@@ -24,9 +24,15 @@ Files under [`data/`](data/) are the API. Clone the repo or fetch a **tagged** r
 
 Partial cards list unimplemented clauses in an `unsupported` array — never silent wrong behavior.
 
-### Pin by tag (engine)
+### Cards ↔ engine pairing
 
-Consumers should pin a release tag (e.g. `v0.2.0`), not `master`.
+Match this dataset and [netrunner-engine](https://github.com/nhoople/netrunner-engine) by the **same semver tag**. Pin a **release tag**, not `master`.
+
+| Pairing | cards-data | engine |
+|---------|------------|--------|
+| **Current** | [`v0.15.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v0.15.0) | [`v0.15.0`](https://github.com/nhoople/netrunner-engine/releases/tag/v0.15.0) |
+
+Incremental wave tags are the day-to-day IR/wiring contract. A set-complete **milestone** GitHub Release is cut only when a wave’s pool status → `supported` (advertised host floor for that set).
 
 The engine declares the pin in [`data/cards-pin.json`](https://github.com/nhoople/netrunner-engine/blob/master/data/cards-pin.json) and fetches with:
 
@@ -37,14 +43,14 @@ npm run fetch-cards   # → vendor/cards-data/
 Example raw URL base:
 
 ```text
-https://raw.githubusercontent.com/nhoople/netrunner-cards-data/v0.2.0/data
+https://raw.githubusercontent.com/nhoople/netrunner-cards-data/v0.15.0/data
 ```
 
 JavaScript — load the pool and one card from a tagged release:
 
 ```js
 const base =
-  "https://raw.githubusercontent.com/nhoople/netrunner-cards-data/v0.2.0/data";
+  "https://raw.githubusercontent.com/nhoople/netrunner-cards-data/v0.15.0/data";
 const pool = await fetch(`${base}/pool.json`).then((r) => r.json());
 const marjanah = await fetch(`${base}/system-gateway/marjanah.json`).then((r) =>
   r.json(),
@@ -66,7 +72,7 @@ Midnight Sun extract lists unimplemented clauses (including sabotage / mark / ch
 
 ## Versioning
 
-Tag dataset releases as `vMAJOR.MINOR.PATCH` (e.g. `v0.2.0`). Bump when card JSON, pool, or schema that consumers rely on changes.
+Tag dataset releases as `vMAJOR.MINOR.PATCH` (e.g. `v0.15.0`). Bump when card JSON, pool, or schema that consumers rely on changes. Keep the README pairing line in sync after each pin bump (no new tag for README-only).
 
 ## License
 
