@@ -1,0 +1,15 @@
+{
+  "id": "captain-padma-isbister-intrepid-explorer",
+  "title": "Captain Padma Isbister: Intrepid Explorer",
+  "wave": "midnight-sun",
+  "nrdbCode": "33021",
+  "type": "identity",
+  "side": "runner",
+  "unsupported": [
+    "First R&D run begin each turn: may charge 1 installed card — Charge (CR §10.10): place 1 power counter on a card that already has ≥1 — no charge primitive yet."
+  ],
+  "subtypes": [
+    "cyborg"
+  ],
+  "link": 0
+}

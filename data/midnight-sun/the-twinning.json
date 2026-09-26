@@ -1,0 +1,15 @@
+{
+  "id": "the-twinning",
+  "title": "The Twinning",
+  "wave": "midnight-sun",
+  "nrdbCode": "33010",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [
+    "First spend from installed card each turn places power counter; on HQ/R&D breach may remove up to 2 for bonus access — needs spend trigger + breach bonus."
+  ],
+  "subtypes": [
+    "virtual"
+  ],
+  "installCost": 3
+}

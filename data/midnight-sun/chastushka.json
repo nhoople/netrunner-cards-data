@@ -1,0 +1,19 @@
+{
+  "id": "chastushka",
+  "title": "Chastushka",
+  "wave": "midnight-sun",
+  "nrdbCode": "33002",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [
+    "Successful HQ run: instead of breach, sabotage 4 — replace-breach + Sabotage 4 (CR §10.12): Corp trashes that many from HQ and/or R&D top — no sabotage primitive yet."
+  ],
+  "subtypes": [
+    "run",
+    "sabotage"
+  ],
+  "playCost": 3,
+  "runEvent": {
+    "servers": "hq"
+  }
+}

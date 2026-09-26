@@ -1,0 +1,20 @@
+{
+  "id": "running-hot",
+  "title": "Running Hot",
+  "wave": "midnight-sun",
+  "nrdbCode": "33003",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [
+    "Additional cost: suffer 1 core damage — play additional cost not enforced; Printed core damage mapped to brain_damage IR (CR §10.4.2c alias); cite/naming alignment incomplete."
+  ],
+  "playCost": 1,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "gain_clicks",
+      "side": "runner",
+      "amount": 3
+    }
+  }
+}

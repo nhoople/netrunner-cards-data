@@ -1,0 +1,18 @@
+{
+  "id": "endurance",
+  "title": "Endurance",
+  "wave": "midnight-sun",
+  "nrdbCode": "33025",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [
+    "First successful run each turn places 1 power counter; 2 power counters break up to 2 subs — needs success trigger + power-counter break cost; console limit not enforced."
+  ],
+  "subtypes": [
+    "console",
+    "vehicle"
+  ],
+  "installCost": 8,
+  "muBonus": 2,
+  "powerCountersOnInstall": 3
+}

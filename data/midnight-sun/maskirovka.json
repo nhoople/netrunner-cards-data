@@ -1,0 +1,39 @@
+{
+  "id": "maskirovka",
+  "title": "Maskirovka",
+  "wave": "midnight-sun",
+  "nrdbCode": "33061",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "subtypes": [
+    "barrier"
+  ],
+  "installCost": 3,
+  "rezCost": 3,
+  "strength": 3,
+  "subroutines": [
+    {
+      "id": "mask-gain",
+      "text": "Gain 2¢.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "corp",
+          "amount": 2
+        }
+      }
+    },
+    {
+      "id": "mask-etr",
+      "text": "End the run.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "end_the_run"
+        }
+      }
+    }
+  ]
+}

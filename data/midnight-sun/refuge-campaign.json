@@ -1,0 +1,23 @@
+{
+  "id": "refuge-campaign",
+  "title": "Refuge Campaign",
+  "wave": "midnight-sun",
+  "nrdbCode": "33033",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "subtypes": [
+    "advertisement"
+  ],
+  "installCost": 4,
+  "rezCost": 4,
+  "trashCost": 4,
+  "onTurnBegin": {
+    "op": "do",
+    "action": {
+      "kind": "gain_credits",
+      "side": "corp",
+      "amount": 2
+    }
+  }
+}

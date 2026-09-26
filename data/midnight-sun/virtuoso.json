@@ -1,0 +1,16 @@
+{
+  "id": "virtuoso",
+  "title": "Virtuoso",
+  "wave": "midnight-sun",
+  "nrdbCode": "33015",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [
+    "Turn begin identify mark; first successful mark run: bonus HQ access or breach HQ at run end — Mark (CR §10.11): identify mark / run-on-mark triggers — no per-Runner mark server state yet.; console limit not enforced."
+  ],
+  "subtypes": [
+    "console"
+  ],
+  "installCost": 4,
+  "muBonus": 1
+}

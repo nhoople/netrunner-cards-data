@@ -1,0 +1,23 @@
+{
+  "id": "carpe-diem",
+  "title": "Carpe Diem",
+  "wave": "midnight-sun",
+  "nrdbCode": "33012",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [
+    "Identify mark; may run mark — Mark (CR §10.11): identify mark / run-on-mark triggers — no per-Runner mark server state yet."
+  ],
+  "subtypes": [
+    "run"
+  ],
+  "playCost": 1,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "gain_credits",
+      "side": "runner",
+      "amount": 4
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "wave",
+  "title": "Wave",
+  "wave": "midnight-sun",
+  "nrdbCode": "33037",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [
+    "On rez during run vs this server: may search R&D for ice, reveal, add to HQ; subroutine: gain 1¢ per rezzed harmonic ice — per-harmonic gain not modeled (sub omitted rather than flat 1¢)."
+  ],
+  "subtypes": [
+    "code gate",
+    "harmonic"
+  ],
+  "installCost": 2,
+  "rezCost": 2,
+  "strength": 3
+}

@@ -1,0 +1,14 @@
+{
+  "id": "ob-superheavy-logistics-extract-export-excel",
+  "title": "Ob Superheavy Logistics: Extract. Export. Excel.",
+  "wave": "midnight-sun",
+  "nrdbCode": "33057",
+  "type": "identity",
+  "side": "corp",
+  "unsupported": [
+    "Once per turn when trash rezzed card (not during install): search R&D for printed rez cost exactly 1¢ less, install and rez ignoring credit costs."
+  ],
+  "subtypes": [
+    "corp"
+  ]
+}

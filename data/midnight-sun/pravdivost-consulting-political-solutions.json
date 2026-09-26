@@ -1,0 +1,14 @@
+{
+  "id": "pravdivost-consulting-political-solutions",
+  "title": "Pravdivost Consulting: Political Solutions",
+  "wave": "midnight-sun",
+  "nrdbCode": "33048",
+  "type": "identity",
+  "side": "corp",
+  "unsupported": [
+    "First successful run each turn: may place 1 advancement on an advanceable card — needs successful-run trigger + advancement targeting."
+  ],
+  "subtypes": [
+    "division"
+  ]
+}

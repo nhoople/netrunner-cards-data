@@ -1,0 +1,37 @@
+{
+  "id": "stoneship-chart-room",
+  "title": "Stoneship Chart Room",
+  "wave": "midnight-sun",
+  "nrdbCode": "33030",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [
+    "Trash: charge 1 installed card — Charge (CR §10.10): place 1 power counter on a card that already has ≥1 — no charge primitive yet."
+  ],
+  "subtypes": [
+    "location"
+  ],
+  "installCost": 0,
+  "paidAbilities": [
+    {
+      "id": "stoneship-draw",
+      "label": "Trash Stoneship Chart Room: draw 2",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "trashSelf": true
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "draw",
+          "side": "runner",
+          "amount": 2
+        }
+      }
+    }
+  ]
+}

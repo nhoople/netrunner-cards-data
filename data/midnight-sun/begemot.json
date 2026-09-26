@@ -1,0 +1,32 @@
+{
+  "id": "begemot",
+  "title": "Begemot",
+  "wave": "midnight-sun",
+  "nrdbCode": "33007",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [
+    "Install: suffer 1 core damage; +1 strength per core damage taken this game — strength-from-damage not modeled; break any number of barrier subs approximated via breakMaxSubs; Printed core damage mapped to brain_damage IR (CR §10.4.2c alias); cite/naming alignment incomplete."
+  ],
+  "subtypes": [
+    "icebreaker",
+    "fracter"
+  ],
+  "installCost": 5,
+  "strength": 2,
+  "memoryCost": 2,
+  "breaker": {
+    "breaksSubtype": "barrier",
+    "strength": 2,
+    "breakCredits": 1,
+    "breakMaxSubs": 99
+  },
+  "paidAbilities": [],
+  "onInstall": {
+    "op": "do",
+    "action": {
+      "kind": "brain_damage",
+      "amount": 1
+    }
+  }
+}

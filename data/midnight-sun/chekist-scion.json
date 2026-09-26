@@ -1,0 +1,18 @@
+{
+  "id": "chekist-scion",
+  "title": "Chekist Scion",
+  "wave": "midnight-sun",
+  "nrdbCode": "33050",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [
+    "On access while installed: give 1 tag + 1 per hosted advancement — advancement-scaled tags not modeled (ability omitted)."
+  ],
+  "subtypes": [
+    "ambush"
+  ],
+  "installCost": 0,
+  "rezCost": 0,
+  "trashCost": 0,
+  "canAdvance": true
+}

@@ -1,0 +1,42 @@
+{
+  "id": "stavka",
+  "title": "Stavka",
+  "wave": "midnight-sun",
+  "nrdbCode": "33062",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [
+    "On rez may trash 1 other installed card for +5 strength remainder of run."
+  ],
+  "subtypes": [
+    "sentry",
+    "destroyer"
+  ],
+  "installCost": 4,
+  "rezCost": 4,
+  "strength": 2,
+  "subroutines": [
+    {
+      "id": "stavka-trash1",
+      "text": "Trash 1 installed program.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "trash_program",
+          "pick": "choose"
+        }
+      }
+    },
+    {
+      "id": "stavka-trash2",
+      "text": "Trash 1 installed program.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "trash_program",
+          "pick": "choose"
+        }
+      }
+    }
+  ]
+}

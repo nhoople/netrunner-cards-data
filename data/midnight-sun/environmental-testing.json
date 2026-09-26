@@ -1,0 +1,12 @@
+{
+  "id": "environmental-testing",
+  "title": "Environmental Testing",
+  "wave": "midnight-sun",
+  "nrdbCode": "33029",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [
+    "On program/hardware install place power counter; at 4+ trash self and gain 9¢ — needs install trigger + threshold trash/gain."
+  ],
+  "installCost": 3
+}

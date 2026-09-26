@@ -1,0 +1,18 @@
+{
+  "id": "pinhole-threading",
+  "title": "Pinhole Threading",
+  "wave": "midnight-sun",
+  "nrdbCode": "33013",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [
+    "Successful: instead of breach, access 1 root card of another server; cannot steal/trash if agenda — needs replace-breach cross-server access."
+  ],
+  "subtypes": [
+    "run"
+  ],
+  "playCost": 1,
+  "runEvent": {
+    "servers": "any"
+  }
+}

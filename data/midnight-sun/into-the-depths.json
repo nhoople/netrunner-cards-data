@@ -1,0 +1,18 @@
+{
+  "id": "into-the-depths",
+  "title": "Into the Depths",
+  "wave": "midnight-sun",
+  "nrdbCode": "33023",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [
+    "On success, for each ice passed resolve one unique option (gain 4¢ / search+install program / charge) — needs passed-ice count + exclusive choice resolution; Charge (CR §10.10): place 1 power counter on a card that already has ≥1 — no charge primitive yet."
+  ],
+  "subtypes": [
+    "run"
+  ],
+  "playCost": 1,
+  "runEvent": {
+    "servers": "any"
+  }
+}

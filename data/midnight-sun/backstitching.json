@@ -1,0 +1,15 @@
+{
+  "id": "backstitching",
+  "title": "Backstitching",
+  "wave": "midnight-sun",
+  "nrdbCode": "33019",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [
+    "Turn begin identify mark; encounter ice on mark run: trash to bypass — Mark (CR §10.11): identify mark / run-on-mark triggers — no per-Runner mark server state yet."
+  ],
+  "subtypes": [
+    "virtual"
+  ],
+  "installCost": 2
+}

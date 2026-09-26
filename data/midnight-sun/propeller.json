@@ -1,0 +1,25 @@
+{
+  "id": "propeller",
+  "title": "Propeller",
+  "wave": "midnight-sun",
+  "nrdbCode": "33027",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [
+    "Hosted power counter: +2 strength — cost.powerCounters not in schema; pump ability omitted (fail closed) until counter spend exists."
+  ],
+  "subtypes": [
+    "icebreaker",
+    "fracter"
+  ],
+  "installCost": 1,
+  "strength": 0,
+  "memoryCost": 1,
+  "breaker": {
+    "breaksSubtype": "barrier",
+    "strength": 0,
+    "breakCredits": 1
+  },
+  "paidAbilities": [],
+  "powerCountersOnInstall": 4
+}

@@ -1,0 +1,20 @@
+{
+  "id": "steelskin-scarring",
+  "title": "Steelskin Scarring",
+  "wave": "midnight-sun",
+  "nrdbCode": "33004",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [
+    "When trashed from grip or stack, may draw 2 — needs grip/stack trash trigger."
+  ],
+  "playCost": 1,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "draw",
+      "side": "runner",
+      "amount": 3
+    }
+  }
+}

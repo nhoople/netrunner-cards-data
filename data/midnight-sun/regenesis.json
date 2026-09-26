@@ -1,0 +1,16 @@
+{
+  "id": "regenesis",
+  "title": "Regenesis",
+  "wave": "midnight-sun",
+  "nrdbCode": "33040",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [
+    "On score if no Corp cards added to Archives this turn: reveal facedown agenda in Archives and add to score area — needs Archives-empty gate + score-from-archives."
+  ],
+  "subtypes": [
+    "research"
+  ],
+  "advancementRequirement": 3,
+  "agendaPoints": 1
+}

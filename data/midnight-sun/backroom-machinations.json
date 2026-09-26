@@ -1,0 +1,23 @@
+{
+  "id": "backroom-machinations",
+  "title": "Backroom Machinations",
+  "wave": "midnight-sun",
+  "nrdbCode": "33055",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [
+    "Additional cost: remove 1 tag; add this operation to score area as 1-point agenda — tag cost + score-as-agenda not modeled."
+  ],
+  "subtypes": [
+    "gray ops"
+  ],
+  "playCost": 2,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "gain_credits",
+      "side": "corp",
+      "amount": 0
+    }
+  }
+}

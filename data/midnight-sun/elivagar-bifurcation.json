@@ -1,0 +1,45 @@
+{
+  "id": "elivagar-bifurcation",
+  "title": "Élivágar Bifurcation",
+  "wave": "midnight-sun",
+  "nrdbCode": "33031",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [
+    "May derez 1 installed card (any type); modeled as derez_ice only."
+  ],
+  "subtypes": [
+    "security"
+  ],
+  "advancementRequirement": 2,
+  "agendaPoints": 1,
+  "onScore": {
+    "op": "choose",
+    "chooser": "corp",
+    "options": [
+      {
+        "id": "derez",
+        "label": "Derez 1 ice",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "derez_ice",
+            "pick": "choose"
+          }
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "corp",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  }
+}

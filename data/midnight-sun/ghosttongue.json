@@ -1,0 +1,22 @@
+{
+  "id": "ghosttongue",
+  "title": "Ghosttongue",
+  "wave": "midnight-sun",
+  "nrdbCode": "33005",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [
+    "Event play cost −1¢ continuous not modeled; Printed core damage mapped to brain_damage IR (CR §10.4.2c alias); cite/naming alignment incomplete."
+  ],
+  "subtypes": [
+    "cybernetic"
+  ],
+  "installCost": 2,
+  "onInstall": {
+    "op": "do",
+    "action": {
+      "kind": "brain_damage",
+      "amount": 1
+    }
+  }
+}

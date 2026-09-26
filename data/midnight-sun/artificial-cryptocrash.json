@@ -1,0 +1,22 @@
+{
+  "id": "artificial-cryptocrash",
+  "title": "Artificial Cryptocrash",
+  "wave": "midnight-sun",
+  "nrdbCode": "33049",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [],
+  "subtypes": [
+    "initiative"
+  ],
+  "advancementRequirement": 4,
+  "agendaPoints": 2,
+  "onScore": {
+    "op": "do",
+    "action": {
+      "kind": "lose_credits",
+      "side": "runner",
+      "amount": 7
+    }
+  }
+}

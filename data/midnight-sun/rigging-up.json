@@ -1,0 +1,21 @@
+{
+  "id": "rigging-up",
+  "title": "Rigging Up",
+  "wave": "midnight-sun",
+  "nrdbCode": "33024",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [
+    "Install program or hardware from grip paying 3¢ less; may charge if able — discounted install targeting incomplete; Charge (CR §10.10): place 1 power counter on a card that already has ≥1 — no charge primitive yet."
+  ],
+  "subtypes": [
+    "mod"
+  ],
+  "playCost": 0,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "may_install_from_grip"
+    }
+  }
+}

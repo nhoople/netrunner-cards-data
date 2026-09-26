@@ -1,0 +1,31 @@
+{
+  "id": "anemone",
+  "title": "Anemone",
+  "wave": "midnight-sun",
+  "nrdbCode": "33043",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [
+    "On rez during run vs this server: may trash 1 from HQ to do 2 net damage."
+  ],
+  "subtypes": [
+    "sentry",
+    "ap"
+  ],
+  "installCost": 3,
+  "rezCost": 3,
+  "strength": 2,
+  "subroutines": [
+    {
+      "id": "anemone-net",
+      "text": "Do 1 net damage.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "net_damage",
+          "amount": 1
+        }
+      }
+    }
+  ]
+}

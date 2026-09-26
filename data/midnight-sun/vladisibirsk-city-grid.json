@@ -1,0 +1,18 @@
+{
+  "id": "vladisibirsk-city-grid",
+  "title": "Vladisibirsk City Grid",
+  "wave": "midnight-sun",
+  "nrdbCode": "33056",
+  "type": "upgrade",
+  "side": "corp",
+  "unsupported": [
+    "Once per turn: 2 hosted advancements → place 2 advancements on another advanceable card in this server's root; limit 1 region/server."
+  ],
+  "subtypes": [
+    "region"
+  ],
+  "installCost": 3,
+  "rezCost": 3,
+  "trashCost": 4,
+  "canAdvance": true
+}

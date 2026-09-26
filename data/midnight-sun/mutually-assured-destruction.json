@@ -1,0 +1,16 @@
+{
+  "id": "mutually-assured-destruction",
+  "title": "Mutually Assured Destruction",
+  "wave": "midnight-sun",
+  "nrdbCode": "33064",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [
+    "Additional cost: spend [click][click] (triple; only one extra click flagged); trash any number of rezzed cards; give 1 tag each — multi-trash + tags not modeled."
+  ],
+  "subtypes": [
+    "triple"
+  ],
+  "playCost": 4,
+  "playAdditionalClick": true
+}

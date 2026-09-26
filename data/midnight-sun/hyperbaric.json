@@ -1,0 +1,26 @@
+{
+  "id": "hyperbaric",
+  "title": "Hyperbaric",
+  "wave": "midnight-sun",
+  "nrdbCode": "33026",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [
+    "Strength per power counter flag set; 2¢ paid ability to place a power counter deferred (no add_power_counter IR) — not listed as a free no-op."
+  ],
+  "subtypes": [
+    "icebreaker",
+    "decoder"
+  ],
+  "installCost": 3,
+  "strength": 0,
+  "memoryCost": 1,
+  "breaker": {
+    "breaksSubtype": "code gate",
+    "strength": 0,
+    "breakCredits": 1
+  },
+  "paidAbilities": [],
+  "powerCountersOnInstall": 1,
+  "strengthPerPowerCounter": true
+}
