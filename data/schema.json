@@ -27,7 +27,8 @@
             "rd",
             "hq",
             "archives",
-            "mark"
+            "mark",
+            "remote"
           ]
         },
         "requireNotRunThisTurn": {
@@ -68,6 +69,10 @@
         "skipBreach": {
           "type": "boolean",
           "description": "On successful run, skip breaching the attacked server (e.g. Chastushka replace-breach)."
+        },
+        "blankAttackedServerRoot": {
+          "type": "boolean",
+          "description": "During this run, cards in the root of the attacked server lose all abilities (Light the Fire!)."
         }
       }
     }
@@ -275,6 +280,11 @@
               "powerCounters": {
                 "type": "integer",
                 "minimum": 0
+              },
+              "coreDamage": {
+                "type": "integer",
+                "minimum": 0,
+                "description": "Suffer this much core damage as a cost (Light the Fire!)."
               }
             }
           },
