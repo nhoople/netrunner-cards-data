@@ -419,6 +419,10 @@
       "type": "object",
       "description": "Effect IR the first time the Runner begins a run on R&D each turn (Runner identities; e.g. Padma may charge)."
     },
+    "onFirstVirusInstallThisTurn": {
+      "type": "object",
+      "description": "Effect IR the first time the Runner installs a virus program each turn (installed continuous; e.g. Avgustina sabotage)."
+    },
     "onAgendaScored": {
       "type": "object",
       "description": "Effect IR when Corp scores any agenda (identity or installed continuous)."
