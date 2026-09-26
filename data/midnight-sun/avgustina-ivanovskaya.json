@@ -5,11 +5,17 @@
   "nrdbCode": "33008",
   "type": "resource",
   "side": "runner",
-  "unsupported": [
-    "First virus program install each turn: sabotage 1 — needs install trigger (sabotage IR exists; still needs this trigger wiring)."
-  ],
+  "unsupported": [],
   "subtypes": [
     "connection"
   ],
-  "installCost": 1
+  "installCost": 1,
+  "onFirstVirusInstallThisTurn": {
+    "op": "do",
+    "action": {
+      "kind": "sabotage",
+      "amount": 1,
+      "interactive": true
+    }
+  }
 }
