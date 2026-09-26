@@ -5,9 +5,7 @@
   "nrdbCode": "33018",
   "type": "program",
   "side": "runner",
-  "unsupported": [
-    "Break with hosted power counter (alternate to trash) — paid ability cost has no powerCounters field yet; trash-to-break mapped."
-  ],
+  "unsupported": [],
   "subtypes": [
     "icebreaker",
     "killer",
@@ -20,6 +18,7 @@
     "breaksSubtype": "sentry",
     "strength": 1,
     "breakCredits": 0,
+    "breakViaPaidAbilityOnly": true,
     "pumpCredits": 2,
     "pumpStrength": 3
   },
@@ -40,6 +39,25 @@
         "action": {
           "kind": "pump_strength",
           "amount": 3
+        }
+      }
+    },
+    {
+      "id": "revolver-power-break",
+      "label": "Spend 1 power counter: break 1 sentry subroutine",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "powerCounters": 1
+      },
+      "windows": [
+        "encounter_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "break_encounter_subroutine",
+          "requireSubtype": "sentry"
         }
       }
     },

@@ -185,6 +185,10 @@
           "type": "integer",
           "minimum": 0
         },
+        "breakViaPaidAbilityOnly": {
+          "type": "boolean",
+          "description": "When true, standard credit break is disabled; breaks only via paidAbilities (e.g. Revolver)."
+        },
         "breakMaxSubs": {
           "type": "integer",
           "minimum": 1,
@@ -265,6 +269,10 @@
                 "minimum": 0
               },
               "agendaCounters": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "powerCounters": {
                 "type": "integer",
                 "minimum": 0
               }

@@ -6,7 +6,7 @@
   "type": "hardware",
   "side": "runner",
   "unsupported": [
-    "First successful run each turn places 1 power counter; 2 power counters break up to 2 subs — needs success trigger + power-counter break cost; console limit not enforced."
+    "First successful run each turn places 1 power counter; 2 hosted power counters break up to 2 subs — success trigger + break ability not wired (cost.powerCounters IR exists); console limit not enforced."
   ],
   "subtypes": [
     "console",
