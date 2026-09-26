@@ -1,0 +1,13 @@
+{
+  "id": "amaze-amusements",
+  "title": "AMAZE Amusements",
+  "wave": "system-gateway",
+  "nrdbCode": "30058",
+  "type": "upgrade",
+  "side": "corp",
+  "installCost": 0,
+  "rezCost": 1,
+  "trashCost": 3,
+  "unsupported": [],
+  "tagsIfAgendaStolenThisRun": 2
+}
