@@ -5,9 +5,7 @@
   "nrdbCode": "33024",
   "type": "event",
   "side": "runner",
-  "unsupported": [
-    "Install program or hardware from grip paying 3¢ less; may charge if able — discounted install targeting incomplete (charge IR exists; still needs this trigger/cost wiring)."
-  ],
+  "unsupported": [],
   "subtypes": [
     "mod"
   ],
@@ -15,7 +13,13 @@
   "onPlay": {
     "op": "do",
     "action": {
-      "kind": "may_install_from_grip"
+      "kind": "install_from_grip_discount",
+      "types": [
+        "program",
+        "hardware"
+      ],
+      "discount": 3,
+      "mayCharge": true
     }
   }
 }
