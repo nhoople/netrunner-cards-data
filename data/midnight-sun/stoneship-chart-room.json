@@ -5,9 +5,7 @@
   "nrdbCode": "33030",
   "type": "resource",
   "side": "runner",
-  "unsupported": [
-    "Trash: charge 1 installed card — Charge (CR §10.10): place 1 power counter on a card that already has ≥1 — no charge primitive yet."
-  ],
+  "unsupported": [],
   "subtypes": [
     "location"
   ],
@@ -30,6 +28,25 @@
           "kind": "draw",
           "side": "runner",
           "amount": 2
+        }
+      }
+    },
+    {
+      "id": "stoneship-charge",
+      "label": "Trash Stoneship Chart Room: charge 1 installed card",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "trashSelf": true
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "charge",
+          "pick": "choose"
         }
       }
     }

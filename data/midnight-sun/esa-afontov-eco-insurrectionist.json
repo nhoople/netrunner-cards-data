@@ -6,7 +6,7 @@
   "type": "identity",
   "side": "runner",
   "unsupported": [
-    "First core damage each turn: may draw 1 and sabotage 2 — needs core-damage trigger + Sabotage 2 (CR §10.12): Corp trashes that many from HQ and/or R&D top — no sabotage primitive yet."
+    "First core damage each turn: may draw 1 and sabotage 2 — needs core-damage trigger (sabotage IR exists; still needs this trigger wiring)."
   ],
   "subtypes": [
     "cyborg"

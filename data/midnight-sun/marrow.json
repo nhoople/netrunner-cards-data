@@ -6,7 +6,7 @@
   "type": "hardware",
   "side": "runner",
   "unsupported": [
-    "Whenever Corp scores an agenda, sabotage 1 — needs agenda-score trigger; Sabotage 1 (CR §10.12): Corp trashes that many from HQ and/or R&D top — no sabotage primitive yet.; Printed core damage mapped to brain_damage IR (CR §10.4.2c alias); cite/naming alignment incomplete.; console limit not enforced."
+    "Printed core damage mapped to brain_damage IR (CR §10.4.2c alias); cite/naming alignment incomplete.; console limit not enforced."
   ],
   "subtypes": [
     "console",
@@ -20,6 +20,14 @@
     "action": {
       "kind": "brain_damage",
       "amount": 1
+    }
+  },
+  "onAgendaScored": {
+    "op": "do",
+    "action": {
+      "kind": "sabotage",
+      "amount": 1,
+      "interactive": true
     }
   }
 }

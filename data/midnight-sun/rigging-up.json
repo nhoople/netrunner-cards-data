@@ -6,7 +6,7 @@
   "type": "event",
   "side": "runner",
   "unsupported": [
-    "Install program or hardware from grip paying 3¢ less; may charge if able — discounted install targeting incomplete; Charge (CR §10.10): place 1 power counter on a card that already has ≥1 — no charge primitive yet."
+    "Install program or hardware from grip paying 3¢ less; may charge if able — discounted install targeting incomplete (charge IR exists; still needs this trigger/cost wiring)."
   ],
   "subtypes": [
     "mod"

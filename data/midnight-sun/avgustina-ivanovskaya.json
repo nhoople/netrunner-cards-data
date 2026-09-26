@@ -6,7 +6,7 @@
   "type": "resource",
   "side": "runner",
   "unsupported": [
-    "First virus program install each turn: sabotage 1 — needs install trigger; Sabotage 1 (CR §10.12): Corp trashes that many from HQ and/or R&D top — no sabotage primitive yet."
+    "First virus program install each turn: sabotage 1 — needs install trigger (sabotage IR exists; still needs this trigger wiring)."
   ],
   "subtypes": [
     "connection"
