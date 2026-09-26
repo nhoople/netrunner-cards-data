@@ -5,9 +5,7 @@
   "nrdbCode": "33026",
   "type": "program",
   "side": "runner",
-  "unsupported": [
-    "Strength per power counter flag set; 2¢ paid ability to place a power counter deferred (no add_power_counter IR) — not listed as a free no-op."
-  ],
+  "unsupported": [],
   "subtypes": [
     "icebreaker",
     "decoder"
@@ -20,7 +18,28 @@
     "strength": 0,
     "breakCredits": 1
   },
-  "paidAbilities": [],
+  "paidAbilities": [
+    {
+      "id": "hyperbaric-place-power",
+      "label": "2¢: Place 1 power counter on Hyperbaric",
+      "clickCost": 0,
+      "creditCost": 2,
+      "cost": {
+        "credits": 2
+      },
+      "windows": [
+        "runner_action_paw",
+        "encounter_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "add_power_counter",
+          "amount": 1
+        }
+      }
+    }
+  ],
   "powerCountersOnInstall": 1,
   "strengthPerPowerCounter": true
 }

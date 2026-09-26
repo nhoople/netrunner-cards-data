@@ -6,7 +6,7 @@
   "type": "hardware",
   "side": "runner",
   "unsupported": [
-    "First successful run each turn places 1 power counter; 2 hosted power counters break up to 2 subs — success trigger + break ability not wired (cost.powerCounters IR exists); console limit not enforced."
+    "Console limit (1 console) not enforced."
   ],
   "subtypes": [
     "console",
@@ -14,5 +14,44 @@
   ],
   "installCost": 8,
   "muBonus": 2,
-  "powerCountersOnInstall": 3
+  "powerCountersOnInstall": 3,
+  "onSuccessfulRunOncePerTurn": true,
+  "onSuccessfulRun": {
+    "op": "do",
+    "action": {
+      "kind": "add_power_counter",
+      "amount": 1
+    }
+  },
+  "paidAbilities": [
+    {
+      "id": "endurance-power-break",
+      "label": "Spend 2 power counters: break up to 2 subroutines",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "powerCounters": 2
+      },
+      "windows": [
+        "encounter_paw"
+      ],
+      "effect": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "break_encounter_subroutine"
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "break_encounter_subroutine"
+            }
+          }
+        ]
+      }
+    }
+  ]
 }
