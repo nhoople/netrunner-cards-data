@@ -5,9 +5,7 @@
   "nrdbCode": "33019",
   "type": "resource",
   "side": "runner",
-  "unsupported": [
-    "Encounter ice on mark run: trash to bypass — needs mark-encounter bypass (identify_mark IR exists; remaining mark triggers not wired)."
-  ],
+  "unsupported": [],
   "subtypes": [
     "virtual"
   ],
@@ -17,5 +15,26 @@
     "action": {
       "kind": "identify_mark"
     }
-  }
+  },
+  "paidAbilities": [
+    {
+      "id": "backstitching-bypass",
+      "label": "Trash Backstitching: bypass encountered ice (mark run)",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "trashSelf": true
+      },
+      "windows": [
+        "encounter_paw"
+      ],
+      "requireAttackingMark": true,
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "bypass_current_ice"
+        }
+      }
+    }
+  ]
 }
