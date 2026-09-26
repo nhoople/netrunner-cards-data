@@ -5,11 +5,38 @@
   "nrdbCode": "33021",
   "type": "identity",
   "side": "runner",
-  "unsupported": [
-    "First R&D run begin each turn: may charge 1 installed card — needs first-R&D-run-begin trigger (charge IR exists; still needs this trigger/cost wiring)."
-  ],
+  "unsupported": [],
   "subtypes": [
     "cyborg"
   ],
-  "link": 0
+  "link": 0,
+  "onFirstRdRunBeginThisTurn": {
+    "op": "choose",
+    "chooser": "runner",
+    "options": [
+      {
+        "id": "charge",
+        "label": "Charge 1 installed card",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "charge",
+            "pick": "choose"
+          }
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "runner",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  }
 }

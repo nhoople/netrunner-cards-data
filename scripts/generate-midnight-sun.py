@@ -286,12 +286,8 @@ def map_card(c: dict) -> dict:
     if cid == "captain-padma-isbister-intrepid-explorer":
         return base(
             c,
-            unsupported=[
-                note_charge_trigger(
-                    "First R&D run begin each turn: may charge 1 installed card — "
-                    "needs first-R&D-run-begin trigger"
-                ),
-            ],
+            onFirstRdRunBeginThisTurn=may_charge_choose(),
+            unsupported=[],
         )
 
     # --- Corp identities ---

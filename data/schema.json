@@ -407,6 +407,10 @@
       "type": "object",
       "description": "Effect IR the first time the Runner suffers core damage each turn (Runner identities; CR §10.4.2b)."
     },
+    "onFirstRdRunBeginThisTurn": {
+      "type": "object",
+      "description": "Effect IR the first time the Runner begins a run on R&D each turn (Runner identities; e.g. Padma may charge)."
+    },
     "onAgendaScored": {
       "type": "object",
       "description": "Effect IR when Corp scores any agenda (identity or installed continuous)."
