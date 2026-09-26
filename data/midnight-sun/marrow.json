@@ -5,9 +5,7 @@
   "nrdbCode": "33006",
   "type": "hardware",
   "side": "runner",
-  "unsupported": [
-    "Console limit (1 console) not enforced."
-  ],
+  "unsupported": [],
   "subtypes": [
     "console",
     "cybernetic"

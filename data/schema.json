@@ -431,6 +431,10 @@
       "type": "object",
       "description": "Effect IR the first time the Runner installs a virus program each turn (installed continuous; e.g. Avgustina sabotage)."
     },
+    "onFirstSuccessfulMarkRunThisTurn": {
+      "type": "object",
+      "description": "Effect IR the first time each turn the Runner makes a successful run on their mark (installed continuous / identity; e.g. Virtuoso HQ bonus access or post-run HQ breach)."
+    },
     "onAgendaScored": {
       "type": "object",
       "description": "Effect IR when Corp scores any agenda (identity or installed continuous)."

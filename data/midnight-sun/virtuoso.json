@@ -5,9 +5,7 @@
   "nrdbCode": "33015",
   "type": "hardware",
   "side": "runner",
-  "unsupported": [
-    "First successful mark run: bonus HQ access or breach HQ at run end (identify_mark IR exists; remaining mark triggers not wired).; console limit not enforced."
-  ],
+  "unsupported": [],
   "subtypes": [
     "console"
   ],
@@ -17,6 +15,26 @@
     "op": "do",
     "action": {
       "kind": "identify_mark"
+    }
+  },
+  "onFirstSuccessfulMarkRunThisTurn": {
+    "op": "if",
+    "cond": {
+      "op": "attacking_hq"
+    },
+    "then": {
+      "op": "do",
+      "action": {
+        "kind": "bonus_access",
+        "amount": 1
+      }
+    },
+    "else": {
+      "op": "do",
+      "action": {
+        "kind": "breach_server_when_run_ends",
+        "server": "hq"
+      }
     }
   }
 }
