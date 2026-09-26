@@ -194,25 +194,50 @@ def note_core_damage_alias() -> str:
     )
 
 
-def note_sabotage(n: int | str = "N") -> str:
-    return (
-        f"Sabotage {n} (CR §10.12): Corp trashes that many from HQ and/or R&D top — "
-        "no sabotage primitive yet."
+def sabotage(n: int, interactive: bool = True):
+    action = {"kind": "sabotage", "amount": n}
+    if interactive:
+        action["interactive"] = True
+    return {"op": "do", "action": action}
+
+
+def identify_mark():
+    return {"op": "do", "action": {"kind": "identify_mark"}}
+
+
+def charge_choose():
+    return {"op": "do", "action": {"kind": "charge", "pick": "choose"}}
+
+
+def may_charge_choose():
+    """Optional charge (Runner may decline)."""
+    return choose(
+        "runner",
+        [
+            {
+                "id": "charge",
+                "label": "Charge 1 installed card",
+                "effect": charge_choose(),
+            },
+            {
+                "id": "decline",
+                "label": "Decline",
+                "effect": gain("runner", 0),
+            },
+        ],
     )
 
 
-def note_mark() -> str:
-    return (
-        "Mark (CR §10.11): identify mark / run-on-mark triggers — "
-        "no per-Runner mark server state yet."
-    )
+def note_sabotage_trigger(extra: str) -> str:
+    return f"{extra} (sabotage IR exists; still needs this trigger wiring)."
 
 
-def note_charge() -> str:
-    return (
-        "Charge (CR §10.10): place 1 power counter on a card that already has ≥1 — "
-        "no charge primitive yet."
-    )
+def note_mark_remainder(extra: str) -> str:
+    return f"{extra} (identify_mark IR exists; remaining mark triggers not wired)."
+
+
+def note_charge_trigger(extra: str) -> str:
+    return f"{extra} (charge IR exists; still needs this trigger/cost wiring)."
 
 
 def map_card(c: dict) -> dict:
@@ -225,23 +250,30 @@ def map_card(c: dict) -> dict:
         return base(
             c,
             unsupported=[
-                "First core damage each turn: may draw 1 and sabotage 2 — needs core-damage trigger + "
-                + note_sabotage(2),
+                note_sabotage_trigger(
+                    "First core damage each turn: may draw 1 and sabotage 2 — "
+                    "needs core-damage trigger"
+                ),
             ],
         )
     if cid == "nyusha-sable-sintashta-symphonic-prodigy":
         return base(
             c,
+            onTurnBegin=identify_mark(),
             unsupported=[
-                "Turn begin identify mark; first successful run on mark gains [click] — "
-                + note_mark(),
+                note_mark_remainder(
+                    "First successful run on mark gains [click] — needs successful-run-on-mark trigger"
+                ),
             ],
         )
     if cid == "captain-padma-isbister-intrepid-explorer":
         return base(
             c,
             unsupported=[
-                "First R&D run begin each turn: may charge 1 installed card — " + note_charge(),
+                note_charge_trigger(
+                    "First R&D run begin each turn: may charge 1 installed card — "
+                    "needs first-R&D-run-begin trigger"
+                ),
             ],
         )
 
@@ -268,11 +300,12 @@ def map_card(c: dict) -> dict:
         return base(
             c,
             subtypes=["run", "sabotage"],
-            runEvent={"servers": "hq"},
-            unsupported=[
-                "Successful HQ run: instead of breach, sabotage 4 — replace-breach + "
-                + note_sabotage(4),
-            ],
+            runEvent={
+                "servers": "hq",
+                "skipBreach": True,
+                "onSuccessfulRun": sabotage(4, interactive=True),
+            },
+            unsupported=[],
         )
     if cid == "running-hot":
         return base(
@@ -295,9 +328,11 @@ def map_card(c: dict) -> dict:
         return base(
             c,
             subtypes=["run"],
-            onPlay=gain("runner", 4),
+            onPlay=seq(identify_mark(), gain("runner", 4)),
             unsupported=[
-                "Identify mark; may run mark — " + note_mark(),
+                note_mark_remainder(
+                    "May run mark — run-on-mark server targeting not in startsRunSpec yet"
+                ),
             ],
         )
     if cid == "pinhole-threading":
@@ -326,9 +361,11 @@ def map_card(c: dict) -> dict:
             subtypes=["run"],
             runEvent={"servers": "any"},
             unsupported=[
-                "On success, for each ice passed resolve one unique option (gain 4¢ / search+install "
-                "program / charge) — needs passed-ice count + exclusive choice resolution; "
-                + note_charge(),
+                note_charge_trigger(
+                    "On success, for each ice passed resolve one unique option "
+                    "(gain 4¢ / search+install program / charge) — needs passed-ice count + "
+                    "exclusive choice resolution"
+                ),
             ],
         )
     if cid == "rigging-up":
@@ -340,8 +377,10 @@ def map_card(c: dict) -> dict:
                 "action": {"kind": "may_install_from_grip"},
             },
             unsupported=[
-                "Install program or hardware from grip paying 3¢ less; may charge if able — "
-                "discounted install targeting incomplete; " + note_charge(),
+                note_charge_trigger(
+                    "Install program or hardware from grip paying 3¢ less; may charge if able — "
+                    "discounted install targeting incomplete"
+                ),
             ],
         )
 
@@ -362,12 +401,9 @@ def map_card(c: dict) -> dict:
             muBonus=1,
             handSizeBonus=3,
             onInstall=brain(1),
+            onAgendaScored=sabotage(1, interactive=True),
             unsupported=[
-                "Whenever Corp scores an agenda, sabotage 1 — needs agenda-score trigger; "
-                + note_sabotage(1)
-                + "; "
-                + note_core_damage_alias()
-                + "; console limit not enforced."
+                note_core_damage_alias() + "; console limit not enforced.",
             ],
         )
     if cid == "pan-weave":
@@ -385,9 +421,12 @@ def map_card(c: dict) -> dict:
             c,
             subtypes=["console"],
             muBonus=1,
+            onTurnBegin=identify_mark(),
             unsupported=[
-                "Turn begin identify mark; first successful mark run: bonus HQ access or "
-                "breach HQ at run end — " + note_mark() + "; console limit not enforced."
+                note_mark_remainder(
+                    "First successful mark run: bonus HQ access or breach HQ at run end"
+                )
+                + "; console limit not enforced.",
             ],
         )
     if cid == "endurance":
@@ -483,8 +522,9 @@ def map_card(c: dict) -> dict:
             c,
             subtypes=["connection"],
             unsupported=[
-                "First virus program install each turn: sabotage 1 — needs install trigger; "
-                + note_sabotage(1),
+                note_sabotage_trigger(
+                    "First virus program install each turn: sabotage 1 — needs install trigger"
+                ),
             ],
         )
     if cid == "light-the-fire":
@@ -510,9 +550,11 @@ def map_card(c: dict) -> dict:
         return base(
             c,
             subtypes=["virtual"],
+            onTurnBegin=identify_mark(),
             unsupported=[
-                "Turn begin identify mark; encounter ice on mark run: trash to bypass — "
-                + note_mark(),
+                note_mark_remainder(
+                    "Encounter ice on mark run: trash to bypass — needs mark-encounter bypass"
+                ),
             ],
         )
     if cid == "no-free-lunch":
@@ -544,10 +586,8 @@ def map_card(c: dict) -> dict:
         return base(
             c,
             subtypes=["companion", "virtual"],
-            unsupported=[
-                "Whenever an agenda is scored or stolen, may charge 1 installed card — "
-                + note_charge(),
-            ],
+            onAgendaScoredOrStolen=may_charge_choose(),
+            unsupported=[],
         )
     if cid == "environmental-testing":
         return base(
@@ -571,10 +611,17 @@ def map_card(c: dict) -> dict:
                     "windows": ["runner_action_paw"],
                     "effect": draw("runner", 2),
                 },
+                {
+                    "id": "stoneship-charge",
+                    "label": "Trash Stoneship Chart Room: charge 1 installed card",
+                    "clickCost": 0,
+                    "creditCost": 0,
+                    "cost": {"trashSelf": True},
+                    "windows": ["runner_action_paw"],
+                    "effect": charge_choose(),
+                },
             ],
-            unsupported=[
-                "Trash: charge 1 installed card — " + note_charge(),
-            ],
+            unsupported=[],
         )
 
     # --- Agendas ---

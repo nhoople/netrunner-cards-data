@@ -5,12 +5,39 @@
   "nrdbCode": "33028",
   "type": "resource",
   "side": "runner",
-  "unsupported": [
-    "Whenever an agenda is scored or stolen, may charge 1 installed card — Charge (CR §10.10): place 1 power counter on a card that already has ≥1 — no charge primitive yet."
-  ],
+  "unsupported": [],
   "subtypes": [
     "companion",
     "virtual"
   ],
-  "installCost": 1
+  "installCost": 1,
+  "onAgendaScoredOrStolen": {
+    "op": "choose",
+    "chooser": "runner",
+    "options": [
+      {
+        "id": "charge",
+        "label": "Charge 1 installed card",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "charge",
+            "pick": "choose"
+          }
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "runner",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  }
 }

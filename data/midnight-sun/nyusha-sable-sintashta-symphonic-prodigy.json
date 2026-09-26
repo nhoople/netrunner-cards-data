@@ -6,10 +6,16 @@
   "type": "identity",
   "side": "runner",
   "unsupported": [
-    "Turn begin identify mark; first successful run on mark gains [click] — Mark (CR §10.11): identify mark / run-on-mark triggers — no per-Runner mark server state yet."
+    "First successful run on mark gains [click] — needs successful-run-on-mark trigger (identify_mark IR exists; remaining mark triggers not wired)."
   ],
   "subtypes": [
     "g-mod"
   ],
-  "link": 0
+  "link": 0,
+  "onTurnBegin": {
+    "op": "do",
+    "action": {
+      "kind": "identify_mark"
+    }
+  }
 }

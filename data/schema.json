@@ -63,6 +63,10 @@
         },
         "skipBreachInstallProgramFromHeap": {
           "type": "boolean"
+        },
+        "skipBreach": {
+          "type": "boolean",
+          "description": "On successful run, skip breaching the attacked server (e.g. Chastushka replace-breach)."
         }
       }
     }
@@ -396,7 +400,11 @@
     },
     "onAgendaScored": {
       "type": "object",
-      "description": "Effect IR when Corp scores any agenda (identity continuous)."
+      "description": "Effect IR when Corp scores any agenda (identity or installed continuous)."
+    },
+    "onAgendaScoredOrStolen": {
+      "type": "object",
+      "description": "Effect IR when any agenda is scored or stolen (installed continuous, e.g. Daeg)."
     },
     "hostedCreditsOnInstall": {
       "type": "integer",

@@ -6,10 +6,16 @@
   "type": "resource",
   "side": "runner",
   "unsupported": [
-    "Turn begin identify mark; encounter ice on mark run: trash to bypass — Mark (CR §10.11): identify mark / run-on-mark triggers — no per-Runner mark server state yet."
+    "Encounter ice on mark run: trash to bypass — needs mark-encounter bypass (identify_mark IR exists; remaining mark triggers not wired)."
   ],
   "subtypes": [
     "virtual"
   ],
-  "installCost": 2
+  "installCost": 2,
+  "onTurnBegin": {
+    "op": "do",
+    "action": {
+      "kind": "identify_mark"
+    }
+  }
 }

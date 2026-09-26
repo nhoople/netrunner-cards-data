@@ -6,7 +6,7 @@
   "type": "identity",
   "side": "runner",
   "unsupported": [
-    "First R&D run begin each turn: may charge 1 installed card — Charge (CR §10.10): place 1 power counter on a card that already has ≥1 — no charge primitive yet."
+    "First R&D run begin each turn: may charge 1 installed card — needs first-R&D-run-begin trigger (charge IR exists; still needs this trigger/cost wiring)."
   ],
   "subtypes": [
     "cyborg"

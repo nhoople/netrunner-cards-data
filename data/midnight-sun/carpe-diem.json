@@ -6,18 +6,29 @@
   "type": "event",
   "side": "runner",
   "unsupported": [
-    "Identify mark; may run mark — Mark (CR §10.11): identify mark / run-on-mark triggers — no per-Runner mark server state yet."
+    "May run mark — run-on-mark server targeting not in startsRunSpec yet (identify_mark IR exists; remaining mark triggers not wired)."
   ],
   "subtypes": [
     "run"
   ],
   "playCost": 1,
   "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "gain_credits",
-      "side": "runner",
-      "amount": 4
-    }
+    "op": "seq",
+    "effects": [
+      {
+        "op": "do",
+        "action": {
+          "kind": "identify_mark"
+        }
+      },
+      {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "runner",
+          "amount": 4
+        }
+      }
+    ]
   }
 }
