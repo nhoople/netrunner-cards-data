@@ -75,8 +75,12 @@ def meat(n: int):
 
 
 def brain(n: int):
-    """Core damage — engine IR currently only has brain_damage (CR alias)."""
-    return {"op": "do", "action": {"kind": "brain_damage", "amount": n}}
+    """Core damage (CR §10.4.2b); brain_damage remains a load-time alias."""
+    return {"op": "do", "action": {"kind": "core_damage", "amount": n}}
+
+
+def core(n: int):
+    return {"op": "do", "action": {"kind": "core_damage", "amount": n}}
 
 
 def tags(n: int):
@@ -188,10 +192,7 @@ def breaker_card(c, subtype, strength, break_c, pump_c=None, pump_s=None, break_
 
 
 def note_core_damage_alias() -> str:
-    return (
-        "Printed core damage mapped to brain_damage IR (CR §10.4.2c alias); "
-        "cite/naming alignment incomplete."
-    )
+    return "Uses core_damage IR (CR §10.4.2b)."
 
 
 def sabotage(n: int, interactive: bool = True):
@@ -253,12 +254,22 @@ def map_card(c: dict) -> dict:
     if cid == "esa-afontov-eco-insurrectionist":
         return base(
             c,
-            unsupported=[
-                note_sabotage_trigger(
-                    "First core damage each turn: may draw 1 and sabotage 2 — "
-                    "needs core-damage trigger"
-                ),
-            ],
+            onFirstCoreDamageThisTurn=choose(
+                "runner",
+                [
+                    {
+                        "id": "draw-sabotage",
+                        "label": "Draw 1 and sabotage 2",
+                        "effect": seq(draw("runner", 1), sabotage(2, True)),
+                    },
+                    {
+                        "id": "decline",
+                        "label": "Decline",
+                        "effect": seq(),
+                    },
+                ],
+            ),
+            unsupported=[],
         )
     if cid == "nyusha-sable-sintashta-symphonic-prodigy":
         return base(
@@ -316,10 +327,10 @@ def map_card(c: dict) -> dict:
     if cid == "running-hot":
         return base(
             c,
+            onPlay=gain_clicks("runner", 3),
             unsupported=[
-                "Additional cost: suffer 1 core damage; then gain [click][click][click] — "
-                "play additional cost not modeled (gain omitted fail-closed); "
-                + note_core_damage_alias(),
+                "Additional cost: suffer 1 core damage — play additional cost not enforced "
+                "(gain currently fires without the cost; fail-closed honesty gap).",
             ],
         )
     if cid == "steelskin-scarring":
@@ -409,9 +420,9 @@ def map_card(c: dict) -> dict:
         return base(
             c,
             subtypes=["cybernetic"],
-            onInstall=brain(1),
+            onInstall=core(1),
             unsupported=[
-                "Event play cost −1¢ continuous not modeled; " + note_core_damage_alias(),
+                "Event play cost −1¢ continuous not modeled; install suffers 1 core damage (wired).",
             ],
         )
     if cid == "marrow":
@@ -420,10 +431,10 @@ def map_card(c: dict) -> dict:
             subtypes=["console", "cybernetic"],
             muBonus=1,
             handSizeBonus=3,
-            onInstall=brain(1),
+            onInstall=core(1),
             onAgendaScored=sabotage(1, interactive=True),
             unsupported=[
-                note_core_damage_alias() + "; console limit not enforced.",
+                "Console limit (1 console) not enforced.",
             ],
         )
     if cid == "pan-weave":
@@ -466,11 +477,11 @@ def map_card(c: dict) -> dict:
     if cid == "begemot":
         card = breaker_card(c, "barrier", 2, 1, break_max=99)
         card["memoryCost"] = 2
-        card["onInstall"] = brain(1)
+        card["onInstall"] = core(1)
         card["unsupported"] = [
-            "Install: suffer 1 core damage; +1 strength per core damage taken this game — "
+            "Install: suffer 1 core damage (wired); +1 strength per core damage taken this game — "
             "strength-from-damage not modeled; break any number of barrier subs approximated via "
-            "breakMaxSubs; " + note_core_damage_alias(),
+            "breakMaxSubs."
         ]
         return card
     if cid == "cats-cradle":
@@ -553,8 +564,8 @@ def map_card(c: dict) -> dict:
             subtypes=["sabotage"],
             unsupported=[
                 "[click], trash, suffer 1 core damage: run remote; root cards lose abilities; "
-                "on success trash all root cards — needs paid run + ability-blank + root trash; "
-                + note_core_damage_alias(),
+                "on success trash all root cards — needs paid run + ability-blank + root trash "
+                "(core_damage IR exists).",
             ],
         )
     if cid == "the-twinning":
@@ -811,7 +822,7 @@ def map_card(c: dict) -> dict:
                 {
                     "id": "hakarl-core",
                     "text": "Do 1 core damage.",
-                    "effect": brain(1),
+                    "effect": core(1),
                 },
                 {"id": "hakarl-etr", "text": "End the run.", "effect": etr()},
             ],
@@ -828,8 +839,7 @@ def map_card(c: dict) -> dict:
             ],
             unsupported=[
                 "On rez during run against this server: may derez another installed card; if so "
-                "Runner cannot use paid abilities on bioroid ice rest of turn; "
-                + note_core_damage_alias(),
+                "Runner cannot use paid abilities on bioroid ice rest of turn.",
             ],
         )
     if cid == "wave":

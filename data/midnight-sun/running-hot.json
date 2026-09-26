@@ -6,7 +6,7 @@
   "type": "event",
   "side": "runner",
   "unsupported": [
-    "Additional cost: suffer 1 core damage — play additional cost not enforced; Printed core damage mapped to brain_damage IR (CR §10.4.2c alias); cite/naming alignment incomplete."
+    "Additional cost: suffer 1 core damage — play additional cost not enforced (gain currently fires without the cost; fail-closed honesty gap)."
   ],
   "playCost": 1,
   "onPlay": {

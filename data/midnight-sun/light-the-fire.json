@@ -6,7 +6,7 @@
   "type": "resource",
   "side": "runner",
   "unsupported": [
-    "[click], trash, suffer 1 core damage: run remote; root cards lose abilities; on success trash all root cards — needs paid run + ability-blank + root trash; Printed core damage mapped to brain_damage IR (CR §10.4.2c alias); cite/naming alignment incomplete."
+    "[click], trash, suffer 1 core damage: run remote; root cards lose abilities; on success trash all root cards — needs paid run + ability-blank + root trash (core_damage IR exists)."
   ],
   "subtypes": [
     "sabotage"

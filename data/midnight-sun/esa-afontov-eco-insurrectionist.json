@@ -5,11 +5,48 @@
   "nrdbCode": "33001",
   "type": "identity",
   "side": "runner",
-  "unsupported": [
-    "First core damage each turn: may draw 1 and sabotage 2 — needs core-damage trigger (sabotage IR exists; still needs this trigger wiring)."
-  ],
+  "unsupported": [],
   "subtypes": [
     "cyborg"
   ],
-  "link": 0
+  "link": 0,
+  "onFirstCoreDamageThisTurn": {
+    "op": "choose",
+    "chooser": "runner",
+    "options": [
+      {
+        "id": "draw-sabotage",
+        "label": "Draw 1 and sabotage 2",
+        "effect": {
+          "op": "seq",
+          "effects": [
+            {
+              "op": "do",
+              "action": {
+                "kind": "draw",
+                "side": "runner",
+                "amount": 1
+              }
+            },
+            {
+              "op": "do",
+              "action": {
+                "kind": "sabotage",
+                "amount": 2,
+                "interactive": true
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "seq",
+          "effects": []
+        }
+      }
+    ]
+  }
 }
