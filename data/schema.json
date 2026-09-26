@@ -637,6 +637,10 @@
     "playAdditionalClick": {
       "type": "boolean"
     },
+    "playAdditionalCost": {
+      "type": "object",
+      "description": "Effect IR paid as an additional cost when playing this event/operation (e.g. Running Hot suffer core damage)."
+    },
     "hostGainsAllIceSubtypes": {
       "type": "boolean"
     },

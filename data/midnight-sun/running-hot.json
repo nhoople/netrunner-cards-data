@@ -5,10 +5,15 @@
   "nrdbCode": "33003",
   "type": "event",
   "side": "runner",
-  "unsupported": [
-    "Additional cost: suffer 1 core damage — play additional cost not enforced (gain currently fires without the cost; fail-closed honesty gap)."
-  ],
+  "unsupported": [],
   "playCost": 1,
+  "playAdditionalCost": {
+    "op": "do",
+    "action": {
+      "kind": "core_damage",
+      "amount": 1
+    }
+  },
   "onPlay": {
     "op": "do",
     "action": {

@@ -323,11 +323,9 @@ def map_card(c: dict) -> dict:
     if cid == "running-hot":
         return base(
             c,
+            playAdditionalCost=core(1),
             onPlay=gain_clicks("runner", 3),
-            unsupported=[
-                "Additional cost: suffer 1 core damage — play additional cost not enforced "
-                "(gain currently fires without the cost; fail-closed honesty gap).",
-            ],
+            unsupported=[],
         )
     if cid == "steelskin-scarring":
         return base(
