@@ -15,19 +15,17 @@ Files under [`data/`](data/) are the API. Clone the repo or fetch a **tagged** r
 | Path | Use |
 | --- | --- |
 | [`data/schema.json`](data/schema.json) | JSON Schema for card definitions |
-| [`data/pool.json`](data/pool.json) | Declared supported corpus / wave order |
-| [`data/stubs/`](data/stubs/) | Synthetic demo ice/breakers |
-| [`data/wave1/`](data/wave1/), [`data/wave2/`](data/wave2/) | Early corpus waves |
+| [`data/pool.json`](data/pool.json) | Declared supported corpus / release order |
 | [`data/system-gateway/`](data/system-gateway/) | System Gateway (NRDB `sg`) |
 | [`data/system-update-2021/`](data/system-update-2021/) | System Update 2021 (NRDB `su21`) |
 
-**Corpus order:** stubs → wave1 → wave2 → System Gateway → System Update 2021 → later releases.
+**Corpus order:** System Gateway → System Update 2021 → later releases.
 
 Partial cards list unimplemented clauses in an `unsupported` array — never silent wrong behavior.
 
 ### Pin by tag (engine)
 
-Consumers should pin a release tag (e.g. `v0.1.0`), not `master`.
+Consumers should pin a release tag (e.g. `v0.2.0`), not `master`.
 
 The engine declares the pin in [`data/cards-pin.json`](https://github.com/nhoople/netrunner-engine/blob/master/data/cards-pin.json) and fetches with:
 
@@ -38,32 +36,33 @@ npm run fetch-cards   # → vendor/cards-data/
 Example raw URL base:
 
 ```text
-https://raw.githubusercontent.com/nhoople/netrunner-cards-data/v0.1.0/data
+https://raw.githubusercontent.com/nhoople/netrunner-cards-data/v0.2.0/data
 ```
 
 JavaScript — load the pool and one card from a tagged release:
 
 ```js
 const base =
-  "https://raw.githubusercontent.com/nhoople/netrunner-cards-data/v0.1.0/data";
+  "https://raw.githubusercontent.com/nhoople/netrunner-cards-data/v0.2.0/data";
 const pool = await fetch(`${base}/pool.json`).then((r) => r.json());
-const crowbar = await fetch(`${base}/stubs/crowbar.json`).then((r) => r.json());
-console.log(pool.corpusOrder, crowbar.title);
+const marjanah = await fetch(`${base}/system-gateway/marjanah.json`).then((r) =>
+  r.json(),
+);
+console.log(pool.corpusOrder, marjanah.title);
 ```
 
 ## Current corpus
 
-| Wave | Count | Notes |
-|------|------:|-------|
-| stubs | 6 | Barrier ice + Crowbar fracter (demos) |
-| wave1 | 8 | IDs, Hedge Fund / Easy Mark, PAD, Data Raven, … |
-| wave2 | 13 | Ice diversity, Gordian/Ninja, Sure Gamble, … |
+| Release | Count | Notes |
+|---------|------:|-------|
 | system-gateway | 77 | Null Signal System Gateway (fully supported) |
 | system-update-2021 | 82 | Null Signal System Update 2021 (fully supported) |
 
+Synthetic stubs and early wave1/wave2 dirs were removed in `v0.2.0`. Reprints that previously lived only under those waves now ship under their Null Signal release directories.
+
 ## Versioning
 
-Tag dataset releases as `vMAJOR.MINOR.PATCH` (e.g. `v0.1.0`). Bump when card JSON, pool, or schema that consumers rely on changes.
+Tag dataset releases as `vMAJOR.MINOR.PATCH` (e.g. `v0.2.0`). Bump when card JSON, pool, or schema that consumers rely on changes.
 
 ## License
 

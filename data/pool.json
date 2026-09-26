@@ -1,64 +1,16 @@
 {
   "version": 1,
-  "description": "Declared supported card pool for the engine. Waves expand as IR/mechanics allow. Cards with partial fidelity list explicit unsupported notes — never silent wrong behavior.",
+  "description": "Declared supported card pool for the engine. Releases expand as IR/mechanics allow. Cards with partial fidelity list explicit unsupported notes — never silent wrong behavior.",
   "agendaPointsToWinDefault": 7,
   "corpusOrder": [
-    "stubs",
-    "wave1",
-    "wave2",
     "system-gateway",
     "system-update-2021",
     "next-release"
   ],
   "waves": {
-    "stubs": {
-      "status": "supported",
-      "notes": "Synthetic ice/breaker demos for vertical slices (barrier + fracter).",
-      "cards": [
-        "static-wall",
-        "lockdown-wall",
-        "bastion",
-        "pulse-needle",
-        "scrap-code",
-        "crowbar"
-      ]
-    },
-    "wave1": {
-      "status": "supported",
-      "notes": "First corpus wave beyond pure ice/breaker stubs: identities, economy ops/events, agenda, recurring-style resource, sentry with trace.",
-      "cards": [
-        "stub-corp-id",
-        "stub-runner-id",
-        "hedge-fund",
-        "easy-mark",
-        "priority-requisition",
-        "pad-campaign",
-        "data-raven",
-        "aesops-pawnshop"
-      ]
-    },
-    "wave2": {
-      "status": "supported",
-      "notes": "Ice diversity (code gate / sentry / bioroid barrier), matching decoder+killer, economy draw ops/events, onScore agenda, click resource. Uses lose_clicks + onScore IR expansions.",
-      "cards": [
-        "sure-gamble",
-        "diesel",
-        "beanstalk-royalties",
-        "neural-katana",
-        "pop-up-window",
-        "enigma",
-        "heimdall-1-0",
-        "rototurret",
-        "hunter",
-        "gordian-blade",
-        "ninja",
-        "hostile-takeover",
-        "armitage-codebusting"
-      ]
-    },
     "system-gateway": {
       "status": "supported",
-      "notes": "Null Signal System Gateway (NRDB pack sg) learner/starter set — 77 cards. Corpus order: System Gateway → System Update 2021 → later releases. Reprints Sure Gamble and Hedge Fund reuse wave2/wave1 defs.",
+      "notes": "Null Signal System Gateway (NRDB pack sg) learner/starter set — 77 cards. Corpus order: System Gateway → System Update 2021 → later releases. Includes Sure Gamble and Hedge Fund as Gateway printings.",
       "cards": [
         "rene-loup-arcemont-party-animal",
         "wildcat-strike",
@@ -141,7 +93,7 @@
     },
     "system-update-2021": {
       "status": "supported",
-      "notes": "Null Signal System Update 2021 (NRDB pack su21) — 82 classic reprints, the set immediately after System Gateway. Reprints Diesel, Enigma, Rototurret, Gordian Blade, PAD Campaign, Aesop's Pawnshop, Pop-up Window, Hostile Takeover reuse earlier wave defs. Partial cards list explicit unsupported notes. Next corpus wave is the following Null Signal release after SU21.",
+      "notes": "Null Signal System Update 2021 (NRDB pack su21) — 82 classic reprints, the set immediately after System Gateway. Partial cards list explicit unsupported notes. Next corpus wave is the following Null Signal release after SU21.",
       "cards": [
         "quetzal-free-spirit",
         "reina-roja-freedom-fighter",

@@ -3,7 +3,7 @@
   "title": "Aesop's Pawnshop",
   "type": "resource",
   "side": "runner",
-  "wave": "wave1",
+  "wave": "system-update-2021",
   "installCost": 1,
   "recurringCreditsMax": 0,
   "unsupported": [],
@@ -14,7 +14,7 @@
     "options": [
       {
         "id": "trash",
-        "label": "Trash an installed card you own \u2192 gain 3\u00a2",
+        "label": "Trash an installed card you own → gain 3¢",
         "effect": {
           "op": "do",
           "action": {

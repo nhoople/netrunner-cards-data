@@ -3,11 +3,15 @@
   "title": "Hedge Fund",
   "type": "operation",
   "side": "corp",
-  "wave": "wave1",
+  "wave": "system-gateway",
   "playCost": 5,
   "onPlay": {
     "op": "do",
-    "action": { "kind": "gain_credits", "side": "corp", "amount": 9 }
+    "action": {
+      "kind": "gain_credits",
+      "side": "corp",
+      "amount": 9
+    }
   },
   "unsupported": []
 }
