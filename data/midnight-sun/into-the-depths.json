@@ -5,14 +5,53 @@
   "nrdbCode": "33023",
   "type": "event",
   "side": "runner",
-  "unsupported": [
-    "On success, for each ice passed resolve one unique option (gain 4¢ / search+install program / charge) — needs passed-ice count + exclusive choice resolution (charge IR exists; still needs this trigger/cost wiring)."
-  ],
+  "unsupported": [],
   "subtypes": [
     "run"
   ],
   "playCost": 1,
   "runEvent": {
-    "servers": "any"
+    "servers": "any",
+    "onSuccessfulRun": {
+      "op": "do",
+      "action": {
+        "kind": "exclusive_choices_per_passed_ice",
+        "options": [
+          {
+            "id": "credits",
+            "label": "Gain 4¢",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "gain_credits",
+                "side": "runner",
+                "amount": 4
+              }
+            }
+          },
+          {
+            "id": "search",
+            "label": "Search your stack for a program and install it",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "search_stack_program_install"
+              }
+            }
+          },
+          {
+            "id": "charge",
+            "label": "Charge 1 of your installed cards",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "charge",
+                "pick": "choose"
+              }
+            }
+          }
+        ]
+      }
+    }
   }
 }
