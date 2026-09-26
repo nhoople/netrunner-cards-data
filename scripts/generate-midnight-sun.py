@@ -205,6 +205,10 @@ def identify_mark():
     return {"op": "do", "action": {"kind": "identify_mark"}}
 
 
+def start_run_on_mark():
+    return {"op": "do", "action": {"kind": "start_run_on_mark"}}
+
+
 def charge_choose():
     return {"op": "do", "action": {"kind": "charge", "pick": "choose"}}
 
@@ -260,11 +264,13 @@ def map_card(c: dict) -> dict:
         return base(
             c,
             onTurnBegin=identify_mark(),
-            unsupported=[
-                note_mark_remainder(
-                    "First successful run on mark gains [click] — needs successful-run-on-mark trigger"
-                ),
-            ],
+            onSuccessfulRunOncePerTurn=True,
+            onSuccessfulRun={
+                "op": "if",
+                "cond": {"op": "attacking_mark"},
+                "then": gain_clicks("runner", 1),
+            },
+            unsupported=[],
         )
     if cid == "captain-padma-isbister-intrepid-explorer":
         return base(
@@ -328,12 +334,26 @@ def map_card(c: dict) -> dict:
         return base(
             c,
             subtypes=["run"],
-            onPlay=seq(identify_mark(), gain("runner", 4)),
-            unsupported=[
-                note_mark_remainder(
-                    "May run mark — run-on-mark server targeting not in startsRunSpec yet"
+            onPlay=seq(
+                identify_mark(),
+                gain("runner", 4),
+                choose(
+                    "runner",
+                    [
+                        {
+                            "id": "run-mark",
+                            "label": "Make a run on the mark",
+                            "effect": start_run_on_mark(),
+                        },
+                        {
+                            "id": "decline",
+                            "label": "Decline",
+                            "effect": seq(),
+                        },
+                    ],
                 ),
-            ],
+            ),
+            unsupported=[],
         )
     if cid == "pinhole-threading":
         return base(

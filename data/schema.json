@@ -26,7 +26,8 @@
             "hq_rd",
             "rd",
             "hq",
-            "archives"
+            "archives",
+            "mark"
           ]
         },
         "requireNotRunThisTurn": {
@@ -388,7 +389,11 @@
     },
     "onSuccessfulRun": {
       "type": "object",
-      "description": "Effect IR when the Runner makes a successful run while this card is installed."
+      "description": "Effect IR when the Runner makes a successful run while this card is installed (or is the Runner identity)."
+    },
+    "onSuccessfulRunOncePerTurn": {
+      "type": "boolean",
+      "description": "When true, onSuccessfulRun fires at most once per turn for this instance (e.g. first successful run on the mark)."
     },
     "onAccess": {
       "type": "object",

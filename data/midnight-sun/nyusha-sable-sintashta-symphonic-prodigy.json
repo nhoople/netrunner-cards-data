@@ -5,9 +5,7 @@
   "nrdbCode": "33011",
   "type": "identity",
   "side": "runner",
-  "unsupported": [
-    "First successful run on mark gains [click] — needs successful-run-on-mark trigger (identify_mark IR exists; remaining mark triggers not wired)."
-  ],
+  "unsupported": [],
   "subtypes": [
     "g-mod"
   ],
@@ -16,6 +14,21 @@
     "op": "do",
     "action": {
       "kind": "identify_mark"
+    }
+  },
+  "onSuccessfulRunOncePerTurn": true,
+  "onSuccessfulRun": {
+    "op": "if",
+    "cond": {
+      "op": "attacking_mark"
+    },
+    "then": {
+      "op": "do",
+      "action": {
+        "kind": "gain_clicks",
+        "side": "runner",
+        "amount": 1
+      }
     }
   }
 }
