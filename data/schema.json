@@ -583,6 +583,11 @@
       "type": "integer",
       "minimum": 0
     },
+    "eventPlayCostDiscount": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "While installed, lower the play cost of each event by this many credits (CR §1.16.2a; e.g. Ghosttongue)."
+    },
     "gainCreditOnFirstRunEvent": {
       "type": "integer",
       "minimum": 0
