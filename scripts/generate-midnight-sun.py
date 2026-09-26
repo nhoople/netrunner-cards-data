@@ -463,9 +463,9 @@ def map_card(c: dict) -> dict:
             muBonus=2,
             powerCountersOnInstall=3,
             unsupported=[
-                "First successful run each turn places 1 power counter; 2 power counters break "
-                "up to 2 subs — needs success trigger + power-counter break cost; "
-                "console limit not enforced."
+                "First successful run each turn places 1 power counter; 2 hosted power counters "
+                "break up to 2 subs — success trigger + break ability not wired "
+                "(cost.powerCounters IR exists); console limit not enforced."
             ],
         )
 
@@ -501,7 +501,23 @@ def map_card(c: dict) -> dict:
     if cid == "revolver":
         card = breaker_card(c, "sentry", 1, 0, 2, 3)
         card["powerCountersOnInstall"] = 6
+        card["breaker"]["breakViaPaidAbilityOnly"] = True
         card["paidAbilities"] = card.get("paidAbilities", []) + [
+            {
+                "id": "revolver-power-break",
+                "label": "Spend 1 power counter: break 1 sentry subroutine",
+                "clickCost": 0,
+                "creditCost": 0,
+                "cost": {"powerCounters": 1},
+                "windows": ["encounter_paw"],
+                "effect": {
+                    "op": "do",
+                    "action": {
+                        "kind": "break_encounter_subroutine",
+                        "requireSubtype": "sentry",
+                    },
+                },
+            },
             {
                 "id": "revolver-trash-break",
                 "label": "Trash Revolver: break 1 sentry subroutine",
@@ -516,12 +532,9 @@ def map_card(c: dict) -> dict:
                         "requireSubtype": "sentry",
                     },
                 },
-            }
+            },
         ]
-        card["unsupported"] = [
-            "Break with hosted power counter (alternate to trash) — paid ability cost has no "
-            "powerCounters field yet; trash-to-break mapped."
-        ]
+        card["unsupported"] = []
         return card
     if cid == "hyperbaric":
         card = breaker_card(c, "code gate", 0, 1)
@@ -535,12 +548,21 @@ def map_card(c: dict) -> dict:
     if cid == "propeller":
         card = breaker_card(c, "barrier", 0, 1)
         card["powerCountersOnInstall"] = 4
-        # Do not emit a free pump — printed cost is a power counter.
-        card["paidAbilities"] = []
-        card["unsupported"] = [
-            "Hosted power counter: +2 strength — cost.powerCounters not in schema; "
-            "pump ability omitted (fail closed) until counter spend exists."
+        card["paidAbilities"] = [
+            {
+                "id": "propeller-power-pump",
+                "label": "Spend 1 power counter: +2 strength",
+                "clickCost": 0,
+                "creditCost": 0,
+                "cost": {"powerCounters": 1},
+                "windows": ["encounter_paw"],
+                "effect": {
+                    "op": "do",
+                    "action": {"kind": "pump_strength", "amount": 2},
+                },
+            }
         ]
+        card["unsupported"] = []
         return card
 
     # --- Resources ---

@@ -5,9 +5,7 @@
   "nrdbCode": "33027",
   "type": "program",
   "side": "runner",
-  "unsupported": [
-    "Hosted power counter: +2 strength — cost.powerCounters not in schema; pump ability omitted (fail closed) until counter spend exists."
-  ],
+  "unsupported": [],
   "subtypes": [
     "icebreaker",
     "fracter"
@@ -20,6 +18,26 @@
     "strength": 0,
     "breakCredits": 1
   },
-  "paidAbilities": [],
+  "paidAbilities": [
+    {
+      "id": "propeller-power-pump",
+      "label": "Spend 1 power counter: +2 strength",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "powerCounters": 1
+      },
+      "windows": [
+        "encounter_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "pump_strength",
+          "amount": 2
+        }
+      }
+    }
+  ],
   "powerCountersOnInstall": 4
 }
