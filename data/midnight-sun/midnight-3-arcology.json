@@ -1,0 +1,24 @@
+{
+  "id": "midnight-3-arcology",
+  "title": "Midnight-3 Arcology",
+  "wave": "midnight-sun",
+  "nrdbCode": "33032",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [
+    "Skip discard step this turn — discard-phase skip not modeled."
+  ],
+  "subtypes": [
+    "expansion"
+  ],
+  "advancementRequirement": 4,
+  "agendaPoints": 2,
+  "onScore": {
+    "op": "do",
+    "action": {
+      "kind": "draw",
+      "side": "corp",
+      "amount": 3
+    }
+  }
+}

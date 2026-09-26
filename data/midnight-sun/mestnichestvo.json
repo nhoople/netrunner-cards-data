@@ -1,0 +1,42 @@
+{
+  "id": "mestnichestvo",
+  "title": "Mestnichestvo",
+  "wave": "midnight-sun",
+  "nrdbCode": "33053",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [
+    "Encounter: may remove 1 hosted advancement; if so Runner loses 3¢ — advancement removal omitted (fail closed)."
+  ],
+  "subtypes": [
+    "code gate"
+  ],
+  "installCost": 5,
+  "rezCost": 5,
+  "strength": 4,
+  "canAdvance": true,
+  "subroutines": [
+    {
+      "id": "mest-lose",
+      "text": "The Runner loses 3¢.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "lose_credits",
+          "side": "runner",
+          "amount": 3
+        }
+      }
+    },
+    {
+      "id": "mest-etr",
+      "text": "End the run.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "end_the_run"
+        }
+      }
+    }
+  ]
+}

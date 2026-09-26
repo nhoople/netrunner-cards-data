@@ -1,0 +1,51 @@
+{
+  "id": "no-free-lunch",
+  "title": "No Free Lunch",
+  "wave": "midnight-sun",
+  "nrdbCode": "33020",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "installCost": 0,
+  "paidAbilities": [
+    {
+      "id": "nfl-credits",
+      "label": "Trash No Free Lunch: gain 3¢",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "trashSelf": true
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "runner",
+          "amount": 3
+        }
+      }
+    },
+    {
+      "id": "nfl-tag",
+      "label": "Trash No Free Lunch: remove 1 tag",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "trashSelf": true
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "remove_tags",
+          "amount": 1
+        }
+      }
+    }
+  ]
+}

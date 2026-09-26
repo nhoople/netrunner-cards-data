@@ -1,0 +1,22 @@
+{
+  "id": "pan-weave",
+  "title": "PAN-Weave",
+  "wave": "midnight-sun",
+  "nrdbCode": "33014",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [
+    "First successful HQ run each turn: Corp loses 1¢, then Runner gains 1¢ — needs first-HQ-success transfer."
+  ],
+  "subtypes": [
+    "cybernetic"
+  ],
+  "installCost": 2,
+  "onInstall": {
+    "op": "do",
+    "action": {
+      "kind": "meat_damage",
+      "amount": 1
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "id": "envelopment",
+  "title": "Envelopment",
+  "wave": "midnight-sun",
+  "nrdbCode": "33060",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [
+    "On rez place 4 power counters; turn begin remove 1; gains ETR sub before others per counter — no add_power_counter-on-rez IR; dynamic subs not modeled."
+  ],
+  "subtypes": [
+    "barrier"
+  ],
+  "installCost": 5,
+  "rezCost": 5,
+  "strength": 5,
+  "subroutines": [
+    {
+      "id": "env-trash",
+      "text": "Trash this ice.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "trash_self"
+        }
+      }
+    }
+  ]
+}

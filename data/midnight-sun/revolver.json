@@ -1,0 +1,67 @@
+{
+  "id": "revolver",
+  "title": "Revolver",
+  "wave": "midnight-sun",
+  "nrdbCode": "33018",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [
+    "Break with hosted power counter (alternate to trash) — paid ability cost has no powerCounters field yet; trash-to-break mapped."
+  ],
+  "subtypes": [
+    "icebreaker",
+    "killer",
+    "weapon"
+  ],
+  "installCost": 2,
+  "strength": 1,
+  "memoryCost": 1,
+  "breaker": {
+    "breaksSubtype": "sentry",
+    "strength": 1,
+    "breakCredits": 0,
+    "pumpCredits": 2,
+    "pumpStrength": 3
+  },
+  "paidAbilities": [
+    {
+      "id": "revolver-pump",
+      "label": "Pump Revolver +3 strength",
+      "clickCost": 0,
+      "creditCost": 2,
+      "cost": {
+        "credits": 2
+      },
+      "windows": [
+        "encounter_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "pump_strength",
+          "amount": 3
+        }
+      }
+    },
+    {
+      "id": "revolver-trash-break",
+      "label": "Trash Revolver: break 1 sentry subroutine",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "trashSelf": true
+      },
+      "windows": [
+        "encounter_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "break_encounter_subroutine",
+          "requireSubtype": "sentry"
+        }
+      }
+    }
+  ],
+  "powerCountersOnInstall": 6
+}

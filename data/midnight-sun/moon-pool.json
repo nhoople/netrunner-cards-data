@@ -1,0 +1,17 @@
+{
+  "id": "moon-pool",
+  "title": "Moon Pool",
+  "wave": "midnight-sun",
+  "nrdbCode": "33042",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [
+    "RFG self: trash up to 2 from HQ; reveal up to 2 facedown Archives and shuffle to R&D; per agenda revealed may place 1 advancement — needs RFG + multi-step."
+  ],
+  "subtypes": [
+    "facility"
+  ],
+  "installCost": 3,
+  "rezCost": 3,
+  "trashCost": 3
+}

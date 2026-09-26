@@ -1,0 +1,15 @@
+{
+  "id": "nyusha-sable-sintashta-symphonic-prodigy",
+  "title": "Nyusha \"Sable\" Sintashta: Symphonic Prodigy",
+  "wave": "midnight-sun",
+  "nrdbCode": "33011",
+  "type": "identity",
+  "side": "runner",
+  "unsupported": [
+    "Turn begin identify mark; first successful run on mark gains [click] — Mark (CR §10.11): identify mark / run-on-mark triggers — no per-Runner mark server state yet."
+  ],
+  "subtypes": [
+    "g-mod"
+  ],
+  "link": 0
+}

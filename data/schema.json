@@ -573,6 +573,10 @@
     "playRequiresSuccessfulRunThisTurn": {
       "type": "boolean"
     },
+    "playRequiresSuccessfulHqRunThisTurn": {
+      "type": "boolean",
+      "description": "Play only if the Runner made a successful run on HQ this turn (e.g. Emergency Shutdown)."
+    },
     "canAdvance": {
       "type": "boolean"
     },

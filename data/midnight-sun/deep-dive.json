@@ -1,0 +1,13 @@
+{
+  "id": "deep-dive",
+  "title": "Deep Dive",
+  "wave": "midnight-sun",
+  "nrdbCode": "33022",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [
+    "Requires successful HQ+R&D+Archives this turn (not just any successful run); Corp sets aside top 8 of R&D faceup; access 1 then may spend [click] for another; shuffle set-aside — needs multi-central success gate + set-aside zone."
+  ],
+  "playCost": 2,
+  "playRequiresSuccessfulRunThisTurn": true
+}

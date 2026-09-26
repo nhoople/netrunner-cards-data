@@ -1,0 +1,18 @@
+{
+  "id": "drago-ivanov",
+  "title": "Drago Ivanov",
+  "wave": "midnight-sun",
+  "nrdbCode": "33051",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [
+    "2 hosted advancements: give Runner 1 tag (Corp turn only) — advancement-cost paid ability not modeled."
+  ],
+  "subtypes": [
+    "executive"
+  ],
+  "installCost": 0,
+  "rezCost": 0,
+  "trashCost": 1,
+  "canAdvance": true
+}

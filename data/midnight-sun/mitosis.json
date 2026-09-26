@@ -1,0 +1,16 @@
+{
+  "id": "mitosis",
+  "title": "Mitosis",
+  "wave": "midnight-sun",
+  "nrdbCode": "33046",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [
+    "Install up to 2 from HQ into new remotes with 2 advancements each; cannot score/rez them this turn — multi-install + lockout not modeled."
+  ],
+  "subtypes": [
+    "double"
+  ],
+  "playCost": 3,
+  "playAdditionalClick": true
+}

@@ -1,0 +1,17 @@
+{
+  "id": "svyatogor-excavator",
+  "title": "Svyatogor Excavator",
+  "wave": "midnight-sun",
+  "nrdbCode": "33059",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [
+    "Turn begin: may trash 1 other installed card to gain 3¢ — trash-other targeting not available (omitted rather than granting free credits)."
+  ],
+  "subtypes": [
+    "industrial"
+  ],
+  "installCost": 0,
+  "rezCost": 0,
+  "trashCost": 4
+}

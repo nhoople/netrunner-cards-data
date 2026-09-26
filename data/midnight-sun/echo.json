@@ -1,0 +1,18 @@
+{
+  "id": "echo",
+  "title": "Echo",
+  "wave": "midnight-sun",
+  "nrdbCode": "33035",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [
+    "When rez harmonic ice, place power counter; gains ETR sub per counter — needs harmonic rez trigger + dynamic subroutines."
+  ],
+  "subtypes": [
+    "barrier",
+    "harmonic"
+  ],
+  "installCost": 2,
+  "rezCost": 2,
+  "strength": 0
+}

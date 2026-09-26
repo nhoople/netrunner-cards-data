@@ -1,0 +1,16 @@
+{
+  "id": "daeg-first-net-cat",
+  "title": "Daeg, First Net-Cat",
+  "wave": "midnight-sun",
+  "nrdbCode": "33028",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [
+    "Whenever an agenda is scored or stolen, may charge 1 installed card — Charge (CR §10.10): place 1 power counter on a card that already has ≥1 — no charge primitive yet."
+  ],
+  "subtypes": [
+    "companion",
+    "virtual"
+  ],
+  "installCost": 1
+}

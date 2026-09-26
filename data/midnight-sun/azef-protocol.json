@@ -1,0 +1,23 @@
+{
+  "id": "azef-protocol",
+  "title": "Azef Protocol",
+  "wave": "midnight-sun",
+  "nrdbCode": "33058",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [
+    "Additional cost to score: trash 1 other installed card — score additional cost not enforced."
+  ],
+  "subtypes": [
+    "security"
+  ],
+  "advancementRequirement": 3,
+  "agendaPoints": 2,
+  "onScore": {
+    "op": "do",
+    "action": {
+      "kind": "meat_damage",
+      "amount": 2
+    }
+  }
+}

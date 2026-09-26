@@ -1,0 +1,1071 @@
+#!/usr/bin/env python3
+"""Generate Midnight Sun card JSON from NRDB pack `ms`.
+
+Requires /tmp/nrdb-cards.json (curl https://netrunnerdb.com/api/2.0/public/cards).
+
+Midnight Sun Booster Pack (`msbp`) titles all reprint in `ms` — absorb under
+midnight-sun/; do not emit a separate msbp wave.
+
+Hand-mapped Effect IR where existing primitives suffice; novel CR keywords
+(sabotage / mark / charge) and other unmapped clauses list honest unsupported
+notes — never invent IR.
+
+Usage: python3 scripts/generate-midnight-sun.py
+"""
+from __future__ import annotations
+
+import json
+import re
+import unicodedata
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+OUT = ROOT / "data" / "midnight-sun"
+NRDB = Path("/tmp/nrdb-cards.json")
+
+# Titles that also appear in msbp (primary metadata is the ms printing).
+MSBP_ABSORBED = {
+    "light-the-fire",
+    "revolver",
+    "deep-dive",
+    "hakarl-1-0",
+    "anemone",
+    "vladisibirsk-city-grid",
+    "azef-protocol",
+}
+
+
+def slugify(title: str) -> str:
+    t = unicodedata.normalize("NFKD", title)
+    t = "".join(c for c in t if not unicodedata.combining(c))
+    t = t.lower()
+    t = t.replace("“", "").replace("”", "").replace('"', "")
+    t = t.replace("'", "").replace("’", "")
+    t = t.replace(".", "-").replace(":", " ")
+    t = re.sub(r"[^a-z0-9]+", "-", t)
+    return t.strip("-")
+
+
+def strip_html(text: str) -> str:
+    return re.sub(r"<[^>]+>", "", text or "")
+
+
+def etr():
+    return {"op": "do", "action": {"kind": "end_the_run"}}
+
+
+def gain(side: str, n: int):
+    return {"op": "do", "action": {"kind": "gain_credits", "side": side, "amount": n}}
+
+
+def lose(side: str, n: int):
+    return {"op": "do", "action": {"kind": "lose_credits", "side": side, "amount": n}}
+
+
+def draw(side: str, n: int):
+    return {"op": "do", "action": {"kind": "draw", "side": side, "amount": n}}
+
+
+def net(n: int):
+    return {"op": "do", "action": {"kind": "net_damage", "amount": n}}
+
+
+def meat(n: int):
+    return {"op": "do", "action": {"kind": "meat_damage", "amount": n}}
+
+
+def brain(n: int):
+    """Core damage — engine IR currently only has brain_damage (CR alias)."""
+    return {"op": "do", "action": {"kind": "brain_damage", "amount": n}}
+
+
+def tags(n: int):
+    return {"op": "do", "action": {"kind": "give_tags", "amount": n}}
+
+
+def gain_clicks(side: str, n: int):
+    return {"op": "do", "action": {"kind": "gain_clicks", "side": side, "amount": n}}
+
+
+def trash_prog(pick="choose"):
+    return {"op": "do", "action": {"kind": "trash_program", "pick": pick}}
+
+
+def trash_res(pick="choose"):
+    return {"op": "do", "action": {"kind": "trash_resource", "pick": pick}}
+
+
+def remove_tags(n: int):
+    return {"op": "do", "action": {"kind": "remove_tags", "amount": n}}
+
+
+def seq(*effects):
+    return {"op": "seq", "effects": list(effects)}
+
+
+def choose(chooser: str, options: list):
+    return {"op": "choose", "chooser": chooser, "options": options}
+
+
+def iff(cond, then, else_=None):
+    e = {"op": "if", "cond": cond, "then": then}
+    if else_ is not None:
+        e["else"] = else_
+    return e
+
+
+def base(c, **extra):
+    subtypes = []
+    if c.get("keywords"):
+        subtypes = [s.strip().lower() for s in c["keywords"].split(" - ")]
+    card = {
+        "id": slugify(c["title"]),
+        "title": c["title"],
+        "wave": "midnight-sun",
+        "nrdbCode": c["code"],
+        "type": c["type_code"],
+        "side": "runner" if c["side_code"] == "runner" else "corp",
+        "unsupported": [],
+    }
+    if subtypes:
+        card["subtypes"] = subtypes
+    if c.get("cost") is not None:
+        if c["type_code"] in ("event", "operation"):
+            card["playCost"] = c["cost"]
+        elif c["type_code"] in ("ice", "asset", "upgrade"):
+            card["installCost"] = c["cost"]
+            card["rezCost"] = c["cost"]
+        else:
+            card["installCost"] = c["cost"]
+    if c.get("trash_cost") is not None:
+        card["trashCost"] = c["trash_cost"]
+    if c.get("strength") is not None:
+        card["strength"] = c["strength"]
+    if c.get("memory_cost") is not None:
+        card["memoryCost"] = c["memory_cost"]
+    if c.get("advancement_cost") is not None:
+        card["advancementRequirement"] = c["advancement_cost"]
+    if c.get("agenda_points") is not None:
+        card["agendaPoints"] = c["agenda_points"]
+    if c.get("base_link") is not None:
+        card["link"] = c["base_link"]
+    card.update(extra)
+    return card
+
+
+def breaker_card(c, subtype, strength, break_c, pump_c=None, pump_s=None, break_max=None, **extra):
+    br = {
+        "breaksSubtype": subtype,
+        "strength": strength,
+        "breakCredits": break_c,
+    }
+    if break_max is not None:
+        br["breakMaxSubs"] = break_max
+    if pump_c is not None:
+        br["pumpCredits"] = pump_c
+        br["pumpStrength"] = pump_s if pump_s is not None else 1
+    paid = []
+    if pump_c is not None:
+        pump_eff = {
+            "op": "do",
+            "action": {
+                "kind": "pump_strength",
+                "amount": pump_s if pump_s is not None else 1,
+            },
+        }
+        paid.append(
+            {
+                "id": f"{slugify(c['title'])}-pump",
+                "label": f"Pump {c['title']} +{pump_s if pump_s is not None else 1} strength",
+                "clickCost": 0,
+                "creditCost": pump_c,
+                "cost": {"credits": pump_c},
+                "windows": ["encounter_paw"],
+                "effect": pump_eff,
+            }
+        )
+    return base(c, breaker=br, paidAbilities=paid, **extra)
+
+
+def note_core_damage_alias() -> str:
+    return (
+        "Printed core damage mapped to brain_damage IR (CR §10.4.2c alias); "
+        "cite/naming alignment incomplete."
+    )
+
+
+def note_sabotage(n: int | str = "N") -> str:
+    return (
+        f"Sabotage {n} (CR §10.12): Corp trashes that many from HQ and/or R&D top — "
+        "no sabotage primitive yet."
+    )
+
+
+def note_mark() -> str:
+    return (
+        "Mark (CR §10.11): identify mark / run-on-mark triggers — "
+        "no per-Runner mark server state yet."
+    )
+
+
+def note_charge() -> str:
+    return (
+        "Charge (CR §10.10): place 1 power counter on a card that already has ≥1 — "
+        "no charge primitive yet."
+    )
+
+
+def map_card(c: dict) -> dict:
+    cid = slugify(c["title"])
+    text = strip_html(c.get("text") or "")
+    plain = re.sub(r"\s+", " ", text).strip()
+
+    # --- Runner identities ---
+    if cid == "esa-afontov-eco-insurrectionist":
+        return base(
+            c,
+            unsupported=[
+                "First core damage each turn: may draw 1 and sabotage 2 — needs core-damage trigger + "
+                + note_sabotage(2),
+            ],
+        )
+    if cid == "nyusha-sable-sintashta-symphonic-prodigy":
+        return base(
+            c,
+            unsupported=[
+                "Turn begin identify mark; first successful run on mark gains [click] — "
+                + note_mark(),
+            ],
+        )
+    if cid == "captain-padma-isbister-intrepid-explorer":
+        return base(
+            c,
+            unsupported=[
+                "First R&D run begin each turn: may charge 1 installed card — " + note_charge(),
+            ],
+        )
+
+    # --- Corp identities ---
+    if cid == "pravdivost-consulting-political-solutions":
+        return base(
+            c,
+            unsupported=[
+                "First successful run each turn: may place 1 advancement on an advanceable card — "
+                "needs successful-run trigger + advancement targeting."
+            ],
+        )
+    if cid == "ob-superheavy-logistics-extract-export-excel":
+        return base(
+            c,
+            unsupported=[
+                "Once per turn when trash rezzed card (not during install): search R&D for printed "
+                "rez cost exactly 1¢ less, install and rez ignoring credit costs."
+            ],
+        )
+
+    # --- Events ---
+    if cid == "chastushka":
+        return base(
+            c,
+            subtypes=["run", "sabotage"],
+            runEvent={"servers": "hq"},
+            unsupported=[
+                "Successful HQ run: instead of breach, sabotage 4 — replace-breach + "
+                + note_sabotage(4),
+            ],
+        )
+    if cid == "running-hot":
+        return base(
+            c,
+            unsupported=[
+                "Additional cost: suffer 1 core damage; then gain [click][click][click] — "
+                "play additional cost not modeled (gain omitted fail-closed); "
+                + note_core_damage_alias(),
+            ],
+        )
+    if cid == "steelskin-scarring":
+        return base(
+            c,
+            onPlay=draw("runner", 3),
+            unsupported=[
+                "When trashed from grip or stack, may draw 2 — needs grip/stack trash trigger."
+            ],
+        )
+    if cid == "carpe-diem":
+        return base(
+            c,
+            subtypes=["run"],
+            onPlay=gain("runner", 4),
+            unsupported=[
+                "Identify mark; may run mark — " + note_mark(),
+            ],
+        )
+    if cid == "pinhole-threading":
+        return base(
+            c,
+            subtypes=["run"],
+            runEvent={"servers": "any"},
+            unsupported=[
+                "Successful: instead of breach, access 1 root card of another server; "
+                "cannot steal/trash if agenda — needs replace-breach cross-server access."
+            ],
+        )
+    if cid == "deep-dive":
+        return base(
+            c,
+            playRequiresSuccessfulRunThisTurn=True,
+            unsupported=[
+                "Requires successful HQ+R&D+Archives this turn (not just any successful run); "
+                "Corp sets aside top 8 of R&D faceup; access 1 then may spend [click] for another; "
+                "shuffle set-aside — needs multi-central success gate + set-aside zone."
+            ],
+        )
+    if cid == "into-the-depths":
+        return base(
+            c,
+            subtypes=["run"],
+            runEvent={"servers": "any"},
+            unsupported=[
+                "On success, for each ice passed resolve one unique option (gain 4¢ / search+install "
+                "program / charge) — needs passed-ice count + exclusive choice resolution; "
+                + note_charge(),
+            ],
+        )
+    if cid == "rigging-up":
+        return base(
+            c,
+            subtypes=["mod"],
+            onPlay={
+                "op": "do",
+                "action": {"kind": "may_install_from_grip"},
+            },
+            unsupported=[
+                "Install program or hardware from grip paying 3¢ less; may charge if able — "
+                "discounted install targeting incomplete; " + note_charge(),
+            ],
+        )
+
+    # --- Hardware ---
+    if cid == "ghosttongue":
+        return base(
+            c,
+            subtypes=["cybernetic"],
+            onInstall=brain(1),
+            unsupported=[
+                "Event play cost −1¢ continuous not modeled; " + note_core_damage_alias(),
+            ],
+        )
+    if cid == "marrow":
+        return base(
+            c,
+            subtypes=["console", "cybernetic"],
+            muBonus=1,
+            handSizeBonus=3,
+            onInstall=brain(1),
+            unsupported=[
+                "Whenever Corp scores an agenda, sabotage 1 — needs agenda-score trigger; "
+                + note_sabotage(1)
+                + "; "
+                + note_core_damage_alias()
+                + "; console limit not enforced."
+            ],
+        )
+    if cid == "pan-weave":
+        return base(
+            c,
+            subtypes=["cybernetic"],
+            onInstall=meat(1),
+            unsupported=[
+                "First successful HQ run each turn: Corp loses 1¢, then Runner gains 1¢ — "
+                "needs first-HQ-success transfer."
+            ],
+        )
+    if cid == "virtuoso":
+        return base(
+            c,
+            subtypes=["console"],
+            muBonus=1,
+            unsupported=[
+                "Turn begin identify mark; first successful mark run: bonus HQ access or "
+                "breach HQ at run end — " + note_mark() + "; console limit not enforced."
+            ],
+        )
+    if cid == "endurance":
+        return base(
+            c,
+            subtypes=["console", "vehicle"],
+            muBonus=2,
+            powerCountersOnInstall=3,
+            unsupported=[
+                "First successful run each turn places 1 power counter; 2 power counters break "
+                "up to 2 subs — needs success trigger + power-counter break cost; "
+                "console limit not enforced."
+            ],
+        )
+
+    # --- Programs / breakers ---
+    if cid == "begemot":
+        card = breaker_card(c, "barrier", 2, 1, break_max=99)
+        card["memoryCost"] = 2
+        card["onInstall"] = brain(1)
+        card["unsupported"] = [
+            "Install: suffer 1 core damage; +1 strength per core damage taken this game — "
+            "strength-from-damage not modeled; break any number of barrier subs approximated via "
+            "breakMaxSubs; " + note_core_damage_alias(),
+        ]
+        return card
+    if cid == "cats-cradle":
+        card = breaker_card(c, "code gate", 1, 1, 1, 1)
+        card["unsupported"] = [
+            "Rez cost of each code gate +1¢ — not applied via iceRezCostIncrease (that field "
+            "boosts all ice; omitted rather than over-applying)."
+        ]
+        return card
+    if cid == "cezve":
+        return base(
+            c,
+            memoryCost=1,
+            recurringCreditsMax=2,
+            recurringSpendFor=["run_central"],
+            unsupported=[
+                "Recurring credits refill modeled; spending only during runs on central servers "
+                "is not yet gated."
+            ],
+        )
+    if cid == "revolver":
+        card = breaker_card(c, "sentry", 1, 0, 2, 3)
+        card["powerCountersOnInstall"] = 6
+        card["paidAbilities"] = card.get("paidAbilities", []) + [
+            {
+                "id": "revolver-trash-break",
+                "label": "Trash Revolver: break 1 sentry subroutine",
+                "clickCost": 0,
+                "creditCost": 0,
+                "cost": {"trashSelf": True},
+                "windows": ["encounter_paw"],
+                "effect": {
+                    "op": "do",
+                    "action": {
+                        "kind": "break_encounter_subroutine",
+                        "requireSubtype": "sentry",
+                    },
+                },
+            }
+        ]
+        card["unsupported"] = [
+            "Break with hosted power counter (alternate to trash) — paid ability cost has no "
+            "powerCounters field yet; trash-to-break mapped."
+        ]
+        return card
+    if cid == "hyperbaric":
+        card = breaker_card(c, "code gate", 0, 1)
+        card["powerCountersOnInstall"] = 1
+        card["strengthPerPowerCounter"] = True
+        card["unsupported"] = [
+            "Strength per power counter flag set; 2¢ paid ability to place a power counter "
+            "deferred (no add_power_counter IR) — not listed as a free no-op."
+        ]
+        return card
+    if cid == "propeller":
+        card = breaker_card(c, "barrier", 0, 1)
+        card["powerCountersOnInstall"] = 4
+        # Do not emit a free pump — printed cost is a power counter.
+        card["paidAbilities"] = []
+        card["unsupported"] = [
+            "Hosted power counter: +2 strength — cost.powerCounters not in schema; "
+            "pump ability omitted (fail closed) until counter spend exists."
+        ]
+        return card
+
+    # --- Resources ---
+    if cid == "avgustina-ivanovskaya":
+        return base(
+            c,
+            subtypes=["connection"],
+            unsupported=[
+                "First virus program install each turn: sabotage 1 — needs install trigger; "
+                + note_sabotage(1),
+            ],
+        )
+    if cid == "light-the-fire":
+        return base(
+            c,
+            subtypes=["sabotage"],
+            unsupported=[
+                "[click], trash, suffer 1 core damage: run remote; root cards lose abilities; "
+                "on success trash all root cards — needs paid run + ability-blank + root trash; "
+                + note_core_damage_alias(),
+            ],
+        )
+    if cid == "the-twinning":
+        return base(
+            c,
+            subtypes=["virtual"],
+            unsupported=[
+                "First spend from installed card each turn places power counter; on HQ/R&D breach "
+                "may remove up to 2 for bonus access — needs spend trigger + breach bonus."
+            ],
+        )
+    if cid == "backstitching":
+        return base(
+            c,
+            subtypes=["virtual"],
+            unsupported=[
+                "Turn begin identify mark; encounter ice on mark run: trash to bypass — "
+                + note_mark(),
+            ],
+        )
+    if cid == "no-free-lunch":
+        return base(
+            c,
+            paidAbilities=[
+                {
+                    "id": "nfl-credits",
+                    "label": "Trash No Free Lunch: gain 3¢",
+                    "clickCost": 0,
+                    "creditCost": 0,
+                    "cost": {"trashSelf": True},
+                    "windows": ["runner_action_paw"],
+                    "effect": gain("runner", 3),
+                },
+                {
+                    "id": "nfl-tag",
+                    "label": "Trash No Free Lunch: remove 1 tag",
+                    "clickCost": 0,
+                    "creditCost": 0,
+                    "cost": {"trashSelf": True},
+                    "windows": ["runner_action_paw"],
+                    "effect": remove_tags(1),
+                },
+            ],
+            unsupported=[],
+        )
+    if cid == "daeg-first-net-cat":
+        return base(
+            c,
+            subtypes=["companion", "virtual"],
+            unsupported=[
+                "Whenever an agenda is scored or stolen, may charge 1 installed card — "
+                + note_charge(),
+            ],
+        )
+    if cid == "environmental-testing":
+        return base(
+            c,
+            unsupported=[
+                "On program/hardware install place power counter; at 4+ trash self and gain 9¢ — "
+                "needs install trigger + threshold trash/gain."
+            ],
+        )
+    if cid == "stoneship-chart-room":
+        return base(
+            c,
+            subtypes=["location"],
+            paidAbilities=[
+                {
+                    "id": "stoneship-draw",
+                    "label": "Trash Stoneship Chart Room: draw 2",
+                    "clickCost": 0,
+                    "creditCost": 0,
+                    "cost": {"trashSelf": True},
+                    "windows": ["runner_action_paw"],
+                    "effect": draw("runner", 2),
+                },
+            ],
+            unsupported=[
+                "Trash: charge 1 installed card — " + note_charge(),
+            ],
+        )
+
+    # --- Agendas ---
+    if cid == "elivagar-bifurcation":
+        return base(
+            c,
+            subtypes=["security"],
+            onScore=choose(
+                "corp",
+                [
+                    {
+                        "id": "derez",
+                        "label": "Derez 1 ice",
+                        "effect": {
+                            "op": "do",
+                            "action": {"kind": "derez_ice", "pick": "choose"},
+                        },
+                    },
+                    {
+                        "id": "decline",
+                        "label": "Decline",
+                        "effect": gain("corp", 0),
+                    },
+                ],
+            ),
+            unsupported=[
+                "May derez 1 installed card (any type); modeled as derez_ice only."
+            ],
+        )
+    if cid == "midnight-3-arcology":
+        return base(
+            c,
+            subtypes=["expansion"],
+            onScore=draw("corp", 3),
+            unsupported=["Skip discard step this turn — discard-phase skip not modeled."],
+        )
+    if cid == "blood-in-the-water":
+        return base(
+            c,
+            subtypes=["research"],
+            unsupported=[
+                "Advancement requirement X = cards in Runner grip — dynamic advancement "
+                "requirement not modeled (printed advancement_cost absent in NRDB)."
+            ],
+        )
+    if cid == "regenesis":
+        return base(
+            c,
+            subtypes=["research"],
+            unsupported=[
+                "On score if no Corp cards added to Archives this turn: reveal facedown agenda "
+                "in Archives and add to score area — needs Archives-empty gate + score-from-archives."
+            ],
+        )
+    if cid == "artificial-cryptocrash":
+        return base(
+            c,
+            subtypes=["initiative"],
+            onScore=lose("runner", 7),
+            unsupported=[],
+        )
+    if cid == "azef-protocol":
+        return base(
+            c,
+            subtypes=["security"],
+            onScore=meat(2),
+            unsupported=[
+                "Additional cost to score: trash 1 other installed card — score additional cost "
+                "not enforced."
+            ],
+        )
+
+    # --- Assets ---
+    if cid == "refuge-campaign":
+        return base(
+            c,
+            subtypes=["advertisement"],
+            onTurnBegin=gain("corp", 2),
+            unsupported=[],
+        )
+    if cid == "trieste-model-bioroids":
+        return base(
+            c,
+            subtypes=["bioroid"],
+            unsupported=[
+                "On rez choose rezzed bioroid ice; Runner card abilities cannot break its "
+                "subroutines — needs chosen-ice lock + break forbid."
+            ],
+        )
+    if cid == "bladderwort":
+        return base(
+            c,
+            subtypes=["hostile"],
+            onTurnBegin=seq(
+                gain("corp", 1),
+                iff(
+                    {"op": "credits_lte", "side": "corp", "amount": 4},
+                    net(1),
+                ),
+            ),
+            unsupported=[],
+        )
+    if cid == "moon-pool":
+        return base(
+            c,
+            subtypes=["facility"],
+            unsupported=[
+                "RFG self: trash up to 2 from HQ; reveal up to 2 facedown Archives and shuffle "
+                "to R&D; per agenda revealed may place 1 advancement — needs RFG + multi-step."
+            ],
+        )
+    if cid == "chekist-scion":
+        return base(
+            c,
+            subtypes=["ambush"],
+            canAdvance=True,
+            unsupported=[
+                "On access while installed: give 1 tag + 1 per hosted advancement — "
+                "advancement-scaled tags not modeled (ability omitted)."
+            ],
+        )
+    if cid == "drago-ivanov":
+        return base(
+            c,
+            subtypes=["executive"],
+            canAdvance=True,
+            unsupported=[
+                "2 hosted advancements: give Runner 1 tag (Corp turn only) — advancement-cost "
+                "paid ability not modeled."
+            ],
+        )
+    if cid == "ubiquitous-vig":
+        return base(
+            c,
+            subtypes=["advertisement"],
+            canAdvance=True,
+            unsupported=[
+                "Turn begin: gain 1¢ per hosted advancement — gain_credits_per_advancement "
+                "primitive missing."
+            ],
+        )
+    if cid == "svyatogor-excavator":
+        return base(
+            c,
+            subtypes=["industrial"],
+            unsupported=[
+                "Turn begin: may trash 1 other installed card to gain 3¢ — trash-other "
+                "targeting not available (omitted rather than granting free credits)."
+            ],
+        )
+
+    # --- Ice ---
+    if cid == "echo":
+        return base(
+            c,
+            subtypes=["barrier", "harmonic"],
+            unsupported=[
+                "When rez harmonic ice, place power counter; gains ETR sub per counter — "
+                "needs harmonic rez trigger + dynamic subroutines."
+            ],
+        )
+    if cid == "hakarl-1-0":
+        return base(
+            c,
+            subtypes=["barrier", "bioroid", "ap"],
+            subroutines=[
+                {
+                    "id": "hakarl-core",
+                    "text": "Do 1 core damage.",
+                    "effect": brain(1),
+                },
+                {"id": "hakarl-etr", "text": "End the run.", "effect": etr()},
+            ],
+            paidAbilities=[
+                {
+                    "id": "hakarl-click-break",
+                    "label": "Lose [click]: Break 1 subroutine on Hákarl 1.0",
+                    "clickCost": 1,
+                    "creditCost": 0,
+                    "cost": {"clicks": 1},
+                    "windows": ["encounter_paw"],
+                    "effect": {"op": "do", "action": {"kind": "break_host_subroutine"}},
+                }
+            ],
+            unsupported=[
+                "On rez during run against this server: may derez another installed card; if so "
+                "Runner cannot use paid abilities on bioroid ice rest of turn; "
+                + note_core_damage_alias(),
+            ],
+        )
+    if cid == "wave":
+        return base(
+            c,
+            subtypes=["code gate", "harmonic"],
+            unsupported=[
+                "On rez during run vs this server: may search R&D for ice, reveal, add to HQ; "
+                "subroutine: gain 1¢ per rezzed harmonic ice — per-harmonic gain not modeled "
+                "(sub omitted rather than flat 1¢)."
+            ],
+        )
+    if cid == "anemone":
+        return base(
+            c,
+            subtypes=["sentry", "ap"],
+            subroutines=[
+                {"id": "anemone-net", "text": "Do 1 net damage.", "effect": net(1)}
+            ],
+            unsupported=[
+                "On rez during run vs this server: may trash 1 from HQ to do 2 net damage."
+            ],
+        )
+    if cid == "bathynomus":
+        return base(
+            c,
+            subtypes=["sentry", "ap"],
+            subroutines=[
+                {"id": "bath-net", "text": "Do 3 net damage.", "effect": net(3)}
+            ],
+            unsupported=[
+                "+3 strength while protecting Archives — no Archives-only strength bonus field "
+                "(not approximated with remote bonus)."
+            ],
+        )
+    if cid == "ivik":
+        return base(
+            c,
+            subtypes=["barrier", "ap"],
+            subroutines=[
+                {"id": "ivik-net", "text": "Do 2 net damage.", "effect": net(2)},
+                {"id": "ivik-etr", "text": "End the run.", "effect": etr()},
+            ],
+            unsupported=[
+                "Rez cost −1¢ per rezzed code gate ice — dynamic rez discount not modeled."
+            ],
+        )
+    if cid == "mestnichestvo":
+        return base(
+            c,
+            subtypes=["code gate"],
+            canAdvance=True,
+            subroutines=[
+                {
+                    "id": "mest-lose",
+                    "text": "The Runner loses 3¢.",
+                    "effect": lose("runner", 3),
+                },
+                {"id": "mest-etr", "text": "End the run.", "effect": etr()},
+            ],
+            unsupported=[
+                "Encounter: may remove 1 hosted advancement; if so Runner loses 3¢ — "
+                "advancement removal omitted (fail closed)."
+            ],
+        )
+    if cid == "vasilisa":
+        return base(
+            c,
+            subtypes=["sentry", "observer"],
+            onEncounter=choose(
+                "corp",
+                [
+                    {
+                        "id": "pay-adv",
+                        "label": "Pay 1¢: place 1 advancement on advanceable card",
+                        "effect": seq(
+                            lose("corp", 1),
+                            {
+                                "op": "do",
+                                "action": {"kind": "place_advancements", "amount": 1},
+                            },
+                        ),
+                    },
+                    {
+                        "id": "decline",
+                        "label": "Decline",
+                        "effect": gain("corp", 0),
+                    },
+                ],
+            ),
+            subroutines=[
+                {
+                    "id": "vasilisa-tag",
+                    "text": "Give the Runner 1 tag.",
+                    "effect": tags(1),
+                }
+            ],
+            unsupported=[
+                "Encounter place-advancement targeting uses place_advancements (engine pick); "
+                "verify advanceable-only targeting."
+            ],
+        )
+    if cid == "envelopment":
+        return base(
+            c,
+            subtypes=["barrier"],
+            subroutines=[
+                {
+                    "id": "env-trash",
+                    "text": "Trash this ice.",
+                    "effect": {"op": "do", "action": {"kind": "trash_self"}},
+                }
+            ],
+            unsupported=[
+                "On rez place 4 power counters; turn begin remove 1; gains ETR sub before "
+                "others per counter — no add_power_counter-on-rez IR; dynamic subs not modeled."
+            ],
+        )
+    if cid == "maskirovka":
+        return base(
+            c,
+            subtypes=["barrier"],
+            subroutines=[
+                {"id": "mask-gain", "text": "Gain 2¢.", "effect": gain("corp", 2)},
+                {"id": "mask-etr", "text": "End the run.", "effect": etr()},
+            ],
+            unsupported=[],
+        )
+    if cid == "stavka":
+        return base(
+            c,
+            subtypes=["sentry", "destroyer"],
+            subroutines=[
+                {
+                    "id": "stavka-trash1",
+                    "text": "Trash 1 installed program.",
+                    "effect": trash_prog(),
+                },
+                {
+                    "id": "stavka-trash2",
+                    "text": "Trash 1 installed program.",
+                    "effect": trash_prog(),
+                },
+            ],
+            unsupported=[
+                "On rez may trash 1 other installed card for +5 strength remainder of run."
+            ],
+        )
+
+    # --- Operations ---
+    if cid == "big-deal":
+        return base(
+            c,
+            subtypes=["terminal"],
+            onPlay={
+                "op": "do",
+                "action": {"kind": "place_advancements", "amount": 4},
+            },
+            unsupported=[
+                "Terminal (end action phase); may score the advanced card if able; RFG self — "
+                "terminal/score/RFG not fully modeled."
+            ],
+        )
+    if cid == "mitosis":
+        return base(
+            c,
+            subtypes=["double"],
+            playAdditionalClick=True,
+            unsupported=[
+                "Install up to 2 from HQ into new remotes with 2 advancements each; cannot "
+                "score/rez them this turn — multi-install + lockout not modeled."
+            ],
+        )
+    if cid == "backroom-machinations":
+        return base(
+            c,
+            subtypes=["gray ops"],
+            onPlay=gain("corp", 0),
+            unsupported=[
+                "Additional cost: remove 1 tag; add this operation to score area as 1-point "
+                "agenda — tag cost + score-as-agenda not modeled."
+            ],
+        )
+    if cid == "extract":
+        return base(
+            c,
+            subtypes=["transaction"],
+            onPlay=gain("corp", 6),
+            unsupported=[
+                "May trash 1 installed card to gain an additional 3¢ — optional trash+gain "
+                "omitted (fail closed) until trash-other targeting exists."
+            ],
+        )
+    if cid == "mutually-assured-destruction":
+        return base(
+            c,
+            subtypes=["triple"],
+            playAdditionalClick=True,
+            unsupported=[
+                "Additional cost: spend [click][click] (triple; only one extra click flagged); "
+                "trash any number of rezzed cards; give 1 tag each — multi-trash + tags not modeled."
+            ],
+        )
+    if cid == "trust-operation":
+        return base(
+            c,
+            subtypes=["gray ops"],
+            playRequiresTagged=True,
+            onPlay=trash_res(),
+            unsupported=[
+                "Install and rez 1 card from Archives ignoring all costs — Archives-only "
+                "ignore-costs install/rez incomplete (trash resource mapped; install omitted)."
+            ],
+        )
+
+    # --- Upgrades ---
+    if cid == "mavirus":
+        return base(
+            c,
+            subtypes=["ambush"],
+            unsupported=[
+                "R&D access must reveal; on access may purge virus counters; if rezzed also "
+                "do 1 net; trash: purge — purge virus IR missing (abilities omitted)."
+            ],
+        )
+    if cid == "vladisibirsk-city-grid":
+        return base(
+            c,
+            subtypes=["region"],
+            canAdvance=True,
+            unsupported=[
+                "Once per turn: 2 hosted advancements → place 2 advancements on another "
+                "advanceable card in this server's root; limit 1 region/server."
+            ],
+        )
+
+    # Fallback: skeleton with full text as unsupported
+    card = base(c)
+    card["unsupported"] = [
+        f"Full text not yet mapped to IR: {plain[:240]}"
+    ]
+    return card
+
+
+def main():
+    data = json.loads(NRDB.read_text())["data"]
+    ms = sorted(
+        [c for c in data if c.get("pack_code") == "ms"],
+        key=lambda c: c.get("position", 0),
+    )
+    assert len(ms) == 65, len(ms)
+
+    msbp = [c for c in data if c.get("pack_code") == "msbp"]
+    assert len(msbp) == 7, len(msbp)
+    msbp_slugs = {slugify(c["title"]) for c in msbp}
+    assert msbp_slugs == MSBP_ABSORBED, (msbp_slugs, MSBP_ABSORBED)
+    ms_slugs = {slugify(c["title"]) for c in ms}
+    assert msbp_slugs <= ms_slugs, msbp_slugs - ms_slugs
+
+    OUT.mkdir(parents=True, exist_ok=True)
+    for p in OUT.glob("*.json"):
+        p.unlink()
+
+    written = []
+    for c in ms:
+        mapped = map_card(c)
+        cid = mapped["id"]
+        path = OUT / f"{cid}.json"
+        path.write_text(json.dumps(mapped, indent=2, ensure_ascii=False) + "\n")
+        written.append(cid)
+
+    assert len(written) == 65, len(written)
+
+    full = sum(
+        1
+        for cid in written
+        if not json.loads((OUT / f"{cid}.json").read_text()).get("unsupported")
+    )
+    partial = len(written) - full
+
+    manifest = {
+        "pack": "midnight-sun",
+        "nrdbPackCode": "ms",
+        "count": 65,
+        "written": 65,
+        "status": "in-progress",
+        "msbpAbsorbed": sorted(MSBP_ABSORBED),
+        "notes": (
+            "Midnight Sun Booster Pack (msbp) titles reprint in ms — absorbed here; "
+            "no separate msbp wave. Wave is in-progress: many cards have explicit "
+            "unsupported notes (sabotage/mark/charge and other IR gaps)."
+        ),
+        "cards": written,
+    }
+    (OUT / "_manifest.json").write_text(
+        json.dumps(manifest, indent=2, ensure_ascii=False) + "\n"
+    )
+
+    print(f"Wrote {len(written)} cards to {OUT}")
+    print(f"Among written: full={full} partial={partial}")
+    print(f"msbp absorbed: {sorted(MSBP_ABSORBED)}")
+    print("POOL_IDS=" + json.dumps(written))
+
+
+if __name__ == "__main__":
+    main()

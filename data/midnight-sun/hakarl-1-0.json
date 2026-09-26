@@ -1,0 +1,62 @@
+{
+  "id": "hakarl-1-0",
+  "title": "Hákarl 1.0",
+  "wave": "midnight-sun",
+  "nrdbCode": "33036",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [
+    "On rez during run against this server: may derez another installed card; if so Runner cannot use paid abilities on bioroid ice rest of turn; Printed core damage mapped to brain_damage IR (CR §10.4.2c alias); cite/naming alignment incomplete."
+  ],
+  "subtypes": [
+    "barrier",
+    "bioroid",
+    "ap"
+  ],
+  "installCost": 5,
+  "rezCost": 5,
+  "strength": 4,
+  "subroutines": [
+    {
+      "id": "hakarl-core",
+      "text": "Do 1 core damage.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "brain_damage",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "id": "hakarl-etr",
+      "text": "End the run.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "end_the_run"
+        }
+      }
+    }
+  ],
+  "paidAbilities": [
+    {
+      "id": "hakarl-click-break",
+      "label": "Lose [click]: Break 1 subroutine on Hákarl 1.0",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1
+      },
+      "windows": [
+        "encounter_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "break_host_subroutine"
+        }
+      }
+    }
+  ]
+}

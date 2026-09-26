@@ -1,0 +1,23 @@
+{
+  "id": "extract",
+  "title": "Extract",
+  "wave": "midnight-sun",
+  "nrdbCode": "33063",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [
+    "May trash 1 installed card to gain an additional 3¢ — optional trash+gain omitted (fail closed) until trash-other targeting exists."
+  ],
+  "subtypes": [
+    "transaction"
+  ],
+  "playCost": 3,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "gain_credits",
+      "side": "corp",
+      "amount": 6
+    }
+  }
+}

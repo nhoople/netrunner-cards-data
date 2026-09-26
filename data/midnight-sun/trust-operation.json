@@ -1,0 +1,23 @@
+{
+  "id": "trust-operation",
+  "title": "Trust Operation",
+  "wave": "midnight-sun",
+  "nrdbCode": "33065",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [
+    "Install and rez 1 card from Archives ignoring all costs — Archives-only ignore-costs install/rez incomplete (trash resource mapped; install omitted)."
+  ],
+  "subtypes": [
+    "gray ops"
+  ],
+  "playCost": 0,
+  "playRequiresTagged": true,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "trash_resource",
+      "pick": "choose"
+    }
+  }
+}
