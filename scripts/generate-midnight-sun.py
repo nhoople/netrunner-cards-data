@@ -577,11 +577,40 @@ def map_card(c: dict) -> dict:
         return base(
             c,
             subtypes=["sabotage"],
-            unsupported=[
-                "[click], trash, suffer 1 core damage: run remote; root cards lose abilities; "
-                "on success trash all root cards — needs paid run + ability-blank + root trash "
-                "(core_damage IR exists).",
+            paidAbilities=[
+                {
+                    "id": "ltf-run",
+                    "label": (
+                        "[click], trash, suffer 1 core damage: run a remote; "
+                        "blank root; on success trash root"
+                    ),
+                    "clickCost": 1,
+                    "creditCost": 0,
+                    "cost": {
+                        "clicks": 1,
+                        "trashSelf": True,
+                        "coreDamage": 1,
+                    },
+                    "windows": ["runner_action_paw"],
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "gain_credits",
+                            "side": "runner",
+                            "amount": 0,
+                        },
+                    },
+                    "startsRun": {
+                        "servers": "remote",
+                        "blankAttackedServerRoot": True,
+                        "onSuccessfulRun": {
+                            "op": "do",
+                            "action": {"kind": "trash_attacked_server_root"},
+                        },
+                    },
+                }
             ],
+            unsupported=[],
         )
     if cid == "the-twinning":
         return base(
