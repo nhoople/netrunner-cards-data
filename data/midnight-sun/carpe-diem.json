@@ -5,9 +5,7 @@
   "nrdbCode": "33012",
   "type": "event",
   "side": "runner",
-  "unsupported": [
-    "May run mark — run-on-mark server targeting not in startsRunSpec yet (identify_mark IR exists; remaining mark triggers not wired)."
-  ],
+  "unsupported": [],
   "subtypes": [
     "run"
   ],
@@ -28,6 +26,30 @@
           "side": "runner",
           "amount": 4
         }
+      },
+      {
+        "op": "choose",
+        "chooser": "runner",
+        "options": [
+          {
+            "id": "run-mark",
+            "label": "Make a run on the mark",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "start_run_on_mark"
+              }
+            }
+          },
+          {
+            "id": "decline",
+            "label": "Decline",
+            "effect": {
+              "op": "seq",
+              "effects": []
+            }
+          }
+        ]
       }
     ]
   }
