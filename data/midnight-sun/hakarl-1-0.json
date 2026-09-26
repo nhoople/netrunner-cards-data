@@ -6,7 +6,7 @@
   "type": "ice",
   "side": "corp",
   "unsupported": [
-    "On rez during run against this server: may derez another installed card; if so Runner cannot use paid abilities on bioroid ice rest of turn; Printed core damage mapped to brain_damage IR (CR §10.4.2c alias); cite/naming alignment incomplete."
+    "On rez during run against this server: may derez another installed card; if so Runner cannot use paid abilities on bioroid ice rest of turn."
   ],
   "subtypes": [
     "barrier",
@@ -23,7 +23,7 @@
       "effect": {
         "op": "do",
         "action": {
-          "kind": "brain_damage",
+          "kind": "core_damage",
           "amount": 1
         }
       }

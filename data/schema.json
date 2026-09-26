@@ -403,6 +403,10 @@
       "type": "object",
       "description": "Effect IR the first time the Runner is tagged each turn (identities)."
     },
+    "onFirstCoreDamageThisTurn": {
+      "type": "object",
+      "description": "Effect IR the first time the Runner suffers core damage each turn (Runner identities; CR §10.4.2b)."
+    },
     "onAgendaScored": {
       "type": "object",
       "description": "Effect IR when Corp scores any agenda (identity or installed continuous)."

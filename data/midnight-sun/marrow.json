@@ -6,7 +6,7 @@
   "type": "hardware",
   "side": "runner",
   "unsupported": [
-    "Printed core damage mapped to brain_damage IR (CR §10.4.2c alias); cite/naming alignment incomplete.; console limit not enforced."
+    "Console limit (1 console) not enforced."
   ],
   "subtypes": [
     "console",
@@ -18,7 +18,7 @@
   "onInstall": {
     "op": "do",
     "action": {
-      "kind": "brain_damage",
+      "kind": "core_damage",
       "amount": 1
     }
   },
