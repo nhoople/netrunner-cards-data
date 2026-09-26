@@ -5,13 +5,12 @@
   "nrdbCode": "33005",
   "type": "hardware",
   "side": "runner",
-  "unsupported": [
-    "Event play cost −1¢ continuous not modeled; install suffers 1 core damage (wired)."
-  ],
+  "unsupported": [],
   "subtypes": [
     "cybernetic"
   ],
   "installCost": 2,
+  "eventPlayCostDiscount": 1,
   "onInstall": {
     "op": "do",
     "action": {

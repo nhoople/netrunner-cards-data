@@ -415,9 +415,8 @@ def map_card(c: dict) -> dict:
             c,
             subtypes=["cybernetic"],
             onInstall=core(1),
-            unsupported=[
-                "Event play cost −1¢ continuous not modeled; install suffers 1 core damage (wired).",
-            ],
+            eventPlayCostDiscount=1,
+            unsupported=[],
         )
     if cid == "marrow":
         return base(
