@@ -303,6 +303,14 @@
           "requiresAdvancements": {
             "type": "integer",
             "minimum": 0
+          },
+          "requireEncounterSubtype": {
+            "type": "string",
+            "description": "Encountered ice must have this subtype (e.g. Abagnale bypass)."
+          },
+          "requireAttackingMark": {
+            "type": "boolean",
+            "description": "Ability usable only while attacking the designated mark (e.g. Backstitching)."
           }
         }
       }
