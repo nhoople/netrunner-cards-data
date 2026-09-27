@@ -956,6 +956,28 @@ def map_card(c: dict) -> dict:
             c,
             subtypes=["code gate"],
             canAdvance=True,
+            onEncounter=choose(
+                "corp",
+                [
+                    {
+                        "id": "remove-adv",
+                        "label": "Remove 1 advancement: Runner loses 3¢",
+                        "effect": {
+                            "op": "do",
+                            "action": {
+                                "kind": "remove_advancements",
+                                "amount": 1,
+                                "then": lose("runner", 3),
+                            },
+                        },
+                    },
+                    {
+                        "id": "decline",
+                        "label": "Decline",
+                        "effect": gain("corp", 0),
+                    },
+                ],
+            ),
             subroutines=[
                 {
                     "id": "mest-lose",
@@ -964,10 +986,7 @@ def map_card(c: dict) -> dict:
                 },
                 {"id": "mest-etr", "text": "End the run.", "effect": etr()},
             ],
-            unsupported=[
-                "Encounter: may remove 1 hosted advancement; if so Runner loses 3¢ — "
-                "advancement removal omitted (fail closed)."
-            ],
+            unsupported=[],
         )
     if cid == "vasilisa":
         return base(

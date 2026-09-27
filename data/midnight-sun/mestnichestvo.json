@@ -5,9 +5,7 @@
   "nrdbCode": "33053",
   "type": "ice",
   "side": "corp",
-  "unsupported": [
-    "Encounter: may remove 1 hosted advancement; if so Runner loses 3¢ — advancement removal omitted (fail closed)."
-  ],
+  "unsupported": [],
   "subtypes": [
     "code gate"
   ],
@@ -15,6 +13,43 @@
   "rezCost": 5,
   "strength": 4,
   "canAdvance": true,
+  "onEncounter": {
+    "op": "choose",
+    "chooser": "corp",
+    "options": [
+      {
+        "id": "remove-adv",
+        "label": "Remove 1 advancement: Runner loses 3¢",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "remove_advancements",
+            "amount": 1,
+            "then": {
+              "op": "do",
+              "action": {
+                "kind": "lose_credits",
+                "side": "runner",
+                "amount": 3
+              }
+            }
+          }
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "corp",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  },
   "subroutines": [
     {
       "id": "mest-lose",
