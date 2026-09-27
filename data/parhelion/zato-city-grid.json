@@ -5,13 +5,13 @@
   "nrdbCode": "33127",
   "type": "upgrade",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: Remote server only. Each piece of ice protecting this server gains \"When the Runner encounters this ice, choose 1 subroutine on it. You may trash this ice to resolve that subroutine.\". Limit 1 region per server."
-  ],
+  "unsupported": [],
   "subtypes": [
     "region"
   ],
   "installCost": 3,
   "rezCost": 3,
-  "trashCost": 3
+  "trashCost": 3,
+  "remoteOnly": true,
+  "iceGainsTrashToResolveChosenSubOnEncounter": true
 }

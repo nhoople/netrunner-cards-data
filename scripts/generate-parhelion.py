@@ -577,6 +577,27 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    if cid == "nanisivik-grid":
+        # Approach this server: may flip 1 facedown Archives ice faceup and
+        # resolve 1 subroutine on it. Region limit is engine-enforced.
+        return base(
+            c,
+            onApproachServer={
+                "op": "do",
+                "action": {"kind": "may_flip_archives_ice_resolve_subroutine"},
+            },
+            unsupported=[],
+        )
+
+    if cid == "zato-city-grid":
+        # Remote only. Protecting ice gains encounter may-trash-to-resolve-sub.
+        return base(
+            c,
+            remoteOnly=True,
+            iceGainsTrashToResolveChosenSubOnEncounter=True,
+            unsupported=[],
+        )
+
     if cid == "hybrid-release":
         return base(
             c,
