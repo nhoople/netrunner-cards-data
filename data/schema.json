@@ -543,6 +543,19 @@
       "minimum": 1,
       "description": "Gain this many credits the first time each turn a run on your mark ends if you breached (Info Bounty)."
     },
+    "meatDamageOnInstalledCorpTrashOncePerTurn": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Do this much meat damage the first time each turn the Runner trashes an installed Corp card (Hostile Architecture)."
+    },
+    "maySpendPowerCountersForBonusRdAccess": {
+      "type": "object",
+      "required": ["max"],
+      "properties": {
+        "max": { "type": "integer", "minimum": 1 }
+      },
+      "description": "When breaching R&D, may remove up to max hosted power counters for that many bonus accesses (Wake Implant)."
+    },
     "hostedCreditsOnInstall": {
       "type": "integer",
       "minimum": 0,
