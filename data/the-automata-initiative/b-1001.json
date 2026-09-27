@@ -5,14 +5,35 @@
   "nrdbCode": "34065",
   "type": "asset",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: Remove 1 tag: End the run. Use this ability only during a run against another server."
-  ],
+  "unsupported": [],
   "subtypes": [
     "bioroid",
     "enforcer"
   ],
   "installCost": 1,
   "rezCost": 1,
-  "trashCost": 3
+  "trashCost": 3,
+  "paidAbilities": [
+    {
+      "id": "b1001-etr",
+      "label": "Remove 1 tag: End the run (other server only)",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "removeTags": 1
+      },
+      "windows": [
+        "approach_server_paw",
+        "approach_paw",
+        "encounter_paw"
+      ],
+      "requireOtherServer": true,
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "end_the_run"
+        }
+      }
+    }
+  ]
 }

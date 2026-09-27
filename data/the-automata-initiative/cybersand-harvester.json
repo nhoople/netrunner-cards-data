@@ -5,10 +5,33 @@
   "nrdbCode": "34058",
   "type": "asset",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: Whenever you rez a piece of ice, place 2[credit] on this asset. You can spend hosted credits to pay install costs. [trash]: Take all credits from this asset."
-  ],
+  "unsupported": [],
   "installCost": 2,
   "rezCost": 2,
-  "trashCost": 4
+  "trashCost": 4,
+  "hostedCreditsOnAnyIceRez": 2,
+  "hostedCreditsSpendFor": [
+    "install"
+  ],
+  "paidAbilities": [
+    {
+      "id": "cybersand-take-all",
+      "label": "[trash]: Take all hosted credits",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "trashSelf": true
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "take_hosted_credits",
+          "amount": 999
+        }
+      }
+    }
+  ]
 }
