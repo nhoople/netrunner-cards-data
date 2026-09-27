@@ -30,7 +30,7 @@ Match this dataset and [netrunner-engine](https://github.com/nhoople/netrunner-e
 
 | Pairing | cards-data | engine |
 |---------|------------|--------|
-| **Current** | [`v0.26.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v0.26.0) | [`v0.26.0`](https://github.com/nhoople/netrunner-engine/releases/tag/v0.26.0) |
+| **Current** | [`v0.27.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v0.27.0) | [`v0.27.0`](https://github.com/nhoople/netrunner-engine/releases/tag/v0.27.0) |
 
 Incremental wave tags are the day-to-day IR/wiring contract. A set-complete **milestone** GitHub Release is cut only when a wave’s pool status → `supported` (advertised host floor for that set).
 
