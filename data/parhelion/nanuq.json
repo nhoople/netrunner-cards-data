@@ -13,20 +13,13 @@
   "installCost": 4,
   "strength": 3,
   "memoryCost": 2,
-  "rfgOnUninstall": true,
-  "onAgendaScoredOrStolen": {
-    "op": "do",
-    "action": {
-      "kind": "rfg_self"
-    }
-  },
   "breaker": {
     "breaksSubtype": "*",
     "strength": 3,
     "breakCredits": 2,
+    "breakMaxSubs": 2,
     "pumpCredits": 1,
-    "pumpStrength": 1,
-    "breakMaxSubs": 2
+    "pumpStrength": 1
   },
   "paidAbilities": [
     {
@@ -48,5 +41,12 @@
         }
       }
     }
-  ]
+  ],
+  "rfgOnUninstall": true,
+  "onAgendaScoredOrStolen": {
+    "op": "do",
+    "action": {
+      "kind": "rfg_self"
+    }
+  }
 }

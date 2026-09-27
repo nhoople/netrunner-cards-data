@@ -5,14 +5,73 @@
   "nrdbCode": "33099",
   "type": "ice",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: When you rez this ice during a run against this server, the Runner loses [click]. [subroutine] The Runner loses 1[credit] for each rezzed piece of harmonic ice. [subroutine] End the run unless the Runner spends [click]."
-  ],
+  "unsupported": [],
   "subtypes": [
     "code gate",
     "harmonic"
   ],
   "installCost": 3,
   "rezCost": 3,
-  "strength": 1
+  "strength": 1,
+  "onRez": {
+    "op": "if",
+    "cond": {
+      "op": "source_protects_attacked_server"
+    },
+    "then": {
+      "op": "do",
+      "action": {
+        "kind": "lose_clicks",
+        "side": "runner",
+        "amount": 1
+      }
+    }
+  },
+  "subroutines": [
+    {
+      "id": "pulse-lose",
+      "text": "The Runner loses 1¢ for each rezzed piece of harmonic ice.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "lose_credits_per_rezzed_subtype",
+          "side": "runner",
+          "subtype": "harmonic",
+          "per": 1
+        }
+      }
+    },
+    {
+      "id": "pulse-etr",
+      "text": "End the run unless the Runner spends [click].",
+      "effect": {
+        "op": "choose",
+        "chooser": "runner",
+        "options": [
+          {
+            "id": "spend-click",
+            "label": "Spend [click]",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "lose_clicks",
+                "side": "runner",
+                "amount": 1
+              }
+            }
+          },
+          {
+            "id": "etr",
+            "label": "End the run",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "end_the_run"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
 }

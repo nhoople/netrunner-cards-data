@@ -17,9 +17,9 @@
     "breaksSubtype": "barrier",
     "strength": 2,
     "breakCredits": 3,
+    "breakMaxSubs": 2,
     "pumpCredits": 2,
     "pumpStrength": 2,
-    "breakMaxSubs": 2,
     "breakCreditsDiscountPerInstalledSubtype": {
       "subtype": "cybernetic",
       "amount": 1

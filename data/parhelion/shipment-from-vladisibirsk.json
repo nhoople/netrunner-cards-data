@@ -5,11 +5,17 @@
   "nrdbCode": "33119",
   "type": "operation",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: Play only if the Runner has at least 2 tags. Place a total of 4 advancement counters on installed cards you can advance."
-  ],
+  "unsupported": [],
   "subtypes": [
     "gray ops"
   ],
-  "playCost": 1
+  "playCost": 1,
+  "playRequiresMinTags": 2,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "place_advancements",
+      "amount": 4
+    }
+  }
 }
