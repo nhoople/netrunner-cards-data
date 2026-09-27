@@ -5,11 +5,18 @@
   "nrdbCode": "33085",
   "type": "hardware",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: When you install this hardware, place 2 power counters on it and suffer 1 meat damage. You get +1 maximum hand size for each hosted power counter."
-  ],
+  "unsupported": [],
   "subtypes": [
     "cybernetic"
   ],
-  "installCost": 0
+  "installCost": 0,
+  "powerCountersOnInstall": 2,
+  "handSizePerPowerCounter": 1,
+  "onInstall": {
+    "op": "do",
+    "action": {
+      "kind": "meat_damage",
+      "amount": 1
+    }
+  }
 }

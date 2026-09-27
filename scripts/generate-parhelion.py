@@ -424,6 +424,54 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    if cid == "simulation-reset":
+        return base(
+            c,
+            onPlay={
+                "op": "do",
+                "action": {
+                    "kind": "simulation_reset_resolve",
+                    "trashHqMax": 5,
+                },
+            },
+            unsupported=[],
+        )
+
+    if cid == "poison-vial":
+        return base(
+            c,
+            powerCountersOnInstall=3,
+            trashWhenPowerEmpty=True,
+            paidAbilities=[
+                {
+                    "id": "poison-vial-break",
+                    "label": "Hosted power counter: Break up to 2 subroutines",
+                    "clickCost": 0,
+                    "creditCost": 0,
+                    "cost": {"powerCounters": 1},
+                    "windows": ["encounter_paw"],
+                    "requireBrokenSubThisEncounter": True,
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "break_encounter_subroutine",
+                            "maxSubs": 2,
+                        },
+                    },
+                }
+            ],
+            unsupported=[],
+        )
+
+    if cid == "hippocampic-mechanocytes":
+        return base(
+            c,
+            powerCountersOnInstall=2,
+            handSizePerPowerCounter=1,
+            onInstall=meat(1),
+            unsupported=[],
+        )
+
     if cid == "tunnel-vision":
         card = breaker_card(
             c, "*", 2, 2, pump_c=2, pump_s=2, break_max=2, unsupported=[]
