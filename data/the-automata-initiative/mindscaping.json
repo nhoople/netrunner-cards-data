@@ -5,11 +5,62 @@
   "nrdbCode": "34045",
   "type": "operation",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: Resolve 1 of the following:Gain 4[credit] and draw 2 cards. Add 1 card from HQ to the top of R&D.Do X net damage. X is equal to the number of tags the Runner has, up to 3."
-  ],
+  "unsupported": [],
   "subtypes": [
     "gray ops"
   ],
-  "playCost": 2
+  "playCost": 2,
+  "onPlay": {
+    "op": "choose",
+    "chooser": "corp",
+    "options": [
+      {
+        "id": "gain-draw",
+        "label": "Gain 4¢ and draw 2 cards",
+        "effect": {
+          "op": "seq",
+          "effects": [
+            {
+              "op": "do",
+              "action": {
+                "kind": "gain_credits",
+                "side": "corp",
+                "amount": 4
+              }
+            },
+            {
+              "op": "do",
+              "action": {
+                "kind": "draw",
+                "side": "corp",
+                "amount": 2
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "hq-top-rd",
+        "label": "Add 1 card from HQ to the top of R&D",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "hq_to_top_rd",
+            "pick": "choose"
+          }
+        }
+      },
+      {
+        "id": "net-tags",
+        "label": "Do X net damage (X = tags, max 3)",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "net_damage_up_to_tags",
+            "max": 3
+          }
+        }
+      }
+    ]
+  }
 }

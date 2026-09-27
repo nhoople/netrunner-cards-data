@@ -5,14 +5,45 @@
   "nrdbCode": "34018",
   "type": "program",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Threat 4 → This program gets −2 strength. (This ability is active if any player has 4 or more agenda points.) Interface → 1[credit]: Break 1 code gate subroutine. 2[credit]: +2 strength."
-  ],
+  "unsupported": [],
   "subtypes": [
     "icebreaker",
     "decoder"
   ],
   "installCost": 1,
   "strength": 3,
-  "memoryCost": 1
+  "memoryCost": 1,
+  "threatStrengthBonus": {
+    "level": 4,
+    "amount": -2
+  },
+  "breaker": {
+    "breaksSubtype": "code gate",
+    "strength": 3,
+    "breakCredits": 1,
+    "pumpCredits": 2,
+    "pumpStrength": 2,
+    "breakMaxSubs": 1
+  },
+  "paidAbilities": [
+    {
+      "id": "shibboleth-pump",
+      "label": "Pump Shibboleth +2 strength",
+      "clickCost": 0,
+      "creditCost": 2,
+      "cost": {
+        "credits": 2
+      },
+      "windows": [
+        "encounter_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "pump_strength",
+          "amount": 2
+        }
+      }
+    }
+  ]
 }

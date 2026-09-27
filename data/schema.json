@@ -692,6 +692,16 @@
       "minimum": 0,
       "description": "Strength bonus per core damage the Runner has taken this game (Begemot)."
     },
+    "threatStrengthBonus": {
+      "type": "object",
+      "required": ["level", "amount"],
+      "additionalProperties": false,
+      "properties": {
+        "level": { "type": "integer", "minimum": 1 },
+        "amount": { "type": "integer" }
+      },
+      "description": "Threat N → adjust this card's strength by amount while threat is active (Shibboleth)."
+    },
     "installCostDiscountIfSuccessfulRunThisTurn": {
       "type": "integer",
       "minimum": 0
