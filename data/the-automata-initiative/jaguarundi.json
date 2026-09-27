@@ -1,0 +1,18 @@
+{
+  "id": "jaguarundi",
+  "title": "Jaguarundi",
+  "wave": "the-automata-initiative",
+  "nrdbCode": "34035",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: Threat 4 → When the Runner encounters this ice, give them 1 tag unless they spend [click]. (This ability is active if any player has 4 or more agenda points.) [subroutine] Give the Runner 1 tag. [subroutine] If the Runner is tagged, do 1 co"
+  ],
+  "subtypes": [
+    "sentry",
+    "ap"
+  ],
+  "installCost": 4,
+  "rezCost": 4,
+  "strength": 3
+}

@@ -1,0 +1,18 @@
+{
+  "id": "starlit-knight",
+  "title": "Starlit Knight",
+  "wave": "the-automata-initiative",
+  "nrdbCode": "34053",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: Threat 4 → When the Runner encounters this ice, it gains X \"[subroutine] End the run.\" subroutines for the remainder of this run, after its other subroutines. X is equal to the number of tags the Runner has. [subroutine] Give the Runner 1 t"
+  ],
+  "subtypes": [
+    "sentry",
+    "observer"
+  ],
+  "installCost": 5,
+  "rezCost": 5,
+  "strength": 2
+}

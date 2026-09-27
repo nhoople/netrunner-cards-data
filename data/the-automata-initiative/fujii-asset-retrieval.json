@@ -1,0 +1,29 @@
+{
+  "id": "fujii-asset-retrieval",
+  "title": "Fujii Asset Retrieval",
+  "wave": "the-automata-initiative",
+  "nrdbCode": "34040",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [],
+  "subtypes": [
+    "ambush",
+    "security"
+  ],
+  "advancementRequirement": 5,
+  "agendaPoints": 3,
+  "onScore": {
+    "op": "do",
+    "action": {
+      "kind": "net_damage",
+      "amount": 2
+    }
+  },
+  "onSteal": {
+    "op": "do",
+    "action": {
+      "kind": "net_damage",
+      "amount": 2
+    }
+  }
+}

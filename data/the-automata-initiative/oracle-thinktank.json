@@ -1,0 +1,16 @@
+{
+  "id": "oracle-thinktank",
+  "title": "Oracle Thinktank",
+  "wave": "the-automata-initiative",
+  "nrdbCode": "34049",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: When the Runner steals this agenda, give them 1 tag. [click], remove 1 tag: Shuffle this agenda into R&D. The Corp can use this ability only if this agenda is in the Runner's score area."
+  ],
+  "subtypes": [
+    "research"
+  ],
+  "advancementRequirement": 3,
+  "agendaPoints": 1
+}

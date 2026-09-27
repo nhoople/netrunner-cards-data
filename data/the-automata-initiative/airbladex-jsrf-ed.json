@@ -1,0 +1,15 @@
+{
+  "id": "airbladex-jsrf-ed",
+  "title": "AirbladeX (JSRF Ed.)",
+  "wave": "the-automata-initiative",
+  "nrdbCode": "34022",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: When you install this hardware, load 3 power counters onto it. When it is empty, trash it. [interrupt] → Hosted power counter: Prevent 1 net damage. Use this ability only during a run. [interrupt] → Hosted power counter: Prevent a \"when enc"
+  ],
+  "subtypes": [
+    "vehicle"
+  ],
+  "installCost": 1
+}

@@ -1,0 +1,16 @@
+{
+  "id": "pichacao",
+  "title": "Pichação",
+  "wave": "the-automata-initiative",
+  "nrdbCode": "34025",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: Install only on a piece of ice. Whenever you pass host ice, you may gain [click]. If this is not the first time you gained [click] during a run this turn, add this program to your grip."
+  ],
+  "subtypes": [
+    "trojan"
+  ],
+  "installCost": 1,
+  "memoryCost": 1
+}

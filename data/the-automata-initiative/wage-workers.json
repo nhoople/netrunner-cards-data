@@ -1,0 +1,19 @@
+{
+  "id": "wage-workers",
+  "title": "Wage Workers",
+  "wave": "the-automata-initiative",
+  "nrdbCode": "34033",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: Whenever you finish taking an action, if you have taken that action exactly 3 times this turn, gain [click]."
+  ],
+  "subtypes": [
+    "bioroid",
+    "clone",
+    "industrial"
+  ],
+  "installCost": 2,
+  "rezCost": 2,
+  "trashCost": 4
+}

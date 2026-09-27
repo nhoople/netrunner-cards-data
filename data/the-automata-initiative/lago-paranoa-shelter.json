@@ -1,0 +1,16 @@
+{
+  "id": "lago-paranoa-shelter",
+  "title": "Lago Paranoá Shelter",
+  "wave": "the-automata-initiative",
+  "nrdbCode": "34009",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: The first time each turn the Corp installs a card in the root of a server, you may trash the top card of your stack to draw 1 card."
+  ],
+  "subtypes": [
+    "connection",
+    "location"
+  ],
+  "installCost": 2
+}

@@ -1,0 +1,15 @@
+{
+  "id": "arissana-rocha-nahu-street-artist",
+  "title": "Arissana Rocha Nahu: Street Artist",
+  "wave": "the-automata-initiative",
+  "nrdbCode": "34020",
+  "type": "identity",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: Once per turn → 0[credit]: Install 1 program from your grip (paying its install cost). Use this ability only during a run. When that run ends, trash that program if it is not a trojan."
+  ],
+  "subtypes": [
+    "natural"
+  ],
+  "link": 0
+}

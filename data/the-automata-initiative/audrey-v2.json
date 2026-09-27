@@ -1,0 +1,19 @@
+{
+  "id": "audrey-v2",
+  "title": "Audrey v2",
+  "wave": "the-automata-initiative",
+  "nrdbCode": "34004",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: Whenever you trash a card you are accessing, place 1 virus counter on this program. Interface → Hosted virus counter: Break up to 2 subroutines. Trash 1 card from your grip: +3 strength."
+  ],
+  "subtypes": [
+    "icebreaker",
+    "ai",
+    "virus"
+  ],
+  "installCost": 3,
+  "strength": 0,
+  "memoryCost": 2
+}

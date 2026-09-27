@@ -1,17 +1,18 @@
 {
   "version": 1,
-  "description": "Declared supported card pool for the engine. Releases expand as IR/mechanics allow. Cards with partial fidelity list explicit unsupported notes \u2014 never silent wrong behavior.",
+  "description": "Declared supported card pool for the engine. Releases expand as IR/mechanics allow. Cards with partial fidelity list explicit unsupported notes — never silent wrong behavior.",
   "agendaPointsToWinDefault": 7,
   "corpusOrder": [
     "system-gateway",
     "system-update-2021",
     "midnight-sun",
-    "parhelion"
+    "parhelion",
+    "the-automata-initiative"
   ],
   "waves": {
     "system-gateway": {
       "status": "supported",
-      "notes": "Null Signal System Gateway (NRDB pack sg) learner/starter set \u2014 77 cards. Corpus order: System Gateway \u2192 System Update 2021 \u2192 later releases. Includes Sure Gamble and Hedge Fund as Gateway printings.",
+      "notes": "Null Signal System Gateway (NRDB pack sg) learner/starter set — 77 cards. Corpus order: System Gateway → System Update 2021 → later releases. Includes Sure Gamble and Hedge Fund as Gateway printings.",
       "cards": [
         "rene-loup-arcemont-party-animal",
         "wildcat-strike",
@@ -94,7 +95,7 @@
     },
     "system-update-2021": {
       "status": "supported",
-      "notes": "Null Signal System Update 2021 (NRDB pack su21) \u2014 82 classic reprints, the set immediately after System Gateway. Fully supported. Next corpus wave is Midnight Sun.",
+      "notes": "Null Signal System Update 2021 (NRDB pack su21) — 82 classic reprints, the set immediately after System Gateway. Fully supported. Next corpus wave is Midnight Sun.",
       "cards": [
         "quetzal-free-spirit",
         "reina-roja-freedom-fighter",
@@ -182,7 +183,7 @@
     },
     "midnight-sun": {
       "status": "supported",
-      "notes": "Null Signal Midnight Sun (NRDB pack ms) \u2014 65 cards, Borealis set 1. Midnight Sun Booster Pack (msbp) titles absorbed into ms printings (no separate wave). Fully supported: every card has unsupported: []. Wave gate met.",
+      "notes": "Null Signal Midnight Sun (NRDB pack ms) — 65 cards, Borealis set 1. Midnight Sun Booster Pack (msbp) titles absorbed into ms printings (no separate wave). Fully supported: every card has unsupported: []. Wave gate met.",
       "cards": [
         "esa-afontov-eco-insurrectionist",
         "chastushka",
@@ -253,7 +254,7 @@
     },
     "parhelion": {
       "status": "supported",
-      "notes": "Null Signal Parhelion (NRDB pack ph) \u2014 Borealis set 2 of 2. Fully supported: all 63 cards mapped (wave gate v0.71.0).",
+      "notes": "Null Signal Parhelion (NRDB pack ph) — Borealis set 2 of 2. Fully supported: all 63 cards mapped (wave gate v0.71.0).",
       "cards": [
         "finality",
         "katorga-breakout",
@@ -318,6 +319,77 @@
         "yakov-erikovich-avdakov",
         "zato-city-grid",
         "ampere-cybernetics-for-anyone"
+      ]
+    },
+    "the-automata-initiative": {
+      "status": "in-progress",
+      "notes": "Null Signal The Automata Initiative (NRDB pack tai) — Liberation set 1 of 2; 65 cards. Kickoff extract: Strike Fund, Joy Ride, Fujii Asset Retrieval mapped; remaining cards have explicit unsupported notes until Effect IR is wired.",
+      "cards": [
+        "strike-fund",
+        "the-price",
+        "solidarity-badge",
+        "audrey-v2",
+        "banner",
+        "monkeywrench",
+        "eru-ayase-pessoa",
+        "hannah-wheels-pilintra",
+        "lago-paranoa-shelter",
+        "mercury-chrome-libertador",
+        "chrysopoeian-skimming",
+        "s-dobrado",
+        "capybara",
+        "hermes",
+        "curupira",
+        "laser-pointer",
+        "saci",
+        "shibboleth",
+        "debbie-downtown-moreira",
+        "arissana-rocha-nahu-street-artist",
+        "joy-ride",
+        "airbladex-jsrf-ed",
+        "lilypad",
+        "living-mural",
+        "pichacao",
+        "slap-vandal",
+        "umbrella",
+        "beatriz-friere-gonzalez",
+        "urban-art-vernissage",
+        "bahia-bands",
+        "salvo-testing",
+        "stegodon-mk-iv",
+        "wage-workers",
+        "ablative-barrier",
+        "jaguarundi",
+        "m-i-c",
+        "greasing-the-palm",
+        "vovo-ozetti",
+        "a-teia-ip-recovery",
+        "fujii-asset-retrieval",
+        "front-company",
+        "attini",
+        "phoneutria",
+        "tatu-bola",
+        "mindscaping",
+        "adrian-seis",
+        "daniela-jorge-inacio",
+        "epiphany-analytica-nations-undivided",
+        "oracle-thinktank",
+        "balanced-coverage",
+        "behold",
+        "federal-fundraising",
+        "starlit-knight",
+        "virtual-service-agent",
+        "oppo-research",
+        "your-digital-life",
+        "slash-and-burn-agriculture",
+        "cybersand-harvester",
+        "tree-line",
+        "valentao",
+        "armed-asset-protection",
+        "pivot",
+        "angelique-garza-correa",
+        "tucana",
+        "b-1001"
       ]
     }
   }

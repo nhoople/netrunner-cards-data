@@ -1,0 +1,15 @@
+{
+  "id": "beatriz-friere-gonzalez",
+  "title": "Beatriz Friere Gonzalez",
+  "wave": "the-automata-initiative",
+  "nrdbCode": "34028",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: [click][click]: Run HQ. If successful, instead of breaching HQ, breach R&D. When you do, access 1 additional card."
+  ],
+  "subtypes": [
+    "connection"
+  ],
+  "installCost": 2
+}

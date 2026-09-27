@@ -1,0 +1,15 @@
+{
+  "id": "lilypad",
+  "title": "LilyPAD",
+  "wave": "the-automata-initiative",
+  "nrdbCode": "34023",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: +2[mu] The first time each turn you install a program, you may draw 1 card. Limit 1 console per player."
+  ],
+  "subtypes": [
+    "console"
+  ],
+  "installCost": 4
+}

@@ -1,0 +1,15 @@
+{
+  "id": "solidarity-badge",
+  "title": "Solidarity Badge",
+  "wave": "the-automata-initiative",
+  "nrdbCode": "34003",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: The first time each turn you trash a Corp card, place 1 power counter on this hardware. When your turn begins, you may remove 1 hosted power counter to draw 1 card or remove 1 tag."
+  ],
+  "subtypes": [
+    "chip"
+  ],
+  "installCost": 1
+}

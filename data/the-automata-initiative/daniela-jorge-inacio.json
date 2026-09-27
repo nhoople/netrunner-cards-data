@@ -1,0 +1,17 @@
+{
+  "id": "daniela-jorge-inacio",
+  "title": "Daniela Jorge Inácio",
+  "wave": "the-automata-initiative",
+  "nrdbCode": "34047",
+  "type": "upgrade",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: As an additional cost to trash this upgrade, the Runner must add 2 cards from the grip at random to the bottom of the stack. Persistent → As an additional cost to steal an agenda from this server or its root, the Runner must add 2 cards fro"
+  ],
+  "subtypes": [
+    "sysop"
+  ],
+  "installCost": 2,
+  "rezCost": 2,
+  "trashCost": 2
+}

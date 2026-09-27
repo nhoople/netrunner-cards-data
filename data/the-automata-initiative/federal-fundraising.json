@@ -1,0 +1,18 @@
+{
+  "id": "federal-fundraising",
+  "title": "Federal Fundraising",
+  "wave": "the-automata-initiative",
+  "nrdbCode": "34052",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: When your turn begins, you may look at the top 3 cards of R&D and arrange them in any order. Then, if this server is not protected by ice, you may draw 1 card."
+  ],
+  "subtypes": [
+    "political",
+    "ritzy"
+  ],
+  "installCost": 0,
+  "rezCost": 0,
+  "trashCost": 2
+}

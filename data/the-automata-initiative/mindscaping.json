@@ -1,0 +1,15 @@
+{
+  "id": "mindscaping",
+  "title": "Mindscaping",
+  "wave": "the-automata-initiative",
+  "nrdbCode": "34045",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: Resolve 1 of the following:Gain 4[credit] and draw 2 cards. Add 1 card from HQ to the top of R&D.Do X net damage. X is equal to the number of tags the Runner has, up to 3."
+  ],
+  "subtypes": [
+    "gray ops"
+  ],
+  "playCost": 2
+}

@@ -1,0 +1,15 @@
+{
+  "id": "hannah-wheels-pilintra",
+  "title": "Hannah \"Wheels\" Pilintra",
+  "wave": "the-automata-initiative",
+  "nrdbCode": "34008",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: Once per turn → [click]: Gain [click]. Run a remote server. When that run ends, if it was unsuccessful, take 1 tag. [click], [trash]: Gain [click][click]. Remove 1 tag."
+  ],
+  "subtypes": [
+    "connection"
+  ],
+  "installCost": 2
+}

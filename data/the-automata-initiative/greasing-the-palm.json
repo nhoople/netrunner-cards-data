@@ -1,0 +1,15 @@
+{
+  "id": "greasing-the-palm",
+  "title": "Greasing the Palm",
+  "wave": "the-automata-initiative",
+  "nrdbCode": "34037",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: Gain 5[credit]. You may install 1 card from HQ. You may remove 1 tag to place 1 advancement counter on that card."
+  ],
+  "subtypes": [
+    "transaction"
+  ],
+  "playCost": 3
+}

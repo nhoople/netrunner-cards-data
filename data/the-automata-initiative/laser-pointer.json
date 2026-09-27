@@ -1,0 +1,16 @@
+{
+  "id": "laser-pointer",
+  "title": "Laser Pointer",
+  "wave": "the-automata-initiative",
+  "nrdbCode": "34016",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: Whenever you encounter a piece of AP, destroyer, or observer ice, you may trash this program to bypass that ice."
+  ],
+  "subtypes": [
+    "weapon"
+  ],
+  "installCost": 2,
+  "memoryCost": 1
+}

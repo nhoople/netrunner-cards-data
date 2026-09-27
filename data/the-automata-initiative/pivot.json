@@ -1,0 +1,16 @@
+{
+  "id": "pivot",
+  "title": "Pivot",
+  "wave": "the-automata-initiative",
+  "nrdbCode": "34062",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: As an additional cost to play this operation, spend [click]. Search R&D for 1 operation or agenda and reveal it. (Shuffle R&D after searching it.) Add that card to HQ. Threat 3 → You may play or install 1 card from HQ. (This ability is acti"
+  ],
+  "subtypes": [
+    "double"
+  ],
+  "playCost": 1,
+  "trashCost": 3
+}

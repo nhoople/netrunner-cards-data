@@ -1,0 +1,12 @@
+{
+  "id": "chrysopoeian-skimming",
+  "title": "Chrysopoeian Skimming",
+  "wave": "the-automata-initiative",
+  "nrdbCode": "34011",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: The Corp may reveal an agenda from HQ. If they do, gain [click] and draw 1 card. Otherwise, look at the top 3 cards of R&D."
+  ],
+  "playCost": 1
+}
