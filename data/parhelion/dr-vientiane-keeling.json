@@ -5,13 +5,26 @@
   "nrdbCode": "33106",
   "type": "asset",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: When you rez this asset and when your turn begins, place 1 power counter on this asset. The Runner gets -1 maximum hand size for each hosted power counter."
-  ],
+  "unsupported": [],
   "subtypes": [
     "academic"
   ],
   "installCost": 3,
   "rezCost": 3,
-  "trashCost": 4
+  "trashCost": 4,
+  "runnerHandSizePenaltyPerPowerCounter": 1,
+  "onRez": {
+    "op": "do",
+    "action": {
+      "kind": "add_power_counter",
+      "amount": 1
+    }
+  },
+  "onTurnBegin": {
+    "op": "do",
+    "action": {
+      "kind": "add_power_counter",
+      "amount": 1
+    }
+  }
 }
