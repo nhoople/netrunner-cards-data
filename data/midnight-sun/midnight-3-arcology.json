@@ -5,20 +5,51 @@
   "nrdbCode": "33032",
   "type": "agenda",
   "side": "corp",
-  "unsupported": [
-    "Skip discard step this turn — discard-phase skip not modeled."
-  ],
+  "unsupported": [],
   "subtypes": [
     "expansion"
   ],
   "advancementRequirement": 4,
   "agendaPoints": 2,
   "onScore": {
-    "op": "do",
-    "action": {
-      "kind": "draw",
-      "side": "corp",
-      "amount": 3
-    }
+    "op": "seq",
+    "effects": [
+      {
+        "op": "do",
+        "action": {
+          "kind": "draw",
+          "side": "corp",
+          "amount": 3
+        }
+      },
+      {
+        "op": "choose",
+        "chooser": "corp",
+        "options": [
+          {
+            "id": "skip-discard",
+            "label": "Skip discard step this turn",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "skip_discard_this_turn"
+              }
+            }
+          },
+          {
+            "id": "decline",
+            "label": "Decline",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "gain_credits",
+                "side": "corp",
+                "amount": 0
+              }
+            }
+          }
+        ]
+      }
+    ]
   }
 }

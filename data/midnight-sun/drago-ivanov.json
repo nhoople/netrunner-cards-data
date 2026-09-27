@@ -5,14 +5,34 @@
   "nrdbCode": "33051",
   "type": "asset",
   "side": "corp",
-  "unsupported": [
-    "2 hosted advancements: give Runner 1 tag (Corp turn only) — advancement-cost paid ability not modeled."
-  ],
+  "unsupported": [],
   "subtypes": [
     "executive"
   ],
   "installCost": 0,
   "rezCost": 0,
   "trashCost": 1,
-  "canAdvance": true
+  "canAdvance": true,
+  "paidAbilities": [
+    {
+      "id": "drago-tag",
+      "label": "Remove 2 advancements: give Runner 1 tag",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1,
+        "advancementTokens": 2
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "give_tags",
+          "amount": 1
+        }
+      }
+    }
+  ]
 }

@@ -5,10 +5,37 @@
   "nrdbCode": "33048",
   "type": "identity",
   "side": "corp",
-  "unsupported": [
-    "First successful run each turn: may place 1 advancement on an advanceable card — needs successful-run trigger + advancement targeting."
-  ],
+  "unsupported": [],
   "subtypes": [
     "division"
-  ]
+  ],
+  "onFirstSuccessfulRunThisTurn": {
+    "op": "choose",
+    "chooser": "corp",
+    "options": [
+      {
+        "id": "place-adv",
+        "label": "Place 1 advancement on an advanceable card",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "place_advancements",
+            "amount": 1
+          }
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "corp",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  }
 }

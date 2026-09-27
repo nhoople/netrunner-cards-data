@@ -305,10 +305,32 @@ def map_card(c: dict) -> dict:
     if cid == "pravdivost-consulting-political-solutions":
         return base(
             c,
-            unsupported=[
-                "First successful run each turn: may place 1 advancement on an advanceable card — "
-                "needs successful-run trigger + advancement targeting."
-            ],
+            onFirstSuccessfulRunThisTurn=choose(
+                "corp",
+                [
+                    {
+                        "id": "place-adv",
+                        "label": "Place 1 advancement on an advanceable card",
+                        "effect": {
+                            "op": "do",
+                            "action": {"kind": "place_advancements", "amount": 1},
+                        },
+                    },
+                    {
+                        "id": "decline",
+                        "label": "Decline",
+                        "effect": {
+                            "op": "do",
+                            "action": {
+                                "kind": "gain_credits",
+                                "side": "corp",
+                                "amount": 0,
+                            },
+                        },
+                    },
+                ],
+            ),
+            unsupported=[],
         )
     if cid == "ob-superheavy-logistics-extract-export-excel":
         return base(
@@ -723,8 +745,35 @@ def map_card(c: dict) -> dict:
         return base(
             c,
             subtypes=["expansion"],
-            onScore=draw("corp", 3),
-            unsupported=["Skip discard step this turn — discard-phase skip not modeled."],
+            onScore=seq(
+                draw("corp", 3),
+                choose(
+                    "corp",
+                    [
+                        {
+                            "id": "skip-discard",
+                            "label": "Skip discard step this turn",
+                            "effect": {
+                                "op": "do",
+                                "action": {"kind": "skip_discard_this_turn"},
+                            },
+                        },
+                        {
+                            "id": "decline",
+                            "label": "Decline",
+                            "effect": {
+                                "op": "do",
+                                "action": {
+                                    "kind": "gain_credits",
+                                    "side": "corp",
+                                    "amount": 0,
+                                },
+                            },
+                        },
+                    ],
+                ),
+            ),
+            unsupported=[],
         )
     if cid == "blood-in-the-water":
         return base(
@@ -755,11 +804,12 @@ def map_card(c: dict) -> dict:
         return base(
             c,
             subtypes=["security"],
+            scoreAdditionalCost={
+                "op": "do",
+                "action": {"kind": "must_trash_installed", "excludeSelf": True},
+            },
             onScore=meat(2),
-            unsupported=[
-                "Additional cost to score: trash 1 other installed card — score additional cost "
-                "not enforced."
-            ],
+            unsupported=[],
         )
 
     # --- Assets ---
@@ -816,10 +866,21 @@ def map_card(c: dict) -> dict:
             c,
             subtypes=["executive"],
             canAdvance=True,
-            unsupported=[
-                "2 hosted advancements: give Runner 1 tag (Corp turn only) — advancement-cost "
-                "paid ability not modeled."
+            paidAbilities=[
+                {
+                    "id": "drago-tag",
+                    "label": "Remove 2 advancements: give Runner 1 tag",
+                    "clickCost": 1,
+                    "creditCost": 0,
+                    "cost": {"clicks": 1, "advancementTokens": 2},
+                    "windows": ["corp_action_paw"],
+                    "effect": {
+                        "op": "do",
+                        "action": {"kind": "give_tags", "amount": 1},
+                    },
+                }
             ],
+            unsupported=[],
         )
     if cid == "ubiquitous-vig":
         return base(
