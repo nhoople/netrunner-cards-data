@@ -5,14 +5,56 @@
   "nrdbCode": "33117",
   "type": "ice",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: When you rez this ice during a run against this server, you may have the Runner gain 2[credit]. If you do, during each encounter with this ice for the remainder of that run, the Runner cannot break more than 1 of its printed subroutines. [s"
-  ],
+  "unsupported": [],
   "subtypes": [
     "sentry",
     "ap"
   ],
   "installCost": 4,
   "rezCost": 4,
-  "strength": 2
+  "strength": 2,
+  "onRez": {
+    "op": "if",
+    "cond": {
+      "op": "source_protects_attacked_server"
+    },
+    "then": {
+      "op": "do",
+      "action": {
+        "kind": "may_give_runner_credits_then",
+        "amount": 2,
+        "then": {
+          "op": "do",
+          "action": {
+            "kind": "limit_printed_breaks_on_source_for_run",
+            "max": 1
+          }
+        }
+      }
+    }
+  },
+  "subroutines": [
+    {
+      "id": "unsmiling-net",
+      "text": "Do 2 net damage.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "net_damage",
+          "amount": 2
+        }
+      }
+    },
+    {
+      "id": "unsmiling-tag",
+      "text": "Give the Runner 1 tag.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "give_tags",
+          "amount": 1
+        }
+      }
+    }
+  ]
 }
