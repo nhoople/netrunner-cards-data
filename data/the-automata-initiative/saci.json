@@ -5,12 +5,27 @@
   "nrdbCode": "34017",
   "type": "program",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Install only on a piece of ice. Whenever host ice is rezzed or derezzed, gain 3[credit]."
-  ],
+  "unsupported": [],
   "subtypes": [
     "trojan"
   ],
   "installCost": 1,
-  "memoryCost": 1
+  "memoryCost": 1,
+  "installOnIce": true,
+  "onHostRezzed": {
+    "op": "do",
+    "action": {
+      "kind": "gain_credits",
+      "side": "runner",
+      "amount": 3
+    }
+  },
+  "onHostDerezzed": {
+    "op": "do",
+    "action": {
+      "kind": "gain_credits",
+      "side": "runner",
+      "amount": 3
+    }
+  }
 }

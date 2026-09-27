@@ -401,6 +401,18 @@
       "type": "object",
       "description": "Effect IR when the Runner bypasses a piece of ice (Capybara)."
     },
+    "onFirstProgramInstallEachTurn": {
+      "type": "object",
+      "description": "Effect IR the first time each turn the Runner installs a program (LilyPAD)."
+    },
+    "onHostRezzed": {
+      "type": "object",
+      "description": "Effect IR when host ice is rezzed (Saci)."
+    },
+    "onHostDerezzed": {
+      "type": "object",
+      "description": "Effect IR when host ice is derezzed (Saci)."
+    },
     "derezHostAtVirus": {
       "type": "integer",
       "minimum": 1

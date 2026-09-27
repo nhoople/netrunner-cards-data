@@ -5,11 +5,81 @@
   "nrdbCode": "34008",
   "type": "resource",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Once per turn → [click]: Gain [click]. Run a remote server. When that run ends, if it was unsuccessful, take 1 tag. [click], [trash]: Gain [click][click]. Remove 1 tag."
-  ],
+  "unsupported": [],
   "subtypes": [
     "connection"
   ],
-  "installCost": 2
+  "installCost": 2,
+  "paidAbilities": [
+    {
+      "id": "wheels-run",
+      "label": "[click]: Gain [click]. Run a remote; if unsuccessful, take 1 tag",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "oncePerTurn": true,
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "gain_clicks",
+          "side": "runner",
+          "amount": 1
+        }
+      },
+      "startsRun": {
+        "servers": "remote",
+        "onRunEnd": {
+          "op": "if",
+          "cond": {
+            "op": "run_unsuccessful"
+          },
+          "then": {
+            "op": "do",
+            "action": {
+              "kind": "give_tags",
+              "amount": 1
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "wheels-remove-tag",
+      "label": "[click], [trash]: Gain [click][click]. Remove 1 tag",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1,
+        "trashSelf": true
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "gain_clicks",
+              "side": "runner",
+              "amount": 2
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "remove_tags",
+              "amount": 1
+            }
+          }
+        ]
+      }
+    }
+  ]
 }

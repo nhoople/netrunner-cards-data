@@ -5,11 +5,28 @@
   "nrdbCode": "34061",
   "type": "operation",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: Gain 3[credit]. Gain 1[credit] for each card type among faceup cards in Archives. If any of those cards are agendas, gain another 2[credit]."
-  ],
+  "unsupported": [],
   "subtypes": [
     "transaction"
   ],
-  "playCost": 2
+  "playCost": 2,
+  "onPlay": {
+    "op": "seq",
+    "effects": [
+      {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "corp",
+          "amount": 3
+        }
+      },
+      {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits_per_distinct_faceup_archive_type"
+        }
+      }
+    ]
+  }
 }
