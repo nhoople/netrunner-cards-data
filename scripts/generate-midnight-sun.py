@@ -922,13 +922,11 @@ def map_card(c: dict) -> dict:
         return base(
             c,
             subtypes=["sentry", "ap"],
+            strengthBonusProtectingArchives=3,
             subroutines=[
                 {"id": "bath-net", "text": "Do 3 net damage.", "effect": net(3)}
             ],
-            unsupported=[
-                "+3 strength while protecting Archives — no Archives-only strength bonus field "
-                "(not approximated with remote bonus)."
-            ],
+            unsupported=[],
         )
     if cid == "ivik":
         return base(

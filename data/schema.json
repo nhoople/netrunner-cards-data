@@ -462,6 +462,10 @@
       "type": "integer",
       "description": "Printed strength bonus while protecting a remote server."
     },
+    "strengthBonusProtectingArchives": {
+      "type": "integer",
+      "description": "Printed strength bonus while protecting Archives (Bathynomus)."
+    },
     "strengthBonusAtAdvancements": {
       "type": "object",
       "required": [
