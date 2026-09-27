@@ -862,10 +862,25 @@ def map_card(c: dict) -> dict:
         return base(
             c,
             subtypes=["facility"],
-            unsupported=[
-                "RFG self: trash up to 2 from HQ; reveal up to 2 facedown Archives and shuffle "
-                "to R&D; per agenda revealed may place 1 advancement — needs RFG + multi-step."
+            paidAbilities=[
+                {
+                    "id": "moon-pool-resolve",
+                    "label": "[click], trash: Remove Moon Pool from the game",
+                    "clickCost": 1,
+                    "creditCost": 0,
+                    "cost": {"clicks": 1, "trashSelf": True},
+                    "windows": ["corp_action_paw"],
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "moon_pool_resolve",
+                            "trashHqMax": 2,
+                            "revealArchivesMax": 2,
+                        },
+                    },
+                }
             ],
+            unsupported=[],
         )
     if cid == "chekist-scion":
         return base(

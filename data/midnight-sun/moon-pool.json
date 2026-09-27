@@ -5,13 +5,34 @@
   "nrdbCode": "33042",
   "type": "asset",
   "side": "corp",
-  "unsupported": [
-    "RFG self: trash up to 2 from HQ; reveal up to 2 facedown Archives and shuffle to R&D; per agenda revealed may place 1 advancement — needs RFG + multi-step."
-  ],
+  "unsupported": [],
   "subtypes": [
     "facility"
   ],
   "installCost": 3,
   "rezCost": 3,
-  "trashCost": 3
+  "trashCost": 3,
+  "paidAbilities": [
+    {
+      "id": "moon-pool-resolve",
+      "label": "[click], trash: Remove Moon Pool from the game",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1,
+        "trashSelf": true
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "moon_pool_resolve",
+          "trashHqMax": 2,
+          "revealArchivesMax": 2
+        }
+      }
+    }
+  ]
 }
