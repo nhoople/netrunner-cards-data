@@ -389,6 +389,18 @@
     "installOnIce": {
       "type": "boolean"
     },
+    "hostStrengthModifier": {
+      "type": "integer",
+      "description": "While hosted on ice, modify host ice strength by this amount (Monkeywrench)."
+    },
+    "otherIceProtectingServerStrengthModifier": {
+      "type": "integer",
+      "description": "While hosted on ice, modify strength of each other ice protecting the same server (Monkeywrench)."
+    },
+    "onBypass": {
+      "type": "object",
+      "description": "Effect IR when the Runner bypasses a piece of ice (Capybara)."
+    },
     "derezHostAtVirus": {
       "type": "integer",
       "minimum": 1

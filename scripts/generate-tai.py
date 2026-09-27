@@ -571,6 +571,116 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    if cid == "hermes":
+        return base(
+            c,
+            muBonus=1,
+            onAgendaScoredOrStolen=draw("corp", 1),
+            unsupported=[],
+        )
+
+    if cid == "salvo-testing":
+        return base(
+            c,
+            onAgendaScored=choose(
+                "corp",
+                [
+                    {
+                        "id": "core",
+                        "label": "Do 1 core damage",
+                        "effect": core(1),
+                    },
+                    {
+                        "id": "decline",
+                        "label": "Decline",
+                        "effect": gain("corp", 0),
+                    },
+                ],
+            ),
+            unsupported=[],
+        )
+
+    if cid == "monkeywrench":
+        return base(
+            c,
+            installOnIce=True,
+            hostStrengthModifier=-2,
+            otherIceProtectingServerStrengthModifier=-1,
+            unsupported=[],
+        )
+
+    if cid == "capybara":
+        return base(
+            c,
+            onBypass=choose(
+                "runner",
+                [
+                    {
+                        "id": "rfg-derez",
+                        "label": "Remove from the game: derez that ice",
+                        "effect": {
+                            "op": "do",
+                            "action": {
+                                "kind": "rfg_self_then_derez_bypassed_ice"
+                            },
+                        },
+                    },
+                    {
+                        "id": "decline",
+                        "label": "Decline",
+                        "effect": gain("runner", 0),
+                    },
+                ],
+            ),
+            unsupported=[],
+        )
+
+    if cid == "ablative-barrier":
+        return base(
+            c,
+            onRez={
+                "op": "if",
+                "cond": {"op": "threat", "level": 3},
+                "then": {
+                    "op": "if",
+                    "cond": {"op": "source_protects_attacked_server"},
+                    "then": choose(
+                        "corp",
+                        [
+                            {
+                                "id": "install",
+                                "label": (
+                                    "Install 1 non-agenda from HQ/Archives "
+                                    "protecting/root of another server"
+                                ),
+                                "effect": {
+                                    "op": "do",
+                                    "action": {
+                                        "kind": "install_from_hq_or_archives",
+                                        "excludeAgenda": True,
+                                        "excludeSourceServer": True,
+                                    },
+                                },
+                            },
+                            {
+                                "id": "decline",
+                                "label": "Decline",
+                                "effect": gain("corp", 0),
+                            },
+                        ],
+                    ),
+                },
+            },
+            subroutines=[
+                {
+                    "id": "ablative-etr",
+                    "text": "End the run.",
+                    "effect": etr(),
+                }
+            ],
+            unsupported=[],
+        )
+
     # Fallback: skeleton with full text as unsupported
 
     card = base(c)

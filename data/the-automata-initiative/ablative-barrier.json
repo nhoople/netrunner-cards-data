@@ -5,13 +5,66 @@
   "nrdbCode": "34034",
   "type": "ice",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: Threat 3 → When you rez this ice during a run against this server, you may install 1 non-agenda card from HQ or Archives in the root of or protecting another server. (This ability is active if any player has 3 or more agenda points.) [subro"
-  ],
+  "unsupported": [],
   "subtypes": [
     "barrier"
   ],
   "installCost": 2,
   "rezCost": 2,
-  "strength": 1
+  "strength": 1,
+  "onRez": {
+    "op": "if",
+    "cond": {
+      "op": "threat",
+      "level": 3
+    },
+    "then": {
+      "op": "if",
+      "cond": {
+        "op": "source_protects_attacked_server"
+      },
+      "then": {
+        "op": "choose",
+        "chooser": "corp",
+        "options": [
+          {
+            "id": "install",
+            "label": "Install 1 non-agenda from HQ/Archives protecting/root of another server",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "install_from_hq_or_archives",
+                "excludeAgenda": true,
+                "excludeSourceServer": true
+              }
+            }
+          },
+          {
+            "id": "decline",
+            "label": "Decline",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "gain_credits",
+                "side": "corp",
+                "amount": 0
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "subroutines": [
+    {
+      "id": "ablative-etr",
+      "text": "End the run.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "end_the_run"
+        }
+      }
+    }
+  ]
 }
