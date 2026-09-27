@@ -145,6 +145,25 @@
       "type": "boolean",
       "description": "When true, advancement requirement equals the number of cards in the Runner grip (Blood in the Water)."
     },
+    "advancementRequirementReductionPerTag": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Reduce this agenda's advancement requirement by this many per Runner tag (Freedom of Information)."
+    },
+    "advancementRequirementReductionPerCoreDamageThisGame": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Reduce this agenda's advancement requirement by this many per core damage the Runner has taken this game (Ontological Dependence)."
+    },
+    "advancementRequirementReductionPerBadPublicity": {
+      "type": "object",
+      "description": "Reduce this agenda's advancement requirement by per × Corp bad publicity, counting at most max BP (Regulatory Capture).",
+      "required": ["per"],
+      "properties": {
+        "per": { "type": "integer", "minimum": 0 },
+        "max": { "type": "integer", "minimum": 0 }
+      }
+    },
     "recurringCreditsMax": {
       "type": "integer",
       "minimum": 0

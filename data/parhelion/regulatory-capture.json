@@ -5,12 +5,14 @@
   "nrdbCode": "33120",
   "type": "agenda",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: For each bad publicity you have up to 4, this agenda gets −1 advancement requirement."
-  ],
+  "unsupported": [],
   "subtypes": [
     "research"
   ],
   "advancementRequirement": 6,
-  "agendaPoints": 2
+  "agendaPoints": 2,
+  "advancementRequirementReductionPerBadPublicity": {
+    "per": 1,
+    "max": 4
+  }
 }

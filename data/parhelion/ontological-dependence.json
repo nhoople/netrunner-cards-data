@@ -5,12 +5,11 @@
   "nrdbCode": "33096",
   "type": "agenda",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: This agenda gets -1 advancement requirement for each core damage the Runner has taken this game."
-  ],
+  "unsupported": [],
   "subtypes": [
     "research"
   ],
   "advancementRequirement": 4,
-  "agendaPoints": 2
+  "agendaPoints": 2,
+  "advancementRequirementReductionPerCoreDamageThisGame": 1
 }

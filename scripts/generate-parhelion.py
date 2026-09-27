@@ -209,6 +209,27 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    if cid == "freedom-of-information":
+        return base(
+            c,
+            advancementRequirementReductionPerTag=1,
+            unsupported=[],
+        )
+
+    if cid == "ontological-dependence":
+        return base(
+            c,
+            advancementRequirementReductionPerCoreDamageThisGame=1,
+            unsupported=[],
+        )
+
+    if cid == "regulatory-capture":
+        return base(
+            c,
+            advancementRequirementReductionPerBadPublicity={"per": 1, "max": 4},
+            unsupported=[],
+        )
+
     # --- Simple operations ---
     if cid == "end-of-the-line":
         return base(
@@ -355,8 +376,8 @@ def main():
         "status": "in-progress",
         "notes": (
             "Null Signal Parhelion (NRDB pack ph) — Borealis set 2 of 2. "
-            "Wave is in-progress: kickoff extract maps a few simple cards; "
-            "remaining cards have explicit unsupported notes until Effect IR is wired."
+            "Wave is in-progress: simple cards mapped where Effect IR covers them; "
+            "remaining cards have explicit unsupported notes."
         ),
         "cards": written,
     }
