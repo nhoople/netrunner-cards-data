@@ -763,6 +763,10 @@
       "type": "boolean",
       "description": "Ice gains an ETR subroutine before printed ones per hosted power counter (Envelopment)."
     },
+    "powerCounterOnHarmonicIceRez": {
+      "type": "boolean",
+      "description": "When any harmonic ice is rezzed, place 1 power counter on this ice (Echo)."
+    },
     "onTrash": {
       "type": "object",
       "description": "Effect IR when this Corp card is trashed to Archives (Mavirus)."
