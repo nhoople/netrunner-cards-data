@@ -481,6 +481,10 @@
       "type": "object",
       "description": "Effect IR the first time each turn the Runner makes a successful run on HQ (installed continuous; e.g. PAN-Weave Corp loses 1¢ / Runner gains 1¢ if they do)."
     },
+    "onFirstSuccessfulCentralRunThisTurn": {
+      "type": "object",
+      "description": "Effect IR the first time each turn the Runner makes a successful run on a central server (HQ / R&D / Archives; installed continuous; e.g. Zenit Chip draw 1)."
+    },
     "onFirstSuccessfulRunThisTurn": {
       "type": "object",
       "description": "Effect IR the first time each turn the Runner makes a successful run on any server (e.g. Pravdivost may place 1 advancement)."

@@ -5,11 +5,20 @@
   "nrdbCode": "33066",
   "type": "event",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: As an additional cost to play this event, suffer 1 core damage. Run R&D. If successful, access 3 additional cards when you breach R&D."
-  ],
+  "unsupported": [],
   "subtypes": [
     "run"
   ],
-  "playCost": 2
+  "playCost": 2,
+  "playAdditionalCost": {
+    "op": "do",
+    "action": {
+      "kind": "core_damage",
+      "amount": 1
+    }
+  },
+  "runEvent": {
+    "servers": "rd",
+    "bonusAccess": 3
+  }
 }
