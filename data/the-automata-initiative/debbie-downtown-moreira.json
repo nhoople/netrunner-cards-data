@@ -5,11 +5,50 @@
   "nrdbCode": "34019",
   "type": "resource",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Threat 4 → When you install this resource, place 2[credit] on it. (This ability is active if any player has 4 or more agenda points.) Whenever you play a run event, place 1[credit] on this resource. [click]: Run any server. You can spend ho"
-  ],
+  "unsupported": [],
   "subtypes": [
     "connection"
   ],
-  "installCost": 1
+  "installCost": 1,
+  "hostedCreditsOnRunEventPlay": 1,
+  "onInstall": {
+    "op": "if",
+    "cond": {
+      "op": "threat",
+      "level": 4
+    },
+    "then": {
+      "op": "do",
+      "action": {
+        "kind": "place_hosted_credits",
+        "amount": 2
+      }
+    }
+  },
+  "paidAbilities": [
+    {
+      "id": "debbie-run",
+      "label": "[click]: Run any server; spend hosted credits during that run",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "runner",
+          "amount": 0
+        }
+      },
+      "startsRun": {
+        "servers": "any",
+        "transferHostedCreditsToEventCredits": true
+      }
+    }
+  ]
 }

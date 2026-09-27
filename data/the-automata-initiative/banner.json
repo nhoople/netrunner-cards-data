@@ -5,9 +5,7 @@
   "nrdbCode": "34005",
   "type": "program",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Interface → 2[credit]: Subroutines on the barrier you are encountering cannot end the run for the remainder of this encounter."
-  ],
+  "unsupported": [],
   "subtypes": [
     "icebreaker",
     "fracter",
@@ -15,5 +13,32 @@
   ],
   "installCost": 4,
   "strength": 5,
-  "memoryCost": 1
+  "memoryCost": 1,
+  "breaker": {
+    "breaksSubtype": "barrier",
+    "strength": 5,
+    "breakCredits": 0,
+    "breakViaPaidAbilityOnly": true
+  },
+  "paidAbilities": [
+    {
+      "id": "banner-suppress-etr",
+      "label": "2¢: barrier subs cannot ETR this encounter",
+      "clickCost": 0,
+      "creditCost": 2,
+      "cost": {
+        "credits": 2
+      },
+      "windows": [
+        "encounter_paw"
+      ],
+      "requireEncounterSubtype": "barrier",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "forbid_end_the_run_this_encounter"
+        }
+      }
+    }
+  ]
 }

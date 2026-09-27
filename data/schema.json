@@ -49,6 +49,10 @@
           "type": "integer",
           "minimum": 0
         },
+        "transferHostedCreditsToEventCredits": {
+          "type": "boolean",
+          "description": "Move hosted credits on the run source into run eventCredits (Debbie)."
+        },
         "onSuccessfulRun": {
           "type": "object"
         },
@@ -1142,6 +1146,20 @@
     "interfaceRequiresTrojanHost": {
       "type": "boolean",
       "description": "Can only interface with ice hosting a trojan program (Umbrella)."
+    },
+    "onFullyBreak": {
+      "type": "object",
+      "description": "Effect IR whenever this card fully breaks a piece of ice (Curupira; unbounded)."
+    },
+    "hostedCreditsOnRunEventPlay": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Place this many hosted credits whenever the Runner plays a run event (Debbie)."
+    },
+    "onBreachHqRdIfNoBreaksOncePerTurnMayBonusAccess": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Once per turn when breaching HQ/R&D with no breaks this run, may access this many additional cards (Mercury)."
     },
     "chooseBreakerSubtypeOnInstall": {
       "type": "boolean"

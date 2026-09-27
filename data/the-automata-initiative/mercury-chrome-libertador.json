@@ -5,11 +5,10 @@
   "nrdbCode": "34010",
   "type": "identity",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Once per turn → When you breach HQ or R&D during a run, if you did not break any subroutines during that run, you may access 1 additional card."
-  ],
+  "unsupported": [],
   "subtypes": [
     "bioroid"
   ],
-  "link": 0
+  "link": 0,
+  "onBreachHqRdIfNoBreaksOncePerTurnMayBonusAccess": 1
 }

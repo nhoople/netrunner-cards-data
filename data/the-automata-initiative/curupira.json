@@ -5,14 +5,89 @@
   "nrdbCode": "34015",
   "type": "program",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Whenever you encounter a barrier, you may spend 3 hosted power counters to bypass it. Whenever this program fully breaks a piece of ice, place 1 power counter on this program. Interface → 1[credit]: Break 1 barrier subroutine. 1[credit]: +1"
-  ],
+  "unsupported": [],
   "subtypes": [
     "icebreaker",
     "fracter"
   ],
   "installCost": 3,
   "strength": 1,
-  "memoryCost": 1
+  "memoryCost": 1,
+  "breaker": {
+    "breaksSubtype": "barrier",
+    "strength": 1,
+    "breakCredits": 1,
+    "breakMaxSubs": 1,
+    "pumpCredits": 1,
+    "pumpStrength": 1,
+    "breakViaPaidAbilityOnly": true
+  },
+  "onFullyBreak": {
+    "op": "do",
+    "action": {
+      "kind": "add_power_counter",
+      "amount": 1
+    }
+  },
+  "paidAbilities": [
+    {
+      "id": "curupira-bypass",
+      "label": "Spend 3 power: bypass encountered barrier",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "powerCounters": 3
+      },
+      "windows": [
+        "encounter_paw"
+      ],
+      "requireEncounterSubtype": "barrier",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "bypass_current_ice",
+          "requireSubtype": "barrier"
+        }
+      }
+    },
+    {
+      "id": "curupira-break",
+      "label": "1¢: Break 1 barrier subroutine",
+      "clickCost": 0,
+      "creditCost": 1,
+      "cost": {
+        "credits": 1
+      },
+      "windows": [
+        "encounter_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "break_encounter_subroutine",
+          "maxSubs": 1,
+          "requireSubtype": "barrier"
+        }
+      }
+    },
+    {
+      "id": "curupira-pump",
+      "label": "1¢: +1 strength",
+      "clickCost": 0,
+      "creditCost": 1,
+      "cost": {
+        "credits": 1
+      },
+      "windows": [
+        "encounter_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "pump_strength",
+          "amount": 1
+        }
+      }
+    }
+  ]
 }
