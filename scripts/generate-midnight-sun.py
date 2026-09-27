@@ -856,10 +856,15 @@ def map_card(c: dict) -> dict:
             c,
             subtypes=["ambush"],
             canAdvance=True,
-            unsupported=[
-                "On access while installed: give 1 tag + 1 per hosted advancement — "
-                "advancement-scaled tags not modeled (ability omitted)."
-            ],
+            onAccess={
+                "op": "do",
+                "action": {
+                    "kind": "give_tags_per_advancement",
+                    "base": 1,
+                    "per": 1,
+                },
+            },
+            unsupported=[],
         )
     if cid == "drago-ivanov":
         return base(
