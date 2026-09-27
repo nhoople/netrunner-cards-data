@@ -5,12 +5,19 @@
   "nrdbCode": "33100",
   "type": "operation",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: As an additional cost to play this operation, spend [click]. Play only if the Runner stole an agenda during their last turn. Give the Runner 1 tag."
-  ],
+  "unsupported": [],
   "subtypes": [
     "double",
     "gray ops"
   ],
-  "playCost": 3
+  "playCost": 3,
+  "playAdditionalClick": true,
+  "playRequiresAgendaStolenLastTurn": true,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "give_tags",
+      "amount": 1
+    }
+  }
 }
