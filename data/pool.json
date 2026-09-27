@@ -180,8 +180,8 @@
       ]
     },
     "midnight-sun": {
-      "status": "in-progress",
-      "notes": "Null Signal Midnight Sun (NRDB pack ms) — 65 cards, Borealis set 1. Midnight Sun Booster Pack (msbp) titles absorbed into ms printings (no separate wave). Extract complete with honest unsupported notes for sabotage/mark/charge and other IR gaps; not claimed fully supported. Engine pin bump out of scope until a tagged release.",
+      "status": "supported",
+      "notes": "Null Signal Midnight Sun (NRDB pack ms) — 65 cards, Borealis set 1. Midnight Sun Booster Pack (msbp) titles absorbed into ms printings (no separate wave). Fully supported: every card has unsupported: []. Wave gate met.",
       "cards": [
         "esa-afontov-eco-insurrectionist",
         "chastushka",
