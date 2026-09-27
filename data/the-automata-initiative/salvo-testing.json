@@ -5,12 +5,39 @@
   "nrdbCode": "34031",
   "type": "agenda",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: Whenever you score an agenda (including this one), you may do 1 core damage."
-  ],
+  "unsupported": [],
   "subtypes": [
     "security"
   ],
   "advancementRequirement": 5,
-  "agendaPoints": 3
+  "agendaPoints": 3,
+  "onAgendaScored": {
+    "op": "choose",
+    "chooser": "corp",
+    "options": [
+      {
+        "id": "core",
+        "label": "Do 1 core damage",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "core_damage",
+            "amount": 1
+          }
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "corp",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  }
 }
