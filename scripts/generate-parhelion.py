@@ -611,6 +611,27 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    if cid == "asmund-pudlat":
+        # Install: search stack for up to 2 virus/weapon with different names;
+        # host faceup (not installed). Turn begin: may grip 1 hosted; trash
+        # when empty.
+        return base(
+            c,
+            onInstall={
+                "op": "do",
+                "action": {
+                    "kind": "search_stack_host_virus_or_weapon",
+                    "max": 2,
+                },
+            },
+            onTurnBegin={
+                "op": "do",
+                "action": {"kind": "may_add_hosted_card_to_grip"},
+            },
+            trashWhenNoHostedCards=True,
+            unsupported=[],
+        )
+
     if cid == "hybrid-release":
         return base(
             c,

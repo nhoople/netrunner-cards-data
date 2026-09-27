@@ -476,6 +476,10 @@
       "minimum": 1,
       "description": "While installed: during the first encounter each turn with ice protecting the server named via may_choose_server / namedServerId, each subroutine resolves as Do N net damage instead (Tsakhia Bankhar Gantulga)."
     },
+    "trashWhenNoHostedCards": {
+      "type": "boolean",
+      "description": "When this card has no hosted cards remaining, trash it (Asmund Pudlat)."
+    },
     "onTurnBegin": {
       "type": "object",
       "description": "Effect IR evaluated when this card's controller's turn begins (rezzed/installed)."
