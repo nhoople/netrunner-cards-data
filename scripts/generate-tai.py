@@ -1150,12 +1150,12 @@ def map_card(c: dict) -> dict:
     if cid == "umbrella":
         return base(
             c,
+            interfaceRequiresTrojanHost=True,
             breaker={
                 "breaksSubtype": "code gate",
                 "strength": 5,
                 "breakCredits": 0,
                 "breakViaPaidAbilityOnly": True,
-                "interfaceRequiresTrojanHost": True,
             },
             paidAbilities=[
                 {

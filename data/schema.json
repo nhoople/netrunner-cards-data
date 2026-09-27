@@ -231,10 +231,6 @@
           "type": "boolean",
           "description": "When true, standard credit break is disabled; breaks only via paidAbilities (e.g. Revolver)."
         },
-        "interfaceRequiresTrojanHost": {
-          "type": "boolean",
-          "description": "Can only interface with ice hosting a trojan program (Umbrella)."
-        },
         "breakMaxSubs": {
           "type": "integer",
           "minimum": 1,

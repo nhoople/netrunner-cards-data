@@ -14,12 +14,12 @@
   "installCost": 3,
   "strength": 5,
   "memoryCost": 1,
+  "interfaceRequiresTrojanHost": true,
   "breaker": {
     "breaksSubtype": "code gate",
     "strength": 5,
     "breakCredits": 0,
-    "breakViaPaidAbilityOnly": true,
-    "interfaceRequiresTrojanHost": true
+    "breakViaPaidAbilityOnly": true
   },
   "paidAbilities": [
     {
