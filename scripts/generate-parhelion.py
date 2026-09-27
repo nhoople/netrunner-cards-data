@@ -314,6 +314,116 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    if cid == "bloop":
+        return base(
+            c,
+            rezAdditionalCostDerezSubtype="harmonic",
+            subroutines=[
+                {
+                    "id": "bloop-core",
+                    "text": "Do 1 core damage.",
+                    "effect": core(1),
+                },
+                {
+                    "id": "bloop-trash-1",
+                    "text": "Trash 1 installed program.",
+                    "effect": trash_prog("choose"),
+                },
+                {
+                    "id": "bloop-trash-2",
+                    "text": "Trash 1 installed program.",
+                    "effect": trash_prog("choose"),
+                },
+            ],
+            unsupported=[],
+        )
+
+    if cid == "pulse":
+        return base(
+            c,
+            onRez={
+                "op": "if",
+                "cond": {"op": "source_protects_attacked_server"},
+                "then": {
+                    "op": "do",
+                    "action": {
+                        "kind": "lose_clicks",
+                        "side": "runner",
+                        "amount": 1,
+                    },
+                },
+            },
+            subroutines=[
+                {
+                    "id": "pulse-lose",
+                    "text": "The Runner loses 1¢ for each rezzed piece of harmonic ice.",
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "lose_credits_per_rezzed_subtype",
+                            "side": "runner",
+                            "subtype": "harmonic",
+                            "per": 1,
+                        },
+                    },
+                },
+                {
+                    "id": "pulse-etr",
+                    "text": "End the run unless the Runner spends [click].",
+                    "effect": choose(
+                        "runner",
+                        [
+                            {
+                                "id": "spend-click",
+                                "label": "Spend [click]",
+                                "effect": {
+                                    "op": "do",
+                                    "action": {
+                                        "kind": "lose_clicks",
+                                        "side": "runner",
+                                        "amount": 1,
+                                    },
+                                },
+                            },
+                            {
+                                "id": "etr",
+                                "label": "End the run",
+                                "effect": etr(),
+                            },
+                        ],
+                    ),
+                },
+            ],
+            unsupported=[],
+        )
+
+    if cid == "shipment-from-vladisibirsk":
+        return base(
+            c,
+            playRequiresMinTags=2,
+            onPlay={
+                "op": "do",
+                "action": {"kind": "place_advancements", "amount": 4},
+            },
+            unsupported=[],
+        )
+
+    if cid == "katorga-breakout":
+        return base(
+            c,
+            runEvent={
+                "servers": "any",
+                "onSuccessfulRun": {
+                    "op": "do",
+                    "action": {
+                        "kind": "add_from_heap_to_grip",
+                        "pick": "choose",
+                    },
+                },
+            },
+            unsupported=[],
+        )
+
     if cid == "tunnel-vision":
         card = breaker_card(
             c, "*", 2, 2, pump_c=2, pump_s=2, break_max=2, unsupported=[]

@@ -616,6 +616,15 @@
     "playRequiresTagged": {
       "type": "boolean"
     },
+    "playRequiresMinTags": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Play only if the Runner has at least this many tags (Shipment from Vladisibirsk)."
+    },
+    "rezAdditionalCostDerezSubtype": {
+      "type": "string",
+      "description": "As an additional rez cost, derez another rezzed ice with this subtype (Bloop / harmonic)."
+    },
     "playRequiresAgendaStolenLastTurn": {
       "type": "boolean",
       "description": "Play only if the Runner stole an agenda during their last turn (Distributed Tracing)."

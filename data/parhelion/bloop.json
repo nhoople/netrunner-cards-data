@@ -5,9 +5,7 @@
   "nrdbCode": "33098",
   "type": "ice",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: As an additional cost to rez this ice, derez another piece of harmonic ice. [subroutine] Do 1 core damage. [subroutine] Trash 1 installed program. [subroutine] Trash 1 installed program."
-  ],
+  "unsupported": [],
   "subtypes": [
     "sentry",
     "ap",
@@ -16,5 +14,41 @@
   ],
   "installCost": 3,
   "rezCost": 3,
-  "strength": 5
+  "strength": 5,
+  "rezAdditionalCostDerezSubtype": "harmonic",
+  "subroutines": [
+    {
+      "id": "bloop-core",
+      "text": "Do 1 core damage.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "core_damage",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "id": "bloop-trash-1",
+      "text": "Trash 1 installed program.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "trash_program",
+          "pick": "choose"
+        }
+      }
+    },
+    {
+      "id": "bloop-trash-2",
+      "text": "Trash 1 installed program.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "trash_program",
+          "pick": "choose"
+        }
+      }
+    }
+  ]
 }

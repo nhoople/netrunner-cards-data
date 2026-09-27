@@ -13,19 +13,13 @@
   "installCost": 2,
   "strength": 2,
   "memoryCost": 2,
-  "onTurnBegin": {
-    "op": "do",
-    "action": {
-      "kind": "identify_mark"
-    }
-  },
   "breaker": {
     "breaksSubtype": "*",
     "strength": 2,
     "breakCredits": 2,
+    "breakMaxSubs": 2,
     "pumpCredits": 2,
     "pumpStrength": 2,
-    "breakMaxSubs": 2,
     "breakRequiresAttackingMark": true
   },
   "paidAbilities": [
@@ -48,5 +42,11 @@
         }
       }
     }
-  ]
+  ],
+  "onTurnBegin": {
+    "op": "do",
+    "action": {
+      "kind": "identify_mark"
+    }
+  }
 }
