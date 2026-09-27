@@ -767,6 +767,16 @@
       "type": "boolean",
       "description": "When any harmonic ice is rezzed, place 1 power counter on this ice (Echo)."
     },
+    "powerOnFirstInstalledCardCreditSpendThisTurn": {
+      "type": "boolean",
+      "description": "First spend of credits from an installed card each turn places 1 power (The Twinning)."
+    },
+    "removePowerForBonusAccessOnHqRdBreach": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "On HQ/R&D breach, remove up to this many power for bonus accesses (The Twinning)."
+    },
+
     "onTrash": {
       "type": "object",
       "description": "Effect IR when this Corp card is trashed to Archives (Mavirus)."

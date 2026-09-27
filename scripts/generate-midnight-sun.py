@@ -664,10 +664,9 @@ def map_card(c: dict) -> dict:
         return base(
             c,
             subtypes=["virtual"],
-            unsupported=[
-                "First spend from installed card each turn places power counter; on HQ/R&D breach "
-                "may remove up to 2 for bonus access — needs spend trigger + breach bonus."
-            ],
+            powerOnFirstInstalledCardCreditSpendThisTurn=True,
+            removePowerForBonusAccessOnHqRdBreach=2,
+            unsupported=[],
         )
     if cid == "backstitching":
         return base(
