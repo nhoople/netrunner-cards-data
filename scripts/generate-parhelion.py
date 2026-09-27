@@ -814,6 +814,101 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    if cid == "hafrun":
+        return base(
+            c,
+            onRez={
+                "op": "if",
+                "cond": {"op": "source_protects_attacked_server"},
+                "then": {
+                    "op": "do",
+                    "action": {
+                        "kind": "may_trash_hq_then",
+                        "then": {
+                            "op": "do",
+                            "action": {
+                                "kind": "forbid_installed_runner_break_for_run"
+                            },
+                        },
+                    },
+                },
+            },
+            subroutines=[
+                {
+                    "id": "hafrun-etr",
+                    "text": "End the run.",
+                    "effect": etr(),
+                }
+            ],
+            unsupported=[],
+        )
+
+    if cid == "klevetnik":
+        return base(
+            c,
+            onRez={
+                "op": "if",
+                "cond": {"op": "source_protects_attacked_server"},
+                "then": {
+                    "op": "do",
+                    "action": {
+                        "kind": "may_give_runner_credits_then",
+                        "amount": 2,
+                        "then": {
+                            "op": "do",
+                            "action": {
+                                "kind": "blank_installed_resource_until_corp_turn_end"
+                            },
+                        },
+                    },
+                },
+            },
+            subroutines=[
+                {
+                    "id": "klevetnik-etr",
+                    "text": "End the run.",
+                    "effect": etr(),
+                }
+            ],
+            unsupported=[],
+        )
+
+    if cid == "unsmiling-tsarevna":
+        return base(
+            c,
+            onRez={
+                "op": "if",
+                "cond": {"op": "source_protects_attacked_server"},
+                "then": {
+                    "op": "do",
+                    "action": {
+                        "kind": "may_give_runner_credits_then",
+                        "amount": 2,
+                        "then": {
+                            "op": "do",
+                            "action": {
+                                "kind": "limit_printed_breaks_on_source_for_run",
+                                "max": 1,
+                            },
+                        },
+                    },
+                },
+            },
+            subroutines=[
+                {
+                    "id": "unsmiling-net",
+                    "text": "Do 2 net damage.",
+                    "effect": net(2),
+                },
+                {
+                    "id": "unsmiling-tag",
+                    "text": "Give the Runner 1 tag.",
+                    "effect": tags(1),
+                },
+            ],
+            unsupported=[],
+        )
+
     if cid == "tunnel-vision":
         card = breaker_card(
             c, "*", 2, 2, pump_c=2, pump_s=2, break_max=2, unsupported=[]
