@@ -31,7 +31,7 @@ Match this dataset and [netrunner-engine](https://github.com/nhoople/netrunner-e
 
 | Pairing | cards-data | engine |
 |---------|------------|--------|
-| **Current** | [`v0.49.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v0.49.0) | [`v0.49.0`](https://github.com/nhoople/netrunner-engine/releases/tag/v0.49.0) |
+| **Current** | [`v0.50.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v0.50.0) | [`v0.50.0`](https://github.com/nhoople/netrunner-engine/releases/tag/v0.50.0) |
 
 Incremental wave tags are the day-to-day IR/wiring contract. A set-complete **milestone** GitHub Release is cut only when a wave’s pool status → `supported` (advertised host floor for that set).
 
@@ -66,7 +66,7 @@ console.log(pool.corpusOrder, marjanah.title);
 | system-gateway | 77 | Null Signal System Gateway (fully supported) |
 | system-update-2021 | 82 | Null Signal System Update 2021 (fully supported) |
 | midnight-sun | 65 | Null Signal Midnight Sun (`ms`); `msbp` titles absorbed; fully supported |
-| parhelion | 63 | Null Signal Parhelion (`ph`); status `in-progress` (**15/63** mapped) |
+| parhelion | 63 | Null Signal Parhelion (`ph`); status `in-progress` (**19/63** mapped) |
 
 Synthetic stubs and early wave1/wave2 dirs were removed in `v0.2.0`. Reprints that previously lived only under those waves now ship under their Null Signal release directories.
 
