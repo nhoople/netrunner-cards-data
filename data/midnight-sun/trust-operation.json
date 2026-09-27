@@ -5,19 +5,28 @@
   "nrdbCode": "33065",
   "type": "operation",
   "side": "corp",
-  "unsupported": [
-    "Install and rez 1 card from Archives ignoring all costs — Archives-only ignore-costs install/rez incomplete (trash resource mapped; install omitted)."
-  ],
+  "unsupported": [],
   "subtypes": [
     "gray ops"
   ],
   "playCost": 0,
   "playRequiresTagged": true,
   "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "trash_resource",
-      "pick": "choose"
-    }
+    "op": "seq",
+    "effects": [
+      {
+        "op": "do",
+        "action": {
+          "kind": "trash_resource",
+          "pick": "choose"
+        }
+      },
+      {
+        "op": "do",
+        "action": {
+          "kind": "install_and_rez_from_archives_free"
+        }
+      }
+    ]
   }
 }
