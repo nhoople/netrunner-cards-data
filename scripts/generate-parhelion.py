@@ -519,6 +519,40 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    if cid == "gaslight":
+        return base(
+            c,
+            onTurnBegin=choose(
+                "corp",
+                [
+                    {
+                        "id": "trash-search",
+                        "label": "Trash Gaslight: search R&D for an operation",
+                        "effect": seq(
+                            trash_self(),
+                            {
+                                "op": "do",
+                                "action": {"kind": "search_rd_operation_to_hq"},
+                            },
+                        ),
+                    },
+                    {
+                        "id": "decline",
+                        "label": "Decline",
+                        "effect": gain("corp", 0),
+                    },
+                ],
+            ),
+            unsupported=[],
+        )
+
+    if cid == "djupstad-grid":
+        return base(
+            c,
+            coreDamageOnAgendaScoredFromThisServer=1,
+            unsupported=[],
+        )
+
     if cid == "tunnel-vision":
         card = breaker_card(
             c, "*", 2, 2, pump_c=2, pump_s=2, break_max=2, unsupported=[]

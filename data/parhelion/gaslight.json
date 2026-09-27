@@ -5,10 +5,47 @@
   "nrdbCode": "33114",
   "type": "asset",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: When your turn begins, you may trash this asset. If you do, search R&D for an operation and reveal it. (Shuffle R&D after searching it.) Add that operation to HQ."
-  ],
+  "unsupported": [],
   "installCost": 0,
   "rezCost": 0,
-  "trashCost": 2
+  "trashCost": 2,
+  "onTurnBegin": {
+    "op": "choose",
+    "chooser": "corp",
+    "options": [
+      {
+        "id": "trash-search",
+        "label": "Trash Gaslight: search R&D for an operation",
+        "effect": {
+          "op": "seq",
+          "effects": [
+            {
+              "op": "do",
+              "action": {
+                "kind": "trash_self"
+              }
+            },
+            {
+              "op": "do",
+              "action": {
+                "kind": "search_rd_operation_to_hq"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "corp",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  }
 }
