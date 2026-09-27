@@ -1,0 +1,15 @@
+{
+  "id": "mercury-chrome-libertador",
+  "title": "Mercury: Chrome Libertador",
+  "wave": "the-automata-initiative",
+  "nrdbCode": "34010",
+  "type": "identity",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: Once per turn → When you breach HQ or R&D during a run, if you did not break any subroutines during that run, you may access 1 additional card."
+  ],
+  "subtypes": [
+    "bioroid"
+  ],
+  "link": 0
+}

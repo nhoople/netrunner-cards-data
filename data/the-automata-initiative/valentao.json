@@ -1,0 +1,18 @@
+{
+  "id": "valentao",
+  "title": "Valentão",
+  "wave": "the-automata-initiative",
+  "nrdbCode": "34060",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: As an additional cost to rez this ice, take 1 bad publicity or remove 1 tag. [subroutine] Gain 2[credit]. [subroutine] The Runner loses 2[credit]. [subroutine] End the run if you have more credits than the Runner."
+  ],
+  "subtypes": [
+    "code gate",
+    "liability"
+  ],
+  "installCost": 5,
+  "rezCost": 5,
+  "strength": 6
+}

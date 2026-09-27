@@ -1,0 +1,14 @@
+{
+  "id": "tucana",
+  "title": "Tucana",
+  "wave": "the-automata-initiative",
+  "nrdbCode": "34064",
+  "type": "upgrade",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: Remote server only. Persistent → Whenever an agenda is scored or stolen from the root of this server, you may search R&D for 1 piece of ice. (Shuffle R&D after searching it.) Install and rez that ice, paying a total of 3[credit] less."
+  ],
+  "installCost": 2,
+  "rezCost": 2,
+  "trashCost": 1
+}

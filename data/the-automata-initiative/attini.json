@@ -1,0 +1,18 @@
+{
+  "id": "attini",
+  "title": "Attini",
+  "wave": "the-automata-initiative",
+  "nrdbCode": "34042",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: Threat 3 → The Runner cannot spend credits while subroutines on this ice are resolving. (This ability is active if any player has 3 or more agenda points.) [subroutine] Do 1 net damage unless the Runner pays 2[credit]. [subroutine] Do 1 net"
+  ],
+  "subtypes": [
+    "code gate",
+    "ap"
+  ],
+  "installCost": 6,
+  "rezCost": 6,
+  "strength": 5
+}

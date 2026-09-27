@@ -1,0 +1,18 @@
+{
+  "id": "b-1001",
+  "title": "B-1001",
+  "wave": "the-automata-initiative",
+  "nrdbCode": "34065",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: Remove 1 tag: End the run. Use this ability only during a run against another server."
+  ],
+  "subtypes": [
+    "bioroid",
+    "enforcer"
+  ],
+  "installCost": 1,
+  "rezCost": 1,
+  "trashCost": 3
+}

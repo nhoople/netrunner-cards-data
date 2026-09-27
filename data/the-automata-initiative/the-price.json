@@ -1,0 +1,12 @@
+{
+  "id": "the-price",
+  "title": "The Price",
+  "wave": "the-automata-initiative",
+  "nrdbCode": "34002",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: Trash the top 4 cards of your stack. You may install 1 of those cards, paying 3[credit] less."
+  ],
+  "playCost": 1
+}

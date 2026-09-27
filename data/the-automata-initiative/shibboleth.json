@@ -1,0 +1,18 @@
+{
+  "id": "shibboleth",
+  "title": "Shibboleth",
+  "wave": "the-automata-initiative",
+  "nrdbCode": "34018",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: Threat 4 → This program gets −2 strength. (This ability is active if any player has 4 or more agenda points.) Interface → 1[credit]: Break 1 code gate subroutine. 2[credit]: +2 strength."
+  ],
+  "subtypes": [
+    "icebreaker",
+    "decoder"
+  ],
+  "installCost": 1,
+  "strength": 3,
+  "memoryCost": 1
+}

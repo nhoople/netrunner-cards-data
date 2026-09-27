@@ -1,0 +1,19 @@
+{
+  "id": "umbrella",
+  "title": "Umbrella",
+  "wave": "the-automata-initiative",
+  "nrdbCode": "34027",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: This program can only interface with ice hosting a trojan program. Interface → 2[credit]: Break up to 3 code gate subroutines. If at least 1 subroutine was broken this way, each player may draw 1 card."
+  ],
+  "subtypes": [
+    "icebreaker",
+    "decoder",
+    "weapon"
+  ],
+  "installCost": 3,
+  "strength": 5,
+  "memoryCost": 1
+}

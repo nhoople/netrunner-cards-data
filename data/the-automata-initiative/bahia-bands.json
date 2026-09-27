@@ -1,0 +1,15 @@
+{
+  "id": "bahia-bands",
+  "title": "Bahia Bands",
+  "wave": "the-automata-initiative",
+  "nrdbCode": "34030",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: Run any server. If successful, resolve 2 of the following in any order:Draw 2 cards.Install 1 card from your grip, paying 1[credit] less.Remove 1 tag.Place 4[credit] on this event. You can spend hosted credits to pay trash costs for the rem"
+  ],
+  "subtypes": [
+    "run"
+  ],
+  "playCost": 2
+}

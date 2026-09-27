@@ -1,0 +1,15 @@
+{
+  "id": "hermes",
+  "title": "Hermes",
+  "wave": "the-automata-initiative",
+  "nrdbCode": "34014",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: +1[mu] Whenever an agenda is scored or stolen, add 1 unrezzed card to HQ. Limit 1 console per player."
+  ],
+  "subtypes": [
+    "console"
+  ],
+  "installCost": 2
+}

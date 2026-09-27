@@ -1,0 +1,17 @@
+{
+  "id": "balanced-coverage",
+  "title": "Balanced Coverage",
+  "wave": "the-automata-initiative",
+  "nrdbCode": "34050",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: When your turn begins, you may choose a card type to look at the top card of R&D. If that card has the chosen type, you may reveal it and gain 2[credit]."
+  ],
+  "subtypes": [
+    "seedy"
+  ],
+  "installCost": 1,
+  "rezCost": 1,
+  "trashCost": 3
+}

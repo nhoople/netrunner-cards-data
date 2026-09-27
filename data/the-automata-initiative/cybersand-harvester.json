@@ -1,0 +1,14 @@
+{
+  "id": "cybersand-harvester",
+  "title": "Cybersand Harvester",
+  "wave": "the-automata-initiative",
+  "nrdbCode": "34058",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: Whenever you rez a piece of ice, place 2[credit] on this asset. You can spend hosted credits to pay install costs. [trash]: Take all credits from this asset."
+  ],
+  "installCost": 2,
+  "rezCost": 2,
+  "trashCost": 4
+}

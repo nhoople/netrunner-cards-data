@@ -1,0 +1,17 @@
+{
+  "id": "tatu-bola",
+  "title": "Tatu-Bola",
+  "wave": "the-automata-initiative",
+  "nrdbCode": "34044",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: When the Runner passes this ice, you may swap it with a piece of ice from HQ. If you do, gain 4[credit]. (The new ice is installed unrezzed. You do not pay an install cost.) [subroutine] End the run."
+  ],
+  "subtypes": [
+    "barrier"
+  ],
+  "installCost": 2,
+  "rezCost": 2,
+  "strength": 1
+}

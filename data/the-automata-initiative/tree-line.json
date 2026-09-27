@@ -1,0 +1,18 @@
+{
+  "id": "tree-line",
+  "title": "Tree Line",
+  "wave": "the-automata-initiative",
+  "nrdbCode": "34059",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: [click], 1[credit], reveal and trash this ice from HQ: Place 3 advancement counters on 1 installed piece of ice. You can advance this ice. It gets +1 strength for each hosted advancement counter. [subroutine] Gain 1[credit]. End the run."
+  ],
+  "subtypes": [
+    "barrier",
+    "expendable"
+  ],
+  "installCost": 4,
+  "rezCost": 4,
+  "strength": 4
+}

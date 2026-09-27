@@ -1,0 +1,16 @@
+{
+  "id": "eru-ayase-pessoa",
+  "title": "Eru Ayase-Pessoa",
+  "wave": "the-automata-initiative",
+  "nrdbCode": "34007",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: Once per turn → [click], take 1 tag: Run Archives. If successful, instead of breaching Archives, breach R&D. Threat 3 → Whenever you breach R&D during a run on Archives, access 1 additional card. (This ability is active if any player has 3 "
+  ],
+  "subtypes": [
+    "connection",
+    "clone"
+  ],
+  "installCost": 2
+}

@@ -1,0 +1,17 @@
+{
+  "id": "slash-and-burn-agriculture",
+  "title": "Slash and Burn Agriculture",
+  "wave": "the-automata-initiative",
+  "nrdbCode": "34057",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: [click], 1[credit], reveal and trash this agenda from HQ: Place 2 advancement counters on 1 installed card that you can advance."
+  ],
+  "subtypes": [
+    "expansion",
+    "expendable"
+  ],
+  "advancementRequirement": 4,
+  "agendaPoints": 2
+}

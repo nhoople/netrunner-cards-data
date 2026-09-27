@@ -1,0 +1,15 @@
+{
+  "id": "s-dobrado",
+  "title": "S-Dobrado",
+  "wave": "the-automata-initiative",
+  "nrdbCode": "34012",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: Run a central server. The first time you encounter a piece of ice during that run, bypass it. Threat 4 → The second time you encounter a piece of ice during that run, you may spend [click] to bypass it. (This ability is active if any player"
+  ],
+  "subtypes": [
+    "run"
+  ],
+  "playCost": 2
+}

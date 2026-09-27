@@ -1,0 +1,15 @@
+{
+  "id": "your-digital-life",
+  "title": "Your Digital Life",
+  "wave": "the-automata-initiative",
+  "nrdbCode": "34056",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: Gain 1[credit] for each card in HQ."
+  ],
+  "subtypes": [
+    "transaction"
+  ],
+  "playCost": 2
+}

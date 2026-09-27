@@ -1,0 +1,12 @@
+{
+  "id": "capybara",
+  "title": "Capybara",
+  "wave": "the-automata-initiative",
+  "nrdbCode": "34013",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: Whenever you bypass a piece of ice, you may remove this hardware from the game to derez that ice."
+  ],
+  "installCost": 2
+}

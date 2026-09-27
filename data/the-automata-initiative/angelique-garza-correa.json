@@ -1,0 +1,19 @@
+{
+  "id": "angelique-garza-correa",
+  "title": "Angelique Garza Correa",
+  "wave": "the-automata-initiative",
+  "nrdbCode": "34063",
+  "type": "upgrade",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: Threat 3 → [click], 1[credit], reveal and trash this upgrade from HQ: Do 1 meat damage. (This ability is active if any player has 3 or more agenda points.) When the Runner accesses this upgrade while it is rezzed, you may pay 2[credit] to d"
+  ],
+  "subtypes": [
+    "ambush",
+    "enforcer",
+    "expendable"
+  ],
+  "installCost": 0,
+  "rezCost": 0,
+  "trashCost": 2
+}

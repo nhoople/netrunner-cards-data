@@ -1,0 +1,17 @@
+{
+  "id": "ablative-barrier",
+  "title": "Ablative Barrier",
+  "wave": "the-automata-initiative",
+  "nrdbCode": "34034",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: Threat 3 → When you rez this ice during a run against this server, you may install 1 non-agenda card from HQ or Archives in the root of or protecting another server. (This ability is active if any player has 3 or more agenda points.) [subro"
+  ],
+  "subtypes": [
+    "barrier"
+  ],
+  "installCost": 2,
+  "rezCost": 2,
+  "strength": 1
+}

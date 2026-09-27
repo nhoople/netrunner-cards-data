@@ -1,0 +1,19 @@
+{
+  "id": "banner",
+  "title": "Banner",
+  "wave": "the-automata-initiative",
+  "nrdbCode": "34005",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: Interface → 2[credit]: Subroutines on the barrier you are encountering cannot end the run for the remainder of this encounter."
+  ],
+  "subtypes": [
+    "icebreaker",
+    "fracter",
+    "weapon"
+  ],
+  "installCost": 4,
+  "strength": 5,
+  "memoryCost": 1
+}

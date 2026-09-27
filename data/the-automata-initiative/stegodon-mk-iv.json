@@ -1,0 +1,16 @@
+{
+  "id": "stegodon-mk-iv",
+  "title": "Stegodon MK IV",
+  "wave": "the-automata-initiative",
+  "nrdbCode": "34032",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: Each run, as long as a piece of ice has been derezzed during that run, each installed icebreaker gets –2 strength. Once per turn → When a run begins, you may derez 1 piece of ice not protecting the attacked server to gain 1[credit]."
+  ],
+  "subtypes": [
+    "security"
+  ],
+  "advancementRequirement": 3,
+  "agendaPoints": 1
+}

@@ -1,0 +1,16 @@
+{
+  "id": "monkeywrench",
+  "title": "Monkeywrench",
+  "wave": "the-automata-initiative",
+  "nrdbCode": "34006",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: Install only on a piece of ice. Host ice gets −2 strength. Each other piece of ice protecting this server gets −1 strength."
+  ],
+  "subtypes": [
+    "trojan"
+  ],
+  "installCost": 2,
+  "memoryCost": 1
+}

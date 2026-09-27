@@ -1,0 +1,19 @@
+{
+  "id": "slap-vandal",
+  "title": "Slap Vandal",
+  "wave": "the-automata-initiative",
+  "nrdbCode": "34026",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: Install only on a piece of ice. Interface → 1[credit]: Break 1 subroutine on host ice. Use this ability only once per encounter."
+  ],
+  "subtypes": [
+    "icebreaker",
+    "ai",
+    "trojan"
+  ],
+  "installCost": 1,
+  "strength": 6,
+  "memoryCost": 1
+}

@@ -1,0 +1,15 @@
+{
+  "id": "armed-asset-protection",
+  "title": "Armed Asset Protection",
+  "wave": "the-automata-initiative",
+  "nrdbCode": "34061",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: Gain 3[credit]. Gain 1[credit] for each card type among faceup cards in Archives. If any of those cards are agendas, gain another 2[credit]."
+  ],
+  "subtypes": [
+    "transaction"
+  ],
+  "playCost": 2
+}

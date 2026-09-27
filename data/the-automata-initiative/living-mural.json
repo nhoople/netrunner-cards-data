@@ -1,0 +1,19 @@
+{
+  "id": "living-mural",
+  "title": "Living Mural",
+  "wave": "the-automata-initiative",
+  "nrdbCode": "34024",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: Install only on a piece of ice. Threat 4 → When you install this program, it gets +3 strength for the remainder of the turn. (This ability is active if any player has 4 or more agenda points.) Interface → 1[credit]: Break 1 subroutine on a "
+  ],
+  "subtypes": [
+    "icebreaker",
+    "killer",
+    "trojan"
+  ],
+  "installCost": 3,
+  "strength": 1,
+  "memoryCost": 1
+}
