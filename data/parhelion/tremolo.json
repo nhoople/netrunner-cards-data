@@ -5,14 +5,45 @@
   "nrdbCode": "33080",
   "type": "program",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Interface → 3[credit]: Break up to 2 barrier subroutines. This ability costs 1[credit] less to use for each installed piece of cybernetic hardware. 2[credit]: +2 strength."
-  ],
+  "unsupported": [],
   "subtypes": [
     "icebreaker",
     "fracter"
   ],
   "installCost": 3,
   "strength": 2,
-  "memoryCost": 1
+  "memoryCost": 1,
+  "breaker": {
+    "breaksSubtype": "barrier",
+    "strength": 2,
+    "breakCredits": 3,
+    "pumpCredits": 2,
+    "pumpStrength": 2,
+    "breakMaxSubs": 2,
+    "breakCreditsDiscountPerInstalledSubtype": {
+      "subtype": "cybernetic",
+      "amount": 1
+    }
+  },
+  "paidAbilities": [
+    {
+      "id": "tremolo-pump",
+      "label": "Pump Tremolo +2 strength",
+      "clickCost": 0,
+      "creditCost": 2,
+      "cost": {
+        "credits": 2
+      },
+      "windows": [
+        "encounter_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "pump_strength",
+          "amount": 2
+        }
+      }
+    }
+  ]
 }

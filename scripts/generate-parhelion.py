@@ -258,6 +258,53 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    if cid == "tremolo":
+        card = breaker_card(
+            c, "barrier", 2, 3, pump_c=2, pump_s=2, break_max=2, unsupported=[]
+        )
+        card["breaker"]["breakCreditsDiscountPerInstalledSubtype"] = {
+            "subtype": "cybernetic",
+            "amount": 1,
+        }
+        return card
+
+    if cid == "basilar-synthgland-2kvj":
+        return base(
+            c,
+            onInstall=core(2),
+            allottedClicksBonus=1,
+            unsupported=[],
+        )
+
+    if cid == "hypoxia":
+        return base(
+            c,
+            playRequiresTagged=True,
+            onPlay=seq(
+                core(1),
+                {
+                    "op": "do",
+                    "action": {
+                        "kind": "allotted_clicks_next_turn",
+                        "side": "runner",
+                        "delta": -1,
+                    },
+                },
+                {"op": "do", "action": {"kind": "rfg_self"}},
+            ),
+            unsupported=[],
+        )
+
+    if cid == "k2cp-turbine":
+        return base(
+            c,
+            giveStrengthToInstalledIcebreakers={
+                "amount": 2,
+                "excludeSubtype": "ai",
+            },
+            unsupported=[],
+        )
+
     # --- Simple agendas ---
     if cid == "post-truth-dividend":
         return base(
