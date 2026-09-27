@@ -5,14 +5,78 @@
   "nrdbCode": "34035",
   "type": "ice",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: Threat 4 → When the Runner encounters this ice, give them 1 tag unless they spend [click]. (This ability is active if any player has 4 or more agenda points.) [subroutine] Give the Runner 1 tag. [subroutine] If the Runner is tagged, do 1 co"
-  ],
+  "unsupported": [],
   "subtypes": [
     "sentry",
     "ap"
   ],
   "installCost": 4,
   "rezCost": 4,
-  "strength": 3
+  "strength": 2,
+  "onEncounter": {
+    "op": "if",
+    "cond": {
+      "op": "threat",
+      "level": 4
+    },
+    "then": {
+      "op": "choose",
+      "chooser": "runner",
+      "options": [
+        {
+          "id": "spend-click",
+          "label": "Spend [click]",
+          "effect": {
+            "op": "do",
+            "action": {
+              "kind": "lose_clicks",
+              "side": "runner",
+              "amount": 1
+            }
+          }
+        },
+        {
+          "id": "take-tag",
+          "label": "Take 1 tag",
+          "effect": {
+            "op": "do",
+            "action": {
+              "kind": "give_tags",
+              "amount": 1
+            }
+          }
+        }
+      ]
+    }
+  },
+  "subroutines": [
+    {
+      "id": "jag-tag",
+      "text": "Give the Runner 1 tag.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "give_tags",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "id": "jag-core",
+      "text": "If the Runner is tagged, do 1 core damage.",
+      "effect": {
+        "op": "if",
+        "cond": {
+          "op": "runner_tagged"
+        },
+        "then": {
+          "op": "do",
+          "action": {
+            "kind": "core_damage",
+            "amount": 1
+          }
+        }
+      }
+    }
+  ]
 }

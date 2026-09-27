@@ -240,6 +240,93 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    if cid == "shibboleth":
+        card = breaker_card(
+            c, "code gate", 3, 1, pump_c=2, pump_s=2, break_max=1, unsupported=[]
+        )
+        card["threatStrengthBonus"] = {"level": 4, "amount": -2}
+        return card
+
+    if cid == "mindscaping":
+        return base(
+            c,
+            onPlay=choose(
+                "corp",
+                [
+                    {
+                        "id": "gain-draw",
+                        "label": "Gain 4¢ and draw 2 cards",
+                        "effect": seq(gain("corp", 4), draw("corp", 2)),
+                    },
+                    {
+                        "id": "hq-top-rd",
+                        "label": "Add 1 card from HQ to the top of R&D",
+                        "effect": {
+                            "op": "do",
+                            "action": {"kind": "hq_to_top_rd", "pick": "choose"},
+                        },
+                    },
+                    {
+                        "id": "net-tags",
+                        "label": "Do X net damage (X = tags, max 3)",
+                        "effect": {
+                            "op": "do",
+                            "action": {"kind": "net_damage_up_to_tags", "max": 3},
+                        },
+                    },
+                ],
+            ),
+            unsupported=[],
+        )
+
+    if cid == "jaguarundi":
+        return base(
+            c,
+            onEncounter={
+                "op": "if",
+                "cond": {"op": "threat", "level": 4},
+                "then": choose(
+                    "runner",
+                    [
+                        {
+                            "id": "spend-click",
+                            "label": "Spend [click]",
+                            "effect": {
+                                "op": "do",
+                                "action": {
+                                    "kind": "lose_clicks",
+                                    "side": "runner",
+                                    "amount": 1,
+                                },
+                            },
+                        },
+                        {
+                            "id": "take-tag",
+                            "label": "Take 1 tag",
+                            "effect": tags(1),
+                        },
+                    ],
+                ),
+            },
+            subroutines=[
+                {
+                    "id": "jag-tag",
+                    "text": "Give the Runner 1 tag.",
+                    "effect": tags(1),
+                },
+                {
+                    "id": "jag-core",
+                    "text": "If the Runner is tagged, do 1 core damage.",
+                    "effect": {
+                        "op": "if",
+                        "cond": {"op": "runner_tagged"},
+                        "then": core(1),
+                    },
+                },
+            ],
+            unsupported=[],
+        )
+
     # Fallback: skeleton with full text as unsupported
     card = base(c)
     card["unsupported"] = [f"Full text not yet mapped to IR: {plain[:240]}"]
