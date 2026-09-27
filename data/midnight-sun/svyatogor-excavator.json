@@ -5,13 +5,26 @@
   "nrdbCode": "33059",
   "type": "asset",
   "side": "corp",
-  "unsupported": [
-    "Turn begin: may trash 1 other installed card to gain 3¢ — trash-other targeting not available (omitted rather than granting free credits)."
-  ],
+  "unsupported": [],
   "subtypes": [
     "industrial"
   ],
   "installCost": 0,
   "rezCost": 0,
-  "trashCost": 4
+  "trashCost": 4,
+  "onTurnBegin": {
+    "op": "do",
+    "action": {
+      "kind": "may_trash_installed",
+      "excludeSelf": true,
+      "then": {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "corp",
+          "amount": 3
+        }
+      }
+    }
+  }
 }
