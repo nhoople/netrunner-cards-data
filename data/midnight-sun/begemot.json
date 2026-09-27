@@ -5,9 +5,7 @@
   "nrdbCode": "33007",
   "type": "program",
   "side": "runner",
-  "unsupported": [
-    "Install: suffer 1 core damage (wired); +1 strength per core damage taken this game — strength-from-damage not modeled; break any number of barrier subs approximated via breakMaxSubs."
-  ],
+  "unsupported": [],
   "subtypes": [
     "icebreaker",
     "fracter"
@@ -15,6 +13,7 @@
   "installCost": 5,
   "strength": 2,
   "memoryCost": 2,
+  "strengthBonusPerCoreDamageThisGame": 1,
   "breaker": {
     "breaksSubtype": "barrier",
     "strength": 2,
