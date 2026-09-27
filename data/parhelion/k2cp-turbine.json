@@ -5,9 +5,11 @@
   "nrdbCode": "33090",
   "type": "program",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Each installed non-AI icebreaker gets +2 strength."
-  ],
+  "unsupported": [],
   "installCost": 4,
-  "memoryCost": 1
+  "memoryCost": 1,
+  "giveStrengthToInstalledIcebreakers": {
+    "amount": 2,
+    "excludeSubtype": "ai"
+  }
 }

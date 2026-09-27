@@ -235,6 +235,15 @@
         "breakCreditsDiscountIfSuccessfulRunThisTurn": {
           "type": "integer",
           "minimum": 0
+        },
+        "breakCreditsDiscountPerInstalledSubtype": {
+          "type": "object",
+          "required": ["subtype", "amount"],
+          "properties": {
+            "subtype": { "type": "string" },
+            "amount": { "type": "integer", "minimum": 0 }
+          },
+          "description": "Reduce breakCredits by amount × count of installed cards with subtype (Tremolo: cybernetic)."
         }
       }
     },
@@ -549,6 +558,22 @@
     "handSizeBonus": {
       "type": "integer",
       "description": "Modifier to controller max hand size while installed/scored."
+    },
+    "allottedClicksBonus": {
+      "type": "integer",
+      "description": "Modifier to allotted clicks each of the controller's turns while installed (Basilar Synthgland)."
+    },
+    "giveStrengthToInstalledIcebreakers": {
+      "type": "object",
+      "required": ["amount"],
+      "properties": {
+        "amount": { "type": "integer" },
+        "excludeSubtype": {
+          "type": "string",
+          "description": "Do not grant the bonus to icebreakers with this subtype (K2CP Turbine: ai)."
+        }
+      },
+      "description": "Aura: each other installed icebreaker gets +amount strength (K2CP Turbine)."
     },
     "memoryCost": {
       "type": "integer",

@@ -5,11 +5,36 @@
   "nrdbCode": "33101",
   "type": "operation",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: Play only if the Runner is tagged. Do 1 core damage. The Runner gets -1 allotted [click] for their next turn. Remove this operation from the game."
-  ],
+  "unsupported": [],
   "subtypes": [
     "black ops"
   ],
-  "playCost": 1
+  "playCost": 1,
+  "playRequiresTagged": true,
+  "onPlay": {
+    "op": "seq",
+    "effects": [
+      {
+        "op": "do",
+        "action": {
+          "kind": "core_damage",
+          "amount": 1
+        }
+      },
+      {
+        "op": "do",
+        "action": {
+          "kind": "allotted_clicks_next_turn",
+          "side": "runner",
+          "delta": -1
+        }
+      },
+      {
+        "op": "do",
+        "action": {
+          "kind": "rfg_self"
+        }
+      }
+    ]
+  }
 }
