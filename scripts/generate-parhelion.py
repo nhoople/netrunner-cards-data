@@ -305,6 +305,15 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    if cid == "distributed-tracing":
+        return base(
+            c,
+            playAdditionalClick=True,
+            playRequiresAgendaStolenLastTurn=True,
+            onPlay=tags(1),
+            unsupported=[],
+        )
+
     if cid == "tunnel-vision":
         card = breaker_card(
             c, "*", 2, 2, pump_c=2, pump_s=2, break_max=2, unsupported=[]
