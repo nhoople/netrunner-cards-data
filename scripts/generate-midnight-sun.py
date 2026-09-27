@@ -58,8 +58,11 @@ def gain(side: str, n: int):
     return {"op": "do", "action": {"kind": "gain_credits", "side": side, "amount": n}}
 
 
-def lose(side: str, n: int):
-    return {"op": "do", "action": {"kind": "lose_credits", "side": side, "amount": n}}
+def lose(side: str, n: int, then=None):
+    action = {"kind": "lose_credits", "side": side, "amount": n}
+    if then is not None:
+        action["then"] = then
+    return {"op": "do", "action": action}
 
 
 def draw(side: str, n: int):
@@ -435,10 +438,8 @@ def map_card(c: dict) -> dict:
             c,
             subtypes=["cybernetic"],
             onInstall=meat(1),
-            unsupported=[
-                "First successful HQ run each turn: Corp loses 1¢, then Runner gains 1¢ — "
-                "needs first-HQ-success transfer."
-            ],
+            onFirstSuccessfulHqRunThisTurn=lose("corp", 1, then=gain("runner", 1)),
+            unsupported=[],
         )
     if cid == "virtuoso":
         return base(

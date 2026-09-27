@@ -445,6 +445,10 @@
       "type": "object",
       "description": "Effect IR the first time each turn the Runner makes a successful run on their mark (installed continuous / identity; e.g. Virtuoso HQ bonus access or post-run HQ breach)."
     },
+    "onFirstSuccessfulHqRunThisTurn": {
+      "type": "object",
+      "description": "Effect IR the first time each turn the Runner makes a successful run on HQ (installed continuous; e.g. PAN-Weave Corp loses 1¢ / Runner gains 1¢ if they do)."
+    },
     "onAgendaScored": {
       "type": "object",
       "description": "Effect IR when Corp scores any agenda (identity or installed continuous)."

@@ -5,9 +5,7 @@
   "nrdbCode": "33014",
   "type": "hardware",
   "side": "runner",
-  "unsupported": [
-    "First successful HQ run each turn: Corp loses 1¢, then Runner gains 1¢ — needs first-HQ-success transfer."
-  ],
+  "unsupported": [],
   "subtypes": [
     "cybernetic"
   ],
@@ -17,6 +15,22 @@
     "action": {
       "kind": "meat_damage",
       "amount": 1
+    }
+  },
+  "onFirstSuccessfulHqRunThisTurn": {
+    "op": "do",
+    "action": {
+      "kind": "lose_credits",
+      "side": "corp",
+      "amount": 1,
+      "then": {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "runner",
+          "amount": 1
+        }
+      }
     }
   }
 }
