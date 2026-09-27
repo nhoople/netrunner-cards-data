@@ -5,19 +5,25 @@
   "nrdbCode": "33055",
   "type": "operation",
   "side": "corp",
-  "unsupported": [
-    "Additional cost: remove 1 tag; add this operation to score area as 1-point agenda — tag cost + score-as-agenda not modeled."
-  ],
+  "unsupported": [],
   "subtypes": [
     "gray ops"
   ],
   "playCost": 2,
+  "playRequiresTagged": true,
+  "playAdditionalCost": {
+    "op": "do",
+    "action": {
+      "kind": "remove_tags",
+      "amount": 1
+    }
+  },
+  "agendaPoints": 1,
   "onPlay": {
     "op": "do",
     "action": {
-      "kind": "gain_credits",
-      "side": "corp",
-      "amount": 0
+      "kind": "score_self_as_agenda",
+      "agendaPoints": 1
     }
   }
 }
