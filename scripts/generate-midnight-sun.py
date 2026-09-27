@@ -364,9 +364,23 @@ def map_card(c: dict) -> dict:
         return base(
             c,
             onPlay=draw("runner", 3),
-            unsupported=[
-                "When trashed from grip or stack, may draw 2 — needs grip/stack trash trigger."
-            ],
+            onTrashFromGripOrStack={
+                "op": "choose",
+                "chooser": "runner",
+                "options": [
+                    {
+                        "id": "draw",
+                        "label": "Draw 2",
+                        "effect": draw("runner", 2),
+                    },
+                    {
+                        "id": "decline",
+                        "label": "Decline",
+                        "effect": gain("runner", 0),
+                    },
+                ],
+            },
+            unsupported=[],
         )
     if cid == "carpe-diem":
         return base(
@@ -1114,6 +1128,9 @@ def map_card(c: dict) -> dict:
         return base(
             c,
             subtypes=["barrier"],
+            etrSubroutinesPerPowerCounter=True,
+            onRez={"op": "do", "action": {"kind": "add_power_counter", "amount": 4}},
+            onTurnBegin={"op": "do", "action": {"kind": "remove_power_counter", "amount": 1}},
             subroutines=[
                 {
                     "id": "env-trash",
@@ -1121,10 +1138,7 @@ def map_card(c: dict) -> dict:
                     "effect": {"op": "do", "action": {"kind": "trash_self"}},
                 }
             ],
-            unsupported=[
-                "On rez place 4 power counters; turn begin remove 1; gains ETR sub before "
-                "others per counter — no add_power_counter-on-rez IR; dynamic subs not modeled."
-            ],
+            unsupported=[],
         )
     if cid == "maskirovka":
         return base(
@@ -1261,10 +1275,37 @@ def map_card(c: dict) -> dict:
         return base(
             c,
             subtypes=["ambush"],
-            unsupported=[
-                "R&D access must reveal; on access may purge virus counters; if rezzed also "
-                "do 1 net; trash: purge — purge virus IR missing (abilities omitted)."
-            ],
+            onAccess={
+                "op": "seq",
+                "effects": [
+                    {
+                        "op": "if",
+                        "cond": {"op": "source_rezzed"},
+                        "then": net(1),
+                    },
+                    {
+                        "op": "choose",
+                        "chooser": "corp",
+                        "options": [
+                            {
+                                "id": "purge",
+                                "label": "Purge virus counters",
+                                "effect": {
+                                    "op": "do",
+                                    "action": {"kind": "purge_virus_counters"},
+                                },
+                            },
+                            {
+                                "id": "decline",
+                                "label": "Decline",
+                                "effect": gain("corp", 0),
+                            },
+                        ],
+                    },
+                ],
+            },
+            onTrash={"op": "do", "action": {"kind": "purge_virus_counters"}},
+            unsupported=[],
         )
     if cid == "vladisibirsk-city-grid":
         return base(

@@ -5,13 +5,63 @@
   "nrdbCode": "33047",
   "type": "upgrade",
   "side": "corp",
-  "unsupported": [
-    "R&D access must reveal; on access may purge virus counters; if rezzed also do 1 net; trash: purge — purge virus IR missing (abilities omitted)."
-  ],
+  "unsupported": [],
   "subtypes": [
     "ambush"
   ],
   "installCost": 3,
   "rezCost": 3,
-  "trashCost": 0
+  "trashCost": 0,
+  "onAccess": {
+    "op": "seq",
+    "effects": [
+      {
+        "op": "if",
+        "cond": {
+          "op": "source_rezzed"
+        },
+        "then": {
+          "op": "do",
+          "action": {
+            "kind": "net_damage",
+            "amount": 1
+          }
+        }
+      },
+      {
+        "op": "choose",
+        "chooser": "corp",
+        "options": [
+          {
+            "id": "purge",
+            "label": "Purge virus counters",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "purge_virus_counters"
+              }
+            }
+          },
+          {
+            "id": "decline",
+            "label": "Decline",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "gain_credits",
+                "side": "corp",
+                "amount": 0
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "onTrash": {
+    "op": "do",
+    "action": {
+      "kind": "purge_virus_counters"
+    }
+  }
 }

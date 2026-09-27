@@ -5,9 +5,7 @@
   "nrdbCode": "33004",
   "type": "event",
   "side": "runner",
-  "unsupported": [
-    "When trashed from grip or stack, may draw 2 — needs grip/stack trash trigger."
-  ],
+  "unsupported": [],
   "playCost": 1,
   "onPlay": {
     "op": "do",
@@ -16,5 +14,35 @@
       "side": "runner",
       "amount": 3
     }
+  },
+  "onTrashFromGripOrStack": {
+    "op": "choose",
+    "chooser": "runner",
+    "options": [
+      {
+        "id": "draw",
+        "label": "Draw 2",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "draw",
+            "side": "runner",
+            "amount": 2
+          }
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "runner",
+            "amount": 0
+          }
+        }
+      }
+    ]
   }
 }

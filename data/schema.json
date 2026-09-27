@@ -759,6 +759,18 @@
       "minimum": 1,
       "description": "Extra clicks beyond the first when playing (triples = 2). Overrides playAdditionalClick count."
     },
+    "etrSubroutinesPerPowerCounter": {
+      "type": "boolean",
+      "description": "Ice gains an ETR subroutine before printed ones per hosted power counter (Envelopment)."
+    },
+    "onTrash": {
+      "type": "object",
+      "description": "Effect IR when this Corp card is trashed to Archives (Mavirus)."
+    },
+    "onTrashFromGripOrStack": {
+      "type": "object",
+      "description": "Effect IR when this Runner card is trashed from grip or stack (Steelskin)."
+    },
     "endsActionPhase": {
       "type": "boolean",
       "description": "Terminal: end the action phase after resolving this operation (Big Deal)."
