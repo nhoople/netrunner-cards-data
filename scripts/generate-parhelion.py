@@ -598,6 +598,19 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    if cid == "tsakhia-bankhar-gantulga":
+        # Turn begin: may name a server. First encounter with ice protecting
+        # that server: each sub becomes Do 1 net damage instead.
+        return base(
+            c,
+            onTurnBegin={
+                "op": "do",
+                "action": {"kind": "may_choose_server"},
+            },
+            firstEncounterSubsBecomeNetDamage=1,
+            unsupported=[],
+        )
+
     if cid == "hybrid-release":
         return base(
             c,
