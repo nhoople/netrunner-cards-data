@@ -4,7 +4,7 @@
   "count": 63,
   "written": 63,
   "status": "in-progress",
-  "notes": "Null Signal Parhelion (NRDB pack ph) — Borealis set 2 of 2. Wave is in-progress: simple cards mapped where Effect IR covers them; remaining cards have explicit unsupported notes.",
+  "notes": "Null Signal Parhelion (NRDB pack ph) \u2014 Borealis set 2 of 2. Fully supported (wave gate v0.71.0); all 63 cards mapped.",
   "cards": [
     "finality",
     "katorga-breakout",
