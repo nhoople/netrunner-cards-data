@@ -5,9 +5,15 @@
   "nrdbCode": "33022",
   "type": "event",
   "side": "runner",
-  "unsupported": [
-    "Requires successful HQ+R&D+Archives this turn (not just any successful run); Corp sets aside top 8 of R&D faceup; access 1 then may spend [click] for another; shuffle set-aside — needs multi-central success gate + set-aside zone."
-  ],
+  "unsupported": [],
   "playCost": 2,
-  "playRequiresSuccessfulRunThisTurn": true
+  "playRequiresSuccessfulAllCentralsThisTurn": true,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "deep_dive_resolve",
+      "setAside": 8,
+      "initialAccess": 1
+    }
+  }
 }

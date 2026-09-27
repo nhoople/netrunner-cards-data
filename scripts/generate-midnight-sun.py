@@ -428,12 +428,16 @@ def map_card(c: dict) -> dict:
     if cid == "deep-dive":
         return base(
             c,
-            playRequiresSuccessfulRunThisTurn=True,
-            unsupported=[
-                "Requires successful HQ+R&D+Archives this turn (not just any successful run); "
-                "Corp sets aside top 8 of R&D faceup; access 1 then may spend [click] for another; "
-                "shuffle set-aside — needs multi-central success gate + set-aside zone."
-            ],
+            playRequiresSuccessfulAllCentralsThisTurn=True,
+            onPlay={
+                "op": "do",
+                "action": {
+                    "kind": "deep_dive_resolve",
+                    "setAside": 8,
+                    "initialAccess": 1,
+                },
+            },
+            unsupported=[],
         )
     if cid == "into-the-depths":
         return base(

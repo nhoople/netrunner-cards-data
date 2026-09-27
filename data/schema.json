@@ -723,6 +723,11 @@
       "type": "boolean",
       "description": "Play only if the Runner made a successful run on HQ this turn (e.g. Emergency Shutdown)."
     },
+    "playRequiresSuccessfulAllCentralsThisTurn": {
+      "type": "boolean",
+      "description": "Play only if successful runs on HQ, R&D, and Archives this turn (Deep Dive)."
+    },
+
     "canAdvance": {
       "type": "boolean"
     },
