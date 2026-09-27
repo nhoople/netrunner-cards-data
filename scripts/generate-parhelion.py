@@ -1029,6 +1029,36 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    if cid == "spark-of-inspiration":
+        # Set aside stack until a program; may install it −10¢; shuffle aside.
+        return base(
+            c,
+            onPlay={
+                "op": "do",
+                "action": {
+                    "kind": "spark_of_inspiration_resolve",
+                    "discount": 10,
+                },
+            },
+            unsupported=[],
+        )
+
+    if cid == "world-tree":
+        # First successful run each turn (Nga once-per-turn pattern): may trash
+        # another installed card → search stack for same type, install −3¢.
+        return base(
+            c,
+            onSuccessfulRunOncePerTurn=True,
+            onSuccessfulRun={
+                "op": "do",
+                "action": {
+                    "kind": "may_trash_other_installed_search_stack_same_type_install",
+                    "discount": 3,
+                },
+            },
+            unsupported=[],
+        )
+
     if cid == "mr-hendrik":
         return base(
             c,

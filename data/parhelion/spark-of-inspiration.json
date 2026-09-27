@@ -5,11 +5,16 @@
   "nrdbCode": "33084",
   "type": "event",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Set aside cards from the top of your stack faceup until you set aside a program. You may install that program, paying 10[credit] less. Shuffle the set-aside cards into your stack."
-  ],
+  "unsupported": [],
   "subtypes": [
     "mod"
   ],
-  "playCost": 3
+  "playCost": 3,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "spark_of_inspiration_resolve",
+      "discount": 10
+    }
+  }
 }
