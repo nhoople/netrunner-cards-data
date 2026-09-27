@@ -19,7 +19,7 @@ Files under [`data/`](data/) are the API. Clone the repo or fetch a **tagged** r
 | [`data/system-gateway/`](data/system-gateway/) | System Gateway (NRDB `sg`) |
 | [`data/system-update-2021/`](data/system-update-2021/) | System Update 2021 (NRDB `su21`) |
 | [`data/midnight-sun/`](data/midnight-sun/) | Midnight Sun (NRDB `ms`) |
-| [`data/parhelion/`](data/parhelion/) | Parhelion (NRDB `ph`) — in progress |
+| [`data/parhelion/`](data/parhelion/) | Parhelion (NRDB `ph`) — supported |
 
 **Corpus order:** System Gateway → System Update 2021 → Midnight Sun → Parhelion → later releases.
 
@@ -66,11 +66,11 @@ console.log(pool.corpusOrder, marjanah.title);
 | system-gateway | 77 | Null Signal System Gateway (fully supported) |
 | system-update-2021 | 82 | Null Signal System Update 2021 (fully supported) |
 | midnight-sun | 65 | Null Signal Midnight Sun (`ms`); `msbp` titles absorbed; fully supported |
-| parhelion | 63 | Null Signal Parhelion (`ph`); status `in-progress` (**63/63** mapped) |
+| parhelion | 63 | Null Signal Parhelion (`ph`); status `supported` (wave gate `v0.71.0`; all 63 clear) |
 
 Synthetic stubs and early wave1/wave2 dirs were removed in `v0.2.0`. Reprints that previously lived only under those waves now ship under their Null Signal release directories.
 
-Parhelion extract lists unimplemented clauses in each card’s `unsupported` array. Do not treat the wave as fully supported until those notes are cleared or explicitly deferred.
+Parhelion is fully supported (wave gate `v0.71.0`). All 63 cards have empty `unsupported` arrays.
 
 ## Versioning
 
