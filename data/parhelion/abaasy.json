@@ -5,14 +5,46 @@
   "nrdbCode": "33070",
   "type": "program",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: The first time each turn this program fully breaks a piece of ice, you may trash 1 card from your grip to draw 1 card. Interface → 1[credit]: Break 1 code gate subroutine. 2[credit]: +2 strength."
-  ],
+  "unsupported": [],
   "subtypes": [
     "icebreaker",
     "decoder"
   ],
   "installCost": 2,
   "strength": 1,
-  "memoryCost": 1
+  "memoryCost": 1,
+  "breaker": {
+    "breaksSubtype": "code gate",
+    "strength": 1,
+    "breakCredits": 1,
+    "pumpCredits": 2,
+    "pumpStrength": 2
+  },
+  "paidAbilities": [
+    {
+      "id": "abaasy-pump",
+      "label": "Pump Abaasy +2 strength",
+      "clickCost": 0,
+      "creditCost": 2,
+      "cost": {
+        "credits": 2
+      },
+      "windows": [
+        "encounter_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "pump_strength",
+          "amount": 2
+        }
+      }
+    }
+  ],
+  "onFullyBreakOncePerTurn": {
+    "op": "do",
+    "action": {
+      "kind": "may_trash_from_grip_to_draw"
+    }
+  }
 }

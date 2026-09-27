@@ -5,14 +5,70 @@
   "nrdbCode": "33089",
   "type": "program",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: The first time each turn this program fully breaks a piece of ice, you may charge 1 of your installed cards. (Add 1 power counter to a card that already has one.) Interface → 2[credit]: Break any number of sentry subroutines. 2[credit]: +3 "
-  ],
+  "unsupported": [],
   "subtypes": [
     "icebreaker",
     "killer"
   ],
   "installCost": 10,
   "strength": 3,
-  "memoryCost": 2
+  "memoryCost": 2,
+  "breaker": {
+    "breaksSubtype": "sentry",
+    "strength": 3,
+    "breakCredits": 2,
+    "breakMaxSubs": 99,
+    "pumpCredits": 2,
+    "pumpStrength": 3
+  },
+  "paidAbilities": [
+    {
+      "id": "orca-pump",
+      "label": "Pump Orca +3 strength",
+      "clickCost": 0,
+      "creditCost": 2,
+      "cost": {
+        "credits": 2
+      },
+      "windows": [
+        "encounter_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "pump_strength",
+          "amount": 3
+        }
+      }
+    }
+  ],
+  "onFullyBreakOncePerTurn": {
+    "op": "choose",
+    "chooser": "runner",
+    "options": [
+      {
+        "id": "charge",
+        "label": "Charge 1 of your installed cards",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "charge",
+            "pick": "choose"
+          }
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "runner",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  }
 }
