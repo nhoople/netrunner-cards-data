@@ -894,6 +894,18 @@
       "type": "boolean",
       "description": "Play only if the Runner stole an agenda during their last turn (Distributed Tracing)."
     },
+    "playRequiresRunnerStoleOrTrashedCorpCardLastTurn": {
+      "type": "boolean",
+      "description": "Play only if the Runner stole or trashed a Corp card during their last turn (Oppo Research)."
+    },
+    "onFirstRunnerStoleOrTrashedCorpCardThisTurn": {
+      "type": "object",
+      "description": "Identity: Effect IR the first time each turn the Runner steals or trashes a Corp card (Epiphany Analytica)."
+    },
+    "wageWorkersTrackActions": {
+      "type": "boolean",
+      "description": "While rezzed, after each Corp action of a type taken exactly 3 times this turn, gain 1 click (Wage Workers)."
+    },
     "playRequiresSuccessfulRunLastTurn": {
       "type": "boolean"
     },

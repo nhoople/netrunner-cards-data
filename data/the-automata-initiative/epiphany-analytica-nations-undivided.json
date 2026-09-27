@@ -5,10 +5,37 @@
   "nrdbCode": "34048",
   "type": "identity",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: The first time each turn the Runner steals or trashes a Corp card, place 1 power counter on this identity. [click], hosted power counter: Look at the top 3 cards of R&D. You may install 1 of those cards."
-  ],
+  "unsupported": [],
   "subtypes": [
     "division"
+  ],
+  "onFirstRunnerStoleOrTrashedCorpCardThisTurn": {
+    "op": "do",
+    "action": {
+      "kind": "add_power_counter",
+      "amount": 1
+    }
+  },
+  "paidAbilities": [
+    {
+      "id": "epiphany-look-install",
+      "label": "[click], hosted power counter: Look at top 3 of R&D; may install 1",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1,
+        "powerCounters": 1
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "look_top_n_rd_may_install_one",
+          "n": 3
+        }
+      }
+    }
   ]
 }

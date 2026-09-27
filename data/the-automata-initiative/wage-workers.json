@@ -5,9 +5,7 @@
   "nrdbCode": "34033",
   "type": "asset",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: Whenever you finish taking an action, if you have taken that action exactly 3 times this turn, gain [click]."
-  ],
+  "unsupported": [],
   "subtypes": [
     "bioroid",
     "clone",
@@ -15,5 +13,6 @@
   ],
   "installCost": 2,
   "rezCost": 2,
-  "trashCost": 4
+  "trashCost": 4,
+  "wageWorkersTrackActions": true
 }
