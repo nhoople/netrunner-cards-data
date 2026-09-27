@@ -737,6 +737,36 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    if cid == "hush":
+        return base(
+            c,
+            installOnIce=True,
+            blanksHostAbilities=True,
+            paidAbilities=[
+                {
+                    "id": "hush-rehost",
+                    "label": "[click]: Host on another installed ice",
+                    "clickCost": 1,
+                    "creditCost": 0,
+                    "cost": {"clicks": 1},
+                    "windows": ["runner_action_paw"],
+                    "effect": {
+                        "op": "do",
+                        "action": {"kind": "rehost_on_other_ice"},
+                    },
+                }
+            ],
+            unsupported=[],
+        )
+
+    if cid == "flux-capacitor":
+        return base(
+            c,
+            installOnIce=True,
+            chargeOnFirstBreakDuringHostEncounter=True,
+            unsupported=[],
+        )
+
     if cid == "concerto":
         return base(
             c,

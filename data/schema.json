@@ -570,6 +570,14 @@
       "minimum": 1,
       "description": "Gain this many credits when a card is trashed from this server's root or ice, except during install (Yakov)."
     },
+    "blanksHostAbilities": {
+      "type": "boolean",
+      "description": "While hosted on ice, host loses abilities except printed subroutines (Hush)."
+    },
+    "chargeOnFirstBreakDuringHostEncounter": {
+      "type": "boolean",
+      "description": "First break during an encounter with host ice: may charge (Flux Capacitor)."
+    },
     "hostedCreditsOnInstall": {
       "type": "integer",
       "minimum": 0,
