@@ -1241,11 +1241,14 @@ def map_card(c: dict) -> dict:
             c,
             subtypes=["gray ops"],
             playRequiresTagged=True,
-            onPlay=trash_res(),
-            unsupported=[
-                "Install and rez 1 card from Archives ignoring all costs — Archives-only "
-                "ignore-costs install/rez incomplete (trash resource mapped; install omitted)."
-            ],
+            onPlay=seq(
+                trash_res(),
+                {
+                    "op": "do",
+                    "action": {"kind": "install_and_rez_from_archives_free"},
+                },
+            ),
+            unsupported=[],
         )
 
     # --- Upgrades ---
