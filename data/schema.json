@@ -52,6 +52,15 @@
         "onSuccessfulRun": {
           "type": "object"
         },
+        "addPowerCounterOnSubroutineResolve": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Place this many power counters on the run source whenever a subroutine resolves during the run (Raindrops Cut Stone)."
+        },
+        "onRunEnd": {
+          "type": "object",
+          "description": "Effect IR fired when the run ends (success or not), sourced on the run event/ability card."
+        },
         "bypassFirstEncounter": {
           "type": "boolean"
         },
@@ -861,6 +870,15 @@
     },
     "trashWhenPowerEmpty": {
       "type": "boolean"
+    },
+    "badPublicityCountersOnRez": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Load this many hosted bad publicity counters when this card is rezzed (Superdeep Borehole). Hosted BP is not player BP until taken."
+    },
+    "winWhenBadPublicityCountersEmpty": {
+      "type": "boolean",
+      "description": "While rezzed, when hosted bad publicity counters reach 0 the Corp wins (Superdeep Borehole)."
     },
     "playRequiresSuccessfulRunThisTurn": {
       "type": "boolean"
