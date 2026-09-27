@@ -5,14 +5,48 @@
   "nrdbCode": "33088",
   "type": "program",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: When this program is uninstalled, remove it from the game. When an agenda is scored or stolen, remove this program from the game. Interface → 2[credit]: Break up to 2 subroutines. 1[credit]: +1 strength."
-  ],
+  "unsupported": [],
   "subtypes": [
     "icebreaker",
     "ai"
   ],
   "installCost": 4,
   "strength": 3,
-  "memoryCost": 2
+  "memoryCost": 2,
+  "rfgOnUninstall": true,
+  "onAgendaScoredOrStolen": {
+    "op": "do",
+    "action": {
+      "kind": "rfg_self"
+    }
+  },
+  "breaker": {
+    "breaksSubtype": "*",
+    "strength": 3,
+    "breakCredits": 2,
+    "pumpCredits": 1,
+    "pumpStrength": 1,
+    "breakMaxSubs": 2
+  },
+  "paidAbilities": [
+    {
+      "id": "nanuq-pump",
+      "label": "Pump Nanuq +1 strength",
+      "clickCost": 0,
+      "creditCost": 1,
+      "cost": {
+        "credits": 1
+      },
+      "windows": [
+        "encounter_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "pump_strength",
+          "amount": 1
+        }
+      }
+    }
+  ]
 }

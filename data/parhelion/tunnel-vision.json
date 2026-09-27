@@ -5,14 +5,48 @@
   "nrdbCode": "33081",
   "type": "program",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: When your turn begins, identify your mark. (If you donʼt have a mark, a random central server becomes your mark for this turn.) Interface → 2[credit]: Break up to 2 subroutines on a piece of ice protecting your mark. 2[credit]: +2 strength."
-  ],
+  "unsupported": [],
   "subtypes": [
     "icebreaker",
     "ai"
   ],
   "installCost": 2,
   "strength": 2,
-  "memoryCost": 2
+  "memoryCost": 2,
+  "onTurnBegin": {
+    "op": "do",
+    "action": {
+      "kind": "identify_mark"
+    }
+  },
+  "breaker": {
+    "breaksSubtype": "*",
+    "strength": 2,
+    "breakCredits": 2,
+    "pumpCredits": 2,
+    "pumpStrength": 2,
+    "breakMaxSubs": 2,
+    "breakRequiresAttackingMark": true
+  },
+  "paidAbilities": [
+    {
+      "id": "tunnel-vision-pump",
+      "label": "Pump Tunnel Vision +2 strength",
+      "clickCost": 0,
+      "creditCost": 2,
+      "cost": {
+        "credits": 2
+      },
+      "windows": [
+        "encounter_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "pump_strength",
+          "amount": 2
+        }
+      }
+    }
+  ]
 }

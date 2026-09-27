@@ -244,6 +244,10 @@
             "amount": { "type": "integer", "minimum": 0 }
           },
           "description": "Reduce breakCredits by amount × count of installed cards with subtype (Tremolo: cybernetic)."
+        },
+        "breakRequiresAttackingMark": {
+          "type": "boolean",
+          "description": "Standard credit break only while attacking the mark (Tunnel Vision)."
         }
       }
     },
@@ -574,6 +578,10 @@
         }
       },
       "description": "Aura: each other installed icebreaker gets +amount strength (K2CP Turbine)."
+    },
+    "rfgOnUninstall": {
+      "type": "boolean",
+      "description": "When this card is uninstalled from the rig, remove it from the game instead of trashing to heap (Nanuq)."
     },
     "memoryCost": {
       "type": "integer",
