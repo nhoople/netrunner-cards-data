@@ -553,6 +553,79 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    if cid == "hybrid-release":
+        return base(
+            c,
+            onScore=choose(
+                "corp",
+                [
+                    {
+                        "id": "install",
+                        "label": "Install 1 facedown card from Archives",
+                        "effect": {
+                            "op": "do",
+                            "action": {
+                                "kind": "may_install_facedown_from_archives",
+                            },
+                        },
+                    },
+                    {
+                        "id": "decline",
+                        "label": "Decline",
+                        "effect": gain("corp", 0),
+                    },
+                ],
+            ),
+            unsupported=[],
+        )
+
+    if cid == "thule-subsea-safety-below":
+        return base(
+            c,
+            onAgendaStolen=choose(
+                "runner",
+                [
+                    {
+                        "id": "pay",
+                        "label": "Spend [click] and 2¢",
+                        "effect": seq(
+                            {
+                                "op": "do",
+                                "action": {
+                                    "kind": "lose_clicks",
+                                    "side": "runner",
+                                    "amount": 1,
+                                },
+                            },
+                            lose("runner", 2),
+                        ),
+                    },
+                    {
+                        "id": "damage",
+                        "label": "Suffer 1 core damage",
+                        "effect": core(1),
+                    },
+                ],
+            ),
+            unsupported=[],
+        )
+
+    if cid == "reprise":
+        return base(
+            c,
+            playRequiresAgendaStolenThisTurn=True,
+            onPlay={
+                "op": "do",
+                "action": {
+                    "kind": "return_installed_corp_to_hq",
+                    "pick": "choose",
+                },
+            },
+            runEvent={"servers": "any"},
+            runEventOptional=True,
+            unsupported=[],
+        )
+
     if cid == "tunnel-vision":
         card = breaker_card(
             c, "*", 2, 2, pump_c=2, pump_s=2, break_max=2, unsupported=[]
