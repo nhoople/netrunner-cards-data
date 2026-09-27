@@ -779,10 +779,8 @@ def map_card(c: dict) -> dict:
         return base(
             c,
             subtypes=["research"],
-            unsupported=[
-                "Advancement requirement X = cards in Runner grip — dynamic advancement "
-                "requirement not modeled (printed advancement_cost absent in NRDB)."
-            ],
+            advancementRequirementEqualsRunnerGrip=True,
+            unsupported=[],
         )
     if cid == "regenesis":
         return base(

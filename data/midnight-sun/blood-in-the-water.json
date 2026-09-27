@@ -5,11 +5,10 @@
   "nrdbCode": "33039",
   "type": "agenda",
   "side": "corp",
-  "unsupported": [
-    "Advancement requirement X = cards in Runner grip — dynamic advancement requirement not modeled (printed advancement_cost absent in NRDB)."
-  ],
+  "unsupported": [],
   "subtypes": [
     "research"
   ],
-  "agendaPoints": 2
+  "agendaPoints": 2,
+  "advancementRequirementEqualsRunnerGrip": true
 }
