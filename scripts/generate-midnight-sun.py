@@ -848,10 +848,22 @@ def map_card(c: dict) -> dict:
         return base(
             c,
             subtypes=["industrial"],
-            unsupported=[
-                "Turn begin: may trash 1 other installed card to gain 3¢ — trash-other "
-                "targeting not available (omitted rather than granting free credits)."
-            ],
+            onTurnBegin={
+                "op": "do",
+                "action": {
+                    "kind": "may_trash_installed",
+                    "excludeSelf": True,
+                    "then": {
+                        "op": "do",
+                        "action": {
+                            "kind": "gain_credits",
+                            "side": "corp",
+                            "amount": 3,
+                        },
+                    },
+                },
+            },
+            unsupported=[],
         )
 
     # --- Ice ---
@@ -1034,6 +1046,17 @@ def map_card(c: dict) -> dict:
         return base(
             c,
             subtypes=["sentry", "destroyer"],
+            onRez={
+                "op": "do",
+                "action": {
+                    "kind": "may_trash_installed",
+                    "excludeSelf": True,
+                    "then": {
+                        "op": "do",
+                        "action": {"kind": "fortify_ice", "amount": 5},
+                    },
+                },
+            },
             subroutines=[
                 {
                     "id": "stavka-trash1",
@@ -1046,9 +1069,7 @@ def map_card(c: dict) -> dict:
                     "effect": trash_prog(),
                 },
             ],
-            unsupported=[
-                "On rez may trash 1 other installed card for +5 strength remainder of run."
-            ],
+            unsupported=[],
         )
 
     # --- Operations ---
@@ -1089,11 +1110,25 @@ def map_card(c: dict) -> dict:
         return base(
             c,
             subtypes=["transaction"],
-            onPlay=gain("corp", 6),
-            unsupported=[
-                "May trash 1 installed card to gain an additional 3¢ — optional trash+gain "
-                "omitted (fail closed) until trash-other targeting exists."
-            ],
+            onPlay=seq(
+                gain("corp", 6),
+                {
+                    "op": "do",
+                    "action": {
+                        "kind": "may_trash_installed",
+                        "excludeSelf": True,
+                        "then": {
+                            "op": "do",
+                            "action": {
+                                "kind": "gain_credits",
+                                "side": "corp",
+                                "amount": 3,
+                            },
+                        },
+                    },
+                },
+            ),
+            unsupported=[],
         )
     if cid == "mutually-assured-destruction":
         return base(

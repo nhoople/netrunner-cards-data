@@ -5,9 +5,7 @@
   "nrdbCode": "33062",
   "type": "ice",
   "side": "corp",
-  "unsupported": [
-    "On rez may trash 1 other installed card for +5 strength remainder of run."
-  ],
+  "unsupported": [],
   "subtypes": [
     "sentry",
     "destroyer"
@@ -15,6 +13,20 @@
   "installCost": 4,
   "rezCost": 4,
   "strength": 2,
+  "onRez": {
+    "op": "do",
+    "action": {
+      "kind": "may_trash_installed",
+      "excludeSelf": true,
+      "then": {
+        "op": "do",
+        "action": {
+          "kind": "fortify_ice",
+          "amount": 5
+        }
+      }
+    }
+  },
   "subroutines": [
     {
       "id": "stavka-trash1",
