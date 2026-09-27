@@ -64,6 +64,11 @@
         "bypassFirstEncounter": {
           "type": "boolean"
         },
+        "bypassSecondEncounterForClickIfThreat": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Threat N → at the second ice encounter this run, Runner may spend [click] to bypass (S-Dobrado)."
+        },
         "redirectSuccessTo": {
           "type": "string",
           "enum": [
@@ -335,6 +340,11 @@
                 "type": "integer",
                 "minimum": 0,
                 "description": "Suffer this much core damage as a cost (Light the Fire!)."
+              },
+              "tags": {
+                "type": "integer",
+                "minimum": 0,
+                "description": "Take this many tags as a cost (Eru Ayase-Pessoa). Always payable."
               }
             }
           },
@@ -404,6 +414,14 @@
     "onFirstProgramInstallEachTurn": {
       "type": "object",
       "description": "Effect IR the first time each turn the Runner installs a program (LilyPAD)."
+    },
+    "onFirstCorpCardTrashEachTurn": {
+      "type": "object",
+      "description": "Effect IR the first time each turn the Runner trashes a Corp card (Solidarity Badge)."
+    },
+    "rezAdditionalCost": {
+      "type": "object",
+      "description": "Effect IR paid as an additional cost when rezzing this card (Valentão)."
     },
     "onHostRezzed": {
       "type": "object",

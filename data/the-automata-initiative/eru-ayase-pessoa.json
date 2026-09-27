@@ -5,12 +5,52 @@
   "nrdbCode": "34007",
   "type": "resource",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Once per turn → [click], take 1 tag: Run Archives. If successful, instead of breaching Archives, breach R&D. Threat 3 → Whenever you breach R&D during a run on Archives, access 1 additional card. (This ability is active if any player has 3 "
-  ],
+  "unsupported": [],
   "subtypes": [
     "connection",
     "clone"
   ],
-  "installCost": 2
+  "installCost": 2,
+  "paidAbilities": [
+    {
+      "id": "eru-run-archives",
+      "label": "[click], take 1 tag: Run Archives; success → breach R&D (Threat 3: +1 access)",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1,
+        "tags": 1
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "oncePerTurn": true,
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "runner",
+          "amount": 0
+        }
+      },
+      "startsRun": {
+        "servers": "archives",
+        "redirectSuccessTo": "rd",
+        "onSuccessfulRun": {
+          "op": "if",
+          "cond": {
+            "op": "threat",
+            "level": 3
+          },
+          "then": {
+            "op": "do",
+            "action": {
+              "kind": "bonus_access",
+              "amount": 1
+            }
+          }
+        }
+      }
+    }
+  ]
 }

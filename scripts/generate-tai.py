@@ -819,6 +819,162 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    if cid == "solidarity-badge":
+        return base(
+            c,
+            onFirstCorpCardTrashEachTurn={
+                "op": "do",
+                "action": {"kind": "add_power_counter", "amount": 1},
+            },
+            onTurnBegin={
+                "op": "if",
+                "cond": {"op": "power_counters_gte", "amount": 1},
+                "then": choose(
+                    "runner",
+                    [
+                        {
+                            "id": "draw",
+                            "label": "Remove 1 power: draw 1 card",
+                            "effect": seq(
+                                {
+                                    "op": "do",
+                                    "action": {
+                                        "kind": "remove_power_counter",
+                                        "amount": 1,
+                                    },
+                                },
+                                draw("runner", 1),
+                            ),
+                        },
+                        {
+                            "id": "remove-tag",
+                            "label": "Remove 1 power: remove 1 tag",
+                            "effect": seq(
+                                {
+                                    "op": "do",
+                                    "action": {
+                                        "kind": "remove_power_counter",
+                                        "amount": 1,
+                                    },
+                                },
+                                {
+                                    "op": "do",
+                                    "action": {
+                                        "kind": "remove_tags",
+                                        "amount": 1,
+                                    },
+                                },
+                            ),
+                        },
+                        {
+                            "id": "decline",
+                            "label": "Decline",
+                            "effect": gain("runner", 0),
+                        },
+                    ],
+                ),
+            },
+            unsupported=[],
+        )
+
+    if cid == "eru-ayase-pessoa":
+        return base(
+            c,
+            paidAbilities=[
+                {
+                    "id": "eru-run-archives",
+                    "label": (
+                        "[click], take 1 tag: Run Archives; "
+                        "success → breach R&D (Threat 3: +1 access)"
+                    ),
+                    "clickCost": 1,
+                    "creditCost": 0,
+                    "cost": {"clicks": 1, "tags": 1},
+                    "windows": ["runner_action_paw"],
+                    "oncePerTurn": True,
+                    "effect": gain("runner", 0),
+                    "startsRun": {
+                        "servers": "archives",
+                        "redirectSuccessTo": "rd",
+                        "onSuccessfulRun": {
+                            "op": "if",
+                            "cond": {"op": "threat", "level": 3},
+                            "then": {
+                                "op": "do",
+                                "action": {
+                                    "kind": "bonus_access",
+                                    "amount": 1,
+                                },
+                            },
+                        },
+                    },
+                }
+            ],
+            unsupported=[],
+        )
+
+    if cid == "valentao":
+        return base(
+            c,
+            rezAdditionalCost=choose(
+                "corp",
+                [
+                    {
+                        "id": "bad-pub",
+                        "label": "Take 1 bad publicity",
+                        "effect": {
+                            "op": "do",
+                            "action": {
+                                "kind": "give_bad_publicity",
+                                "amount": 1,
+                            },
+                        },
+                    },
+                    {
+                        "id": "remove-tag",
+                        "label": "Remove 1 tag",
+                        "effect": {
+                            "op": "do",
+                            "action": {"kind": "remove_tags", "amount": 1},
+                        },
+                    },
+                ],
+            ),
+            subroutines=[
+                {
+                    "id": "valentao-gain",
+                    "text": "Gain 2[credit].",
+                    "effect": gain("corp", 2),
+                },
+                {
+                    "id": "valentao-lose",
+                    "text": "The Runner loses 2[credit].",
+                    "effect": lose("runner", 2),
+                },
+                {
+                    "id": "valentao-etr",
+                    "text": "End the run if you have more credits than the Runner.",
+                    "effect": {
+                        "op": "if",
+                        "cond": {"op": "credits_gt_other_side", "side": "corp"},
+                        "then": etr(),
+                    },
+                },
+            ],
+            unsupported=[],
+        )
+
+    if cid == "s-dobrado":
+        return base(
+            c,
+            runEvent={
+                "servers": "central",
+                "bypassFirstEncounter": True,
+                "bypassSecondEncounterForClickIfThreat": 4,
+            },
+            unsupported=[],
+        )
+
     # Fallback: skeleton with full text as unsupported
 
     card = base(c)
