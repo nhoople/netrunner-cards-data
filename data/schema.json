@@ -281,6 +281,11 @@
                 "type": "integer",
                 "minimum": 0
               },
+              "advancementTokens": {
+                "type": "integer",
+                "minimum": 0,
+                "description": "Spend hosted advancement tokens from this card as a cost (Drago Ivanov)."
+              },
               "coreDamage": {
                 "type": "integer",
                 "minimum": 0,
@@ -397,6 +402,10 @@
       "type": "object",
       "description": "Effect IR evaluated when Corp scores this agenda."
     },
+    "scoreAdditionalCost": {
+      "type": "object",
+      "description": "Additional cost Effect IR paid before scoring this agenda (e.g. Azef Protocol must trash 1 other installed Corp card)."
+    },
     "onSteal": {
       "type": "object",
       "description": "Effect IR evaluated when Runner steals this agenda."
@@ -448,6 +457,10 @@
     "onFirstSuccessfulHqRunThisTurn": {
       "type": "object",
       "description": "Effect IR the first time each turn the Runner makes a successful run on HQ (installed continuous; e.g. PAN-Weave Corp loses 1¢ / Runner gains 1¢ if they do)."
+    },
+    "onFirstSuccessfulRunThisTurn": {
+      "type": "object",
+      "description": "Effect IR the first time each turn the Runner makes a successful run on any server (e.g. Pravdivost may place 1 advancement)."
     },
     "onProgramOrHardwareInstall": {
       "type": "object",

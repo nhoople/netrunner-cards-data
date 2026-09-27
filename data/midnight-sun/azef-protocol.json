@@ -5,14 +5,19 @@
   "nrdbCode": "33058",
   "type": "agenda",
   "side": "corp",
-  "unsupported": [
-    "Additional cost to score: trash 1 other installed card — score additional cost not enforced."
-  ],
+  "unsupported": [],
   "subtypes": [
     "security"
   ],
   "advancementRequirement": 3,
   "agendaPoints": 2,
+  "scoreAdditionalCost": {
+    "op": "do",
+    "action": {
+      "kind": "must_trash_installed",
+      "excludeSelf": true
+    }
+  },
   "onScore": {
     "op": "do",
     "action": {
