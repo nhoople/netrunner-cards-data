@@ -5,11 +5,36 @@
   "nrdbCode": "34028",
   "type": "resource",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: [click][click]: Run HQ. If successful, instead of breaching HQ, breach R&D. When you do, access 1 additional card."
-  ],
+  "unsupported": [],
   "subtypes": [
     "connection"
   ],
-  "installCost": 2
+  "installCost": 2,
+  "paidAbilities": [
+    {
+      "id": "beatriz-run",
+      "label": "[click][click]: Run HQ; success → breach R&D +1 access",
+      "clickCost": 2,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 2
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "runner",
+          "amount": 0
+        }
+      },
+      "startsRun": {
+        "servers": "hq",
+        "redirectSuccessTo": "rd",
+        "bonusAccess": 1
+      }
+    }
+  ]
 }

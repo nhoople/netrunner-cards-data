@@ -5,13 +5,89 @@
   "nrdbCode": "34036",
   "type": "ice",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: [trash]: End the run unless the Runner spends [click]. Use this ability only during a run on this server. [subroutine] The Runner loses [click]. [subroutine] The Runner loses [click]. [subroutine] End the run."
-  ],
+  "unsupported": [],
   "subtypes": [
     "code gate"
   ],
   "installCost": 6,
   "rezCost": 6,
-  "strength": 4
+  "strength": 4,
+  "paidAbilities": [
+    {
+      "id": "mic-trash-etr",
+      "label": "[trash]: End the run unless the Runner spends [click]",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "trashSelf": true
+      },
+      "windows": [
+        "approach_paw"
+      ],
+      "effect": {
+        "op": "choose",
+        "chooser": "runner",
+        "options": [
+          {
+            "id": "spend-click",
+            "label": "Spend [click]",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "lose_clicks",
+                "side": "runner",
+                "amount": 1
+              }
+            }
+          },
+          {
+            "id": "etr",
+            "label": "End the run",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "end_the_run"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "subroutines": [
+    {
+      "id": "mic-lose-1",
+      "text": "The Runner loses [click].",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "lose_clicks",
+          "side": "runner",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "id": "mic-lose-2",
+      "text": "The Runner loses [click].",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "lose_clicks",
+          "side": "runner",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "id": "mic-etr",
+      "text": "End the run.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "end_the_run"
+        }
+      }
+    }
+  ]
 }
