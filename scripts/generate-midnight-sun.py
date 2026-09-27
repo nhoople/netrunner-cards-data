@@ -937,10 +937,10 @@ def map_card(c: dict) -> dict:
         return base(
             c,
             subtypes=["barrier", "harmonic"],
-            unsupported=[
-                "When rez harmonic ice, place power counter; gains ETR sub per counter — "
-                "needs harmonic rez trigger + dynamic subroutines."
-            ],
+            powerCounterOnHarmonicIceRez=True,
+            etrSubroutinesPerPowerCounter=True,
+            subroutines=[],
+            unsupported=[],
         )
     if cid == "hakarl-1-0":
         return base(
