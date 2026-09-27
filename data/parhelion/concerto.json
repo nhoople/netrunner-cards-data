@@ -5,11 +5,18 @@
   "nrdbCode": "33075",
   "type": "event",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Reveal the top card of your stack and place credits equal to its printed play or install cost on this event. Add the revealed card to your grip. Run any server. You can spend hosted credits during that run."
-  ],
+  "unsupported": [],
   "subtypes": [
     "run"
   ],
-  "playCost": 0
+  "playCost": 0,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "reveal_top_stack_to_grip_place_hosted_credits"
+    }
+  },
+  "runEvent": {
+    "servers": "any"
+  }
 }
