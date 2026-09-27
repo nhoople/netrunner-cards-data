@@ -1264,10 +1264,27 @@ def map_card(c: dict) -> dict:
             c,
             subtypes=["region"],
             canAdvance=True,
-            unsupported=[
-                "Once per turn: 2 hosted advancements → place 2 advancements on another "
-                "advanceable card in this server's root; limit 1 region/server."
+            paidAbilities=[
+                {
+                    "id": "vlad-place",
+                    "label": "Remove 2 advancements: place 2 on another root card",
+                    "clickCost": 1,
+                    "creditCost": 0,
+                    "cost": {"clicks": 1, "advancementTokens": 2},
+                    "oncePerTurn": True,
+                    "windows": ["corp_action_paw"],
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "place_advancements",
+                            "amount": 2,
+                            "sameServerRootAsSource": True,
+                            "excludeSelf": True,
+                        },
+                    },
+                }
             ],
+            unsupported=[],
         )
 
     # Fallback: skeleton with full text as unsupported
