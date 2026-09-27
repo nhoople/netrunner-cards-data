@@ -335,10 +335,14 @@ def map_card(c: dict) -> dict:
     if cid == "ob-superheavy-logistics-extract-export-excel":
         return base(
             c,
-            unsupported=[
-                "Once per turn when trash rezzed card (not during install): search R&D for printed "
-                "rez cost exactly 1¢ less, install and rez ignoring credit costs."
-            ],
+            onRezzedCardTrashed={
+                "op": "do",
+                "action": {
+                    "kind": "search_rd_install_rez_by_printed_rez_cost",
+                    "delta": -1,
+                },
+            },
+            unsupported=[],
         )
 
     # --- Events ---

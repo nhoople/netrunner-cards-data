@@ -775,6 +775,10 @@
       "type": "object",
       "description": "Effect IR when this Runner card is trashed from grip or stack (Steelskin)."
     },
+    "onRezzedCardTrashed": {
+      "type": "object",
+      "description": "Identity: when a rezzed Corp card is trashed not during install (Ob Superheavy)."
+    },
     "endsActionPhase": {
       "type": "boolean",
       "description": "Terminal: end the action phase after resolving this operation (Big Deal)."
