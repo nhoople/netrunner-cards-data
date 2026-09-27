@@ -5,14 +5,60 @@
   "nrdbCode": "33037",
   "type": "ice",
   "side": "corp",
-  "unsupported": [
-    "On rez during run vs this server: may search R&D for ice, reveal, add to HQ; subroutine: gain 1¢ per rezzed harmonic ice — per-harmonic gain not modeled (sub omitted rather than flat 1¢)."
-  ],
+  "unsupported": [],
   "subtypes": [
     "code gate",
     "harmonic"
   ],
   "installCost": 2,
   "rezCost": 2,
-  "strength": 3
+  "strength": 3,
+  "onRez": {
+    "op": "if",
+    "cond": {
+      "op": "source_protects_attacked_server"
+    },
+    "then": {
+      "op": "choose",
+      "chooser": "corp",
+      "options": [
+        {
+          "id": "search",
+          "label": "Search R&D for an ice",
+          "effect": {
+            "op": "do",
+            "action": {
+              "kind": "search_rd_ice_to_hq"
+            }
+          }
+        },
+        {
+          "id": "decline",
+          "label": "Decline",
+          "effect": {
+            "op": "do",
+            "action": {
+              "kind": "gain_credits",
+              "side": "corp",
+              "amount": 0
+            }
+          }
+        }
+      ]
+    }
+  },
+  "subroutines": [
+    {
+      "id": "wave-harmonic",
+      "text": "Gain 1\u00a2 for each rezzed piece of harmonic ice.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits_per_rezzed_subtype",
+          "subtype": "harmonic",
+          "per": 1
+        }
+      }
+    }
+  ]
 }

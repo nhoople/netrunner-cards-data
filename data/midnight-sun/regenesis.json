@@ -5,12 +5,16 @@
   "nrdbCode": "33040",
   "type": "agenda",
   "side": "corp",
-  "unsupported": [
-    "On score if no Corp cards added to Archives this turn: reveal facedown agenda in Archives and add to score area — needs Archives-empty gate + score-from-archives."
-  ],
+  "unsupported": [],
   "subtypes": [
     "research"
   ],
   "advancementRequirement": 3,
-  "agendaPoints": 1
+  "agendaPoints": 1,
+  "onScore": {
+    "op": "do",
+    "action": {
+      "kind": "score_facedown_agenda_from_archives_if_clean"
+    }
+  }
 }
