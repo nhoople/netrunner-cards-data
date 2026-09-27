@@ -5,12 +5,25 @@
   "nrdbCode": "33079",
   "type": "hardware",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: When you install this hardware, suffer 1 core damage. The first time each turn you make a successful run on a central server, draw 1 card."
-  ],
+  "unsupported": [],
   "subtypes": [
     "cybernetic",
     "chip"
   ],
-  "installCost": 1
+  "installCost": 1,
+  "onInstall": {
+    "op": "do",
+    "action": {
+      "kind": "core_damage",
+      "amount": 1
+    }
+  },
+  "onFirstSuccessfulCentralRunThisTurn": {
+    "op": "do",
+    "action": {
+      "kind": "draw",
+      "side": "runner",
+      "amount": 1
+    }
+  }
 }

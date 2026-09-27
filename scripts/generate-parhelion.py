@@ -174,18 +174,89 @@ def map_card(c: dict) -> dict:
         return base(c, unsupported=[])
 
     if cid == "ampere-cybernetics-for-anyone":
-        return base(
-            c,
-            unsupported=[
-                "Deckbuilding: singleton + up to 2 different agendas from each Corp "
-                "faction — not modeled in Effect IR (no in-play ability)."
-            ],
-        )
+        # Deckbuilding-only (singleton + faction agenda mix) — no in-play ability.
+        return base(c, unsupported=[])
 
     # --- Simple breakers ---
     if cid == "num":
         # Fixed strength 8; break 1 sentry for 2¢; no pump.
         return breaker_card(c, "sentry", 8, 2, break_max=1)
+
+    # --- Runner cybernetics / power / run events ---
+    if cid == "zenit-chip-jz-2mj":
+        return base(
+            c,
+            onInstall=core(1),
+            onFirstSuccessfulCentralRunThisTurn=draw("runner", 1),
+            unsupported=[],
+        )
+
+    if cid == "nga":
+        return base(
+            c,
+            powerCountersOnInstall=3,
+            trashWhenPowerEmpty=True,
+            onSuccessfulRunOncePerTurn=True,
+            onSuccessfulRun=choose(
+                "runner",
+                [
+                    {
+                        "id": "sabotage",
+                        "label": "Remove 1 power counter to sabotage 1",
+                        "effect": seq(
+                            {
+                                "op": "do",
+                                "action": {
+                                    "kind": "remove_power_counter",
+                                    "amount": 1,
+                                },
+                            },
+                            {
+                                "op": "do",
+                                "action": {
+                                    "kind": "sabotage",
+                                    "amount": 1,
+                                    "interactive": True,
+                                },
+                            },
+                        ),
+                    },
+                    {
+                        "id": "decline",
+                        "label": "Decline",
+                        "effect": gain("runner", 0),
+                    },
+                ],
+            ),
+            unsupported=[],
+        )
+
+    if cid == "dr-nuka-vrolyck":
+        return base(
+            c,
+            powerCountersOnInstall=2,
+            trashWhenPowerEmpty=True,
+            paidAbilities=[
+                {
+                    "id": "nuka-draw",
+                    "label": "[click], hosted power counter: Draw 3 cards",
+                    "clickCost": 1,
+                    "creditCost": 0,
+                    "cost": {"clicks": 1, "powerCounters": 1},
+                    "windows": ["runner_action_paw"],
+                    "effect": draw("runner", 3),
+                }
+            ],
+            unsupported=[],
+        )
+
+    if cid == "finality":
+        return base(
+            c,
+            playAdditionalCost=core(1),
+            runEvent={"servers": "rd", "bonusAccess": 3},
+            unsupported=[],
+        )
 
     # --- Simple agendas ---
     if cid == "post-truth-dividend":

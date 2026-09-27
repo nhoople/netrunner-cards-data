@@ -5,9 +5,52 @@
   "nrdbCode": "33072",
   "type": "program",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: When you install this program, load 3 power counters onto it. When it is empty, trash it. The first time each turn you make a successful run, you may remove 1 hosted power counter to sabotage 1. (The Corp trashes 1 card of their choice from"
-  ],
+  "unsupported": [],
   "installCost": 2,
-  "memoryCost": 1
+  "memoryCost": 1,
+  "powerCountersOnInstall": 3,
+  "trashWhenPowerEmpty": true,
+  "onSuccessfulRunOncePerTurn": true,
+  "onSuccessfulRun": {
+    "op": "choose",
+    "chooser": "runner",
+    "options": [
+      {
+        "id": "sabotage",
+        "label": "Remove 1 power counter to sabotage 1",
+        "effect": {
+          "op": "seq",
+          "effects": [
+            {
+              "op": "do",
+              "action": {
+                "kind": "remove_power_counter",
+                "amount": 1
+              }
+            },
+            {
+              "op": "do",
+              "action": {
+                "kind": "sabotage",
+                "amount": 1,
+                "interactive": true
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "runner",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  }
 }
