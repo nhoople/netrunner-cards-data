@@ -1,0 +1,14 @@
+{
+  "id": "ampere-cybernetics-for-anyone",
+  "title": "Ampère: Cybernetics For Anyone",
+  "wave": "parhelion",
+  "nrdbCode": "33128",
+  "type": "identity",
+  "side": "corp",
+  "unsupported": [
+    "Deckbuilding: singleton + up to 2 different agendas from each Corp faction — not modeled in Effect IR (no in-play ability)."
+  ],
+  "subtypes": [
+    "corp"
+  ]
+}

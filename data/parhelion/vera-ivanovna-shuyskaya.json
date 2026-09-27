@@ -1,0 +1,17 @@
+{
+  "id": "vera-ivanovna-shuyskaya",
+  "title": "Vera Ivanovna Shuyskaya",
+  "wave": "parhelion",
+  "nrdbCode": "33115",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: Whenever an agenda is scored or stolen, you may reveal the grip. Trash 1 card revealed this way."
+  ],
+  "subtypes": [
+    "executive"
+  ],
+  "installCost": 3,
+  "rezCost": 3,
+  "trashCost": 3
+}

@@ -1,0 +1,18 @@
+{
+  "id": "tremolo",
+  "title": "Tremolo",
+  "wave": "parhelion",
+  "nrdbCode": "33080",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: Interface → 3[credit]: Break up to 2 barrier subroutines. This ability costs 1[credit] less to use for each installed piece of cybernetic hardware. 2[credit]: +2 strength."
+  ],
+  "subtypes": [
+    "icebreaker",
+    "fracter"
+  ],
+  "installCost": 3,
+  "strength": 2,
+  "memoryCost": 1
+}

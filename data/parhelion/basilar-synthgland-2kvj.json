@@ -1,0 +1,15 @@
+{
+  "id": "basilar-synthgland-2kvj",
+  "title": "Basilar Synthgland 2KVJ",
+  "wave": "parhelion",
+  "nrdbCode": "33086",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: When you install this hardware, suffer 2 core damage. You get +1 allotted [click] for each of your turns."
+  ],
+  "subtypes": [
+    "cybernetic"
+  ],
+  "installCost": 1
+}

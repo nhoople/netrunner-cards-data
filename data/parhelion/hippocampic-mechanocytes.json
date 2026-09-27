@@ -1,0 +1,15 @@
+{
+  "id": "hippocampic-mechanocytes",
+  "title": "Hippocampic Mechanocytes",
+  "wave": "parhelion",
+  "nrdbCode": "33085",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: When you install this hardware, place 2 power counters on it and suffer 1 meat damage. You get +1 maximum hand size for each hosted power counter."
+  ],
+  "subtypes": [
+    "cybernetic"
+  ],
+  "installCost": 0
+}

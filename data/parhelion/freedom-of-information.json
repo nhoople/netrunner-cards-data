@@ -1,0 +1,16 @@
+{
+  "id": "freedom-of-information",
+  "title": "Freedom of Information",
+  "wave": "parhelion",
+  "nrdbCode": "33112",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: This agenda gets -1 advancement requirement for each tag the Runner has."
+  ],
+  "subtypes": [
+    "research"
+  ],
+  "advancementRequirement": 4,
+  "agendaPoints": 2
+}

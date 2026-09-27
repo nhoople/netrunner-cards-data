@@ -1,0 +1,15 @@
+{
+  "id": "reprise",
+  "title": "Reprise",
+  "wave": "parhelion",
+  "nrdbCode": "33076",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: Play only if you stole an agenda this turn. Add 1 installed Corp card to HQ. You may run any server."
+  ],
+  "subtypes": [
+    "run"
+  ],
+  "playCost": 2
+}

@@ -1,0 +1,15 @@
+{
+  "id": "concerto",
+  "title": "Concerto",
+  "wave": "parhelion",
+  "nrdbCode": "33075",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: Reveal the top card of your stack and place credits equal to its printed play or install cost on this event. Add the revealed card to your grip. Run any server. You can spend hosted credits during that run."
+  ],
+  "subtypes": [
+    "run"
+  ],
+  "playCost": 0
+}

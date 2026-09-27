@@ -1,0 +1,18 @@
+{
+  "id": "tunnel-vision",
+  "title": "Tunnel Vision",
+  "wave": "parhelion",
+  "nrdbCode": "33081",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: When your turn begins, identify your mark. (If you donʼt have a mark, a random central server becomes your mark for this turn.) Interface → 2[credit]: Break up to 2 subroutines on a piece of ice protecting your mark. 2[credit]: +2 strength."
+  ],
+  "subtypes": [
+    "icebreaker",
+    "ai"
+  ],
+  "installCost": 2,
+  "strength": 2,
+  "memoryCost": 2
+}

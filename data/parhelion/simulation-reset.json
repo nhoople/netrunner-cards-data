@@ -1,0 +1,12 @@
+{
+  "id": "simulation-reset",
+  "title": "Simulation Reset",
+  "wave": "parhelion",
+  "nrdbCode": "33110",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: Trash up to 5 cards from HQ. Shuffle that many cards from Archives into R&D. Draw that many cards. Remove this operation from the game."
+  ],
+  "playCost": 1
+}

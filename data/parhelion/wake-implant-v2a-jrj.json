@@ -1,0 +1,15 @@
+{
+  "id": "wake-implant-v2a-jrj",
+  "title": "WAKE Implant v2A-JRJ",
+  "wave": "parhelion",
+  "nrdbCode": "33078",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: When you install this hardware, suffer 1 meat damage. Whenever you make a successful run on HQ, place 1 power counter on this hardware. Whenever you breach R&D, you may remove up to 3 hosted power counters to access that many additional car"
+  ],
+  "subtypes": [
+    "cybernetic"
+  ],
+  "installCost": 1
+}

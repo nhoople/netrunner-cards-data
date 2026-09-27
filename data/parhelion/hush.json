@@ -1,0 +1,16 @@
+{
+  "id": "hush",
+  "title": "Hush",
+  "wave": "parhelion",
+  "nrdbCode": "33071",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: Install only on a piece of ice. Host ice cannot gain abilities and loses all abilities except its printed subroutines. [click]: Host this program on another installed piece of ice."
+  ],
+  "subtypes": [
+    "trojan"
+  ],
+  "installCost": 1,
+  "memoryCost": 1
+}

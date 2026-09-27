@@ -1,0 +1,16 @@
+{
+  "id": "hybrid-release",
+  "title": "Hybrid Release",
+  "wave": "parhelion",
+  "nrdbCode": "33105",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: When you score this agenda, you may install 1 facedown card from Archives."
+  ],
+  "subtypes": [
+    "expansion"
+  ],
+  "advancementRequirement": 2,
+  "agendaPoints": 1
+}

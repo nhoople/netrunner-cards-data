@@ -1,0 +1,15 @@
+{
+  "id": "finality",
+  "title": "Finality",
+  "wave": "parhelion",
+  "nrdbCode": "33066",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: As an additional cost to play this event, suffer 1 core damage. Run R&D. If successful, access 3 additional cards when you breach R&D."
+  ],
+  "subtypes": [
+    "run"
+  ],
+  "playCost": 2
+}

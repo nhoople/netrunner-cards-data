@@ -1,0 +1,18 @@
+{
+  "id": "pulse",
+  "title": "Pulse",
+  "wave": "parhelion",
+  "nrdbCode": "33099",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: When you rez this ice during a run against this server, the Runner loses [click]. [subroutine] The Runner loses 1[credit] for each rezzed piece of harmonic ice. [subroutine] End the run unless the Runner spends [click]."
+  ],
+  "subtypes": [
+    "code gate",
+    "harmonic"
+  ],
+  "installCost": 3,
+  "rezCost": 3,
+  "strength": 1
+}

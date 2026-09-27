@@ -1,0 +1,69 @@
+{
+  "id": "nonequivalent-exchange",
+  "title": "Nonequivalent Exchange",
+  "wave": "parhelion",
+  "nrdbCode": "33118",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "subtypes": [
+    "transaction"
+  ],
+  "playCost": 2,
+  "onPlay": {
+    "op": "seq",
+    "effects": [
+      {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "corp",
+          "amount": 5
+        }
+      },
+      {
+        "op": "choose",
+        "chooser": "corp",
+        "options": [
+          {
+            "id": "both-gain-2",
+            "label": "Each player gains 2¢",
+            "effect": {
+              "op": "seq",
+              "effects": [
+                {
+                  "op": "do",
+                  "action": {
+                    "kind": "gain_credits",
+                    "side": "corp",
+                    "amount": 2
+                  }
+                },
+                {
+                  "op": "do",
+                  "action": {
+                    "kind": "gain_credits",
+                    "side": "runner",
+                    "amount": 2
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "id": "decline",
+            "label": "Decline",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "gain_credits",
+                "side": "corp",
+                "amount": 0
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

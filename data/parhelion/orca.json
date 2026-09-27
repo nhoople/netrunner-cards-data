@@ -1,0 +1,18 @@
+{
+  "id": "orca",
+  "title": "Orca",
+  "wave": "parhelion",
+  "nrdbCode": "33089",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: The first time each turn this program fully breaks a piece of ice, you may charge 1 of your installed cards. (Add 1 power counter to a card that already has one.) Interface → 2[credit]: Break any number of sentry subroutines. 2[credit]: +3 "
+  ],
+  "subtypes": [
+    "icebreaker",
+    "killer"
+  ],
+  "installCost": 10,
+  "strength": 3,
+  "memoryCost": 2
+}

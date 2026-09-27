@@ -1,0 +1,18 @@
+{
+  "id": "mr-hendrik",
+  "title": "Mr. Hendrik",
+  "wave": "parhelion",
+  "nrdbCode": "33103",
+  "type": "upgrade",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: When the Runner accesses this upgrade while it is installed, you may pay 2[credit] to do 1 core damage. If the Runner has any [click] remaining, they may lose all their [click] to prevent this damage."
+  ],
+  "subtypes": [
+    "ambush",
+    "sysop"
+  ],
+  "installCost": 0,
+  "rezCost": 0,
+  "trashCost": 2
+}
