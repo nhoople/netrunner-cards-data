@@ -5,11 +5,88 @@
   "nrdbCode": "34003",
   "type": "hardware",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: The first time each turn you trash a Corp card, place 1 power counter on this hardware. When your turn begins, you may remove 1 hosted power counter to draw 1 card or remove 1 tag."
-  ],
+  "unsupported": [],
   "subtypes": [
     "chip"
   ],
-  "installCost": 1
+  "installCost": 1,
+  "onFirstCorpCardTrashEachTurn": {
+    "op": "do",
+    "action": {
+      "kind": "add_power_counter",
+      "amount": 1
+    }
+  },
+  "onTurnBegin": {
+    "op": "if",
+    "cond": {
+      "op": "power_counters_gte",
+      "amount": 1
+    },
+    "then": {
+      "op": "choose",
+      "chooser": "runner",
+      "options": [
+        {
+          "id": "draw",
+          "label": "Remove 1 power: draw 1 card",
+          "effect": {
+            "op": "seq",
+            "effects": [
+              {
+                "op": "do",
+                "action": {
+                  "kind": "remove_power_counter",
+                  "amount": 1
+                }
+              },
+              {
+                "op": "do",
+                "action": {
+                  "kind": "draw",
+                  "side": "runner",
+                  "amount": 1
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "remove-tag",
+          "label": "Remove 1 power: remove 1 tag",
+          "effect": {
+            "op": "seq",
+            "effects": [
+              {
+                "op": "do",
+                "action": {
+                  "kind": "remove_power_counter",
+                  "amount": 1
+                }
+              },
+              {
+                "op": "do",
+                "action": {
+                  "kind": "remove_tags",
+                  "amount": 1
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "decline",
+          "label": "Decline",
+          "effect": {
+            "op": "do",
+            "action": {
+              "kind": "gain_credits",
+              "side": "runner",
+              "amount": 0
+            }
+          }
+        }
+      ]
+    }
+  }
 }
