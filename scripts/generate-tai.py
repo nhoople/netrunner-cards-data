@@ -204,6 +204,42 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    if cid == "behold":
+        return base(
+            c,
+            mustRevealWhenAccessedFromRd=True,
+            skipOnAccessFromArchives=True,
+            onAccess=choose(
+                "corp",
+                [
+                    {
+                        "id": "pay",
+                        "label": "Pay 4¢: give the Runner 2 tags",
+                        "effect": seq(
+                            lose("corp", 4),
+                            tags(2),
+                        ),
+                    },
+                    {
+                        "id": "decline",
+                        "label": "Decline",
+                        "effect": gain("corp", 0),
+                    },
+                ],
+            ),
+            unsupported=[],
+        )
+
+    if cid == "your-digital-life":
+        return base(
+            c,
+            onPlay={
+                "op": "do",
+                "action": {"kind": "gain_credits_per_hq_card", "per": 1},
+            },
+            unsupported=[],
+        )
+
     # Fallback: skeleton with full text as unsupported
     card = base(c)
     card["unsupported"] = [f"Full text not yet mapped to IR: {plain[:240]}"]

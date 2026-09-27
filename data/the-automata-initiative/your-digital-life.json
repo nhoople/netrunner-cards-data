@@ -5,11 +5,16 @@
   "nrdbCode": "34056",
   "type": "operation",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: Gain 1[credit] for each card in HQ."
-  ],
+  "unsupported": [],
   "subtypes": [
     "transaction"
   ],
-  "playCost": 2
+  "playCost": 2,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "gain_credits_per_hq_card",
+      "per": 1
+    }
+  }
 }

@@ -68,7 +68,7 @@ console.log(pool.corpusOrder, marjanah.title);
 | system-update-2021 | 82 | Null Signal System Update 2021 (fully supported) |
 | midnight-sun | 65 | Null Signal Midnight Sun (`ms`); `msbp` titles absorbed; fully supported |
 | parhelion | 63 | Null Signal Parhelion (`ph`); status `supported` (wave gate `v0.71.0`; all 63 clear) |
-| the-automata-initiative | 65 | Null Signal The Automata Initiative (`tai`); status `in-progress` (**3/65** mapped) |
+| the-automata-initiative | 65 | Null Signal The Automata Initiative (`tai`); status `in-progress` (**5/65** mapped) |
 
 Synthetic stubs and early wave1/wave2 dirs were removed in `v0.2.0`. Reprints that previously lived only under those waves now ship under their Null Signal release directories.
 
