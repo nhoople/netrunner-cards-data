@@ -862,6 +862,23 @@ def map_card(c: dict) -> dict:
         return base(
             c,
             subtypes=["barrier", "bioroid", "ap"],
+            onRez={
+                "op": "if",
+                "cond": {"op": "source_protects_attacked_server"},
+                "then": {
+                    "op": "do",
+                    "action": {
+                        "kind": "may_derez_installed",
+                        "excludeSelf": True,
+                        "then": {
+                            "op": "do",
+                            "action": {
+                                "kind": "forbid_bioroid_ice_paid_abilities_this_turn"
+                            },
+                        },
+                    },
+                },
+            },
             subroutines=[
                 {
                     "id": "hakarl-core",
@@ -881,10 +898,7 @@ def map_card(c: dict) -> dict:
                     "effect": {"op": "do", "action": {"kind": "break_host_subroutine"}},
                 }
             ],
-            unsupported=[
-                "On rez during run against this server: may derez another installed card; if so "
-                "Runner cannot use paid abilities on bioroid ice rest of turn.",
-            ],
+            unsupported=[],
         )
     if cid == "wave":
         return base(
