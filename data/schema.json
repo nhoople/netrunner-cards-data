@@ -556,6 +556,20 @@
       },
       "description": "When breaching R&D, may remove up to max hosted power counters for that many bonus accesses (Wake Implant)."
     },
+    "powerOnScoreIfAgendaNotInstalledOrAdvancedThisTurn": {
+      "type": "boolean",
+      "description": "When scoring an agenda not installed or advanced this turn, place 1 power counter (Issuaq Adaptics)."
+    },
+    "agendaPointsToWinReductionPerPowerCounter": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Reduce agenda points needed to win by this amount per hosted power counter (Issuaq Adaptics)."
+    },
+    "creditsOnTrashFromThisServer": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Gain this many credits when a card is trashed from this server's root or ice, except during install (Yakov)."
+    },
     "hostedCreditsOnInstall": {
       "type": "integer",
       "minimum": 0,
