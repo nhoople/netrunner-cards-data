@@ -5,15 +5,28 @@
   "nrdbCode": "33060",
   "type": "ice",
   "side": "corp",
-  "unsupported": [
-    "On rez place 4 power counters; turn begin remove 1; gains ETR sub before others per counter — no add_power_counter-on-rez IR; dynamic subs not modeled."
-  ],
+  "unsupported": [],
   "subtypes": [
     "barrier"
   ],
   "installCost": 5,
   "rezCost": 5,
   "strength": 5,
+  "etrSubroutinesPerPowerCounter": true,
+  "onRez": {
+    "op": "do",
+    "action": {
+      "kind": "add_power_counter",
+      "amount": 4
+    }
+  },
+  "onTurnBegin": {
+    "op": "do",
+    "action": {
+      "kind": "remove_power_counter",
+      "amount": 1
+    }
+  },
   "subroutines": [
     {
       "id": "env-trash",
