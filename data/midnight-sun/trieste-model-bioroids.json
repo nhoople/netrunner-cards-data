@@ -5,13 +5,17 @@
   "nrdbCode": "33034",
   "type": "asset",
   "side": "corp",
-  "unsupported": [
-    "On rez choose rezzed bioroid ice; Runner card abilities cannot break its subroutines — needs chosen-ice lock + break forbid."
-  ],
+  "unsupported": [],
   "subtypes": [
     "bioroid"
   ],
   "installCost": 2,
   "rezCost": 2,
-  "trashCost": 3
+  "trashCost": 3,
+  "onRez": {
+    "op": "do",
+    "action": {
+      "kind": "choose_rezzed_bioroid_forbid_runner_break"
+    }
+  }
 }
