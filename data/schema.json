@@ -530,6 +530,10 @@
       "type": "object",
       "description": "Effect IR when any agenda is scored or stolen (installed continuous, e.g. Daeg)."
     },
+    "onAgendaStolen": {
+      "type": "object",
+      "description": "Effect IR when the Runner steals an agenda (Corp identity, e.g. Thule Subsea)."
+    },
     "hostedCreditsOnInstall": {
       "type": "integer",
       "minimum": 0,
@@ -641,6 +645,14 @@
       "type": "integer",
       "minimum": 1,
       "description": "When Corp scores an agenda from this server's root, do this much core damage (Djupstad Grid)."
+    },
+    "playRequiresAgendaStolenThisTurn": {
+      "type": "boolean",
+      "description": "Play only if the Runner stole an agenda this turn (Reprise)."
+    },
+    "runEventOptional": {
+      "type": "boolean",
+      "description": "When true with runEvent, playing without a server skips the run (Reprise may-run)."
     },
     "playRequiresAgendaStolenLastTurn": {
       "type": "boolean",

@@ -5,11 +5,21 @@
   "nrdbCode": "33076",
   "type": "event",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Play only if you stole an agenda this turn. Add 1 installed Corp card to HQ. You may run any server."
-  ],
+  "unsupported": [],
   "subtypes": [
     "run"
   ],
-  "playCost": 2
+  "playCost": 2,
+  "playRequiresAgendaStolenThisTurn": true,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "return_installed_corp_to_hq",
+      "pick": "choose"
+    }
+  },
+  "runEvent": {
+    "servers": "any"
+  },
+  "runEventOptional": true
 }

@@ -5,12 +5,38 @@
   "nrdbCode": "33105",
   "type": "agenda",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: When you score this agenda, you may install 1 facedown card from Archives."
-  ],
+  "unsupported": [],
   "subtypes": [
     "expansion"
   ],
   "advancementRequirement": 2,
-  "agendaPoints": 1
+  "agendaPoints": 1,
+  "onScore": {
+    "op": "choose",
+    "chooser": "corp",
+    "options": [
+      {
+        "id": "install",
+        "label": "Install 1 facedown card from Archives",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "may_install_facedown_from_archives"
+          }
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "corp",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  }
 }
