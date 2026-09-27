@@ -1206,10 +1206,15 @@ def map_card(c: dict) -> dict:
             c,
             subtypes=["double"],
             playAdditionalClick=True,
-            unsupported=[
-                "Install up to 2 from HQ into new remotes with 2 advancements each; cannot "
-                "score/rez them this turn — multi-install + lockout not modeled."
-            ],
+            onPlay={
+                "op": "do",
+                "action": {
+                    "kind": "install_hq_new_remotes_with_advancements",
+                    "max": 2,
+                    "advancements": 2,
+                },
+            },
+            unsupported=[],
         )
     if cid == "backroom-machinations":
         return base(
