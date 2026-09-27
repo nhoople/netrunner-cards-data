@@ -5,14 +5,20 @@
   "nrdbCode": "33050",
   "type": "asset",
   "side": "corp",
-  "unsupported": [
-    "On access while installed: give 1 tag + 1 per hosted advancement — advancement-scaled tags not modeled (ability omitted)."
-  ],
+  "unsupported": [],
   "subtypes": [
     "ambush"
   ],
   "installCost": 0,
   "rezCost": 0,
-  "trashCost": 0,
-  "canAdvance": true
+  "trashCost": 2,
+  "canAdvance": true,
+  "onAccess": {
+    "op": "do",
+    "action": {
+      "kind": "give_tags_per_advancement",
+      "base": 1,
+      "per": 1
+    }
+  }
 }
