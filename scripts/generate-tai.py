@@ -681,6 +681,144 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    if cid == "lilypad":
+        return base(
+            c,
+            muBonus=2,
+            onFirstProgramInstallEachTurn=choose(
+                "runner",
+                [
+                    {
+                        "id": "draw",
+                        "label": "Draw 1 card",
+                        "effect": draw("runner", 1),
+                    },
+                    {
+                        "id": "decline",
+                        "label": "Decline",
+                        "effect": gain("runner", 0),
+                    },
+                ],
+            ),
+            unsupported=[],
+        )
+
+    if cid == "hannah-wheels-pilintra":
+        return base(
+            c,
+            paidAbilities=[
+                {
+                    "id": "wheels-run",
+                    "label": (
+                        "[click]: Gain [click]. Run a remote; "
+                        "if unsuccessful, take 1 tag"
+                    ),
+                    "clickCost": 1,
+                    "creditCost": 0,
+                    "cost": {"clicks": 1},
+                    "windows": ["runner_action_paw"],
+                    "oncePerTurn": True,
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "gain_clicks",
+                            "side": "runner",
+                            "amount": 1,
+                        },
+                    },
+                    "startsRun": {
+                        "servers": "remote",
+                        "onRunEnd": {
+                            "op": "if",
+                            "cond": {"op": "run_unsuccessful"},
+                            "then": tags(1),
+                        },
+                    },
+                },
+                {
+                    "id": "wheels-remove-tag",
+                    "label": "[click], [trash]: Gain [click][click]. Remove 1 tag",
+                    "clickCost": 1,
+                    "creditCost": 0,
+                    "cost": {"clicks": 1, "trashSelf": True},
+                    "windows": ["runner_action_paw"],
+                    "effect": seq(
+                        {
+                            "op": "do",
+                            "action": {
+                                "kind": "gain_clicks",
+                                "side": "runner",
+                                "amount": 2,
+                            },
+                        },
+                        {
+                            "op": "do",
+                            "action": {"kind": "remove_tags", "amount": 1},
+                        },
+                    ),
+                },
+            ],
+            unsupported=[],
+        )
+
+    if cid == "armed-asset-protection":
+        return base(
+            c,
+            onPlay=seq(
+                gain("corp", 3),
+                {
+                    "op": "do",
+                    "action": {
+                        "kind": "gain_credits_per_distinct_faceup_archive_type"
+                    },
+                },
+            ),
+            unsupported=[],
+        )
+
+    if cid == "saci":
+        return base(
+            c,
+            installOnIce=True,
+            onHostRezzed=gain("runner", 3),
+            onHostDerezzed=gain("runner", 3),
+            unsupported=[],
+        )
+
+    if cid == "tatu-bola":
+        return base(
+            c,
+            onPass=choose(
+                "corp",
+                [
+                    {
+                        "id": "swap",
+                        "label": "Swap with ice from HQ; gain 4¢",
+                        "effect": {
+                            "op": "do",
+                            "action": {
+                                "kind": "swap_ice_with_hq",
+                                "gainCredits": 4,
+                            },
+                        },
+                    },
+                    {
+                        "id": "decline",
+                        "label": "Decline",
+                        "effect": gain("corp", 0),
+                    },
+                ],
+            ),
+            subroutines=[
+                {
+                    "id": "tatu-bola-etr",
+                    "text": "End the run.",
+                    "effect": etr(),
+                }
+            ],
+            unsupported=[],
+        )
+
     # Fallback: skeleton with full text as unsupported
 
     card = base(c)

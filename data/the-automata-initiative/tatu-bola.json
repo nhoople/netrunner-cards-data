@@ -5,13 +5,52 @@
   "nrdbCode": "34044",
   "type": "ice",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: When the Runner passes this ice, you may swap it with a piece of ice from HQ. If you do, gain 4[credit]. (The new ice is installed unrezzed. You do not pay an install cost.) [subroutine] End the run."
-  ],
+  "unsupported": [],
   "subtypes": [
     "barrier"
   ],
   "installCost": 2,
   "rezCost": 2,
-  "strength": 1
+  "strength": 1,
+  "onPass": {
+    "op": "choose",
+    "chooser": "corp",
+    "options": [
+      {
+        "id": "swap",
+        "label": "Swap with ice from HQ; gain 4¢",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "swap_ice_with_hq",
+            "gainCredits": 4
+          }
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "corp",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  },
+  "subroutines": [
+    {
+      "id": "tatu-bola-etr",
+      "text": "End the run.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "end_the_run"
+        }
+      }
+    }
+  ]
 }
