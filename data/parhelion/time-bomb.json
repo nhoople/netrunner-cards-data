@@ -5,11 +5,49 @@
   "nrdbCode": "33069",
   "type": "hardware",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Install only if you made a successful run on a central server this turn. When you install this hardware, place 1 power counter on it. When your turn begins, if there are 3 or more hosted power counters, trash this hardware and sabotage 3. ("
-  ],
+  "unsupported": [],
   "subtypes": [
     "weapon"
   ],
-  "installCost": 1
+  "installCost": 1,
+  "installRequiresSuccessfulCentralRunThisTurn": true,
+  "powerCountersOnInstall": 1,
+  "onTurnBegin": {
+    "op": "seq",
+    "effects": [
+      {
+        "op": "do",
+        "action": {
+          "kind": "add_power_counter",
+          "amount": 1
+        }
+      },
+      {
+        "op": "if",
+        "cond": {
+          "op": "power_counters_gte",
+          "amount": 3
+        },
+        "then": {
+          "op": "seq",
+          "effects": [
+            {
+              "op": "do",
+              "action": {
+                "kind": "trash_self"
+              }
+            },
+            {
+              "op": "do",
+              "action": {
+                "kind": "sabotage",
+                "amount": 3,
+                "interactive": true
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
 }

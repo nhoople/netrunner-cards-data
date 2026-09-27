@@ -472,6 +472,53 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    if cid == "dr-vientiane-keeling":
+        return base(
+            c,
+            runnerHandSizePenaltyPerPowerCounter=1,
+            onRez={"op": "do", "action": {"kind": "add_power_counter", "amount": 1}},
+            onTurnBegin={
+                "op": "do",
+                "action": {"kind": "add_power_counter", "amount": 1},
+            },
+            unsupported=[],
+        )
+
+    if cid == "time-bomb":
+        return base(
+            c,
+            installRequiresSuccessfulCentralRunThisTurn=True,
+            powerCountersOnInstall=1,
+            onTurnBegin={
+                "op": "seq",
+                "effects": [
+                    {
+                        "op": "do",
+                        "action": {"kind": "add_power_counter", "amount": 1},
+                    },
+                    {
+                        "op": "if",
+                        "cond": {"op": "power_counters_gte", "amount": 3},
+                        "then": {
+                            "op": "seq",
+                            "effects": [
+                                {"op": "do", "action": {"kind": "trash_self"}},
+                                {
+                                    "op": "do",
+                                    "action": {
+                                        "kind": "sabotage",
+                                        "amount": 3,
+                                        "interactive": True,
+                                    },
+                                },
+                            ],
+                        },
+                    },
+                ],
+            },
+            unsupported=[],
+        )
+
     if cid == "tunnel-vision":
         card = breaker_card(
             c, "*", 2, 2, pump_c=2, pump_s=2, break_max=2, unsupported=[]

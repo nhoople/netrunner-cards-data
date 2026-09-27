@@ -629,6 +629,14 @@
       "type": "integer",
       "description": "Runner max hand size +N per hosted power counter (Hippocampic Mechanocytes)."
     },
+    "runnerHandSizePenaltyPerPowerCounter": {
+      "type": "integer",
+      "description": "While rezzed: Runner max hand size −N per hosted power counter (Dr. Vientiane Keeling)."
+    },
+    "installRequiresSuccessfulCentralRunThisTurn": {
+      "type": "boolean",
+      "description": "Install only if Runner made a successful run on a central this turn (Time Bomb)."
+    },
     "playRequiresAgendaStolenLastTurn": {
       "type": "boolean",
       "description": "Play only if the Runner stole an agenda during their last turn (Distributed Tracing)."
