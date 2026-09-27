@@ -5,9 +5,7 @@
   "nrdbCode": "33054",
   "type": "ice",
   "side": "corp",
-  "unsupported": [
-    "Encounter place-advancement targeting uses place_advancements (engine pick); verify advanceable-only targeting."
-  ],
+  "unsupported": [],
   "subtypes": [
     "sentry",
     "observer"
@@ -21,7 +19,7 @@
     "options": [
       {
         "id": "pay-adv",
-        "label": "Pay 1¢: place 1 advancement on advanceable card",
+        "label": "Pay 1\u00a2: place 1 advancement on advanceable card",
         "effect": {
           "op": "seq",
           "effects": [

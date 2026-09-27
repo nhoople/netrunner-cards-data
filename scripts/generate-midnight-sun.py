@@ -1001,10 +1001,7 @@ def map_card(c: dict) -> dict:
                     "effect": tags(1),
                 }
             ],
-            unsupported=[
-                "Encounter place-advancement targeting uses place_advancements (engine pick); "
-                "verify advanceable-only targeting."
-            ],
+            unsupported=[],
         )
     if cid == "envelopment":
         return base(
