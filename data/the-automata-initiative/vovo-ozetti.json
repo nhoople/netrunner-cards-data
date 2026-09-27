@@ -5,13 +5,22 @@
   "nrdbCode": "34038",
   "type": "upgrade",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: The rez cost of each piece of ice protecting this server is lowered by 2[credit]. Threat 4 → The rez cost of each card in the root of this server is lowered by 2[credit]. (This ability is active if any player has 4 or more agenda points.) W"
-  ],
+  "unsupported": [],
   "subtypes": [
     "sysop"
   ],
   "installCost": 1,
   "rezCost": 1,
-  "trashCost": 2
+  "trashCost": 2,
+  "iceRezCostReductionProtectingThisServer": 2,
+  "rootRezCostReductionThisServerIfThreat": {
+    "level": 4,
+    "amount": 2
+  },
+  "onCorpTurnEnd": {
+    "op": "do",
+    "action": {
+      "kind": "may_move_source_upgrade_to_another_server_root"
+    }
+  }
 }

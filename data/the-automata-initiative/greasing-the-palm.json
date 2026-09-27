@@ -5,11 +5,29 @@
   "nrdbCode": "34037",
   "type": "operation",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: Gain 5[credit]. You may install 1 card from HQ. You may remove 1 tag to place 1 advancement counter on that card."
-  ],
+  "unsupported": [],
   "subtypes": [
     "transaction"
   ],
-  "playCost": 3
+  "playCost": 3,
+  "onPlay": {
+    "op": "seq",
+    "effects": [
+      {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "corp",
+          "amount": 5
+        }
+      },
+      {
+        "op": "do",
+        "action": {
+          "kind": "may_install_from_hq_paying_costs",
+          "thenMayRemoveTagToAdvance": true
+        }
+      }
+    ]
+  }
 }
