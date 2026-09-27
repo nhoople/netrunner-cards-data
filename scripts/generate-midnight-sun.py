@@ -471,11 +471,8 @@ def map_card(c: dict) -> dict:
         card = breaker_card(c, "barrier", 2, 1, break_max=99)
         card["memoryCost"] = 2
         card["onInstall"] = core(1)
-        card["unsupported"] = [
-            "Install: suffer 1 core damage (wired); +1 strength per core damage taken this game — "
-            "strength-from-damage not modeled; break any number of barrier subs approximated via "
-            "breakMaxSubs."
-        ]
+        card["strengthBonusPerCoreDamageThisGame"] = 1
+        card["unsupported"] = []
         return card
     if cid == "cats-cradle":
         card = breaker_card(c, "code gate", 1, 1, 1, 1)
