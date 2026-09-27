@@ -12,6 +12,7 @@
   "installCost": 0,
   "rezCost": 0,
   "trashCost": 0,
+  "skipOnAccessFromArchives": true,
   "onAccess": {
     "op": "choose",
     "chooser": "corp",

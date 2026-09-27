@@ -509,6 +509,10 @@
       "type": "boolean",
       "description": "Static ability: while accessing this card in R&D, the Runner must reveal it (CR §1.21.7)."
     },
+    "skipOnAccessFromArchives": {
+      "type": "boolean",
+      "description": "When true, onAccess does not fire if this card is accessed from Archives (Snare!, Behold!)."
+    },
     "onFirstTagThisTurn": {
       "type": "object",
       "description": "Effect IR the first time the Runner is tagged each turn (identities)."

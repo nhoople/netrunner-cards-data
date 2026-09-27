@@ -5,13 +5,55 @@
   "nrdbCode": "34051",
   "type": "asset",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: While the Runner is accessing this asset in R&D, they must reveal it. When the Runner accesses this asset anywhere except in Archives, you may pay 4[credit] to give them 2 tags."
-  ],
+  "unsupported": [],
   "subtypes": [
     "ambush"
   ],
   "installCost": 0,
   "rezCost": 0,
-  "trashCost": 0
+  "trashCost": 0,
+  "mustRevealWhenAccessedFromRd": true,
+  "skipOnAccessFromArchives": true,
+  "onAccess": {
+    "op": "choose",
+    "chooser": "corp",
+    "options": [
+      {
+        "id": "pay",
+        "label": "Pay 4¢: give the Runner 2 tags",
+        "effect": {
+          "op": "seq",
+          "effects": [
+            {
+              "op": "do",
+              "action": {
+                "kind": "lose_credits",
+                "side": "corp",
+                "amount": 4
+              }
+            },
+            {
+              "op": "do",
+              "action": {
+                "kind": "give_tags",
+                "amount": 2
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "corp",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  }
 }
