@@ -954,13 +954,15 @@ def map_card(c: dict) -> dict:
         return base(
             c,
             subtypes=["barrier", "ap"],
+            rezCostDiscountPerRezzedSubtype={
+                "subtype": "code gate",
+                "amount": 1,
+            },
             subroutines=[
                 {"id": "ivik-net", "text": "Do 2 net damage.", "effect": net(2)},
                 {"id": "ivik-etr", "text": "End the run.", "effect": etr()},
             ],
-            unsupported=[
-                "Rez cost −1¢ per rezzed code gate ice — dynamic rez discount not modeled."
-            ],
+            unsupported=[],
         )
     if cid == "mestnichestvo":
         return base(
