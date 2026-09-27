@@ -305,6 +305,28 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    if cid == "tunnel-vision":
+        card = breaker_card(
+            c, "*", 2, 2, pump_c=2, pump_s=2, break_max=2, unsupported=[]
+        )
+        card["breaker"]["breakRequiresAttackingMark"] = True
+        card["onTurnBegin"] = {"op": "do", "action": {"kind": "identify_mark"}}
+        return card
+
+    if cid == "nanuq":
+        return breaker_card(
+            c,
+            "*",
+            3,
+            2,
+            pump_c=1,
+            pump_s=1,
+            break_max=2,
+            rfgOnUninstall=True,
+            onAgendaScoredOrStolen={"op": "do", "action": {"kind": "rfg_self"}},
+            unsupported=[],
+        )
+
     # --- Simple agendas ---
     if cid == "post-truth-dividend":
         return base(
