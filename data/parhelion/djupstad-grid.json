@@ -5,13 +5,12 @@
   "nrdbCode": "33102",
   "type": "upgrade",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: Whenever you score an agenda from the root of this server, do 1 core damage. Limit 1 region per server."
-  ],
+  "unsupported": [],
   "subtypes": [
     "region"
   ],
   "installCost": 4,
   "rezCost": 4,
-  "trashCost": 4
+  "trashCost": 4,
+  "coreDamageOnAgendaScoredFromThisServer": 1
 }

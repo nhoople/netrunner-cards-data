@@ -637,6 +637,11 @@
       "type": "boolean",
       "description": "Install only if Runner made a successful run on a central this turn (Time Bomb)."
     },
+    "coreDamageOnAgendaScoredFromThisServer": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "When Corp scores an agenda from this server's root, do this much core damage (Djupstad Grid)."
+    },
     "playRequiresAgendaStolenLastTurn": {
       "type": "boolean",
       "description": "Play only if the Runner stole an agenda during their last turn (Distributed Tracing)."
