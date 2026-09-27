@@ -5,13 +5,12 @@
   "nrdbCode": "33122",
   "type": "asset",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: The first time each turn the Runner trashes any of your installed cards (including this asset), do 2 meat damage."
-  ],
+  "unsupported": [],
   "subtypes": [
     "hostile"
   ],
   "installCost": 5,
   "rezCost": 5,
-  "trashCost": 4
+  "trashCost": 4,
+  "meatDamageOnInstalledCorpTrashOncePerTurn": 2
 }

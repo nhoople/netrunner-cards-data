@@ -66,7 +66,7 @@ console.log(pool.corpusOrder, marjanah.title);
 | system-gateway | 77 | Null Signal System Gateway (fully supported) |
 | system-update-2021 | 82 | Null Signal System Update 2021 (fully supported) |
 | midnight-sun | 65 | Null Signal Midnight Sun (`ms`); `msbp` titles absorbed; fully supported |
-| parhelion | 63 | Null Signal Parhelion (`ph`); status `in-progress` (**39/63** mapped) |
+| parhelion | 63 | Null Signal Parhelion (`ph`); status `in-progress` (**42/63** mapped) |
 
 Synthetic stubs and early wave1/wave2 dirs were removed in `v0.2.0`. Reprints that previously lived only under those waves now ship under their Null Signal release directories.
 

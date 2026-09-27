@@ -668,6 +668,39 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    if cid == "hostile-architecture":
+        return base(
+            c,
+            meatDamageOnInstalledCorpTrashOncePerTurn=2,
+            unsupported=[],
+        )
+
+    if cid == "wake-implant-v2a-jrj":
+        return base(
+            c,
+            onInstall=meat(1),
+            onSuccessfulRun={
+                "op": "if",
+                "cond": {"op": "attacking_hq"},
+                "then": {
+                    "op": "do",
+                    "action": {"kind": "add_power_counter", "amount": 1},
+                },
+            },
+            maySpendPowerCountersForBonusRdAccess={"max": 3},
+            unsupported=[],
+        )
+
+    if cid == "vera-ivanovna-shuyskaya":
+        return base(
+            c,
+            onAgendaScoredOrStolen={
+                "op": "do",
+                "action": {"kind": "may_trash_one_from_grip"},
+            },
+            unsupported=[],
+        )
+
     if cid == "tunnel-vision":
         card = breaker_card(
             c, "*", 2, 2, pump_c=2, pump_s=2, break_max=2, unsupported=[]

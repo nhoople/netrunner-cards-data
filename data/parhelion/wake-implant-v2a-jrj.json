@@ -5,11 +5,32 @@
   "nrdbCode": "33078",
   "type": "hardware",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: When you install this hardware, suffer 1 meat damage. Whenever you make a successful run on HQ, place 1 power counter on this hardware. Whenever you breach R&D, you may remove up to 3 hosted power counters to access that many additional car"
-  ],
+  "unsupported": [],
   "subtypes": [
     "cybernetic"
   ],
-  "installCost": 1
+  "installCost": 1,
+  "onInstall": {
+    "op": "do",
+    "action": {
+      "kind": "meat_damage",
+      "amount": 1
+    }
+  },
+  "onSuccessfulRun": {
+    "op": "if",
+    "cond": {
+      "op": "attacking_hq"
+    },
+    "then": {
+      "op": "do",
+      "action": {
+        "kind": "add_power_counter",
+        "amount": 1
+      }
+    }
+  },
+  "maySpendPowerCountersForBonusRdAccess": {
+    "max": 3
+  }
 }
