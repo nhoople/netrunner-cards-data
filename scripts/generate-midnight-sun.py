@@ -488,10 +488,7 @@ def map_card(c: dict) -> dict:
             memoryCost=1,
             recurringCreditsMax=2,
             recurringSpendFor=["run_central"],
-            unsupported=[
-                "Recurring credits refill modeled; spending only during runs on central servers "
-                "is not yet gated."
-            ],
+            unsupported=[],
         )
     if cid == "revolver":
         card = breaker_card(c, "sentry", 1, 0, 2, 3)
