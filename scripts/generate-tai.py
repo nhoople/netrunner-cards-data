@@ -975,6 +975,156 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    if cid == "slash-and-burn-agriculture":
+        return base(
+            c,
+            paidAbilities=[
+                {
+                    "id": "sab-expend",
+                    "label": (
+                        "[click], 1¢, reveal and trash from HQ: "
+                        "place 2 advancements on 1 advanceable card"
+                    ),
+                    "clickCost": 1,
+                    "creditCost": 1,
+                    "cost": {"clicks": 1, "credits": 1, "trashSelf": True},
+                    "windows": ["corp_action_paw"],
+                    "usableFromHq": True,
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "place_advancements",
+                            "amount": 2,
+                        },
+                    },
+                }
+            ],
+            unsupported=[],
+        )
+
+    if cid == "audrey-v2":
+        return base(
+            c,
+            breaker={
+                "breaksSubtype": "*",
+                "strength": 0,
+                "breakCredits": 0,
+                "breakViaPaidAbilityOnly": True,
+            },
+            onAccessTrash={
+                "op": "do",
+                "action": {"kind": "add_virus_counter", "amount": 1},
+            },
+            paidAbilities=[
+                {
+                    "id": "audrey-break",
+                    "label": "Hosted virus counter: Break up to 2 subroutines",
+                    "clickCost": 0,
+                    "creditCost": 0,
+                    "cost": {"virusCounters": 1},
+                    "windows": ["encounter_paw"],
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "break_encounter_subroutine",
+                            "maxSubs": 2,
+                        },
+                    },
+                },
+                {
+                    "id": "audrey-pump",
+                    "label": "Trash 1 card from grip: +3 strength",
+                    "clickCost": 0,
+                    "creditCost": 0,
+                    "cost": {"trashFromGrip": 1},
+                    "windows": ["encounter_paw"],
+                    "effect": {
+                        "op": "do",
+                        "action": {"kind": "pump_strength", "amount": 3},
+                    },
+                },
+            ],
+            unsupported=[],
+        )
+
+    if cid == "the-price":
+        return base(
+            c,
+            onPlay={
+                "op": "do",
+                "action": {
+                    "kind": "trash_top_n_may_install_discount",
+                    "count": 4,
+                    "discount": 3,
+                },
+            },
+            unsupported=[],
+        )
+
+    if cid == "lago-paranoa-shelter":
+        return base(
+            c,
+            onFirstCorpRootInstallEachTurn=choose(
+                "runner",
+                [
+                    {
+                        "id": "mill-draw",
+                        "label": "Trash top of stack: draw 1",
+                        "effect": seq(
+                            {
+                                "op": "do",
+                                "action": {"kind": "trash_top_of_stack"},
+                            },
+                            draw("runner", 1),
+                        ),
+                    },
+                    {
+                        "id": "decline",
+                        "label": "Decline",
+                        "effect": gain("runner", 0),
+                    },
+                ],
+            ),
+            unsupported=[],
+        )
+
+    if cid == "angelique-garza-correa":
+        return base(
+            c,
+            onAccessRequiresRezzed=True,
+            onAccess=choose(
+                "corp",
+                [
+                    {
+                        "id": "pay",
+                        "label": "Pay 2¢: do 2 meat damage",
+                        "effect": seq(lose("corp", 2), meat(2)),
+                    },
+                    {
+                        "id": "decline",
+                        "label": "Decline",
+                        "effect": gain("corp", 0),
+                    },
+                ],
+            ),
+            paidAbilities=[
+                {
+                    "id": "angelique-expend",
+                    "label": (
+                        "Threat 3 → [click], 1¢, trash from HQ: do 1 meat damage"
+                    ),
+                    "clickCost": 1,
+                    "creditCost": 1,
+                    "requiresThreat": 3,
+                    "cost": {"clicks": 1, "credits": 1, "trashSelf": True},
+                    "windows": ["corp_action_paw"],
+                    "usableFromHq": True,
+                    "effect": meat(1),
+                }
+            ],
+            unsupported=[],
+        )
+
     # Fallback: skeleton with full text as unsupported
 
     card = base(c)

@@ -382,6 +382,11 @@
             "type": "integer",
             "minimum": 0
           },
+          "requiresThreat": {
+            "type": "integer",
+            "minimum": 0,
+            "description": "Ability usable only while Threat N is active (Angelique Garza Correa)."
+          },
           "requireEncounterSubtype": {
             "type": "string",
             "description": "Encountered ice must have this subtype (e.g. Abagnale bypass)."
@@ -418,6 +423,18 @@
     "onFirstCorpCardTrashEachTurn": {
       "type": "object",
       "description": "Effect IR the first time each turn the Runner trashes a Corp card (Solidarity Badge)."
+    },
+    "onAccessTrash": {
+      "type": "object",
+      "description": "Effect IR whenever the Runner trashes a card they are accessing (Audrey v2)."
+    },
+    "onFirstCorpRootInstallEachTurn": {
+      "type": "object",
+      "description": "Effect IR the first time each turn the Corp installs a card in a server root (Lago Paranoá Shelter)."
+    },
+    "onAccessRequiresRezzed": {
+      "type": "boolean",
+      "description": "When true, onAccess fires only while this card is rezzed (Angelique Garza Correa)."
     },
     "rezAdditionalCost": {
       "type": "object",
