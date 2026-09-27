@@ -470,6 +470,10 @@
       "type": "object",
       "description": "Effect IR when this card is accessed (ambushes)."
     },
+    "mustRevealWhenAccessedFromRd": {
+      "type": "boolean",
+      "description": "Static ability: while accessing this card in R&D, the Runner must reveal it (CR §1.21.7)."
+    },
     "onFirstTagThisTurn": {
       "type": "object",
       "description": "Effect IR the first time the Runner is tagged each turn (identities)."

@@ -1029,6 +1029,55 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    if cid == "mr-hendrik":
+        return base(
+            c,
+            onAccess={
+                "op": "if",
+                "cond": {"op": "source_installed"},
+                "then": {
+                    "op": "do",
+                    "action": {
+                        "kind": "may_pay_credits_for_core_damage",
+                        "amount": 2,
+                        "damage": 1,
+                    },
+                },
+            },
+            unsupported=[],
+        )
+
+    if cid == "nightmare-archive":
+        return base(
+            c,
+            mustRevealWhenAccessedFromRd=True,
+            onAccess=choose(
+                "runner",
+                [
+                    {
+                        "id": "score-neg1",
+                        "label": "Add to score area as −1 agenda point",
+                        "effect": {
+                            "op": "do",
+                            "action": {
+                                "kind": "add_to_runner_score_as_agenda",
+                                "agendaPoints": -1,
+                            },
+                        },
+                    },
+                    {
+                        "id": "damage-rfg",
+                        "label": "Suffer 1 core damage; remove from the game",
+                        "effect": seq(
+                            core(1),
+                            {"op": "do", "action": {"kind": "rfg_self"}},
+                        ),
+                    },
+                ],
+            ),
+            unsupported=[],
+        )
+
     # --- Ice with fully mappable printed subs (on-rez / encounter deferred) ---
     if cid == "vampyronassa":
         return base(

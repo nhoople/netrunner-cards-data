@@ -5,13 +5,51 @@
   "nrdbCode": "33097",
   "type": "asset",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: While the Runner is accessing this asset in R&D, they must reveal it. When the Runner accesses this asset, they may add it to their score area as an agenda worth -1 agenda point. If they do not, do 1 core damage and remove this asset from t"
-  ],
+  "unsupported": [],
   "subtypes": [
     "ambush"
   ],
   "installCost": 0,
   "rezCost": 0,
-  "trashCost": 0
+  "trashCost": 0,
+  "mustRevealWhenAccessedFromRd": true,
+  "onAccess": {
+    "op": "choose",
+    "chooser": "runner",
+    "options": [
+      {
+        "id": "score-neg1",
+        "label": "Add to score area as −1 agenda point",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "add_to_runner_score_as_agenda",
+            "agendaPoints": -1
+          }
+        }
+      },
+      {
+        "id": "damage-rfg",
+        "label": "Suffer 1 core damage; remove from the game",
+        "effect": {
+          "op": "seq",
+          "effects": [
+            {
+              "op": "do",
+              "action": {
+                "kind": "core_damage",
+                "amount": 1
+              }
+            },
+            {
+              "op": "do",
+              "action": {
+                "kind": "rfg_self"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
 }
