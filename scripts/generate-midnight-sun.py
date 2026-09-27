@@ -476,10 +476,11 @@ def map_card(c: dict) -> dict:
         return card
     if cid == "cats-cradle":
         card = breaker_card(c, "code gate", 1, 1, 1, 1)
-        card["unsupported"] = [
-            "Rez cost of each code gate +1¢ — not applied via iceRezCostIncrease (that field "
-            "boosts all ice; omitted rather than over-applying)."
-        ]
+        card["iceRezCostIncreaseBySubtype"] = {
+            "subtype": "code gate",
+            "amount": 1,
+        }
+        card["unsupported"] = []
         return card
     if cid == "cezve":
         return base(

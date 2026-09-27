@@ -602,6 +602,24 @@
       "type": "integer",
       "minimum": 0
     },
+    "iceRezCostIncreaseBySubtype": {
+      "type": "object",
+      "required": [
+        "subtype",
+        "amount"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "subtype": {
+          "type": "string"
+        },
+        "amount": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "description": "While installed, increase rez cost of ice with this subtype by amount credits (CR §1.16.2a / §8.1.2d; e.g. Cat's Cradle code-gate-only)."
+    },
     "eventPlayCostDiscount": {
       "type": "integer",
       "minimum": 0,

@@ -5,9 +5,7 @@
   "nrdbCode": "33016",
   "type": "program",
   "side": "runner",
-  "unsupported": [
-    "Rez cost of each code gate +1¢ — not applied via iceRezCostIncrease (that field boosts all ice; omitted rather than over-applying)."
-  ],
+  "unsupported": [],
   "subtypes": [
     "icebreaker",
     "decoder"
@@ -15,6 +13,10 @@
   "installCost": 2,
   "strength": 1,
   "memoryCost": 1,
+  "iceRezCostIncreaseBySubtype": {
+    "subtype": "code gate",
+    "amount": 1
+  },
   "breaker": {
     "breaksSubtype": "code gate",
     "strength": 1,
