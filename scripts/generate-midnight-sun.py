@@ -710,27 +710,14 @@ def map_card(c: dict) -> dict:
         return base(
             c,
             subtypes=["security"],
-            onScore=choose(
-                "corp",
-                [
-                    {
-                        "id": "derez",
-                        "label": "Derez 1 ice",
-                        "effect": {
-                            "op": "do",
-                            "action": {"kind": "derez_ice", "pick": "choose"},
-                        },
-                    },
-                    {
-                        "id": "decline",
-                        "label": "Decline",
-                        "effect": gain("corp", 0),
-                    },
-                ],
-            ),
-            unsupported=[
-                "May derez 1 installed card (any type); modeled as derez_ice only."
-            ],
+            onScore={
+                "op": "do",
+                "action": {
+                    "kind": "may_derez_installed",
+                    "excludeSelf": True,
+                },
+            },
+            unsupported=[],
         )
     if cid == "midnight-3-arcology":
         return base(
