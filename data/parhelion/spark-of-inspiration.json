@@ -1,0 +1,15 @@
+{
+  "id": "spark-of-inspiration",
+  "title": "Spark of Inspiration",
+  "wave": "parhelion",
+  "nrdbCode": "33084",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: Set aside cards from the top of your stack faceup until you set aside a program. You may install that program, paying 10[credit] less. Shuffle the set-aside cards into your stack."
+  ],
+  "subtypes": [
+    "mod"
+  ],
+  "playCost": 3
+}

@@ -1,0 +1,16 @@
+{
+  "id": "zenit-chip-jz-2mj",
+  "title": "Zenit Chip JZ-2MJ",
+  "wave": "parhelion",
+  "nrdbCode": "33079",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: When you install this hardware, suffer 1 core damage. The first time each turn you make a successful run on a central server, draw 1 card."
+  ],
+  "subtypes": [
+    "cybernetic",
+    "chip"
+  ],
+  "installCost": 1
+}

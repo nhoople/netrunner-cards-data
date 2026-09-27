@@ -1,0 +1,55 @@
+{
+  "id": "reaper-function",
+  "title": "Reaper Function",
+  "wave": "parhelion",
+  "nrdbCode": "33107",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "subtypes": [
+    "hostile"
+  ],
+  "installCost": 3,
+  "rezCost": 3,
+  "trashCost": 2,
+  "onTurnBegin": {
+    "op": "choose",
+    "chooser": "corp",
+    "options": [
+      {
+        "id": "trash-net",
+        "label": "Trash Reaper Function to do 2 net damage",
+        "effect": {
+          "op": "seq",
+          "effects": [
+            {
+              "op": "do",
+              "action": {
+                "kind": "trash_self"
+              }
+            },
+            {
+              "op": "do",
+              "action": {
+                "kind": "net_damage",
+                "amount": 2
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "corp",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  }
+}

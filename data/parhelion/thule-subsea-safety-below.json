@@ -1,0 +1,14 @@
+{
+  "id": "thule-subsea-safety-below",
+  "title": "Thule Subsea: Safety Below",
+  "wave": "parhelion",
+  "nrdbCode": "33095",
+  "type": "identity",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: Whenever the Runner steals an agenda, do 1 core damage unless they spend [click] and 2[credit]."
+  ],
+  "subtypes": [
+    "division"
+  ]
+}

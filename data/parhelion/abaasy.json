@@ -1,0 +1,18 @@
+{
+  "id": "abaasy",
+  "title": "Abaasy",
+  "wave": "parhelion",
+  "nrdbCode": "33070",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: The first time each turn this program fully breaks a piece of ice, you may trash 1 card from your grip to draw 1 card. Interface → 1[credit]: Break 1 code gate subroutine. 2[credit]: +2 strength."
+  ],
+  "subtypes": [
+    "icebreaker",
+    "decoder"
+  ],
+  "installCost": 2,
+  "strength": 1,
+  "memoryCost": 1
+}

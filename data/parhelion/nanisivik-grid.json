@@ -1,0 +1,17 @@
+{
+  "id": "nanisivik-grid",
+  "title": "Nanisivik Grid",
+  "wave": "parhelion",
+  "nrdbCode": "33111",
+  "type": "upgrade",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: Whenever the Runner approaches this server, you may turn 1 facedown piece of ice in Archives faceup. If you do, resolve 1 subroutine on that ice. Limit 1 region per server."
+  ],
+  "subtypes": [
+    "region"
+  ],
+  "installCost": 2,
+  "rezCost": 2,
+  "trashCost": 3
+}

@@ -1,0 +1,15 @@
+{
+  "id": "tsakhia-bankhar-gantulga",
+  "title": "Tsakhia \"Bankhar\" Gantulga",
+  "wave": "parhelion",
+  "nrdbCode": "33074",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: When your turn begins, you may choose a server. During the first encounter each turn with a piece of ice protecting the chosen server, whenever the Corp would resolve a subroutine, instead they resolve \"[subroutine] Do 1 net damage.\"."
+  ],
+  "subtypes": [
+    "connection"
+  ],
+  "installCost": 1
+}

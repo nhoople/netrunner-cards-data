@@ -1,0 +1,17 @@
+{
+  "id": "klevetnik",
+  "title": "Klevetnik",
+  "wave": "parhelion",
+  "nrdbCode": "33116",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: When you rez this ice during a run against this server, you may have the Runner gain 2[credit]. If you do, choose 1 installed resource. That resource loses all abilities until your next turn ends. [subroutine] End the run."
+  ],
+  "subtypes": [
+    "barrier"
+  ],
+  "installCost": 3,
+  "rezCost": 3,
+  "strength": 3
+}

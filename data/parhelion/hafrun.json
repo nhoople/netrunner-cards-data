@@ -1,0 +1,18 @@
+{
+  "id": "hafrun",
+  "title": "Hafrún",
+  "wave": "parhelion",
+  "nrdbCode": "33108",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: When you rez this ice during a run against this server, you may trash 1 card from HQ. If you do, choose 1 installed Runner card. That cardʼs abilities cannot break subroutines for the remainder of that run. [subroutine] End the run."
+  ],
+  "subtypes": [
+    "barrier",
+    "code gate"
+  ],
+  "installCost": 2,
+  "rezCost": 2,
+  "strength": 3
+}

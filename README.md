@@ -18,9 +18,10 @@ Files under [`data/`](data/) are the API. Clone the repo or fetch a **tagged** r
 | [`data/pool.json`](data/pool.json) | Declared supported corpus / release order |
 | [`data/system-gateway/`](data/system-gateway/) | System Gateway (NRDB `sg`) |
 | [`data/system-update-2021/`](data/system-update-2021/) | System Update 2021 (NRDB `su21`) |
-| [`data/midnight-sun/`](data/midnight-sun/) | Midnight Sun (NRDB `ms`) — in progress |
+| [`data/midnight-sun/`](data/midnight-sun/) | Midnight Sun (NRDB `ms`) |
+| [`data/parhelion/`](data/parhelion/) | Parhelion (NRDB `ph`) — in progress |
 
-**Corpus order:** System Gateway → System Update 2021 → Midnight Sun → later releases.
+**Corpus order:** System Gateway → System Update 2021 → Midnight Sun → Parhelion → later releases.
 
 Partial cards list unimplemented clauses in an `unsupported` array — never silent wrong behavior.
 
@@ -30,7 +31,7 @@ Match this dataset and [netrunner-engine](https://github.com/nhoople/netrunner-e
 
 | Pairing | cards-data | engine |
 |---------|------------|--------|
-| **Current** | [`v0.46.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v0.46.0) | [`v0.46.0`](https://github.com/nhoople/netrunner-engine/releases/tag/v0.46.0) |
+| **Current** | [`v0.47.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v0.47.0) | [`v0.47.0`](https://github.com/nhoople/netrunner-engine/releases/tag/v0.47.0) |
 
 Incremental wave tags are the day-to-day IR/wiring contract. A set-complete **milestone** GitHub Release is cut only when a wave’s pool status → `supported` (advertised host floor for that set).
 
@@ -64,11 +65,12 @@ console.log(pool.corpusOrder, marjanah.title);
 |---------|------:|-------|
 | system-gateway | 77 | Null Signal System Gateway (fully supported) |
 | system-update-2021 | 82 | Null Signal System Update 2021 (fully supported) |
-| midnight-sun | 65 | Null Signal Midnight Sun (`ms`); `msbp` titles absorbed; status `in-progress` |
+| midnight-sun | 65 | Null Signal Midnight Sun (`ms`); `msbp` titles absorbed; fully supported |
+| parhelion | 63 | Null Signal Parhelion (`ph`); status `in-progress` |
 
 Synthetic stubs and early wave1/wave2 dirs were removed in `v0.2.0`. Reprints that previously lived only under those waves now ship under their Null Signal release directories.
 
-Midnight Sun extract lists unimplemented clauses (including sabotage / mark / charge) in each card’s `unsupported` array. Do not treat the wave as fully supported until those notes are cleared or explicitly deferred.
+Parhelion extract lists unimplemented clauses in each card’s `unsupported` array. Do not treat the wave as fully supported until those notes are cleared or explicitly deferred.
 
 ## Versioning
 

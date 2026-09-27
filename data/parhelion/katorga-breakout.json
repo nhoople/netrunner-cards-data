@@ -1,0 +1,15 @@
+{
+  "id": "katorga-breakout",
+  "title": "Katorga Breakout",
+  "wave": "parhelion",
+  "nrdbCode": "33067",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: Run any server. If successful, add 1 card from your heap to your grip."
+  ],
+  "subtypes": [
+    "run"
+  ],
+  "playCost": 2
+}

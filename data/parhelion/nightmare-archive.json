@@ -1,0 +1,17 @@
+{
+  "id": "nightmare-archive",
+  "title": "Nightmare Archive",
+  "wave": "parhelion",
+  "nrdbCode": "33097",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: While the Runner is accessing this asset in R&D, they must reveal it. When the Runner accesses this asset, they may add it to their score area as an agenda worth -1 agenda point. If they do not, do 1 core damage and remove this asset from t"
+  ],
+  "subtypes": [
+    "ambush"
+  ],
+  "installCost": 0,
+  "rezCost": 0,
+  "trashCost": 0
+}

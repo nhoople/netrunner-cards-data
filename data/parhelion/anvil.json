@@ -1,0 +1,17 @@
+{
+  "id": "anvil",
+  "title": "Anvil",
+  "wave": "parhelion",
+  "nrdbCode": "33124",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: When the Runner encounters this ice, you may trash 1 of your other installed cards. If you do, the Runner cannot break this iceʼs printed subroutines for the remainder of this encounter. [subroutine] Gain 1[credit]. The Runner loses 1[credi"
+  ],
+  "subtypes": [
+    "code gate"
+  ],
+  "installCost": 4,
+  "rezCost": 4,
+  "strength": 3
+}

@@ -1,0 +1,20 @@
+{
+  "id": "bloop",
+  "title": "Bloop",
+  "wave": "parhelion",
+  "nrdbCode": "33098",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: As an additional cost to rez this ice, derez another piece of harmonic ice. [subroutine] Do 1 core damage. [subroutine] Trash 1 installed program. [subroutine] Trash 1 installed program."
+  ],
+  "subtypes": [
+    "sentry",
+    "ap",
+    "destroyer",
+    "harmonic"
+  ],
+  "installCost": 3,
+  "rezCost": 3,
+  "strength": 5
+}

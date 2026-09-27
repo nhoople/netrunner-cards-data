@@ -1,0 +1,27 @@
+{
+  "id": "end-of-the-line",
+  "title": "End of the Line",
+  "wave": "parhelion",
+  "nrdbCode": "33125",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "subtypes": [
+    "black ops"
+  ],
+  "playCost": 3,
+  "playAdditionalCost": {
+    "op": "do",
+    "action": {
+      "kind": "remove_tags",
+      "amount": 1
+    }
+  },
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "meat_damage",
+      "amount": 4
+    }
+  }
+}

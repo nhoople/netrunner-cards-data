@@ -1,0 +1,13 @@
+{
+  "id": "k2cp-turbine",
+  "title": "K2CP Turbine",
+  "wave": "parhelion",
+  "nrdbCode": "33090",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: Each installed non-AI icebreaker gets +2 strength."
+  ],
+  "installCost": 4,
+  "memoryCost": 1
+}

@@ -1,0 +1,17 @@
+{
+  "id": "yakov-erikovich-avdakov",
+  "title": "Yakov Erikovich Avdakov",
+  "wave": "parhelion",
+  "nrdbCode": "33126",
+  "type": "upgrade",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: Whenever a player trashes a card (including this upgrade) from the root of this server or protecting it, except during installation, gain 2[credit]."
+  ],
+  "subtypes": [
+    "executive"
+  ],
+  "installCost": 2,
+  "rezCost": 2,
+  "trashCost": 2
+}

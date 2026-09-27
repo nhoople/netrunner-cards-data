@@ -1,0 +1,18 @@
+{
+  "id": "unsmiling-tsarevna",
+  "title": "Unsmiling Tsarevna",
+  "wave": "parhelion",
+  "nrdbCode": "33117",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: When you rez this ice during a run against this server, you may have the Runner gain 2[credit]. If you do, during each encounter with this ice for the remainder of that run, the Runner cannot break more than 1 of its printed subroutines. [s"
+  ],
+  "subtypes": [
+    "sentry",
+    "ap"
+  ],
+  "installCost": 4,
+  "rezCost": 4,
+  "strength": 2
+}

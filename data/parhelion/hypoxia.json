@@ -1,0 +1,15 @@
+{
+  "id": "hypoxia",
+  "title": "Hypoxia",
+  "wave": "parhelion",
+  "nrdbCode": "33101",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: Play only if the Runner is tagged. Do 1 core damage. The Runner gets -1 allotted [click] for their next turn. Remove this operation from the game."
+  ],
+  "subtypes": [
+    "black ops"
+  ],
+  "playCost": 1
+}

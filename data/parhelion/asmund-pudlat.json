@@ -1,0 +1,16 @@
+{
+  "id": "asmund-pudlat",
+  "title": "Asmund Pudlat",
+  "wave": "parhelion",
+  "nrdbCode": "33082",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: When you install this resource, search your stack for up to 2 virus or weapon cards with different names. Host those cards faceup on this resource. (They are not installed.) When your turn begins, you may add 1 hosted card to your grip. If "
+  ],
+  "subtypes": [
+    "connection",
+    "seedy"
+  ],
+  "installCost": 2
+}

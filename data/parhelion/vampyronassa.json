@@ -1,0 +1,99 @@
+{
+  "id": "vampyronassa",
+  "title": "Vampyronassa",
+  "wave": "parhelion",
+  "nrdbCode": "33109",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "subtypes": [
+    "code gate",
+    "ap"
+  ],
+  "installCost": 7,
+  "rezCost": 7,
+  "strength": 4,
+  "subroutines": [
+    {
+      "id": "vamp-lose",
+      "text": "The Runner loses 2¢.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "lose_credits",
+          "side": "runner",
+          "amount": 2
+        }
+      }
+    },
+    {
+      "id": "vamp-gain",
+      "text": "Gain 2¢.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "corp",
+          "amount": 2
+        }
+      }
+    },
+    {
+      "id": "vamp-net",
+      "text": "Do 2 net damage.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "net_damage",
+          "amount": 2
+        }
+      }
+    },
+    {
+      "id": "vamp-draw",
+      "text": "You may draw 1 or 2 cards.",
+      "effect": {
+        "op": "choose",
+        "chooser": "corp",
+        "options": [
+          {
+            "id": "draw1",
+            "label": "Draw 1",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "draw",
+                "side": "corp",
+                "amount": 1
+              }
+            }
+          },
+          {
+            "id": "draw2",
+            "label": "Draw 2",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "draw",
+                "side": "corp",
+                "amount": 2
+              }
+            }
+          },
+          {
+            "id": "decline",
+            "label": "Decline",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "gain_credits",
+                "side": "corp",
+                "amount": 0
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

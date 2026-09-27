@@ -1,0 +1,16 @@
+{
+  "id": "distributed-tracing",
+  "title": "Distributed Tracing",
+  "wave": "parhelion",
+  "nrdbCode": "33100",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: As an additional cost to play this operation, spend [click]. Play only if the Runner stole an agenda during their last turn. Give the Runner 1 tag."
+  ],
+  "subtypes": [
+    "double",
+    "gray ops"
+  ],
+  "playCost": 3
+}
