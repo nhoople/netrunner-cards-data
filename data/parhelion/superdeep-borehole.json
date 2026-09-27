@@ -5,14 +5,21 @@
   "nrdbCode": "33123",
   "type": "asset",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: When you rez this asset, load 6 bad publicity counters onto it. When it is empty, you win the game. When your turn begins, take 1 bad publicity from this asset."
-  ],
+  "unsupported": [],
   "subtypes": [
     "industrial",
     "liability"
   ],
   "installCost": 6,
   "rezCost": 6,
-  "trashCost": 6
+  "trashCost": 6,
+  "badPublicityCountersOnRez": 6,
+  "winWhenBadPublicityCountersEmpty": true,
+  "onTurnBegin": {
+    "op": "do",
+    "action": {
+      "kind": "take_hosted_bad_publicity",
+      "amount": 1
+    }
+  }
 }

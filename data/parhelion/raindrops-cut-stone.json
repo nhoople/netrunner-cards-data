@@ -5,11 +5,34 @@
   "nrdbCode": "33068",
   "type": "event",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Run any server. Whenever a subroutine resolves during that run (including a subroutine that ends the run), place 1 power counter on this event. When that run ends, draw 1 card for each hosted power counter and gain 3[credit]."
-  ],
+  "unsupported": [],
   "subtypes": [
     "run"
   ],
-  "playCost": 1
+  "playCost": 1,
+  "runEvent": {
+    "servers": "any",
+    "addPowerCounterOnSubroutineResolve": 1,
+    "onRunEnd": {
+      "op": "seq",
+      "effects": [
+        {
+          "op": "do",
+          "action": {
+            "kind": "draw_per_power_counter",
+            "side": "runner",
+            "per": 1
+          }
+        },
+        {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "runner",
+            "amount": 3
+          }
+        }
+      ]
+    }
+  }
 }

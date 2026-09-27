@@ -424,6 +424,30 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    if cid == "raindrops-cut-stone":
+        # Run any server; +1 power per subroutine that resolves; on run end
+        # draw 1 per hosted power + gain 3¢.
+        return base(
+            c,
+            subtypes=["run"],
+            runEvent={
+                "servers": "any",
+                "addPowerCounterOnSubroutineResolve": 1,
+                "onRunEnd": seq(
+                    {
+                        "op": "do",
+                        "action": {
+                            "kind": "draw_per_power_counter",
+                            "side": "runner",
+                            "per": 1,
+                        },
+                    },
+                    gain("runner", 3),
+                ),
+            },
+            unsupported=[],
+        )
+
     if cid == "simulation-reset":
         return base(
             c,
@@ -1026,6 +1050,20 @@ def map_card(c: dict) -> dict:
                     },
                 ],
             ),
+            unsupported=[],
+        )
+
+    if cid == "superdeep-borehole":
+        # Load 6 hosted BP on rez (not player BP). Turn begin: take 1 from
+        # this asset → player BP. When empty, Corp wins.
+        return base(
+            c,
+            badPublicityCountersOnRez=6,
+            winWhenBadPublicityCountersEmpty=True,
+            onTurnBegin={
+                "op": "do",
+                "action": {"kind": "take_hosted_bad_publicity", "amount": 1},
+            },
             unsupported=[],
         )
 
