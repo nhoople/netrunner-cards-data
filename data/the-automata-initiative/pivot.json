@@ -5,12 +5,35 @@
   "nrdbCode": "34062",
   "type": "operation",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: As an additional cost to play this operation, spend [click]. Search R&D for 1 operation or agenda and reveal it. (Shuffle R&D after searching it.) Add that card to HQ. Threat 3 → You may play or install 1 card from HQ. (This ability is acti"
-  ],
+  "unsupported": [],
   "subtypes": [
     "double"
   ],
   "playCost": 1,
-  "trashCost": 3
+  "trashCost": 3,
+  "playAdditionalClick": true,
+  "onPlay": {
+    "op": "seq",
+    "effects": [
+      {
+        "op": "do",
+        "action": {
+          "kind": "search_rd_operation_or_agenda_to_hq"
+        }
+      },
+      {
+        "op": "if",
+        "cond": {
+          "op": "threat",
+          "level": 3
+        },
+        "then": {
+          "op": "do",
+          "action": {
+            "kind": "may_play_or_install_from_hq"
+          }
+        }
+      }
+    ]
+  }
 }

@@ -5,14 +5,78 @@
   "nrdbCode": "34052",
   "type": "asset",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: When your turn begins, you may look at the top 3 cards of R&D and arrange them in any order. Then, if this server is not protected by ice, you may draw 1 card."
-  ],
+  "unsupported": [],
   "subtypes": [
     "political",
     "ritzy"
   ],
   "installCost": 0,
   "rezCost": 0,
-  "trashCost": 2
+  "trashCost": 2,
+  "onTurnBegin": {
+    "op": "choose",
+    "chooser": "corp",
+    "options": [
+      {
+        "id": "look",
+        "label": "Look at top 3 of R&D and arrange",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "look_top_n_rd_arrange",
+            "n": 3,
+            "thenMayDrawIfUnprotected": true
+          }
+        }
+      },
+      {
+        "id": "decline-look",
+        "label": "Decline to look",
+        "effect": {
+          "op": "if",
+          "cond": {
+            "op": "host_server_unprotected_by_ice"
+          },
+          "then": {
+            "op": "choose",
+            "chooser": "corp",
+            "options": [
+              {
+                "id": "draw",
+                "label": "Draw 1 card",
+                "effect": {
+                  "op": "do",
+                  "action": {
+                    "kind": "draw",
+                    "side": "corp",
+                    "amount": 1
+                  }
+                }
+              },
+              {
+                "id": "decline",
+                "label": "Decline to draw",
+                "effect": {
+                  "op": "do",
+                  "action": {
+                    "kind": "gain_credits",
+                    "side": "corp",
+                    "amount": 0
+                  }
+                }
+              }
+            ]
+          },
+          "else": {
+            "op": "do",
+            "action": {
+              "kind": "gain_credits",
+              "side": "corp",
+              "amount": 0
+            }
+          }
+        }
+      }
+    ]
+  }
 }

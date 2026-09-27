@@ -1623,6 +1623,148 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    if cid == "oppo-research":
+        return base(
+            c,
+            playRequiresRunnerStoleOrTrashedCorpCardLastTurn=True,
+            endsActionPhase=True,
+            onPlay=seq(
+                tags(2),
+                {
+                    "op": "if",
+                    "cond": {"op": "threat", "level": 3},
+                    "then": choose(
+                        "corp",
+                        [
+                            {
+                                "id": "pay",
+                                "label": "Pay 5¢: give 2 tags",
+                                "effect": seq(
+                                    lose("corp", 5),
+                                    tags(2),
+                                ),
+                            },
+                            {
+                                "id": "decline",
+                                "label": "Decline",
+                                "effect": gain("corp", 0),
+                            },
+                        ],
+                    ),
+                },
+            ),
+            unsupported=[],
+        )
+
+    if cid == "epiphany-analytica-nations-undivided":
+        return base(
+            c,
+            onFirstRunnerStoleOrTrashedCorpCardThisTurn={
+                "op": "do",
+                "action": {"kind": "add_power_counter", "amount": 1},
+            },
+            paidAbilities=[
+                {
+                    "id": "epiphany-look-install",
+                    "label": (
+                        "[click], hosted power counter: Look at top 3 "
+                        "of R&D; may install 1"
+                    ),
+                    "clickCost": 1,
+                    "creditCost": 0,
+                    "cost": {"clicks": 1, "powerCounters": 1},
+                    "windows": ["corp_action_paw"],
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "look_top_n_rd_may_install_one",
+                            "n": 3,
+                        },
+                    },
+                }
+            ],
+            unsupported=[],
+        )
+
+    if cid == "pivot":
+        return base(
+            c,
+            playAdditionalClick=True,
+            onPlay=seq(
+                {
+                    "op": "do",
+                    "action": {
+                        "kind": "search_rd_operation_or_agenda_to_hq"
+                    },
+                },
+                {
+                    "op": "if",
+                    "cond": {"op": "threat", "level": 3},
+                    "then": {
+                        "op": "do",
+                        "action": {"kind": "may_play_or_install_from_hq"},
+                    },
+                },
+            ),
+            unsupported=[],
+        )
+
+    if cid == "federal-fundraising":
+        return base(
+            c,
+            onTurnBegin=choose(
+                "corp",
+                [
+                    {
+                        "id": "look",
+                        "label": "Look at top 3 of R&D and arrange",
+                        "effect": {
+                            "op": "do",
+                            "action": {
+                                "kind": "look_top_n_rd_arrange",
+                                "n": 3,
+                                "thenMayDrawIfUnprotected": True,
+                            },
+                        },
+                    },
+                    {
+                        "id": "decline-look",
+                        "label": "Decline to look",
+                        "effect": {
+                            "op": "if",
+                            "cond": {
+                                "op": "host_server_unprotected_by_ice"
+                            },
+                            "then": choose(
+                                "corp",
+                                [
+                                    {
+                                        "id": "draw",
+                                        "label": "Draw 1 card",
+                                        "effect": draw("corp", 1),
+                                    },
+                                    {
+                                        "id": "decline",
+                                        "label": "Decline to draw",
+                                        "effect": gain("corp", 0),
+                                    },
+                                ],
+                            ),
+                            "else": gain("corp", 0),
+                        },
+                    },
+                ],
+            ),
+            unsupported=[],
+        )
+
+    if cid == "wage-workers":
+        return base(
+            c,
+            wageWorkersTrackActions=True,
+            unsupported=[],
+        )
+
     # Fallback: skeleton with full text as unsupported
 
     card = base(c)
