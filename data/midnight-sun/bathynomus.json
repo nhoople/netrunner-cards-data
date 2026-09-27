@@ -5,9 +5,7 @@
   "nrdbCode": "33044",
   "type": "ice",
   "side": "corp",
-  "unsupported": [
-    "+3 strength while protecting Archives — no Archives-only strength bonus field (not approximated with remote bonus)."
-  ],
+  "unsupported": [],
   "subtypes": [
     "sentry",
     "ap"
@@ -15,6 +13,7 @@
   "installCost": 3,
   "rezCost": 3,
   "strength": 1,
+  "strengthBonusProtectingArchives": 3,
   "subroutines": [
     {
       "id": "bath-net",
