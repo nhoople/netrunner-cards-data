@@ -5,9 +5,7 @@
   "nrdbCode": "33045",
   "type": "ice",
   "side": "corp",
-  "unsupported": [
-    "Rez cost −1¢ per rezzed code gate ice — dynamic rez discount not modeled."
-  ],
+  "unsupported": [],
   "subtypes": [
     "barrier",
     "ap"
@@ -15,6 +13,10 @@
   "installCost": 7,
   "rezCost": 7,
   "strength": 5,
+  "rezCostDiscountPerRezzedSubtype": {
+    "subtype": "code gate",
+    "amount": 1
+  },
   "subroutines": [
     {
       "id": "ivik-net",

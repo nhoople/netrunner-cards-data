@@ -644,6 +644,24 @@
       },
       "description": "While installed, increase rez cost of ice with this subtype by amount credits (CR §1.16.2a / §8.1.2d; e.g. Cat's Cradle code-gate-only)."
     },
+    "rezCostDiscountPerRezzedSubtype": {
+      "type": "object",
+      "required": [
+        "subtype",
+        "amount"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "subtype": {
+          "type": "string"
+        },
+        "amount": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "description": "When rezzing this ice, reduce rez cost by amount per already-rezzed ice with this subtype (CR §1.16.2a / §8.1.2d; e.g. Ivik −1¢ per rezzed code gate)."
+    },
     "eventPlayCostDiscount": {
       "type": "integer",
       "minimum": 0,
