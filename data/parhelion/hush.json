@@ -5,12 +5,32 @@
   "nrdbCode": "33071",
   "type": "program",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Install only on a piece of ice. Host ice cannot gain abilities and loses all abilities except its printed subroutines. [click]: Host this program on another installed piece of ice."
-  ],
+  "unsupported": [],
   "subtypes": [
     "trojan"
   ],
   "installCost": 1,
-  "memoryCost": 1
+  "memoryCost": 1,
+  "installOnIce": true,
+  "blanksHostAbilities": true,
+  "paidAbilities": [
+    {
+      "id": "hush-rehost",
+      "label": "[click]: Host on another installed ice",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "rehost_on_other_ice"
+        }
+      }
+    }
+  ]
 }
