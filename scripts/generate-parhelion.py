@@ -626,6 +626,48 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    if cid == "orca":
+        card = breaker_card(
+            c, "sentry", 3, 2, pump_c=2, pump_s=3, break_max=99, unsupported=[]
+        )
+        card["onFullyBreakOncePerTurn"] = choose(
+            "runner",
+            [
+                {
+                    "id": "charge",
+                    "label": "Charge 1 of your installed cards",
+                    "effect": {
+                        "op": "do",
+                        "action": {"kind": "charge", "pick": "choose"},
+                    },
+                },
+                {
+                    "id": "decline",
+                    "label": "Decline",
+                    "effect": gain("runner", 0),
+                },
+            ],
+        )
+        return card
+
+    if cid == "abaasy":
+        card = breaker_card(
+            c, "code gate", 1, 1, pump_c=2, pump_s=2, unsupported=[]
+        )
+        card["onFullyBreakOncePerTurn"] = {
+            "op": "do",
+            "action": {"kind": "may_trash_from_grip_to_draw"},
+        }
+        return card
+
+    if cid == "info-bounty":
+        return base(
+            c,
+            onTurnBegin={"op": "do", "action": {"kind": "identify_mark"}},
+            gainCreditsOnFirstMarkRunEndIfBreached=2,
+            unsupported=[],
+        )
+
     if cid == "tunnel-vision":
         card = breaker_card(
             c, "*", 2, 2, pump_c=2, pump_s=2, break_max=2, unsupported=[]
