@@ -920,12 +920,36 @@ def map_card(c: dict) -> dict:
         return base(
             c,
             subtypes=["sentry", "ap"],
+            onRez={
+                "op": "if",
+                "cond": {"op": "source_protects_attacked_server"},
+                "then": choose(
+                    "corp",
+                    [
+                        {
+                            "id": "trash-hq-net",
+                            "label": "Trash 1 from HQ: do 2 net damage",
+                            "effect": {
+                                "op": "do",
+                                "action": {
+                                    "kind": "trash_hq",
+                                    "pick": "first",
+                                    "then": net(2),
+                                },
+                            },
+                        },
+                        {
+                            "id": "decline",
+                            "label": "Decline",
+                            "effect": gain("corp", 0),
+                        },
+                    ],
+                ),
+            },
             subroutines=[
                 {"id": "anemone-net", "text": "Do 1 net damage.", "effect": net(1)}
             ],
-            unsupported=[
-                "On rez during run vs this server: may trash 1 from HQ to do 2 net damage."
-            ],
+            unsupported=[],
         )
     if cid == "bathynomus":
         return base(

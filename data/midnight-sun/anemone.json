@@ -5,9 +5,7 @@
   "nrdbCode": "33043",
   "type": "ice",
   "side": "corp",
-  "unsupported": [
-    "On rez during run vs this server: may trash 1 from HQ to do 2 net damage."
-  ],
+  "unsupported": [],
   "subtypes": [
     "sentry",
     "ap"
@@ -27,5 +25,47 @@
         }
       }
     }
-  ]
+  ],
+  "onRez": {
+    "op": "if",
+    "cond": {
+      "op": "source_protects_attacked_server"
+    },
+    "then": {
+      "op": "choose",
+      "chooser": "corp",
+      "options": [
+        {
+          "id": "trash-hq-net",
+          "label": "Trash 1 from HQ: do 2 net damage",
+          "effect": {
+            "op": "do",
+            "action": {
+              "kind": "trash_hq",
+              "pick": "first",
+              "then": {
+                "op": "do",
+                "action": {
+                  "kind": "net_damage",
+                  "amount": 2
+                }
+              }
+            }
+          }
+        },
+        {
+          "id": "decline",
+          "label": "Decline",
+          "effect": {
+            "op": "do",
+            "action": {
+              "kind": "gain_credits",
+              "side": "corp",
+              "amount": 0
+            }
+          }
+        }
+      ]
+    }
+  }
 }
