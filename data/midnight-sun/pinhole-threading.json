@@ -5,14 +5,19 @@
   "nrdbCode": "33013",
   "type": "event",
   "side": "runner",
-  "unsupported": [
-    "Successful: instead of breach, access 1 root card of another server; cannot steal/trash if agenda — needs replace-breach cross-server access."
-  ],
+  "unsupported": [],
   "subtypes": [
     "run"
   ],
   "playCost": 1,
   "runEvent": {
-    "servers": "any"
+    "servers": "any",
+    "skipBreach": true,
+    "onSuccessfulRun": {
+      "op": "do",
+      "action": {
+        "kind": "access_one_root_other_server"
+      }
+    }
   }
 }

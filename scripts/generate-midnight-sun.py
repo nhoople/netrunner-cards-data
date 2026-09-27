@@ -411,11 +411,15 @@ def map_card(c: dict) -> dict:
         return base(
             c,
             subtypes=["run"],
-            runEvent={"servers": "any"},
-            unsupported=[
-                "Successful: instead of breach, access 1 root card of another server; "
-                "cannot steal/trash if agenda — needs replace-breach cross-server access."
-            ],
+            runEvent={
+                "servers": "any",
+                "skipBreach": True,
+                "onSuccessfulRun": {
+                    "op": "do",
+                    "action": {"kind": "access_one_root_other_server"},
+                },
+            },
+            unsupported=[],
         )
     if cid == "deep-dive":
         return base(
