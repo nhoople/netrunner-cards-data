@@ -5,14 +5,156 @@
   "nrdbCode": "34042",
   "type": "ice",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: Threat 3 → The Runner cannot spend credits while subroutines on this ice are resolving. (This ability is active if any player has 3 or more agenda points.) [subroutine] Do 1 net damage unless the Runner pays 2[credit]. [subroutine] Do 1 net"
-  ],
+  "unsupported": [],
   "subtypes": [
     "code gate",
     "ap"
   ],
   "installCost": 6,
   "rezCost": 6,
-  "strength": 5
+  "strength": 5,
+  "threatCannotSpendCreditsDuringSubs": 3,
+  "subroutines": [
+    {
+      "id": "attini-1",
+      "text": "Do 1 net damage unless the Runner pays 2[credit].",
+      "effect": {
+        "op": "if",
+        "cond": {
+          "op": "threat",
+          "level": 3
+        },
+        "then": {
+          "op": "do",
+          "action": {
+            "kind": "net_damage",
+            "amount": 1
+          }
+        },
+        "else": {
+          "op": "choose",
+          "chooser": "runner",
+          "options": [
+            {
+              "id": "pay",
+              "label": "Pay 2¢",
+              "effect": {
+                "op": "do",
+                "action": {
+                  "kind": "lose_credits",
+                  "side": "runner",
+                  "amount": 2
+                }
+              }
+            },
+            {
+              "id": "net",
+              "label": "Suffer 1 net damage",
+              "effect": {
+                "op": "do",
+                "action": {
+                  "kind": "net_damage",
+                  "amount": 1
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "attini-2",
+      "text": "Do 1 net damage unless the Runner pays 2[credit].",
+      "effect": {
+        "op": "if",
+        "cond": {
+          "op": "threat",
+          "level": 3
+        },
+        "then": {
+          "op": "do",
+          "action": {
+            "kind": "net_damage",
+            "amount": 1
+          }
+        },
+        "else": {
+          "op": "choose",
+          "chooser": "runner",
+          "options": [
+            {
+              "id": "pay",
+              "label": "Pay 2¢",
+              "effect": {
+                "op": "do",
+                "action": {
+                  "kind": "lose_credits",
+                  "side": "runner",
+                  "amount": 2
+                }
+              }
+            },
+            {
+              "id": "net",
+              "label": "Suffer 1 net damage",
+              "effect": {
+                "op": "do",
+                "action": {
+                  "kind": "net_damage",
+                  "amount": 1
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "attini-3",
+      "text": "Do 1 net damage unless the Runner pays 2[credit].",
+      "effect": {
+        "op": "if",
+        "cond": {
+          "op": "threat",
+          "level": 3
+        },
+        "then": {
+          "op": "do",
+          "action": {
+            "kind": "net_damage",
+            "amount": 1
+          }
+        },
+        "else": {
+          "op": "choose",
+          "chooser": "runner",
+          "options": [
+            {
+              "id": "pay",
+              "label": "Pay 2¢",
+              "effect": {
+                "op": "do",
+                "action": {
+                  "kind": "lose_credits",
+                  "side": "runner",
+                  "amount": 2
+                }
+              }
+            },
+            {
+              "id": "net",
+              "label": "Suffer 1 net damage",
+              "effect": {
+                "op": "do",
+                "action": {
+                  "kind": "net_damage",
+                  "amount": 1
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
 }

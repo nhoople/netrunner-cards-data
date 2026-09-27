@@ -327,6 +327,136 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    if cid == "tree-line":
+        return base(
+            c,
+            canAdvance=True,
+            strengthPerAdvancement=1,
+            paidAbilities=[
+                {
+                    "id": "tree-line-expend",
+                    "label": (
+                        "[click], 1¢, reveal and trash from HQ: "
+                        "place 3 advancements on 1 installed ice"
+                    ),
+                    "clickCost": 1,
+                    "creditCost": 1,
+                    "cost": {"clicks": 1, "credits": 1, "trashSelf": True},
+                    "windows": ["corp_action_paw"],
+                    "usableFromHq": True,
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "place_advancements",
+                            "amount": 3,
+                            "anyInstalledIce": True,
+                        },
+                    },
+                }
+            ],
+            subroutines=[
+                {
+                    "id": "tl-gain-etr",
+                    "text": "Gain 1[credit]. End the run.",
+                    "effect": seq(gain("corp", 1), etr()),
+                }
+            ],
+            unsupported=[],
+        )
+
+    if cid == "phoneutria":
+        return base(
+            c,
+            onPass={
+                "op": "if",
+                "cond": {"op": "grip_count_gte", "amount": 4},
+                "then": tags(1),
+            },
+            subroutines=[
+                {
+                    "id": "phone-net-1",
+                    "text": "Do 1 net damage.",
+                    "effect": net(1),
+                },
+                {
+                    "id": "phone-net-2",
+                    "text": "Do 1 net damage.",
+                    "effect": net(1),
+                },
+            ],
+            unsupported=[],
+        )
+
+    if cid == "slap-vandal":
+        return base(
+            c,
+            installOnIce=True,
+            strength=6,
+            paidAbilities=[
+                {
+                    "id": "slap-break-host",
+                    "label": "1¢: Break 1 subroutine on host ice",
+                    "clickCost": 0,
+                    "creditCost": 1,
+                    "cost": {"credits": 1},
+                    "windows": ["encounter_paw"],
+                    "oncePerEncounter": True,
+                    "effect": {
+                        "op": "do",
+                        "action": {"kind": "break_host_subroutine"},
+                    },
+                }
+            ],
+            unsupported=[],
+        )
+
+    if cid == "attini":
+        pay_or_net = choose(
+            "runner",
+            [
+                {
+                    "id": "pay",
+                    "label": "Pay 2¢",
+                    "effect": lose("runner", 2),
+                },
+                {
+                    "id": "net",
+                    "label": "Suffer 1 net damage",
+                    "effect": net(1),
+                },
+            ],
+        )
+        # Threat 3: Runner cannot spend credits while these resolve →
+        # pay path is impossible; take net. Spend-block also covers prevention.
+        sub_fx = {
+            "op": "if",
+            "cond": {"op": "threat", "level": 3},
+            "then": net(1),
+            "else": pay_or_net,
+        }
+        return base(
+            c,
+            threatCannotSpendCreditsDuringSubs=3,
+            subroutines=[
+                {
+                    "id": "attini-1",
+                    "text": "Do 1 net damage unless the Runner pays 2[credit].",
+                    "effect": sub_fx,
+                },
+                {
+                    "id": "attini-2",
+                    "text": "Do 1 net damage unless the Runner pays 2[credit].",
+                    "effect": sub_fx,
+                },
+                {
+                    "id": "attini-3",
+                    "text": "Do 1 net damage unless the Runner pays 2[credit].",
+                    "effect": sub_fx,
+                },
+            ],
+            unsupported=[],
+        )
+
     if cid == "beatriz-friere-gonzalez":
         return base(
             c,

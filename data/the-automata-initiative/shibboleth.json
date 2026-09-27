@@ -13,17 +13,13 @@
   "installCost": 1,
   "strength": 3,
   "memoryCost": 1,
-  "threatStrengthBonus": {
-    "level": 4,
-    "amount": -2
-  },
   "breaker": {
     "breaksSubtype": "code gate",
     "strength": 3,
     "breakCredits": 1,
+    "breakMaxSubs": 1,
     "pumpCredits": 2,
-    "pumpStrength": 2,
-    "breakMaxSubs": 1
+    "pumpStrength": 2
   },
   "paidAbilities": [
     {
@@ -45,5 +41,9 @@
         }
       }
     }
-  ]
+  ],
+  "threatStrengthBonus": {
+    "level": 4,
+    "amount": -2
+  }
 }

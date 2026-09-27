@@ -5,14 +5,64 @@
   "nrdbCode": "34059",
   "type": "ice",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: [click], 1[credit], reveal and trash this ice from HQ: Place 3 advancement counters on 1 installed piece of ice. You can advance this ice. It gets +1 strength for each hosted advancement counter. [subroutine] Gain 1[credit]. End the run."
-  ],
+  "unsupported": [],
   "subtypes": [
     "barrier",
     "expendable"
   ],
   "installCost": 4,
   "rezCost": 4,
-  "strength": 4
+  "strength": 4,
+  "canAdvance": true,
+  "strengthPerAdvancement": 1,
+  "paidAbilities": [
+    {
+      "id": "tree-line-expend",
+      "label": "[click], 1¢, reveal and trash from HQ: place 3 advancements on 1 installed ice",
+      "clickCost": 1,
+      "creditCost": 1,
+      "cost": {
+        "clicks": 1,
+        "credits": 1,
+        "trashSelf": true
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "usableFromHq": true,
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "place_advancements",
+          "amount": 3,
+          "anyInstalledIce": true
+        }
+      }
+    }
+  ],
+  "subroutines": [
+    {
+      "id": "tl-gain-etr",
+      "text": "Gain 1[credit]. End the run.",
+      "effect": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "gain_credits",
+              "side": "corp",
+              "amount": 1
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "end_the_run"
+            }
+          }
+        ]
+      }
+    }
+  ]
 }

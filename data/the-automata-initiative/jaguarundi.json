@@ -12,7 +12,7 @@
   ],
   "installCost": 4,
   "rezCost": 4,
-  "strength": 2,
+  "strength": 3,
   "onEncounter": {
     "op": "if",
     "cond": {

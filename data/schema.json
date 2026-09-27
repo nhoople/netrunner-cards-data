@@ -360,6 +360,14 @@
           "oncePerRun": {
             "type": "boolean"
           },
+          "oncePerEncounter": {
+            "type": "boolean",
+            "description": "Enforce once-per-encounter usage (Slap Vandal break host)."
+          },
+          "usableFromHq": {
+            "type": "boolean",
+            "description": "Corp paid ability usable while this card is in HQ (Expendable; Tree Line)."
+          },
           "requiresAdvancements": {
             "type": "integer",
             "minimum": 0
@@ -458,6 +466,15 @@
     "onEncounter": {
       "type": "object",
       "description": "Effect IR evaluated when the Runner encounters this ice."
+    },
+    "onPass": {
+      "type": "object",
+      "description": "Effect IR evaluated when the Runner passes this ice (Phoneutria)."
+    },
+    "threatCannotSpendCreditsDuringSubs": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Threat N → Runner cannot spend credits while subroutines on this ice are resolving (Attini)."
     },
     "onApproachServer": {
       "type": "object",

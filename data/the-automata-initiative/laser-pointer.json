@@ -14,7 +14,7 @@
   "paidAbilities": [
     {
       "id": "laser-bypass-ap",
-      "label": "Trash Laser Pointer: bypass encountered AP ice",
+      "label": "Trash Laser Pointer: bypass encountered ap ice",
       "clickCost": 0,
       "creditCost": 0,
       "cost": {

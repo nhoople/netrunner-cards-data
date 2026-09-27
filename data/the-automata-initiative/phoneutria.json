@@ -5,9 +5,7 @@
   "nrdbCode": "34043",
   "type": "ice",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: When the Runner passes this ice, if there are 4 or more cards in the grip, give them 1 tag. [subroutine] Do 1 net damage. [subroutine] Do 1 net damage."
-  ],
+  "unsupported": [],
   "subtypes": [
     "sentry",
     "ap",
@@ -15,5 +13,43 @@
   ],
   "installCost": 4,
   "rezCost": 4,
-  "strength": 2
+  "strength": 2,
+  "onPass": {
+    "op": "if",
+    "cond": {
+      "op": "grip_count_gte",
+      "amount": 4
+    },
+    "then": {
+      "op": "do",
+      "action": {
+        "kind": "give_tags",
+        "amount": 1
+      }
+    }
+  },
+  "subroutines": [
+    {
+      "id": "phone-net-1",
+      "text": "Do 1 net damage.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "net_damage",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "id": "phone-net-2",
+      "text": "Do 1 net damage.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "net_damage",
+          "amount": 1
+        }
+      }
+    }
+  ]
 }

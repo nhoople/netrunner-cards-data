@@ -5,9 +5,7 @@
   "nrdbCode": "34026",
   "type": "program",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Install only on a piece of ice. Interface → 1[credit]: Break 1 subroutine on host ice. Use this ability only once per encounter."
-  ],
+  "unsupported": [],
   "subtypes": [
     "icebreaker",
     "ai",
@@ -15,5 +13,27 @@
   ],
   "installCost": 1,
   "strength": 6,
-  "memoryCost": 1
+  "memoryCost": 1,
+  "installOnIce": true,
+  "paidAbilities": [
+    {
+      "id": "slap-break-host",
+      "label": "1¢: Break 1 subroutine on host ice",
+      "clickCost": 0,
+      "creditCost": 1,
+      "cost": {
+        "credits": 1
+      },
+      "windows": [
+        "encounter_paw"
+      ],
+      "oncePerEncounter": true,
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "break_host_subroutine"
+        }
+      }
+    }
+  ]
 }
