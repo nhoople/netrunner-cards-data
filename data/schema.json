@@ -754,6 +754,15 @@
     "playAdditionalClick": {
       "type": "boolean"
     },
+    "playAdditionalClicks": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Extra clicks beyond the first when playing (triples = 2). Overrides playAdditionalClick count."
+    },
+    "endsActionPhase": {
+      "type": "boolean",
+      "description": "Terminal: end the action phase after resolving this operation (Big Deal)."
+    },
     "playAdditionalCost": {
       "type": "object",
       "description": "Effect IR paid as an additional cost when playing this event/operation (e.g. Running Hot suffer core damage)."

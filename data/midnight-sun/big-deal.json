@@ -5,19 +5,25 @@
   "nrdbCode": "33038",
   "type": "operation",
   "side": "corp",
-  "unsupported": [
-    "Terminal (end action phase); may score the advanced card if able; RFG self — terminal/score/RFG not fully modeled."
-  ],
+  "unsupported": [],
   "subtypes": [
     "terminal"
   ],
   "playCost": 17,
   "trashCost": 3,
+  "endsActionPhase": true,
   "onPlay": {
     "op": "do",
     "action": {
       "kind": "place_advancements",
-      "amount": 4
+      "amount": 4,
+      "thenMayScore": true,
+      "then": {
+        "op": "do",
+        "action": {
+          "kind": "rfg_self"
+        }
+      }
     }
   }
 }

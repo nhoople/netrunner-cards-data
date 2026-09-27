@@ -1171,14 +1171,17 @@ def map_card(c: dict) -> dict:
         return base(
             c,
             subtypes=["terminal"],
+            endsActionPhase=True,
             onPlay={
                 "op": "do",
-                "action": {"kind": "place_advancements", "amount": 4},
+                "action": {
+                    "kind": "place_advancements",
+                    "amount": 4,
+                    "thenMayScore": True,
+                    "then": {"op": "do", "action": {"kind": "rfg_self"}},
+                },
             },
-            unsupported=[
-                "Terminal (end action phase); may score the advanced card if able; RFG self — "
-                "terminal/score/RFG not fully modeled."
-            ],
+            unsupported=[],
         )
     if cid == "mitosis":
         return base(
@@ -1194,11 +1197,14 @@ def map_card(c: dict) -> dict:
         return base(
             c,
             subtypes=["gray ops"],
-            onPlay=gain("corp", 0),
-            unsupported=[
-                "Additional cost: remove 1 tag; add this operation to score area as 1-point "
-                "agenda — tag cost + score-as-agenda not modeled."
-            ],
+            playRequiresTagged=True,
+            playAdditionalCost=remove_tags(1),
+            agendaPoints=1,
+            onPlay={
+                "op": "do",
+                "action": {"kind": "score_self_as_agenda", "agendaPoints": 1},
+            },
+            unsupported=[],
         )
     if cid == "extract":
         return base(
@@ -1228,11 +1234,12 @@ def map_card(c: dict) -> dict:
         return base(
             c,
             subtypes=["triple"],
-            playAdditionalClick=True,
-            unsupported=[
-                "Additional cost: spend [click][click] (triple; only one extra click flagged); "
-                "trash any number of rezzed cards; give 1 tag each — multi-trash + tags not modeled."
-            ],
+            playAdditionalClicks=2,
+            onPlay={
+                "op": "do",
+                "action": {"kind": "trash_any_rezzed_give_tags"},
+            },
+            unsupported=[],
         )
     if cid == "trust-operation":
         return base(
