@@ -327,7 +327,122 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    if cid == "beatriz-friere-gonzalez":
+        return base(
+            c,
+            paidAbilities=[
+                {
+                    "id": "beatriz-run",
+                    "label": "[click][click]: Run HQ; success → breach R&D +1 access",
+                    "clickCost": 2,
+                    "creditCost": 0,
+                    "cost": {"clicks": 2},
+                    "windows": ["runner_action_paw"],
+                    "effect": gain("runner", 0),
+                    "startsRun": {
+                        "servers": "hq",
+                        "redirectSuccessTo": "rd",
+                        "bonusAccess": 1,
+                    },
+                }
+            ],
+            unsupported=[],
+        )
+
+    if cid == "laser-pointer":
+        paid = []
+        for sub in ("ap", "destroyer", "observer"):
+            paid.append(
+                {
+                    "id": f"laser-bypass-{sub}",
+                    "label": f"Trash Laser Pointer: bypass encountered {sub} ice",
+                    "clickCost": 0,
+                    "creditCost": 0,
+                    "cost": {"trashSelf": True},
+                    "windows": ["encounter_paw"],
+                    "requireEncounterSubtype": sub,
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "bypass_current_ice",
+                            "requireSubtype": sub,
+                        },
+                    },
+                }
+            )
+        return base(c, paidAbilities=paid, unsupported=[])
+
+    if cid == "m-i-c":
+        return base(
+            c,
+            paidAbilities=[
+                {
+                    "id": "mic-trash-etr",
+                    "label": "[trash]: End the run unless the Runner spends [click]",
+                    "clickCost": 0,
+                    "creditCost": 0,
+                    "cost": {"trashSelf": True},
+                    "windows": ["approach_paw"],
+                    "effect": choose(
+                        "runner",
+                        [
+                            {
+                                "id": "spend-click",
+                                "label": "Spend [click]",
+                                "effect": {
+                                    "op": "do",
+                                    "action": {
+                                        "kind": "lose_clicks",
+                                        "side": "runner",
+                                        "amount": 1,
+                                    },
+                                },
+                            },
+                            {
+                                "id": "etr",
+                                "label": "End the run",
+                                "effect": etr(),
+                            },
+                        ],
+                    ),
+                }
+            ],
+            subroutines=[
+                {
+                    "id": "mic-lose-1",
+                    "text": "The Runner loses [click].",
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "lose_clicks",
+                            "side": "runner",
+                            "amount": 1,
+                        },
+                    },
+                },
+                {
+                    "id": "mic-lose-2",
+                    "text": "The Runner loses [click].",
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "lose_clicks",
+                            "side": "runner",
+                            "amount": 1,
+                        },
+                    },
+                },
+                {
+                    "id": "mic-etr",
+                    "text": "End the run.",
+                    "effect": etr(),
+                },
+            ],
+            unsupported=[],
+        )
+
     # Fallback: skeleton with full text as unsupported
+
     card = base(c)
     card["unsupported"] = [f"Full text not yet mapped to IR: {plain[:240]}"]
     return card

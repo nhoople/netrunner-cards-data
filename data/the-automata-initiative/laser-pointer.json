@@ -5,12 +5,72 @@
   "nrdbCode": "34016",
   "type": "program",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Whenever you encounter a piece of AP, destroyer, or observer ice, you may trash this program to bypass that ice."
-  ],
+  "unsupported": [],
   "subtypes": [
     "weapon"
   ],
   "installCost": 2,
-  "memoryCost": 1
+  "memoryCost": 1,
+  "paidAbilities": [
+    {
+      "id": "laser-bypass-ap",
+      "label": "Trash Laser Pointer: bypass encountered AP ice",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "trashSelf": true
+      },
+      "windows": [
+        "encounter_paw"
+      ],
+      "requireEncounterSubtype": "ap",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "bypass_current_ice",
+          "requireSubtype": "ap"
+        }
+      }
+    },
+    {
+      "id": "laser-bypass-destroyer",
+      "label": "Trash Laser Pointer: bypass encountered destroyer ice",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "trashSelf": true
+      },
+      "windows": [
+        "encounter_paw"
+      ],
+      "requireEncounterSubtype": "destroyer",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "bypass_current_ice",
+          "requireSubtype": "destroyer"
+        }
+      }
+    },
+    {
+      "id": "laser-bypass-observer",
+      "label": "Trash Laser Pointer: bypass encountered observer ice",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "trashSelf": true
+      },
+      "windows": [
+        "encounter_paw"
+      ],
+      "requireEncounterSubtype": "observer",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "bypass_current_ice",
+          "requireSubtype": "observer"
+        }
+      }
+    }
+  ]
 }
