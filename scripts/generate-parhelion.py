@@ -737,6 +737,53 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    if cid == "concerto":
+        return base(
+            c,
+            subtypes=["run"],
+            onPlay={
+                "op": "do",
+                "action": {"kind": "reveal_top_stack_to_grip_place_hosted_credits"},
+            },
+            runEvent={"servers": "any"},
+            unsupported=[],
+        )
+
+    if cid == "anvil":
+        return base(
+            c,
+            onEncounter={
+                "op": "do",
+                "action": {
+                    "kind": "may_trash_installed",
+                    "excludeSelf": True,
+                    "then": {
+                        "op": "do",
+                        "action": {"kind": "forbid_runner_break_on_source"},
+                    },
+                },
+            },
+            subroutines=[
+                {
+                    "id": "anvil-gain-lose",
+                    "text": "Gain 1[credit]. The Runner loses 1[credit].",
+                    "effect": seq(gain("corp", 1), lose("runner", 1)),
+                },
+                {
+                    "id": "anvil-trash-runner",
+                    "text": "The Runner trashes 1 of their installed cards.",
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "trash_installed_runner",
+                            "pick": "choose",
+                        },
+                    },
+                },
+            ],
+            unsupported=[],
+        )
+
     if cid == "tunnel-vision":
         card = breaker_card(
             c, "*", 2, 2, pump_c=2, pump_s=2, break_max=2, unsupported=[]
