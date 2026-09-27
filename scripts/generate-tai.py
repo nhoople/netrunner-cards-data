@@ -1448,6 +1448,181 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    if cid == "oracle-thinktank":
+        return base(
+            c,
+            onSteal=tags(1),
+            paidAbilities=[
+                {
+                    "id": "oracle-shuffle",
+                    "label": "[click], remove 1 tag: Shuffle this into R&D",
+                    "clickCost": 1,
+                    "creditCost": 0,
+                    "cost": {"clicks": 1, "removeTags": 1},
+                    "windows": ["corp_action_paw"],
+                    "usableFromRunnerScoreArea": True,
+                    "effect": {
+                        "op": "do",
+                        "action": {"kind": "shuffle_source_into_rd"},
+                    },
+                }
+            ],
+            unsupported=[],
+        )
+
+    if cid == "living-mural":
+        return base(
+            c,
+            installOnIce=True,
+            breaker={
+                "breaksSubtype": "sentry",
+                "strength": 1,
+                "breakCredits": 1,
+                "breakMaxSubs": 1,
+                "pumpCredits": 1,
+                "pumpStrength": 2,
+                "breakViaPaidAbilityOnly": True,
+            },
+            onInstall={
+                "op": "if",
+                "cond": {"op": "threat", "level": 4},
+                "then": {
+                    "op": "do",
+                    "action": {"kind": "gain_strength_this_turn", "amount": 3},
+                },
+            },
+            paidAbilities=[
+                {
+                    "id": "mural-break",
+                    "label": "1¢: Break 1 sentry sub protecting host server",
+                    "clickCost": 0,
+                    "creditCost": 1,
+                    "cost": {"credits": 1},
+                    "windows": ["encounter_paw"],
+                    "requireProtectingHostServer": True,
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "break_encounter_subroutine",
+                            "maxSubs": 1,
+                            "requireSubtype": "sentry",
+                        },
+                    },
+                },
+                {
+                    "id": "mural-pump",
+                    "label": "1¢: +2 strength",
+                    "clickCost": 0,
+                    "creditCost": 1,
+                    "cost": {"credits": 1},
+                    "windows": ["encounter_paw"],
+                    "effect": {
+                        "op": "do",
+                        "action": {"kind": "pump_strength", "amount": 2},
+                    },
+                },
+            ],
+            unsupported=[],
+        )
+
+    if cid == "greasing-the-palm":
+        return base(
+            c,
+            onPlay=seq(
+                gain("corp", 5),
+                {
+                    "op": "do",
+                    "action": {
+                        "kind": "may_install_from_hq_paying_costs",
+                        "thenMayRemoveTagToAdvance": True,
+                    },
+                },
+            ),
+            unsupported=[],
+        )
+
+    if cid == "bahia-bands":
+        return base(
+            c,
+            runEvent={
+                "servers": "any",
+                "onSuccessfulRun": {
+                    "op": "do",
+                    "action": {
+                        "kind": "choose_exactly_n",
+                        "n": 2,
+                        "options": [
+                            {
+                                "id": "draw2",
+                                "label": "Draw 2",
+                                "effect": draw("runner", 2),
+                            },
+                            {
+                                "id": "install-discount",
+                                "label": "Install from grip (−1¢)",
+                                "effect": {
+                                    "op": "do",
+                                    "action": {
+                                        "kind": "may_install_from_grip",
+                                        "discount": 1,
+                                    },
+                                },
+                            },
+                            {
+                                "id": "untag",
+                                "label": "Remove 1 tag",
+                                "effect": {
+                                    "op": "do",
+                                    "action": {
+                                        "kind": "remove_tags",
+                                        "amount": 1,
+                                    },
+                                },
+                            },
+                            {
+                                "id": "bank-trash-credits",
+                                "label": "Place 4¢; spend for trash costs this run",
+                                "effect": seq(
+                                    {
+                                        "op": "do",
+                                        "action": {
+                                            "kind": "place_hosted_credits",
+                                            "amount": 4,
+                                        },
+                                    },
+                                    {
+                                        "op": "do",
+                                        "action": {
+                                            "kind": "enable_hosted_credits_spend_for",
+                                            "purposes": ["trash"],
+                                        },
+                                    },
+                                ),
+                            },
+                        ],
+                    },
+                },
+            },
+            unsupported=[],
+        )
+
+    if cid == "vovo-ozetti":
+        return base(
+            c,
+            iceRezCostReductionProtectingThisServer=2,
+            rootRezCostReductionThisServerIfThreat={
+                "level": 4,
+                "amount": 2,
+            },
+            onCorpTurnEnd={
+                "op": "do",
+                "action": {
+                    "kind": "may_move_source_upgrade_to_another_server_root"
+                },
+            },
+            unsupported=[],
+        )
+
     # Fallback: skeleton with full text as unsupported
 
     card = base(c)

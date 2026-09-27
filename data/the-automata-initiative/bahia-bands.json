@@ -5,11 +5,80 @@
   "nrdbCode": "34030",
   "type": "event",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Run any server. If successful, resolve 2 of the following in any order:Draw 2 cards.Install 1 card from your grip, paying 1[credit] less.Remove 1 tag.Place 4[credit] on this event. You can spend hosted credits to pay trash costs for the rem"
-  ],
+  "unsupported": [],
   "subtypes": [
     "run"
   ],
-  "playCost": 2
+  "playCost": 2,
+  "runEvent": {
+    "servers": "any",
+    "onSuccessfulRun": {
+      "op": "do",
+      "action": {
+        "kind": "choose_exactly_n",
+        "n": 2,
+        "options": [
+          {
+            "id": "draw2",
+            "label": "Draw 2",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "draw",
+                "side": "runner",
+                "amount": 2
+              }
+            }
+          },
+          {
+            "id": "install-discount",
+            "label": "Install from grip (−1¢)",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "may_install_from_grip",
+                "discount": 1
+              }
+            }
+          },
+          {
+            "id": "untag",
+            "label": "Remove 1 tag",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "remove_tags",
+                "amount": 1
+              }
+            }
+          },
+          {
+            "id": "bank-trash-credits",
+            "label": "Place 4¢; spend for trash costs this run",
+            "effect": {
+              "op": "seq",
+              "effects": [
+                {
+                  "op": "do",
+                  "action": {
+                    "kind": "place_hosted_credits",
+                    "amount": 4
+                  }
+                },
+                {
+                  "op": "do",
+                  "action": {
+                    "kind": "enable_hosted_credits_spend_for",
+                    "purposes": [
+                      "trash"
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  }
 }

@@ -5,12 +5,39 @@
   "nrdbCode": "34049",
   "type": "agenda",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: When the Runner steals this agenda, give them 1 tag. [click], remove 1 tag: Shuffle this agenda into R&D. The Corp can use this ability only if this agenda is in the Runner's score area."
-  ],
+  "unsupported": [],
   "subtypes": [
     "research"
   ],
   "advancementRequirement": 3,
-  "agendaPoints": 1
+  "agendaPoints": 1,
+  "onSteal": {
+    "op": "do",
+    "action": {
+      "kind": "give_tags",
+      "amount": 1
+    }
+  },
+  "paidAbilities": [
+    {
+      "id": "oracle-shuffle",
+      "label": "[click], remove 1 tag: Shuffle this into R&D",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1,
+        "removeTags": 1
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "usableFromRunnerScoreArea": true,
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "shuffle_source_into_rd"
+        }
+      }
+    }
+  ]
 }

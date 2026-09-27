@@ -387,6 +387,10 @@
             "type": "boolean",
             "description": "Corp paid ability usable while this card is in HQ (Expendable; Tree Line)."
           },
+          "usableFromRunnerScoreArea": {
+            "type": "boolean",
+            "description": "Corp paid ability usable while this agenda is in the Runner's score area (Oracle Thinktank)."
+          },
           "requiresAdvancements": {
             "type": "integer",
             "minimum": 0
@@ -403,6 +407,10 @@
           "requireEncounterSubtype": {
             "type": "string",
             "description": "Encountered ice must have this subtype (e.g. Abagnale bypass)."
+          },
+          "requireProtectingHostServer": {
+            "type": "boolean",
+            "description": "Encountered ice must protect the same server as the ice hosting this card (Living Mural)."
           },
           "requireAttackingMark": {
             "type": "boolean",
@@ -462,9 +470,34 @@
       "type": "array",
       "items": {
         "type": "string",
-        "enum": ["install"]
+        "enum": ["install", "trash"]
       },
-      "description": "Spend non-recurring hosted credits for these purposes (Cybersand / Urban Art Vernissage)."
+      "description": "Spend non-recurring hosted credits for these purposes (Cybersand install; Bahia Bands trash)."
+    },
+    "iceRezCostReductionProtectingThisServer": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "While rezzed, lower rez cost of each ice protecting this server by this many credits (Vovô Ozetti)."
+    },
+    "rootRezCostReductionThisServerIfThreat": {
+      "type": "object",
+      "required": ["level", "amount"],
+      "additionalProperties": false,
+      "properties": {
+        "level": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "amount": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "description": "Threat N → while rezzed, lower rez cost of each card in this server's root by amount (Vovô Ozetti)."
+    },
+    "onCorpTurnEnd": {
+      "type": "object",
+      "description": "Effect IR when the Corp's turn ends while this card is rezzed (Vovô Ozetti may-move)."
     },
     "rezAdditionalCost": {
       "type": "object",
