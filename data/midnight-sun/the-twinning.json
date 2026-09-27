@@ -5,11 +5,11 @@
   "nrdbCode": "33010",
   "type": "resource",
   "side": "runner",
-  "unsupported": [
-    "First spend from installed card each turn places power counter; on HQ/R&D breach may remove up to 2 for bonus access — needs spend trigger + breach bonus."
-  ],
+  "unsupported": [],
   "subtypes": [
     "virtual"
   ],
-  "installCost": 3
+  "installCost": 3,
+  "powerOnFirstInstalledCardCreditSpendThisTurn": true,
+  "removePowerForBonusAccessOnHqRdBreach": 2
 }
