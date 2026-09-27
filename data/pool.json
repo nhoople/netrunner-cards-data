@@ -323,7 +323,7 @@
     },
     "the-automata-initiative": {
       "status": "in-progress",
-      "notes": "Null Signal The Automata Initiative (NRDB pack tai) — Liberation set 1 of 2; 65 cards. Kickoff extract: Strike Fund, Joy Ride, Fujii Asset Retrieval mapped; remaining cards have explicit unsupported notes until Effect IR is wired.",
+      "notes": "Null Signal The Automata Initiative (NRDB pack tai) — Liberation set 1 of 2; 65 cards. In-progress 34/65 (v0.80.0: Slash and Burn / Audrey v2 / The Price / Lago Paranoá / Angelique); remaining cards have explicit unsupported notes until Effect IR is wired.",
       "cards": [
         "strike-fund",
         "the-price",

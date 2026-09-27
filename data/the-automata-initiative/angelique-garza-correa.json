@@ -5,9 +5,7 @@
   "nrdbCode": "34063",
   "type": "upgrade",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: Threat 3 → [click], 1[credit], reveal and trash this upgrade from HQ: Do 1 meat damage. (This ability is active if any player has 3 or more agenda points.) When the Runner accesses this upgrade while it is rezzed, you may pay 2[credit] to d"
-  ],
+  "unsupported": [],
   "subtypes": [
     "ambush",
     "enforcer",
@@ -15,5 +13,73 @@
   ],
   "installCost": 0,
   "rezCost": 0,
-  "trashCost": 2
+  "trashCost": 2,
+  "onAccessRequiresRezzed": true,
+  "onAccess": {
+    "op": "choose",
+    "chooser": "corp",
+    "options": [
+      {
+        "id": "pay",
+        "label": "Pay 2¢: do 2 meat damage",
+        "effect": {
+          "op": "seq",
+          "effects": [
+            {
+              "op": "do",
+              "action": {
+                "kind": "lose_credits",
+                "side": "corp",
+                "amount": 2
+              }
+            },
+            {
+              "op": "do",
+              "action": {
+                "kind": "meat_damage",
+                "amount": 2
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "corp",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  },
+  "paidAbilities": [
+    {
+      "id": "angelique-expend",
+      "label": "Threat 3 → [click], 1¢, trash from HQ: do 1 meat damage",
+      "clickCost": 1,
+      "creditCost": 1,
+      "requiresThreat": 3,
+      "cost": {
+        "clicks": 1,
+        "credits": 1,
+        "trashSelf": true
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "usableFromHq": true,
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "meat_damage",
+          "amount": 1
+        }
+      }
+    }
+  ]
 }

@@ -5,8 +5,14 @@
   "nrdbCode": "34002",
   "type": "event",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Trash the top 4 cards of your stack. You may install 1 of those cards, paying 3[credit] less."
-  ],
-  "playCost": 1
+  "unsupported": [],
+  "playCost": 1,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "trash_top_n_may_install_discount",
+      "count": 4,
+      "discount": 3
+    }
+  }
 }

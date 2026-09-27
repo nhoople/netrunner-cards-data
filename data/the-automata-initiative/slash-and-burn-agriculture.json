@@ -5,13 +5,35 @@
   "nrdbCode": "34057",
   "type": "agenda",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: [click], 1[credit], reveal and trash this agenda from HQ: Place 2 advancement counters on 1 installed card that you can advance."
-  ],
+  "unsupported": [],
   "subtypes": [
     "expansion",
     "expendable"
   ],
   "advancementRequirement": 4,
-  "agendaPoints": 2
+  "agendaPoints": 2,
+  "paidAbilities": [
+    {
+      "id": "sab-expend",
+      "label": "[click], 1¢, reveal and trash from HQ: place 2 advancements on 1 advanceable card",
+      "clickCost": 1,
+      "creditCost": 1,
+      "cost": {
+        "clicks": 1,
+        "credits": 1,
+        "trashSelf": true
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "usableFromHq": true,
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "place_advancements",
+          "amount": 2
+        }
+      }
+    }
+  ]
 }
