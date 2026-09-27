@@ -1125,6 +1125,177 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    if cid == "b-1001":
+        return base(
+            c,
+            paidAbilities=[
+                {
+                    "id": "b1001-etr",
+                    "label": "Remove 1 tag: End the run (other server only)",
+                    "clickCost": 0,
+                    "creditCost": 0,
+                    "cost": {"removeTags": 1},
+                    "windows": [
+                        "approach_server_paw",
+                        "approach_paw",
+                        "encounter_paw",
+                    ],
+                    "requireOtherServer": True,
+                    "effect": etr(),
+                }
+            ],
+            unsupported=[],
+        )
+
+    if cid == "umbrella":
+        return base(
+            c,
+            breaker={
+                "breaksSubtype": "code gate",
+                "strength": 5,
+                "breakCredits": 0,
+                "breakViaPaidAbilityOnly": True,
+                "interfaceRequiresTrojanHost": True,
+            },
+            paidAbilities=[
+                {
+                    "id": "umbrella-break",
+                    "label": (
+                        "2¢: Break up to 3 code gate subs; "
+                        "if any, each player may draw 1"
+                    ),
+                    "clickCost": 0,
+                    "creditCost": 2,
+                    "cost": {"credits": 2},
+                    "windows": ["encounter_paw"],
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "break_encounter_subroutine",
+                            "maxSubs": 3,
+                            "requireSubtype": "code gate",
+                            "thenIfBroke": seq(
+                                choose(
+                                    "runner",
+                                    [
+                                        {
+                                            "id": "draw",
+                                            "label": "Draw 1",
+                                            "effect": draw("runner", 1),
+                                        },
+                                        {
+                                            "id": "decline",
+                                            "label": "Decline",
+                                            "effect": gain("runner", 0),
+                                        },
+                                    ],
+                                ),
+                                choose(
+                                    "corp",
+                                    [
+                                        {
+                                            "id": "draw",
+                                            "label": "Draw 1",
+                                            "effect": draw("corp", 1),
+                                        },
+                                        {
+                                            "id": "decline",
+                                            "label": "Decline",
+                                            "effect": gain("corp", 0),
+                                        },
+                                    ],
+                                ),
+                            ),
+                        },
+                    },
+                }
+            ],
+            unsupported=[],
+        )
+
+    if cid == "pichacao":
+        return base(
+            c,
+            installOnIce=True,
+            onPassHost=choose(
+                "runner",
+                [
+                    {
+                        "id": "gain-click",
+                        "label": "Gain [click]",
+                        "effect": seq(
+                            {
+                                "op": "do",
+                                "action": {
+                                    "kind": "gain_clicks",
+                                    "side": "runner",
+                                    "amount": 1,
+                                },
+                            },
+                            {
+                                "op": "if",
+                                "cond": {
+                                    "op": "clicks_gained_this_run_gte",
+                                    "amount": 2,
+                                },
+                                "then": {
+                                    "op": "do",
+                                    "action": {
+                                        "kind": "return_source_to_grip"
+                                    },
+                                },
+                            },
+                        ),
+                    },
+                    {
+                        "id": "decline",
+                        "label": "Decline",
+                        "effect": gain("runner", 0),
+                    },
+                ],
+            ),
+            unsupported=[],
+        )
+
+    if cid == "cybersand-harvester":
+        return base(
+            c,
+            hostedCreditsOnAnyIceRez=2,
+            hostedCreditsSpendFor=["install"],
+            paidAbilities=[
+                {
+                    "id": "cybersand-take-all",
+                    "label": "[trash]: Take all hosted credits",
+                    "clickCost": 0,
+                    "creditCost": 0,
+                    "cost": {"trashSelf": True},
+                    "windows": ["corp_action_paw"],
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "take_hosted_credits",
+                            "amount": 999,
+                        },
+                    },
+                }
+            ],
+            unsupported=[],
+        )
+
+    if cid == "urban-art-vernissage":
+        return base(
+            c,
+            hostedCreditsSpendFor=["install"],
+            onTurnBegin={
+                "op": "do",
+                "action": {
+                    "kind": "may_return_non_virus_trojan_to_grip_place_hosted",
+                    "hostedAmount": 2,
+                },
+            },
+            unsupported=[],
+        )
+
     # Fallback: skeleton with full text as unsupported
 
     card = base(c)

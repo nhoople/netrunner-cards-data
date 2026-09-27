@@ -5,12 +5,20 @@
   "nrdbCode": "34029",
   "type": "resource",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: When your turn begins, you may add 1 installed non-virus trojan program to your grip. If you do, place 2[credit] on this resource. You can spend hosted credits to install cards."
-  ],
+  "unsupported": [],
   "subtypes": [
     "job",
     "ritzy"
   ],
-  "installCost": 2
+  "installCost": 2,
+  "hostedCreditsSpendFor": [
+    "install"
+  ],
+  "onTurnBegin": {
+    "op": "do",
+    "action": {
+      "kind": "may_return_non_virus_trojan_to_grip_place_hosted",
+      "hostedAmount": 2
+    }
+  }
 }

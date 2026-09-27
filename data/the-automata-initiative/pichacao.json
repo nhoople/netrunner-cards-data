@@ -5,12 +5,59 @@
   "nrdbCode": "34025",
   "type": "program",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Install only on a piece of ice. Whenever you pass host ice, you may gain [click]. If this is not the first time you gained [click] during a run this turn, add this program to your grip."
-  ],
+  "unsupported": [],
   "subtypes": [
     "trojan"
   ],
   "installCost": 1,
-  "memoryCost": 1
+  "memoryCost": 1,
+  "installOnIce": true,
+  "onPassHost": {
+    "op": "choose",
+    "chooser": "runner",
+    "options": [
+      {
+        "id": "gain-click",
+        "label": "Gain [click]",
+        "effect": {
+          "op": "seq",
+          "effects": [
+            {
+              "op": "do",
+              "action": {
+                "kind": "gain_clicks",
+                "side": "runner",
+                "amount": 1
+              }
+            },
+            {
+              "op": "if",
+              "cond": {
+                "op": "clicks_gained_this_run_gte",
+                "amount": 2
+              },
+              "then": {
+                "op": "do",
+                "action": {
+                  "kind": "return_source_to_grip"
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "runner",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  }
 }

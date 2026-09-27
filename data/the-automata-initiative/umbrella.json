@@ -5,9 +5,7 @@
   "nrdbCode": "34027",
   "type": "program",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: This program can only interface with ice hosting a trojan program. Interface → 2[credit]: Break up to 3 code gate subroutines. If at least 1 subroutine was broken this way, each player may draw 1 card."
-  ],
+  "unsupported": [],
   "subtypes": [
     "icebreaker",
     "decoder",
@@ -15,5 +13,99 @@
   ],
   "installCost": 3,
   "strength": 5,
-  "memoryCost": 1
+  "memoryCost": 1,
+  "breaker": {
+    "breaksSubtype": "code gate",
+    "strength": 5,
+    "breakCredits": 0,
+    "breakViaPaidAbilityOnly": true,
+    "interfaceRequiresTrojanHost": true
+  },
+  "paidAbilities": [
+    {
+      "id": "umbrella-break",
+      "label": "2¢: Break up to 3 code gate subs; if any, each player may draw 1",
+      "clickCost": 0,
+      "creditCost": 2,
+      "cost": {
+        "credits": 2
+      },
+      "windows": [
+        "encounter_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "break_encounter_subroutine",
+          "maxSubs": 3,
+          "requireSubtype": "code gate",
+          "thenIfBroke": {
+            "op": "seq",
+            "effects": [
+              {
+                "op": "choose",
+                "chooser": "runner",
+                "options": [
+                  {
+                    "id": "draw",
+                    "label": "Draw 1",
+                    "effect": {
+                      "op": "do",
+                      "action": {
+                        "kind": "draw",
+                        "side": "runner",
+                        "amount": 1
+                      }
+                    }
+                  },
+                  {
+                    "id": "decline",
+                    "label": "Decline",
+                    "effect": {
+                      "op": "do",
+                      "action": {
+                        "kind": "gain_credits",
+                        "side": "runner",
+                        "amount": 0
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "op": "choose",
+                "chooser": "corp",
+                "options": [
+                  {
+                    "id": "draw",
+                    "label": "Draw 1",
+                    "effect": {
+                      "op": "do",
+                      "action": {
+                        "kind": "draw",
+                        "side": "corp",
+                        "amount": 1
+                      }
+                    }
+                  },
+                  {
+                    "id": "decline",
+                    "label": "Decline",
+                    "effect": {
+                      "op": "do",
+                      "action": {
+                        "kind": "gain_credits",
+                        "side": "corp",
+                        "amount": 0
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
 }
