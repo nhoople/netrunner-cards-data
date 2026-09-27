@@ -701,6 +701,42 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    if cid == "issuaq-adaptics-sustaining-diversity":
+        return base(
+            c,
+            powerOnScoreIfAgendaNotInstalledOrAdvancedThisTurn=True,
+            agendaPointsToWinReductionPerPowerCounter=1,
+            unsupported=[],
+        )
+
+    if cid == "kimberlite-field":
+        return base(
+            c,
+            onScore={
+                "op": "do",
+                "action": {
+                    "kind": "may_trash_installed",
+                    "excludeSelf": True,
+                    "rezzedOnly": True,
+                    "then": {
+                        "op": "do",
+                        "action": {
+                            "kind": "trash_installed_runner_lte_last_trashed_rez",
+                            "pick": "choose",
+                        },
+                    },
+                },
+            },
+            unsupported=[],
+        )
+
+    if cid == "yakov-erikovich-avdakov":
+        return base(
+            c,
+            creditsOnTrashFromThisServer=2,
+            unsupported=[],
+        )
+
     if cid == "tunnel-vision":
         card = breaker_card(
             c, "*", 2, 2, pump_c=2, pump_s=2, break_max=2, unsupported=[]
