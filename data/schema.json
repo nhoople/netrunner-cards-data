@@ -480,6 +480,11 @@
       "type": "boolean",
       "description": "When this card has no hosted cards remaining, trash it (Asmund Pudlat)."
     },
+    "deckLimit": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Maximum copies per deck (Matryoshka limit 6)."
+    },
     "onTurnBegin": {
       "type": "object",
       "description": "Effect IR evaluated when this card's controller's turn begins (rezzed/installed)."

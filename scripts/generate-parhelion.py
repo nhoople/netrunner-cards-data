@@ -632,6 +632,66 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    if cid == "matryoshka":
+        return base(
+            c,
+            deckLimit=6,
+            breaker={
+                "breaksSubtype": "*",
+                "strength": 2,
+                "breakCredits": 0,
+                "breakViaPaidAbilityOnly": True,
+                "pumpCredits": 1,
+                "pumpStrength": 1,
+            },
+            onTurnBegin={
+                "op": "do",
+                "action": {"kind": "turn_hosted_cards_faceup"},
+            },
+            paidAbilities=[
+                {
+                    "id": "matryoshka-host",
+                    "label": "[click]: Host a copy of Matryoshka from grip faceup",
+                    "clickCost": 1,
+                    "creditCost": 0,
+                    "cost": {"clicks": 1},
+                    "windows": ["runner_action_paw"],
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "host_copy_from_grip",
+                            "title": "Matryoshka",
+                        },
+                    },
+                },
+                {
+                    "id": "matryoshka-break",
+                    "label": "X¢, turn 1 hosted Matryoshka facedown: Break X subroutines",
+                    "clickCost": 0,
+                    "creditCost": 0,
+                    "cost": {},
+                    "windows": ["encounter_paw"],
+                    "effect": {
+                        "op": "do",
+                        "action": {"kind": "matryoshka_break"},
+                    },
+                },
+                {
+                    "id": "matryoshka-pump",
+                    "label": "Pump Matryoshka +1 strength",
+                    "clickCost": 0,
+                    "creditCost": 1,
+                    "cost": {"credits": 1},
+                    "windows": ["encounter_paw"],
+                    "effect": {
+                        "op": "do",
+                        "action": {"kind": "pump_strength", "amount": 1},
+                    },
+                },
+            ],
+            unsupported=[],
+        )
+
     if cid == "hybrid-release":
         return base(
             c,
