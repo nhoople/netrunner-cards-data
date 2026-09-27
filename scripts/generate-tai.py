@@ -1296,6 +1296,158 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    if cid == "banner":
+        return base(
+            c,
+            breaker={
+                "breaksSubtype": "barrier",
+                "strength": 5,
+                "breakCredits": 0,
+                "breakViaPaidAbilityOnly": True,
+            },
+            paidAbilities=[
+                {
+                    "id": "banner-suppress-etr",
+                    "label": "2¢: barrier subs cannot ETR this encounter",
+                    "clickCost": 0,
+                    "creditCost": 2,
+                    "cost": {"credits": 2},
+                    "windows": ["encounter_paw"],
+                    "requireEncounterSubtype": "barrier",
+                    "effect": {
+                        "op": "do",
+                        "action": {"kind": "forbid_end_the_run_this_encounter"},
+                    },
+                }
+            ],
+            unsupported=[],
+        )
+
+    if cid == "curupira":
+        return base(
+            c,
+            breaker={
+                "breaksSubtype": "barrier",
+                "strength": 1,
+                "breakCredits": 1,
+                "breakMaxSubs": 1,
+                "pumpCredits": 1,
+                "pumpStrength": 1,
+                "breakViaPaidAbilityOnly": True,
+            },
+            onFullyBreak={
+                "op": "do",
+                "action": {"kind": "add_power_counter", "amount": 1},
+            },
+            paidAbilities=[
+                {
+                    "id": "curupira-bypass",
+                    "label": "Spend 3 power: bypass encountered barrier",
+                    "clickCost": 0,
+                    "creditCost": 0,
+                    "cost": {"powerCounters": 3},
+                    "windows": ["encounter_paw"],
+                    "requireEncounterSubtype": "barrier",
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "bypass_current_ice",
+                            "requireSubtype": "barrier",
+                        },
+                    },
+                },
+                {
+                    "id": "curupira-break",
+                    "label": "1¢: Break 1 barrier subroutine",
+                    "clickCost": 0,
+                    "creditCost": 1,
+                    "cost": {"credits": 1},
+                    "windows": ["encounter_paw"],
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "break_encounter_subroutine",
+                            "maxSubs": 1,
+                            "requireSubtype": "barrier",
+                        },
+                    },
+                },
+                {
+                    "id": "curupira-pump",
+                    "label": "1¢: +1 strength",
+                    "clickCost": 0,
+                    "creditCost": 1,
+                    "cost": {"credits": 1},
+                    "windows": ["encounter_paw"],
+                    "effect": {
+                        "op": "do",
+                        "action": {"kind": "pump_strength", "amount": 1},
+                    },
+                },
+            ],
+            unsupported=[],
+        )
+
+    if cid == "debbie-downtown-moreira":
+        return base(
+            c,
+            hostedCreditsOnRunEventPlay=1,
+            onInstall={
+                "op": "if",
+                "cond": {"op": "threat", "level": 4},
+                "then": {
+                    "op": "do",
+                    "action": {"kind": "place_hosted_credits", "amount": 2},
+                },
+            },
+            paidAbilities=[
+                {
+                    "id": "debbie-run",
+                    "label": (
+                        "[click]: Run any server; spend hosted credits "
+                        "during that run"
+                    ),
+                    "clickCost": 1,
+                    "creditCost": 0,
+                    "cost": {"clicks": 1},
+                    "windows": ["runner_action_paw"],
+                    "effect": gain("runner", 0),
+                    "startsRun": {
+                        "servers": "any",
+                        "transferHostedCreditsToEventCredits": True,
+                    },
+                }
+            ],
+            unsupported=[],
+        )
+
+    if cid == "virtual-service-agent":
+        return base(
+            c,
+            onPass={
+                "op": "if",
+                "cond": {
+                    "op": "did_not_break_printed_sub_with_decoder_this_encounter"
+                },
+                "then": tags(1),
+            },
+            subroutines=[
+                {
+                    "id": "vsa-lose",
+                    "text": "The Runner loses 1[credit].",
+                    "effect": lose("runner", 1),
+                }
+            ],
+            unsupported=[],
+        )
+
+    if cid == "mercury-chrome-libertador":
+        return base(
+            c,
+            onBreachHqRdIfNoBreaksOncePerTurnMayBonusAccess=1,
+            unsupported=[],
+        )
+
     # Fallback: skeleton with full text as unsupported
 
     card = base(c)
