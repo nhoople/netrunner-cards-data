@@ -459,6 +459,18 @@
       "type": "object",
       "description": "Effect IR evaluated when the Runner encounters this ice."
     },
+    "onApproachServer": {
+      "type": "object",
+      "description": "Effect IR evaluated when the Runner approaches the server this card protects (rezzed upgrade/asset in root; e.g. Nanisivik Grid)."
+    },
+    "remoteOnly": {
+      "type": "boolean",
+      "description": "Corp may only install this card in a remote server (e.g. ZATO City Grid)."
+    },
+    "iceGainsTrashToResolveChosenSubOnEncounter": {
+      "type": "boolean",
+      "description": "While rezzed: each ice protecting this server gains encounter ability — choose 1 subroutine; may trash the ice to resolve it (ZATO City Grid)."
+    },
     "onTurnBegin": {
       "type": "object",
       "description": "Effect IR evaluated when this card's controller's turn begins (rezzed/installed)."
