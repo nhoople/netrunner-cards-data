@@ -5,14 +5,19 @@
   "nrdbCode": "33052",
   "type": "asset",
   "side": "corp",
-  "unsupported": [
-    "Turn begin: gain 1¢ per hosted advancement — gain_credits_per_advancement primitive missing."
-  ],
+  "unsupported": [],
   "subtypes": [
     "advertisement"
   ],
   "installCost": 1,
   "rezCost": 1,
   "trashCost": 4,
-  "canAdvance": true
+  "canAdvance": true,
+  "onTurnBegin": {
+    "op": "do",
+    "action": {
+      "kind": "gain_credits_per_advancement",
+      "per": 1
+    }
+  }
 }

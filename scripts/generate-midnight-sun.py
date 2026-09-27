@@ -839,10 +839,11 @@ def map_card(c: dict) -> dict:
             c,
             subtypes=["advertisement"],
             canAdvance=True,
-            unsupported=[
-                "Turn begin: gain 1¢ per hosted advancement — gain_credits_per_advancement "
-                "primitive missing."
-            ],
+            onTurnBegin={
+                "op": "do",
+                "action": {"kind": "gain_credits_per_advancement", "per": 1},
+            },
+            unsupported=[],
         )
     if cid == "svyatogor-excavator":
         return base(
