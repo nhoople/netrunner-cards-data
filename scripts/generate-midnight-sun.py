@@ -102,6 +102,14 @@ def trash_res(pick="choose"):
     return {"op": "do", "action": {"kind": "trash_resource", "pick": pick}}
 
 
+def trash_self():
+    return {"op": "do", "action": {"kind": "trash_self"}}
+
+
+def add_power(n: int):
+    return {"op": "do", "action": {"kind": "add_power_counter", "amount": n}}
+
+
 def remove_tags(n: int):
     return {"op": "do", "action": {"kind": "remove_tags", "amount": n}}
 
@@ -663,10 +671,12 @@ def map_card(c: dict) -> dict:
     if cid == "environmental-testing":
         return base(
             c,
-            unsupported=[
-                "On program/hardware install place power counter; at 4+ trash self and gain 9¢ — "
-                "needs install trigger + threshold trash/gain."
-            ],
+            onProgramOrHardwareInstall=add_power(1),
+            onPowerCountersGte={
+                "amount": 4,
+                "effect": seq(trash_self(), gain("runner", 9)),
+            },
+            unsupported=[],
         )
     if cid == "stoneship-chart-room":
         return base(

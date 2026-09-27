@@ -449,6 +449,26 @@
       "type": "object",
       "description": "Effect IR the first time each turn the Runner makes a successful run on HQ (installed continuous; e.g. PAN-Weave Corp loses 1¢ / Runner gains 1¢ if they do)."
     },
+    "onProgramOrHardwareInstall": {
+      "type": "object",
+      "description": "Effect IR whenever the Runner installs a program or piece of hardware (installed continuous; e.g. Environmental Testing place 1 power counter)."
+    },
+    "onPowerCountersGte": {
+      "type": "object",
+      "required": ["amount", "effect"],
+      "properties": {
+        "amount": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Fire when hosted power counters reach this many or more."
+        },
+        "effect": {
+          "type": "object",
+          "description": "Effect IR evaluated when the threshold is met (e.g. trash self + gain credits)."
+        }
+      },
+      "description": "Static-condition ability when hosted power counters ≥ amount (e.g. Environmental Testing trash + gain 9¢)."
+    },
     "onAgendaScored": {
       "type": "object",
       "description": "Effect IR when Corp scores any agenda (identity or installed continuous)."
