@@ -1,0 +1,20 @@
+{
+  "id": "cloud-eater",
+  "title": "Cloud Eater",
+  "wave": "rebellion-without-rehearsal",
+  "nrdbCode": "34110",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: Whenever an encounter with this ice ends, if it was rezzed this turn, trash 1 installed Runner card unless the Runner takes 2 tags or suffers 3 net damage. [subroutine] Trash 1 installed Runner card. [subroutine] Give the Runner 2 tags. [su"
+  ],
+  "subtypes": [
+    "sentry",
+    "ap",
+    "destroyer",
+    "observer"
+  ],
+  "installCost": 10,
+  "rezCost": 10,
+  "strength": 6
+}

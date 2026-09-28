@@ -1,0 +1,19 @@
+{
+  "id": "piranhas",
+  "title": "Piranhas",
+  "wave": "rebellion-without-rehearsal",
+  "nrdbCode": "34117",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: As an additional cost to rez this ice, take 1 bad publicity or remove 1 tag. [subroutine] You may draw 1 card. [subroutine] Do 1 net damage. [subroutine] End the run if there are more cards in HQ than in the grip."
+  ],
+  "subtypes": [
+    "code gate",
+    "ap",
+    "liability"
+  ],
+  "installCost": 5,
+  "rezCost": 5,
+  "strength": 6
+}

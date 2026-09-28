@@ -1,0 +1,18 @@
+{
+  "id": "lycian-multi-munition",
+  "title": "Lycian Multi-Munition",
+  "wave": "rebellion-without-rehearsal",
+  "nrdbCode": "34100",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: When you rez this ice, choose 1 or more subtypes among barrier, code gate, and sentry. This ice gains the chosen subtypes while it remains rezzed. When a turn ends, derez this ice. [subroutine] If this ice is a code gate, the Runner loses ["
+  ],
+  "subtypes": [
+    "mythic",
+    "destroyer"
+  ],
+  "installCost": 3,
+  "rezCost": 3,
+  "strength": 1
+}

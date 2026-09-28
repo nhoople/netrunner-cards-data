@@ -1,0 +1,15 @@
+{
+  "id": "trick-shot",
+  "title": "Trick Shot",
+  "wave": "rebellion-without-rehearsal",
+  "nrdbCode": "34087",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: Place 4[credit] on this event. You can spend hosted credits during runs. Run R&D. If successful, place 2[credit] on this event and access 1 additional card when you breach R&D. When that run ends, you may run a remote server."
+  ],
+  "subtypes": [
+    "run"
+  ],
+  "playCost": 1
+}

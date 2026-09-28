@@ -1,0 +1,16 @@
+{
+  "id": "pretty-mary-da-silva",
+  "title": "“Pretty” Mary da Silva",
+  "wave": "rebellion-without-rehearsal",
+  "nrdbCode": "34093",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: Whenever you breach R&D, if you are allowed to access 2 or more cards in R&D during this breach, you may access 1 additional card."
+  ],
+  "subtypes": [
+    "connection",
+    "seedy"
+  ],
+  "installCost": 1
+}

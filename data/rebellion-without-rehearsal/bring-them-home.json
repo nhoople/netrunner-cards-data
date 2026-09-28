@@ -1,0 +1,16 @@
+{
+  "id": "bring-them-home",
+  "title": "Bring Them Home",
+  "wave": "rebellion-without-rehearsal",
+  "nrdbCode": "34112",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: Play only if the Runner stole or trashed a Corp card during their last turn. After you resolve this operation, your action phase ends. Reveal and add 2 cards at random from the grip to the top of the stack. Threat 3 → You may pay 2[credit] "
+  ],
+  "subtypes": [
+    "terminal",
+    "black ops"
+  ],
+  "playCost": 0
+}

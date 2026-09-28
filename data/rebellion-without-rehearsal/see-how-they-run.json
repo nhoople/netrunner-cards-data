@@ -1,0 +1,48 @@
+{
+  "id": "see-how-they-run",
+  "title": "See How They Run",
+  "wave": "rebellion-without-rehearsal",
+  "nrdbCode": "34105",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [],
+  "subtypes": [
+    "psi",
+    "security"
+  ],
+  "advancementRequirement": 4,
+  "agendaPoints": 2,
+  "onScore": {
+    "op": "seq",
+    "effects": [
+      {
+        "op": "do",
+        "action": {
+          "kind": "give_tags",
+          "amount": 1
+        }
+      },
+      {
+        "op": "do",
+        "action": {
+          "kind": "play_psi_game",
+          "maxBid": 2,
+          "ifBidsDiffer": {
+            "op": "do",
+            "action": {
+              "kind": "core_damage",
+              "amount": 1
+            }
+          },
+          "ifBidsMatch": {
+            "op": "do",
+            "action": {
+              "kind": "net_damage",
+              "amount": 1
+            }
+          }
+        }
+      }
+    ]
+  }
+}

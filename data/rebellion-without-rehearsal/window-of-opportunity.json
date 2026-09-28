@@ -1,0 +1,15 @@
+{
+  "id": "window-of-opportunity",
+  "title": "Window of Opportunity",
+  "wave": "rebellion-without-rehearsal",
+  "nrdbCode": "34077",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: You may install 1 program or piece of hardware from your grip. Run any server. When that run begins, derez 1 piece of ice protecting that server. When that run ends, the Corp may rez the ice derezzed this way, ignoring all costs."
+  ],
+  "subtypes": [
+    "run"
+  ],
+  "playCost": 1
+}

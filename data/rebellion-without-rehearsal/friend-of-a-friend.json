@@ -1,0 +1,15 @@
+{
+  "id": "friend-of-a-friend",
+  "title": "Friend of a Friend",
+  "wave": "rebellion-without-rehearsal",
+  "nrdbCode": "34074",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: [click], [trash]: Gain 5[credit] and remove 1 tag. [click], [trash]: Gain 9[credit] and take 1 tag. Use this ability only if you are not tagged."
+  ],
+  "subtypes": [
+    "connection"
+  ],
+  "installCost": 3
+}

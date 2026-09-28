@@ -1,0 +1,16 @@
+{
+  "id": "stoke-the-embers",
+  "title": "Stoke the Embers",
+  "wave": "rebellion-without-rehearsal",
+  "nrdbCode": "34114",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: When you score this agenda, gain 3[credit] and place 1 advancement counter on an installed card. When you install this agenda from anywhere except HQ, you may reveal it. If you do, gain 2[credit] and place 1 advancement counter on an instal"
+  ],
+  "subtypes": [
+    "initiative"
+  ],
+  "advancementRequirement": 4,
+  "agendaPoints": 2
+}

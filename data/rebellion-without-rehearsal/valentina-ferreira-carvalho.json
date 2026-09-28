@@ -1,0 +1,15 @@
+{
+  "id": "valentina-ferreira-carvalho",
+  "title": "Valentina Ferreira Carvalho",
+  "wave": "rebellion-without-rehearsal",
+  "nrdbCode": "34095",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: Whenever you remove 1 or more tags, gain 1[credit]. Threat 3 → When you install this resource during your turn, you may remove 1 tag or gain 2[credit]. (This ability is active if any player has 3 or more agenda points.)"
+  ],
+  "subtypes": [
+    "connection"
+  ],
+  "installCost": 2
+}

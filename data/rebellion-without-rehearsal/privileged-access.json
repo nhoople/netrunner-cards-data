@@ -1,0 +1,15 @@
+{
+  "id": "privileged-access",
+  "title": "Privileged Access",
+  "wave": "rebellion-without-rehearsal",
+  "nrdbCode": "34068",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: Play only if you are not tagged. Run Archives. If successful, instead of breaching Archives, take 1 tag. When you take a tag with this event, you may install 1 resource from your heap, paying 2[credit] less. Threat 3 → When you take a tag w"
+  ],
+  "subtypes": [
+    "run"
+  ],
+  "playCost": 0
+}

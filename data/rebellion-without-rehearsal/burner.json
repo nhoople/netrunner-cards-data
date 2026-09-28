@@ -1,0 +1,15 @@
+{
+  "id": "burner",
+  "title": "Burner",
+  "wave": "rebellion-without-rehearsal",
+  "nrdbCode": "34085",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: Run HQ. If successful, instead of breaching HQ, reveal 3 cards in HQ at random. Add 2 of the revealed cards to the top and/or bottom of R&D."
+  ],
+  "subtypes": [
+    "run"
+  ],
+  "playCost": 1
+}

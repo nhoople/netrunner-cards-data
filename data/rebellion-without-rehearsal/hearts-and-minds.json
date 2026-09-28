@@ -1,0 +1,17 @@
+{
+  "id": "hearts-and-minds",
+  "title": "Hearts and Minds",
+  "wave": "rebellion-without-rehearsal",
+  "nrdbCode": "34124",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: When your turn begins, you may move 1 advancement counter from an installed card to an installed card you can advance. If this server is not protected by ice, you may also place 1 advancement counter on an installed card you can advance."
+  ],
+  "subtypes": [
+    "political"
+  ],
+  "installCost": 1,
+  "rezCost": 1,
+  "trashCost": 2
+}

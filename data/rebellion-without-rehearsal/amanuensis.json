@@ -1,0 +1,15 @@
+{
+  "id": "amanuensis",
+  "title": "Amanuensis",
+  "wave": "rebellion-without-rehearsal",
+  "nrdbCode": "34069",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: +1[mu] When your turn ends, place 1 power counter on this hardware if you are tagged. Whenever you remove 1 or more tags, you may remove 1 hosted power counter to draw 2 cards. Limit 1 console per player."
+  ],
+  "subtypes": [
+    "console"
+  ],
+  "installCost": 2
+}

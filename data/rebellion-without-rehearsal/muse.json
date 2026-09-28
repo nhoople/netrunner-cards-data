@@ -1,0 +1,16 @@
+{
+  "id": "muse",
+  "title": "Muse",
+  "wave": "rebellion-without-rehearsal",
+  "nrdbCode": "34091",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: When you install this program, search your stack, heap, or grip for 1 non-daemon program. (Shuffle your stack after searching it.) If that program is a trojan, install it on a piece of ice. Otherwise, install it on this program."
+  ],
+  "subtypes": [
+    "daemon"
+  ],
+  "installCost": 2,
+  "memoryCost": 1
+}

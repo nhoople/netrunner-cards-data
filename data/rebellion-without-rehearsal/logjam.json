@@ -1,0 +1,17 @@
+{
+  "id": "logjam",
+  "title": "Logjam",
+  "wave": "rebellion-without-rehearsal",
+  "nrdbCode": "34127",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: You can advance this ice. It gets +1 strength for each hosted advancement counter. When you rez this ice, place 1 advancement counter on it plus 1 advancement counter for each card type among faceup cards in Archives. [subroutine] Gain 2[cr"
+  ],
+  "subtypes": [
+    "barrier"
+  ],
+  "installCost": 6,
+  "rezCost": 6,
+  "strength": 0
+}

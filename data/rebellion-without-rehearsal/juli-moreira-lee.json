@@ -1,0 +1,15 @@
+{
+  "id": "juli-moreira-lee",
+  "title": "Juli Moreira Lee",
+  "wave": "rebellion-without-rehearsal",
+  "nrdbCode": "34084",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: When you install this resource, load 4 power counters onto it. When it is empty, trash it. The first time each turn you take an action on an installed resource, remove 1 hosted power counter and gain [click]."
+  ],
+  "subtypes": [
+    "connection"
+  ],
+  "installCost": 2
+}

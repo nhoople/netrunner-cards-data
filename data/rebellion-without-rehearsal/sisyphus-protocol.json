@@ -1,0 +1,16 @@
+{
+  "id": "sisyphus-protocol",
+  "title": "Sisyphus Protocol",
+  "wave": "rebellion-without-rehearsal",
+  "nrdbCode": "34106",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: The first time each turn the Runner passes a rezzed code gate or sentry, you may pay 1[credit] or trash 1 card from HQ. If you do, the Runner encounters that ice again."
+  ],
+  "subtypes": [
+    "security"
+  ],
+  "advancementRequirement": 5,
+  "agendaPoints": 2
+}

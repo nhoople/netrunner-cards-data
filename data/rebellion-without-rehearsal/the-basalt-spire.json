@@ -1,0 +1,13 @@
+{
+  "id": "the-basalt-spire",
+  "title": "The Basalt Spire",
+  "wave": "rebellion-without-rehearsal",
+  "nrdbCode": "34123",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: When the Runner steals this agenda, you may add 1 card from Archives to HQ. When you score this agenda, place 2 agenda counters on it. Once per turn → Hosted agenda counter, trash the top card of R&D: Add 1 card from Archives to HQ."
+  ],
+  "advancementRequirement": 5,
+  "agendaPoints": 3
+}

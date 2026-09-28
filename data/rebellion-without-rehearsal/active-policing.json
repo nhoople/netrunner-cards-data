@@ -1,0 +1,16 @@
+{
+  "id": "active-policing",
+  "title": "Active Policing",
+  "wave": "rebellion-without-rehearsal",
+  "nrdbCode": "34102",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: Play only if the Runner stole or trashed a Corp card during their last turn. After you resolve this operation, your action phase ends. You may install 1 card from HQ. The Runner gets −1 allotted [click] for their next turn. Threat 3 → You m"
+  ],
+  "subtypes": [
+    "terminal",
+    "gray ops"
+  ],
+  "playCost": 0
+}
