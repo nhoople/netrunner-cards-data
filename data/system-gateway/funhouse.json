@@ -12,31 +12,11 @@
     "code gate"
   ],
   "onEncounter": {
-    "op": "choose",
-    "chooser": "runner",
-    "options": [
-      {
-        "id": "tag",
-        "label": "Take 1 tag",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "give_tags",
-            "amount": 1
-          }
-        }
-      },
-      {
-        "id": "etr",
-        "label": "End the run",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "end_the_run"
-          }
-        }
-      }
-    ]
+    "op": "do",
+    "action": {
+      "kind": "end_the_run_unless_take_tags",
+      "amount": 1
+    }
   },
   "subroutines": [
     {
