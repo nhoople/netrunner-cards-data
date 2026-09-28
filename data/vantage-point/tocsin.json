@@ -1,0 +1,18 @@
+{
+  "id": "tocsin",
+  "title": "Tocsin",
+  "wave": "vantage-point",
+  "nrdbCode": "36060",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: [click], 1[credit], reveal and trash this ice from HQ: Search R&D for up to 1 barrier and up to 1 sentry and reveal them. (Shuffle R&D after searching it.) Add those cards to HQ. [subroutine] The Runner loses 2[credit]. [subroutine] End the"
+  ],
+  "subtypes": [
+    "code gate",
+    "expendable"
+  ],
+  "installCost": 8,
+  "rezCost": 8,
+  "strength": 5
+}

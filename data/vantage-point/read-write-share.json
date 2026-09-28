@@ -1,0 +1,13 @@
+{
+  "id": "read-write-share",
+  "title": "Read-Write Share",
+  "wave": "vantage-point",
+  "nrdbCode": "36022",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: Limit 4 hosted cards. When you install this program and when your turn begins, you may host 1 card from your grip facedown on this program to draw 1 card. [trash]: Shuffle all hosted cards into your stack."
+  ],
+  "installCost": 0,
+  "memoryCost": 2
+}

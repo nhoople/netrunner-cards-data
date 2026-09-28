@@ -1,0 +1,19 @@
+{
+  "id": "vicsek",
+  "title": "Vicsek",
+  "wave": "vantage-point",
+  "nrdbCode": "36042",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: [subroutine] Do X net damage and give the Runner X tags. X is equal to the number of tags the Runner has. [subroutine] Give the Runner 1 tag. Trash this ice."
+  ],
+  "subtypes": [
+    "trap",
+    "ap",
+    "observer"
+  ],
+  "installCost": 2,
+  "rezCost": 2,
+  "strength": 3
+}

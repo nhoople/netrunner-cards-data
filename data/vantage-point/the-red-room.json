@@ -1,0 +1,17 @@
+{
+  "id": "the-red-room",
+  "title": "The Red Room",
+  "wave": "vantage-point",
+  "nrdbCode": "36045",
+  "type": "upgrade",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: Central server only. The first time each turn an agenda is scored or stolen, place 1 power counter on this upgrade. Hosted power counter: End the run. Use this ability only during a run against another server."
+  ],
+  "subtypes": [
+    "facility"
+  ],
+  "installCost": 1,
+  "rezCost": 1,
+  "trashCost": 3
+}

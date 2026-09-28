@@ -1,0 +1,15 @@
+{
+  "id": "nurse-hanh",
+  "title": "Nurse Hạnh",
+  "wave": "vantage-point",
+  "nrdbCode": "36007",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: Whenever 2 or more facedown cards in Archives are turned faceup, draw 2 cards."
+  ],
+  "subtypes": [
+    "connection"
+  ],
+  "installCost": 1
+}

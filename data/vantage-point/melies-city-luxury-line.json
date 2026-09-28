@@ -1,0 +1,16 @@
+{
+  "id": "melies-city-luxury-line",
+  "title": "Méliès City Luxury Line",
+  "wave": "vantage-point",
+  "nrdbCode": "36026",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: As an additional cost to steal this agenda, the Runner must spend [click]. When you score this agenda, gain [click]."
+  ],
+  "subtypes": [
+    "expansion"
+  ],
+  "advancementRequirement": 5,
+  "agendaPoints": 3
+}

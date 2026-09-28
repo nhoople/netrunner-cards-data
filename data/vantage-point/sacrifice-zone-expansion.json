@@ -1,0 +1,17 @@
+{
+  "id": "sacrifice-zone-expansion",
+  "title": "Sacrifice Zone Expansion",
+  "wave": "vantage-point",
+  "nrdbCode": "36056",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: Install only faceup. (This agenda is neither rezzed nor unrezzed.) The first time each turn you advance this agenda, gain 3[credit]. Once per turn → When the Runner makes a successful run on another server, you may remove 1 hosted advanceme"
+  ],
+  "subtypes": [
+    "public",
+    "expansion"
+  ],
+  "advancementRequirement": 4,
+  "agendaPoints": 2
+}

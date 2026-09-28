@@ -1,0 +1,15 @@
+{
+  "id": "touchstone",
+  "title": "Touchstone",
+  "wave": "vantage-point",
+  "nrdbCode": "36021",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: The first time each turn you play an event, place 1[credit] on this hardware. You can spend hosted credits during runs."
+  ],
+  "subtypes": [
+    "stealth"
+  ],
+  "installCost": 2
+}

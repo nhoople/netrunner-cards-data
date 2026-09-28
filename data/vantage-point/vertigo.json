@@ -1,0 +1,17 @@
+{
+  "id": "vertigo",
+  "title": "Vertigo",
+  "wave": "vantage-point",
+  "nrdbCode": "36031",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: When the Runner passes this ice, if they have no [click] remaining, they cannot steal or trash Corp cards for the remainder of this run. [subroutine] The Runner loses [click]."
+  ],
+  "subtypes": [
+    "code gate"
+  ],
+  "installCost": 1,
+  "rezCost": 1,
+  "strength": 1
+}

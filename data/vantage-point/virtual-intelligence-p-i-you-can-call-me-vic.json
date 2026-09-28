@@ -1,0 +1,15 @@
+{
+  "id": "virtual-intelligence-p-i-you-can-call-me-vic",
+  "title": "Virtual Intelligence, P.I.: “You Can Call Me Vic”",
+  "wave": "vantage-point",
+  "nrdbCode": "36009",
+  "type": "identity",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: Once per turn → [click], 1[credit]: Draw 1 card and remove 1 tag."
+  ],
+  "subtypes": [
+    "digital"
+  ],
+  "link": 0
+}

@@ -1,0 +1,15 @@
+{
+  "id": "take-a-dive",
+  "title": "Take a Dive",
+  "wave": "vantage-point",
+  "nrdbCode": "36002",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: Run HQ or R&D. If successful, and if a subroutine resolved during this run, give the Corp 1 bad publicity. Remove this event from the game."
+  ],
+  "subtypes": [
+    "run"
+  ],
+  "playCost": 2
+}

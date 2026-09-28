@@ -1,0 +1,18 @@
+{
+  "id": "lethe",
+  "title": "Lethe",
+  "wave": "vantage-point",
+  "nrdbCode": "36051",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: Whenever the Runner bypasses or fully breaks this ice, give them 1 tag. [subroutine] You may add 1 card from Archives to the top or bottom of R&D. [subroutine] Add 1 installed Runner card to the grip."
+  ],
+  "subtypes": [
+    "sentry",
+    "observer"
+  ],
+  "installCost": 9,
+  "rezCost": 9,
+  "strength": 6
+}

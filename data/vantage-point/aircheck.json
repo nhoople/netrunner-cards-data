@@ -1,0 +1,16 @@
+{
+  "id": "aircheck",
+  "title": "Aircheck",
+  "wave": "vantage-point",
+  "nrdbCode": "36018",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: Place 4[credit] on this event. While this event is active, you can spend hosted credits, and you cannot lose or spend credits from your credit pool. Run HQ or R&D. When that run ends, if it was successful, you may run a remote server."
+  ],
+  "subtypes": [
+    "run",
+    "stealth"
+  ],
+  "playCost": 1
+}

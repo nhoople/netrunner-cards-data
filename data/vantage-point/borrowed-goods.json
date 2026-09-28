@@ -1,0 +1,15 @@
+{
+  "id": "borrowed-goods",
+  "title": "Borrowed Goods",
+  "wave": "vantage-point",
+  "nrdbCode": "36013",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: +1[mu] When you install this hardware, if you are not tagged, take 1 tag."
+  ],
+  "subtypes": [
+    "chip"
+  ],
+  "installCost": 0
+}

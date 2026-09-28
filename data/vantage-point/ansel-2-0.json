@@ -1,0 +1,19 @@
+{
+  "id": "ansel-2-0",
+  "title": "Ansel 2.0",
+  "wave": "vantage-point",
+  "nrdbCode": "36028",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: Lose [click][click]: Break up to 2 subroutines on this ice. Only the Runner can use this ability. [subroutine] Trash 1 installed Runner card. [subroutine] Remove 1 card in the heap from the game. [subroutine] You may install 1 card from HQ "
+  ],
+  "subtypes": [
+    "sentry",
+    "bioroid",
+    "destroyer"
+  ],
+  "installCost": 8,
+  "rezCost": 8,
+  "strength": 5
+}

@@ -1,0 +1,12 @@
+{
+  "id": "word-on-the-street",
+  "title": "Word on the Street",
+  "wave": "vantage-point",
+  "nrdbCode": "36025",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: As an additional cost to score an agenda the Corp installed this turn, they must add this resource to their score area as an agenda worth −1 agenda points with “You cannot forfeit this agenda.”. When the Corp scores an agenda they did not i"
+  ],
+  "installCost": 2
+}

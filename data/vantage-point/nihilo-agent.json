@@ -1,0 +1,18 @@
+{
+  "id": "nihilo-agent",
+  "title": "Nihilo Agent",
+  "wave": "vantage-point",
+  "nrdbCode": "36049",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: When you rez this asset, load 3 power counters onto it. When it is empty, trash it. When your turn begins, remove 1 tag and 1 bad publicity. When your discard phase ends, give the Runner 1 tag, take 1 bad publicity, and remove 1 hosted powe"
+  ],
+  "subtypes": [
+    "enforcer",
+    "liability"
+  ],
+  "installCost": 1,
+  "rezCost": 1,
+  "trashCost": 3
+}

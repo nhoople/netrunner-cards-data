@@ -1,0 +1,12 @@
+{
+  "id": "cultivate",
+  "title": "Cultivate",
+  "wave": "vantage-point",
+  "nrdbCode": "36043",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: Look at the top 5 cards of R&D. Trash 1 of those cards, add 1 of them to HQ, and arrange the rest in any order."
+  ],
+  "playCost": 0
+}

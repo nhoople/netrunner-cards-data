@@ -1,0 +1,15 @@
+{
+  "id": "hackerspace",
+  "title": "Hackerspace",
+  "wave": "vantage-point",
+  "nrdbCode": "36006",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: You can install unique (♦) companion resources and unique (♦) connection resources onto this resource. Each resource installed this way costs 1[credit] less to install. While this resource has a hosted companion and a hosted connection, you"
+  ],
+  "subtypes": [
+    "location"
+  ],
+  "installCost": 2
+}

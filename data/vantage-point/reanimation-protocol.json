@@ -1,0 +1,15 @@
+{
+  "id": "reanimation-protocol",
+  "title": "Reanimation Protocol",
+  "wave": "vantage-point",
+  "nrdbCode": "36062",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: Install and rez 1 piece of ice from Archives, paying a total of 10[credit] less. If you rezzed a piece of non-liability ice this way, take 1 bad publicity."
+  ],
+  "subtypes": [
+    "liability"
+  ],
+  "playCost": 2
+}

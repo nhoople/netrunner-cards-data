@@ -1,0 +1,17 @@
+{
+  "id": "shackleton-grid",
+  "title": "Shackleton Grid",
+  "wave": "vantage-point",
+  "nrdbCode": "36065",
+  "type": "upgrade",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: Once per turn → When the Runner spends credits from outside their credit pool during a run against this server, you may do 4 meat damage. Limit 1 region per server."
+  ],
+  "subtypes": [
+    "region"
+  ],
+  "installCost": 1,
+  "rezCost": 1,
+  "trashCost": 3
+}

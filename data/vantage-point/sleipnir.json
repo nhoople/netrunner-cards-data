@@ -1,0 +1,17 @@
+{
+  "id": "sleipnir",
+  "title": "Sleipnir",
+  "wave": "vantage-point",
+  "nrdbCode": "36030",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: [subroutine] You may draw 1 card. [subroutine] You may shuffle 1 card from HQ or Archives into R&D. [subroutine] End the run."
+  ],
+  "subtypes": [
+    "code gate"
+  ],
+  "installCost": 4,
+  "rezCost": 4,
+  "strength": 4
+}

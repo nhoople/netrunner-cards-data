@@ -1,0 +1,17 @@
+{
+  "id": "synchrocyclotron",
+  "title": "Synchrocyclotron",
+  "wave": "vantage-point",
+  "nrdbCode": "36027",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: The first double operation you play each turn costs [click] less to play."
+  ],
+  "subtypes": [
+    "facility"
+  ],
+  "installCost": 3,
+  "rezCost": 3,
+  "trashCost": 3
+}
