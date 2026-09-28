@@ -1319,10 +1319,113 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    # --- v1.28.0 B-slice ---
+
+    if cid == "sacrifice-zone-expansion":
+        return base(
+            c,
+            installFaceup=True,
+            creditsOnFirstAdvanceThisTurn=3,
+            onSuccessfulRunOtherServerOncePerTurn={
+                "op": "choose",
+                "chooser": "corp",
+                "options": [
+                    {
+                        "id": "remove-adv-meat",
+                        "label": "Remove 1 advancement: do 1 meat damage",
+                        "effect": {
+                            "op": "do",
+                            "action": {
+                                "kind": "remove_advancements",
+                                "amount": 1,
+                                "then": {
+                                    "op": "do",
+                                    "action": {
+                                        "kind": "meat_damage",
+                                        "amount": 1,
+                                    },
+                                },
+                            },
+                        },
+                    },
+                    decline("corp"),
+                ],
+            },
+            unsupported=[],
+        )
+
+    if cid == "shackleton-grid":
+        return base(
+            c,
+            onSpendCreditsOutsidePoolDuringRunOncePerTurn={
+                "op": "choose",
+                "chooser": "corp",
+                "options": [
+                    {
+                        "id": "meat-4",
+                        "label": "Do 4 meat damage",
+                        "effect": {
+                            "op": "do",
+                            "action": {"kind": "meat_damage", "amount": 4},
+                        },
+                    },
+                    decline("corp"),
+                ],
+            },
+            unsupported=[],
+        )
+
+    if cid == "tocsin":
+        return base(
+            c,
+            paidAbilities=[
+                {
+                    "id": "tocsin-search",
+                    "label": "[click], 1[credit], trash: Search R&D for barrier + sentry",
+                    "clickCost": 1,
+                    "creditCost": 1,
+                    "cost": {"clicks": 1, "credits": 1, "trashSelf": True},
+                    "windows": ["corp_action_paw"],
+                    "usableFromHq": True,
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "search_rd_up_to_one_each_subtype_to_hq",
+                            "subtypes": ["barrier", "sentry"],
+                        },
+                    },
+                }
+            ],
+            subroutines=[
+                {
+                    "id": "tocsin-lose",
+                    "text": "The Runner loses 2[credit].",
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "lose_credits",
+                            "side": "runner",
+                            "amount": 2,
+                        },
+                    },
+                },
+                {
+                    "id": "tocsin-etr-1",
+                    "text": "End the run.",
+                    "effect": etr(),
+                },
+                {
+                    "id": "tocsin-etr-2",
+                    "text": "End the run.",
+                    "effect": etr(),
+                },
+            ],
+            unsupported=[],
+        )
+
     # Fail closed — honest unsupported note for the remainder.
-    # Corsair / Lampades / Baker / Aircheck / Methuselah need stealth-credit
-    # spend restrictions; remaining stubs need encounter/breach/host hooks
-    # not yet covered.
+    # Stealth cluster (Corsair / Lampades / Baker / Aircheck / Methuselah)
+    # and remaining host/identity stubs stay unsupported until IR exists.
     card = base(c)
     card["unsupported"] = [f"Full text not yet mapped to IR: {plain[:240]}"]
     return card

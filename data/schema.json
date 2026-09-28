@@ -1720,6 +1720,19 @@
       "type": "boolean",
       "description": "Once per turn when passing outermost ice after fully breaking it, may swap with another installed ice (Sipa)."
     },
+    "creditsOnFirstAdvanceThisTurn": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "First time each turn this card is advanced, gain this many credits (Sacrifice Zone Expansion)."
+    },
+    "onSuccessfulRunOtherServerOncePerTurn": {
+      "type": "object",
+      "description": "Once per turn when the Runner makes a successful run on another server, evaluate this effect (Sacrifice Zone Expansion)."
+    },
+    "onSpendCreditsOutsidePoolDuringRunOncePerTurn": {
+      "type": "object",
+      "description": "Once per turn when the Runner spends credits from outside their credit pool during a run against this server, evaluate this effect (Shackleton Grid)."
+    },
     "onBreachHqRdIfNoBreaksOncePerTurnMayBonusAccess": {
       "type": "integer",
       "minimum": 1,

@@ -5,13 +5,40 @@
   "nrdbCode": "36065",
   "type": "upgrade",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: Once per turn → When the Runner spends credits from outside their credit pool during a run against this server, you may do 4 meat damage. Limit 1 region per server."
-  ],
+  "unsupported": [],
   "subtypes": [
     "region"
   ],
   "installCost": 1,
   "rezCost": 1,
-  "trashCost": 3
+  "trashCost": 3,
+  "onSpendCreditsOutsidePoolDuringRunOncePerTurn": {
+    "op": "choose",
+    "chooser": "corp",
+    "options": [
+      {
+        "id": "meat-4",
+        "label": "Do 4 meat damage",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "meat_damage",
+            "amount": 4
+          }
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "corp",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  }
 }

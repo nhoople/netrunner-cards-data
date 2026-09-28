@@ -5,13 +5,49 @@
   "nrdbCode": "36056",
   "type": "agenda",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: Install only faceup. (This agenda is neither rezzed nor unrezzed.) The first time each turn you advance this agenda, gain 3[credit]. Once per turn → When the Runner makes a successful run on another server, you may remove 1 hosted advanceme"
-  ],
+  "unsupported": [],
   "subtypes": [
     "public",
     "expansion"
   ],
   "advancementRequirement": 4,
-  "agendaPoints": 2
+  "agendaPoints": 2,
+  "installFaceup": true,
+  "creditsOnFirstAdvanceThisTurn": 3,
+  "onSuccessfulRunOtherServerOncePerTurn": {
+    "op": "choose",
+    "chooser": "corp",
+    "options": [
+      {
+        "id": "remove-adv-meat",
+        "label": "Remove 1 advancement: do 1 meat damage",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "remove_advancements",
+            "amount": 1,
+            "then": {
+              "op": "do",
+              "action": {
+                "kind": "meat_damage",
+                "amount": 1
+              }
+            }
+          }
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "corp",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  }
 }

@@ -35,7 +35,7 @@ Match this dataset and [netrunner-engine](https://github.com/nhoople/netrunner-e
 
 | Pairing | cards-data | engine |
 |---------|------------|--------|
-| **Current** | [`v1.27.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.27.0) | engine same-semver pin `v1.27.0` |
+| **Current** | [`v1.28.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.28.0) | engine same-semver pin `v1.28.0` |
 | Elevation milestone | [`v1.12.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.12.0) | [`v1.12.0`](https://github.com/nhoople/netrunner-engine/releases/tag/v1.12.0) |
 | RWR milestone | [`v1.00.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.00.0) | [`v1.00.0`](https://github.com/nhoople/netrunner-engine/releases/tag/v1.00.0) |
 
@@ -76,11 +76,11 @@ console.log(pool.corpusOrder, marjanah.title);
 | the-automata-initiative | 65 | Null Signal The Automata Initiative (`tai`); status `supported` (wave gate `v0.86.0`) |
 | rebellion-without-rehearsal | 65 | Null Signal Rebellion Without Rehearsal (`rwr`); status `supported` (**65/65** mapped; wave gate `v1.00.0`) |
 | elevation | 82 | Null Signal Elevation (`elev`); status `supported` (**82/82** mapped; wave gate `v1.12.0`) |
-| vantage-point | 66 | Null Signal Vantage Point (`vp`); status `in-progress` (`v1.27.0`; **48/66** mapped) |
+| vantage-point | 66 | Null Signal Vantage Point (`vp`); status `in-progress` (`v1.28.0`; **51/66** mapped) |
 
 Synthetic stubs and early wave1/wave2 dirs were removed in `v0.2.0`. Reprints that previously lived only under those waves now ship under their Null Signal release directories.
 
-Parhelion is fully supported (wave gate `v0.71.0`). The Automata Initiative is fully supported (wave gate `v0.86.0`). Rebellion Without Rehearsal is fully supported (wave gate `v1.00.0`). Elevation is fully supported (wave gate `v1.12.0`). Vantage Point is in progress (`v1.27.0`; **48/66** mapped).
+Parhelion is fully supported (wave gate `v0.71.0`). The Automata Initiative is fully supported (wave gate `v0.86.0`). Rebellion Without Rehearsal is fully supported (wave gate `v1.00.0`). Elevation is fully supported (wave gate `v1.12.0`). Vantage Point is in progress (`v1.28.0`; **51/66** mapped).
 
 ## Versioning
 

@@ -5,14 +5,73 @@
   "nrdbCode": "36060",
   "type": "ice",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: [click], 1[credit], reveal and trash this ice from HQ: Search R&D for up to 1 barrier and up to 1 sentry and reveal them. (Shuffle R&D after searching it.) Add those cards to HQ. [subroutine] The Runner loses 2[credit]. [subroutine] End the"
-  ],
+  "unsupported": [],
   "subtypes": [
     "code gate",
     "expendable"
   ],
   "installCost": 8,
   "rezCost": 8,
-  "strength": 5
+  "strength": 5,
+  "paidAbilities": [
+    {
+      "id": "tocsin-search",
+      "label": "[click], 1[credit], trash: Search R&D for barrier + sentry",
+      "clickCost": 1,
+      "creditCost": 1,
+      "cost": {
+        "clicks": 1,
+        "credits": 1,
+        "trashSelf": true
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "usableFromHq": true,
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "search_rd_up_to_one_each_subtype_to_hq",
+          "subtypes": [
+            "barrier",
+            "sentry"
+          ]
+        }
+      }
+    }
+  ],
+  "subroutines": [
+    {
+      "id": "tocsin-lose",
+      "text": "The Runner loses 2[credit].",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "lose_credits",
+          "side": "runner",
+          "amount": 2
+        }
+      }
+    },
+    {
+      "id": "tocsin-etr-1",
+      "text": "End the run.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "end_the_run"
+        }
+      }
+    },
+    {
+      "id": "tocsin-etr-2",
+      "text": "End the run.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "end_the_run"
+        }
+      }
+    }
+  ]
 }
