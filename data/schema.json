@@ -91,6 +91,14 @@
         "blankAttackedServerRoot": {
           "type": "boolean",
           "description": "During this run, cards in the root of the attacked server lose all abilities (Light the Fire!)."
+        },
+        "derezProtectingIceOnRunBegin": {
+          "type": "boolean",
+          "description": "When this run begins, derez 1 ice protecting the attacked server (Window of Opportunity)."
+        },
+        "mayRezEventDerezzedIceOnRunEndIgnoreCosts": {
+          "type": "boolean",
+          "description": "When this run ends, Corp may rez the ice derezzed by this event, ignoring all costs (Window of Opportunity)."
         }
       }
     }
@@ -1377,6 +1385,16 @@
         "amount": { "type": "integer", "minimum": 1 }
       },
       "description": "On HQ/R&D run end, if accessed ≥ min cards, place amount power (Amelia Earhart)."
+    },
+    "bonusAccessOnHqRdBreachWhileTagged": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "While tagged, +N card access when breaching HQ or R&D (Manuel Lattes de Moura)."
+    },
+    "threatBasicTrashAdditionalCostTrashHq": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Threat N → as additional cost for Corp basic trash of this resource, trash 1 from HQ (Manuel)."
     },
     "powerCounterOnAnyCardRez": {
       "type": "integer",

@@ -5,8 +5,34 @@
   "nrdbCode": "34076",
   "type": "event",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Choose connection or virtual. You may search your stack for 1 resource with the chosen subtype and reveal it. Add that card to your grip. Reveal any number of cards with the chosen subtype in your grip. Gain 1[credit] for each card revealed"
-  ],
-  "playCost": 4
+  "unsupported": [],
+  "playCost": 4,
+  "onPlay": {
+    "op": "choose",
+    "chooser": "runner",
+    "options": [
+      {
+        "id": "connection",
+        "label": "Choose connection",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "meeting_of_minds_resolve",
+            "subtype": "connection"
+          }
+        }
+      },
+      {
+        "id": "virtual",
+        "label": "Choose virtual",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "meeting_of_minds_resolve",
+            "subtype": "virtual"
+          }
+        }
+      }
+    ]
+  }
 }
