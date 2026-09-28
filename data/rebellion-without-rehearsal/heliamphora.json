@@ -5,12 +5,32 @@
   "nrdbCode": "34072",
   "type": "program",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: [interrupt] → Whenever you would access a card in Archives, you may host it faceup on this program instead. (It is not installed.) Use this ability only once each time you breach Archives. When the Corp purges virus counters, they trash 2 c"
-  ],
+  "unsupported": [],
   "subtypes": [
     "virus"
   ],
   "installCost": 1,
-  "memoryCost": 1
+  "memoryCost": 1,
+  "onWouldAccessArchivesHostInstead": {
+    "oncePerArchivesBreach": true
+  },
+  "onVirusPurge": {
+    "op": "seq",
+    "effects": [
+      {
+        "op": "do",
+        "action": {
+          "kind": "trash_hq",
+          "pick": "random",
+          "amount": 2
+        }
+      },
+      {
+        "op": "do",
+        "action": {
+          "kind": "trash_self"
+        }
+      }
+    ]
+  }
 }

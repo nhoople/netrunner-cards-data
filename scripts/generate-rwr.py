@@ -2351,6 +2351,75 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    if cid == "cupellation":
+        decline = {
+            "id": "decline",
+            "label": "Decline",
+            "effect": gain("runner", 0),
+        }
+        return base(
+            c,
+            maxHostedCards=1,
+            accessHostNonAgendaFaceup={"creditCost": 1},
+            onBreachHqIfHostingCorpCard={
+                "op": "choose",
+                "chooser": "runner",
+                "options": [
+                    {
+                        "id": "bonus",
+                        "label": (
+                            "Pay 1¢ and trash Cupellation: "
+                            "access 2 additional cards"
+                        ),
+                        "effect": seq(
+                            {
+                                "op": "do",
+                                "action": {
+                                    "kind": "lose_credits",
+                                    "side": "runner",
+                                    "amount": 1,
+                                },
+                            },
+                            {
+                                "op": "do",
+                                "action": {"kind": "trash_self"},
+                            },
+                            {
+                                "op": "do",
+                                "action": {
+                                    "kind": "bonus_access",
+                                    "amount": 2,
+                                },
+                            },
+                        ),
+                    },
+                    decline,
+                ],
+            },
+            unsupported=[],
+        )
+
+    if cid == "heliamphora":
+        return base(
+            c,
+            onWouldAccessArchivesHostInstead={"oncePerArchivesBreach": True},
+            onVirusPurge=seq(
+                {
+                    "op": "do",
+                    "action": {
+                        "kind": "trash_hq",
+                        "pick": "random",
+                        "amount": 2,
+                    },
+                },
+                {
+                    "op": "do",
+                    "action": {"kind": "trash_self"},
+                },
+            ),
+            unsupported=[],
+        )
+
     card = base(c)
     card["unsupported"] = [f"Full text not yet mapped to IR: {plain[:240]}"]
     return card
@@ -2389,11 +2458,10 @@ def main():
         "nrdbPackCode": PACK,
         "count": EXPECTED,
         "written": EXPECTED,
-        "status": "in-progress",
+        "status": "supported",
         "notes": (
             "Null Signal Rebellion Without Rehearsal (NRDB pack rwr) — Liberation "
-            "set 2 of 2. Wave is in-progress: simple cards mapped where Effect "
-            "IR covers them; remaining cards have explicit unsupported notes."
+            "set 2 of 2. Fully supported: all 65 cards mapped (wave gate v1.00.0)."
         ),
         "cards": written,
     }

@@ -21,7 +21,7 @@ Files under [`data/`](data/) are the API. Clone the repo or fetch a **tagged** r
 | [`data/midnight-sun/`](data/midnight-sun/) | Midnight Sun (NRDB `ms`) |
 | [`data/parhelion/`](data/parhelion/) | Parhelion (NRDB `ph`) — supported |
 | [`data/the-automata-initiative/`](data/the-automata-initiative/) | The Automata Initiative (NRDB `tai`) — **supported** |
-| [`data/rebellion-without-rehearsal/`](data/rebellion-without-rehearsal/) | Rebellion Without Rehearsal (NRDB `rwr`) — **in-progress**
+| [`data/rebellion-without-rehearsal/`](data/rebellion-without-rehearsal/) | Rebellion Without Rehearsal (NRDB `rwr`) — **supported**
 
 **Corpus order:** System Gateway → System Update 2021 → Midnight Sun → Parhelion → The Automata Initiative → Rebellion Without Rehearsal → later releases.
 
@@ -70,11 +70,11 @@ console.log(pool.corpusOrder, marjanah.title);
 | midnight-sun | 65 | Null Signal Midnight Sun (`ms`); `msbp` titles absorbed; fully supported |
 | parhelion | 63 | Null Signal Parhelion (`ph`); status `supported` (wave gate `v0.71.0`; all 63 clear) |
 | the-automata-initiative | 65 | Null Signal The Automata Initiative (`tai`); status `supported` (wave gate `v0.86.0`) |
-| rebellion-without-rehearsal | 65 | Null Signal Rebellion Without Rehearsal (`rwr`); status `in-progress` (**63/65** mapped; Burner, Cataloguer, Muse, Jeitinho, The Wizard's Chest cleared in v0.99.0; Cupellation + Heliamphora remain) |
+| rebellion-without-rehearsal | 65 | Null Signal Rebellion Without Rehearsal (`rwr`); status `supported` (**65/65** mapped; wave gate `v1.00.0`) |
 
 Synthetic stubs and early wave1/wave2 dirs were removed in `v0.2.0`. Reprints that previously lived only under those waves now ship under their Null Signal release directories.
 
-Parhelion is fully supported (wave gate `v0.71.0`). The Automata Initiative is fully supported (wave gate `v0.86.0`). Rebellion Without Rehearsal lists unimplemented clauses in each card’s `unsupported` array until those notes are cleared.
+Parhelion is fully supported (wave gate `v0.71.0`). The Automata Initiative is fully supported (wave gate `v0.86.0`). Rebellion Without Rehearsal is fully supported (wave gate `v1.00.0`).
 
 ## Versioning
 

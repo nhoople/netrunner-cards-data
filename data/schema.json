@@ -1557,6 +1557,46 @@
     "maxPrintedSubsBreakExceptSubtype": {
       "type": "string",
       "description": "Breakers with this subtype ignore maxPrintedSubsBreakablePerEncounter (Hammer killers)."
+    },
+    "maxHostedCards": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Limit on faceup hosted cards (not installed) on this program (Cupellation)."
+    },
+    "accessHostNonAgendaFaceup": {
+      "type": "object",
+      "required": [
+        "creditCost"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "creditCost": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "description": "Access → pay creditCost to host the non-agenda card being accessed faceup on this program; if it was installed, it becomes uninstalled (Cupellation)."
+    },
+    "onBreachHqIfHostingCorpCard": {
+      "type": "object",
+      "description": "Effect IR when breaching HQ while this program hosts a Corp card (Cupellation may pay+trash for bonus access)."
+    },
+    "onWouldAccessArchivesHostInstead": {
+      "type": "object",
+      "required": [
+        "oncePerArchivesBreach"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "oncePerArchivesBreach": {
+          "type": "boolean"
+        }
+      },
+      "description": "Interrupt: whenever you would access a card in Archives, may host it faceup on this program instead (not installed). oncePerArchivesBreach limits to one use per Archives breach (Heliamphora)."
+    },
+    "onVirusPurge": {
+      "type": "object",
+      "description": "Effect IR when the Corp purges virus counters (Heliamphora: trash 2 random HQ then trash self). Prefer over trashOnVirusPurge when purge does more than trash this card."
     }
   }
 }

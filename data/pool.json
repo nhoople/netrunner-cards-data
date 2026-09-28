@@ -394,8 +394,8 @@
       ]
     },
     "rebellion-without-rehearsal": {
-      "status": "in-progress",
-      "notes": "Null Signal Rebellion Without Rehearsal (NRDB pack rwr) — Liberation set 2 of 2; 65 cards. Wave is in-progress.",
+      "status": "supported",
+      "notes": "Null Signal Rebellion Without Rehearsal (NRDB pack rwr) — Liberation set 2 of 2; 65 cards. Fully supported: all 65 cards mapped (wave gate v1.00.0).",
       "cards": [
         "sebastiao-souza-pessoa-activist-organizer",
         "eye-for-an-eye",
