@@ -5,13 +5,26 @@
   "nrdbCode": "34047",
   "type": "upgrade",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: As an additional cost to trash this upgrade, the Runner must add 2 cards from the grip at random to the bottom of the stack. Persistent → As an additional cost to steal an agenda from this server or its root, the Runner must add 2 cards fro"
-  ],
+  "unsupported": [],
   "subtypes": [
     "sysop"
   ],
   "installCost": 2,
   "rezCost": 2,
-  "trashCost": 2
+  "trashCost": 2,
+  "persistent": true,
+  "trashAdditionalCost": {
+    "op": "do",
+    "action": {
+      "kind": "add_random_grip_to_stack_bottom",
+      "count": 2
+    }
+  },
+  "stealAdditionalCostFromProtectingServer": {
+    "op": "do",
+    "action": {
+      "kind": "add_random_grip_to_stack_bottom",
+      "count": 2
+    }
+  }
 }

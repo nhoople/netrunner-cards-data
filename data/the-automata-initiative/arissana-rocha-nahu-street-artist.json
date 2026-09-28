@@ -5,11 +5,35 @@
   "nrdbCode": "34020",
   "type": "identity",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Once per turn → 0[credit]: Install 1 program from your grip (paying its install cost). Use this ability only during a run. When that run ends, trash that program if it is not a trojan."
-  ],
+  "unsupported": [],
   "subtypes": [
     "natural"
   ],
-  "link": 0
+  "link": 0,
+  "paidAbilities": [
+    {
+      "id": "arissana-install-program",
+      "label": "Once per turn: 0¢ install 1 program from grip (pay install cost); run only",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "credits": 0
+      },
+      "oncePerTurn": true,
+      "requireDuringRun": true,
+      "windows": [
+        "approach_paw",
+        "approach_server_paw",
+        "encounter_paw",
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "install_program_from_grip_paying_cost",
+          "trackOnRunEndTrashUnlessSubtype": "trojan"
+        }
+      }
+    }
+  ]
 }

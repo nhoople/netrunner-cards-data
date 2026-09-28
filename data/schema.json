@@ -366,9 +366,15 @@
                 "approach_server_paw",
                 "encounter_paw",
                 "corp_action_paw",
-                "runner_action_paw"
+                "runner_action_paw",
+                "damage_interrupt_paw",
+                "when_encountered_interrupt_paw"
               ]
             }
+          },
+          "requireDuringRun": {
+            "type": "boolean",
+            "description": "Ability usable only while a run is in progress (Arissana / AirbladeX)."
           },
           "effect": {
             "type": "object"
@@ -678,7 +684,33 @@
     },
     "persistent": {
       "type": "boolean",
-      "description": "Abilities remain active while installed even if unrezzed (Tucana)."
+      "description": "Abilities remain active while installed even if unrezzed (Tucana / Daniela)."
+    },
+    "trashAdditionalCost": {
+      "type": "object",
+      "description": "Effect IR paid as an additional cost when the Runner trashes this card (Daniela)."
+    },
+    "stealAdditionalCostFromProtectingServer": {
+      "type": "object",
+      "description": "Effect IR paid as an additional cost when the Runner steals an agenda from this server (Daniela Persistent)."
+    },
+    "maxRemoteServers": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Corp identity: maximum number of remote servers (A Teia)."
+    },
+    "onFirstRemoteInstallThisTurn": {
+      "type": "object",
+      "description": "Identity: Effect IR the first time each turn Corp installs on a remote root or protecting ice (A Teia)."
+    },
+    "onFirstRunBeginThisTurn": {
+      "type": "object",
+      "description": "Effect IR the first time each turn a run begins while this card is scored (Stegodon)."
+    },
+    "whileScoredBreakerStrengthPenaltyIfIceDerezzedThisRun": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "While scored, if any ice was derezzed this run, each icebreaker gets -N strength (Stegodon)."
     },
     "onFirstVirusInstallThisTurn": {
       "type": "object",

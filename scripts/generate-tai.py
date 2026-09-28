@@ -1895,6 +1895,167 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    if cid == "daniela-jorge-inacio":
+        grip_bottom = {
+            "op": "do",
+            "action": {
+                "kind": "add_random_grip_to_stack_bottom",
+                "count": 2,
+            },
+        }
+        return base(
+            c,
+            persistent=True,
+            trashAdditionalCost=grip_bottom,
+            stealAdditionalCostFromProtectingServer=grip_bottom,
+            unsupported=[],
+        )
+
+    if cid == "adrian-seis":
+        return base(
+            c,
+            onSuccessfulRun={
+                "op": "do",
+                "action": {
+                    "kind": "play_psi_game",
+                    "maxBid": 2,
+                    "ifBidsDiffer": {
+                        "op": "do",
+                        "action": {
+                            "kind": "restrict_run_access",
+                            "mode": "only_source",
+                            "cardIdsFromSource": True,
+                        },
+                    },
+                    "ifBidsMatch": {
+                        "op": "do",
+                        "action": {
+                            "kind": "restrict_run_access",
+                            "mode": "forbid_source",
+                            "cardIdsFromSource": True,
+                        },
+                    },
+                },
+            },
+            onCorpTurnEnd={
+                "op": "do",
+                "action": {
+                    "kind": "may_move_source_upgrade_to_another_server_root"
+                },
+            },
+            unsupported=[],
+        )
+
+    if cid == "a-teia-ip-recovery":
+        return base(
+            c,
+            maxRemoteServers=2,
+            onFirstRemoteInstallThisTurn={
+                "op": "do",
+                "action": {
+                    "kind": "may_install_from_hq_on_other_remote_ignore_costs",
+                    "cannotScoreInstalledCardThisTurn": True,
+                },
+            },
+            unsupported=[],
+        )
+
+    if cid == "arissana-rocha-nahu-street-artist":
+        return base(
+            c,
+            paidAbilities=[
+                {
+                    "id": "arissana-install-program",
+                    "label": (
+                        "Once per turn: 0¢ install 1 program from grip "
+                        "(pay install cost); run only"
+                    ),
+                    "clickCost": 0,
+                    "creditCost": 0,
+                    "cost": {"credits": 0},
+                    "oncePerTurn": True,
+                    "requireDuringRun": True,
+                    "windows": [
+                        "approach_paw",
+                        "approach_server_paw",
+                        "encounter_paw",
+                        "runner_action_paw",
+                    ],
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "install_program_from_grip_paying_cost",
+                            "trackOnRunEndTrashUnlessSubtype": "trojan",
+                        },
+                    },
+                }
+            ],
+            unsupported=[],
+        )
+
+    if cid == "stegodon-mk-iv":
+        return base(
+            c,
+            whileScoredBreakerStrengthPenaltyIfIceDerezzedThisRun=2,
+            onFirstRunBeginThisTurn={
+                "op": "do",
+                "action": {
+                    "kind": "may_derez_installed",
+                    "onlyIce": True,
+                    "excludeProtectingAttackedServer": True,
+                    "then": gain("corp", 1),
+                },
+            },
+            unsupported=[],
+        )
+
+    if cid == "airbladex-jsrf-ed":
+        return base(
+            c,
+            powerCountersOnInstall=3,
+            trashWhenPowerEmpty=True,
+            paidAbilities=[
+                {
+                    "id": "airblade-prevent-damage",
+                    "label": (
+                        "Interrupt: hosted power counter — prevent 1 net "
+                        "damage (run only)"
+                    ),
+                    "clickCost": 0,
+                    "creditCost": 0,
+                    "cost": {"powerCounters": 1},
+                    "windows": ["damage_interrupt_paw"],
+                    "requireDuringRun": True,
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "prevent_pending_damage",
+                            "amount": 1,
+                        },
+                    },
+                },
+                {
+                    "id": "airblade-prevent-encounter",
+                    "label": (
+                        "Interrupt: hosted power counter — prevent when "
+                        "encountered on ice"
+                    ),
+                    "clickCost": 0,
+                    "creditCost": 0,
+                    "cost": {"powerCounters": 1},
+                    "windows": ["when_encountered_interrupt_paw"],
+                    "requireDuringRun": True,
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "prevent_current_ice_on_encounter"
+                        },
+                    },
+                },
+            ],
+            unsupported=[],
+        )
+
     # Fallback: skeleton with full text as unsupported
 
     card = base(c)
