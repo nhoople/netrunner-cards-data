@@ -1,0 +1,16 @@
+{
+  "id": "proprionegation",
+  "title": "Proprionegation",
+  "wave": "elevation",
+  "nrdbCode": "35048",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: When you score this agenda, place 1 agenda counter on it. Hosted agenda counter: The Runner moves to the outermost position of Archives. (They approach any ice in that position.) Use this ability only during a run."
+  ],
+  "subtypes": [
+    "security"
+  ],
+  "advancementRequirement": 4,
+  "agendaPoints": 2
+}

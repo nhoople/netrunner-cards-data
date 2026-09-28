@@ -1,0 +1,13 @@
+{
+  "id": "devadatta-drone",
+  "title": "Devadatta Drone",
+  "wave": "elevation",
+  "nrdbCode": "35031",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: When you install this program, place 2 power counters on it. Whenever you breach R&D, you may remove 1 hosted power counter to access 1 additional card."
+  ],
+  "installCost": 1,
+  "memoryCost": 1
+}

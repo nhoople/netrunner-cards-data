@@ -1,0 +1,15 @@
+{
+  "id": "fransofia-ward",
+  "title": "Fransofia Ward",
+  "wave": "elevation",
+  "nrdbCode": "35021",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: The rez cost of each piece of ice is increased by 1[credit]. Whenever you encounter a piece of ice, if the Corp has 15[credit] or more, you may trash this resource to bypass that ice. (Pass that ice. No subroutines or further \"when encounte"
+  ],
+  "subtypes": [
+    "connection"
+  ],
+  "installCost": 3
+}

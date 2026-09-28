@@ -1,0 +1,24 @@
+{
+  "id": "clean-getaway",
+  "title": "Clean Getaway",
+  "wave": "elevation",
+  "nrdbCode": "35014",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "subtypes": [
+    "run"
+  ],
+  "playCost": 3,
+  "runEvent": {
+    "servers": "any",
+    "onSuccessfulRun": {
+      "op": "do",
+      "action": {
+        "kind": "gain_credits",
+        "side": "runner",
+        "amount": 6
+      }
+    }
+  }
+}

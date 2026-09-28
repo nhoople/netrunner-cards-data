@@ -1,0 +1,18 @@
+{
+  "id": "mercia-b4ll4rd",
+  "title": "Mercia B4LL4RD",
+  "wave": "elevation",
+  "nrdbCode": "35045",
+  "type": "upgrade",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: When your action phase ends, you may install 1 piece of ice from HQ, paying 1[credit] less. If you do, move this upgrade to the root of the server that piece of ice is protecting."
+  ],
+  "subtypes": [
+    "bioroid",
+    "academic"
+  ],
+  "installCost": 2,
+  "rezCost": 2,
+  "trashCost": 2
+}

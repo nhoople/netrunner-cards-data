@@ -1,0 +1,15 @@
+{
+  "id": "maglectric-rapid-748-mod",
+  "title": "Maglectric Rapid (748 Mod)",
+  "wave": "elevation",
+  "nrdbCode": "35019",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: Whenever you make a successful run on HQ, you may trash this hardware to derez 1 installed Corp card."
+  ],
+  "subtypes": [
+    "weapon"
+  ],
+  "installCost": 1
+}

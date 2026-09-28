@@ -1,0 +1,14 @@
+{
+  "id": "pt-untaian-lifes-building-blocks",
+  "title": "PT Untaian: Life's Building Blocks",
+  "wave": "elevation",
+  "nrdbCode": "35047",
+  "type": "identity",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: When your discard phase ends, if there are 3 or fewer cards in HQ, you may pay 1[credit] to place 1 advancement counter on an unrezzed card you can advance. (You cannot score that card this turn.)"
+  ],
+  "subtypes": [
+    "division"
+  ]
+}

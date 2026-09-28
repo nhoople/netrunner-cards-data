@@ -1,0 +1,15 @@
+{
+  "id": "dewi-subrotoputri-pedagogical-dhalang",
+  "title": "Dewi Subrotoputri: Pedagogical Dhalang",
+  "wave": "elevation",
+  "nrdbCode": "35023",
+  "type": "identity",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: Whenever you make a successful run, if your [mu] is full, you may flip this identity and gain 1[credit]. Flip side: Whenever you make a successful run, if you have at least 1 unused [mu], you may flip this identity and draw 1 card."
+  ],
+  "subtypes": [
+    "natural"
+  ],
+  "link": 0
+}

@@ -1,0 +1,17 @@
+{
+  "id": "mahkota-langit-grid",
+  "title": "Mahkota Langit Grid",
+  "wave": "elevation",
+  "nrdbCode": "35082",
+  "type": "upgrade",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: 2[recurring-credit] (When you rez this upgrade and before your turn begins, refill to 2 hosted credits.) You can spend hosted credits to rez assets in the root of this server and ice protecting this server. Persistent → The trash cost of ea"
+  ],
+  "subtypes": [
+    "region"
+  ],
+  "installCost": 2,
+  "rezCost": 2,
+  "trashCost": 2
+}

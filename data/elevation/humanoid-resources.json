@@ -1,0 +1,14 @@
+{
+  "id": "humanoid-resources",
+  "title": "Humanoid Resources",
+  "wave": "elevation",
+  "nrdbCode": "35039",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: [click][click][click], [trash]: Gain 4[credit] and draw 3 cards. Install up to 2 cards from HQ (one at a time). You may play 1 operation from HQ."
+  ],
+  "installCost": 1,
+  "rezCost": 1,
+  "trashCost": 1
+}

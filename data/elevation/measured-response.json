@@ -1,0 +1,16 @@
+{
+  "id": "measured-response",
+  "title": "Measured Response",
+  "wave": "elevation",
+  "nrdbCode": "35078",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: Play only if the threat level is 4 or greater, and only if the Runner made a successful run during their last turn. Do 4 meat damage unless the Runner pays 8[credit]."
+  ],
+  "subtypes": [
+    "black ops"
+  ],
+  "playCost": 5,
+  "trashCost": 3
+}

@@ -1,0 +1,16 @@
+{
+  "id": "maintenance-access",
+  "title": "Maintenance Access",
+  "wave": "elevation",
+  "nrdbCode": "35016",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: As an additional cost to play this event, spend [click]. Run Archives. When you would approach Archives (after passing all ice), instead change the attacked server to HQ and approach HQ."
+  ],
+  "subtypes": [
+    "run",
+    "double"
+  ],
+  "playCost": 0
+}

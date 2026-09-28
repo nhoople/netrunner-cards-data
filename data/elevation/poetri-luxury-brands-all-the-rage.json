@@ -1,0 +1,14 @@
+{
+  "id": "poetri-luxury-brands-all-the-rage",
+  "title": "Poétrï Luxury Brands: All the Rage",
+  "wave": "elevation",
+  "nrdbCode": "35036",
+  "type": "identity",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: Whenever you score an agenda, look at the top 3 cards of R&D. You may install 1 non-agenda card from among them. Whenever an agenda is stolen, you may install 1 non-agenda card from HQ."
+  ],
+  "subtypes": [
+    "division"
+  ]
+}

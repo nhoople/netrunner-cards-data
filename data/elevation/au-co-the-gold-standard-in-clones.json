@@ -1,0 +1,14 @@
+{
+  "id": "au-co-the-gold-standard-in-clones",
+  "title": "AU Co.: The Gold Standard in Clones",
+  "wave": "elevation",
+  "nrdbCode": "35046",
+  "type": "identity",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: Whenever you do damage or trash 1 or more cards from HQ, place 1 power counter on this identity. When your turn begins, you may remove 2 hosted power counters to look at the top 3 cards of R&D. Trash 1 of those cards and add the rest to HQ."
+  ],
+  "subtypes": [
+    "division"
+  ]
+}

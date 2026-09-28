@@ -1,0 +1,19 @@
+{
+  "id": "hantu",
+  "title": "Hantu",
+  "wave": "elevation",
+  "nrdbCode": "35008",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: When you install this program, place 2 virus counters on it. Interface → 1[credit]: Break 1 sentry subroutine. Hosted virus counter: +2 strength."
+  ],
+  "subtypes": [
+    "icebreaker",
+    "killer",
+    "virus"
+  ],
+  "installCost": 3,
+  "strength": 2,
+  "memoryCost": 1
+}

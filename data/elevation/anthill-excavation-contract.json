@@ -1,0 +1,42 @@
+{
+  "id": "anthill-excavation-contract",
+  "title": "Anthill Excavation Contract",
+  "wave": "elevation",
+  "nrdbCode": "35072",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "subtypes": [
+    "industrial"
+  ],
+  "installCost": 3,
+  "rezCost": 3,
+  "trashCost": 1,
+  "onRez": {
+    "op": "do",
+    "action": {
+      "kind": "place_hosted_credits",
+      "amount": 8
+    }
+  },
+  "onTurnBegin": {
+    "op": "seq",
+    "effects": [
+      {
+        "op": "do",
+        "action": {
+          "kind": "take_hosted_credits",
+          "amount": 4
+        }
+      },
+      {
+        "op": "do",
+        "action": {
+          "kind": "draw",
+          "side": "corp",
+          "amount": 1
+        }
+      }
+    ]
+  }
+}

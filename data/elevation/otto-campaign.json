@@ -1,0 +1,17 @@
+{
+  "id": "otto-campaign",
+  "title": "Otto Campaign",
+  "wave": "elevation",
+  "nrdbCode": "35040",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: When you rez this asset, load 6[credit] onto it. When it is empty, trash it and gain [click][click]. When your turn begins, take 2[credit] from this asset."
+  ],
+  "subtypes": [
+    "advertisement"
+  ],
+  "installCost": 2,
+  "rezCost": 2,
+  "trashCost": 2
+}

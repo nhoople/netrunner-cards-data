@@ -1,0 +1,15 @@
+{
+  "id": "peer-review",
+  "title": "Peer Review",
+  "wave": "elevation",
+  "nrdbCode": "35055",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: Reveal all but 1 card in HQ. Gain 7[credit]. You may install 1 card from HQ in the root of a remote server."
+  ],
+  "subtypes": [
+    "transaction"
+  ],
+  "playCost": 4
+}

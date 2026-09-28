@@ -1,0 +1,14 @@
+{
+  "id": "the-zwicky-group-invisible-hands",
+  "title": "The Zwicky Group: Invisible Hands",
+  "wave": "elevation",
+  "nrdbCode": "35069",
+  "type": "identity",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: The first time each turn you gain credits through an ability on an agenda or operation, you may draw 1 card."
+  ],
+  "subtypes": [
+    "unsubstantiated"
+  ]
+}

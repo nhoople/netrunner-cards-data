@@ -1,0 +1,17 @@
+{
+  "id": "phat-gioan-baotixita",
+  "title": "Phật Gioan Baotixita",
+  "wave": "elevation",
+  "nrdbCode": "35051",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: When your discard phase ends, place 1 power counter on this asset. The first time each turn an agenda is scored or stolen, you may remove up to 2 hosted power counters. Do 1 net damage plus 1 net damage for each power counter removed this w"
+  ],
+  "subtypes": [
+    "executive"
+  ],
+  "installCost": 1,
+  "rezCost": 1,
+  "trashCost": 3
+}

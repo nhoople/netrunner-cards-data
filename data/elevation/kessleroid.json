@@ -1,0 +1,17 @@
+{
+  "id": "kessleroid",
+  "title": "Kessleroid",
+  "wave": "elevation",
+  "nrdbCode": "35075",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: The Runner cannot trash this ice (while it is rezzed). [subroutine] End the run. [subroutine] End the run."
+  ],
+  "subtypes": [
+    "barrier"
+  ],
+  "installCost": 2,
+  "rezCost": 2,
+  "strength": 1
+}

@@ -1,0 +1,17 @@
+{
+  "id": "idiosyncresis",
+  "title": "Idiosyncresis",
+  "wave": "elevation",
+  "nrdbCode": "35061",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: You can advance this asset. When your turn begins, you may trash this asset. If you do, for each hosted advancement counter, gain 3[credit] and the Runner loses 2[credit]."
+  ],
+  "subtypes": [
+    "hostile"
+  ],
+  "installCost": 1,
+  "rezCost": 1,
+  "trashCost": 2
+}

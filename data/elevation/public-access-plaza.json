@@ -1,0 +1,14 @@
+{
+  "id": "public-access-plaza",
+  "title": "Public Access Plaza",
+  "wave": "elevation",
+  "nrdbCode": "35062",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: When your turn begins, gain 1[credit]. Threat 2 → When the Runner trashes this asset (while it is rezzed), give them 1 tag."
+  ],
+  "installCost": 1,
+  "rezCost": 1,
+  "trashCost": 2
+}

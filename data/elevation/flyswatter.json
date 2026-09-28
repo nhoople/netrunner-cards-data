@@ -1,0 +1,17 @@
+{
+  "id": "flyswatter",
+  "title": "Flyswatter",
+  "wave": "elevation",
+  "nrdbCode": "35079",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: When you rez this ice during a run against this server, purge virus counters. [subroutine] End the run."
+  ],
+  "subtypes": [
+    "code gate"
+  ],
+  "installCost": 2,
+  "rezCost": 2,
+  "strength": 0
+}

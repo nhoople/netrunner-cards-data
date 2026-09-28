@@ -1,0 +1,15 @@
+{
+  "id": "bigger-picture",
+  "title": "Bigger Picture",
+  "wave": "elevation",
+  "nrdbCode": "35065",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: Play only if the Runner is tagged. Resolve 1 of the following:Give the Runner 1 tag.Remove any number of tags. The Runner loses 5[credit] for each tag removed this way. Gain credits equal to the number of credits the Runner lost."
+  ],
+  "subtypes": [
+    "gray ops"
+  ],
+  "playCost": 0
+}

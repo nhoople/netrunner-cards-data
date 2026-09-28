@@ -1,0 +1,17 @@
+{
+  "id": "scatter-field",
+  "title": "Scatter Field",
+  "wave": "elevation",
+  "nrdbCode": "35042",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: While this ice is the only piece of ice protecting this server, it gets +4 strength. [subroutine] You may install 1 card from HQ. [subroutine] End the run."
+  ],
+  "subtypes": [
+    "code gate"
+  ],
+  "installCost": 3,
+  "rezCost": 3,
+  "strength": 0
+}

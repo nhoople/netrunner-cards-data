@@ -1,0 +1,18 @@
+{
+  "id": "principia",
+  "title": "Principia",
+  "wave": "elevation",
+  "nrdbCode": "35032",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: This program costs 1[credit] less to install for each other installed icebreaker. (Programs trashed as part of installing this program don’t count.) Interface → 1[credit]: Break 1 barrier subroutine. 2[credit]: +2 strength."
+  ],
+  "subtypes": [
+    "icebreaker",
+    "fracter"
+  ],
+  "installCost": 4,
+  "strength": 2,
+  "memoryCost": 1
+}

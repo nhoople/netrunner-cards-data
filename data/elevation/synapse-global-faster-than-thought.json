@@ -1,0 +1,14 @@
+{
+  "id": "synapse-global-faster-than-thought",
+  "title": "Synapse Global: Faster than Thought",
+  "wave": "elevation",
+  "nrdbCode": "35058",
+  "type": "identity",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: The first time each turn a tag is removed, you may reveal and install 1 card from HQ, ignoring all costs. [click], remove 1 tag: Gain 2[credit]."
+  ],
+  "subtypes": [
+    "division"
+  ]
+}

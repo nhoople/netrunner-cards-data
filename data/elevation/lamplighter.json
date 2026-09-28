@@ -1,0 +1,18 @@
+{
+  "id": "lamplighter",
+  "title": "Lamplighter",
+  "wave": "elevation",
+  "nrdbCode": "35080",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: When an agenda is scored or stolen from this server or its root, trash this ice. [subroutine] Give the Runner 1 tag unless they pay 3[credit]. [subroutine] End the run if the Runner is tagged."
+  ],
+  "subtypes": [
+    "sentry",
+    "observer"
+  ],
+  "installCost": 2,
+  "rezCost": 2,
+  "strength": 3
+}

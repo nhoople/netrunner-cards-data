@@ -1,0 +1,12 @@
+{
+  "id": "top-down-solutions",
+  "title": "Top-Down Solutions",
+  "wave": "elevation",
+  "nrdbCode": "35044",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: Draw 2 cards. Install up to 2 cards from HQ (one at a time)."
+  ],
+  "playCost": 2
+}

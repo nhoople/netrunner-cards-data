@@ -1,0 +1,16 @@
+{
+  "id": "aggressive-trendsetting",
+  "title": "Aggressive Trendsetting",
+  "wave": "elevation",
+  "nrdbCode": "35037",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: The first time the Runner trashes an installed Corp card during each of their turns, they may spend [click]. If they do not, you get +1 allotted [click] for your next turn."
+  ],
+  "subtypes": [
+    "initiative"
+  ],
+  "advancementRequirement": 3,
+  "agendaPoints": 1
+}
