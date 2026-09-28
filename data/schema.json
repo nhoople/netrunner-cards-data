@@ -1684,6 +1684,20 @@
       "minimum": 0,
       "description": "Place this many hosted credits whenever the Runner plays a run event (Debbie)."
     },
+    "hostedCreditsOnFirstEventPlayOncePerTurn": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "First time each turn the Runner plays an event, place this many hosted credits (Touchstone)."
+    },
+    "spendHostedCreditsDuringRuns": {
+      "type": "boolean",
+      "description": "Hosted credits on this card may be spent during runs (Touchstone / stealth pools)."
+    },
+    "maxAccessOtherThanSelf": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "While rezzed, Runner may access at most this many cards other than this upgrade during a run against its server (Flagship)."
+    },
     "onBreachHqRdIfNoBreaksOncePerTurnMayBonusAccess": {
       "type": "integer",
       "minimum": 1,

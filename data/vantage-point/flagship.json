@@ -5,13 +5,17 @@
   "nrdbCode": "36064",
   "type": "upgrade",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: HQ or R&D only. Runs against this server cannot be declared successful. (This effect does not cause runs to become unsuccessful.) Persistent → During each run against this server, the Runner cannot access more than 1 card other than this up"
-  ],
+  "unsupported": [],
   "subtypes": [
     "ritzy"
   ],
   "installCost": 3,
   "rezCost": 3,
-  "trashCost": 4
+  "trashCost": 4,
+  "installServers": [
+    "hq",
+    "rd"
+  ],
+  "runsCannotBeSuccessful": true,
+  "maxAccessOtherThanSelf": 1
 }

@@ -5,8 +5,13 @@
   "nrdbCode": "36043",
   "type": "operation",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: Look at the top 5 cards of R&D. Trash 1 of those cards, add 1 of them to HQ, and arrange the rest in any order."
-  ],
-  "playCost": 0
+  "unsupported": [],
+  "playCost": 0,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "look_top_n_rd_trash_one_hq_one_arrange_rest",
+      "n": 5
+    }
+  }
 }

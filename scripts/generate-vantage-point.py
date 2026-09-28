@@ -1244,9 +1244,42 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    # --- v1.26.0 B-slice ---
+
+    if cid == "flagship":
+        return base(
+            c,
+            installServers=["hq", "rd"],
+            runsCannotBeSuccessful=True,
+            maxAccessOtherThanSelf=1,
+            unsupported=[],
+        )
+
+    if cid == "cultivate":
+        return base(
+            c,
+            onPlay={
+                "op": "do",
+                "action": {
+                    "kind": "look_top_n_rd_trash_one_hq_one_arrange_rest",
+                    "n": 5,
+                },
+            },
+            unsupported=[],
+        )
+
+    if cid == "touchstone":
+        return base(
+            c,
+            hostedCreditsOnFirstEventPlayOncePerTurn=1,
+            spendHostedCreditsDuringRuns=True,
+            unsupported=[],
+        )
+
     # Fail closed — honest unsupported note for the remainder.
-    # Corsair / Lampades need stealth-credit spend; Cultivate is a
-    # look/trash/HQ/arrange composite not yet in IR.
+    # Corsair / Lampades / Baker / Aircheck / Methuselah need stealth-credit
+    # spend restrictions; Sipa / Stick and Poke / Rotary need encounter/breach
+    # hooks not yet covered.
     card = base(c)
     card["unsupported"] = [f"Full text not yet mapped to IR: {plain[:240]}"]
     return card
@@ -1300,7 +1333,7 @@ def main():
             "Null Signal Vantage Point (NRDB pack vp) — next constructed set after "
             "Elevation. Fail-closed IR; "
             f"{full} cards fully mapped, {partial} with unsupported notes "
-            f"(wave v1.25.0 B-slice)."
+            f"(wave v1.26.0 B-slice)."
         )
         manifest["status"] = "in-progress"
     (OUT / "_manifest.json").write_text(
