@@ -5,12 +5,77 @@
   "nrdbCode": "34083",
   "type": "resource",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Whenever a run on HQ or R&D ends, if you accessed 3 or more cards during that run, place 1 power counter on this resource. When your turn begins, you may remove 3 hosted power counters and trash this resource. If you do, the Corp loses 10[c"
-  ],
+  "unsupported": [],
   "subtypes": [
     "virtual",
     "companion"
   ],
-  "installCost": 0
+  "installCost": 0,
+  "powerOnHqRdRunEndIfAccessedGte": {
+    "min": 3,
+    "amount": 1
+  },
+  "onTurnBegin": {
+    "op": "choose",
+    "chooser": "runner",
+    "options": [
+      {
+        "id": "detonate",
+        "label": "Remove 3 power, trash: Corp loses 10¢",
+        "effect": {
+          "op": "if",
+          "cond": {
+            "op": "power_counters_gte",
+            "amount": 3
+          },
+          "then": {
+            "op": "seq",
+            "effects": [
+              {
+                "op": "do",
+                "action": {
+                  "kind": "remove_power_counter",
+                  "amount": 3
+                }
+              },
+              {
+                "op": "do",
+                "action": {
+                  "kind": "trash_self"
+                }
+              },
+              {
+                "op": "do",
+                "action": {
+                  "kind": "lose_credits",
+                  "side": "corp",
+                  "amount": 10
+                }
+              }
+            ]
+          },
+          "else": {
+            "op": "do",
+            "action": {
+              "kind": "gain_credits",
+              "side": "runner",
+              "amount": 0
+            }
+          }
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "runner",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  }
 }

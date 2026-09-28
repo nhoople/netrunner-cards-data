@@ -5,13 +5,77 @@
   "nrdbCode": "34108",
   "type": "asset",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: When your turn begins, you may resolve 1 of the following:Trash 1 card from HQ. If you do, gain 2[credit] and draw 1 card.Turn 1 facedown card in Archives faceup. If you do, place 1 advancement counter on an installed card."
-  ],
+  "unsupported": [],
   "subtypes": [
     "clone"
   ],
   "installCost": 1,
   "rezCost": 1,
-  "trashCost": 2
+  "trashCost": 2,
+  "onTurnBegin": {
+    "op": "choose",
+    "chooser": "corp",
+    "options": [
+      {
+        "id": "trash-hq",
+        "label": "Trash 1 from HQ: gain 2¢ and draw 1",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "may_trash_hq_then",
+            "then": {
+              "op": "seq",
+              "effects": [
+                {
+                  "op": "do",
+                  "action": {
+                    "kind": "gain_credits",
+                    "side": "corp",
+                    "amount": 2
+                  }
+                },
+                {
+                  "op": "do",
+                  "action": {
+                    "kind": "draw",
+                    "side": "corp",
+                    "amount": 1
+                  }
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "id": "faceup-archives",
+        "label": "Turn 1 Archives card faceup: place 1 advancement",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "may_turn_facedown_archives_faceup_then",
+            "then": {
+              "op": "do",
+              "action": {
+                "kind": "place_advancements",
+                "amount": 1
+              }
+            }
+          }
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "corp",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  }
 }

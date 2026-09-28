@@ -1359,6 +1359,25 @@
       "type": "object",
       "description": "Effect IR the first time each turn the Runner resolves a paid ability on an installed resource (Juli Moreira Lee). Sourced on this card."
     },
+    "advancedIceProtectingThisServerStrengthBonus": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Each advanced ice protecting this server gets +N strength (Isaac Liberdade)."
+    },
+    "onMovedToServerRoot": {
+      "type": "object",
+      "description": "Effect IR whenever this upgrade finishes moving to a server root (Isaac Liberdade)."
+    },
+    "powerOnHqRdRunEndIfAccessedGte": {
+      "type": "object",
+      "required": ["min", "amount"],
+      "additionalProperties": false,
+      "properties": {
+        "min": { "type": "integer", "minimum": 1 },
+        "amount": { "type": "integer", "minimum": 1 }
+      },
+      "description": "On HQ/R&D run end, if accessed ≥ min cards, place amount power (Amelia Earhart)."
+    },
     "powerCounterOnAnyCardRez": {
       "type": "integer",
       "minimum": 1,
