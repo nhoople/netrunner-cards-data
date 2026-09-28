@@ -6,5 +6,6 @@
   "type": "hardware",
   "side": "runner",
   "installCost": 2,
-  "unsupported": []
+  "unsupported": [],
+  "bonusAccessOnFirstHqBreachThisTurn": 1
 }
