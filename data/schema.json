@@ -1879,6 +1879,11 @@
       "minimum": 1,
       "description": "While tagged, +N card access when breaching HQ or R&D (Manuel Lattes de Moura)."
     },
+    "bonusAccessOnFirstHqBreachThisTurn": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "The first time each turn you breach HQ, access +N additional cards (Docklands Pass; CR §7.4.2)."
+    },
     "threatBasicTrashAdditionalCostTrashHq": {
       "type": "integer",
       "minimum": 1,
