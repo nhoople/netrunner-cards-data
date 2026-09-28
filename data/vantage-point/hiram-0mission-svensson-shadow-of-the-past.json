@@ -5,11 +5,16 @@
   "nrdbCode": "36017",
   "type": "identity",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Whenever you install or trash a piece of hardware (from any location), look at the top card of R&D."
-  ],
+  "unsupported": [],
   "subtypes": [
     "natural"
   ],
-  "link": 0
+  "link": 0,
+  "onHardwareInstallOrTrash": {
+    "op": "do",
+    "action": {
+      "kind": "look_top_n_rd_peek",
+      "n": 1
+    }
+  }
 }

@@ -5,14 +5,65 @@
   "nrdbCode": "36049",
   "type": "asset",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: When you rez this asset, load 3 power counters onto it. When it is empty, trash it. When your turn begins, remove 1 tag and 1 bad publicity. When your discard phase ends, give the Runner 1 tag, take 1 bad publicity, and remove 1 hosted powe"
-  ],
+  "unsupported": [],
   "subtypes": [
     "enforcer",
     "liability"
   ],
   "installCost": 1,
   "rezCost": 1,
-  "trashCost": 3
+  "trashCost": 3,
+  "onRez": {
+    "op": "do",
+    "action": {
+      "kind": "add_power_counter",
+      "amount": 3
+    }
+  },
+  "trashWhenPowerEmpty": true,
+  "onTurnBegin": {
+    "op": "seq",
+    "effects": [
+      {
+        "op": "do",
+        "action": {
+          "kind": "remove_tags",
+          "amount": 1
+        }
+      },
+      {
+        "op": "do",
+        "action": {
+          "kind": "remove_bad_publicity",
+          "amount": 1
+        }
+      }
+    ]
+  },
+  "onDiscardPhaseEnd": {
+    "op": "seq",
+    "effects": [
+      {
+        "op": "do",
+        "action": {
+          "kind": "give_tags",
+          "amount": 1
+        }
+      },
+      {
+        "op": "do",
+        "action": {
+          "kind": "give_bad_publicity",
+          "amount": 1
+        }
+      },
+      {
+        "op": "do",
+        "action": {
+          "kind": "remove_power_counter",
+          "amount": 1
+        }
+      }
+    ]
+  }
 }

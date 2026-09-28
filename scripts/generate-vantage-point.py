@@ -1172,6 +1172,78 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    # --- v1.25.0 B-slice ---
+
+    if cid == "hiram-0mission-svensson-shadow-of-the-past":
+        return base(
+            c,
+            onHardwareInstallOrTrash={
+                "op": "do",
+                "action": {"kind": "look_top_n_rd_peek", "n": 1},
+            },
+            unsupported=[],
+        )
+
+    if cid == "the-red-room":
+        return base(
+            c,
+            installServers=["hq", "rd", "archives"],
+            onFirstAgendaScoredOrStolenThisTurn={
+                "op": "do",
+                "action": {"kind": "add_power_counter", "amount": 1},
+            },
+            paidAbilities=[
+                {
+                    "id": "red-room-etr",
+                    "label": "Hosted power counter: End the run (other server)",
+                    "clickCost": 0,
+                    "creditCost": 0,
+                    "cost": {"powerCounters": 1},
+                    "windows": [
+                        "approach_paw",
+                        "approach_server_paw",
+                        "encounter_paw",
+                    ],
+                    "requireDuringRun": True,
+                    "requireOtherServer": True,
+                    "effect": etr(),
+                },
+            ],
+            unsupported=[],
+        )
+
+    if cid == "nihilo-agent":
+        return base(
+            c,
+            onRez={
+                "op": "do",
+                "action": {"kind": "add_power_counter", "amount": 3},
+            },
+            trashWhenPowerEmpty=True,
+            onTurnBegin=seq(
+                {
+                    "op": "do",
+                    "action": {"kind": "remove_tags", "amount": 1},
+                },
+                {
+                    "op": "do",
+                    "action": {"kind": "remove_bad_publicity", "amount": 1},
+                },
+            ),
+            onDiscardPhaseEnd=seq(
+                tags(1),
+                {
+                    "op": "do",
+                    "action": {"kind": "give_bad_publicity", "amount": 1},
+                },
+                {
+                    "op": "do",
+                    "action": {"kind": "remove_power_counter", "amount": 1},
+                },
+            ),
+            unsupported=[],
+        )
+
     # Fail closed — honest unsupported note for the remainder.
     # Corsair / Lampades need stealth-credit spend; Cultivate is a
     # look/trash/HQ/arrange composite not yet in IR.
@@ -1228,7 +1300,7 @@ def main():
             "Null Signal Vantage Point (NRDB pack vp) — next constructed set after "
             "Elevation. Fail-closed IR; "
             f"{full} cards fully mapped, {partial} with unsupported notes "
-            f"(wave v1.24.0 B-slice)."
+            f"(wave v1.25.0 B-slice)."
         )
         manifest["status"] = "in-progress"
     (OUT / "_manifest.json").write_text(

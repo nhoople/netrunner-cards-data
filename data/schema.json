@@ -1557,6 +1557,16 @@
       "type": "integer",
       "description": "First time each turn you break a subroutine on ice with effective strength ≤ this value, gain 1¢ (The Tungsten Tailor; typically 0)."
     },
+    "onHardwareInstallOrTrash": {
+      "type": "object",
+      "description": "Effect IR whenever the Runner installs or trashes hardware from any location (Hiram 0mission)."
+    },
+    "installServers": {
+      "type": "array",
+      "items": { "type": "string", "enum": ["hq", "rd", "archives"] },
+      "minItems": 1,
+      "description": "Upgrade/agenda may only be installed on these central servers (The Red Room / Flagship)."
+    },
     "canAdvance": {
       "type": "boolean"
     },
