@@ -5,12 +5,19 @@
   "nrdbCode": "36026",
   "type": "agenda",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: As an additional cost to steal this agenda, the Runner must spend [click]. When you score this agenda, gain [click]."
-  ],
+  "unsupported": [],
   "subtypes": [
     "expansion"
   ],
   "advancementRequirement": 5,
-  "agendaPoints": 3
+  "agendaPoints": 3,
+  "stealAdditionalClicks": 1,
+  "onScore": {
+    "op": "do",
+    "action": {
+      "kind": "gain_clicks",
+      "side": "corp",
+      "amount": 1
+    }
+  }
 }

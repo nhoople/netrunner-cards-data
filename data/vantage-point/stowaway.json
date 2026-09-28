@@ -5,12 +5,19 @@
   "nrdbCode": "36024",
   "type": "program",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Install only on a piece of ice. Whenever you make a successful run on this server, gain 2[credit]."
-  ],
+  "unsupported": [],
   "subtypes": [
     "trojan"
   ],
   "installCost": 0,
-  "memoryCost": 1
+  "memoryCost": 1,
+  "installOnIce": true,
+  "onSuccessfulRun": {
+    "op": "do",
+    "action": {
+      "kind": "gain_credits",
+      "side": "runner",
+      "amount": 2
+    }
+  }
 }

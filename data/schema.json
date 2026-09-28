@@ -880,6 +880,11 @@
       "type": "object",
       "description": "Effect IR paid as an additional cost when the Runner steals an agenda from this server (Daniela Persistent)."
     },
+    "stealAdditionalClicks": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Additional clicks the Runner must spend to steal this agenda (Méliès City Luxury Line)."
+    },
     "maxRemoteServers": {
       "type": "integer",
       "minimum": 0,
@@ -903,7 +908,7 @@
     },
     "onCorpActionPhaseEnd": {
       "type": "object",
-      "description": "Effect IR when the Corp's action phase ends (Corp identity or rezzed root; Mercia / Nebula)."
+      "description": "Effect IR when the Corp's action phase ends (Corp identity, rezzed root, or scored agenda; Mercia / Nebula / Witch Hunt)."
     },
     "onApproachIce": {
       "type": "object",

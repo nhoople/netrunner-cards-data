@@ -733,9 +733,49 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    # --- v1.18.0 B-slice ---
+
+    if cid == "witch-hunt":
+        return base(
+            c,
+            badPublicityOnScore=1,
+            onSteal={
+                "op": "do",
+                "action": {"kind": "give_bad_publicity", "amount": 1},
+            },
+            onCorpActionPhaseEnd={
+                "op": "if",
+                "cond": {"op": "self_scored_this_turn"},
+                "then": seq(
+                    {"op": "do", "action": {"kind": "remove_all_tags"}},
+                    tags(3),
+                ),
+            },
+            unsupported=[],
+        )
+
+    if cid == "stowaway":
+        return base(
+            c,
+            installOnIce=True,
+            onSuccessfulRun=gain("runner", 2),
+            unsupported=[],
+        )
+
+    if cid == "melies-city-luxury-line":
+        return base(
+            c,
+            stealAdditionalClicks=1,
+            onScore={
+                "op": "do",
+                "action": {"kind": "gain_clicks", "side": "corp", "amount": 1},
+            },
+            unsupported=[],
+        )
+
     # Fail closed — honest unsupported note for the remainder.
-    # Corsair / Stowaway need IR not yet available (stealth credits,
-    # host-server successful-run gate).
+    # Corsair / Lampades need stealth-credit spend; Retirement Plan needs
+    # paying install-from-Archives (ignore-costs variant only today).
     card = base(c)
     card["unsupported"] = [f"Full text not yet mapped to IR: {plain[:240]}"]
     return card
@@ -789,7 +829,7 @@ def main():
             "Null Signal Vantage Point (NRDB pack vp) — next constructed set after "
             "Elevation. Fail-closed IR; "
             f"{full} cards fully mapped, {partial} with unsupported notes "
-            f"(wave v1.17.0 B-slice)."
+            f"(wave v1.18.0 B-slice)."
         )
         manifest["status"] = "in-progress"
     (OUT / "_manifest.json").write_text(
