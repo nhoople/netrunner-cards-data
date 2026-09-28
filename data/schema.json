@@ -894,6 +894,11 @@
       "minimum": 1,
       "description": "While this card is rezzed, Runner must pay this many credits as an additional cost to steal any agenda (Magistrate Revontulet)."
     },
+    "playCostDiscountPerIceProtectingServer": {
+      "type": "string",
+      "enum": ["hq", "rd", "archives"],
+      "description": "Reduce this card's play cost by 1 for each piece of ice protecting the named server (Tailgate)."
+    },
     "maxRemoteServers": {
       "type": "integer",
       "minimum": 0,

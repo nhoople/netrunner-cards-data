@@ -5,8 +5,27 @@
   "nrdbCode": "36001",
   "type": "event",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Play only if you made a successful run on HQ, R&D, and Archives this turn. Trash 2 installed Corp cards. The Corp trashes 1 installed Runner card."
-  ],
-  "playCost": 1
+  "unsupported": [],
+  "playCost": 1,
+  "playRequiresSuccessfulAllCentralsThisTurn": true,
+  "onPlay": {
+    "op": "seq",
+    "effects": [
+      {
+        "op": "do",
+        "action": {
+          "kind": "trash_n_installed_corp",
+          "count": 2,
+          "chooser": "runner"
+        }
+      },
+      {
+        "op": "do",
+        "action": {
+          "kind": "trash_installed_runner",
+          "pick": "choose"
+        }
+      }
+    ]
+  }
 }

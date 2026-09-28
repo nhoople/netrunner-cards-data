@@ -940,6 +940,51 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    # --- v1.21.0 B-slice ---
+
+    if cid == "tailgate":
+        return base(
+            c,
+            playCostDiscountPerIceProtectingServer="hq",
+            runEvent={"servers": "hq", "bonusAccess": 2},
+            unsupported=[],
+        )
+
+    if cid == "chain-reaction":
+        return base(
+            c,
+            playRequiresSuccessfulAllCentralsThisTurn=True,
+            onPlay=seq(
+                {
+                    "op": "do",
+                    "action": {
+                        "kind": "trash_n_installed_corp",
+                        "count": 2,
+                        "chooser": "runner",
+                    },
+                },
+                {
+                    "op": "do",
+                    "action": {
+                        "kind": "trash_installed_runner",
+                        "pick": "choose",
+                    },
+                },
+            ),
+            unsupported=[],
+        )
+
+    if cid == "realloc":
+        return base(
+            c,
+            playAdditionalClick=True,
+            onPlay={
+                "op": "do",
+                "action": {"kind": "realloc_two_rezzed_ice"},
+            },
+            unsupported=[],
+        )
+
     # Fail closed — honest unsupported note for the remainder.
     # Corsair / Lampades need stealth-credit spend; Cultivate is a
     # look/trash/HQ/arrange composite not yet in IR.
@@ -996,7 +1041,7 @@ def main():
             "Null Signal Vantage Point (NRDB pack vp) — next constructed set after "
             "Elevation. Fail-closed IR; "
             f"{full} cards fully mapped, {partial} with unsupported notes "
-            f"(wave v1.20.0 B-slice)."
+            f"(wave v1.21.0 B-slice)."
         )
         manifest["status"] = "in-progress"
     (OUT / "_manifest.json").write_text(

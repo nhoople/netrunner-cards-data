@@ -5,11 +5,14 @@
   "nrdbCode": "36012",
   "type": "event",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: The play cost of this event is lowered by 1[credit] for each piece of ice protecting HQ. Run HQ. If successful, access 2 additional cards when you breach HQ."
-  ],
+  "unsupported": [],
   "subtypes": [
     "run"
   ],
-  "playCost": 3
+  "playCost": 3,
+  "playCostDiscountPerIceProtectingServer": "hq",
+  "runEvent": {
+    "servers": "hq",
+    "bonusAccess": 2
+  }
 }

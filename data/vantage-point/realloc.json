@@ -5,11 +5,16 @@
   "nrdbCode": "36033",
   "type": "operation",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: As an additional cost to play this operation, spend [click]. Choose 2 rezzed pieces of ice. For each chosen piece of ice, gain credits equal to its printed rez cost, then derez it."
-  ],
+  "unsupported": [],
   "subtypes": [
     "double"
   ],
-  "playCost": 0
+  "playCost": 0,
+  "playAdditionalClick": true,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "realloc_two_rezzed_ice"
+    }
+  }
 }
