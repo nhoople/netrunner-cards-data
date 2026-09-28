@@ -1927,21 +1927,9 @@ def map_card(c: dict) -> dict:
     if cid == "ryo-phoenix-ono-out-of-the-ashes":
         return base(
             c,
-            onSuccessfulRunOncePerTurn=True,
             onSuccessfulRun={
-                "op": "if",
-                "cond": {"op": "subroutine_resolved_this_run"},
-                "then": seq(
-                    gain("runner", 1),
-                    {
-                        "op": "do",
-                        "action": {
-                            "kind": "trash_hq",
-                            "pick": "random",
-                            "amount": 1,
-                        },
-                    },
-                ),
+                "op": "do",
+                "action": {"kind": "ryo_phoenix_on_successful_run"},
             },
             unsupported=[],
         )
@@ -2075,7 +2063,128 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
-    # Slice B (v1.13): shred, bling, detente, bangun, au-co — see elev-v112-candidate-slice.md
+    # --- v1.12.0 Slice B: shred / bling / detente / bangun / au-co → 82/82 ---
+
+    if cid == "shred":
+        return base(
+            c,
+            subtypes=["run"],
+            runEvent={
+                "servers": "any",
+                "shredPreventFirstEndTheRun": True,
+            },
+            unsupported=[],
+        )
+
+    if cid == "bling":
+        return base(
+            c,
+            subtypes=["console"],
+            muBonus=1,
+            hostedCardsPlayableAsGrip=True,
+            onInstallWithoutSpendingCredits={
+                "op": "choose",
+                "chooser": "runner",
+                "options": [
+                    {
+                        "id": "host",
+                        "label": "Host the top card of your stack faceup",
+                        "effect": {
+                            "op": "do",
+                            "action": {"kind": "host_top_of_stack_on_source"},
+                        },
+                    },
+                    decline("runner"),
+                ],
+            },
+            onDiscardPhaseEnd={
+                "op": "do",
+                "action": {"kind": "trash_all_hosted_cards"},
+            },
+            unsupported=[],
+        )
+
+    if cid == "detente":
+        return base(
+            c,
+            subtypes=["console"],
+            muBonus=1,
+            onFirstSuccessfulHqRunThisTurn={
+                "op": "choose",
+                "chooser": "runner",
+                "options": [
+                    {
+                        "id": "host",
+                        "label": "Host 1 card from HQ at random faceup",
+                        "effect": {
+                            "op": "do",
+                            "action": {"kind": "detente_host_random_hq"},
+                        },
+                    },
+                    decline("runner"),
+                ],
+            },
+            paidAbilities=[
+                {
+                    "id": "detente-return-access",
+                    "label": (
+                        "[click], add 2 hosted cards to HQ: "
+                        "The Runner may access 1 card in HQ at random"
+                    ),
+                    "clickCost": 1,
+                    "creditCost": 0,
+                    "cost": {"clicks": 1},
+                    "windows": ["runner_action_paw", "corp_action_paw"],
+                    "usableByAnyPlayer": True,
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "detente_return_two_hosted_may_access"
+                        },
+                    },
+                }
+            ],
+            unsupported=[],
+        )
+
+    if cid == "au-co-the-gold-standard-in-clones":
+        return base(
+            c,
+            powerCounterOnDamageOrTrashFromHq=True,
+            onTurnBegin={
+                "op": "choose",
+                "chooser": "corp",
+                "options": [
+                    {
+                        "id": "look",
+                        "label": (
+                            "Remove 2 power counters: look at top 3 of R&D, "
+                            "trash 1, add the rest to HQ"
+                        ),
+                        "effect": {
+                            "op": "do",
+                            "action": {"kind": "au_co_remove_2_look_rd"},
+                        },
+                    },
+                    decline("corp"),
+                ],
+            },
+            unsupported=[],
+        )
+
+    if cid == "bangun-when-disaster-strikes":
+        return base(
+            c,
+            mayInstallAgendasFaceup=True,
+            onAccessFaceupInstalledAgenda=seq(
+                {
+                    "op": "do",
+                    "action": {"kind": "meat_damage", "amount": 2},
+                },
+                tags(1),
+            ),
+            unsupported=[],
+        )
 
     # Fail closed — honest unsupported note for the remainder.
     card = base(c)
@@ -2117,12 +2226,11 @@ def main():
         "nrdbPackCode": PACK,
         "count": EXPECTED,
         "written": EXPECTED,
-        "status": "in-progress",
+        "status": "supported",
         "notes": (
             "Null Signal Elevation (NRDB pack elev) — next constructed set after "
-            "Rebellion Without Rehearsal. Kickoff extract: fail-closed IR; "
-            f"{full} cards fully mapped, {partial} with unsupported notes "
-            "(wave v1.12.0 Slice A target 77/82)."
+            "Rebellion Without Rehearsal. Fully supported: all 82 cards mapped "
+            f"(wave gate v1.12.0; full={full}, partial={partial})."
         ),
         "cards": written,
     }

@@ -5,11 +5,13 @@
   "nrdbCode": "35005",
   "type": "event",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Run any server. The first time the Corp would end that run, prevent the run from ending unless the Corp reveals and trashes X cards from HQ at random. X is equal to the number of cards in the root of the attacked server."
-  ],
+  "unsupported": [],
   "subtypes": [
     "run"
   ],
-  "playCost": 1
+  "playCost": 1,
+  "runEvent": {
+    "servers": "any",
+    "shredPreventFirstEndTheRun": true
+  }
 }

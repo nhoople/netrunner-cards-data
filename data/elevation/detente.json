@@ -5,11 +5,60 @@
   "nrdbCode": "35018",
   "type": "hardware",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: +1[mu] The first time each turn you make a successful run on HQ, you may host 1 card from HQ at random faceup on this hardware. (It is not installed or rezzed.) [click], add 2 hosted cards to HQ: The Runner may access 1 card in HQ at random"
-  ],
+  "unsupported": [],
   "subtypes": [
     "console"
   ],
-  "installCost": 3
+  "installCost": 3,
+  "muBonus": 1,
+  "onFirstSuccessfulHqRunThisTurn": {
+    "op": "choose",
+    "chooser": "runner",
+    "options": [
+      {
+        "id": "host",
+        "label": "Host 1 card from HQ at random faceup",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "detente_host_random_hq"
+          }
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "runner",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  },
+  "paidAbilities": [
+    {
+      "id": "detente-return-access",
+      "label": "[click], add 2 hosted cards to HQ: The Runner may access 1 card in HQ at random",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1
+      },
+      "windows": [
+        "runner_action_paw",
+        "corp_action_paw"
+      ],
+      "usableByAnyPlayer": true,
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "detente_return_two_hosted_may_access"
+        }
+      }
+    }
+  ]
 }
