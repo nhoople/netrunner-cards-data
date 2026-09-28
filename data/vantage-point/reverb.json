@@ -5,14 +5,35 @@
   "nrdbCode": "36029",
   "type": "ice",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: The rez cost of this ice is lowered by 1[credit] for each other unrezzed piece of ice. [subroutine] End the run. [subroutine] End the run."
-  ],
+  "unsupported": [],
   "subtypes": [
     "barrier",
     "harmonic"
   ],
   "installCost": 4,
   "rezCost": 4,
-  "strength": 2
+  "strength": 2,
+  "rezCostDiscountPerOtherUnrezzedIce": 1,
+  "subroutines": [
+    {
+      "id": "reverb-etr-1",
+      "text": "End the run.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "end_the_run"
+        }
+      }
+    },
+    {
+      "id": "reverb-etr-2",
+      "text": "End the run.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "end_the_run"
+        }
+      }
+    }
+  ]
 }

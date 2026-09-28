@@ -5,13 +5,41 @@
   "nrdbCode": "36031",
   "type": "ice",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: When the Runner passes this ice, if they have no [click] remaining, they cannot steal or trash Corp cards for the remainder of this run. [subroutine] The Runner loses [click]."
-  ],
+  "unsupported": [],
   "subtypes": [
     "code gate"
   ],
   "installCost": 1,
   "rezCost": 1,
-  "strength": 1
+  "strength": 1,
+  "onPass": {
+    "op": "if",
+    "cond": {
+      "op": "not",
+      "cond": {
+        "op": "clicks_remaining",
+        "side": "runner"
+      }
+    },
+    "then": {
+      "op": "do",
+      "action": {
+        "kind": "forbid_steal_trash_this_run"
+      }
+    }
+  },
+  "subroutines": [
+    {
+      "id": "vertigo-lose-click",
+      "text": "The Runner loses [click].",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "lose_clicks",
+          "side": "runner",
+          "amount": 1
+        }
+      }
+    }
+  ]
 }

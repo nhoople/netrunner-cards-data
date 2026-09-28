@@ -5,14 +5,91 @@
   "nrdbCode": "36050",
   "type": "ice",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: When you rez this ice, if it is protecting a central server, take 1 bad publicity. [subroutine] End the run unless the Runner pays 3[credit]. [subroutine] End the run unless the Runner pays 3[credit]."
-  ],
+  "unsupported": [],
   "subtypes": [
     "barrier",
     "liability"
   ],
   "installCost": 5,
   "rezCost": 5,
-  "strength": 5
+  "strength": 5,
+  "onRez": {
+    "op": "if",
+    "cond": {
+      "op": "protecting_central"
+    },
+    "then": {
+      "op": "do",
+      "action": {
+        "kind": "give_bad_publicity",
+        "amount": 1
+      }
+    }
+  },
+  "subroutines": [
+    {
+      "id": "grubber-etr-1",
+      "text": "End the run unless the Runner pays 3[credit].",
+      "effect": {
+        "op": "choose",
+        "chooser": "runner",
+        "options": [
+          {
+            "id": "pay3",
+            "label": "Pay 3¢",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "lose_credits",
+                "side": "runner",
+                "amount": 3
+              }
+            }
+          },
+          {
+            "id": "etr",
+            "label": "End the run",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "end_the_run"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "grubber-etr-2",
+      "text": "End the run unless the Runner pays 3[credit].",
+      "effect": {
+        "op": "choose",
+        "chooser": "runner",
+        "options": [
+          {
+            "id": "pay3",
+            "label": "Pay 3¢",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "lose_credits",
+                "side": "runner",
+                "amount": 3
+              }
+            }
+          },
+          {
+            "id": "etr",
+            "label": "End the run",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "end_the_run"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
 }

@@ -258,7 +258,7 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
-    # --- v1.14.0 B-slice: existing IR only ---
+    # --- v1.15.0 B-slice (v1.14.0 already shipped 8/66) ---
 
     if cid == "virtual-intelligence-p-i-you-can-call-me-vic":
         return base(
@@ -418,6 +418,132 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    if cid == "caveat-emptor":
+        allotted = lambda delta: {
+            "op": "do",
+            "action": {
+                "kind": "allotted_clicks_next_turn",
+                "side": "runner",
+                "delta": delta,
+            },
+        }
+        return base(
+            c,
+            onPlay={
+                "op": "choose",
+                "chooser": "corp",
+                "options": [
+                    {
+                        "id": "gain6",
+                        "label": "Gain 6¢; Runner −1 allotted click next turn",
+                        "effect": seq(gain("corp", 6), allotted(-1)),
+                    },
+                    {
+                        "id": "gain10",
+                        "label": "Gain 10¢; Runner +1 allotted click next turn",
+                        "effect": seq(gain("corp", 10), allotted(1)),
+                    },
+                ],
+            },
+            unsupported=[],
+        )
+
+    if cid == "grubber":
+        etr_unless_pay3 = {
+            "op": "choose",
+            "chooser": "runner",
+            "options": [
+                {
+                    "id": "pay3",
+                    "label": "Pay 3¢",
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "lose_credits",
+                            "side": "runner",
+                            "amount": 3,
+                        },
+                    },
+                },
+                {
+                    "id": "etr",
+                    "label": "End the run",
+                    "effect": etr(),
+                },
+            ],
+        }
+        sub = {
+            "id": "grubber-etr",
+            "text": "End the run unless the Runner pays 3[credit].",
+            "effect": etr_unless_pay3,
+        }
+        return base(
+            c,
+            onRez={
+                "op": "if",
+                "cond": {"op": "protecting_central"},
+                "then": {
+                    "op": "do",
+                    "action": {"kind": "give_bad_publicity", "amount": 1},
+                },
+            },
+            subroutines=[
+                {**sub, "id": "grubber-etr-1"},
+                {**sub, "id": "grubber-etr-2"},
+            ],
+            unsupported=[],
+        )
+
+    if cid == "reverb":
+        return base(
+            c,
+            rezCostDiscountPerOtherUnrezzedIce=1,
+            subroutines=[
+                {
+                    "id": "reverb-etr-1",
+                    "text": "End the run.",
+                    "effect": etr(),
+                },
+                {
+                    "id": "reverb-etr-2",
+                    "text": "End the run.",
+                    "effect": etr(),
+                },
+            ],
+            unsupported=[],
+        )
+
+    if cid == "vertigo":
+        return base(
+            c,
+            onPass={
+                "op": "if",
+                "cond": {
+                    "op": "not",
+                    "cond": {"op": "clicks_remaining", "side": "runner"},
+                },
+                "then": {
+                    "op": "do",
+                    "action": {"kind": "forbid_steal_trash_this_run"},
+                },
+            },
+            subroutines=[
+                {
+                    "id": "vertigo-lose-click",
+                    "text": "The Runner loses [click].",
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "lose_clicks",
+                            "side": "runner",
+                            "amount": 1,
+                        },
+                    },
+                }
+            ],
+            unsupported=[],
+        )
+
     # Fail closed — honest unsupported note for the remainder.
     # Corsair / Sell Out / Stowaway need IR not yet available (stealth credits,
     # trash-own-resource play cost, host-server successful-run gate).
@@ -469,12 +595,12 @@ def main():
         ),
         "cards": written,
     }
-    if full >= 8:
+    if full >= 12:
         manifest["notes"] = (
             "Null Signal Vantage Point (NRDB pack vp) — next constructed set after "
             "Elevation. Fail-closed IR; "
             f"{full} cards fully mapped, {partial} with unsupported notes "
-            "(wave v1.14.0 B-slice)."
+            "(wave v1.15.0 B-slice)."
         )
         manifest["status"] = "in-progress"
     (OUT / "_manifest.json").write_text(

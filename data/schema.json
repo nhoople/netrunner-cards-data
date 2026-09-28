@@ -1441,6 +1441,11 @@
       },
       "description": "When rezzing this ice, reduce rez cost by amount per already-rezzed ice with this subtype (CR §1.16.2a / §8.1.2d; e.g. Ivik −1¢ per rezzed code gate)."
     },
+    "rezCostDiscountPerOtherUnrezzedIce": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "When rezzing this ice, reduce rez cost by this many credits per other unrezzed piece of ice (CR §1.16.2a / §8.1.2d; e.g. Reverb −1¢ per other unrezzed ice)."
+    },
     "eventPlayCostDiscount": {
       "type": "integer",
       "minimum": 0,
