@@ -5,14 +5,102 @@
   "nrdbCode": "36058",
   "type": "ice",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: [trash]: End the run. Use this ability only during a run against this server. [subroutine] Trash 1 installed program unless the Runner pays 3[credit]. [subroutine] End the run unless the Runner pays 3[credit]."
-  ],
+  "unsupported": [],
   "subtypes": [
     "sentry",
     "destroyer"
   ],
   "installCost": 4,
   "rezCost": 4,
-  "strength": 0
+  "strength": 0,
+  "paidAbilities": [
+    {
+      "id": "event-horizon-trash-etr",
+      "label": "[trash]: End the run (run against this server)",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "trashSelf": true
+      },
+      "requireDuringRun": true,
+      "windows": [
+        "approach_paw",
+        "encounter_paw",
+        "approach_server_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "end_the_run"
+        }
+      }
+    }
+  ],
+  "subroutines": [
+    {
+      "id": "event-horizon-trash-prog",
+      "text": "Trash 1 installed program unless the Runner pays 3[credit].",
+      "effect": {
+        "op": "choose",
+        "chooser": "runner",
+        "options": [
+          {
+            "id": "pay3",
+            "label": "Pay 3¢",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "lose_credits",
+                "side": "runner",
+                "amount": 3
+              }
+            }
+          },
+          {
+            "id": "trash",
+            "label": "Trash 1 installed program",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "trash_program",
+                "pick": "choose"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "event-horizon-etr",
+      "text": "End the run unless the Runner pays 3[credit].",
+      "effect": {
+        "op": "choose",
+        "chooser": "runner",
+        "options": [
+          {
+            "id": "pay3",
+            "label": "Pay 3¢",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "lose_credits",
+                "side": "runner",
+                "amount": 3
+              }
+            }
+          },
+          {
+            "id": "etr",
+            "label": "End the run",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "end_the_run"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
 }

@@ -5,11 +5,31 @@
   "nrdbCode": "36002",
   "type": "event",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Run HQ or R&D. If successful, and if a subroutine resolved during this run, give the Corp 1 bad publicity. Remove this event from the game."
-  ],
+  "unsupported": [],
   "subtypes": [
     "run"
   ],
-  "playCost": 2
+  "playCost": 2,
+  "runEvent": {
+    "servers": "hq_rd",
+    "onSuccessfulRun": {
+      "op": "if",
+      "cond": {
+        "op": "subroutine_resolved_this_run"
+      },
+      "then": {
+        "op": "do",
+        "action": {
+          "kind": "give_bad_publicity",
+          "amount": 1
+        }
+      }
+    },
+    "onRunEnd": {
+      "op": "do",
+      "action": {
+        "kind": "rfg_self"
+      }
+    }
+  }
 }

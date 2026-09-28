@@ -544,6 +544,135 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+
+    if cid == "take-a-dive":
+        return base(
+            c,
+            runEvent={
+                "servers": "hq_rd",
+                "onSuccessfulRun": {
+                    "op": "if",
+                    "cond": {"op": "subroutine_resolved_this_run"},
+                    "then": {
+                        "op": "do",
+                        "action": {"kind": "give_bad_publicity", "amount": 1},
+                    },
+                },
+                "onRunEnd": {
+                    "op": "do",
+                    "action": {"kind": "rfg_self"},
+                },
+            },
+            unsupported=[],
+        )
+
+    if cid == "event-horizon":
+        trash_prog_unless_pay3 = {
+            "op": "choose",
+            "chooser": "runner",
+            "options": [
+                {
+                    "id": "pay3",
+                    "label": "Pay 3¢",
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "lose_credits",
+                            "side": "runner",
+                            "amount": 3,
+                        },
+                    },
+                },
+                {
+                    "id": "trash",
+                    "label": "Trash 1 installed program",
+                    "effect": {
+                        "op": "do",
+                        "action": {"kind": "trash_program", "pick": "choose"},
+                    },
+                },
+            ],
+        }
+        etr_unless_pay3 = {
+            "op": "choose",
+            "chooser": "runner",
+            "options": [
+                {
+                    "id": "pay3",
+                    "label": "Pay 3¢",
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "lose_credits",
+                            "side": "runner",
+                            "amount": 3,
+                        },
+                    },
+                },
+                {
+                    "id": "etr",
+                    "label": "End the run",
+                    "effect": etr(),
+                },
+            ],
+        }
+        return base(
+            c,
+            paidAbilities=[
+                {
+                    "id": "event-horizon-trash-etr",
+                    "label": "[trash]: End the run (run against this server)",
+                    "clickCost": 0,
+                    "creditCost": 0,
+                    "cost": {"trashSelf": True},
+                    "requireDuringRun": True,
+                    "windows": [
+                        "approach_paw",
+                        "encounter_paw",
+                        "approach_server_paw",
+                    ],
+                    "effect": etr(),
+                }
+            ],
+            subroutines=[
+                {
+                    "id": "event-horizon-trash-prog",
+                    "text": "Trash 1 installed program unless the Runner pays 3[credit].",
+                    "effect": trash_prog_unless_pay3,
+                },
+                {
+                    "id": "event-horizon-etr",
+                    "text": "End the run unless the Runner pays 3[credit].",
+                    "effect": etr_unless_pay3,
+                },
+            ],
+            unsupported=[],
+        )
+
+    if cid == "vicsek":
+        return base(
+            c,
+            subroutines=[
+                {
+                    "id": "vicsek-x",
+                    "text": "Do X net damage and give the Runner X tags. X is equal to the number of tags the Runner has.",
+                    "effect": {
+                        "op": "do",
+                        "action": {"kind": "net_damage_and_tags_equal_runner_tags"},
+                    },
+                },
+                {
+                    "id": "vicsek-trash",
+                    "text": "Give the Runner 1 tag. Trash this ice.",
+                    "effect": seq(
+                        tags(1),
+                        {"op": "do", "action": {"kind": "trash_self"}},
+                    ),
+                },
+            ],
+            unsupported=[],
+        )
+
     # Fail closed — honest unsupported note for the remainder.
     # Corsair / Sell Out / Stowaway need IR not yet available (stealth credits,
     # trash-own-resource play cost, host-server successful-run gate).
@@ -600,7 +729,7 @@ def main():
             "Null Signal Vantage Point (NRDB pack vp) — next constructed set after "
             "Elevation. Fail-closed IR; "
             f"{full} cards fully mapped, {partial} with unsupported notes "
-            "(wave v1.15.0 B-slice)."
+            "(wave v1.16.0 B-slice)."
         )
         manifest["status"] = "in-progress"
     (OUT / "_manifest.json").write_text(
