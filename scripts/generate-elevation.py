@@ -1927,7 +1927,8 @@ def map_card(c: dict) -> dict:
     if cid == "ryo-phoenix-ono-out-of-the-ashes":
         return base(
             c,
-            onSuccessfulRunOncePerTurn={
+            onSuccessfulRunOncePerTurn=True,
+            onSuccessfulRun={
                 "op": "if",
                 "cond": {"op": "subroutine_resolved_this_run"},
                 "then": seq(
@@ -1982,7 +1983,10 @@ def map_card(c: dict) -> dict:
                                 "op": "and",
                                 "conds": [
                                     {"op": "identity_flipped"},
-                                    {"op": "runner_unused_mu_gte", "amount": 1},
+                                    {
+                                        "op": "runner_unused_mu_gte",
+                                        "amount": 1,
+                                    },
                                 ],
                             },
                             "then": seq(
@@ -2013,6 +2017,65 @@ def map_card(c: dict) -> dict:
             },
             unsupported=[],
         )
+
+    if cid == "gamedragon-pro":
+        return base(
+            c,
+            subtypes=["mod"],
+            onInstall={
+                "op": "do",
+                "action": {"kind": "gamedragon_may_host_on_icebreaker"},
+            },
+            onTurnBegin={
+                "op": "do",
+                "action": {"kind": "gamedragon_may_host_on_icebreaker"},
+            },
+            hostIcebreakerStrengthBonus=1,
+            extendsHostBreakerPumpToRun=True,
+            unsupported=[],
+        )
+
+    if cid == "madani":
+        return base(
+            c,
+            subtypes=["console"],
+            paidAbilities=[
+                {
+                    "id": "madani-host",
+                    "label": (
+                        "[click]: Host any number of programs from your grip "
+                        "faceup (not installed)"
+                    ),
+                    "clickCost": 1,
+                    "creditCost": 0,
+                    "cost": {"clicks": 1},
+                    "windows": ["runner_action_paw"],
+                    "effect": {
+                        "op": "do",
+                        "action": {"kind": "host_all_programs_from_grip"},
+                    },
+                },
+                {
+                    "id": "madani-install",
+                    "label": (
+                        "0[credit]: Install 1 hosted program "
+                        "(paying its install cost)"
+                    ),
+                    "clickCost": 0,
+                    "creditCost": 0,
+                    "cost": {"credits": 0},
+                    "oncePerTurn": True,
+                    "windows": ["runner_action_paw"],
+                    "effect": {
+                        "op": "do",
+                        "action": {"kind": "may_install_one_hosted_program"},
+                    },
+                },
+            ],
+            unsupported=[],
+        )
+
+    # Slice B (v1.13): shred, bling, detente, bangun, au-co — see elev-v112-candidate-slice.md
 
     # Fail closed — honest unsupported note for the remainder.
     card = base(c)
@@ -2059,7 +2122,7 @@ def main():
             "Null Signal Elevation (NRDB pack elev) — next constructed set after "
             "Rebellion Without Rehearsal. Kickoff extract: fail-closed IR; "
             f"{full} cards fully mapped, {partial} with unsupported notes "
-            "(wave kickoff v1.01.0)."
+            "(wave v1.12.0 Slice A target 77/82)."
         ),
         "cards": written,
     }

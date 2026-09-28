@@ -5,11 +5,48 @@
   "nrdbCode": "35028",
   "type": "hardware",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: [click]: Host any number of programs from your grip faceup on this hardware. (They are not installed.) Once per turn → 0[credit]: Install 1 hosted program (paying its install cost). Limit 1 console per player."
-  ],
+  "unsupported": [],
   "subtypes": [
     "console"
   ],
-  "installCost": 2
+  "installCost": 2,
+  "paidAbilities": [
+    {
+      "id": "madani-host",
+      "label": "[click]: Host any number of programs from your grip faceup (not installed)",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "host_all_programs_from_grip"
+        }
+      }
+    },
+    {
+      "id": "madani-install",
+      "label": "0[credit]: Install 1 hosted program (paying its install cost)",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "credits": 0
+      },
+      "oncePerTurn": true,
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "may_install_one_hosted_program"
+        }
+      }
+    }
+  ]
 }

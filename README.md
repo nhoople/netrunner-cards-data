@@ -22,7 +22,7 @@ Files under [`data/`](data/) are the API. Clone the repo or fetch a **tagged** r
 | [`data/parhelion/`](data/parhelion/) | Parhelion (NRDB `ph`) — supported |
 | [`data/the-automata-initiative/`](data/the-automata-initiative/) | The Automata Initiative (NRDB `tai`) — **supported** |
 | [`data/rebellion-without-rehearsal/`](data/rebellion-without-rehearsal/) | Rebellion Without Rehearsal (NRDB `rwr`) — **supported** |
-| [`data/elevation/`](data/elevation/) | Elevation (NRDB `elev`) — **in-progress** |
+| [`data/elevation/`](data/elevation/) | Elevation (NRDB `elev`) — **supported** |
 
 **Corpus order:** System Gateway → System Update 2021 → Midnight Sun → Parhelion → The Automata Initiative → Rebellion Without Rehearsal → Elevation → later releases.
 
@@ -34,7 +34,7 @@ Match this dataset and [netrunner-engine](https://github.com/nhoople/netrunner-e
 
 | Pairing | cards-data | engine |
 |---------|------------|--------|
-| **Current** | [`v1.11.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.11.0) | engine same-semver pin `v1.11.0` |
+| **Current** | [`v1.12.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.12.0) | engine same-semver pin `v1.12.0` |
 | RWR milestone | [`v1.00.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.00.0) | [`v1.00.0`](https://github.com/nhoople/netrunner-engine/releases/tag/v1.00.0) |
 
 Incremental wave tags are the day-to-day IR/wiring contract. A set-complete **milestone** GitHub Release is cut only when a wave’s pool status → `supported` (advertised host floor for that set).
@@ -73,11 +73,11 @@ console.log(pool.corpusOrder, marjanah.title);
 | parhelion | 63 | Null Signal Parhelion (`ph`); status `supported` (wave gate `v0.71.0`; all 63 clear) |
 | the-automata-initiative | 65 | Null Signal The Automata Initiative (`tai`); status `supported` (wave gate `v0.86.0`) |
 | rebellion-without-rehearsal | 65 | Null Signal Rebellion Without Rehearsal (`rwr`); status `supported` (**65/65** mapped; wave gate `v1.00.0`) |
-| elevation | 82 | Null Signal Elevation (`elev`); status `in-progress` (72/82 mapped; `v1.11.0`) |
+| elevation | 82 | Null Signal Elevation (`elev`); status `supported` (**82/82** mapped; wave gate `v1.12.0`) |
 
 Synthetic stubs and early wave1/wave2 dirs were removed in `v0.2.0`. Reprints that previously lived only under those waves now ship under their Null Signal release directories.
 
-Parhelion is fully supported (wave gate `v0.71.0`). The Automata Initiative is fully supported (wave gate `v0.86.0`). Rebellion Without Rehearsal is fully supported (wave gate `v1.00.0`). Elevation is the active corpus wave (`in-progress`).
+Parhelion is fully supported (wave gate `v0.71.0`). The Automata Initiative is fully supported (wave gate `v0.86.0`). Rebellion Without Rehearsal is fully supported (wave gate `v1.00.0`). Elevation is fully supported (wave gate `v1.12.0`).
 
 ## Versioning
 

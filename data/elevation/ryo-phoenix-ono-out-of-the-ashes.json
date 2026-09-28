@@ -10,7 +10,8 @@
     "g-mod"
   ],
   "link": 0,
-  "onSuccessfulRunOncePerTurn": {
+  "onSuccessfulRunOncePerTurn": true,
+  "onSuccessfulRun": {
     "op": "if",
     "cond": {
       "op": "subroutine_resolved_this_run"
