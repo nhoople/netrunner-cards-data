@@ -258,6 +258,166 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    # --- v1.14.0 B-slice: existing IR only ---
+
+    if cid == "virtual-intelligence-p-i-you-can-call-me-vic":
+        return base(
+            c,
+            paidAbilities=[
+                {
+                    "id": "vic-draw-untag",
+                    "label": "Once per turn → [click], 1[credit]: Draw 1 and remove 1 tag",
+                    "clickCost": 1,
+                    "creditCost": 1,
+                    "cost": {"clicks": 1, "credits": 1},
+                    "oncePerTurn": True,
+                    "windows": ["runner_action_paw"],
+                    "effect": seq(
+                        draw("runner", 1),
+                        {
+                            "op": "do",
+                            "action": {"kind": "remove_tags", "amount": 1},
+                        },
+                    ),
+                }
+            ],
+            unsupported=[],
+        )
+
+    if cid == "lionsmane":
+        net2 = net(2)
+        net2_unless_pay3 = {
+            "op": "choose",
+            "chooser": "runner",
+            "options": [
+                {
+                    "id": "pay",
+                    "label": "Pay 3¢",
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "lose_credits",
+                            "side": "runner",
+                            "amount": 3,
+                        },
+                    },
+                },
+                {
+                    "id": "net",
+                    "label": "Suffer 2 net damage",
+                    "effect": net2,
+                },
+            ],
+        }
+        net2_unless_jack = {
+            "op": "choose",
+            "chooser": "runner",
+            "options": [
+                {
+                    "id": "jack-out",
+                    "label": "Jack out",
+                    "effect": etr(),
+                },
+                {
+                    "id": "net",
+                    "label": "Suffer 2 net damage",
+                    "effect": net2,
+                },
+            ],
+        }
+        return base(
+            c,
+            subroutines=[
+                {
+                    "id": "lionsmane-net",
+                    "text": "Do 2 net damage.",
+                    "effect": net2,
+                },
+                {
+                    "id": "lionsmane-pay",
+                    "text": "Do 2 net damage unless the Runner pays 3[credit].",
+                    "effect": net2_unless_pay3,
+                },
+                {
+                    "id": "lionsmane-jack",
+                    "text": "Do 2 net damage unless the Runner jacks out.",
+                    "effect": net2_unless_jack,
+                },
+            ],
+            unsupported=[],
+        )
+
+    if cid == "esca":
+        return base(
+            c,
+            mustRevealWhenAccessedFromRd=True,
+            onAccess=seq(
+                {
+                    "op": "do",
+                    "action": {
+                        "kind": "lose_credits",
+                        "side": "runner",
+                        "amount": 1,
+                    },
+                },
+                {
+                    "op": "if",
+                    "cond": {"op": "runner_tagged"},
+                    "then": net(1),
+                },
+            ),
+            unsupported=[],
+        )
+
+    if cid == "sleipnir":
+        may_shuffle = {
+            "op": "choose",
+            "chooser": "corp",
+            "options": [
+                {
+                    "id": "hq",
+                    "label": "Shuffle 1 card from HQ into R&D",
+                    "effect": {
+                        "op": "do",
+                        "action": {"kind": "shuffle_hq_to_rd", "amount": 1},
+                    },
+                },
+                {
+                    "id": "archives",
+                    "label": "Shuffle 1 card from Archives into R&D",
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "shuffle_archives_to_rd",
+                            "amount": 1,
+                        },
+                    },
+                },
+                decline("corp"),
+            ],
+        }
+        return base(
+            c,
+            subroutines=[
+                {
+                    "id": "sleipnir-draw",
+                    "text": "You may draw 1 card.",
+                    "effect": may_draw("corp", 1),
+                },
+                {
+                    "id": "sleipnir-shuffle",
+                    "text": "You may shuffle 1 card from HQ or Archives into R&D.",
+                    "effect": may_shuffle,
+                },
+                {
+                    "id": "sleipnir-etr",
+                    "text": "End the run.",
+                    "effect": etr(),
+                },
+            ],
+            unsupported=[],
+        )
+
     # Fail closed — honest unsupported note for the remainder.
     # Corsair / Sell Out / Stowaway need IR not yet available (stealth credits,
     # trash-own-resource play cost, host-server successful-run gate).
@@ -309,6 +469,14 @@ def main():
         ),
         "cards": written,
     }
+    if full >= 8:
+        manifest["notes"] = (
+            "Null Signal Vantage Point (NRDB pack vp) — next constructed set after "
+            "Elevation. Fail-closed IR; "
+            f"{full} cards fully mapped, {partial} with unsupported notes "
+            "(wave v1.14.0 B-slice)."
+        )
+        manifest["status"] = "in-progress"
     (OUT / "_manifest.json").write_text(
         json.dumps(manifest, indent=2, ensure_ascii=False) + "\n"
     )

@@ -556,7 +556,7 @@
     },
     "vantage-point": {
       "status": "in-progress",
-      "notes": "Null Signal Vantage Point (NRDB pack vp) — 66 cards. Kickoff extract: fail-closed IR; 4 mapped, 62 unsupported (wave kickoff v1.13.0).",
+      "notes": "Null Signal Vantage Point (NRDB pack vp) — 66 cards. In progress: 8/66 mapped (wave v1.14.0 B-slice).",
       "cards": [
         "chain-reaction",
         "take-a-dive",

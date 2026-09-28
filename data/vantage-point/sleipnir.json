@@ -5,13 +5,101 @@
   "nrdbCode": "36030",
   "type": "ice",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: [subroutine] You may draw 1 card. [subroutine] You may shuffle 1 card from HQ or Archives into R&D. [subroutine] End the run."
-  ],
+  "unsupported": [],
   "subtypes": [
     "code gate"
   ],
   "installCost": 4,
   "rezCost": 4,
-  "strength": 4
+  "strength": 4,
+  "subroutines": [
+    {
+      "id": "sleipnir-draw",
+      "text": "You may draw 1 card.",
+      "effect": {
+        "op": "choose",
+        "chooser": "corp",
+        "options": [
+          {
+            "id": "draw",
+            "label": "Draw 1 card",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "draw",
+                "side": "corp",
+                "amount": 1
+              }
+            }
+          },
+          {
+            "id": "decline",
+            "label": "Decline",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "gain_credits",
+                "side": "corp",
+                "amount": 0
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "sleipnir-shuffle",
+      "text": "You may shuffle 1 card from HQ or Archives into R&D.",
+      "effect": {
+        "op": "choose",
+        "chooser": "corp",
+        "options": [
+          {
+            "id": "hq",
+            "label": "Shuffle 1 card from HQ into R&D",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "shuffle_hq_to_rd",
+                "amount": 1
+              }
+            }
+          },
+          {
+            "id": "archives",
+            "label": "Shuffle 1 card from Archives into R&D",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "shuffle_archives_to_rd",
+                "amount": 1
+              }
+            }
+          },
+          {
+            "id": "decline",
+            "label": "Decline",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "gain_credits",
+                "side": "corp",
+                "amount": 0
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "sleipnir-etr",
+      "text": "End the run.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "end_the_run"
+        }
+      }
+    }
+  ]
 }

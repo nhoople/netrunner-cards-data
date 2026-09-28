@@ -5,13 +5,38 @@
   "nrdbCode": "36038",
   "type": "asset",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: While the Runner is accessing this asset in R&D, they must reveal it. When the Runner accesses this asset, they lose 1[credit]. If they are tagged, do 1 net damage."
-  ],
+  "unsupported": [],
   "subtypes": [
     "ambush"
   ],
   "installCost": 0,
   "rezCost": 0,
-  "trashCost": 3
+  "trashCost": 3,
+  "mustRevealWhenAccessedFromRd": true,
+  "onAccess": {
+    "op": "seq",
+    "effects": [
+      {
+        "op": "do",
+        "action": {
+          "kind": "lose_credits",
+          "side": "runner",
+          "amount": 1
+        }
+      },
+      {
+        "op": "if",
+        "cond": {
+          "op": "runner_tagged"
+        },
+        "then": {
+          "op": "do",
+          "action": {
+            "kind": "net_damage",
+            "amount": 1
+          }
+        }
+      }
+    ]
+  }
 }

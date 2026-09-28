@@ -5,11 +5,45 @@
   "nrdbCode": "36009",
   "type": "identity",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Once per turn → [click], 1[credit]: Draw 1 card and remove 1 tag."
-  ],
+  "unsupported": [],
   "subtypes": [
     "digital"
   ],
-  "link": 0
+  "link": 0,
+  "paidAbilities": [
+    {
+      "id": "vic-draw-untag",
+      "label": "Once per turn → [click], 1[credit]: Draw 1 and remove 1 tag",
+      "clickCost": 1,
+      "creditCost": 1,
+      "cost": {
+        "clicks": 1,
+        "credits": 1
+      },
+      "oncePerTurn": true,
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "draw",
+              "side": "runner",
+              "amount": 1
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "remove_tags",
+              "amount": 1
+            }
+          }
+        ]
+      }
+    }
+  ]
 }
