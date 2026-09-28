@@ -467,7 +467,7 @@
     },
     "elevation": {
       "status": "in-progress",
-      "notes": "Null Signal Elevation (NRDB pack elev) — 82 cards. In progress: 47/82 mapped (v1.07.0).",
+      "notes": "Null Signal Elevation (NRDB pack elev) — 82 cards. In progress: 54/82 mapped (v1.08.0).",
       "cards": [
         "ryo-phoenix-ono-out-of-the-ashes",
         "topan-ormas-leader",

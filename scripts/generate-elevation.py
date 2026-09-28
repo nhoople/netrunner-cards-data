@@ -1305,6 +1305,233 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    # --- v1.08.0: Humanoid / Next Big Thing / Poétrï / Phật / Biawak / Cacophony / Mercia ---
+
+    if cid == "humanoid-resources":
+        return base(
+            c,
+            paidAbilities=[
+                {
+                    "id": "humanoid-resources-main",
+                    "label": "[click][click][click], [trash]: Gain 4¢ and draw 3. Install up to 2 from HQ. May play 1 operation from HQ.",
+                    "clickCost": 3,
+                    "creditCost": 0,
+                    "cost": {"clicks": 3, "trashSelf": True},
+                    "windows": ["corp_action_paw"],
+                    "effect": seq(
+                        gain("corp", 4),
+                        draw("corp", 3),
+                        {
+                            "op": "do",
+                            "action": {"kind": "may_install_from_hq_paying_costs"},
+                        },
+                        {
+                            "op": "do",
+                            "action": {"kind": "may_install_from_hq_paying_costs"},
+                        },
+                        {
+                            "op": "do",
+                            "action": {"kind": "may_play_operation_from_hq"},
+                        },
+                    ),
+                }
+            ],
+            unsupported=[],
+        )
+
+    if cid == "next-big-thing":
+        return base(
+            c,
+            onScore={
+                "op": "do",
+                "action": {"kind": "add_agenda_counter", "amount": 1},
+            },
+            onSteal={
+                "op": "do",
+                "action": {"kind": "add_agenda_counter", "amount": 1},
+            },
+            paidAbilities=[
+                {
+                    "id": "next-big-thing-draw",
+                    "label": "[click], hosted agenda counter: Draw 4. Shuffle any number from HQ into R&D.",
+                    "clickCost": 1,
+                    "creditCost": 0,
+                    "cost": {"clicks": 1, "agendaCounters": 1},
+                    "windows": ["corp_action_paw"],
+                    "usableFromRunnerScoreArea": True,
+                    "effect": seq(
+                        draw("corp", 4),
+                        {
+                            "op": "do",
+                            "action": {"kind": "shuffle_any_number_hq_to_rd"},
+                        },
+                    ),
+                }
+            ],
+            unsupported=[],
+        )
+
+    if cid == "poetri-luxury-brands-all-the-rage":
+        return base(
+            c,
+            onAgendaScored={
+                "op": "do",
+                "action": {
+                    "kind": "look_top_n_rd_may_install_one",
+                    "n": 3,
+                    "excludeAgenda": True,
+                },
+            },
+            onAgendaStolen={
+                "op": "do",
+                "action": {
+                    "kind": "may_install_from_hq_paying_costs",
+                    "excludeAgenda": True,
+                },
+            },
+            unsupported=[],
+        )
+
+    if cid == "phat-gioan-baotixita":
+        return base(
+            c,
+            onDiscardPhaseEnd={
+                "op": "do",
+                "action": {"kind": "add_power_counter", "amount": 1},
+            },
+            onFirstAgendaScoredOrStolenThisTurn={
+                "op": "do",
+                "action": {
+                    "kind": "may_remove_power_counters_then_net_damage",
+                    "base": 1,
+                    "perRemoved": 1,
+                    "maxRemove": 2,
+                },
+            },
+            unsupported=[],
+        )
+
+    if cid == "biawak":
+        return base(
+            c,
+            rezCostCreditDiscountOnForfeitAgenda=10,
+            subroutines=[
+                {
+                    "id": "biawak-trash-program",
+                    "text": "Trash 1 installed program or end the run.",
+                    "effect": {
+                        "op": "choose",
+                        "chooser": "corp",
+                        "options": [
+                            {
+                                "id": "trash",
+                                "label": "Trash a program",
+                                "effect": {
+                                    "op": "do",
+                                    "action": {
+                                        "kind": "trash_program",
+                                        "pick": "choose",
+                                    },
+                                },
+                            },
+                            {
+                                "id": "etr",
+                                "label": "End the run",
+                                "effect": etr(),
+                            },
+                        ],
+                    },
+                },
+                {
+                    "id": "biawak-trash-resource",
+                    "text": "Trash 1 installed resource or end the run.",
+                    "effect": {
+                        "op": "choose",
+                        "chooser": "corp",
+                        "options": [
+                            {
+                                "id": "trash",
+                                "label": "Trash a resource",
+                                "effect": {
+                                    "op": "do",
+                                    "action": {
+                                        "kind": "trash_resource",
+                                        "pick": "choose",
+                                    },
+                                },
+                            },
+                            {
+                                "id": "etr",
+                                "label": "End the run",
+                                "effect": etr(),
+                            },
+                        ],
+                    },
+                },
+                {
+                    "id": "biawak-etr",
+                    "text": "End the run.",
+                    "effect": etr(),
+                },
+            ],
+            unsupported=[],
+        )
+
+    if cid == "cacophony":
+        return base(
+            c,
+            onFirstRunnerStoleOrTrashedCorpCardThisTurn={
+                "op": "do",
+                "action": {"kind": "add_power_counter", "amount": 1},
+            },
+            onRunnerActionPhaseEnd={
+                "op": "choose",
+                "chooser": "runner",
+                "options": [
+                    {
+                        "id": "sabotage",
+                        "label": "Remove 2 power counters to sabotage 3",
+                        "effect": seq(
+                            {
+                                "op": "do",
+                                "action": {
+                                    "kind": "remove_power_counter",
+                                    "amount": 2,
+                                },
+                            },
+                            {
+                                "op": "do",
+                                "action": {
+                                    "kind": "sabotage",
+                                    "amount": 3,
+                                    "interactive": True,
+                                },
+                            },
+                        ),
+                    },
+                    {
+                        "id": "decline",
+                        "label": "Decline",
+                        "effect": gain("runner", 0),
+                    },
+                ],
+            },
+            unsupported=[],
+        )
+
+    if cid == "mercia-b4ll4rd":
+        return base(
+            c,
+            onCorpActionPhaseEnd={
+                "op": "do",
+                "action": {
+                    "kind": "may_install_ice_from_hq_discount_then_move_source",
+                    "discount": 1,
+                },
+            },
+            unsupported=[],
+        )
+
     # Fail closed — honest unsupported note for the remainder.
     card = base(c)
     card["unsupported"] = [f"Full text not yet mapped to IR: {plain[:240]}"]

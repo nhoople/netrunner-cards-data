@@ -5,14 +5,87 @@
   "nrdbCode": "35074",
   "type": "ice",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: You can forfeit 1 agenda as you rez this ice to pay for 10[credit] of its rez cost. [subroutine] Trash 1 installed program or end the run. [subroutine] Trash 1 installed resource or end the run. [subroutine] End the run."
-  ],
+  "unsupported": [],
   "subtypes": [
     "sentry",
     "destroyer"
   ],
   "installCost": 14,
   "rezCost": 14,
-  "strength": 6
+  "strength": 6,
+  "rezCostCreditDiscountOnForfeitAgenda": 10,
+  "subroutines": [
+    {
+      "id": "biawak-trash-program",
+      "text": "Trash 1 installed program or end the run.",
+      "effect": {
+        "op": "choose",
+        "chooser": "corp",
+        "options": [
+          {
+            "id": "trash",
+            "label": "Trash a program",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "trash_program",
+                "pick": "choose"
+              }
+            }
+          },
+          {
+            "id": "etr",
+            "label": "End the run",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "end_the_run"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "biawak-trash-resource",
+      "text": "Trash 1 installed resource or end the run.",
+      "effect": {
+        "op": "choose",
+        "chooser": "corp",
+        "options": [
+          {
+            "id": "trash",
+            "label": "Trash a resource",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "trash_resource",
+                "pick": "choose"
+              }
+            }
+          },
+          {
+            "id": "etr",
+            "label": "End the run",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "end_the_run"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "biawak-etr",
+      "text": "End the run.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "end_the_run"
+        }
+      }
+    }
+  ]
 }
