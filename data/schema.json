@@ -739,6 +739,47 @@
       "type": "object",
       "description": "Scored agenda: Effect IR the first time each turn the Runner passes a rezzed code gate or sentry (Sisyphus)."
     },
+    "onRunBeginMaySpendAgendaCounterRezUpToIceProtectingAttacked": {
+      "type": "object",
+      "required": ["maxIce"],
+      "additionalProperties": false,
+      "properties": {
+        "maxIce": { "type": "integer", "minimum": 1 }
+      },
+      "description": "Scored: on run begin may spend agenda counter to rez up to N ice protecting attacked (Lightning Laboratory)."
+    },
+    "onCorpTurnEndDerezUpToIceProtectingLightningServer": {
+      "type": "object",
+      "required": ["maxIce"],
+      "additionalProperties": false,
+      "properties": {
+        "maxIce": { "type": "integer", "minimum": 1 }
+      },
+      "description": "Scored: Corp turn end derez up to N ice protecting Lightning's remembered server."
+    },
+    "oncePerTurnOnRezIceProtectingThisServerDuringRun": {
+      "type": "object",
+      "required": ["mayDerezOtherIceForStrengthBonus"],
+      "additionalProperties": false,
+      "properties": {
+        "mayDerezOtherIceForStrengthBonus": { "type": "integer", "minimum": 1 }
+      },
+      "description": "Brasília: once/turn when ice rezzed protecting this server during a run, may derez another for +N strength."
+    },
+    "onRezApOrDestroyerIceDuringRun": {
+      "type": "object",
+      "required": ["strengthBonus", "gainEtrUnlessTrashInstalledSub"],
+      "additionalProperties": false,
+      "properties": {
+        "strengthBonus": { "type": "integer", "minimum": 1 },
+        "gainEtrUnlessTrashInstalledSub": { "type": "boolean" }
+      },
+      "description": "Thunderbolt: when rez AP/destroyer ice during a run, +strength and grant ETR-unless-trash sub."
+    },
+    "derezAtAnyTurnEnd": {
+      "type": "boolean",
+      "description": "While rezzed, derez this card when any turn ends (Lycian Multi-Munition)."
+    },
     "onFirstCoreDamageThisTurn": {
       "type": "object",
       "description": "Effect IR the first time the Runner suffers core damage each turn (Runner identities; CR §10.4.2b)."

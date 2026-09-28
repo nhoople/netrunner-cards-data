@@ -5,13 +5,14 @@
   "nrdbCode": "34104",
   "type": "upgrade",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: Once per turn → When you rez a piece of ice during a run against this server, you may derez another installed piece of ice. If you do, the rezzed ice gets +3 strength for the remainder of that run. Limit 1 region per server."
-  ],
+  "unsupported": [],
   "subtypes": [
     "region"
   ],
   "installCost": 0,
   "rezCost": 0,
-  "trashCost": 3
+  "trashCost": 3,
+  "oncePerTurnOnRezIceProtectingThisServerDuringRun": {
+    "mayDerezOtherIceForStrengthBonus": 3
+  }
 }

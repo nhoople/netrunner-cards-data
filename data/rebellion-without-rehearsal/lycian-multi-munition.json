@@ -5,14 +5,101 @@
   "nrdbCode": "34100",
   "type": "ice",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: When you rez this ice, choose 1 or more subtypes among barrier, code gate, and sentry. This ice gains the chosen subtypes while it remains rezzed. When a turn ends, derez this ice. [subroutine] If this ice is a code gate, the Runner loses ["
-  ],
+  "unsupported": [],
   "subtypes": [
     "mythic",
     "destroyer"
   ],
   "installCost": 3,
   "rezCost": 3,
-  "strength": 1
+  "strength": 1,
+  "onRez": {
+    "op": "do",
+    "action": {
+      "kind": "lycian_choose_subtypes"
+    }
+  },
+  "derezAtAnyTurnEnd": true,
+  "subroutines": [
+    {
+      "id": "lycian-cg",
+      "text": "If code gate: Runner loses [click] and 1¢.",
+      "effect": {
+        "op": "if",
+        "cond": {
+          "op": "source_has_subtype",
+          "subtype": "code gate"
+        },
+        "then": {
+          "op": "seq",
+          "effects": [
+            {
+              "op": "do",
+              "action": {
+                "kind": "lose_clicks",
+                "side": "runner",
+                "amount": 1
+              }
+            },
+            {
+              "op": "do",
+              "action": {
+                "kind": "lose_credits",
+                "side": "runner",
+                "amount": 1
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "lycian-sentry",
+      "text": "If sentry: Trash 1 installed program.",
+      "effect": {
+        "op": "if",
+        "cond": {
+          "op": "source_has_subtype",
+          "subtype": "sentry"
+        },
+        "then": {
+          "op": "do",
+          "action": {
+            "kind": "trash_program",
+            "pick": "choose"
+          }
+        }
+      }
+    },
+    {
+      "id": "lycian-barrier",
+      "text": "If barrier: Gain 1¢ and end the run.",
+      "effect": {
+        "op": "if",
+        "cond": {
+          "op": "source_has_subtype",
+          "subtype": "barrier"
+        },
+        "then": {
+          "op": "seq",
+          "effects": [
+            {
+              "op": "do",
+              "action": {
+                "kind": "gain_credits",
+                "side": "corp",
+                "amount": 1
+              }
+            },
+            {
+              "op": "do",
+              "action": {
+                "kind": "end_the_run"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
 }
