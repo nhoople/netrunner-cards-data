@@ -34,6 +34,10 @@
         "requireNotRunThisTurn": {
           "type": "boolean"
         },
+        "requiresProtectingIce": {
+          "type": "boolean",
+          "description": "Only servers protected by at least one piece of ice are legal run targets (Kompromat)."
+        },
         "bonusAccessFromVirus": {
           "type": "boolean"
         },

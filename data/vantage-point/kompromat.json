@@ -5,11 +5,36 @@
   "nrdbCode": "36010",
   "type": "event",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Run a server protected by ice. When that run ends, if it was successful, give the Corp 1 bad publicity unless they derez 1 piece of ice protecting the attacked server. Remove this event from the game."
-  ],
+  "unsupported": [],
   "subtypes": [
     "run"
   ],
-  "playCost": 2
+  "playCost": 2,
+  "runEvent": {
+    "servers": "any",
+    "requiresProtectingIce": true,
+    "onRunEnd": {
+      "op": "seq",
+      "effects": [
+        {
+          "op": "if",
+          "cond": {
+            "op": "run_successful"
+          },
+          "then": {
+            "op": "do",
+            "action": {
+              "kind": "bp_unless_derez_protecting_attacked"
+            }
+          }
+        },
+        {
+          "op": "do",
+          "action": {
+            "kind": "rfg_self"
+          }
+        }
+      ]
+    }
+  }
 }

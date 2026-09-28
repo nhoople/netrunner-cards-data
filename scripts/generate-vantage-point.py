@@ -773,9 +773,88 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    # --- v1.19.0 B-slice ---
+
+    if cid == "ansel-2-0":
+        return base(
+            c,
+            subroutines=[
+                {
+                    "id": "ansel2-trash",
+                    "text": "Trash 1 installed Runner card.",
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "trash_installed_runner",
+                            "pick": "choose",
+                        },
+                    },
+                },
+                {
+                    "id": "ansel2-rfg-heap",
+                    "text": "Remove 1 card in the heap from the game.",
+                    "effect": {
+                        "op": "do",
+                        "action": {"kind": "rfg_heap_card"},
+                    },
+                },
+                {
+                    "id": "ansel2-install",
+                    "text": "You may install 1 card from HQ or Archives.",
+                    "effect": {
+                        "op": "do",
+                        "action": {"kind": "install_from_hq_or_archives"},
+                    },
+                },
+                {
+                    "id": "ansel2-etr",
+                    "text": "End the run.",
+                    "effect": etr(),
+                },
+            ],
+            unsupported=[],
+        )
+
+    if cid == "kompromat":
+        return base(
+            c,
+            runEvent={
+                "servers": "any",
+                "requiresProtectingIce": True,
+                "onRunEnd": seq(
+                    {
+                        "op": "if",
+                        "cond": {"op": "run_successful"},
+                        "then": {
+                            "op": "do",
+                            "action": {
+                                "kind": "bp_unless_derez_protecting_attacked"
+                            },
+                        },
+                    },
+                    {"op": "do", "action": {"kind": "rfg_self"}},
+                ),
+            },
+            unsupported=[],
+        )
+
+    if cid == "retirement-plan":
+        return base(
+            c,
+            playAdditionalClick=True,
+            onPlay={
+                "op": "do",
+                "action": {
+                    "kind": "install_from_archives",
+                    "types": ["agenda", "asset", "ice"],
+                },
+            },
+            unsupported=[],
+        )
+
     # Fail closed — honest unsupported note for the remainder.
-    # Corsair / Lampades need stealth-credit spend; Retirement Plan needs
-    # paying install-from-Archives (ignore-costs variant only today).
+    # Corsair / Lampades need stealth-credit spend; Cultivate is a
+    # look/trash/HQ/arrange composite not yet in IR.
     card = base(c)
     card["unsupported"] = [f"Full text not yet mapped to IR: {plain[:240]}"]
     return card
@@ -829,7 +908,7 @@ def main():
             "Null Signal Vantage Point (NRDB pack vp) — next constructed set after "
             "Elevation. Fail-closed IR; "
             f"{full} cards fully mapped, {partial} with unsupported notes "
-            f"(wave v1.18.0 B-slice)."
+            f"(wave v1.19.0 B-slice)."
         )
         manifest["status"] = "in-progress"
     (OUT / "_manifest.json").write_text(

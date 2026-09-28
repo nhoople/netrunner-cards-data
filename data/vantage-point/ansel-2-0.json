@@ -5,9 +5,7 @@
   "nrdbCode": "36028",
   "type": "ice",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: Lose [click][click]: Break up to 2 subroutines on this ice. Only the Runner can use this ability. [subroutine] Trash 1 installed Runner card. [subroutine] Remove 1 card in the heap from the game. [subroutine] You may install 1 card from HQ "
-  ],
+  "unsupported": [],
   "subtypes": [
     "sentry",
     "bioroid",
@@ -15,5 +13,48 @@
   ],
   "installCost": 8,
   "rezCost": 8,
-  "strength": 5
+  "strength": 5,
+  "subroutines": [
+    {
+      "id": "ansel2-trash",
+      "text": "Trash 1 installed Runner card.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "trash_installed_runner",
+          "pick": "choose"
+        }
+      }
+    },
+    {
+      "id": "ansel2-rfg-heap",
+      "text": "Remove 1 card in the heap from the game.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "rfg_heap_card"
+        }
+      }
+    },
+    {
+      "id": "ansel2-install",
+      "text": "You may install 1 card from HQ or Archives.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "install_from_hq_or_archives"
+        }
+      }
+    },
+    {
+      "id": "ansel2-etr",
+      "text": "End the run.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "end_the_run"
+        }
+      }
+    }
+  ]
 }
