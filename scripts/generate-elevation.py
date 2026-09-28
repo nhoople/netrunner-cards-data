@@ -1532,6 +1532,145 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    # --- v1.09.0: Touch-ups / Knickknack / Barry / Proprionegation / Mycoweb / Mahkota / Nebula ---
+
+    if cid == "touch-ups":
+        return base(
+            c,
+            playAdditionalClick=True,
+            onPlay=seq(
+                {
+                    "op": "do",
+                    "action": {
+                        "kind": "place_advancements",
+                        "amount": 2,
+                        "pick": "choose",
+                    },
+                },
+                {
+                    "op": "do",
+                    "action": {
+                        "kind": "touch_ups_choose_type_shuffle_grip",
+                        "maxCards": 2,
+                    },
+                },
+            ),
+            unsupported=[],
+        )
+
+    if cid == "knickknack-obrian":
+        return base(
+            c,
+            onFirstRunBeginThisTurn={
+                "op": "do",
+                "action": {
+                    "kind": "may_trash_other_installed_gain_printed_install_and_draw",
+                },
+            },
+            unsupported=[],
+        )
+
+    if cid == "barry-baz-wong-tri-maf-veteran":
+        return base(
+            c,
+            onAnyIceRez={
+                "op": "do",
+                "action": {
+                    "kind": "may_install_from_grip",
+                    "types": ["resource", "hardware"],
+                },
+            },
+            unsupported=[],
+        )
+
+    if cid == "proprionegation":
+        return base(
+            c,
+            onScore={
+                "op": "do",
+                "action": {"kind": "add_agenda_counter", "amount": 1},
+            },
+            paidAbilities=[
+                {
+                    "id": "proprionegation-archives",
+                    "label": "Hosted agenda counter: Move Runner to outermost Archives (during a run)",
+                    "clickCost": 0,
+                    "creditCost": 0,
+                    "cost": {"agendaCounters": 1},
+                    "windows": ["corp_action_paw"],
+                    "requireDuringRun": True,
+                    "usableFromRunnerScoreArea": True,
+                    "effect": {
+                        "op": "do",
+                        "action": {"kind": "move_runner_to_archives_outermost"},
+                    },
+                }
+            ],
+            unsupported=[],
+        )
+
+    if cid == "mycoweb":
+        return base(
+            c,
+            subroutines=[
+                {
+                    "id": "mycoweb-archives-install",
+                    "text": "You may install 1 piece of ice from Archives, ignoring all costs.",
+                    "effect": {
+                        "op": "do",
+                        "action": {"kind": "may_install_from_archives_ignore_costs"},
+                    },
+                },
+                {
+                    "id": "mycoweb-rez-discount",
+                    "text": "You may rez 1 installed piece of ice, paying 2[credit] less.",
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "may_rez_installed_ice_discount",
+                            "discount": 2,
+                        },
+                    },
+                },
+                {
+                    "id": "mycoweb-sentry-sub",
+                    "text": "Resolve 1 subroutine on a rezzed sentry.",
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "may_resolve_subroutine_on_rezzed_ice",
+                            "subtype": "sentry",
+                            "excludeSelf": True,
+                        },
+                    },
+                },
+                {
+                    "id": "mycoweb-code-gate-sub",
+                    "text": "Resolve 1 subroutine on another rezzed code gate.",
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "may_resolve_subroutine_on_rezzed_ice",
+                            "subtype": "code gate",
+                            "excludeSelf": True,
+                        },
+                    },
+                },
+            ],
+            unsupported=[],
+        )
+
+    if cid == "mahkota-langit-grid":
+        return base(
+            c,
+            subtypes=["region"],
+            recurringCreditsMax=2,
+            recurringSpendFor=["rez_host_server"],
+            persistent=True,
+            serverRootAssetTrashCostBonus=2,
+            unsupported=[],
+        )
+
     # Fail closed — honest unsupported note for the remainder.
     card = base(c)
     card["unsupported"] = [f"Full text not yet mapped to IR: {plain[:240]}"]

@@ -881,6 +881,19 @@
       "type": "object",
       "description": "Effect IR when the Runner's action phase ends while this card is installed (Cacophony)."
     },
+    "onAnyIceRez": {
+      "type": "object",
+      "description": "Runner identity: whenever Corp rezzes ice (Barry Wong)."
+    },
+    "serverRootAssetTrashCostBonus": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Mahkota: +N trash cost for assets in this server's root."
+    },
+    "playRequiresNoCorpActionFinished": {
+      "type": "boolean",
+      "description": "Corp operation: play only before the first Corp action completes (Petty Cash)."
+    },
     "onFirstAgendaScoredOrStolenThisTurn": {
       "type": "object",
       "description": "Effect IR the first time each turn an agenda is scored or stolen while this card is rezzed (Phật Gioan Baotixita)."
