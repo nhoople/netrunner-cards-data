@@ -85,6 +85,10 @@
           "type": "boolean",
           "description": "After passing Archives ice, change attacked server to HQ and approach HQ (Maintenance Access)."
         },
+        "shredPreventFirstEndTheRun": {
+          "type": "boolean",
+          "description": "Shred: first Corp end-the-run is prevented unless Corp reveals and trashes X random HQ (X = root size)."
+        },
         "skipBreachInstallProgramFromHeap": {
           "type": "boolean"
         },
@@ -430,6 +434,14 @@
             "type": "boolean",
             "description": "Corp paid ability usable while this card is in Archives (Petty Cash)."
           },
+          "usableByAnyPlayer": {
+            "type": "boolean",
+            "description": "Either player may pay and use this ability (Detente)."
+          },
+          "oncePerTurn": {
+            "type": "boolean",
+            "description": "Ability usable at most once per turn (Madani install)."
+          },
           "usableFromRunnerScoreArea": {
             "type": "boolean",
             "description": "Corp paid ability usable while this agenda is in the Runner's score area (Oracle Thinktank)."
@@ -501,6 +513,14 @@
     "hostStrengthModifier": {
       "type": "integer",
       "description": "While hosted on ice, modify host ice strength by this amount (Monkeywrench)."
+    },
+    "hostIcebreakerStrengthBonus": {
+      "type": "integer",
+      "description": "While this hardware is hosted on an icebreaker, that breaker gets +strength (GAMEDRAGON Pro)."
+    },
+    "extendsHostBreakerPumpToRun": {
+      "type": "boolean",
+      "description": "While hosted on an icebreaker, that breaker's strength pumps last for the run (GAMEDRAGON Pro)."
     },
     "otherIceProtectingServerStrengthModifier": {
       "type": "integer",
@@ -1768,6 +1788,38 @@
     "onVirusPurge": {
       "type": "object",
       "description": "Effect IR when the Corp purges virus counters (Heliamphora: trash 2 random HQ then trash self). Prefer over trashOnVirusPurge when purge does more than trash this card."
+    },
+    "shredPreventFirstEndTheRun": {
+      "type": "boolean",
+      "description": "Shred: the first time the Corp would end that run, prevent unless Corp reveals and trashes X random HQ (X = root size of attacked server)."
+    },
+    "hostedCardsPlayableAsGrip": {
+      "type": "boolean",
+      "description": "Bling: play or install hosted cards as if they were in the grip."
+    },
+    "onInstallWithoutSpendingCredits": {
+      "type": "object",
+      "description": "Bling: Effect IR whenever the Runner installs a card without spending credits."
+    },
+    "usableByAnyPlayer": {
+      "type": "boolean",
+      "description": "Paid ability: either player may pay and use (Detente)."
+    },
+    "hostStrengthIncreasesLastForRun": {
+      "type": "boolean",
+      "description": "Gamedragon Pro: while this is hosted on an icebreaker, strength increases on the host last for the remainder of the run."
+    },
+    "powerCounterOnDamageOrTrashFromHq": {
+      "type": "boolean",
+      "description": "Au Co: whenever Corp does damage or trashes ≥1 from HQ, place 1 power on this identity."
+    },
+    "mayInstallAgendasFaceup": {
+      "type": "boolean",
+      "description": "Bangun: Corp may install agendas faceup (abilities inactive until scored)."
+    },
+    "onAccessFaceupInstalledAgenda": {
+      "type": "object",
+      "description": "Bangun: Effect IR when the Runner accesses a faceup installed agenda."
     }
   }
 }

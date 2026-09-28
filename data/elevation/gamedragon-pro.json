@@ -5,11 +5,23 @@
   "nrdbCode": "35027",
   "type": "hardware",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: When you install this hardware and when your turn begins, you may host this hardware on an installed non-AI icebreaker. Host icebreaker gets +1 strength. Abilities that increase its strength last for the remainder of the run (instead of any"
-  ],
+  "unsupported": [],
   "subtypes": [
     "mod"
   ],
-  "installCost": 2
+  "installCost": 2,
+  "onInstall": {
+    "op": "do",
+    "action": {
+      "kind": "gamedragon_may_host_on_icebreaker"
+    }
+  },
+  "onTurnBegin": {
+    "op": "do",
+    "action": {
+      "kind": "gamedragon_may_host_on_icebreaker"
+    }
+  },
+  "hostIcebreakerStrengthBonus": 1,
+  "extendsHostBreakerPumpToRun": true
 }

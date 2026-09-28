@@ -5,11 +5,18 @@
   "nrdbCode": "35003",
   "type": "event",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Run Archives. When that run ends, you may trash 1 rezzed copy of a card you accessed in Archives during that run."
-  ],
+  "unsupported": [],
   "subtypes": [
     "run"
   ],
-  "playCost": 0
+  "playCost": 0,
+  "runEvent": {
+    "servers": "archives",
+    "onRunEnd": {
+      "op": "do",
+      "action": {
+        "kind": "charm_offensive_trash_rezzed_accessed"
+      }
+    }
+  }
 }

@@ -5,11 +5,102 @@
   "nrdbCode": "35023",
   "type": "identity",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Whenever you make a successful run, if your [mu] is full, you may flip this identity and gain 1[credit]. Flip side: Whenever you make a successful run, if you have at least 1 unused [mu], you may flip this identity and draw 1 card."
-  ],
+  "unsupported": [],
   "subtypes": [
     "natural"
   ],
-  "link": 0
+  "link": 0,
+  "onSuccessfulRun": {
+    "op": "choose",
+    "chooser": "runner",
+    "options": [
+      {
+        "id": "unflipped",
+        "label": "MU full: flip and gain 1[credit]",
+        "effect": {
+          "op": "if",
+          "cond": {
+            "op": "and",
+            "conds": [
+              {
+                "op": "identity_unflipped"
+              },
+              {
+                "op": "runner_mu_full"
+              }
+            ]
+          },
+          "then": {
+            "op": "seq",
+            "effects": [
+              {
+                "op": "do",
+                "action": {
+                  "kind": "flip_identity"
+                }
+              },
+              {
+                "op": "do",
+                "action": {
+                  "kind": "gain_credits",
+                  "side": "runner",
+                  "amount": 1
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "flipped",
+        "label": "Unused MU: flip and draw 1",
+        "effect": {
+          "op": "if",
+          "cond": {
+            "op": "and",
+            "conds": [
+              {
+                "op": "identity_flipped"
+              },
+              {
+                "op": "runner_unused_mu_gte",
+                "amount": 1
+              }
+            ]
+          },
+          "then": {
+            "op": "seq",
+            "effects": [
+              {
+                "op": "do",
+                "action": {
+                  "kind": "flip_identity"
+                }
+              },
+              {
+                "op": "do",
+                "action": {
+                  "kind": "draw",
+                  "side": "runner",
+                  "amount": 1
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "runner",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  }
 }

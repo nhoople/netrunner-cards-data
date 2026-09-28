@@ -1922,6 +1922,270 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    # --- v1.12.0: final 10 (82/82) ---
+
+    if cid == "ryo-phoenix-ono-out-of-the-ashes":
+        return base(
+            c,
+            onSuccessfulRun={
+                "op": "do",
+                "action": {"kind": "ryo_phoenix_on_successful_run"},
+            },
+            unsupported=[],
+        )
+
+    if cid == "dewi-subrotoputri-pedagogical-dhalang":
+        return base(
+            c,
+            onSuccessfulRun={
+                "op": "choose",
+                "chooser": "runner",
+                "options": [
+                    {
+                        "id": "unflipped",
+                        "label": "MU full: flip and gain 1[credit]",
+                        "effect": {
+                            "op": "if",
+                            "cond": {
+                                "op": "and",
+                                "conds": [
+                                    {"op": "identity_unflipped"},
+                                    {"op": "runner_mu_full"},
+                                ],
+                            },
+                            "then": seq(
+                                {
+                                    "op": "do",
+                                    "action": {"kind": "flip_identity"},
+                                },
+                                gain("runner", 1),
+                            ),
+                        },
+                    },
+                    {
+                        "id": "flipped",
+                        "label": "Unused MU: flip and draw 1",
+                        "effect": {
+                            "op": "if",
+                            "cond": {
+                                "op": "and",
+                                "conds": [
+                                    {"op": "identity_flipped"},
+                                    {
+                                        "op": "runner_unused_mu_gte",
+                                        "amount": 1,
+                                    },
+                                ],
+                            },
+                            "then": seq(
+                                {
+                                    "op": "do",
+                                    "action": {"kind": "flip_identity"},
+                                },
+                                draw("runner", 1),
+                            ),
+                        },
+                    },
+                    decline("runner"),
+                ],
+            },
+            unsupported=[],
+        )
+
+    if cid == "charm-offensive":
+        return base(
+            c,
+            subtypes=["run"],
+            runEvent={
+                "servers": "archives",
+                "onRunEnd": {
+                    "op": "do",
+                    "action": {"kind": "charm_offensive_trash_rezzed_accessed"},
+                },
+            },
+            unsupported=[],
+        )
+
+    if cid == "gamedragon-pro":
+        return base(
+            c,
+            subtypes=["mod"],
+            onInstall={
+                "op": "do",
+                "action": {"kind": "gamedragon_may_host_on_icebreaker"},
+            },
+            onTurnBegin={
+                "op": "do",
+                "action": {"kind": "gamedragon_may_host_on_icebreaker"},
+            },
+            hostIcebreakerStrengthBonus=1,
+            extendsHostBreakerPumpToRun=True,
+            unsupported=[],
+        )
+
+    if cid == "madani":
+        return base(
+            c,
+            subtypes=["console"],
+            paidAbilities=[
+                {
+                    "id": "madani-host",
+                    "label": (
+                        "[click]: Host any number of programs from your grip "
+                        "faceup (not installed)"
+                    ),
+                    "clickCost": 1,
+                    "creditCost": 0,
+                    "cost": {"clicks": 1},
+                    "windows": ["runner_action_paw"],
+                    "effect": {
+                        "op": "do",
+                        "action": {"kind": "host_all_programs_from_grip"},
+                    },
+                },
+                {
+                    "id": "madani-install",
+                    "label": (
+                        "0[credit]: Install 1 hosted program "
+                        "(paying its install cost)"
+                    ),
+                    "clickCost": 0,
+                    "creditCost": 0,
+                    "cost": {"credits": 0},
+                    "oncePerTurn": True,
+                    "windows": ["runner_action_paw"],
+                    "effect": {
+                        "op": "do",
+                        "action": {"kind": "may_install_one_hosted_program"},
+                    },
+                },
+            ],
+            unsupported=[],
+        )
+
+    # --- v1.12.0 Slice B: shred / bling / detente / bangun / au-co → 82/82 ---
+
+    if cid == "shred":
+        return base(
+            c,
+            subtypes=["run"],
+            runEvent={
+                "servers": "any",
+                "shredPreventFirstEndTheRun": True,
+            },
+            unsupported=[],
+        )
+
+    if cid == "bling":
+        return base(
+            c,
+            subtypes=["console"],
+            muBonus=1,
+            hostedCardsPlayableAsGrip=True,
+            onInstallWithoutSpendingCredits={
+                "op": "choose",
+                "chooser": "runner",
+                "options": [
+                    {
+                        "id": "host",
+                        "label": "Host the top card of your stack faceup",
+                        "effect": {
+                            "op": "do",
+                            "action": {"kind": "host_top_of_stack_on_source"},
+                        },
+                    },
+                    decline("runner"),
+                ],
+            },
+            onDiscardPhaseEnd={
+                "op": "do",
+                "action": {"kind": "trash_all_hosted_cards"},
+            },
+            unsupported=[],
+        )
+
+    if cid == "detente":
+        return base(
+            c,
+            subtypes=["console"],
+            muBonus=1,
+            onFirstSuccessfulHqRunThisTurn={
+                "op": "choose",
+                "chooser": "runner",
+                "options": [
+                    {
+                        "id": "host",
+                        "label": "Host 1 card from HQ at random faceup",
+                        "effect": {
+                            "op": "do",
+                            "action": {"kind": "detente_host_random_hq"},
+                        },
+                    },
+                    decline("runner"),
+                ],
+            },
+            paidAbilities=[
+                {
+                    "id": "detente-return-access",
+                    "label": (
+                        "[click], add 2 hosted cards to HQ: "
+                        "The Runner may access 1 card in HQ at random"
+                    ),
+                    "clickCost": 1,
+                    "creditCost": 0,
+                    "cost": {"clicks": 1},
+                    "windows": ["runner_action_paw", "corp_action_paw"],
+                    "usableByAnyPlayer": True,
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "detente_return_two_hosted_may_access"
+                        },
+                    },
+                }
+            ],
+            unsupported=[],
+        )
+
+    if cid == "au-co-the-gold-standard-in-clones":
+        return base(
+            c,
+            powerCounterOnDamageOrTrashFromHq=True,
+            onTurnBegin={
+                "op": "choose",
+                "chooser": "corp",
+                "options": [
+                    {
+                        "id": "look",
+                        "label": (
+                            "Remove 2 power counters: look at top 3 of R&D, "
+                            "trash 1, add the rest to HQ"
+                        ),
+                        "effect": {
+                            "op": "do",
+                            "action": {"kind": "au_co_remove_2_look_rd"},
+                        },
+                    },
+                    decline("corp"),
+                ],
+            },
+            unsupported=[],
+        )
+
+    if cid == "bangun-when-disaster-strikes":
+        return base(
+            c,
+            mayInstallAgendasFaceup=True,
+            onAccessFaceupInstalledAgenda=seq(
+                {
+                    "op": "do",
+                    "action": {"kind": "meat_damage", "amount": 2},
+                },
+                tags(1),
+            ),
+            unsupported=[],
+        )
+
     # Fail closed — honest unsupported note for the remainder.
     card = base(c)
     card["unsupported"] = [f"Full text not yet mapped to IR: {plain[:240]}"]
@@ -1962,12 +2226,11 @@ def main():
         "nrdbPackCode": PACK,
         "count": EXPECTED,
         "written": EXPECTED,
-        "status": "in-progress",
+        "status": "supported",
         "notes": (
             "Null Signal Elevation (NRDB pack elev) — next constructed set after "
-            "Rebellion Without Rehearsal. Kickoff extract: fail-closed IR; "
-            f"{full} cards fully mapped, {partial} with unsupported notes "
-            "(wave kickoff v1.01.0)."
+            "Rebellion Without Rehearsal. Fully supported: all 82 cards mapped "
+            f"(wave gate v1.12.0; full={full}, partial={partial})."
         ),
         "cards": written,
     }

@@ -5,11 +5,45 @@
   "nrdbCode": "35006",
   "type": "hardware",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: +1[mu] Whenever you install a card without spending credits, you may host the top card of your stack faceup on this hardware. (It is not installed.) You can play or install hosted cards as if they were in your grip. When your discard phase "
-  ],
+  "unsupported": [],
   "subtypes": [
     "console"
   ],
-  "installCost": 2
+  "installCost": 2,
+  "muBonus": 1,
+  "hostedCardsPlayableAsGrip": true,
+  "onInstallWithoutSpendingCredits": {
+    "op": "choose",
+    "chooser": "runner",
+    "options": [
+      {
+        "id": "host",
+        "label": "Host the top card of your stack faceup",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "host_top_of_stack_on_source"
+          }
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "runner",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  },
+  "onDiscardPhaseEnd": {
+    "op": "do",
+    "action": {
+      "kind": "trash_all_hosted_cards"
+    }
+  }
 }

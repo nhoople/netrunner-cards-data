@@ -5,11 +5,15 @@
   "nrdbCode": "35001",
   "type": "identity",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: The first time each turn a run becomes successful after a subroutine resolved during that run, gain 1[credit] and the Corp trashes 1 card from HQ."
-  ],
+  "unsupported": [],
   "subtypes": [
     "g-mod"
   ],
-  "link": 0
+  "link": 0,
+  "onSuccessfulRun": {
+    "op": "do",
+    "action": {
+      "kind": "ryo_phoenix_on_successful_run"
+    }
+  }
 }

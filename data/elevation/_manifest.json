@@ -3,8 +3,8 @@
   "nrdbPackCode": "elev",
   "count": 82,
   "written": 82,
-  "status": "in-progress",
-  "notes": "Null Signal Elevation (NRDB pack elev) — next constructed set after Rebellion Without Rehearsal. Kickoff extract: fail-closed IR; 72 cards fully mapped, 10 with unsupported notes (wave kickoff v1.01.0).",
+  "status": "supported",
+  "notes": "Null Signal Elevation (NRDB pack elev) — next constructed set after Rebellion Without Rehearsal. Fully supported: all 82 cards mapped (wave gate v1.12.0; full=82, partial=0).",
   "cards": [
     "ryo-phoenix-ono-out-of-the-ashes",
     "topan-ormas-leader",

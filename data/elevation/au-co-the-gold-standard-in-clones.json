@@ -5,10 +5,37 @@
   "nrdbCode": "35046",
   "type": "identity",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: Whenever you do damage or trash 1 or more cards from HQ, place 1 power counter on this identity. When your turn begins, you may remove 2 hosted power counters to look at the top 3 cards of R&D. Trash 1 of those cards and add the rest to HQ."
-  ],
+  "unsupported": [],
   "subtypes": [
     "division"
-  ]
+  ],
+  "powerCounterOnDamageOrTrashFromHq": true,
+  "onTurnBegin": {
+    "op": "choose",
+    "chooser": "corp",
+    "options": [
+      {
+        "id": "look",
+        "label": "Remove 2 power counters: look at top 3 of R&D, trash 1, add the rest to HQ",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "au_co_remove_2_look_rd"
+          }
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "corp",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  }
 }
