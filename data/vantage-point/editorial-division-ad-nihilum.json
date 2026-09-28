@@ -5,10 +5,19 @@
   "nrdbCode": "36046",
   "type": "identity",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: The first time each turn you take bad publicity, you may search R&D for 1 non-agenda black ops, gray ops, or liability card and reveal it. (Shuffle R&D after searching it.) Add that card to HQ."
-  ],
+  "unsupported": [],
   "subtypes": [
     "division"
-  ]
+  ],
+  "onFirstBadPublicityTakeEachTurn": {
+    "op": "do",
+    "action": {
+      "kind": "may_search_rd_non_agenda_any_subtype_to_hq",
+      "subtypes": [
+        "black ops",
+        "gray ops",
+        "liability"
+      ]
+    }
+  }
 }

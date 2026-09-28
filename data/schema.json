@@ -340,7 +340,8 @@
             "minimum": 0
           },
           "oncePerTurn": {
-            "type": "boolean"
+            "type": "boolean",
+            "description": "Ability usable at most once per turn (Madani install)."
           },
           "cost": {
             "type": "object",
@@ -454,10 +455,6 @@
           "usableByAnyPlayer": {
             "type": "boolean",
             "description": "Either player may pay and use this ability (Detente)."
-          },
-          "oncePerTurn": {
-            "type": "boolean",
-            "description": "Ability usable at most once per turn (Madani install)."
           },
           "usableFromRunnerScoreArea": {
             "type": "boolean",
@@ -830,38 +827,61 @@
     },
     "onRunBeginMaySpendAgendaCounterRezUpToIceProtectingAttacked": {
       "type": "object",
-      "required": ["maxIce"],
+      "required": [
+        "maxIce"
+      ],
       "additionalProperties": false,
       "properties": {
-        "maxIce": { "type": "integer", "minimum": 1 }
+        "maxIce": {
+          "type": "integer",
+          "minimum": 1
+        }
       },
       "description": "Scored: on run begin may spend agenda counter to rez up to N ice protecting attacked (Lightning Laboratory)."
     },
     "onCorpTurnEndDerezUpToIceProtectingLightningServer": {
       "type": "object",
-      "required": ["maxIce"],
+      "required": [
+        "maxIce"
+      ],
       "additionalProperties": false,
       "properties": {
-        "maxIce": { "type": "integer", "minimum": 1 }
+        "maxIce": {
+          "type": "integer",
+          "minimum": 1
+        }
       },
       "description": "Scored: Corp turn end derez up to N ice protecting Lightning's remembered server."
     },
     "oncePerTurnOnRezIceProtectingThisServerDuringRun": {
       "type": "object",
-      "required": ["mayDerezOtherIceForStrengthBonus"],
+      "required": [
+        "mayDerezOtherIceForStrengthBonus"
+      ],
       "additionalProperties": false,
       "properties": {
-        "mayDerezOtherIceForStrengthBonus": { "type": "integer", "minimum": 1 }
+        "mayDerezOtherIceForStrengthBonus": {
+          "type": "integer",
+          "minimum": 1
+        }
       },
       "description": "Brasília: once/turn when ice rezzed protecting this server during a run, may derez another for +N strength."
     },
     "onRezApOrDestroyerIceDuringRun": {
       "type": "object",
-      "required": ["strengthBonus", "gainEtrUnlessTrashInstalledSub"],
+      "required": [
+        "strengthBonus",
+        "gainEtrUnlessTrashInstalledSub"
+      ],
       "additionalProperties": false,
       "properties": {
-        "strengthBonus": { "type": "integer", "minimum": 1 },
-        "gainEtrUnlessTrashInstalledSub": { "type": "boolean" }
+        "strengthBonus": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "gainEtrUnlessTrashInstalledSub": {
+          "type": "boolean"
+        }
       },
       "description": "Thunderbolt: when rez AP/destroyer ice during a run, +strength and grant ETR-unless-trash sub."
     },
@@ -913,7 +933,11 @@
     },
     "playCostDiscountPerIceProtectingServer": {
       "type": "string",
-      "enum": ["hq", "rd", "archives"],
+      "enum": [
+        "hq",
+        "rd",
+        "archives"
+      ],
       "description": "Reduce this card's play cost by 1 for each piece of ice protecting the named server (Tailgate)."
     },
     "maxRemoteServers": {
@@ -947,15 +971,22 @@
     },
     "identityFlippedHooks": {
       "type": "object",
+      "description": "Corp dual-faced identity: effects while flipped (Nebula).",
+      "additionalProperties": false,
       "properties": {
-        "onFirstOperationPlayThisTurn": { "type": "object" },
-        "onSuccessfulHqOrRdRun": { "type": "object" }
-      },
-      "description": "Dual-sided Corp identity: effects while identityFlipped is true (Nebula)."
+        "onFirstOperationPlayThisTurn": {
+          "type": "object",
+          "description": "First operation played each turn while flipped."
+        },
+        "onSuccessfulHqOrRdRun": {
+          "type": "object",
+          "description": "Successful Runner run on HQ or R&D while flipped."
+        }
+      }
     },
     "onRunnerDiscardOverMaxHand": {
       "type": "object",
-      "description": "Runner identity: when discarding to max hand size (Magdalene)."
+      "description": "Runner identity: Effect IR after discarding to max hand size, with discarded batch available (Magdalene)."
     },
     "onRunnerActionPhaseEnd": {
       "type": "object",
@@ -974,28 +1005,9 @@
       "type": "boolean",
       "description": "Corp operation: play only before the first Corp action completes (Petty Cash)."
     },
-    "identityFlippedHooks": {
-      "type": "object",
-      "description": "Corp dual-faced identity: effects while flipped (Nebula).",
-      "additionalProperties": false,
-      "properties": {
-        "onFirstOperationPlayThisTurn": {
-          "type": "object",
-          "description": "First operation played each turn while flipped."
-        },
-        "onSuccessfulHqOrRdRun": {
-          "type": "object",
-          "description": "Successful Runner run on HQ or R&D while flipped."
-        }
-      }
-    },
     "onCreditsGainedFromAgendaOrOperationAbility": {
       "type": "object",
       "description": "Corp identity: first time each turn credits are gained via an agenda or operation ability (Zwicky)."
-    },
-    "onRunnerDiscardOverMaxHand": {
-      "type": "object",
-      "description": "Runner identity: Effect IR after discarding to max hand size, with discarded batch available (Magdalene)."
     },
     "onFirstAgendaScoredOrStolenThisTurn": {
       "type": "object",
@@ -1008,7 +1020,10 @@
     },
     "onHostedCreditsGte": {
       "type": "object",
-      "required": ["amount", "effect"],
+      "required": [
+        "amount",
+        "effect"
+      ],
       "properties": {
         "amount": {
           "type": "integer",
@@ -1207,11 +1222,19 @@
     },
     "strengthBonusPerHeapSubtype": {
       "type": "object",
-      "required": ["subtype", "bonus"],
+      "required": [
+        "subtype",
+        "bonus"
+      ],
       "additionalProperties": false,
       "properties": {
-        "subtype": { "type": "string", "minLength": 1 },
-        "bonus": { "type": "integer" }
+        "subtype": {
+          "type": "string",
+          "minLength": 1
+        },
+        "bonus": {
+          "type": "integer"
+        }
       },
       "description": "Strength bonus per card of subtype in the heap (Rising Tide)."
     },
@@ -1348,17 +1371,28 @@
     },
     "threatGiveTagsOnRezzedTrash": {
       "type": "object",
-      "required": ["level", "tags"],
+      "required": [
+        "level",
+        "tags"
+      ],
       "additionalProperties": false,
       "properties": {
-        "level": { "type": "integer", "minimum": 1 },
-        "tags": { "type": "integer", "minimum": 1 }
+        "level": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "tags": {
+          "type": "integer",
+          "minimum": 1
+        }
       },
       "description": "Threat N → when the Runner trashes this card while rezzed, give that many tags (Public Access Plaza)."
     },
     "hostedCreditsSpendForInstallSubtypes": {
       "type": "array",
-      "items": { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "description": "When set with hostedCreditsSpendFor install, hosted credits apply only to resources with these subtypes (Open Market)."
     },
     "accessTrashSelfNonAgendaThenDraw": {
@@ -1580,7 +1614,14 @@
     },
     "installServers": {
       "type": "array",
-      "items": { "type": "string", "enum": ["hq", "rd", "archives"] },
+      "items": {
+        "type": "string",
+        "enum": [
+          "hq",
+          "rd",
+          "archives"
+        ]
+      },
       "minItems": 1,
       "description": "Upgrade/agenda may only be installed on these central servers (The Red Room / Flagship)."
     },
@@ -1721,10 +1762,17 @@
     },
     "firstEncounterGainsSubroutine": {
       "type": "object",
-      "required": ["text", "effect"],
+      "required": [
+        "text",
+        "effect"
+      ],
       "properties": {
-        "text": { "type": "string" },
-        "effect": { "type": "object" }
+        "text": {
+          "type": "string"
+        },
+        "effect": {
+          "type": "object"
+        }
       },
       "description": "First encounter each turn, ice gains this subroutine before printed ones for the encounter (Stick and Poke)."
     },
@@ -1797,11 +1845,20 @@
     },
     "powerOnHqRdRunEndIfAccessedGte": {
       "type": "object",
-      "required": ["min", "amount"],
+      "required": [
+        "min",
+        "amount"
+      ],
       "additionalProperties": false,
       "properties": {
-        "min": { "type": "integer", "minimum": 1 },
-        "amount": { "type": "integer", "minimum": 1 }
+        "min": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "amount": {
+          "type": "integer",
+          "minimum": 1
+        }
       },
       "description": "On HQ/R&D run end, if accessed ≥ min cards, place amount power (Amelia Earhart)."
     },
@@ -1951,6 +2008,18 @@
     "onAccessFaceupInstalledAgenda": {
       "type": "object",
       "description": "Bangun: Effect IR when the Runner accesses a faceup installed agenda."
+    },
+    "returnHostedBadPublicityOnUninstall": {
+      "type": "boolean",
+      "description": "When this card would be uninstalled, take all hosted bad publicity (Luana Campos)."
+    },
+    "agendaPointsModifierInRunnerScoreArea": {
+      "type": "integer",
+      "description": "Modify agenda points while in the Runner score area (Let Them Dream −1)."
+    },
+    "onFirstBadPublicityTakeEachTurn": {
+      "type": "object",
+      "description": "First time each turn Corp takes bad publicity, evaluate this effect (Editorial Division)."
     }
   }
 }

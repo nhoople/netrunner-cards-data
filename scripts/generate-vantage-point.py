@@ -1518,10 +1518,52 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    # --- v1.31.0 B-slice ---
+
+    if cid == "luana-campos":
+        return base(
+            c,
+            onTurnBegin={
+                "op": "do",
+                "action": {
+                    "kind": "may_host_bad_publicity_then",
+                    "amount": 1,
+                    "then": seq(gain("corp", 3), draw("corp", 1)),
+                },
+            },
+            returnHostedBadPublicityOnUninstall=True,
+            unsupported=[],
+        )
+
+    if cid == "let-them-dream":
+        return base(
+            c,
+            agendaPointsModifierInRunnerScoreArea=-1,
+            onScore={
+                "op": "do",
+                "action": {
+                    "kind": "may_search_hq_rd_archives_agenda_to_hq_or_rd_bottom",
+                },
+            },
+            unsupported=[],
+        )
+
+    if cid == "editorial-division-ad-nihilum":
+        return base(
+            c,
+            onFirstBadPublicityTakeEachTurn={
+                "op": "do",
+                "action": {
+                    "kind": "may_search_rd_non_agenda_any_subtype_to_hq",
+                    "subtypes": ["black ops", "gray ops", "liability"],
+                },
+            },
+            unsupported=[],
+        )
+
     # Fail closed — honest unsupported note for the remainder.
-    # Remaining stubs: Nurse Hạnh / Editorial / Perfect Recall / Let Them Dream /
-    # Luana / Word on the Street / Beta Build / Read-Write Share / Hackerspace /
-    # Méliès U.
+    # Remaining stubs: Nurse Hạnh / Perfect Recall / Word on the Street /
+    # Beta Build / Read-Write Share / Hackerspace / Méliès U.
     card = base(c)
     card["unsupported"] = [f"Full text not yet mapped to IR: {plain[:240]}"]
     return card
@@ -1575,7 +1617,7 @@ def main():
             "Null Signal Vantage Point (NRDB pack vp) — next constructed set after "
             "Elevation. Fail-closed IR; "
             f"{full} cards fully mapped, {partial} with unsupported notes "
-            f"(wave v1.30.0 B-slice)."
+            f"(wave v1.31.0 B-slice)."
         )
         manifest["status"] = "in-progress"
     (OUT / "_manifest.json").write_text(

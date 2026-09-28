@@ -5,12 +5,17 @@
   "nrdbCode": "36066",
   "type": "agenda",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: When you score this agenda, you may search HQ, R&D, or Archives for 1 agenda and reveal it. (Shuffle R&D after searching it.) Add that agenda to HQ or the bottom of R&D. While this agenda is in the Runner’s score area, it is worth 1 less ag"
-  ],
+  "unsupported": [],
   "subtypes": [
     "initiative"
   ],
   "advancementRequirement": 4,
-  "agendaPoints": 2
+  "agendaPoints": 2,
+  "agendaPointsModifierInRunnerScoreArea": -1,
+  "onScore": {
+    "op": "do",
+    "action": {
+      "kind": "may_search_hq_rd_archives_agenda_to_hq_or_rd_bottom"
+    }
+  }
 }
