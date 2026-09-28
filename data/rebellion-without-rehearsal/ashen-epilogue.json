@@ -5,8 +5,38 @@
   "nrdbCode": "34094",
   "type": "event",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Shuffle your grip and heap into your stack, then remove the top 5 cards of your stack from the game. Draw 5 cards. Remove this event from the game."
-  ],
-  "playCost": 5
+  "unsupported": [],
+  "playCost": 5,
+  "onPlay": {
+    "op": "seq",
+    "effects": [
+      {
+        "op": "do",
+        "action": {
+          "kind": "shuffle_grip_and_heap_into_stack"
+        }
+      },
+      {
+        "op": "do",
+        "action": {
+          "kind": "rfg_top_of_stack",
+          "amount": 5
+        }
+      },
+      {
+        "op": "do",
+        "action": {
+          "kind": "draw",
+          "side": "runner",
+          "amount": 5
+        }
+      },
+      {
+        "op": "do",
+        "action": {
+          "kind": "rfg_self"
+        }
+      }
+    ]
+  }
 }

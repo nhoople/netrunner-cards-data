@@ -5,11 +5,36 @@
   "nrdbCode": "34086",
   "type": "event",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Place 3 power counters on this event, then run any server. Hosted power counter: Host 1 installed trojan program on a piece of ice protecting the attacked server."
-  ],
+  "unsupported": [],
   "subtypes": [
     "run"
   ],
-  "playCost": 0
+  "playCost": 0,
+  "powerCountersOnPlay": 3,
+  "runEvent": {
+    "servers": "any"
+  },
+  "paidAbilities": [
+    {
+      "id": "spree-host",
+      "label": "Hosted power: host installed trojan on attacked ice",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "powerCounters": 1
+      },
+      "windows": [
+        "approach_paw",
+        "encounter_paw",
+        "approach_server_paw"
+      ],
+      "requireDuringRun": true,
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "host_installed_trojan_on_attacked_ice"
+        }
+      }
+    }
+  ]
 }

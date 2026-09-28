@@ -1351,6 +1351,20 @@
       "type": "object",
       "description": "Effect IR whenever 1 or more tags are removed while this card is installed (Valentina)."
     },
+    "onRunnerTurnEnd": {
+      "type": "object",
+      "description": "Effect IR at the end of the Runner's turn while installed (Amanuensis)."
+    },
+    "powerCounterOnAnyCardRez": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Place this many power counters whenever any card is rezzed, including this one (Working Prototype)."
+    },
+    "powerCountersOnPlay": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Place this many power counters when this event is played (Spree)."
+    },
     "chooseBreakerSubtypeOnInstall": {
       "type": "boolean"
     },

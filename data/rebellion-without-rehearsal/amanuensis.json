@@ -5,11 +5,65 @@
   "nrdbCode": "34069",
   "type": "hardware",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: +1[mu] When your turn ends, place 1 power counter on this hardware if you are tagged. Whenever you remove 1 or more tags, you may remove 1 hosted power counter to draw 2 cards. Limit 1 console per player."
-  ],
+  "unsupported": [],
   "subtypes": [
     "console"
   ],
-  "installCost": 2
+  "installCost": 2,
+  "muBonus": 1,
+  "onRunnerTurnEnd": {
+    "op": "if",
+    "cond": {
+      "op": "runner_tagged"
+    },
+    "then": {
+      "op": "do",
+      "action": {
+        "kind": "add_power_counter",
+        "amount": 1
+      }
+    }
+  },
+  "onRemoveTags": {
+    "op": "choose",
+    "chooser": "runner",
+    "options": [
+      {
+        "id": "draw",
+        "label": "Remove 1 power: draw 2",
+        "effect": {
+          "op": "seq",
+          "effects": [
+            {
+              "op": "do",
+              "action": {
+                "kind": "remove_power_counter",
+                "amount": 1
+              }
+            },
+            {
+              "op": "do",
+              "action": {
+                "kind": "draw",
+                "side": "runner",
+                "amount": 2
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "runner",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  }
 }

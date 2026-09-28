@@ -5,12 +5,85 @@
   "nrdbCode": "34119",
   "type": "operation",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: Draw 2 cards. You may play 1 non-terminal operation from HQ. Threat 3 → If this operation is the first mandate you played this turn, you may pay 3[credit] to gain [click]. (This ability is active if any player has 3 or more agenda points.)"
-  ],
+  "unsupported": [],
   "subtypes": [
     "mandate"
   ],
   "playCost": 1,
-  "trashCost": 2
+  "trashCost": 2,
+  "onPlay": {
+    "op": "seq",
+    "effects": [
+      {
+        "op": "do",
+        "action": {
+          "kind": "draw",
+          "side": "corp",
+          "amount": 2
+        }
+      },
+      {
+        "op": "do",
+        "action": {
+          "kind": "may_play_nonterminal_operation_from_hq"
+        }
+      },
+      {
+        "op": "if",
+        "cond": {
+          "op": "threat",
+          "level": 3
+        },
+        "then": {
+          "op": "choose",
+          "chooser": "corp",
+          "options": [
+            {
+              "id": "pay",
+              "label": "Pay 3¢: gain [click] (first mandate)",
+              "effect": {
+                "op": "if",
+                "cond": {
+                  "op": "first_mandate_this_turn"
+                },
+                "then": {
+                  "op": "seq",
+                  "effects": [
+                    {
+                      "op": "do",
+                      "action": {
+                        "kind": "lose_credits",
+                        "side": "corp",
+                        "amount": 3
+                      }
+                    },
+                    {
+                      "op": "do",
+                      "action": {
+                        "kind": "gain_clicks",
+                        "side": "corp",
+                        "amount": 1
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "id": "decline",
+              "label": "Decline",
+              "effect": {
+                "op": "do",
+                "action": {
+                  "kind": "gain_credits",
+                  "side": "corp",
+                  "amount": 0
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
 }
