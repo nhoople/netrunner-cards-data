@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
-"""Generate The Automata Initiative card JSON from NRDB pack `tai`.
+"""Generate The Automata Initiative card JSON from pinned pack `tai`.
 
-Requires /tmp/nrdb-cards.json (curl https://netrunnerdb.com/api/2.0/public/cards).
+Catalog source: Null-Signal-Games/netrunner-cards-json (see data/nrdb-catalog-pin.json).
+Fetch with: python3 scripts/nrdb_catalog.py fetch tai
 
 Hand-mapped Effect IR only where existing primitives fully cover the card;
 everything else lists honest unsupported notes — never invent IR.
@@ -15,9 +16,10 @@ import re
 import unicodedata
 from pathlib import Path
 
+from nrdb_catalog import load_pack_cards
+
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "data" / "the-automata-initiative"
-NRDB = Path("/tmp/nrdb-cards.json")
 WAVE = "the-automata-initiative"
 PACK = "tai"
 EXPECTED = 65
@@ -2064,9 +2066,8 @@ def map_card(c: dict) -> dict:
 
 
 def main():
-    data = json.loads(NRDB.read_text())["data"]
     pack = sorted(
-        [c for c in data if c.get("pack_code") == PACK],
+        load_pack_cards(PACK),
         key=lambda c: c.get("position", 0),
     )
     assert len(pack) == EXPECTED, len(pack)

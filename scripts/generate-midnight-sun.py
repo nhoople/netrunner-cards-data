@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
-"""Generate Midnight Sun card JSON from NRDB pack `ms`.
+"""Generate Midnight Sun card JSON from pinned pack `ms`.
 
-Requires /tmp/nrdb-cards.json (curl https://netrunnerdb.com/api/2.0/public/cards).
+Catalog source: Null-Signal-Games/netrunner-cards-json (see data/nrdb-catalog-pin.json).
+Fetch with: python3 scripts/nrdb_catalog.py fetch ms msbp
 
 Midnight Sun Booster Pack (`msbp`) titles all reprint in `ms` — absorb under
 midnight-sun/; do not emit a separate msbp wave.
@@ -19,9 +20,10 @@ import re
 import unicodedata
 from pathlib import Path
 
+from nrdb_catalog import load_pack_cards
+
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "data" / "midnight-sun"
-NRDB = Path("/tmp/nrdb-cards.json")
 
 # Titles that also appear in msbp (primary metadata is the ms printing).
 MSBP_ABSORBED = {
@@ -1375,14 +1377,13 @@ def map_card(c: dict) -> dict:
 
 
 def main():
-    data = json.loads(NRDB.read_text())["data"]
     ms = sorted(
-        [c for c in data if c.get("pack_code") == "ms"],
+        load_pack_cards("ms"),
         key=lambda c: c.get("position", 0),
     )
     assert len(ms) == 65, len(ms)
 
-    msbp = [c for c in data if c.get("pack_code") == "msbp"]
+    msbp = load_pack_cards("msbp")
     assert len(msbp) == 7, len(msbp)
     msbp_slugs = {slugify(c["title"]) for c in msbp}
     assert msbp_slugs == MSBP_ABSORBED, (msbp_slugs, MSBP_ABSORBED)

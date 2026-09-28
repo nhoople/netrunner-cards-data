@@ -7,8 +7,11 @@ R. Talsorian Games, or Wizards of the Coast.
 
 Card titles, types, subtypes, costs, and printed text are reference material
 from Null Signal Games Netrunner releases (including System Gateway and System
-Update 2021). Structured Effect IR and pool metadata are hand-authored for the
-nhoople rules engine and are not official rulings.
+Update 2021). Pack-level catalog extracts for generate scripts are taken from a
+pinned commit of Null-Signal-Games/netrunner-cards-json (see
+data/nrdb-catalog-pin.json), not from the live NetrunnerDB public API.
+Structured Effect IR and pool metadata are hand-authored for the nhoople rules
+engine and are not official rulings.
 
 Netrunner is a trademark of R. Talsorian Games, Inc. Android is a trademark
 of and copyright Fantasy Flight Games.
