@@ -1884,6 +1884,10 @@
       "minimum": 1,
       "description": "The first time each turn you breach HQ, access +N additional cards (Docklands Pass; CR §7.4.2)."
     },
+    "preventFirstTagThisTurn": {
+      "type": "boolean",
+      "description": "The first time each turn you would take a tag, prevent 1 tag (Jesminder-class; also blocks nested tag costs per CR §1.16.1b)."
+    },
     "threatBasicTrashAdditionalCostTrashHq": {
       "type": "integer",
       "minimum": 1,
