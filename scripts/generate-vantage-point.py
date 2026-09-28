@@ -1561,9 +1561,67 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    # --- v1.32.0 B-slice ---
+
+    if cid == "nurse-hanh":
+        return base(
+            c,
+            onArchivesFacedownTurnedFaceupGte={
+                "min": 2,
+                "effect": draw("runner", 2),
+            },
+            unsupported=[],
+        )
+
+    if cid == "beta-build":
+        return base(
+            c,
+            onPlay={
+                "op": "do",
+                "action": {
+                    "kind": "search_stack_non_virus_program_install_ignore_costs_track",
+                },
+            },
+            runEvent={
+                "servers": "any",
+                "onRunEnd": {
+                    "op": "do",
+                    "action": {
+                        "kind": "return_tracked_install_to_stack_top_if_installed",
+                    },
+                },
+            },
+            unsupported=[],
+        )
+
+    if cid == "perfect-recall":
+        return base(
+            c,
+            powerCountersOnRez=1,
+            powerCounterOnAgendaScoredOrStolenFromThisServer=1,
+            paidAbilities=[
+                {
+                    "id": "perfect-recall-reveal",
+                    "label": "Hosted power: Reveal HQ card — Runner cannot steal/trash copies this run",
+                    "clickCost": 0,
+                    "creditCost": 0,
+                    "cost": {"powerCounters": 1},
+                    "windows": ["approach_paw", "encounter_paw", "approach_server_paw"],
+                    "requiresActiveRun": True,
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "reveal_hq_forbid_steal_trash_copies_this_run",
+                        },
+                    },
+                }
+            ],
+            unsupported=[],
+        )
+
     # Fail closed — honest unsupported note for the remainder.
-    # Remaining stubs: Nurse Hạnh / Perfect Recall / Word on the Street /
-    # Beta Build / Read-Write Share / Hackerspace / Méliès U.
+    # Remaining stubs: Word on the Street / Read-Write Share / Hackerspace /
+    # Méliès U.
     card = base(c)
     card["unsupported"] = [f"Full text not yet mapped to IR: {plain[:240]}"]
     return card
@@ -1617,7 +1675,7 @@ def main():
             "Null Signal Vantage Point (NRDB pack vp) — next constructed set after "
             "Elevation. Fail-closed IR; "
             f"{full} cards fully mapped, {partial} with unsupported notes "
-            f"(wave v1.31.0 B-slice)."
+            f"(wave v1.32.0 B-slice)."
         )
         manifest["status"] = "in-progress"
     (OUT / "_manifest.json").write_text(
