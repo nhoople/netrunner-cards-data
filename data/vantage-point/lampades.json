@@ -5,9 +5,9 @@
   "nrdbCode": "36005",
   "type": "program",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: When you install this program, place 3 power counters on it. Access → Hosted power counter, pay the printed rez or play cost of the card you are accessing: Trash that card. Spend credits only from stealth cards to use this ability."
-  ],
+  "unsupported": [],
   "installCost": 1,
-  "memoryCost": 1
+  "memoryCost": 1,
+  "powerCountersOnInstall": 3,
+  "accessTrashPayingPrintedCostFromStealth": true
 }

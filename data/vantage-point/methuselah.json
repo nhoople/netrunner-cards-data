@@ -5,12 +5,19 @@
   "nrdbCode": "36020",
   "type": "hardware",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: +1[mu] Whenever a run begins, you may trash 1 piece of hardware from your grip to place 2[credit] on this hardware. You can spend hosted credits during runs. Limit 1 console per player."
-  ],
+  "unsupported": [],
   "subtypes": [
     "console",
     "stealth"
   ],
-  "installCost": 4
+  "installCost": 4,
+  "muBonus": 1,
+  "spendHostedCreditsDuringRuns": true,
+  "onRunBegin": {
+    "op": "do",
+    "action": {
+      "kind": "may_trash_hardware_from_grip_place_hosted_credits",
+      "amount": 2
+    }
+  }
 }

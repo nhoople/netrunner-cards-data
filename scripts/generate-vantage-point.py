@@ -1423,9 +1423,58 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    # --- v1.29.0 B-slice (stealth cluster foundation) ---
+
+    if cid == "corsair":
+        return breaker_card(
+            c,
+            "barrier",
+            0,
+            1,
+            paidAbilities=[
+                {
+                    "id": "corsair-weaken",
+                    "label": "1[credit] from stealth: barrier gets −3 strength",
+                    "clickCost": 0,
+                    "creditCost": 1,
+                    "cost": {"credits": 1, "creditsFromStealthOnly": True},
+                    "windows": ["encounter_paw"],
+                    "requireEncounterSubtype": "barrier",
+                    "effect": {
+                        "op": "do",
+                        "action": {"kind": "weaken_ice", "amount": 3},
+                    },
+                }
+            ],
+            unsupported=[],
+        )
+
+    if cid == "methuselah":
+        return base(
+            c,
+            muBonus=1,
+            spendHostedCreditsDuringRuns=True,
+            onRunBegin={
+                "op": "do",
+                "action": {
+                    "kind": "may_trash_hardware_from_grip_place_hosted_credits",
+                    "amount": 2,
+                },
+            },
+            unsupported=[],
+        )
+
+    if cid == "lampades":
+        return base(
+            c,
+            powerCountersOnInstall=3,
+            accessTrashPayingPrintedCostFromStealth=True,
+            unsupported=[],
+        )
+
     # Fail closed — honest unsupported note for the remainder.
-    # Stealth cluster (Corsair / Lampades / Baker / Aircheck / Methuselah)
-    # and remaining host/identity stubs stay unsupported until IR exists.
+    # Remaining stealth (Baker / Aircheck) plus host/identity stubs stay
+    # unsupported until IR exists.
     card = base(c)
     card["unsupported"] = [f"Full text not yet mapped to IR: {plain[:240]}"]
     return card
@@ -1479,7 +1528,7 @@ def main():
             "Null Signal Vantage Point (NRDB pack vp) — next constructed set after "
             "Elevation. Fail-closed IR; "
             f"{full} cards fully mapped, {partial} with unsupported notes "
-            f"(wave v1.27.0 B-slice)."
+            f"(wave v1.29.0 B-slice)."
         )
         manifest["status"] = "in-progress"
     (OUT / "_manifest.json").write_text(

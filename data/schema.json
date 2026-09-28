@@ -89,6 +89,11 @@
           "type": "boolean",
           "description": "After passing Archives ice, change attacked server to HQ and approach HQ (Maintenance Access)."
         },
+        "mayRedirectApproachArchivesToHqOrRdPayingStealthCredits": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "After passing Archives ice, Runner may pay this many stealth credits to change attacked server to HQ or R&D and approach that server (Baker)."
+        },
         "shredPreventFirstEndTheRun": {
           "type": "boolean",
           "description": "Shred: first Corp end-the-run is prevented unless Corp reveals and trashes X random HQ (X = root size)."
@@ -343,6 +348,10 @@
               "credits": {
                 "type": "integer",
                 "minimum": 0
+              },
+              "creditsFromStealthOnly": {
+                "type": "boolean",
+                "description": "When true with credits, pay those credits only from hosted credits on stealth cards (Corsair / Lampades / Baker)."
               },
               "recurringCredits": {
                 "type": "integer",
@@ -1696,6 +1705,10 @@
     "spendHostedCreditsDuringRuns": {
       "type": "boolean",
       "description": "Hosted credits on this card may be spent during runs (Touchstone / stealth pools)."
+    },
+    "accessTrashPayingPrintedCostFromStealth": {
+      "type": "boolean",
+      "description": "Access → spend 1 hosted power counter and pay the accessed card's printed rez or play cost from stealth credits to trash it (Lampades)."
     },
     "maxAccessOtherThanSelf": {
       "type": "integer",

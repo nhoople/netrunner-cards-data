@@ -5,14 +5,40 @@
   "nrdbCode": "36004",
   "type": "program",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Interface → 1[credit]: Break 1 barrier subroutine. 1[credit]: The barrier you are encountering gets −3 strength for the remainder of this encounter. Spend credits only from stealth cards to use this ability."
-  ],
+  "unsupported": [],
   "subtypes": [
     "icebreaker",
     "fracter"
   ],
   "installCost": 3,
   "strength": 0,
-  "memoryCost": 1
+  "memoryCost": 1,
+  "breaker": {
+    "breaksSubtype": "barrier",
+    "strength": 0,
+    "breakCredits": 1
+  },
+  "paidAbilities": [
+    {
+      "id": "corsair-weaken",
+      "label": "1[credit] from stealth: barrier gets −3 strength",
+      "clickCost": 0,
+      "creditCost": 1,
+      "cost": {
+        "credits": 1,
+        "creditsFromStealthOnly": true
+      },
+      "windows": [
+        "encounter_paw"
+      ],
+      "requireEncounterSubtype": "barrier",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "weaken_ice",
+          "amount": 3
+        }
+      }
+    }
+  ]
 }
