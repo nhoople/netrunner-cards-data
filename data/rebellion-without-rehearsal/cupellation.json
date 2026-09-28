@@ -5,9 +5,59 @@
   "nrdbCode": "34080",
   "type": "program",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Limit 1 hosted card. Access → 1[credit]: Host the non-agenda card you are accessing faceup on this program. (If it was installed, it becomes uninstalled.) Whenever you breach HQ, if this program has a hosted Corp card, you may pay 1[credit]"
-  ],
+  "unsupported": [],
   "installCost": 1,
-  "memoryCost": 1
+  "memoryCost": 1,
+  "maxHostedCards": 1,
+  "accessHostNonAgendaFaceup": {
+    "creditCost": 1
+  },
+  "onBreachHqIfHostingCorpCard": {
+    "op": "choose",
+    "chooser": "runner",
+    "options": [
+      {
+        "id": "bonus",
+        "label": "Pay 1¢ and trash Cupellation: access 2 additional cards",
+        "effect": {
+          "op": "seq",
+          "effects": [
+            {
+              "op": "do",
+              "action": {
+                "kind": "lose_credits",
+                "side": "runner",
+                "amount": 1
+              }
+            },
+            {
+              "op": "do",
+              "action": {
+                "kind": "trash_self"
+              }
+            },
+            {
+              "op": "do",
+              "action": {
+                "kind": "bonus_access",
+                "amount": 2
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "runner",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  }
 }
