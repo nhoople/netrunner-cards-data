@@ -1119,6 +1119,59 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    # --- v1.24.0 B-slice ---
+
+    if cid == "lethe":
+        return base(
+            c,
+            onBypass=tags(1),
+            onFullyBreak=tags(1),
+            subroutines=[
+                {
+                    "id": "lethe-1",
+                    "text": "You may add 1 card from Archives to the top or bottom of R&D.",
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "may_add_archives_card_to_rd_top_or_bottom",
+                        },
+                    },
+                },
+                {
+                    "id": "lethe-2",
+                    "text": "Add 1 installed Runner card to the grip.",
+                    "effect": {
+                        "op": "do",
+                        "action": {"kind": "add_installed_runner_to_grip"},
+                    },
+                },
+            ],
+            unsupported=[],
+        )
+
+    if cid == "reanimation-protocol":
+        return base(
+            c,
+            onPlay={
+                "op": "do",
+                "action": {
+                    "kind": "install_and_rez_ice_from_archives",
+                    "totalDiscount": 10,
+                    "badPublicityIfNotSubtype": "liability",
+                },
+            },
+            unsupported=[],
+        )
+
+    if cid == "the-tungsten-tailor":
+        return base(
+            c,
+            muBonus=1,
+            allIceStrengthPenalty=1,
+            gainCreditOnBreakIceStrengthLteOncePerTurn=0,
+            unsupported=[],
+        )
+
     # Fail closed — honest unsupported note for the remainder.
     # Corsair / Lampades need stealth-credit spend; Cultivate is a
     # look/trash/HQ/arrange composite not yet in IR.
@@ -1175,7 +1228,7 @@ def main():
             "Null Signal Vantage Point (NRDB pack vp) — next constructed set after "
             "Elevation. Fail-closed IR; "
             f"{full} cards fully mapped, {partial} with unsupported notes "
-            f"(wave v1.23.0 B-slice)."
+            f"(wave v1.24.0 B-slice)."
         )
         manifest["status"] = "in-progress"
     (OUT / "_manifest.json").write_text(

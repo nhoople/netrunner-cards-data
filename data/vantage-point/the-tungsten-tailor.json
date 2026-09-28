@@ -5,8 +5,9 @@
   "nrdbCode": "36003",
   "type": "hardware",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Each piece of ice gets −1 strength. The first time each turn you break a subroutine on a piece of ice with 0 or less strength, gain 1[credit]."
-  ],
-  "installCost": 3
+  "unsupported": [],
+  "installCost": 3,
+  "muBonus": 1,
+  "allIceStrengthPenalty": 1,
+  "gainCreditOnBreakIceStrengthLteOncePerTurn": 0
 }

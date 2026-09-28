@@ -5,11 +5,17 @@
   "nrdbCode": "36062",
   "type": "operation",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: Install and rez 1 piece of ice from Archives, paying a total of 10[credit] less. If you rezzed a piece of non-liability ice this way, take 1 bad publicity."
-  ],
+  "unsupported": [],
   "subtypes": [
     "liability"
   ],
-  "playCost": 2
+  "playCost": 2,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "install_and_rez_ice_from_archives",
+      "totalDiscount": 10,
+      "badPublicityIfNotSubtype": "liability"
+    }
+  }
 }

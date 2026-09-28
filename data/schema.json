@@ -1548,6 +1548,15 @@
       "type": "object",
       "description": "Effect IR when an encounter with this ice ends (Knowledge Seeker)."
     },
+    "allIceStrengthPenalty": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "While installed, each piece of ice gets −N strength (The Tungsten Tailor)."
+    },
+    "gainCreditOnBreakIceStrengthLteOncePerTurn": {
+      "type": "integer",
+      "description": "First time each turn you break a subroutine on ice with effective strength ≤ this value, gain 1¢ (The Tungsten Tailor; typically 0)."
+    },
     "canAdvance": {
       "type": "boolean"
     },

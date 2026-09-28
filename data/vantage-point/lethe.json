@@ -5,14 +5,48 @@
   "nrdbCode": "36051",
   "type": "ice",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: Whenever the Runner bypasses or fully breaks this ice, give them 1 tag. [subroutine] You may add 1 card from Archives to the top or bottom of R&D. [subroutine] Add 1 installed Runner card to the grip."
-  ],
+  "unsupported": [],
   "subtypes": [
     "sentry",
     "observer"
   ],
   "installCost": 9,
   "rezCost": 9,
-  "strength": 6
+  "strength": 6,
+  "onBypass": {
+    "op": "do",
+    "action": {
+      "kind": "give_tags",
+      "amount": 1
+    }
+  },
+  "onFullyBreak": {
+    "op": "do",
+    "action": {
+      "kind": "give_tags",
+      "amount": 1
+    }
+  },
+  "subroutines": [
+    {
+      "id": "lethe-1",
+      "text": "You may add 1 card from Archives to the top or bottom of R&D.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "may_add_archives_card_to_rd_top_or_bottom"
+        }
+      }
+    },
+    {
+      "id": "lethe-2",
+      "text": "Add 1 installed Runner card to the grip.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "add_installed_runner_to_grip"
+        }
+      }
+    }
+  ]
 }
