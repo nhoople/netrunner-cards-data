@@ -5,11 +5,21 @@
   "nrdbCode": "35066",
   "type": "operation",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: As an additional cost to play this operation, remove X tags. Install 1 agenda from the Runner’s score area with a printed agenda point value equal to X. If the Runner is still tagged, place 1 advancement counter on that agenda."
-  ],
+  "unsupported": [],
   "subtypes": [
     "gray ops"
   ],
-  "trashCost": 5
+  "trashCost": 5,
+  "playAdditionalCost": {
+    "op": "do",
+    "action": {
+      "kind": "ip_enforcement_remove_tags"
+    }
+  },
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "ip_enforcement_install_from_runner_score"
+    }
+  }
 }

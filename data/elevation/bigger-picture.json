@@ -5,11 +5,37 @@
   "nrdbCode": "35065",
   "type": "operation",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: Play only if the Runner is tagged. Resolve 1 of the following:Give the Runner 1 tag.Remove any number of tags. The Runner loses 5[credit] for each tag removed this way. Gain credits equal to the number of credits the Runner lost."
-  ],
+  "unsupported": [],
   "subtypes": [
     "gray ops"
   ],
-  "playCost": 0
+  "playCost": 0,
+  "playRequiresTagged": true,
+  "onPlay": {
+    "op": "choose",
+    "chooser": "corp",
+    "options": [
+      {
+        "id": "tag",
+        "label": "Give the Runner 1 tag",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "give_tags",
+            "amount": 1
+          }
+        }
+      },
+      {
+        "id": "remove",
+        "label": "Remove tags (Runner loses 5[credit] each; you gain that much)",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "bigger_picture_remove_tags"
+          }
+        }
+      }
+    ]
+  }
 }

@@ -1797,6 +1797,131 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    # --- v1.11.0: Mitra / Bigger Picture / Aggressive / Plutus / IP / Maintenance ---
+
+    if cid == "mitra-aman":
+        return base(
+            c,
+            onApproachIce={
+                "op": "choose",
+                "chooser": "corp",
+                "options": [
+                    decline("corp"),
+                    {
+                        "id": "activate",
+                        "label": "Trash this upgrade: gain 3[credit] and may swap approached ice",
+                        "effect": {
+                            "op": "do",
+                            "action": {"kind": "mitra_aman_approach_ice"},
+                        },
+                    },
+                ],
+            },
+            unsupported=[],
+        )
+
+    if cid == "bigger-picture":
+        return base(
+            c,
+            playRequiresTagged=True,
+            onPlay={
+                "op": "choose",
+                "chooser": "corp",
+                "options": [
+                    {
+                        "id": "tag",
+                        "label": "Give the Runner 1 tag",
+                        "effect": tags(1),
+                    },
+                    {
+                        "id": "remove",
+                        "label": "Remove tags (Runner loses 5[credit] each; you gain that much)",
+                        "effect": {
+                            "op": "do",
+                            "action": {"kind": "bigger_picture_remove_tags"},
+                        },
+                    },
+                ],
+            },
+            unsupported=[],
+        )
+
+    if cid == "aggressive-trendsetting":
+        return base(
+            c,
+            onFirstCorpCardTrashEachTurn={
+                "op": "choose",
+                "chooser": "runner",
+                "options": [
+                    {
+                        "id": "spend-click",
+                        "label": "Spend [click]",
+                        "effect": {
+                            "op": "do",
+                            "action": {
+                                "kind": "lose_clicks",
+                                "side": "runner",
+                                "amount": 1,
+                            },
+                        },
+                    },
+                    {
+                        "id": "corp-click",
+                        "label": "Decline — Corp gets +1 allotted click next turn",
+                        "effect": {
+                            "op": "do",
+                            "action": {
+                                "kind": "allotted_clicks_next_turn",
+                                "side": "corp",
+                                "delta": 1,
+                            },
+                        },
+                    },
+                ],
+            },
+            unsupported=[],
+        )
+
+    if cid == "plutus":
+        return base(
+            c,
+            rezAdditionalCost={
+                "op": "do",
+                "action": {"kind": "plutus_pay_rez_additional_cost"},
+            },
+            onTurnBegin={
+                "op": "do",
+                "action": {"kind": "plutus_may_play_transaction_from_archives"},
+            },
+            unsupported=[],
+        )
+
+    if cid == "ip-enforcement":
+        return base(
+            c,
+            playAdditionalCost={
+                "op": "do",
+                "action": {"kind": "ip_enforcement_remove_tags"},
+            },
+            onPlay={
+                "op": "do",
+                "action": {"kind": "ip_enforcement_install_from_runner_score"},
+            },
+            unsupported=[],
+        )
+
+    if cid == "maintenance-access":
+        return base(
+            c,
+            playAdditionalClick=True,
+            subtypes=["run", "double"],
+            runEvent={
+                "servers": "archives",
+                "redirectApproachArchivesToHq": True,
+            },
+            unsupported=[],
+        )
+
     # Fail closed — honest unsupported note for the remainder.
     card = base(c)
     card["unsupported"] = [f"Full text not yet mapped to IR: {plain[:240]}"]

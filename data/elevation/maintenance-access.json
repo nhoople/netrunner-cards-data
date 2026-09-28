@@ -5,12 +5,15 @@
   "nrdbCode": "35016",
   "type": "event",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: As an additional cost to play this event, spend [click]. Run Archives. When you would approach Archives (after passing all ice), instead change the attacked server to HQ and approach HQ."
-  ],
+  "unsupported": [],
   "subtypes": [
     "run",
     "double"
   ],
-  "playCost": 0
+  "playCost": 0,
+  "playAdditionalClick": true,
+  "runEvent": {
+    "servers": "archives",
+    "redirectApproachArchivesToHq": true
+  }
 }

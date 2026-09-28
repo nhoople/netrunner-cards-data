@@ -5,12 +5,40 @@
   "nrdbCode": "35037",
   "type": "agenda",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: The first time the Runner trashes an installed Corp card during each of their turns, they may spend [click]. If they do not, you get +1 allotted [click] for your next turn."
-  ],
+  "unsupported": [],
   "subtypes": [
     "initiative"
   ],
   "advancementRequirement": 3,
-  "agendaPoints": 1
+  "agendaPoints": 1,
+  "onFirstCorpCardTrashEachTurn": {
+    "op": "choose",
+    "chooser": "runner",
+    "options": [
+      {
+        "id": "spend-click",
+        "label": "Spend [click]",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "lose_clicks",
+            "side": "runner",
+            "amount": 1
+          }
+        }
+      },
+      {
+        "id": "corp-click",
+        "label": "Decline — Corp gets +1 allotted click next turn",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "allotted_clicks_next_turn",
+            "side": "corp",
+            "delta": 1
+          }
+        }
+      }
+    ]
+  }
 }
