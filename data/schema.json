@@ -176,10 +176,18 @@
     "advancementRequirementReductionPerBadPublicity": {
       "type": "object",
       "description": "Reduce this agenda's advancement requirement by per × Corp bad publicity, counting at most max BP (Regulatory Capture).",
-      "required": ["per"],
+      "required": [
+        "per"
+      ],
       "properties": {
-        "per": { "type": "integer", "minimum": 0 },
-        "max": { "type": "integer", "minimum": 0 }
+        "per": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "max": {
+          "type": "integer",
+          "minimum": 0
+        }
       }
     },
     "recurringCreditsMax": {
@@ -256,10 +264,18 @@
         },
         "breakCreditsDiscountPerInstalledSubtype": {
           "type": "object",
-          "required": ["subtype", "amount"],
+          "required": [
+            "subtype",
+            "amount"
+          ],
           "properties": {
-            "subtype": { "type": "string" },
-            "amount": { "type": "integer", "minimum": 0 }
+            "subtype": {
+              "type": "string"
+            },
+            "amount": {
+              "type": "integer",
+              "minimum": 0
+            }
           },
           "description": "Reduce breakCredits by amount × count of installed cards with subtype (Tremolo: cybernetic)."
         },
@@ -480,7 +496,10 @@
       "type": "array",
       "items": {
         "type": "string",
-        "enum": ["install", "trash"]
+        "enum": [
+          "install",
+          "trash"
+        ]
       },
       "description": "Spend non-recurring hosted credits for these purposes (Cybersand install; Bahia Bands trash)."
     },
@@ -491,7 +510,10 @@
     },
     "rootRezCostReductionThisServerIfThreat": {
       "type": "object",
-      "required": ["level", "amount"],
+      "required": [
+        "level",
+        "amount"
+      ],
       "additionalProperties": false,
       "properties": {
         "level": {
@@ -742,7 +764,10 @@
     },
     "onPowerCountersGte": {
       "type": "object",
-      "required": ["amount", "effect"],
+      "required": [
+        "amount",
+        "effect"
+      ],
       "properties": {
         "amount": {
           "type": "integer",
@@ -784,9 +809,14 @@
     },
     "maySpendPowerCountersForBonusRdAccess": {
       "type": "object",
-      "required": ["max"],
+      "required": [
+        "max"
+      ],
       "properties": {
-        "max": { "type": "integer", "minimum": 1 }
+        "max": {
+          "type": "integer",
+          "minimum": 1
+        }
       },
       "description": "When breaching R&D, may remove up to max hosted power counters for that many bonus accesses (Wake Implant)."
     },
@@ -855,9 +885,13 @@
     },
     "giveStrengthToInstalledIcebreakers": {
       "type": "object",
-      "required": ["amount"],
+      "required": [
+        "amount"
+      ],
       "properties": {
-        "amount": { "type": "integer" },
+        "amount": {
+          "type": "integer"
+        },
         "excludeSubtype": {
           "type": "string",
           "description": "Do not grant the bonus to icebreakers with this subtype (K2CP Turbine: ai)."
@@ -889,11 +923,19 @@
     },
     "threatStrengthBonus": {
       "type": "object",
-      "required": ["level", "amount"],
+      "required": [
+        "level",
+        "amount"
+      ],
       "additionalProperties": false,
       "properties": {
-        "level": { "type": "integer", "minimum": 1 },
-        "amount": { "type": "integer" }
+        "level": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "amount": {
+          "type": "integer"
+        }
       },
       "description": "Threat N → adjust this card's strength by amount while threat is active (Shibboleth)."
     },
@@ -1011,7 +1053,7 @@
     },
     "nrdbCode": {
       "type": "string",
-      "description": "Optional NetrunnerDB code \u2014 metadata only, not behavior."
+      "description": "Optional NetrunnerDB code — metadata only, not behavior."
     },
     "strengthPerAdvancement": {
       "type": "integer"
@@ -1138,7 +1180,6 @@
       "type": "boolean",
       "description": "Play only if successful runs on HQ, R&D, and Archives this turn (Deep Dive)."
     },
-
     "canAdvance": {
       "type": "boolean"
     },
@@ -1192,7 +1233,6 @@
       "minimum": 1,
       "description": "On HQ/R&D breach, remove up to this many power for bonus accesses (The Twinning)."
     },
-
     "onTrash": {
       "type": "object",
       "description": "Effect IR when this Corp card is trashed to Archives (Mavirus)."
@@ -1298,6 +1338,20 @@
     },
     "skipBreachInstallProgramFromHeap": {
       "type": "boolean"
+    },
+    "onInstallFromNonHq": {
+      "type": "object",
+      "description": "Effect IR when this card is installed from anywhere except HQ (Stoke the Embers)."
+    },
+    "paidAbilityCreditDiscountIfOwnInstalledTrashedThisTurn": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Reduce paid ability credit costs by this amount if the Runner trashed any of their installed cards this turn (Boi-tatá)."
+    },
+    "maxInstalledRunnerTrashesPerEncounter": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "This ice cannot trash more than N installed Runner cards during each encounter (Sorocaban Blade)."
     }
   }
 }

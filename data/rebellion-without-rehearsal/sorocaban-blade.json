@@ -5,14 +5,48 @@
   "nrdbCode": "34101",
   "type": "ice",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: You cannot trash more than 1 installed Runner card with this ice during each encounter. [subroutine] Trash 1 installed resource. [subroutine] Trash 1 installed piece of hardware. [subroutine] Trash 1 installed program."
-  ],
+  "unsupported": [],
   "subtypes": [
     "sentry",
     "destroyer"
   ],
   "installCost": 4,
   "rezCost": 4,
-  "strength": 2
+  "strength": 2,
+  "maxInstalledRunnerTrashesPerEncounter": 1,
+  "subroutines": [
+    {
+      "id": "soro-resource",
+      "text": "Trash 1 installed resource.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "trash_resource",
+          "pick": "choose"
+        }
+      }
+    },
+    {
+      "id": "soro-hardware",
+      "text": "Trash 1 installed piece of hardware.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "trash_hardware",
+          "pick": "choose"
+        }
+      }
+    },
+    {
+      "id": "soro-program",
+      "text": "Trash 1 installed program.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "trash_program",
+          "pick": "choose"
+        }
+      }
+    }
+  ]
 }

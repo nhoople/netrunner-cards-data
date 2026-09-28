@@ -5,12 +5,72 @@
   "nrdbCode": "34114",
   "type": "agenda",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: When you score this agenda, gain 3[credit] and place 1 advancement counter on an installed card. When you install this agenda from anywhere except HQ, you may reveal it. If you do, gain 2[credit] and place 1 advancement counter on an instal"
-  ],
+  "unsupported": [],
   "subtypes": [
     "initiative"
   ],
   "advancementRequirement": 4,
-  "agendaPoints": 2
+  "agendaPoints": 2,
+  "onScore": {
+    "op": "seq",
+    "effects": [
+      {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "corp",
+          "amount": 3
+        }
+      },
+      {
+        "op": "do",
+        "action": {
+          "kind": "place_advancements",
+          "amount": 1
+        }
+      }
+    ]
+  },
+  "onInstallFromNonHq": {
+    "op": "choose",
+    "chooser": "corp",
+    "options": [
+      {
+        "id": "reveal",
+        "label": "Reveal: gain 2¢ and place 1 advancement",
+        "effect": {
+          "op": "seq",
+          "effects": [
+            {
+              "op": "do",
+              "action": {
+                "kind": "gain_credits",
+                "side": "corp",
+                "amount": 2
+              }
+            },
+            {
+              "op": "do",
+              "action": {
+                "kind": "place_advancements",
+                "amount": 1
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "corp",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  }
 }

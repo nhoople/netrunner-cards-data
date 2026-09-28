@@ -363,6 +363,166 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    if cid == "the-powers-that-be":
+        return base(
+            c,
+            onAgendaScored={
+                "op": "choose",
+                "chooser": "corp",
+                "options": [
+                    {
+                        "id": "install",
+                        "label": "Install 1 card from HQ or Archives, ignoring all costs",
+                        "effect": {
+                            "op": "do",
+                            "action": {"kind": "install_from_hq_or_archives"},
+                        },
+                    },
+                    {
+                        "id": "decline",
+                        "label": "Decline",
+                        "effect": gain("corp", 0),
+                    },
+                ],
+            },
+            unsupported=[],
+        )
+
+    if cid == "stoke-the-embers":
+        place1 = {
+            "op": "do",
+            "action": {"kind": "place_advancements", "amount": 1},
+        }
+        return base(
+            c,
+            onScore=seq(gain("corp", 3), place1),
+            onInstallFromNonHq={
+                "op": "choose",
+                "chooser": "corp",
+                "options": [
+                    {
+                        "id": "reveal",
+                        "label": "Reveal: gain 2¢ and place 1 advancement",
+                        "effect": seq(gain("corp", 2), place1),
+                    },
+                    {
+                        "id": "decline",
+                        "label": "Decline",
+                        "effect": gain("corp", 0),
+                    },
+                ],
+            },
+            unsupported=[],
+        )
+
+    if cid == "boi-tata":
+        card = breaker_card(
+            c, "sentry", 1, 2, pump_c=3, pump_s=3, break_max=2, unsupported=[]
+        )
+        card["paidAbilityCreditDiscountIfOwnInstalledTrashedThisTurn"] = 1
+        return card
+
+    if cid == "sorocaban-blade":
+        return base(
+            c,
+            maxInstalledRunnerTrashesPerEncounter=1,
+            subroutines=[
+                {
+                    "id": "soro-resource",
+                    "text": "Trash 1 installed resource.",
+                    "effect": {
+                        "op": "do",
+                        "action": {"kind": "trash_resource", "pick": "choose"},
+                    },
+                },
+                {
+                    "id": "soro-hardware",
+                    "text": "Trash 1 installed piece of hardware.",
+                    "effect": {
+                        "op": "do",
+                        "action": {"kind": "trash_hardware", "pick": "choose"},
+                    },
+                },
+                {
+                    "id": "soro-program",
+                    "text": "Trash 1 installed program.",
+                    "effect": {
+                        "op": "do",
+                        "action": {"kind": "trash_program", "pick": "choose"},
+                    },
+                },
+            ],
+            unsupported=[],
+        )
+
+    if cid == "piranhas":
+        may_draw = {
+            "op": "choose",
+            "chooser": "corp",
+            "options": [
+                {
+                    "id": "draw",
+                    "label": "Draw 1 card",
+                    "effect": draw("corp", 1),
+                },
+                {
+                    "id": "decline",
+                    "label": "Decline",
+                    "effect": gain("corp", 0),
+                },
+            ],
+        }
+        return base(
+            c,
+            rezAdditionalCost={
+                "op": "choose",
+                "chooser": "corp",
+                "options": [
+                    {
+                        "id": "bad-pub",
+                        "label": "Take 1 bad publicity",
+                        "effect": {
+                            "op": "do",
+                            "action": {
+                                "kind": "give_bad_publicity",
+                                "amount": 1,
+                            },
+                        },
+                    },
+                    {
+                        "id": "remove-tag",
+                        "label": "Remove 1 tag",
+                        "effect": {
+                            "op": "do",
+                            "action": {"kind": "remove_tags", "amount": 1},
+                        },
+                    },
+                ],
+            },
+            subroutines=[
+                {
+                    "id": "piranhas-draw",
+                    "text": "You may draw 1 card.",
+                    "effect": may_draw,
+                },
+                {
+                    "id": "piranhas-net",
+                    "text": "Do 1 net damage.",
+                    "effect": net(1),
+                },
+                {
+                    "id": "piranhas-etr",
+                    "text": "End the run if there are more cards in HQ than in the grip.",
+                    "effect": {
+                        "op": "if",
+                        "cond": {"op": "hq_count_gt_grip"},
+                        "then": etr(),
+                    },
+                },
+            ],
+            unsupported=[],
+        )
+
     card = base(c)
     card["unsupported"] = [f"Full text not yet mapped to IR: {plain[:240]}"]
     return card
