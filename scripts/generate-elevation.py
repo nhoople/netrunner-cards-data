@@ -964,6 +964,112 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    if cid == "topan-ormas-leader":
+        return base(
+            c,
+            paidAbilities=[
+                {
+                    "id": "topan-install",
+                    "label": "Once per turn → [click]: Install 1 card from grip (−2¢); suffer 1 meat damage",
+                    "clickCost": 1,
+                    "creditCost": 0,
+                    "cost": {"clicks": 1},
+                    "oncePerTurn": True,
+                    "windows": ["runner_action_paw"],
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "install_from_grip_discount",
+                            "types": ["program", "hardware", "resource"],
+                            "discount": 2,
+                            "thenOnInstall": {
+                                "op": "do",
+                                "action": {"kind": "meat_damage", "amount": 1},
+                            },
+                        },
+                    },
+                }
+            ],
+            unsupported=[],
+        )
+
+    if cid == "key-performance-indicators":
+        return base(
+            c,
+            onPlay={
+                "op": "do",
+                "action": {
+                    "kind": "choose_exactly_n",
+                    "n": 2,
+                    "options": [
+                        {
+                            "id": "draw",
+                            "label": "Draw 1 card",
+                            "effect": draw("corp", 1),
+                        },
+                        {
+                            "id": "shuffle",
+                            "label": "Shuffle 1 card from HQ into R&D",
+                            "effect": {
+                                "op": "do",
+                                "action": {
+                                    "kind": "shuffle_hq_to_rd",
+                                    "amount": 1,
+                                },
+                            },
+                        },
+                        {
+                            "id": "install-ice",
+                            "label": "Install 1 ice from HQ, ignoring all costs",
+                            "effect": {
+                                "op": "do",
+                                "action": {
+                                    "kind": "install_ice_from_hq_ignore_costs"
+                                },
+                            },
+                        },
+                        {
+                            "id": "advance",
+                            "label": "Place 1 advancement counter on an installed card you can advance",
+                            "effect": {
+                                "op": "do",
+                                "action": {
+                                    "kind": "place_advancements",
+                                    "amount": 1,
+                                },
+                            },
+                        },
+                        {
+                            "id": "credits",
+                            "label": "Gain 2¢",
+                            "effect": gain("corp", 2),
+                        },
+                    ],
+                },
+            },
+            unsupported=[],
+        )
+
+    if cid == "open-market":
+        return base(
+            c,
+            hostedCreditsOnInstall=6,
+            hostedCreditsSpendFor=["install"],
+            hostedCreditsSpendForInstallSubtypes=["connection", "job"],
+            onTurnBegin={
+                "op": "do",
+                "action": {"kind": "take_hosted_credits", "amount": 1},
+            },
+            unsupported=[],
+        )
+
+    if cid == "gourmand":
+        return base(
+            c,
+            accessTrashSelfNonAgendaThenDraw=True,
+            unsupported=[],
+        )
+
     # Fail closed — honest unsupported note for the remainder.
     card = base(c)
     card["unsupported"] = [f"Full text not yet mapped to IR: {plain[:240]}"]

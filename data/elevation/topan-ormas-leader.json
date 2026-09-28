@@ -5,11 +5,43 @@
   "nrdbCode": "35002",
   "type": "identity",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Once per turn → [click]: Install 1 card from your grip, paying 2[credit] less. When you install that card, suffer 1 meat damage."
-  ],
+  "unsupported": [],
   "subtypes": [
     "natural"
   ],
-  "link": 0
+  "link": 0,
+  "paidAbilities": [
+    {
+      "id": "topan-install",
+      "label": "Once per turn → [click]: Install 1 card from grip (−2¢); suffer 1 meat damage",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1
+      },
+      "oncePerTurn": true,
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "install_from_grip_discount",
+          "types": [
+            "program",
+            "hardware",
+            "resource"
+          ],
+          "discount": 2,
+          "thenOnInstall": {
+            "op": "do",
+            "action": {
+              "kind": "meat_damage",
+              "amount": 1
+            }
+          }
+        }
+      }
+    }
+  ]
 }
