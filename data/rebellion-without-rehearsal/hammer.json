@@ -5,9 +5,7 @@
   "nrdbCode": "34126",
   "type": "ice",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: During each encounter with this ice, the Runner cannot break more than 1 of its printed subroutines except using killers. [subroutine] Give the Runner 1 tag. [subroutine] Trash 1 installed resource or piece of hardware. [subroutine] Trash 1"
-  ],
+  "unsupported": [],
   "subtypes": [
     "sentry",
     "destroyer",
@@ -15,5 +13,53 @@
   ],
   "installCost": 6,
   "rezCost": 6,
-  "strength": 4
+  "strength": 4,
+  "maxPrintedSubsBreakExceptSubtype": "killer",
+  "onEncounter": {
+    "op": "do",
+    "action": {
+      "kind": "limit_printed_breaks_on_source_for_run",
+      "max": 1
+    }
+  },
+  "subroutines": [
+    {
+      "id": "hammer-tag",
+      "text": "Give the Runner 1 tag.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "give_tags",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "id": "hammer-trash-rh",
+      "text": "Trash 1 installed resource or piece of hardware.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "trash_resource_or_hardware",
+          "pick": "choose"
+        }
+      }
+    },
+    {
+      "id": "hammer-trash-prog",
+      "text": "Trash 1 installed program that is not a decoder, fracter, or killer.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "trash_program",
+          "pick": "choose",
+          "excludeSubtypes": [
+            "decoder",
+            "fracter",
+            "killer"
+          ]
+        }
+      }
+    }
+  ]
 }

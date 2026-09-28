@@ -5,14 +5,57 @@
   "nrdbCode": "34115",
   "type": "asset",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: When your turn begins, place 3[credit] on this asset. [click], add this asset to HQ: Take all credits from this asset. You may install 1 card from HQ."
-  ],
+  "unsupported": [],
   "subtypes": [
     "academic",
     "clone"
   ],
   "installCost": 1,
   "rezCost": 1,
-  "trashCost": 1
+  "trashCost": 1,
+  "onTurnBegin": {
+    "op": "do",
+    "action": {
+      "kind": "place_hosted_credits",
+      "amount": 3
+    }
+  },
+  "paidAbilities": [
+    {
+      "id": "janaina-take",
+      "label": "[click], add to HQ: Take all hosted credits; may install",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "effect": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "return_source_to_hq"
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "take_hosted_credits",
+              "amount": 99
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "may_install_from_hq_paying_costs"
+            }
+          }
+        ]
+      }
+    }
+  ]
 }

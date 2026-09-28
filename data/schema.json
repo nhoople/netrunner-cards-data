@@ -1352,6 +1352,10 @@
       "type": "integer",
       "minimum": 1,
       "description": "This ice cannot trash more than N installed Runner cards during each encounter (Sorocaban Blade)."
+    },
+    "maxPrintedSubsBreakExceptSubtype": {
+      "type": "string",
+      "description": "Breakers with this subtype ignore maxPrintedSubsBreakablePerEncounter (Hammer killers)."
     }
   }
 }

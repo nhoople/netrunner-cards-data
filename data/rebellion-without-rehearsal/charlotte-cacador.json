@@ -5,13 +5,85 @@
   "nrdbCode": "34107",
   "type": "asset",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: You can advance this asset. When your turn begins, you may remove 1 hosted advancement counter to gain 4[credit] and draw 1 card. [trash], hosted advancement counter: Gain 3[credit]."
-  ],
+  "unsupported": [],
   "subtypes": [
     "clone"
   ],
   "installCost": 0,
   "rezCost": 0,
-  "trashCost": 2
+  "trashCost": 2,
+  "canAdvance": true,
+  "onTurnBegin": {
+    "op": "choose",
+    "chooser": "corp",
+    "options": [
+      {
+        "id": "remove-adv",
+        "label": "Remove 1 advancement: gain 4¢ and draw 1",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "remove_advancements",
+            "amount": 1,
+            "then": {
+              "op": "seq",
+              "effects": [
+                {
+                  "op": "do",
+                  "action": {
+                    "kind": "gain_credits",
+                    "side": "corp",
+                    "amount": 4
+                  }
+                },
+                {
+                  "op": "do",
+                  "action": {
+                    "kind": "draw",
+                    "side": "corp",
+                    "amount": 1
+                  }
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "corp",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  },
+  "paidAbilities": [
+    {
+      "id": "charlotte-gain",
+      "label": "[trash], hosted advancement: Gain 3¢",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "trashSelf": true,
+        "advancementTokens": 1
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "corp",
+          "amount": 3
+        }
+      }
+    }
+  ]
 }
