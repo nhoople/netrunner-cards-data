@@ -5,12 +5,37 @@
   "nrdbCode": "36037",
   "type": "agenda",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: When you score this agenda, place 3 agenda counters on it. Hosted agenda counter: Move 1 rezzed upgrade to the root of another server."
-  ],
+  "unsupported": [],
   "subtypes": [
     "security"
   ],
   "advancementRequirement": 4,
-  "agendaPoints": 2
+  "agendaPoints": 2,
+  "onScore": {
+    "op": "do",
+    "action": {
+      "kind": "add_agenda_counter",
+      "amount": 3
+    }
+  },
+  "paidAbilities": [
+    {
+      "id": "lotus-haze-move",
+      "label": "Hosted agenda counter: Move 1 rezzed upgrade to another server",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "agendaCounters": 1
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "may_move_rezzed_upgrade_to_another_server_root"
+        }
+      }
+    }
+  ]
 }

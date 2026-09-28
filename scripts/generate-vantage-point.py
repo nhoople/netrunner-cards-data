@@ -1022,6 +1022,103 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    # --- v1.23.0 B-slice ---
+
+    if cid == "knowledge-seeker":
+        return base(
+            c,
+            subroutines=[
+                {
+                    "id": "knowledge-seeker-1",
+                    "text": "Place 1 virus counter on this ice.",
+                    "effect": {
+                        "op": "do",
+                        "action": {"kind": "add_virus_counter", "amount": 1},
+                    },
+                },
+                {
+                    "id": "knowledge-seeker-2",
+                    "text": "Look at the top 4 cards of R&D and arrange them in any order.",
+                    "effect": {
+                        "op": "do",
+                        "action": {"kind": "look_top_n_rd_arrange", "n": 4},
+                    },
+                },
+                {
+                    "id": "knowledge-seeker-3",
+                    "text": "End the run.",
+                    "effect": etr(),
+                },
+            ],
+            onEncounterEnd={
+                "op": "if",
+                "cond": {"op": "virus_counters_gte", "amount": 3},
+                "then": seq(
+                    {
+                        "op": "do",
+                        "action": {"kind": "purge_virus_counters"},
+                    },
+                    {
+                        "op": "do",
+                        "action": {"kind": "derez_source"},
+                    },
+                ),
+            },
+            unsupported=[],
+        )
+
+    if cid == "lotus-haze":
+        return base(
+            c,
+            onScore={
+                "op": "do",
+                "action": {"kind": "add_agenda_counter", "amount": 3},
+            },
+            paidAbilities=[
+                {
+                    "id": "lotus-haze-move",
+                    "label": "Hosted agenda counter: Move 1 rezzed upgrade to another server",
+                    "clickCost": 0,
+                    "creditCost": 0,
+                    "cost": {"agendaCounters": 1},
+                    "windows": ["corp_action_paw"],
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "may_move_rezzed_upgrade_to_another_server_root",
+                        },
+                    },
+                },
+            ],
+            unsupported=[],
+        )
+
+    if cid == "hype-machine":
+        return base(
+            c,
+            rezCostDiscountIfAgendaScoredOrStolenThisTurn=6,
+            paidAbilities=[
+                {
+                    "id": "hype-machine-advance",
+                    "label": "[trash]: Place 1 advancement on a card you can advance in this server's root",
+                    "clickCost": 0,
+                    "creditCost": 0,
+                    "cost": {"trashSelf": True},
+                    "windows": ["corp_action_paw"],
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "place_advancements",
+                            "amount": 1,
+                            "pick": "choose",
+                            "sameServerRootAsSource": True,
+                        },
+                    },
+                },
+            ],
+            unsupported=[],
+        )
+
     # Fail closed — honest unsupported note for the remainder.
     # Corsair / Lampades need stealth-credit spend; Cultivate is a
     # look/trash/HQ/arrange composite not yet in IR.
@@ -1078,7 +1175,7 @@ def main():
             "Null Signal Vantage Point (NRDB pack vp) — next constructed set after "
             "Elevation. Fail-closed IR; "
             f"{full} cards fully mapped, {partial} with unsupported notes "
-            f"(wave v1.22.0 B-slice)."
+            f"(wave v1.23.0 B-slice)."
         )
         manifest["status"] = "in-progress"
     (OUT / "_manifest.json").write_text(

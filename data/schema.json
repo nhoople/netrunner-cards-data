@@ -1539,6 +1539,15 @@
       "minimum": 1,
       "description": "While rezzed, the first double operation each turn costs this many clicks less to play (Synchrocyclotron)."
     },
+    "rezCostDiscountIfAgendaScoredOrStolenThisTurn": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "While an agenda was scored or stolen this turn, reduce this card's rez cost by this amount (Hype Machine)."
+    },
+    "onEncounterEnd": {
+      "type": "object",
+      "description": "Effect IR when an encounter with this ice ends (Knowledge Seeker)."
+    },
     "canAdvance": {
       "type": "boolean"
     },

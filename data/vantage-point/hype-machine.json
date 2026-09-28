@@ -5,13 +5,35 @@
   "nrdbCode": "36055",
   "type": "upgrade",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: As long as an agenda was scored or stolen this turn, the rez cost of this upgrade is lowered by 6[credit]. [trash]: Place 1 advancement counter on a card you can advance in the root of this server."
-  ],
+  "unsupported": [],
   "subtypes": [
     "advertisement"
   ],
   "installCost": 6,
   "rezCost": 6,
-  "trashCost": 2
+  "trashCost": 2,
+  "rezCostDiscountIfAgendaScoredOrStolenThisTurn": 6,
+  "paidAbilities": [
+    {
+      "id": "hype-machine-advance",
+      "label": "[trash]: Place 1 advancement on a card you can advance in this server's root",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "trashSelf": true
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "place_advancements",
+          "amount": 1,
+          "pick": "choose",
+          "sameServerRootAsSource": true
+        }
+      }
+    }
+  ]
 }

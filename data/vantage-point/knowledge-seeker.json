@@ -5,13 +5,69 @@
   "nrdbCode": "36040",
   "type": "ice",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: Whenever an encounter with this ice ends, if it has 3 or more hosted virus counters, purge virus counters and derez this ice. [subroutine] Place 1 virus counter on this ice. [subroutine] Look at the top 4 cards of R&D and arrange them in an"
-  ],
+  "unsupported": [],
   "subtypes": [
     "code gate"
   ],
   "installCost": 5,
   "rezCost": 5,
-  "strength": 5
+  "strength": 5,
+  "subroutines": [
+    {
+      "id": "knowledge-seeker-1",
+      "text": "Place 1 virus counter on this ice.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "add_virus_counter",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "id": "knowledge-seeker-2",
+      "text": "Look at the top 4 cards of R&D and arrange them in any order.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "look_top_n_rd_arrange",
+          "n": 4
+        }
+      }
+    },
+    {
+      "id": "knowledge-seeker-3",
+      "text": "End the run.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "end_the_run"
+        }
+      }
+    }
+  ],
+  "onEncounterEnd": {
+    "op": "if",
+    "cond": {
+      "op": "virus_counters_gte",
+      "amount": 3
+    },
+    "then": {
+      "op": "seq",
+      "effects": [
+        {
+          "op": "do",
+          "action": {
+            "kind": "purge_virus_counters"
+          }
+        },
+        {
+          "op": "do",
+          "action": {
+            "kind": "derez_source"
+          }
+        }
+      ]
+    }
+  }
 }
