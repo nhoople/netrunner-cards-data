@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
-"""Generate Parhelion card JSON from NRDB pack `ph`.
+"""Generate Parhelion card JSON from pinned pack `ph`.
 
-Requires /tmp/nrdb-cards.json (curl https://netrunnerdb.com/api/2.0/public/cards).
+Catalog source: Null-Signal-Games/netrunner-cards-json (see data/nrdb-catalog-pin.json).
+Fetch with: python3 scripts/nrdb_catalog.py fetch ph
 
 Hand-mapped Effect IR only where existing primitives fully cover the card;
 everything else lists honest unsupported notes — never invent IR.
@@ -15,9 +16,10 @@ import re
 import unicodedata
 from pathlib import Path
 
+from nrdb_catalog import load_pack_cards
+
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "data" / "parhelion"
-NRDB = Path("/tmp/nrdb-cards.json")
 
 
 def slugify(title: str) -> str:
@@ -1316,9 +1318,8 @@ def map_card(c: dict) -> dict:
 
 
 def main():
-    data = json.loads(NRDB.read_text())["data"]
     ph = sorted(
-        [c for c in data if c.get("pack_code") == "ph"],
+        load_pack_cards("ph"),
         key=lambda c: c.get("position", 0),
     )
     assert len(ph) == 63, len(ph)

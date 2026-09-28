@@ -80,6 +80,23 @@ Parhelion is fully supported (wave gate `v0.71.0`). The Automata Initiative is f
 
 Tag dataset releases as `vMAJOR.MINOR.PATCH` (e.g. `v0.16.0`). Bump when card JSON, pool, or schema that consumers rely on changes. Keep the README pairing line in sync after each pin bump (no new tag for README-only).
 
+## Catalog extract source
+
+Pack metadata for generate/extract scripts comes from the pinned [Null-Signal-Games/netrunner-cards-json](https://github.com/Null-Signal-Games/netrunner-cards-json) repo (`pack/{code}.json`), **not** the live NetrunnerDB public API.
+
+| Path | Use |
+| --- | --- |
+| [`data/nrdb-catalog-pin.json`](data/nrdb-catalog-pin.json) | Upstream repo URL + commit SHA pin |
+| [`scripts/nrdb_catalog.py`](scripts/nrdb_catalog.py) | Fetch helper (caches under `tmp/nrdb-catalog/`) |
+
+```bash
+python3 scripts/nrdb_catalog.py show-pin
+python3 scripts/nrdb_catalog.py fetch sg su21 ms msbp ph tai rwr
+# then: python3 scripts/generate-<set>.py
+```
+
+To bump the catalog: set `ref` in the pin to a newer commit SHA on `main`, clear `tmp/nrdb-catalog/`, and re-fetch. Effect IR remains hand-authored in this repo.
+
 ## License
 
 MIT for schema and tooling — see [`LICENSE`](LICENSE). Card text: see [`NOTICE`](NOTICE).

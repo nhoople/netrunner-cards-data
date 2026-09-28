@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
-"""Generate System Update 2021 card JSON from NRDB pack `su21`.
+"""Generate System Update 2021 card JSON from pinned pack `su21`.
 
-Requires /tmp/nrdb-cards.json (curl https://netrunnerdb.com/api/2.0/public/cards).
+Catalog source: Null-Signal-Games/netrunner-cards-json (see data/nrdb-catalog-pin.json).
+Fetch with: python3 scripts/nrdb_catalog.py fetch su21
 
 Reprints that reuse earlier wave defs (skipped as files; listed in pool.json):
   diesel, enigma, rototurret, gordian-blade, pad-campaign, aesops-pawnshop
@@ -15,9 +16,10 @@ import re
 import unicodedata
 from pathlib import Path
 
+from nrdb_catalog import load_pack_cards
+
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "data" / "system-update-2021"
-NRDB = Path("/tmp/nrdb-cards.json")
 
 # Existing accurate (or already-noted) defs — do not emit duplicate files.
 REPRINTS = {
@@ -1121,9 +1123,8 @@ def map_card(c: dict) -> dict | None:
 
 
 def main():
-    data = json.loads(NRDB.read_text())["data"]
     su = sorted(
-        [c for c in data if c.get("pack_code") == "su21"],
+        load_pack_cards("su21"),
         key=lambda c: c.get("position", 0),
     )
     assert len(su) == 82, len(su)

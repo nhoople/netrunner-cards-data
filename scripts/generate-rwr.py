@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
-"""Generate Rebellion Without Rehearsal card JSON from NRDB pack `rwr`.
+"""Generate Rebellion Without Rehearsal card JSON from pinned pack `rwr`.
 
-Requires /tmp/nrdb-cards.json (curl 'https://netrunnerdb.com/api/2.0/public/cards?format=json').
+Catalog source: Null-Signal-Games/netrunner-cards-json (see data/nrdb-catalog-pin.json).
+Fetch with: python3 scripts/nrdb_catalog.py fetch rwr
 
 Hand-mapped Effect IR only where existing primitives fully cover the card;
 everything else lists honest unsupported notes — never invent IR.
@@ -15,9 +16,10 @@ import re
 import unicodedata
 from pathlib import Path
 
+from nrdb_catalog import load_pack_cards
+
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "data" / "rebellion-without-rehearsal"
-NRDB = Path("/tmp/nrdb-cards.json")
 WAVE = "rebellion-without-rehearsal"
 PACK = "rwr"
 EXPECTED = 65
@@ -529,9 +531,8 @@ def map_card(c: dict) -> dict:
 
 
 def main():
-    data = json.loads(NRDB.read_text())["data"]
     pack = sorted(
-        [c for c in data if c.get("pack_code") == PACK],
+        load_pack_cards(PACK),
         key=lambda c: c.get("position", 0),
     )
     assert len(pack) == EXPECTED, len(pack)

@@ -1,0 +1,11 @@
+{
+  "repo": "https://github.com/Null-Signal-Games/netrunner-cards-json",
+  "owner": "Null-Signal-Games",
+  "name": "netrunner-cards-json",
+  "defaultBranch": "main",
+  "ref": "69a34d7d425d08a785f64e508ac0f05019e11ad9",
+  "packPathTemplate": "pack/{code}.json",
+  "rawUrlTemplate": "https://raw.githubusercontent.com/Null-Signal-Games/netrunner-cards-json/{ref}/pack/{code}.json",
+  "cacheDir": "tmp/nrdb-catalog",
+  "notes": "Canonical NSG catalog for pack extracts. Prefer a commit SHA on main (not a floating branch). To bump: set `ref` to the new SHA (or annotated tag), clear tmp/nrdb-catalog/, then re-run scripts/nrdb_catalog.py fetch <pack> / generate-*.py. Effect IR remains hand-authored in this repo."
+}
