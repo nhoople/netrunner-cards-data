@@ -1575,7 +1575,7 @@ def main():
             "Null Signal Vantage Point (NRDB pack vp) — next constructed set after "
             "Elevation. Fail-closed IR; "
             f"{full} cards fully mapped, {partial} with unsupported notes "
-            f"(wave v1.29.0 B-slice)."
+            f"(wave v1.30.0 B-slice)."
         )
         manifest["status"] = "in-progress"
     (OUT / "_manifest.json").write_text(
