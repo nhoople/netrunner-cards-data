@@ -5,11 +5,74 @@
   "nrdbCode": "35077",
   "type": "operation",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: Resolve 2 of the following in any order:Draw 1 card. Shuffle 1 card from HQ into R&D.Install 1 piece of ice from HQ, ignoring all costs.Place 1 advancement counter on an installed card you can advance.Gain 2[credit]."
-  ],
+  "unsupported": [],
   "subtypes": [
     "transaction"
   ],
-  "playCost": 1
+  "playCost": 1,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "choose_exactly_n",
+      "n": 2,
+      "options": [
+        {
+          "id": "draw",
+          "label": "Draw 1 card",
+          "effect": {
+            "op": "do",
+            "action": {
+              "kind": "draw",
+              "side": "corp",
+              "amount": 1
+            }
+          }
+        },
+        {
+          "id": "shuffle",
+          "label": "Shuffle 1 card from HQ into R&D",
+          "effect": {
+            "op": "do",
+            "action": {
+              "kind": "shuffle_hq_to_rd",
+              "amount": 1
+            }
+          }
+        },
+        {
+          "id": "install-ice",
+          "label": "Install 1 ice from HQ, ignoring all costs",
+          "effect": {
+            "op": "do",
+            "action": {
+              "kind": "install_ice_from_hq_ignore_costs"
+            }
+          }
+        },
+        {
+          "id": "advance",
+          "label": "Place 1 advancement counter on an installed card you can advance",
+          "effect": {
+            "op": "do",
+            "action": {
+              "kind": "place_advancements",
+              "amount": 1
+            }
+          }
+        },
+        {
+          "id": "credits",
+          "label": "Gain 2¢",
+          "effect": {
+            "op": "do",
+            "action": {
+              "kind": "gain_credits",
+              "side": "corp",
+              "amount": 2
+            }
+          }
+        }
+      ]
+    }
+  }
 }

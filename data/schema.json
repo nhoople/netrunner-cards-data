@@ -1195,6 +1195,15 @@
       },
       "description": "Threat N → when the Runner trashes this card while rezzed, give that many tags (Public Access Plaza)."
     },
+    "hostedCreditsSpendForInstallSubtypes": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "When set with hostedCreditsSpendFor install, hosted credits apply only to resources with these subtypes (Open Market)."
+    },
+    "accessTrashSelfNonAgendaThenDraw": {
+      "type": "boolean",
+      "description": "Access → trash this card to trash the accessed non-agenda Corp card, then draw 1 (Gourmand)."
+    },
     "trashAfterBreakingThisRun": {
       "type": "boolean"
     },

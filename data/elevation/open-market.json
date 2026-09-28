@@ -5,12 +5,25 @@
   "nrdbCode": "35022",
   "type": "resource",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: When you install this resource, load 6[credit] onto it. When it is empty, trash it. You can spend hosted credits to install connection and job resources. When your turn begins, take 1[credit] from this resource."
-  ],
+  "unsupported": [],
   "subtypes": [
     "job",
     "location"
   ],
-  "installCost": 2
+  "installCost": 2,
+  "hostedCreditsOnInstall": 6,
+  "hostedCreditsSpendFor": [
+    "install"
+  ],
+  "hostedCreditsSpendForInstallSubtypes": [
+    "connection",
+    "job"
+  ],
+  "onTurnBegin": {
+    "op": "do",
+    "action": {
+      "kind": "take_hosted_credits",
+      "amount": 1
+    }
+  }
 }
