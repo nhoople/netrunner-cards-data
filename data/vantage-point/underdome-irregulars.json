@@ -1,0 +1,15 @@
+{
+  "id": "underdome-irregulars",
+  "title": "Underdome Irregulars",
+  "wave": "vantage-point",
+  "nrdbCode": "36016",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: When your action phase ends, if a piece of ice was rezzed this turn, draw 2 cards or remove 1 tag. If no ice was rezzed this turn, trash this resource."
+  ],
+  "subtypes": [
+    "connection"
+  ],
+  "installCost": 1
+}

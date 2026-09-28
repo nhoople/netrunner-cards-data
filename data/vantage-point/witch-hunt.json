@@ -1,0 +1,17 @@
+{
+  "id": "witch-hunt",
+  "title": "Witch Hunt",
+  "wave": "vantage-point",
+  "nrdbCode": "36047",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: When this agenda is scored or stolen, take 1 bad publicity. When your action phase ends, if you scored this agenda this turn, remove all tags, then give the Runner 3 tags."
+  ],
+  "subtypes": [
+    "initiative",
+    "liability"
+  ],
+  "advancementRequirement": 4,
+  "agendaPoints": 2
+}

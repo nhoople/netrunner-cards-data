@@ -1,0 +1,34 @@
+{
+  "id": "vulture-fund",
+  "title": "Vulture Fund",
+  "wave": "vantage-point",
+  "nrdbCode": "36063",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "subtypes": [
+    "transaction",
+    "liability"
+  ],
+  "playCost": 7,
+  "onPlay": {
+    "op": "seq",
+    "effects": [
+      {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "corp",
+          "amount": 14
+        }
+      },
+      {
+        "op": "do",
+        "action": {
+          "kind": "give_bad_publicity",
+          "amount": 1
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "id": "let-them-dream",
+  "title": "Let Them Dream",
+  "wave": "vantage-point",
+  "nrdbCode": "36066",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: When you score this agenda, you may search HQ, R&D, or Archives for 1 agenda and reveal it. (Shuffle R&D after searching it.) Add that agenda to HQ or the bottom of R&D. While this agenda is in the Runner’s score area, it is worth 1 less ag"
+  ],
+  "subtypes": [
+    "initiative"
+  ],
+  "advancementRequirement": 4,
+  "agendaPoints": 2
+}

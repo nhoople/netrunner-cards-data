@@ -1,0 +1,15 @@
+{
+  "id": "unleash",
+  "title": "Unleash",
+  "wave": "vantage-point",
+  "nrdbCode": "36044",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: As an additional cost to play this operation, remove 1 tag. Rez 1 installed piece of ice, ignoring all costs. You may resolve 1 subroutine on that ice."
+  ],
+  "subtypes": [
+    "gray ops"
+  ],
+  "playCost": 0
+}

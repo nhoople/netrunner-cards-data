@@ -1,0 +1,12 @@
+{
+  "id": "myoshu",
+  "title": "Myōshu",
+  "wave": "vantage-point",
+  "nrdbCode": "36061",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: Play only if you scored an agenda this turn that you did not install this turn. Add this operation to your score area as an agenda worth 2 agenda points."
+  ],
+  "playCost": 10
+}

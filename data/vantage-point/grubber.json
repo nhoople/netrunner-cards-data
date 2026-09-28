@@ -1,0 +1,18 @@
+{
+  "id": "grubber",
+  "title": "Grubber",
+  "wave": "vantage-point",
+  "nrdbCode": "36050",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: When you rez this ice, if it is protecting a central server, take 1 bad publicity. [subroutine] End the run unless the Runner pays 3[credit]. [subroutine] End the run unless the Runner pays 3[credit]."
+  ],
+  "subtypes": [
+    "barrier",
+    "liability"
+  ],
+  "installCost": 5,
+  "rezCost": 5,
+  "strength": 5
+}

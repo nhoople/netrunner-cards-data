@@ -1,0 +1,16 @@
+{
+  "id": "stick-and-poke",
+  "title": "Stick and Poke",
+  "wave": "vantage-point",
+  "nrdbCode": "36008",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: The first time each turn you encounter a piece of ice, it gains “[subroutine] Do 1 net damage. The Runner draws 1 card.”, before its other subroutines, for the remainder of that encounter."
+  ],
+  "subtypes": [
+    "companion",
+    "virtual"
+  ],
+  "installCost": 0
+}

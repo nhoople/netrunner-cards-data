@@ -1,0 +1,15 @@
+{
+  "id": "rotary",
+  "title": "Rotary",
+  "wave": "vantage-point",
+  "nrdbCode": "36014",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: +1[mu] Whenever you breach HQ or R&D, you may take 1 tag to access 1 additional card. [click], 2[credit]: Trash this hardware. Only the Corp can use this ability, and only if the Runner is tagged. Limit 1 console per player."
+  ],
+  "subtypes": [
+    "console"
+  ],
+  "installCost": 3
+}

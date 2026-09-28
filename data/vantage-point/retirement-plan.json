@@ -1,0 +1,15 @@
+{
+  "id": "retirement-plan",
+  "title": "Retirement Plan",
+  "wave": "vantage-point",
+  "nrdbCode": "36034",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: As an additional cost to play this operation, spend [click]. Install 1 agenda, asset, or piece of ice from Archives."
+  ],
+  "subtypes": [
+    "double"
+  ],
+  "playCost": 1
+}

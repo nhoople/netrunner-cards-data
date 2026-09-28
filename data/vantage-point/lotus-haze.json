@@ -1,0 +1,16 @@
+{
+  "id": "lotus-haze",
+  "title": "Lotus Haze",
+  "wave": "vantage-point",
+  "nrdbCode": "36037",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: When you score this agenda, place 3 agenda counters on it. Hosted agenda counter: Move 1 rezzed upgrade to the root of another server."
+  ],
+  "subtypes": [
+    "security"
+  ],
+  "advancementRequirement": 4,
+  "agendaPoints": 2
+}

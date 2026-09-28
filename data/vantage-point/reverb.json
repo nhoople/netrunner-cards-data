@@ -1,0 +1,18 @@
+{
+  "id": "reverb",
+  "title": "Reverb",
+  "wave": "vantage-point",
+  "nrdbCode": "36029",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: The rez cost of this ice is lowered by 1[credit] for each other unrezzed piece of ice. [subroutine] End the run. [subroutine] End the run."
+  ],
+  "subtypes": [
+    "barrier",
+    "harmonic"
+  ],
+  "installCost": 4,
+  "rezCost": 4,
+  "strength": 2
+}

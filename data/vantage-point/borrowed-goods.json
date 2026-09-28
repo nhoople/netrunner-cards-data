@@ -1,0 +1,35 @@
+{
+  "id": "borrowed-goods",
+  "title": "Borrowed Goods",
+  "wave": "vantage-point",
+  "nrdbCode": "36013",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [],
+  "subtypes": [
+    "chip"
+  ],
+  "installCost": 0,
+  "muBonus": 1,
+  "onInstall": {
+    "op": "if",
+    "cond": {
+      "op": "runner_tagged"
+    },
+    "then": {
+      "op": "do",
+      "action": {
+        "kind": "gain_credits",
+        "side": "runner",
+        "amount": 0
+      }
+    },
+    "else": {
+      "op": "do",
+      "action": {
+        "kind": "give_tags",
+        "amount": 1
+      }
+    }
+  }
+}

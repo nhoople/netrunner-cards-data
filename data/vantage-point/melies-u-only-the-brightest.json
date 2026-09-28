@@ -1,0 +1,14 @@
+{
+  "id": "melies-u-only-the-brightest",
+  "title": "Méliès U: Only the Brightest",
+  "wave": "vantage-point",
+  "nrdbCode": "36036",
+  "type": "identity",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: When your discard phase ends, secretly set your identity to any copy of Méliès U: Only the Brightest. When the Runner makes a successful run on a central server, flip this identity. When the Runner’s action phase ends, gain 1[credit]. Side "
+  ],
+  "subtypes": [
+    "division"
+  ]
+}

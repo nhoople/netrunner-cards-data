@@ -1,0 +1,17 @@
+{
+  "id": "esca",
+  "title": "Esca",
+  "wave": "vantage-point",
+  "nrdbCode": "36038",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: While the Runner is accessing this asset in R&D, they must reveal it. When the Runner accesses this asset, they lose 1[credit]. If they are tagged, do 1 net damage."
+  ],
+  "subtypes": [
+    "ambush"
+  ],
+  "installCost": 0,
+  "rezCost": 0,
+  "trashCost": 3
+}

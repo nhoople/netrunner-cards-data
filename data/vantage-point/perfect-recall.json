@@ -1,0 +1,14 @@
+{
+  "id": "perfect-recall",
+  "title": "Perfect Recall",
+  "wave": "vantage-point",
+  "nrdbCode": "36035",
+  "type": "upgrade",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: When you rez this upgrade and whenever an agenda is scored or stolen from this server or its root, place 1 power counter on this upgrade. Hosted power counter: Reveal 1 card in HQ. The Runner cannot steal or trash copies of that card for th"
+  ],
+  "installCost": 1,
+  "rezCost": 1,
+  "trashCost": 3
+}

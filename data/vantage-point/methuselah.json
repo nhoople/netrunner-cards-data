@@ -1,0 +1,16 @@
+{
+  "id": "methuselah",
+  "title": "Methuselah",
+  "wave": "vantage-point",
+  "nrdbCode": "36020",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: +1[mu] Whenever a run begins, you may trash 1 piece of hardware from your grip to place 2[credit] on this hardware. You can spend hosted credits during runs. Limit 1 console per player."
+  ],
+  "subtypes": [
+    "console",
+    "stealth"
+  ],
+  "installCost": 4
+}

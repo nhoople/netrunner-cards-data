@@ -1,0 +1,13 @@
+{
+  "id": "sipa",
+  "title": "Sipa",
+  "wave": "vantage-point",
+  "nrdbCode": "36023",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: The first time each turn you pass the outermost piece of ice protecting a server after fully breaking it, you may swap it with another installed piece of ice."
+  ],
+  "installCost": 1,
+  "memoryCost": 2
+}
