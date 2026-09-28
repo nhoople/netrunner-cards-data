@@ -5,11 +5,24 @@
   "nrdbCode": "34067",
   "type": "event",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Play only if you are not tagged. Run HQ. If successful, take 1 tag and access 1 additional card when you breach HQ. Access → Trash 1 card from your grip: Trash the card you are accessing."
-  ],
+  "unsupported": [],
   "subtypes": [
     "run"
   ],
-  "playCost": 1
+  "playCost": 1,
+  "playRequiresUntagged": true,
+  "accessTrashFromGrip": {
+    "gripCards": 1
+  },
+  "runEvent": {
+    "servers": "hq",
+    "bonusAccess": 1,
+    "onSuccessfulRun": {
+      "op": "do",
+      "action": {
+        "kind": "give_tags",
+        "amount": 1
+      }
+    }
+  }
 }

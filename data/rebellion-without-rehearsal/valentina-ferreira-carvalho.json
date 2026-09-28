@@ -5,11 +5,65 @@
   "nrdbCode": "34095",
   "type": "resource",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Whenever you remove 1 or more tags, gain 1[credit]. Threat 3 → When you install this resource during your turn, you may remove 1 tag or gain 2[credit]. (This ability is active if any player has 3 or more agenda points.)"
-  ],
+  "unsupported": [],
   "subtypes": [
     "connection"
   ],
-  "installCost": 2
+  "installCost": 2,
+  "onRemoveTags": {
+    "op": "do",
+    "action": {
+      "kind": "gain_credits",
+      "side": "runner",
+      "amount": 1
+    }
+  },
+  "onInstall": {
+    "op": "if",
+    "cond": {
+      "op": "threat",
+      "level": 3
+    },
+    "then": {
+      "op": "choose",
+      "chooser": "runner",
+      "options": [
+        {
+          "id": "untag",
+          "label": "Remove 1 tag",
+          "effect": {
+            "op": "do",
+            "action": {
+              "kind": "remove_tags",
+              "amount": 1
+            }
+          }
+        },
+        {
+          "id": "credits",
+          "label": "Gain 2¢",
+          "effect": {
+            "op": "do",
+            "action": {
+              "kind": "gain_credits",
+              "side": "runner",
+              "amount": 2
+            }
+          }
+        },
+        {
+          "id": "decline",
+          "label": "Decline",
+          "effect": {
+            "op": "do",
+            "action": {
+              "kind": "gain_credits",
+              "side": "runner",
+              "amount": 0
+            }
+          }
+        }
+      ]
+    }
+  }
 }

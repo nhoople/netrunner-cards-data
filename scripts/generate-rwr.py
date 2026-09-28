@@ -721,6 +721,176 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    if cid == "active-policing":
+        decline = {
+            "id": "decline",
+            "label": "Decline",
+            "effect": gain("corp", 0),
+        }
+        click_penalty = {
+            "op": "do",
+            "action": {
+                "kind": "allotted_clicks_next_turn",
+                "side": "runner",
+                "delta": -1,
+            },
+        }
+        return base(
+            c,
+            subtypes=["terminal", "gray ops"],
+            playRequiresRunnerStoleOrTrashedCorpCardLastTurn=True,
+            endsActionPhase=True,
+            onPlay=seq(
+                {
+                    "op": "do",
+                    "action": {"kind": "may_install_from_hq_paying_costs"},
+                },
+                click_penalty,
+                {
+                    "op": "if",
+                    "cond": {"op": "threat", "level": 3},
+                    "then": {
+                        "op": "choose",
+                        "chooser": "corp",
+                        "options": [
+                            {
+                                "id": "pay",
+                                "label": "Pay 2¢: Runner −1 allotted click next turn",
+                                "effect": seq(
+                                    {
+                                        "op": "do",
+                                        "action": {
+                                            "kind": "lose_credits",
+                                            "side": "corp",
+                                            "amount": 2,
+                                        },
+                                    },
+                                    click_penalty,
+                                ),
+                            },
+                            decline,
+                        ],
+                    },
+                },
+            ),
+            unsupported=[],
+        )
+
+    if cid == "bring-them-home":
+        decline = {
+            "id": "decline",
+            "label": "Decline",
+            "effect": gain("corp", 0),
+        }
+        return base(
+            c,
+            subtypes=["terminal", "gray ops"],
+            playRequiresRunnerStoleOrTrashedCorpCardLastTurn=True,
+            endsActionPhase=True,
+            onPlay=seq(
+                {
+                    "op": "do",
+                    "action": {
+                        "kind": "add_random_grip_to_stack_top",
+                        "count": 2,
+                    },
+                },
+                {
+                    "op": "if",
+                    "cond": {"op": "threat", "level": 3},
+                    "then": {
+                        "op": "choose",
+                        "chooser": "corp",
+                        "options": [
+                            {
+                                "id": "pay",
+                                "label": "Pay 2¢: shuffle 1 random grip card into stack",
+                                "effect": seq(
+                                    {
+                                        "op": "do",
+                                        "action": {
+                                            "kind": "lose_credits",
+                                            "side": "corp",
+                                            "amount": 2,
+                                        },
+                                    },
+                                    {
+                                        "op": "do",
+                                        "action": {
+                                            "kind": "shuffle_random_grip_into_stack",
+                                            "count": 1,
+                                        },
+                                    },
+                                ),
+                            },
+                            decline,
+                        ],
+                    },
+                },
+            ),
+            unsupported=[],
+        )
+
+    if cid == "pretty-mary-da-silva":
+        return base(
+            c,
+            onBreachRdIfAccessGteMayBonusAccess={"min": 2, "amount": 1},
+            unsupported=[],
+        )
+
+    if cid == "eye-for-an-eye":
+        return base(
+            c,
+            subtypes=["run"],
+            playRequiresUntagged=True,
+            accessTrashFromGrip={"gripCards": 1},
+            runEvent={
+                "servers": "hq",
+                "bonusAccess": 1,
+                "onSuccessfulRun": tags(1),
+            },
+            unsupported=[],
+        )
+
+    if cid == "valentina-ferreira-carvalho":
+        decline = {
+            "id": "decline",
+            "label": "Decline",
+            "effect": gain("runner", 0),
+        }
+        return base(
+            c,
+            onRemoveTags=gain("runner", 1),
+            onInstall={
+                "op": "if",
+                "cond": {"op": "threat", "level": 3},
+                "then": {
+                    "op": "choose",
+                    "chooser": "runner",
+                    "options": [
+                        {
+                            "id": "untag",
+                            "label": "Remove 1 tag",
+                            "effect": {
+                                "op": "do",
+                                "action": {
+                                    "kind": "remove_tags",
+                                    "amount": 1,
+                                },
+                            },
+                        },
+                        {
+                            "id": "credits",
+                            "label": "Gain 2¢",
+                            "effect": gain("runner", 2),
+                        },
+                        decline,
+                    ],
+                },
+            },
+            unsupported=[],
+        )
+
     card = base(c)
     card["unsupported"] = [f"Full text not yet mapped to IR: {plain[:240]}"]
     return card
