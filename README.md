@@ -76,11 +76,11 @@ console.log(pool.corpusOrder, marjanah.title);
 | the-automata-initiative | 65 | Null Signal The Automata Initiative (`tai`); status `supported` (wave gate `v0.86.0`) |
 | rebellion-without-rehearsal | 65 | Null Signal Rebellion Without Rehearsal (`rwr`); status `supported` (**65/65** mapped; wave gate `v1.00.0`) |
 | elevation | 82 | Null Signal Elevation (`elev`); status `supported` (**82/82** mapped; wave gate `v1.12.0`) |
-| vantage-point | 66 | Null Signal Vantage Point (`vp`); status `in-progress` (`v1.21.0`; **30/66** mapped) |
+| vantage-point | 66 | Null Signal Vantage Point (`vp`); status `in-progress` (`v1.22.0`; **33/66** mapped) |
 
 Synthetic stubs and early wave1/wave2 dirs were removed in `v0.2.0`. Reprints that previously lived only under those waves now ship under their Null Signal release directories.
 
-Parhelion is fully supported (wave gate `v0.71.0`). The Automata Initiative is fully supported (wave gate `v0.86.0`). Rebellion Without Rehearsal is fully supported (wave gate `v1.00.0`). Elevation is fully supported (wave gate `v1.12.0`). Vantage Point is in progress (`v1.21.0`; **30/66** mapped).
+Parhelion is fully supported (wave gate `v0.71.0`). The Automata Initiative is fully supported (wave gate `v0.86.0`). Rebellion Without Rehearsal is fully supported (wave gate `v1.00.0`). Elevation is fully supported (wave gate `v1.12.0`). Vantage Point is in progress (`v1.22.0`; **33/66** mapped).
 
 ## Versioning
 
