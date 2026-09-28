@@ -1868,6 +1868,175 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    if cid == "sebastiao-souza-pessoa-activist-organizer":
+        return base(
+            c,
+            onTakeTagsWhenUntagged={
+                "op": "do",
+                "action": {
+                    "kind": "may_install_from_grip",
+                    "types": ["resource"],
+                    "subtype": "connection",
+                    "discount": 2,
+                },
+            },
+            connectionBasicTrashAdditionalCostTrashHq=True,
+            unsupported=[],
+        )
+
+    if cid == "cloud-eater":
+        return base(
+            c,
+            onEncounterEndIfRezzedThisTurn={
+                "op": "choose",
+                "chooser": "runner",
+                "options": [
+                    {
+                        "id": "tags",
+                        "label": "Take 2 tags",
+                        "effect": tags(2),
+                    },
+                    {
+                        "id": "net",
+                        "label": "Suffer 3 net damage",
+                        "effect": net(3),
+                    },
+                    {
+                        "id": "trash",
+                        "label": "Trash 1 installed Runner card",
+                        "effect": {
+                            "op": "do",
+                            "action": {"kind": "trash_installed_runner"},
+                        },
+                    },
+                ],
+            },
+            subroutines=[
+                {
+                    "id": "cloud-trash",
+                    "text": "Trash 1 installed Runner card.",
+                    "effect": {
+                        "op": "do",
+                        "action": {"kind": "trash_installed_runner"},
+                    },
+                },
+                {
+                    "id": "cloud-tags",
+                    "text": "Give the Runner 2 tags.",
+                    "effect": tags(2),
+                },
+                {
+                    "id": "cloud-net",
+                    "text": "Do 3 net damage.",
+                    "effect": net(3),
+                },
+            ],
+            unsupported=[],
+        )
+
+    if cid == "descent":
+        return base(
+            c,
+            subtypes=["code gate", "expendable"],
+            onTurnBegin={
+                "op": "choose",
+                "chooser": "corp",
+                "options": [
+                    {
+                        "id": "to-hq",
+                        "label": "Add Descent to HQ",
+                        "effect": {
+                            "op": "do",
+                            "action": {"kind": "return_source_to_hq"},
+                        },
+                    },
+                    {
+                        "id": "decline",
+                        "label": "Decline",
+                        "effect": gain("corp", 0),
+                    },
+                ],
+            },
+            paidAbilities=[
+                {
+                    "id": "descent-expend",
+                    "label": "[click], 1¢, reveal and trash from HQ: Draw 1; shuffle up to 2 agendas into R&D",
+                    "clickCost": 1,
+                    "creditCost": 1,
+                    "cost": {"clicks": 1, "credits": 1, "trashSelf": True},
+                    "windows": ["corp_action_paw"],
+                    "usableFromHq": True,
+                    "effect": seq(
+                        draw("corp", 1),
+                        {
+                            "op": "do",
+                            "action": {
+                                "kind": "may_reveal_shuffle_agendas_into_rd",
+                                "max": 2,
+                            },
+                        },
+                    ),
+                }
+            ],
+            subroutines=[
+                {
+                    "id": "descent-etr",
+                    "text": "End the run.",
+                    "effect": etr(),
+                }
+            ],
+            unsupported=[],
+        )
+
+    if cid == "nuvem-sa-law-of-the-land":
+        return base(
+            c,
+            onAfterOperationOrExpendable={
+                "op": "do",
+                "action": {"kind": "look_top_rd_may_trash"},
+            },
+            creditsOnFirstRdTrashThisTurn=2,
+            unsupported=[],
+        )
+
+    if cid == "sisyphus-protocol":
+        return base(
+            c,
+            onFirstPassRezzedCodeGateOrSentryThisTurn={
+                "op": "choose",
+                "chooser": "corp",
+                "options": [
+                    {
+                        "id": "pay",
+                        "label": "Pay 1¢ to encounter that ice again",
+                        "effect": {
+                            "op": "do",
+                            "action": {
+                                "kind": "pay_credits_reencounter_passed_ice",
+                                "credits": 1,
+                            },
+                        },
+                    },
+                    {
+                        "id": "trash-hq",
+                        "label": "Trash 1 from HQ to encounter that ice again",
+                        "effect": {
+                            "op": "do",
+                            "action": {
+                                "kind": "trash_hq_reencounter_passed_ice",
+                            },
+                        },
+                    },
+                    {
+                        "id": "decline",
+                        "label": "Decline",
+                        "effect": gain("corp", 0),
+                    },
+                ],
+            },
+            unsupported=[],
+        )
+
     card = base(c)
     card["unsupported"] = [f"Full text not yet mapped to IR: {plain[:240]}"]
     return card

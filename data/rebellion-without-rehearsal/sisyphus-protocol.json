@@ -5,12 +5,49 @@
   "nrdbCode": "34106",
   "type": "agenda",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: The first time each turn the Runner passes a rezzed code gate or sentry, you may pay 1[credit] or trash 1 card from HQ. If you do, the Runner encounters that ice again."
-  ],
+  "unsupported": [],
   "subtypes": [
     "security"
   ],
   "advancementRequirement": 5,
-  "agendaPoints": 2
+  "agendaPoints": 2,
+  "onFirstPassRezzedCodeGateOrSentryThisTurn": {
+    "op": "choose",
+    "chooser": "corp",
+    "options": [
+      {
+        "id": "pay",
+        "label": "Pay 1¢ to encounter that ice again",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "pay_credits_reencounter_passed_ice",
+            "credits": 1
+          }
+        }
+      },
+      {
+        "id": "trash-hq",
+        "label": "Trash 1 from HQ to encounter that ice again",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "trash_hq_reencounter_passed_ice"
+          }
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "corp",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  }
 }

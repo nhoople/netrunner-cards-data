@@ -5,11 +5,21 @@
   "nrdbCode": "34066",
   "type": "identity",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Whenever you take 1 or more tags, if you had no tags, you may install 1 connection resource from your grip, paying 2[credit] less. As an additional cost to trash a connection resource with the basic action, the Corp must trash 1 card from H"
-  ],
+  "unsupported": [],
   "subtypes": [
     "g-mod"
   ],
-  "link": 0
+  "link": 0,
+  "onTakeTagsWhenUntagged": {
+    "op": "do",
+    "action": {
+      "kind": "may_install_from_grip",
+      "types": [
+        "resource"
+      ],
+      "subtype": "connection",
+      "discount": 2
+    }
+  },
+  "connectionBasicTrashAdditionalCostTrashHq": true
 }

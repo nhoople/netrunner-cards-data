@@ -714,6 +714,31 @@
       "type": "object",
       "description": "Effect IR the first time the Runner is tagged each turn (identities)."
     },
+    "onTakeTagsWhenUntagged": {
+      "type": "object",
+      "description": "Runner identity: Effect IR when taking 1+ tags while previously untagged (Sebastião)."
+    },
+    "connectionBasicTrashAdditionalCostTrashHq": {
+      "type": "boolean",
+      "description": "As additional cost for Corp basic trash of a connection resource, trash 1 from HQ (Sebastião)."
+    },
+    "onEncounterEndIfRezzedThisTurn": {
+      "type": "object",
+      "description": "Effect IR when an encounter with this ice ends if it was rezzed this turn (Cloud Eater)."
+    },
+    "onAfterOperationOrExpendable": {
+      "type": "object",
+      "description": "Corp identity: Effect IR after resolving an operation or expendable card action (Nuvem)."
+    },
+    "creditsOnFirstRdTrashThisTurn": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Corp identity: gain N¢ the first time each turn a card is trashed from R&D (Nuvem)."
+    },
+    "onFirstPassRezzedCodeGateOrSentryThisTurn": {
+      "type": "object",
+      "description": "Scored agenda: Effect IR the first time each turn the Runner passes a rezzed code gate or sentry (Sisyphus)."
+    },
     "onFirstCoreDamageThisTurn": {
       "type": "object",
       "description": "Effect IR the first time the Runner suffers core damage each turn (Runner identities; CR §10.4.2b)."
