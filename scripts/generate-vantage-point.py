@@ -673,9 +673,69 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    if cid == "sell-out":
+        return base(
+            c,
+            playRequiresInstalledResource=True,
+            playAdditionalCost={
+                "op": "do",
+                "action": {"kind": "trash_own_resource"},
+            },
+            onPlay=seq(gain("runner", 4), draw("runner", 2)),
+            unsupported=[],
+        )
+
+    if cid == "underdome-irregulars":
+        return base(
+            c,
+            onRunnerActionPhaseEnd={
+                "op": "if",
+                "cond": {"op": "ice_rezzed_this_turn"},
+                "then": {
+                    "op": "choose",
+                    "chooser": "runner",
+                    "options": [
+                        {
+                            "id": "draw",
+                            "label": "Draw 2 cards",
+                            "effect": draw("runner", 2),
+                        },
+                        {
+                            "id": "untag",
+                            "label": "Remove 1 tag",
+                            "effect": {
+                                "op": "do",
+                                "action": {"kind": "remove_tags", "amount": 1},
+                            },
+                        },
+                    ],
+                },
+                "else": {
+                    "op": "do",
+                    "action": {"kind": "trash_self"},
+                },
+            },
+            unsupported=[],
+        )
+
+    if cid == "unleash":
+        return base(
+            c,
+            playRequiresTagged=True,
+            playAdditionalCost={
+                "op": "do",
+                "action": {"kind": "remove_tags", "amount": 1},
+            },
+            onPlay={
+                "op": "do",
+                "action": {"kind": "unleash_rez_may_resolve_sub"},
+            },
+            unsupported=[],
+        )
+
     # Fail closed — honest unsupported note for the remainder.
-    # Corsair / Sell Out / Stowaway need IR not yet available (stealth credits,
-    # trash-own-resource play cost, host-server successful-run gate).
+    # Corsair / Stowaway need IR not yet available (stealth credits,
+    # host-server successful-run gate).
     card = base(c)
     card["unsupported"] = [f"Full text not yet mapped to IR: {plain[:240]}"]
     return card
@@ -729,7 +789,7 @@ def main():
             "Null Signal Vantage Point (NRDB pack vp) — next constructed set after "
             "Elevation. Fail-closed IR; "
             f"{full} cards fully mapped, {partial} with unsupported notes "
-            "(wave v1.16.0 B-slice)."
+            f"(wave v1.17.0 B-slice)."
         )
         manifest["status"] = "in-progress"
     (OUT / "_manifest.json").write_text(

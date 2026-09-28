@@ -556,7 +556,7 @@
     },
     "vantage-point": {
       "status": "in-progress",
-      "notes": "Null Signal Vantage Point (NRDB pack vp) — 66 cards. In progress: 15/66 mapped (wave v1.16.0 B-slice).",
+      "notes": "Null Signal Vantage Point (NRDB pack vp) — 66 cards. In progress: 18/66 mapped (wave v1.17.0 B-slice).",
       "cards": [
         "chain-reaction",
         "take-a-dive",

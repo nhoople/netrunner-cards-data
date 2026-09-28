@@ -1227,6 +1227,10 @@
     "playRequiresTagged": {
       "type": "boolean"
     },
+    "playRequiresInstalledResource": {
+      "type": "boolean",
+      "description": "Play only if the Runner has at least one installed resource (Sell Out)."
+    },
     "playRequiresUntagged": {
       "type": "boolean",
       "description": "Play only if the Runner has no tags (Eye for an Eye / Privileged Access)."

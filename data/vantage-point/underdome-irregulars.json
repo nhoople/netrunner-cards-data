@@ -5,11 +5,50 @@
   "nrdbCode": "36016",
   "type": "resource",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: When your action phase ends, if a piece of ice was rezzed this turn, draw 2 cards or remove 1 tag. If no ice was rezzed this turn, trash this resource."
-  ],
+  "unsupported": [],
   "subtypes": [
     "connection"
   ],
-  "installCost": 1
+  "installCost": 1,
+  "onRunnerActionPhaseEnd": {
+    "op": "if",
+    "cond": {
+      "op": "ice_rezzed_this_turn"
+    },
+    "then": {
+      "op": "choose",
+      "chooser": "runner",
+      "options": [
+        {
+          "id": "draw",
+          "label": "Draw 2 cards",
+          "effect": {
+            "op": "do",
+            "action": {
+              "kind": "draw",
+              "side": "runner",
+              "amount": 2
+            }
+          }
+        },
+        {
+          "id": "untag",
+          "label": "Remove 1 tag",
+          "effect": {
+            "op": "do",
+            "action": {
+              "kind": "remove_tags",
+              "amount": 1
+            }
+          }
+        }
+      ]
+    },
+    "else": {
+      "op": "do",
+      "action": {
+        "kind": "trash_self"
+      }
+    }
+  }
 }
