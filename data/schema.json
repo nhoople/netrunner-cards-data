@@ -865,6 +865,30 @@
       "type": "object",
       "description": "Effect IR the first time each turn a run begins while this card is scored (Stegodon)."
     },
+    "onRunBegin": {
+      "type": "object",
+      "description": "Effect IR whenever a run begins while this card is installed (Side Hustle)."
+    },
+    "onDiscardPhaseEnd": {
+      "type": "object",
+      "description": "Effect IR when the Corp's discard phase ends (Project Ingatan / Embedded Reporting / Sericulture / PT Untaian / Off the Books)."
+    },
+    "onHostedCreditsGte": {
+      "type": "object",
+      "required": ["amount", "effect"],
+      "properties": {
+        "amount": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Fire when hosted credits reach this many or more."
+        },
+        "effect": {
+          "type": "object",
+          "description": "Effect IR evaluated when the threshold is met."
+        }
+      },
+      "description": "Static-condition ability when hosted credits ≥ amount (Side Hustle)."
+    },
     "whileScoredBreakerStrengthPenaltyIfIceDerezzedThisRun": {
       "type": "integer",
       "minimum": 0,

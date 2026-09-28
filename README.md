@@ -34,7 +34,7 @@ Match this dataset and [netrunner-engine](https://github.com/nhoople/netrunner-e
 
 | Pairing | cards-data | engine |
 |---------|------------|--------|
-| **Current** | [`v1.06.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.06.0) | engine same-semver pin `v1.06.0` |
+| **Current** | [`v1.07.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.07.0) | engine same-semver pin `v1.07.0` |
 | RWR milestone | [`v1.00.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.00.0) | [`v1.00.0`](https://github.com/nhoople/netrunner-engine/releases/tag/v1.00.0) |
 
 Incremental wave tags are the day-to-day IR/wiring contract. A set-complete **milestone** GitHub Release is cut only when a wave’s pool status → `supported` (advertised host floor for that set).
@@ -73,7 +73,7 @@ console.log(pool.corpusOrder, marjanah.title);
 | parhelion | 63 | Null Signal Parhelion (`ph`); status `supported` (wave gate `v0.71.0`; all 63 clear) |
 | the-automata-initiative | 65 | Null Signal The Automata Initiative (`tai`); status `supported` (wave gate `v0.86.0`) |
 | rebellion-without-rehearsal | 65 | Null Signal Rebellion Without Rehearsal (`rwr`); status `supported` (**65/65** mapped; wave gate `v1.00.0`) |
-| elevation | 82 | Null Signal Elevation (`elev`); status `in-progress` (39/82 mapped; `v1.06.0`) |
+| elevation | 82 | Null Signal Elevation (`elev`); status `in-progress` (47/82 mapped; `v1.07.0`) |
 
 Synthetic stubs and early wave1/wave2 dirs were removed in `v0.2.0`. Reprints that previously lived only under those waves now ship under their Null Signal release directories.
 

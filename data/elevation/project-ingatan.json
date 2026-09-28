@@ -5,12 +5,65 @@
   "nrdbCode": "35038",
   "type": "agenda",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: Dividends 1 (When you score this agenda, place 1 agenda counter on it for each excess advancement counter.) When your discard phase ends, you may remove 1 hosted agenda counter to install 1 card from Archives, ignoring all costs."
-  ],
+  "unsupported": [],
   "subtypes": [
     "research"
   ],
   "advancementRequirement": 3,
-  "agendaPoints": 2
+  "agendaPoints": 2,
+  "onScore": {
+    "op": "do",
+    "action": {
+      "kind": "add_agenda_counters_from_overadvance",
+      "past": 3,
+      "per": 1
+    }
+  },
+  "onDiscardPhaseEnd": {
+    "op": "if",
+    "cond": {
+      "op": "agenda_counters_gte",
+      "amount": 1
+    },
+    "then": {
+      "op": "choose",
+      "chooser": "corp",
+      "options": [
+        {
+          "id": "install",
+          "label": "Remove 1 agenda counter: install 1 card from Archives, ignoring all costs",
+          "effect": {
+            "op": "seq",
+            "effects": [
+              {
+                "op": "do",
+                "action": {
+                  "kind": "remove_agenda_counters",
+                  "amount": 1
+                }
+              },
+              {
+                "op": "do",
+                "action": {
+                  "kind": "may_install_from_archives_ignore_costs"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "decline",
+          "label": "Decline",
+          "effect": {
+            "op": "do",
+            "action": {
+              "kind": "gain_credits",
+              "side": "corp",
+              "amount": 0
+            }
+          }
+        }
+      ]
+    }
+  }
 }

@@ -5,10 +5,40 @@
   "nrdbCode": "35035",
   "type": "identity",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: Once per turn → Trash 1 rezzed bioroid card in the root of or protecting the attacked server: End the run."
-  ],
+  "unsupported": [],
   "subtypes": [
     "division"
+  ],
+  "paidAbilities": [
+    {
+      "id": "leo-etr",
+      "label": "Once per turn → Trash 1 rezzed bioroid in/protecting attacked server: End the run",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {},
+      "oncePerTurn": true,
+      "windows": [
+        "approach_paw",
+        "encounter_paw",
+        "approach_server_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "trash_installed",
+          "rezzedOnly": true,
+          "includeSubtypes": [
+            "bioroid"
+          ],
+          "attackedServerOnly": true,
+          "then": {
+            "op": "do",
+            "action": {
+              "kind": "end_the_run"
+            }
+          }
+        }
+      }
+    }
   ]
 }
