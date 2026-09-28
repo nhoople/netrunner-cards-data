@@ -5,11 +5,36 @@
   "nrdbCode": "36054",
   "type": "operation",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: Resolve 1 of the following of the Runner’s choice:Remove 2 bad publicity.Choose 1 installed Runner card. The Runner shuffles it into the stack."
-  ],
+  "unsupported": [],
   "subtypes": [
     "gray ops"
   ],
-  "playCost": 0
+  "playCost": 0,
+  "onPlay": {
+    "op": "choose",
+    "chooser": "runner",
+    "options": [
+      {
+        "id": "remove-bp",
+        "label": "Corp removes 2 bad publicity",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "remove_bad_publicity",
+            "amount": 2
+          }
+        }
+      },
+      {
+        "id": "shuffle-installed",
+        "label": "Shuffle 1 installed Runner card into the stack",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "shuffle_installed_runner_into_stack"
+          }
+        }
+      }
+    ]
+  }
 }

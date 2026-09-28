@@ -5,13 +5,20 @@
   "nrdbCode": "36048",
   "type": "asset",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: As an additional cost to steal an agenda, the Runner must pay 3[credit]. Whenever you score an agenda, the Runner loses 3[credit]."
-  ],
+  "unsupported": [],
   "subtypes": [
     "executive"
   ],
   "installCost": 2,
   "rezCost": 2,
-  "trashCost": 3
+  "trashCost": 3,
+  "stealAdditionalCreditsWhileRezzed": 3,
+  "onAgendaScored": {
+    "op": "do",
+    "action": {
+      "kind": "lose_credits",
+      "side": "runner",
+      "amount": 3
+    }
+  }
 }

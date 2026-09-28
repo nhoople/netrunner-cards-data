@@ -852,6 +852,94 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    # --- v1.20.0 B-slice ---
+
+    if cid == "ezam":
+        return base(
+            c,
+            paidAbilities=[
+                {
+                    "id": "ezam-swap",
+                    "label": "[click]: Swap this ice with another installed ice",
+                    "clickCost": 1,
+                    "creditCost": 0,
+                    "cost": {"clicks": 1},
+                    "windows": ["corp_action_paw"],
+                    "effect": {
+                        "op": "do",
+                        "action": {"kind": "swap_source_ice_with_other"},
+                    },
+                }
+            ],
+            subroutines=[
+                {
+                    "id": "ezam-look",
+                    "text": "Look at the top card of R&D. You may add that card to the bottom of R&D.",
+                    "effect": {
+                        "op": "do",
+                        "action": {"kind": "look_top_rd_may_bottom"},
+                    },
+                },
+                {
+                    "id": "ezam-fortify",
+                    "text": "Each piece of ice gets +1 strength for the remainder of this run.",
+                    "effect": {
+                        "op": "do",
+                        "action": {"kind": "fortify_all_ice", "amount": 1},
+                    },
+                },
+            ],
+            unsupported=[],
+        )
+
+    if cid == "magistrate-revontulet":
+        return base(
+            c,
+            stealAdditionalCreditsWhileRezzed=3,
+            onAgendaScored={
+                "op": "do",
+                "action": {
+                    "kind": "lose_credits",
+                    "side": "runner",
+                    "amount": 3,
+                },
+            },
+            unsupported=[],
+        )
+
+    if cid == "scapegoat":
+        return base(
+            c,
+            onPlay={
+                "op": "choose",
+                "chooser": "runner",
+                "options": [
+                    {
+                        "id": "remove-bp",
+                        "label": "Corp removes 2 bad publicity",
+                        "effect": {
+                            "op": "do",
+                            "action": {
+                                "kind": "remove_bad_publicity",
+                                "amount": 2,
+                            },
+                        },
+                    },
+                    {
+                        "id": "shuffle-installed",
+                        "label": "Shuffle 1 installed Runner card into the stack",
+                        "effect": {
+                            "op": "do",
+                            "action": {
+                                "kind": "shuffle_installed_runner_into_stack",
+                            },
+                        },
+                    },
+                ],
+            },
+            unsupported=[],
+        )
+
     # Fail closed — honest unsupported note for the remainder.
     # Corsair / Lampades need stealth-credit spend; Cultivate is a
     # look/trash/HQ/arrange composite not yet in IR.
@@ -908,7 +996,7 @@ def main():
             "Null Signal Vantage Point (NRDB pack vp) — next constructed set after "
             "Elevation. Fail-closed IR; "
             f"{full} cards fully mapped, {partial} with unsupported notes "
-            f"(wave v1.19.0 B-slice)."
+            f"(wave v1.20.0 B-slice)."
         )
         manifest["status"] = "in-progress"
     (OUT / "_manifest.json").write_text(

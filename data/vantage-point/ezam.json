@@ -5,13 +5,54 @@
   "nrdbCode": "36039",
   "type": "ice",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: [click]: Swap this ice with another installed piece of ice. [subroutine] Look at the top card of R&D. You may add that card to the bottom of R&D. [subroutine] Each piece of ice gets +1 strength for the remainder of this run."
-  ],
+  "unsupported": [],
   "subtypes": [
     "code gate"
   ],
   "installCost": 1,
   "rezCost": 1,
-  "strength": 3
+  "strength": 3,
+  "paidAbilities": [
+    {
+      "id": "ezam-swap",
+      "label": "[click]: Swap this ice with another installed ice",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "swap_source_ice_with_other"
+        }
+      }
+    }
+  ],
+  "subroutines": [
+    {
+      "id": "ezam-look",
+      "text": "Look at the top card of R&D. You may add that card to the bottom of R&D.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "look_top_rd_may_bottom"
+        }
+      }
+    },
+    {
+      "id": "ezam-fortify",
+      "text": "Each piece of ice gets +1 strength for the remainder of this run.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "fortify_all_ice",
+          "amount": 1
+        }
+      }
+    }
+  ]
 }

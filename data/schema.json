@@ -889,6 +889,11 @@
       "minimum": 1,
       "description": "Additional clicks the Runner must spend to steal this agenda (Méliès City Luxury Line)."
     },
+    "stealAdditionalCreditsWhileRezzed": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "While this card is rezzed, Runner must pay this many credits as an additional cost to steal any agenda (Magistrate Revontulet)."
+    },
     "maxRemoteServers": {
       "type": "integer",
       "minimum": 0,
