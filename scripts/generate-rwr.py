@@ -2172,6 +2172,185 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    if cid == "burner":
+        return base(
+            c,
+            subtypes=["run"],
+            runEvent={
+                "servers": "hq",
+                "skipBreach": True,
+                "onSuccessfulRun": {
+                    "op": "do",
+                    "action": {
+                        "kind": "burner_resolve",
+                        "reveal": 3,
+                        "move": 2,
+                    },
+                },
+            },
+            unsupported=[],
+        )
+
+    if cid == "cataloguer":
+        decline = {
+            "id": "breach",
+            "label": "Breach R&D normally",
+            "effect": gain("runner", 0),
+        }
+        return base(
+            c,
+            powerCountersOnInstall=2,
+            trashWhenPowerEmpty=True,
+            onSuccessfulRun={
+                "op": "if",
+                "cond": {"op": "attacking_rd"},
+                "then": {
+                    "op": "choose",
+                    "chooser": "runner",
+                    "options": [
+                        {
+                            "id": "arrange",
+                            "label": (
+                                "Remove 1 power: look at top 4 of R&D "
+                                "and arrange (skip breach)"
+                            ),
+                            "effect": seq(
+                                {
+                                    "op": "do",
+                                    "action": {
+                                        "kind": "remove_power_counter",
+                                        "amount": 1,
+                                    },
+                                },
+                                {
+                                    "op": "do",
+                                    "action": {
+                                        "kind": "look_top_n_rd_arrange",
+                                        "n": 4,
+                                    },
+                                },
+                                {
+                                    "op": "do",
+                                    "action": {"kind": "set_run_skip_breach"},
+                                },
+                            ),
+                        },
+                        decline,
+                    ],
+                },
+            },
+            paidAbilities=[
+                {
+                    "id": "cataloguer-breach-rd",
+                    "label": "[click], hosted power counter: Breach R&D",
+                    "clickCost": 1,
+                    "creditCost": 0,
+                    "cost": {"clicks": 1, "powerCounters": 1},
+                    "windows": ["runner_action_paw"],
+                    "requiresSuccessfulRdRunThisTurn": True,
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "breach_server_standalone",
+                            "server": "rd",
+                        },
+                    },
+                }
+            ],
+            unsupported=[],
+        )
+
+    if cid == "muse":
+        return base(
+            c,
+            subtypes=["daemon"],
+            daemonHost=True,
+            onInstall={
+                "op": "do",
+                "action": {"kind": "muse_search_install_non_daemon"},
+            },
+            unsupported=[],
+        )
+
+    if cid == "jeitinho":
+        decline = {
+            "id": "decline",
+            "label": "Decline",
+            "effect": gain("runner", 0),
+        }
+        return base(
+            c,
+            subtypes=["weapon"],
+            onRunnerTurnEnd={
+                "op": "if",
+                "cond": {"op": "successful_all_centrals_this_turn"},
+                "then": {
+                    "op": "choose",
+                    "chooser": "runner",
+                    "options": [
+                        {
+                            "id": "score",
+                            "label": (
+                                "Add to score area as 0-point "
+                                "assassination agenda"
+                            ),
+                            "effect": seq(
+                                {
+                                    "op": "do",
+                                    "action": {
+                                        "kind": "add_to_runner_score_as_agenda",
+                                        "agendaPoints": 0,
+                                        "addSubtypes": ["assassination"],
+                                    },
+                                },
+                                {
+                                    "op": "do",
+                                    "action": {
+                                        "kind": "check_assassination_win",
+                                        "amount": 3,
+                                    },
+                                },
+                            ),
+                        },
+                        decline,
+                    ],
+                },
+            },
+            onBypassMayInstallFromHeap={
+                "requiresThreat": 3,
+                "clickCost": 1,
+            },
+            unsupported=[],
+        )
+
+    if cid == "the-wizard-s-chest":
+        return base(
+            c,
+            paidAbilities=[
+                {
+                    "id": "wizard-chest-set-aside",
+                    "label": (
+                        "[trash]: Set aside until 2 of a type; "
+                        "may install 1 ignoring costs"
+                    ),
+                    "clickCost": 0,
+                    "creditCost": 0,
+                    "cost": {"trashSelf": True},
+                    "windows": ["runner_action_paw"],
+                    "requiresSuccessfulAllCentralsThisTurn": True,
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "wizard_chest_resolve",
+                            "untilCount": 2,
+                            "ignoreAllCosts": True,
+                        },
+                    },
+                }
+            ],
+            unsupported=[],
+        )
+
     card = base(c)
     card["unsupported"] = [f"Full text not yet mapped to IR: {plain[:240]}"]
     return card

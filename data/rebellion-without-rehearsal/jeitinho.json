@@ -5,11 +5,63 @@
   "nrdbCode": "34079",
   "type": "hardware",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: When your turn ends, if you made a successful run on HQ, R&D, and Archives this turn, you may add this hardware to your score area as an assassination agenda worth 0 agenda points. Then, if you have 3 assassination agendas in your score are"
-  ],
+  "unsupported": [],
   "subtypes": [
     "weapon"
   ],
-  "installCost": 1
+  "installCost": 1,
+  "onRunnerTurnEnd": {
+    "op": "if",
+    "cond": {
+      "op": "successful_all_centrals_this_turn"
+    },
+    "then": {
+      "op": "choose",
+      "chooser": "runner",
+      "options": [
+        {
+          "id": "score",
+          "label": "Add to score area as 0-point assassination agenda",
+          "effect": {
+            "op": "seq",
+            "effects": [
+              {
+                "op": "do",
+                "action": {
+                  "kind": "add_to_runner_score_as_agenda",
+                  "agendaPoints": 0,
+                  "addSubtypes": [
+                    "assassination"
+                  ]
+                }
+              },
+              {
+                "op": "do",
+                "action": {
+                  "kind": "check_assassination_win",
+                  "amount": 3
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "decline",
+          "label": "Decline",
+          "effect": {
+            "op": "do",
+            "action": {
+              "kind": "gain_credits",
+              "side": "runner",
+              "amount": 0
+            }
+          }
+        }
+      ]
+    }
+  },
+  "onBypassMayInstallFromHeap": {
+    "requiresThreat": 3,
+    "clickCost": 1
+  }
 }

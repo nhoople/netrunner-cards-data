@@ -5,11 +5,21 @@
   "nrdbCode": "34085",
   "type": "event",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Run HQ. If successful, instead of breaching HQ, reveal 3 cards in HQ at random. Add 2 of the revealed cards to the top and/or bottom of R&D."
-  ],
+  "unsupported": [],
   "subtypes": [
     "run"
   ],
-  "playCost": 1
+  "playCost": 1,
+  "runEvent": {
+    "servers": "hq",
+    "skipBreach": true,
+    "onSuccessfulRun": {
+      "op": "do",
+      "action": {
+        "kind": "burner_resolve",
+        "reveal": 3,
+        "move": 2
+      }
+    }
+  }
 }

@@ -5,8 +5,29 @@
   "nrdbCode": "34070",
   "type": "hardware",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Use this hardware only if you made a successful run on HQ, R&D, and Archives this turn. [trash]: Choose hardware, program, or resource. Set aside cards from the top of your stack faceup until you set aside 2 cards of the chosen type. You ma"
-  ],
-  "installCost": 0
+  "unsupported": [],
+  "installCost": 0,
+  "paidAbilities": [
+    {
+      "id": "wizard-chest-set-aside",
+      "label": "[trash]: Set aside until 2 of a type; may install 1 ignoring costs",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "trashSelf": true
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "requiresSuccessfulAllCentralsThisTurn": true,
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "wizard_chest_resolve",
+          "untilCount": 2,
+          "ignoreAllCosts": true
+        }
+      }
+    }
+  ]
 }

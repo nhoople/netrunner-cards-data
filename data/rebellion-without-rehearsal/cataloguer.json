@@ -5,8 +5,84 @@
   "nrdbCode": "34088",
   "type": "hardware",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: When you install this hardware, load 2 power counters onto it. When it is empty, trash it. Whenever you make a successful run on R&D, instead of breaching R&D, you may remove 1 hosted power counter to look at the top 4 cards of R&D and arra"
-  ],
-  "installCost": 2
+  "unsupported": [],
+  "installCost": 2,
+  "powerCountersOnInstall": 2,
+  "trashWhenPowerEmpty": true,
+  "onSuccessfulRun": {
+    "op": "if",
+    "cond": {
+      "op": "attacking_rd"
+    },
+    "then": {
+      "op": "choose",
+      "chooser": "runner",
+      "options": [
+        {
+          "id": "arrange",
+          "label": "Remove 1 power: look at top 4 of R&D and arrange (skip breach)",
+          "effect": {
+            "op": "seq",
+            "effects": [
+              {
+                "op": "do",
+                "action": {
+                  "kind": "remove_power_counter",
+                  "amount": 1
+                }
+              },
+              {
+                "op": "do",
+                "action": {
+                  "kind": "look_top_n_rd_arrange",
+                  "n": 4
+                }
+              },
+              {
+                "op": "do",
+                "action": {
+                  "kind": "set_run_skip_breach"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "breach",
+          "label": "Breach R&D normally",
+          "effect": {
+            "op": "do",
+            "action": {
+              "kind": "gain_credits",
+              "side": "runner",
+              "amount": 0
+            }
+          }
+        }
+      ]
+    }
+  },
+  "paidAbilities": [
+    {
+      "id": "cataloguer-breach-rd",
+      "label": "[click], hosted power counter: Breach R&D",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1,
+        "powerCounters": 1
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "requiresSuccessfulRdRunThisTurn": true,
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "breach_server_standalone",
+          "server": "rd"
+        }
+      }
+    }
+  ]
 }
