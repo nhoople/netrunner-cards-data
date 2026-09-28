@@ -5,11 +5,34 @@
   "nrdbCode": "35055",
   "type": "operation",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: Reveal all but 1 card in HQ. Gain 7[credit]. You may install 1 card from HQ in the root of a remote server."
-  ],
+  "unsupported": [],
   "subtypes": [
     "transaction"
   ],
-  "playCost": 4
+  "playCost": 4,
+  "onPlay": {
+    "op": "seq",
+    "effects": [
+      {
+        "op": "do",
+        "action": {
+          "kind": "reveal_all_but_one_hq"
+        }
+      },
+      {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "corp",
+          "amount": 7
+        }
+      },
+      {
+        "op": "do",
+        "action": {
+          "kind": "may_install_from_hq_to_remote_root_paying_costs"
+        }
+      }
+    ]
+  }
 }

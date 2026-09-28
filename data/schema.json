@@ -422,6 +422,10 @@
             "type": "boolean",
             "description": "Corp paid ability usable while this card is in HQ (Expendable; Tree Line)."
           },
+          "usableFromArchives": {
+            "type": "boolean",
+            "description": "Corp paid ability usable while this card is in Archives (Petty Cash)."
+          },
           "usableFromRunnerScoreArea": {
             "type": "boolean",
             "description": "Corp paid ability usable while this agenda is in the Runner's score area (Oracle Thinktank)."
@@ -893,6 +897,18 @@
     "playRequiresNoCorpActionFinished": {
       "type": "boolean",
       "description": "Corp operation: play only before the first Corp action completes (Petty Cash)."
+    },
+    "onFirstPlayOperationThisTurn": {
+      "type": "object",
+      "description": "Corp identity: Effect IR the first time each turn Corp plays an operation (Nebula flip side)."
+    },
+    "onCreditsGainedFromAgendaOrOperationAbility": {
+      "type": "object",
+      "description": "Corp identity: first time each turn credits are gained via an agenda or operation ability (Zwicky)."
+    },
+    "onDiscardToMaxHandSize": {
+      "type": "object",
+      "description": "Runner identity: Effect IR after discarding to max hand size, with discarded batch available (Magdalene)."
     },
     "onFirstAgendaScoredOrStolenThisTurn": {
       "type": "object",

@@ -5,11 +5,15 @@
   "nrdbCode": "35024",
   "type": "identity",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Whenever you discard cards to reach your maximum hand size, you may install 1 program or piece of hardware from among those cards."
-  ],
+  "unsupported": [],
   "subtypes": [
     "cyborg"
   ],
-  "link": 0
+  "link": 0,
+  "onDiscardToMaxHandSize": {
+    "op": "do",
+    "action": {
+      "kind": "may_install_program_or_hardware_from_discarded_batch"
+    }
+  }
 }

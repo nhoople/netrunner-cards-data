@@ -5,10 +5,38 @@
   "nrdbCode": "35069",
   "type": "identity",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: The first time each turn you gain credits through an ability on an agenda or operation, you may draw 1 card."
-  ],
+  "unsupported": [],
   "subtypes": [
     "unsubstantiated"
-  ]
+  ],
+  "onCreditsGainedFromAgendaOrOperationAbility": {
+    "op": "choose",
+    "chooser": "corp",
+    "options": [
+      {
+        "id": "draw",
+        "label": "Draw 1 card",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "draw",
+            "side": "corp",
+            "amount": 1
+          }
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "corp",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  }
 }
