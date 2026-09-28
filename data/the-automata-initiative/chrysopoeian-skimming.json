@@ -5,8 +5,40 @@
   "nrdbCode": "34011",
   "type": "event",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: The Corp may reveal an agenda from HQ. If they do, gain [click] and draw 1 card. Otherwise, look at the top 3 cards of R&D."
-  ],
-  "playCost": 1
+  "unsupported": [],
+  "playCost": 1,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "corp_may_reveal_agenda_from_hq",
+      "then": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "gain_clicks",
+              "side": "runner",
+              "amount": 1
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "draw",
+              "side": "runner",
+              "amount": 1
+            }
+          }
+        ]
+      },
+      "else": {
+        "op": "do",
+        "action": {
+          "kind": "look_top_n_rd_peek",
+          "n": 3
+        }
+      }
+    }
+  }
 }
