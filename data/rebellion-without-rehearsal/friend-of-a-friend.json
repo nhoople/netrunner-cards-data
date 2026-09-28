@@ -5,11 +5,78 @@
   "nrdbCode": "34074",
   "type": "resource",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: [click], [trash]: Gain 5[credit] and remove 1 tag. [click], [trash]: Gain 9[credit] and take 1 tag. Use this ability only if you are not tagged."
-  ],
+  "unsupported": [],
   "subtypes": [
     "connection"
   ],
-  "installCost": 3
+  "installCost": 3,
+  "paidAbilities": [
+    {
+      "id": "fof-untag",
+      "label": "[click], [trash]: Gain 5¢ and remove 1 tag",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1,
+        "trashSelf": true
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "gain_credits",
+              "side": "runner",
+              "amount": 5
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "remove_tags",
+              "amount": 1
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "fof-tag",
+      "label": "[click], [trash]: Gain 9¢ and take 1 tag (if untagged)",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1,
+        "trashSelf": true
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "requiresUntagged": true,
+      "effect": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "gain_credits",
+              "side": "runner",
+              "amount": 9
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "give_tags",
+              "amount": 1
+            }
+          }
+        ]
+      }
+    }
+  ]
 }

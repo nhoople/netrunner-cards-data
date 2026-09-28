@@ -202,6 +202,167 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    if cid == "corporate-hospitality":
+        return base(
+            c,
+            playAdditionalClick=True,
+            onPlay=seq(
+                gain("corp", 6),
+                draw("corp", 2),
+                {
+                    "op": "do",
+                    "action": {"kind": "archives_to_hq", "amount": 1},
+                },
+            ),
+            unsupported=[],
+        )
+
+    if cid == "boto":
+        return base(
+            c,
+            threatStrengthBonus={"level": 4, "amount": 2},
+            subroutines=[
+                {
+                    "id": "boto-net",
+                    "text": "Do 2 net damage.",
+                    "effect": net(2),
+                },
+                {
+                    "id": "boto-trash-etr",
+                    "text": "You may trash 1 card from HQ to end the run.",
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "may_trash_hq_then",
+                            "then": etr(),
+                        },
+                    },
+                },
+                {
+                    "id": "boto-etr",
+                    "text": "End the run.",
+                    "effect": etr(),
+                },
+            ],
+            unsupported=[],
+        )
+
+    if cid == "capacitor":
+        return base(
+            c,
+            strengthBonusWhileTagged=2,
+            subroutines=[
+                {
+                    "id": "capacitor-credits",
+                    "text": "Gain 1[credit] for each tag the Runner has.",
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "gain_credits_per_runner_tags",
+                            "per": 1,
+                        },
+                    },
+                },
+                {
+                    "id": "capacitor-etr",
+                    "text": "End the run.",
+                    "effect": etr(),
+                },
+            ],
+            unsupported=[],
+        )
+
+    if cid == "friend-of-a-friend":
+        return base(
+            c,
+            paidAbilities=[
+                {
+                    "id": "fof-untag",
+                    "label": "[click], [trash]: Gain 5¢ and remove 1 tag",
+                    "clickCost": 1,
+                    "creditCost": 0,
+                    "cost": {"clicks": 1, "trashSelf": True},
+                    "windows": ["runner_action_paw"],
+                    "effect": seq(
+                        gain("runner", 5),
+                        {
+                            "op": "do",
+                            "action": {"kind": "remove_tags", "amount": 1},
+                        },
+                    ),
+                },
+                {
+                    "id": "fof-tag",
+                    "label": "[click], [trash]: Gain 9¢ and take 1 tag (if untagged)",
+                    "clickCost": 1,
+                    "creditCost": 0,
+                    "cost": {"clicks": 1, "trashSelf": True},
+                    "windows": ["runner_action_paw"],
+                    "requiresUntagged": True,
+                    "effect": seq(gain("runner", 9), tags(1)),
+                },
+            ],
+            unsupported=[],
+        )
+
+    if cid == "seraph":
+        return base(
+            c,
+            onEncounter={
+                "op": "choose",
+                "chooser": "runner",
+                "options": [
+                    {
+                        "id": "lose-3",
+                        "label": "Lose 3¢",
+                        "effect": {
+                            "op": "do",
+                            "action": {
+                                "kind": "lose_credits",
+                                "side": "runner",
+                                "amount": 3,
+                            },
+                        },
+                    },
+                    {
+                        "id": "net-2",
+                        "label": "Suffer 2 net damage",
+                        "effect": net(2),
+                    },
+                    {
+                        "id": "tag-1",
+                        "label": "Take 1 tag",
+                        "effect": tags(1),
+                    },
+                ],
+            },
+            subroutines=[
+                {
+                    "id": "seraph-lose",
+                    "text": "The Runner loses 3[credit].",
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "lose_credits",
+                            "side": "runner",
+                            "amount": 3,
+                        },
+                    },
+                },
+                {
+                    "id": "seraph-net",
+                    "text": "Do 2 net damage.",
+                    "effect": net(2),
+                },
+                {
+                    "id": "seraph-tag",
+                    "text": "Give the Runner 1 tag.",
+                    "effect": tags(1),
+                },
+            ],
+            unsupported=[],
+        )
+
     card = base(c)
     card["unsupported"] = [f"Full text not yet mapped to IR: {plain[:240]}"]
     return card

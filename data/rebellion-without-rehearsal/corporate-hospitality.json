@@ -5,13 +5,40 @@
   "nrdbCode": "34103",
   "type": "operation",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: As an additional cost to play this operation, spend [click]. Gain 6[credit] and draw 2 cards. Add 1 card from Archives to HQ."
-  ],
+  "unsupported": [],
   "subtypes": [
     "double",
     "transaction"
   ],
   "playCost": 4,
-  "trashCost": 1
+  "trashCost": 1,
+  "playAdditionalClick": true,
+  "onPlay": {
+    "op": "seq",
+    "effects": [
+      {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "corp",
+          "amount": 6
+        }
+      },
+      {
+        "op": "do",
+        "action": {
+          "kind": "draw",
+          "side": "corp",
+          "amount": 2
+        }
+      },
+      {
+        "op": "do",
+        "action": {
+          "kind": "archives_to_hq",
+          "amount": 1
+        }
+      }
+    ]
+  }
 }
