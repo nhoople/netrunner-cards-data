@@ -7,6 +7,7 @@
   "side": "runner",
   "unsupported": [],
   "installCost": 3,
+  "unique": true,
   "muBonus": 1,
   "allIceStrengthPenalty": 1,
   "gainCreditOnBreakIceStrengthLteOncePerTurn": 0

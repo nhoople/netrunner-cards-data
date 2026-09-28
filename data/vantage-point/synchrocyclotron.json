@@ -12,5 +12,6 @@
   "installCost": 3,
   "rezCost": 3,
   "trashCost": 3,
+  "unique": true,
   "firstDoubleOperationClickDiscount": 1
 }

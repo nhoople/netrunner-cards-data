@@ -10,6 +10,7 @@
     "console"
   ],
   "installCost": 3,
+  "unique": true,
   "muBonus": 1,
   "mayTakeTagForBonusAccessOnHqRdBreach": 1,
   "paidAbilities": [

@@ -124,6 +124,8 @@ def base(c, **extra):
         card["agendaPoints"] = c["agenda_points"]
     if c.get("base_link") is not None:
         card["link"] = c["base_link"]
+    if c.get("uniqueness"):
+        card["unique"] = True
     card.update(extra)
     return card
 
@@ -1619,9 +1621,98 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    # --- v1.33.0 B-slice (final four → 66/66) ---
+
+    if cid == "word-on-the-street":
+        return base(
+            c,
+            additionalCostOnScoreAgendaInstalledThisTurn={
+                "op": "do",
+                "action": {
+                    "kind": "add_to_corp_score_as_agenda",
+                    "agendaPoints": -1,
+                    "cannotForfeit": True,
+                },
+            },
+            onAgendaScored={
+                "op": "if",
+                "cond": {
+                    "op": "not",
+                    "cond": {"op": "last_scored_agenda_installed_this_turn"},
+                },
+                "then": seq(
+                    {"op": "do", "action": {"kind": "trash_self"}},
+                    gain("runner", 4),
+                    draw("runner", 1),
+                ),
+            },
+            unsupported=[],
+        )
+
+    if cid == "read-write-share":
+        may_host = {
+            "op": "do",
+            "action": {"kind": "may_host_one_from_grip_facedown_then_draw"},
+        }
+        return base(
+            c,
+            maxHostedCards=4,
+            onInstall=may_host,
+            onTurnBegin=may_host,
+            paidAbilities=[
+                {
+                    "id": "read-write-share-shuffle",
+                    "label": "[trash]: Shuffle all hosted cards into your stack",
+                    "clickCost": 0,
+                    "creditCost": 0,
+                    "cost": {"trashSelf": True},
+                    "windows": ["runner_action_paw", "corp_action_paw"],
+                    "effect": {
+                        "op": "do",
+                        "action": {"kind": "shuffle_hosted_cards_into_stack"},
+                    },
+                }
+            ],
+            unsupported=[],
+        )
+
+    if cid == "hackerspace":
+        return base(
+            c,
+            hostsUniqueCompanionOrConnectionResources={"creditDiscount": 1},
+            handSizeBonusIfHostingCompanionAndConnection=2,
+            unsupported=[],
+        )
+
+    if cid == "melies-u-only-the-brightest":
+        return base(
+            c,
+            onDiscardPhaseEnd={
+                "op": "do",
+                "action": {"kind": "melies_secretly_set_face"},
+            },
+            flipIdentityOnSuccessfulCentralRun=True,
+            onRunnerActionPhaseEnd={
+                "op": "if",
+                "cond": {"op": "identity_unflipped"},
+                "then": gain("corp", 1),
+            },
+            identityFlippedHooks={
+                "onFlipToBackIfRunMatchesFace": {
+                    "op": "do",
+                    "action": {
+                        "kind": "look_top_rd_may_trash_if_do_archives_to_hq"
+                    },
+                },
+                "onRunnerDiscardPhaseEnd": {
+                    "op": "do",
+                    "action": {"kind": "flip_identity"},
+                },
+            },
+            unsupported=[],
+        )
+
     # Fail closed — honest unsupported note for the remainder.
-    # Remaining stubs: Word on the Street / Read-Write Share / Hackerspace /
-    # Méliès U.
     card = base(c)
     card["unsupported"] = [f"Full text not yet mapped to IR: {plain[:240]}"]
     return card
@@ -1675,9 +1766,16 @@ def main():
             "Null Signal Vantage Point (NRDB pack vp) — next constructed set after "
             "Elevation. Fail-closed IR; "
             f"{full} cards fully mapped, {partial} with unsupported notes "
-            f"(wave v1.32.0 B-slice)."
+            f"(wave v1.33.0 B-slice)."
         )
-        manifest["status"] = "in-progress"
+        if full >= EXPECTED and partial == 0:
+            manifest["status"] = "supported"
+            manifest["notes"] = (
+                "Null Signal Vantage Point (NRDB pack vp) — fully mapped "
+                f"({full}/{EXPECTED}; wave gate v1.33.0)."
+            )
+        else:
+            manifest["status"] = "in-progress"
     (OUT / "_manifest.json").write_text(
         json.dumps(manifest, indent=2, ensure_ascii=False) + "\n"
     )

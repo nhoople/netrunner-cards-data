@@ -10,6 +10,7 @@
     "stealth"
   ],
   "installCost": 2,
+  "unique": true,
   "hostedCreditsOnFirstEventPlayOncePerTurn": 1,
   "spendHostedCreditsDuringRuns": true
 }

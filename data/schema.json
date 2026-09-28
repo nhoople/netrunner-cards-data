@@ -975,7 +975,7 @@
     },
     "identityFlippedHooks": {
       "type": "object",
-      "description": "Corp dual-faced identity: effects while flipped (Nebula).",
+      "description": "Corp dual/multi-faced identity: effects while flipped (Nebula / Méliès U).",
       "additionalProperties": false,
       "properties": {
         "onFirstOperationPlayThisTurn": {
@@ -985,6 +985,14 @@
         "onSuccessfulHqOrRdRun": {
           "type": "object",
           "description": "Successful Runner run on HQ or R&D while flipped."
+        },
+        "onFlipToBackIfRunMatchesFace": {
+          "type": "object",
+          "description": "When flipping to back during a run on the secretly-set central (Méliès U)."
+        },
+        "onRunnerDiscardPhaseEnd": {
+          "type": "object",
+          "description": "When the Runner's discard phase ends while flipped (Méliès U)."
         }
       }
     },
@@ -2051,6 +2059,34 @@
       "type": "integer",
       "minimum": 0,
       "description": "Load power counters when rezzed (Perfect Recall)."
+    },
+    "unique": {
+      "type": "boolean",
+      "description": "Card is unique (♦) per NRDB uniqueness."
+    },
+    "additionalCostOnScoreAgendaInstalledThisTurn": {
+      "type": "object",
+      "description": "Runner: Effect IR additional cost when Corp scores an agenda installed this turn (Word on the Street)."
+    },
+    "hostsUniqueCompanionOrConnectionResources": {
+      "type": "object",
+      "required": ["creditDiscount"],
+      "additionalProperties": false,
+      "properties": {
+        "creditDiscount": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "description": "Location may host unique companion/connection resources at a credit discount (Hackerspace)."
+    },
+    "handSizeBonusIfHostingCompanionAndConnection": {
+      "type": "integer",
+      "description": "While hosting both a companion and a connection, Runner max hand size +N (Hackerspace)."
+    },
+    "flipIdentityOnSuccessfulCentralRun": {
+      "type": "boolean",
+      "description": "Corp identity flips on successful Runner run on a central server (Méliès U)."
     }
   }
 }

@@ -5,9 +5,41 @@
   "nrdbCode": "36022",
   "type": "program",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Limit 4 hosted cards. When you install this program and when your turn begins, you may host 1 card from your grip facedown on this program to draw 1 card. [trash]: Shuffle all hosted cards into your stack."
-  ],
+  "unsupported": [],
   "installCost": 0,
-  "memoryCost": 2
+  "memoryCost": 2,
+  "maxHostedCards": 4,
+  "onInstall": {
+    "op": "do",
+    "action": {
+      "kind": "may_host_one_from_grip_facedown_then_draw"
+    }
+  },
+  "onTurnBegin": {
+    "op": "do",
+    "action": {
+      "kind": "may_host_one_from_grip_facedown_then_draw"
+    }
+  },
+  "paidAbilities": [
+    {
+      "id": "read-write-share-shuffle",
+      "label": "[trash]: Shuffle all hosted cards into your stack",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "trashSelf": true
+      },
+      "windows": [
+        "runner_action_paw",
+        "corp_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "shuffle_hosted_cards_into_stack"
+        }
+      }
+    }
+  ]
 }

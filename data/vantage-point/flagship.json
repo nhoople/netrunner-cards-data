@@ -12,6 +12,7 @@
   "installCost": 3,
   "rezCost": 3,
   "trashCost": 4,
+  "unique": true,
   "installServers": [
     "hq",
     "rd"

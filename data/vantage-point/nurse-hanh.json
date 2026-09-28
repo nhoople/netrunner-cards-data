@@ -10,6 +10,7 @@
     "connection"
   ],
   "installCost": 1,
+  "unique": true,
   "onArchivesFacedownTurnedFaceupGte": {
     "min": 2,
     "effect": {

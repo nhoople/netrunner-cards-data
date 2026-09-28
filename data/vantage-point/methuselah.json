@@ -11,6 +11,7 @@
     "stealth"
   ],
   "installCost": 4,
+  "unique": true,
   "muBonus": 1,
   "spendHostedCreditsDuringRuns": true,
   "onRunBegin": {
