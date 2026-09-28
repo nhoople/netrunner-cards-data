@@ -5,14 +5,107 @@
   "nrdbCode": "35076",
   "type": "ice",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: You can advance this ice. When the Runner encounters this ice, if it has 3 or more hosted advancement counters, you may place 1 advancement counter on an installed card you can advance. [subroutine] You may place 1 advancement counter on an"
-  ],
+  "unsupported": [],
   "subtypes": [
     "code gate",
     "ap"
   ],
   "installCost": 4,
   "rezCost": 4,
-  "strength": 5
+  "strength": 5,
+  "canAdvance": true,
+  "onEncounter": {
+    "op": "if",
+    "cond": {
+      "op": "advancements_gte",
+      "amount": 3
+    },
+    "then": {
+      "op": "choose",
+      "chooser": "corp",
+      "options": [
+        {
+          "id": "place",
+          "label": "Place 1 advancement",
+          "effect": {
+            "op": "do",
+            "action": {
+              "kind": "place_advancements",
+              "amount": 1
+            }
+          }
+        },
+        {
+          "id": "decline",
+          "label": "Decline",
+          "effect": {
+            "op": "do",
+            "action": {
+              "kind": "gain_credits",
+              "side": "corp",
+              "amount": 0
+            }
+          }
+        }
+      ]
+    }
+  },
+  "subroutines": [
+    {
+      "id": "syailendra-adv",
+      "text": "You may place 1 advancement on an advanceable card.",
+      "effect": {
+        "op": "choose",
+        "chooser": "corp",
+        "options": [
+          {
+            "id": "place",
+            "label": "Place 1 advancement",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "place_advancements",
+                "amount": 1
+              }
+            }
+          },
+          {
+            "id": "decline",
+            "label": "Decline",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "gain_credits",
+                "side": "corp",
+                "amount": 0
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "syailendra-lose",
+      "text": "The Runner loses 2[credit].",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "lose_credits",
+          "side": "runner",
+          "amount": 2
+        }
+      }
+    },
+    {
+      "id": "syailendra-net",
+      "text": "Do 1 net damage.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "net_damage",
+          "amount": 1
+        }
+      }
+    }
+  ]
 }

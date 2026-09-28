@@ -5,8 +5,14 @@
   "nrdbCode": "35043",
   "type": "operation",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: Gain [click][click]."
-  ],
-  "playCost": 4
+  "unsupported": [],
+  "playCost": 4,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "gain_clicks",
+      "side": "corp",
+      "amount": 2
+    }
+  }
 }

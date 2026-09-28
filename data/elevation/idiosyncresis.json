@@ -5,13 +5,59 @@
   "nrdbCode": "35061",
   "type": "asset",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: You can advance this asset. When your turn begins, you may trash this asset. If you do, for each hosted advancement counter, gain 3[credit] and the Runner loses 2[credit]."
-  ],
+  "unsupported": [],
   "subtypes": [
     "hostile"
   ],
   "installCost": 1,
   "rezCost": 1,
-  "trashCost": 2
+  "trashCost": 2,
+  "canAdvance": true,
+  "onTurnBegin": {
+    "op": "choose",
+    "chooser": "corp",
+    "options": [
+      {
+        "id": "detonate",
+        "label": "Trash: gain 3¢ and Runner loses 2¢ per advancement",
+        "effect": {
+          "op": "seq",
+          "effects": [
+            {
+              "op": "do",
+              "action": {
+                "kind": "gain_credits_per_advancement",
+                "per": 3
+              }
+            },
+            {
+              "op": "do",
+              "action": {
+                "kind": "lose_credits_per_advancement",
+                "per": 2
+              }
+            },
+            {
+              "op": "do",
+              "action": {
+                "kind": "trash_self"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "corp",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  }
 }

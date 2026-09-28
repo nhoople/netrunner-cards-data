@@ -5,8 +5,31 @@
   "nrdbCode": "35044",
   "type": "operation",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: Draw 2 cards. Install up to 2 cards from HQ (one at a time)."
-  ],
-  "playCost": 2
+  "unsupported": [],
+  "playCost": 2,
+  "onPlay": {
+    "op": "seq",
+    "effects": [
+      {
+        "op": "do",
+        "action": {
+          "kind": "draw",
+          "side": "corp",
+          "amount": 2
+        }
+      },
+      {
+        "op": "do",
+        "action": {
+          "kind": "may_install_from_hq_paying_costs"
+        }
+      },
+      {
+        "op": "do",
+        "action": {
+          "kind": "may_install_from_hq_paying_costs"
+        }
+      }
+    ]
+  }
 }

@@ -5,12 +5,12 @@
   "nrdbCode": "35030",
   "type": "program",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Install only on a piece of ice. Host ice gains barrier, code gate, and sentry."
-  ],
+  "unsupported": [],
   "subtypes": [
     "trojan"
   ],
   "installCost": 1,
-  "memoryCost": 1
+  "memoryCost": 1,
+  "installOnIce": true,
+  "hostGainsAllIceSubtypes": true
 }

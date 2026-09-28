@@ -5,11 +5,54 @@
   "nrdbCode": "35019",
   "type": "hardware",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Whenever you make a successful run on HQ, you may trash this hardware to derez 1 installed Corp card."
-  ],
+  "unsupported": [],
   "subtypes": [
     "weapon"
   ],
-  "installCost": 1
+  "installCost": 1,
+  "onSuccessfulRun": {
+    "op": "if",
+    "cond": {
+      "op": "attacking_hq"
+    },
+    "then": {
+      "op": "choose",
+      "chooser": "runner",
+      "options": [
+        {
+          "id": "trash-derez",
+          "label": "Trash Maglectric: derez 1 installed Corp card",
+          "effect": {
+            "op": "seq",
+            "effects": [
+              {
+                "op": "do",
+                "action": {
+                  "kind": "trash_self"
+                }
+              },
+              {
+                "op": "do",
+                "action": {
+                  "kind": "may_derez_installed"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "decline",
+          "label": "Decline",
+          "effect": {
+            "op": "do",
+            "action": {
+              "kind": "gain_credits",
+              "side": "runner",
+              "amount": 0
+            }
+          }
+        }
+      ]
+    }
+  }
 }

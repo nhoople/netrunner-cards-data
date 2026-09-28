@@ -467,7 +467,7 @@
     },
     "elevation": {
       "status": "in-progress",
-      "notes": "Null Signal Elevation (NRDB pack elev) — 82 cards, next constructed set after Rebellion Without Rehearsal. Kickoff extract at v1.01.0: fail-closed IR; 3 cards fully mapped (Clean Getaway / Rent Rioters / Anthill Excavation Contract), 79 with unsupported notes.",
+      "notes": "Null Signal Elevation (NRDB pack elev) — 82 cards. In progress: 18/82 mapped (v1.02.0 slice: 15 A-class + kickoff 3).",
       "cards": [
         "ryo-phoenix-ono-out-of-the-ashes",
         "topan-ormas-leader",

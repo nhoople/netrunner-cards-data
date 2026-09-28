@@ -117,7 +117,7 @@ def breaker_card(c, subtype, strength, break_c, pump_c=None, pump_s=None, break_
     if pump_c is not None:
         br["pumpCredits"] = pump_c
         br["pumpStrength"] = pump_s if pump_s is not None else 1
-    paid = []
+    paid = list(extra.pop("paidAbilities", []) or [])
     if pump_c is not None:
         pump_eff = {
             "op": "do",
@@ -140,12 +140,38 @@ def breaker_card(c, subtype, strength, break_c, pump_c=None, pump_s=None, break_
     return base(c, breaker=br, paidAbilities=paid, **extra)
 
 
+def decline(side: str):
+    return {
+        "id": "decline",
+        "label": "Decline",
+        "effect": gain(side, 0),
+    }
+
+
+def may_place_adv(amount: int = 1):
+    return {
+        "op": "choose",
+        "chooser": "corp",
+        "options": [
+            {
+                "id": "place",
+                "label": f"Place {amount} advancement",
+                "effect": {
+                    "op": "do",
+                    "action": {"kind": "place_advancements", "amount": amount},
+                },
+            },
+            decline("corp"),
+        ],
+    }
+
+
 def map_card(c: dict) -> dict:
     cid = slugify(c["title"])
     text = strip_html(c.get("text") or "")
     plain = re.sub(r"\s+", " ", text).strip()
 
-    # --- Kickoff trivial maps (existing IR covers full card text) ---
+    # --- Mapped (existing IR covers full card text) ---
 
     if cid == "clean-getaway":
         return base(
@@ -189,6 +215,400 @@ def map_card(c: dict) -> dict:
                 },
                 draw("corp", 1),
             ),
+            unsupported=[],
+        )
+
+    if cid == "azimat":
+        return base(
+            c,
+            recurringCreditsMax=2,
+            recurringSpendFor=["trash"],
+            unsupported=[],
+        )
+
+    if cid == "chromatophores":
+        return base(
+            c,
+            installOnIce=True,
+            hostGainsAllIceSubtypes=True,
+            unsupported=[],
+        )
+
+    if cid == "byte":
+        return base(
+            c,
+            mustRevealWhenAccessedFromRd=True,
+            skipOnAccessFromArchives=True,
+            onAccess={
+                "op": "choose",
+                "chooser": "corp",
+                "options": [
+                    {
+                        "id": "pay",
+                        "label": "Pay 4¢: give 1 tag and do 3 net damage",
+                        "effect": seq(
+                            {
+                                "op": "do",
+                                "action": {
+                                    "kind": "lose_credits",
+                                    "side": "corp",
+                                    "amount": 4,
+                                },
+                            },
+                            tags(1),
+                            net(3),
+                        ),
+                    },
+                    decline("corp"),
+                ],
+            },
+            unsupported=[],
+        )
+
+    if cid == "nanomanagement":
+        return base(
+            c,
+            onPlay={
+                "op": "do",
+                "action": {
+                    "kind": "gain_clicks",
+                    "side": "corp",
+                    "amount": 2,
+                },
+            },
+            unsupported=[],
+        )
+
+    if cid == "hantu":
+        return breaker_card(
+            c,
+            "sentry",
+            c.get("strength") or 2,
+            1,
+            break_max=1,
+            onInstall={
+                "op": "do",
+                "action": {"kind": "add_virus_counter", "amount": 2},
+            },
+            paidAbilities=[
+                {
+                    "id": "hantu-pump",
+                    "label": "Hosted virus counter: +2 strength",
+                    "clickCost": 0,
+                    "creditCost": 0,
+                    "cost": {"virusCounters": 1},
+                    "windows": ["encounter_paw"],
+                    "effect": {
+                        "op": "do",
+                        "action": {"kind": "pump_strength", "amount": 2},
+                    },
+                }
+            ],
+            unsupported=[],
+        )
+
+    if cid == "flyswatter":
+        return base(
+            c,
+            onRez={
+                "op": "if",
+                "cond": {"op": "source_protects_attacked_server"},
+                "then": {
+                    "op": "do",
+                    "action": {"kind": "purge_virus_counters"},
+                },
+            },
+            subroutines=[
+                {
+                    "id": "flyswatter-etr",
+                    "text": "End the run.",
+                    "effect": etr(),
+                }
+            ],
+            unsupported=[],
+        )
+
+    if cid == "n-pot":
+        return base(
+            c,
+            paidAbilities=[
+                {
+                    "id": "n-pot-break",
+                    "label": "3¢: Break 1 subroutine on N-Pot",
+                    "clickCost": 0,
+                    "creditCost": 3,
+                    "cost": {"credits": 3},
+                    "windows": ["encounter_paw"],
+                    "effect": {
+                        "op": "do",
+                        "action": {"kind": "break_host_subroutine"},
+                    },
+                }
+            ],
+            subroutines=[
+                {
+                    "id": "n-pot-etr",
+                    "text": "End the run.",
+                    "effect": etr(),
+                },
+                {
+                    "id": "n-pot-threat-2",
+                    "text": "If threat ≥ 2, end the run.",
+                    "effect": {
+                        "op": "if",
+                        "cond": {"op": "threat", "level": 2},
+                        "then": etr(),
+                    },
+                },
+                {
+                    "id": "n-pot-threat-4",
+                    "text": "If threat ≥ 4, end the run.",
+                    "effect": {
+                        "op": "if",
+                        "cond": {"op": "threat", "level": 4},
+                        "then": etr(),
+                    },
+                },
+            ],
+            unsupported=[],
+        )
+
+    if cid == "empiricist":
+        return base(
+            c,
+            subroutines=[
+                {
+                    "id": "empiricist-draw",
+                    "text": "Draw 1. You may add 1 card from HQ to the top of R&D.",
+                    "effect": seq(
+                        draw("corp", 1),
+                        {
+                            "op": "choose",
+                            "chooser": "corp",
+                            "options": [
+                                {
+                                    "id": "hq-top",
+                                    "label": "Add 1 from HQ to top of R&D",
+                                    "effect": {
+                                        "op": "do",
+                                        "action": {
+                                            "kind": "hq_to_top_rd",
+                                            "pick": "choose",
+                                        },
+                                    },
+                                },
+                                decline("corp"),
+                            ],
+                        },
+                    ),
+                },
+                {
+                    "id": "empiricist-net-tag",
+                    "text": "Do 1 net damage. Give the Runner 1 tag.",
+                    "effect": seq(net(1), tags(1)),
+                },
+                {
+                    "id": "empiricist-net-2",
+                    "text": "Do 2 net damage.",
+                    "effect": net(2),
+                },
+            ],
+            unsupported=[],
+        )
+
+    if cid == "syailendra":
+        return base(
+            c,
+            canAdvance=True,
+            onEncounter={
+                "op": "if",
+                "cond": {"op": "advancements_gte", "amount": 3},
+                "then": may_place_adv(1),
+            },
+            subroutines=[
+                {
+                    "id": "syailendra-adv",
+                    "text": "You may place 1 advancement on an advanceable card.",
+                    "effect": may_place_adv(1),
+                },
+                {
+                    "id": "syailendra-lose",
+                    "text": "The Runner loses 2[credit].",
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "lose_credits",
+                            "side": "runner",
+                            "amount": 2,
+                        },
+                    },
+                },
+                {
+                    "id": "syailendra-net",
+                    "text": "Do 1 net damage.",
+                    "effect": net(1),
+                },
+            ],
+            unsupported=[],
+        )
+
+    if cid == "lamplighter":
+        return base(
+            c,
+            onAgendaScoredOrStolen={
+                "op": "if",
+                "cond": {
+                    "op": "last_agenda_scored_or_stolen_from_source_server_root"
+                },
+                "then": {"op": "do", "action": {"kind": "trash_self"}},
+            },
+            subroutines=[
+                {
+                    "id": "lamplighter-tag",
+                    "text": "Give the Runner 1 tag unless they pay 3[credit].",
+                    "effect": {
+                        "op": "choose",
+                        "chooser": "runner",
+                        "options": [
+                            {
+                                "id": "pay",
+                                "label": "Pay 3¢",
+                                "effect": {
+                                    "op": "do",
+                                    "action": {
+                                        "kind": "lose_credits",
+                                        "side": "runner",
+                                        "amount": 3,
+                                    },
+                                },
+                            },
+                            {
+                                "id": "tag",
+                                "label": "Take 1 tag",
+                                "effect": tags(1),
+                            },
+                        ],
+                    },
+                },
+                {
+                    "id": "lamplighter-etr",
+                    "text": "End the run if the Runner is tagged.",
+                    "effect": {
+                        "op": "if",
+                        "cond": {"op": "runner_tagged"},
+                        "then": etr(),
+                    },
+                },
+            ],
+            unsupported=[],
+        )
+
+    if cid == "top-down-solutions":
+        return base(
+            c,
+            onPlay=seq(
+                draw("corp", 2),
+                {
+                    "op": "do",
+                    "action": {"kind": "may_install_from_hq_paying_costs"},
+                },
+                {
+                    "op": "do",
+                    "action": {"kind": "may_install_from_hq_paying_costs"},
+                },
+            ),
+            unsupported=[],
+        )
+
+    if cid == "illumination":
+        install1 = {
+            "op": "do",
+            "action": {"kind": "may_install_from_grip", "discount": 1},
+        }
+        return base(
+            c,
+            subtypes=["run"],
+            runEvent={
+                "servers": "rd",
+                "onSuccessfulRun": seq(install1, install1, install1),
+            },
+            unsupported=[],
+        )
+
+    if cid == "maglectric-rapid-748-mod":
+        return base(
+            c,
+            onSuccessfulRun={
+                "op": "if",
+                "cond": {"op": "attacking_hq"},
+                "then": {
+                    "op": "choose",
+                    "chooser": "runner",
+                    "options": [
+                        {
+                            "id": "trash-derez",
+                            "label": "Trash Maglectric: derez 1 installed Corp card",
+                            "effect": seq(
+                                {
+                                    "op": "do",
+                                    "action": {"kind": "trash_self"},
+                                },
+                                {
+                                    "op": "do",
+                                    "action": {"kind": "may_derez_installed"},
+                                },
+                            ),
+                        },
+                        decline("runner"),
+                    ],
+                },
+            },
+            unsupported=[],
+        )
+
+    if cid == "idiosyncresis":
+        return base(
+            c,
+            canAdvance=True,
+            onTurnBegin={
+                "op": "choose",
+                "chooser": "corp",
+                "options": [
+                    {
+                        "id": "detonate",
+                        "label": "Trash: gain 3¢ and Runner loses 2¢ per advancement",
+                        "effect": seq(
+                            {
+                                "op": "do",
+                                "action": {
+                                    "kind": "gain_credits_per_advancement",
+                                    "per": 3,
+                                },
+                            },
+                            {
+                                "op": "do",
+                                "action": {
+                                    "kind": "lose_credits_per_advancement",
+                                    "per": 2,
+                                },
+                            },
+                            {
+                                "op": "do",
+                                "action": {"kind": "trash_self"},
+                            },
+                        ),
+                    },
+                    decline("corp"),
+                ],
+            },
+            unsupported=[],
+        )
+
+    if cid == "devadatta-drone":
+        return base(
+            c,
+            powerCountersOnInstall=2,
+            maySpendPowerCountersForBonusRdAccess={"max": 1},
             unsupported=[],
         )
 
