@@ -2097,11 +2097,10 @@ def main():
         "nrdbPackCode": PACK,
         "count": EXPECTED,
         "written": EXPECTED,
-        "status": "in-progress",
+        "status": "supported",
         "notes": (
             "Null Signal The Automata Initiative (NRDB pack tai) — Liberation "
-            "set 1 of 2. Wave is in-progress: simple cards mapped where Effect "
-            "IR covers them; remaining cards have explicit unsupported notes."
+            "set 1 of 2. Fully supported: all 65 cards mapped (wave gate v0.86.0)."
         ),
         "cards": written,
     }
