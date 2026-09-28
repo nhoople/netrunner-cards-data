@@ -5,13 +5,39 @@
   "nrdbCode": "34130",
   "type": "asset",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: Whenever you score an agenda, you may install 1 card from HQ or Archives, ignoring all costs."
-  ],
+  "unsupported": [],
   "subtypes": [
     "ritzy"
   ],
   "installCost": 1,
   "rezCost": 1,
-  "trashCost": 3
+  "trashCost": 3,
+  "onAgendaScored": {
+    "op": "choose",
+    "chooser": "corp",
+    "options": [
+      {
+        "id": "install",
+        "label": "Install 1 card from HQ or Archives, ignoring all costs",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "install_from_hq_or_archives"
+          }
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "corp",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  }
 }

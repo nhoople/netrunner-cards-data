@@ -5,9 +5,7 @@
   "nrdbCode": "34117",
   "type": "ice",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: As an additional cost to rez this ice, take 1 bad publicity or remove 1 tag. [subroutine] You may draw 1 card. [subroutine] Do 1 net damage. [subroutine] End the run if there are more cards in HQ than in the grip."
-  ],
+  "unsupported": [],
   "subtypes": [
     "code gate",
     "ap",
@@ -15,5 +13,96 @@
   ],
   "installCost": 5,
   "rezCost": 5,
-  "strength": 6
+  "strength": 6,
+  "rezAdditionalCost": {
+    "op": "choose",
+    "chooser": "corp",
+    "options": [
+      {
+        "id": "bad-pub",
+        "label": "Take 1 bad publicity",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "give_bad_publicity",
+            "amount": 1
+          }
+        }
+      },
+      {
+        "id": "remove-tag",
+        "label": "Remove 1 tag",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "remove_tags",
+            "amount": 1
+          }
+        }
+      }
+    ]
+  },
+  "subroutines": [
+    {
+      "id": "piranhas-draw",
+      "text": "You may draw 1 card.",
+      "effect": {
+        "op": "choose",
+        "chooser": "corp",
+        "options": [
+          {
+            "id": "draw",
+            "label": "Draw 1 card",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "draw",
+                "side": "corp",
+                "amount": 1
+              }
+            }
+          },
+          {
+            "id": "decline",
+            "label": "Decline",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "gain_credits",
+                "side": "corp",
+                "amount": 0
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "piranhas-net",
+      "text": "Do 1 net damage.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "net_damage",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "id": "piranhas-etr",
+      "text": "End the run if there are more cards in HQ than in the grip.",
+      "effect": {
+        "op": "if",
+        "cond": {
+          "op": "hq_count_gt_grip"
+        },
+        "then": {
+          "op": "do",
+          "action": {
+            "kind": "end_the_run"
+          }
+        }
+      }
+    }
+  ]
 }
