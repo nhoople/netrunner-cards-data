@@ -5,11 +5,20 @@
   "nrdbCode": "36007",
   "type": "resource",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Whenever 2 or more facedown cards in Archives are turned faceup, draw 2 cards."
-  ],
+  "unsupported": [],
   "subtypes": [
     "connection"
   ],
-  "installCost": 1
+  "installCost": 1,
+  "onArchivesFacedownTurnedFaceupGte": {
+    "min": 2,
+    "effect": {
+      "op": "do",
+      "action": {
+        "kind": "draw",
+        "side": "runner",
+        "amount": 2
+      }
+    }
+  }
 }

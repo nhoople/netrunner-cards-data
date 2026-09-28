@@ -2024,6 +2024,28 @@
     "onFirstBadPublicityTakeEachTurn": {
       "type": "object",
       "description": "First time each turn Corp takes bad publicity, evaluate this effect (Editorial Division)."
+    },
+    "onArchivesFacedownTurnedFaceupGte": {
+      "type": "object",
+      "required": [
+        "min",
+        "effect"
+      ],
+      "properties": {
+        "min": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "effect": {
+          "type": "object"
+        }
+      },
+      "description": "When ≥min facedown Archives cards are turned faceup together, evaluate effect (Nurse Hạnh)."
+    },
+    "powerCounterOnAgendaScoredOrStolenFromThisServer": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Place this many power counters when an agenda is scored or stolen from this server (Perfect Recall)."
     }
   }
 }

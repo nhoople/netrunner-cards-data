@@ -5,10 +5,33 @@
   "nrdbCode": "36035",
   "type": "upgrade",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: When you rez this upgrade and whenever an agenda is scored or stolen from this server or its root, place 1 power counter on this upgrade. Hosted power counter: Reveal 1 card in HQ. The Runner cannot steal or trash copies of that card for th"
-  ],
+  "unsupported": [],
   "installCost": 1,
   "rezCost": 1,
-  "trashCost": 3
+  "trashCost": 3,
+  "powerCountersOnRez": 1,
+  "powerCounterOnAgendaScoredOrStolenFromThisServer": 1,
+  "paidAbilities": [
+    {
+      "id": "perfect-recall-reveal",
+      "label": "Hosted power: Reveal HQ card — Runner cannot steal/trash copies this run",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "powerCounters": 1
+      },
+      "windows": [
+        "approach_paw",
+        "encounter_paw",
+        "approach_server_paw"
+      ],
+      "requiresActiveRun": true,
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "reveal_hq_forbid_steal_trash_copies_this_run"
+        }
+      }
+    }
+  ]
 }
