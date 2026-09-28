@@ -5,13 +5,34 @@
   "nrdbCode": "35042",
   "type": "ice",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: While this ice is the only piece of ice protecting this server, it gets +4 strength. [subroutine] You may install 1 card from HQ. [subroutine] End the run."
-  ],
+  "unsupported": [],
   "subtypes": [
     "code gate"
   ],
   "installCost": 3,
   "rezCost": 3,
-  "strength": 0
+  "strength": 0,
+  "strengthBonusIfSoleIceProtectingServer": 4,
+  "subroutines": [
+    {
+      "id": "scatter-field-install",
+      "text": "You may install 1 card from HQ.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "may_install_from_hq_paying_costs"
+        }
+      }
+    },
+    {
+      "id": "scatter-field-etr",
+      "text": "End the run.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "end_the_run"
+        }
+      }
+    }
+  ]
 }

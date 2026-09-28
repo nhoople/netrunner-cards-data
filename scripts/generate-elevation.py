@@ -688,6 +688,158 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    if cid == "lie-low":
+        return base(
+            c,
+            playAdditionalClick=True,
+            onPlay={
+                "op": "choose",
+                "chooser": "runner",
+                "options": [
+                    {
+                        "id": "draw",
+                        "label": "Draw 4 cards",
+                        "effect": draw("runner", 4),
+                    },
+                    {
+                        "id": "tags",
+                        "label": "Remove up to 2 tags",
+                        "effect": {
+                            "op": "do",
+                            "action": {"kind": "remove_tags", "amount": 2},
+                        },
+                    },
+                ],
+            },
+            unsupported=[],
+        )
+
+    if cid == "measured-response":
+        return base(
+            c,
+            playRequiresThreat=4,
+            playRequiresSuccessfulRunLastTurn=True,
+            onPlay={
+                "op": "choose",
+                "chooser": "runner",
+                "options": [
+                    {
+                        "id": "pay8",
+                        "label": "Pay 8¢",
+                        "effect": {
+                            "op": "do",
+                            "action": {
+                                "kind": "lose_credits",
+                                "side": "runner",
+                                "amount": 8,
+                            },
+                        },
+                    },
+                    {
+                        "id": "meat",
+                        "label": "Suffer 4 meat damage",
+                        "effect": {
+                            "op": "do",
+                            "action": {"kind": "meat_damage", "amount": 4},
+                        },
+                    },
+                ],
+            },
+            unsupported=[],
+        )
+
+    if cid == "kessleroid":
+        return base(
+            c,
+            cannotBeTrashedByRunnerWhileRezzed=True,
+            subroutines=[
+                {
+                    "id": "kessleroid-etr-1",
+                    "text": "End the run.",
+                    "effect": etr(),
+                },
+                {
+                    "id": "kessleroid-etr-2",
+                    "text": "End the run.",
+                    "effect": etr(),
+                },
+            ],
+            unsupported=[],
+        )
+
+    if cid == "scatter-field":
+        return base(
+            c,
+            strengthBonusIfSoleIceProtectingServer=4,
+            subroutines=[
+                {
+                    "id": "scatter-field-install",
+                    "text": "You may install 1 card from HQ.",
+                    "effect": {
+                        "op": "do",
+                        "action": {"kind": "may_install_from_hq_paying_costs"},
+                    },
+                },
+                {
+                    "id": "scatter-field-etr",
+                    "text": "End the run.",
+                    "effect": etr(),
+                },
+            ],
+            unsupported=[],
+        )
+
+    if cid == "semak-samun":
+        return base(
+            c,
+            cannotBreakExceptSubtype="fracter",
+            subroutines=[
+                {
+                    "id": "semak-samun-etr",
+                    "text": "End the run unless the Runner suffers 3 net damage.",
+                    "effect": {
+                        "op": "choose",
+                        "chooser": "runner",
+                        "options": [
+                            {
+                                "id": "net",
+                                "label": "Suffer 3 net damage",
+                                "effect": net(3),
+                            },
+                            {
+                                "id": "etr",
+                                "label": "End the run",
+                                "effect": etr(),
+                            },
+                        ],
+                    },
+                },
+            ],
+            unsupported=[],
+        )
+
+    if cid == "fransofia-ward":
+        return base(
+            c,
+            iceRezCostIncrease=1,
+            paidAbilities=[
+                {
+                    "id": "fransofia-ward-bypass",
+                    "label": "Trash Fransofia Ward: bypass encountered ice (Corp ≥15¢)",
+                    "clickCost": 0,
+                    "creditCost": 0,
+                    "cost": {"trashSelf": True},
+                    "windows": ["encounter_paw"],
+                    "requiresCorpCreditsGte": 15,
+                    "effect": {
+                        "op": "do",
+                        "action": {"kind": "bypass_current_ice"},
+                    },
+                }
+            ],
+            unsupported=[],
+        )
+
     # Fail closed — honest unsupported note for the remainder.
     card = base(c)
     card["unsupported"] = [f"Full text not yet mapped to IR: {plain[:240]}"]
