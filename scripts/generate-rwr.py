@@ -2037,6 +2037,141 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    if cid == "eminent-domain":
+        return base(
+            c,
+            subtypes=["expansion", "expendable"],
+            paidAbilities=[
+                {
+                    "id": "eminent-expend",
+                    "label": "[click], 1¢, reveal and trash from HQ: Install and rez from HQ paying 5¢ less",
+                    "clickCost": 1,
+                    "creditCost": 1,
+                    "cost": {"clicks": 1, "credits": 1, "trashSelf": True},
+                    "windows": ["corp_action_paw"],
+                    "usableFromHq": True,
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "may_install_and_rez_from_hq",
+                            "totalDiscount": 5,
+                        },
+                    },
+                }
+            ],
+            onScore={
+                "op": "do",
+                "action": {"kind": "may_search_rd_install_rez_ignore_costs"},
+            },
+            unsupported=[],
+        )
+
+    if cid == "lightning-laboratory":
+        return base(
+            c,
+            onScore={
+                "op": "do",
+                "action": {"kind": "add_agenda_counter", "amount": 1},
+            },
+            onRunBeginMaySpendAgendaCounterRezUpToIceProtectingAttacked={
+                "maxIce": 2
+            },
+            onCorpTurnEndDerezUpToIceProtectingLightningServer={"maxIce": 2},
+            unsupported=[],
+        )
+
+    if cid == "brasilia-government-grid":
+        return base(
+            c,
+            subtypes=["region"],
+            oncePerTurnOnRezIceProtectingThisServerDuringRun={
+                "mayDerezOtherIceForStrengthBonus": 3
+            },
+            unsupported=[],
+        )
+
+    if cid == "thunderbolt-armaments-peace-through-power":
+        return base(
+            c,
+            onRezApOrDestroyerIceDuringRun={
+                "strengthBonus": 1,
+                "gainEtrUnlessTrashInstalledSub": True,
+            },
+            unsupported=[],
+        )
+
+    if cid == "lycian-multi-munition":
+        return base(
+            c,
+            onRez={
+                "op": "do",
+                "action": {"kind": "lycian_choose_subtypes"},
+            },
+            derezAtAnyTurnEnd=True,
+            subroutines=[
+                {
+                    "id": "lycian-cg",
+                    "text": "If code gate: Runner loses [click] and 1¢.",
+                    "effect": {
+                        "op": "if",
+                        "cond": {
+                            "op": "source_has_subtype",
+                            "subtype": "code gate",
+                        },
+                        "then": seq(
+                            {
+                                "op": "do",
+                                "action": {
+                                    "kind": "lose_clicks",
+                                    "side": "runner",
+                                    "amount": 1,
+                                },
+                            },
+                            {
+                                "op": "do",
+                                "action": {
+                                    "kind": "lose_credits",
+                                    "side": "runner",
+                                    "amount": 1,
+                                },
+                            },
+                        ),
+                    },
+                },
+                {
+                    "id": "lycian-sentry",
+                    "text": "If sentry: Trash 1 installed program.",
+                    "effect": {
+                        "op": "if",
+                        "cond": {
+                            "op": "source_has_subtype",
+                            "subtype": "sentry",
+                        },
+                        "then": {
+                            "op": "do",
+                            "action": {
+                                "kind": "trash_program",
+                                "pick": "choose",
+                            },
+                        },
+                    },
+                },
+                {
+                    "id": "lycian-barrier",
+                    "text": "If barrier: Gain 1¢ and end the run.",
+                    "effect": {
+                        "op": "if",
+                        "cond": {
+                            "op": "source_has_subtype",
+                            "subtype": "barrier",
+                        },
+                        "then": seq(gain("corp", 1), etr()),
+                    },
+                },
+            ],
+            unsupported=[],
+        )
+
     card = base(c)
     card["unsupported"] = [f"Full text not yet mapped to IR: {plain[:240]}"]
     return card

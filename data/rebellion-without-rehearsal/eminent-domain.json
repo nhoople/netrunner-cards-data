@@ -5,13 +5,41 @@
   "nrdbCode": "34122",
   "type": "agenda",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: [click], 1[credit], reveal and trash this agenda from HQ: Install and rez 1 card from HQ, paying a total of 5[credit] less. When you score this agenda, you may search R&D for 1 card. (Shuffle R&D after searching it.) Install and rez that ca"
-  ],
+  "unsupported": [],
   "subtypes": [
     "expansion",
     "expendable"
   ],
   "advancementRequirement": 3,
-  "agendaPoints": 1
+  "agendaPoints": 1,
+  "paidAbilities": [
+    {
+      "id": "eminent-expend",
+      "label": "[click], 1¢, reveal and trash from HQ: Install and rez from HQ paying 5¢ less",
+      "clickCost": 1,
+      "creditCost": 1,
+      "cost": {
+        "clicks": 1,
+        "credits": 1,
+        "trashSelf": true
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "usableFromHq": true,
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "may_install_and_rez_from_hq",
+          "totalDiscount": 5
+        }
+      }
+    }
+  ],
+  "onScore": {
+    "op": "do",
+    "action": {
+      "kind": "may_search_rd_install_rez_ignore_costs"
+    }
+  }
 }
