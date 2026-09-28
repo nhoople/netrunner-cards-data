@@ -2046,6 +2046,11 @@
       "type": "integer",
       "minimum": 1,
       "description": "Place this many power counters when an agenda is scored or stolen from this server (Perfect Recall)."
+    },
+    "powerCountersOnRez": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Load power counters when rezzed (Perfect Recall)."
     }
   }
 }
