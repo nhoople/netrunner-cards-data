@@ -5,10 +5,16 @@
   "nrdbCode": "34039",
   "type": "identity",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: Limit 2 remote servers. The first time each turn you install a card in the root of or protecting a remote server, you may install 1 card from HQ in the root of or protecting another remote server, ignoring all costs. You cannot score the se"
-  ],
+  "unsupported": [],
   "subtypes": [
     "division"
-  ]
+  ],
+  "maxRemoteServers": 2,
+  "onFirstRemoteInstallThisTurn": {
+    "op": "do",
+    "action": {
+      "kind": "may_install_from_hq_on_other_remote_ignore_costs",
+      "cannotScoreInstalledCardThisTurn": true
+    }
+  }
 }

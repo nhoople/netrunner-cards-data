@@ -20,7 +20,7 @@ Files under [`data/`](data/) are the API. Clone the repo or fetch a **tagged** r
 | [`data/system-update-2021/`](data/system-update-2021/) | System Update 2021 (NRDB `su21`) |
 | [`data/midnight-sun/`](data/midnight-sun/) | Midnight Sun (NRDB `ms`) |
 | [`data/parhelion/`](data/parhelion/) | Parhelion (NRDB `ph`) — supported |
-| [`data/the-automata-initiative/`](data/the-automata-initiative/) | The Automata Initiative (NRDB `tai`) — in progress |
+| [`data/the-automata-initiative/`](data/the-automata-initiative/) | The Automata Initiative (NRDB `tai`) — **supported**
 
 **Corpus order:** System Gateway → System Update 2021 → Midnight Sun → Parhelion → The Automata Initiative → later releases.
 
@@ -32,7 +32,7 @@ Match this dataset and [netrunner-engine](https://github.com/nhoople/netrunner-e
 
 | Pairing | cards-data | engine |
 |---------|------------|--------|
-| **Current** | [`v0.84.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v0.84.0) | [`v0.84.0`](https://github.com/nhoople/netrunner-engine/releases/tag/v0.84.0) |
+| **Current** | [`v0.85.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v0.85.0) | [`v0.85.0`](https://github.com/nhoople/netrunner-engine/releases/tag/v0.85.0) |
 
 Incremental wave tags are the day-to-day IR/wiring contract. A set-complete **milestone** GitHub Release is cut only when a wave’s pool status → `supported` (advertised host floor for that set).
 

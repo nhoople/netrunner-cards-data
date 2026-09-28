@@ -5,9 +5,7 @@
   "nrdbCode": "34046",
   "type": "upgrade",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: Whenever the Runner makes a successful run on this server, play a Psi Game. (Players secretly bid 0–2[credit]. Then each player reveals and spends their bid.) If the bids differ, the Runner cannot access cards other than this upgrade for th"
-  ],
+  "unsupported": [],
   "subtypes": [
     "psi",
     "clone",
@@ -15,5 +13,34 @@
   ],
   "installCost": 0,
   "rezCost": 0,
-  "trashCost": 2
+  "trashCost": 2,
+  "onSuccessfulRun": {
+    "op": "do",
+    "action": {
+      "kind": "play_psi_game",
+      "maxBid": 2,
+      "ifBidsDiffer": {
+        "op": "do",
+        "action": {
+          "kind": "restrict_run_access",
+          "mode": "only_source",
+          "cardIdsFromSource": true
+        }
+      },
+      "ifBidsMatch": {
+        "op": "do",
+        "action": {
+          "kind": "restrict_run_access",
+          "mode": "forbid_source",
+          "cardIdsFromSource": true
+        }
+      }
+    }
+  },
+  "onCorpTurnEnd": {
+    "op": "do",
+    "action": {
+      "kind": "may_move_source_upgrade_to_another_server_root"
+    }
+  }
 }

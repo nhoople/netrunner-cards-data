@@ -322,8 +322,8 @@
       ]
     },
     "the-automata-initiative": {
-      "status": "in-progress",
-      "notes": "Null Signal The Automata Initiative (NRDB pack tai) — Liberation set 1 of 2; 65 cards. In-progress 59/65 (v0.85.0: Front Company / Balanced Coverage / Chrysopoeian / Tucana / Starlit Knight); remaining cards have explicit unsupported notes until Effect IR is wired.",
+      "status": "supported",
+      "notes": "Null Signal The Automata Initiative (NRDB pack tai) — Liberation set 1 of 2; 65 cards. Fully supported: all 65 cards mapped (wave gate v0.86.0).",
       "cards": [
         "strike-fund",
         "the-price",
