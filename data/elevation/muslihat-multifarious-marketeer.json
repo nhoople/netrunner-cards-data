@@ -13,7 +13,7 @@
   "onTurnBegin": {
     "op": "do",
     "action": {
-      "kind": "look_top_stack_may_reveal_icebreaker_or_run_event_to_grip"
+      "kind": "look_top_stack_may_reveal_breaker_or_run_event"
     }
   }
 }

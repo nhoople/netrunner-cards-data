@@ -1679,7 +1679,7 @@ def map_card(c: dict) -> dict:
             onTurnBegin={
                 "op": "do",
                 "action": {
-                    "kind": "look_top_stack_may_reveal_icebreaker_or_run_event_to_grip",
+                    "kind": "look_top_stack_may_reveal_breaker_or_run_event",
                 },
             },
             unsupported=[],
@@ -1703,10 +1703,8 @@ def map_card(c: dict) -> dict:
                     ),
                 },
             },
-            onFirstPlayOperationThisTurn={
-                "op": "if",
-                "cond": {"op": "identity_flipped"},
-                "then": {
+            identityFlippedHooks={
+                "onFirstOperationPlayThisTurn": {
                     "op": "do",
                     "action": {
                         "kind": "gain_clicks",
@@ -1714,17 +1712,9 @@ def map_card(c: dict) -> dict:
                         "amount": 1,
                     },
                 },
-            },
-            onSuccessfulRun={
-                "op": "if",
-                "cond": {"op": "identity_flipped"},
-                "then": {
-                    "op": "if",
-                    "cond": {"op": "attacking_hq_or_rd"},
-                    "then": {
-                        "op": "do",
-                        "action": {"kind": "flip_identity"},
-                    },
+                "onSuccessfulHqOrRdRun": {
+                    "op": "do",
+                    "action": {"kind": "flip_identity"},
                 },
             },
             unsupported=[],
@@ -1788,10 +1778,10 @@ def map_card(c: dict) -> dict:
     if cid == "magdalene-keino-chemutai-cryptarchitect":
         return base(
             c,
-            onDiscardToMaxHandSize={
+            onRunnerDiscardOverMaxHand={
                 "op": "do",
                 "action": {
-                    "kind": "may_install_program_or_hardware_from_discarded_batch",
+                    "kind": "may_install_program_hardware_from_last_runner_discarded",
                 },
             },
             unsupported=[],
@@ -1800,19 +1790,10 @@ def map_card(c: dict) -> dict:
     if cid == "peer-review":
         return base(
             c,
-            onPlay=seq(
-                {
-                    "op": "do",
-                    "action": {"kind": "reveal_all_but_one_hq"},
-                },
-                gain("corp", 7),
-                {
-                    "op": "do",
-                    "action": {
-                        "kind": "may_install_from_hq_to_remote_root_paying_costs",
-                    },
-                },
-            ),
+            onPlay={
+                "op": "do",
+                "action": {"kind": "peer_review"},
+            },
             unsupported=[],
         )
 

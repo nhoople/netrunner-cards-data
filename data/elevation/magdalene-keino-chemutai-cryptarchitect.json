@@ -10,10 +10,10 @@
     "cyborg"
   ],
   "link": 0,
-  "onDiscardToMaxHandSize": {
+  "onRunnerDiscardOverMaxHand": {
     "op": "do",
     "action": {
-      "kind": "may_install_program_or_hardware_from_discarded_batch"
+      "kind": "may_install_program_hardware_from_last_runner_discarded"
     }
   }
 }

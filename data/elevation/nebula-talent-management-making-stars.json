@@ -40,35 +40,19 @@
       }
     }
   },
-  "onFirstPlayOperationThisTurn": {
-    "op": "if",
-    "cond": {
-      "op": "identity_flipped"
-    },
-    "then": {
+  "identityFlippedHooks": {
+    "onFirstOperationPlayThisTurn": {
       "op": "do",
       "action": {
         "kind": "gain_clicks",
         "side": "corp",
         "amount": 1
       }
-    }
-  },
-  "onSuccessfulRun": {
-    "op": "if",
-    "cond": {
-      "op": "identity_flipped"
     },
-    "then": {
-      "op": "if",
-      "cond": {
-        "op": "attacking_hq_or_rd"
-      },
-      "then": {
-        "op": "do",
-        "action": {
-          "kind": "flip_identity"
-        }
+    "onSuccessfulHqOrRdRun": {
+      "op": "do",
+      "action": {
+        "kind": "flip_identity"
       }
     }
   }
