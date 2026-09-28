@@ -1922,6 +1922,98 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    # --- v1.12.0: final 10 (82/82) ---
+
+    if cid == "ryo-phoenix-ono-out-of-the-ashes":
+        return base(
+            c,
+            onSuccessfulRunOncePerTurn={
+                "op": "if",
+                "cond": {"op": "subroutine_resolved_this_run"},
+                "then": seq(
+                    gain("runner", 1),
+                    {
+                        "op": "do",
+                        "action": {
+                            "kind": "trash_hq",
+                            "pick": "random",
+                            "amount": 1,
+                        },
+                    },
+                ),
+            },
+            unsupported=[],
+        )
+
+    if cid == "dewi-subrotoputri-pedagogical-dhalang":
+        return base(
+            c,
+            onSuccessfulRun={
+                "op": "choose",
+                "chooser": "runner",
+                "options": [
+                    {
+                        "id": "unflipped",
+                        "label": "MU full: flip and gain 1[credit]",
+                        "effect": {
+                            "op": "if",
+                            "cond": {
+                                "op": "and",
+                                "conds": [
+                                    {"op": "identity_unflipped"},
+                                    {"op": "runner_mu_full"},
+                                ],
+                            },
+                            "then": seq(
+                                {
+                                    "op": "do",
+                                    "action": {"kind": "flip_identity"},
+                                },
+                                gain("runner", 1),
+                            ),
+                        },
+                    },
+                    {
+                        "id": "flipped",
+                        "label": "Unused MU: flip and draw 1",
+                        "effect": {
+                            "op": "if",
+                            "cond": {
+                                "op": "and",
+                                "conds": [
+                                    {"op": "identity_flipped"},
+                                    {"op": "runner_unused_mu_gte", "amount": 1},
+                                ],
+                            },
+                            "then": seq(
+                                {
+                                    "op": "do",
+                                    "action": {"kind": "flip_identity"},
+                                },
+                                draw("runner", 1),
+                            ),
+                        },
+                    },
+                    decline("runner"),
+                ],
+            },
+            unsupported=[],
+        )
+
+    if cid == "charm-offensive":
+        return base(
+            c,
+            subtypes=["run"],
+            runEvent={
+                "servers": "archives",
+                "onRunEnd": {
+                    "op": "do",
+                    "action": {"kind": "charm_offensive_trash_rezzed_accessed"},
+                },
+            },
+            unsupported=[],
+        )
+
     # Fail closed — honest unsupported note for the remainder.
     card = base(c)
     card["unsupported"] = [f"Full text not yet mapped to IR: {plain[:240]}"]
