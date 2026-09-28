@@ -5,9 +5,59 @@
   "nrdbCode": "34081",
   "type": "program",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: When you install this program, load 2 power counters onto it. When it is empty, remove it from the game. Once per turn → When you encounter a piece of ice, if its strength is 3 or less, you may remove 1 hosted power counter to bypass it. Th"
-  ],
+  "unsupported": [],
   "installCost": 4,
-  "memoryCost": 1
+  "memoryCost": 1,
+  "powerCountersOnInstall": 2,
+  "rfgWhenPowerEmpty": true,
+  "paidAbilities": [
+    {
+      "id": "malandragem-bypass",
+      "label": "Hosted power: bypass ice if strength ≤ 3 (once per turn)",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "powerCounters": 1
+      },
+      "windows": [
+        "encounter_paw"
+      ],
+      "oncePerTurn": true,
+      "requireEncounterStrengthLte": 3,
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "bypass_current_ice"
+        }
+      }
+    },
+    {
+      "id": "malandragem-threat-bypass",
+      "label": "Threat 4 → RFG: bypass encountered ice",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {},
+      "windows": [
+        "encounter_paw"
+      ],
+      "requiresThreat": 4,
+      "effect": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "rfg_self"
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "bypass_current_ice"
+            }
+          }
+        ]
+      }
+    }
+  ]
 }
