@@ -5,10 +5,20 @@
   "nrdbCode": "35062",
   "type": "asset",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: When your turn begins, gain 1[credit]. Threat 2 → When the Runner trashes this asset (while it is rezzed), give them 1 tag."
-  ],
+  "unsupported": [],
   "installCost": 1,
   "rezCost": 1,
-  "trashCost": 2
+  "trashCost": 2,
+  "onTurnBegin": {
+    "op": "do",
+    "action": {
+      "kind": "gain_credits",
+      "side": "corp",
+      "amount": 1
+    }
+  },
+  "threatGiveTagsOnRezzedTrash": {
+    "level": 2,
+    "tags": 1
+  }
 }

@@ -5,8 +5,13 @@
   "nrdbCode": "35026",
   "type": "event",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Draw 1 card for each [click] you have remaining."
-  ],
-  "playCost": 0
+  "unsupported": [],
+  "playCost": 0,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "draw_per_clicks_remaining",
+      "side": "runner"
+    }
+  }
 }
