@@ -201,32 +201,66 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
-    if cid == "corsair":
-        # Interface → 1¢: Break 1 barrier. 1¢: encountered barrier −3 strength (run).
-        return breaker_card(
-            c,
-            "barrier",
-            strength=c.get("strength") or 0,
-            break_c=1,
-            break_max=1,
-            paidAbilities=[
+    if cid == "paywall":
+        etr_unless_pay1 = {
+            "op": "choose",
+            "chooser": "runner",
+            "options": [
                 {
-                    "id": "corsair-weaken",
-                    "label": "1[credit]: Encountered barrier gets −3 strength for the run",
-                    "clickCost": 0,
-                    "creditCost": 1,
-                    "cost": {"credits": 1},
-                    "windows": ["encounter_paw"],
+                    "id": "pay1",
+                    "label": "Pay 1¢",
                     "effect": {
                         "op": "do",
-                        "action": {"kind": "weaken_ice", "amount": 3},
+                        "action": {
+                            "kind": "lose_credits",
+                            "side": "runner",
+                            "amount": 1,
+                        },
                     },
+                },
+                {
+                    "id": "etr",
+                    "label": "End the run",
+                    "effect": etr(),
+                },
+            ],
+        }
+        return base(
+            c,
+            onEncounter={
+                "op": "do",
+                "action": {
+                    "kind": "lose_credits",
+                    "side": "runner",
+                    "amount": 1,
+                },
+            },
+            subroutines=[
+                {
+                    "id": "paywall-etr",
+                    "text": "End the run unless the Runner pays 1[credit].",
+                    "effect": etr_unless_pay1,
                 }
             ],
             unsupported=[],
         )
 
+    if cid == "borrowed-goods":
+        return base(
+            c,
+            muBonus=1,
+            onInstall={
+                "op": "if",
+                "cond": {"op": "runner_tagged"},
+                "then": gain("runner", 0),
+                "else": tags(1),
+            },
+            unsupported=[],
+        )
+
     # Fail closed — honest unsupported note for the remainder.
+    # Corsair / Sell Out / Stowaway need IR not yet available (stealth credits,
+    # trash-own-resource play cost, host-server successful-run gate).
     card = base(c)
     card["unsupported"] = [f"Full text not yet mapped to IR: {plain[:240]}"]
     return card

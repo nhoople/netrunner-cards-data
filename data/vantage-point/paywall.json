@@ -5,13 +5,53 @@
   "nrdbCode": "36052",
   "type": "ice",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: When the Runner encounters this ice, they lose 1[credit]. [subroutine] End the run unless the Runner pays 1[credit]."
-  ],
+  "unsupported": [],
   "subtypes": [
     "barrier"
   ],
   "installCost": 1,
   "rezCost": 1,
-  "strength": 1
+  "strength": 1,
+  "onEncounter": {
+    "op": "do",
+    "action": {
+      "kind": "lose_credits",
+      "side": "runner",
+      "amount": 1
+    }
+  },
+  "subroutines": [
+    {
+      "id": "paywall-etr",
+      "text": "End the run unless the Runner pays 1[credit].",
+      "effect": {
+        "op": "choose",
+        "chooser": "runner",
+        "options": [
+          {
+            "id": "pay1",
+            "label": "Pay 1¢",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "lose_credits",
+                "side": "runner",
+                "amount": 1
+              }
+            }
+          },
+          {
+            "id": "etr",
+            "label": "End the run",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "end_the_run"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
 }

@@ -4,7 +4,7 @@
   "count": 66,
   "written": 66,
   "status": "in-progress",
-  "notes": "Null Signal Vantage Point (NRDB pack vp) — next constructed set after Elevation. Kickoff extract: fail-closed IR; 3 cards fully mapped, 63 with unsupported notes (wave kickoff v1.13.0).",
+  "notes": "Null Signal Vantage Point (NRDB pack vp) — next constructed set after Elevation. Kickoff extract: fail-closed IR; 4 cards fully mapped, 62 with unsupported notes (wave kickoff v1.13.0).",
   "cards": [
     "chain-reaction",
     "take-a-dive",
