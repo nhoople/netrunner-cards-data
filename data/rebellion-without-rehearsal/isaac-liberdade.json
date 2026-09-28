@@ -5,14 +5,49 @@
   "nrdbCode": "34129",
   "type": "upgrade",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: Each advanced piece of ice protecting this server gets +2 strength. Whenever this upgrade moves to the root of a server, you may place 1 advancement counter on a piece of ice protecting that server that has no advancement counters. When you"
-  ],
+  "unsupported": [],
   "subtypes": [
     "bioroid",
     "sysop"
   ],
   "installCost": 3,
   "rezCost": 3,
-  "trashCost": 2
+  "trashCost": 2,
+  "advancedIceProtectingThisServerStrengthBonus": 2,
+  "onMovedToServerRoot": {
+    "op": "choose",
+    "chooser": "corp",
+    "options": [
+      {
+        "id": "place-ice",
+        "label": "Place 1 advancement on unprotected ice",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "place_advancements",
+            "amount": 1,
+            "onlyIceProtectingSourceServerWithNoAdvancements": true
+          }
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "corp",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  },
+  "onCorpTurnEnd": {
+    "op": "do",
+    "action": {
+      "kind": "may_move_source_upgrade_to_another_server_root"
+    }
+  }
 }

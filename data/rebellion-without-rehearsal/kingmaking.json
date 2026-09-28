@@ -5,12 +5,30 @@
   "nrdbCode": "34113",
   "type": "agenda",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: When you score this agenda, draw up to 3 cards. You may add 1 agenda worth 1 or less agenda points from HQ to your score area."
-  ],
+  "unsupported": [],
   "subtypes": [
     "research"
   ],
   "advancementRequirement": 4,
-  "agendaPoints": 2
+  "agendaPoints": 2,
+  "onScore": {
+    "op": "seq",
+    "effects": [
+      {
+        "op": "do",
+        "action": {
+          "kind": "draw_up_to",
+          "side": "corp",
+          "amount": 3
+        }
+      },
+      {
+        "op": "do",
+        "action": {
+          "kind": "may_add_hq_agenda_ap_lte_to_score",
+          "maxAgendaPoints": 1
+        }
+      }
+    ]
+  }
 }

@@ -1467,6 +1467,193 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    if cid == "the-holo-man":
+        return base(
+            c,
+            onTurnBegin={
+                "op": "do",
+                "action": {
+                    "kind": "may_move_source_upgrade_to_another_server_root",
+                },
+            },
+            paidAbilities=[
+                {
+                    "id": "holo-advance",
+                    "label": "[click], 4¢: Place 2 (or 3) advancements on this server",
+                    "clickCost": 1,
+                    "creditCost": 4,
+                    "cost": {"clicks": 1, "credits": 4},
+                    "windows": ["corp_action_paw"],
+                    "oncePerTurn": True,
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "place_advancements",
+                            "amount": 2,
+                            "sameServerRootOrIceAsSource": True,
+                            "bonusAmountIfNoCorpInstallFromHqThisTurn": 1,
+                        },
+                    },
+                }
+            ],
+            unsupported=[],
+        )
+
+    if cid == "isaac-liberdade":
+        return base(
+            c,
+            advancedIceProtectingThisServerStrengthBonus=2,
+            onMovedToServerRoot={
+                "op": "choose",
+                "chooser": "corp",
+                "options": [
+                    {
+                        "id": "place-ice",
+                        "label": "Place 1 advancement on unprotected ice",
+                        "effect": {
+                            "op": "do",
+                            "action": {
+                                "kind": "place_advancements",
+                                "amount": 1,
+                                "onlyIceProtectingSourceServerWithNoAdvancements": True,
+                            },
+                        },
+                    },
+                    {
+                        "id": "decline",
+                        "label": "Decline",
+                        "effect": gain("corp", 0),
+                    },
+                ],
+            },
+            onCorpTurnEnd={
+                "op": "do",
+                "action": {
+                    "kind": "may_move_source_upgrade_to_another_server_root",
+                },
+            },
+            unsupported=[],
+        )
+
+    if cid == "kingmaking":
+        return base(
+            c,
+            onScore=seq(
+                {
+                    "op": "do",
+                    "action": {
+                        "kind": "draw_up_to",
+                        "side": "corp",
+                        "amount": 3,
+                    },
+                },
+                {
+                    "op": "do",
+                    "action": {
+                        "kind": "may_add_hq_agenda_ap_lte_to_score",
+                        "maxAgendaPoints": 1,
+                    },
+                },
+            ),
+            unsupported=[],
+        )
+
+    if cid == "amelia-earhart":
+        return base(
+            c,
+            powerOnHqRdRunEndIfAccessedGte={"min": 3, "amount": 1},
+            onTurnBegin={
+                "op": "choose",
+                "chooser": "runner",
+                "options": [
+                    {
+                        "id": "detonate",
+                        "label": "Remove 3 power, trash: Corp loses 10¢",
+                        "effect": {
+                            "op": "if",
+                            "cond": {
+                                "op": "power_counters_gte",
+                                "amount": 3,
+                            },
+                            "then": seq(
+                                {
+                                    "op": "do",
+                                    "action": {
+                                        "kind": "remove_power_counter",
+                                        "amount": 3,
+                                    },
+                                },
+                                {
+                                    "op": "do",
+                                    "action": {"kind": "trash_self"},
+                                },
+                                {
+                                    "op": "do",
+                                    "action": {
+                                        "kind": "lose_credits",
+                                        "side": "corp",
+                                        "amount": 10,
+                                    },
+                                },
+                            ),
+                            "else": gain("runner", 0),
+                        },
+                    },
+                    {
+                        "id": "decline",
+                        "label": "Decline",
+                        "effect": gain("runner", 0),
+                    },
+                ],
+            },
+            unsupported=[],
+        )
+
+    if cid == "cohort-guidance-program":
+        return base(
+            c,
+            onTurnBegin={
+                "op": "choose",
+                "chooser": "corp",
+                "options": [
+                    {
+                        "id": "trash-hq",
+                        "label": "Trash 1 from HQ: gain 2¢ and draw 1",
+                        "effect": {
+                            "op": "do",
+                            "action": {
+                                "kind": "may_trash_hq_then",
+                                "then": seq(gain("corp", 2), draw("corp", 1)),
+                            },
+                        },
+                    },
+                    {
+                        "id": "faceup-archives",
+                        "label": "Turn 1 Archives card faceup: place 1 advancement",
+                        "effect": {
+                            "op": "do",
+                            "action": {
+                                "kind": "may_turn_facedown_archives_faceup_then",
+                                "then": {
+                                    "op": "do",
+                                    "action": {
+                                        "kind": "place_advancements",
+                                        "amount": 1,
+                                    },
+                                },
+                            },
+                        },
+                    },
+                    {
+                        "id": "decline",
+                        "label": "Decline",
+                        "effect": gain("corp", 0),
+                    },
+                ],
+            },
+            unsupported=[],
+        )
+
     card = base(c)
     card["unsupported"] = [f"Full text not yet mapped to IR: {plain[:240]}"]
     return card
