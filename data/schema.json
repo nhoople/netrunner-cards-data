@@ -1355,6 +1355,10 @@
       "type": "object",
       "description": "Effect IR at the end of the Runner's turn while installed (Amanuensis)."
     },
+    "onFirstResourcePaidAbilityEachTurn": {
+      "type": "object",
+      "description": "Effect IR the first time each turn the Runner resolves a paid ability on an installed resource (Juli Moreira Lee). Sourced on this card."
+    },
     "powerCounterOnAnyCardRez": {
       "type": "integer",
       "minimum": 1,

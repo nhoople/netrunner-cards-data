@@ -5,9 +5,76 @@
   "nrdbCode": "34123",
   "type": "agenda",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: When the Runner steals this agenda, you may add 1 card from Archives to HQ. When you score this agenda, place 2 agenda counters on it. Once per turn → Hosted agenda counter, trash the top card of R&D: Add 1 card from Archives to HQ."
-  ],
+  "unsupported": [],
   "advancementRequirement": 5,
-  "agendaPoints": 3
+  "agendaPoints": 3,
+  "onSteal": {
+    "op": "choose",
+    "chooser": "corp",
+    "options": [
+      {
+        "id": "archives-hq",
+        "label": "Add 1 card from Archives to HQ",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "archives_to_hq",
+            "amount": 1
+          }
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "corp",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  },
+  "onScore": {
+    "op": "do",
+    "action": {
+      "kind": "add_agenda_counter",
+      "amount": 2
+    }
+  },
+  "paidAbilities": [
+    {
+      "id": "basalt-archives",
+      "label": "Hosted agenda counter, trash top of R&D: Archives → HQ",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "agendaCounters": 1
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "oncePerTurn": true,
+      "effect": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "trash_top_of_rd"
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "archives_to_hq",
+              "amount": 1
+            }
+          }
+        ]
+      }
+    }
+  ]
 }

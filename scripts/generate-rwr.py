@@ -1276,6 +1276,197 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    if cid == "hearts-and-minds":
+        decline = {
+            "id": "decline",
+            "label": "Decline",
+            "effect": gain("corp", 0),
+        }
+        return base(
+            c,
+            onTurnBegin=seq(
+                {
+                    "op": "choose",
+                    "chooser": "corp",
+                    "options": [
+                        {
+                            "id": "move-adv",
+                            "label": "Move 1 advancement to an advanceable card",
+                            "effect": {
+                                "op": "do",
+                                "action": {
+                                    "kind": "move_advancements",
+                                    "amount": 1,
+                                },
+                            },
+                        },
+                        decline,
+                    ],
+                },
+                {
+                    "op": "if",
+                    "cond": {"op": "host_server_unprotected_by_ice"},
+                    "then": {
+                        "op": "choose",
+                        "chooser": "corp",
+                        "options": [
+                            {
+                                "id": "place-adv",
+                                "label": "Place 1 advancement on an advanceable card",
+                                "effect": {
+                                    "op": "do",
+                                    "action": {
+                                        "kind": "place_advancements",
+                                        "amount": 1,
+                                    },
+                                },
+                            },
+                            {
+                                "id": "decline-place",
+                                "label": "Decline",
+                                "effect": gain("corp", 0),
+                            },
+                        ],
+                    },
+                },
+            ),
+            unsupported=[],
+        )
+
+    if cid == "warm-reception":
+        return base(
+            c,
+            onTurnBegin=seq(
+                {
+                    "op": "do",
+                    "action": {
+                        "kind": "may_install_from_hq_paying_costs",
+                        "cannotScoreInstalledCardThisTurn": True,
+                    },
+                },
+                {
+                    "op": "if",
+                    "cond": {"op": "host_server_unprotected_by_ice"},
+                    "then": {
+                        "op": "choose",
+                        "chooser": "corp",
+                        "options": [
+                            {
+                                "id": "derez-pair",
+                                "label": "Derez this asset to derez another installed card",
+                                "effect": seq(
+                                    {
+                                        "op": "do",
+                                        "action": {"kind": "derez_source"},
+                                    },
+                                    {
+                                        "op": "do",
+                                        "action": {
+                                            "kind": "may_derez_installed",
+                                            "excludeSelf": True,
+                                        },
+                                    },
+                                ),
+                            },
+                            {
+                                "id": "decline-derez",
+                                "label": "Decline",
+                                "effect": gain("corp", 0),
+                            },
+                        ],
+                    },
+                },
+            ),
+            unsupported=[],
+        )
+
+    if cid == "the-basalt-spire":
+        may_archives = {
+            "op": "choose",
+            "chooser": "corp",
+            "options": [
+                {
+                    "id": "archives-hq",
+                    "label": "Add 1 card from Archives to HQ",
+                    "effect": {
+                        "op": "do",
+                        "action": {"kind": "archives_to_hq", "amount": 1},
+                    },
+                },
+                {
+                    "id": "decline",
+                    "label": "Decline",
+                    "effect": gain("corp", 0),
+                },
+            ],
+        }
+        return base(
+            c,
+            onSteal=may_archives,
+            onScore={
+                "op": "do",
+                "action": {"kind": "add_agenda_counter", "amount": 2},
+            },
+            paidAbilities=[
+                {
+                    "id": "basalt-archives",
+                    "label": "Hosted agenda counter, trash top of R&D: Archives → HQ",
+                    "clickCost": 0,
+                    "creditCost": 0,
+                    "cost": {"agendaCounters": 1},
+                    "windows": ["corp_action_paw"],
+                    "oncePerTurn": True,
+                    "effect": seq(
+                        {
+                            "op": "do",
+                            "action": {"kind": "trash_top_of_rd"},
+                        },
+                        {
+                            "op": "do",
+                            "action": {"kind": "archives_to_hq", "amount": 1},
+                        },
+                    ),
+                }
+            ],
+            unsupported=[],
+        )
+
+    if cid == "juli-moreira-lee":
+        return base(
+            c,
+            powerCountersOnInstall=4,
+            trashWhenPowerEmpty=True,
+            onFirstResourcePaidAbilityEachTurn=seq(
+                {
+                    "op": "do",
+                    "action": {"kind": "remove_power_counter", "amount": 1},
+                },
+                {
+                    "op": "do",
+                    "action": {
+                        "kind": "gain_clicks",
+                        "side": "runner",
+                        "amount": 1,
+                    },
+                },
+            ),
+            unsupported=[],
+        )
+
+    if cid == "alarm-clock":
+        return base(
+            c,
+            onTurnBegin={
+                "op": "do",
+                "action": {
+                    "kind": "may_start_run",
+                    "servers": "hq",
+                    "bypassFirstEncounterForClicks": 2,
+                },
+            },
+            unsupported=[],
+        )
+
     card = base(c)
     card["unsupported"] = [f"Full text not yet mapped to IR: {plain[:240]}"]
     return card
