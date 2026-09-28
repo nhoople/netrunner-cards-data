@@ -5,14 +5,42 @@
   "nrdbCode": "35032",
   "type": "program",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: This program costs 1[credit] less to install for each other installed icebreaker. (Programs trashed as part of installing this program don’t count.) Interface → 1[credit]: Break 1 barrier subroutine. 2[credit]: +2 strength."
-  ],
+  "unsupported": [],
   "subtypes": [
     "icebreaker",
     "fracter"
   ],
   "installCost": 4,
   "strength": 2,
-  "memoryCost": 1
+  "memoryCost": 1,
+  "breaker": {
+    "breaksSubtype": "barrier",
+    "strength": 2,
+    "breakCredits": 1,
+    "breakMaxSubs": 1,
+    "pumpCredits": 2,
+    "pumpStrength": 2
+  },
+  "paidAbilities": [
+    {
+      "id": "principia-pump",
+      "label": "Pump Principia +2 strength",
+      "clickCost": 0,
+      "creditCost": 2,
+      "cost": {
+        "credits": 2
+      },
+      "windows": [
+        "encounter_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "pump_strength",
+          "amount": 2
+        }
+      }
+    }
+  ],
+  "installCostDiscountPerInstalledIcebreaker": 1
 }

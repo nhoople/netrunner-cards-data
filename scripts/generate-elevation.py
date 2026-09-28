@@ -612,6 +612,82 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    if cid == "doomscroll":
+        return base(
+            c,
+            subroutines=[
+                {
+                    "id": "doomscroll-tag",
+                    "text": "Give the Runner 1 tag.",
+                    "effect": tags(1),
+                },
+                {
+                    "id": "doomscroll-net-1",
+                    "text": "Do 1 net damage.",
+                    "effect": net(1),
+                },
+                {
+                    "id": "doomscroll-net-2",
+                    "text": "Do 2 net damage if the Runner has at least 2 tags.",
+                    "effect": {
+                        "op": "if",
+                        "cond": {"op": "tags_gte", "amount": 2},
+                        "then": net(2),
+                    },
+                },
+            ],
+            unsupported=[],
+        )
+
+    if cid == "otto-campaign":
+        return base(
+            c,
+            onRez={
+                "op": "do",
+                "action": {"kind": "place_hosted_credits", "amount": 6},
+            },
+            onTurnBegin={
+                "op": "do",
+                "action": {"kind": "take_hosted_credits", "amount": 2},
+            },
+            clicksOnHostedEmpty=2,
+            unsupported=[],
+        )
+
+    if cid == "principia":
+        return breaker_card(
+            c,
+            "barrier",
+            c.get("strength") or 2,
+            1,
+            pump_c=2,
+            pump_s=2,
+            break_max=1,
+            installCostDiscountPerInstalledIcebreaker=1,
+            unsupported=[],
+        )
+
+    if cid == "rising-tide":
+        return breaker_card(
+            c,
+            "barrier",
+            c.get("strength") or 1,
+            1,
+            pump_c=1,
+            pump_s=1,
+            break_max=1,
+            strengthBonusPerHeapSubtype={"subtype": "fracter", "bonus": 1},
+            unsupported=[],
+        )
+
+    if cid == "greenmail":
+        return base(
+            c,
+            onScore=gain("corp", 2),
+            onForfeit=gain("corp", 4),
+            unsupported=[],
+        )
+
     # Fail closed — honest unsupported note for the remainder.
     card = base(c)
     card["unsupported"] = [f"Full text not yet mapped to IR: {plain[:240]}"]

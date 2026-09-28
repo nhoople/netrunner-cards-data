@@ -666,6 +666,10 @@
       "type": "object",
       "description": "Effect IR evaluated when Corp scores this agenda."
     },
+    "onForfeit": {
+      "type": "object",
+      "description": "Effect IR evaluated when Corp forfeits this scored agenda (Greenmail)."
+    },
     "scoreAdditionalCost": {
       "type": "object",
       "description": "Additional cost Effect IR paid before scoring this agenda (e.g. Azef Protocol must trash 1 other installed Corp card)."
@@ -1039,6 +1043,21 @@
       "type": "integer",
       "description": "Strength bonus per installed icebreaker (Echelon)."
     },
+    "strengthBonusPerHeapSubtype": {
+      "type": "object",
+      "required": ["subtype", "bonus"],
+      "additionalProperties": false,
+      "properties": {
+        "subtype": { "type": "string", "minLength": 1 },
+        "bonus": { "type": "integer" }
+      },
+      "description": "Strength bonus per card of subtype in the heap (Rising Tide)."
+    },
+    "installCostDiscountPerInstalledIcebreaker": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Reduce install cost by this × currently installed icebreakers (Principia)."
+    },
     "strengthBonusPerCoreDamageThisGame": {
       "type": "integer",
       "minimum": 0,
@@ -1073,6 +1092,11 @@
     "drawOnHostedEmpty": {
       "type": "integer",
       "minimum": 0
+    },
+    "clicksOnHostedEmpty": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "When hosted credits empty and card trashes, gain this many clicks (Otto Campaign)."
     },
     "playRequiresTagged": {
       "type": "boolean"

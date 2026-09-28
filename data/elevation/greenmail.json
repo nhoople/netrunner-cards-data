@@ -5,12 +5,26 @@
   "nrdbCode": "35070",
   "type": "agenda",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: When you score this agenda, gain 2[credit]. When you forfeit this agenda, gain 4[credit]."
-  ],
+  "unsupported": [],
   "subtypes": [
     "expansion"
   ],
   "advancementRequirement": 2,
-  "agendaPoints": 1
+  "agendaPoints": 1,
+  "onScore": {
+    "op": "do",
+    "action": {
+      "kind": "gain_credits",
+      "side": "corp",
+      "amount": 2
+    }
+  },
+  "onForfeit": {
+    "op": "do",
+    "action": {
+      "kind": "gain_credits",
+      "side": "corp",
+      "amount": 4
+    }
+  }
 }

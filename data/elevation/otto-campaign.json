@@ -5,13 +5,26 @@
   "nrdbCode": "35040",
   "type": "asset",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: When you rez this asset, load 6[credit] onto it. When it is empty, trash it and gain [click][click]. When your turn begins, take 2[credit] from this asset."
-  ],
+  "unsupported": [],
   "subtypes": [
     "advertisement"
   ],
   "installCost": 2,
   "rezCost": 2,
-  "trashCost": 2
+  "trashCost": 2,
+  "onRez": {
+    "op": "do",
+    "action": {
+      "kind": "place_hosted_credits",
+      "amount": 6
+    }
+  },
+  "onTurnBegin": {
+    "op": "do",
+    "action": {
+      "kind": "take_hosted_credits",
+      "amount": 2
+    }
+  },
+  "clicksOnHostedEmpty": 2
 }
