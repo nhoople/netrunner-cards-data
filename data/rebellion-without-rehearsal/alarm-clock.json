@@ -5,8 +5,14 @@
   "nrdbCode": "34078",
   "type": "hardware",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: When your turn begins, you may run HQ. The first time you encounter a piece of ice during that run, you may spend [click][click] to bypass it."
-  ],
-  "installCost": 2
+  "unsupported": [],
+  "installCost": 2,
+  "onTurnBegin": {
+    "op": "do",
+    "action": {
+      "kind": "may_start_run",
+      "servers": "hq",
+      "bypassFirstEncounterForClicks": 2
+    }
+  }
 }

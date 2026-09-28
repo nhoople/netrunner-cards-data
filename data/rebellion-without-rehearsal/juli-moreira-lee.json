@@ -5,11 +5,31 @@
   "nrdbCode": "34084",
   "type": "resource",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: When you install this resource, load 4 power counters onto it. When it is empty, trash it. The first time each turn you take an action on an installed resource, remove 1 hosted power counter and gain [click]."
-  ],
+  "unsupported": [],
   "subtypes": [
     "connection"
   ],
-  "installCost": 2
+  "installCost": 2,
+  "powerCountersOnInstall": 4,
+  "trashWhenPowerEmpty": true,
+  "onFirstResourcePaidAbilityEachTurn": {
+    "op": "seq",
+    "effects": [
+      {
+        "op": "do",
+        "action": {
+          "kind": "remove_power_counter",
+          "amount": 1
+        }
+      },
+      {
+        "op": "do",
+        "action": {
+          "kind": "gain_clicks",
+          "side": "runner",
+          "amount": 1
+        }
+      }
+    ]
+  }
 }

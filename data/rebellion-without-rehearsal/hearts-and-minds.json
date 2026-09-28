@@ -5,13 +5,80 @@
   "nrdbCode": "34124",
   "type": "asset",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: When your turn begins, you may move 1 advancement counter from an installed card to an installed card you can advance. If this server is not protected by ice, you may also place 1 advancement counter on an installed card you can advance."
-  ],
+  "unsupported": [],
   "subtypes": [
     "political"
   ],
   "installCost": 1,
   "rezCost": 1,
-  "trashCost": 2
+  "trashCost": 2,
+  "onTurnBegin": {
+    "op": "seq",
+    "effects": [
+      {
+        "op": "choose",
+        "chooser": "corp",
+        "options": [
+          {
+            "id": "move-adv",
+            "label": "Move 1 advancement to an advanceable card",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "move_advancements",
+                "amount": 1
+              }
+            }
+          },
+          {
+            "id": "decline",
+            "label": "Decline",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "gain_credits",
+                "side": "corp",
+                "amount": 0
+              }
+            }
+          }
+        ]
+      },
+      {
+        "op": "if",
+        "cond": {
+          "op": "host_server_unprotected_by_ice"
+        },
+        "then": {
+          "op": "choose",
+          "chooser": "corp",
+          "options": [
+            {
+              "id": "place-adv",
+              "label": "Place 1 advancement on an advanceable card",
+              "effect": {
+                "op": "do",
+                "action": {
+                  "kind": "place_advancements",
+                  "amount": 1
+                }
+              }
+            },
+            {
+              "id": "decline-place",
+              "label": "Decline",
+              "effect": {
+                "op": "do",
+                "action": {
+                  "kind": "gain_credits",
+                  "side": "corp",
+                  "amount": 0
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
 }
