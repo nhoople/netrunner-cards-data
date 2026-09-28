@@ -5,11 +5,24 @@
   "nrdbCode": "34077",
   "type": "event",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: You may install 1 program or piece of hardware from your grip. Run any server. When that run begins, derez 1 piece of ice protecting that server. When that run ends, the Corp may rez the ice derezzed this way, ignoring all costs."
-  ],
+  "unsupported": [],
   "subtypes": [
     "run"
   ],
-  "playCost": 1
+  "playCost": 1,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "may_install_from_grip",
+      "types": [
+        "program",
+        "hardware"
+      ]
+    }
+  },
+  "runEvent": {
+    "servers": "any",
+    "derezProtectingIceOnRunBegin": true,
+    "mayRezEventDerezzedIceOnRunEndIgnoreCosts": true
+  }
 }

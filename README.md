@@ -70,7 +70,7 @@ console.log(pool.corpusOrder, marjanah.title);
 | midnight-sun | 65 | Null Signal Midnight Sun (`ms`); `msbp` titles absorbed; fully supported |
 | parhelion | 63 | Null Signal Parhelion (`ph`); status `supported` (wave gate `v0.71.0`; all 63 clear) |
 | the-automata-initiative | 65 | Null Signal The Automata Initiative (`tai`); status `supported` (wave gate `v0.86.0`) |
-| rebellion-without-rehearsal | 65 | Null Signal Rebellion Without Rehearsal (`rwr`); status `in-progress` (**43/65** mapped) |
+| rebellion-without-rehearsal | 65 | Null Signal Rebellion Without Rehearsal (`rwr`); status `in-progress` (**48/65** mapped) |
 
 Synthetic stubs and early wave1/wave2 dirs were removed in `v0.2.0`. Reprints that previously lived only under those waves now ship under their Null Signal release directories.
 

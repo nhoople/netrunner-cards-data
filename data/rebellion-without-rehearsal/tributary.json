@@ -5,13 +5,97 @@
   "nrdbCode": "34111",
   "type": "ice",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: The first time each turn a run begins, you may move this ice to the outermost position protecting the attacked server. (The Runner will approach this ice.) [subroutine] You may draw 1 card. You may install 1 piece of ice from HQ protecting "
-  ],
+  "unsupported": [],
   "subtypes": [
     "code gate"
   ],
   "installCost": 3,
   "rezCost": 3,
-  "strength": 4
+  "strength": 4,
+  "onFirstRunBeginThisTurn": {
+    "op": "choose",
+    "chooser": "corp",
+    "options": [
+      {
+        "id": "move",
+        "label": "Move Tributary to outermost of attacked server",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "move_source_ice_to_outermost_attacked"
+          }
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "corp",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  },
+  "subroutines": [
+    {
+      "id": "tributary-draw-install",
+      "text": "You may draw 1. You may install ice from HQ on another server, ignoring costs.",
+      "effect": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "choose",
+            "chooser": "corp",
+            "options": [
+              {
+                "id": "draw",
+                "label": "Draw 1",
+                "effect": {
+                  "op": "do",
+                  "action": {
+                    "kind": "draw",
+                    "side": "corp",
+                    "amount": 1
+                  }
+                }
+              },
+              {
+                "id": "skip-draw",
+                "label": "Decline draw",
+                "effect": {
+                  "op": "do",
+                  "action": {
+                    "kind": "gain_credits",
+                    "side": "corp",
+                    "amount": 0
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "may_install_ice_from_hq_other_server_ignore_costs"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "tributary-fortify",
+      "text": "Each ice gets +2 strength for the remainder of this run.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "fortify_all_ice",
+          "amount": 2
+        }
+      }
+    }
+  ]
 }

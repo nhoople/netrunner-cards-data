@@ -5,11 +5,11 @@
   "nrdbCode": "34075",
   "type": "resource",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Whenever you breach HQ or R&D while you are tagged, access 1 additional card. Threat 3 → As an additional cost to trash this resource with the basic action, the Corp must trash 1 card from HQ. (This ability is active if any player has 3 or "
-  ],
+  "unsupported": [],
   "subtypes": [
     "connection"
   ],
-  "installCost": 2
+  "installCost": 2,
+  "bonusAccessOnHqRdBreachWhileTagged": 1,
+  "threatBasicTrashAdditionalCostTrashHq": 3
 }

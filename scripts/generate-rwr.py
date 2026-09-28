@@ -1654,6 +1654,220 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    if cid == "business-as-usual":
+        place_up_to_2 = {
+            "op": "do",
+            "action": {
+                "kind": "place_advancements_on_up_to",
+                "amountEach": 1,
+                "maxCards": 2,
+            },
+        }
+        remove_virus = {
+            "op": "do",
+            "action": {"kind": "remove_all_virus_from_one_installed"},
+        }
+        decline = {
+            "id": "decline",
+            "label": "Decline",
+            "effect": gain("corp", 0),
+        }
+        return base(
+            c,
+            onPlay={
+                "op": "choose",
+                "chooser": "corp",
+                "options": [
+                    {
+                        "id": "adv",
+                        "label": "Place 1 advancement on each of up to 2 cards",
+                        "effect": {
+                            "op": "seq",
+                            "effects": [
+                                place_up_to_2,
+                                {
+                                    "op": "if",
+                                    "cond": {"op": "threat", "level": 3},
+                                    "then": {
+                                        "op": "choose",
+                                        "chooser": "corp",
+                                        "options": [
+                                            {
+                                                "id": "also-virus",
+                                                "label": "Also remove all virus from 1 card",
+                                                "effect": remove_virus,
+                                            },
+                                            decline,
+                                        ],
+                                    },
+                                },
+                            ],
+                        },
+                    },
+                    {
+                        "id": "virus",
+                        "label": "Remove all virus counters from 1 installed card",
+                        "effect": {
+                            "op": "seq",
+                            "effects": [
+                                remove_virus,
+                                {
+                                    "op": "if",
+                                    "cond": {"op": "threat", "level": 3},
+                                    "then": {
+                                        "op": "choose",
+                                        "chooser": "corp",
+                                        "options": [
+                                            {
+                                                "id": "also-adv",
+                                                "label": "Also place advancements on up to 2",
+                                                "effect": place_up_to_2,
+                                            },
+                                            {
+                                                "id": "decline-adv",
+                                                "label": "Decline",
+                                                "effect": gain("corp", 0),
+                                            },
+                                        ],
+                                    },
+                                },
+                            ],
+                        },
+                    },
+                ],
+            },
+            unsupported=[],
+        )
+
+    if cid == "tributary":
+        return base(
+            c,
+            onFirstRunBeginThisTurn={
+                "op": "choose",
+                "chooser": "corp",
+                "options": [
+                    {
+                        "id": "move",
+                        "label": "Move Tributary to outermost of attacked server",
+                        "effect": {
+                            "op": "do",
+                            "action": {
+                                "kind": "move_source_ice_to_outermost_attacked",
+                            },
+                        },
+                    },
+                    {
+                        "id": "decline",
+                        "label": "Decline",
+                        "effect": gain("corp", 0),
+                    },
+                ],
+            },
+            subroutines=[
+                {
+                    "id": "tributary-draw-install",
+                    "text": "You may draw 1. You may install ice from HQ on another server, ignoring costs.",
+                    "effect": seq(
+                        {
+                            "op": "choose",
+                            "chooser": "corp",
+                            "options": [
+                                {
+                                    "id": "draw",
+                                    "label": "Draw 1",
+                                    "effect": draw("corp", 1),
+                                },
+                                {
+                                    "id": "skip-draw",
+                                    "label": "Decline draw",
+                                    "effect": gain("corp", 0),
+                                },
+                            ],
+                        },
+                        {
+                            "op": "do",
+                            "action": {
+                                "kind": "may_install_ice_from_hq_other_server_ignore_costs",
+                            },
+                        },
+                    ),
+                },
+                {
+                    "id": "tributary-fortify",
+                    "text": "Each ice gets +2 strength for the remainder of this run.",
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "fortify_all_ice",
+                            "amount": 2,
+                        },
+                    },
+                },
+            ],
+            unsupported=[],
+        )
+
+    if cid == "meeting-of-minds":
+        return base(
+            c,
+            onPlay={
+                "op": "choose",
+                "chooser": "runner",
+                "options": [
+                    {
+                        "id": "connection",
+                        "label": "Choose connection",
+                        "effect": {
+                            "op": "do",
+                            "action": {
+                                "kind": "meeting_of_minds_resolve",
+                                "subtype": "connection",
+                            },
+                        },
+                    },
+                    {
+                        "id": "virtual",
+                        "label": "Choose virtual",
+                        "effect": {
+                            "op": "do",
+                            "action": {
+                                "kind": "meeting_of_minds_resolve",
+                                "subtype": "virtual",
+                            },
+                        },
+                    },
+                ],
+            },
+            unsupported=[],
+        )
+
+    if cid == "manuel-lattes-de-moura":
+        return base(
+            c,
+            bonusAccessOnHqRdBreachWhileTagged=1,
+            threatBasicTrashAdditionalCostTrashHq=3,
+            unsupported=[],
+        )
+
+    if cid == "window-of-opportunity":
+        return base(
+            c,
+            subtypes=["run"],
+            onPlay={
+                "op": "do",
+                "action": {
+                    "kind": "may_install_from_grip",
+                    "types": ["program", "hardware"],
+                },
+            },
+            runEvent={
+                "servers": "any",
+                "derezProtectingIceOnRunBegin": True,
+                "mayRezEventDerezzedIceOnRunEndIgnoreCosts": True,
+            },
+            unsupported=[],
+        )
+
     card = base(c)
     card["unsupported"] = [f"Full text not yet mapped to IR: {plain[:240]}"]
     return card
