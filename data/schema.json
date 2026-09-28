@@ -475,6 +475,11 @@
           "requireAttackingMark": {
             "type": "boolean",
             "description": "Ability usable only while attacking the designated mark (e.g. Backstitching)."
+          },
+          "requiresCorpCreditsGte": {
+            "type": "integer",
+            "minimum": 0,
+            "description": "Ability usable only while the Corp has at least this many credits (Fransofia Ward)."
           }
         }
       }
@@ -1157,6 +1162,23 @@
     },
     "playRequiresSuccessfulRunLastTurn": {
       "type": "boolean"
+    },
+    "playRequiresThreat": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Play only while Threat N is active (Measured Response)."
+    },
+    "cannotBeTrashedByRunnerWhileRezzed": {
+      "type": "boolean",
+      "description": "While rezzed, the Runner cannot trash this card (Kessleroid)."
+    },
+    "cannotBreakExceptSubtype": {
+      "type": "string",
+      "description": "Printed subroutines on this ice can only be broken by icebreakers with this subtype (Semak-samun / fracter)."
+    },
+    "strengthBonusIfSoleIceProtectingServer": {
+      "type": "integer",
+      "description": "While this is the only ice protecting its server, it gets +N strength (Scatter Field)."
     },
     "trashAfterBreakingThisRun": {
       "type": "boolean"

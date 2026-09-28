@@ -5,11 +5,31 @@
   "nrdbCode": "35021",
   "type": "resource",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: The rez cost of each piece of ice is increased by 1[credit]. Whenever you encounter a piece of ice, if the Corp has 15[credit] or more, you may trash this resource to bypass that ice. (Pass that ice. No subroutines or further \"when encounte"
-  ],
+  "unsupported": [],
   "subtypes": [
     "connection"
   ],
-  "installCost": 3
+  "installCost": 3,
+  "iceRezCostIncrease": 1,
+  "paidAbilities": [
+    {
+      "id": "fransofia-ward-bypass",
+      "label": "Trash Fransofia Ward: bypass encountered ice (Corp ≥15¢)",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "trashSelf": true
+      },
+      "windows": [
+        "encounter_paw"
+      ],
+      "requiresCorpCreditsGte": 15,
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "bypass_current_ice"
+        }
+      }
+    }
+  ]
 }

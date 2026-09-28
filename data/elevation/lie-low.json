@@ -5,11 +5,39 @@
   "nrdbCode": "35015",
   "type": "event",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: As an additional cost to play this event, spend [click]. Resolve 1 of the following:Draw 4 cards.Remove up to 2 tags."
-  ],
+  "unsupported": [],
   "subtypes": [
     "double"
   ],
-  "playCost": 1
+  "playCost": 1,
+  "playAdditionalClick": true,
+  "onPlay": {
+    "op": "choose",
+    "chooser": "runner",
+    "options": [
+      {
+        "id": "draw",
+        "label": "Draw 4 cards",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "draw",
+            "side": "runner",
+            "amount": 4
+          }
+        }
+      },
+      {
+        "id": "tags",
+        "label": "Remove up to 2 tags",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "remove_tags",
+            "amount": 2
+          }
+        }
+      }
+    ]
+  }
 }

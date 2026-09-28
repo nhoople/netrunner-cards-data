@@ -5,12 +5,41 @@
   "nrdbCode": "35078",
   "type": "operation",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: Play only if the threat level is 4 or greater, and only if the Runner made a successful run during their last turn. Do 4 meat damage unless the Runner pays 8[credit]."
-  ],
+  "unsupported": [],
   "subtypes": [
     "black ops"
   ],
   "playCost": 5,
-  "trashCost": 3
+  "trashCost": 3,
+  "playRequiresThreat": 4,
+  "playRequiresSuccessfulRunLastTurn": true,
+  "onPlay": {
+    "op": "choose",
+    "chooser": "runner",
+    "options": [
+      {
+        "id": "pay8",
+        "label": "Pay 8¢",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "lose_credits",
+            "side": "runner",
+            "amount": 8
+          }
+        }
+      },
+      {
+        "id": "meat",
+        "label": "Suffer 4 meat damage",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "meat_damage",
+            "amount": 4
+          }
+        }
+      }
+    ]
+  }
 }
