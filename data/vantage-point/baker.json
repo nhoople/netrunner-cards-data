@@ -5,9 +5,34 @@
   "nrdbCode": "36015",
   "type": "program",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Once per turn → [click]: Run Archives. When you would approach Archives (after passing all ice), you may pay 1[credit] to instead change the attacked server to HQ or R&D and approach that server. Spend credits only from stealth cards to pay"
-  ],
+  "unsupported": [],
   "installCost": 3,
-  "memoryCost": 1
+  "memoryCost": 1,
+  "paidAbilities": [
+    {
+      "id": "baker-run",
+      "label": "[click]: Run Archives (may redirect approach with stealth)",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "oncePerTurn": true,
+      "startsRun": {
+        "servers": "archives",
+        "mayRedirectApproachArchivesToHqOrRdPayingStealthCredits": 1
+      },
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "runner",
+          "amount": 0
+        }
+      }
+    }
+  ]
 }

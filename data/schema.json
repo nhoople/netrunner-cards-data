@@ -94,6 +94,10 @@
           "minimum": 1,
           "description": "After passing Archives ice, Runner may pay this many stealth credits to change attacked server to HQ or R&D and approach that server (Baker)."
         },
+        "blockCreditPoolSpendAndLose": {
+          "type": "boolean",
+          "description": "While this run is active, Runner cannot spend or lose credits from their credit pool (Aircheck)."
+        },
         "shredPreventFirstEndTheRun": {
           "type": "boolean",
           "description": "Shred: first Corp end-the-run is prevented unless Corp reveals and trashes X random HQ (X = root size)."

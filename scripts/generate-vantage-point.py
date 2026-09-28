@@ -1472,9 +1472,56 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    # --- v1.30.0 B-slice (stealth cluster finish) ---
+
+    if cid == "baker":
+        return base(
+            c,
+            paidAbilities=[
+                {
+                    "id": "baker-run",
+                    "label": "[click]: Run Archives (may redirect approach with stealth)",
+                    "clickCost": 1,
+                    "creditCost": 0,
+                    "cost": {"clicks": 1},
+                    "windows": ["runner_action_paw"],
+                    "oncePerTurn": True,
+                    "startsRun": {
+                        "servers": "archives",
+                        "mayRedirectApproachArchivesToHqOrRdPayingStealthCredits": 1,
+                    },
+                    "effect": gain("runner", 0),
+                }
+            ],
+            unsupported=[],
+        )
+
+    if cid == "aircheck":
+        return base(
+            c,
+            runEvent={
+                "servers": "hq_rd",
+                "placeEventCredits": 4,
+                "blockCreditPoolSpendAndLose": True,
+                "onRunEnd": {
+                    "op": "if",
+                    "cond": {"op": "run_successful"},
+                    "then": {
+                        "op": "do",
+                        "action": {
+                            "kind": "may_start_run",
+                            "servers": "remote",
+                        },
+                    },
+                },
+            },
+            unsupported=[],
+        )
+
     # Fail closed — honest unsupported note for the remainder.
-    # Remaining stealth (Baker / Aircheck) plus host/identity stubs stay
-    # unsupported until IR exists.
+    # Remaining stubs: Nurse Hạnh / Editorial / Perfect Recall / Let Them Dream /
+    # Luana / Word on the Street / Beta Build / Read-Write Share / Hackerspace /
+    # Méliès U.
     card = base(c)
     card["unsupported"] = [f"Full text not yet mapped to IR: {plain[:240]}"]
     return card
