@@ -5,14 +5,89 @@
   "nrdbCode": "34125",
   "type": "ice",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: [click], 1[credit], reveal and trash this ice from HQ: Draw 1 card. Reveal up to 2 agendas in HQ and/or Archives and shuffle them into R&D. When your turn begins, you may add this ice to HQ. [subroutine] End the run."
-  ],
+  "unsupported": [],
   "subtypes": [
     "code gate",
     "expendable"
   ],
   "installCost": 2,
   "rezCost": 2,
-  "strength": 1
+  "strength": 1,
+  "onTurnBegin": {
+    "op": "choose",
+    "chooser": "corp",
+    "options": [
+      {
+        "id": "to-hq",
+        "label": "Add Descent to HQ",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "return_source_to_hq"
+          }
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "corp",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  },
+  "paidAbilities": [
+    {
+      "id": "descent-expend",
+      "label": "[click], 1¢, reveal and trash from HQ: Draw 1; shuffle up to 2 agendas into R&D",
+      "clickCost": 1,
+      "creditCost": 1,
+      "cost": {
+        "clicks": 1,
+        "credits": 1,
+        "trashSelf": true
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "usableFromHq": true,
+      "effect": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "draw",
+              "side": "corp",
+              "amount": 1
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "may_reveal_shuffle_agendas_into_rd",
+              "max": 2
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "subroutines": [
+    {
+      "id": "descent-etr",
+      "text": "End the run.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "end_the_run"
+        }
+      }
+    }
+  ]
 }
