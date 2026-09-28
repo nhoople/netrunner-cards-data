@@ -5,9 +5,7 @@
   "nrdbCode": "34118",
   "type": "ice",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: When the Runner encounters this ice, they lose 3[credit] unless they suffer 2 net damage or take 1 tag. [subroutine] The Runner loses 3[credit]. [subroutine] Do 2 net damage. [subroutine] Give the Runner 1 tag."
-  ],
+  "unsupported": [],
   "subtypes": [
     "sentry",
     "ap",
@@ -16,5 +14,81 @@
   ],
   "installCost": 10,
   "rezCost": 10,
-  "strength": 5
+  "strength": 5,
+  "onEncounter": {
+    "op": "choose",
+    "chooser": "runner",
+    "options": [
+      {
+        "id": "lose-3",
+        "label": "Lose 3¢",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "lose_credits",
+            "side": "runner",
+            "amount": 3
+          }
+        }
+      },
+      {
+        "id": "net-2",
+        "label": "Suffer 2 net damage",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "net_damage",
+            "amount": 2
+          }
+        }
+      },
+      {
+        "id": "tag-1",
+        "label": "Take 1 tag",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "give_tags",
+            "amount": 1
+          }
+        }
+      }
+    ]
+  },
+  "subroutines": [
+    {
+      "id": "seraph-lose",
+      "text": "The Runner loses 3[credit].",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "lose_credits",
+          "side": "runner",
+          "amount": 3
+        }
+      }
+    },
+    {
+      "id": "seraph-net",
+      "text": "Do 2 net damage.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "net_damage",
+          "amount": 2
+        }
+      }
+    },
+    {
+      "id": "seraph-tag",
+      "text": "Give the Runner 1 tag.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "give_tags",
+          "amount": 1
+        }
+      }
+    }
+  ]
 }
