@@ -5,12 +5,59 @@
   "nrdbCode": "35060",
   "type": "agenda",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: When this agenda is scored or stolen, place 1 agenda counter on it. [click], hosted agenda counter: Draw 4 cards. Shuffle any number of cards from HQ into R&D. The Corp can use this ability even if this agenda is in the Runner's score area."
-  ],
+  "unsupported": [],
   "subtypes": [
     "initiative"
   ],
   "advancementRequirement": 5,
-  "agendaPoints": 3
+  "agendaPoints": 3,
+  "onScore": {
+    "op": "do",
+    "action": {
+      "kind": "add_agenda_counter",
+      "amount": 1
+    }
+  },
+  "onSteal": {
+    "op": "do",
+    "action": {
+      "kind": "add_agenda_counter",
+      "amount": 1
+    }
+  },
+  "paidAbilities": [
+    {
+      "id": "next-big-thing-draw",
+      "label": "[click], hosted agenda counter: Draw 4. Shuffle any number from HQ into R&D.",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1,
+        "agendaCounters": 1
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "usableFromRunnerScoreArea": true,
+      "effect": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "draw",
+              "side": "corp",
+              "amount": 4
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "shuffle_any_number_hq_to_rd"
+            }
+          }
+        ]
+      }
+    }
+  ]
 }

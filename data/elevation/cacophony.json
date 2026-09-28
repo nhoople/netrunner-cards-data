@@ -5,11 +5,58 @@
   "nrdbCode": "35010",
   "type": "resource",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: The first time each turn you steal or trash a Corp card, place 1 power counter on this resource. When your action phase ends, you may remove 2 hosted power counters to sabotage 3. (The Corp trashes 3 cards of their choice from HQ and/or the"
-  ],
+  "unsupported": [],
   "subtypes": [
     "virtual"
   ],
-  "installCost": 3
+  "installCost": 3,
+  "onFirstRunnerStoleOrTrashedCorpCardThisTurn": {
+    "op": "do",
+    "action": {
+      "kind": "add_power_counter",
+      "amount": 1
+    }
+  },
+  "onRunnerActionPhaseEnd": {
+    "op": "choose",
+    "chooser": "runner",
+    "options": [
+      {
+        "id": "sabotage",
+        "label": "Remove 2 power counters to sabotage 3",
+        "effect": {
+          "op": "seq",
+          "effects": [
+            {
+              "op": "do",
+              "action": {
+                "kind": "remove_power_counter",
+                "amount": 2
+              }
+            },
+            {
+              "op": "do",
+              "action": {
+                "kind": "sabotage",
+                "amount": 3,
+                "interactive": true
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "runner",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  }
 }

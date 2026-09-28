@@ -5,14 +5,19 @@
   "nrdbCode": "35045",
   "type": "upgrade",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: When your action phase ends, you may install 1 piece of ice from HQ, paying 1[credit] less. If you do, move this upgrade to the root of the server that piece of ice is protecting."
-  ],
+  "unsupported": [],
   "subtypes": [
     "bioroid",
     "academic"
   ],
   "installCost": 2,
   "rezCost": 2,
-  "trashCost": 2
+  "trashCost": 2,
+  "onCorpActionPhaseEnd": {
+    "op": "do",
+    "action": {
+      "kind": "may_install_ice_from_hq_discount_then_move_source",
+      "discount": 1
+    }
+  }
 }

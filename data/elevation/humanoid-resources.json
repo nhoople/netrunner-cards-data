@@ -5,10 +5,62 @@
   "nrdbCode": "35039",
   "type": "asset",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: [click][click][click], [trash]: Gain 4[credit] and draw 3 cards. Install up to 2 cards from HQ (one at a time). You may play 1 operation from HQ."
-  ],
+  "unsupported": [],
   "installCost": 1,
   "rezCost": 1,
-  "trashCost": 1
+  "trashCost": 1,
+  "paidAbilities": [
+    {
+      "id": "humanoid-resources-main",
+      "label": "[click][click][click], [trash]: Gain 4¢ and draw 3. Install up to 2 from HQ. May play 1 operation from HQ.",
+      "clickCost": 3,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 3,
+        "trashSelf": true
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "effect": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "gain_credits",
+              "side": "corp",
+              "amount": 4
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "draw",
+              "side": "corp",
+              "amount": 3
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "may_install_from_hq_paying_costs"
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "may_install_from_hq_paying_costs"
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "may_play_operation_from_hq"
+            }
+          }
+        ]
+      }
+    }
+  ]
 }

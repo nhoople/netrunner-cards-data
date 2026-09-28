@@ -873,6 +873,23 @@
       "type": "object",
       "description": "Effect IR when the Corp's discard phase ends (Project Ingatan / Embedded Reporting / Sericulture / PT Untaian / Off the Books)."
     },
+    "onCorpActionPhaseEnd": {
+      "type": "object",
+      "description": "Effect IR when the Corp's action phase ends while this card is rezzed (Mercia B4LL4RD)."
+    },
+    "onRunnerActionPhaseEnd": {
+      "type": "object",
+      "description": "Effect IR when the Runner's action phase ends while this card is installed (Cacophony)."
+    },
+    "onFirstAgendaScoredOrStolenThisTurn": {
+      "type": "object",
+      "description": "Effect IR the first time each turn an agenda is scored or stolen while this card is rezzed (Phật Gioan Baotixita)."
+    },
+    "rezCostCreditDiscountOnForfeitAgenda": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Optional: forfeit 1 agenda when rezzing to reduce rez cost by this many credits (Biawak)."
+    },
     "onHostedCreditsGte": {
       "type": "object",
       "required": ["amount", "effect"],
@@ -1178,7 +1195,7 @@
     },
     "onFirstRunnerStoleOrTrashedCorpCardThisTurn": {
       "type": "object",
-      "description": "Identity: Effect IR the first time each turn the Runner steals or trashes a Corp card (Epiphany Analytica)."
+      "description": "Effect IR the first time each turn the Runner steals or trashes a Corp card (Epiphany identity; Cacophony resource)."
     },
     "wageWorkersTrackActions": {
       "type": "boolean",
