@@ -1,0 +1,15 @@
+{
+  "id": "lie-low",
+  "title": "Lie Low",
+  "wave": "elevation",
+  "nrdbCode": "35015",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: As an additional cost to play this event, spend [click]. Resolve 1 of the following:Draw 4 cards.Remove up to 2 tags."
+  ],
+  "subtypes": [
+    "double"
+  ],
+  "playCost": 1
+}

@@ -1,0 +1,15 @@
+{
+  "id": "illumination",
+  "title": "Illumination",
+  "wave": "elevation",
+  "nrdbCode": "35025",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: Run R&D. If successful, install up to 3 cards from your grip (one at a time), paying 1[credit] less for each."
+  ],
+  "subtypes": [
+    "run"
+  ],
+  "playCost": 0
+}

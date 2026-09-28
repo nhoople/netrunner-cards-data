@@ -1,0 +1,15 @@
+{
+  "id": "transfer-of-wealth",
+  "title": "Transfer of Wealth",
+  "wave": "elevation",
+  "nrdbCode": "35017",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: Run HQ. If successful, take 1 tag and the Corp loses 3[credit]. Gain 2[credit] for each credit lost this way."
+  ],
+  "subtypes": [
+    "run"
+  ],
+  "playCost": 0
+}

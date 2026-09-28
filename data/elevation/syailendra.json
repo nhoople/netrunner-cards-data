@@ -1,0 +1,18 @@
+{
+  "id": "syailendra",
+  "title": "Syailendra",
+  "wave": "elevation",
+  "nrdbCode": "35076",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: You can advance this ice. When the Runner encounters this ice, if it has 3 or more hosted advancement counters, you may place 1 advancement counter on an installed card you can advance. [subroutine] You may place 1 advancement counter on an"
+  ],
+  "subtypes": [
+    "code gate",
+    "ap"
+  ],
+  "installCost": 4,
+  "rezCost": 4,
+  "strength": 5
+}

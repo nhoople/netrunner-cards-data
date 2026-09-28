@@ -1,0 +1,37 @@
+{
+  "id": "rent-rioters",
+  "title": "Rent Rioters",
+  "wave": "elevation",
+  "nrdbCode": "35011",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "subtypes": [
+    "connection",
+    "seedy"
+  ],
+  "installCost": 2,
+  "paidAbilities": [
+    {
+      "id": "rent-rioters-gain",
+      "label": "[click][click][click], [trash]: Gain 9¢",
+      "clickCost": 3,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 3,
+        "trashSelf": true
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "runner",
+          "amount": 9
+        }
+      }
+    }
+  ]
+}

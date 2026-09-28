@@ -1,0 +1,16 @@
+{
+  "id": "embedded-reporting",
+  "title": "Embedded Reporting",
+  "wave": "elevation",
+  "nrdbCode": "35059",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: Dividends 2 (When you score this agenda, place 2 agenda counters on it for each excess advancement counter.) When your discard phase ends, you may remove 1 hosted agenda counter to search R&D for 1 operation and reveal it. (Shuffle R&D afte"
+  ],
+  "subtypes": [
+    "initiative"
+  ],
+  "advancementRequirement": 3,
+  "agendaPoints": 2
+}

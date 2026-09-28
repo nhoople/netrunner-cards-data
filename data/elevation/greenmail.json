@@ -1,0 +1,16 @@
+{
+  "id": "greenmail",
+  "title": "Greenmail",
+  "wave": "elevation",
+  "nrdbCode": "35070",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: When you score this agenda, gain 2[credit]. When you forfeit this agenda, gain 4[credit]."
+  ],
+  "subtypes": [
+    "expansion"
+  ],
+  "advancementRequirement": 2,
+  "agendaPoints": 1
+}

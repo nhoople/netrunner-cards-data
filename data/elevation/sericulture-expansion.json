@@ -1,0 +1,16 @@
+{
+  "id": "sericulture-expansion",
+  "title": "Sericulture Expansion",
+  "wave": "elevation",
+  "nrdbCode": "35049",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: Dividends 1 (When you score this agenda, place 1 agenda counter on it for each excess advancement counter.) When your discard phase ends, you may remove 1 hosted agenda counter to place 2 advancement counters on 1 installed card. (You canno"
+  ],
+  "subtypes": [
+    "expansion"
+  ],
+  "advancementRequirement": 3,
+  "agendaPoints": 2
+}

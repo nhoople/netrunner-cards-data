@@ -1,0 +1,15 @@
+{
+  "id": "cacophony",
+  "title": "Cacophony",
+  "wave": "elevation",
+  "nrdbCode": "35010",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: The first time each turn you steal or trash a Corp card, place 1 power counter on this resource. When your action phase ends, you may remove 2 hosted power counters to sabotage 3. (The Corp trashes 3 cards of their choice from HQ and/or the"
+  ],
+  "subtypes": [
+    "virtual"
+  ],
+  "installCost": 3
+}

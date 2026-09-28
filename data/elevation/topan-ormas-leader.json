@@ -1,0 +1,15 @@
+{
+  "id": "topan-ormas-leader",
+  "title": "Topan: Ormas Leader",
+  "wave": "elevation",
+  "nrdbCode": "35002",
+  "type": "identity",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: Once per turn → [click]: Install 1 card from your grip, paying 2[credit] less. When you install that card, suffer 1 meat damage."
+  ],
+  "subtypes": [
+    "natural"
+  ],
+  "link": 0
+}

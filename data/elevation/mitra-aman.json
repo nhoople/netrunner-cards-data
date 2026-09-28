@@ -1,0 +1,17 @@
+{
+  "id": "mitra-aman",
+  "title": "Mitra Aman",
+  "wave": "elevation",
+  "nrdbCode": "35056",
+  "type": "upgrade",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: Whenever the Runner approaches a piece of ice protecting this server, you may trash this upgrade. If you do, gain 3[credit] and you may swap the ice being approached with a piece of ice from Archives or HQ."
+  ],
+  "subtypes": [
+    "clone"
+  ],
+  "installCost": 0,
+  "rezCost": 0,
+  "trashCost": 3
+}

@@ -1,0 +1,15 @@
+{
+  "id": "magdalene-keino-chemutai-cryptarchitect",
+  "title": "Magdalene Keino-Chemutai: Cryptarchitect",
+  "wave": "elevation",
+  "nrdbCode": "35024",
+  "type": "identity",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: Whenever you discard cards to reach your maximum hand size, you may install 1 program or piece of hardware from among those cards."
+  ],
+  "subtypes": [
+    "cyborg"
+  ],
+  "link": 0
+}

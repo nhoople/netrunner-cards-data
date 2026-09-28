@@ -1,0 +1,15 @@
+{
+  "id": "bling",
+  "title": "Bling",
+  "wave": "elevation",
+  "nrdbCode": "35006",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: +1[mu] Whenever you install a card without spending credits, you may host the top card of your stack faceup on this hardware. (It is not installed.) You can play or install hosted cards as if they were in your grip. When your discard phase "
+  ],
+  "subtypes": [
+    "console"
+  ],
+  "installCost": 2
+}

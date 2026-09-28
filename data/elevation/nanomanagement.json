@@ -1,0 +1,12 @@
+{
+  "id": "nanomanagement",
+  "title": "Nanomanagement",
+  "wave": "elevation",
+  "nrdbCode": "35043",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: Gain [click][click]."
+  ],
+  "playCost": 4
+}

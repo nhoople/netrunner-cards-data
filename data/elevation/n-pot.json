@@ -1,0 +1,17 @@
+{
+  "id": "n-pot",
+  "title": "N-Pot",
+  "wave": "elevation",
+  "nrdbCode": "35064",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: 3[credit]: Break 1 subroutine on this ice. Only the Runner can use this ability. [subroutine] End the run. [subroutine] If the threat level is 2 or greater, end the run. [subroutine] If the threat level is 4 or greater, end the run."
+  ],
+  "subtypes": [
+    "code gate"
+  ],
+  "installCost": 4,
+  "rezCost": 4,
+  "strength": 4
+}

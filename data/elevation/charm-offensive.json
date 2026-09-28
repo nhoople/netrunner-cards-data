@@ -1,0 +1,15 @@
+{
+  "id": "charm-offensive",
+  "title": "Charm Offensive",
+  "wave": "elevation",
+  "nrdbCode": "35003",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: Run Archives. When that run ends, you may trash 1 rezzed copy of a card you accessed in Archives during that run."
+  ],
+  "subtypes": [
+    "run"
+  ],
+  "playCost": 0
+}

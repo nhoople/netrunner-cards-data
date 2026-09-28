@@ -1,0 +1,16 @@
+{
+  "id": "project-ingatan",
+  "title": "Project Ingatan",
+  "wave": "elevation",
+  "nrdbCode": "35038",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: Dividends 1 (When you score this agenda, place 1 agenda counter on it for each excess advancement counter.) When your discard phase ends, you may remove 1 hosted agenda counter to install 1 card from Archives, ignoring all costs."
+  ],
+  "subtypes": [
+    "research"
+  ],
+  "advancementRequirement": 3,
+  "agendaPoints": 2
+}

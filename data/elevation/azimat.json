@@ -1,0 +1,13 @@
+{
+  "id": "azimat",
+  "title": "Azimat",
+  "wave": "elevation",
+  "nrdbCode": "35029",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: 2[recurring-credit] (When you install this program and before your turn begins, refill to 2 hosted credits.) You can spend hosted credits to pay trash costs."
+  ],
+  "installCost": 1,
+  "memoryCost": 2
+}

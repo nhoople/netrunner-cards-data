@@ -1,0 +1,14 @@
+{
+  "id": "leo-construction-labor-solutions",
+  "title": "LEO Construction: Labor Solutions",
+  "wave": "elevation",
+  "nrdbCode": "35035",
+  "type": "identity",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: Once per turn → Trash 1 rezzed bioroid card in the root of or protecting the attacked server: End the run."
+  ],
+  "subtypes": [
+    "division"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "id": "key-performance-indicators",
+  "title": "Key Performance Indicators",
+  "wave": "elevation",
+  "nrdbCode": "35077",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: Resolve 2 of the following in any order:Draw 1 card. Shuffle 1 card from HQ into R&D.Install 1 piece of ice from HQ, ignoring all costs.Place 1 advancement counter on an installed card you can advance.Gain 2[credit]."
+  ],
+  "subtypes": [
+    "transaction"
+  ],
+  "playCost": 1
+}

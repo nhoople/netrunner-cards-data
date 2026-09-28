@@ -1,0 +1,15 @@
+{
+  "id": "gamedragon-pro",
+  "title": "GAMEDRAGON™ Pro",
+  "wave": "elevation",
+  "nrdbCode": "35027",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: When you install this hardware and when your turn begins, you may host this hardware on an installed non-AI icebreaker. Host icebreaker gets +1 strength. Abilities that increase its strength last for the remainder of the run (instead of any"
+  ],
+  "subtypes": [
+    "mod"
+  ],
+  "installCost": 2
+}

@@ -1,0 +1,15 @@
+{
+  "id": "barry-baz-wong-tri-maf-veteran",
+  "title": "Barry “Baz” Wong: Tri-Maf Veteran",
+  "wave": "elevation",
+  "nrdbCode": "35012",
+  "type": "identity",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: Whenever the Corp rezzes a piece of ice, you may install 1 resource or piece of hardware from your grip."
+  ],
+  "subtypes": [
+    "cyborg"
+  ],
+  "link": 0
+}

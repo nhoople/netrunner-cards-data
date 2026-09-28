@@ -1,0 +1,14 @@
+{
+  "id": "nebula-talent-management-making-stars",
+  "title": "Nebula Talent Management: Making Stars",
+  "wave": "elevation",
+  "nrdbCode": "35057",
+  "type": "identity",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: When your action phase ends, if you played an operation this turn, gain 1[credit] and flip this identity. Flip side: The first time each turn you play an operation, gain [click]. When the Runner makes a successful run on HQ or R&D, flip thi"
+  ],
+  "subtypes": [
+    "division"
+  ]
+}

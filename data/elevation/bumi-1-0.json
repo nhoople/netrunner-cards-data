@@ -1,0 +1,20 @@
+{
+  "id": "bumi-1-0",
+  "title": "Bumi 1.0",
+  "wave": "elevation",
+  "nrdbCode": "35041",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: When you rez this ice during a run against this server, you may trash 1 installed trojan program. Lose [click]: Break 1 subroutine on this ice. Only the Runner can use this ability. [subroutine] Trash 1 installed program. [subroutine] Do 1 "
+  ],
+  "subtypes": [
+    "sentry",
+    "bioroid",
+    "ap",
+    "destroyer"
+  ],
+  "installCost": 3,
+  "rezCost": 3,
+  "strength": 3
+}
