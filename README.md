@@ -35,7 +35,7 @@ Match this dataset and [netrunner-engine](https://github.com/nhoople/netrunner-e
 
 | Pairing | cards-data | engine |
 |---------|------------|--------|
-| **Current** | [`v1.21.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.21.0) | engine same-semver pin `v1.21.0` |
+| **Current** | [`v1.22.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.22.0) | engine same-semver pin `v1.22.0` |
 | Elevation milestone | [`v1.12.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.12.0) | [`v1.12.0`](https://github.com/nhoople/netrunner-engine/releases/tag/v1.12.0) |
 | RWR milestone | [`v1.00.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.00.0) | [`v1.00.0`](https://github.com/nhoople/netrunner-engine/releases/tag/v1.00.0) |
 

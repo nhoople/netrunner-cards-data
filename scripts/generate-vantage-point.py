@@ -985,6 +985,43 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    # --- v1.22.0 B-slice ---
+
+    if cid == "myoshu":
+        return base(
+            c,
+            playRequiresScoredAgendaNotInstalledThisTurn=True,
+            agendaPoints=2,
+            onPlay={
+                "op": "do",
+                "action": {
+                    "kind": "score_self_as_agenda",
+                    "agendaPoints": 2,
+                },
+            },
+            unsupported=[],
+        )
+
+    if cid == "flood-the-market":
+        return base(
+            c,
+            playAdditionalClick=True,
+            onPlay={
+                "op": "do",
+                "action": {
+                    "kind": "place_advancements_per_iced_rooted_remote",
+                },
+            },
+            unsupported=[],
+        )
+
+    if cid == "synchrocyclotron":
+        return base(
+            c,
+            firstDoubleOperationClickDiscount=1,
+            unsupported=[],
+        )
+
     # Fail closed — honest unsupported note for the remainder.
     # Corsair / Lampades need stealth-credit spend; Cultivate is a
     # look/trash/HQ/arrange composite not yet in IR.
@@ -1041,7 +1078,7 @@ def main():
             "Null Signal Vantage Point (NRDB pack vp) — next constructed set after "
             "Elevation. Fail-closed IR; "
             f"{full} cards fully mapped, {partial} with unsupported notes "
-            f"(wave v1.21.0 B-slice)."
+            f"(wave v1.22.0 B-slice)."
         )
         manifest["status"] = "in-progress"
     (OUT / "_manifest.json").write_text(

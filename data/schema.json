@@ -1530,6 +1530,15 @@
       "type": "boolean",
       "description": "Play only if successful runs on HQ, R&D, and Archives this turn (Deep Dive)."
     },
+    "playRequiresScoredAgendaNotInstalledThisTurn": {
+      "type": "boolean",
+      "description": "Play only if Corp scored an agenda this turn that was not installed this turn (Myōshu)."
+    },
+    "firstDoubleOperationClickDiscount": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "While rezzed, the first double operation each turn costs this many clicks less to play (Synchrocyclotron)."
+    },
     "canAdvance": {
       "type": "boolean"
     },
