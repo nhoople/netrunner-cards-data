@@ -5,11 +5,58 @@
   "nrdbCode": "35081",
   "type": "operation",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: Play only if you have not finished an action yet this turn. Gain 5[credit]. If you played this operation from anywhere except HQ, gain [click]. [click]: Play this operation from Archives. After it resolves, remove it from the game."
-  ],
+  "unsupported": [],
   "subtypes": [
     "transaction"
   ],
-  "playCost": 3
+  "playCost": 3,
+  "playRequiresNoCorpActionFinished": true,
+  "onPlay": {
+    "op": "seq",
+    "effects": [
+      {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "corp",
+          "amount": 5
+        }
+      },
+      {
+        "op": "if",
+        "cond": {
+          "op": "played_from_non_hq"
+        },
+        "then": {
+          "op": "do",
+          "action": {
+            "kind": "gain_clicks",
+            "side": "corp",
+            "amount": 1
+          }
+        }
+      }
+    ]
+  },
+  "paidAbilities": [
+    {
+      "id": "petty-cash-archives",
+      "label": "[click]: Play this operation from Archives. After it resolves, remove it from the game.",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "usableFromArchives": true,
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "play_self_from_archives_then_rfg"
+        }
+      }
+    }
+  ]
 }

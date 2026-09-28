@@ -5,10 +5,55 @@
   "nrdbCode": "35057",
   "type": "identity",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: When your action phase ends, if you played an operation this turn, gain 1[credit] and flip this identity. Flip side: The first time each turn you play an operation, gain [click]. When the Runner makes a successful run on HQ or R&D, flip thi"
-  ],
+  "unsupported": [],
   "subtypes": [
     "division"
-  ]
+  ],
+  "onCorpActionPhaseEnd": {
+    "op": "if",
+    "cond": {
+      "op": "corp_played_operation_this_turn"
+    },
+    "then": {
+      "op": "if",
+      "cond": {
+        "op": "identity_unflipped"
+      },
+      "then": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "gain_credits",
+              "side": "corp",
+              "amount": 1
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "flip_identity"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "identityFlippedHooks": {
+    "onFirstOperationPlayThisTurn": {
+      "op": "do",
+      "action": {
+        "kind": "gain_clicks",
+        "side": "corp",
+        "amount": 1
+      }
+    },
+    "onSuccessfulHqOrRdRun": {
+      "op": "do",
+      "action": {
+        "kind": "flip_identity"
+      }
+    }
+  }
 }

@@ -1671,6 +1671,132 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    # --- v1.10.0 safer 6: Muslihat / Nebula / Petty Cash / Zwicky / Magdalene / Peer Review ---
+
+    if cid == "muslihat-multifarious-marketeer":
+        return base(
+            c,
+            onTurnBegin={
+                "op": "do",
+                "action": {
+                    "kind": "look_top_stack_may_reveal_breaker_or_run_event",
+                },
+            },
+            unsupported=[],
+        )
+
+    if cid == "nebula-talent-management-making-stars":
+        return base(
+            c,
+            onCorpActionPhaseEnd={
+                "op": "if",
+                "cond": {"op": "corp_played_operation_this_turn"},
+                "then": {
+                    "op": "if",
+                    "cond": {"op": "identity_unflipped"},
+                    "then": seq(
+                        gain("corp", 1),
+                        {
+                            "op": "do",
+                            "action": {"kind": "flip_identity"},
+                        },
+                    ),
+                },
+            },
+            identityFlippedHooks={
+                "onFirstOperationPlayThisTurn": {
+                    "op": "do",
+                    "action": {
+                        "kind": "gain_clicks",
+                        "side": "corp",
+                        "amount": 1,
+                    },
+                },
+                "onSuccessfulHqOrRdRun": {
+                    "op": "do",
+                    "action": {"kind": "flip_identity"},
+                },
+            },
+            unsupported=[],
+        )
+
+    if cid == "petty-cash":
+        return base(
+            c,
+            playRequiresNoCorpActionFinished=True,
+            onPlay=seq(
+                gain("corp", 5),
+                {
+                    "op": "if",
+                    "cond": {"op": "played_from_non_hq"},
+                    "then": {
+                        "op": "do",
+                        "action": {
+                            "kind": "gain_clicks",
+                            "side": "corp",
+                            "amount": 1,
+                        },
+                    },
+                },
+            ),
+            paidAbilities=[
+                {
+                    "id": "petty-cash-archives",
+                    "label": "[click]: Play this operation from Archives. After it resolves, remove it from the game.",
+                    "clickCost": 1,
+                    "creditCost": 0,
+                    "cost": {"clicks": 1},
+                    "windows": ["corp_action_paw"],
+                    "usableFromArchives": True,
+                    "effect": {
+                        "op": "do",
+                        "action": {"kind": "play_self_from_archives_then_rfg"},
+                    },
+                }
+            ],
+            unsupported=[],
+        )
+
+    if cid == "the-zwicky-group-invisible-hands":
+        return base(
+            c,
+            onCreditsGainedFromAgendaOrOperationAbility={
+                "op": "choose",
+                "chooser": "corp",
+                "options": [
+                    {
+                        "id": "draw",
+                        "label": "Draw 1 card",
+                        "effect": draw("corp", 1),
+                    },
+                    decline("corp"),
+                ],
+            },
+            unsupported=[],
+        )
+
+    if cid == "magdalene-keino-chemutai-cryptarchitect":
+        return base(
+            c,
+            onRunnerDiscardOverMaxHand={
+                "op": "do",
+                "action": {
+                    "kind": "may_install_program_hardware_from_last_runner_discarded",
+                },
+            },
+            unsupported=[],
+        )
+
+    if cid == "peer-review":
+        return base(
+            c,
+            onPlay={
+                "op": "do",
+                "action": {"kind": "peer_review"},
+            },
+            unsupported=[],
+        )
+
     # Fail closed — honest unsupported note for the remainder.
     card = base(c)
     card["unsupported"] = [f"Full text not yet mapped to IR: {plain[:240]}"]
