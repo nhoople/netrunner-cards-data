@@ -5,14 +5,27 @@
   "nrdbCode": "34041",
   "type": "asset",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: Rez only during your turn. The first run each turn cannot be made against a remote server. The first time each turn a run on Archives begins, if this server is not protected by ice, do 2 net damage."
-  ],
+  "unsupported": [],
   "subtypes": [
     "political",
     "seedy"
   ],
   "installCost": 2,
   "rezCost": 2,
-  "trashCost": 2
+  "trashCost": 2,
+  "rezOnlyDuringCorpTurn": true,
+  "firstRunCannotTargetRemote": true,
+  "onFirstArchivesRunBeginThisTurn": {
+    "op": "if",
+    "cond": {
+      "op": "host_server_unprotected_by_ice"
+    },
+    "then": {
+      "op": "do",
+      "action": {
+        "kind": "net_damage",
+        "amount": 2
+      }
+    }
+  }
 }

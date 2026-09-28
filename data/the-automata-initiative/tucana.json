@@ -5,10 +5,45 @@
   "nrdbCode": "34064",
   "type": "upgrade",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: Remote server only. Persistent → Whenever an agenda is scored or stolen from the root of this server, you may search R&D for 1 piece of ice. (Shuffle R&D after searching it.) Install and rez that ice, paying a total of 3[credit] less."
-  ],
+  "unsupported": [],
   "installCost": 2,
   "rezCost": 2,
-  "trashCost": 1
+  "trashCost": 1,
+  "remoteOnly": true,
+  "persistent": true,
+  "onAgendaScoredOrStolen": {
+    "op": "if",
+    "cond": {
+      "op": "last_agenda_scored_or_stolen_from_source_server_root"
+    },
+    "then": {
+      "op": "choose",
+      "chooser": "corp",
+      "options": [
+        {
+          "id": "search",
+          "label": "Search R&D for ice; install and rez (−3¢)",
+          "effect": {
+            "op": "do",
+            "action": {
+              "kind": "search_rd_install_rez_ice_on_source_server",
+              "totalDiscount": 3
+            }
+          }
+        },
+        {
+          "id": "decline",
+          "label": "Decline",
+          "effect": {
+            "op": "do",
+            "action": {
+              "kind": "gain_credits",
+              "side": "corp",
+              "amount": 0
+            }
+          }
+        }
+      ]
+    }
+  }
 }

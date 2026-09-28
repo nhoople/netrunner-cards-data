@@ -5,14 +5,49 @@
   "nrdbCode": "34053",
   "type": "ice",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: Threat 4 → When the Runner encounters this ice, it gains X \"[subroutine] End the run.\" subroutines for the remainder of this run, after its other subroutines. X is equal to the number of tags the Runner has. [subroutine] Give the Runner 1 t"
-  ],
+  "unsupported": [],
   "subtypes": [
     "sentry",
     "observer"
   ],
   "installCost": 5,
   "rezCost": 5,
-  "strength": 2
+  "strength": 2,
+  "onEncounter": {
+    "op": "if",
+    "cond": {
+      "op": "threat",
+      "level": 4
+    },
+    "then": {
+      "op": "do",
+      "action": {
+        "kind": "etr_subroutines_per_runner_tags_on_encounter"
+      }
+    }
+  },
+  "subroutines": [
+    {
+      "id": "starlit-tag-1",
+      "text": "Give the Runner 1 tag.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "give_tags",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "id": "starlit-tag-2",
+      "text": "Give the Runner 1 tag.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "give_tags",
+          "amount": 1
+        }
+      }
+    }
+  ]
 }

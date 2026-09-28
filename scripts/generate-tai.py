@@ -1765,6 +1765,136 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    if cid == "front-company":
+        return base(
+            c,
+            rezOnlyDuringCorpTurn=True,
+            firstRunCannotTargetRemote=True,
+            onFirstArchivesRunBeginThisTurn={
+                "op": "if",
+                "cond": {"op": "host_server_unprotected_by_ice"},
+                "then": net(2),
+            },
+            unsupported=[],
+        )
+
+    if cid == "balanced-coverage":
+        return base(
+            c,
+            onTurnBegin=choose(
+                "corp",
+                [
+                    {
+                        "id": "peek",
+                        "label": "Choose a type and look at the top card of R&D",
+                        "effect": {
+                            "op": "do",
+                            "action": {
+                                "kind": "look_top_1_rd_choose_type_may_reveal_gain",
+                                "credits": 2,
+                            },
+                        },
+                    },
+                    {
+                        "id": "decline",
+                        "label": "Decline",
+                        "effect": gain("corp", 0),
+                    },
+                ],
+            ),
+            unsupported=[],
+        )
+
+    if cid == "chrysopoeian-skimming":
+        return base(
+            c,
+            onPlay={
+                "op": "do",
+                "action": {
+                    "kind": "corp_may_reveal_agenda_from_hq",
+                    "then": seq(
+                        {
+                            "op": "do",
+                            "action": {
+                                "kind": "gain_clicks",
+                                "side": "runner",
+                                "amount": 1,
+                            },
+                        },
+                        draw("runner", 1),
+                    ),
+                    "else": {
+                        "op": "do",
+                        "action": {"kind": "look_top_n_rd_peek", "n": 3},
+                    },
+                },
+            },
+            unsupported=[],
+        )
+
+    if cid == "tucana":
+        return base(
+            c,
+            remoteOnly=True,
+            persistent=True,
+            onAgendaScoredOrStolen={
+                "op": "if",
+                "cond": {
+                    "op": "last_agenda_scored_or_stolen_from_source_server_root"
+                },
+                "then": choose(
+                    "corp",
+                    [
+                        {
+                            "id": "search",
+                            "label": "Search R&D for ice; install and rez (−3¢)",
+                            "effect": {
+                                "op": "do",
+                                "action": {
+                                    "kind": "search_rd_install_rez_ice_on_source_server",
+                                    "totalDiscount": 3,
+                                },
+                            },
+                        },
+                        {
+                            "id": "decline",
+                            "label": "Decline",
+                            "effect": gain("corp", 0),
+                        },
+                    ],
+                ),
+            },
+            unsupported=[],
+        )
+
+    if cid == "starlit-knight":
+        return base(
+            c,
+            onEncounter={
+                "op": "if",
+                "cond": {"op": "threat", "level": 4},
+                "then": {
+                    "op": "do",
+                    "action": {
+                        "kind": "etr_subroutines_per_runner_tags_on_encounter"
+                    },
+                },
+            },
+            subroutines=[
+                {
+                    "id": "starlit-tag-1",
+                    "text": "Give the Runner 1 tag.",
+                    "effect": tags(1),
+                },
+                {
+                    "id": "starlit-tag-2",
+                    "text": "Give the Runner 1 tag.",
+                    "effect": tags(1),
+                },
+            ],
+            unsupported=[],
+        )
+
     # Fallback: skeleton with full text as unsupported
 
     card = base(c)

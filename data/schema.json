@@ -664,6 +664,22 @@
       "type": "object",
       "description": "Effect IR the first time the Runner begins a run on R&D each turn (Runner identities; e.g. Padma may charge)."
     },
+    "onFirstArchivesRunBeginThisTurn": {
+      "type": "object",
+      "description": "Effect IR the first time each turn a run on Archives begins while this card is rezzed (Front Company)."
+    },
+    "rezOnlyDuringCorpTurn": {
+      "type": "boolean",
+      "description": "May only rez this card during the Corp's turn (Front Company)."
+    },
+    "firstRunCannotTargetRemote": {
+      "type": "boolean",
+      "description": "While rezzed, the first run each turn cannot target a remote server (Front Company)."
+    },
+    "persistent": {
+      "type": "boolean",
+      "description": "Abilities remain active while installed even if unrezzed (Tucana)."
+    },
     "onFirstVirusInstallThisTurn": {
       "type": "object",
       "description": "Effect IR the first time the Runner installs a virus program each turn (installed continuous; e.g. Avgustina sabotage)."
