@@ -1070,6 +1070,241 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    # --- v1.07.0: Corp discard-phase hub + deferred B ---
+
+    def dividends_on_score(*, past: int = 3, per: int = 1, counters_per_excess: int | None = None):
+        action = {
+            "kind": "add_agenda_counters_from_overadvance",
+            "past": past,
+        }
+        if counters_per_excess is not None:
+            action["countersPerExcess"] = counters_per_excess
+        elif per != 1:
+            action["per"] = per
+        else:
+            action["per"] = 1
+        return {"op": "do", "action": action}
+
+    def discard_spend_agenda(label: str, option_id: str, body_effect: dict) -> dict:
+        return {
+            "op": "if",
+            "cond": {"op": "agenda_counters_gte", "amount": 1},
+            "then": {
+                "op": "choose",
+                "chooser": "corp",
+                "options": [
+                    {
+                        "id": option_id,
+                        "label": label,
+                        "effect": seq(
+                            {
+                                "op": "do",
+                                "action": {
+                                    "kind": "remove_agenda_counters",
+                                    "amount": 1,
+                                },
+                            },
+                            body_effect,
+                        ),
+                    },
+                    {
+                        "id": "decline",
+                        "label": "Decline",
+                        "effect": gain("corp", 0),
+                    },
+                ],
+            },
+        }
+
+    if cid == "project-ingatan":
+        return base(
+            c,
+            onScore=dividends_on_score(),
+            onDiscardPhaseEnd=discard_spend_agenda(
+                "Remove 1 agenda counter: install 1 card from Archives, ignoring all costs",
+                "install",
+                {
+                    "op": "do",
+                    "action": {"kind": "may_install_from_archives_ignore_costs"},
+                },
+            ),
+            unsupported=[],
+        )
+
+    if cid == "embedded-reporting":
+        return base(
+            c,
+            onScore=dividends_on_score(counters_per_excess=2),
+            onDiscardPhaseEnd=discard_spend_agenda(
+                "Remove 1 agenda counter: search R&D for 1 operation → top of R&D",
+                "search",
+                {
+                    "op": "do",
+                    "action": {"kind": "search_rd_operation_to_top_rd"},
+                },
+            ),
+            unsupported=[],
+        )
+
+    if cid == "sericulture-expansion":
+        return base(
+            c,
+            onScore=dividends_on_score(),
+            onDiscardPhaseEnd=discard_spend_agenda(
+                "Remove 1 agenda counter: place 2 advancements (cannot score that card this turn)",
+                "advance",
+                {
+                    "op": "do",
+                    "action": {
+                        "kind": "place_advancements",
+                        "amount": 2,
+                        "pick": "choose",
+                        "cannotScoreTargetThisTurn": True,
+                    },
+                },
+            ),
+            unsupported=[],
+        )
+
+    if cid == "side-hustle":
+        return base(
+            c,
+            onInstall={
+                "op": "do",
+                "action": {"kind": "place_hosted_credits", "amount": 1},
+            },
+            onRunBegin={
+                "op": "do",
+                "action": {"kind": "place_hosted_credits", "amount": 1},
+            },
+            onHostedCreditsGte={
+                "amount": 6,
+                "effect": {
+                    "op": "do",
+                    "action": {"kind": "take_hosted_credits", "amount": 999},
+                },
+            },
+            drawOnHostedEmpty=1,
+            unsupported=[],
+        )
+
+    if cid == "leo-construction-labor-solutions":
+        return base(
+            c,
+            paidAbilities=[
+                {
+                    "id": "leo-etr",
+                    "label": "Once per turn → Trash 1 rezzed bioroid in/protecting attacked server: End the run",
+                    "clickCost": 0,
+                    "creditCost": 0,
+                    "cost": {},
+                    "oncePerTurn": True,
+                    "windows": [
+                        "approach_paw",
+                        "encounter_paw",
+                        "approach_server_paw",
+                    ],
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "trash_installed",
+                            "rezzedOnly": True,
+                            "includeSubtypes": ["bioroid"],
+                            "attackedServerOnly": True,
+                            "then": {
+                                "op": "do",
+                                "action": {"kind": "end_the_run"},
+                            },
+                        },
+                    },
+                }
+            ],
+            unsupported=[],
+        )
+
+    if cid == "synapse-global-faster-than-thought":
+        return base(
+            c,
+            onRemoveTags={
+                "op": "do",
+                "action": {"kind": "may_install_from_hq_ignore_costs"},
+            },
+            paidAbilities=[
+                {
+                    "id": "synapse-untag",
+                    "label": "[click], remove 1 tag: Gain 2¢",
+                    "clickCost": 1,
+                    "creditCost": 0,
+                    "cost": {"clicks": 1, "removeTags": 1},
+                    "windows": ["corp_action_paw"],
+                    "effect": gain("corp", 2),
+                }
+            ],
+            unsupported=[],
+        )
+
+    if cid == "pt-untaian-lifes-building-blocks":
+        return base(
+            c,
+            onDiscardPhaseEnd={
+                "op": "if",
+                "cond": {"op": "hq_count_lte", "amount": 3},
+                "then": {
+                    "op": "choose",
+                    "chooser": "corp",
+                    "options": [
+                        {
+                            "id": "pay-advance",
+                            "label": "Pay 1¢: place 1 advancement on an unrezzed advanceable card",
+                            "effect": seq(
+                                {
+                                    "op": "do",
+                                    "action": {
+                                        "kind": "lose_credits",
+                                        "side": "corp",
+                                        "amount": 1,
+                                    },
+                                },
+                                {
+                                    "op": "do",
+                                    "action": {
+                                        "kind": "place_advancements",
+                                        "amount": 1,
+                                        "pick": "choose",
+                                        "unrezzedOnly": True,
+                                        "cannotScoreTargetThisTurn": True,
+                                    },
+                                },
+                            ),
+                        },
+                        {
+                            "id": "decline",
+                            "label": "Decline",
+                            "effect": gain("corp", 0),
+                        },
+                    ],
+                },
+            },
+            unsupported=[],
+        )
+
+    if cid == "off-the-books":
+        return base(
+            c,
+            onScore=dividends_on_score(),
+            onDiscardPhaseEnd=discard_spend_agenda(
+                "Remove 1 agenda counter: search R&D — may install ignoring costs, else HQ",
+                "search",
+                {
+                    "op": "do",
+                    "action": {
+                        "kind": "search_rd_reveal_may_install_ignore_costs_else_hq"
+                    },
+                },
+            ),
+            unsupported=[],
+        )
+
     # Fail closed — honest unsupported note for the remainder.
     card = base(c)
     card["unsupported"] = [f"Full text not yet mapped to IR: {plain[:240]}"]

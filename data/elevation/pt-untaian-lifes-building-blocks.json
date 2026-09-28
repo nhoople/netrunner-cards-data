@@ -5,10 +5,60 @@
   "nrdbCode": "35047",
   "type": "identity",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: When your discard phase ends, if there are 3 or fewer cards in HQ, you may pay 1[credit] to place 1 advancement counter on an unrezzed card you can advance. (You cannot score that card this turn.)"
-  ],
+  "unsupported": [],
   "subtypes": [
     "division"
-  ]
+  ],
+  "onDiscardPhaseEnd": {
+    "op": "if",
+    "cond": {
+      "op": "hq_count_lte",
+      "amount": 3
+    },
+    "then": {
+      "op": "choose",
+      "chooser": "corp",
+      "options": [
+        {
+          "id": "pay-advance",
+          "label": "Pay 1¢: place 1 advancement on an unrezzed advanceable card",
+          "effect": {
+            "op": "seq",
+            "effects": [
+              {
+                "op": "do",
+                "action": {
+                  "kind": "lose_credits",
+                  "side": "corp",
+                  "amount": 1
+                }
+              },
+              {
+                "op": "do",
+                "action": {
+                  "kind": "place_advancements",
+                  "amount": 1,
+                  "pick": "choose",
+                  "unrezzedOnly": true,
+                  "cannotScoreTargetThisTurn": true
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "decline",
+          "label": "Decline",
+          "effect": {
+            "op": "do",
+            "action": {
+              "kind": "gain_credits",
+              "side": "corp",
+              "amount": 0
+            }
+          }
+        }
+      ]
+    }
+  }
 }

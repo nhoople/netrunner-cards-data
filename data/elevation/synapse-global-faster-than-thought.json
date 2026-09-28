@@ -5,10 +5,37 @@
   "nrdbCode": "35058",
   "type": "identity",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: The first time each turn a tag is removed, you may reveal and install 1 card from HQ, ignoring all costs. [click], remove 1 tag: Gain 2[credit]."
-  ],
+  "unsupported": [],
   "subtypes": [
     "division"
+  ],
+  "onRemoveTags": {
+    "op": "do",
+    "action": {
+      "kind": "may_install_from_hq_ignore_costs"
+    }
+  },
+  "paidAbilities": [
+    {
+      "id": "synapse-untag",
+      "label": "[click], remove 1 tag: Gain 2¢",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1,
+        "removeTags": 1
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "corp",
+          "amount": 2
+        }
+      }
+    }
   ]
 }

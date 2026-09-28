@@ -5,12 +5,65 @@
   "nrdbCode": "35059",
   "type": "agenda",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: Dividends 2 (When you score this agenda, place 2 agenda counters on it for each excess advancement counter.) When your discard phase ends, you may remove 1 hosted agenda counter to search R&D for 1 operation and reveal it. (Shuffle R&D afte"
-  ],
+  "unsupported": [],
   "subtypes": [
     "initiative"
   ],
   "advancementRequirement": 3,
-  "agendaPoints": 2
+  "agendaPoints": 2,
+  "onScore": {
+    "op": "do",
+    "action": {
+      "kind": "add_agenda_counters_from_overadvance",
+      "past": 3,
+      "countersPerExcess": 2
+    }
+  },
+  "onDiscardPhaseEnd": {
+    "op": "if",
+    "cond": {
+      "op": "agenda_counters_gte",
+      "amount": 1
+    },
+    "then": {
+      "op": "choose",
+      "chooser": "corp",
+      "options": [
+        {
+          "id": "search",
+          "label": "Remove 1 agenda counter: search R&D for 1 operation → top of R&D",
+          "effect": {
+            "op": "seq",
+            "effects": [
+              {
+                "op": "do",
+                "action": {
+                  "kind": "remove_agenda_counters",
+                  "amount": 1
+                }
+              },
+              {
+                "op": "do",
+                "action": {
+                  "kind": "search_rd_operation_to_top_rd"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "decline",
+          "label": "Decline",
+          "effect": {
+            "op": "do",
+            "action": {
+              "kind": "gain_credits",
+              "side": "corp",
+              "amount": 0
+            }
+          }
+        }
+      ]
+    }
+  }
 }

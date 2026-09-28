@@ -5,11 +5,34 @@
   "nrdbCode": "35034",
   "type": "resource",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: When you install this resource and whenever a run begins, place 1[credit] on this resource. When there are 6 or more hosted credits, take all credits from this resource, trash it, and draw 1 card."
-  ],
+  "unsupported": [],
   "subtypes": [
     "job"
   ],
-  "installCost": 2
+  "installCost": 2,
+  "onInstall": {
+    "op": "do",
+    "action": {
+      "kind": "place_hosted_credits",
+      "amount": 1
+    }
+  },
+  "onRunBegin": {
+    "op": "do",
+    "action": {
+      "kind": "place_hosted_credits",
+      "amount": 1
+    }
+  },
+  "onHostedCreditsGte": {
+    "amount": 6,
+    "effect": {
+      "op": "do",
+      "action": {
+        "kind": "take_hosted_credits",
+        "amount": 999
+      }
+    }
+  },
+  "drawOnHostedEmpty": 1
 }
