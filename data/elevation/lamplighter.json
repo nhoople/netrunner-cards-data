@@ -5,14 +5,75 @@
   "nrdbCode": "35080",
   "type": "ice",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: When an agenda is scored or stolen from this server or its root, trash this ice. [subroutine] Give the Runner 1 tag unless they pay 3[credit]. [subroutine] End the run if the Runner is tagged."
-  ],
+  "unsupported": [],
   "subtypes": [
     "sentry",
     "observer"
   ],
   "installCost": 2,
   "rezCost": 2,
-  "strength": 3
+  "strength": 3,
+  "onAgendaScoredOrStolen": {
+    "op": "if",
+    "cond": {
+      "op": "last_agenda_scored_or_stolen_from_source_server_root"
+    },
+    "then": {
+      "op": "do",
+      "action": {
+        "kind": "trash_self"
+      }
+    }
+  },
+  "subroutines": [
+    {
+      "id": "lamplighter-tag",
+      "text": "Give the Runner 1 tag unless they pay 3[credit].",
+      "effect": {
+        "op": "choose",
+        "chooser": "runner",
+        "options": [
+          {
+            "id": "pay",
+            "label": "Pay 3¢",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "lose_credits",
+                "side": "runner",
+                "amount": 3
+              }
+            }
+          },
+          {
+            "id": "tag",
+            "label": "Take 1 tag",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "give_tags",
+                "amount": 1
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "lamplighter-etr",
+      "text": "End the run if the Runner is tagged.",
+      "effect": {
+        "op": "if",
+        "cond": {
+          "op": "runner_tagged"
+        },
+        "then": {
+          "op": "do",
+          "action": {
+            "kind": "end_the_run"
+          }
+        }
+      }
+    }
+  ]
 }

@@ -5,11 +5,38 @@
   "nrdbCode": "35025",
   "type": "event",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Run R&D. If successful, install up to 3 cards from your grip (one at a time), paying 1[credit] less for each."
-  ],
+  "unsupported": [],
   "subtypes": [
     "run"
   ],
-  "playCost": 0
+  "playCost": 0,
+  "runEvent": {
+    "servers": "rd",
+    "onSuccessfulRun": {
+      "op": "seq",
+      "effects": [
+        {
+          "op": "do",
+          "action": {
+            "kind": "may_install_from_grip",
+            "discount": 1
+          }
+        },
+        {
+          "op": "do",
+          "action": {
+            "kind": "may_install_from_grip",
+            "discount": 1
+          }
+        },
+        {
+          "op": "do",
+          "action": {
+            "kind": "may_install_from_grip",
+            "discount": 1
+          }
+        }
+      ]
+    }
+  }
 }

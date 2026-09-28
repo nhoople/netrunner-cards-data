@@ -5,13 +5,77 @@
   "nrdbCode": "35064",
   "type": "ice",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: 3[credit]: Break 1 subroutine on this ice. Only the Runner can use this ability. [subroutine] End the run. [subroutine] If the threat level is 2 or greater, end the run. [subroutine] If the threat level is 4 or greater, end the run."
-  ],
+  "unsupported": [],
   "subtypes": [
     "code gate"
   ],
   "installCost": 4,
   "rezCost": 4,
-  "strength": 4
+  "strength": 4,
+  "paidAbilities": [
+    {
+      "id": "n-pot-break",
+      "label": "3¢: Break 1 subroutine on N-Pot",
+      "clickCost": 0,
+      "creditCost": 3,
+      "cost": {
+        "credits": 3
+      },
+      "windows": [
+        "encounter_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "break_host_subroutine"
+        }
+      }
+    }
+  ],
+  "subroutines": [
+    {
+      "id": "n-pot-etr",
+      "text": "End the run.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "end_the_run"
+        }
+      }
+    },
+    {
+      "id": "n-pot-threat-2",
+      "text": "If threat ≥ 2, end the run.",
+      "effect": {
+        "op": "if",
+        "cond": {
+          "op": "threat",
+          "level": 2
+        },
+        "then": {
+          "op": "do",
+          "action": {
+            "kind": "end_the_run"
+          }
+        }
+      }
+    },
+    {
+      "id": "n-pot-threat-4",
+      "text": "If threat ≥ 4, end the run.",
+      "effect": {
+        "op": "if",
+        "cond": {
+          "op": "threat",
+          "level": 4
+        },
+        "then": {
+          "op": "do",
+          "action": {
+            "kind": "end_the_run"
+          }
+        }
+      }
+    }
+  ]
 }

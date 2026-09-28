@@ -5,13 +5,35 @@
   "nrdbCode": "35079",
   "type": "ice",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: When you rez this ice during a run against this server, purge virus counters. [subroutine] End the run."
-  ],
+  "unsupported": [],
   "subtypes": [
     "code gate"
   ],
   "installCost": 2,
   "rezCost": 2,
-  "strength": 0
+  "strength": 0,
+  "onRez": {
+    "op": "if",
+    "cond": {
+      "op": "source_protects_attacked_server"
+    },
+    "then": {
+      "op": "do",
+      "action": {
+        "kind": "purge_virus_counters"
+      }
+    }
+  },
+  "subroutines": [
+    {
+      "id": "flyswatter-etr",
+      "text": "End the run.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "end_the_run"
+        }
+      }
+    }
+  ]
 }
