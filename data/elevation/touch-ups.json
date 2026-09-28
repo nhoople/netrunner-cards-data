@@ -5,11 +5,30 @@
   "nrdbCode": "35067",
   "type": "operation",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: As an additional cost to play this operation, spend [click]. Place 2 advancement counters on 1 installed card you can advance. If you do, choose a card type and reveal the grip. Choose up to 2 revealed cards of that type. The Runner shuffle"
-  ],
+  "unsupported": [],
   "subtypes": [
     "double"
   ],
-  "playCost": 2
+  "playCost": 2,
+  "playAdditionalClick": true,
+  "onPlay": {
+    "op": "seq",
+    "effects": [
+      {
+        "op": "do",
+        "action": {
+          "kind": "place_advancements",
+          "amount": 2,
+          "pick": "choose"
+        }
+      },
+      {
+        "op": "do",
+        "action": {
+          "kind": "touch_ups_choose_type_shuffle_grip",
+          "maxCards": 2
+        }
+      }
+    ]
+  }
 }

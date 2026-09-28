@@ -5,12 +5,39 @@
   "nrdbCode": "35048",
   "type": "agenda",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: When you score this agenda, place 1 agenda counter on it. Hosted agenda counter: The Runner moves to the outermost position of Archives. (They approach any ice in that position.) Use this ability only during a run."
-  ],
+  "unsupported": [],
   "subtypes": [
     "security"
   ],
   "advancementRequirement": 4,
-  "agendaPoints": 2
+  "agendaPoints": 2,
+  "onScore": {
+    "op": "do",
+    "action": {
+      "kind": "add_agenda_counter",
+      "amount": 1
+    }
+  },
+  "paidAbilities": [
+    {
+      "id": "proprionegation-archives",
+      "label": "Hosted agenda counter: Move Runner to outermost Archives (during a run)",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "agendaCounters": 1
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "requireDuringRun": true,
+      "usableFromRunnerScoreArea": true,
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "move_runner_to_archives_outermost"
+        }
+      }
+    }
+  ]
 }

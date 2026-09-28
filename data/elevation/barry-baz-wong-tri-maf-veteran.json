@@ -5,11 +5,19 @@
   "nrdbCode": "35012",
   "type": "identity",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Whenever the Corp rezzes a piece of ice, you may install 1 resource or piece of hardware from your grip."
-  ],
+  "unsupported": [],
   "subtypes": [
     "cyborg"
   ],
-  "link": 0
+  "link": 0,
+  "onAnyIceRez": {
+    "op": "do",
+    "action": {
+      "kind": "may_install_from_grip",
+      "types": [
+        "resource",
+        "hardware"
+      ]
+    }
+  }
 }
