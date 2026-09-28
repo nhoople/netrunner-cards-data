@@ -5,13 +5,39 @@
   "nrdbCode": "35056",
   "type": "upgrade",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: Whenever the Runner approaches a piece of ice protecting this server, you may trash this upgrade. If you do, gain 3[credit] and you may swap the ice being approached with a piece of ice from Archives or HQ."
-  ],
+  "unsupported": [],
   "subtypes": [
     "clone"
   ],
   "installCost": 0,
   "rezCost": 0,
-  "trashCost": 3
+  "trashCost": 3,
+  "onApproachIce": {
+    "op": "choose",
+    "chooser": "corp",
+    "options": [
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "corp",
+            "amount": 0
+          }
+        }
+      },
+      {
+        "id": "activate",
+        "label": "Trash this upgrade: gain 3[credit] and may swap approached ice",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "mitra_aman_approach_ice"
+          }
+        }
+      }
+    ]
+  }
 }

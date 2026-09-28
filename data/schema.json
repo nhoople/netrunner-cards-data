@@ -81,6 +81,10 @@
             "archives"
           ]
         },
+        "redirectApproachArchivesToHq": {
+          "type": "boolean",
+          "description": "After passing Archives ice, change attacked server to HQ and approach HQ (Maintenance Access)."
+        },
         "skipBreachInstallProgramFromHeap": {
           "type": "boolean"
         },
