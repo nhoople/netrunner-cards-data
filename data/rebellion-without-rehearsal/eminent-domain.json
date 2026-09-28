@@ -1,0 +1,17 @@
+{
+  "id": "eminent-domain",
+  "title": "Eminent Domain",
+  "wave": "rebellion-without-rehearsal",
+  "nrdbCode": "34122",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: [click], 1[credit], reveal and trash this agenda from HQ: Install and rez 1 card from HQ, paying a total of 5[credit] less. When you score this agenda, you may search R&D for 1 card. (Shuffle R&D after searching it.) Install and rez that ca"
+  ],
+  "subtypes": [
+    "expansion",
+    "expendable"
+  ],
+  "advancementRequirement": 3,
+  "agendaPoints": 1
+}

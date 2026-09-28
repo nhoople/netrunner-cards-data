@@ -1,0 +1,12 @@
+{
+  "id": "ashen-epilogue",
+  "title": "Ashen Epilogue",
+  "wave": "rebellion-without-rehearsal",
+  "nrdbCode": "34094",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: Shuffle your grip and heap into your stack, then remove the top 5 cards of your stack from the game. Draw 5 cards. Remove this event from the game."
+  ],
+  "playCost": 5
+}

@@ -1,0 +1,17 @@
+{
+  "id": "charlotte-cacador",
+  "title": "Charlotte Caçador",
+  "wave": "rebellion-without-rehearsal",
+  "nrdbCode": "34107",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: You can advance this asset. When your turn begins, you may remove 1 hosted advancement counter to gain 4[credit] and draw 1 card. [trash], hosted advancement counter: Gain 3[credit]."
+  ],
+  "subtypes": [
+    "clone"
+  ],
+  "installCost": 0,
+  "rezCost": 0,
+  "trashCost": 2
+}

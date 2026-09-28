@@ -1,0 +1,12 @@
+{
+  "id": "the-wizard-s-chest",
+  "title": "The Wizard’s Chest",
+  "wave": "rebellion-without-rehearsal",
+  "nrdbCode": "34070",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: Use this hardware only if you made a successful run on HQ, R&D, and Archives this turn. [trash]: Choose hardware, program, or resource. Set aside cards from the top of your stack faceup until you set aside 2 cards of the chosen type. You ma"
+  ],
+  "installCost": 0
+}

@@ -1,0 +1,34 @@
+{
+  "id": "coalescence",
+  "title": "Coalescence",
+  "wave": "rebellion-without-rehearsal",
+  "nrdbCode": "34089",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "installCost": 2,
+  "memoryCost": 1,
+  "powerCountersOnInstall": 2,
+  "paidAbilities": [
+    {
+      "id": "coalescence-gain",
+      "label": "Hosted power counter: Gain 2¢",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "powerCounters": 1
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "runner",
+          "amount": 2
+        }
+      }
+    }
+  ]
+}

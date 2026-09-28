@@ -1,0 +1,17 @@
+{
+  "id": "corporate-hospitality",
+  "title": "Corporate Hospitality",
+  "wave": "rebellion-without-rehearsal",
+  "nrdbCode": "34103",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: As an additional cost to play this operation, spend [click]. Gain 6[credit] and draw 2 cards. Add 1 card from Archives to HQ."
+  ],
+  "subtypes": [
+    "double",
+    "transaction"
+  ],
+  "playCost": 4,
+  "trashCost": 1
+}

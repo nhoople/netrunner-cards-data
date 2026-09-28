@@ -1,0 +1,12 @@
+{
+  "id": "alarm-clock",
+  "title": "Alarm Clock",
+  "wave": "rebellion-without-rehearsal",
+  "nrdbCode": "34078",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: When your turn begins, you may run HQ. The first time you encounter a piece of ice during that run, you may spend [click][click] to bypass it."
+  ],
+  "installCost": 2
+}

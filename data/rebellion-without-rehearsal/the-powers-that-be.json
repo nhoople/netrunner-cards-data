@@ -1,0 +1,17 @@
+{
+  "id": "the-powers-that-be",
+  "title": "The Powers That Be",
+  "wave": "rebellion-without-rehearsal",
+  "nrdbCode": "34130",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: Whenever you score an agenda, you may install 1 card from HQ or Archives, ignoring all costs."
+  ],
+  "subtypes": [
+    "ritzy"
+  ],
+  "installCost": 1,
+  "rezCost": 1,
+  "trashCost": 3
+}

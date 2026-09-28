@@ -20,9 +20,10 @@ Files under [`data/`](data/) are the API. Clone the repo or fetch a **tagged** r
 | [`data/system-update-2021/`](data/system-update-2021/) | System Update 2021 (NRDB `su21`) |
 | [`data/midnight-sun/`](data/midnight-sun/) | Midnight Sun (NRDB `ms`) |
 | [`data/parhelion/`](data/parhelion/) | Parhelion (NRDB `ph`) — supported |
-| [`data/the-automata-initiative/`](data/the-automata-initiative/) | The Automata Initiative (NRDB `tai`) — **supported**
+| [`data/the-automata-initiative/`](data/the-automata-initiative/) | The Automata Initiative (NRDB `tai`) — **supported** |
+| [`data/rebellion-without-rehearsal/`](data/rebellion-without-rehearsal/) | Rebellion Without Rehearsal (NRDB `rwr`) — **in-progress**
 
-**Corpus order:** System Gateway → System Update 2021 → Midnight Sun → Parhelion → The Automata Initiative → later releases.
+**Corpus order:** System Gateway → System Update 2021 → Midnight Sun → Parhelion → The Automata Initiative → Rebellion Without Rehearsal → later releases.
 
 Partial cards list unimplemented clauses in an `unsupported` array — never silent wrong behavior.
 
@@ -32,7 +33,7 @@ Match this dataset and [netrunner-engine](https://github.com/nhoople/netrunner-e
 
 | Pairing | cards-data | engine |
 |---------|------------|--------|
-| **Current** | [`v0.85.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v0.85.0) | [`v0.85.0`](https://github.com/nhoople/netrunner-engine/releases/tag/v0.85.0) |
+| **Current** | [`v0.86.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v0.86.0) | [`v0.86.0`](https://github.com/nhoople/netrunner-engine/releases/tag/v0.86.0) |
 
 Incremental wave tags are the day-to-day IR/wiring contract. A set-complete **milestone** GitHub Release is cut only when a wave’s pool status → `supported` (advertised host floor for that set).
 
@@ -68,11 +69,12 @@ console.log(pool.corpusOrder, marjanah.title);
 | system-update-2021 | 82 | Null Signal System Update 2021 (fully supported) |
 | midnight-sun | 65 | Null Signal Midnight Sun (`ms`); `msbp` titles absorbed; fully supported |
 | parhelion | 63 | Null Signal Parhelion (`ph`); status `supported` (wave gate `v0.71.0`; all 63 clear) |
-| the-automata-initiative | 65 | Null Signal The Automata Initiative (`tai`); status `in-progress` (**29/65** mapped) |
+| the-automata-initiative | 65 | Null Signal The Automata Initiative (`tai`); status `supported` (wave gate `v0.86.0`) |
+| rebellion-without-rehearsal | 65 | Null Signal Rebellion Without Rehearsal (`rwr`); status `in-progress` (**3/65** mapped) |
 
 Synthetic stubs and early wave1/wave2 dirs were removed in `v0.2.0`. Reprints that previously lived only under those waves now ship under their Null Signal release directories.
 
-Parhelion is fully supported (wave gate `v0.71.0`). The Automata Initiative extract lists unimplemented clauses in each card’s `unsupported` array until those notes are cleared.
+Parhelion is fully supported (wave gate `v0.71.0`). The Automata Initiative is fully supported (wave gate `v0.86.0`). Rebellion Without Rehearsal lists unimplemented clauses in each card’s `unsupported` array until those notes are cleared.
 
 ## Versioning
 

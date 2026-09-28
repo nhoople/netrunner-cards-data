@@ -1,0 +1,17 @@
+{
+  "id": "working-prototype",
+  "title": "Working Prototype",
+  "wave": "rebellion-without-rehearsal",
+  "nrdbCode": "34099",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: Whenever you rez a card (including this asset), place 1 power counter on this asset. [click], hosted power counter: Gain 3[credit]. [click], 5 hosted power counters: Gain 6[credit]. Add 1 installed resource to the top of the stack."
+  ],
+  "subtypes": [
+    "hostile"
+  ],
+  "installCost": 1,
+  "rezCost": 1,
+  "trashCost": 2
+}

@@ -1,0 +1,16 @@
+{
+  "id": "arruaceiras-crew",
+  "title": "Arruaceiras Crew",
+  "wave": "rebellion-without-rehearsal",
+  "nrdbCode": "34073",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: Once per turn → Take 1 tag: The ice you are encountering gets –2 strength for the remainder of this encounter. [trash], 2[credit]: Trash the ice you are encountering if its strength is 0 or less."
+  ],
+  "subtypes": [
+    "connection",
+    "seedy"
+  ],
+  "installCost": 2
+}

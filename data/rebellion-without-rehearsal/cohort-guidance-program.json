@@ -1,0 +1,17 @@
+{
+  "id": "cohort-guidance-program",
+  "title": "Cohort Guidance Program",
+  "wave": "rebellion-without-rehearsal",
+  "nrdbCode": "34108",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: When your turn begins, you may resolve 1 of the following:Trash 1 card from HQ. If you do, gain 2[credit] and draw 1 card.Turn 1 facedown card in Archives faceup. If you do, place 1 advancement counter on an installed card."
+  ],
+  "subtypes": [
+    "clone"
+  ],
+  "installCost": 1,
+  "rezCost": 1,
+  "trashCost": 2
+}

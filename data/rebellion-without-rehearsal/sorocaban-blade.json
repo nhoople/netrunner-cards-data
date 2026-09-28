@@ -1,0 +1,18 @@
+{
+  "id": "sorocaban-blade",
+  "title": "Sorocaban Blade",
+  "wave": "rebellion-without-rehearsal",
+  "nrdbCode": "34101",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: You cannot trash more than 1 installed Runner card with this ice during each encounter. [subroutine] Trash 1 installed resource. [subroutine] Trash 1 installed piece of hardware. [subroutine] Trash 1 installed program."
+  ],
+  "subtypes": [
+    "sentry",
+    "destroyer"
+  ],
+  "installCost": 4,
+  "rezCost": 4,
+  "strength": 2
+}

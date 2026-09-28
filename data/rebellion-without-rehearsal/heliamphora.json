@@ -1,0 +1,16 @@
+{
+  "id": "heliamphora",
+  "title": "Heliamphora",
+  "wave": "rebellion-without-rehearsal",
+  "nrdbCode": "34072",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: [interrupt] → Whenever you would access a card in Archives, you may host it faceup on this program instead. (It is not installed.) Use this ability only once each time you breach Archives. When the Corp purges virus counters, they trash 2 c"
+  ],
+  "subtypes": [
+    "virus"
+  ],
+  "installCost": 1,
+  "memoryCost": 1
+}

@@ -1,0 +1,19 @@
+{
+  "id": "hammer",
+  "title": "Hammer",
+  "wave": "rebellion-without-rehearsal",
+  "nrdbCode": "34126",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: During each encounter with this ice, the Runner cannot break more than 1 of its printed subroutines except using killers. [subroutine] Give the Runner 1 tag. [subroutine] Trash 1 installed resource or piece of hardware. [subroutine] Trash 1"
+  ],
+  "subtypes": [
+    "sentry",
+    "destroyer",
+    "observer"
+  ],
+  "installCost": 6,
+  "rezCost": 6,
+  "strength": 4
+}

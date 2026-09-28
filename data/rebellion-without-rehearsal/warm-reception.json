@@ -1,0 +1,18 @@
+{
+  "id": "warm-reception",
+  "title": "Warm Reception",
+  "wave": "rebellion-without-rehearsal",
+  "nrdbCode": "34098",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: When your turn begins, you may install 1 card from HQ. You cannot score that card this turn. If this server is not protected by ice, you may derez this asset to derez another installed card."
+  ],
+  "subtypes": [
+    "political",
+    "ritzy"
+  ],
+  "installCost": 1,
+  "rezCost": 1,
+  "trashCost": 2
+}

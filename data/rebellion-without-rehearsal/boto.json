@@ -1,0 +1,18 @@
+{
+  "id": "boto",
+  "title": "Boto",
+  "wave": "rebellion-without-rehearsal",
+  "nrdbCode": "34109",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: Threat 4 → This ice gets +2 strength. (This ability is active if any player has 4 or more agenda points.) [subroutine] Do 2 net damage. [subroutine] You may trash 1 card from HQ to end the run. [subroutine] You may trash 1 card from HQ to e"
+  ],
+  "subtypes": [
+    "barrier",
+    "ap"
+  ],
+  "installCost": 6,
+  "rezCost": 6,
+  "strength": 4
+}

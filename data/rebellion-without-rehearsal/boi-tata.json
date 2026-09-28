@@ -1,0 +1,18 @@
+{
+  "id": "boi-tata",
+  "title": "Boi-tatá",
+  "wave": "rebellion-without-rehearsal",
+  "nrdbCode": "34071",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: If you trashed any of your installed cards this turn, paid abilities on this program cost 1[credit] less to use. Interface → 2[credit]: Break up to 2 sentry subroutines. 3[credit]: +3 strength."
+  ],
+  "subtypes": [
+    "icebreaker",
+    "killer"
+  ],
+  "installCost": 3,
+  "strength": 1,
+  "memoryCost": 1
+}

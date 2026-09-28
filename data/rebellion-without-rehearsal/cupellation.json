@@ -1,0 +1,13 @@
+{
+  "id": "cupellation",
+  "title": "Cupellation",
+  "wave": "rebellion-without-rehearsal",
+  "nrdbCode": "34080",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: Limit 1 hosted card. Access → 1[credit]: Host the non-agenda card you are accessing faceup on this program. (If it was installed, it becomes uninstalled.) Whenever you breach HQ, if this program has a hosted Corp card, you may pay 1[credit]"
+  ],
+  "installCost": 1,
+  "memoryCost": 1
+}

@@ -1,0 +1,66 @@
+{
+  "id": "pressure-spike",
+  "title": "Pressure Spike",
+  "wave": "rebellion-without-rehearsal",
+  "nrdbCode": "34092",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "subtypes": [
+    "icebreaker",
+    "fracter"
+  ],
+  "installCost": 4,
+  "strength": 1,
+  "memoryCost": 1,
+  "breaker": {
+    "breaksSubtype": "barrier",
+    "strength": 1,
+    "breakCredits": 1,
+    "breakMaxSubs": 1,
+    "pumpCredits": 2,
+    "pumpStrength": 3
+  },
+  "paidAbilities": [
+    {
+      "id": "pressure-spike-pump",
+      "label": "Pump Pressure Spike +3 strength",
+      "clickCost": 0,
+      "creditCost": 2,
+      "cost": {
+        "credits": 2
+      },
+      "windows": [
+        "encounter_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "pump_strength",
+          "amount": 3
+        }
+      }
+    },
+    {
+      "id": "pressure-spike-threat-pump",
+      "label": "Threat 4 → 2¢: +9 strength (once per run)",
+      "clickCost": 0,
+      "creditCost": 2,
+      "cost": {
+        "credits": 2
+      },
+      "windows": [
+        "encounter_paw"
+      ],
+      "requiresThreat": 4,
+      "oncePerRun": true,
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "pump_strength",
+          "amount": 9
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "id": "physarum-entangler",
+  "title": "Physarum Entangler",
+  "wave": "rebellion-without-rehearsal",
+  "nrdbCode": "34082",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: Install only on a piece of ice. Whenever you encounter host ice, if it is not a barrier, you may pay 1[credit] for each subroutine it has. If you do, bypass that ice. When the Corp purges virus counters, trash this program."
+  ],
+  "subtypes": [
+    "virus",
+    "trojan"
+  ],
+  "installCost": 0,
+  "memoryCost": 1
+}

@@ -1,0 +1,15 @@
+{
+  "id": "spree",
+  "title": "Spree",
+  "wave": "rebellion-without-rehearsal",
+  "nrdbCode": "34086",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: Place 3 power counters on this event, then run any server. Hosted power counter: Host 1 installed trojan program on a piece of ice protecting the attacked server."
+  ],
+  "subtypes": [
+    "run"
+  ],
+  "playCost": 0
+}

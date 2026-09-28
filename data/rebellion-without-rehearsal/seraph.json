@@ -1,0 +1,20 @@
+{
+  "id": "seraph",
+  "title": "Seraph",
+  "wave": "rebellion-without-rehearsal",
+  "nrdbCode": "34118",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: When the Runner encounters this ice, they lose 3[credit] unless they suffer 2 net damage or take 1 tag. [subroutine] The Runner loses 3[credit]. [subroutine] Do 2 net damage. [subroutine] Give the Runner 1 tag."
+  ],
+  "subtypes": [
+    "sentry",
+    "ap",
+    "observer",
+    "deep net"
+  ],
+  "installCost": 10,
+  "rezCost": 10,
+  "strength": 5
+}

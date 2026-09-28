@@ -1,0 +1,18 @@
+{
+  "id": "isaac-liberdade",
+  "title": "Isaac Liberdade",
+  "wave": "rebellion-without-rehearsal",
+  "nrdbCode": "34129",
+  "type": "upgrade",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: Each advanced piece of ice protecting this server gets +2 strength. Whenever this upgrade moves to the root of a server, you may place 1 advancement counter on a piece of ice protecting that server that has no advancement counters. When you"
+  ],
+  "subtypes": [
+    "bioroid",
+    "sysop"
+  ],
+  "installCost": 3,
+  "rezCost": 3,
+  "trashCost": 2
+}
