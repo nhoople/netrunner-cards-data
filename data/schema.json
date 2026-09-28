@@ -463,6 +463,10 @@
             "type": "boolean",
             "description": "Ability usable only while the Runner has no tags (Friend of a Friend)."
           },
+          "requireRunnerTagged": {
+            "type": "boolean",
+            "description": "Ability usable only while the Runner has at least one tag (Rotary Corp trash)."
+          },
           "requiresSuccessfulRdRunThisTurn": {
             "type": "boolean",
             "description": "Ability usable only if the Runner made a successful run on R&D this turn (Cataloguer)."
@@ -1697,6 +1701,24 @@
       "type": "integer",
       "minimum": 0,
       "description": "While rezzed, Runner may access at most this many cards other than this upgrade during a run against its server (Flagship)."
+    },
+    "firstEncounterGainsSubroutine": {
+      "type": "object",
+      "required": ["text", "effect"],
+      "properties": {
+        "text": { "type": "string" },
+        "effect": { "type": "object" }
+      },
+      "description": "First encounter each turn, ice gains this subroutine before printed ones for the encounter (Stick and Poke)."
+    },
+    "mayTakeTagForBonusAccessOnHqRdBreach": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "On HQ/R&D breach, may take 1 tag to access this many additional cards (Rotary)."
+    },
+    "maySwapOutermostIceOnPassAfterFullyBreakOncePerTurn": {
+      "type": "boolean",
+      "description": "Once per turn when passing outermost ice after fully breaking it, may swap with another installed ice (Sipa)."
     },
     "onBreachHqRdIfNoBreaksOncePerTurnMayBonusAccess": {
       "type": "integer",

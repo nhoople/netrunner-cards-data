@@ -5,11 +5,34 @@
   "nrdbCode": "36014",
   "type": "hardware",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: +1[mu] Whenever you breach HQ or R&D, you may take 1 tag to access 1 additional card. [click], 2[credit]: Trash this hardware. Only the Corp can use this ability, and only if the Runner is tagged. Limit 1 console per player."
-  ],
+  "unsupported": [],
   "subtypes": [
     "console"
   ],
-  "installCost": 3
+  "installCost": 3,
+  "muBonus": 1,
+  "mayTakeTagForBonusAccessOnHqRdBreach": 1,
+  "paidAbilities": [
+    {
+      "id": "rotary-corp-trash",
+      "label": "[click], 2[credit]: Trash Rotary (Corp; Runner tagged)",
+      "clickCost": 1,
+      "creditCost": 2,
+      "cost": {
+        "clicks": 1,
+        "credits": 2
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "usableByAnyPlayer": true,
+      "requireRunnerTagged": true,
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "trash_self"
+        }
+      }
+    }
+  ]
 }

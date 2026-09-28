@@ -1276,10 +1276,53 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    # --- v1.27.0 B-slice ---
+
+    if cid == "stick-and-poke":
+        return base(
+            c,
+            firstEncounterGainsSubroutine={
+                "text": "Do 1 net damage. The Runner draws 1 card.",
+                "effect": seq(net(1), draw("runner", 1)),
+            },
+            unsupported=[],
+        )
+
+    if cid == "rotary":
+        return base(
+            c,
+            muBonus=1,
+            mayTakeTagForBonusAccessOnHqRdBreach=1,
+            paidAbilities=[
+                {
+                    "id": "rotary-corp-trash",
+                    "label": "[click], 2[credit]: Trash Rotary (Corp; Runner tagged)",
+                    "clickCost": 1,
+                    "creditCost": 2,
+                    "cost": {"clicks": 1, "credits": 2},
+                    "windows": ["corp_action_paw"],
+                    "usableByAnyPlayer": True,
+                    "requireRunnerTagged": True,
+                    "effect": {
+                        "op": "do",
+                        "action": {"kind": "trash_self"},
+                    },
+                }
+            ],
+            unsupported=[],
+        )
+
+    if cid == "sipa":
+        return base(
+            c,
+            maySwapOutermostIceOnPassAfterFullyBreakOncePerTurn=True,
+            unsupported=[],
+        )
+
     # Fail closed — honest unsupported note for the remainder.
     # Corsair / Lampades / Baker / Aircheck / Methuselah need stealth-credit
-    # spend restrictions; Sipa / Stick and Poke / Rotary need encounter/breach
-    # hooks not yet covered.
+    # spend restrictions; remaining stubs need encounter/breach/host hooks
+    # not yet covered.
     card = base(c)
     card["unsupported"] = [f"Full text not yet mapped to IR: {plain[:240]}"]
     return card
@@ -1333,7 +1376,7 @@ def main():
             "Null Signal Vantage Point (NRDB pack vp) — next constructed set after "
             "Elevation. Fail-closed IR; "
             f"{full} cards fully mapped, {partial} with unsupported notes "
-            f"(wave v1.26.0 B-slice)."
+            f"(wave v1.27.0 B-slice)."
         )
         manifest["status"] = "in-progress"
     (OUT / "_manifest.json").write_text(
