@@ -1906,7 +1906,7 @@ def map_card(c: dict) -> dict:
                         "label": "Trash 1 installed Runner card",
                         "effect": {
                             "op": "do",
-                            "action": {"kind": "trash_installed_runner"},
+                            "action": {"kind": "trash_installed_runner", "pick": "choose"},
                         },
                     },
                 ],
@@ -1917,7 +1917,7 @@ def map_card(c: dict) -> dict:
                     "text": "Trash 1 installed Runner card.",
                     "effect": {
                         "op": "do",
-                        "action": {"kind": "trash_installed_runner"},
+                        "action": {"kind": "trash_installed_runner", "pick": "choose"},
                     },
                 },
                 {
