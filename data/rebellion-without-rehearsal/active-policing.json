@@ -5,12 +5,81 @@
   "nrdbCode": "34102",
   "type": "operation",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: Play only if the Runner stole or trashed a Corp card during their last turn. After you resolve this operation, your action phase ends. You may install 1 card from HQ. The Runner gets −1 allotted [click] for their next turn. Threat 3 → You m"
-  ],
+  "unsupported": [],
   "subtypes": [
     "terminal",
     "gray ops"
   ],
-  "playCost": 0
+  "playCost": 0,
+  "playRequiresRunnerStoleOrTrashedCorpCardLastTurn": true,
+  "endsActionPhase": true,
+  "onPlay": {
+    "op": "seq",
+    "effects": [
+      {
+        "op": "do",
+        "action": {
+          "kind": "may_install_from_hq_paying_costs"
+        }
+      },
+      {
+        "op": "do",
+        "action": {
+          "kind": "allotted_clicks_next_turn",
+          "side": "runner",
+          "delta": -1
+        }
+      },
+      {
+        "op": "if",
+        "cond": {
+          "op": "threat",
+          "level": 3
+        },
+        "then": {
+          "op": "choose",
+          "chooser": "corp",
+          "options": [
+            {
+              "id": "pay",
+              "label": "Pay 2¢: Runner −1 allotted click next turn",
+              "effect": {
+                "op": "seq",
+                "effects": [
+                  {
+                    "op": "do",
+                    "action": {
+                      "kind": "lose_credits",
+                      "side": "corp",
+                      "amount": 2
+                    }
+                  },
+                  {
+                    "op": "do",
+                    "action": {
+                      "kind": "allotted_clicks_next_turn",
+                      "side": "runner",
+                      "delta": -1
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "decline",
+              "label": "Decline",
+              "effect": {
+                "op": "do",
+                "action": {
+                  "kind": "gain_credits",
+                  "side": "corp",
+                  "amount": 0
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
 }

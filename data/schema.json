@@ -954,6 +954,10 @@
     "playRequiresTagged": {
       "type": "boolean"
     },
+    "playRequiresUntagged": {
+      "type": "boolean",
+      "description": "Play only if the Runner has no tags (Eye for an Eye / Privileged Access)."
+    },
     "playRequiresMinTags": {
       "type": "integer",
       "minimum": 1,
@@ -1301,6 +1305,29 @@
       "type": "integer",
       "minimum": 1,
       "description": "Once per turn when breaching HQ/R&D with no breaks this run, may access this many additional cards (Mercury)."
+    },
+    "onBreachRdIfAccessGteMayBonusAccess": {
+      "type": "object",
+      "required": [
+        "min",
+        "amount"
+      ],
+      "properties": {
+        "min": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Minimum R&D cards already allowed this breach before the may-bonus fires."
+        },
+        "amount": {
+          "type": "integer",
+          "minimum": 1
+        }
+      },
+      "description": "Pretty Mary: when breaching R&D, if allowed R&D access ≥ min, may access amount additional cards."
+    },
+    "onRemoveTags": {
+      "type": "object",
+      "description": "Effect IR whenever 1 or more tags are removed while this card is installed (Valentina)."
     },
     "chooseBreakerSubtypeOnInstall": {
       "type": "boolean"

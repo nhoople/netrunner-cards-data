@@ -5,12 +5,73 @@
   "nrdbCode": "34112",
   "type": "operation",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: Play only if the Runner stole or trashed a Corp card during their last turn. After you resolve this operation, your action phase ends. Reveal and add 2 cards at random from the grip to the top of the stack. Threat 3 → You may pay 2[credit] "
-  ],
+  "unsupported": [],
   "subtypes": [
     "terminal",
-    "black ops"
+    "gray ops"
   ],
-  "playCost": 0
+  "playCost": 0,
+  "playRequiresRunnerStoleOrTrashedCorpCardLastTurn": true,
+  "endsActionPhase": true,
+  "onPlay": {
+    "op": "seq",
+    "effects": [
+      {
+        "op": "do",
+        "action": {
+          "kind": "add_random_grip_to_stack_top",
+          "count": 2
+        }
+      },
+      {
+        "op": "if",
+        "cond": {
+          "op": "threat",
+          "level": 3
+        },
+        "then": {
+          "op": "choose",
+          "chooser": "corp",
+          "options": [
+            {
+              "id": "pay",
+              "label": "Pay 2¢: shuffle 1 random grip card into stack",
+              "effect": {
+                "op": "seq",
+                "effects": [
+                  {
+                    "op": "do",
+                    "action": {
+                      "kind": "lose_credits",
+                      "side": "corp",
+                      "amount": 2
+                    }
+                  },
+                  {
+                    "op": "do",
+                    "action": {
+                      "kind": "shuffle_random_grip_into_stack",
+                      "count": 1
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "decline",
+              "label": "Decline",
+              "effect": {
+                "op": "do",
+                "action": {
+                  "kind": "gain_credits",
+                  "side": "corp",
+                  "amount": 0
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
 }
