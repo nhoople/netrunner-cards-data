@@ -1094,6 +1094,188 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    if cid == "amanuensis":
+        decline = {
+            "id": "decline",
+            "label": "Decline",
+            "effect": gain("runner", 0),
+        }
+        return base(
+            c,
+            muBonus=1,
+            onRunnerTurnEnd={
+                "op": "if",
+                "cond": {"op": "runner_tagged"},
+                "then": {
+                    "op": "do",
+                    "action": {"kind": "add_power_counter", "amount": 1},
+                },
+            },
+            onRemoveTags={
+                "op": "choose",
+                "chooser": "runner",
+                "options": [
+                    {
+                        "id": "draw",
+                        "label": "Remove 1 power: draw 2",
+                        "effect": {
+                            "op": "seq",
+                            "effects": [
+                                {
+                                    "op": "do",
+                                    "action": {
+                                        "kind": "remove_power_counter",
+                                        "amount": 1,
+                                    },
+                                },
+                                draw("runner", 2),
+                            ],
+                        },
+                    },
+                    decline,
+                ],
+            },
+            unsupported=[],
+        )
+
+    if cid == "ashen-epilogue":
+        return base(
+            c,
+            onPlay=seq(
+                {
+                    "op": "do",
+                    "action": {"kind": "shuffle_grip_and_heap_into_stack"},
+                },
+                {
+                    "op": "do",
+                    "action": {"kind": "rfg_top_of_stack", "amount": 5},
+                },
+                draw("runner", 5),
+                {"op": "do", "action": {"kind": "rfg_self"}},
+            ),
+            unsupported=[],
+        )
+
+    if cid == "sudden-commandment":
+        return base(
+            c,
+            subtypes=["mandate"],
+            onPlay=seq(
+                draw("corp", 2),
+                {
+                    "op": "do",
+                    "action": {
+                        "kind": "may_play_nonterminal_operation_from_hq",
+                    },
+                },
+                {
+                    "op": "if",
+                    "cond": {"op": "threat", "level": 3},
+                    "then": {
+                        "op": "choose",
+                        "chooser": "corp",
+                        "options": [
+                            {
+                                "id": "pay",
+                                "label": "Pay 3¢: gain [click] (first mandate)",
+                                "effect": {
+                                    "op": "if",
+                                    "cond": {
+                                        "op": "first_mandate_this_turn",
+                                    },
+                                    "then": seq(
+                                        {
+                                            "op": "do",
+                                            "action": {
+                                                "kind": "lose_credits",
+                                                "side": "corp",
+                                                "amount": 3,
+                                            },
+                                        },
+                                        {
+                                            "op": "do",
+                                            "action": {
+                                                "kind": "gain_clicks",
+                                                "side": "corp",
+                                                "amount": 1,
+                                            },
+                                        },
+                                    ),
+                                },
+                            },
+                            {
+                                "id": "decline",
+                                "label": "Decline",
+                                "effect": gain("corp", 0),
+                            },
+                        ],
+                    },
+                },
+            ),
+            unsupported=[],
+        )
+
+    if cid == "working-prototype":
+        return base(
+            c,
+            powerCounterOnAnyCardRez=1,
+            paidAbilities=[
+                {
+                    "id": "wp-gain-3",
+                    "label": "[click], hosted power: Gain 3¢",
+                    "clickCost": 1,
+                    "creditCost": 0,
+                    "cost": {"clicks": 1, "powerCounters": 1},
+                    "windows": ["corp_action_paw"],
+                    "effect": gain("corp", 3),
+                },
+                {
+                    "id": "wp-gain-6",
+                    "label": "[click], 5 hosted power: Gain 6¢; resource to stack top",
+                    "clickCost": 1,
+                    "creditCost": 0,
+                    "cost": {"clicks": 1, "powerCounters": 5},
+                    "windows": ["corp_action_paw"],
+                    "effect": seq(
+                        gain("corp", 6),
+                        {
+                            "op": "do",
+                            "action": {
+                                "kind": "add_installed_resource_to_stack_top",
+                            },
+                        },
+                    ),
+                },
+            ],
+            unsupported=[],
+        )
+
+    if cid == "spree":
+        return base(
+            c,
+            subtypes=["run"],
+            powerCountersOnPlay=3,
+            runEvent={"servers": "any"},
+            paidAbilities=[
+                {
+                    "id": "spree-host",
+                    "label": "Hosted power: host installed trojan on attacked ice",
+                    "clickCost": 0,
+                    "creditCost": 0,
+                    "cost": {"powerCounters": 1},
+                    "windows": ["approach_paw", "encounter_paw", "approach_server_paw"],
+                    "requireDuringRun": True,
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "host_installed_trojan_on_attacked_ice",
+                        },
+                    },
+                }
+            ],
+            unsupported=[],
+        )
+
     card = base(c)
     card["unsupported"] = [f"Full text not yet mapped to IR: {plain[:240]}"]
     return card

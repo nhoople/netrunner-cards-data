@@ -5,13 +5,67 @@
   "nrdbCode": "34099",
   "type": "asset",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: Whenever you rez a card (including this asset), place 1 power counter on this asset. [click], hosted power counter: Gain 3[credit]. [click], 5 hosted power counters: Gain 6[credit]. Add 1 installed resource to the top of the stack."
-  ],
+  "unsupported": [],
   "subtypes": [
     "hostile"
   ],
   "installCost": 1,
   "rezCost": 1,
-  "trashCost": 2
+  "trashCost": 2,
+  "powerCounterOnAnyCardRez": 1,
+  "paidAbilities": [
+    {
+      "id": "wp-gain-3",
+      "label": "[click], hosted power: Gain 3¢",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1,
+        "powerCounters": 1
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "corp",
+          "amount": 3
+        }
+      }
+    },
+    {
+      "id": "wp-gain-6",
+      "label": "[click], 5 hosted power: Gain 6¢; resource to stack top",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1,
+        "powerCounters": 5
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "effect": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "gain_credits",
+              "side": "corp",
+              "amount": 6
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "add_installed_resource_to_stack_top"
+            }
+          }
+        ]
+      }
+    }
+  ]
 }
