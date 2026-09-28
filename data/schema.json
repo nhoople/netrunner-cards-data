@@ -370,6 +370,11 @@
                 "type": "integer",
                 "minimum": 0,
                 "description": "Remove this many Runner tags as a cost (B-1001). Payable only when the Runner has at least that many tags."
+              },
+              "creditsPerEncounterSubroutine": {
+                "type": "integer",
+                "minimum": 1,
+                "description": "Pay this many credits per subroutine on the encountered ice (Physarum Entangler)."
               }
             }
           },
@@ -433,6 +438,19 @@
           "requireEncounterSubtype": {
             "type": "string",
             "description": "Encountered ice must have this subtype (e.g. Abagnale bypass)."
+          },
+          "forbidEncounterSubtype": {
+            "type": "string",
+            "description": "Encountered ice must NOT have this subtype (Physarum)."
+          },
+          "requireEncounterHost": {
+            "type": "boolean",
+            "description": "Encountered ice must be this card's host (Physarum / trojans)."
+          },
+          "requireEncounterStrengthLte": {
+            "type": "integer",
+            "minimum": 0,
+            "description": "Encountered ice strength must be ≤ this value (Malandragem)."
           },
           "requireProtectingHostServer": {
             "type": "boolean",
@@ -1163,6 +1181,10 @@
     },
     "trashWhenPowerEmpty": {
       "type": "boolean"
+    },
+    "rfgWhenPowerEmpty": {
+      "type": "boolean",
+      "description": "When hosted power counters reach 0, remove this card from the game (Malandragem)."
     },
     "badPublicityCountersOnRez": {
       "type": "integer",

@@ -5,13 +5,35 @@
   "nrdbCode": "34082",
   "type": "program",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Install only on a piece of ice. Whenever you encounter host ice, if it is not a barrier, you may pay 1[credit] for each subroutine it has. If you do, bypass that ice. When the Corp purges virus counters, trash this program."
-  ],
+  "unsupported": [],
   "subtypes": [
     "virus",
     "trojan"
   ],
   "installCost": 0,
-  "memoryCost": 1
+  "memoryCost": 1,
+  "installOnIce": true,
+  "trashOnVirusPurge": true,
+  "paidAbilities": [
+    {
+      "id": "physarum-bypass",
+      "label": "Pay 1¢ per sub: bypass host ice (if not barrier)",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "creditsPerEncounterSubroutine": 1
+      },
+      "windows": [
+        "encounter_paw"
+      ],
+      "requireEncounterHost": true,
+      "forbidEncounterSubtype": "barrier",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "bypass_current_ice"
+        }
+      }
+    }
+  ]
 }

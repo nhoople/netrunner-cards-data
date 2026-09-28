@@ -5,9 +5,7 @@
   "nrdbCode": "34090",
   "type": "program",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: When you install this program and whenever it fully breaks a code gate, place 1 power counter on this program. Interface → 1[credit]: Break 1 code gate subroutine. Interface → X[credit], hosted power counter: Break X barrier subroutines. 1["
-  ],
+  "unsupported": [],
   "subtypes": [
     "icebreaker",
     "decoder",
@@ -15,5 +13,90 @@
   ],
   "installCost": 8,
   "strength": 2,
-  "memoryCost": 2
+  "memoryCost": 2,
+  "breaker": {
+    "breaksSubtype": "code gate",
+    "strength": 2,
+    "breakCredits": 1,
+    "breakMaxSubs": 1,
+    "pumpCredits": 1,
+    "pumpStrength": 2,
+    "breakViaPaidAbilityOnly": true
+  },
+  "onInstall": {
+    "op": "do",
+    "action": {
+      "kind": "add_power_counter",
+      "amount": 1
+    }
+  },
+  "onFullyBreak": {
+    "op": "do",
+    "action": {
+      "kind": "add_power_counter",
+      "amount": 1
+    }
+  },
+  "paidAbilities": [
+    {
+      "id": "lobisomem-break-cg",
+      "label": "1¢: Break 1 code gate subroutine",
+      "clickCost": 0,
+      "creditCost": 1,
+      "cost": {
+        "credits": 1
+      },
+      "windows": [
+        "encounter_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "break_encounter_subroutine",
+          "maxSubs": 1,
+          "requireSubtype": "code gate"
+        }
+      }
+    },
+    {
+      "id": "lobisomem-break-barrier",
+      "label": "X¢, hosted power: Break X barrier subroutines",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "powerCounters": 1
+      },
+      "windows": [
+        "encounter_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "break_encounter_subroutine",
+          "maxSubs": 99,
+          "requireSubtype": "barrier",
+          "payCreditsPerBrokenSub": 1
+        }
+      }
+    },
+    {
+      "id": "lobisomem-pump",
+      "label": "1¢: +2 strength",
+      "clickCost": 0,
+      "creditCost": 1,
+      "cost": {
+        "credits": 1
+      },
+      "windows": [
+        "encounter_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "pump_strength",
+          "amount": 2
+        }
+      }
+    }
+  ]
 }

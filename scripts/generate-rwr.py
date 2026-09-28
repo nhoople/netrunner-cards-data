@@ -891,6 +891,209 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    if cid == "malandragem":
+        return base(
+            c,
+            powerCountersOnInstall=2,
+            rfgWhenPowerEmpty=True,
+            paidAbilities=[
+                {
+                    "id": "malandragem-bypass",
+                    "label": "Hosted power: bypass ice if strength ≤ 3 (once per turn)",
+                    "clickCost": 0,
+                    "creditCost": 0,
+                    "cost": {"powerCounters": 1},
+                    "windows": ["encounter_paw"],
+                    "oncePerTurn": True,
+                    "requireEncounterStrengthLte": 3,
+                    "effect": {
+                        "op": "do",
+                        "action": {"kind": "bypass_current_ice"},
+                    },
+                },
+                {
+                    "id": "malandragem-threat-bypass",
+                    "label": "Threat 4 → RFG: bypass encountered ice",
+                    "clickCost": 0,
+                    "creditCost": 0,
+                    "cost": {},
+                    "windows": ["encounter_paw"],
+                    "requiresThreat": 4,
+                    "effect": seq(
+                        {
+                            "op": "do",
+                            "action": {"kind": "rfg_self"},
+                        },
+                        {
+                            "op": "do",
+                            "action": {"kind": "bypass_current_ice"},
+                        },
+                    ),
+                },
+            ],
+            unsupported=[],
+        )
+
+    if cid == "physarum-entangler":
+        return base(
+            c,
+            installOnIce=True,
+            trashOnVirusPurge=True,
+            paidAbilities=[
+                {
+                    "id": "physarum-bypass",
+                    "label": "Pay 1¢ per sub: bypass host ice (if not barrier)",
+                    "clickCost": 0,
+                    "creditCost": 0,
+                    "cost": {"creditsPerEncounterSubroutine": 1},
+                    "windows": ["encounter_paw"],
+                    "requireEncounterHost": True,
+                    "forbidEncounterSubtype": "barrier",
+                    "effect": {
+                        "op": "do",
+                        "action": {"kind": "bypass_current_ice"},
+                    },
+                }
+            ],
+            unsupported=[],
+        )
+
+    if cid == "lobisomem":
+        card = base(
+            c,
+            breaker={
+                "breaksSubtype": "code gate",
+                "strength": c.get("strength") or 2,
+                "breakCredits": 1,
+                "breakMaxSubs": 1,
+                "pumpCredits": 1,
+                "pumpStrength": 2,
+                "breakViaPaidAbilityOnly": True,
+            },
+            onInstall={
+                "op": "do",
+                "action": {"kind": "add_power_counter", "amount": 1},
+            },
+            onFullyBreak={
+                "op": "do",
+                "action": {"kind": "add_power_counter", "amount": 1},
+            },
+            paidAbilities=[
+                {
+                    "id": "lobisomem-break-cg",
+                    "label": "1¢: Break 1 code gate subroutine",
+                    "clickCost": 0,
+                    "creditCost": 1,
+                    "cost": {"credits": 1},
+                    "windows": ["encounter_paw"],
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "break_encounter_subroutine",
+                            "maxSubs": 1,
+                            "requireSubtype": "code gate",
+                        },
+                    },
+                },
+                {
+                    "id": "lobisomem-break-barrier",
+                    "label": "X¢, hosted power: Break X barrier subroutines",
+                    "clickCost": 0,
+                    "creditCost": 0,
+                    "cost": {"powerCounters": 1},
+                    "windows": ["encounter_paw"],
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "break_encounter_subroutine",
+                            "maxSubs": 99,
+                            "requireSubtype": "barrier",
+                            "payCreditsPerBrokenSub": 1,
+                        },
+                    },
+                },
+                {
+                    "id": "lobisomem-pump",
+                    "label": "1¢: +2 strength",
+                    "clickCost": 0,
+                    "creditCost": 1,
+                    "cost": {"credits": 1},
+                    "windows": ["encounter_paw"],
+                    "effect": {
+                        "op": "do",
+                        "action": {"kind": "pump_strength", "amount": 2},
+                    },
+                },
+            ],
+            unsupported=[],
+        )
+        return card
+
+    if cid == "trick-shot":
+        return base(
+            c,
+            subtypes=["run"],
+            runEvent={
+                "servers": "rd",
+                "placeEventCredits": 4,
+                "bonusAccess": 1,
+                "onSuccessfulRun": {
+                    "op": "do",
+                    "action": {"kind": "place_event_credits", "amount": 2},
+                },
+                "onRunEnd": {
+                    "op": "do",
+                    "action": {
+                        "kind": "may_start_run",
+                        "servers": "remote",
+                    },
+                },
+            },
+            unsupported=[],
+        )
+
+    if cid == "privileged-access":
+        decline = {
+            "id": "decline",
+            "label": "Decline",
+            "effect": gain("runner", 0),
+        }
+        install_resource = {
+            "op": "do",
+            "action": {
+                "kind": "may_install_from_heap",
+                "types": ["resource"],
+                "discount": 2,
+            },
+        }
+        install_program = {
+            "op": "do",
+            "action": {
+                "kind": "may_install_from_heap",
+                "types": ["program"],
+                "discount": 0,
+            },
+        }
+        return base(
+            c,
+            subtypes=["run"],
+            playRequiresUntagged=True,
+            runEvent={
+                "servers": "archives",
+                "skipBreach": True,
+                "onSuccessfulRun": seq(
+                    tags(1),
+                    install_resource,
+                    {
+                        "op": "if",
+                        "cond": {"op": "threat", "level": 3},
+                        "then": install_program,
+                    },
+                ),
+            },
+            unsupported=[],
+        )
+
     card = base(c)
     card["unsupported"] = [f"Full text not yet mapped to IR: {plain[:240]}"]
     return card
