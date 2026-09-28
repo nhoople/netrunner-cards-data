@@ -840,6 +840,130 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    if cid == "bumi-1-0":
+        return base(
+            c,
+            onRez={
+                "op": "if",
+                "cond": {"op": "source_protects_attacked_server"},
+                "then": {
+                    "op": "choose",
+                    "chooser": "corp",
+                    "options": [
+                        {
+                            "id": "trash-trojan",
+                            "label": "Trash 1 installed trojan program",
+                            "effect": {
+                                "op": "do",
+                                "action": {
+                                    "kind": "trash_program",
+                                    "pick": "choose",
+                                    "includeSubtypes": ["trojan"],
+                                },
+                            },
+                        },
+                        decline("corp"),
+                    ],
+                },
+            },
+            subroutines=[
+                {
+                    "id": "bumi-trash",
+                    "text": "Trash 1 installed program.",
+                    "effect": {
+                        "op": "do",
+                        "action": {"kind": "trash_program", "pick": "choose"},
+                    },
+                },
+                {
+                    "id": "bumi-core",
+                    "text": "Do 1 core damage.",
+                    "effect": {
+                        "op": "do",
+                        "action": {"kind": "core_damage", "amount": 1},
+                    },
+                },
+            ],
+            unsupported=[],
+        )
+
+    if cid == "ritual":
+        return base(
+            c,
+            onPlay={
+                "op": "do",
+                "action": {"kind": "draw_per_clicks_remaining", "side": "runner"},
+            },
+            unsupported=[],
+        )
+
+    if cid == "sang-kancil":
+        return breaker_card(
+            c,
+            "code gate",
+            c.get("strength") or 2,
+            1,
+            pump_c=3,
+            pump_s=2,
+            break_max=1,
+            paidAbilityCreditDiscountIfRunEventActive=2,
+            unsupported=[],
+        )
+
+    if cid == "transfer-of-wealth":
+        return base(
+            c,
+            subtypes=["run"],
+            runEvent={
+                "servers": "hq",
+                "onSuccessfulRun": seq(
+                    tags(1),
+                    {
+                        "op": "do",
+                        "action": {
+                            "kind": "lose_credits",
+                            "side": "corp",
+                            "amount": 3,
+                            "gainPerCreditLost": {"side": "runner", "per": 2},
+                        },
+                    },
+                ),
+            },
+            unsupported=[],
+        )
+
+    if cid == "public-access-plaza":
+        return base(
+            c,
+            onTurnBegin=gain("corp", 1),
+            threatGiveTagsOnRezzedTrash={"level": 2, "tags": 1},
+            unsupported=[],
+        )
+
+    if cid == "scrounge":
+        return base(
+            c,
+            playAdditionalClick=True,
+            onPlay=seq(
+                {
+                    "op": "do",
+                    "action": {
+                        "kind": "install_from_heap",
+                        "types": ["program"],
+                        "discount": 0,
+                    },
+                },
+                {
+                    "op": "do",
+                    "action": {
+                        "kind": "may_add_from_heap_to_stack_bottom",
+                        "types": ["program"],
+                    },
+                },
+            ),
+            unsupported=[],
+        )
+
     # Fail closed — honest unsupported note for the remainder.
     card = base(c)
     card["unsupported"] = [f"Full text not yet mapped to IR: {plain[:240]}"]

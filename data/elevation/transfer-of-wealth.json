@@ -5,11 +5,36 @@
   "nrdbCode": "35017",
   "type": "event",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Run HQ. If successful, take 1 tag and the Corp loses 3[credit]. Gain 2[credit] for each credit lost this way."
-  ],
+  "unsupported": [],
   "subtypes": [
     "run"
   ],
-  "playCost": 0
+  "playCost": 0,
+  "runEvent": {
+    "servers": "hq",
+    "onSuccessfulRun": {
+      "op": "seq",
+      "effects": [
+        {
+          "op": "do",
+          "action": {
+            "kind": "give_tags",
+            "amount": 1
+          }
+        },
+        {
+          "op": "do",
+          "action": {
+            "kind": "lose_credits",
+            "side": "corp",
+            "amount": 3,
+            "gainPerCreditLost": {
+              "side": "runner",
+              "per": 2
+            }
+          }
+        }
+      ]
+    }
+  }
 }

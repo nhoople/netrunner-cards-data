@@ -5,11 +5,34 @@
   "nrdbCode": "35004",
   "type": "event",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: As an additional cost to play this event, spend [click]. Install 1 program from your heap. You may add 1 program from your heap to the bottom of your stack."
-  ],
+  "unsupported": [],
   "subtypes": [
     "double"
   ],
-  "playCost": 1
+  "playCost": 1,
+  "playAdditionalClick": true,
+  "onPlay": {
+    "op": "seq",
+    "effects": [
+      {
+        "op": "do",
+        "action": {
+          "kind": "install_from_heap",
+          "types": [
+            "program"
+          ],
+          "discount": 0
+        }
+      },
+      {
+        "op": "do",
+        "action": {
+          "kind": "may_add_from_heap_to_stack_bottom",
+          "types": [
+            "program"
+          ]
+        }
+      }
+    ]
+  }
 }

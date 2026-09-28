@@ -5,14 +5,42 @@
   "nrdbCode": "35020",
   "type": "program",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Interface → 1[credit]: Break 1 code gate subroutine. 3[credit]: +2 strength. If a run event is active, this ability costs 2[credit] less to use."
-  ],
+  "unsupported": [],
   "subtypes": [
     "icebreaker",
     "decoder"
   ],
   "installCost": 3,
   "strength": 2,
-  "memoryCost": 1
+  "memoryCost": 1,
+  "breaker": {
+    "breaksSubtype": "code gate",
+    "strength": 2,
+    "breakCredits": 1,
+    "breakMaxSubs": 1,
+    "pumpCredits": 3,
+    "pumpStrength": 2
+  },
+  "paidAbilities": [
+    {
+      "id": "sang-kancil-pump",
+      "label": "Pump Sang Kancil +2 strength",
+      "clickCost": 0,
+      "creditCost": 3,
+      "cost": {
+        "credits": 3
+      },
+      "windows": [
+        "encounter_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "pump_strength",
+          "amount": 2
+        }
+      }
+    }
+  ],
+  "paidAbilityCreditDiscountIfRunEventActive": 2
 }

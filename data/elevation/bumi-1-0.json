@@ -5,9 +5,7 @@
   "nrdbCode": "35041",
   "type": "ice",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: When you rez this ice during a run against this server, you may trash 1 installed trojan program. Lose [click]: Break 1 subroutine on this ice. Only the Runner can use this ability. [subroutine] Trash 1 installed program. [subroutine] Do 1 "
-  ],
+  "unsupported": [],
   "subtypes": [
     "sentry",
     "bioroid",
@@ -16,5 +14,67 @@
   ],
   "installCost": 3,
   "rezCost": 3,
-  "strength": 3
+  "strength": 3,
+  "onRez": {
+    "op": "if",
+    "cond": {
+      "op": "source_protects_attacked_server"
+    },
+    "then": {
+      "op": "choose",
+      "chooser": "corp",
+      "options": [
+        {
+          "id": "trash-trojan",
+          "label": "Trash 1 installed trojan program",
+          "effect": {
+            "op": "do",
+            "action": {
+              "kind": "trash_program",
+              "pick": "choose",
+              "includeSubtypes": [
+                "trojan"
+              ]
+            }
+          }
+        },
+        {
+          "id": "decline",
+          "label": "Decline",
+          "effect": {
+            "op": "do",
+            "action": {
+              "kind": "gain_credits",
+              "side": "corp",
+              "amount": 0
+            }
+          }
+        }
+      ]
+    }
+  },
+  "subroutines": [
+    {
+      "id": "bumi-trash",
+      "text": "Trash 1 installed program.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "trash_program",
+          "pick": "choose"
+        }
+      }
+    },
+    {
+      "id": "bumi-core",
+      "text": "Do 1 core damage.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "core_damage",
+          "amount": 1
+        }
+      }
+    }
+  ]
 }

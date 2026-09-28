@@ -1180,6 +1180,21 @@
       "type": "integer",
       "description": "While this is the only ice protecting its server, it gets +N strength (Scatter Field)."
     },
+    "paidAbilityCreditDiscountIfRunEventActive": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Reduce paid ability credit costs by this amount while a run event is active (Sang Kancil)."
+    },
+    "threatGiveTagsOnRezzedTrash": {
+      "type": "object",
+      "required": ["level", "tags"],
+      "additionalProperties": false,
+      "properties": {
+        "level": { "type": "integer", "minimum": 1 },
+        "tags": { "type": "integer", "minimum": 1 }
+      },
+      "description": "Threat N → when the Runner trashes this card while rezzed, give that many tags (Public Access Plaza)."
+    },
     "trashAfterBreakingThisRun": {
       "type": "boolean"
     },
