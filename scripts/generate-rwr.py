@@ -523,6 +523,202 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    if cid == "charlotte-cacador":
+        return base(
+            c,
+            canAdvance=True,
+            onTurnBegin={
+                "op": "choose",
+                "chooser": "corp",
+                "options": [
+                    {
+                        "id": "remove-adv",
+                        "label": "Remove 1 advancement: gain 4¢ and draw 1",
+                        "effect": {
+                            "op": "do",
+                            "action": {
+                                "kind": "remove_advancements",
+                                "amount": 1,
+                                "then": seq(gain("corp", 4), draw("corp", 1)),
+                            },
+                        },
+                    },
+                    {
+                        "id": "decline",
+                        "label": "Decline",
+                        "effect": gain("corp", 0),
+                    },
+                ],
+            },
+            paidAbilities=[
+                {
+                    "id": "charlotte-gain",
+                    "label": "[trash], hosted advancement: Gain 3¢",
+                    "clickCost": 0,
+                    "creditCost": 0,
+                    "cost": {"trashSelf": True, "advancementTokens": 1},
+                    "windows": ["corp_action_paw"],
+                    "effect": gain("corp", 3),
+                }
+            ],
+            unsupported=[],
+        )
+
+    if cid == "janaina-jk-dumont-kindelan":
+        return base(
+            c,
+            onTurnBegin={
+                "op": "do",
+                "action": {"kind": "place_hosted_credits", "amount": 3},
+            },
+            paidAbilities=[
+                {
+                    "id": "janaina-take",
+                    "label": "[click], add to HQ: Take all hosted credits; may install",
+                    "clickCost": 1,
+                    "creditCost": 0,
+                    "cost": {"clicks": 1},
+                    "windows": ["corp_action_paw"],
+                    "effect": seq(
+                        {
+                            "op": "do",
+                            "action": {"kind": "return_source_to_hq"},
+                        },
+                        {
+                            "op": "do",
+                            "action": {
+                                "kind": "take_hosted_credits",
+                                "amount": 99,
+                            },
+                        },
+                        {
+                            "op": "do",
+                            "action": {
+                                "kind": "may_install_from_hq_paying_costs"
+                            },
+                        },
+                    ),
+                }
+            ],
+            unsupported=[],
+        )
+
+    if cid == "arruaceiras-crew":
+        return base(
+            c,
+            paidAbilities=[
+                {
+                    "id": "arruaceiras-weaken",
+                    "label": "Take 1 tag: encountered ice gets –2 strength",
+                    "clickCost": 0,
+                    "creditCost": 0,
+                    "cost": {"tags": 1},
+                    "windows": ["encounter_paw"],
+                    "oncePerTurn": True,
+                    "effect": {
+                        "op": "do",
+                        "action": {"kind": "weaken_ice", "amount": 2},
+                    },
+                },
+                {
+                    "id": "arruaceiras-trash-ice",
+                    "label": "[trash], 2¢: Trash encountered ice if strength ≤ 0",
+                    "clickCost": 0,
+                    "creditCost": 2,
+                    "cost": {"credits": 2, "trashSelf": True},
+                    "windows": ["encounter_paw"],
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "trash_encounter_ice_if_strength_lte",
+                            "maxStrength": 0,
+                        },
+                    },
+                },
+            ],
+            unsupported=[],
+        )
+
+    if cid == "logjam":
+        return base(
+            c,
+            canAdvance=True,
+            strengthPerAdvancement=1,
+            onRez={
+                "op": "do",
+                "action": {
+                    "kind": "place_advancements_on_self_per_faceup_archive_types",
+                    "base": 1,
+                },
+            },
+            subroutines=[
+                {
+                    "id": "logjam-gain-etr",
+                    "text": "Gain 2[credit]. End the run.",
+                    "effect": seq(gain("corp", 2), etr()),
+                },
+                {
+                    "id": "logjam-etr-2",
+                    "text": "End the run.",
+                    "effect": etr(),
+                },
+                {
+                    "id": "logjam-etr-3",
+                    "text": "End the run.",
+                    "effect": etr(),
+                },
+            ],
+            unsupported=[],
+        )
+
+    if cid == "hammer":
+        return base(
+            c,
+            maxPrintedSubsBreakExceptSubtype="killer",
+            onEncounter={
+                "op": "do",
+                "action": {
+                    "kind": "limit_printed_breaks_on_source_for_run",
+                    "max": 1,
+                },
+            },
+            subroutines=[
+                {
+                    "id": "hammer-tag",
+                    "text": "Give the Runner 1 tag.",
+                    "effect": tags(1),
+                },
+                {
+                    "id": "hammer-trash-rh",
+                    "text": "Trash 1 installed resource or piece of hardware.",
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "trash_resource_or_hardware",
+                            "pick": "choose",
+                        },
+                    },
+                },
+                {
+                    "id": "hammer-trash-prog",
+                    "text": "Trash 1 installed program that is not a decoder, fracter, or killer.",
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "trash_program",
+                            "pick": "choose",
+                            "excludeSubtypes": [
+                                "decoder",
+                                "fracter",
+                                "killer",
+                            ],
+                        },
+                    },
+                },
+            ],
+            unsupported=[],
+        )
+
     card = base(c)
     card["unsupported"] = [f"Full text not yet mapped to IR: {plain[:240]}"]
     return card
