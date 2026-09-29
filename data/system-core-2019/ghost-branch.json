@@ -5,9 +5,7 @@
   "nrdbCode": "25109",
   "type": "asset",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: Ghost Branch can be advanced. When the Runner accesses Ghost Branch, you may give the Runner 1 tag for each advancement token on Ghost Branch."
-  ],
+  "unsupported": [],
   "faction": "nbn",
   "subtypes": [
     "ambush",
@@ -15,5 +13,36 @@
   ],
   "installCost": 0,
   "rezCost": 0,
-  "trashCost": 0
+  "trashCost": 0,
+  "canAdvance": true,
+  "onAccess": {
+    "op": "choose",
+    "chooser": "corp",
+    "options": [
+      {
+        "id": "tags",
+        "label": "Give 1 tag per advancement",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "give_tags_per_advancement",
+            "base": 0,
+            "per": 1
+          }
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "corp",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  }
 }

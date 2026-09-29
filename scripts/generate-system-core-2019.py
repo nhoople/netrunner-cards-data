@@ -760,6 +760,98 @@ def map_card(c: dict) -> dict | None:
             unsupported=[],
         )
 
+    # --- v1.65.0 F-slice: existing IR only ---
+
+    if cid == "gabriel-santiago-consummate-professional":
+        return base(
+            c,
+            onFirstSuccessfulHqRunThisTurn=gain("runner", 2),
+            unsupported=[],
+        )
+
+    if cid == "quest-completed":
+        return base(
+            c,
+            playRequiresSuccessfulAllCentralsThisTurn=True,
+            onPlay={
+                "op": "do",
+                "action": {"kind": "access_one_root_other_server"},
+            },
+            unsupported=[],
+        )
+
+    if cid == "explode-a-palooza":
+        return base(
+            c,
+            mustRevealWhenAccessedFromRd=True,
+            onAccess={
+                "op": "choose",
+                "chooser": "corp",
+                "options": [
+                    {
+                        "id": "gain",
+                        "label": "Gain 5¢",
+                        "effect": gain("corp", 5),
+                    },
+                    {
+                        "id": "decline",
+                        "label": "Decline",
+                        "effect": gain("corp", 0),
+                    },
+                ],
+            },
+            unsupported=[],
+        )
+
+    if cid == "lamprey":
+        return base(
+            c,
+            trashOnVirusPurge=True,
+            onSuccessfulRun={
+                "op": "if",
+                "cond": {"op": "attacking_hq"},
+                "then": {
+                    "op": "do",
+                    "action": {
+                        "kind": "lose_credits",
+                        "side": "corp",
+                        "amount": 1,
+                    },
+                },
+            },
+            unsupported=[],
+        )
+
+    if cid == "ghost-branch":
+        return base(
+            c,
+            canAdvance=True,
+            onAccess={
+                "op": "choose",
+                "chooser": "corp",
+                "options": [
+                    {
+                        "id": "tags",
+                        "label": "Give 1 tag per advancement",
+                        "effect": {
+                            "op": "do",
+                            "action": {
+                                "kind": "give_tags_per_advancement",
+                                "base": 0,
+                                "per": 1,
+                            },
+                        },
+                    },
+                    {
+                        "id": "decline",
+                        "label": "Decline",
+                        "effect": gain("corp", 0),
+                    },
+                ],
+            },
+            unsupported=[],
+        )
+
     card = base(c)
     card["unsupported"] = [
         f"Full text not yet mapped to IR: {plain[:200]}"
@@ -851,6 +943,13 @@ def main():
             "sea-source",
             "product-placement",
             "notoriety",
+        ],
+        "fSliceClears": [
+            "gabriel-santiago-consummate-professional",
+            "quest-completed",
+            "explode-a-palooza",
+            "lamprey",
+            "ghost-branch",
         ],
     }
     (OUT / "_manifest.json").write_text(
