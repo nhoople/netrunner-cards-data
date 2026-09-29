@@ -5,14 +5,20 @@
   "nrdbCode": "25070",
   "type": "asset",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: Put 12[credit] from the bank on Adonis Campaign when rezzed. When there are no credits left on Adonis Campaign, trash it. Take 3[credit] from Adonis Campaign when your turn begins."
-  ],
+  "unsupported": [],
   "faction": "haas-bioroid",
   "subtypes": [
     "advertisement"
   ],
   "installCost": 4,
   "rezCost": 4,
-  "trashCost": 3
+  "trashCost": 3,
+  "hostedCreditsOnInstall": 12,
+  "onTurnBegin": {
+    "op": "do",
+    "action": {
+      "kind": "take_hosted_credits",
+      "amount": 3
+    }
+  }
 }

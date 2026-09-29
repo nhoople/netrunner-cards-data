@@ -5,7 +5,7 @@
   "written": 84,
   "reprintSkipped": 63,
   "status": "in-progress",
-  "notes": "System Core 2019 (sc19) kickoff v1.59.0. Wrote 84 files; skipped 63 Gateway/SU21 reprints. Kickoff clears among written: 10.",
+  "notes": "System Core 2019 (sc19) kickoff v1.59.0. Wrote 84 files; skipped 63 Gateway/SU21 reprints. Kickoff clears among written: 15.",
   "cards": [
     "reina-roja-freedom-fighter",
     "quetzal-free-spirit",
@@ -233,5 +233,12 @@
     "armitage-codebusting",
     "hadrians-wall",
     "ipo"
+  ],
+  "bSliceClears": [
+    "battering-ram",
+    "force-of-nature",
+    "pipeline",
+    "blue-level-clearance",
+    "adonis-campaign"
   ]
 }
