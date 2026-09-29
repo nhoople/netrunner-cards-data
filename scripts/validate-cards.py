@@ -15,9 +15,23 @@ ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
 SCHEMA = json.loads((DATA / "schema.json").read_text())
 POOL = json.loads((DATA / "pool.json").read_text())
+ALLOWLIST_PATH = DATA / "supported-unsupported-allowlist.json"
 
 # Manifests are pack metadata, not card defs.
 SKIP_NAMES = {"_manifest.json"}
+
+
+def load_unsupported_allowlist() -> dict[str, str]:
+    """Card ids allowed to keep non-empty unsupported under status=supported."""
+    if not ALLOWLIST_PATH.is_file():
+        return {}
+    raw = json.loads(ALLOWLIST_PATH.read_text())
+    cards = raw.get("cards") or {}
+    if not isinstance(cards, dict):
+        raise SystemExit(
+            f"{ALLOWLIST_PATH.relative_to(ROOT)}: 'cards' must be an object"
+        )
+    return {str(k): str(v) for k, v in cards.items()}
 
 
 def wave_dirs() -> list[Path]:
@@ -91,12 +105,35 @@ def main() -> int:
             print(f"{name}: pool cards with no file: {missing_anywhere}")
             errors += 1
 
+    # supported ⇒ empty unsupported unless explicitly allowlisted.
+    allow = load_unsupported_allowlist()
+    for name, wave in waves.items():
+        if wave.get("status") != "supported":
+            continue
+        for cid in wave.get("cards") or []:
+            path = card_ids.get(cid)
+            if path is None:
+                continue
+            notes = json.loads(path.read_text()).get("unsupported") or []
+            if not notes:
+                continue
+            if cid in allow and str(allow[cid]).strip():
+                continue
+            print(
+                f"{name}/{cid}: status=supported but unsupported={notes!r}; "
+                f"clear the card or add a reason under "
+                f"{ALLOWLIST_PATH.relative_to(ROOT)} cards.{cid}"
+            )
+            errors += 1
+
     if errors:
         print(f"FAILED with {errors} error(s)")
         return 1
     print(
         f"OK: {len(card_ids)} cards across {len(wave_dirs())} waves; "
-        f"pool corpusOrder={corpus}"
+        f"pool corpusOrder={corpus}; "
+        f"supported empty-unsupported invariant ok "
+        f"(allowlist={len(allow)})"
     )
     return 0
 
