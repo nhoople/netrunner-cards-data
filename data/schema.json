@@ -808,7 +808,7 @@
     },
     "onTurnBegin": {
       "type": "object",
-      "description": "Effect IR evaluated when this card's controller's turn begins (rezzed/installed)."
+      "description": "Effect IR evaluated when this card's controller's turn begins (rezzed/installed, or Runner/Corp identity)."
     },
     "onInstall": {
       "type": "object",
@@ -1474,6 +1474,10 @@
     "playRequiresSuccessfulRunLastTurn": {
       "type": "boolean"
     },
+    "playRequiresNoSuccessfulHqRunLastTurn": {
+      "type": "boolean",
+      "description": "Corp operation: play only if the Runner did not make a successful run on HQ during their last turn (Digital Rights Management)."
+    },
     "playRequiresThreat": {
       "type": "integer",
       "minimum": 1,
@@ -1962,7 +1966,11 @@
     },
     "onRunnerTurnEnd": {
       "type": "object",
-      "description": "Effect IR at the end of the Runner's turn while installed (Amanuensis)."
+      "description": "Effect IR at the end of the Runner's turn while this card is installed or is the Runner identity (Amanuensis / Hoshiko Shiro)."
+    },
+    "onFirstGripOrStackTrashBatchEachTurn": {
+      "type": "object",
+      "description": "Effect IR the first time each turn 1 or more cards are trashed from the Runner's grip or stack while this card is installed (Buffer Drive). Engine supplies the trashed batch card ids when evaluating may_add_one_of_card_ids_to_stack_bottom."
     },
     "onFirstResourcePaidAbilityEachTurn": {
       "type": "object",

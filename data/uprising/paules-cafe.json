@@ -5,13 +5,50 @@
   "nrdbCode": "26092",
   "type": "resource",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: [click]: Host 1 program or piece of hardware from your grip faceup on this resource. 1[credit]: Install 1 hosted card. The first card you install this way during each of your turns costs 1[credit] less to install for each unique (♦) connect"
-  ],
+  "unsupported": [],
   "subtypes": [
     "location",
     "seedy"
   ],
   "installCost": 1,
-  "unique": true
+  "unique": true,
+  "paidAbilities": [
+    {
+      "id": "paules-cafe-host",
+      "label": "[click]: Host 1 program or hardware from grip faceup on this resource",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "may_host_one_program_or_hardware_from_grip_faceup"
+        }
+      }
+    },
+    {
+      "id": "paules-cafe-install",
+      "label": "1¢: Install 1 hosted card (first this turn −1¢ per unique ♦ connection resource installed)",
+      "clickCost": 0,
+      "creditCost": 1,
+      "cost": {
+        "credits": 1
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "may_install_one_hosted_card",
+          "firstThisTurnDiscountPerUniqueConnection": true
+        }
+      }
+    }
+  ]
 }

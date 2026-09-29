@@ -1730,6 +1730,211 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    # --- J-slice (v1.45.0): Hoshiko / DRM / Paule's Café / Konjin /
+    # Buffer Drive ---
+
+    if cid == "hoshiko-shiro-untold-protagonist":
+        return base(
+            c,
+            onRunnerTurnEnd={
+                "op": "if",
+                "cond": {
+                    "op": "and",
+                    "conds": [
+                        {"op": "identity_unflipped"},
+                        {"op": "accessed_a_card_this_turn"},
+                    ],
+                },
+                "then": {
+                    "op": "seq",
+                    "effects": [
+                        gain("runner", 2),
+                        {
+                            "op": "do",
+                            "action": {"kind": "flip_identity"},
+                        },
+                    ],
+                },
+                "else": {
+                    "op": "if",
+                    "cond": {
+                        "op": "and",
+                        "conds": [
+                            {"op": "identity_flipped"},
+                            {"op": "not_accessed_a_card_this_turn"},
+                        ],
+                    },
+                    "then": {
+                        "op": "do",
+                        "action": {"kind": "flip_identity"},
+                    },
+                },
+            },
+            onTurnBegin={
+                "op": "if",
+                "cond": {"op": "identity_flipped"},
+                "then": {
+                    "op": "seq",
+                    "effects": [
+                        {
+                            "op": "do",
+                            "action": {
+                                "kind": "draw",
+                                "side": "runner",
+                                "amount": 1,
+                            },
+                        },
+                        {
+                            "op": "do",
+                            "action": {
+                                "kind": "lose_credits",
+                                "side": "runner",
+                                "amount": 1,
+                            },
+                        },
+                    ],
+                },
+            },
+            unsupported=[],
+        )
+
+    if cid == "digital-rights-management":
+        return base(
+            c,
+            playRequiresNoSuccessfulHqRunLastTurn=True,
+            onPlay={
+                "op": "seq",
+                "effects": [
+                    {
+                        "op": "do",
+                        "action": {"kind": "search_rd_agenda_to_hq"},
+                    },
+                    {
+                        "op": "do",
+                        "action": {
+                            "kind": (
+                                "may_install_from_hq_in_remote_root_paying_costs"
+                            )
+                        },
+                    },
+                    {
+                        "op": "do",
+                        "action": {
+                            "kind": "forbid_scoring_agendas_this_turn"
+                        },
+                    },
+                ],
+            },
+            unsupported=[],
+        )
+
+    if cid == "paules-cafe":
+        return base(
+            c,
+            paidAbilities=[
+                {
+                    "id": "paules-cafe-host",
+                    "label": (
+                        "[click]: Host 1 program or hardware from grip "
+                        "faceup on this resource"
+                    ),
+                    "clickCost": 1,
+                    "creditCost": 0,
+                    "cost": {"clicks": 1},
+                    "windows": ["runner_action_paw"],
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": (
+                                "may_host_one_program_or_hardware_from_grip_faceup"
+                            )
+                        },
+                    },
+                },
+                {
+                    "id": "paules-cafe-install",
+                    "label": (
+                        "1¢: Install 1 hosted card (first this turn −1¢ per "
+                        "unique ♦ connection resource installed)"
+                    ),
+                    "clickCost": 0,
+                    "creditCost": 1,
+                    "cost": {"credits": 1},
+                    "windows": ["runner_action_paw"],
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "may_install_one_hosted_card",
+                            "firstThisTurnDiscountPerUniqueConnection": True,
+                        },
+                    },
+                },
+            ],
+            unsupported=[],
+        )
+
+    if cid == "konjin":
+        return base(
+            c,
+            onEncounter={
+                "op": "do",
+                "action": {
+                    "kind": "play_psi_game",
+                    "maxBid": 2,
+                    "ifBidsDiffer": {
+                        "op": "do",
+                        "action": {
+                            "kind": (
+                                "may_choose_other_rezzed_ice_encounter_"
+                                "then_resume_source"
+                            )
+                        },
+                    },
+                },
+            },
+            unsupported=[],
+        )
+
+    if cid == "buffer-drive":
+        return base(
+            c,
+            onFirstGripOrStackTrashBatchEachTurn={
+                "op": "do",
+                "action": {
+                    "kind": "may_add_one_of_card_ids_to_stack_bottom"
+                },
+            },
+            paidAbilities=[
+                {
+                    "id": "buffer-drive-heap-top",
+                    "label": (
+                        "Remove Buffer Drive from the game: Add 1 card from "
+                        "your heap to the top of your stack"
+                    ),
+                    "clickCost": 0,
+                    "creditCost": 0,
+                    "cost": {},
+                    "windows": ["runner_action_paw"],
+                    "effect": {
+                        "op": "seq",
+                        "effects": [
+                            {
+                                "op": "do",
+                                "action": {"kind": "rfg_self"},
+                            },
+                            {
+                                "op": "do",
+                                "action": {
+                                    "kind": "may_add_from_heap_to_stack_top"
+                                },
+                            },
+                        ],
+                    },
+                }
+            ],
+            unsupported=[],
+        )
+
     # Fail closed — honest unsupported note for the remainder.
     card = base(c)
     card["unsupported"] = [f"Full text not yet mapped to IR: {plain[:240]}"]
@@ -1775,7 +1980,7 @@ def main():
             "Null Signal Uprising (NRDB pack ur) — Ashes set 2 of 2; first "
             "legacy backwards wave before System Gateway. urbp titles absorbed. "
             f"In-progress: {full} cards fully mapped, {partial} with unsupported "
-            "notes (wave slice v1.44.0)."
+            "notes (wave slice v1.45.0)."
         ),
         "cards": written,
     }
