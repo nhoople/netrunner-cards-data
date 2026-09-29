@@ -37,7 +37,7 @@ Match this dataset and [netrunner-engine](https://github.com/nhoople/netrunner-e
 
 | Pairing | cards-data | engine |
 |---------|------------|--------|
-| **Current** | [`v1.37.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.37.0) | engine same-semver pin `v1.37.0` |
+| **Current** | [`v1.37.1`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.37.1) | engine same-semver pin `v1.37.1` (prefer over mistagged `v1.37.0`) |
 | Post-VP maintenance | [`v1.34.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.34.0) | [`v1.34.0`](https://github.com/nhoople/netrunner-engine/releases/tag/v1.34.0) |
 | Vantage Point milestone | [`v1.33.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.33.0) | [`v1.33.0`](https://github.com/nhoople/netrunner-engine/releases/tag/v1.33.0) |
 | Elevation milestone | [`v1.12.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.12.0) | [`v1.12.0`](https://github.com/nhoople/netrunner-engine/releases/tag/v1.12.0) |
@@ -59,14 +59,14 @@ npm run demo:library  # createGame → queryLegality → applyIntent → getPubl
 Example raw URL base (match the **current** pairing tag):
 
 ```text
-https://raw.githubusercontent.com/nhoople/netrunner-cards-data/v1.37.0/data
+https://raw.githubusercontent.com/nhoople/netrunner-cards-data/v1.37.1/data
 ```
 
 JavaScript — load the pool and one card from a tagged release:
 
 ```js
 const base =
-  "https://raw.githubusercontent.com/nhoople/netrunner-cards-data/v1.37.0/data";
+  "https://raw.githubusercontent.com/nhoople/netrunner-cards-data/v1.37.1/data";
 const pool = await fetch(`${base}/pool.json`).then((r) => r.json());
 const marjanah = await fetch(`${base}/system-gateway/marjanah.json`).then((r) =>
   r.json(),
@@ -78,7 +78,7 @@ console.log(pool.corpusOrder, marjanah.title);
 
 | Release | Count | Notes |
 |---------|------:|-------|
-| uprising | 65 | Null Signal Uprising (`ur`); Ashes set 2; **in-progress** (B-slice `v1.37.0`; **17/65** mapped; `urbp` absorbed) |
+| uprising | 65 | Null Signal Uprising (`ur`); Ashes set 2; **in-progress** (B-slice `v1.37.1`; **17/65** mapped; `urbp` absorbed) |
 | system-gateway | 77 | Null Signal System Gateway (fully supported) |
 | system-update-2021 | 82 | Null Signal System Update 2021 (fully supported) |
 | midnight-sun | 65 | Null Signal Midnight Sun (`ms`); `msbp` titles absorbed; fully supported |
@@ -90,7 +90,7 @@ console.log(pool.corpusOrder, marjanah.title);
 
 Synthetic stubs and early wave1/wave2 dirs were removed in `v0.2.0`. Reprints that previously lived only under those waves now ship under their Null Signal release directories.
 
-Parhelion is fully supported (wave gate `v0.71.0`). The Automata Initiative is fully supported (wave gate `v0.86.0`). Rebellion Without Rehearsal is fully supported (wave gate `v1.00.0`). Elevation is fully supported (wave gate `v1.12.0`). Vantage Point is fully supported (wave gate `v1.33.0`). Uprising is the first **legacy backwards** wave (pre-Gateway); B-slice `v1.37.0` at **17/65**.
+Parhelion is fully supported (wave gate `v0.71.0`). The Automata Initiative is fully supported (wave gate `v0.86.0`). Rebellion Without Rehearsal is fully supported (wave gate `v1.00.0`). Elevation is fully supported (wave gate `v1.12.0`). Vantage Point is fully supported (wave gate `v1.33.0`). Uprising is the first **legacy backwards** wave (pre-Gateway); B-slice `v1.37.1` at **17/65**.
 
 **Next:** continue Uprising clears toward `supported`. Further backwards after Uprising: Downfall (`df`, 65; skip/absorb Magnum Opus Reprint). Forward after VP still waits on a new NSG pack or CR bump. Pair every clear with the engine CR adherence gate; at set-complete, run interaction smoke.
 
