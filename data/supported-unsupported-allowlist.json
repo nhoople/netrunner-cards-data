@@ -1,0 +1,5 @@
+{
+  "version": 1,
+  "description": "Cards allowed to retain non-empty unsupported while their pool wave status is supported. Key = card id, value = deferral reason (CR cite and/or tracking note). Prefer empty: leave the wave non-supported until clears land.",
+  "cards": {}
+}

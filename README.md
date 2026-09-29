@@ -28,7 +28,7 @@ Files under [`data/`](data/) are the API. Clone the repo or fetch a **tagged** r
 
 **Corpus order:** System Gateway → System Update 2021 → Midnight Sun → Parhelion → The Automata Initiative → Rebellion Without Rehearsal → Elevation → Vantage Point → later releases.
 
-Partial cards list unimplemented clauses in an `unsupported` array — never silent wrong behavior.
+Partial cards list unimplemented clauses in an `unsupported` array — never silent wrong behavior. A wave marked `supported` in [`data/pool.json`](data/pool.json) must keep those arrays empty unless the card is listed with a reason in [`data/supported-unsupported-allowlist.json`](data/supported-unsupported-allowlist.json) (enforced by `scripts/validate-cards.py`). See [`CONTRIBUTING.md`](CONTRIBUTING.md) for the CR gate PR template.
 
 ### Cards ↔ engine pairing
 
