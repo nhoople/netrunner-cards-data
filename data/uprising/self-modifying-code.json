@@ -5,9 +5,28 @@
   "nrdbCode": "26090",
   "type": "program",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: 2[credit], [trash]: Search your stack for 1 program. Install it. (Shuffle your stack after searching it.)"
-  ],
+  "unsupported": [],
   "installCost": 0,
-  "memoryCost": 2
+  "memoryCost": 2,
+  "paidAbilities": [
+    {
+      "id": "smc-search",
+      "label": "2¢, [trash]: Search stack for a program and install it",
+      "clickCost": 0,
+      "creditCost": 2,
+      "cost": {
+        "credits": 2,
+        "trashSelf": true
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "search_stack_program_install"
+        }
+      }
+    }
+  ]
 }
