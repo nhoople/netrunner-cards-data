@@ -5,13 +5,40 @@
   "nrdbCode": "26082",
   "type": "resource",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: The first time each turn you use a piece of hardware during a run, place 1 power counter on this resource. [click], remove this resource from the game: For each hosted power counter, choose up to 2 cards in your heap with [trash] abilities."
-  ],
+  "unsupported": [],
   "subtypes": [
     "job",
     "location"
   ],
   "installCost": 1,
-  "unique": true
+  "unique": true,
+  "onFirstHardwareUseDuringRunEachTurn": {
+    "op": "do",
+    "action": {
+      "kind": "add_power_counter",
+      "amount": 1
+    }
+  },
+  "paidAbilities": [
+    {
+      "id": "the-back-heap-shuffle",
+      "label": "[click], remove The Back from the game: For each hosted power counter, shuffle up to 2 heap cards with [trash] abilities into your stack",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1,
+        "rfgSelf": true
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "shuffle_up_to_n_heap_cards_with_trash_abilities_into_stack",
+          "nPerPowerCounter": 2
+        }
+      }
+    }
+  ]
 }

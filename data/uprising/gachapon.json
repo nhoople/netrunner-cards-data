@@ -5,11 +5,29 @@
   "nrdbCode": "26069",
   "type": "hardware",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: [trash]: Set aside the top 6 cards of your stack faceup. You may install 1 program or virtual resource from among those cards, paying 2[credit] less. Shuffle 3 of the remaining cards into your stack, then remove the rest from the game."
-  ],
+  "unsupported": [],
   "subtypes": [
     "chip"
   ],
-  "installCost": 0
+  "installCost": 0,
+  "paidAbilities": [
+    {
+      "id": "gachapon-resolve",
+      "label": "[trash]: Set aside top 6 faceup; may install program/virtual −2¢; shuffle 3; RFG rest",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "trashSelf": true
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "gachapon_resolve"
+        }
+      }
+    }
+  ]
 }

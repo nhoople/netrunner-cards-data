@@ -5,11 +5,40 @@
   "nrdbCode": "26111",
   "type": "operation",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: As an additional cost to play this operation, spend [click][click]. Trash any number of cards from HQ. Turn all cards in Archives facedown. You may install 1 card from Archives in the root of a remote server and place 2 advancement counters"
-  ],
+  "unsupported": [],
   "subtypes": [
     "triple"
   ],
-  "playCost": 2
+  "playCost": 2,
+  "playAdditionalClicks": 2,
+  "onPlay": {
+    "op": "seq",
+    "effects": [
+      {
+        "op": "do",
+        "action": {
+          "kind": "trash_any_number_from_hq"
+        }
+      },
+      {
+        "op": "do",
+        "action": {
+          "kind": "turn_all_archives_facedown"
+        }
+      },
+      {
+        "op": "do",
+        "action": {
+          "kind": "may_install_from_archives_in_remote_root_with_advancements",
+          "amount": 2
+        }
+      },
+      {
+        "op": "do",
+        "action": {
+          "kind": "rfg_self"
+        }
+      }
+    ]
+  }
 }

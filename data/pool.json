@@ -15,8 +15,8 @@
   ],
   "waves": {
     "uprising": {
-      "status": "in-progress",
-      "notes": "Null Signal Uprising — in-progress under pin v1.45.0 (J-slice).",
+      "status": "supported",
+      "notes": "Null Signal Uprising (NRDB pack ur) — Ashes set 2 of 2; 65 cards. Fully supported: all 65 cards mapped (wave gate v1.46.0).",
       "cards": [
         "hoshiko-shiro-untold-protagonist",
         "moshing",

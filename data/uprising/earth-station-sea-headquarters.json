@@ -5,10 +5,41 @@
   "nrdbCode": "26120",
   "type": "identity",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: Limit 1 remote server. As an additional cost to run HQ, the Runner must pay 1[credit]. [click]: Flip this identity. Flip side: Limit 1 remote server. As an additional cost to run a remote server, the Runner must pay 6[credit]. When the Runn"
-  ],
+  "unsupported": [],
   "subtypes": [
     "division"
-  ]
+  ],
+  "maxRemoteServers": 1,
+  "additionalRunInitiateCredits": {
+    "hqUnflipped": 1,
+    "remoteFlipped": 6
+  },
+  "paidAbilities": [
+    {
+      "id": "earth-station-flip",
+      "label": "[click]: Flip this identity",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "flip_identity"
+        }
+      }
+    }
+  ],
+  "identityFlippedHooks": {
+    "onSuccessfulHqRun": {
+      "op": "do",
+      "action": {
+        "kind": "flip_identity"
+      }
+    }
+  }
 }

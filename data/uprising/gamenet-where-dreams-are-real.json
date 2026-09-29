@@ -5,10 +5,16 @@
   "nrdbCode": "26113",
   "type": "identity",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: Whenever a Corp card ability causes the Runner to spend or lose at least 1[credit] during a run, gain 1[credit]."
-  ],
+  "unsupported": [],
   "subtypes": [
     "division"
-  ]
+  ],
+  "onCorpAbilityCausesRunnerSpendOrLoseCreditsDuringRun": {
+    "op": "do",
+    "action": {
+      "kind": "gain_credits",
+      "side": "corp",
+      "amount": 1
+    }
+  }
 }
