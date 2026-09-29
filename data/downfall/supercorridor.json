@@ -5,12 +5,49 @@
   "nrdbCode": "26023",
   "type": "hardware",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: +2[mu] You get +1 maximum hand size. When your turn ends, if you and the Corp have the same number of credits, you may gain 2[credit]. Limit 1 console per player."
-  ],
+  "unsupported": [],
   "subtypes": [
     "console"
   ],
   "installCost": 4,
-  "unique": true
+  "unique": true,
+  "muBonus": 2,
+  "handSizeBonus": 1,
+  "onRunnerTurnEnd": {
+    "op": "if",
+    "cond": {
+      "op": "credits_eq_other_side",
+      "side": "runner"
+    },
+    "then": {
+      "op": "choose",
+      "chooser": "runner",
+      "options": [
+        {
+          "id": "gain",
+          "label": "Gain 2¢",
+          "effect": {
+            "op": "do",
+            "action": {
+              "kind": "gain_credits",
+              "side": "runner",
+              "amount": 2
+            }
+          }
+        },
+        {
+          "id": "decline",
+          "label": "Decline",
+          "effect": {
+            "op": "do",
+            "action": {
+              "kind": "gain_credits",
+              "side": "runner",
+              "amount": 0
+            }
+          }
+        }
+      ]
+    }
+  }
 }

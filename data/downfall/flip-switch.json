@@ -5,8 +5,67 @@
   "nrdbCode": "26013",
   "type": "hardware",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Use this hardware only during your turn. [trash]: Jack out. [trash]: Remove 1 tag. [interrupt] → [trash]: Reduce the base trace strength of a trace to 0."
-  ],
-  "installCost": 1
+  "unsupported": [],
+  "installCost": 1,
+  "paidAbilities": [
+    {
+      "id": "flip-switch-jack-out",
+      "label": "[trash]: Jack out",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "trashSelf": true
+      },
+      "requireDuringRun": true,
+      "windows": [
+        "approach_paw",
+        "encounter_paw",
+        "approach_server_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "end_the_run"
+        }
+      }
+    },
+    {
+      "id": "flip-switch-remove-tag",
+      "label": "[trash]: Remove 1 tag",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "trashSelf": true
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "remove_tags",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "id": "flip-switch-trace",
+      "label": "[interrupt] → [trash]: Reduce base trace strength to 0",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "trashSelf": true
+      },
+      "windows": [
+        "trace_interrupt_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "set_trace_base_strength",
+          "amount": 0
+        }
+      }
+    }
+  ]
 }

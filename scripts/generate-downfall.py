@@ -621,6 +621,119 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    # --- v1.51.0 D-slice ---
+
+    if cid == "supercorridor":
+        return base(
+            c,
+            muBonus=2,
+            handSizeBonus=1,
+            onRunnerTurnEnd={
+                "op": "if",
+                "cond": {"op": "credits_eq_other_side", "side": "runner"},
+                "then": {
+                    "op": "choose",
+                    "chooser": "runner",
+                    "options": [
+                        {
+                            "id": "gain",
+                            "label": "Gain 2¢",
+                            "effect": gain("runner", 2),
+                        },
+                        decline("runner"),
+                    ],
+                },
+            },
+            unsupported=[],
+        )
+
+    if cid == "public-health-portal":
+        return base(
+            c,
+            onTurnBegin={
+                "op": "seq",
+                "effects": [
+                    {
+                        "op": "do",
+                        "action": {"kind": "reveal_top_of_rd"},
+                    },
+                    gain("corp", 2),
+                ],
+            },
+            unsupported=[],
+        )
+
+    if cid == "demolisher":
+        return base(
+            c,
+            muBonus=1,
+            corpCardTrashCostReduction=1,
+            onFirstCorpCardTrashEachTurn=gain("runner", 1),
+            unsupported=[],
+        )
+
+    if cid == "flip-switch":
+        return base(
+            c,
+            paidAbilities=[
+                {
+                    "id": "flip-switch-jack-out",
+                    "label": "[trash]: Jack out",
+                    "clickCost": 0,
+                    "creditCost": 0,
+                    "cost": {"trashSelf": True},
+                    "requireDuringRun": True,
+                    "windows": [
+                        "approach_paw",
+                        "encounter_paw",
+                        "approach_server_paw",
+                    ],
+                    "effect": {
+                        "op": "do",
+                        "action": {"kind": "end_the_run"},
+                    },
+                },
+                {
+                    "id": "flip-switch-remove-tag",
+                    "label": "[trash]: Remove 1 tag",
+                    "clickCost": 0,
+                    "creditCost": 0,
+                    "cost": {"trashSelf": True},
+                    "windows": ["runner_action_paw"],
+                    "effect": {
+                        "op": "do",
+                        "action": {"kind": "remove_tags", "amount": 1},
+                    },
+                },
+                {
+                    "id": "flip-switch-trace",
+                    "label": "[interrupt] → [trash]: Reduce base trace strength to 0",
+                    "clickCost": 0,
+                    "creditCost": 0,
+                    "cost": {"trashSelf": True},
+                    "windows": ["trace_interrupt_paw"],
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "set_trace_base_strength",
+                            "amount": 0,
+                        },
+                    },
+                },
+            ],
+            unsupported=[],
+        )
+
+    if cid == "fully-operational":
+        return base(
+            c,
+            onPlay={
+                "op": "do",
+                "action": {"kind": "fully_operational_resolve"},
+            },
+            unsupported=[],
+        )
+
     # Fail closed — honest unsupported note for the remainder.
     card = base(c)
     card["unsupported"] = [f"Full text not yet mapped to IR: {plain[:240]}"]
@@ -661,7 +774,7 @@ def main():
         "Null Signal Downfall (NRDB pack df) — Ashes set 1 of 2; legacy "
         "backwards wave before Uprising / System Gateway. Skip Magnum Opus "
         f"Reprint (mor). In-progress: {full} cards fully mapped, {partial} "
-        "with unsupported notes (C-slice v1.50.0)."
+        "with unsupported notes (D-slice v1.51.0)."
     )
     manifest = {
         "pack": WAVE,

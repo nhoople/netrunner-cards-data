@@ -5,8 +5,12 @@
   "nrdbCode": "26036",
   "type": "operation",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: Gain 2[credit] or draw 2 cards. Repeat this process for each remote server that has a card in its root and is protected by ice."
-  ],
-  "playCost": 1
+  "unsupported": [],
+  "playCost": 1,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "fully_operational_resolve"
+    }
+  }
 }
