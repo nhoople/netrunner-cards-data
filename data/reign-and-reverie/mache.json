@@ -1,0 +1,14 @@
+{
+  "id": "mache",
+  "title": "Mâché",
+  "wave": "reign-and-reverie",
+  "nrdbCode": "22018",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: The first time you trash an accessed card each turn, you may place power counters on Mâché equal to that card's trash cost. 3 hosted power counters: Draw 1 card."
+  ],
+  "faction": "shaper",
+  "installCost": 1,
+  "unique": true
+}

@@ -1,0 +1,15 @@
+{
+  "id": "daruma",
+  "title": "Daruma",
+  "wave": "reign-and-reverie",
+  "nrdbCode": "22041",
+  "type": "upgrade",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: When the Runner approaches this server, you may trash this upgrade. If you do, choose 1 card in the root of another server or 1 agenda, asset, or upgrade in HQ. Swap that card with 1 card in the root of this server. If you swap cards this w"
+  ],
+  "faction": "jinteki",
+  "installCost": 1,
+  "rezCost": 1,
+  "trashCost": 2
+}

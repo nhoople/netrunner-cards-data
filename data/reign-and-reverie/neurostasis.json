@@ -1,0 +1,18 @@
+{
+  "id": "neurostasis",
+  "title": "Neurostasis",
+  "wave": "reign-and-reverie",
+  "nrdbCode": "22037",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: Neurostasis can be advanced. If you pay 3[credit] when the Runner accesses Neurostasis, choose 1 installed Runner card for each advancement token on Neurostasis. The Runner must shuffle the chosen cards into the stack."
+  ],
+  "faction": "jinteki",
+  "subtypes": [
+    "ambush"
+  ],
+  "installCost": 0,
+  "rezCost": 0,
+  "trashCost": 1
+}

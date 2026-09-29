@@ -1,0 +1,17 @@
+{
+  "id": "psych-mike",
+  "title": "Psych Mike",
+  "wave": "reign-and-reverie",
+  "nrdbCode": "22021",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: The first time each turn a successful run on R&D ends, you may gain 1[credit] for each time you accessed a card in R&D during that run."
+  ],
+  "faction": "shaper",
+  "subtypes": [
+    "connection"
+  ],
+  "installCost": 1,
+  "unique": true
+}

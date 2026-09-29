@@ -1,0 +1,15 @@
+{
+  "id": "algernon",
+  "title": "Algernon",
+  "wave": "reign-and-reverie",
+  "nrdbCode": "22022",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: When your turn begins, you may pay 2[credit] to gain [click]. If you do, trash Algernon when your turn ends if you did not make a successful run this turn."
+  ],
+  "faction": "adam",
+  "installCost": 0,
+  "memoryCost": 1,
+  "unique": true
+}

@@ -1,0 +1,18 @@
+{
+  "id": "gatekeeper",
+  "title": "Gatekeeper",
+  "wave": "reign-and-reverie",
+  "nrdbCode": "22029",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: Gatekeeper has +6 strength if you rezzed it this turn. [subroutine] Draw up to 3 cards. Reveal up to 3 agendas in HQ and/or Archives, then shuffle those agendas into R&D. [subroutine] End the run."
+  ],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "code gate"
+  ],
+  "installCost": 3,
+  "rezCost": 3,
+  "strength": 0
+}

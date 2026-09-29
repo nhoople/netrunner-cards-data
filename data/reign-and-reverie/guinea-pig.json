@@ -1,0 +1,13 @@
+{
+  "id": "guinea-pig",
+  "title": "Guinea Pig",
+  "wave": "reign-and-reverie",
+  "nrdbCode": "22003",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: Trash your grip. Gain 10[credit]."
+  ],
+  "faction": "anarch",
+  "playCost": 4
+}

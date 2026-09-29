@@ -1,0 +1,19 @@
+{
+  "id": "tycoon",
+  "title": "Tycoon",
+  "wave": "reign-and-reverie",
+  "nrdbCode": "22012",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: Interface → 1[credit]: Break up to 2 barrier subroutines. 2[credit]: +3 strength. Whenever an encounter ends, if you used this program to break a subroutine during that encounter, the Corp gains 2[credit]."
+  ],
+  "faction": "criminal",
+  "subtypes": [
+    "icebreaker",
+    "fracter"
+  ],
+  "installCost": 1,
+  "strength": 1,
+  "memoryCost": 1
+}

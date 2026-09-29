@@ -1,0 +1,15 @@
+{
+  "id": "sportsmetal-go-big-or-go-home",
+  "title": "Sportsmetal: Go Big or Go Home",
+  "wave": "reign-and-reverie",
+  "nrdbCode": "22026",
+  "type": "identity",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: Whenever an agenda is scored or stolen, gain 2[credit] or draw 2 cards."
+  ],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "subsidiary"
+  ]
+}

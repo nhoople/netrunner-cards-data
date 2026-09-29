@@ -1,0 +1,13 @@
+{
+  "id": "building-blocks",
+  "title": "Building Blocks",
+  "wave": "reign-and-reverie",
+  "nrdbCode": "22055",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: Reveal a barrier from HQ. Install and rez it, ignoring all costs."
+  ],
+  "faction": "weyland-consortium",
+  "playCost": 5
+}

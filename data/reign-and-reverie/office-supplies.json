@@ -1,0 +1,13 @@
+{
+  "id": "office-supplies",
+  "title": "Office Supplies",
+  "wave": "reign-and-reverie",
+  "nrdbCode": "22024",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: Reduce the play cost of Office Supplies by 1 for each [link] you have. Gain 4[credit] or draw 4 cards."
+  ],
+  "faction": "sunny-lebeau",
+  "playCost": 4
+}

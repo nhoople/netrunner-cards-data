@@ -1,0 +1,17 @@
+{
+  "id": "minds-eye",
+  "title": "Mind's Eye",
+  "wave": "reign-and-reverie",
+  "nrdbCode": "22017",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: +1[mu] Whenever you make a successful run on R&D, you may place 1 power counter on this hardware. [click], 3 hosted power counters: Breach R&D. You cannot access cards in the root of R&D during this breach. Limit 1 console per player."
+  ],
+  "faction": "shaper",
+  "subtypes": [
+    "console"
+  ],
+  "installCost": 3,
+  "unique": true
+}

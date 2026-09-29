@@ -1,0 +1,17 @@
+{
+  "id": "under-the-bus",
+  "title": "Under the Bus",
+  "wave": "reign-and-reverie",
+  "nrdbCode": "22057",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: Play only if the Runner accessed a card during their last turn. Trash 1 installed connection resource and take 1 bad publicity."
+  ],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "gray ops",
+    "liability"
+  ],
+  "playCost": 1
+}

@@ -1,0 +1,22 @@
+{
+  "id": "fly-on-the-wall",
+  "title": "Fly on the Wall",
+  "wave": "reign-and-reverie",
+  "nrdbCode": "22043",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "subtypes": [
+    "initiative"
+  ],
+  "advancementRequirement": 3,
+  "agendaPoints": 1,
+  "onScore": {
+    "op": "do",
+    "action": {
+      "kind": "give_tags",
+      "amount": 1
+    }
+  }
+}

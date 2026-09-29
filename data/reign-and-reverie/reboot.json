@@ -1,0 +1,16 @@
+{
+  "id": "reboot",
+  "title": "Reboot",
+  "wave": "reign-and-reverie",
+  "nrdbCode": "22023",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: Run Archives. If successful, instead of breaching Archives, install up to 5 cards from your heap facedown. Remove this event from the game."
+  ],
+  "faction": "apex",
+  "subtypes": [
+    "run"
+  ],
+  "playCost": 1
+}

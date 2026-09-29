@@ -1,0 +1,14 @@
+{
+  "id": "hijacked-router",
+  "title": "Hijacked Router",
+  "wave": "reign-and-reverie",
+  "nrdbCode": "22005",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: Whenever the Corp creates a server, they lose 1[credit]. Whenever you make a successful run on Archives, you may trash this hardware. If you do, the Corp loses 3[credit]."
+  ],
+  "faction": "anarch",
+  "installCost": 2,
+  "unique": true
+}

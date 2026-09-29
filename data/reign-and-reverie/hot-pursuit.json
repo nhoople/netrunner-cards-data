@@ -1,0 +1,37 @@
+{
+  "id": "hot-pursuit",
+  "title": "Hot Pursuit",
+  "wave": "reign-and-reverie",
+  "nrdbCode": "22009",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "subtypes": [
+    "run"
+  ],
+  "playCost": 2,
+  "runEvent": {
+    "servers": "hq",
+    "onSuccessfulRun": {
+      "op": "seq",
+      "effects": [
+        {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "runner",
+            "amount": 9
+          }
+        },
+        {
+          "op": "do",
+          "action": {
+            "kind": "give_tags",
+            "amount": 1
+          }
+        }
+      ]
+    }
+  }
+}

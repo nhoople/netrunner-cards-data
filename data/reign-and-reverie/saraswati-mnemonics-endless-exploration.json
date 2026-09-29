@@ -1,0 +1,15 @@
+{
+  "id": "saraswati-mnemonics-endless-exploration",
+  "title": "Saraswati Mnemonics: Endless Exploration",
+  "wave": "reign-and-reverie",
+  "nrdbCode": "22034",
+  "type": "identity",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: [click], 1[credit]: Install 1 card from HQ in the root of a remote server, then place 1 advancement counter on it. You cannot score or rez that card until your next turn begins."
+  ],
+  "faction": "jinteki",
+  "subtypes": [
+    "division"
+  ]
+}
