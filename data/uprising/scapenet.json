@@ -5,11 +5,28 @@
   "nrdbCode": "26104",
   "type": "operation",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: Play only if the Runner made a successful run during their last turn. Trace[7]. If successful, remove 1 installed chip or virtual card from the game."
-  ],
+  "unsupported": [],
   "subtypes": [
     "gray ops"
   ],
-  "playCost": 1
+  "playCost": 1,
+  "playRequiresSuccessfulRunLastTurn": true,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "trace",
+      "strength": 7,
+      "onSuccess": {
+        "op": "do",
+        "action": {
+          "kind": "rfg_installed_with_any_subtype",
+          "subtypes": [
+            "chip",
+            "virtual"
+          ],
+          "pick": "choose"
+        }
+      }
+    }
+  }
 }

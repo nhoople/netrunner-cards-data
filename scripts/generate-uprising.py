@@ -1053,6 +1053,102 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    # --- E-slice (v1.40.0): Cerebral Overwriter / Bravado / Scapenet /
+    # Megaprix Qualifier / Harmony AR Therapy ---
+
+    if cid == "cerebral-overwriter":
+        return base(
+            c,
+            canAdvance=True,
+            onAccess={
+                "op": "if",
+                "cond": {"op": "source_installed"},
+                "then": {
+                    "op": "do",
+                    "action": {
+                        "kind": "may_pay_credits_for_core_damage_per_advancement",
+                        "amount": 3,
+                    },
+                },
+            },
+            unsupported=[],
+        )
+
+    if cid == "bravado":
+        return base(
+            c,
+            runEvent={
+                "servers": "any",
+                "requiresProtectingIce": True,
+                "onRunEnd": {
+                    "op": "do",
+                    "action": {
+                        "kind": "gain_credits_base_plus_per_passed_ice",
+                        "side": "runner",
+                        "base": 6,
+                        "per": 1,
+                    },
+                },
+            },
+            unsupported=[],
+        )
+
+    if cid == "scapenet":
+        return base(
+            c,
+            playRequiresSuccessfulRunLastTurn=True,
+            onPlay={
+                "op": "do",
+                "action": {
+                    "kind": "trace",
+                    "strength": 7,
+                    "onSuccess": {
+                        "op": "do",
+                        "action": {
+                            "kind": "rfg_installed_with_any_subtype",
+                            "subtypes": ["chip", "virtual"],
+                            "pick": "choose",
+                        },
+                    },
+                },
+            },
+            unsupported=[],
+        )
+
+    if cid == "megaprix-qualifier":
+        return base(
+            c,
+            onScore={
+                "op": "if",
+                "cond": {"op": "another_copy_of_source_title_in_either_score_area"},
+                "then": {
+                    "op": "do",
+                    "action": {"kind": "add_agenda_counter", "amount": 1},
+                },
+            },
+            agendaPointsPerAgendaCounter=1,
+            unsupported=[],
+        )
+
+    if cid == "harmony-ar-therapy":
+        return base(
+            c,
+            onPlay={
+                "op": "seq",
+                "effects": [
+                    {
+                        "op": "do",
+                        "action": {
+                            "kind": "shuffle_up_to_n_distinct_heap_titles_into_stack",
+                            "max": 5,
+                        },
+                    },
+                    {"op": "do", "action": {"kind": "rfg_self"}},
+                ],
+            },
+            unsupported=[],
+        )
+
     # Fail closed — honest unsupported note for the remainder.
     card = base(c)
     card["unsupported"] = [f"Full text not yet mapped to IR: {plain[:240]}"]
@@ -1098,7 +1194,7 @@ def main():
             "Null Signal Uprising (NRDB pack ur) — Ashes set 2 of 2; first "
             "legacy backwards wave before System Gateway. urbp titles absorbed. "
             f"In-progress: {full} cards fully mapped, {partial} with unsupported "
-            "notes (wave slice v1.39.0)."
+            "notes (wave slice v1.40.0)."
         ),
         "cards": written,
     }
