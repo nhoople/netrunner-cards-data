@@ -5,12 +5,51 @@
   "nrdbCode": "26040",
   "type": "agenda",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: When you score this agenda, place 1 agenda counter on it for each hosted advancement counter past 3. Hosted agenda counter: Swap 1 card from HQ with 1 card in the root of or protecting the attacked server. The Runner may jack out. Use this "
-  ],
+  "unsupported": [],
   "subtypes": [
     "research"
   ],
   "advancementRequirement": 3,
-  "agendaPoints": 2
+  "agendaPoints": 2,
+  "onScore": {
+    "op": "do",
+    "action": {
+      "kind": "add_agenda_counters_from_overadvance",
+      "past": 3
+    }
+  },
+  "paidAbilities": [
+    {
+      "id": "yagi-swap",
+      "label": "Hosted agenda counter: Swap 1 HQ card with 1 card in the root of or protecting the attacked server; Runner may jack out",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "agendaCounters": 1
+      },
+      "windows": [
+        "approach_paw",
+        "encounter_paw",
+        "approach_server_paw"
+      ],
+      "requireDuringRun": true,
+      "effect": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "yagi_swap_hq_with_attacked_root_or_ice"
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "offer_jack_out"
+            }
+          }
+        ]
+      }
+    }
+  ]
 }

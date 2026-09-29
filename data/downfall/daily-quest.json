@@ -5,10 +5,31 @@
   "nrdbCode": "26048",
   "type": "asset",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: Rez only during your action phase. Whenever the Runner makes a successful run on this server, they gain 2[credit]. When your turn begins, if the Runner did not make a successful run on this server during their last turn, gain 3[credit]."
-  ],
+  "unsupported": [],
   "installCost": 1,
   "rezCost": 1,
-  "trashCost": 3
+  "trashCost": 3,
+  "rezOnlyDuringCorpTurn": true,
+  "onSuccessfulRun": {
+    "op": "do",
+    "action": {
+      "kind": "gain_credits",
+      "side": "runner",
+      "amount": 2
+    }
+  },
+  "onTurnBegin": {
+    "op": "if",
+    "cond": {
+      "op": "no_successful_run_on_host_server_last_turn"
+    },
+    "then": {
+      "op": "do",
+      "action": {
+        "kind": "gain_credits",
+        "side": "corp",
+        "amount": 3
+      }
+    }
+  }
 }
