@@ -5,12 +5,57 @@
   "nrdbCode": "22044",
   "type": "asset",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: When your turn begins, you may trash SIU to Trace[3]. If successful, give the Runner 1 tag."
-  ],
+  "unsupported": [],
   "faction": "nbn",
   "installCost": 3,
   "rezCost": 3,
   "trashCost": 1,
-  "unique": true
+  "unique": true,
+  "onTurnBegin": {
+    "op": "choose",
+    "chooser": "corp",
+    "options": [
+      {
+        "id": "trash-trace",
+        "label": "Trash SIU to Trace[3]. If successful, give the Runner 1 tag.",
+        "effect": {
+          "op": "seq",
+          "effects": [
+            {
+              "op": "do",
+              "action": {
+                "kind": "trash_self"
+              }
+            },
+            {
+              "op": "do",
+              "action": {
+                "kind": "trace",
+                "strength": 3,
+                "onSuccess": {
+                  "op": "do",
+                  "action": {
+                    "kind": "give_tags",
+                    "amount": 1
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "corp",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  }
 }
