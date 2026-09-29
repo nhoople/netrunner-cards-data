@@ -852,6 +852,79 @@ def map_card(c: dict) -> dict | None:
             unsupported=[],
         )
 
+    # --- v1.66.0 G-slice: new Effect IR leaves (fail-closed engine pair) ---
+
+    if cid == "hq-interface":
+        return base(c, bonusAccessOnHqBreach=1, unsupported=[])
+
+    if cid == "r-d-interface":
+        return base(c, bonusAccessOnRdBreach=1, unsupported=[])
+
+    if cid == "closed-accounts":
+        return base(
+            c,
+            playRequiresTagged=True,
+            onPlay={
+                "op": "do",
+                "action": {"kind": "lose_all_credits", "side": "runner"},
+            },
+            unsupported=[],
+        )
+
+    if cid == "flare":
+        return base(
+            c,
+            subroutines=[
+                {
+                    "id": "flare-trace",
+                    "text": (
+                        "Trace[6]. If successful, trash 1 piece of hardware, "
+                        "do 2 meat damage (cannot be prevented), and end the run."
+                    ),
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "trace",
+                            "strength": 6,
+                            "onSuccess": seq(
+                                {
+                                    "op": "do",
+                                    "action": {
+                                        "kind": "trash_hardware",
+                                        "pick": "choose",
+                                    },
+                                },
+                                {
+                                    "op": "do",
+                                    "action": {
+                                        "kind": "meat_damage",
+                                        "amount": 2,
+                                        "cannotPrevent": True,
+                                    },
+                                },
+                                etr(),
+                            ),
+                        },
+                    },
+                }
+            ],
+            unsupported=[],
+        )
+
+    if cid == "leela-patel-trained-pragmatist":
+        return base(
+            c,
+            onAgendaScoredOrStolen={
+                "op": "do",
+                "action": {
+                    "kind": "return_installed_corp_to_hq",
+                    "pick": "choose",
+                    "unrezzedOnly": True,
+                },
+            },
+            unsupported=[],
+        )
+
     card = base(c)
     card["unsupported"] = [
         f"Full text not yet mapped to IR: {plain[:200]}"
@@ -950,6 +1023,13 @@ def main():
             "explode-a-palooza",
             "lamprey",
             "ghost-branch",
+        ],
+        "gSliceClears": [
+            "hq-interface",
+            "r-d-interface",
+            "closed-accounts",
+            "flare",
+            "leela-patel-trained-pragmatist",
         ],
     }
     (OUT / "_manifest.json").write_text(

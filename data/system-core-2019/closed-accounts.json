@@ -5,12 +5,18 @@
   "nrdbCode": "25117",
   "type": "operation",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: Play only if the Runner is tagged. The Runner loses all credits in their credit pool."
-  ],
+  "unsupported": [],
   "faction": "nbn",
   "subtypes": [
     "gray ops"
   ],
-  "playCost": 1
+  "playCost": 1,
+  "playRequiresTagged": true,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "lose_all_credits",
+      "side": "runner"
+    }
+  }
 }

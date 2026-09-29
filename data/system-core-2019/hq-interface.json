@@ -5,9 +5,8 @@
   "nrdbCode": "25031",
   "type": "hardware",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Whenever you breach HQ, access 1 additional card."
-  ],
+  "unsupported": [],
   "faction": "criminal",
-  "installCost": 4
+  "installCost": 4,
+  "bonusAccessOnHqBreach": 1
 }
