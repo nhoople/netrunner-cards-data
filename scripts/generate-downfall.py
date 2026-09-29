@@ -213,6 +213,113 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    # --- v1.48.0 A-slice ---
+
+    if cid == "congratulations":
+        return base(
+            c,
+            onPass=gain("corp", 1),
+            subroutines=[
+                {
+                    "id": "congratulations-credits",
+                    "text": "Gain 2[credit]. The Runner gains 1[credit].",
+                    "effect": {
+                        "op": "seq",
+                        "effects": [
+                            gain("corp", 2),
+                            gain("runner", 1),
+                        ],
+                    },
+                }
+            ],
+            unsupported=[],
+        )
+
+    if cid == "gauss":
+        return breaker_card(
+            c,
+            "barrier",
+            1,
+            1,
+            2,
+            2,
+            break_max=1,
+            onInstall={
+                "op": "do",
+                "action": {"kind": "gain_strength_this_turn", "amount": 3},
+            },
+            unsupported=[],
+        )
+
+    if cid == "spec-work":
+        return base(
+            c,
+            playRequiresInstalledProgram=True,
+            playAdditionalCost={
+                "op": "do",
+                "action": {"kind": "trash_own_program"},
+            },
+            onPlay={
+                "op": "seq",
+                "effects": [
+                    gain("runner", 4),
+                    draw("runner", 2),
+                ],
+            },
+            unsupported=[],
+        )
+
+    if cid == "nanoetching-matrix":
+        return base(
+            c,
+            paidAbilities=[
+                {
+                    "id": "nanoetching-matrix-gain",
+                    "label": "[click]: Gain 2¢",
+                    "clickCost": 1,
+                    "creditCost": 0,
+                    "cost": {"clicks": 1},
+                    "windows": ["corp_action_paw"],
+                    "oncePerTurn": True,
+                    "effect": gain("corp", 2),
+                }
+            ],
+            onTrash={
+                "op": "choose",
+                "chooser": "corp",
+                "options": [
+                    {
+                        "id": "gain",
+                        "label": "Gain 2¢",
+                        "effect": gain("corp", 2),
+                    },
+                    decline("corp"),
+                ],
+            },
+            unsupported=[],
+        )
+
+    if cid == "sandstone":
+        return base(
+            c,
+            onEncounter={
+                "op": "do",
+                "action": {"kind": "add_virus_counter", "amount": 1},
+            },
+            strengthPerVirusCounter=-1,
+            subroutines=[
+                {
+                    "id": "sandstone-etr",
+                    "text": "End the run.",
+                    "effect": {
+                        "op": "do",
+                        "action": {"kind": "end_the_run"},
+                    },
+                }
+            ],
+            unsupported=[],
+        )
+
     # Fail closed — honest unsupported note for the remainder.
     card = base(c)
     card["unsupported"] = [f"Full text not yet mapped to IR: {plain[:240]}"]
@@ -253,7 +360,7 @@ def main():
         "Null Signal Downfall (NRDB pack df) — Ashes set 1 of 2; legacy "
         "backwards wave before Uprising / System Gateway. Skip Magnum Opus "
         f"Reprint (mor). In-progress: {full} cards fully mapped, {partial} "
-        "with unsupported notes (wave kickoff v1.47.0)."
+        "with unsupported notes (A-slice v1.48.0)."
     )
     manifest = {
         "pack": WAVE,

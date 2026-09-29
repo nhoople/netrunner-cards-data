@@ -5,13 +5,31 @@
   "nrdbCode": "26059",
   "type": "ice",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: When the Runner encounters this ice, place 1 virus counter on it. This ice gets −1 strength for each hosted virus counter. [subroutine] End the run."
-  ],
+  "unsupported": [],
   "subtypes": [
     "barrier"
   ],
   "installCost": 3,
   "rezCost": 3,
-  "strength": 6
+  "strength": 6,
+  "onEncounter": {
+    "op": "do",
+    "action": {
+      "kind": "add_virus_counter",
+      "amount": 1
+    }
+  },
+  "strengthPerVirusCounter": -1,
+  "subroutines": [
+    {
+      "id": "sandstone-etr",
+      "text": "End the run.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "end_the_run"
+        }
+      }
+    }
+  ]
 }
