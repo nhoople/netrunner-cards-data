@@ -1721,6 +1721,14 @@
       "minimum": 1,
       "description": "When Corp scores an agenda from this server's root, do this much core damage (Djupstad Grid)."
     },
+    "onAgendaScoredFromThisServer": {
+      "type": "object",
+      "description": "Effect IR whenever an agenda is scored from this server's root while this card is rezzed (Arella Salvatore)."
+    },
+    "onFirstSuccessfulRunOnRdEndsThisTurn": {
+      "type": "object",
+      "description": "Effect IR the first time each turn a successful run on R&D ends while this card is installed (Psych Mike). Engine supplies R&D access count for gain_credits_equal_to_rd_accesses_this_run."
+    },
     "playRequiresAgendaStolenThisTurn": {
       "type": "boolean",
       "description": "Play only if the Runner stole an agenda this turn (Reprise)."

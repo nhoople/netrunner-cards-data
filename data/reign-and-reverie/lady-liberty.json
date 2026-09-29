@@ -5,9 +5,7 @@
   "nrdbCode": "22058",
   "type": "asset",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: When your turn begins, place 1 power counter on Lady Liberty. [click], [click], [click]: Add an agenda from HQ to your score area worth agenda points equal to the exact number of hosted power counters. Limit 1 region per server. Limit 1 per"
-  ],
+  "unsupported": [],
   "faction": "neutral-corp",
   "subtypes": [
     "region",
@@ -16,5 +14,33 @@
   "installCost": 5,
   "rezCost": 5,
   "trashCost": 4,
-  "unique": true
+  "unique": true,
+  "deckLimit": 1,
+  "onTurnBegin": {
+    "op": "do",
+    "action": {
+      "kind": "add_power_counter",
+      "amount": 1
+    }
+  },
+  "paidAbilities": [
+    {
+      "id": "lady-liberty-score",
+      "label": "[click][click][click]: Add an agenda from HQ to your score area worth agenda points equal to the exact number of hosted power counters",
+      "clickCost": 3,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 3
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "add_agenda_from_hq_to_score_worth_exact_hosted_power"
+        }
+      }
+    }
+  ]
 }

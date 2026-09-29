@@ -5,9 +5,14 @@
   "nrdbCode": "22030",
   "type": "operation",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: Derez any number of cards. You may rez a card, lowering its rez cost by 3 for each card that you derezzed this way."
-  ],
+  "unsupported": [],
   "faction": "haas-bioroid",
-  "playCost": 2
+  "playCost": 2,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "derez_any_number_then_may_rez_discount_per",
+      "creditsPerDerezzed": 3
+    }
+  }
 }

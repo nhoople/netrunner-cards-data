@@ -5,14 +5,26 @@
   "nrdbCode": "22038",
   "type": "ice",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: [subroutine] You may place up to 3 advancement counters on 1 card installed in the root of a remote server. If you do, the Runner accesses that card unless they pay 3[credit]."
-  ],
+  "unsupported": [],
   "faction": "jinteki",
   "subtypes": [
     "sentry"
   ],
   "installCost": 2,
   "rezCost": 2,
-  "strength": 5
+  "strength": 5,
+  "subroutines": [
+    {
+      "id": "otoroshi-place-access",
+      "text": "You may place up to 3 advancement counters on 1 card installed in the root of a remote server. If you do, the Runner accesses that card unless they pay 3[credit].",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "may_place_up_to_advancements_on_remote_root_then_access_unless_pay",
+          "maxAdvancements": 3,
+          "credits": 3
+        }
+      }
+    }
+  ]
 }
