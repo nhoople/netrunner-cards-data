@@ -871,17 +871,72 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
-    if cid == "secure-and-protect":
+    if cid == "utae":
         return base(
             c,
-            playAdditionalClick=True,
-            onPlay={
-                "op": "do",
-                "action": {
-                    "kind": "search_rd_ice_install_central_discount",
-                    "discount": 3,
-                },
+            breaker={
+                "breaksSubtype": "code gate",
+                "strength": c.get("strength") or 1,
+                "breakCredits": 1,
+                "breakMaxSubs": 1,
+                "pumpCredits": 1,
+                "pumpStrength": 1,
+                "breakViaPaidAbilityOnly": True,
             },
+            paidAbilities=[
+                {
+                    "id": "utae-break-x",
+                    "label": "X¢: Break X code gate subroutines (once per run)",
+                    "clickCost": 0,
+                    "creditCost": 0,
+                    "cost": {},
+                    "windows": ["encounter_paw"],
+                    "oncePerRun": True,
+                    "requireEncounterSubtype": "code gate",
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "break_encounter_subroutine",
+                            "maxSubs": 99,
+                            "requireSubtype": "code gate",
+                            "payCreditsPerBrokenSub": 1,
+                        },
+                    },
+                },
+                {
+                    "id": "utae-break-virtual",
+                    "label": "1¢: Break 1 code gate subroutine (3+ virtual resources)",
+                    "clickCost": 0,
+                    "creditCost": 1,
+                    "cost": {"credits": 1},
+                    "windows": ["encounter_paw"],
+                    "requireInstalledVirtualResourcesGte": 3,
+                    "requireEncounterSubtype": "code gate",
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "break_encounter_subroutine",
+                            "maxSubs": 1,
+                            "requireSubtype": "code gate",
+                        },
+                    },
+                },
+                {
+                    "id": "utae-pump",
+                    "label": "1¢: +1 strength",
+                    "clickCost": 0,
+                    "creditCost": 1,
+                    "cost": {"credits": 1},
+                    "windows": ["encounter_paw"],
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "pump_strength",
+                            "amount": 1,
+                        },
+                    },
+                },
+            ],
             unsupported=[],
         )
 
