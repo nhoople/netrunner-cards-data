@@ -2581,6 +2581,14 @@
       "type": "boolean",
       "description": "When this card would be uninstalled, take all hosted bad publicity (Luana Campos)."
     },
+    "gainsTextOfHostedIdentity": {
+      "type": "boolean",
+      "description": "DJ Fenris: while hosting an identity, this card gains that identity's ability text (CR 1.5.4)."
+    },
+    "returnHostedIdentityToOutsideGameOnUninstall": {
+      "type": "boolean",
+      "description": "DJ Fenris: when uninstalled, return hosted identity to the outside-game additional-identities pile (CR 1.5.4b), not the heap."
+    },
     "agendaPointsModifierInRunnerScoreArea": {
       "type": "integer",
       "description": "Modify agenda points while in the Runner score area (Let Them Dream −1)."

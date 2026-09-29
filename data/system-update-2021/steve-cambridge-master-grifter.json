@@ -5,6 +5,7 @@
   "nrdbCode": "31014",
   "type": "identity",
   "side": "runner",
+  "faction": "criminal",
   "unsupported": [],
   "subtypes": [
     "g-mod"
