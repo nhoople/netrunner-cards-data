@@ -5,13 +5,44 @@
   "nrdbCode": "26073",
   "type": "resource",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: When your turn begins and whenever you steal an agenda, place 1[credit] on this resource. You can spend hosted credits to install non-connection cards. When your turn ends, if there are 3 or more hosted credits, trash 1 of your installed ca"
-  ],
+  "unsupported": [],
   "subtypes": [
     "companion",
     "virtual"
   ],
   "installCost": 1,
-  "unique": true
+  "unique": true,
+  "onTurnBegin": {
+    "op": "do",
+    "action": {
+      "kind": "place_hosted_credits",
+      "amount": 1
+    }
+  },
+  "onStealAgenda": {
+    "op": "do",
+    "action": {
+      "kind": "place_hosted_credits",
+      "amount": 1
+    }
+  },
+  "hostedCreditsSpendFor": [
+    "install"
+  ],
+  "hostedCreditsSpendForInstallExcludeSubtypes": [
+    "connection"
+  ],
+  "onRunnerTurnEnd": {
+    "op": "if",
+    "cond": {
+      "op": "hosted_credits_gte",
+      "amount": 3
+    },
+    "then": {
+      "op": "do",
+      "action": {
+        "kind": "must_trash_own_installed"
+      }
+    }
+  }
 }

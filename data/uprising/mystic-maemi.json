@@ -5,13 +5,62 @@
   "nrdbCode": "26072",
   "type": "resource",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: When your turn begins and whenever you steal an agenda, place 1[credit] on this resource. You can spend hosted credits to play events. When your turn ends, if there are 3 or more hosted credits, you must trash 1 card from your grip at rando"
-  ],
+  "unsupported": [],
   "subtypes": [
     "companion",
     "virtual"
   ],
   "installCost": 1,
-  "unique": true
+  "unique": true,
+  "onTurnBegin": {
+    "op": "do",
+    "action": {
+      "kind": "place_hosted_credits",
+      "amount": 1
+    }
+  },
+  "onStealAgenda": {
+    "op": "do",
+    "action": {
+      "kind": "place_hosted_credits",
+      "amount": 1
+    }
+  },
+  "hostedCreditsSpendFor": [
+    "play_event"
+  ],
+  "onRunnerTurnEnd": {
+    "op": "if",
+    "cond": {
+      "op": "hosted_credits_gte",
+      "amount": 3
+    },
+    "then": {
+      "op": "choose",
+      "chooser": "runner",
+      "options": [
+        {
+          "id": "trash-grip",
+          "label": "Trash 1 card from grip at random",
+          "effect": {
+            "op": "do",
+            "action": {
+              "kind": "trash_random_from_grip",
+              "amount": 1
+            }
+          }
+        },
+        {
+          "id": "trash-self",
+          "label": "Trash Mystic Maemi",
+          "effect": {
+            "op": "do",
+            "action": {
+              "kind": "trash_self"
+            }
+          }
+        }
+      ]
+    }
+  }
 }

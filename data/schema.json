@@ -528,6 +528,10 @@
             "minimum": 0,
             "description": "Encountered ice strength must be ≤ this value (Malandragem)."
           },
+          "requireEncounterChosenIce": {
+            "type": "boolean",
+            "description": "Encountered ice must be the ice chosen on install (Boomerang; chosenIceId)."
+          },
           "requireProtectingHostServer": {
             "type": "boolean",
             "description": "Encountered ice must protect the same server as the ice hosting this card (Living Mural)."
@@ -635,10 +639,11 @@
         "type": "string",
         "enum": [
           "install",
-          "trash"
+          "trash",
+          "play_event"
         ]
       },
-      "description": "Spend non-recurring hosted credits for these purposes (Cybersand install; Bahia Bands trash)."
+      "description": "Spend non-recurring hosted credits for these purposes (Cybersand install; Bahia Bands trash; Mystic Maemi play_event)."
     },
     "iceRezCostReductionProtectingThisServer": {
       "type": "integer",
@@ -757,6 +762,10 @@
     "onSteal": {
       "type": "object",
       "description": "Effect IR evaluated when Runner steals this agenda."
+    },
+    "onStealAgenda": {
+      "type": "object",
+      "description": "Effect IR on an installed Runner card whenever the Runner steals an agenda (Mystic Maemi / Paladin Poemu)."
     },
     "onEncounter": {
       "type": "object",
@@ -990,7 +999,7 @@
     },
     "onFirstRunBeginThisTurn": {
       "type": "object",
-      "description": "Effect IR the first time each turn a run begins while this card is scored (Stegodon)."
+      "description": "Effect IR the first time each turn a run begins while this card is scored or installed (Stegodon / Knickknack / Prognostic Q-Loop)."
     },
     "onRunBegin": {
       "type": "object",
@@ -1474,6 +1483,13 @@
         "type": "string"
       },
       "description": "When set with hostedCreditsSpendFor install, hosted credits apply only to resources with these subtypes (Open Market)."
+    },
+    "hostedCreditsSpendForInstallExcludeSubtypes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "When set with hostedCreditsSpendFor install, hosted credits cannot be spent to install cards with these subtypes (Paladin Poemu excludes connection)."
     },
     "accessTrashSelfNonAgendaThenDraw": {
       "type": "boolean",
@@ -1979,6 +1995,10 @@
     },
     "chooseIceOnInstallForBypass": {
       "type": "boolean"
+    },
+    "chooseIceOnInstall": {
+      "type": "boolean",
+      "description": "When installed, choose 1 installed ice and store chosenIceId; use only vs that ice (Boomerang; no bypass)."
     },
     "hostedProgramsLoseAbilities": {
       "type": "boolean"

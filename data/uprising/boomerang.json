@@ -5,9 +5,42 @@
   "nrdbCode": "26075",
   "type": "hardware",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: When you install this hardware, choose 1 installed piece of ice. Use this hardware only during encounters with that ice. [trash]: Break up to 2 subroutines. When this run ends, if it was successful, you may shuffle 1 copy of Boomerang from "
-  ],
+  "unsupported": [],
   "installCost": 2,
-  "unique": true
+  "unique": true,
+  "chooseIceOnInstall": true,
+  "paidAbilities": [
+    {
+      "id": "boomerang-break",
+      "label": "[trash]: Break up to 2 subroutines; if this run is successful, may shuffle Boomerang from heap into stack",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "trashSelf": true
+      },
+      "windows": [
+        "encounter_paw"
+      ],
+      "requireEncounterChosenIce": true,
+      "effect": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "break_encounter_subroutine",
+              "maxSubs": 2
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "register_may_shuffle_title_from_heap_on_successful_run_end",
+              "title": "Boomerang"
+            }
+          }
+        ]
+      }
+    }
+  ]
 }
