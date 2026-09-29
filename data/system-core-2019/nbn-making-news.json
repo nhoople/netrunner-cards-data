@@ -5,11 +5,13 @@
   "nrdbCode": "25104",
   "type": "identity",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: 2[recurring-credit] Use these credits during trace attempts."
-  ],
+  "unsupported": [],
   "faction": "nbn",
   "subtypes": [
     "megacorp"
+  ],
+  "recurringCreditsMax": 2,
+  "recurringSpendFor": [
+    "trace"
   ]
 }

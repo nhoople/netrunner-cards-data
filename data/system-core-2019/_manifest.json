@@ -5,7 +5,7 @@
   "written": 84,
   "reprintSkipped": 63,
   "status": "in-progress",
-  "notes": "System Core 2019 (sc19) kickoff v1.59.0. Wrote 84 files; skipped 63 Gateway/SU21 reprints. Kickoff clears among written: 40.",
+  "notes": "System Core 2019 (sc19) kickoff v1.59.0. Wrote 84 files; skipped 63 Gateway/SU21 reprints. Kickoff clears among written: 45.",
   "cards": [
     "reina-roja-freedom-fighter",
     "quetzal-free-spirit",
@@ -275,5 +275,12 @@
     "closed-accounts",
     "flare",
     "leela-patel-trained-pragmatist"
+  ],
+  "hSliceClears": [
+    "priority-requisition",
+    "neural-emp",
+    "haas-bioroid-stronger-together",
+    "nbn-making-news",
+    "philotic-entanglement"
   ]
 }

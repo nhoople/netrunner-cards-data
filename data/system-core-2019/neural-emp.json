@@ -5,12 +5,18 @@
   "nrdbCode": "25101",
   "type": "operation",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: Play only if the Runner made a run during their last turn. Do 1 net damage."
-  ],
+  "unsupported": [],
   "faction": "jinteki",
   "subtypes": [
     "gray ops"
   ],
-  "playCost": 2
+  "playCost": 2,
+  "playRequiresRunnerMadeRunLastTurn": true,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "net_damage",
+      "amount": 1
+    }
+  }
 }
