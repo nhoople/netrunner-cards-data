@@ -669,6 +669,14 @@
       "type": "object",
       "description": "Effect IR the first time each turn the Runner trashes a Corp card (Solidarity Badge)."
     },
+    "onFirstProgramOrHardwareTrashEachTurn": {
+      "type": "object",
+      "description": "Effect IR the first time each turn a program or piece of hardware is trashed from any location while this card is installed (District 99)."
+    },
+    "onFirstAccessTrashEachTurn": {
+      "type": "object",
+      "description": "Effect IR the first time each turn the Runner trashes a card they are accessing while this card is installed (Mâché). Engine supplies the trashed card's trash cost for add_power_counter_equal_to_last_access_trash_cost."
+    },
     "onAccessTrash": {
       "type": "object",
       "description": "Effect IR whenever the Runner trashes a card they are accessing (Audrey v2)."

@@ -5,12 +5,32 @@
   "nrdbCode": "22023",
   "type": "event",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Run Archives. If successful, instead of breaching Archives, install up to 5 cards from your heap facedown. Remove this event from the game."
-  ],
-  "faction": "apex",
+  "unsupported": [],
+  "faction": "criminal",
   "subtypes": [
     "run"
   ],
-  "playCost": 1
+  "playCost": 1,
+  "runEvent": {
+    "servers": "archives",
+    "skipBreach": true,
+    "onSuccessfulRun": {
+      "op": "seq",
+      "effects": [
+        {
+          "op": "do",
+          "action": {
+            "kind": "install_up_to_from_heap_facedown",
+            "max": 5
+          }
+        },
+        {
+          "op": "do",
+          "action": {
+            "kind": "rfg_self"
+          }
+        }
+      ]
+    }
+  }
 }

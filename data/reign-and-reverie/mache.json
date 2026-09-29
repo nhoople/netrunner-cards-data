@@ -5,10 +5,58 @@
   "nrdbCode": "22018",
   "type": "hardware",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: The first time you trash an accessed card each turn, you may place power counters on Mâché equal to that card's trash cost. 3 hosted power counters: Draw 1 card."
-  ],
+  "unsupported": [],
   "faction": "shaper",
   "installCost": 1,
-  "unique": true
+  "unique": true,
+  "onFirstAccessTrashEachTurn": {
+    "op": "choose",
+    "chooser": "runner",
+    "options": [
+      {
+        "id": "place-power",
+        "label": "Place power counters on Mâché equal to that card's trash cost",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "add_power_counter_equal_to_last_access_trash_cost"
+          }
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "runner",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  },
+  "paidAbilities": [
+    {
+      "id": "mache-draw",
+      "label": "3 hosted power counters: Draw 1 card",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "powerCounters": 3
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "draw",
+          "side": "runner",
+          "amount": 1
+        }
+      }
+    }
+  ]
 }
