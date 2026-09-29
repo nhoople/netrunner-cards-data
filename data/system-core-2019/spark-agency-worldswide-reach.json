@@ -5,11 +5,10 @@
   "nrdbCode": "25105",
   "type": "identity",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: The first time each turn you rez an advertisement, the Runner loses 1[credit]."
-  ],
+  "unsupported": [],
   "faction": "nbn",
   "subtypes": [
     "division"
-  ]
+  ],
+  "loseCreditsOnFirstAdvertisementRezThisTurn": 1
 }
