@@ -1012,17 +1012,14 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
-    if cid == "sting":
-        sting_dmg = {
-            "op": "do",
-            "action": {
-                "kind": "net_damage_1_plus_copies_of_source_title_in_other_score_area"
-            },
-        }
+    if cid == "rejig":
         return base(
             c,
-            onScore=sting_dmg,
-            onSteal=sting_dmg,
+            playRequiresInstalledProgramOrHardware=True,
+            onPlay={
+                "op": "do",
+                "action": {"kind": "rejig_bounce_install"},
+            },
             unsupported=[],
         )
 

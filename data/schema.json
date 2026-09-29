@@ -1494,6 +1494,10 @@
       "type": "boolean",
       "description": "Play only if the Runner has at least one installed program (Spec Work)."
     },
+    "playRequiresInstalledProgramOrHardware": {
+      "type": "boolean",
+      "description": "Play only if the Runner has at least one installed program or piece of hardware (Rejig)."
+    },
     "playRequiresUntagged": {
       "type": "boolean",
       "description": "Play only if the Runner has no tags (Eye for an Eye / Privileged Access)."

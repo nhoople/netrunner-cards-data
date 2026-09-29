@@ -5,11 +5,16 @@
   "nrdbCode": "26029",
   "type": "event",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: As an additional cost to play this event, add 1 installed program or piece of hardware to your grip. Install 1 program or piece of hardware from your grip, paying X[credit] less. X is equal to the printed install cost of the card you added "
-  ],
+  "unsupported": [],
   "subtypes": [
     "mod"
   ],
-  "playCost": 0
+  "playCost": 0,
+  "playRequiresInstalledProgramOrHardware": true,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "rejig_bounce_install"
+    }
+  }
 }
