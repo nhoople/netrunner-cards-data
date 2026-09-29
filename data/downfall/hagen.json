@@ -5,14 +5,41 @@
   "nrdbCode": "26035",
   "type": "ice",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: This ice gets −1 strength for each installed icebreaker. [subroutine] Trash 1 installed program that is not a decoder, fracter, or killer. [subroutine] End the run."
-  ],
+  "unsupported": [],
   "subtypes": [
     "barrier",
     "destroyer"
   ],
   "installCost": 4,
   "rezCost": 4,
-  "strength": 6
+  "strength": 6,
+  "strengthBonusPerIcebreaker": -1,
+  "subroutines": [
+    {
+      "id": "hagen-trash",
+      "text": "Trash 1 installed program that is not a decoder, fracter, or killer.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "trash_program",
+          "pick": "choose",
+          "excludeSubtypes": [
+            "decoder",
+            "fracter",
+            "killer"
+          ]
+        }
+      }
+    },
+    {
+      "id": "hagen-etr",
+      "text": "End the run.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "end_the_run"
+        }
+      }
+    }
+  ]
 }

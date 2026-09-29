@@ -5,11 +5,65 @@
   "nrdbCode": "26037",
   "type": "operation",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: Resolve 2 of the following in any order:Draw 2 cards.Gain 2[credit].Install 1 non-agenda card from HQ.Gain [click]."
-  ],
+  "unsupported": [],
   "subtypes": [
     "transaction"
   ],
-  "playCost": 1
+  "playCost": 1,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "choose_exactly_n",
+      "n": 2,
+      "options": [
+        {
+          "id": "draw",
+          "label": "Draw 2 cards",
+          "effect": {
+            "op": "do",
+            "action": {
+              "kind": "draw",
+              "side": "corp",
+              "amount": 2
+            }
+          }
+        },
+        {
+          "id": "credits",
+          "label": "Gain 2¢",
+          "effect": {
+            "op": "do",
+            "action": {
+              "kind": "gain_credits",
+              "side": "corp",
+              "amount": 2
+            }
+          }
+        },
+        {
+          "id": "install",
+          "label": "Install 1 non-agenda card from HQ",
+          "effect": {
+            "op": "do",
+            "action": {
+              "kind": "may_install_from_hq_paying_costs",
+              "excludeAgenda": true
+            }
+          }
+        },
+        {
+          "id": "click",
+          "label": "Gain [click]",
+          "effect": {
+            "op": "do",
+            "action": {
+              "kind": "gain_clicks",
+              "side": "corp",
+              "amount": 1
+            }
+          }
+        }
+      ]
+    }
+  }
 }

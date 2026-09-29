@@ -767,6 +767,10 @@
       "type": "object",
       "description": "Additional cost Effect IR paid before scoring this agenda (e.g. Azef Protocol must trash 1 other installed Corp card)."
     },
+    "stealAdditionalCost": {
+      "type": "object",
+      "description": "Additional cost Effect IR paid before stealing this agenda (e.g. SDS Drone Deployment must trash 1 installed program)."
+    },
     "onSteal": {
       "type": "object",
       "description": "Effect IR evaluated when Runner steals this agenda."
