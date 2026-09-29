@@ -5,9 +5,7 @@
   "nrdbCode": "25128",
   "type": "asset",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: When you rez this asset, remove 1 bad publicity. [click], [trash]: Trash 1 installed location resource. Take 1 bad publicity."
-  ],
+  "unsupported": [],
   "faction": "weyland-consortium",
   "subtypes": [
     "executive",
@@ -16,5 +14,47 @@
   "installCost": 2,
   "rezCost": 2,
   "trashCost": 1,
-  "unique": true
+  "unique": true,
+  "onRez": {
+    "op": "do",
+    "action": {
+      "kind": "remove_bad_publicity",
+      "amount": 1
+    }
+  },
+  "paidAbilities": [
+    {
+      "id": "elizabeth-mills-trash-location",
+      "label": "Trash: Trash 1 location resource. Take 1 bad publicity.",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1,
+        "trashSelf": true
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "effect": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "trash_installed_resource_with_subtype",
+              "subtype": "location",
+              "pick": "choose"
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "give_bad_publicity",
+              "amount": 1
+            }
+          }
+        ]
+      }
+    }
+  ]
 }

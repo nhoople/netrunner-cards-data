@@ -5,9 +5,7 @@
   "nrdbCode": "25097",
   "type": "ice",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: [subroutine] End the run unless the Corp pays 1[credit]. [subroutine] Do 1 net damage. [subroutine] Do 1 net damage. [subroutine] Do 1 net damage."
-  ],
+  "unsupported": [],
   "faction": "jinteki",
   "subtypes": [
     "sentry",
@@ -15,5 +13,51 @@
   ],
   "installCost": 6,
   "rezCost": 6,
-  "strength": 2
+  "strength": 2,
+  "subroutines": [
+    {
+      "id": "tsurugi-etr-unless-pay",
+      "text": "End the run unless the Corp pays 1¢.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "end_the_run_unless_corp_pays",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "id": "tsurugi-net-1",
+      "text": "Do 1 net damage.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "net_damage",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "id": "tsurugi-net-2",
+      "text": "Do 1 net damage.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "net_damage",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "id": "tsurugi-net-3",
+      "text": "Do 1 net damage.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "net_damage",
+          "amount": 1
+        }
+      }
+    }
+  ]
 }

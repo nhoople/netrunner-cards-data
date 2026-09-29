@@ -1036,6 +1036,143 @@ def map_card(c: dict) -> dict | None:
             unsupported=[],
         )
 
+    # --- v1.69.0 J-slice: new Effect IR leaves (fail-closed engine pair) ---
+
+    if cid == "run-amok":
+        return base(
+            c,
+            runEvent={
+                "servers": "any",
+                "onRunEnd": {
+                    "op": "do",
+                    "action": {
+                        "kind": "trash_ice_rezzed_this_run",
+                        "pick": "choose",
+                    },
+                },
+            },
+            unsupported=[],
+        )
+
+    if cid == "tsurugi":
+        return base(
+            c,
+            subroutines=[
+                {
+                    "id": "tsurugi-etr-unless-pay",
+                    "text": "End the run unless the Corp pays 1¢.",
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "end_the_run_unless_corp_pays",
+                            "amount": 1,
+                        },
+                    },
+                },
+                {
+                    "id": "tsurugi-net-1",
+                    "text": "Do 1 net damage.",
+                    "effect": net(1),
+                },
+                {
+                    "id": "tsurugi-net-2",
+                    "text": "Do 1 net damage.",
+                    "effect": net(1),
+                },
+                {
+                    "id": "tsurugi-net-3",
+                    "text": "Do 1 net damage.",
+                    "effect": net(1),
+                },
+            ],
+            unsupported=[],
+        )
+
+    if cid == "elizabeth-mills":
+        return base(
+            c,
+            onRez={
+                "op": "do",
+                "action": {"kind": "remove_bad_publicity", "amount": 1},
+            },
+            paidAbilities=[
+                {
+                    "id": "elizabeth-mills-trash-location",
+                    "label": "Trash: Trash 1 location resource. Take 1 bad publicity.",
+                    "clickCost": 1,
+                    "creditCost": 0,
+                    "cost": {"clicks": 1, "trashSelf": True},
+                    "windows": ["corp_action_paw"],
+                    "effect": seq(
+                        {
+                            "op": "do",
+                            "action": {
+                                "kind": "trash_installed_resource_with_subtype",
+                                "subtype": "location",
+                                "pick": "choose",
+                            },
+                        },
+                        {
+                            "op": "do",
+                            "action": {
+                                "kind": "give_bad_publicity",
+                                "amount": 1,
+                            },
+                        },
+                    ),
+                }
+            ],
+            unsupported=[],
+        )
+
+    if cid == "kati-jones":
+        return base(
+            c,
+            paidAbilitiesOncePerTurn=True,
+            paidAbilities=[
+                {
+                    "id": "kati-jones-load",
+                    "label": "[click]: Place 3¢ on Kati Jones",
+                    "clickCost": 1,
+                    "creditCost": 0,
+                    "cost": {"clicks": 1},
+                    "windows": ["runner_action_paw"],
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "place_hosted_credits",
+                            "amount": 3,
+                        },
+                    },
+                },
+                {
+                    "id": "kati-jones-take",
+                    "label": "[click]: Take all credits from Kati Jones",
+                    "clickCost": 1,
+                    "creditCost": 0,
+                    "cost": {"clicks": 1},
+                    "windows": ["runner_action_paw"],
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "take_hosted_credits",
+                            "amount": 999,
+                        },
+                    },
+                },
+            ],
+            unsupported=[],
+        )
+
+    if cid == "ice-analyzer":
+        return base(
+            c,
+            hostedCreditsOnAnyIceRez=1,
+            hostedCreditsSpendFor=["install"],
+            hostedCreditsSpendForInstallTypes=["program"],
+            unsupported=[],
+        )
+
     card = base(c)
     card["unsupported"] = [
         f"Full text not yet mapped to IR: {plain[:200]}"
@@ -1155,6 +1292,13 @@ def main():
             "paper-trail",
             "data-dealer",
             "cyberfeeder",
+        ],
+        "jSliceClears": [
+            "run-amok",
+            "tsurugi",
+            "elizabeth-mills",
+            "kati-jones",
+            "ice-analyzer",
         ],
     }
     (OUT / "_manifest.json").write_text(

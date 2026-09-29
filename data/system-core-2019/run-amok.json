@@ -5,13 +5,21 @@
   "nrdbCode": "25006",
   "type": "event",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Make a run. When the run ends, trash 1 piece of ice that was rezzed during this run."
-  ],
+  "unsupported": [],
   "faction": "anarch",
   "subtypes": [
     "run",
     "sabotage"
   ],
-  "playCost": 3
+  "playCost": 3,
+  "runEvent": {
+    "servers": "any",
+    "onRunEnd": {
+      "op": "do",
+      "action": {
+        "kind": "trash_ice_rezzed_this_run",
+        "pick": "choose"
+      }
+    }
+  }
 }

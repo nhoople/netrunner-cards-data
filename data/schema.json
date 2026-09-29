@@ -684,7 +684,7 @@
     "hostedCreditsOnAnyIceRez": {
       "type": "integer",
       "minimum": 0,
-      "description": "Place this many hosted credits when any ice is rezzed (Cybersand Harvester)."
+      "description": "Place this many hosted credits when any ice is rezzed (Cybersand Harvester; Ice Analyzer while installed)."
     },
     "hostedCreditsSpendFor": {
       "type": "array",
@@ -697,6 +697,22 @@
         ]
       },
       "description": "Spend non-recurring hosted credits for these purposes (Cybersand install; Bahia Bands trash; Mystic Maemi play_event)."
+    },
+    "hostedCreditsSpendForInstallTypes": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "program",
+          "hardware",
+          "resource"
+        ]
+      },
+      "description": "When set with hostedCreditsSpendFor install, hosted credits apply only to installs of these card types (Ice Analyzer: program)."
+    },
+    "paidAbilitiesOncePerTurn": {
+      "type": "boolean",
+      "description": "At most one paid ability on this card may be used each turn (Kati Jones)."
     },
     "iceRezCostReductionProtectingThisServer": {
       "type": "integer",

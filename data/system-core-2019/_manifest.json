@@ -5,7 +5,7 @@
   "written": 84,
   "reprintSkipped": 63,
   "status": "in-progress",
-  "notes": "System Core 2019 (sc19) kickoff v1.59.0. Wrote 84 files; skipped 63 Gateway/SU21 reprints. Kickoff clears among written: 50.",
+  "notes": "System Core 2019 (sc19) kickoff v1.59.0. Wrote 84 files; skipped 63 Gateway/SU21 reprints. Kickoff clears among written: 55.",
   "cards": [
     "reina-roja-freedom-fighter",
     "quetzal-free-spirit",
@@ -289,5 +289,12 @@
     "paper-trail",
     "data-dealer",
     "cyberfeeder"
+  ],
+  "jSliceClears": [
+    "run-amok",
+    "tsurugi",
+    "elizabeth-mills",
+    "kati-jones",
+    "ice-analyzer"
   ]
 }

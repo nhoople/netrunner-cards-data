@@ -5,13 +5,52 @@
   "nrdbCode": "25065",
   "type": "resource",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: You cannot use this resource more than once per turn. [click]: Place 3[credit] on this resource. [click]: Take all credits from this resource."
-  ],
+  "unsupported": [],
   "faction": "neutral-runner",
   "subtypes": [
     "connection"
   ],
   "installCost": 2,
-  "unique": true
+  "unique": true,
+  "paidAbilitiesOncePerTurn": true,
+  "paidAbilities": [
+    {
+      "id": "kati-jones-load",
+      "label": "[click]: Place 3¢ on Kati Jones",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "place_hosted_credits",
+          "amount": 3
+        }
+      }
+    },
+    {
+      "id": "kati-jones-take",
+      "label": "[click]: Take all credits from Kati Jones",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "take_hosted_credits",
+          "amount": 999
+        }
+      }
+    }
+  ]
 }
