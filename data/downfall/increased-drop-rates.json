@@ -5,13 +5,40 @@
   "nrdbCode": "26054",
   "type": "upgrade",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: While the Runner is accessing this upgrade in R&D, they must reveal it. When the Runner accesses this upgrade, remove 1 bad publicity unless they take 1 tag."
-  ],
+  "unsupported": [],
   "subtypes": [
     "ambush"
   ],
   "installCost": 0,
   "rezCost": 0,
-  "trashCost": 2
+  "trashCost": 2,
+  "mustRevealWhenAccessedFromRd": true,
+  "onAccess": {
+    "op": "choose",
+    "chooser": "runner",
+    "options": [
+      {
+        "id": "take-tag",
+        "label": "Take 1 tag",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "give_tags",
+            "amount": 1
+          }
+        }
+      },
+      {
+        "id": "allow-remove-bp",
+        "label": "Allow Corp to remove 1 bad publicity",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "remove_bad_publicity",
+            "amount": 1
+          }
+        }
+      }
+    ]
+  }
 }

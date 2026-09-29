@@ -450,6 +450,177 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    # --- v1.50.0 C-slice ---
+
+    if cid == "increased-drop-rates":
+        return base(
+            c,
+            mustRevealWhenAccessedFromRd=True,
+            onAccess={
+                "op": "choose",
+                "chooser": "runner",
+                "options": [
+                    {
+                        "id": "take-tag",
+                        "label": "Take 1 tag",
+                        "effect": {
+                            "op": "do",
+                            "action": {"kind": "give_tags", "amount": 1},
+                        },
+                    },
+                    {
+                        "id": "allow-remove-bp",
+                        "label": "Allow Corp to remove 1 bad publicity",
+                        "effect": {
+                            "op": "do",
+                            "action": {
+                                "kind": "remove_bad_publicity",
+                                "amount": 1,
+                            },
+                        },
+                    },
+                ],
+            },
+            unsupported=[],
+        )
+
+    if cid == "red-level-clearance":
+        return base(
+            c,
+            onPlay={
+                "op": "do",
+                "action": {
+                    "kind": "choose_exactly_n",
+                    "n": 2,
+                    "options": [
+                        {
+                            "id": "draw",
+                            "label": "Draw 2 cards",
+                            "effect": draw("corp", 2),
+                        },
+                        {
+                            "id": "credits",
+                            "label": "Gain 2¢",
+                            "effect": gain("corp", 2),
+                        },
+                        {
+                            "id": "install",
+                            "label": "Install 1 non-agenda card from HQ",
+                            "effect": {
+                                "op": "do",
+                                "action": {
+                                    "kind": "may_install_from_hq_paying_costs",
+                                    "excludeAgenda": True,
+                                },
+                            },
+                        },
+                        {
+                            "id": "click",
+                            "label": "Gain [click]",
+                            "effect": {
+                                "op": "do",
+                                "action": {
+                                    "kind": "gain_clicks",
+                                    "side": "corp",
+                                    "amount": 1,
+                                },
+                            },
+                        },
+                    ],
+                },
+            },
+            unsupported=[],
+        )
+
+    if cid == "afshar":
+        return base(
+            c,
+            onEncounter={
+                "op": "if",
+                "cond": {"op": "attacking_hq"},
+                "then": {
+                    "op": "do",
+                    "action": {
+                        "kind": "limit_printed_breaks_on_source_for_run",
+                        "max": 1,
+                    },
+                },
+            },
+            subroutines=[
+                {
+                    "id": "afshar-lose",
+                    "text": "The Runner loses 2[credit].",
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "lose_credits",
+                            "side": "runner",
+                            "amount": 2,
+                        },
+                    },
+                },
+                {
+                    "id": "afshar-etr",
+                    "text": "End the run.",
+                    "effect": {
+                        "op": "do",
+                        "action": {"kind": "end_the_run"},
+                    },
+                },
+            ],
+            unsupported=[],
+        )
+
+    if cid == "hagen":
+        return base(
+            c,
+            strengthBonusPerIcebreaker=-1,
+            subroutines=[
+                {
+                    "id": "hagen-trash",
+                    "text": "Trash 1 installed program that is not a decoder, fracter, or killer.",
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "trash_program",
+                            "pick": "choose",
+                            "excludeSubtypes": [
+                                "decoder",
+                                "fracter",
+                                "killer",
+                            ],
+                        },
+                    },
+                },
+                {
+                    "id": "hagen-etr",
+                    "text": "End the run.",
+                    "effect": {
+                        "op": "do",
+                        "action": {"kind": "end_the_run"},
+                    },
+                },
+            ],
+            unsupported=[],
+        )
+
+    if cid == "sds-drone-deployment":
+        return base(
+            c,
+            stealAdditionalCost={
+                "op": "do",
+                "action": {"kind": "trash_own_program"},
+            },
+            onScore={
+                "op": "do",
+                "action": {
+                    "kind": "trash_program",
+                    "pick": "choose",
+                },
+            },
+            unsupported=[],
+        )
+
     # Fail closed — honest unsupported note for the remainder.
     card = base(c)
     card["unsupported"] = [f"Full text not yet mapped to IR: {plain[:240]}"]
@@ -490,7 +661,7 @@ def main():
         "Null Signal Downfall (NRDB pack df) — Ashes set 1 of 2; legacy "
         "backwards wave before Uprising / System Gateway. Skip Magnum Opus "
         f"Reprint (mor). In-progress: {full} cards fully mapped, {partial} "
-        "with unsupported notes (B-slice v1.49.0)."
+        "with unsupported notes (C-slice v1.50.0)."
     )
     manifest = {
         "pack": WAVE,

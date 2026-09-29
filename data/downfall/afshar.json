@@ -5,13 +5,48 @@
   "nrdbCode": "26058",
   "type": "ice",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: While this ice is protecting HQ, the Runner cannot break more than 1 of its printed subroutines during each encounter. [subroutine] The Runner loses 2[credit]. [subroutine] End the run."
-  ],
+  "unsupported": [],
   "subtypes": [
     "code gate"
   ],
   "installCost": 3,
   "rezCost": 3,
-  "strength": 1
+  "strength": 1,
+  "onEncounter": {
+    "op": "if",
+    "cond": {
+      "op": "attacking_hq"
+    },
+    "then": {
+      "op": "do",
+      "action": {
+        "kind": "limit_printed_breaks_on_source_for_run",
+        "max": 1
+      }
+    }
+  },
+  "subroutines": [
+    {
+      "id": "afshar-lose",
+      "text": "The Runner loses 2[credit].",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "lose_credits",
+          "side": "runner",
+          "amount": 2
+        }
+      }
+    },
+    {
+      "id": "afshar-etr",
+      "text": "End the run.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "end_the_run"
+        }
+      }
+    }
+  ]
 }

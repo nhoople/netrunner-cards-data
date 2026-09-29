@@ -5,12 +5,23 @@
   "nrdbCode": "26056",
   "type": "agenda",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: As an additional cost to steal this agenda, the Runner must trash 1 installed program. When you score this agenda, trash 1 installed program."
-  ],
+  "unsupported": [],
   "subtypes": [
     "security"
   ],
   "advancementRequirement": 5,
-  "agendaPoints": 3
+  "agendaPoints": 3,
+  "stealAdditionalCost": {
+    "op": "do",
+    "action": {
+      "kind": "trash_own_program"
+    }
+  },
+  "onScore": {
+    "op": "do",
+    "action": {
+      "kind": "trash_program",
+      "pick": "choose"
+    }
+  }
 }
