@@ -1235,6 +1235,157 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    # --- v1.56.0 I-slice ---
+
+    _companion_place_credit = {
+        "op": "do",
+        "action": {"kind": "place_hosted_credits", "amount": 1},
+    }
+
+    if cid == "fencer-fueno":
+        return base(
+            c,
+            onTurnBegin=_companion_place_credit,
+            onStealAgenda=_companion_place_credit,
+            spendHostedCreditsDuringRuns=True,
+            onRunnerTurnEnd={
+                "op": "if",
+                "cond": {"op": "hosted_credits_gte", "amount": 3},
+                "then": {
+                    "op": "choose",
+                    "chooser": "runner",
+                    "options": [
+                        {
+                            "id": "pay-1",
+                            "label": "Pay 1¢",
+                            "effect": {
+                                "op": "do",
+                                "action": {
+                                    "kind": "lose_credits",
+                                    "side": "runner",
+                                    "amount": 1,
+                                },
+                            },
+                        },
+                        {
+                            "id": "trash-self",
+                            "label": "Trash Fencer Fueno",
+                            "effect": {
+                                "op": "do",
+                                "action": {"kind": "trash_self"},
+                            },
+                        },
+                    ],
+                },
+            },
+            unsupported=[],
+        )
+
+    if cid == "trickster-taka":
+        return base(
+            c,
+            onTurnBegin=_companion_place_credit,
+            onStealAgenda=_companion_place_credit,
+            spendHostedCreditsToUseProgramsDuringRuns=True,
+            onRunnerTurnEnd={
+                "op": "if",
+                "cond": {"op": "hosted_credits_gte", "amount": 3},
+                "then": {
+                    "op": "choose",
+                    "chooser": "runner",
+                    "options": [
+                        {
+                            "id": "take-tag",
+                            "label": "Take 1 tag",
+                            "effect": {
+                                "op": "do",
+                                "action": {
+                                    "kind": "give_tags",
+                                    "amount": 1,
+                                },
+                            },
+                        },
+                        {
+                            "id": "trash-self",
+                            "label": "Trash Trickster Taka",
+                            "effect": {
+                                "op": "do",
+                                "action": {"kind": "trash_self"},
+                            },
+                        },
+                    ],
+                },
+            },
+            unsupported=[],
+        )
+
+    if cid == "the-nihilist":
+        return base(
+            c,
+            onFirstVirusInstallThisTurn={
+                "op": "do",
+                "action": {"kind": "add_virus_counter", "amount": 2},
+            },
+            onTurnBegin={
+                "op": "do",
+                "action": {
+                    "kind": "nihilist_may_remove_2_virus_draw_unless_corp_trash_top_rd",
+                },
+            },
+            unsupported=[],
+        )
+
+    if cid == "in-the-groove":
+        return base(
+            c,
+            playRequiresFirstClick=True,
+            remainderOfTurnOnInstallPrintedCostGte={
+                "min": 1,
+                "effect": {
+                    "op": "choose",
+                    "chooser": "runner",
+                    "options": [
+                        {
+                            "id": "draw",
+                            "label": "Draw 1 card",
+                            "effect": draw("runner", 1),
+                        },
+                        {
+                            "id": "gain",
+                            "label": "Gain 1¢",
+                            "effect": gain("runner", 1),
+                        },
+                    ],
+                },
+            },
+            unsupported=[],
+        )
+
+    if cid == "game-over":
+        return base(
+            c,
+            playRequiresAgendaStolenLastTurn=True,
+            onPlay={
+                "op": "seq",
+                "effects": [
+                    {
+                        "op": "do",
+                        "action": {
+                            "kind": "game_over_trash_type_may_pay_3_prevent",
+                        },
+                    },
+                    {
+                        "op": "do",
+                        "action": {
+                            "kind": "give_bad_publicity",
+                            "amount": 1,
+                        },
+                    },
+                ],
+            },
+            unsupported=[],
+        )
+
     # Fail closed — honest unsupported note for the remainder.
     card = base(c)
     card["unsupported"] = [f"Full text not yet mapped to IR: {plain[:240]}"]
@@ -1275,7 +1426,7 @@ def main():
         "Null Signal Downfall (NRDB pack df) — Ashes set 1 of 2; legacy "
         "backwards wave before Uprising / System Gateway. Skip Magnum Opus "
         f"Reprint (mor). In-progress: {full} cards fully mapped, {partial} "
-        "with unsupported notes (H-slice v1.55.0)."
+        "with unsupported notes (I-slice v1.56.0)."
     )
     manifest = {
         "pack": WAVE,

@@ -5,11 +5,43 @@
   "nrdbCode": "26020",
   "type": "event",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Play only as your first [click]. For the remainder of this turn, whenever you install a card with a printed install cost of 1[credit] or greater, draw 1 card or gain 1[credit]."
-  ],
+  "unsupported": [],
   "subtypes": [
     "priority"
   ],
-  "playCost": 0
+  "playCost": 0,
+  "playRequiresFirstClick": true,
+  "remainderOfTurnOnInstallPrintedCostGte": {
+    "min": 1,
+    "effect": {
+      "op": "choose",
+      "chooser": "runner",
+      "options": [
+        {
+          "id": "draw",
+          "label": "Draw 1 card",
+          "effect": {
+            "op": "do",
+            "action": {
+              "kind": "draw",
+              "side": "runner",
+              "amount": 1
+            }
+          }
+        },
+        {
+          "id": "gain",
+          "label": "Gain 1¢",
+          "effect": {
+            "op": "do",
+            "action": {
+              "kind": "gain_credits",
+              "side": "runner",
+              "amount": 1
+            }
+          }
+        }
+      ]
+    }
+  }
 }
