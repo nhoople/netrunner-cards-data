@@ -5,9 +5,8 @@
   "nrdbCode": "25050",
   "type": "hardware",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Whenever you breach R&D, access 1 additional card."
-  ],
+  "unsupported": [],
   "faction": "shaper",
-  "installCost": 4
+  "installCost": 4,
+  "bonusAccessOnRdBreach": 1
 }

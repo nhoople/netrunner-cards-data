@@ -5,9 +5,7 @@
   "nrdbCode": "25113",
   "type": "ice",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: [subroutine]Trace[6]. If successful, trash 1 piece of hardware, do 2 meat damage (cannot be prevented), and end the run."
-  ],
+  "unsupported": [],
   "faction": "nbn",
   "subtypes": [
     "sentry",
@@ -16,5 +14,44 @@
   ],
   "installCost": 9,
   "rezCost": 9,
-  "strength": 6
+  "strength": 6,
+  "subroutines": [
+    {
+      "id": "flare-trace",
+      "text": "Trace[6]. If successful, trash 1 piece of hardware, do 2 meat damage (cannot be prevented), and end the run.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "trace",
+          "strength": 6,
+          "onSuccess": {
+            "op": "seq",
+            "effects": [
+              {
+                "op": "do",
+                "action": {
+                  "kind": "trash_hardware",
+                  "pick": "choose"
+                }
+              },
+              {
+                "op": "do",
+                "action": {
+                  "kind": "meat_damage",
+                  "amount": 2,
+                  "cannotPrevent": true
+                }
+              },
+              {
+                "op": "do",
+                "action": {
+                  "kind": "end_the_run"
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
 }

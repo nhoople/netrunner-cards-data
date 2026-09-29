@@ -5,12 +5,18 @@
   "nrdbCode": "25021",
   "type": "identity",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Whenever an agenda is scored or stolen, add 1 unrezzed card to HQ."
-  ],
+  "unsupported": [],
   "faction": "criminal",
   "subtypes": [
     "natural"
   ],
-  "link": 0
+  "link": 0,
+  "onAgendaScoredOrStolen": {
+    "op": "do",
+    "action": {
+      "kind": "return_installed_corp_to_hq",
+      "pick": "choose",
+      "unrezzedOnly": true
+    }
+  }
 }
