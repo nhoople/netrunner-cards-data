@@ -409,6 +409,10 @@
                 "type": "integer",
                 "minimum": 1,
                 "description": "Pay this many credits per subroutine on the encountered ice (Physarum Entangler)."
+              },
+              "trashInstalledProgramUnlessOwnInstalledTrashedThisTurn": {
+                "type": "boolean",
+                "description": "Simulchip: trash 1 installed program as an additional cost unless the Runner already trashed an installed card this turn."
               }
             }
           },
@@ -1148,6 +1152,11 @@
       "type": "integer",
       "minimum": 1,
       "description": "Gain this many credits the first time each turn a run on your mark ends if you breached (Info Bounty)."
+    },
+    "gainCreditsOnFirstCompanionInstallOrSpendThisTurn": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Gain this many credits the first time each turn you install a companion or spend credits from an installed companion (Keiko)."
     },
     "meatDamageOnInstalledCorpTrashOncePerTurn": {
       "type": "integer",

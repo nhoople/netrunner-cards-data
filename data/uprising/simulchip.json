@@ -5,11 +5,34 @@
   "nrdbCode": "26085",
   "type": "hardware",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: As an additional cost to use this hardware, trash 1 installed program. Ignore this cost if an installed program has already been trashed this turn. [trash]: Install 1 program from your heap, paying 3[credit] less."
-  ],
+  "unsupported": [],
   "subtypes": [
     "chip"
   ],
-  "installCost": 1
+  "installCost": 1,
+  "paidAbilities": [
+    {
+      "id": "simulchip-install",
+      "label": "[trash]: Install 1 program from heap, paying 3¢ less",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "trashSelf": true,
+        "trashInstalledProgramUnlessOwnInstalledTrashedThisTurn": true
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "install_from_heap",
+          "types": [
+            "program"
+          ],
+          "discount": 3
+        }
+      }
+    }
+  ]
 }

@@ -1149,6 +1149,154 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    # --- F-slice (v1.41.0): Devil Charm / Simulchip / Cordyceps / Keiko /
+    # Flower Sermon ---
+
+    if cid == "devil-charm":
+        return base(
+            c,
+            paidAbilities=[
+                {
+                    "id": "devil-charm-weaken",
+                    "label": "Remove Devil Charm from the game: encountered ice gets −6 strength this run",
+                    "clickCost": 0,
+                    "creditCost": 0,
+                    "cost": {},
+                    "windows": ["encounter_paw"],
+                    "effect": {
+                        "op": "seq",
+                        "effects": [
+                            {"op": "do", "action": {"kind": "rfg_self"}},
+                            {
+                                "op": "do",
+                                "action": {"kind": "weaken_ice", "amount": 6},
+                            },
+                        ],
+                    },
+                }
+            ],
+            unsupported=[],
+        )
+
+    if cid == "simulchip":
+        return base(
+            c,
+            paidAbilities=[
+                {
+                    "id": "simulchip-install",
+                    "label": "[trash]: Install 1 program from heap, paying 3¢ less",
+                    "clickCost": 0,
+                    "creditCost": 0,
+                    "cost": {
+                        "trashSelf": True,
+                        "trashInstalledProgramUnlessOwnInstalledTrashedThisTurn": True,
+                    },
+                    "windows": ["runner_action_paw"],
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "install_from_heap",
+                            "types": ["program"],
+                            "discount": 3,
+                        },
+                    },
+                }
+            ],
+            unsupported=[],
+        )
+
+    if cid == "cordyceps":
+        remove_and_swap = {
+            "op": "seq",
+            "effects": [
+                {
+                    "op": "do",
+                    "action": {"kind": "remove_virus_counters", "amount": 1},
+                },
+                {
+                    "op": "do",
+                    "action": {
+                        "kind": "may_swap_protecting_attacked_ice_with_other_installed"
+                    },
+                },
+            ],
+        }
+        return base(
+            c,
+            memoryCost=1,
+            onInstall={
+                "op": "do",
+                "action": {"kind": "add_virus_counter", "amount": 2},
+            },
+            onSuccessfulRunOncePerTurn=True,
+            onSuccessfulRun={
+                "op": "if",
+                "cond": {"op": "attacking_central"},
+                "then": {
+                    "op": "if",
+                    "cond": {"op": "virus_counters_gte", "amount": 1},
+                    "then": {
+                        "op": "choose",
+                        "chooser": "runner",
+                        "options": [
+                            {
+                                "id": "swap",
+                                "label": "Remove 1 virus counter: swap ice protecting this server",
+                                "effect": remove_and_swap,
+                            },
+                            {
+                                "id": "decline",
+                                "label": "Decline",
+                                "effect": {
+                                    "op": "do",
+                                    "action": {
+                                        "kind": "gain_credits",
+                                        "side": "runner",
+                                        "amount": 0,
+                                    },
+                                },
+                            },
+                        ],
+                    },
+                },
+            },
+            unsupported=[],
+        )
+
+    if cid == "keiko":
+        return base(
+            c,
+            muBonus=2,
+            gainCreditsOnFirstCompanionInstallOrSpendThisTurn=1,
+            unsupported=[],
+        )
+
+    if cid == "flower-sermon":
+        return base(
+            c,
+            onScore={
+                "op": "do",
+                "action": {"kind": "add_agenda_counter", "amount": 5},
+            },
+            paidAbilities=[
+                {
+                    "id": "flower-sermon-look",
+                    "label": "Hosted agenda counter: Look at top of R&D; may advance; may bottom",
+                    "clickCost": 0,
+                    "creditCost": 0,
+                    "cost": {"agendaCounters": 1},
+                    "windows": ["corp_action_paw"],
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "look_top_rd_may_advance_may_bottom"
+                        },
+                    },
+                }
+            ],
+            unsupported=[],
+        )
+
     # Fail closed — honest unsupported note for the remainder.
     card = base(c)
     card["unsupported"] = [f"Full text not yet mapped to IR: {plain[:240]}"]
@@ -1194,7 +1342,7 @@ def main():
             "Null Signal Uprising (NRDB pack ur) — Ashes set 2 of 2; first "
             "legacy backwards wave before System Gateway. urbp titles absorbed. "
             f"In-progress: {full} cards fully mapped, {partial} with unsupported "
-            "notes (wave slice v1.40.0)."
+            "notes (wave slice v1.41.0)."
         ),
         "cards": written,
     }

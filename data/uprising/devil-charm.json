@@ -5,12 +5,40 @@
   "nrdbCode": "26068",
   "type": "hardware",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Whenever you encounter a piece of ice, you may remove this hardware from the game. If you do, that ice gets −6 strength for the remainder of this run."
-  ],
+  "unsupported": [],
   "subtypes": [
     "chip"
   ],
   "installCost": 1,
-  "unique": true
+  "unique": true,
+  "paidAbilities": [
+    {
+      "id": "devil-charm-weaken",
+      "label": "Remove Devil Charm from the game: encountered ice gets −6 strength this run",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {},
+      "windows": [
+        "encounter_paw"
+      ],
+      "effect": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "rfg_self"
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "weaken_ice",
+              "amount": 6
+            }
+          }
+        ]
+      }
+    }
+  ]
 }
