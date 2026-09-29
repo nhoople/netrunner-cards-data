@@ -5,12 +5,22 @@
   "nrdbCode": "25007",
   "type": "event",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Place 9[credit] on this event, then run any server. During that run, hosted credits are considered to be in your credit pool. When that run ends, suffer 1 core damage. This damage cannot be prevented."
-  ],
+  "unsupported": [],
   "faction": "anarch",
   "subtypes": [
     "run"
   ],
-  "playCost": 0
+  "playCost": 0,
+  "runEvent": {
+    "servers": "any",
+    "placeEventCredits": 9,
+    "onRunEnd": {
+      "op": "do",
+      "action": {
+        "kind": "core_damage",
+        "amount": 1,
+        "cannotPrevent": true
+      }
+    }
+  }
 }

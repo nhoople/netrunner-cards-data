@@ -5,12 +5,14 @@
   "nrdbCode": "25029",
   "type": "event",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Make a run. When you encounter the innermost piece of ice protecting that server, bypass it."
-  ],
+  "unsupported": [],
   "faction": "criminal",
   "subtypes": [
     "run"
   ],
-  "playCost": 2
+  "playCost": 2,
+  "runEvent": {
+    "servers": "any",
+    "bypassInnermostEncounter": true
+  }
 }
