@@ -940,6 +940,89 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    # --- v1.53.0 F-slice ---
+
+    if cid == "secure-and-protect":
+        return base(
+            c,
+            playAdditionalClick=True,
+            onPlay={
+                "op": "do",
+                "action": {
+                    "kind": "search_rd_ice_install_central_discount",
+                    "discount": 3,
+                },
+            },
+            unsupported=[],
+        )
+
+    if cid == "chisel":
+        return base(
+            c,
+            installOnIce=True,
+            hostStrengthPerVirusCounter=-1,
+            onHostEncounter={
+                "op": "if",
+                "cond": {"op": "encounter_ice_strength_lte", "amount": 0},
+                "then": {
+                    "op": "do",
+                    "action": {
+                        "kind": "trash_encounter_ice_if_strength_lte",
+                        "maxStrength": 0,
+                    },
+                },
+                "else": {
+                    "op": "do",
+                    "action": {"kind": "add_virus_counter", "amount": 1},
+                },
+            },
+            unsupported=[],
+        )
+
+    if cid == "rime":
+        return base(
+            c,
+            rezAsNonIceDuringRunsOnServer=True,
+            sameServerIceStrengthBonus=1,
+            subroutines=[
+                {
+                    "id": "rime-lose",
+                    "text": "The Runner loses 1[credit].",
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "lose_credits",
+                            "side": "runner",
+                            "amount": 1,
+                        },
+                    },
+                }
+            ],
+            unsupported=[],
+        )
+
+    if cid == "lat-ethical-freelancer":
+        return base(
+            c,
+            onDiscardPhaseEnd={
+                "op": "if",
+                "cond": {"op": "grip_count_eq_hq"},
+                "then": may_draw("runner", 1),
+            },
+            unsupported=[],
+        )
+
+    if cid == "rejig":
+        return base(
+            c,
+            playRequiresInstalledProgramOrHardware=True,
+            onPlay={
+                "op": "do",
+                "action": {"kind": "rejig_bounce_install"},
+            },
+            unsupported=[],
+        )
+
     # Fail closed — honest unsupported note for the remainder.
     card = base(c)
     card["unsupported"] = [f"Full text not yet mapped to IR: {plain[:240]}"]
@@ -980,7 +1063,7 @@ def main():
         "Null Signal Downfall (NRDB pack df) — Ashes set 1 of 2; legacy "
         "backwards wave before Uprising / System Gateway. Skip Magnum Opus "
         f"Reprint (mor). In-progress: {full} cards fully mapped, {partial} "
-        "with unsupported notes (E-slice v1.52.0)."
+        "with unsupported notes (F-slice v1.53.0)."
     )
     manifest = {
         "pack": WAVE,
