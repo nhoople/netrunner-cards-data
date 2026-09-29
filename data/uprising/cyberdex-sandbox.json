@@ -5,12 +5,47 @@
   "nrdbCode": "26128",
   "type": "agenda",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: The first time each turn you purge virus counters, gain 4[credit]. When you score this agenda, you may purge virus counters."
-  ],
+  "unsupported": [],
   "subtypes": [
     "security"
   ],
   "advancementRequirement": 4,
-  "agendaPoints": 2
+  "agendaPoints": 2,
+  "onVirusPurgeOncePerTurn": true,
+  "onVirusPurge": {
+    "op": "do",
+    "action": {
+      "kind": "gain_credits",
+      "side": "corp",
+      "amount": 4
+    }
+  },
+  "onScore": {
+    "op": "choose",
+    "chooser": "corp",
+    "options": [
+      {
+        "id": "purge",
+        "label": "Purge virus counters",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "purge_virus_counters"
+          }
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "corp",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  }
 }

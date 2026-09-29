@@ -5,8 +5,35 @@
   "nrdbCode": "26067",
   "type": "event",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: As an additional cost to play this event, trash 3 cards from your grip. Gain 3[credit] and draw 3 cards."
-  ],
-  "playCost": 0
+  "unsupported": [],
+  "playCost": 0,
+  "playRequiresOtherGripCardsGte": 3,
+  "playAdditionalCost": {
+    "op": "do",
+    "action": {
+      "kind": "trash_n_from_grip",
+      "amount": 3
+    }
+  },
+  "onPlay": {
+    "op": "seq",
+    "effects": [
+      {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "runner",
+          "amount": 3
+        }
+      },
+      {
+        "op": "do",
+        "action": {
+          "kind": "draw",
+          "side": "runner",
+          "amount": 3
+        }
+      }
+    ]
+  }
 }

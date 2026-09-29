@@ -297,6 +297,336 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    # --- v1.37.0 B-slice ---
+
+    if cid == "euler":
+        return base(
+            c,
+            breaker={
+                "breaksSubtype": "code gate",
+                "strength": 2,
+                "breakCredits": 2,
+                "breakMaxSubs": 2,
+                "pumpCredits": 1,
+                "pumpStrength": 1,
+                "breakViaPaidAbilityOnly": True,
+            },
+            paidAbilities=[
+                {
+                    "id": "euler-break-install",
+                    "label": "0¢: Break 1 code gate subroutine (installed this turn)",
+                    "clickCost": 0,
+                    "creditCost": 0,
+                    "cost": {"credits": 0},
+                    "windows": ["encounter_paw"],
+                    "requireInstalledThisTurn": True,
+                    "requireEncounterSubtype": "code gate",
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "break_encounter_subroutine",
+                            "maxSubs": 1,
+                            "requireSubtype": "code gate",
+                        },
+                    },
+                },
+                {
+                    "id": "euler-break",
+                    "label": "2¢: Break up to 2 code gate subroutines",
+                    "clickCost": 0,
+                    "creditCost": 2,
+                    "cost": {"credits": 2},
+                    "windows": ["encounter_paw"],
+                    "requireEncounterSubtype": "code gate",
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "break_encounter_subroutine",
+                            "maxSubs": 2,
+                            "requireSubtype": "code gate",
+                        },
+                    },
+                },
+                {
+                    "id": "euler-pump",
+                    "label": "1¢: +1 strength",
+                    "clickCost": 0,
+                    "creditCost": 1,
+                    "cost": {"credits": 1},
+                    "windows": ["encounter_paw"],
+                    "effect": {
+                        "op": "do",
+                        "action": {"kind": "pump_strength", "amount": 1},
+                    },
+                },
+            ],
+            unsupported=[],
+        )
+
+    if cid == "penrose":
+        return base(
+            c,
+            breaker={
+                "breaksSubtype": "code gate",
+                "strength": 2,
+                "breakCredits": 1,
+                "breakMaxSubs": 1,
+                "pumpCredits": 1,
+                "pumpStrength": 3,
+                "breakViaPaidAbilityOnly": True,
+            },
+            paidAbilities=[
+                {
+                    "id": "penrose-break-barrier",
+                    "label": "1¢: Break 1 barrier subroutine (installed this turn)",
+                    "clickCost": 0,
+                    "creditCost": 1,
+                    "cost": {"credits": 1},
+                    "windows": ["encounter_paw"],
+                    "requireInstalledThisTurn": True,
+                    "requireEncounterSubtype": "barrier",
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "break_encounter_subroutine",
+                            "maxSubs": 1,
+                            "requireSubtype": "barrier",
+                        },
+                    },
+                },
+                {
+                    "id": "penrose-break-cg",
+                    "label": "1¢: Break 1 code gate subroutine",
+                    "clickCost": 0,
+                    "creditCost": 1,
+                    "cost": {"credits": 1},
+                    "windows": ["encounter_paw"],
+                    "requireEncounterSubtype": "code gate",
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "break_encounter_subroutine",
+                            "maxSubs": 1,
+                            "requireSubtype": "code gate",
+                        },
+                    },
+                },
+                {
+                    "id": "penrose-pump",
+                    "label": "1¢: +3 strength (stealth credits only)",
+                    "clickCost": 0,
+                    "creditCost": 1,
+                    "cost": {"credits": 1, "creditsFromStealthOnly": True},
+                    "windows": ["encounter_paw"],
+                    "effect": {
+                        "op": "do",
+                        "action": {"kind": "pump_strength", "amount": 3},
+                    },
+                },
+            ],
+            unsupported=[],
+        )
+
+    if cid == "odore":
+        return base(
+            c,
+            breaker={
+                "breaksSubtype": "sentry",
+                "strength": 0,
+                "breakCredits": 2,
+                "breakMaxSubs": 99,
+                "pumpCredits": 3,
+                "pumpStrength": 3,
+                "breakViaPaidAbilityOnly": True,
+            },
+            paidAbilities=[
+                {
+                    "id": "odore-break-any",
+                    "label": "2¢: Break any number of sentry subroutines",
+                    "clickCost": 0,
+                    "creditCost": 2,
+                    "cost": {"credits": 2},
+                    "windows": ["encounter_paw"],
+                    "requireEncounterSubtype": "sentry",
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "break_encounter_subroutine",
+                            "maxSubs": 99,
+                            "requireSubtype": "sentry",
+                        },
+                    },
+                },
+                {
+                    "id": "odore-break-virtual",
+                    "label": "0¢: Break 1 sentry (3+ virtual resources)",
+                    "clickCost": 0,
+                    "creditCost": 0,
+                    "cost": {"credits": 0},
+                    "windows": ["encounter_paw"],
+                    "requireInstalledVirtualResourcesGte": 3,
+                    "requireEncounterSubtype": "sentry",
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "break_encounter_subroutine",
+                            "maxSubs": 1,
+                            "requireSubtype": "sentry",
+                        },
+                    },
+                },
+                {
+                    "id": "odore-pump",
+                    "label": "3¢: +3 strength",
+                    "clickCost": 0,
+                    "creditCost": 3,
+                    "cost": {"credits": 3},
+                    "windows": ["encounter_paw"],
+                    "effect": {
+                        "op": "do",
+                        "action": {"kind": "pump_strength", "amount": 3},
+                    },
+                },
+            ],
+            unsupported=[],
+        )
+
+    if cid == "moshing":
+        return base(
+            c,
+            playRequiresOtherGripCardsGte=3,
+            playAdditionalCost={
+                "op": "do",
+                "action": {"kind": "trash_n_from_grip", "amount": 3},
+            },
+            onPlay={
+                "op": "seq",
+                "effects": [
+                    gain("runner", 3),
+                    {
+                        "op": "do",
+                        "action": {
+                            "kind": "draw",
+                            "side": "runner",
+                            "amount": 3,
+                        },
+                    },
+                ],
+            },
+            unsupported=[],
+        )
+
+    if cid == "cayambe-grid":
+        return base(
+            c,
+            onTurnBegin={
+                "op": "do",
+                "action": {
+                    "kind": "place_advancements",
+                    "amount": 1,
+                    "onlyIceProtectingSourceServer": True,
+                    "pick": "choose",
+                },
+            },
+            approachServerEtrUnlessCreditsPerAdvancedIce=2,
+            unsupported=[],
+        )
+
+    if cid == "cyberdex-sandbox":
+        return base(
+            c,
+            onVirusPurgeOncePerTurn=True,
+            onVirusPurge=gain("corp", 4),
+            onScore={
+                "op": "choose",
+                "chooser": "corp",
+                "options": [
+                    {
+                        "id": "purge",
+                        "label": "Purge virus counters",
+                        "effect": {
+                            "op": "do",
+                            "action": {"kind": "purge_virus_counters"},
+                        },
+                    },
+                    {
+                        "id": "decline",
+                        "label": "Decline",
+                        "effect": {
+                            "op": "do",
+                            "action": {
+                                "kind": "gain_credits",
+                                "side": "corp",
+                                "amount": 0,
+                            },
+                        },
+                    },
+                ],
+            },
+            unsupported=[],
+        )
+
+    if cid == "dreamnet":
+        return base(
+            c,
+            onFirstSuccessfulRunThisTurn={
+                "op": "seq",
+                "effects": [
+                    {
+                        "op": "do",
+                        "action": {
+                            "kind": "draw",
+                            "side": "runner",
+                            "amount": 1,
+                        },
+                    },
+                    {
+                        "op": "if",
+                        "cond": {
+                            "op": "or",
+                            "conds": [
+                                {
+                                    "op": "identity_has_subtype",
+                                    "subtype": "digital",
+                                },
+                                {"op": "link_gte", "amount": 2},
+                            ],
+                        },
+                        "then": gain("runner", 1),
+                    },
+                ],
+            },
+            unsupported=[],
+        )
+
+    if cid == "swift":
+        return base(
+            c,
+            muBonus=1,
+            gainClickOnFirstRunEventThisTurn=True,
+            unsupported=[],
+        )
+
+    if cid == "self-modifying-code":
+        return base(
+            c,
+            paidAbilities=[
+                {
+                    "id": "smc-search",
+                    "label": "2¢, [trash]: Search stack for a program and install it",
+                    "clickCost": 0,
+                    "creditCost": 2,
+                    "cost": {"credits": 2, "trashSelf": True},
+                    "windows": ["runner_action_paw"],
+                    "effect": {
+                        "op": "do",
+                        "action": {"kind": "search_stack_program_install"},
+                    },
+                }
+            ],
+            unsupported=[],
+        )
+
     # Fail closed — honest unsupported note for the remainder.
     card = base(c)
     card["unsupported"] = [f"Full text not yet mapped to IR: {plain[:240]}"]
@@ -342,7 +672,7 @@ def main():
             "Null Signal Uprising (NRDB pack ur) — Ashes set 2 of 2; first "
             "legacy backwards wave before System Gateway. urbp titles absorbed. "
             f"In-progress: {full} cards fully mapped, {partial} with unsupported "
-            "notes (wave slice v1.36.0)."
+            "notes (wave slice v1.37.0)."
         ),
         "cards": written,
     }

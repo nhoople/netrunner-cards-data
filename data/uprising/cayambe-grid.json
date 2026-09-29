@@ -5,13 +5,21 @@
   "nrdbCode": "26127",
   "type": "upgrade",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: When your turn begins, place 1 advancement counter on a piece of ice protecting this server. Whenever the Runner approaches this server, end the run unless they pay 2[credit] for each advanced piece of ice protecting this server. Limit 1 re"
-  ],
+  "unsupported": [],
   "subtypes": [
     "region"
   ],
   "installCost": 3,
   "rezCost": 3,
-  "trashCost": 3
+  "trashCost": 3,
+  "onTurnBegin": {
+    "op": "do",
+    "action": {
+      "kind": "place_advancements",
+      "amount": 1,
+      "onlyIceProtectingSourceServer": true,
+      "pick": "choose"
+    }
+  },
+  "approachServerEtrUnlessCreditsPerAdvancedIce": 2
 }

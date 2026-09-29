@@ -536,6 +536,13 @@
             "type": "integer",
             "minimum": 0,
             "description": "Ability usable only while the Corp has at least this many credits (Fransofia Ward)."
+          },
+          "requireInstalledThisTurn": {
+            "type": "boolean"
+          },
+          "requireInstalledVirtualResourcesGte": {
+            "type": "integer",
+            "minimum": 0
           }
         }
       }
@@ -2103,7 +2110,9 @@
     },
     "hostsUniqueCompanionOrConnectionResources": {
       "type": "object",
-      "required": ["creditDiscount"],
+      "required": [
+        "creditDiscount"
+      ],
       "additionalProperties": false,
       "properties": {
         "creditDiscount": {
@@ -2120,6 +2129,24 @@
     "flipIdentityOnSuccessfulCentralRun": {
       "type": "boolean",
       "description": "Corp identity flips on successful Runner run on a central server (Méliès U)."
+    },
+    "approachServerEtrUnlessCreditsPerAdvancedIce": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Cayambe Grid: ETR unless Runner pays N credits per advanced protecting ice."
+    },
+    "onVirusPurgeOncePerTurn": {
+      "type": "boolean",
+      "description": "Cyberdex Sandbox: onVirusPurge fires at most once per turn."
+    },
+    "gainClickOnFirstRunEventThisTurn": {
+      "type": "boolean",
+      "description": "Swift: gain [click] the first time each turn a run event is played."
+    },
+    "playRequiresOtherGripCardsGte": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Moshing: require at least this many other grip cards (trash additional cost)."
     }
   }
 }

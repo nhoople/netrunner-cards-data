@@ -5,14 +5,85 @@
   "nrdbCode": "26071",
   "type": "program",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Interface → 2[credit]: Break any number of sentry subroutines. Interface → 0[credit]: Break 1 sentry subroutine. Use this ability only if you have 3 or more installed virtual resources. 3[credit]: +3 strength."
-  ],
+  "unsupported": [],
   "subtypes": [
     "icebreaker",
     "killer"
   ],
   "installCost": 4,
   "strength": 0,
-  "memoryCost": 1
+  "memoryCost": 1,
+  "breaker": {
+    "breaksSubtype": "sentry",
+    "strength": 0,
+    "breakCredits": 2,
+    "breakMaxSubs": 99,
+    "pumpCredits": 3,
+    "pumpStrength": 3,
+    "breakViaPaidAbilityOnly": true
+  },
+  "paidAbilities": [
+    {
+      "id": "odore-break-any",
+      "label": "2¢: Break any number of sentry subroutines",
+      "clickCost": 0,
+      "creditCost": 2,
+      "cost": {
+        "credits": 2
+      },
+      "windows": [
+        "encounter_paw"
+      ],
+      "requireEncounterSubtype": "sentry",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "break_encounter_subroutine",
+          "maxSubs": 99,
+          "requireSubtype": "sentry"
+        }
+      }
+    },
+    {
+      "id": "odore-break-virtual",
+      "label": "0¢: Break 1 sentry (3+ virtual resources)",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "credits": 0
+      },
+      "windows": [
+        "encounter_paw"
+      ],
+      "requireInstalledVirtualResourcesGte": 3,
+      "requireEncounterSubtype": "sentry",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "break_encounter_subroutine",
+          "maxSubs": 1,
+          "requireSubtype": "sentry"
+        }
+      }
+    },
+    {
+      "id": "odore-pump",
+      "label": "3¢: +3 strength",
+      "clickCost": 0,
+      "creditCost": 3,
+      "cost": {
+        "credits": 3
+      },
+      "windows": [
+        "encounter_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "pump_strength",
+          "amount": 3
+        }
+      }
+    }
+  ]
 }

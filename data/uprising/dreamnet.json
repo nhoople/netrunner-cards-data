@@ -5,12 +5,47 @@
   "nrdbCode": "26095",
   "type": "resource",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: The first time each turn you make a successful run, draw 1 card. If your identity is digital or you have at least 2[link], also gain 1[credit]."
-  ],
+  "unsupported": [],
   "subtypes": [
     "virtual"
   ],
   "installCost": 3,
-  "unique": true
+  "unique": true,
+  "onFirstSuccessfulRunThisTurn": {
+    "op": "seq",
+    "effects": [
+      {
+        "op": "do",
+        "action": {
+          "kind": "draw",
+          "side": "runner",
+          "amount": 1
+        }
+      },
+      {
+        "op": "if",
+        "cond": {
+          "op": "or",
+          "conds": [
+            {
+              "op": "identity_has_subtype",
+              "subtype": "digital"
+            },
+            {
+              "op": "link_gte",
+              "amount": 2
+            }
+          ]
+        },
+        "then": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "runner",
+            "amount": 1
+          }
+        }
+      }
+    ]
+  }
 }
