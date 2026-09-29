@@ -5,9 +5,7 @@
   "nrdbCode": "26044",
   "type": "ice",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: When the Runner encounters this ice, choose a card type. For the remainder of the encounter, whenever you trash a card of the chosen type with net damage from a subroutine on this ice, do 1 net damage. [subroutine] Do 1 net damage. [subrout"
-  ],
+  "unsupported": [],
   "subtypes": [
     "sentry",
     "ap",
@@ -15,5 +13,47 @@
   ],
   "installCost": 5,
   "rezCost": 5,
-  "strength": 2
+  "strength": 2,
+  "onEncounter": {
+    "op": "do",
+    "action": {
+      "kind": "choose_card_type_for_encounter"
+    }
+  },
+  "amplifyNetDamageOnTrashChosenEncounterType": true,
+  "subroutines": [
+    {
+      "id": "saisentan-net-1",
+      "text": "Do 1 net damage.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "net_damage",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "id": "saisentan-net-2",
+      "text": "Do 1 net damage.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "net_damage",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "id": "saisentan-net-3",
+      "text": "Do 1 net damage.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "net_damage",
+          "amount": 1
+        }
+      }
+    }
+  ]
 }
