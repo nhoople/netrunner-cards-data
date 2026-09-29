@@ -5,12 +5,32 @@
   "nrdbCode": "25062",
   "type": "resource",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Place 12[credit] from the bank on Armitage Codebusting when it is installed. When there are no credits left on Armitage Codebusting, trash it. [click]: Take 2[credit] from Armitage Codebusting."
-  ],
+  "unsupported": [],
   "faction": "neutral-runner",
   "subtypes": [
     "job"
   ],
-  "installCost": 1
+  "installCost": 1,
+  "hostedCreditsOnInstall": 12,
+  "paidAbilities": [
+    {
+      "id": "armitage-codebusting-take",
+      "label": "Take 2¢",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "take_hosted_credits",
+          "amount": 2
+        }
+      }
+    }
+  ]
 }

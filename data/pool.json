@@ -18,7 +18,7 @@
   "waves": {
     "system-core-2019": {
       "status": "in-progress",
-      "notes": "Null Signal System Core 2019 (NRDB pack sc19) — legacy backwards after Downfall. 147 titles; 63 Gateway/SU21 reprints absorbed (no duplicate files). Kickoff v1.59.0 clears: Easy Mark, Beanstalk Royalties, Wall of Static, Akamatsu Mem Chip, Spiderweb. Skip Magnum Opus (mo) / Magnum Opus Reprint (mor).",
+      "notes": "Null Signal System Core 2019 (NRDB pack sc19) — legacy backwards after Downfall. 147 titles; 63 Gateway/SU21 reprints absorbed (no duplicate files). A-slice v1.60.0: 10/147 SC19-only clears (kickoff 5 + Neural Katana, Wall of Thorns, Armitage Codebusting, Hadrian's Wall, IPO). Skip Magnum Opus (mo) / Magnum Opus Reprint (mor).",
       "cards": [
         "reina-roja-freedom-fighter",
         "quetzal-free-spirit",

@@ -124,6 +124,18 @@ def gain(side: str, n: int):
     return {"op": "do", "action": {"kind": "gain_credits", "side": side, "amount": n}}
 
 
+def net(n: int):
+    return {"op": "do", "action": {"kind": "net_damage", "amount": n}}
+
+
+def draw(side: str, n: int):
+    return {"op": "do", "action": {"kind": "draw", "side": side, "amount": n}}
+
+
+def seq(*effects):
+    return {"op": "seq", "effects": list(effects)}
+
+
 def base(c, **extra):
     subtypes = []
     if c.get("keywords"):
@@ -222,6 +234,88 @@ def map_card(c: dict) -> dict | None:
             unsupported=[],
         )
 
+    # --- v1.60.0 A-slice: existing IR only ---
+
+    if cid == "neural-katana":
+        return base(
+            c,
+            subroutines=[
+                {
+                    "id": "neural-katana-net",
+                    "text": "Do 3 net damage.",
+                    "effect": net(3),
+                }
+            ],
+            unsupported=[],
+        )
+
+    if cid == "wall-of-thorns":
+        return base(
+            c,
+            subroutines=[
+                {
+                    "id": "wall-of-thorns-net",
+                    "text": "Do 2 net damage.",
+                    "effect": net(2),
+                },
+                {
+                    "id": "wall-of-thorns-etr",
+                    "text": "End the run.",
+                    "effect": etr(),
+                },
+            ],
+            unsupported=[],
+        )
+
+    if cid == "armitage-codebusting":
+        return base(
+            c,
+            hostedCreditsOnInstall=12,
+            paidAbilities=[
+                {
+                    "id": "armitage-codebusting-take",
+                    "label": "Take 2¢",
+                    "clickCost": 1,
+                    "creditCost": 0,
+                    "cost": {"clicks": 1},
+                    "windows": ["runner_action_paw"],
+                    "effect": {
+                        "op": "do",
+                        "action": {"kind": "take_hosted_credits", "amount": 2},
+                    },
+                }
+            ],
+            unsupported=[],
+        )
+
+    if cid == "hadrians-wall":
+        return base(
+            c,
+            canAdvance=True,
+            strengthPerAdvancement=1,
+            subroutines=[
+                {
+                    "id": "hadrians-wall-etr-1",
+                    "text": "End the run.",
+                    "effect": etr(),
+                },
+                {
+                    "id": "hadrians-wall-etr-2",
+                    "text": "End the run.",
+                    "effect": etr(),
+                },
+            ],
+            unsupported=[],
+        )
+
+    if cid == "ipo":
+        return base(
+            c,
+            endsActionPhase=True,
+            onPlay=gain("corp", 13),
+            unsupported=[],
+        )
+
     card = base(c)
     card["unsupported"] = [
         f"Full text not yet mapped to IR: {plain[:200]}"
@@ -278,6 +372,13 @@ def main():
             "wall-of-static",
             "akamatsu-mem-chip",
             "spiderweb",
+        ],
+        "aSliceClears": [
+            "neural-katana",
+            "wall-of-thorns",
+            "armitage-codebusting",
+            "hadrians-wall",
+            "ipo",
         ],
     }
     (OUT / "_manifest.json").write_text(

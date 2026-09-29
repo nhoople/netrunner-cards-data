@@ -5,14 +5,36 @@
   "nrdbCode": "25132",
   "type": "ice",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: Hadrian's Wall can be advanced and has +1 strength for each advancement token on it. [subroutine] End the run. [subroutine] End the run."
-  ],
+  "unsupported": [],
   "faction": "weyland-consortium",
   "subtypes": [
     "barrier"
   ],
   "installCost": 10,
   "rezCost": 10,
-  "strength": 7
+  "strength": 7,
+  "canAdvance": true,
+  "strengthPerAdvancement": 1,
+  "subroutines": [
+    {
+      "id": "hadrians-wall-etr-1",
+      "text": "End the run.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "end_the_run"
+        }
+      }
+    },
+    {
+      "id": "hadrians-wall-etr-2",
+      "text": "End the run.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "end_the_run"
+        }
+      }
+    }
+  ]
 }
