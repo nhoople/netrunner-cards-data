@@ -5,7 +5,7 @@
   "written": 84,
   "reprintSkipped": 63,
   "status": "in-progress",
-  "notes": "System Core 2019 (sc19) kickoff v1.59.0. Wrote 84 files; skipped 63 Gateway/SU21 reprints. Kickoff clears among written: 30.",
+  "notes": "System Core 2019 (sc19) kickoff v1.59.0. Wrote 84 files; skipped 63 Gateway/SU21 reprints. Kickoff clears among written: 35.",
   "cards": [
     "reina-roja-freedom-fighter",
     "quetzal-free-spirit",
@@ -261,5 +261,12 @@
     "sea-source",
     "product-placement",
     "notoriety"
+  ],
+  "fSliceClears": [
+    "gabriel-santiago-consummate-professional",
+    "quest-completed",
+    "explode-a-palooza",
+    "lamprey",
+    "ghost-branch"
   ]
 }

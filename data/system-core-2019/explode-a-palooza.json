@@ -5,13 +5,42 @@
   "nrdbCode": "25106",
   "type": "agenda",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: While the Runner is accessing this agenda in R&D, they must reveal it. When the Runner accesses this agenda, you may gain 5[credit]."
-  ],
+  "unsupported": [],
   "faction": "nbn",
   "subtypes": [
     "sensie"
   ],
   "advancementRequirement": 4,
-  "agendaPoints": 2
+  "agendaPoints": 2,
+  "mustRevealWhenAccessedFromRd": true,
+  "onAccess": {
+    "op": "choose",
+    "chooser": "corp",
+    "options": [
+      {
+        "id": "gain",
+        "label": "Gain 5¢",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "corp",
+            "amount": 5
+          }
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "corp",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  }
 }

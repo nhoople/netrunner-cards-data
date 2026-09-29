@@ -5,12 +5,18 @@
   "nrdbCode": "25020",
   "type": "identity",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: The first time you make a successful run on HQ each turn, gain 2[credit]."
-  ],
+  "unsupported": [],
   "faction": "criminal",
   "subtypes": [
     "cyborg"
   ],
-  "link": 0
+  "link": 0,
+  "onFirstSuccessfulHqRunThisTurn": {
+    "op": "do",
+    "action": {
+      "kind": "gain_credits",
+      "side": "runner",
+      "amount": 2
+    }
+  }
 }
