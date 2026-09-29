@@ -5,14 +5,33 @@
   "nrdbCode": "22056",
   "type": "operation",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: Play only if you have less than 10[credit]. Gain 7[credit] and take 1 bad publicity."
-  ],
+  "unsupported": [],
   "faction": "weyland-consortium",
   "subtypes": [
     "transaction",
     "liability"
   ],
   "playCost": 0,
-  "trashCost": 5
+  "trashCost": 5,
+  "playRequiresCreditsLt": 10,
+  "onPlay": {
+    "op": "seq",
+    "effects": [
+      {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "corp",
+          "amount": 7
+        }
+      },
+      {
+        "op": "do",
+        "action": {
+          "kind": "give_bad_publicity",
+          "amount": 1
+        }
+      }
+    ]
+  }
 }

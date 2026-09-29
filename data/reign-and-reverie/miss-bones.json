@@ -5,13 +5,15 @@
   "nrdbCode": "22014",
   "type": "resource",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Place 12[credit] from the bank on Miss Bones when she is installed. When there are no credits left on Miss Bones, trash her. Use these credits to trash installed cards."
-  ],
+  "unsupported": [],
   "faction": "criminal",
   "subtypes": [
     "connection"
   ],
   "installCost": 2,
-  "unique": true
+  "unique": true,
+  "hostedCreditsOnInstall": 12,
+  "hostedCreditsSpendFor": [
+    "trash"
+  ]
 }

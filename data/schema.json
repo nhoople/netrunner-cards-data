@@ -1643,6 +1643,15 @@
     "playRequiresTagged": {
       "type": "boolean"
     },
+    "playRequiresCreditsLt": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Play only if the playing side has fewer than this many credits (Too Big to Fail)."
+    },
+    "playCostReducedByLink": {
+      "type": "boolean",
+      "description": "Reduce this event's play cost by 1 for each link the Runner has (Office Supplies)."
+    },
     "playRequiresInstalledResource": {
       "type": "boolean",
       "description": "Play only if the Runner has at least one installed resource (Sell Out)."
@@ -2008,6 +2017,11 @@
     "removeVirusOrTrashOnEncounterEndIfBroke": {
       "type": "boolean",
       "description": "When an encounter ends, if this program broke a subroutine during that encounter, remove 1 hosted virus counter or trash this program (Crypsis)."
+    },
+    "corpGainsCreditsOnEncounterEndIfBroke": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "When an encounter ends, if this program broke a subroutine during that encounter, the Corp gains this many credits (Tycoon)."
     },
     "hostNonAiIcebreaker": {
       "type": "boolean",

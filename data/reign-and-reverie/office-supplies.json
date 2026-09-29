@@ -5,9 +5,38 @@
   "nrdbCode": "22024",
   "type": "event",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Reduce the play cost of Office Supplies by 1 for each [link] you have. Gain 4[credit] or draw 4 cards."
-  ],
+  "unsupported": [],
   "faction": "sunny-lebeau",
-  "playCost": 4
+  "playCost": 4,
+  "playCostReducedByLink": true,
+  "onPlay": {
+    "op": "choose",
+    "chooser": "runner",
+    "options": [
+      {
+        "id": "gain4",
+        "label": "Gain 4¢",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "runner",
+            "amount": 4
+          }
+        }
+      },
+      {
+        "id": "draw4",
+        "label": "Draw 4 cards",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "draw",
+            "side": "runner",
+            "amount": 4
+          }
+        }
+      }
+    ]
+  }
 }
