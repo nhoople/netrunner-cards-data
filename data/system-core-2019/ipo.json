@@ -5,13 +5,20 @@
   "nrdbCode": "25147",
   "type": "operation",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: After you resolve this operation, end your action phase. Gain 13[credit]."
-  ],
+  "unsupported": [],
   "faction": "neutral-corp",
   "subtypes": [
     "terminal",
     "transaction"
   ],
-  "playCost": 8
+  "playCost": 8,
+  "endsActionPhase": true,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "gain_credits",
+      "side": "corp",
+      "amount": 13
+    }
+  }
 }
