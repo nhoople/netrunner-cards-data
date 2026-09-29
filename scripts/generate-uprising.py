@@ -627,6 +627,253 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    # --- v1.38.0 C-slice ---
+
+    if cid == "afterimage":
+        return base(
+            c,
+            breaker={
+                "breaksSubtype": "sentry",
+                "strength": 2,
+                "breakCredits": 1,
+                "breakMaxSubs": 2,
+                "pumpCredits": 1,
+                "pumpStrength": 2,
+                "breakViaPaidAbilityOnly": True,
+            },
+            paidAbilities=[
+                {
+                    "id": "afterimage-bypass",
+                    "label": "2¢: Bypass encountered sentry (stealth; once per turn)",
+                    "clickCost": 0,
+                    "creditCost": 2,
+                    "cost": {"credits": 2, "creditsFromStealthOnly": True},
+                    "windows": ["encounter_paw"],
+                    "oncePerTurn": True,
+                    "requireEncounterSubtype": "sentry",
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "bypass_current_ice",
+                            "requireSubtype": "sentry",
+                        },
+                    },
+                },
+                {
+                    "id": "afterimage-break",
+                    "label": "1¢: Break up to 2 sentry subroutines",
+                    "clickCost": 0,
+                    "creditCost": 1,
+                    "cost": {"credits": 1},
+                    "windows": ["encounter_paw"],
+                    "requireEncounterSubtype": "sentry",
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "break_encounter_subroutine",
+                            "maxSubs": 2,
+                            "requireSubtype": "sentry",
+                        },
+                    },
+                },
+                {
+                    "id": "afterimage-pump",
+                    "label": "1¢: +2 strength (stealth credits only)",
+                    "clickCost": 0,
+                    "creditCost": 1,
+                    "cost": {"credits": 1, "creditsFromStealthOnly": True},
+                    "windows": ["encounter_paw"],
+                    "effect": {
+                        "op": "do",
+                        "action": {"kind": "pump_strength", "amount": 2},
+                    },
+                },
+            ],
+            unsupported=[],
+        )
+
+    if cid == "penumbral-toolkit":
+        return base(
+            c,
+            hostedCreditsOnInstall=4,
+            spendHostedCreditsDuringRuns=True,
+            installCostDiscountIfSuccessfulHqRunThisTurn=2,
+            unsupported=[],
+        )
+
+    if cid == "f2p":
+        return base(
+            c,
+            paidAbilities=[
+                {
+                    "id": "f2p-break",
+                    "label": "2¢: Break 1 subroutine (Runner; untagged)",
+                    "clickCost": 0,
+                    "creditCost": 2,
+                    "cost": {"credits": 2},
+                    "windows": ["encounter_paw"],
+                    "usableByAnyPlayer": True,
+                    "requiresUntagged": True,
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "break_encounter_subroutine",
+                            "maxSubs": 1,
+                        },
+                    },
+                }
+            ],
+            subroutines=[
+                {
+                    "id": "f2p-bounce",
+                    "text": "Add 1 installed Runner card to the grip.",
+                    "effect": {
+                        "op": "do",
+                        "action": {"kind": "add_installed_runner_to_grip"},
+                    },
+                },
+                {
+                    "id": "f2p-tag",
+                    "text": "Give the Runner 1 tag.",
+                    "effect": {
+                        "op": "do",
+                        "action": {"kind": "give_tags", "amount": 1},
+                    },
+                },
+            ],
+            unsupported=[],
+        )
+
+    if cid == "transport-monopoly":
+        return base(
+            c,
+            onScore={
+                "op": "do",
+                "action": {"kind": "add_agenda_counter", "amount": 2},
+            },
+            paidAbilities=[
+                {
+                    "id": "transport-monopoly-block",
+                    "label": "Hosted agenda counter: this run cannot be declared successful",
+                    "clickCost": 0,
+                    "creditCost": 0,
+                    "cost": {"agendaCounters": 1},
+                    "windows": [
+                        "approach_paw",
+                        "encounter_paw",
+                        "approach_server_paw",
+                    ],
+                    "oncePerTurn": True,
+                    "requireDuringRun": True,
+                    "effect": {
+                        "op": "do",
+                        "action": {"kind": "prevent_declare_run_successful"},
+                    },
+                }
+            ],
+            unsupported=[],
+        )
+
+    if cid == "akhet":
+        return base(
+            c,
+            canAdvance=True,
+            strengthBonusAtAdvancements={"threshold": 3, "bonus": 3},
+            maxPrintedSubsBreakablePerEncounterAtAdvancements={
+                "threshold": 3,
+                "max": 1,
+            },
+            subroutines=[
+                {
+                    "id": "akhet-adv",
+                    "text": "Gain 1[credit]. Place 1 advancement counter on an installed card.",
+                    "effect": {
+                        "op": "seq",
+                        "effects": [
+                            gain("corp", 1),
+                            {
+                                "op": "do",
+                                "action": {
+                                    "kind": "place_advancements",
+                                    "amount": 1,
+                                    "pick": "choose",
+                                },
+                            },
+                        ],
+                    },
+                },
+                {
+                    "id": "akhet-etr",
+                    "text": "End the run.",
+                    "effect": {
+                        "op": "do",
+                        "action": {"kind": "end_the_run"},
+                    },
+                },
+            ],
+            unsupported=[],
+        )
+
+    if cid == "colossus":
+        return base(
+            c,
+            canAdvance=True,
+            strengthPerAdvancement=1,
+            subroutines=[
+                {
+                    "id": "colossus-tag",
+                    "text": "Give the Runner 1 tag. If 3+ advancements, instead give 2 tags.",
+                    "effect": {
+                        "op": "if",
+                        "cond": {"op": "advancements_gte", "amount": 3},
+                        "then": {
+                            "op": "do",
+                            "action": {"kind": "give_tags", "amount": 2},
+                        },
+                        "else": {
+                            "op": "do",
+                            "action": {"kind": "give_tags", "amount": 1},
+                        },
+                    },
+                },
+                {
+                    "id": "colossus-trash",
+                    "text": "Trash 1 installed program. If 3+ advancements, also trash 1 installed resource.",
+                    "effect": {
+                        "op": "if",
+                        "cond": {"op": "advancements_gte", "amount": 3},
+                        "then": {
+                            "op": "seq",
+                            "effects": [
+                                {
+                                    "op": "do",
+                                    "action": {
+                                        "kind": "trash_program",
+                                        "pick": "choose",
+                                    },
+                                },
+                                {
+                                    "op": "do",
+                                    "action": {
+                                        "kind": "trash_resource",
+                                        "pick": "choose",
+                                    },
+                                },
+                            ],
+                        },
+                        "else": {
+                            "op": "do",
+                            "action": {
+                                "kind": "trash_program",
+                                "pick": "choose",
+                            },
+                        },
+                    },
+                },
+            ],
+            unsupported=[],
+        )
+
     # Fail closed — honest unsupported note for the remainder.
     card = base(c)
     card["unsupported"] = [f"Full text not yet mapped to IR: {plain[:240]}"]
@@ -672,7 +919,7 @@ def main():
             "Null Signal Uprising (NRDB pack ur) — Ashes set 2 of 2; first "
             "legacy backwards wave before System Gateway. urbp titles absorbed. "
             f"In-progress: {full} cards fully mapped, {partial} with unsupported "
-            "notes (wave slice v1.37.0)."
+            "notes (wave slice v1.38.0)."
         ),
         "cards": written,
     }
