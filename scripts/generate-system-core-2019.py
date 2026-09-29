@@ -1366,6 +1366,101 @@ def map_card(c: dict) -> dict | None:
             unsupported=[],
         )
 
+    # --- v1.72.0 M-slice: reuse + new Effect IR leaves (fail-closed engine pair) ---
+
+    if cid == "paragon":
+        return base(
+            c,
+            muBonus=1,
+            onSuccessfulRunOncePerTurn=True,
+            onSuccessfulRun={
+                "op": "choose",
+                "chooser": "runner",
+                "options": [
+                    {
+                        "id": "paragon-yes",
+                        "label": "Gain 1¢ and look at the top of your stack",
+                        "effect": seq(
+                            gain("runner", 1),
+                            {
+                                "op": "do",
+                                "action": {
+                                    "kind": "look_top_n_stack_may_bottom_one",
+                                    "n": 1,
+                                },
+                            },
+                        ),
+                    },
+                    {
+                        "id": "paragon-decline",
+                        "label": "Decline",
+                        "effect": {
+                            "op": "do",
+                            "action": {
+                                "kind": "gain_credits",
+                                "side": "runner",
+                                "amount": 0,
+                            },
+                        },
+                    },
+                ],
+            },
+            unsupported=[],
+        )
+
+    if cid == "aggressive-secretary":
+        return base(
+            c,
+            canAdvance=True,
+            onAccess={
+                "op": "do",
+                "action": {
+                    "kind": "may_pay_credits_for_trash_programs_per_advancement",
+                    "amount": 2,
+                },
+            },
+            unsupported=[],
+        )
+
+    if cid == "successful-field-test":
+        return base(
+            c,
+            onScore={
+                "op": "do",
+                "action": {
+                    "kind": "install_any_number_from_hq_ignore_costs",
+                },
+            },
+            unsupported=[],
+        )
+
+    if cid == "hostage":
+        return base(
+            c,
+            playAdditionalClick=True,
+            onPlay={
+                "op": "do",
+                "action": {
+                    "kind": "search_stack_subtype_may_install",
+                    "subtype": "connection",
+                },
+            },
+            unsupported=[],
+        )
+
+    if cid == "tinkering":
+        return base(
+            c,
+            onPlay={
+                "op": "do",
+                "action": {
+                    "kind": "grant_chosen_ice_subtypes_until_end_of_turn",
+                    "subtypes": ["sentry", "code gate", "barrier"],
+                },
+            },
+            unsupported=[],
+        )
+
     card = base(c)
     card["unsupported"] = [
         f"Full text not yet mapped to IR: {plain[:200]}"
@@ -1506,6 +1601,13 @@ def main():
             "red-herrings",
             "public-support",
             "project-junebug",
+        ],
+        "mSliceClears": [
+            "paragon",
+            "aggressive-secretary",
+            "successful-field-test",
+            "hostage",
+            "tinkering",
         ],
     }
     (OUT / "_manifest.json").write_text(
