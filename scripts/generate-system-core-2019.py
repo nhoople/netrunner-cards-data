@@ -427,6 +427,107 @@ def map_card(c: dict) -> dict | None:
             unsupported=[],
         )
 
+    # --- v1.62.0 C-slice: existing IR only ---
+
+    if cid == "demara":
+        card = breaker_card(
+            c,
+            "barrier",
+            1,
+            2,
+            2,
+            3,
+            break_max=2,
+            unsupported=[],
+        )
+        card["paidAbilities"] = list(card.get("paidAbilities") or []) + [
+            {
+                "id": "demara-bypass",
+                "label": "Trash Demara: bypass encountered barrier",
+                "clickCost": 0,
+                "creditCost": 0,
+                "cost": {"trashSelf": True},
+                "windows": ["encounter_paw"],
+                "requireEncounterSubtype": "barrier",
+                "effect": {
+                    "op": "do",
+                    "action": {
+                        "kind": "bypass_current_ice",
+                        "requireSubtype": "barrier",
+                    },
+                },
+            }
+        ]
+        return card
+
+    if cid == "himitsu-bako":
+        return base(
+            c,
+            paidAbilities=[
+                {
+                    "id": "himitsu-bako-hq",
+                    "label": "1¢: Add Himitsu-Bako to HQ",
+                    "clickCost": 0,
+                    "creditCost": 1,
+                    "cost": {"credits": 1},
+                    "windows": ["corp_action_paw", "encounter_paw"],
+                    "effect": {
+                        "op": "do",
+                        "action": {"kind": "return_source_to_hq"},
+                    },
+                }
+            ],
+            subroutines=[
+                {
+                    "id": "himitsu-bako-etr",
+                    "text": "End the run.",
+                    "effect": etr(),
+                }
+            ],
+            unsupported=[],
+        )
+
+    if cid == "marked-accounts":
+        return base(
+            c,
+            onTurnBegin={
+                "op": "do",
+                "action": {"kind": "take_hosted_credits", "amount": 1},
+            },
+            paidAbilities=[
+                {
+                    "id": "marked-accounts-load",
+                    "label": "[click]: Place 3¢ on Marked Accounts",
+                    "clickCost": 1,
+                    "creditCost": 0,
+                    "cost": {"clicks": 1},
+                    "windows": ["corp_action_paw"],
+                    "effect": {
+                        "op": "do",
+                        "action": {"kind": "place_hosted_credits", "amount": 3},
+                    },
+                }
+            ],
+            unsupported=[],
+        )
+
+    if cid == "modded":
+        return base(
+            c,
+            onPlay={
+                "op": "do",
+                "action": {
+                    "kind": "install_from_grip_discount",
+                    "types": ["program", "hardware"],
+                    "discount": 3,
+                },
+            },
+            unsupported=[],
+        )
+
+    if cid == "chaos-theory-wunderkind":
+        return base(c, muBonus=1, unsupported=[])
+
     card = base(c)
     card["unsupported"] = [
         f"Full text not yet mapped to IR: {plain[:200]}"
@@ -497,6 +598,13 @@ def main():
             "pipeline",
             "blue-level-clearance",
             "adonis-campaign",
+        ],
+        "cSliceClears": [
+            "demara",
+            "himitsu-bako",
+            "marked-accounts",
+            "modded",
+            "chaos-theory-wunderkind",
         ],
     }
     (OUT / "_manifest.json").write_text(

@@ -5,12 +5,21 @@
   "nrdbCode": "25043",
   "type": "event",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Install a program or piece of hardware, lowering the install cost by 3."
-  ],
+  "unsupported": [],
   "faction": "shaper",
   "subtypes": [
     "mod"
   ],
-  "playCost": 0
+  "playCost": 0,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "install_from_grip_discount",
+      "types": [
+        "program",
+        "hardware"
+      ],
+      "discount": 3
+    }
+  }
 }
