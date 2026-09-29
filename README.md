@@ -40,7 +40,8 @@ Match this dataset and [netrunner-engine](https://github.com/nhoople/netrunner-e
 
 | Pairing | cards-data | engine |
 |---------|------------|--------|
-| **Current** | [`v1.82.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.82.0) | engine same-semver pin `v1.82.0` |
+| **Current** | [`v1.83.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.83.0) | engine same-semver pin `v1.83.0` |
+| RaR G-slice | [`v1.82.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.82.0) | engine same-semver pin `v1.82.0` |
 | RaR F-slice | [`v1.81.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.81.0) | engine same-semver pin `v1.81.0` |
 | RaR E-slice | [`v1.80.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.80.0) | engine same-semver pin `v1.80.0` |
 | RaR D-slice | [`v1.79.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.79.0) | engine same-semver pin `v1.79.0` |
@@ -91,7 +92,7 @@ console.log(pool.corpusOrder, marjanah.title);
 
 | Release | Count | Notes |
 |---------|------:|-------|
-| reign-and-reverie | 58 | Null Signal Reign and Reverie (`rar`); **in-progress** (G-slice `v1.82.0`; 40/56 RaR-only clears; 2 SC19 reprints absorbed) |
+| reign-and-reverie | 58 | Null Signal Reign and Reverie (`rar`); **in-progress** (H-slice `v1.83.0`; 45/56 RaR-only clears; 2 SC19 reprints absorbed) |
 | system-core-2019 | 147 | Null Signal System Core 2019 (`sc19`); **supported** (wave gate `v1.74.0`; 84/147 SC19-only; 63 Gateway/SU21 reprints absorbed; skip `mo`/`mor`) |
 | downfall | 65 | Null Signal Downfall (`df`); Ashes set 1; **supported** (**65/65** mapped; wave gate `v1.58.0`; skip `mor`) |
 | uprising | 65 | Null Signal Uprising (`ur`); Ashes set 2; **supported** (**65/65** mapped; wave gate `v1.46.0`; `urbp` absorbed) |

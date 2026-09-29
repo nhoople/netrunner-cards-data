@@ -5,14 +5,64 @@
   "nrdbCode": "22007",
   "type": "resource",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: The first time each turn a program or a piece of hardware is trashed (from any location), you may place 1 power counter on District 99. [click], 3 hosted power counters: Add a card that matches the faction of your identity from your heap to"
-  ],
+  "unsupported": [],
   "faction": "anarch",
   "subtypes": [
     "location",
     "seedy"
   ],
   "installCost": 3,
-  "unique": true
+  "unique": true,
+  "onFirstProgramOrHardwareTrashEachTurn": {
+    "op": "choose",
+    "chooser": "runner",
+    "options": [
+      {
+        "id": "place-power",
+        "label": "Place 1 power counter on District 99",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "add_power_counter",
+            "amount": 1
+          }
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "runner",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  },
+  "paidAbilities": [
+    {
+      "id": "district-99-heap",
+      "label": "[click], 3 hosted power counters: Add a card that matches the faction of your identity from your heap to your grip",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1,
+        "powerCounters": 3
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "add_from_heap_to_grip",
+          "pick": "choose",
+          "matchingIdentityFaction": true
+        }
+      }
+    }
+  ]
 }

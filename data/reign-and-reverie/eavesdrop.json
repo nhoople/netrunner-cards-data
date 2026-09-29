@@ -5,13 +5,31 @@
   "nrdbCode": "22047",
   "type": "operation",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: Install Eavesdrop on a piece of ice as a hosted condition counter with the text \"Whenever the Runner encounters host ice, Trace[3]. If successful, give the Runner 1 tag.\""
-  ],
+  "unsupported": [],
   "faction": "nbn",
   "subtypes": [
     "gray ops",
     "condition"
   ],
-  "playCost": 1
+  "playCost": 1,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "host_on_ice_as_condition"
+    }
+  },
+  "onHostEncounter": {
+    "op": "do",
+    "action": {
+      "kind": "trace",
+      "strength": 3,
+      "onSuccess": {
+        "op": "do",
+        "action": {
+          "kind": "give_tags",
+          "amount": 1
+        }
+      }
+    }
+  }
 }

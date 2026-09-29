@@ -5,11 +5,31 @@
   "nrdbCode": "22034",
   "type": "identity",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: [click], 1[credit]: Install 1 card from HQ in the root of a remote server, then place 1 advancement counter on it. You cannot score or rez that card until your next turn begins."
-  ],
+  "unsupported": [],
   "faction": "jinteki",
   "subtypes": [
     "division"
+  ],
+  "paidAbilities": [
+    {
+      "id": "saraswati-install-advance",
+      "label": "[click], 1[credit]: Install 1 card from HQ in the root of a remote server, then place 1 advancement counter on it (cannot score or rez until your next turn begins)",
+      "clickCost": 1,
+      "creditCost": 1,
+      "cost": {
+        "clicks": 1,
+        "credits": 1
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "install_from_hq_on_remote_root_place_advancement_cannot_score_or_rez_until_next_corp_turn",
+          "amount": 1
+        }
+      }
+    }
   ]
 }
