@@ -5,12 +5,20 @@
   "nrdbCode": "26002",
   "type": "hardware",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: +1[mu] The trash cost of each Corp card is lowered by 1[credit]. The first time each turn you trash a Corp card, gain 1[credit]. Limit 1 console per player."
-  ],
+  "unsupported": [],
   "subtypes": [
     "console"
   ],
   "installCost": 4,
-  "unique": true
+  "unique": true,
+  "muBonus": 1,
+  "corpCardTrashCostReduction": 1,
+  "onFirstCorpCardTrashEachTurn": {
+    "op": "do",
+    "action": {
+      "kind": "gain_credits",
+      "side": "runner",
+      "amount": 1
+    }
+  }
 }

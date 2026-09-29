@@ -431,7 +431,10 @@
                 "corp_action_paw",
                 "runner_action_paw",
                 "damage_interrupt_paw",
-                "when_encountered_interrupt_paw"
+                "tag_interrupt_paw",
+                "when_encountered_interrupt_paw",
+                "trace_interrupt_paw",
+                "other_priority_window"
               ]
             }
           },
@@ -1391,6 +1394,11 @@
     "muBonus": {
       "type": "integer",
       "description": "Bonus to Runner memory limit while installed."
+    },
+    "corpCardTrashCostReduction": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "While installed: lower the trash cost of each Corp card by this many credits (Demolisher). Floored at 0."
     },
     "strengthBonusPerIcebreaker": {
       "type": "integer",

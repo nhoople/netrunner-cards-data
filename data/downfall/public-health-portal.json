@@ -5,13 +5,30 @@
   "nrdbCode": "26042",
   "type": "asset",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: When your turn begins, reveal the top card of R&D and gain 2[credit]."
-  ],
+  "unsupported": [],
   "subtypes": [
     "facility"
   ],
   "installCost": 3,
   "rezCost": 3,
-  "trashCost": 2
+  "trashCost": 2,
+  "onTurnBegin": {
+    "op": "seq",
+    "effects": [
+      {
+        "op": "do",
+        "action": {
+          "kind": "reveal_top_of_rd"
+        }
+      },
+      {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "corp",
+          "amount": 2
+        }
+      }
+    ]
+  }
 }
