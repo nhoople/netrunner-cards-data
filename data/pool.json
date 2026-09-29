@@ -627,8 +627,8 @@
       ]
     },
     "fixtures": {
-      "status": "supported",
-      "notes": "CR-example / host-test cards outside corpusOrder (Plascrete Carapace meat-prevent interrupt). Not part of Gateway→VP wave gates.",
+      "status": "fixture",
+      "notes": "CR-example / host-test cards outside corpusOrder (Plascrete Carapace meat-prevent interrupt). Not part of Gateway→VP wave gates; excluded from supportedCardIds().",
       "cards": [
         "plascrete-carapace"
       ]

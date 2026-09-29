@@ -3,8 +3,8 @@
   "nrdbPackCode": null,
   "count": 1,
   "written": 1,
-  "status": "supported",
-  "notes": "CR-example / host-test cards outside NSG corpus order (e.g. Plascrete Carapace for meat damage interrupt PAW). Not part of Gateway→VP wave gates.",
+  "status": "fixture",
+  "notes": "CR-example / host-test cards outside NSG corpus order (e.g. Plascrete Carapace for meat damage interrupt PAW). Not part of Gateway→VP wave gates; excluded from supportedCardIds().",
   "cards": [
     "plascrete-carapace"
   ]
