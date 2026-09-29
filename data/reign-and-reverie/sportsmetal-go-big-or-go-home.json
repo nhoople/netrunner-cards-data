@@ -5,11 +5,39 @@
   "nrdbCode": "22026",
   "type": "identity",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: Whenever an agenda is scored or stolen, gain 2[credit] or draw 2 cards."
-  ],
+  "unsupported": [],
   "faction": "haas-bioroid",
   "subtypes": [
     "subsidiary"
-  ]
+  ],
+  "onAgendaScoredOrStolen": {
+    "op": "choose",
+    "chooser": "corp",
+    "options": [
+      {
+        "id": "gain2",
+        "label": "Gain 2¢",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "corp",
+            "amount": 2
+          }
+        }
+      },
+      {
+        "id": "draw2",
+        "label": "Draw 2 cards",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "draw",
+            "side": "corp",
+            "amount": 2
+          }
+        }
+      }
+    ]
+  }
 }

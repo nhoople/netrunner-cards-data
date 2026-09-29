@@ -5,9 +5,27 @@
   "nrdbCode": "22003",
   "type": "event",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Trash your grip. Gain 10[credit]."
-  ],
+  "unsupported": [],
   "faction": "anarch",
-  "playCost": 4
+  "playCost": 4,
+  "onPlay": {
+    "op": "seq",
+    "effects": [
+      {
+        "op": "do",
+        "action": {
+          "kind": "trash_random_from_grip",
+          "amount": 99
+        }
+      },
+      {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "runner",
+          "amount": 10
+        }
+      }
+    ]
+  }
 }
