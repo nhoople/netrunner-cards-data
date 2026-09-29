@@ -734,6 +734,212 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    # --- v1.52.0 E-slice ---
+
+    if cid == "trebuchet":
+        return base(
+            c,
+            onRez={
+                "op": "do",
+                "action": {"kind": "give_bad_publicity", "amount": 1},
+            },
+            subroutines=[
+                {
+                    "id": "trebuchet-trash",
+                    "text": "Trash 1 installed Runner card.",
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "trash_installed_runner",
+                            "pick": "choose",
+                        },
+                    },
+                },
+                {
+                    "id": "trebuchet-trace",
+                    "text": "Trace[6]. If successful, the Runner cannot steal or trash Corp cards for the remainder of this run.",
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "trace",
+                            "strength": 6,
+                            "onSuccess": {
+                                "op": "do",
+                                "action": {
+                                    "kind": "forbid_steal_trash_this_run"
+                                },
+                            },
+                        },
+                    },
+                },
+            ],
+            unsupported=[],
+        )
+
+    if cid == "blueberry-diesel":
+        return base(
+            c,
+            onPlay={
+                "op": "seq",
+                "effects": [
+                    {
+                        "op": "do",
+                        "action": {
+                            "kind": "look_top_n_stack_may_bottom_one",
+                            "n": 2,
+                        },
+                    },
+                    draw("runner", 2),
+                ],
+            },
+            unsupported=[],
+        )
+
+    if cid == "pelangi":
+        return base(
+            c,
+            onInstall={
+                "op": "do",
+                "action": {"kind": "add_virus_counter", "amount": 2},
+            },
+            paidAbilities=[
+                {
+                    "id": "pelangi-grant-subtype",
+                    "label": "Hosted virus counter: Choose an ice subtype for encountered ice",
+                    "clickCost": 0,
+                    "creditCost": 0,
+                    "cost": {"virusCounters": 1},
+                    "windows": ["encounter_paw"],
+                    "oncePerTurn": True,
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "choose_grant_encounter_ice_subtype"
+                        },
+                    },
+                }
+            ],
+            unsupported=[],
+        )
+
+    if cid == "loot-box":
+        return base(
+            c,
+            subroutines=[
+                {
+                    "id": "loot-box-pay",
+                    "text": "End the run unless the Runner pays 2[credit].",
+                    "effect": {
+                        "op": "choose",
+                        "chooser": "runner",
+                        "options": [
+                            {
+                                "id": "pay2",
+                                "label": "Pay 2¢",
+                                "effect": {
+                                    "op": "do",
+                                    "action": {
+                                        "kind": "lose_credits",
+                                        "side": "runner",
+                                        "amount": 2,
+                                    },
+                                },
+                            },
+                            {
+                                "id": "etr",
+                                "label": "End the run",
+                                "effect": {
+                                    "op": "do",
+                                    "action": {"kind": "end_the_run"},
+                                },
+                            },
+                        ],
+                    },
+                },
+                {
+                    "id": "loot-box-reveal",
+                    "text": "Reveal the top 3 cards of the stack. Add 1 of those cards to the grip and gain X[credit], where X is equal to that card's play or install cost. The Runner shuffles the remaining cards into the stack.",
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "loot_box_reveal_top_n",
+                            "n": 3,
+                        },
+                    },
+                },
+            ],
+            unsupported=[],
+        )
+
+    if cid == "utae":
+        return base(
+            c,
+            breaker={
+                "breaksSubtype": "code gate",
+                "strength": c.get("strength") or 1,
+                "breakCredits": 1,
+                "breakMaxSubs": 1,
+                "pumpCredits": 1,
+                "pumpStrength": 1,
+                "breakViaPaidAbilityOnly": True,
+            },
+            paidAbilities=[
+                {
+                    "id": "utae-break-x",
+                    "label": "X¢: Break X code gate subroutines (once per run)",
+                    "clickCost": 0,
+                    "creditCost": 0,
+                    "cost": {},
+                    "windows": ["encounter_paw"],
+                    "oncePerRun": True,
+                    "requireEncounterSubtype": "code gate",
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "break_encounter_subroutine",
+                            "maxSubs": 99,
+                            "requireSubtype": "code gate",
+                            "payCreditsPerBrokenSub": 1,
+                        },
+                    },
+                },
+                {
+                    "id": "utae-break-virtual",
+                    "label": "1¢: Break 1 code gate subroutine (3+ virtual resources)",
+                    "clickCost": 0,
+                    "creditCost": 1,
+                    "cost": {"credits": 1},
+                    "windows": ["encounter_paw"],
+                    "requireInstalledVirtualResourcesGte": 3,
+                    "requireEncounterSubtype": "code gate",
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "break_encounter_subroutine",
+                            "maxSubs": 1,
+                            "requireSubtype": "code gate",
+                        },
+                    },
+                },
+                {
+                    "id": "utae-pump",
+                    "label": "1¢: +1 strength",
+                    "clickCost": 0,
+                    "creditCost": 1,
+                    "cost": {"credits": 1},
+                    "windows": ["encounter_paw"],
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "pump_strength",
+                            "amount": 1,
+                        },
+                    },
+                },
+            ],
+            unsupported=[],
+        )
+
     # Fail closed — honest unsupported note for the remainder.
     card = base(c)
     card["unsupported"] = [f"Full text not yet mapped to IR: {plain[:240]}"]
@@ -774,7 +980,7 @@ def main():
         "Null Signal Downfall (NRDB pack df) — Ashes set 1 of 2; legacy "
         "backwards wave before Uprising / System Gateway. Skip Magnum Opus "
         f"Reprint (mor). In-progress: {full} cards fully mapped, {partial} "
-        "with unsupported notes (D-slice v1.51.0)."
+        "with unsupported notes (E-slice v1.52.0)."
     )
     manifest = {
         "pack": WAVE,

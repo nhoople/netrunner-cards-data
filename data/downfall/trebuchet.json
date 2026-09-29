@@ -5,9 +5,7 @@
   "nrdbCode": "26060",
   "type": "ice",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: When you rez this ice, take 1 bad publicity. [subroutine] Trash 1 installed Runner card. [subroutine] Trace[6]. If successful, the Runner cannot steal or trash Corp cards for the remainder of this run."
-  ],
+  "unsupported": [],
   "subtypes": [
     "sentry",
     "destroyer",
@@ -16,5 +14,42 @@
   ],
   "installCost": 7,
   "rezCost": 7,
-  "strength": 6
+  "strength": 6,
+  "onRez": {
+    "op": "do",
+    "action": {
+      "kind": "give_bad_publicity",
+      "amount": 1
+    }
+  },
+  "subroutines": [
+    {
+      "id": "trebuchet-trash",
+      "text": "Trash 1 installed Runner card.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "trash_installed_runner",
+          "pick": "choose"
+        }
+      }
+    },
+    {
+      "id": "trebuchet-trace",
+      "text": "Trace[6]. If successful, the Runner cannot steal or trash Corp cards for the remainder of this run.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "trace",
+          "strength": 6,
+          "onSuccess": {
+            "op": "do",
+            "action": {
+              "kind": "forbid_steal_trash_this_run"
+            }
+          }
+        }
+      }
+    }
+  ]
 }

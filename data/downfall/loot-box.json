@@ -5,13 +5,56 @@
   "nrdbCode": "26051",
   "type": "ice",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: [subroutine] End the run unless the Runner pays 2[credit]. [subroutine] Reveal the top 3 cards of the stack. Add 1 of those cards to the grip and gain X[credit], where X is equal to that cardʼs play or install cost. The Runner shuffles the "
-  ],
+  "unsupported": [],
   "subtypes": [
     "trap"
   ],
   "installCost": 0,
   "rezCost": 0,
-  "strength": 3
+  "strength": 3,
+  "subroutines": [
+    {
+      "id": "loot-box-pay",
+      "text": "End the run unless the Runner pays 2[credit].",
+      "effect": {
+        "op": "choose",
+        "chooser": "runner",
+        "options": [
+          {
+            "id": "pay2",
+            "label": "Pay 2¢",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "lose_credits",
+                "side": "runner",
+                "amount": 2
+              }
+            }
+          },
+          {
+            "id": "etr",
+            "label": "End the run",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "end_the_run"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "loot-box-reveal",
+      "text": "Reveal the top 3 cards of the stack. Add 1 of those cards to the grip and gain X[credit], where X is equal to that card's play or install cost. The Runner shuffles the remaining cards into the stack.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "loot_box_reveal_top_n",
+          "n": 3
+        }
+      }
+    }
+  ]
 }
