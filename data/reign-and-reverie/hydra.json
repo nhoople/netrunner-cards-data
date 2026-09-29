@@ -5,9 +5,7 @@
   "nrdbCode": "22046",
   "type": "ice",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: [subroutine] Do 3 net damage if the Runner is tagged; otherwise, give the Runner 1 tag. [subroutine] Gain 5[credit] if the Runner is tagged; otherwise, give the Runner 1 tag. [subroutine] End the run if the Runner is tagged; otherwise, give"
-  ],
+  "unsupported": [],
   "faction": "nbn",
   "subtypes": [
     "sentry",
@@ -15,5 +13,79 @@
   ],
   "installCost": 10,
   "rezCost": 10,
-  "strength": 6
+  "strength": 6,
+  "subroutines": [
+    {
+      "id": "hydra-net",
+      "text": "Do 3 net damage if the Runner is tagged; otherwise, give the Runner 1 tag.",
+      "effect": {
+        "op": "if",
+        "cond": {
+          "op": "runner_tagged"
+        },
+        "then": {
+          "op": "do",
+          "action": {
+            "kind": "net_damage",
+            "amount": 3
+          }
+        },
+        "else": {
+          "op": "do",
+          "action": {
+            "kind": "give_tags",
+            "amount": 1
+          }
+        }
+      }
+    },
+    {
+      "id": "hydra-credits",
+      "text": "Gain 5[credit] if the Runner is tagged; otherwise, give the Runner 1 tag.",
+      "effect": {
+        "op": "if",
+        "cond": {
+          "op": "runner_tagged"
+        },
+        "then": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "corp",
+            "amount": 5
+          }
+        },
+        "else": {
+          "op": "do",
+          "action": {
+            "kind": "give_tags",
+            "amount": 1
+          }
+        }
+      }
+    },
+    {
+      "id": "hydra-etr",
+      "text": "End the run if the Runner is tagged; otherwise, give the Runner 1 tag.",
+      "effect": {
+        "op": "if",
+        "cond": {
+          "op": "runner_tagged"
+        },
+        "then": {
+          "op": "do",
+          "action": {
+            "kind": "end_the_run"
+          }
+        },
+        "else": {
+          "op": "do",
+          "action": {
+            "kind": "give_tags",
+            "amount": 1
+          }
+        }
+      }
+    }
+  ]
 }

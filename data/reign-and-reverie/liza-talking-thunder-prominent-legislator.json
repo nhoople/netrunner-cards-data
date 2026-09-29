@@ -5,12 +5,30 @@
   "nrdbCode": "22008",
   "type": "identity",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: The first time you make a successful run on a central server each turn, draw 2 cards and take 1 tag."
-  ],
+  "unsupported": [],
   "faction": "criminal",
   "subtypes": [
     "g-mod"
   ],
-  "link": 0
+  "link": 0,
+  "onFirstSuccessfulCentralRunThisTurn": {
+    "op": "seq",
+    "effects": [
+      {
+        "op": "do",
+        "action": {
+          "kind": "draw",
+          "side": "runner",
+          "amount": 2
+        }
+      },
+      {
+        "op": "do",
+        "action": {
+          "kind": "give_tags",
+          "amount": 1
+        }
+      }
+    ]
+  }
 }

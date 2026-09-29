@@ -5,12 +5,28 @@
   "nrdbCode": "22001",
   "type": "identity",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: When your turn begins, gain 1[credit] if you have 2 or fewer cards in your grip."
-  ],
+  "unsupported": [],
   "faction": "anarch",
   "subtypes": [
     "natural"
   ],
-  "link": 0
+  "link": 0,
+  "onTurnBegin": {
+    "op": "if",
+    "cond": {
+      "op": "not",
+      "cond": {
+        "op": "grip_count_gte",
+        "amount": 3
+      }
+    },
+    "then": {
+      "op": "do",
+      "action": {
+        "kind": "gain_credits",
+        "side": "runner",
+        "amount": 1
+      }
+    }
+  }
 }
