@@ -5,14 +5,86 @@
   "nrdbCode": "26079",
   "type": "program",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Once per turn → When you encounter a sentry, you may pay 2[credit] to bypass it. Spend credits only from stealth cards to use this ability. Interface → 1[credit]: Break up to 2 sentry subroutines. 1[credit]: +2 strength. Spend credits only "
-  ],
+  "unsupported": [],
   "subtypes": [
     "icebreaker",
     "killer"
   ],
   "installCost": 4,
   "strength": 2,
-  "memoryCost": 1
+  "memoryCost": 1,
+  "breaker": {
+    "breaksSubtype": "sentry",
+    "strength": 2,
+    "breakCredits": 1,
+    "breakMaxSubs": 2,
+    "pumpCredits": 1,
+    "pumpStrength": 2,
+    "breakViaPaidAbilityOnly": true
+  },
+  "paidAbilities": [
+    {
+      "id": "afterimage-bypass",
+      "label": "2¢: Bypass encountered sentry (stealth; once per turn)",
+      "clickCost": 0,
+      "creditCost": 2,
+      "cost": {
+        "credits": 2,
+        "creditsFromStealthOnly": true
+      },
+      "windows": [
+        "encounter_paw"
+      ],
+      "oncePerTurn": true,
+      "requireEncounterSubtype": "sentry",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "bypass_current_ice",
+          "requireSubtype": "sentry"
+        }
+      }
+    },
+    {
+      "id": "afterimage-break",
+      "label": "1¢: Break up to 2 sentry subroutines",
+      "clickCost": 0,
+      "creditCost": 1,
+      "cost": {
+        "credits": 1
+      },
+      "windows": [
+        "encounter_paw"
+      ],
+      "requireEncounterSubtype": "sentry",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "break_encounter_subroutine",
+          "maxSubs": 2,
+          "requireSubtype": "sentry"
+        }
+      }
+    },
+    {
+      "id": "afterimage-pump",
+      "label": "1¢: +2 strength (stealth credits only)",
+      "clickCost": 0,
+      "creditCost": 1,
+      "cost": {
+        "credits": 1,
+        "creditsFromStealthOnly": true
+      },
+      "windows": [
+        "encounter_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "pump_strength",
+          "amount": 2
+        }
+      }
+    }
+  ]
 }

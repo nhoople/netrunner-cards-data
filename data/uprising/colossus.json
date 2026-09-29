@@ -5,14 +5,78 @@
   "nrdbCode": "26124",
   "type": "ice",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: You can advance this ice. It gets +1 strength for each hosted advancement counter. [subroutine] Give the Runner 1 tag. If there are 3 or more hosted advancement counters, instead give the Runner 2 tags. [subroutine] Trash 1 installed progra"
-  ],
+  "unsupported": [],
   "subtypes": [
     "sentry",
     "destroyer"
   ],
   "installCost": 6,
   "rezCost": 6,
-  "strength": 4
+  "strength": 4,
+  "canAdvance": true,
+  "strengthPerAdvancement": 1,
+  "subroutines": [
+    {
+      "id": "colossus-tag",
+      "text": "Give the Runner 1 tag. If 3+ advancements, instead give 2 tags.",
+      "effect": {
+        "op": "if",
+        "cond": {
+          "op": "advancements_gte",
+          "amount": 3
+        },
+        "then": {
+          "op": "do",
+          "action": {
+            "kind": "give_tags",
+            "amount": 2
+          }
+        },
+        "else": {
+          "op": "do",
+          "action": {
+            "kind": "give_tags",
+            "amount": 1
+          }
+        }
+      }
+    },
+    {
+      "id": "colossus-trash",
+      "text": "Trash 1 installed program. If 3+ advancements, also trash 1 installed resource.",
+      "effect": {
+        "op": "if",
+        "cond": {
+          "op": "advancements_gte",
+          "amount": 3
+        },
+        "then": {
+          "op": "seq",
+          "effects": [
+            {
+              "op": "do",
+              "action": {
+                "kind": "trash_program",
+                "pick": "choose"
+              }
+            },
+            {
+              "op": "do",
+              "action": {
+                "kind": "trash_resource",
+                "pick": "choose"
+              }
+            }
+          ]
+        },
+        "else": {
+          "op": "do",
+          "action": {
+            "kind": "trash_program",
+            "pick": "choose"
+          }
+        }
+      }
+    }
+  ]
 }

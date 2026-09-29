@@ -5,13 +5,57 @@
   "nrdbCode": "26115",
   "type": "ice",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: 2[credit]: Break 1 subroutine on this ice. Only the Runner can use this ability, and only if they are not tagged. [subroutine] Add 1 installed Runner card to the grip. [subroutine] Give the Runner 1 tag."
-  ],
+  "unsupported": [],
   "subtypes": [
     "sentry"
   ],
   "installCost": 4,
   "rezCost": 4,
-  "strength": 5
+  "strength": 5,
+  "paidAbilities": [
+    {
+      "id": "f2p-break",
+      "label": "2¢: Break 1 subroutine (Runner; untagged)",
+      "clickCost": 0,
+      "creditCost": 2,
+      "cost": {
+        "credits": 2
+      },
+      "windows": [
+        "encounter_paw"
+      ],
+      "usableByAnyPlayer": true,
+      "requiresUntagged": true,
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "break_encounter_subroutine",
+          "maxSubs": 1
+        }
+      }
+    }
+  ],
+  "subroutines": [
+    {
+      "id": "f2p-bounce",
+      "text": "Add 1 installed Runner card to the grip.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "add_installed_runner_to_grip"
+        }
+      }
+    },
+    {
+      "id": "f2p-tag",
+      "text": "Give the Runner 1 tag.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "give_tags",
+          "amount": 1
+        }
+      }
+    }
+  ]
 }

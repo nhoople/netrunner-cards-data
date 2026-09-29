@@ -5,12 +5,41 @@
   "nrdbCode": "26121",
   "type": "agenda",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: When you score this agenda, place 2 agenda counters on it. Once per turn → Hosted agenda counter: This run cannot be declared successful. (This effect does not cause the run to become unsuccessful.) Use this ability only during a run."
-  ],
+  "unsupported": [],
   "subtypes": [
     "initiative"
   ],
   "advancementRequirement": 4,
-  "agendaPoints": 2
+  "agendaPoints": 2,
+  "onScore": {
+    "op": "do",
+    "action": {
+      "kind": "add_agenda_counter",
+      "amount": 2
+    }
+  },
+  "paidAbilities": [
+    {
+      "id": "transport-monopoly-block",
+      "label": "Hosted agenda counter: this run cannot be declared successful",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "agendaCounters": 1
+      },
+      "windows": [
+        "approach_paw",
+        "encounter_paw",
+        "approach_server_paw"
+      ],
+      "oncePerTurn": true,
+      "requireDuringRun": true,
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "prevent_declare_run_successful"
+        }
+      }
+    }
+  ]
 }

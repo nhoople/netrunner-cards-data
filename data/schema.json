@@ -2147,6 +2147,27 @@
       "type": "integer",
       "minimum": 0,
       "description": "Moshing: require at least this many other grip cards (trash additional cost)."
+    },
+    "installCostDiscountIfSuccessfulHqRunThisTurn": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "maxPrintedSubsBreakablePerEncounterAtAdvancements": {
+      "type": "object",
+      "required": [
+        "threshold",
+        "max"
+      ],
+      "properties": {
+        "threshold": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "max": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
     }
   }
 }
