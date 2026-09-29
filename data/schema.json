@@ -816,7 +816,7 @@
     },
     "onSuccessfulRun": {
       "type": "object",
-      "description": "Effect IR when the Runner makes a successful run while this card is installed (or is the Runner identity)."
+      "description": "Effect IR when the Runner makes a successful run while this card is installed, is the Runner identity, or is an active lockdown in corp:play-area (Argus Crackdown / Hyoubu Precog Manifold)."
     },
     "onSuccessfulRunOncePerTurn": {
       "type": "boolean",
@@ -1003,7 +1003,7 @@
     },
     "onRunBegin": {
       "type": "object",
-      "description": "Effect IR whenever a run begins while this card is installed (Side Hustle)."
+      "description": "Effect IR whenever a run begins while this card is installed or an active lockdown in corp:play-area (Side Hustle / SYNC Rerouting)."
     },
     "onDiscardPhaseEnd": {
       "type": "object",
@@ -1060,6 +1060,44 @@
     "playRequiresNoCorpActionFinished": {
       "type": "boolean",
       "description": "Corp operation: play only before the first Corp action completes (Petty Cash)."
+    },
+    "playRequiresNoActiveLockdown": {
+      "type": "boolean",
+      "description": "Corp lockdown operation: play only if no lockdown is active in corp:play-area (CR §3.5.1c / SYNC Rerouting et al.)."
+    },
+    "lingerUntilCorpNextTurnBegins": {
+      "type": "boolean",
+      "description": "Corp lockdown: after play, remain faceup in corp:play-area (not trashed to Archives) until Corp's next turn begins; trash at that turn-begin checkpoint before pending conditionals (CR §8.6.6c / §3.5.1c)."
+    },
+    "stealAdditionalCreditsFormula": {
+      "type": "object",
+      "required": [
+        "base",
+        "perAdvancement"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "base": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Flat additional credits to steal any agenda while this card is active."
+        },
+        "perAdvancement": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Additional credits per advancement counter on the stolen agenda."
+        }
+      },
+      "description": "While this lockdown is active, Runner pays base + perAdvancement×advancementTokens as an additional cost to steal an agenda (NAPD Cordon)."
+    },
+    "allIceStrengthBonus": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "While this card is active (installed or lingering lockdown), each piece of ice gets +N strength (NEXT Activation Command; inverse of allIceStrengthPenalty)."
+    },
+    "cannotBreakExceptIcebreaker": {
+      "type": "boolean",
+      "description": "While this card is active, Runner cannot break subroutines using cards that lack the icebreaker subtype (NEXT Activation Command; covers non-breaker paid breaks)."
     },
     "onCreditsGainedFromAgendaOrOperationAbility": {
       "type": "object",
@@ -1698,7 +1736,7 @@
     "allIceStrengthPenalty": {
       "type": "integer",
       "minimum": 1,
-      "description": "While installed, each piece of ice gets −N strength (The Tungsten Tailor)."
+      "description": "While installed, each piece of ice gets −N strength (The Tungsten Tailor). See also allIceStrengthBonus for lockdown +N."
     },
     "gainCreditOnBreakIceStrengthLteOncePerTurn": {
       "type": "integer",

@@ -5,13 +5,38 @@
   "nrdbCode": "26110",
   "type": "operation",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: Play only if there is no active lockdown. This operation is not trashed until your next turn begins. When you play this operation, choose a server. Whenever the Runner makes a successful run on the chosen server, play a Psi Game. (Players s"
-  ],
+  "unsupported": [],
   "subtypes": [
     "lockdown",
     "psi"
   ],
   "playCost": 0,
-  "trashCost": 4
+  "trashCost": 4,
+  "playRequiresNoActiveLockdown": true,
+  "lingerUntilCorpNextTurnBegins": true,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "choose_server"
+    }
+  },
+  "onSuccessfulRun": {
+    "op": "if",
+    "cond": {
+      "op": "attacking_chosen_server"
+    },
+    "then": {
+      "op": "do",
+      "action": {
+        "kind": "play_psi_game",
+        "maxBid": 2,
+        "ifBidsDiffer": {
+          "op": "do",
+          "action": {
+            "kind": "end_the_run"
+          }
+        }
+      }
+    }
+  }
 }
