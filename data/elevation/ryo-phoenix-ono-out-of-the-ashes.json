@@ -5,6 +5,7 @@
   "nrdbCode": "35001",
   "type": "identity",
   "side": "runner",
+  "faction": "anarch",
   "unsupported": [],
   "subtypes": [
     "g-mod"

@@ -5,13 +5,21 @@
   "nrdbCode": "22025",
   "type": "resource",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Host a g-mod identity that does not match the faction of your identity on DJ Fenris when he is installed. Remove hosted identity from the game if DJ Fenris is uninstalled. DJ Fenris gains the text of hosted identity. Limit 1 per deck."
-  ],
+  "unsupported": [],
   "faction": "neutral-runner",
   "subtypes": [
     "connection"
   ],
   "installCost": 3,
-  "unique": true
+  "unique": true,
+  "deckLimit": 1,
+  "onInstall": {
+    "op": "do",
+    "action": {
+      "kind": "fenris_host_gmod_identity_from_outside_game",
+      "requireFactionMismatchWithRunnerIdentity": true
+    }
+  },
+  "gainsTextOfHostedIdentity": true,
+  "returnHostedIdentityToOutsideGameOnUninstall": true
 }

@@ -16,7 +16,7 @@ Files under [`data/`](data/) are the API. Clone the repo or fetch a **tagged** r
 | --- | --- |
 | [`data/schema.json`](data/schema.json) | JSON Schema for card definitions |
 | [`data/pool.json`](data/pool.json) | Declared supported corpus / release order |
-| [`data/reign-and-reverie/`](data/reign-and-reverie/) | Reign and Reverie (NRDB `rar`) — **in-progress** (legacy backwards) |
+| [`data/reign-and-reverie/`](data/reign-and-reverie/) | Reign and Reverie (NRDB `rar`) — **supported** (legacy backwards) |
 | [`data/system-core-2019/`](data/system-core-2019/) | System Core 2019 (NRDB `sc19`) — **supported** (legacy backwards) |
 | [`data/downfall/`](data/downfall/) | Downfall (NRDB `df`) — **supported** (legacy backwards) |
 | [`data/uprising/`](data/uprising/) | Uprising (NRDB `ur`) — **supported** (legacy backwards) |
@@ -30,7 +30,7 @@ Files under [`data/`](data/) are the API. Clone the repo or fetch a **tagged** r
 | [`data/vantage-point/`](data/vantage-point/) | Vantage Point (NRDB `vp`) — **supported** |
 | [`data/fixtures/`](data/fixtures/) | CR-example / host-test cards outside corpus order (e.g. Plascrete) |
 
-**Corpus order:** Reign and Reverie (legacy backwards, in-progress) → System Core 2019 (legacy backwards, supported) → Downfall (legacy backwards, supported) → Uprising (legacy backwards, supported) → System Gateway → System Update 2021 → Midnight Sun → Parhelion → The Automata Initiative → Rebellion Without Rehearsal → Elevation → Vantage Point → later releases.
+**Corpus order:** Reign and Reverie (legacy backwards, supported) → System Core 2019 (legacy backwards, supported) → Downfall (legacy backwards, supported) → Uprising (legacy backwards, supported) → System Gateway → System Update 2021 → Midnight Sun → Parhelion → The Automata Initiative → Rebellion Without Rehearsal → Elevation → Vantage Point → later releases.
 
 Partial cards list unimplemented clauses in an `unsupported` array — never silent wrong behavior. A wave marked `supported` in [`data/pool.json`](data/pool.json) must keep those arrays empty unless the card is listed with a reason in [`data/supported-unsupported-allowlist.json`](data/supported-unsupported-allowlist.json) (enforced by `scripts/validate-cards.py`). See [`CONTRIBUTING.md`](CONTRIBUTING.md) for the CR gate PR template.
 
@@ -40,7 +40,8 @@ Match this dataset and [netrunner-engine](https://github.com/nhoople/netrunner-e
 
 | Pairing | cards-data | engine |
 |---------|------------|--------|
-| **Current** | [`v1.85.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.85.0) | engine same-semver pin `v1.85.0` |
+| **Current** | [`v1.86.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.86.0) | engine same-semver pin `v1.86.0` (RaR set-complete **56/56**) |
+| RaR J-slice | [`v1.85.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.85.0) | engine same-semver pin `v1.85.0` |
 | RaR I-slice | [`v1.84.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.84.0) | engine same-semver pin `v1.84.0` |
 | RaR H-slice | [`v1.83.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.83.0) | engine same-semver pin `v1.83.0` |
 | RaR G-slice | [`v1.82.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.82.0) | engine same-semver pin `v1.82.0` |

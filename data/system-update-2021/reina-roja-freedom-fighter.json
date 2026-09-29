@@ -5,6 +5,7 @@
   "nrdbCode": "31002",
   "type": "identity",
   "side": "runner",
+  "faction": "anarch",
   "unsupported": [],
   "subtypes": [
     "cyborg",
