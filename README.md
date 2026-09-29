@@ -40,7 +40,8 @@ Match this dataset and [netrunner-engine](https://github.com/nhoople/netrunner-e
 
 | Pairing | cards-data | engine |
 |---------|------------|--------|
-| **Current** | [`v1.78.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.78.0) | engine same-semver pin `v1.78.0` |
+| **Current** | [`v1.79.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.79.0) | engine same-semver pin `v1.79.0` |
+| RaR C-slice | [`v1.78.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.78.0) | engine same-semver pin `v1.78.0` |
 | RaR B-slice | [`v1.77.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.77.0) | engine same-semver pin `v1.77.0` |
 | RaR A-slice | [`v1.76.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.76.0) | engine same-semver pin `v1.76.0` |
 | RaR kickoff | [`v1.75.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.75.0) | engine same-semver pin `v1.75.0` |
