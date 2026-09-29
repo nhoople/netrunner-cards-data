@@ -5,13 +5,34 @@
   "nrdbCode": "26003",
   "type": "program",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Install only on a piece of ice. Host ice gets −1 strength for each hosted virus counter. Whenever you encounter host ice, if its strength is 0 or less, trash it. Otherwise, place 1 virus counter on this program."
-  ],
+  "unsupported": [],
   "subtypes": [
     "virus",
     "trojan"
   ],
   "installCost": 2,
-  "memoryCost": 1
+  "memoryCost": 1,
+  "installOnIce": true,
+  "hostStrengthPerVirusCounter": -1,
+  "onHostEncounter": {
+    "op": "if",
+    "cond": {
+      "op": "encounter_ice_strength_lte",
+      "amount": 0
+    },
+    "then": {
+      "op": "do",
+      "action": {
+        "kind": "trash_encounter_ice_if_strength_lte",
+        "maxStrength": 0
+      }
+    },
+    "else": {
+      "op": "do",
+      "action": {
+        "kind": "add_virus_counter",
+        "amount": 1
+      }
+    }
+  }
 }

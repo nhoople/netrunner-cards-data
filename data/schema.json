@@ -576,6 +576,22 @@
       "type": "integer",
       "description": "While hosted on ice, modify host ice strength by this amount (Monkeywrench)."
     },
+    "hostStrengthPerVirusCounter": {
+      "type": "integer",
+      "description": "While hosted on ice, modify host ice strength by this amount per virus counter on this card (Chisel: -1)."
+    },
+    "onHostEncounter": {
+      "type": "object",
+      "description": "Effect IR when the Runner encounters the ice hosting this card (Chisel)."
+    },
+    "rezAsNonIceDuringRunsOnServer": {
+      "type": "boolean",
+      "description": "During runs against this ice's server, may rez this ice any time non-ice cards could be rezzed (Rime)."
+    },
+    "sameServerIceStrengthBonus": {
+      "type": "integer",
+      "description": "While rezzed, each ice protecting the same server gets this much strength (Rime: +1)."
+    },
     "hostIcebreakerStrengthBonus": {
       "type": "integer",
       "description": "While this hardware is hosted on an icebreaker, that breaker gets +strength (GAMEDRAGON Pro)."
@@ -1055,7 +1071,7 @@
     },
     "onDiscardPhaseEnd": {
       "type": "object",
-      "description": "Effect IR when the Corp's discard phase ends (Project Ingatan / Embedded Reporting / Sericulture / PT Untaian / Off the Books)."
+      "description": "Effect IR when the owner's discard phase ends (Corp: Project Ingatan / Embedded Reporting / Sericulture / PT Untaian / Off the Books; Runner: Lat Ethical Freelancer)."
     },
     "onCorpActionPhaseEnd": {
       "type": "object",

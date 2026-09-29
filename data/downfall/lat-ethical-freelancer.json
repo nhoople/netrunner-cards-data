@@ -5,11 +5,45 @@
   "nrdbCode": "26019",
   "type": "identity",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: When your discard phase ends, if you have the same number of cards in your grip as the Corp has in HQ, you may draw 1 card."
-  ],
+  "unsupported": [],
   "subtypes": [
     "natural"
   ],
-  "link": 1
+  "link": 1,
+  "onDiscardPhaseEnd": {
+    "op": "if",
+    "cond": {
+      "op": "grip_count_eq_hq"
+    },
+    "then": {
+      "op": "choose",
+      "chooser": "runner",
+      "options": [
+        {
+          "id": "draw",
+          "label": "Draw 1 card",
+          "effect": {
+            "op": "do",
+            "action": {
+              "kind": "draw",
+              "side": "runner",
+              "amount": 1
+            }
+          }
+        },
+        {
+          "id": "decline",
+          "label": "Decline",
+          "effect": {
+            "op": "do",
+            "action": {
+              "kind": "gain_credits",
+              "side": "runner",
+              "amount": 0
+            }
+          }
+        }
+      ]
+    }
+  }
 }
