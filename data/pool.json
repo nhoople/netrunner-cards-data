@@ -625,6 +625,13 @@
         "shackleton-grid",
         "let-them-dream"
       ]
+    },
+    "fixtures": {
+      "status": "supported",
+      "notes": "CR-example / host-test cards outside corpusOrder (Plascrete Carapace meat-prevent interrupt). Not part of Gateway→VP wave gates.",
+      "cards": [
+        "plascrete-carapace"
+      ]
     }
   }
 }

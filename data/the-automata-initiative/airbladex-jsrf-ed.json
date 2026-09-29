@@ -25,6 +25,9 @@
         "damage_interrupt_paw"
       ],
       "requireDuringRun": true,
+      "requirePendingDamageTypes": [
+        "net"
+      ],
       "effect": {
         "op": "do",
         "action": {
