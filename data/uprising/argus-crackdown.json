@@ -5,13 +5,26 @@
   "nrdbCode": "26126",
   "type": "operation",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: Play only if there is no active lockdown. This operation is not trashed until your next turn begins. Whenever the Runner makes a successful run on a server protected by ice, do 2 meat damage."
-  ],
+  "unsupported": [],
   "subtypes": [
     "lockdown",
     "gray ops"
   ],
   "playCost": 0,
-  "trashCost": 4
+  "trashCost": 4,
+  "playRequiresNoActiveLockdown": true,
+  "lingerUntilCorpNextTurnBegins": true,
+  "onSuccessfulRun": {
+    "op": "if",
+    "cond": {
+      "op": "attacked_server_protected_by_ice"
+    },
+    "then": {
+      "op": "do",
+      "action": {
+        "kind": "meat_damage",
+        "amount": 2
+      }
+    }
+  }
 }

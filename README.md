@@ -37,7 +37,7 @@ Match this dataset and [netrunner-engine](https://github.com/nhoople/netrunner-e
 
 | Pairing | cards-data | engine |
 |---------|------------|--------|
-| **Current** | [`v1.43.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.43.0) | engine same-semver pin `v1.43.0` |
+| **Current** | [`v1.44.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.44.0) | engine same-semver pin `v1.44.0` |
 | Post-VP maintenance | [`v1.34.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.34.0) | [`v1.34.0`](https://github.com/nhoople/netrunner-engine/releases/tag/v1.34.0) |
 | Vantage Point milestone | [`v1.33.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.33.0) | [`v1.33.0`](https://github.com/nhoople/netrunner-engine/releases/tag/v1.33.0) |
 | Elevation milestone | [`v1.12.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.12.0) | [`v1.12.0`](https://github.com/nhoople/netrunner-engine/releases/tag/v1.12.0) |
@@ -78,7 +78,7 @@ console.log(pool.corpusOrder, marjanah.title);
 
 | Release | Count | Notes |
 |---------|------:|-------|
-| uprising | 65 | Null Signal Uprising (`ur`); Ashes set 2; **in-progress** (H-slice `v1.43.0`; **48/65** mapped; `urbp` absorbed) |
+| uprising | 65 | Null Signal Uprising (`ur`); Ashes set 2; **in-progress** (I-slice `v1.44.0`; **53/65** mapped; `urbp` absorbed) |
 | system-gateway | 77 | Null Signal System Gateway (fully supported) |
 | system-update-2021 | 82 | Null Signal System Update 2021 (fully supported) |
 | midnight-sun | 65 | Null Signal Midnight Sun (`ms`); `msbp` titles absorbed; fully supported |

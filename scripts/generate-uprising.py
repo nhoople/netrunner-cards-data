@@ -1626,6 +1626,110 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    # --- I-slice (v1.44.0): SYNC Rerouting / Argus Crackdown /
+    # Hyoubu Precog Manifold / NAPD Cordon / NEXT Activation Command ---
+    # Shared lockdown shell: playRequiresNoActiveLockdown +
+    # lingerUntilCorpNextTurnBegins (CR 3.5.1c / 8.6.6c).
+
+    _lockdown = dict(
+        playRequiresNoActiveLockdown=True,
+        lingerUntilCorpNextTurnBegins=True,
+    )
+
+    if cid == "sync-rerouting":
+        return base(
+            c,
+            **_lockdown,
+            onRunBegin={
+                "op": "choose",
+                "chooser": "runner",
+                "options": [
+                    {
+                        "id": "pay4",
+                        "label": "Pay 4¢",
+                        "effect": {
+                            "op": "do",
+                            "action": {
+                                "kind": "lose_credits",
+                                "side": "runner",
+                                "amount": 4,
+                            },
+                        },
+                    },
+                    {
+                        "id": "tag",
+                        "label": "Take 1 tag",
+                        "effect": {
+                            "op": "do",
+                            "action": {"kind": "give_tags", "amount": 1},
+                        },
+                    },
+                ],
+            },
+            unsupported=[],
+        )
+
+    if cid == "argus-crackdown":
+        return base(
+            c,
+            **_lockdown,
+            onSuccessfulRun={
+                "op": "if",
+                "cond": {"op": "attacked_server_protected_by_ice"},
+                "then": {
+                    "op": "do",
+                    "action": {"kind": "meat_damage", "amount": 2},
+                },
+            },
+            unsupported=[],
+        )
+
+    if cid == "hyoubu-precog-manifold":
+        return base(
+            c,
+            **_lockdown,
+            onPlay={
+                "op": "do",
+                "action": {"kind": "choose_server"},
+            },
+            onSuccessfulRun={
+                "op": "if",
+                "cond": {"op": "attacking_chosen_server"},
+                "then": {
+                    "op": "do",
+                    "action": {
+                        "kind": "play_psi_game",
+                        "maxBid": 2,
+                        "ifBidsDiffer": {
+                            "op": "do",
+                            "action": {"kind": "end_the_run"},
+                        },
+                    },
+                },
+            },
+            unsupported=[],
+        )
+
+    if cid == "napd-cordon":
+        return base(
+            c,
+            **_lockdown,
+            stealAdditionalCreditsFormula={
+                "base": 4,
+                "perAdvancement": 2,
+            },
+            unsupported=[],
+        )
+
+    if cid == "next-activation-command":
+        return base(
+            c,
+            **_lockdown,
+            allIceStrengthBonus=2,
+            cannotBreakExceptIcebreaker=True,
+            unsupported=[],
+        )
+
     # Fail closed — honest unsupported note for the remainder.
     card = base(c)
     card["unsupported"] = [f"Full text not yet mapped to IR: {plain[:240]}"]
@@ -1671,7 +1775,7 @@ def main():
             "Null Signal Uprising (NRDB pack ur) — Ashes set 2 of 2; first "
             "legacy backwards wave before System Gateway. urbp titles absorbed. "
             f"In-progress: {full} cards fully mapped, {partial} with unsupported "
-            "notes (wave slice v1.43.0)."
+            "notes (wave slice v1.44.0)."
         ),
         "cards": written,
     }
