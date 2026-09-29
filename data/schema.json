@@ -369,6 +369,10 @@
               "trashSelf": {
                 "type": "boolean"
               },
+              "rfgSelf": {
+                "type": "boolean",
+                "description": "Remove this card from the game as a cost (The Back). Engine snapshots hosted counters before RFG."
+              },
               "trashFromHq": {
                 "type": "integer",
                 "minimum": 0
@@ -991,7 +995,40 @@
     "maxRemoteServers": {
       "type": "integer",
       "minimum": 0,
-      "description": "Corp identity: maximum number of remote servers (A Teia)."
+      "description": "Corp identity: maximum number of remote servers (A Teia / Earth Station)."
+    },
+    "additionalRunInitiateCredits": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "hqUnflipped": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Additional credits to initiate a run on HQ while identity is unflipped (Earth Station)."
+        },
+        "remoteFlipped": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Additional credits to initiate a run on a remote while identity is flipped (Earth Station)."
+        }
+      },
+      "description": "Corp identity: additional credit cost to initiate a run, gated by face (Earth Station; CR 1.16.1b / 4.6.8f)."
+    },
+    "vacheronStealReplacement": {
+      "type": "boolean",
+      "description": "When this agenda would be added to the Runner score area from anywhere except Archives, instead add it with 4 agenda counters (Project Vacheron; CR 9.9.9c). Replacement does not re-trigger on its own result."
+    },
+    "worthZeroAgendaPointsWhileHasAgendaCounters": {
+      "type": "boolean",
+      "description": "While in the Runner score area with ≥1 agenda counters, contribute 0 agenda points (Project Vacheron)."
+    },
+    "onFirstHardwareUseDuringRunEachTurn": {
+      "type": "object",
+      "description": "Effect IR the first time each turn the Runner uses (resolves a paid ability on) installed hardware during a run while this card is installed (The Back)."
+    },
+    "onCorpAbilityCausesRunnerSpendOrLoseCreditsDuringRun": {
+      "type": "object",
+      "description": "Corp identity: Effect IR whenever a Corp card ability causes the Runner to spend or lose ≥1¢ during a run — once per aggregate payment/lose instruction (GameNET; CR 1.16.2b)."
     },
     "onFirstRemoteInstallThisTurn": {
       "type": "object",
@@ -1029,6 +1066,10 @@
         "onSuccessfulHqOrRdRun": {
           "type": "object",
           "description": "Successful Runner run on HQ or R&D while flipped."
+        },
+        "onSuccessfulHqRun": {
+          "type": "object",
+          "description": "Successful Runner run on HQ while flipped (Earth Station unflip)."
         },
         "onFlipToBackIfRunMatchesFace": {
           "type": "object",

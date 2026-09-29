@@ -5,11 +5,70 @@
   "nrdbCode": "26107",
   "type": "asset",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: [interrupt] → Whenever you would do 1 or more net damage, you may prevent 1 net damage. If you do, place 1 power counter on this asset and gain 3[credit]. [click][click], [trash]: Do 1 net damage for each hosted power counter."
-  ],
+  "unsupported": [],
   "installCost": 1,
   "rezCost": 1,
   "trashCost": 4,
-  "unique": true
+  "unique": true,
+  "paidAbilities": [
+    {
+      "id": "prana-prevent-net",
+      "label": "Interrupt: prevent 1 net damage → +1 power + 3¢",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {},
+      "windows": [
+        "damage_interrupt_paw"
+      ],
+      "requirePendingDamageTypes": [
+        "net"
+      ],
+      "effect": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "prevent_pending_damage",
+              "amount": 1
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "add_power_counter",
+              "amount": 1
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "gain_credits",
+              "side": "corp",
+              "amount": 3
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "prana-discharge",
+      "label": "[click][click], [trash]: Do 1 net damage for each hosted power counter",
+      "clickCost": 2,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 2,
+        "trashSelf": true
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "deal_net_damage_per_power_counter"
+        }
+      }
+    }
+  ]
 }

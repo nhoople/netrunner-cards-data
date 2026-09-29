@@ -1935,6 +1935,220 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    # --- K-slice (v1.46.0): final 7 → 65/65 set-complete ---
+    # Prāna / Vacheron / Earth Station / Kakurenbo / Gachapon /
+    # The Back / GameNET. CR pin v26.03.
+
+    if cid == "prana-condenser":
+        return base(
+            c,
+            paidAbilities=[
+                {
+                    "id": "prana-prevent-net",
+                    "label": (
+                        "Interrupt: prevent 1 net damage → +1 power + 3¢"
+                    ),
+                    "clickCost": 0,
+                    "creditCost": 0,
+                    "cost": {},
+                    "windows": ["damage_interrupt_paw"],
+                    "requirePendingDamageTypes": ["net"],
+                    "effect": {
+                        "op": "seq",
+                        "effects": [
+                            {
+                                "op": "do",
+                                "action": {
+                                    "kind": "prevent_pending_damage",
+                                    "amount": 1,
+                                },
+                            },
+                            {
+                                "op": "do",
+                                "action": {
+                                    "kind": "add_power_counter",
+                                    "amount": 1,
+                                },
+                            },
+                            gain("corp", 3),
+                        ],
+                    },
+                },
+                {
+                    "id": "prana-discharge",
+                    "label": (
+                        "[click][click], [trash]: Do 1 net damage for each "
+                        "hosted power counter"
+                    ),
+                    "clickCost": 2,
+                    "creditCost": 0,
+                    "cost": {"clicks": 2, "trashSelf": True},
+                    "windows": ["corp_action_paw"],
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "deal_net_damage_per_power_counter"
+                        },
+                    },
+                },
+            ],
+            unsupported=[],
+        )
+
+    if cid == "project-vacheron":
+        return base(
+            c,
+            vacheronStealReplacement=True,
+            worthZeroAgendaPointsWhileHasAgendaCounters=True,
+            onTurnBegin={
+                "op": "do",
+                "action": {
+                    "kind": "remove_agenda_counters",
+                    "amount": 1,
+                },
+            },
+            unsupported=[],
+        )
+
+    if cid == "earth-station-sea-headquarters":
+        return base(
+            c,
+            maxRemoteServers=1,
+            additionalRunInitiateCredits={
+                "hqUnflipped": 1,
+                "remoteFlipped": 6,
+            },
+            paidAbilities=[
+                {
+                    "id": "earth-station-flip",
+                    "label": "[click]: Flip this identity",
+                    "clickCost": 1,
+                    "creditCost": 0,
+                    "cost": {"clicks": 1},
+                    "windows": ["corp_action_paw"],
+                    "effect": {
+                        "op": "do",
+                        "action": {"kind": "flip_identity"},
+                    },
+                }
+            ],
+            identityFlippedHooks={
+                "onSuccessfulHqRun": {
+                    "op": "do",
+                    "action": {"kind": "flip_identity"},
+                }
+            },
+            unsupported=[],
+        )
+
+    if cid == "kakurenbo":
+        return base(
+            c,
+            playAdditionalClicks=2,
+            onPlay={
+                "op": "seq",
+                "effects": [
+                    {
+                        "op": "do",
+                        "action": {"kind": "trash_any_number_from_hq"},
+                    },
+                    {
+                        "op": "do",
+                        "action": {"kind": "turn_all_archives_facedown"},
+                    },
+                    {
+                        "op": "do",
+                        "action": {
+                            "kind": (
+                                "may_install_from_archives_in_remote_root_"
+                                "with_advancements"
+                            ),
+                            "amount": 2,
+                        },
+                    },
+                    {
+                        "op": "do",
+                        "action": {"kind": "rfg_self"},
+                    },
+                ],
+            },
+            unsupported=[],
+        )
+
+    if cid == "gachapon":
+        return base(
+            c,
+            paidAbilities=[
+                {
+                    "id": "gachapon-resolve",
+                    "label": (
+                        "[trash]: Set aside top 6 faceup; may install "
+                        "program/virtual −2¢; shuffle 3; RFG rest"
+                    ),
+                    "clickCost": 0,
+                    "creditCost": 0,
+                    "cost": {"trashSelf": True},
+                    "windows": ["runner_action_paw"],
+                    "effect": {
+                        "op": "do",
+                        "action": {"kind": "gachapon_resolve"},
+                    },
+                }
+            ],
+            unsupported=[],
+        )
+
+    if cid == "the-back":
+        return base(
+            c,
+            onFirstHardwareUseDuringRunEachTurn={
+                "op": "do",
+                "action": {
+                    "kind": "add_power_counter",
+                    "amount": 1,
+                },
+            },
+            paidAbilities=[
+                {
+                    "id": "the-back-heap-shuffle",
+                    "label": (
+                        "[click], remove The Back from the game: For each "
+                        "hosted power counter, shuffle up to 2 heap cards "
+                        "with [trash] abilities into your stack"
+                    ),
+                    "clickCost": 1,
+                    "creditCost": 0,
+                    "cost": {"clicks": 1, "rfgSelf": True},
+                    "windows": ["runner_action_paw"],
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": (
+                                "shuffle_up_to_n_heap_cards_with_trash_"
+                                "abilities_into_stack"
+                            ),
+                            "nPerPowerCounter": 2,
+                        },
+                    },
+                }
+            ],
+            unsupported=[],
+        )
+
+    if cid == "gamenet-where-dreams-are-real":
+        return base(
+            c,
+            onCorpAbilityCausesRunnerSpendOrLoseCreditsDuringRun={
+                "op": "do",
+                "action": {
+                    "kind": "gain_credits",
+                    "side": "corp",
+                    "amount": 1,
+                },
+            },
+            unsupported=[],
+        )
+
     # Fail closed — honest unsupported note for the remainder.
     card = base(c)
     card["unsupported"] = [f"Full text not yet mapped to IR: {plain[:240]}"]
@@ -1970,18 +2184,28 @@ def main():
     )
     partial = len(written) - full
 
+    status = "supported" if partial == 0 else "in-progress"
+    if status == "supported":
+        notes = (
+            "Null Signal Uprising (NRDB pack ur) — Ashes set 2 of 2; first "
+            "legacy backwards wave before System Gateway. urbp titles absorbed. "
+            f"Fully supported: all {EXPECTED} cards mapped (wave gate v1.46.0; "
+            f"full={full}, partial={partial})."
+        )
+    else:
+        notes = (
+            "Null Signal Uprising (NRDB pack ur) — Ashes set 2 of 2; first "
+            "legacy backwards wave before System Gateway. urbp titles absorbed. "
+            f"In-progress: {full} cards fully mapped, {partial} with unsupported "
+            "notes (wave slice v1.46.0)."
+        )
     manifest = {
         "pack": WAVE,
         "nrdbPackCode": PACK,
         "count": EXPECTED,
         "written": EXPECTED,
-        "status": "in-progress",
-        "notes": (
-            "Null Signal Uprising (NRDB pack ur) — Ashes set 2 of 2; first "
-            "legacy backwards wave before System Gateway. urbp titles absorbed. "
-            f"In-progress: {full} cards fully mapped, {partial} with unsupported "
-            "notes (wave slice v1.45.0)."
-        ),
+        "status": status,
+        "notes": notes,
         "cards": written,
     }
     (OUT / "_manifest.json").write_text(
