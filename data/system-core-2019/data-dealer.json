@@ -5,13 +5,34 @@
   "nrdbCode": "25039",
   "type": "resource",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: [click], forfeit 1 agenda: Gain 9[credit]."
-  ],
+  "unsupported": [],
   "faction": "criminal",
   "subtypes": [
     "connection",
     "seedy"
   ],
-  "installCost": 0
+  "installCost": 0,
+  "paidAbilities": [
+    {
+      "id": "data-dealer-forfeit",
+      "label": "Forfeit 1 agenda: Gain 9¢",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1,
+        "forfeitAgenda": true
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "runner",
+          "amount": 9
+        }
+      }
+    }
+  ]
 }

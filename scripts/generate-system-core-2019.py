@@ -971,6 +971,71 @@ def map_card(c: dict) -> dict | None:
             unsupported=[],
         )
 
+    # --- v1.68.0 I-slice: new Effect IR leaves (fail-closed engine pair) ---
+
+    if cid == "john-masanori":
+        return base(
+            c,
+            onFirstSuccessfulRunThisTurn=draw("runner", 1),
+            onFirstUnsuccessfulRunThisTurn={
+                "op": "do",
+                "action": {"kind": "give_tags", "amount": 1},
+            },
+            unsupported=[],
+        )
+
+    if cid == "spark-agency-worldswide-reach":
+        return base(
+            c,
+            loseCreditsOnFirstAdvertisementRezThisTurn=1,
+            unsupported=[],
+        )
+
+    if cid == "paper-trail":
+        return base(
+            c,
+            onScore={
+                "op": "do",
+                "action": {
+                    "kind": "trace",
+                    "strength": 6,
+                    "onSuccess": {
+                        "op": "do",
+                        "action": {
+                            "kind": "trash_installed_resources_with_any_subtype",
+                            "subtypes": ["connection", "job"],
+                        },
+                    },
+                },
+            },
+            unsupported=[],
+        )
+
+    if cid == "data-dealer":
+        return base(
+            c,
+            paidAbilities=[
+                {
+                    "id": "data-dealer-forfeit",
+                    "label": "Forfeit 1 agenda: Gain 9¢",
+                    "clickCost": 1,
+                    "creditCost": 0,
+                    "cost": {"clicks": 1, "forfeitAgenda": True},
+                    "windows": ["runner_action_paw"],
+                    "effect": gain("runner", 9),
+                }
+            ],
+            unsupported=[],
+        )
+
+    if cid == "cyberfeeder":
+        return base(
+            c,
+            recurringCreditsMax=1,
+            recurringSpendFor=["use_program", "install_virus"],
+            unsupported=[],
+        )
+
     card = base(c)
     card["unsupported"] = [
         f"Full text not yet mapped to IR: {plain[:200]}"
@@ -1083,6 +1148,13 @@ def main():
             "haas-bioroid-stronger-together",
             "nbn-making-news",
             "philotic-entanglement",
+        ],
+        "iSliceClears": [
+            "john-masanori",
+            "spark-agency-worldswide-reach",
+            "paper-trail",
+            "data-dealer",
+            "cyberfeeder",
         ],
     }
     (OUT / "_manifest.json").write_text(
