@@ -2460,42 +2460,6 @@
       "items": {
         "type": "object"
       }
-    },
-    "rezSpendCreditsForPowerCounters": {
-      "type": "object",
-      "required": [
-        "max"
-      ],
-      "additionalProperties": false,
-      "properties": {
-        "max": {
-          "type": "integer",
-          "minimum": 1,
-          "description": "Maximum credits Corp may optionally spend on rez to place that many power counters (Reduced Service)."
-        }
-      },
-      "description": "On rez, Corp may spend X∈0..min(max, credits) to place X power counters (Reduced Service; Atman installSpendCreditsForPowerCounters cousin)."
-    },
-    "additionalRunInitiatePerPowerCounter": {
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "credits": {
-          "type": "integer",
-          "minimum": 0,
-          "description": "Additional credits to initiate a run on this server per hosted power counter (Reduced Service)."
-        },
-        "clicks": {
-          "type": "integer",
-          "minimum": 0,
-          "description": "Additional clicks to initiate a run on this server per hosted power counter (Cold Site Server)."
-        }
-      },
-      "description": "Rezzed upgrade protecting a server: additional run-initiate cost of clicks and/or credits × hosted power counters (Reduced Service / Cold Site Server; Earth Station timing — not Manegarm approach tax)."
-    },
-    "onApproachServerOncePerRun": {
-      "type": "boolean",
-      "description": "When true, onApproachServer fires at most once per run for this instance (Letheia Nisei first approach each run)."
     }
   }
 }
