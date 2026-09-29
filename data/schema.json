@@ -1997,6 +1997,14 @@
       "type": "object",
       "description": "Effect IR when an encounter with this ice ends (Knowledge Seeker)."
     },
+    "loseClickOnProtectingIceEncounterEndIfBroke": {
+      "type": "boolean",
+      "description": "While rezzed, when an encounter with ice protecting this server ends, if the Runner broke at least one subroutine during that encounter, they lose [click] (Mason Bellamy)."
+    },
+    "cannotRunRemotesUntilCentralRunThisTurn": {
+      "type": "boolean",
+      "description": "Corp identity: Runner cannot run remote servers; ignore until end of turn whenever the Runner runs on a central server (Jinteki: Replicating Perfection)."
+    },
     "allIceStrengthPenalty": {
       "type": "integer",
       "minimum": 1,

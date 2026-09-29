@@ -5,11 +5,10 @@
   "nrdbCode": "25085",
   "type": "identity",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: The Runner cannot run on remote servers. Ignore this ability until the end of the turn whenever the Runner runs on a central server."
-  ],
+  "unsupported": [],
   "faction": "jinteki",
   "subtypes": [
     "megacorp"
-  ]
+  ],
+  "cannotRunRemotesUntilCentralRunThisTurn": true
 }

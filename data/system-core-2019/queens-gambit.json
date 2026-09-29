@@ -5,12 +5,19 @@
   "nrdbCode": "25003",
   "type": "event",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: As an additional cost to play this event, spend [click]. Place up to 3 advancement counters on 1 unrezzed card in the root of a remote server. Gain 2[credit] for each counter placed this way. You cann"
-  ],
+  "unsupported": [],
   "faction": "anarch",
   "subtypes": [
     "double"
   ],
-  "playCost": 0
+  "playCost": 0,
+  "playAdditionalClick": true,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "queens_gambit_place_up_to",
+      "max": 3,
+      "creditsPer": 2
+    }
+  }
 }
