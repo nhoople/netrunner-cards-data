@@ -5,11 +5,11 @@
   "nrdbCode": "25092",
   "type": "asset",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: The first time the Runner spends 1 or more [click] during their turn, gain 2[credit]. If those [click] were spent to take an action, the first time during that action a run on this server begins, pay "
-  ],
+  "unsupported": [],
   "faction": "jinteki",
   "installCost": 2,
   "rezCost": 2,
-  "trashCost": 2
+  "trashCost": 2,
+  "gainCreditsOnFirstRunnerClickSpendThisTurn": 2,
+  "refundCreditsIfRunBeginsOnThisServerDuringClickAction": 2
 }

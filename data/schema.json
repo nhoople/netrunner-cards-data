@@ -2005,6 +2005,41 @@
       "type": "boolean",
       "description": "Corp identity: Runner cannot run remote servers; ignore until end of turn whenever the Runner runs on a central server (Jinteki: Replicating Perfection)."
     },
+    "removeVirusOrTrashOnEncounterEndIfBroke": {
+      "type": "boolean",
+      "description": "When an encounter ends, if this program broke a subroutine during that encounter, remove 1 hosted virus counter or trash this program (Crypsis)."
+    },
+    "hostNonAiIcebreaker": {
+      "type": "boolean",
+      "description": "May host a single non-AI icebreaker (Dinosaurus). Pair with maxHostedCards."
+    },
+    "hostedIcebreakerMemoryDoesNotCount": {
+      "type": "boolean",
+      "description": "Hosted icebreaker's memory cost does not count against the Runner's memory limit (Dinosaurus)."
+    },
+    "playOrInstallDiscountByTrashingGripOncePerTurn": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Interrupt once per turn: when playing or installing a card, may trash 1 from grip to reduce that play/install cost by this many credits (Patchwork)."
+    },
+    "gainCreditsOnFirstRunnerClickSpendThisTurn": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "While rezzed, the first time the Runner spends ≥1 [click] during their turn, Corp gains this many credits (Sundew)."
+    },
+    "refundCreditsIfRunBeginsOnThisServerDuringClickAction": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "If the first click-spend was for an action and a run on this server begins during that action, Corp pays this many credits (Sundew refund)."
+    },
+    "onFirstRunnerClickSpendOrLoseDuringRun": {
+      "type": "object",
+      "description": "Effect IR the first time each turn the Runner loses or spends [click] during a run (Seidr Laboratories)."
+    },
+    "trashHostIfAllSubsBrokenThisEncounter": {
+      "type": "boolean",
+      "description": "While hosted on ice, if all host subroutines are broken during a single encounter, trash the host ice (Oversight AI condition)."
+    },
     "allIceStrengthPenalty": {
       "type": "integer",
       "minimum": 1,

@@ -17,8 +17,8 @@
   ],
   "waves": {
     "system-core-2019": {
-      "status": "in-progress",
-      "notes": "Null Signal System Core 2019 (NRDB pack sc19) — legacy backwards after Downfall. 147 titles; 63 Gateway/SU21 reprints absorbed. N-slice v1.73.0: 75/147 SC19-only clears. Skip mo/mor.",
+      "status": "supported",
+      "notes": "Null Signal System Core 2019 (NRDB pack sc19) — legacy backwards after Downfall. 147 titles; 63 Gateway/SU21 reprints absorbed. O-slice set-complete v1.74.0: 84/147 SC19-only clears (63 reprints). Skip mo/mor.",
       "cards": [
         "reina-roja-freedom-fighter",
         "quetzal-free-spirit",

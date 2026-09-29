@@ -1553,6 +1553,166 @@ def map_card(c: dict) -> dict | None:
             unsupported=[],
         )
 
+    # --- v1.74.0 O-slice set-complete: remaining 9 SC19-only ---
+
+    if cid == "ash-2x3zb9cy":
+        return base(
+            c,
+            onSuccessfulRun={
+                "op": "do",
+                "action": {
+                    "kind": "trace",
+                    "strength": 4,
+                    "onSuccess": {
+                        "op": "do",
+                        "action": {
+                            "kind": "restrict_run_access",
+                            "mode": "only_source",
+                            "cardIdsFromSource": True,
+                        },
+                    },
+                },
+            },
+            unsupported=[],
+        )
+
+    if cid == "crypsis":
+        return breaker_card(
+            c,
+            "*",
+            0,
+            1,
+            pump_c=1,
+            pump_s=1,
+            paidAbilities=[
+                {
+                    "id": "crypsis-virus",
+                    "label": "Place 1 virus counter",
+                    "clickCost": 1,
+                    "creditCost": 0,
+                    "cost": {"clicks": 1},
+                    "windows": ["runner_action_paw"],
+                    "effect": {
+                        "op": "do",
+                        "action": {"kind": "add_virus_counter", "amount": 1},
+                    },
+                }
+            ],
+            removeVirusOrTrashOnEncounterEndIfBroke=True,
+            unsupported=[],
+        )
+
+    if cid == "deus-x":
+        return base(
+            c,
+            breaker={
+                "breaksSubtype": "ap",
+                "strength": 10,
+                "breakCredits": 0,
+                "breakMaxSubs": 99,
+                "breakViaPaidAbilityOnly": True,
+            },
+            paidAbilities=[
+                {
+                    "id": "deus-x-break",
+                    "label": "Trash Deus X: break any number of AP subroutines",
+                    "clickCost": 0,
+                    "creditCost": 0,
+                    "cost": {"trashSelf": True},
+                    "windows": ["encounter_paw"],
+                    "requireEncounterSubtype": "ap",
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "break_encounter_subroutine",
+                            "maxSubs": 99,
+                            "requireSubtype": "ap",
+                        },
+                    },
+                },
+                {
+                    "id": "deus-x-prevent-net",
+                    "label": "Interrupt: trash Deus X — prevent any amount of net damage",
+                    "clickCost": 0,
+                    "creditCost": 0,
+                    "cost": {"trashSelf": True},
+                    "windows": ["damage_interrupt_paw"],
+                    "requirePendingDamageTypes": ["net"],
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "prevent_pending_damage",
+                            "amount": 99,
+                        },
+                    },
+                },
+            ],
+            unsupported=[],
+        )
+
+    if cid == "bank-job":
+        return base(
+            c,
+            hostedCreditsOnInstall=8,
+            onSuccessfulRun={
+                "op": "if",
+                "cond": {"op": "attacking_remote"},
+                "then": {
+                    "op": "do",
+                    "action": {"kind": "may_take_any_hosted_credits_skip_breach"},
+                },
+            },
+            unsupported=[],
+        )
+
+    if cid == "seidr-laboratories-destiny-defined":
+        return base(
+            c,
+            onFirstRunnerClickSpendOrLoseDuringRun={
+                "op": "do",
+                "action": {"kind": "may_add_archives_card_to_rd_top"},
+            },
+            unsupported=[],
+        )
+
+    if cid == "dinosaurus":
+        return base(
+            c,
+            muBonus=1,
+            maxHostedCards=1,
+            hostIcebreakerStrengthBonus=2,
+            hostNonAiIcebreaker=True,
+            hostedIcebreakerMemoryDoesNotCount=True,
+            unsupported=[],
+        )
+
+    if cid == "patchwork":
+        return base(
+            c,
+            muBonus=1,
+            playOrInstallDiscountByTrashingGripOncePerTurn=2,
+            unsupported=[],
+        )
+
+    if cid == "sundew":
+        return base(
+            c,
+            gainCreditsOnFirstRunnerClickSpendThisTurn=2,
+            refundCreditsIfRunBeginsOnThisServerDuringClickAction=2,
+            unsupported=[],
+        )
+
+    if cid == "oversight-ai":
+        return base(
+            c,
+            onPlay={
+                "op": "do",
+                "action": {"kind": "oversight_ai_rez_and_host"},
+            },
+            trashHostIfAllSubsBrokenThisEncounter=True,
+            unsupported=[],
+        )
+
     card = base(c)
     card["unsupported"] = [
         f"Full text not yet mapped to IR: {plain[:200]}"
@@ -1707,6 +1867,17 @@ def main():
             "blue-sun-powering-the-future",
             "mason-bellamy",
             "jinteki-replicating-perfection",
+        ],
+        "oSliceClears": [
+            "ash-2x3zb9cy",
+            "crypsis",
+            "deus-x",
+            "bank-job",
+            "seidr-laboratories-destiny-defined",
+            "dinosaurus",
+            "patchwork",
+            "sundew",
+            "oversight-ai",
         ],
     }
     (OUT / "_manifest.json").write_text(
