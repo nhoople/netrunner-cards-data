@@ -1,0 +1,14 @@
+{
+  "id": "earth-station-sea-headquarters",
+  "title": "Earth Station: SEA Headquarters",
+  "wave": "uprising",
+  "nrdbCode": "26120",
+  "type": "identity",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: Limit 1 remote server. As an additional cost to run HQ, the Runner must pay 1[credit]. [click]: Flip this identity. Flip side: Limit 1 remote server. As an additional cost to run a remote server, the Runner must pay 6[credit]. When the Runn"
+  ],
+  "subtypes": [
+    "division"
+  ]
+}

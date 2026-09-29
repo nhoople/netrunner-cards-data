@@ -1,0 +1,18 @@
+{
+  "id": "la-costa-grid",
+  "title": "La Costa Grid",
+  "wave": "uprising",
+  "nrdbCode": "26112",
+  "type": "upgrade",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: Remote server only. When your turn begins, place 1 advancement counter on a card in the root of this server. Limit 1 region per server."
+  ],
+  "subtypes": [
+    "region",
+    "seedy"
+  ],
+  "installCost": 3,
+  "rezCost": 3,
+  "trashCost": 4
+}

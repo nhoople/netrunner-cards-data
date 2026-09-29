@@ -1,0 +1,12 @@
+{
+  "id": "moshing",
+  "title": "Moshing",
+  "wave": "uprising",
+  "nrdbCode": "26067",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: As an additional cost to play this event, trash 3 cards from your grip. Gain 3[credit] and draw 3 cards."
+  ],
+  "playCost": 0
+}

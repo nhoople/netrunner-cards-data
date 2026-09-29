@@ -1,0 +1,16 @@
+{
+  "id": "next-activation-command",
+  "title": "NEXT Activation Command",
+  "wave": "uprising",
+  "nrdbCode": "26103",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: Play only if there is no active lockdown. This operation is not trashed until your next turn begins. Each piece of ice gets +2 strength. The Runner cannot use non-icebreaker cards to break subroutines."
+  ],
+  "subtypes": [
+    "lockdown"
+  ],
+  "playCost": 0,
+  "trashCost": 4
+}

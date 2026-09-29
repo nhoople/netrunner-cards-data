@@ -1,0 +1,17 @@
+{
+  "id": "akhet",
+  "title": "Akhet",
+  "wave": "uprising",
+  "nrdbCode": "26123",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: You can advance this ice. While there are 3 or more hosted advancement counters, this ice gets +3 strength and the Runner cannot break more than 1 of its printed subroutines during each encounter. [subroutine] Gain 1[credit]. Place 1 advanc"
+  ],
+  "subtypes": [
+    "barrier"
+  ],
+  "installCost": 3,
+  "rezCost": 3,
+  "strength": 2
+}

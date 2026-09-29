@@ -1,0 +1,16 @@
+{
+  "id": "mantle",
+  "title": "Mantle",
+  "wave": "uprising",
+  "nrdbCode": "26088",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: 1[recurring-credit] You can spend hosted credits to use hardware and programs."
+  ],
+  "subtypes": [
+    "stealth"
+  ],
+  "installCost": 1,
+  "memoryCost": 1
+}

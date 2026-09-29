@@ -1,0 +1,16 @@
+{
+  "id": "bellona",
+  "title": "Bellona",
+  "wave": "uprising",
+  "nrdbCode": "26114",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: As an additional cost to steal this agenda, the Runner must pay 5[credit]. When you score this agenda, gain 5[credit]."
+  ],
+  "subtypes": [
+    "expansion"
+  ],
+  "advancementRequirement": 5,
+  "agendaPoints": 3
+}

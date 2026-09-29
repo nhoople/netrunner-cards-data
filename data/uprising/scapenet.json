@@ -1,0 +1,15 @@
+{
+  "id": "scapenet",
+  "title": "Scapenet",
+  "wave": "uprising",
+  "nrdbCode": "26104",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: Play only if the Runner made a successful run during their last turn. Trace[7]. If successful, remove 1 installed chip or virtual card from the game."
+  ],
+  "subtypes": [
+    "gray ops"
+  ],
+  "playCost": 1
+}

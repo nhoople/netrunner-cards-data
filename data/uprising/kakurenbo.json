@@ -1,0 +1,15 @@
+{
+  "id": "kakurenbo",
+  "title": "Kakurenbo",
+  "wave": "uprising",
+  "nrdbCode": "26111",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: As an additional cost to play this operation, spend [click][click]. Trash any number of cards from HQ. Turn all cards in Archives facedown. You may install 1 card from Archives in the root of a remote server and place 2 advancement counters"
+  ],
+  "subtypes": [
+    "triple"
+  ],
+  "playCost": 2
+}

@@ -1,0 +1,13 @@
+{
+  "id": "flower-sermon",
+  "title": "Flower Sermon",
+  "wave": "uprising",
+  "nrdbCode": "26106",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: When you score this agenda, place 5 agenda counters on it. Once per turn → Hosted agenda counter: Reveal the top card of R&D. Draw 2 cards. Add 1 card from HQ to the top of R&D."
+  ],
+  "advancementRequirement": 4,
+  "agendaPoints": 2
+}

@@ -1,0 +1,13 @@
+{
+  "id": "buffer-drive",
+  "title": "Buffer Drive",
+  "wave": "uprising",
+  "nrdbCode": "26093",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: The first time each turn 1 or more cards are trashed from your grip or stack, you may add 1 of those cards to the bottom of your stack. Remove this hardware from the game: Add 1 card from your heap to the top of your stack."
+  ],
+  "installCost": 3,
+  "unique": true
+}

@@ -1,0 +1,17 @@
+{
+  "id": "hyoubu-precog-manifold",
+  "title": "Hyoubu Precog Manifold",
+  "wave": "uprising",
+  "nrdbCode": "26110",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: Play only if there is no active lockdown. This operation is not trashed until your next turn begins. When you play this operation, choose a server. Whenever the Runner makes a successful run on the chosen server, play a Psi Game. (Players s"
+  ],
+  "subtypes": [
+    "lockdown",
+    "psi"
+  ],
+  "playCost": 0,
+  "trashCost": 4
+}

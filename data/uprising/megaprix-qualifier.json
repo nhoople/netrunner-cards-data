@@ -1,0 +1,13 @@
+{
+  "id": "megaprix-qualifier",
+  "title": "Megaprix Qualifier",
+  "wave": "uprising",
+  "nrdbCode": "26096",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: When you score this agenda, if there is another copy of Megaprix Qualifier in either playerʼs score area, place 1 agenda counter on this agenda. While this agenda has a hosted agenda counter, it is worth 1 more agenda point."
+  ],
+  "advancementRequirement": 3,
+  "agendaPoints": 1
+}

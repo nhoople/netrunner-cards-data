@@ -1,0 +1,14 @@
+{
+  "id": "gamenet-where-dreams-are-real",
+  "title": "GameNET: Where Dreams are Real",
+  "wave": "uprising",
+  "nrdbCode": "26113",
+  "type": "identity",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: Whenever a Corp card ability causes the Runner to spend or lose at least 1[credit] during a run, gain 1[credit]."
+  ],
+  "subtypes": [
+    "division"
+  ]
+}

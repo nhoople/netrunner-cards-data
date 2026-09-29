@@ -1,0 +1,18 @@
+{
+  "id": "colossus",
+  "title": "Colossus",
+  "wave": "uprising",
+  "nrdbCode": "26124",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: You can advance this ice. It gets +1 strength for each hosted advancement counter. [subroutine] Give the Runner 1 tag. If there are 3 or more hosted advancement counters, instead give the Runner 2 tags. [subroutine] Trash 1 installed progra"
+  ],
+  "subtypes": [
+    "sentry",
+    "destroyer"
+  ],
+  "installCost": 6,
+  "rezCost": 6,
+  "strength": 4
+}

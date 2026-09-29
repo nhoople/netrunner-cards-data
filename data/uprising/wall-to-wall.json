@@ -1,0 +1,18 @@
+{
+  "id": "wall-to-wall",
+  "title": "Wall to Wall",
+  "wave": "uprising",
+  "nrdbCode": "26122",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: When your turn begins, if you have any other rezzed assets, resolve 1 of the following; otherwise, resolve up to 3 in any order:Draw 1 card.Gain 1[credit].Place 1 advancement counter on an installed piece of ice.Add this asset to HQ."
+  ],
+  "subtypes": [
+    "advertisement"
+  ],
+  "installCost": 1,
+  "rezCost": 1,
+  "trashCost": 3,
+  "unique": true
+}

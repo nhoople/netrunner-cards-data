@@ -1,0 +1,16 @@
+{
+  "id": "napd-cordon",
+  "title": "NAPD Cordon",
+  "wave": "uprising",
+  "nrdbCode": "26130",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: Play only if there is no active lockdown. This operation is not trashed until your next turn begins. As an additional cost to steal an agenda, the Runner must pay 4[credit] plus 2[credit] for each advancement counter on that agenda."
+  ],
+  "subtypes": [
+    "lockdown"
+  ],
+  "playCost": 0,
+  "trashCost": 2
+}

@@ -1,0 +1,17 @@
+{
+  "id": "gold-farmer",
+  "title": "Gold Farmer",
+  "wave": "uprising",
+  "nrdbCode": "26116",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: Whenever the Runner breaks a printed subroutine on this ice, they lose 1[credit]. [subroutine] End the run unless the Runner pays 3[credit]. [subroutine] End the run unless the Runner pays 3[credit]."
+  ],
+  "subtypes": [
+    "barrier"
+  ],
+  "installCost": 3,
+  "rezCost": 3,
+  "strength": 1
+}

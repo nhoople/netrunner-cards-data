@@ -1,0 +1,16 @@
+{
+  "id": "devil-charm",
+  "title": "Devil Charm",
+  "wave": "uprising",
+  "nrdbCode": "26068",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: Whenever you encounter a piece of ice, you may remove this hardware from the game. If you do, that ice gets −6 strength for the remainder of this run."
+  ],
+  "subtypes": [
+    "chip"
+  ],
+  "installCost": 1,
+  "unique": true
+}

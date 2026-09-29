@@ -1,0 +1,17 @@
+{
+  "id": "f2p",
+  "title": "F2P",
+  "wave": "uprising",
+  "nrdbCode": "26115",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: 2[credit]: Break 1 subroutine on this ice. Only the Runner can use this ability, and only if they are not tagged. [subroutine] Add 1 installed Runner card to the grip. [subroutine] Give the Runner 1 tag."
+  ],
+  "subtypes": [
+    "sentry"
+  ],
+  "installCost": 4,
+  "rezCost": 4,
+  "strength": 5
+}

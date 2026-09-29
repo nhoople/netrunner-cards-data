@@ -1,0 +1,16 @@
+{
+  "id": "dreamnet",
+  "title": "DreamNet",
+  "wave": "uprising",
+  "nrdbCode": "26095",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: The first time each turn you make a successful run, draw 1 card. If your identity is digital or you have at least 2[link], also gain 1[credit]."
+  ],
+  "subtypes": [
+    "virtual"
+  ],
+  "installCost": 3,
+  "unique": true
+}

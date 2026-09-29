@@ -1,0 +1,12 @@
+{
+  "id": "digital-rights-management",
+  "title": "Digital Rights Management",
+  "wave": "uprising",
+  "nrdbCode": "26117",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: Play only if the Runner did not make a successful run on HQ during their last turn. Search R&D for 1 agenda and reveal it. (Shuffle R&D after searching it.) Add that agenda to HQ. You may install 1 card from HQ in the root of a remote serve"
+  ],
+  "playCost": 1
+}

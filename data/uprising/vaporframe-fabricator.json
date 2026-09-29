@@ -1,0 +1,17 @@
+{
+  "id": "vaporframe-fabricator",
+  "title": "Vaporframe Fabricator",
+  "wave": "uprising",
+  "nrdbCode": "26100",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: Once per turn → [click]: Install 1 card from HQ, ignoring all costs. When the Runner trashes this asset, you may install 1 card from HQ, ignoring all costs. You cannot install that card in the root of this server."
+  ],
+  "subtypes": [
+    "industrial"
+  ],
+  "installCost": 2,
+  "rezCost": 2,
+  "trashCost": 3
+}

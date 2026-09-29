@@ -1,0 +1,16 @@
+{
+  "id": "penumbral-toolkit",
+  "title": "Penumbral Toolkit",
+  "wave": "uprising",
+  "nrdbCode": "26081",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: If you made a successful run on HQ this turn, this resource costs 2[credit] less to install. When you install this resource, load 4[credit] onto it. When it is empty, trash it. You can spend hosted credits during runs."
+  ],
+  "subtypes": [
+    "stealth",
+    "virtual"
+  ],
+  "installCost": 2
+}

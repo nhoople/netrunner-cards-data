@@ -1,0 +1,15 @@
+{
+  "id": "bravado",
+  "title": "Bravado",
+  "wave": "uprising",
+  "nrdbCode": "26074",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: Run a server protected by ice. When that run ends, gain 6[credit] plus 1[credit] for each piece of ice you passed during that run."
+  ],
+  "subtypes": [
+    "run"
+  ],
+  "playCost": 3
+}

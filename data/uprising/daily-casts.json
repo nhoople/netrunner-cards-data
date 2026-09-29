@@ -1,0 +1,18 @@
+{
+  "id": "daily-casts",
+  "title": "Daily Casts",
+  "wave": "uprising",
+  "nrdbCode": "26094",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "installCost": 3,
+  "hostedCreditsOnInstall": 8,
+  "onTurnBegin": {
+    "op": "do",
+    "action": {
+      "kind": "take_hosted_credits",
+      "amount": 2
+    }
+  }
+}

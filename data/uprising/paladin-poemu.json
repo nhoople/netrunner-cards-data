@@ -1,0 +1,17 @@
+{
+  "id": "paladin-poemu",
+  "title": "Paladin Poemu",
+  "wave": "uprising",
+  "nrdbCode": "26073",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: When your turn begins and whenever you steal an agenda, place 1[credit] on this resource. You can spend hosted credits to install non-connection cards. When your turn ends, if there are 3 or more hosted credits, trash 1 of your installed ca"
+  ],
+  "subtypes": [
+    "companion",
+    "virtual"
+  ],
+  "installCost": 1,
+  "unique": true
+}
