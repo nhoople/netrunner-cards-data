@@ -5,12 +5,21 @@
   "nrdbCode": "25047",
   "type": "event",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Choose a piece of ice. That ice gains sentry, code gate, and barrier until the end of the turn."
-  ],
+  "unsupported": [],
   "faction": "shaper",
   "subtypes": [
     "mod"
   ],
-  "playCost": 0
+  "playCost": 0,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "grant_chosen_ice_subtypes_until_end_of_turn",
+      "subtypes": [
+        "sentry",
+        "code gate",
+        "barrier"
+      ]
+    }
+  }
 }

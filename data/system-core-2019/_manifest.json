@@ -5,7 +5,7 @@
   "written": 84,
   "reprintSkipped": 63,
   "status": "in-progress",
-  "notes": "System Core 2019 (sc19) kickoff v1.59.0. Wrote 84 files; skipped 63 Gateway/SU21 reprints. Kickoff clears among written: 65.",
+  "notes": "System Core 2019 (sc19) kickoff v1.59.0. Wrote 84 files; skipped 63 Gateway/SU21 reprints. Kickoff clears among written: 70.",
   "cards": [
     "reina-roja-freedom-fighter",
     "quetzal-free-spirit",
@@ -310,5 +310,12 @@
     "red-herrings",
     "public-support",
     "project-junebug"
+  ],
+  "mSliceClears": [
+    "paragon",
+    "aggressive-secretary",
+    "successful-field-test",
+    "hostage",
+    "tinkering"
   ]
 }

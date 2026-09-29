@@ -5,13 +5,55 @@
   "nrdbCode": "25032",
   "type": "hardware",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: +1[mu] The first time you make a successful run each turn, you may gain 1[credit] and look at the top card of your stack. If you do, you may add that card to the bottom of your stack. Limit 1 console "
-  ],
+  "unsupported": [],
   "faction": "criminal",
   "subtypes": [
     "console"
   ],
   "installCost": 3,
-  "unique": true
+  "unique": true,
+  "muBonus": 1,
+  "onSuccessfulRunOncePerTurn": true,
+  "onSuccessfulRun": {
+    "op": "choose",
+    "chooser": "runner",
+    "options": [
+      {
+        "id": "paragon-yes",
+        "label": "Gain 1¢ and look at the top of your stack",
+        "effect": {
+          "op": "seq",
+          "effects": [
+            {
+              "op": "do",
+              "action": {
+                "kind": "gain_credits",
+                "side": "runner",
+                "amount": 1
+              }
+            },
+            {
+              "op": "do",
+              "action": {
+                "kind": "look_top_n_stack_may_bottom_one",
+                "n": 1
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "paragon-decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "runner",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  }
 }

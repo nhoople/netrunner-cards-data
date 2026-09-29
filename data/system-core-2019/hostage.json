@@ -5,12 +5,18 @@
   "nrdbCode": "25025",
   "type": "event",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: As an additional cost to play this event, spend [click]. Search your stack for a connection, reveal it, and add it to your grip. You may install that connection (paying its install cost). Shuffle your"
-  ],
+  "unsupported": [],
   "faction": "criminal",
   "subtypes": [
     "double"
   ],
-  "playCost": 1
+  "playCost": 1,
+  "playAdditionalClick": true,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "search_stack_subtype_may_install",
+      "subtype": "connection"
+    }
+  }
 }

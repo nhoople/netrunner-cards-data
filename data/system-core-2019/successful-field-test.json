@@ -5,13 +5,17 @@
   "nrdbCode": "25069",
   "type": "agenda",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: When you score Successful Field Test, install any number of cards from HQ, ignoring all costs."
-  ],
+  "unsupported": [],
   "faction": "haas-bioroid",
   "subtypes": [
     "research"
   ],
   "advancementRequirement": 4,
-  "agendaPoints": 2
+  "agendaPoints": 2,
+  "onScore": {
+    "op": "do",
+    "action": {
+      "kind": "install_any_number_from_hq_ignore_costs"
+    }
+  }
 }
