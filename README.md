@@ -46,20 +46,25 @@ Incremental wave tags are the day-to-day IR/wiring contract. A set-complete **mi
 The engine declares the pin in [`data/cards-pin.json`](https://github.com/nhoople/netrunner-engine/blob/master/data/cards-pin.json) and fetches with:
 
 ```bash
-npm run fetch-cards   # → vendor/cards-data/
+# in netrunner-engine
+npm run fetch-cards   # → vendor/cards-data/ (from this tag)
+npm run fetch-cr      # → vendor/cr-data/ (CR pin; citations / timing IDs)
+npm run prepare-data  # both fetches
+npm test
+npm run demo:library  # createGame → queryLegality → applyIntent → getPublicView
 ```
 
-Example raw URL base:
+Example raw URL base (match the **current** pairing tag):
 
 ```text
-https://raw.githubusercontent.com/nhoople/netrunner-cards-data/v0.16.0/data
+https://raw.githubusercontent.com/nhoople/netrunner-cards-data/v1.33.0/data
 ```
 
 JavaScript — load the pool and one card from a tagged release:
 
 ```js
 const base =
-  "https://raw.githubusercontent.com/nhoople/netrunner-cards-data/v0.16.0/data";
+  "https://raw.githubusercontent.com/nhoople/netrunner-cards-data/v1.33.0/data";
 const pool = await fetch(`${base}/pool.json`).then((r) => r.json());
 const marjanah = await fetch(`${base}/system-gateway/marjanah.json`).then((r) =>
   r.json(),
@@ -86,7 +91,7 @@ Parhelion is fully supported (wave gate `v0.71.0`). The Automata Initiative is f
 
 ## Versioning
 
-Tag dataset releases as `vMAJOR.MINOR.PATCH` (e.g. `v0.16.0`). Bump when card JSON, pool, or schema that consumers rely on changes. Keep the README pairing line in sync after each pin bump (no new tag for README-only).
+Tag dataset releases as `vMAJOR.MINOR.PATCH` (e.g. `v1.33.0`). Bump when card JSON, pool, or schema that consumers rely on changes. Keep the README pairing line in sync after each pin bump (no new tag for README-only).
 
 ## Catalog extract source
 
