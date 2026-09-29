@@ -874,6 +874,185 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    # --- v1.39.0 D-slice ---
+
+    if cid == "drafter":
+        may_archives = {
+            "op": "choose",
+            "chooser": "corp",
+            "options": [
+                {
+                    "id": "take",
+                    "label": "Add 1 card from Archives to HQ",
+                    "effect": {
+                        "op": "do",
+                        "action": {"kind": "archives_to_hq", "amount": 1},
+                    },
+                },
+                {
+                    "id": "decline",
+                    "label": "Decline",
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "gain_credits",
+                            "side": "corp",
+                            "amount": 0,
+                        },
+                    },
+                },
+            ],
+        }
+        may_install = {
+            "op": "choose",
+            "chooser": "corp",
+            "options": [
+                {
+                    "id": "install",
+                    "label": "Install 1 card from Archives or HQ, ignoring all costs",
+                    "effect": {
+                        "op": "do",
+                        "action": {"kind": "install_from_hq_or_archives"},
+                    },
+                },
+                {
+                    "id": "decline",
+                    "label": "Decline",
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "gain_credits",
+                            "side": "corp",
+                            "amount": 0,
+                        },
+                    },
+                },
+            ],
+        }
+        return base(
+            c,
+            subroutines=[
+                {
+                    "id": "drafter-archives",
+                    "text": "You may add 1 card from Archives to HQ.",
+                    "effect": may_archives,
+                },
+                {
+                    "id": "drafter-install",
+                    "text": "You may install 1 card from Archives or HQ, ignoring all costs.",
+                    "effect": may_install,
+                },
+            ],
+            unsupported=[],
+        )
+
+    if cid == "aniccam":
+        return base(
+            c,
+            muBonus=1,
+            onFirstEventTrashedThisTurn={
+                "op": "do",
+                "action": {"kind": "draw", "side": "runner", "amount": 1},
+            },
+            unsupported=[],
+        )
+
+    if cid == "cybertrooper-talut":
+        return base(
+            c,
+            link=1,
+            nonAiIcebreakerInstallStrengthBonusThisTurn=2,
+            unsupported=[],
+        )
+
+    if cid == "tranquility-home-grid":
+        return base(
+            c,
+            remoteOnly=True,
+            onFirstInstallInThisServerRootThisTurn={
+                "op": "choose",
+                "chooser": "corp",
+                "options": [
+                    {
+                        "id": "credits",
+                        "label": "Gain 2¢",
+                        "effect": gain("corp", 2),
+                    },
+                    {
+                        "id": "draw",
+                        "label": "Draw 1 card",
+                        "effect": {
+                            "op": "do",
+                            "action": {
+                                "kind": "draw",
+                                "side": "corp",
+                                "amount": 1,
+                            },
+                        },
+                    },
+                ],
+            },
+            unsupported=[],
+        )
+
+    if cid == "winchester":
+        trace_program = {
+            "op": "do",
+            "action": {
+                "kind": "trace",
+                "strength": 4,
+                "onSuccess": {
+                    "op": "do",
+                    "action": {"kind": "trash_program", "pick": "choose"},
+                },
+            },
+        }
+        trace_hardware = {
+            "op": "do",
+            "action": {
+                "kind": "trace",
+                "strength": 3,
+                "onSuccess": {
+                    "op": "do",
+                    "action": {"kind": "trash_hardware", "pick": "choose"},
+                },
+            },
+        }
+        trace_etr = {
+            "op": "do",
+            "action": {
+                "kind": "trace",
+                "strength": 3,
+                "onSuccess": {
+                    "op": "do",
+                    "action": {"kind": "end_the_run"},
+                },
+            },
+        }
+        return base(
+            c,
+            subroutines=[
+                {
+                    "id": "winchester-program",
+                    "text": "Trace[4]. If successful, trash 1 installed program.",
+                    "effect": trace_program,
+                },
+                {
+                    "id": "winchester-hardware",
+                    "text": "Trace[3]. If successful, trash 1 installed piece of hardware.",
+                    "effect": trace_hardware,
+                },
+            ],
+            gainsSubroutinesWhileProtectingHq=[
+                {
+                    "id": "winchester-etr",
+                    "text": "Trace[3]. If successful, end the run.",
+                    "effect": trace_etr,
+                }
+            ],
+            unsupported=[],
+        )
+
     # Fail closed — honest unsupported note for the remainder.
     card = base(c)
     card["unsupported"] = [f"Full text not yet mapped to IR: {plain[:240]}"]
@@ -919,7 +1098,7 @@ def main():
             "Null Signal Uprising (NRDB pack ur) — Ashes set 2 of 2; first "
             "legacy backwards wave before System Gateway. urbp titles absorbed. "
             f"In-progress: {full} cards fully mapped, {partial} with unsupported "
-            "notes (wave slice v1.38.0)."
+            "notes (wave slice v1.39.0)."
         ),
         "cards": written,
     }
