@@ -1,0 +1,12 @@
+{
+  "id": "focus-group",
+  "title": "Focus Group",
+  "wave": "downfall",
+  "nrdbCode": "26052",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: Play only if the Runner made a successful run during their last turn. Choose a card type, then reveal the grip. Choose a value for X equal to or less than the number of revealed cards of the chosen type. You may pay X[credit] to place X adv"
+  ],
+  "playCost": 3
+}

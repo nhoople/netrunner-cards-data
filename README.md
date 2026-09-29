@@ -16,6 +16,7 @@ Files under [`data/`](data/) are the API. Clone the repo or fetch a **tagged** r
 | --- | --- |
 | [`data/schema.json`](data/schema.json) | JSON Schema for card definitions |
 | [`data/pool.json`](data/pool.json) | Declared supported corpus / release order |
+| [`data/downfall/`](data/downfall/) | Downfall (NRDB `df`) — **in-progress** (legacy backwards) |
 | [`data/uprising/`](data/uprising/) | Uprising (NRDB `ur`) — **supported** (legacy backwards) |
 | [`data/system-gateway/`](data/system-gateway/) | System Gateway (NRDB `sg`) |
 | [`data/system-update-2021/`](data/system-update-2021/) | System Update 2021 (NRDB `su21`) |
@@ -27,7 +28,7 @@ Files under [`data/`](data/) are the API. Clone the repo or fetch a **tagged** r
 | [`data/vantage-point/`](data/vantage-point/) | Vantage Point (NRDB `vp`) — **supported** |
 | [`data/fixtures/`](data/fixtures/) | CR-example / host-test cards outside corpus order (e.g. Plascrete) |
 
-**Corpus order:** Uprising (legacy backwards, supported) → System Gateway → System Update 2021 → Midnight Sun → Parhelion → The Automata Initiative → Rebellion Without Rehearsal → Elevation → Vantage Point → later releases.
+**Corpus order:** Downfall (legacy backwards, in-progress) → Uprising (legacy backwards, supported) → System Gateway → System Update 2021 → Midnight Sun → Parhelion → The Automata Initiative → Rebellion Without Rehearsal → Elevation → Vantage Point → later releases.
 
 Partial cards list unimplemented clauses in an `unsupported` array — never silent wrong behavior. A wave marked `supported` in [`data/pool.json`](data/pool.json) must keep those arrays empty unless the card is listed with a reason in [`data/supported-unsupported-allowlist.json`](data/supported-unsupported-allowlist.json) (enforced by `scripts/validate-cards.py`). See [`CONTRIBUTING.md`](CONTRIBUTING.md) for the CR gate PR template.
 
@@ -37,7 +38,8 @@ Match this dataset and [netrunner-engine](https://github.com/nhoople/netrunner-e
 
 | Pairing | cards-data | engine |
 |---------|------------|--------|
-| **Current** | [`v1.46.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.46.0) | engine same-semver pin `v1.46.0` |
+| **Current** | [`v1.47.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.47.0) | engine same-semver pin `v1.47.0` |
+| Uprising milestone | [`v1.46.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.46.0) | [`v1.46.0`](https://github.com/nhoople/netrunner-engine/releases/tag/v1.46.0) |
 | Post-VP maintenance | [`v1.34.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.34.0) | [`v1.34.0`](https://github.com/nhoople/netrunner-engine/releases/tag/v1.34.0) |
 | Vantage Point milestone | [`v1.33.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.33.0) | [`v1.33.0`](https://github.com/nhoople/netrunner-engine/releases/tag/v1.33.0) |
 | Elevation milestone | [`v1.12.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.12.0) | [`v1.12.0`](https://github.com/nhoople/netrunner-engine/releases/tag/v1.12.0) |
@@ -78,6 +80,7 @@ console.log(pool.corpusOrder, marjanah.title);
 
 | Release | Count | Notes |
 |---------|------:|-------|
+| downfall | 65 | Null Signal Downfall (`df`); Ashes set 1; **in-progress** (**5/65** mapped; kickoff `v1.47.0`; skip `mor`) |
 | uprising | 65 | Null Signal Uprising (`ur`); Ashes set 2; **supported** (**65/65** mapped; wave gate `v1.46.0`; `urbp` absorbed) |
 | system-gateway | 77 | Null Signal System Gateway (fully supported) |
 | system-update-2021 | 82 | Null Signal System Update 2021 (fully supported) |
@@ -90,9 +93,9 @@ console.log(pool.corpusOrder, marjanah.title);
 
 Synthetic stubs and early wave1/wave2 dirs were removed in `v0.2.0`. Reprints that previously lived only under those waves now ship under their Null Signal release directories.
 
-Parhelion is fully supported (wave gate `v0.71.0`). The Automata Initiative is fully supported (wave gate `v0.86.0`). Rebellion Without Rehearsal is fully supported (wave gate `v1.00.0`). Elevation is fully supported (wave gate `v1.12.0`). Vantage Point is fully supported (wave gate `v1.33.0`). Uprising is fully supported (wave gate `v1.46.0`) — first **legacy backwards** wave (pre-Gateway).
+Parhelion is fully supported (wave gate `v0.71.0`). The Automata Initiative is fully supported (wave gate `v0.86.0`). Rebellion Without Rehearsal is fully supported (wave gate `v1.00.0`). Elevation is fully supported (wave gate `v1.12.0`). Vantage Point is fully supported (wave gate `v1.33.0`). Uprising is fully supported (wave gate `v1.46.0`). **Downfall** is the next **legacy backwards** wave (`in-progress`, kickoff **`v1.47.0`**, **5/65**).
 
-**Next:** Downfall (`df`, 65; skip/absorb Magnum Opus Reprint). Forward after VP still waits on a new NSG pack or CR bump. Pair every clear with the engine CR adherence gate; at set-complete, run interaction smoke.
+**Next:** Continue Downfall clears (`df`, 65; skip/absorb Magnum Opus Reprint). Forward after VP still waits on a new NSG pack or CR bump. Pair every clear with the engine CR adherence gate; at set-complete, run interaction smoke.
 
 ## Versioning
 
@@ -109,7 +112,7 @@ Pack metadata for generate/extract scripts comes from the pinned [Null-Signal-Ga
 
 ```bash
 python3 scripts/nrdb_catalog.py show-pin
-python3 scripts/nrdb_catalog.py fetch ur sg su21 ms msbp ph tai rwr elev vp
+python3 scripts/nrdb_catalog.py fetch df ur sg su21 ms msbp ph tai rwr elev vp
 # then: python3 scripts/generate-<set>.py
 ```
 

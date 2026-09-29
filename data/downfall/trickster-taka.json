@@ -1,0 +1,18 @@
+{
+  "id": "trickster-taka",
+  "title": "Trickster Taka",
+  "wave": "downfall",
+  "nrdbCode": "26009",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: When your turn begins and whenever you steal an agenda, place 1[credit] on this resource. You can spend hosted credits to use programs during runs. When your turn ends, if there are 3 or more hosted credits, you must take 1 tag or trash thi"
+  ],
+  "subtypes": [
+    "companion",
+    "stealth",
+    "virtual"
+  ],
+  "installCost": 1,
+  "unique": true
+}

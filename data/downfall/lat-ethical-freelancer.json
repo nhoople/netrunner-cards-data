@@ -1,0 +1,15 @@
+{
+  "id": "lat-ethical-freelancer",
+  "title": "Lat: Ethical Freelancer",
+  "wave": "downfall",
+  "nrdbCode": "26019",
+  "type": "identity",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: When your discard phase ends, if you have the same number of cards in your grip as the Corp has in HQ, you may draw 1 card."
+  ],
+  "subtypes": [
+    "natural"
+  ],
+  "link": 1
+}

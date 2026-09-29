@@ -1,0 +1,23 @@
+{
+  "id": "tiered-subscription",
+  "title": "Tiered Subscription",
+  "wave": "downfall",
+  "nrdbCode": "26049",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "subtypes": [
+    "advertisement"
+  ],
+  "installCost": 0,
+  "rezCost": 0,
+  "trashCost": 3,
+  "onFirstRunBeginThisTurn": {
+    "op": "do",
+    "action": {
+      "kind": "gain_credits",
+      "side": "corp",
+      "amount": 1
+    }
+  }
+}

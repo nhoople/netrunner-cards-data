@@ -1,0 +1,45 @@
+{
+  "id": "csr-campaign",
+  "title": "CSR Campaign",
+  "wave": "downfall",
+  "nrdbCode": "26064",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "subtypes": [
+    "advertisement"
+  ],
+  "installCost": 2,
+  "rezCost": 2,
+  "trashCost": 2,
+  "onTurnBegin": {
+    "op": "choose",
+    "chooser": "corp",
+    "options": [
+      {
+        "id": "draw",
+        "label": "Draw 1 card",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "draw",
+            "side": "corp",
+            "amount": 1
+          }
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "corp",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  }
+}

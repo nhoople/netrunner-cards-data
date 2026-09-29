@@ -1,0 +1,19 @@
+{
+  "id": "saisentan",
+  "title": "Saisentan",
+  "wave": "downfall",
+  "nrdbCode": "26044",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: When the Runner encounters this ice, choose a card type. For the remainder of the encounter, whenever you trash a card of the chosen type with net damage from a subroutine on this ice, do 1 net damage. [subroutine] Do 1 net damage. [subrout"
+  ],
+  "subtypes": [
+    "sentry",
+    "ap",
+    "observer"
+  ],
+  "installCost": 5,
+  "rezCost": 5,
+  "strength": 2
+}

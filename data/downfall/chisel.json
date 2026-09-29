@@ -1,0 +1,17 @@
+{
+  "id": "chisel",
+  "title": "Chisel",
+  "wave": "downfall",
+  "nrdbCode": "26003",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: Install only on a piece of ice. Host ice gets −1 strength for each hosted virus counter. Whenever you encounter host ice, if its strength is 0 or less, trash it. Otherwise, place 1 virus counter on this program."
+  ],
+  "subtypes": [
+    "virus",
+    "trojan"
+  ],
+  "installCost": 2,
+  "memoryCost": 1
+}

@@ -1,0 +1,17 @@
+{
+  "id": "nanoetching-matrix",
+  "title": "Nanoetching Matrix",
+  "wave": "downfall",
+  "nrdbCode": "26034",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: Once per turn → [click]: Gain 2[credit]. When the Runner trashes this asset, you may gain 2[credit]."
+  ],
+  "subtypes": [
+    "industrial"
+  ],
+  "installCost": 0,
+  "rezCost": 0,
+  "trashCost": 3
+}

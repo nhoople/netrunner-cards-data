@@ -1,0 +1,17 @@
+{
+  "id": "loot-box",
+  "title": "Loot Box",
+  "wave": "downfall",
+  "nrdbCode": "26051",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: [subroutine] End the run unless the Runner pays 2[credit]. [subroutine] Reveal the top 3 cards of the stack. Add 1 of those cards to the grip and gain X[credit], where X is equal to that cardʼs play or install cost. The Runner shuffles the "
+  ],
+  "subtypes": [
+    "trap"
+  ],
+  "installCost": 0,
+  "rezCost": 0,
+  "strength": 3
+}

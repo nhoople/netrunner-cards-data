@@ -1,0 +1,18 @@
+{
+  "id": "gauss",
+  "title": "Gauss",
+  "wave": "downfall",
+  "nrdbCode": "26024",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: When you install this program, it gets +3 strength for the remainder of the turn. Interface → 1[credit]: Break 1 barrier subroutine. 2[credit]: +2 strength."
+  ],
+  "subtypes": [
+    "icebreaker",
+    "fracter"
+  ],
+  "installCost": 2,
+  "strength": 1,
+  "memoryCost": 1
+}

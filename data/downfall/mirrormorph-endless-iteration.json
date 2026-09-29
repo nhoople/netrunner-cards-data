@@ -1,0 +1,14 @@
+{
+  "id": "mirrormorph-endless-iteration",
+  "title": "MirrorMorph: Endless Iteration",
+  "wave": "downfall",
+  "nrdbCode": "26031",
+  "type": "identity",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: If the first, second, and third actions you take on your turn are each different from one another, when the third action completes, you may gain 1[credit] or take another different action, paying [click] less."
+  ],
+  "subtypes": [
+    "division"
+  ]
+}

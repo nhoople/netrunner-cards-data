@@ -1,0 +1,17 @@
+{
+  "id": "the-nihilist",
+  "title": "The Nihilist",
+  "wave": "downfall",
+  "nrdbCode": "26008",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: The first time each turn you install a virus program, place 2 virus counters on this resource. When your turn begins, you may remove any 2 virus counters from your installed cards. If you do, draw 2 cards unless the Corp trashes the top car"
+  ],
+  "subtypes": [
+    "connection",
+    "seedy"
+  ],
+  "installCost": 4,
+  "unique": true
+}

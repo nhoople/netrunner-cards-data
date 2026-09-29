@@ -1,0 +1,17 @@
+{
+  "id": "public-health-portal",
+  "title": "Public Health Portal",
+  "wave": "downfall",
+  "nrdbCode": "26042",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: When your turn begins, reveal the top card of R&D and gain 2[credit]."
+  ],
+  "subtypes": [
+    "facility"
+  ],
+  "installCost": 3,
+  "rezCost": 3,
+  "trashCost": 2
+}

@@ -1,0 +1,17 @@
+{
+  "id": "sandstone",
+  "title": "Sandstone",
+  "wave": "downfall",
+  "nrdbCode": "26059",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: When the Runner encounters this ice, place 1 virus counter on it. This ice gets −1 strength for each hosted virus counter. [subroutine] End the run."
+  ],
+  "subtypes": [
+    "barrier"
+  ],
+  "installCost": 3,
+  "rezCost": 3,
+  "strength": 6
+}

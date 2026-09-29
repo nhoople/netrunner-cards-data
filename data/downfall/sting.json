@@ -1,0 +1,16 @@
+{
+  "id": "sting",
+  "title": "Sting!",
+  "wave": "downfall",
+  "nrdbCode": "26041",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: When a player scores or steals this agenda, do X net damage. X is equal to 1 plus the number of copies of Sting! in the other playerʼs score area."
+  ],
+  "subtypes": [
+    "ambush"
+  ],
+  "advancementRequirement": 3,
+  "agendaPoints": 1
+}

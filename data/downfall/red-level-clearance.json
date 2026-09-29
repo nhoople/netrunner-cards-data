@@ -1,0 +1,15 @@
+{
+  "id": "red-level-clearance",
+  "title": "Red Level Clearance",
+  "wave": "downfall",
+  "nrdbCode": "26037",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: Resolve 2 of the following in any order:Draw 2 cards.Gain 2[credit].Install 1 non-agenda card from HQ.Gain [click]."
+  ],
+  "subtypes": [
+    "transaction"
+  ],
+  "playCost": 1
+}
