@@ -5,9 +5,24 @@
   "nrdbCode": "26006",
   "type": "resource",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: When your turn begins, remove this resource from the game. Choose a server protected by ice. The Corp may trash 1 piece of ice protecting that server. If they do not, the first time this turn you breach either R&D or HQ, access 2 additional"
-  ],
+  "unsupported": [],
   "installCost": 2,
-  "unique": true
+  "unique": true,
+  "onTurnBegin": {
+    "op": "seq",
+    "effects": [
+      {
+        "op": "do",
+        "action": {
+          "kind": "rfg_self"
+        }
+      },
+      {
+        "op": "do",
+        "action": {
+          "kind": "climactic_choose_server_corp_may_trash_ice_else_bonus_access"
+        }
+      }
+    ]
+  }
 }

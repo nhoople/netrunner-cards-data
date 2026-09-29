@@ -5,9 +5,7 @@
   "nrdbCode": "26046",
   "type": "upgrade",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: The first time the Runner approaches this server during each run, play a Psi Game. (Players secretly bid 0–2[credit]. Then each player reveals and spends their bid.) If the bids differ, you may trash this upgrade. If you do, the Runner move"
-  ],
+  "unsupported": [],
   "subtypes": [
     "psi",
     "clone"
@@ -15,5 +13,58 @@
   "installCost": 1,
   "rezCost": 1,
   "trashCost": 2,
-  "unique": true
+  "unique": true,
+  "onApproachServerOncePerRun": true,
+  "onApproachServer": {
+    "op": "do",
+    "action": {
+      "kind": "play_psi_game",
+      "maxBid": 2,
+      "ifBidsDiffer": {
+        "op": "choose",
+        "chooser": "corp",
+        "options": [
+          {
+            "id": "trash-move",
+            "label": "Trash Letheia Nisei → outermost + may jack out",
+            "effect": {
+              "op": "seq",
+              "effects": [
+                {
+                  "op": "do",
+                  "action": {
+                    "kind": "trash_self"
+                  }
+                },
+                {
+                  "op": "do",
+                  "action": {
+                    "kind": "move_runner_to_outermost_attacked"
+                  }
+                },
+                {
+                  "op": "do",
+                  "action": {
+                    "kind": "offer_jack_out"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "id": "decline",
+            "label": "Decline",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "gain_credits",
+                "side": "corp",
+                "amount": 0
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
 }
