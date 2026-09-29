@@ -5,9 +5,7 @@
   "nrdbCode": "25078",
   "type": "ice",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: Lose [click]: Break 1 subroutine on this ice. Only the Runner can use this ability. [subroutine] Do 1 core damage. [subroutine] End the run."
-  ],
+  "unsupported": [],
   "faction": "haas-bioroid",
   "subtypes": [
     "code gate",
@@ -16,5 +14,28 @@
   ],
   "installCost": 3,
   "rezCost": 3,
-  "strength": 3
+  "strength": 3,
+  "subroutines": [
+    {
+      "id": "viktor-1-0-core",
+      "text": "Do 1 core damage.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "core_damage",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "id": "viktor-1-0-etr",
+      "text": "End the run.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "end_the_run"
+        }
+      }
+    }
+  ]
 }

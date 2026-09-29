@@ -5,7 +5,7 @@
   "written": 84,
   "reprintSkipped": 63,
   "status": "in-progress",
-  "notes": "System Core 2019 (sc19) kickoff v1.59.0. Wrote 84 files; skipped 63 Gateway/SU21 reprints. Kickoff clears among written: 20.",
+  "notes": "System Core 2019 (sc19) kickoff v1.59.0. Wrote 84 files; skipped 63 Gateway/SU21 reprints. Kickoff clears among written: 25.",
   "cards": [
     "reina-roja-freedom-fighter",
     "quetzal-free-spirit",
@@ -247,5 +247,12 @@
     "marked-accounts",
     "modded",
     "chaos-theory-wunderkind"
+  ],
+  "dSliceClears": [
+    "hunter",
+    "caduceus",
+    "yagura",
+    "viktor-1-0",
+    "special-order"
   ]
 }

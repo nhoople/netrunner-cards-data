@@ -5,9 +5,7 @@
   "nrdbCode": "25144",
   "type": "ice",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: [subroutine] Trace[3]. If successful, give the Runner 1 tag."
-  ],
+  "unsupported": [],
   "faction": "neutral-corp",
   "subtypes": [
     "sentry",
@@ -16,5 +14,25 @@
   ],
   "installCost": 1,
   "rezCost": 1,
-  "strength": 4
+  "strength": 4,
+  "subroutines": [
+    {
+      "id": "hunter-trace-tag",
+      "text": "Trace[3]. If successful, give the Runner 1 tag.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "trace",
+          "strength": 3,
+          "onSuccess": {
+            "op": "do",
+            "action": {
+              "kind": "give_tags",
+              "amount": 1
+            }
+          }
+        }
+      }
+    }
+  ]
 }

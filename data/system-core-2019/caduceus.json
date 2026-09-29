@@ -5,9 +5,7 @@
   "nrdbCode": "25131",
   "type": "ice",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: [subroutine] Trace[3]. If successful, the Corp gains 3[credit]. [subroutine] Trace[2]. If successful, end the run."
-  ],
+  "unsupported": [],
   "faction": "weyland-consortium",
   "subtypes": [
     "sentry",
@@ -15,5 +13,43 @@
   ],
   "installCost": 3,
   "rezCost": 3,
-  "strength": 3
+  "strength": 3,
+  "subroutines": [
+    {
+      "id": "caduceus-trace-gain",
+      "text": "Trace[3]. If successful, the Corp gains 3[credit].",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "trace",
+          "strength": 3,
+          "onSuccess": {
+            "op": "do",
+            "action": {
+              "kind": "gain_credits",
+              "side": "corp",
+              "amount": 3
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "caduceus-trace-etr",
+      "text": "Trace[2]. If successful, end the run.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "trace",
+          "strength": 2,
+          "onSuccess": {
+            "op": "do",
+            "action": {
+              "kind": "end_the_run"
+            }
+          }
+        }
+      }
+    }
+  ]
 }

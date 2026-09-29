@@ -528,6 +528,118 @@ def map_card(c: dict) -> dict | None:
     if cid == "chaos-theory-wunderkind":
         return base(c, muBonus=1, unsupported=[])
 
+    # --- v1.63.0 D-slice: existing IR only ---
+
+    if cid == "hunter":
+        return base(
+            c,
+            subroutines=[
+                {
+                    "id": "hunter-trace-tag",
+                    "text": "Trace[3]. If successful, give the Runner 1 tag.",
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "trace",
+                            "strength": 3,
+                            "onSuccess": {
+                                "op": "do",
+                                "action": {
+                                    "kind": "give_tags",
+                                    "amount": 1,
+                                },
+                            },
+                        },
+                    },
+                }
+            ],
+            unsupported=[],
+        )
+
+    if cid == "caduceus":
+        return base(
+            c,
+            subroutines=[
+                {
+                    "id": "caduceus-trace-gain",
+                    "text": "Trace[3]. If successful, the Corp gains 3[credit].",
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "trace",
+                            "strength": 3,
+                            "onSuccess": gain("corp", 3),
+                        },
+                    },
+                },
+                {
+                    "id": "caduceus-trace-etr",
+                    "text": "Trace[2]. If successful, end the run.",
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "trace",
+                            "strength": 2,
+                            "onSuccess": etr(),
+                        },
+                    },
+                },
+            ],
+            unsupported=[],
+        )
+
+    if cid == "yagura":
+        return base(
+            c,
+            subroutines=[
+                {
+                    "id": "yagura-look",
+                    "text": "Look at the top card of R&D. You may add that card to the bottom of R&D.",
+                    "effect": {
+                        "op": "do",
+                        "action": {"kind": "look_top_rd_may_bottom"},
+                    },
+                },
+                {
+                    "id": "yagura-net",
+                    "text": "Do 1 net damage.",
+                    "effect": net(1),
+                },
+            ],
+            unsupported=[],
+        )
+
+    if cid == "viktor-1-0":
+        return base(
+            c,
+            subroutines=[
+                {
+                    "id": "viktor-1-0-core",
+                    "text": "Do 1 core damage.",
+                    "effect": {
+                        "op": "do",
+                        "action": {"kind": "core_damage", "amount": 1},
+                    },
+                },
+                {
+                    "id": "viktor-1-0-etr",
+                    "text": "End the run.",
+                    "effect": etr(),
+                },
+            ],
+            unsupported=[],
+        )
+
+    if cid == "special-order":
+        return base(
+            c,
+            onPlay={
+                "op": "do",
+                "action": {"kind": "search_stack_icebreaker"},
+            },
+            unsupported=[],
+        )
+
     card = base(c)
     card["unsupported"] = [
         f"Full text not yet mapped to IR: {plain[:200]}"
@@ -605,6 +717,13 @@ def main():
             "marked-accounts",
             "modded",
             "chaos-theory-wunderkind",
+        ],
+        "dSliceClears": [
+            "hunter",
+            "caduceus",
+            "yagura",
+            "viktor-1-0",
+            "special-order",
         ],
     }
     (OUT / "_manifest.json").write_text(

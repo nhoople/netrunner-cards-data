@@ -5,9 +5,13 @@
   "nrdbCode": "25030",
   "type": "event",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Search your stack for an icebreaker, reveal it, and add it to your grip. Shuffle your stack."
-  ],
+  "unsupported": [],
   "faction": "criminal",
-  "playCost": 1
+  "playCost": 1,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "search_stack_icebreaker"
+    }
+  }
 }
