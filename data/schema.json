@@ -744,7 +744,12 @@
     },
     "onCorpTurnEnd": {
       "type": "object",
-      "description": "Effect IR when the Corp's turn ends while this card is rezzed (Vovô Ozetti may-move)."
+      "description": "Effect IR when the Corp's turn ends while this card is rezzed in a server root, or while scored in the Corp score area (Vovô Ozetti may-move; Jumon)."
+    },
+    "corpLosesCreditsOnCreateServer": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Whenever the Corp creates a server, they lose this many credits (Hijacked Router)."
     },
     "rezAdditionalCost": {
       "type": "object",

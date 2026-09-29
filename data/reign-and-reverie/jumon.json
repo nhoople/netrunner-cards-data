@@ -5,13 +5,20 @@
   "nrdbCode": "22035",
   "type": "agenda",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: When your turn ends, place 2 advancement counters on 1 card in the root of a remote server."
-  ],
+  "unsupported": [],
   "faction": "jinteki",
   "subtypes": [
     "research"
   ],
   "advancementRequirement": 6,
-  "agendaPoints": 2
+  "agendaPoints": 2,
+  "onCorpTurnEnd": {
+    "op": "do",
+    "action": {
+      "kind": "place_advancements",
+      "amount": 2,
+      "onlyRemoteRoot": true,
+      "pick": "choose"
+    }
+  }
 }
