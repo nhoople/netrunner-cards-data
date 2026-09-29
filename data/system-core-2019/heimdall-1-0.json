@@ -1,0 +1,20 @@
+{
+  "id": "heimdall-1-0",
+  "title": "Heimdall 1.0",
+  "wave": "system-core-2019",
+  "nrdbCode": "25074",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: Lose [click]: Break 1 subroutine on this ice. Only the Runner can use this ability. [subroutine] Do 1 core damage. [subroutine] End the run. [subroutine] End the run."
+  ],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "barrier",
+    "bioroid",
+    "ap"
+  ],
+  "installCost": 8,
+  "rezCost": 8,
+  "strength": 6
+}

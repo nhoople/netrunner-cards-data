@@ -1,0 +1,17 @@
+{
+  "id": "john-masanori",
+  "title": "John Masanori",
+  "wave": "system-core-2019",
+  "nrdbCode": "25064",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: The first time you make a successful run each turn, draw 1 card. The first time you make an unsuccessful run each turn, take 1 tag."
+  ],
+  "faction": "neutral-runner",
+  "subtypes": [
+    "connection"
+  ],
+  "installCost": 2,
+  "unique": true
+}

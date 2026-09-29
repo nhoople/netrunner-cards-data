@@ -1,0 +1,20 @@
+{
+  "id": "data-raven",
+  "title": "Data Raven",
+  "wave": "system-core-2019",
+  "nrdbCode": "25112",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: When the Runner encounters this ice, they must take 1 tag or end the run. Hosted power counter: Give the Runner 1 tag. [subroutine] Trace[3]. If successful, place 1 power counter on this ice."
+  ],
+  "faction": "nbn",
+  "subtypes": [
+    "sentry",
+    "tracer",
+    "observer"
+  ],
+  "installCost": 4,
+  "rezCost": 4,
+  "strength": 4
+}

@@ -1,0 +1,13 @@
+{
+  "id": "quest-completed",
+  "title": "Quest Completed",
+  "wave": "system-core-2019",
+  "nrdbCode": "25004",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: Play only if you made a successful run on R&D, HQ, and Archives this turn. Access 1 installed card (non-ice)."
+  ],
+  "faction": "anarch",
+  "playCost": 0
+}

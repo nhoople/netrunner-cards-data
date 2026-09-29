@@ -1,0 +1,17 @@
+{
+  "id": "blue-level-clearance",
+  "title": "Blue Level Clearance",
+  "wave": "system-core-2019",
+  "nrdbCode": "25081",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: As an additional cost to play this operation, spend [click]. Gain 5[credit] and draw 2 cards."
+  ],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "double",
+    "transaction"
+  ],
+  "playCost": 2
+}

@@ -1,0 +1,17 @@
+{
+  "id": "explode-a-palooza",
+  "title": "Explode-a-palooza",
+  "wave": "system-core-2019",
+  "nrdbCode": "25106",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: While the Runner is accessing this agenda in R&D, they must reveal it. When the Runner accesses this agenda, you may gain 5[credit]."
+  ],
+  "faction": "nbn",
+  "subtypes": [
+    "sensie"
+  ],
+  "advancementRequirement": 4,
+  "agendaPoints": 2
+}

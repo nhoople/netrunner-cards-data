@@ -1,0 +1,17 @@
+{
+  "id": "lamprey",
+  "title": "Lamprey",
+  "wave": "system-core-2019",
+  "nrdbCode": "25014",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: Whenever you make a successful run on HQ, the Corp loses 1[credit]. Trash Lamprey if the Corp purges virus counters."
+  ],
+  "faction": "anarch",
+  "subtypes": [
+    "virus"
+  ],
+  "installCost": 1,
+  "memoryCost": 1
+}

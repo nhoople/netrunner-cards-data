@@ -1,0 +1,28 @@
+{
+  "id": "wall-of-static",
+  "title": "Wall of Static",
+  "wave": "system-core-2019",
+  "nrdbCode": "25145",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "neutral-corp",
+  "subtypes": [
+    "barrier"
+  ],
+  "installCost": 3,
+  "rezCost": 3,
+  "strength": 3,
+  "subroutines": [
+    {
+      "id": "wall-of-static-etr",
+      "text": "End the run.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "end_the_run"
+        }
+      }
+    }
+  ]
+}

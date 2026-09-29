@@ -1,0 +1,48 @@
+{
+  "id": "spiderweb",
+  "title": "Spiderweb",
+  "wave": "system-core-2019",
+  "nrdbCode": "25135",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "barrier"
+  ],
+  "installCost": 4,
+  "rezCost": 4,
+  "strength": 2,
+  "subroutines": [
+    {
+      "id": "spiderweb-etr-1",
+      "text": "End the run.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "end_the_run"
+        }
+      }
+    },
+    {
+      "id": "spiderweb-etr-2",
+      "text": "End the run.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "end_the_run"
+        }
+      }
+    },
+    {
+      "id": "spiderweb-etr-3",
+      "text": "End the run.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "end_the_run"
+        }
+      }
+    }
+  ]
+}

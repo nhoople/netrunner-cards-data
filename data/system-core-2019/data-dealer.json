@@ -1,0 +1,17 @@
+{
+  "id": "data-dealer",
+  "title": "Data Dealer",
+  "wave": "system-core-2019",
+  "nrdbCode": "25039",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: [click], forfeit 1 agenda: Gain 9[credit]."
+  ],
+  "faction": "criminal",
+  "subtypes": [
+    "connection",
+    "seedy"
+  ],
+  "installCost": 0
+}

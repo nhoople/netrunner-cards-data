@@ -1,0 +1,13 @@
+{
+  "id": "sea-source",
+  "title": "SEA Source",
+  "wave": "system-core-2019",
+  "nrdbCode": "25119",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: Play only if the Runner made a successful run during their last turn. Trace[3]. If successful, give the Runner 1 tag."
+  ],
+  "faction": "nbn",
+  "playCost": 2
+}

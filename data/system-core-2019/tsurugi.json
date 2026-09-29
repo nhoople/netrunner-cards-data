@@ -1,0 +1,19 @@
+{
+  "id": "tsurugi",
+  "title": "Tsurugi",
+  "wave": "system-core-2019",
+  "nrdbCode": "25097",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: [subroutine] End the run unless the Corp pays 1[credit]. [subroutine] Do 1 net damage. [subroutine] Do 1 net damage. [subroutine] Do 1 net damage."
+  ],
+  "faction": "jinteki",
+  "subtypes": [
+    "sentry",
+    "ap"
+  ],
+  "installCost": 6,
+  "rezCost": 6,
+  "strength": 2
+}

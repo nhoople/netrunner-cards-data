@@ -1,0 +1,20 @@
+{
+  "id": "viktor-1-0",
+  "title": "Viktor 1.0",
+  "wave": "system-core-2019",
+  "nrdbCode": "25078",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: Lose [click]: Break 1 subroutine on this ice. Only the Runner can use this ability. [subroutine] Do 1 core damage. [subroutine] End the run."
+  ],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "code gate",
+    "bioroid",
+    "ap"
+  ],
+  "installCost": 3,
+  "rezCost": 3,
+  "strength": 3
+}

@@ -1,0 +1,16 @@
+{
+  "id": "modded",
+  "title": "Modded",
+  "wave": "system-core-2019",
+  "nrdbCode": "25043",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: Install a program or piece of hardware, lowering the install cost by 3."
+  ],
+  "faction": "shaper",
+  "subtypes": [
+    "mod"
+  ],
+  "playCost": 0
+}

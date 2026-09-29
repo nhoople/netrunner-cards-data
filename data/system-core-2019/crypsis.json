@@ -1,0 +1,20 @@
+{
+  "id": "crypsis",
+  "title": "Crypsis",
+  "wave": "system-core-2019",
+  "nrdbCode": "25061",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: Interface → 1[credit]: Break 1 subroutine. 1[credit]: +1 strength. [click]: Place 1 virus counter on this program. Whenever an encounter ends, if you used this program to break a subroutine during tha"
+  ],
+  "faction": "neutral-runner",
+  "subtypes": [
+    "icebreaker",
+    "ai",
+    "virus"
+  ],
+  "installCost": 5,
+  "strength": 0,
+  "memoryCost": 1
+}

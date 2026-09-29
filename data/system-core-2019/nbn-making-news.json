@@ -1,0 +1,15 @@
+{
+  "id": "nbn-making-news",
+  "title": "NBN: Making News",
+  "wave": "system-core-2019",
+  "nrdbCode": "25104",
+  "type": "identity",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: 2[recurring-credit] Use these credits during trace attempts."
+  ],
+  "faction": "nbn",
+  "subtypes": [
+    "megacorp"
+  ]
+}

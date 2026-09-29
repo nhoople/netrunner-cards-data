@@ -1,0 +1,15 @@
+{
+  "id": "spark-agency-worldswide-reach",
+  "title": "Spark Agency: Worldswide Reach",
+  "wave": "system-core-2019",
+  "nrdbCode": "25105",
+  "type": "identity",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: The first time each turn you rez an advertisement, the Runner loses 1[credit]."
+  ],
+  "faction": "nbn",
+  "subtypes": [
+    "division"
+  ]
+}

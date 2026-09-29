@@ -1,0 +1,16 @@
+{
+  "id": "hostage",
+  "title": "Hostage",
+  "wave": "system-core-2019",
+  "nrdbCode": "25025",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: As an additional cost to play this event, spend [click]. Search your stack for a connection, reveal it, and add it to your grip. You may install that connection (paying its install cost). Shuffle your"
+  ],
+  "faction": "criminal",
+  "subtypes": [
+    "double"
+  ],
+  "playCost": 1
+}

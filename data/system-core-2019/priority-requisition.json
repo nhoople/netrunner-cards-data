@@ -1,0 +1,17 @@
+{
+  "id": "priority-requisition",
+  "title": "Priority Requisition",
+  "wave": "system-core-2019",
+  "nrdbCode": "25141",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: When you score Priority Requisition, you may rez a piece of ice ignoring all costs."
+  ],
+  "faction": "neutral-corp",
+  "subtypes": [
+    "security"
+  ],
+  "advancementRequirement": 5,
+  "agendaPoints": 3
+}

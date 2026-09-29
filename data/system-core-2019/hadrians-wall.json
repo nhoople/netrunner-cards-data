@@ -1,0 +1,18 @@
+{
+  "id": "hadrians-wall",
+  "title": "Hadrian's Wall",
+  "wave": "system-core-2019",
+  "nrdbCode": "25132",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: Hadrian's Wall can be advanced and has +1 strength for each advancement token on it. [subroutine] End the run. [subroutine] End the run."
+  ],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "barrier"
+  ],
+  "installCost": 10,
+  "rezCost": 10,
+  "strength": 7
+}

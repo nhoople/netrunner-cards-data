@@ -1,0 +1,19 @@
+{
+  "id": "neural-katana",
+  "title": "Neural Katana",
+  "wave": "system-core-2019",
+  "nrdbCode": "25095",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: [subroutine] Do 3 net damage."
+  ],
+  "faction": "jinteki",
+  "subtypes": [
+    "sentry",
+    "ap"
+  ],
+  "installCost": 4,
+  "rezCost": 4,
+  "strength": 3
+}

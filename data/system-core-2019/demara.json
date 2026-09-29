@@ -1,0 +1,19 @@
+{
+  "id": "demara",
+  "title": "Demara",
+  "wave": "system-core-2019",
+  "nrdbCode": "25034",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: Interface → 2[credit]: Break up to 2 barrier subroutines. 2[credit]: +3 strength. [trash]: Bypass the barrier you are encountering."
+  ],
+  "faction": "criminal",
+  "subtypes": [
+    "icebreaker",
+    "fracter"
+  ],
+  "installCost": 4,
+  "strength": 1,
+  "memoryCost": 1
+}

@@ -1,0 +1,16 @@
+{
+  "id": "armitage-codebusting",
+  "title": "Armitage Codebusting",
+  "wave": "system-core-2019",
+  "nrdbCode": "25062",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: Place 12[credit] from the bank on Armitage Codebusting when it is installed. When there are no credits left on Armitage Codebusting, trash it. [click]: Take 2[credit] from Armitage Codebusting."
+  ],
+  "faction": "neutral-runner",
+  "subtypes": [
+    "job"
+  ],
+  "installCost": 1
+}

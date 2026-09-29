@@ -1,0 +1,18 @@
+{
+  "id": "deus-x",
+  "title": "Deus X",
+  "wave": "system-core-2019",
+  "nrdbCode": "25053",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: Interface → [trash]: Break any number of AP subroutines. [interrupt] → [trash]: Prevent any amount of net damage."
+  ],
+  "faction": "shaper",
+  "subtypes": [
+    "icebreaker"
+  ],
+  "installCost": 3,
+  "strength": 10,
+  "memoryCost": 1
+}

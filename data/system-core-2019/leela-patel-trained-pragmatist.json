@@ -1,0 +1,16 @@
+{
+  "id": "leela-patel-trained-pragmatist",
+  "title": "Leela Patel: Trained Pragmatist",
+  "wave": "system-core-2019",
+  "nrdbCode": "25021",
+  "type": "identity",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: Whenever an agenda is scored or stolen, add 1 unrezzed card to HQ."
+  ],
+  "faction": "criminal",
+  "subtypes": [
+    "natural"
+  ],
+  "link": 0
+}

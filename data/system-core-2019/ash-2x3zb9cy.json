@@ -1,0 +1,19 @@
+{
+  "id": "ash-2x3zb9cy",
+  "title": "Ash 2X3ZB9CY",
+  "wave": "system-core-2019",
+  "nrdbCode": "25082",
+  "type": "upgrade",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: Whenever there is a successful run on this server, Trace[4]. If successful, the Runner cannot access any cards other than Ash 2X3ZB9CY for the remainder of this run."
+  ],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "bioroid"
+  ],
+  "installCost": 2,
+  "rezCost": 2,
+  "trashCost": 3,
+  "unique": true
+}

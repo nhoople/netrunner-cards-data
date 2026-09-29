@@ -1,0 +1,19 @@
+{
+  "id": "yagura",
+  "title": "Yagura",
+  "wave": "system-core-2019",
+  "nrdbCode": "25099",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: [subroutine] Look at the top card of R&D. You may add that card to the bottom of R&D. [subroutine] Do 1 net damage."
+  ],
+  "faction": "jinteki",
+  "subtypes": [
+    "code gate",
+    "ap"
+  ],
+  "installCost": 1,
+  "rezCost": 1,
+  "strength": 0
+}

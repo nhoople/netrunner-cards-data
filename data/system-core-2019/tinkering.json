@@ -1,0 +1,16 @@
+{
+  "id": "tinkering",
+  "title": "Tinkering",
+  "wave": "system-core-2019",
+  "nrdbCode": "25047",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: Choose a piece of ice. That ice gains sentry, code gate, and barrier until the end of the turn."
+  ],
+  "faction": "shaper",
+  "subtypes": [
+    "mod"
+  ],
+  "playCost": 0
+}

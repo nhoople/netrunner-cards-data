@@ -1,0 +1,19 @@
+{
+  "id": "caduceus",
+  "title": "Caduceus",
+  "wave": "system-core-2019",
+  "nrdbCode": "25131",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: [subroutine] Trace[3]. If successful, the Corp gains 3[credit]. [subroutine] Trace[2]. If successful, end the run."
+  ],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "sentry",
+    "tracer"
+  ],
+  "installCost": 3,
+  "rezCost": 3,
+  "strength": 3
+}

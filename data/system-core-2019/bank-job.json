@@ -1,0 +1,16 @@
+{
+  "id": "bank-job",
+  "title": "Bank Job",
+  "wave": "system-core-2019",
+  "nrdbCode": "25038",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: When you install this resource, load 8[credit] on it. When it is empty, trash it. Whenever you make a successful run on a remote server, instead of breaching that server, you may take any number of cr"
+  ],
+  "faction": "criminal",
+  "subtypes": [
+    "job"
+  ],
+  "installCost": 1
+}
