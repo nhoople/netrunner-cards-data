@@ -640,6 +640,126 @@ def map_card(c: dict) -> dict | None:
             unsupported=[],
         )
 
+    # --- v1.64.0 E-slice: existing IR only ---
+
+    if cid == "heimdall-1-0":
+        return base(
+            c,
+            subroutines=[
+                {
+                    "id": "heimdall-1-0-core",
+                    "text": "Do 1 core damage.",
+                    "effect": {
+                        "op": "do",
+                        "action": {"kind": "core_damage", "amount": 1},
+                    },
+                },
+                {
+                    "id": "heimdall-1-0-etr-1",
+                    "text": "End the run.",
+                    "effect": etr(),
+                },
+                {
+                    "id": "heimdall-1-0-etr-2",
+                    "text": "End the run.",
+                    "effect": etr(),
+                },
+            ],
+            unsupported=[],
+        )
+
+    if cid == "ichi-1-0":
+        return base(
+            c,
+            subroutines=[
+                {
+                    "id": "ichi-1-0-trash-1",
+                    "text": "Trash 1 installed program.",
+                    "effect": {
+                        "op": "do",
+                        "action": {"kind": "trash_program", "pick": "choose"},
+                    },
+                },
+                {
+                    "id": "ichi-1-0-trash-2",
+                    "text": "Trash 1 installed program.",
+                    "effect": {
+                        "op": "do",
+                        "action": {"kind": "trash_program", "pick": "choose"},
+                    },
+                },
+                {
+                    "id": "ichi-1-0-trace",
+                    "text": "Trace[1]. If successful, do 1 core damage and give the Runner 1 tag.",
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "trace",
+                            "strength": 1,
+                            "onSuccess": seq(
+                                {
+                                    "op": "do",
+                                    "action": {
+                                        "kind": "core_damage",
+                                        "amount": 1,
+                                    },
+                                },
+                                {
+                                    "op": "do",
+                                    "action": {
+                                        "kind": "give_tags",
+                                        "amount": 1,
+                                    },
+                                },
+                            ),
+                        },
+                    },
+                },
+            ],
+            unsupported=[],
+        )
+
+    if cid == "sea-source":
+        return base(
+            c,
+            playRequiresSuccessfulRunLastTurn=True,
+            onPlay={
+                "op": "do",
+                "action": {
+                    "kind": "trace",
+                    "strength": 3,
+                    "onSuccess": {
+                        "op": "do",
+                        "action": {"kind": "give_tags", "amount": 1},
+                    },
+                },
+            },
+            unsupported=[],
+        )
+
+    if cid == "product-placement":
+        return base(
+            c,
+            mustRevealWhenAccessedFromRd=True,
+            skipOnAccessFromArchives=True,
+            onAccess=gain("corp", 2),
+            unsupported=[],
+        )
+
+    if cid == "notoriety":
+        return base(
+            c,
+            playRequiresSuccessfulAllCentralsThisTurn=True,
+            onPlay={
+                "op": "do",
+                "action": {
+                    "kind": "add_to_runner_score_as_agenda",
+                    "agendaPoints": 1,
+                },
+            },
+            unsupported=[],
+        )
+
     card = base(c)
     card["unsupported"] = [
         f"Full text not yet mapped to IR: {plain[:200]}"
@@ -724,6 +844,13 @@ def main():
             "yagura",
             "viktor-1-0",
             "special-order",
+        ],
+        "eSliceClears": [
+            "heimdall-1-0",
+            "ichi-1-0",
+            "sea-source",
+            "product-placement",
+            "notoriety",
         ],
     }
     (OUT / "_manifest.json").write_text(

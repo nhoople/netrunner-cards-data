@@ -5,9 +5,22 @@
   "nrdbCode": "25119",
   "type": "operation",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: Play only if the Runner made a successful run during their last turn. Trace[3]. If successful, give the Runner 1 tag."
-  ],
+  "unsupported": [],
   "faction": "nbn",
-  "playCost": 2
+  "playCost": 2,
+  "playRequiresSuccessfulRunLastTurn": true,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "trace",
+      "strength": 3,
+      "onSuccess": {
+        "op": "do",
+        "action": {
+          "kind": "give_tags",
+          "amount": 1
+        }
+      }
+    }
+  }
 }
