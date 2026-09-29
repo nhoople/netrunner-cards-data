@@ -6,6 +6,7 @@
   "type": "identity",
   "side": "runner",
   "unsupported": [],
+  "faction": "shaper",
   "subtypes": [
     "natural"
   ],

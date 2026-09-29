@@ -6,6 +6,7 @@
   "type": "program",
   "side": "runner",
   "unsupported": [],
+  "faction": "anarch",
   "installCost": 4,
   "memoryCost": 2,
   "paidAbilities": [

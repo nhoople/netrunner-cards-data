@@ -6,6 +6,7 @@
   "type": "resource",
   "side": "runner",
   "unsupported": [],
+  "faction": "shaper",
   "subtypes": [
     "connection"
   ],

@@ -5,10 +5,37 @@
   "nrdbCode": "26039",
   "type": "identity",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: The first time each turn you reveal a card, gain 1[credit]. [click]: Reveal 1 card from the grip at random or the top card of the stack."
-  ],
+  "unsupported": [],
+  "faction": "jinteki",
   "subtypes": [
     "division"
+  ],
+  "onFirstRevealEachTurn": {
+    "op": "do",
+    "action": {
+      "kind": "gain_credits",
+      "side": "corp",
+      "amount": 1
+    }
+  },
+  "paidAbilities": [
+    {
+      "id": "hyoubu-reveal",
+      "label": "[click]: Reveal 1 card from the grip at random or the top card of the stack",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "hyoubu_reveal_grip_random_or_stack_top"
+        }
+      }
+    }
   ]
 }

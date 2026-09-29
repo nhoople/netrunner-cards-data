@@ -6,6 +6,7 @@
   "type": "event",
   "side": "runner",
   "unsupported": [],
+  "faction": "neutral-runner",
   "subtypes": [
     "mod"
   ],

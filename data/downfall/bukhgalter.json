@@ -6,6 +6,7 @@
   "type": "program",
   "side": "runner",
   "unsupported": [],
+  "faction": "criminal",
   "subtypes": [
     "icebreaker",
     "killer"

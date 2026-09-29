@@ -6,6 +6,7 @@
   "type": "operation",
   "side": "corp",
   "unsupported": [],
+  "faction": "nbn",
   "playCost": 3,
   "playRequiresSuccessfulRunLastTurn": true,
   "onPlay": {

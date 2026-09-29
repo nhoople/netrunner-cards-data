@@ -6,6 +6,7 @@
   "type": "event",
   "side": "runner",
   "unsupported": [],
+  "faction": "anarch",
   "playCost": 2,
   "playRequiresInstalledResource": true,
   "playAdditionalCost": {

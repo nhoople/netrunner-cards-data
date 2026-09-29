@@ -155,6 +155,11 @@
         "runner"
       ]
     },
+    "faction": {
+      "type": "string",
+      "minLength": 1,
+      "description": "NRDB faction_code (e.g. jinteki, criminal, neutral-runner). Used for faction-matching abilities (Storgotic Resonator)."
+    },
     "installCost": {
       "type": "integer",
       "minimum": 0
@@ -438,6 +443,7 @@
                 "tag_interrupt_paw",
                 "when_encountered_interrupt_paw",
                 "trace_interrupt_paw",
+                "end_the_run_interrupt_paw",
                 "other_priority_window"
               ]
             }
@@ -517,6 +523,10 @@
           "requiresSuccessfulRdRunThisTurn": {
             "type": "boolean",
             "description": "Ability usable only if the Runner made a successful run on R&D this turn (Cataloguer)."
+          },
+          "requiresSuccessfulHqRunThisTurn": {
+            "type": "boolean",
+            "description": "Ability usable only if the Runner made a successful run on HQ this turn (Lucky Charm)."
           },
           "requiresSuccessfulAllCentralsThisTurn": {
             "type": "boolean",
@@ -1086,6 +1096,31 @@
     "onApproachServerOncePerRun": {
       "type": "boolean",
       "description": "Fire onApproachServer only the first time the Runner approaches this server each run (Letheia Nisei)."
+    },
+    "blankIdentitiesWhileResolving": {
+      "type": "boolean",
+      "description": "While resolving this event (including any run it starts), each player's identity loses all abilities (Direct Access)."
+    },
+    "onFirstTrashMatchingRunnerIdentityFactionEachTurn": {
+      "type": "object",
+      "description": "Effect IR the first time each turn you trash a card whose faction matches the Runner identity's faction, from any location (Storgotic Resonator)."
+    },
+    "onFirstRevealEachTurn": {
+      "type": "object",
+      "description": "Effect IR the first time each turn this card's controller reveals a card (Hyoubu Institute)."
+    },
+    "onWouldDrawOncePerTurn": {
+      "type": "object",
+      "description": "Interrupt Effect IR the first time each turn the controller would draw any number of cards (The Class Act)."
+    },
+    "playRequiresRunnerAgendaPointsGte": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Play only if the Runner has at least this many agenda points (Complete Image)."
+    },
+    "mirrormorphOnThirdDistinctAction": {
+      "type": "object",
+      "description": "Corp identity: when the third action of the turn completes, if the first three actions were each different kinds, resolve this Effect IR (MirrorMorph: Endless Iteration)."
     },
     "vacheronStealReplacement": {
       "type": "boolean",

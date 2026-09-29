@@ -5,11 +5,30 @@
   "nrdbCode": "26021",
   "type": "event",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Run R&D. If successful, instead of breaching R&D, choose an install cost greater than 0[credit]. The Corp sets aside the top X cards of R&D faceup, where X is equal to the number of your installed cards with that printed install cost, up to"
-  ],
+  "unsupported": [],
+  "faction": "shaper",
   "subtypes": [
     "run"
   ],
-  "playCost": 3
+  "playCost": 3,
+  "runEvent": {
+    "servers": "rd",
+    "onSuccessfulRun": {
+      "op": "seq",
+      "effects": [
+        {
+          "op": "do",
+          "action": {
+            "kind": "set_run_skip_breach"
+          }
+        },
+        {
+          "op": "do",
+          "action": {
+            "kind": "khusyuk_choose_install_cost_set_aside_access_shuffle"
+          }
+        }
+      ]
+    }
+  }
 }

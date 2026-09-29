@@ -5,12 +5,17 @@
   "nrdbCode": "26030",
   "type": "resource",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Whenever you make a successful run, you may trash this resource to choose a card name. The next time this run you access an agenda with the chosen name, steal it, ignoring all costs. (You are no longer accessing it.)"
-  ],
+  "unsupported": [],
+  "faction": "neutral-runner",
   "subtypes": [
     "connection"
   ],
   "installCost": 2,
-  "unique": true
+  "unique": true,
+  "onSuccessfulRun": {
+    "op": "do",
+    "action": {
+      "kind": "whistleblower_may_trash_name_agenda_steal_ignore_costs"
+    }
+  }
 }

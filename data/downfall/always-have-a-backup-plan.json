@@ -5,11 +5,25 @@
   "nrdbCode": "26011",
   "type": "event",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Run any server. When that run ends, if it was unsuccessful, you may run the attacked server again, ignoring any additional costs to run. During the second run, whenever you encounter the last piece of ice you encountered during the first ru"
-  ],
+  "unsupported": [],
+  "faction": "criminal",
   "subtypes": [
     "run"
   ],
-  "playCost": 2
+  "playCost": 2,
+  "runEvent": {
+    "servers": "any",
+    "onRunEnd": {
+      "op": "if",
+      "cond": {
+        "op": "run_unsuccessful"
+      },
+      "then": {
+        "op": "do",
+        "action": {
+          "kind": "backup_plan_may_rerun_ignore_additional_costs_bypass_last_ice"
+        }
+      }
+    }
+  }
 }

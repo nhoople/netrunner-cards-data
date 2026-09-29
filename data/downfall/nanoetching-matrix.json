@@ -6,6 +6,7 @@
   "type": "asset",
   "side": "corp",
   "unsupported": [],
+  "faction": "haas-bioroid",
   "subtypes": [
     "industrial"
   ],

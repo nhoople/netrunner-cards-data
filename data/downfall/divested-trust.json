@@ -6,6 +6,7 @@
   "type": "agenda",
   "side": "corp",
   "unsupported": [],
+  "faction": "weyland-consortium",
   "advancementRequirement": 3,
   "agendaPoints": 1,
   "onOtherAgendaStolen": {

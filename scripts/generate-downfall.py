@@ -89,6 +89,9 @@ def base(c, **extra):
         "side": "runner" if c["side_code"] == "runner" else "corp",
         "unsupported": [],
     }
+    # NRDB faction_code — required for Storgotic Resonator (match Runner ID faction).
+    if c.get("faction_code"):
+        card["faction"] = c["faction_code"]
     if subtypes:
         card["subtypes"] = subtypes
     if c.get("cost") is not None:
@@ -1539,6 +1542,238 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    # --- v1.58.0 K-slice (set-complete) ---
+
+    if cid == "direct-access":
+        return base(
+            c,
+            blankIdentitiesWhileResolving=True,
+            runEvent={
+                "servers": "any",
+                "onRunEnd": {
+                    "op": "do",
+                    "action": {
+                        "kind": "may_shuffle_title_from_heap_into_stack",
+                        "title": "Direct Access",
+                    },
+                },
+            },
+            unsupported=[],
+        )
+
+    if cid == "lucky-charm":
+        return base(
+            c,
+            paidAbilities=[
+                {
+                    "id": "lucky-charm-prevent-etr",
+                    "label": (
+                        "[interrupt] → Remove from the game: Prevent a "
+                        "Corp card ability from ending the run"
+                    ),
+                    "clickCost": 0,
+                    "creditCost": 0,
+                    "cost": {"rfgSelf": True},
+                    "windows": ["end_the_run_interrupt_paw"],
+                    "requiresSuccessfulHqRunThisTurn": True,
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": (
+                                "prevent_pending_end_the_run_"
+                                "from_corp_card_ability"
+                            ),
+                        },
+                    },
+                }
+            ],
+            unsupported=[],
+        )
+
+    if cid == "whistleblower":
+        return base(
+            c,
+            onSuccessfulRun={
+                "op": "do",
+                "action": {
+                    "kind": (
+                        "whistleblower_may_trash_name_agenda_"
+                        "steal_ignore_costs"
+                    ),
+                },
+            },
+            unsupported=[],
+        )
+
+    if cid == "storgotic-resonator":
+        return base(
+            c,
+            onFirstTrashMatchingRunnerIdentityFactionEachTurn={
+                "op": "do",
+                "action": {"kind": "add_power_counter", "amount": 1},
+            },
+            paidAbilities=[
+                {
+                    "id": "storgotic-net",
+                    "label": "[click], hosted power counter: Do 1 net damage",
+                    "clickCost": 1,
+                    "creditCost": 0,
+                    "cost": {"clicks": 1, "powerCounters": 1},
+                    "windows": ["corp_action_paw"],
+                    "effect": {
+                        "op": "do",
+                        "action": {"kind": "net_damage", "amount": 1},
+                    },
+                }
+            ],
+            unsupported=[],
+        )
+
+    if cid == "hyoubu-institute-absolute-clarity":
+        return base(
+            c,
+            onFirstRevealEachTurn={
+                "op": "do",
+                "action": {
+                    "kind": "gain_credits",
+                    "side": "corp",
+                    "amount": 1,
+                },
+            },
+            paidAbilities=[
+                {
+                    "id": "hyoubu-reveal",
+                    "label": (
+                        "[click]: Reveal 1 card from the grip at random "
+                        "or the top card of the stack"
+                    ),
+                    "clickCost": 1,
+                    "creditCost": 0,
+                    "cost": {"clicks": 1},
+                    "windows": ["corp_action_paw"],
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "hyoubu_reveal_grip_random_or_stack_top",
+                        },
+                    },
+                }
+            ],
+            unsupported=[],
+        )
+
+    if cid == "the-class-act":
+        return base(
+            c,
+            onDiscardPhaseEnd={
+                "op": "if",
+                "cond": {"op": "self_installed_this_turn"},
+                "then": draw("runner", 4),
+            },
+            onWouldDrawOncePerTurn={
+                "op": "do",
+                "action": {
+                    "kind": "class_act_look_top_draw_amount_plus_one_bottom_one",
+                },
+            },
+            unsupported=[],
+        )
+
+    if cid == "always-have-a-backup-plan":
+        return base(
+            c,
+            runEvent={
+                "servers": "any",
+                "onRunEnd": {
+                    "op": "if",
+                    "cond": {"op": "run_unsuccessful"},
+                    "then": {
+                        "op": "do",
+                        "action": {
+                            "kind": (
+                                "backup_plan_may_rerun_ignore_additional_"
+                                "costs_bypass_last_ice"
+                            ),
+                        },
+                    },
+                },
+            },
+            unsupported=[],
+        )
+
+    if cid == "complete-image":
+        return base(
+            c,
+            playRequiresSuccessfulRunLastTurn=True,
+            playRequiresRunnerAgendaPointsGte=3,
+            endsActionPhase=True,
+            onPlay={
+                "op": "do",
+                "action": {"kind": "complete_image_name_net_damage_loop"},
+            },
+            unsupported=[],
+        )
+
+    if cid == "khusyuk":
+        return base(
+            c,
+            runEvent={
+                "servers": "rd",
+                "onSuccessfulRun": {
+                    "op": "seq",
+                    "effects": [
+                        {
+                            "op": "do",
+                            "action": {"kind": "set_run_skip_breach"},
+                        },
+                        {
+                            "op": "do",
+                            "action": {
+                                "kind": (
+                                    "khusyuk_choose_install_cost_"
+                                    "set_aside_access_shuffle"
+                                ),
+                            },
+                        },
+                    ],
+                },
+            },
+            unsupported=[],
+        )
+
+    if cid == "mirrormorph-endless-iteration":
+        return base(
+            c,
+            mirrormorphOnThirdDistinctAction={
+                "op": "choose",
+                "chooser": "corp",
+                "options": [
+                    {
+                        "id": "gain-1",
+                        "label": "Gain 1¢",
+                        "effect": gain("corp", 1),
+                    },
+                    {
+                        "id": "extra-action",
+                        "label": (
+                            "Take another different action, paying [click] less"
+                        ),
+                        "effect": {
+                            "op": "do",
+                            "action": {
+                                "kind": (
+                                    "mirrormorph_take_different_"
+                                    "action_click_discount"
+                                ),
+                            },
+                        },
+                    },
+                    decline("corp"),
+                ],
+            },
+            unsupported=[],
+        )
+
     # Fail closed — honest unsupported note for the remainder.
     card = base(c)
     card["unsupported"] = [f"Full text not yet mapped to IR: {plain[:240]}"]
@@ -1578,8 +1813,15 @@ def main():
     notes = (
         "Null Signal Downfall (NRDB pack df) — Ashes set 1 of 2; legacy "
         "backwards wave before Uprising / System Gateway. Skip Magnum Opus "
-        f"Reprint (mor). In-progress: {full} cards fully mapped, {partial} "
-        "with unsupported notes (J-slice v1.57.0)."
+        "Reprint (mor). Fully supported: all 65 cards mapped "
+        "(wave gate v1.58.0)."
+        if partial == 0
+        else (
+            "Null Signal Downfall (NRDB pack df) — Ashes set 1 of 2; legacy "
+            "backwards wave before Uprising / System Gateway. Skip Magnum Opus "
+            f"Reprint (mor). In-progress: {full} cards fully mapped, {partial} "
+            "with unsupported notes (K-slice v1.58.0)."
+        )
     )
     manifest = {
         "pack": WAVE,

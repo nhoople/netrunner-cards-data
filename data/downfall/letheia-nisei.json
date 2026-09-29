@@ -6,6 +6,7 @@
   "type": "upgrade",
   "side": "corp",
   "unsupported": [],
+  "faction": "jinteki",
   "subtypes": [
     "psi",
     "clone"

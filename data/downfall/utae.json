@@ -6,6 +6,7 @@
   "type": "program",
   "side": "runner",
   "unsupported": [],
+  "faction": "anarch",
   "subtypes": [
     "icebreaker",
     "decoder"

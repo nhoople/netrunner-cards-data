@@ -5,13 +5,21 @@
   "nrdbCode": "26045",
   "type": "operation",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: Play only if the Runner has 3 or more agenda points and they made a successful run during their last turn. After you resolve this operation, your action phase ends. Choose a card name, then do 1 net damage. If you trash a card with the chos"
-  ],
+  "unsupported": [],
+  "faction": "jinteki",
   "subtypes": [
     "terminal",
     "gray ops"
   ],
   "playCost": 4,
-  "trashCost": 2
+  "trashCost": 2,
+  "playRequiresSuccessfulRunLastTurn": true,
+  "playRequiresRunnerAgendaPointsGte": 3,
+  "endsActionPhase": true,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "complete_image_name_net_damage_loop"
+    }
+  }
 }

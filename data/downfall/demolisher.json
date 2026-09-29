@@ -6,6 +6,7 @@
   "type": "hardware",
   "side": "runner",
   "unsupported": [],
+  "faction": "anarch",
   "subtypes": [
     "console"
   ],

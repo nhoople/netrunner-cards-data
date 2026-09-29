@@ -5,12 +5,32 @@
   "nrdbCode": "26014",
   "type": "hardware",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: [interrupt] → Remove this hardware from the game: Prevent a Corp card ability from ending the run. Use this ability only if you made a successful run on HQ this turn."
-  ],
+  "unsupported": [],
+  "faction": "criminal",
   "subtypes": [
     "chip"
   ],
   "installCost": 1,
-  "unique": true
+  "unique": true,
+  "paidAbilities": [
+    {
+      "id": "lucky-charm-prevent-etr",
+      "label": "[interrupt] → Remove from the game: Prevent a Corp card ability from ending the run",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "rfgSelf": true
+      },
+      "windows": [
+        "end_the_run_interrupt_paw"
+      ],
+      "requiresSuccessfulHqRunThisTurn": true,
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "prevent_pending_end_the_run_from_corp_card_ability"
+        }
+      }
+    }
+  ]
 }

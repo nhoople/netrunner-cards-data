@@ -6,6 +6,7 @@
   "type": "agenda",
   "side": "corp",
   "unsupported": [],
+  "faction": "nbn",
   "subtypes": [
     "expansion"
   ],
