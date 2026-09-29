@@ -1158,6 +1158,34 @@
       "minimum": 1,
       "description": "Gain this many credits the first time each turn you install a companion or spend credits from an installed companion (Keiko)."
     },
+    "bioroidBreakGivesCorpAllottedClickNextTurn": {
+      "type": "boolean",
+      "description": "When the Runner spends a click to break a subroutine on this bioroid ice, Corp gets +1 allotted click for their next turn (Týr)."
+    },
+    "paidAbilitiesUseStealthCreditsOnly": {
+      "type": "boolean",
+      "description": "Spend credits only from stealth cards to use paid abilities / credit costs on this card (Mu Safecracker)."
+    },
+    "onSuccessfulHqRunMayPayForBonusAccess": {
+      "type": "object",
+      "required": ["credits", "bonusAccess"],
+      "additionalProperties": false,
+      "properties": {
+        "credits": { "type": "integer", "minimum": 1 },
+        "bonusAccess": { "type": "integer", "minimum": 1 }
+      },
+      "description": "On successful HQ run, may pay credits for bonusAccess on the upcoming breach (Mu Safecracker)."
+    },
+    "onSuccessfulRdRunMayPayForBonusAccess": {
+      "type": "object",
+      "required": ["credits", "bonusAccess"],
+      "additionalProperties": false,
+      "properties": {
+        "credits": { "type": "integer", "minimum": 1 },
+        "bonusAccess": { "type": "integer", "minimum": 1 }
+      },
+      "description": "On successful R&D run, may pay credits for bonusAccess on the upcoming breach (Mu Safecracker)."
+    },
     "meatDamageOnInstalledCorpTrashOncePerTurn": {
       "type": "integer",
       "minimum": 1,

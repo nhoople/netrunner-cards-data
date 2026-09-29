@@ -1297,6 +1297,131 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    # --- G-slice (v1.42.0): Týr / Vaporframe Fabricator / Mu Safecracker /
+    # Wall to Wall / Engram Flush ---
+
+    if cid == "tyr":
+        return base(
+            c,
+            bioroidBreakGivesCorpAllottedClickNextTurn=True,
+            subroutines=[
+                {
+                    "id": "tyr-core",
+                    "text": "Do 2 core damage.",
+                    "effect": {
+                        "op": "do",
+                        "action": {"kind": "core_damage", "amount": 2},
+                    },
+                },
+                {
+                    "id": "tyr-trash",
+                    "text": "Trash 1 installed Runner card. Gain 3¢.",
+                    "effect": {
+                        "op": "seq",
+                        "effects": [
+                            {
+                                "op": "do",
+                                "action": {
+                                    "kind": "trash_installed_runner",
+                                    "pick": "choose",
+                                },
+                            },
+                            gain("corp", 3),
+                        ],
+                    },
+                },
+                {
+                    "id": "tyr-etr",
+                    "text": "End the run.",
+                    "effect": {
+                        "op": "do",
+                        "action": {"kind": "end_the_run"},
+                    },
+                },
+            ],
+            unsupported=[],
+        )
+
+    if cid == "vaporframe-fabricator":
+        return base(
+            c,
+            paidAbilities=[
+                {
+                    "id": "vaporframe-click-install",
+                    "label": "[click]: Install 1 card from HQ, ignoring all costs",
+                    "clickCost": 1,
+                    "creditCost": 0,
+                    "cost": {"clicks": 1},
+                    "windows": ["corp_action_paw"],
+                    "oncePerTurn": True,
+                    "effect": {
+                        "op": "do",
+                        "action": {"kind": "may_install_from_hq_ignore_costs"},
+                    },
+                }
+            ],
+            onTrash={
+                "op": "do",
+                "action": {
+                    "kind": "may_install_from_hq_ignore_costs_exclude_source_server"
+                },
+            },
+            unsupported=[],
+        )
+
+    if cid == "mu-safecracker":
+        return base(
+            c,
+            paidAbilitiesUseStealthCreditsOnly=True,
+            onSuccessfulHqRunMayPayForBonusAccess={"credits": 1, "bonusAccess": 1},
+            onSuccessfulRdRunMayPayForBonusAccess={"credits": 2, "bonusAccess": 1},
+            unsupported=[],
+        )
+
+    if cid == "wall-to-wall":
+        # Resolve 1 if any other rezzed asset exists; otherwise up to 3 in any order.
+        # Represented via dedicated primitive that encodes the card's choice rules.
+        return base(
+            c,
+            onTurnBegin={
+                "op": "do",
+                "action": {"kind": "wall_to_wall_turn_begin"},
+            },
+            unsupported=[],
+        )
+
+    if cid == "engram-flush":
+        return base(
+            c,
+            onEncounter={
+                "op": "do",
+                "action": {"kind": "choose_card_type_for_encounter"},
+            },
+            subroutines=[
+                {
+                    "id": "engram-reveal-1",
+                    "text": "Reveal the grip.",
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "reveal_grip_may_trash_chosen_encounter_type"
+                        },
+                    },
+                },
+                {
+                    "id": "engram-reveal-2",
+                    "text": "Reveal the grip.",
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "reveal_grip_may_trash_chosen_encounter_type"
+                        },
+                    },
+                },
+            ],
+            unsupported=[],
+        )
+
     # Fail closed — honest unsupported note for the remainder.
     card = base(c)
     card["unsupported"] = [f"Full text not yet mapped to IR: {plain[:240]}"]
@@ -1342,7 +1467,7 @@ def main():
             "Null Signal Uprising (NRDB pack ur) — Ashes set 2 of 2; first "
             "legacy backwards wave before System Gateway. urbp titles absorbed. "
             f"In-progress: {full} cards fully mapped, {partial} with unsupported "
-            "notes (wave slice v1.41.0)."
+            "notes (wave slice v1.42.0)."
         ),
         "cards": written,
     }

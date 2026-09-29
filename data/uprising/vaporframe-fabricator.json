@@ -5,13 +5,38 @@
   "nrdbCode": "26100",
   "type": "asset",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: Once per turn → [click]: Install 1 card from HQ, ignoring all costs. When the Runner trashes this asset, you may install 1 card from HQ, ignoring all costs. You cannot install that card in the root of this server."
-  ],
+  "unsupported": [],
   "subtypes": [
     "industrial"
   ],
   "installCost": 2,
   "rezCost": 2,
-  "trashCost": 3
+  "trashCost": 3,
+  "paidAbilities": [
+    {
+      "id": "vaporframe-click-install",
+      "label": "[click]: Install 1 card from HQ, ignoring all costs",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "oncePerTurn": true,
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "may_install_from_hq_ignore_costs"
+        }
+      }
+    }
+  ],
+  "onTrash": {
+    "op": "do",
+    "action": {
+      "kind": "may_install_from_hq_ignore_costs_exclude_source_server"
+    }
+  }
 }

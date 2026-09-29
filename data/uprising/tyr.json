@@ -5,9 +5,7 @@
   "nrdbCode": "26102",
   "type": "ice",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: Lose [click]: Break 1 subroutine on this ice. The Corp gets +1 allotted [click] for their next turn. Only the Runner can use this ability. [subroutine] Do 2 core damage. [subroutine] Trash 1 installed Runner card. Gain 3[credit]. [subroutin"
-  ],
+  "unsupported": [],
   "subtypes": [
     "sentry",
     "bioroid",
@@ -17,5 +15,53 @@
   "installCost": 10,
   "rezCost": 10,
   "strength": 7,
-  "unique": true
+  "unique": true,
+  "bioroidBreakGivesCorpAllottedClickNextTurn": true,
+  "subroutines": [
+    {
+      "id": "tyr-core",
+      "text": "Do 2 core damage.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "core_damage",
+          "amount": 2
+        }
+      }
+    },
+    {
+      "id": "tyr-trash",
+      "text": "Trash 1 installed Runner card. Gain 3¢.",
+      "effect": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "trash_installed_runner",
+              "pick": "choose"
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "gain_credits",
+              "side": "corp",
+              "amount": 3
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "tyr-etr",
+      "text": "End the run.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "end_the_run"
+        }
+      }
+    }
+  ]
 }

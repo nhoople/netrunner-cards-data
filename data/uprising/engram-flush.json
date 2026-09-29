@@ -5,14 +5,40 @@
   "nrdbCode": "26108",
   "type": "ice",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: When the Runner encounters this ice, choose a card type. For the remainder of the encounter, whenever you reveal the grip with a subroutine on this ice, you may trash 1 revealed card of the chosen type. [subroutine] Reveal the grip. [subrou"
-  ],
+  "unsupported": [],
   "subtypes": [
     "code gate",
     "observer"
   ],
   "installCost": 2,
   "rezCost": 2,
-  "strength": 5
+  "strength": 5,
+  "onEncounter": {
+    "op": "do",
+    "action": {
+      "kind": "choose_card_type_for_encounter"
+    }
+  },
+  "subroutines": [
+    {
+      "id": "engram-reveal-1",
+      "text": "Reveal the grip.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "reveal_grip_may_trash_chosen_encounter_type"
+        }
+      }
+    },
+    {
+      "id": "engram-reveal-2",
+      "text": "Reveal the grip.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "reveal_grip_may_trash_chosen_encounter_type"
+        }
+      }
+    }
+  ]
 }
