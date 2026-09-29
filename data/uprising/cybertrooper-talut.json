@@ -5,13 +5,13 @@
   "nrdbCode": "26091",
   "type": "resource",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: +1[link] Whenever you install a non-AI icebreaker, that icebreaker gets +2 strength for the remainder of the turn."
-  ],
+  "unsupported": [],
   "subtypes": [
     "connection",
     "virtual"
   ],
   "installCost": 2,
-  "unique": true
+  "unique": true,
+  "link": 1,
+  "nonAiIcebreakerInstallStrengthBonusThisTurn": 2
 }

@@ -2168,6 +2168,22 @@
           "minimum": 0
         }
       }
+    },
+    "onFirstEventTrashedThisTurn": {
+      "description": "Aniccam: effect on first event trashed each turn"
+    },
+    "nonAiIcebreakerInstallStrengthBonusThisTurn": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "onFirstInstallInThisServerRootThisTurn": {
+      "description": "Tranquility: first install in this server root"
+    },
+    "gainsSubroutinesWhileProtectingHq": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
     }
   }
 }

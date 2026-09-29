@@ -5,13 +5,78 @@
   "nrdbCode": "26101",
   "type": "ice",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: [subroutine] You may add 1 card from Archives to HQ. [subroutine] You may install 1 card from Archives or HQ, ignoring all costs."
-  ],
+  "unsupported": [],
   "subtypes": [
     "sentry"
   ],
   "installCost": 3,
   "rezCost": 3,
-  "strength": 3
+  "strength": 3,
+  "subroutines": [
+    {
+      "id": "drafter-archives",
+      "text": "You may add 1 card from Archives to HQ.",
+      "effect": {
+        "op": "choose",
+        "chooser": "corp",
+        "options": [
+          {
+            "id": "take",
+            "label": "Add 1 card from Archives to HQ",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "archives_to_hq",
+                "amount": 1
+              }
+            }
+          },
+          {
+            "id": "decline",
+            "label": "Decline",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "gain_credits",
+                "side": "corp",
+                "amount": 0
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "drafter-install",
+      "text": "You may install 1 card from Archives or HQ, ignoring all costs.",
+      "effect": {
+        "op": "choose",
+        "chooser": "corp",
+        "options": [
+          {
+            "id": "install",
+            "label": "Install 1 card from Archives or HQ, ignoring all costs",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "install_from_hq_or_archives"
+              }
+            }
+          },
+          {
+            "id": "decline",
+            "label": "Decline",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "gain_credits",
+                "side": "corp",
+                "amount": 0
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
 }
