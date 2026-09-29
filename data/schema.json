@@ -544,6 +544,10 @@
             "type": "boolean",
             "description": "Ability usable only during a run against a different server than the one hosting this card (B-1001)."
           },
+          "formicaryApproachAnyServer": {
+            "type": "boolean",
+            "description": "Unrezzed ice ability legal at approach_server_paw for any approached server (Formicary)."
+          },
           "requireEncounterSubtype": {
             "type": "string",
             "description": "Encountered ice must have this subtype (e.g. Abagnale bypass)."
@@ -2506,6 +2510,10 @@
         }
       },
       "description": "Access → pay creditCost to host the non-agenda card being accessed faceup on this program; if it was installed, it becomes uninstalled (Cupellation)."
+    },
+    "onBreachRd": {
+      "type": "object",
+      "description": "Effect IR whenever the Runner breaches R&D while this card is active (Akiko Nisei)."
     },
     "onBreachHqIfHostingCorpCard": {
       "type": "object",

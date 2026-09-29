@@ -5,12 +5,24 @@
   "nrdbCode": "22002",
   "type": "event",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Run Archives. If successful, after breaching Archives, breach HQ, then breach R&D. You cannot access cards in the root of HQ or R&D during these breaches."
-  ],
+  "unsupported": [],
   "faction": "anarch",
   "subtypes": [
     "run"
   ],
-  "playCost": 3
+  "playCost": 3,
+  "runEvent": {
+    "servers": "archives",
+    "onSuccessfulRun": {
+      "op": "do",
+      "action": {
+        "kind": "queue_breaches_after_current",
+        "servers": [
+          "hq",
+          "rd"
+        ],
+        "cannotAccessRoot": true
+      }
+    }
+  }
 }
