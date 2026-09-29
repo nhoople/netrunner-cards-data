@@ -2232,6 +2232,28 @@
       "minimum": 1,
       "description": "Whenever you breach R&D, access +N additional cards (R&D Interface; CR §7.4.2)."
     },
+    "playRequiresRunnerMadeRunLastTurn": {
+      "type": "boolean",
+      "description": "Play only if the Runner made a run during their last turn (Neural EMP)."
+    },
+    "iceStrengthBonusForSubtype": {
+      "type": "object",
+      "required": [
+        "subtype",
+        "bonus"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "subtype": {
+          "type": "string",
+          "minLength": 1
+        },
+        "bonus": {
+          "type": "integer"
+        }
+      },
+      "description": "While this card is active (e.g. Corp identity), each ice with subtype gets +bonus strength (Haas-Bioroid: Stronger Together)."
+    },
     "preventFirstTagThisTurn": {
       "type": "boolean",
       "description": "The first time each turn you would take a tag, prevent 1 tag (Jesminder-class; also blocks nested tag costs per CR §1.16.1b)."

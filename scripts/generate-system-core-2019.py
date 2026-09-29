@@ -925,6 +925,52 @@ def map_card(c: dict) -> dict | None:
             unsupported=[],
         )
 
+    # --- v1.67.0 H-slice: new Effect IR leaves (fail-closed engine pair) ---
+
+    if cid == "priority-requisition":
+        return base(
+            c,
+            onScore={
+                "op": "do",
+                "action": {"kind": "rez_ice_ignoring_costs"},
+            },
+            unsupported=[],
+        )
+
+    if cid == "neural-emp":
+        return base(
+            c,
+            playRequiresRunnerMadeRunLastTurn=True,
+            onPlay=net(1),
+            unsupported=[],
+        )
+
+    if cid == "haas-bioroid-stronger-together":
+        return base(
+            c,
+            iceStrengthBonusForSubtype={"subtype": "bioroid", "bonus": 1},
+            unsupported=[],
+        )
+
+    if cid == "nbn-making-news":
+        return base(
+            c,
+            recurringCreditsMax=2,
+            recurringSpendFor=["trace"],
+            unsupported=[],
+        )
+
+    if cid == "philotic-entanglement":
+        return base(
+            c,
+            deckLimit=1,
+            onScore={
+                "op": "do",
+                "action": {"kind": "net_damage_per_runner_scored_agenda"},
+            },
+            unsupported=[],
+        )
+
     card = base(c)
     card["unsupported"] = [
         f"Full text not yet mapped to IR: {plain[:200]}"
@@ -1030,6 +1076,13 @@ def main():
             "closed-accounts",
             "flare",
             "leela-patel-trained-pragmatist",
+        ],
+        "hSliceClears": [
+            "priority-requisition",
+            "neural-emp",
+            "haas-bioroid-stronger-together",
+            "nbn-making-news",
+            "philotic-entanglement",
         ],
     }
     (OUT / "_manifest.json").write_text(

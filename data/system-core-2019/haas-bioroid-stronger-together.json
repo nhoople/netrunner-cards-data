@@ -5,11 +5,13 @@
   "nrdbCode": "25066",
   "type": "identity",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: All bioroid ice has +1 strength."
-  ],
+  "unsupported": [],
   "faction": "haas-bioroid",
   "subtypes": [
     "megacorp"
-  ]
+  ],
+  "iceStrengthBonusForSubtype": {
+    "subtype": "bioroid",
+    "bonus": 1
+  }
 }
