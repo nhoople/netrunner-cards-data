@@ -1499,6 +1499,31 @@
       "type": "object",
       "description": "Effect IR on a scored Corp agenda whenever the Runner steals another agenda (Divested Trust)."
     },
+    "spendHostedCreditsToUseProgramsDuringRuns": {
+      "type": "boolean",
+      "description": "Hosted credits on this card may be spent to use programs during runs (Trickster Taka)."
+    },
+    "playRequiresFirstClick": {
+      "type": "boolean",
+      "description": "Play only as the Runner's first click this turn (priority; In the Groove; CR 1.11.4)."
+    },
+    "remainderOfTurnOnInstallPrintedCostGte": {
+      "type": "object",
+      "required": ["min", "effect"],
+      "additionalProperties": false,
+      "properties": {
+        "min": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Printed install cost threshold (credits)."
+        },
+        "effect": {
+          "type": "object",
+          "description": "Effect IR whenever the Runner installs a card meeting the threshold for the remainder of this turn (In the Groove; CR 9.6.13b)."
+        }
+      },
+      "description": "Delayed conditional for the remainder of this turn on install with printed install cost ≥ min (In the Groove)."
+    },
     "drawOnHostedEmpty": {
       "type": "integer",
       "minimum": 0

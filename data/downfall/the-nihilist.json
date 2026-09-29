@@ -5,13 +5,24 @@
   "nrdbCode": "26008",
   "type": "resource",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: The first time each turn you install a virus program, place 2 virus counters on this resource. When your turn begins, you may remove any 2 virus counters from your installed cards. If you do, draw 2 cards unless the Corp trashes the top car"
-  ],
+  "unsupported": [],
   "subtypes": [
     "connection",
     "seedy"
   ],
   "installCost": 4,
-  "unique": true
+  "unique": true,
+  "onFirstVirusInstallThisTurn": {
+    "op": "do",
+    "action": {
+      "kind": "add_virus_counter",
+      "amount": 2
+    }
+  },
+  "onTurnBegin": {
+    "op": "do",
+    "action": {
+      "kind": "nihilist_may_remove_2_virus_draw_unless_corp_trash_top_rd"
+    }
+  }
 }

@@ -5,14 +5,61 @@
   "nrdbCode": "26009",
   "type": "resource",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: When your turn begins and whenever you steal an agenda, place 1[credit] on this resource. You can spend hosted credits to use programs during runs. When your turn ends, if there are 3 or more hosted credits, you must take 1 tag or trash thi"
-  ],
+  "unsupported": [],
   "subtypes": [
     "companion",
     "stealth",
     "virtual"
   ],
   "installCost": 1,
-  "unique": true
+  "unique": true,
+  "onTurnBegin": {
+    "op": "do",
+    "action": {
+      "kind": "place_hosted_credits",
+      "amount": 1
+    }
+  },
+  "onStealAgenda": {
+    "op": "do",
+    "action": {
+      "kind": "place_hosted_credits",
+      "amount": 1
+    }
+  },
+  "spendHostedCreditsToUseProgramsDuringRuns": true,
+  "onRunnerTurnEnd": {
+    "op": "if",
+    "cond": {
+      "op": "hosted_credits_gte",
+      "amount": 3
+    },
+    "then": {
+      "op": "choose",
+      "chooser": "runner",
+      "options": [
+        {
+          "id": "take-tag",
+          "label": "Take 1 tag",
+          "effect": {
+            "op": "do",
+            "action": {
+              "kind": "give_tags",
+              "amount": 1
+            }
+          }
+        },
+        {
+          "id": "trash-self",
+          "label": "Trash Trickster Taka",
+          "effect": {
+            "op": "do",
+            "action": {
+              "kind": "trash_self"
+            }
+          }
+        }
+      ]
+    }
+  }
 }
