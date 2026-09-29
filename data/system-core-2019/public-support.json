@@ -5,11 +5,20 @@
   "nrdbCode": "25129",
   "type": "asset",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: Place 3 power counters on Public Support when it is rezzed. When there are no power counters left on Public Support, add it to your score area as an agenda worth 1 agenda point. When your turn begins,"
-  ],
+  "unsupported": [],
   "faction": "weyland-consortium",
   "installCost": 2,
   "rezCost": 2,
-  "trashCost": 4
+  "trashCost": 4,
+  "powerCountersOnRez": 3,
+  "scoreWhenPowerEmpty": {
+    "agendaPoints": 1
+  },
+  "onTurnBegin": {
+    "op": "do",
+    "action": {
+      "kind": "remove_power_counter",
+      "amount": 1
+    }
+  }
 }

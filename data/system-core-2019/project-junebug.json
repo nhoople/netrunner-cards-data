@@ -5,9 +5,7 @@
   "nrdbCode": "25089",
   "type": "asset",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: Project Junebug can be advanced. If you pay 1[credit] when the Runner accesses Project Junebug, do 2 net damage for each advancement token on Project Junebug."
-  ],
+  "unsupported": [],
   "faction": "jinteki",
   "subtypes": [
     "ambush",
@@ -15,5 +13,14 @@
   ],
   "installCost": 0,
   "rezCost": 0,
-  "trashCost": 0
+  "trashCost": 0,
+  "canAdvance": true,
+  "onAccess": {
+    "op": "do",
+    "action": {
+      "kind": "may_pay_credits_for_net_damage_per_advancement",
+      "amount": 1,
+      "per": 2
+    }
+  }
 }
