@@ -5,13 +5,32 @@
   "nrdbCode": "22040",
   "type": "operation",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: Play only if the Runner trashed a Corp card during their last turn and you have at least 1 installed card. Choose 1 of your installed cards. The Runner may access that card. If they do, remove this operation from the game; otherwise, add th"
-  ],
+  "unsupported": [],
   "faction": "jinteki",
   "subtypes": [
     "reprisal",
     "gray ops"
   ],
-  "playCost": 0
+  "playCost": 0,
+  "playRequiresRunnerTrashedCorpCardLastTurn": true,
+  "playRequiresCorpHasInstalledCard": true,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "hangeki_choose_installed_runner_may_access",
+      "onAccess": {
+        "op": "do",
+        "action": {
+          "kind": "rfg_self"
+        }
+      },
+      "onDecline": {
+        "op": "do",
+        "action": {
+          "kind": "add_to_runner_score_as_agenda",
+          "agendaPoints": -1
+        }
+      }
+    }
+  }
 }

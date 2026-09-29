@@ -5,14 +5,79 @@
   "nrdbCode": "22053",
   "type": "ice",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: This ice gains \"[subroutine] Gain 1[credit] and the Runner loses 1[credit].\" before its other subroutines for every 2 faceup transaction operations in Archives. [subroutine] Gain 1[credit] and the Runner loses 1[credit]. [subroutine] End th"
-  ],
+  "unsupported": [],
   "faction": "weyland-consortium",
   "subtypes": [
     "barrier"
   ],
   "installCost": 7,
   "rezCost": 7,
-  "strength": 4
+  "strength": 4,
+  "gainsSubroutinesBeforePrintedPerFaceupArchives": {
+    "subtype": "transaction",
+    "type": "operation",
+    "per": 2,
+    "subroutine": {
+      "id": "blockchain-tx",
+      "text": "Gain 1[credit] and the Runner loses 1[credit].",
+      "effect": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "gain_credits",
+              "side": "corp",
+              "amount": 1
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "lose_credits",
+              "side": "runner",
+              "amount": 1
+            }
+          }
+        ]
+      }
+    }
+  },
+  "subroutines": [
+    {
+      "id": "blockchain-credit",
+      "text": "Gain 1[credit] and the Runner loses 1[credit].",
+      "effect": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "gain_credits",
+              "side": "corp",
+              "amount": 1
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "lose_credits",
+              "side": "runner",
+              "amount": 1
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "blockchain-etr",
+      "text": "End the run.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "end_the_run"
+        }
+      }
+    }
+  ]
 }

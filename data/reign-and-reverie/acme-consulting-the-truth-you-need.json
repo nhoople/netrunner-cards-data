@@ -5,11 +5,10 @@
   "nrdbCode": "22042",
   "type": "identity",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: The Runner is considered to have 1 additional tag (even if they have 0) during encounters with the outermost piece of ice protecting any server."
-  ],
+  "unsupported": [],
   "faction": "nbn",
   "subtypes": [
     "subsidiary"
-  ]
+  ],
+  "additionalTagsDuringOutermostIceEncounter": 1
 }

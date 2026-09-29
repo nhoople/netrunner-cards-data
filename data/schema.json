@@ -1757,6 +1757,15 @@
       "type": "boolean",
       "description": "Play only if the Runner stole or trashed a Corp card during their last turn (Oppo Research)."
     },
+    "playRequiresRunnerTrashedCorpCardLastTurn": {
+      "type": "boolean",
+      "description": "Play only if the Runner trashed a Corp card during their last turn (Hangeki; trash-only, not steal)."
+    },
+    "playRequiresCorpHasInstalledCard": {
+      "type": "boolean",
+      "description": "Play only if the Corp has at least one installed card (Hangeki)."
+    },
+
     "onFirstRunnerStoleOrTrashedCorpCardThisTurn": {
       "type": "object",
       "description": "Effect IR the first time each turn the Runner steals or trashes a Corp card (Epiphany identity; Cacophony resource)."
@@ -2691,6 +2700,53 @@
       "items": {
         "type": "object"
       }
+    },
+    "gainsSubroutinesBeforePrintedPerFaceupArchives": {
+      "type": "object",
+      "description": "Ice gains N copies of subroutine before printed subs, where N = floor(faceup Archives cards matching type+subtype / per) (Blockchain).",
+      "required": [
+        "subtype",
+        "type",
+        "per",
+        "subroutine"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "subtype": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "per": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "subroutine": {
+          "type": "object",
+          "required": [
+            "id",
+            "text",
+            "effect"
+          ],
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "text": {
+              "type": "string"
+            },
+            "effect": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "additionalTagsDuringOutermostIceEncounter": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "While encountering the outermost ice protecting any server, the Runner is considered to have this many additional tags (Acme Consulting)."
     }
   }
 }
