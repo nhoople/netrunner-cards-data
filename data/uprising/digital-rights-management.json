@@ -5,8 +5,30 @@
   "nrdbCode": "26117",
   "type": "operation",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: Play only if the Runner did not make a successful run on HQ during their last turn. Search R&D for 1 agenda and reveal it. (Shuffle R&D after searching it.) Add that agenda to HQ. You may install 1 card from HQ in the root of a remote serve"
-  ],
-  "playCost": 1
+  "unsupported": [],
+  "playCost": 1,
+  "playRequiresNoSuccessfulHqRunLastTurn": true,
+  "onPlay": {
+    "op": "seq",
+    "effects": [
+      {
+        "op": "do",
+        "action": {
+          "kind": "search_rd_agenda_to_hq"
+        }
+      },
+      {
+        "op": "do",
+        "action": {
+          "kind": "may_install_from_hq_in_remote_root_paying_costs"
+        }
+      },
+      {
+        "op": "do",
+        "action": {
+          "kind": "forbid_scoring_agendas_this_turn"
+        }
+      }
+    ]
+  }
 }

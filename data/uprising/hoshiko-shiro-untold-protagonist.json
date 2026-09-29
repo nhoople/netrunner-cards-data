@@ -5,11 +5,89 @@
   "nrdbCode": "26066",
   "type": "identity",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: When your turn ends, if you accessed a card this turn, gain 2[credit] and flip this identity. Flip side: When your turn begins, draw 1 card and lose 1[credit]. When your turn ends, if you did not access any cards this turn, flip this identi"
-  ],
+  "unsupported": [],
   "subtypes": [
     "natural"
   ],
-  "link": 0
+  "link": 0,
+  "onRunnerTurnEnd": {
+    "op": "if",
+    "cond": {
+      "op": "and",
+      "conds": [
+        {
+          "op": "identity_unflipped"
+        },
+        {
+          "op": "accessed_a_card_this_turn"
+        }
+      ]
+    },
+    "then": {
+      "op": "seq",
+      "effects": [
+        {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "runner",
+            "amount": 2
+          }
+        },
+        {
+          "op": "do",
+          "action": {
+            "kind": "flip_identity"
+          }
+        }
+      ]
+    },
+    "else": {
+      "op": "if",
+      "cond": {
+        "op": "and",
+        "conds": [
+          {
+            "op": "identity_flipped"
+          },
+          {
+            "op": "not_accessed_a_card_this_turn"
+          }
+        ]
+      },
+      "then": {
+        "op": "do",
+        "action": {
+          "kind": "flip_identity"
+        }
+      }
+    }
+  },
+  "onTurnBegin": {
+    "op": "if",
+    "cond": {
+      "op": "identity_flipped"
+    },
+    "then": {
+      "op": "seq",
+      "effects": [
+        {
+          "op": "do",
+          "action": {
+            "kind": "draw",
+            "side": "runner",
+            "amount": 1
+          }
+        },
+        {
+          "op": "do",
+          "action": {
+            "kind": "lose_credits",
+            "side": "runner",
+            "amount": 1
+          }
+        }
+      ]
+    }
+  }
 }
