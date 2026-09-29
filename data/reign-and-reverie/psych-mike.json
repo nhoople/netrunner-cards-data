@@ -5,13 +5,39 @@
   "nrdbCode": "22021",
   "type": "resource",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: The first time each turn a successful run on R&D ends, you may gain 1[credit] for each time you accessed a card in R&D during that run."
-  ],
+  "unsupported": [],
   "faction": "shaper",
   "subtypes": [
     "connection"
   ],
   "installCost": 1,
-  "unique": true
+  "unique": true,
+  "onFirstSuccessfulRunOnRdEndsThisTurn": {
+    "op": "choose",
+    "chooser": "runner",
+    "options": [
+      {
+        "id": "gain",
+        "label": "Gain 1¢ for each time you accessed a card in R&D during that run",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits_equal_to_rd_accesses_this_run"
+          }
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "runner",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  }
 }

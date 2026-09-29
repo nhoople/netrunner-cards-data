@@ -5,9 +5,7 @@
   "nrdbCode": "22049",
   "type": "upgrade",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: Whenever an agenda is scored from this server, you may install a card from HQ, ignoring all costs, and place 1 advancement token on it."
-  ],
+  "unsupported": [],
   "faction": "nbn",
   "subtypes": [
     "sysop"
@@ -15,5 +13,12 @@
   "installCost": 2,
   "rezCost": 2,
   "trashCost": 5,
-  "unique": true
+  "unique": true,
+  "onAgendaScoredFromThisServer": {
+    "op": "do",
+    "action": {
+      "kind": "may_install_from_hq_ignore_costs_then_place_advancements",
+      "amount": 1
+    }
+  }
 }
