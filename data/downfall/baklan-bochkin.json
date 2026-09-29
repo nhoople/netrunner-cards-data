@@ -5,12 +5,50 @@
   "nrdbCode": "26017",
   "type": "resource",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: The first time you encounter a piece of ice during each run, place 1 power counter on this resource. [trash], X hosted power counters: Derez the ice you are encountering if its strength is X or less. Take 1 tag."
-  ],
+  "unsupported": [],
   "subtypes": [
     "connection"
   ],
   "installCost": 2,
-  "unique": true
+  "unique": true,
+  "onFirstEncounterEachRun": {
+    "op": "do",
+    "action": {
+      "kind": "add_power_counter",
+      "amount": 1
+    }
+  },
+  "paidAbilities": [
+    {
+      "id": "baklan-derez",
+      "label": "[trash], X power: Derez encountering ice if strength ≤ X; take 1 tag",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "trashSelf": true,
+        "powerCountersEqualEncounterStrength": true
+      },
+      "windows": [
+        "encounter_paw"
+      ],
+      "effect": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "derez_encounter_ice"
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "give_tags",
+              "amount": 1
+            }
+          }
+        ]
+      }
+    }
+  ]
 }

@@ -1023,6 +1023,139 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    # --- v1.54.0 G-slice ---
+
+    if cid == "project-yagi-uda":
+        return base(
+            c,
+            onScore={
+                "op": "do",
+                "action": {
+                    "kind": "add_agenda_counters_from_overadvance",
+                    "past": 3,
+                },
+            },
+            paidAbilities=[
+                {
+                    "id": "yagi-swap",
+                    "label": (
+                        "Hosted agenda counter: Swap 1 HQ card with 1 card "
+                        "in the root of or protecting the attacked server; "
+                        "Runner may jack out"
+                    ),
+                    "clickCost": 0,
+                    "creditCost": 0,
+                    "cost": {"agendaCounters": 1},
+                    "windows": [
+                        "approach_paw",
+                        "encounter_paw",
+                        "approach_server_paw",
+                    ],
+                    "requireDuringRun": True,
+                    "effect": {
+                        "op": "seq",
+                        "effects": [
+                            {
+                                "op": "do",
+                                "action": {
+                                    "kind": "yagi_swap_hq_with_attacked_root_or_ice",
+                                },
+                            },
+                            {
+                                "op": "do",
+                                "action": {"kind": "offer_jack_out"},
+                            },
+                        ],
+                    },
+                }
+            ],
+            unsupported=[],
+        )
+
+    if cid == "architect-deployment-test":
+        return base(
+            c,
+            onScore={
+                "op": "do",
+                "action": {
+                    "kind": "look_top_n_rd_may_install_and_rez_ignore_costs",
+                    "n": 5,
+                },
+            },
+            unsupported=[],
+        )
+
+    if cid == "daily-quest":
+        return base(
+            c,
+            rezOnlyDuringCorpTurn=True,
+            onSuccessfulRun=gain("runner", 2),
+            onTurnBegin={
+                "op": "if",
+                "cond": {"op": "no_successful_run_on_host_server_last_turn"},
+                "then": gain("corp", 3),
+            },
+            unsupported=[],
+        )
+
+    if cid == "baklan-bochkin":
+        return base(
+            c,
+            onFirstEncounterEachRun={
+                "op": "do",
+                "action": {"kind": "add_power_counter", "amount": 1},
+            },
+            paidAbilities=[
+                {
+                    "id": "baklan-derez",
+                    "label": (
+                        "[trash], X power: Derez encountering ice if "
+                        "strength ≤ X; take 1 tag"
+                    ),
+                    "clickCost": 0,
+                    "creditCost": 0,
+                    "cost": {
+                        "trashSelf": True,
+                        "powerCountersEqualEncounterStrength": True,
+                    },
+                    "windows": ["encounter_paw"],
+                    "effect": {
+                        "op": "seq",
+                        "effects": [
+                            {
+                                "op": "do",
+                                "action": {"kind": "derez_encounter_ice"},
+                            },
+                            {
+                                "op": "do",
+                                "action": {
+                                    "kind": "give_tags",
+                                    "amount": 1,
+                                },
+                            },
+                        ],
+                    },
+                }
+            ],
+            unsupported=[],
+        )
+
+    if cid == "masterwork-v37":
+        return base(
+            c,
+            muBonus=1,
+            onFirstHardwareInstallEachTurn=draw("runner", 1),
+            onRunBegin={
+                "op": "do",
+                "action": {
+                    "kind": "may_install_from_grip",
+                    "types": ["hardware"],
+                    "discount": -1,
+                },
+            },
+            unsupported=[],
+        )
+
     # Fail closed — honest unsupported note for the remainder.
     card = base(c)
     card["unsupported"] = [f"Full text not yet mapped to IR: {plain[:240]}"]
@@ -1063,7 +1196,7 @@ def main():
         "Null Signal Downfall (NRDB pack df) — Ashes set 1 of 2; legacy "
         "backwards wave before Uprising / System Gateway. Skip Magnum Opus "
         f"Reprint (mor). In-progress: {full} cards fully mapped, {partial} "
-        "with unsupported notes (F-slice v1.53.0)."
+        "with unsupported notes (G-slice v1.54.0)."
     )
     manifest = {
         "pack": WAVE,

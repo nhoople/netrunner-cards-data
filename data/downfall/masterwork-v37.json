@@ -5,12 +5,29 @@
   "nrdbCode": "26015",
   "type": "hardware",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: +1[mu] The first time each turn you install a piece of hardware, draw 1 card. Whenever a run begins, you may install 1 piece of hardware from your grip, paying 1[credit] more. Limit 1 console per player."
-  ],
+  "unsupported": [],
   "subtypes": [
     "console"
   ],
   "installCost": 2,
-  "unique": true
+  "unique": true,
+  "muBonus": 1,
+  "onFirstHardwareInstallEachTurn": {
+    "op": "do",
+    "action": {
+      "kind": "draw",
+      "side": "runner",
+      "amount": 1
+    }
+  },
+  "onRunBegin": {
+    "op": "do",
+    "action": {
+      "kind": "may_install_from_grip",
+      "types": [
+        "hardware"
+      ],
+      "discount": -1
+    }
+  }
 }

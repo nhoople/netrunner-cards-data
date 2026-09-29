@@ -5,12 +5,17 @@
   "nrdbCode": "26032",
   "type": "agenda",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: When you score this agenda, look at the top 5 cards of R&D. You may install and rez 1 of those cards, ignoring all costs."
-  ],
+  "unsupported": [],
   "subtypes": [
     "research"
   ],
   "advancementRequirement": 4,
-  "agendaPoints": 2
+  "agendaPoints": 2,
+  "onScore": {
+    "op": "do",
+    "action": {
+      "kind": "look_top_n_rd_may_install_and_rez_ignore_costs",
+      "n": 5
+    }
+  }
 }

@@ -414,6 +414,10 @@
                 "minimum": 1,
                 "description": "Pay this many credits per subroutine on the encountered ice (Physarum Entangler)."
               },
+              "powerCountersEqualEncounterStrength": {
+                "type": "boolean",
+                "description": "Spend hosted power counters equal to the effective strength of the ice being encountered (Baklan Bochkin)."
+              },
               "trashInstalledProgramUnlessOwnInstalledTrashedThisTurn": {
                 "type": "boolean",
                 "description": "Simulchip: trash 1 installed program as an additional cost unless the Runner already trashed an installed card this turn."
@@ -634,6 +638,14 @@
     "onFirstProgramInstallEachTurn": {
       "type": "object",
       "description": "Effect IR the first time each turn the Runner installs a program (LilyPAD)."
+    },
+    "onFirstHardwareInstallEachTurn": {
+      "type": "object",
+      "description": "Effect IR the first time each turn the Runner installs a piece of hardware (Masterwork v37)."
+    },
+    "onFirstEncounterEachRun": {
+      "type": "object",
+      "description": "Effect IR the first time each run the Runner encounters a piece of ice (Baklan Bochkin)."
     },
     "onFirstCorpCardTrashEachTurn": {
       "type": "object",
