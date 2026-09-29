@@ -5,14 +5,58 @@
   "nrdbCode": "25127",
   "type": "asset",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: Contract Killer can be advanced. If there are at least 2 advancement tokens on Contract Killer, it gains: \"[click], [trash]: Trash a connection or do 2 meat damage.\""
-  ],
+  "unsupported": [],
   "faction": "weyland-consortium",
   "subtypes": [
     "hostile"
   ],
   "installCost": 2,
   "rezCost": 2,
-  "trashCost": 3
+  "trashCost": 3,
+  "canAdvance": true,
+  "paidAbilities": [
+    {
+      "id": "contract-killer-fire",
+      "label": "Trash Contract Killer: trash a connection or do 2 meat damage (needs 2 advancements)",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1,
+        "trashSelf": true
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "requiresAdvancements": 2,
+      "effect": {
+        "op": "choose",
+        "chooser": "corp",
+        "options": [
+          {
+            "id": "trash-connection",
+            "label": "Trash a connection",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "trash_installed_resource_with_subtype",
+                "subtype": "connection",
+                "pick": "choose"
+              }
+            }
+          },
+          {
+            "id": "meat-2",
+            "label": "Do 2 meat damage",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "meat_damage",
+                "amount": 2
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
 }

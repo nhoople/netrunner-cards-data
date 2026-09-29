@@ -5,11 +5,15 @@
   "nrdbCode": "25123",
   "type": "identity",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: When your turn begins, you may add 1 rezzed card to HQ and gain credits equal to its rez cost."
-  ],
+  "unsupported": [],
   "faction": "weyland-consortium",
   "subtypes": [
     "corp"
-  ]
+  ],
+  "onTurnBegin": {
+    "op": "do",
+    "action": {
+      "kind": "may_return_rezzed_to_hq_gain_rez_cost"
+    }
+  }
 }

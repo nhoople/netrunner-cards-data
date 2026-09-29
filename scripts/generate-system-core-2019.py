@@ -1461,6 +1461,98 @@ def map_card(c: dict) -> dict | None:
             unsupported=[],
         )
 
+    # --- v1.73.0 N-slice: reuse + new Effect IR / continuous fields ---
+
+    if cid == "contract-killer":
+        return base(
+            c,
+            canAdvance=True,
+            paidAbilities=[
+                {
+                    "id": "contract-killer-fire",
+                    "label": "Trash Contract Killer: trash a connection or do 2 meat damage (needs 2 advancements)",
+                    "clickCost": 1,
+                    "creditCost": 0,
+                    "cost": {"clicks": 1, "trashSelf": True},
+                    "windows": ["corp_action_paw"],
+                    "requiresAdvancements": 2,
+                    "effect": {
+                        "op": "choose",
+                        "chooser": "corp",
+                        "options": [
+                            {
+                                "id": "trash-connection",
+                                "label": "Trash a connection",
+                                "effect": {
+                                    "op": "do",
+                                    "action": {
+                                        "kind": "trash_installed_resource_with_subtype",
+                                        "subtype": "connection",
+                                        "pick": "choose",
+                                    },
+                                },
+                            },
+                            {
+                                "id": "meat-2",
+                                "label": "Do 2 meat damage",
+                                "effect": {
+                                    "op": "do",
+                                    "action": {
+                                        "kind": "meat_damage",
+                                        "amount": 2,
+                                    },
+                                },
+                            },
+                        ],
+                    },
+                }
+            ],
+            unsupported=[],
+        )
+
+    # Queen's Gambit: place 0..max adv on 1 unrezzed remote-root card; gain
+    # creditsPer each; that card cannot be accessed for the remainder of the turn.
+    if cid == "queens-gambit":
+        return base(
+            c,
+            playAdditionalClick=True,
+            onPlay={
+                "op": "do",
+                "action": {
+                    "kind": "queens_gambit_place_up_to",
+                    "max": 3,
+                    "creditsPer": 2,
+                },
+            },
+            unsupported=[],
+        )
+
+    if cid == "blue-sun-powering-the-future":
+        return base(
+            c,
+            onTurnBegin={
+                "op": "do",
+                "action": {
+                    "kind": "may_return_rezzed_to_hq_gain_rez_cost",
+                },
+            },
+            unsupported=[],
+        )
+
+    if cid == "mason-bellamy":
+        return base(
+            c,
+            loseClickOnProtectingIceEncounterEndIfBroke=True,
+            unsupported=[],
+        )
+
+    if cid == "jinteki-replicating-perfection":
+        return base(
+            c,
+            cannotRunRemotesUntilCentralRunThisTurn=True,
+            unsupported=[],
+        )
+
     card = base(c)
     card["unsupported"] = [
         f"Full text not yet mapped to IR: {plain[:200]}"
@@ -1608,6 +1700,13 @@ def main():
             "successful-field-test",
             "hostage",
             "tinkering",
+        ],
+        "nSliceClears": [
+            "contract-killer",
+            "queens-gambit",
+            "blue-sun-powering-the-future",
+            "mason-bellamy",
+            "jinteki-replicating-perfection",
         ],
     }
     (OUT / "_manifest.json").write_text(

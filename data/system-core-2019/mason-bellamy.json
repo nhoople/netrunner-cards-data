@@ -5,9 +5,7 @@
   "nrdbCode": "25083",
   "type": "upgrade",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: Whenever an encounter with a piece of ice protecting this server ends, if the Runner broke at least 1 subroutine during that encounter, they lose [click]."
-  ],
+  "unsupported": [],
   "faction": "haas-bioroid",
   "subtypes": [
     "sysop"
@@ -15,5 +13,6 @@
   "installCost": 2,
   "rezCost": 2,
   "trashCost": 3,
-  "unique": true
+  "unique": true,
+  "loseClickOnProtectingIceEncounterEndIfBroke": true
 }
