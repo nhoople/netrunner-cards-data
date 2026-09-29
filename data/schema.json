@@ -1738,6 +1738,10 @@
     "forbidScoreAgendaInstalledThisTurn": {
       "type": "boolean"
     },
+    "cannotScoreIfInstalledThisTurn": {
+      "type": "boolean",
+      "description": "This agenda cannot be scored if it was installed this turn (Vulnerability Audit). Self-only — unlike Clot's forbidScoreAgendaInstalledThisTurn."
+    },
     "trashOnVirusPurge": {
       "type": "boolean"
     },

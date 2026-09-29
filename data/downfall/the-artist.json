@@ -5,12 +5,57 @@
   "nrdbCode": "26027",
   "type": "resource",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Once per turn → [click]: Gain 2[credit]. Once per turn → [click]: Install 1 program or piece of hardware from your grip, paying 1[credit] less."
-  ],
+  "unsupported": [],
   "subtypes": [
     "connection"
   ],
   "installCost": 4,
-  "unique": true
+  "unique": true,
+  "paidAbilities": [
+    {
+      "id": "the-artist-gain",
+      "label": "[click]: Gain 2¢",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "oncePerTurn": true,
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "runner",
+          "amount": 2
+        }
+      }
+    },
+    {
+      "id": "the-artist-install",
+      "label": "[click]: Install program or hardware, paying 1¢ less",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "oncePerTurn": true,
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "install_from_grip_discount",
+          "types": [
+            "program",
+            "hardware"
+          ],
+          "discount": 1
+        }
+      }
+    }
+  ]
 }

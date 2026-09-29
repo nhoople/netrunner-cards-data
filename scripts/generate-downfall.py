@@ -320,6 +320,136 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    # --- v1.49.0 B-slice ---
+
+    if cid == "vulnerability-audit":
+        return base(
+            c,
+            cannotScoreIfInstalledThisTurn=True,
+            unsupported=[],
+        )
+
+    if cid == "calvin-b4l3y":
+        return base(
+            c,
+            paidAbilities=[
+                {
+                    "id": "calvin-b4l3y-draw",
+                    "label": "[click]: Draw 2 cards",
+                    "clickCost": 1,
+                    "creditCost": 0,
+                    "cost": {"clicks": 1},
+                    "windows": ["corp_action_paw"],
+                    "oncePerTurn": True,
+                    "effect": draw("corp", 2),
+                }
+            ],
+            onTrash=may_draw("corp", 2),
+            unsupported=[],
+        )
+
+    if cid == "remastered-edition":
+        return base(
+            c,
+            onScore={
+                "op": "do",
+                "action": {"kind": "add_agenda_counter", "amount": 1},
+            },
+            paidAbilities=[
+                {
+                    "id": "remastered-edition-advance",
+                    "label": "Hosted agenda counter: Place 1 advancement counter",
+                    "clickCost": 0,
+                    "creditCost": 0,
+                    "cost": {"agendaCounters": 1},
+                    "windows": ["corp_action_paw"],
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "place_advancements",
+                            "amount": 1,
+                        },
+                    },
+                }
+            ],
+            unsupported=[],
+        )
+
+    if cid == "roughneck-repair-squad":
+        return base(
+            c,
+            paidAbilities=[
+                {
+                    "id": "roughneck-repair-squad-main",
+                    "label": "[click][click][click]: Gain 6¢. You may remove 1 bad publicity.",
+                    "clickCost": 3,
+                    "creditCost": 0,
+                    "cost": {"clicks": 3},
+                    "windows": ["corp_action_paw"],
+                    "effect": {
+                        "op": "seq",
+                        "effects": [
+                            gain("corp", 6),
+                            {
+                                "op": "choose",
+                                "chooser": "corp",
+                                "options": [
+                                    {
+                                        "id": "remove-bp",
+                                        "label": "Remove 1 bad publicity",
+                                        "effect": {
+                                            "op": "do",
+                                            "action": {
+                                                "kind": "remove_bad_publicity",
+                                                "amount": 1,
+                                            },
+                                        },
+                                    },
+                                    decline("corp"),
+                                ],
+                            },
+                        ],
+                    },
+                }
+            ],
+            unsupported=[],
+        )
+
+    if cid == "the-artist":
+        return base(
+            c,
+            paidAbilities=[
+                {
+                    "id": "the-artist-gain",
+                    "label": "[click]: Gain 2¢",
+                    "clickCost": 1,
+                    "creditCost": 0,
+                    "cost": {"clicks": 1},
+                    "windows": ["runner_action_paw"],
+                    "oncePerTurn": True,
+                    "effect": gain("runner", 2),
+                },
+                {
+                    "id": "the-artist-install",
+                    "label": "[click]: Install program or hardware, paying 1¢ less",
+                    "clickCost": 1,
+                    "creditCost": 0,
+                    "cost": {"clicks": 1},
+                    "windows": ["runner_action_paw"],
+                    "oncePerTurn": True,
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "install_from_grip_discount",
+                            "types": ["program", "hardware"],
+                            "discount": 1,
+                        },
+                    },
+                },
+            ],
+            unsupported=[],
+        )
+
     # Fail closed — honest unsupported note for the remainder.
     card = base(c)
     card["unsupported"] = [f"Full text not yet mapped to IR: {plain[:240]}"]
@@ -360,7 +490,7 @@ def main():
         "Null Signal Downfall (NRDB pack df) — Ashes set 1 of 2; legacy "
         "backwards wave before Uprising / System Gateway. Skip Magnum Opus "
         f"Reprint (mor). In-progress: {full} cards fully mapped, {partial} "
-        "with unsupported notes (A-slice v1.48.0)."
+        "with unsupported notes (B-slice v1.49.0)."
     )
     manifest = {
         "pack": WAVE,
