@@ -1,0 +1,17 @@
+{
+  "id": "cybertrooper-talut",
+  "title": "Cybertrooper Talut",
+  "wave": "uprising",
+  "nrdbCode": "26091",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: +1[link] Whenever you install a non-AI icebreaker, that icebreaker gets +2 strength for the remainder of the turn."
+  ],
+  "subtypes": [
+    "connection",
+    "virtual"
+  ],
+  "installCost": 2,
+  "unique": true
+}

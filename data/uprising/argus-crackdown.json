@@ -1,0 +1,17 @@
+{
+  "id": "argus-crackdown",
+  "title": "Argus Crackdown",
+  "wave": "uprising",
+  "nrdbCode": "26126",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: Play only if there is no active lockdown. This operation is not trashed until your next turn begins. Whenever the Runner makes a successful run on a server protected by ice, do 2 meat damage."
+  ],
+  "subtypes": [
+    "lockdown",
+    "gray ops"
+  ],
+  "playCost": 0,
+  "trashCost": 4
+}

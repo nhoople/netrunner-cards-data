@@ -1,0 +1,16 @@
+{
+  "id": "cyberdex-sandbox",
+  "title": "Cyberdex Sandbox",
+  "wave": "uprising",
+  "nrdbCode": "26128",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: The first time each turn you purge virus counters, gain 4[credit]. When you score this agenda, you may purge virus counters."
+  ],
+  "subtypes": [
+    "security"
+  ],
+  "advancementRequirement": 4,
+  "agendaPoints": 2
+}

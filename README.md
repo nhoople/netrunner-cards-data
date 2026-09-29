@@ -16,6 +16,7 @@ Files under [`data/`](data/) are the API. Clone the repo or fetch a **tagged** r
 | --- | --- |
 | [`data/schema.json`](data/schema.json) | JSON Schema for card definitions |
 | [`data/pool.json`](data/pool.json) | Declared supported corpus / release order |
+| [`data/uprising/`](data/uprising/) | Uprising (NRDB `ur`) — **in-progress** (legacy backwards) |
 | [`data/system-gateway/`](data/system-gateway/) | System Gateway (NRDB `sg`) |
 | [`data/system-update-2021/`](data/system-update-2021/) | System Update 2021 (NRDB `su21`) |
 | [`data/midnight-sun/`](data/midnight-sun/) | Midnight Sun (NRDB `ms`) |
@@ -26,7 +27,7 @@ Files under [`data/`](data/) are the API. Clone the repo or fetch a **tagged** r
 | [`data/vantage-point/`](data/vantage-point/) | Vantage Point (NRDB `vp`) — **supported** |
 | [`data/fixtures/`](data/fixtures/) | CR-example / host-test cards outside corpus order (e.g. Plascrete) |
 
-**Corpus order:** System Gateway → System Update 2021 → Midnight Sun → Parhelion → The Automata Initiative → Rebellion Without Rehearsal → Elevation → Vantage Point → later releases.
+**Corpus order:** Uprising (legacy backwards, in-progress) → System Gateway → System Update 2021 → Midnight Sun → Parhelion → The Automata Initiative → Rebellion Without Rehearsal → Elevation → Vantage Point → later releases.
 
 Partial cards list unimplemented clauses in an `unsupported` array — never silent wrong behavior. A wave marked `supported` in [`data/pool.json`](data/pool.json) must keep those arrays empty unless the card is listed with a reason in [`data/supported-unsupported-allowlist.json`](data/supported-unsupported-allowlist.json) (enforced by `scripts/validate-cards.py`). See [`CONTRIBUTING.md`](CONTRIBUTING.md) for the CR gate PR template.
 
@@ -36,7 +37,8 @@ Match this dataset and [netrunner-engine](https://github.com/nhoople/netrunner-e
 
 | Pairing | cards-data | engine |
 |---------|------------|--------|
-| **Current** | [`v1.34.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.34.0) | engine same-semver pin `v1.34.0` |
+| **Current** | [`v1.35.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.35.0) | engine same-semver pin `v1.35.0` |
+| Post-VP maintenance | [`v1.34.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.34.0) | [`v1.34.0`](https://github.com/nhoople/netrunner-engine/releases/tag/v1.34.0) |
 | Vantage Point milestone | [`v1.33.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.33.0) | [`v1.33.0`](https://github.com/nhoople/netrunner-engine/releases/tag/v1.33.0) |
 | Elevation milestone | [`v1.12.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.12.0) | [`v1.12.0`](https://github.com/nhoople/netrunner-engine/releases/tag/v1.12.0) |
 | RWR milestone | [`v1.00.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.00.0) | [`v1.00.0`](https://github.com/nhoople/netrunner-engine/releases/tag/v1.00.0) |
@@ -57,14 +59,14 @@ npm run demo:library  # createGame → queryLegality → applyIntent → getPubl
 Example raw URL base (match the **current** pairing tag):
 
 ```text
-https://raw.githubusercontent.com/nhoople/netrunner-cards-data/v1.34.0/data
+https://raw.githubusercontent.com/nhoople/netrunner-cards-data/v1.35.0/data
 ```
 
 JavaScript — load the pool and one card from a tagged release:
 
 ```js
 const base =
-  "https://raw.githubusercontent.com/nhoople/netrunner-cards-data/v1.34.0/data";
+  "https://raw.githubusercontent.com/nhoople/netrunner-cards-data/v1.35.0/data";
 const pool = await fetch(`${base}/pool.json`).then((r) => r.json());
 const marjanah = await fetch(`${base}/system-gateway/marjanah.json`).then((r) =>
   r.json(),
@@ -76,6 +78,7 @@ console.log(pool.corpusOrder, marjanah.title);
 
 | Release | Count | Notes |
 |---------|------:|-------|
+| uprising | 65 | Null Signal Uprising (`ur`); Ashes set 2; **in-progress** (kickoff `v1.35.0`; **3/65** mapped; `urbp` absorbed) |
 | system-gateway | 77 | Null Signal System Gateway (fully supported) |
 | system-update-2021 | 82 | Null Signal System Update 2021 (fully supported) |
 | midnight-sun | 65 | Null Signal Midnight Sun (`ms`); `msbp` titles absorbed; fully supported |
@@ -87,13 +90,13 @@ console.log(pool.corpusOrder, marjanah.title);
 
 Synthetic stubs and early wave1/wave2 dirs were removed in `v0.2.0`. Reprints that previously lived only under those waves now ship under their Null Signal release directories.
 
-Parhelion is fully supported (wave gate `v0.71.0`). The Automata Initiative is fully supported (wave gate `v0.86.0`). Rebellion Without Rehearsal is fully supported (wave gate `v1.00.0`). Elevation is fully supported (wave gate `v1.12.0`). Vantage Point is fully supported (wave gate `v1.33.0`).
+Parhelion is fully supported (wave gate `v0.71.0`). The Automata Initiative is fully supported (wave gate `v0.86.0`). Rebellion Without Rehearsal is fully supported (wave gate `v1.00.0`). Elevation is fully supported (wave gate `v1.12.0`). Vantage Point is fully supported (wave gate `v1.33.0`). Uprising is the first **legacy backwards** wave (pre-Gateway); kickoff `v1.35.0` at **3/65**.
 
-**Next:** wait on the next Null Signal pack (chronological order after Vantage Point) or a CR bump. Pair every clear with the engine CR adherence gate; at set-complete, run interaction smoke (engine `tests/confidence-*.test.ts` covers the Gateway→VP one-time pass; re-sample for the next wave).
+**Next:** continue Uprising clears toward `supported`. Further backwards after Uprising: Downfall (`df`, 65; skip/absorb Magnum Opus Reprint). Forward after VP still waits on a new NSG pack or CR bump. Pair every clear with the engine CR adherence gate; at set-complete, run interaction smoke.
 
 ## Versioning
 
-Tag dataset releases as `vMAJOR.MINOR.PATCH` (e.g. `v1.34.0`). Bump when card JSON, pool, or schema that consumers rely on changes. Keep the README pairing line in sync after each pin bump (no new tag for README-only).
+Tag dataset releases as `vMAJOR.MINOR.PATCH` (e.g. `v1.35.0`). Bump when card JSON, pool, or schema that consumers rely on changes. Keep the README pairing line in sync after each pin bump (no new tag for README-only).
 
 ## Catalog extract source
 
@@ -106,7 +109,7 @@ Pack metadata for generate/extract scripts comes from the pinned [Null-Signal-Ga
 
 ```bash
 python3 scripts/nrdb_catalog.py show-pin
-python3 scripts/nrdb_catalog.py fetch sg su21 ms msbp ph tai rwr elev
+python3 scripts/nrdb_catalog.py fetch ur sg su21 ms msbp ph tai rwr elev vp
 # then: python3 scripts/generate-<set>.py
 ```
 

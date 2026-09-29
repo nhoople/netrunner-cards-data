@@ -1,0 +1,13 @@
+{
+  "id": "boomerang",
+  "title": "Boomerang",
+  "wave": "uprising",
+  "nrdbCode": "26075",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: When you install this hardware, choose 1 installed piece of ice. Use this hardware only during encounters with that ice. [trash]: Break up to 2 subroutines. When this run ends, if it was successful, you may shuffle 1 copy of Boomerang from "
+  ],
+  "installCost": 2,
+  "unique": true
+}

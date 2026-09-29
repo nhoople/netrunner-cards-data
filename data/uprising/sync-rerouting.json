@@ -1,0 +1,16 @@
+{
+  "id": "sync-rerouting",
+  "title": "SYNC Rerouting",
+  "wave": "uprising",
+  "nrdbCode": "26118",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: Play only if there is no active lockdown. This operation is not trashed until your next turn begins. Whenever a run begins, give the Runner 1 tag unless they pay 4[credit]."
+  ],
+  "subtypes": [
+    "lockdown"
+  ],
+  "playCost": 0,
+  "trashCost": 3
+}

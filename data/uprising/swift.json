@@ -1,0 +1,17 @@
+{
+  "id": "swift",
+  "title": "Swift",
+  "wave": "uprising",
+  "nrdbCode": "26078",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: +1[mu] The first time each turn you play a run event, gain [click]. Limit 1 console per player."
+  ],
+  "subtypes": [
+    "console",
+    "vehicle"
+  ],
+  "installCost": 2,
+  "unique": true
+}

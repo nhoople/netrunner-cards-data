@@ -1,0 +1,18 @@
+{
+  "id": "afterimage",
+  "title": "Afterimage",
+  "wave": "uprising",
+  "nrdbCode": "26079",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: Once per turn → When you encounter a sentry, you may pay 2[credit] to bypass it. Spend credits only from stealth cards to use this ability. Interface → 1[credit]: Break up to 2 sentry subroutines. 1[credit]: +2 strength. Spend credits only "
+  ],
+  "subtypes": [
+    "icebreaker",
+    "killer"
+  ],
+  "installCost": 4,
+  "strength": 2,
+  "memoryCost": 1
+}

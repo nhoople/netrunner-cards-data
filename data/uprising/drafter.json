@@ -1,0 +1,17 @@
+{
+  "id": "drafter",
+  "title": "Drafter",
+  "wave": "uprising",
+  "nrdbCode": "26101",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: [subroutine] You may add 1 card from Archives to HQ. [subroutine] You may install 1 card from Archives or HQ, ignoring all costs."
+  ],
+  "subtypes": [
+    "sentry"
+  ],
+  "installCost": 3,
+  "rezCost": 3,
+  "strength": 3
+}

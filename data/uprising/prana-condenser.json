@@ -1,0 +1,15 @@
+{
+  "id": "prana-condenser",
+  "title": "Prāna Condenser",
+  "wave": "uprising",
+  "nrdbCode": "26107",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: [interrupt] → Whenever you would do 1 or more net damage, you may prevent 1 net damage. If you do, place 1 power counter on this asset and gain 3[credit]. [click][click], [trash]: Do 1 net damage for each hosted power counter."
+  ],
+  "installCost": 1,
+  "rezCost": 1,
+  "trashCost": 4,
+  "unique": true
+}

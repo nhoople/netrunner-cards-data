@@ -1,0 +1,18 @@
+{
+  "id": "engram-flush",
+  "title": "Engram Flush",
+  "wave": "uprising",
+  "nrdbCode": "26108",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: When the Runner encounters this ice, choose a card type. For the remainder of the encounter, whenever you reveal the grip with a subroutine on this ice, you may trash 1 revealed card of the chosen type. [subroutine] Reveal the grip. [subrou"
+  ],
+  "subtypes": [
+    "code gate",
+    "observer"
+  ],
+  "installCost": 2,
+  "rezCost": 2,
+  "strength": 5
+}

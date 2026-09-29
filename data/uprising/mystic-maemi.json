@@ -1,0 +1,17 @@
+{
+  "id": "mystic-maemi",
+  "title": "Mystic Maemi",
+  "wave": "uprising",
+  "nrdbCode": "26072",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: When your turn begins and whenever you steal an agenda, place 1[credit] on this resource. You can spend hosted credits to play events. When your turn ends, if there are 3 or more hosted credits, you must trash 1 card from your grip at rando"
+  ],
+  "subtypes": [
+    "companion",
+    "virtual"
+  ],
+  "installCost": 1,
+  "unique": true
+}

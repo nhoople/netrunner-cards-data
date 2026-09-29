@@ -1,0 +1,12 @@
+{
+  "id": "harmony-ar-therapy",
+  "title": "Harmony AR Therapy",
+  "wave": "uprising",
+  "nrdbCode": "26083",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: Choose up to 5 cards with different names in your heap. Shuffle those cards into your stack. Remove this event from the game."
+  ],
+  "playCost": 2
+}

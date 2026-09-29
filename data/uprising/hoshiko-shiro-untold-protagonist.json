@@ -1,0 +1,15 @@
+{
+  "id": "hoshiko-shiro-untold-protagonist",
+  "title": "Hoshiko Shiro: Untold Protagonist",
+  "wave": "uprising",
+  "nrdbCode": "26066",
+  "type": "identity",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: When your turn ends, if you accessed a card this turn, gain 2[credit] and flip this identity. Flip side: When your turn begins, draw 1 card and lose 1[credit]. When your turn ends, if you did not access any cards this turn, flip this identi"
+  ],
+  "subtypes": [
+    "natural"
+  ],
+  "link": 0
+}

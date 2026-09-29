@@ -1,0 +1,19 @@
+{
+  "id": "winchester",
+  "title": "Winchester",
+  "wave": "uprising",
+  "nrdbCode": "26125",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: [subroutine] Trace[4]. If successful, trash 1 installed program. [subroutine] Trace[3]. If successful, trash 1 installed piece of hardware. While this ice is protecting HQ, it gains “[subroutine] Trace[3]. If successful, end the run.” after"
+  ],
+  "subtypes": [
+    "sentry",
+    "destroyer",
+    "tracer"
+  ],
+  "installCost": 4,
+  "rezCost": 4,
+  "strength": 4
+}

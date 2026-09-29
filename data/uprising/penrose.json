@@ -1,0 +1,19 @@
+{
+  "id": "penrose",
+  "title": "Penrose",
+  "wave": "uprising",
+  "nrdbCode": "26089",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: Interface → 1[credit]: Break 1 barrier subroutine. Use this ability only if this program was installed this turn. Interface → 1[credit]: Break 1 code gate subroutine. 1[credit]: +3 strength. Spend credits only from stealth cards to use this"
+  ],
+  "subtypes": [
+    "icebreaker",
+    "decoder",
+    "fracter"
+  ],
+  "installCost": 3,
+  "strength": 2,
+  "memoryCost": 1
+}

@@ -1,0 +1,17 @@
+{
+  "id": "the-back",
+  "title": "The Back",
+  "wave": "uprising",
+  "nrdbCode": "26082",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: The first time each turn you use a piece of hardware during a run, place 1 power counter on this resource. [click], remove this resource from the game: For each hosted power counter, choose up to 2 cards in your heap with [trash] abilities."
+  ],
+  "subtypes": [
+    "job",
+    "location"
+  ],
+  "installCost": 1,
+  "unique": true
+}

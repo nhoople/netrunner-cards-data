@@ -1,0 +1,18 @@
+{
+  "id": "euler",
+  "title": "Euler",
+  "wave": "uprising",
+  "nrdbCode": "26087",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: Interface → 0[credit]: Break 1 code gate subroutine. Use this ability only if this program was installed this turn. Interface → 2[credit]: Break up to 2 code gate subroutines. 1[credit]: +1 strength."
+  ],
+  "subtypes": [
+    "icebreaker",
+    "decoder"
+  ],
+  "installCost": 2,
+  "strength": 2,
+  "memoryCost": 1
+}

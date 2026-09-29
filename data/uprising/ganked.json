@@ -1,0 +1,17 @@
+{
+  "id": "ganked",
+  "title": "Ganked!",
+  "wave": "uprising",
+  "nrdbCode": "26119",
+  "type": "upgrade",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: While the Runner is accessing this upgrade in R&D, they must reveal it. When the Runner accesses this upgrade, you may trash it to choose a rezzed piece of ice protecting this server. The Runner encounters that ice."
+  ],
+  "subtypes": [
+    "ambush"
+  ],
+  "installCost": 0,
+  "rezCost": 0,
+  "trashCost": 3
+}

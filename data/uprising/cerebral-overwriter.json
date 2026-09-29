@@ -1,0 +1,17 @@
+{
+  "id": "cerebral-overwriter",
+  "title": "Cerebral Overwriter",
+  "wave": "uprising",
+  "nrdbCode": "26099",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: You can advance this asset. When the Runner accesses this asset while it is installed, you may pay 3[credit] to do X core damage. X is equal to the number of hosted advancement counters."
+  ],
+  "subtypes": [
+    "ambush"
+  ],
+  "installCost": 0,
+  "rezCost": 0,
+  "trashCost": 0
+}

@@ -1,0 +1,39 @@
+{
+  "id": "bass-ch1r180g4",
+  "title": "Bass CH1R180G4",
+  "wave": "uprising",
+  "nrdbCode": "26098",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "subtypes": [
+    "bioroid"
+  ],
+  "installCost": 3,
+  "rezCost": 3,
+  "trashCost": 4,
+  "unique": true,
+  "paidAbilities": [
+    {
+      "id": "bass-ch1r180g4-clicks",
+      "label": "[click], [trash]: Gain [click][click]",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1,
+        "trashSelf": true
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "gain_clicks",
+          "side": "corp",
+          "amount": 2
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "project-vacheron",
+  "title": "Project Vacheron",
+  "wave": "uprising",
+  "nrdbCode": "26097",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: [interrupt] → When this agenda would be added to the Runnerʼs score area from anywhere except Archives, instead it is added to their score area with 4 hosted agenda counters. While this agenda is in the Runnerʼs score area with 1 or more ho"
+  ],
+  "subtypes": [
+    "research"
+  ],
+  "advancementRequirement": 5,
+  "agendaPoints": 3
+}

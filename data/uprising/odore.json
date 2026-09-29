@@ -1,0 +1,18 @@
+{
+  "id": "odore",
+  "title": "Odore",
+  "wave": "uprising",
+  "nrdbCode": "26071",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: Interface → 2[credit]: Break any number of sentry subroutines. Interface → 0[credit]: Break 1 sentry subroutine. Use this ability only if you have 3 or more installed virtual resources. 3[credit]: +3 strength."
+  ],
+  "subtypes": [
+    "icebreaker",
+    "killer"
+  ],
+  "installCost": 4,
+  "strength": 0,
+  "memoryCost": 1
+}

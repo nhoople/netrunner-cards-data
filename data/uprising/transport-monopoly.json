@@ -1,0 +1,16 @@
+{
+  "id": "transport-monopoly",
+  "title": "Transport Monopoly",
+  "wave": "uprising",
+  "nrdbCode": "26121",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: When you score this agenda, place 2 agenda counters on it. Once per turn → Hosted agenda counter: This run cannot be declared successful. (This effect does not cause the run to become unsuccessful.) Use this ability only during a run."
+  ],
+  "subtypes": [
+    "initiative"
+  ],
+  "advancementRequirement": 4,
+  "agendaPoints": 2
+}

@@ -1,0 +1,13 @@
+{
+  "id": "self-modifying-code",
+  "title": "Self-modifying Code",
+  "wave": "uprising",
+  "nrdbCode": "26090",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: 2[credit], [trash]: Search your stack for 1 program. Install it. (Shuffle your stack after searching it.)"
+  ],
+  "installCost": 0,
+  "memoryCost": 2
+}
