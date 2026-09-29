@@ -5,12 +5,11 @@
   "nrdbCode": "25040",
   "type": "identity",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: +1[mu]"
-  ],
+  "unsupported": [],
   "faction": "shaper",
   "subtypes": [
     "g-mod"
   ],
-  "link": 0
+  "link": 0,
+  "muBonus": 1
 }

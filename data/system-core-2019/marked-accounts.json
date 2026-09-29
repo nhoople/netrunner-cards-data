@@ -5,14 +5,40 @@
   "nrdbCode": "25110",
   "type": "asset",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: When your turn begins, take 1[credit] from Marked Accounts, if able. [click]: Place 3[credit] from the bank on Marked Accounts."
-  ],
+  "unsupported": [],
   "faction": "nbn",
   "subtypes": [
     "transaction"
   ],
   "installCost": 0,
   "rezCost": 0,
-  "trashCost": 5
+  "trashCost": 5,
+  "onTurnBegin": {
+    "op": "do",
+    "action": {
+      "kind": "take_hosted_credits",
+      "amount": 1
+    }
+  },
+  "paidAbilities": [
+    {
+      "id": "marked-accounts-load",
+      "label": "[click]: Place 3¢ on Marked Accounts",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "place_hosted_credits",
+          "amount": 3
+        }
+      }
+    }
+  ]
 }
