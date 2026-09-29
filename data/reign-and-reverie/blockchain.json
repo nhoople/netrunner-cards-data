@@ -1,0 +1,18 @@
+{
+  "id": "blockchain",
+  "title": "Blockchain",
+  "wave": "reign-and-reverie",
+  "nrdbCode": "22053",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: This ice gains \"[subroutine] Gain 1[credit] and the Runner loses 1[credit].\" before its other subroutines for every 2 faceup transaction operations in Archives. [subroutine] Gain 1[credit] and the Runner loses 1[credit]. [subroutine] End th"
+  ],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "barrier"
+  ],
+  "installCost": 7,
+  "rezCost": 7,
+  "strength": 4
+}

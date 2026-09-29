@@ -1,0 +1,17 @@
+{
+  "id": "hangeki",
+  "title": "Hangeki",
+  "wave": "reign-and-reverie",
+  "nrdbCode": "22040",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: Play only if the Runner trashed a Corp card during their last turn and you have at least 1 installed card. Choose 1 of your installed cards. The Runner may access that card. If they do, remove this operation from the game; otherwise, add th"
+  ],
+  "faction": "jinteki",
+  "subtypes": [
+    "reprisal",
+    "gray ops"
+  ],
+  "playCost": 0
+}

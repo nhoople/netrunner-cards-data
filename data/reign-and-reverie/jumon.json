@@ -1,0 +1,17 @@
+{
+  "id": "jumon",
+  "title": "Jumon",
+  "wave": "reign-and-reverie",
+  "nrdbCode": "22035",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: When your turn ends, place 2 advancement counters on 1 card in the root of a remote server."
+  ],
+  "faction": "jinteki",
+  "subtypes": [
+    "research"
+  ],
+  "advancementRequirement": 6,
+  "agendaPoints": 2
+}

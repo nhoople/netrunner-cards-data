@@ -1,0 +1,18 @@
+{
+  "id": "thunder-art-gallery",
+  "title": "Thunder Art Gallery",
+  "wave": "reign-and-reverie",
+  "nrdbCode": "22013",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: The first time you avoid or remove a tag each turn, you may install a card from your grip, lowering its install cost by 1."
+  ],
+  "faction": "criminal",
+  "subtypes": [
+    "location",
+    "ritzy"
+  ],
+  "installCost": 3,
+  "unique": true
+}

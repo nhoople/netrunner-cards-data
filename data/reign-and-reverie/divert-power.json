@@ -1,0 +1,13 @@
+{
+  "id": "divert-power",
+  "title": "Divert Power",
+  "wave": "reign-and-reverie",
+  "nrdbCode": "22030",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: Derez any number of cards. You may rez a card, lowering its rez cost by 3 for each card that you derezzed this way."
+  ],
+  "faction": "haas-bioroid",
+  "playCost": 2
+}

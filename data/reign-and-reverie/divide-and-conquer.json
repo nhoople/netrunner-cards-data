@@ -1,0 +1,16 @@
+{
+  "id": "divide-and-conquer",
+  "title": "Divide and Conquer",
+  "wave": "reign-and-reverie",
+  "nrdbCode": "22002",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: Run Archives. If successful, after breaching Archives, breach HQ, then breach R&D. You cannot access cards in the root of HQ or R&D during these breaches."
+  ],
+  "faction": "anarch",
+  "subtypes": [
+    "run"
+  ],
+  "playCost": 3
+}

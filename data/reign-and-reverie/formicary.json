@@ -1,0 +1,19 @@
+{
+  "id": "formicary",
+  "title": "Formicary",
+  "wave": "reign-and-reverie",
+  "nrdbCode": "22054",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: Whenever the Runner approaches a server, you may rez this ice. If you do, move this ice to the innermost position protecting the approached server. The Runner moves to this ice and encounters it. [subroutine] End the run unless the Runner s"
+  ],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "sentry",
+    "ap"
+  ],
+  "installCost": 2,
+  "rezCost": 2,
+  "strength": 2
+}

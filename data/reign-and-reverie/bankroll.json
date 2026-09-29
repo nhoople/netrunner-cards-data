@@ -1,0 +1,62 @@
+{
+  "id": "bankroll",
+  "title": "Bankroll",
+  "wave": "reign-and-reverie",
+  "nrdbCode": "22011",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "installCost": 1,
+  "memoryCost": 1,
+  "onSuccessfulRun": {
+    "op": "choose",
+    "chooser": "runner",
+    "options": [
+      {
+        "id": "place",
+        "label": "Place 1¢ on Bankroll",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "place_hosted_credits",
+            "amount": 1
+          }
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "runner",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  },
+  "paidAbilities": [
+    {
+      "id": "bankroll-take",
+      "label": "Trash Bankroll: take all hosted credits",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "trashSelf": true
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "take_hosted_credits",
+          "amount": 99
+        }
+      }
+    }
+  ]
+}

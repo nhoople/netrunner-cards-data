@@ -1,0 +1,23 @@
+{
+  "id": "hyperloop-extension",
+  "title": "Hyperloop Extension",
+  "wave": "reign-and-reverie",
+  "nrdbCode": "22027",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "expansion"
+  ],
+  "advancementRequirement": 3,
+  "agendaPoints": 1,
+  "onAgendaScoredOrStolen": {
+    "op": "do",
+    "action": {
+      "kind": "gain_credits",
+      "side": "corp",
+      "amount": 3
+    }
+  }
+}

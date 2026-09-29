@@ -1,0 +1,18 @@
+{
+  "id": "peeping-tom",
+  "title": "Peeping Tom",
+  "wave": "reign-and-reverie",
+  "nrdbCode": "22045",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: When the Runner encounters this ice, choose a card type, then reveal all cards in the grip. For the remainder of this run, this ice gains \"[subroutine] End the run unless the Runner takes 1 tag.\" for each revealed card of the chosen type."
+  ],
+  "faction": "nbn",
+  "subtypes": [
+    "code gate"
+  ],
+  "installCost": 4,
+  "rezCost": 4,
+  "strength": 4
+}

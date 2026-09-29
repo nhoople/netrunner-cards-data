@@ -1,0 +1,16 @@
+{
+  "id": "siu",
+  "title": "SIU",
+  "wave": "reign-and-reverie",
+  "nrdbCode": "22044",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: When your turn begins, you may trash SIU to Trace[3]. If successful, give the Runner 1 tag."
+  ],
+  "faction": "nbn",
+  "installCost": 3,
+  "rezCost": 3,
+  "trashCost": 1,
+  "unique": true
+}

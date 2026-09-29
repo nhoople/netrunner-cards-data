@@ -1,0 +1,16 @@
+{
+  "id": "nathaniel-gnat-hall-one-of-a-kind",
+  "title": "Nathaniel \"Gnat\" Hall: One-of-a-Kind",
+  "wave": "reign-and-reverie",
+  "nrdbCode": "22001",
+  "type": "identity",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: When your turn begins, gain 1[credit] if you have 2 or fewer cards in your grip."
+  ],
+  "faction": "anarch",
+  "subtypes": [
+    "natural"
+  ],
+  "link": 0
+}

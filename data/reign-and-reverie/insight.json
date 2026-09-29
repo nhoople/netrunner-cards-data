@@ -1,0 +1,16 @@
+{
+  "id": "insight",
+  "title": "Insight",
+  "wave": "reign-and-reverie",
+  "nrdbCode": "22016",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: As an additional cost to play this event, spend [click]. The Corp may look at the top 4 cards of R&D and arrange them in any order. Reveal the top 4 cards of R&D."
+  ],
+  "faction": "shaper",
+  "subtypes": [
+    "double"
+  ],
+  "playCost": 0
+}

@@ -1,0 +1,20 @@
+{
+  "id": "lady-liberty",
+  "title": "Lady Liberty",
+  "wave": "reign-and-reverie",
+  "nrdbCode": "22058",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: When your turn begins, place 1 power counter on Lady Liberty. [click], [click], [click]: Add an agenda from HQ to your score area worth agenda points equal to the exact number of hosted power counters. Limit 1 region per server. Limit 1 per"
+  ],
+  "faction": "neutral-corp",
+  "subtypes": [
+    "region",
+    "ritzy"
+  ],
+  "installCost": 5,
+  "rezCost": 5,
+  "trashCost": 4,
+  "unique": true
+}

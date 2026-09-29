@@ -1,0 +1,15 @@
+{
+  "id": "drudge-work",
+  "title": "Drudge Work",
+  "wave": "reign-and-reverie",
+  "nrdbCode": "22052",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: Place 3 power counters on Drudge Work when it is rezzed. When there are no power counters left on Drudge Work, trash it. [click], hosted power counter: Reveal an agenda in HQ or Archives. Gain credits equal to its agenda points, then shuffl"
+  ],
+  "faction": "weyland-consortium",
+  "installCost": 2,
+  "rezCost": 2,
+  "trashCost": 3
+}

@@ -1,0 +1,15 @@
+{
+  "id": "the-outfit-family-owned-and-operated",
+  "title": "The Outfit: Family Owned and Operated",
+  "wave": "reign-and-reverie",
+  "nrdbCode": "22050",
+  "type": "identity",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: Whenever you take 1 or more bad publicity, gain 3[credit]."
+  ],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "subsidiary"
+  ]
+}

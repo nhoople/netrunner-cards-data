@@ -1,0 +1,18 @@
+{
+  "id": "too-big-to-fail",
+  "title": "Too Big to Fail",
+  "wave": "reign-and-reverie",
+  "nrdbCode": "22056",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: Play only if you have less than 10[credit]. Gain 7[credit] and take 1 bad publicity."
+  ],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "transaction",
+    "liability"
+  ],
+  "playCost": 0,
+  "trashCost": 5
+}

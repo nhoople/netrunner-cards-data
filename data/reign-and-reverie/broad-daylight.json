@@ -1,0 +1,18 @@
+{
+  "id": "broad-daylight",
+  "title": "Broad Daylight",
+  "wave": "reign-and-reverie",
+  "nrdbCode": "22051",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: When you score this agenda, you may take 1 bad publicity. Place 1 agenda counter on this agenda for each bad publicity you have. Once per turn → [click], hosted agenda counter: Do 2 meat damage."
+  ],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "security",
+    "liability"
+  ],
+  "advancementRequirement": 4,
+  "agendaPoints": 2
+}

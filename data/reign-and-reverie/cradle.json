@@ -1,0 +1,19 @@
+{
+  "id": "cradle",
+  "title": "Cradle",
+  "wave": "reign-and-reverie",
+  "nrdbCode": "22006",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: This program gets -1 strength for each card in your grip. Interface → 2[credit]: Break any number of code gate subroutines."
+  ],
+  "faction": "anarch",
+  "subtypes": [
+    "icebreaker",
+    "decoder"
+  ],
+  "installCost": 4,
+  "strength": 5,
+  "memoryCost": 1
+}

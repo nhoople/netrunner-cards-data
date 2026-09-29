@@ -1,0 +1,20 @@
+{
+  "id": "ika",
+  "title": "Ika",
+  "wave": "reign-and-reverie",
+  "nrdbCode": "22019",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: 2[credit]: Host this program on a piece of ice. Interface → 1[credit]: Break up to 2 subroutines on host sentry. 2[credit]: +3 strength."
+  ],
+  "faction": "shaper",
+  "subtypes": [
+    "icebreaker",
+    "killer",
+    "trojan"
+  ],
+  "installCost": 0,
+  "strength": 2,
+  "memoryCost": 1
+}

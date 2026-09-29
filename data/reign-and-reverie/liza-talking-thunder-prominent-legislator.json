@@ -1,0 +1,16 @@
+{
+  "id": "liza-talking-thunder-prominent-legislator",
+  "title": "Liza Talking Thunder: Prominent Legislator",
+  "wave": "reign-and-reverie",
+  "nrdbCode": "22008",
+  "type": "identity",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: The first time you make a successful run on a central server each turn, draw 2 cards and take 1 tag."
+  ],
+  "faction": "criminal",
+  "subtypes": [
+    "g-mod"
+  ],
+  "link": 0
+}
