@@ -5,14 +5,27 @@
   "nrdbCode": "25077",
   "type": "ice",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: Turing has +3 strength while protecting a remote server. The Runner cannot use AI programs to break subroutines on Turing. [subroutine] End the run unless the Runner spends [click][click][click]."
-  ],
+  "unsupported": [],
   "faction": "haas-bioroid",
   "subtypes": [
     "code gate"
   ],
   "installCost": 4,
   "rezCost": 4,
-  "strength": 2
+  "strength": 2,
+  "strengthBonusProtectingRemote": 3,
+  "cannotBreakWithAi": true,
+  "subroutines": [
+    {
+      "id": "turing-etr-unless-clicks",
+      "text": "End the run unless the Runner spends [click][click][click].",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "end_the_run_unless_runner_spends_clicks",
+          "amount": 3
+        }
+      }
+    }
+  ]
 }

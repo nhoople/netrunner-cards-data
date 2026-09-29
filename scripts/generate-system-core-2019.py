@@ -1173,6 +1173,97 @@ def map_card(c: dict) -> dict | None:
             unsupported=[],
         )
 
+    # --- v1.70.0 K-slice: reuse + new Effect IR leaves (fail-closed engine pair) ---
+
+    if cid == "faerie":
+        return breaker_card(
+            c,
+            "sentry",
+            2,
+            0,
+            1,
+            1,
+            trashAfterBreakingThisRun=True,
+            unsupported=[],
+        )
+
+    if cid == "datasucker":
+        return base(
+            c,
+            onSuccessfulRun={
+                "op": "if",
+                "cond": {"op": "attacking_central"},
+                "then": {
+                    "op": "do",
+                    "action": {"kind": "add_virus_counter", "amount": 1},
+                },
+            },
+            paidAbilities=[
+                {
+                    "id": "datasucker-weaken",
+                    "label": "Spend virus: ice −1 strength",
+                    "clickCost": 0,
+                    "creditCost": 0,
+                    "cost": {"virusCounters": 1},
+                    "windows": ["encounter_paw"],
+                    "effect": {
+                        "op": "do",
+                        "action": {"kind": "weaken_ice", "amount": 1},
+                    },
+                }
+            ],
+            unsupported=[],
+        )
+
+    if cid == "stimhack":
+        return base(
+            c,
+            runEvent={
+                "servers": "any",
+                "placeEventCredits": 9,
+                "onRunEnd": {
+                    "op": "do",
+                    "action": {
+                        "kind": "core_damage",
+                        "amount": 1,
+                        "cannotPrevent": True,
+                    },
+                },
+            },
+            unsupported=[],
+        )
+
+    if cid == "turing":
+        return base(
+            c,
+            strengthBonusProtectingRemote=3,
+            cannotBreakWithAi=True,
+            subroutines=[
+                {
+                    "id": "turing-etr-unless-clicks",
+                    "text": "End the run unless the Runner spends [click][click][click].",
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "end_the_run_unless_runner_spends_clicks",
+                            "amount": 3,
+                        },
+                    },
+                }
+            ],
+            unsupported=[],
+        )
+
+    if cid == "spear-phishing":
+        return base(
+            c,
+            runEvent={
+                "servers": "any",
+                "bypassInnermostEncounter": True,
+            },
+            unsupported=[],
+        )
+
     card = base(c)
     card["unsupported"] = [
         f"Full text not yet mapped to IR: {plain[:200]}"
@@ -1299,6 +1390,13 @@ def main():
             "elizabeth-mills",
             "kati-jones",
             "ice-analyzer",
+        ],
+        "kSliceClears": [
+            "faerie",
+            "datasucker",
+            "stimhack",
+            "turing",
+            "spear-phishing",
         ],
     }
     (OUT / "_manifest.json").write_text(

@@ -5,13 +5,45 @@
   "nrdbCode": "25011",
   "type": "program",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Whenever you make a successful run on a central server, place 1 virus counter on Datasucker. Hosted virus counter: Rezzed piece of ice currently being encountered has -1 strength until the end of the "
-  ],
+  "unsupported": [],
   "faction": "anarch",
   "subtypes": [
     "virus"
   ],
   "installCost": 1,
-  "memoryCost": 1
+  "memoryCost": 1,
+  "onSuccessfulRun": {
+    "op": "if",
+    "cond": {
+      "op": "attacking_central"
+    },
+    "then": {
+      "op": "do",
+      "action": {
+        "kind": "add_virus_counter",
+        "amount": 1
+      }
+    }
+  },
+  "paidAbilities": [
+    {
+      "id": "datasucker-weaken",
+      "label": "Spend virus: ice −1 strength",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "virusCounters": 1
+      },
+      "windows": [
+        "encounter_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "weaken_ice",
+          "amount": 1
+        }
+      }
+    }
+  ]
 }

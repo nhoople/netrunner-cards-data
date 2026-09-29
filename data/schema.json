@@ -72,6 +72,10 @@
         "bypassFirstEncounter": {
           "type": "boolean"
         },
+        "bypassInnermostEncounter": {
+          "type": "boolean",
+          "description": "When encountering the innermost ice protecting the attacked server, bypass it (Spear Phishing)."
+        },
         "bypassSecondEncounterForClickIfThreat": {
           "type": "integer",
           "minimum": 1,
