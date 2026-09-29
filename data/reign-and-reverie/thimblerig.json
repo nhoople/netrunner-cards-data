@@ -5,14 +5,36 @@
   "nrdbCode": "22039",
   "type": "ice",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: When your turn begins and whenever the Runner passes this ice, you may swap this ice with another installed piece of ice. [subroutine] End the run."
-  ],
+  "unsupported": [],
   "faction": "jinteki",
   "subtypes": [
     "code gate"
   ],
   "installCost": 2,
   "rezCost": 2,
-  "strength": 0
+  "strength": 0,
+  "onTurnBegin": {
+    "op": "do",
+    "action": {
+      "kind": "may_swap_ice_with_other_installed"
+    }
+  },
+  "onPass": {
+    "op": "do",
+    "action": {
+      "kind": "may_swap_ice_with_other_installed"
+    }
+  },
+  "subroutines": [
+    {
+      "id": "thimblerig-etr",
+      "text": "End the run.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "end_the_run"
+        }
+      }
+    }
+  ]
 }
