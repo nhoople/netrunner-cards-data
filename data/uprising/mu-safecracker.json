@@ -5,9 +5,16 @@
   "nrdbCode": "26076",
   "type": "hardware",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Spend credits only from stealth cards to use this hardware. Whenever you make a successful run on HQ, you may pay 1[credit] to access 1 additional card when you breach HQ. Whenever you make a successful run on R&D, you may pay 2[credit] to "
-  ],
+  "unsupported": [],
   "installCost": 2,
-  "unique": true
+  "unique": true,
+  "paidAbilitiesUseStealthCreditsOnly": true,
+  "onSuccessfulHqRunMayPayForBonusAccess": {
+    "credits": 1,
+    "bonusAccess": 1
+  },
+  "onSuccessfulRdRunMayPayForBonusAccess": {
+    "credits": 2,
+    "bonusAccess": 1
+  }
 }
