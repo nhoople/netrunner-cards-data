@@ -5,12 +5,17 @@
   "nrdbCode": "25057",
   "type": "resource",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Whenever the Corp rezzes a piece of ice, place 1[credit] on Ice Analyzer. You may use credits on Ice Analyzer to install programs."
-  ],
+  "unsupported": [],
   "faction": "shaper",
   "subtypes": [
     "virtual"
   ],
-  "installCost": 0
+  "installCost": 0,
+  "hostedCreditsOnAnyIceRez": 1,
+  "hostedCreditsSpendFor": [
+    "install"
+  ],
+  "hostedCreditsSpendForInstallTypes": [
+    "program"
+  ]
 }
