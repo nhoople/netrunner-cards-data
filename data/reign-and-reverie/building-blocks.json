@@ -5,9 +5,14 @@
   "nrdbCode": "22055",
   "type": "operation",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: Reveal a barrier from HQ. Install and rez it, ignoring all costs."
-  ],
+  "unsupported": [],
   "faction": "weyland-consortium",
-  "playCost": 5
+  "playCost": 5,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "reveal_hq_subtype_install_and_rez_ignore_costs",
+      "subtype": "barrier"
+    }
+  }
 }

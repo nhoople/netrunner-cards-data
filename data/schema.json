@@ -1567,6 +1567,16 @@
       "minimum": 0,
       "description": "Strength bonus per core damage the Runner has taken this game (Begemot)."
     },
+    "strengthPenaltyPerGripCard": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Reduce this program's strength by N for each card in the Runner's grip (Cradle)."
+    },
+    "gainCreditsOnEachBadPublicityTake": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Whenever Corp takes 1 or more bad publicity, gain this many credits (The Outfit)."
+    },
     "threatStrengthBonus": {
       "type": "object",
       "required": [

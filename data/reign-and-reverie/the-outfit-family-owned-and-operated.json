@@ -5,11 +5,10 @@
   "nrdbCode": "22050",
   "type": "identity",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: Whenever you take 1 or more bad publicity, gain 3[credit]."
-  ],
+  "unsupported": [],
   "faction": "weyland-consortium",
   "subtypes": [
     "subsidiary"
-  ]
+  ],
+  "gainCreditsOnEachBadPublicityTake": 3
 }
