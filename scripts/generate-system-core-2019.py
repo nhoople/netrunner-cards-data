@@ -136,6 +136,58 @@ def seq(*effects):
     return {"op": "seq", "effects": list(effects)}
 
 
+def breaker_card(
+    c,
+    subtype,
+    strength,
+    break_c,
+    pump_c=None,
+    pump_s=None,
+    break_max=None,
+    duration=None,
+    **extra,
+):
+    br = {
+        "breaksSubtype": subtype,
+        "strength": strength,
+        "breakCredits": break_c,
+    }
+    if break_max is not None:
+        br["breakMaxSubs"] = break_max
+    if pump_c is not None:
+        br["pumpCredits"] = pump_c
+        br["pumpStrength"] = pump_s if pump_s is not None else 1
+    paid = list(extra.pop("paidAbilities", []) or [])
+    if pump_c is not None:
+        pump_eff = {
+            "op": "do",
+            "action": {
+                "kind": "pump_strength",
+                "amount": pump_s if pump_s is not None else 1,
+            },
+        }
+        if duration:
+            pump_eff["action"]["duration"] = duration
+        label_dur = (
+            " for the remainder of this run" if duration == "run" else ""
+        )
+        paid.append(
+            {
+                "id": f"{slugify(c['title'])}-pump",
+                "label": (
+                    f"Pump {c['title']} +{pump_s if pump_s is not None else 1} "
+                    f"strength{label_dur}"
+                ),
+                "clickCost": 0,
+                "creditCost": pump_c,
+                "cost": {"credits": pump_c},
+                "windows": ["encounter_paw"],
+                "effect": pump_eff,
+            }
+        )
+    return base(c, breaker=br, paidAbilities=paid, **extra)
+
+
 def base(c, **extra):
     subtypes = []
     if c.get("keywords"):
@@ -316,6 +368,65 @@ def map_card(c: dict) -> dict | None:
             unsupported=[],
         )
 
+    # --- v1.61.0 B-slice: existing IR only ---
+
+    if cid == "battering-ram":
+        return breaker_card(
+            c,
+            "barrier",
+            3,
+            2,
+            1,
+            1,
+            break_max=2,
+            duration="run",
+            unsupported=[],
+        )
+
+    if cid == "force-of-nature":
+        return breaker_card(
+            c,
+            "code gate",
+            1,
+            2,
+            1,
+            1,
+            break_max=2,
+            unsupported=[],
+        )
+
+    if cid == "pipeline":
+        return breaker_card(
+            c,
+            "sentry",
+            1,
+            1,
+            2,
+            1,
+            break_max=1,
+            duration="run",
+            unsupported=[],
+        )
+
+    if cid == "blue-level-clearance":
+        return base(
+            c,
+            playAdditionalClick=True,
+            onPlay=seq(gain("corp", 5), draw("corp", 2)),
+            unsupported=[],
+        )
+
+    if cid == "adonis-campaign":
+        return base(
+            c,
+            hostedCreditsOnInstall=12,
+            onTurnBegin={
+                "op": "do",
+                "action": {"kind": "take_hosted_credits", "amount": 3},
+            },
+            unsupported=[],
+        )
+
     card = base(c)
     card["unsupported"] = [
         f"Full text not yet mapped to IR: {plain[:200]}"
@@ -379,6 +490,13 @@ def main():
             "armitage-codebusting",
             "hadrians-wall",
             "ipo",
+        ],
+        "bSliceClears": [
+            "battering-ram",
+            "force-of-nature",
+            "pipeline",
+            "blue-level-clearance",
+            "adonis-campaign",
         ],
     }
     (OUT / "_manifest.json").write_text(

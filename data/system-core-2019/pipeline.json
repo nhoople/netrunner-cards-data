@@ -5,9 +5,7 @@
   "nrdbCode": "25055",
   "type": "program",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Interface → 1[credit]: Break 1 sentry subroutine. 2[credit]: +1 strength for the remainder of this run."
-  ],
+  "unsupported": [],
   "faction": "shaper",
   "subtypes": [
     "icebreaker",
@@ -15,5 +13,35 @@
   ],
   "installCost": 3,
   "strength": 1,
-  "memoryCost": 1
+  "memoryCost": 1,
+  "breaker": {
+    "breaksSubtype": "sentry",
+    "strength": 1,
+    "breakCredits": 1,
+    "breakMaxSubs": 1,
+    "pumpCredits": 2,
+    "pumpStrength": 1
+  },
+  "paidAbilities": [
+    {
+      "id": "pipeline-pump",
+      "label": "Pump Pipeline +1 strength for the remainder of this run",
+      "clickCost": 0,
+      "creditCost": 2,
+      "cost": {
+        "credits": 2
+      },
+      "windows": [
+        "encounter_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "pump_strength",
+          "amount": 1,
+          "duration": "run"
+        }
+      }
+    }
+  ]
 }

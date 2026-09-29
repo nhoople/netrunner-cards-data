@@ -5,13 +5,33 @@
   "nrdbCode": "25081",
   "type": "operation",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: As an additional cost to play this operation, spend [click]. Gain 5[credit] and draw 2 cards."
-  ],
+  "unsupported": [],
   "faction": "haas-bioroid",
   "subtypes": [
     "double",
     "transaction"
   ],
-  "playCost": 2
+  "playCost": 2,
+  "playAdditionalClick": true,
+  "onPlay": {
+    "op": "seq",
+    "effects": [
+      {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "corp",
+          "amount": 5
+        }
+      },
+      {
+        "op": "do",
+        "action": {
+          "kind": "draw",
+          "side": "corp",
+          "amount": 2
+        }
+      }
+    ]
+  }
 }
