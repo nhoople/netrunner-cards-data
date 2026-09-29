@@ -1156,6 +1156,85 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    # --- v1.55.0 H-slice ---
+
+    if cid == "sting":
+        sting_dmg = {
+            "op": "do",
+            "action": {
+                "kind": "net_damage_1_plus_copies_of_source_title_in_other_score_area",
+            },
+        }
+        return base(
+            c,
+            onScore=sting_dmg,
+            onSteal=sting_dmg,
+            unsupported=[],
+        )
+
+    if cid == "az-mccaffrey-mechanical-prodigy":
+        return base(
+            c,
+            firstJobConnectionOrHardwareInstallDiscount=1,
+            unsupported=[],
+        )
+
+    if cid == "saisentan":
+        net1 = {
+            "op": "do",
+            "action": {"kind": "net_damage", "amount": 1},
+        }
+        return base(
+            c,
+            onEncounter={
+                "op": "do",
+                "action": {"kind": "choose_card_type_for_encounter"},
+            },
+            amplifyNetDamageOnTrashChosenEncounterType=True,
+            subroutines=[
+                {
+                    "id": "saisentan-net-1",
+                    "text": "Do 1 net damage.",
+                    "effect": net1,
+                },
+                {
+                    "id": "saisentan-net-2",
+                    "text": "Do 1 net damage.",
+                    "effect": net1,
+                },
+                {
+                    "id": "saisentan-net-3",
+                    "text": "Do 1 net damage.",
+                    "effect": net1,
+                },
+            ],
+            unsupported=[],
+        )
+
+    if cid == "focus-group":
+        return base(
+            c,
+            playRequiresSuccessfulRunLastTurn=True,
+            onPlay={
+                "op": "do",
+                "action": {"kind": "focus_group_reveal_may_advance"},
+            },
+            unsupported=[],
+        )
+
+    if cid == "divested-trust":
+        return base(
+            c,
+            onOtherAgendaStolen={
+                "op": "do",
+                "action": {
+                    "kind": "divested_trust_may_forfeit_return_stolen",
+                    "gainCredits": 5,
+                },
+            },
+            unsupported=[],
+        )
+
     # Fail closed — honest unsupported note for the remainder.
     card = base(c)
     card["unsupported"] = [f"Full text not yet mapped to IR: {plain[:240]}"]
@@ -1196,7 +1275,7 @@ def main():
         "Null Signal Downfall (NRDB pack df) — Ashes set 1 of 2; legacy "
         "backwards wave before Uprising / System Gateway. Skip Magnum Opus "
         f"Reprint (mor). In-progress: {full} cards fully mapped, {partial} "
-        "with unsupported notes (G-slice v1.54.0)."
+        "with unsupported notes (H-slice v1.55.0)."
     )
     manifest = {
         "pack": WAVE,

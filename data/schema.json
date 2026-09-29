@@ -1486,6 +1486,19 @@
       "type": "integer",
       "minimum": 0
     },
+    "firstJobConnectionOrHardwareInstallDiscount": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "The first job resource, connection resource, or piece of hardware installed each turn costs this many credits less (Az McCaffrey)."
+    },
+    "amplifyNetDamageOnTrashChosenEncounterType": {
+      "type": "boolean",
+      "description": "During an encounter after choose_card_type_for_encounter: whenever net damage from a subroutine on this ice trashes a card of the chosen type, do 1 net damage (Saisentan)."
+    },
+    "onOtherAgendaStolen": {
+      "type": "object",
+      "description": "Effect IR on a scored Corp agenda whenever the Runner steals another agenda (Divested Trust)."
+    },
     "drawOnHostedEmpty": {
       "type": "integer",
       "minimum": 0
