@@ -93,7 +93,7 @@ console.log(pool.corpusOrder, marjanah.title);
 
 Synthetic stubs and early wave1/wave2 dirs were removed in `v0.2.0`. Reprints that previously lived only under those waves now ship under their Null Signal release directories.
 
-Parhelion is fully supported (wave gate `v0.71.0`). The Automata Initiative is fully supported (wave gate `v0.86.0`). Rebellion Without Rehearsal is fully supported (wave gate `v1.00.0`). Elevation is fully supported (wave gate `v1.12.0`). Vantage Point is fully supported (wave gate `v1.33.0`). Uprising is fully supported (wave gate `v1.46.0`). **Downfall** is the next **legacy backwards** wave (`in-progress`, E-slice **`v1.52.0`**, **30/65**).
+Parhelion is fully supported (wave gate `v0.71.0`). The Automata Initiative is fully supported (wave gate `v0.86.0`). Rebellion Without Rehearsal is fully supported (wave gate `v1.00.0`). Elevation is fully supported (wave gate `v1.12.0`). Vantage Point is fully supported (wave gate `v1.33.0`). Uprising is fully supported (wave gate `v1.46.0`). **Downfall** is the next **legacy backwards** wave (`in-progress`, F-slice **`v1.53.0`**, **35/65**).
 
 **Next:** Continue Downfall clears (`df`, 65; skip/absorb Magnum Opus Reprint). Forward after VP still waits on a new NSG pack or CR bump. Pair every clear with the engine CR adherence gate; at set-complete, run interaction smoke.
 
