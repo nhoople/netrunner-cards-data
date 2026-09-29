@@ -5,11 +5,21 @@
   "nrdbCode": "26028",
   "type": "event",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: While you are resolving this event, each playerʼs identity loses all abilities. Run any server. When that run ends, you may shuffle this event into your stack."
-  ],
+  "unsupported": [],
+  "faction": "neutral-runner",
   "subtypes": [
     "run"
   ],
-  "playCost": 1
+  "playCost": 1,
+  "blankIdentitiesWhileResolving": true,
+  "runEvent": {
+    "servers": "any",
+    "onRunEnd": {
+      "op": "do",
+      "action": {
+        "kind": "may_shuffle_title_from_heap_into_stack",
+        "title": "Direct Access"
+      }
+    }
+  }
 }

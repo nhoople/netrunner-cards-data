@@ -6,6 +6,7 @@
   "type": "ice",
   "side": "corp",
   "unsupported": [],
+  "faction": "neutral-corp",
   "subtypes": [
     "mythic"
   ],

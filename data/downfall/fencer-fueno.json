@@ -6,6 +6,7 @@
   "type": "resource",
   "side": "runner",
   "unsupported": [],
+  "faction": "anarch",
   "subtypes": [
     "companion",
     "virtual"

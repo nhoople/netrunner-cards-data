@@ -6,6 +6,7 @@
   "type": "upgrade",
   "side": "corp",
   "unsupported": [],
+  "faction": "weyland-consortium",
   "installCost": 0,
   "rezCost": 0,
   "trashCost": 2,

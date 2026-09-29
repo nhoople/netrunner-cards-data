@@ -5,13 +5,32 @@
   "nrdbCode": "26018",
   "type": "resource",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: When a discard phase ends, if you installed this resource this turn, draw 4 cards. [interrupt] → The first time each turn you would draw any number of cards, look at the top X cards of your stack. Add 1 of those cards to the bottom of your "
-  ],
+  "unsupported": [],
+  "faction": "criminal",
   "subtypes": [
     "connection",
     "ritzy"
   ],
   "installCost": 4,
-  "unique": true
+  "unique": true,
+  "onDiscardPhaseEnd": {
+    "op": "if",
+    "cond": {
+      "op": "self_installed_this_turn"
+    },
+    "then": {
+      "op": "do",
+      "action": {
+        "kind": "draw",
+        "side": "runner",
+        "amount": 4
+      }
+    }
+  },
+  "onWouldDrawOncePerTurn": {
+    "op": "do",
+    "action": {
+      "kind": "class_act_look_top_draw_amount_plus_one_bottom_one"
+    }
+  }
 }

@@ -6,6 +6,7 @@
   "type": "event",
   "side": "runner",
   "unsupported": [],
+  "faction": "criminal",
   "playCost": 0,
   "onPlay": {
     "op": "seq",
