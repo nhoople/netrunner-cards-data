@@ -5,9 +5,13 @@
   "nrdbCode": "22031",
   "type": "operation",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: Gain X[credit]. Draw up to X cards. Install up to X cards in the root of and/or protecting a single remote server. X is equal to the number of agendas in the Runner's score area."
-  ],
+  "unsupported": [],
   "faction": "haas-bioroid",
-  "playCost": 4
+  "playCost": 4,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "fast_break_equal_to_runner_scored_agendas"
+    }
+  }
 }
