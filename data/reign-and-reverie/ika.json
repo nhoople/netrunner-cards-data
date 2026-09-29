@@ -5,9 +5,7 @@
   "nrdbCode": "22019",
   "type": "program",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: 2[credit]: Host this program on a piece of ice. Interface → 1[credit]: Break up to 2 subroutines on host sentry. 2[credit]: +3 strength."
-  ],
+  "unsupported": [],
   "faction": "shaper",
   "subtypes": [
     "icebreaker",
@@ -16,5 +14,73 @@
   ],
   "installCost": 0,
   "strength": 2,
-  "memoryCost": 1
+  "memoryCost": 1,
+  "breaker": {
+    "breaksSubtype": "sentry",
+    "strength": 2,
+    "breakCredits": 1,
+    "breakMaxSubs": 2,
+    "breakViaPaidAbilityOnly": true,
+    "pumpCredits": 2,
+    "pumpStrength": 3
+  },
+  "paidAbilities": [
+    {
+      "id": "ika-host",
+      "label": "2¢: Host this program on a piece of ice",
+      "clickCost": 0,
+      "creditCost": 2,
+      "cost": {
+        "credits": 2
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "rehost_on_other_ice"
+        }
+      }
+    },
+    {
+      "id": "ika-break",
+      "label": "1¢: Break up to 2 subroutines on host sentry",
+      "clickCost": 0,
+      "creditCost": 1,
+      "cost": {
+        "credits": 1
+      },
+      "windows": [
+        "encounter_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "break_host_subroutine",
+          "maxSubs": 2,
+          "requireSubtype": "sentry"
+        }
+      }
+    },
+    {
+      "id": "ika-pump",
+      "label": "2¢: +3 strength",
+      "clickCost": 0,
+      "creditCost": 2,
+      "cost": {
+        "credits": 2
+      },
+      "windows": [
+        "encounter_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "pump_strength",
+          "amount": 3
+        }
+      }
+    }
+  ]
 }

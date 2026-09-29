@@ -5,11 +5,32 @@
   "nrdbCode": "22052",
   "type": "asset",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: Place 3 power counters on Drudge Work when it is rezzed. When there are no power counters left on Drudge Work, trash it. [click], hosted power counter: Reveal an agenda in HQ or Archives. Gain credits equal to its agenda points, then shuffl"
-  ],
+  "unsupported": [],
   "faction": "weyland-consortium",
   "installCost": 2,
   "rezCost": 2,
-  "trashCost": 3
+  "trashCost": 3,
+  "powerCountersOnRez": 3,
+  "trashWhenPowerEmpty": true,
+  "paidAbilities": [
+    {
+      "id": "drudge-work-reveal",
+      "label": "[click], hosted power counter: Reveal an agenda in HQ or Archives, gain credits equal to its agenda points, shuffle into R&D",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1,
+        "powerCounters": 1
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "reveal_agenda_hq_or_archives_gain_ap_shuffle"
+        }
+      }
+    }
+  ]
 }

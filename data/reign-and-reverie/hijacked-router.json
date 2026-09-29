@@ -5,10 +5,56 @@
   "nrdbCode": "22005",
   "type": "hardware",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Whenever the Corp creates a server, they lose 1[credit]. Whenever you make a successful run on Archives, you may trash this hardware. If you do, the Corp loses 3[credit]."
-  ],
+  "unsupported": [],
   "faction": "anarch",
   "installCost": 2,
-  "unique": true
+  "unique": true,
+  "corpLosesCreditsOnCreateServer": 1,
+  "onSuccessfulRun": {
+    "op": "if",
+    "cond": {
+      "op": "attacking_archives"
+    },
+    "then": {
+      "op": "choose",
+      "chooser": "runner",
+      "options": [
+        {
+          "id": "trash-lose-3",
+          "label": "Trash Hijacked Router: Corp loses 3¢",
+          "effect": {
+            "op": "seq",
+            "effects": [
+              {
+                "op": "do",
+                "action": {
+                  "kind": "trash_self"
+                }
+              },
+              {
+                "op": "do",
+                "action": {
+                  "kind": "lose_credits",
+                  "side": "corp",
+                  "amount": 3
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "decline",
+          "label": "Decline",
+          "effect": {
+            "op": "do",
+            "action": {
+              "kind": "gain_credits",
+              "side": "runner",
+              "amount": 0
+            }
+          }
+        }
+      ]
+    }
+  }
 }
