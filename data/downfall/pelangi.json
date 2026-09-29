@@ -5,12 +5,38 @@
   "nrdbCode": "26025",
   "type": "program",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: When you install this program, place 2 virus counters on it. Once per turn → Hosted virus counter: Choose an ice subtype. The ice you are encountering gains that subtype for the remainder of this encounter."
-  ],
+  "unsupported": [],
   "subtypes": [
     "virus"
   ],
   "installCost": 1,
-  "memoryCost": 1
+  "memoryCost": 1,
+  "onInstall": {
+    "op": "do",
+    "action": {
+      "kind": "add_virus_counter",
+      "amount": 2
+    }
+  },
+  "paidAbilities": [
+    {
+      "id": "pelangi-grant-subtype",
+      "label": "Hosted virus counter: Choose an ice subtype for encountered ice",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "virusCounters": 1
+      },
+      "windows": [
+        "encounter_paw"
+      ],
+      "oncePerTurn": true,
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "choose_grant_encounter_ice_subtype"
+        }
+      }
+    }
+  ]
 }
