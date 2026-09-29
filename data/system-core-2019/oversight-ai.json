@@ -5,12 +5,17 @@
   "nrdbCode": "25137",
   "type": "operation",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: Rez a piece of ice, ignoring all costs, and install Oversight AI on that ice as a hosted condition counter with the text \"Trash host ice if all its subroutines are broken during a single encounter.\""
-  ],
+  "unsupported": [],
   "faction": "weyland-consortium",
   "subtypes": [
     "condition"
   ],
-  "playCost": 1
+  "playCost": 1,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "oversight_ai_rez_and_host"
+    }
+  },
+  "trashHostIfAllSubsBrokenThisEncounter": true
 }

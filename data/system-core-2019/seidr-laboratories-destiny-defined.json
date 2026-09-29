@@ -5,11 +5,15 @@
   "nrdbCode": "25067",
   "type": "identity",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: The first time each turn the Runner loses or spends [click] during a run, you may add 1 card from Archives to the top of R&D."
-  ],
+  "unsupported": [],
   "faction": "haas-bioroid",
   "subtypes": [
     "division"
-  ]
+  ],
+  "onFirstRunnerClickSpendOrLoseDuringRun": {
+    "op": "do",
+    "action": {
+      "kind": "may_add_archives_card_to_rd_top"
+    }
+  }
 }

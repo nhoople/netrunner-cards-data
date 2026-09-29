@@ -5,14 +5,64 @@
   "nrdbCode": "25053",
   "type": "program",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Interface → [trash]: Break any number of AP subroutines. [interrupt] → [trash]: Prevent any amount of net damage."
-  ],
+  "unsupported": [],
   "faction": "shaper",
   "subtypes": [
     "icebreaker"
   ],
   "installCost": 3,
   "strength": 10,
-  "memoryCost": 1
+  "memoryCost": 1,
+  "breaker": {
+    "breaksSubtype": "ap",
+    "strength": 10,
+    "breakCredits": 0,
+    "breakMaxSubs": 99,
+    "breakViaPaidAbilityOnly": true
+  },
+  "paidAbilities": [
+    {
+      "id": "deus-x-break",
+      "label": "Trash Deus X: break any number of AP subroutines",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "trashSelf": true
+      },
+      "windows": [
+        "encounter_paw"
+      ],
+      "requireEncounterSubtype": "ap",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "break_encounter_subroutine",
+          "maxSubs": 99,
+          "requireSubtype": "ap"
+        }
+      }
+    },
+    {
+      "id": "deus-x-prevent-net",
+      "label": "Interrupt: trash Deus X — prevent any amount of net damage",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "trashSelf": true
+      },
+      "windows": [
+        "damage_interrupt_paw"
+      ],
+      "requirePendingDamageTypes": [
+        "net"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "prevent_pending_damage",
+          "amount": 99
+        }
+      }
+    }
+  ]
 }
