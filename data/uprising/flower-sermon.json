@@ -5,9 +5,34 @@
   "nrdbCode": "26106",
   "type": "agenda",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: When you score this agenda, place 5 agenda counters on it. Once per turn → Hosted agenda counter: Reveal the top card of R&D. Draw 2 cards. Add 1 card from HQ to the top of R&D."
-  ],
+  "unsupported": [],
   "advancementRequirement": 4,
-  "agendaPoints": 2
+  "agendaPoints": 2,
+  "onScore": {
+    "op": "do",
+    "action": {
+      "kind": "add_agenda_counter",
+      "amount": 5
+    }
+  },
+  "paidAbilities": [
+    {
+      "id": "flower-sermon-look",
+      "label": "Hosted agenda counter: Look at top of R&D; may advance; may bottom",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "agendaCounters": 1
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "look_top_rd_may_advance_may_bottom"
+        }
+      }
+    }
+  ]
 }
