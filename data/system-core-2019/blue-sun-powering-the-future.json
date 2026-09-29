@@ -1,0 +1,15 @@
+{
+  "id": "blue-sun-powering-the-future",
+  "title": "Blue Sun: Powering the Future",
+  "wave": "system-core-2019",
+  "nrdbCode": "25123",
+  "type": "identity",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: When your turn begins, you may add 1 rezzed card to HQ and gain credits equal to its rez cost."
+  ],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "corp"
+  ]
+}

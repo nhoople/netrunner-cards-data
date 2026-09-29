@@ -1,0 +1,16 @@
+{
+  "id": "spear-phishing",
+  "title": "Spear Phishing",
+  "wave": "system-core-2019",
+  "nrdbCode": "25029",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: Make a run. When you encounter the innermost piece of ice protecting that server, bypass it."
+  ],
+  "faction": "criminal",
+  "subtypes": [
+    "run"
+  ],
+  "playCost": 2
+}

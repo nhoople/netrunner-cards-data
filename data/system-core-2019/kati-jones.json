@@ -1,0 +1,17 @@
+{
+  "id": "kati-jones",
+  "title": "Kati Jones",
+  "wave": "system-core-2019",
+  "nrdbCode": "25065",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: You cannot use this resource more than once per turn. [click]: Place 3[credit] on this resource. [click]: Take all credits from this resource."
+  ],
+  "faction": "neutral-runner",
+  "subtypes": [
+    "connection"
+  ],
+  "installCost": 2,
+  "unique": true
+}

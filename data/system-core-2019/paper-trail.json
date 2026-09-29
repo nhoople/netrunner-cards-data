@@ -1,0 +1,17 @@
+{
+  "id": "paper-trail",
+  "title": "Paper Trail",
+  "wave": "system-core-2019",
+  "nrdbCode": "25140",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: When you score Paper Trail, Trace[6]. If successful, trash all connection and job resources."
+  ],
+  "faction": "neutral-corp",
+  "subtypes": [
+    "security"
+  ],
+  "advancementRequirement": 4,
+  "agendaPoints": 2
+}

@@ -1,0 +1,16 @@
+{
+  "id": "closed-accounts",
+  "title": "Closed Accounts",
+  "wave": "system-core-2019",
+  "nrdbCode": "25117",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: Play only if the Runner is tagged. The Runner loses all credits in their credit pool."
+  ],
+  "faction": "nbn",
+  "subtypes": [
+    "gray ops"
+  ],
+  "playCost": 1
+}

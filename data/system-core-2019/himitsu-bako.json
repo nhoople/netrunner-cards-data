@@ -1,0 +1,18 @@
+{
+  "id": "himitsu-bako",
+  "title": "Himitsu-Bako",
+  "wave": "system-core-2019",
+  "nrdbCode": "25093",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: 1[credit]: Add Himitsu-Bako to HQ. [subroutine] End the run."
+  ],
+  "faction": "jinteki",
+  "subtypes": [
+    "barrier"
+  ],
+  "installCost": 2,
+  "rezCost": 2,
+  "strength": 2
+}

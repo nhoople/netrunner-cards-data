@@ -1,0 +1,17 @@
+{
+  "id": "run-amok",
+  "title": "Run Amok",
+  "wave": "system-core-2019",
+  "nrdbCode": "25006",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: Make a run. When the run ends, trash 1 piece of ice that was rezzed during this run."
+  ],
+  "faction": "anarch",
+  "subtypes": [
+    "run",
+    "sabotage"
+  ],
+  "playCost": 3
+}

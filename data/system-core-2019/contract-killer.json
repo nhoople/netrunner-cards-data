@@ -1,0 +1,18 @@
+{
+  "id": "contract-killer",
+  "title": "Contract Killer",
+  "wave": "system-core-2019",
+  "nrdbCode": "25127",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: Contract Killer can be advanced. If there are at least 2 advancement tokens on Contract Killer, it gains: \"[click], [trash]: Trash a connection or do 2 meat damage.\""
+  ],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "hostile"
+  ],
+  "installCost": 2,
+  "rezCost": 2,
+  "trashCost": 3
+}

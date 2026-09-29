@@ -1,0 +1,20 @@
+{
+  "id": "elizabeth-mills",
+  "title": "Elizabeth Mills",
+  "wave": "system-core-2019",
+  "nrdbCode": "25128",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: When you rez this asset, remove 1 bad publicity. [click], [trash]: Trash 1 installed location resource. Take 1 bad publicity."
+  ],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "executive",
+    "liability"
+  ],
+  "installCost": 2,
+  "rezCost": 2,
+  "trashCost": 1,
+  "unique": true
+}

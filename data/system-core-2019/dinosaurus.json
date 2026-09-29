@@ -1,0 +1,17 @@
+{
+  "id": "dinosaurus",
+  "title": "Dinosaurus",
+  "wave": "system-core-2019",
+  "nrdbCode": "25049",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: Dinosaurus can host a single non-AI icebreaker. The memory cost of the hosted icebreaker does not count against your memory limit. Hosted icebreaker has +2 strength. Limit 1 console per player."
+  ],
+  "faction": "shaper",
+  "subtypes": [
+    "console"
+  ],
+  "installCost": 5,
+  "unique": true
+}

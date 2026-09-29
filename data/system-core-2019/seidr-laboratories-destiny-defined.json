@@ -1,0 +1,15 @@
+{
+  "id": "seidr-laboratories-destiny-defined",
+  "title": "Seidr Laboratories: Destiny Defined",
+  "wave": "system-core-2019",
+  "nrdbCode": "25067",
+  "type": "identity",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: The first time each turn the Runner loses or spends [click] during a run, you may add 1 card from Archives to the top of R&D."
+  ],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "division"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "id": "battering-ram",
+  "title": "Battering Ram",
+  "wave": "system-core-2019",
+  "nrdbCode": "25052",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: Interface → 2[credit]: Break up to 2 barrier subroutines. 1[credit]: +1 strength for the remainder of this run."
+  ],
+  "faction": "shaper",
+  "subtypes": [
+    "icebreaker",
+    "fracter"
+  ],
+  "installCost": 5,
+  "strength": 3,
+  "memoryCost": 2
+}

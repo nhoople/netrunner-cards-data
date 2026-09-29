@@ -1,0 +1,19 @@
+{
+  "id": "pipeline",
+  "title": "Pipeline",
+  "wave": "system-core-2019",
+  "nrdbCode": "25055",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: Interface → 1[credit]: Break 1 sentry subroutine. 2[credit]: +1 strength for the remainder of this run."
+  ],
+  "faction": "shaper",
+  "subtypes": [
+    "icebreaker",
+    "killer"
+  ],
+  "installCost": 3,
+  "strength": 1,
+  "memoryCost": 1
+}

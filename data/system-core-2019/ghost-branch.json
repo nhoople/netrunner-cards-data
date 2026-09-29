@@ -1,0 +1,19 @@
+{
+  "id": "ghost-branch",
+  "title": "Ghost Branch",
+  "wave": "system-core-2019",
+  "nrdbCode": "25109",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: Ghost Branch can be advanced. When the Runner accesses Ghost Branch, you may give the Runner 1 tag for each advancement token on Ghost Branch."
+  ],
+  "faction": "nbn",
+  "subtypes": [
+    "ambush",
+    "facility"
+  ],
+  "installCost": 0,
+  "rezCost": 0,
+  "trashCost": 0
+}

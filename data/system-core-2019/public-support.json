@@ -1,0 +1,15 @@
+{
+  "id": "public-support",
+  "title": "Public Support",
+  "wave": "system-core-2019",
+  "nrdbCode": "25129",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: Place 3 power counters on Public Support when it is rezzed. When there are no power counters left on Public Support, add it to your score area as an agenda worth 1 agenda point. When your turn begins,"
+  ],
+  "faction": "weyland-consortium",
+  "installCost": 2,
+  "rezCost": 2,
+  "trashCost": 4
+}

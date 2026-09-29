@@ -1,0 +1,21 @@
+{
+  "id": "ichi-1-0",
+  "title": "Ichi 1.0",
+  "wave": "system-core-2019",
+  "nrdbCode": "25075",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: Lose [click]: Break 1 subroutine on this ice. Only the Runner can use this ability. [subroutine] Trash 1 installed program. [subroutine] Trash 1 installed program. [subroutine] Trace[1]. If successful"
+  ],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "sentry",
+    "bioroid",
+    "tracer",
+    "destroyer"
+  ],
+  "installCost": 5,
+  "rezCost": 5,
+  "strength": 4
+}

@@ -1,0 +1,16 @@
+{
+  "id": "gabriel-santiago-consummate-professional",
+  "title": "Gabriel Santiago: Consummate Professional",
+  "wave": "system-core-2019",
+  "nrdbCode": "25020",
+  "type": "identity",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: The first time you make a successful run on HQ each turn, gain 2[credit]."
+  ],
+  "faction": "criminal",
+  "subtypes": [
+    "cyborg"
+  ],
+  "link": 0
+}

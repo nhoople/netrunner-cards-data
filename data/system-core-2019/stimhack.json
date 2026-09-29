@@ -1,0 +1,16 @@
+{
+  "id": "stimhack",
+  "title": "Stimhack",
+  "wave": "system-core-2019",
+  "nrdbCode": "25007",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: Place 9[credit] on this event, then run any server. During that run, hosted credits are considered to be in your credit pool. When that run ends, suffer 1 core damage. This damage cannot be prevented."
+  ],
+  "faction": "anarch",
+  "subtypes": [
+    "run"
+  ],
+  "playCost": 0
+}

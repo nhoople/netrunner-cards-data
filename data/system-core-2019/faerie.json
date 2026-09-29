@@ -1,0 +1,19 @@
+{
+  "id": "faerie",
+  "title": "Faerie",
+  "wave": "system-core-2019",
+  "nrdbCode": "25035",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: Interface → 0[credit]: Break 1 sentry subroutine. 1[credit]: +1 strength. Whenever an encounter ends, if you used this program to break a subroutine during that encounter, trash this program."
+  ],
+  "faction": "criminal",
+  "subtypes": [
+    "icebreaker",
+    "killer"
+  ],
+  "installCost": 0,
+  "strength": 2,
+  "memoryCost": 1
+}

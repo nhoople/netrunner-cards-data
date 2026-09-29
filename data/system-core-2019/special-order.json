@@ -1,0 +1,13 @@
+{
+  "id": "special-order",
+  "title": "Special Order",
+  "wave": "system-core-2019",
+  "nrdbCode": "25030",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: Search your stack for an icebreaker, reveal it, and add it to your grip. Shuffle your stack."
+  ],
+  "faction": "criminal",
+  "playCost": 1
+}

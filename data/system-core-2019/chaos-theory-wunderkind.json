@@ -1,0 +1,16 @@
+{
+  "id": "chaos-theory-wunderkind",
+  "title": "Chaos Theory: Wünderkind",
+  "wave": "system-core-2019",
+  "nrdbCode": "25040",
+  "type": "identity",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: +1[mu]"
+  ],
+  "faction": "shaper",
+  "subtypes": [
+    "g-mod"
+  ],
+  "link": 0
+}

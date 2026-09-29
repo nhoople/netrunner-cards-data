@@ -1,0 +1,13 @@
+{
+  "id": "notoriety",
+  "title": "Notoriety",
+  "wave": "system-core-2019",
+  "nrdbCode": "25044",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: Play only if you made a successful run on R&D, HQ, and Archives this turn. Add Notoriety to your score area as an agenda worth 1 agenda point."
+  ],
+  "faction": "shaper",
+  "playCost": 1
+}

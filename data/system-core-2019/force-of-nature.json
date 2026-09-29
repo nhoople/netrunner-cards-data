@@ -1,0 +1,19 @@
+{
+  "id": "force-of-nature",
+  "title": "Force of Nature",
+  "wave": "system-core-2019",
+  "nrdbCode": "25012",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: Interface → 2[credit]: Break up to 2 code gate subroutines. 1[credit]: +1 strength."
+  ],
+  "faction": "anarch",
+  "subtypes": [
+    "icebreaker",
+    "decoder"
+  ],
+  "installCost": 5,
+  "strength": 1,
+  "memoryCost": 1
+}

@@ -1,0 +1,18 @@
+{
+  "id": "product-placement",
+  "title": "Product Placement",
+  "wave": "system-core-2019",
+  "nrdbCode": "25120",
+  "type": "upgrade",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: While the Runner is accessing this upgrade in R&D, they must reveal it. When the Runner accesses this upgrade anywhere except in Archives, gain 2[credit]."
+  ],
+  "faction": "nbn",
+  "subtypes": [
+    "advertisement"
+  ],
+  "installCost": 0,
+  "rezCost": 0,
+  "trashCost": 2
+}

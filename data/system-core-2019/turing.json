@@ -1,0 +1,18 @@
+{
+  "id": "turing",
+  "title": "Turing",
+  "wave": "system-core-2019",
+  "nrdbCode": "25077",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: Turing has +3 strength while protecting a remote server. The Runner cannot use AI programs to break subroutines on Turing. [subroutine] End the run unless the Runner spends [click][click][click]."
+  ],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "code gate"
+  ],
+  "installCost": 4,
+  "rezCost": 4,
+  "strength": 2
+}

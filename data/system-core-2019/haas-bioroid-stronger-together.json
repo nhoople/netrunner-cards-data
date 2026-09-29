@@ -1,0 +1,15 @@
+{
+  "id": "haas-bioroid-stronger-together",
+  "title": "Haas-Bioroid: Stronger Together",
+  "wave": "system-core-2019",
+  "nrdbCode": "25066",
+  "type": "identity",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: All bioroid ice has +1 strength."
+  ],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "megacorp"
+  ]
+}

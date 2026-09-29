@@ -1,0 +1,19 @@
+{
+  "id": "wall-of-thorns",
+  "title": "Wall of Thorns",
+  "wave": "system-core-2019",
+  "nrdbCode": "25098",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: [subroutine] Do 2 net damage. [subroutine] End the run."
+  ],
+  "faction": "jinteki",
+  "subtypes": [
+    "barrier",
+    "ap"
+  ],
+  "installCost": 8,
+  "rezCost": 8,
+  "strength": 5
+}

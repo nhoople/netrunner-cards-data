@@ -1,0 +1,19 @@
+{
+  "id": "project-junebug",
+  "title": "Project Junebug",
+  "wave": "system-core-2019",
+  "nrdbCode": "25089",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: Project Junebug can be advanced. If you pay 1[credit] when the Runner accesses Project Junebug, do 2 net damage for each advancement token on Project Junebug."
+  ],
+  "faction": "jinteki",
+  "subtypes": [
+    "ambush",
+    "research"
+  ],
+  "installCost": 0,
+  "rezCost": 0,
+  "trashCost": 0
+}

@@ -1,0 +1,13 @@
+{
+  "id": "r-d-interface",
+  "title": "R&D Interface",
+  "wave": "system-core-2019",
+  "nrdbCode": "25050",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: Whenever you breach R&D, access 1 additional card."
+  ],
+  "faction": "shaper",
+  "installCost": 4
+}

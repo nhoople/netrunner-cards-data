@@ -1,0 +1,17 @@
+{
+  "id": "successful-field-test",
+  "title": "Successful Field Test",
+  "wave": "system-core-2019",
+  "nrdbCode": "25069",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: When you score Successful Field Test, install any number of cards from HQ, ignoring all costs."
+  ],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "research"
+  ],
+  "advancementRequirement": 4,
+  "agendaPoints": 2
+}

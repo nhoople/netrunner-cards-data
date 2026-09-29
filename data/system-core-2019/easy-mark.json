@@ -1,0 +1,22 @@
+{
+  "id": "easy-mark",
+  "title": "Easy Mark",
+  "wave": "system-core-2019",
+  "nrdbCode": "25023",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "subtypes": [
+    "job"
+  ],
+  "playCost": 0,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "gain_credits",
+      "side": "runner",
+      "amount": 3
+    }
+  }
+}

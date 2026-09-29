@@ -1,0 +1,18 @@
+{
+  "id": "philotic-entanglement",
+  "title": "Philotic Entanglement",
+  "wave": "system-core-2019",
+  "nrdbCode": "25088",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: When you score Philotic Entanglement, do 1 net damage for each agenda in the Runner's score area. Limit 1 Philotic Entanglement per deck."
+  ],
+  "faction": "jinteki",
+  "subtypes": [
+    "security"
+  ],
+  "advancementRequirement": 3,
+  "agendaPoints": 2,
+  "unique": true
+}
