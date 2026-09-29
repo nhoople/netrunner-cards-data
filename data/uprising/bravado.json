@@ -5,11 +5,22 @@
   "nrdbCode": "26074",
   "type": "event",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Run a server protected by ice. When that run ends, gain 6[credit] plus 1[credit] for each piece of ice you passed during that run."
-  ],
+  "unsupported": [],
   "subtypes": [
     "run"
   ],
-  "playCost": 3
+  "playCost": 3,
+  "runEvent": {
+    "servers": "any",
+    "requiresProtectingIce": true,
+    "onRunEnd": {
+      "op": "do",
+      "action": {
+        "kind": "gain_credits_base_plus_per_passed_ice",
+        "side": "runner",
+        "base": 6,
+        "per": 1
+      }
+    }
+  }
 }

@@ -5,13 +5,25 @@
   "nrdbCode": "26099",
   "type": "asset",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: You can advance this asset. When the Runner accesses this asset while it is installed, you may pay 3[credit] to do X core damage. X is equal to the number of hosted advancement counters."
-  ],
+  "unsupported": [],
   "subtypes": [
     "ambush"
   ],
   "installCost": 0,
   "rezCost": 0,
-  "trashCost": 0
+  "trashCost": 0,
+  "canAdvance": true,
+  "onAccess": {
+    "op": "if",
+    "cond": {
+      "op": "source_installed"
+    },
+    "then": {
+      "op": "do",
+      "action": {
+        "kind": "may_pay_credits_for_core_damage_per_advancement",
+        "amount": 3
+      }
+    }
+  }
 }

@@ -5,8 +5,24 @@
   "nrdbCode": "26083",
   "type": "event",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Choose up to 5 cards with different names in your heap. Shuffle those cards into your stack. Remove this event from the game."
-  ],
-  "playCost": 2
+  "unsupported": [],
+  "playCost": 2,
+  "onPlay": {
+    "op": "seq",
+    "effects": [
+      {
+        "op": "do",
+        "action": {
+          "kind": "shuffle_up_to_n_distinct_heap_titles_into_stack",
+          "max": 5
+        }
+      },
+      {
+        "op": "do",
+        "action": {
+          "kind": "rfg_self"
+        }
+      }
+    ]
+  }
 }
