@@ -5,14 +5,58 @@
   "nrdbCode": "22028",
   "type": "ice",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: [subroutine] Gain 4[credit] and end the run unless the Runner adds this ice to their score area as an agenda worth -1 agenda point."
-  ],
+  "unsupported": [],
   "faction": "haas-bioroid",
   "subtypes": [
     "barrier"
   ],
   "installCost": 3,
   "rezCost": 3,
-  "strength": 4
+  "strength": 4,
+  "subroutines": [
+    {
+      "id": "meridian-gain-etr-unless-score",
+      "text": "Gain 4[credit] and end the run unless the Runner adds this ice to their score area as an agenda worth -1 agenda point.",
+      "effect": {
+        "op": "choose",
+        "chooser": "runner",
+        "options": [
+          {
+            "id": "take-neg1",
+            "label": "Add Meridian to your score area as −1 agenda point",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "add_to_runner_score_as_agenda",
+                "agendaPoints": -1
+              }
+            }
+          },
+          {
+            "id": "suffer",
+            "label": "Corp gains 4¢ and end the run",
+            "effect": {
+              "op": "seq",
+              "effects": [
+                {
+                  "op": "do",
+                  "action": {
+                    "kind": "gain_credits",
+                    "side": "corp",
+                    "amount": 4
+                  }
+                },
+                {
+                  "op": "do",
+                  "action": {
+                    "kind": "end_the_run"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
 }

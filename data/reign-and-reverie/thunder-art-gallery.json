@@ -5,14 +5,46 @@
   "nrdbCode": "22013",
   "type": "resource",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: The first time you avoid or remove a tag each turn, you may install a card from your grip, lowering its install cost by 1."
-  ],
+  "unsupported": [],
   "faction": "criminal",
   "subtypes": [
     "location",
     "ritzy"
   ],
   "installCost": 3,
-  "unique": true
+  "unique": true,
+  "onFirstAvoidOrRemoveTagThisTurn": {
+    "op": "choose",
+    "chooser": "runner",
+    "options": [
+      {
+        "id": "install",
+        "label": "Install a card from grip, lowering its install cost by 1",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "install_from_grip_discount",
+            "types": [
+              "program",
+              "hardware",
+              "resource"
+            ],
+            "discount": 1
+          }
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "runner",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  }
 }
