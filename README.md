@@ -89,6 +89,8 @@ Synthetic stubs and early wave1/wave2 dirs were removed in `v0.2.0`. Reprints th
 
 Parhelion is fully supported (wave gate `v0.71.0`). The Automata Initiative is fully supported (wave gate `v0.86.0`). Rebellion Without Rehearsal is fully supported (wave gate `v1.00.0`). Elevation is fully supported (wave gate `v1.12.0`). Vantage Point is fully supported (wave gate `v1.33.0`).
 
+**Next:** wait on the next Null Signal pack (chronological order after Vantage Point) or a CR bump. Pair every clear with the engine CR adherence gate; at set-complete, run interaction smoke (engine `tests/confidence-*.test.ts` covers the Gateway→VP one-time pass; re-sample for the next wave).
+
 ## Versioning
 
 Tag dataset releases as `vMAJOR.MINOR.PATCH` (e.g. `v1.33.0`). Bump when card JSON, pool, or schema that consumers rely on changes. Keep the README pairing line in sync after each pin bump (no new tag for README-only).

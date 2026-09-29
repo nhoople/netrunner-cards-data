@@ -13,3 +13,9 @@ A wave with `status: "supported"` in `data/pool.json` must have **empty** `unsup
 Rare explicit deferrals while keeping `supported` require an entry in [`data/supported-unsupported-allowlist.json`](data/supported-unsupported-allowlist.json) (card id → reason with CR cite / tracking note). Prefer leaving the wave non-`supported` until clears land.
 
 CI runs `python3 scripts/validate-cards.py`, which enforces schema, pool consistency, and this invariant.
+
+## Set-complete
+
+When marking a wave `supported`, keep README pairing + `pool.json` in sync with the matching engine same-semver tag. Interaction smoke at set-complete is required for each **new** pack (Project `docs/interaction-smoke-samples.md`); Gateway → Vantage Point already passed once via engine [#193](https://github.com/nhoople/netrunner-engine/pull/193).
+
+**Current floor:** Gateway → Vantage Point `supported` at **`v1.33.0`** (pair with engine `v1.33.0`). CR pin in the engine is `v26.03`.
