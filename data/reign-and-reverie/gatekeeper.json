@@ -5,14 +5,49 @@
   "nrdbCode": "22029",
   "type": "ice",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: Gatekeeper has +6 strength if you rezzed it this turn. [subroutine] Draw up to 3 cards. Reveal up to 3 agendas in HQ and/or Archives, then shuffle those agendas into R&D. [subroutine] End the run."
-  ],
+  "unsupported": [],
   "faction": "haas-bioroid",
   "subtypes": [
     "code gate"
   ],
   "installCost": 3,
   "rezCost": 3,
-  "strength": 0
+  "strength": 0,
+  "strengthBonusIfRezzedThisTurn": 6,
+  "subroutines": [
+    {
+      "id": "gatekeeper-draw-shuffle",
+      "text": "Draw up to 3 cards. Reveal up to 3 agendas in HQ and/or Archives, then shuffle those agendas into R&D.",
+      "effect": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "draw_up_to",
+              "side": "corp",
+              "amount": 3
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "may_reveal_shuffle_agendas_into_rd",
+              "max": 3
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "gatekeeper-etr",
+      "text": "End the run.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "end_the_run"
+        }
+      }
+    }
+  ]
 }

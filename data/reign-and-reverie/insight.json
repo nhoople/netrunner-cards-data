@@ -5,12 +5,52 @@
   "nrdbCode": "22016",
   "type": "event",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: As an additional cost to play this event, spend [click]. The Corp may look at the top 4 cards of R&D and arrange them in any order. Reveal the top 4 cards of R&D."
-  ],
+  "unsupported": [],
   "faction": "shaper",
   "subtypes": [
     "double"
   ],
-  "playCost": 0
+  "playCost": 0,
+  "playAdditionalClick": true,
+  "onPlay": {
+    "op": "seq",
+    "effects": [
+      {
+        "op": "choose",
+        "chooser": "corp",
+        "options": [
+          {
+            "id": "arrange",
+            "label": "Look at top 4 of R&D and arrange",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "look_top_n_rd_arrange",
+                "n": 4
+              }
+            }
+          },
+          {
+            "id": "decline",
+            "label": "Decline to look",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "gain_credits",
+                "side": "corp",
+                "amount": 0
+              }
+            }
+          }
+        ]
+      },
+      {
+        "op": "do",
+        "action": {
+          "kind": "reveal_top_n_rd",
+          "n": 4
+        }
+      }
+    ]
+  }
 }
