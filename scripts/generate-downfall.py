@@ -1386,6 +1386,159 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    # --- v1.57.0 J-slice ---
+
+    if cid == "reduced-service":
+        return base(
+            c,
+            rezSpendCreditsForPowerCounters={"max": 4},
+            additionalRunInitiatePerPowerCounter={"credits": 2},
+            onSuccessfulRun={
+                "op": "if",
+                "cond": {"op": "attacking_central"},
+                "then": {
+                    "op": "do",
+                    "action": {"kind": "remove_power_counter", "amount": 1},
+                },
+            },
+            unsupported=[],
+        )
+
+    if cid == "cold-site-server":
+        return base(
+            c,
+            paidAbilities=[
+                {
+                    "id": "cold-site-power",
+                    "label": "[click]: Place 1 power counter",
+                    "clickCost": 1,
+                    "creditCost": 0,
+                    "cost": {"clicks": 1},
+                    "windows": ["corp_action_paw"],
+                    "effect": {
+                        "op": "do",
+                        "action": {"kind": "add_power_counter", "amount": 1},
+                    },
+                }
+            ],
+            additionalRunInitiatePerPowerCounter={"clicks": 1, "credits": 1},
+            onTurnBegin={
+                "op": "do",
+                "action": {"kind": "remove_all_power_counters"},
+            },
+            unsupported=[],
+        )
+
+    if cid == "stargate":
+        return base(
+            c,
+            paidAbilities=[
+                {
+                    "id": "stargate-run-rd",
+                    "label": "[click]: Run R&D (once per turn)",
+                    "clickCost": 1,
+                    "creditCost": 0,
+                    "cost": {"clicks": 1},
+                    "windows": ["runner_action_paw"],
+                    "oncePerTurn": True,
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "gain_credits",
+                            "side": "runner",
+                            "amount": 0,
+                        },
+                    },
+                    "startsRun": {
+                        "servers": "rd",
+                        "onSuccessfulRun": {
+                            "op": "seq",
+                            "effects": [
+                                {
+                                    "op": "do",
+                                    "action": {"kind": "set_run_skip_breach"},
+                                },
+                                {
+                                    "op": "do",
+                                    "action": {
+                                        "kind": "reveal_top_n_rd_trash_one",
+                                        "n": 3,
+                                    },
+                                },
+                            ],
+                        },
+                    },
+                }
+            ],
+            unsupported=[],
+        )
+
+    if cid == "letheia-nisei":
+        return base(
+            c,
+            onApproachServerOncePerRun=True,
+            onApproachServer={
+                "op": "do",
+                "action": {
+                    "kind": "play_psi_game",
+                    "maxBid": 2,
+                    "ifBidsDiffer": {
+                        "op": "choose",
+                        "chooser": "corp",
+                        "options": [
+                            {
+                                "id": "trash-move",
+                                "label": "Trash Letheia Nisei → outermost + may jack out",
+                                "effect": {
+                                    "op": "seq",
+                                    "effects": [
+                                        {
+                                            "op": "do",
+                                            "action": {"kind": "trash_self"},
+                                        },
+                                        {
+                                            "op": "do",
+                                            "action": {
+                                                "kind": "move_runner_to_outermost_attacked",
+                                            },
+                                        },
+                                        {
+                                            "op": "do",
+                                            "action": {"kind": "offer_jack_out"},
+                                        },
+                                    ],
+                                },
+                            },
+                            {
+                                "id": "decline",
+                                "label": "Decline",
+                                "effect": gain("corp", 0),
+                            },
+                        ],
+                    },
+                },
+            },
+            unsupported=[],
+        )
+
+    if cid == "climactic-showdown":
+        return base(
+            c,
+            onTurnBegin={
+                "op": "seq",
+                "effects": [
+                    {"op": "do", "action": {"kind": "rfg_self"}},
+                    {
+                        "op": "do",
+                        "action": {
+                            "kind": "climactic_choose_server_corp_may_trash_ice_else_bonus_access",
+                        },
+                    },
+                ],
+            },
+            unsupported=[],
+        )
+
     # Fail closed — honest unsupported note for the remainder.
     card = base(c)
     card["unsupported"] = [f"Full text not yet mapped to IR: {plain[:240]}"]
@@ -1426,7 +1579,7 @@ def main():
         "Null Signal Downfall (NRDB pack df) — Ashes set 1 of 2; legacy "
         "backwards wave before Uprising / System Gateway. Skip Magnum Opus "
         f"Reprint (mor). In-progress: {full} cards fully mapped, {partial} "
-        "with unsupported notes (I-slice v1.56.0)."
+        "with unsupported notes (J-slice v1.57.0)."
     )
     manifest = {
         "pack": WAVE,

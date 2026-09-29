@@ -5,9 +5,51 @@
   "nrdbCode": "26004",
   "type": "program",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Once per turn → [click]: Run R&D. If successful, instead of breaching R&D, reveal the top 3 cards of R&D. Trash 1 of the revealed cards."
-  ],
+  "unsupported": [],
   "installCost": 4,
-  "memoryCost": 2
+  "memoryCost": 2,
+  "paidAbilities": [
+    {
+      "id": "stargate-run-rd",
+      "label": "[click]: Run R&D (once per turn)",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "oncePerTurn": true,
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "runner",
+          "amount": 0
+        }
+      },
+      "startsRun": {
+        "servers": "rd",
+        "onSuccessfulRun": {
+          "op": "seq",
+          "effects": [
+            {
+              "op": "do",
+              "action": {
+                "kind": "set_run_skip_breach"
+              }
+            },
+            {
+              "op": "do",
+              "action": {
+                "kind": "reveal_top_n_rd_trash_one",
+                "n": 3
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
 }

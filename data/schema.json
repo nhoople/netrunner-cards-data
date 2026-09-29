@@ -1053,6 +1053,40 @@
       },
       "description": "Corp identity: additional credit cost to initiate a run, gated by face (Earth Station; CR 1.16.1b / 4.6.8f)."
     },
+    "additionalRunInitiatePerPowerCounter": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "credits": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Credits per hosted power counter as additional cost to initiate a run on this server (Reduced Service / Cold Site)."
+        },
+        "clicks": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Clicks per hosted power counter as additional cost to initiate a run on this server (Cold Site)."
+        }
+      },
+      "description": "Rezzed upgrade protecting a server: additional run-initiate cost of clicks/credits × hosted power counters (Reduced Service / Cold Site; Earth Station timing)."
+    },
+    "rezSpendCreditsForPowerCounters": {
+      "type": "object",
+      "required": ["max"],
+      "additionalProperties": false,
+      "properties": {
+        "max": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Maximum credits that may be spent on rez to place that many power counters (Reduced Service)."
+        }
+      },
+      "description": "When this card is rezzed, Corp may pay up to max credits to place that many power counters (Reduced Service; Atman install cousin)."
+    },
+    "onApproachServerOncePerRun": {
+      "type": "boolean",
+      "description": "Fire onApproachServer only the first time the Runner approaches this server each run (Letheia Nisei)."
+    },
     "vacheronStealReplacement": {
       "type": "boolean",
       "description": "When this agenda would be added to the Runner score area from anywhere except Archives, instead add it with 4 agenda counters (Project Vacheron; CR 9.9.9c). Replacement does not re-trigger on its own result."

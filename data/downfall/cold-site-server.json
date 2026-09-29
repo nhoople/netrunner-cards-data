@@ -5,13 +5,42 @@
   "nrdbCode": "26038",
   "type": "upgrade",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: [click]: Place 1 power counter on this upgrade. As an additional cost to run this server, the Runner must spend [click] and 1[credit] for each hosted power counter. When your turn begins, remove all hosted power counters."
-  ],
+  "unsupported": [],
   "subtypes": [
     "facility"
   ],
   "installCost": 0,
   "rezCost": 0,
-  "trashCost": 3
+  "trashCost": 3,
+  "paidAbilities": [
+    {
+      "id": "cold-site-power",
+      "label": "[click]: Place 1 power counter",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "add_power_counter",
+          "amount": 1
+        }
+      }
+    }
+  ],
+  "additionalRunInitiatePerPowerCounter": {
+    "clicks": 1,
+    "credits": 1
+  },
+  "onTurnBegin": {
+    "op": "do",
+    "action": {
+      "kind": "remove_all_power_counters"
+    }
+  }
 }
