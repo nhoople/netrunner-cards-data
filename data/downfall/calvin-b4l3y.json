@@ -5,14 +5,65 @@
   "nrdbCode": "26033",
   "type": "asset",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: Once per turn → [click]: Draw 2 cards. When the Runner trashes this asset, you may draw 2 cards."
-  ],
+  "unsupported": [],
   "subtypes": [
     "bioroid"
   ],
   "installCost": 0,
   "rezCost": 0,
   "trashCost": 3,
-  "unique": true
+  "unique": true,
+  "paidAbilities": [
+    {
+      "id": "calvin-b4l3y-draw",
+      "label": "[click]: Draw 2 cards",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "oncePerTurn": true,
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "draw",
+          "side": "corp",
+          "amount": 2
+        }
+      }
+    }
+  ],
+  "onTrash": {
+    "op": "choose",
+    "chooser": "corp",
+    "options": [
+      {
+        "id": "draw",
+        "label": "Draw 2 cards",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "draw",
+            "side": "corp",
+            "amount": 2
+          }
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "corp",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  }
 }

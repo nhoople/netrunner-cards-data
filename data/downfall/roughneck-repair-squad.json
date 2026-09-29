@@ -5,13 +5,67 @@
   "nrdbCode": "26057",
   "type": "asset",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: [click][click][click]: Gain 6[credit]. You may remove 1 bad publicity."
-  ],
+  "unsupported": [],
   "subtypes": [
     "industrial"
   ],
   "installCost": 0,
   "rezCost": 0,
-  "trashCost": 3
+  "trashCost": 3,
+  "paidAbilities": [
+    {
+      "id": "roughneck-repair-squad-main",
+      "label": "[click][click][click]: Gain 6¢. You may remove 1 bad publicity.",
+      "clickCost": 3,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 3
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "effect": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "gain_credits",
+              "side": "corp",
+              "amount": 6
+            }
+          },
+          {
+            "op": "choose",
+            "chooser": "corp",
+            "options": [
+              {
+                "id": "remove-bp",
+                "label": "Remove 1 bad publicity",
+                "effect": {
+                  "op": "do",
+                  "action": {
+                    "kind": "remove_bad_publicity",
+                    "amount": 1
+                  }
+                }
+              },
+              {
+                "id": "decline",
+                "label": "Decline",
+                "effect": {
+                  "op": "do",
+                  "action": {
+                    "kind": "gain_credits",
+                    "side": "corp",
+                    "amount": 0
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
 }

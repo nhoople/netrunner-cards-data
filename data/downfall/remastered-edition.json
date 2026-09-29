@@ -5,12 +5,38 @@
   "nrdbCode": "26047",
   "type": "agenda",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: When you score this agenda, place 1 agenda counter on it. Hosted agenda counter: Place 1 advancement counter on an installed card."
-  ],
+  "unsupported": [],
   "subtypes": [
     "expansion"
   ],
   "advancementRequirement": 4,
-  "agendaPoints": 2
+  "agendaPoints": 2,
+  "onScore": {
+    "op": "do",
+    "action": {
+      "kind": "add_agenda_counter",
+      "amount": 1
+    }
+  },
+  "paidAbilities": [
+    {
+      "id": "remastered-edition-advance",
+      "label": "Hosted agenda counter: Place 1 advancement counter",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "agendaCounters": 1
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "place_advancements",
+          "amount": 1
+        }
+      }
+    }
+  ]
 }
