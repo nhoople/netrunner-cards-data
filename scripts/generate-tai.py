@@ -2028,6 +2028,7 @@ def map_card(c: dict) -> dict:
                     "cost": {"powerCounters": 1},
                     "windows": ["damage_interrupt_paw"],
                     "requireDuringRun": True,
+                    "requirePendingDamageTypes": ["net"],
                     "effect": {
                         "op": "do",
                         "action": {

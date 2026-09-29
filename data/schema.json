@@ -431,6 +431,20 @@
             "type": "boolean",
             "description": "Ability usable only while a run is in progress (Arissana / AirbladeX)."
           },
+          "requirePendingDamageTypes": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "enum": [
+                "net",
+                "meat",
+                "core",
+                "brain"
+              ]
+            },
+            "description": "Damage interrupt ability legal only while pendingDamage.type is one of these (Plascrete meat; AirbladeX net)."
+          },
           "effect": {
             "type": "object"
           },

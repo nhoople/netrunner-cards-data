@@ -1,0 +1,39 @@
+{
+  "id": "plascrete-carapace",
+  "title": "Plascrete Carapace",
+  "wave": "fixtures",
+  "nrdbCode": "02009",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [],
+  "subtypes": [
+    "gear"
+  ],
+  "installCost": 3,
+  "powerCountersOnInstall": 4,
+  "trashWhenPowerEmpty": true,
+  "paidAbilities": [
+    {
+      "id": "plascrete-prevent-meat",
+      "label": "Interrupt: hosted power counter — prevent 1 meat damage",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "powerCounters": 1
+      },
+      "windows": [
+        "damage_interrupt_paw"
+      ],
+      "requirePendingDamageTypes": [
+        "meat"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "prevent_pending_damage",
+          "amount": 1
+        }
+      }
+    }
+  ]
+}
