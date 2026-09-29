@@ -1422,6 +1422,210 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    # --- H-slice (v1.43.0): Ganked! / Mystic Maemi / Paladin Poemu /
+    # Prognostic Q-Loop / Boomerang ---
+
+    if cid == "ganked":
+        return base(
+            c,
+            mustRevealWhenAccessedFromRd=True,
+            onAccess={
+                "op": "choose",
+                "chooser": "corp",
+                "options": [
+                    {
+                        "id": "trash-encounter",
+                        "label": (
+                            "Trash Ganked! to choose rezzed ice protecting "
+                            "this server; Runner encounters it"
+                        ),
+                        "effect": {
+                            "op": "do",
+                            "action": {
+                                "kind": (
+                                    "trash_self_choose_rezzed_protecting_ice_encounter"
+                                )
+                            },
+                        },
+                    },
+                    {
+                        "id": "decline",
+                        "label": "Decline",
+                        "effect": {
+                            "op": "do",
+                            "action": {
+                                "kind": "gain_credits",
+                                "side": "corp",
+                                "amount": 0,
+                            },
+                        },
+                    },
+                ],
+            },
+            unsupported=[],
+        )
+
+    _companion_place_credit = {
+        "op": "do",
+        "action": {"kind": "place_hosted_credits", "amount": 1},
+    }
+
+    if cid == "mystic-maemi":
+        return base(
+            c,
+            onTurnBegin=_companion_place_credit,
+            onStealAgenda=_companion_place_credit,
+            hostedCreditsSpendFor=["play_event"],
+            onRunnerTurnEnd={
+                "op": "if",
+                "cond": {"op": "hosted_credits_gte", "amount": 3},
+                "then": {
+                    "op": "choose",
+                    "chooser": "runner",
+                    "options": [
+                        {
+                            "id": "trash-grip",
+                            "label": "Trash 1 card from grip at random",
+                            "effect": {
+                                "op": "do",
+                                "action": {
+                                    "kind": "trash_random_from_grip",
+                                    "amount": 1,
+                                },
+                            },
+                        },
+                        {
+                            "id": "trash-self",
+                            "label": "Trash Mystic Maemi",
+                            "effect": {
+                                "op": "do",
+                                "action": {"kind": "trash_self"},
+                            },
+                        },
+                    ],
+                },
+            },
+            unsupported=[],
+        )
+
+    if cid == "paladin-poemu":
+        return base(
+            c,
+            onTurnBegin=_companion_place_credit,
+            onStealAgenda=_companion_place_credit,
+            hostedCreditsSpendFor=["install"],
+            hostedCreditsSpendForInstallExcludeSubtypes=["connection"],
+            onRunnerTurnEnd={
+                "op": "if",
+                "cond": {"op": "hosted_credits_gte", "amount": 3},
+                "then": {
+                    "op": "do",
+                    "action": {"kind": "must_trash_own_installed"},
+                },
+            },
+            unsupported=[],
+        )
+
+    if cid == "prognostic-q-loop":
+        return base(
+            c,
+            onFirstRunBeginThisTurn={
+                "op": "choose",
+                "chooser": "runner",
+                "options": [
+                    {
+                        "id": "look",
+                        "label": "Look at the top 2 cards of your stack",
+                        "effect": {
+                            "op": "do",
+                            "action": {
+                                "kind": "look_top_n_stack_peek",
+                                "amount": 2,
+                            },
+                        },
+                    },
+                    {
+                        "id": "decline",
+                        "label": "Decline",
+                        "effect": {
+                            "op": "do",
+                            "action": {
+                                "kind": "gain_credits",
+                                "side": "runner",
+                                "amount": 0,
+                            },
+                        },
+                    },
+                ],
+            },
+            paidAbilities=[
+                {
+                    "id": "prognostic-q-loop-reveal-install",
+                    "label": (
+                        "1¢: Reveal top of stack; may install if program "
+                        "or hardware"
+                    ),
+                    "clickCost": 0,
+                    "creditCost": 1,
+                    "cost": {"credits": 1},
+                    "windows": ["runner_action_paw"],
+                    "oncePerTurn": True,
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": (
+                                "reveal_top_stack_may_install_program_or_hardware"
+                            )
+                        },
+                    },
+                }
+            ],
+            unsupported=[],
+        )
+
+    if cid == "boomerang":
+        return base(
+            c,
+            chooseIceOnInstall=True,
+            paidAbilities=[
+                {
+                    "id": "boomerang-break",
+                    "label": (
+                        "[trash]: Break up to 2 subroutines; if this run is "
+                        "successful, may shuffle Boomerang from heap into stack"
+                    ),
+                    "clickCost": 0,
+                    "creditCost": 0,
+                    "cost": {"trashSelf": True},
+                    "windows": ["encounter_paw"],
+                    "requireEncounterChosenIce": True,
+                    "effect": {
+                        "op": "seq",
+                        "effects": [
+                            {
+                                "op": "do",
+                                "action": {
+                                    "kind": "break_encounter_subroutine",
+                                    "maxSubs": 2,
+                                },
+                            },
+                            {
+                                "op": "do",
+                                "action": {
+                                    "kind": (
+                                        "register_may_shuffle_title_from_heap_"
+                                        "on_successful_run_end"
+                                    ),
+                                    "title": "Boomerang",
+                                },
+                            },
+                        ],
+                    },
+                }
+            ],
+            unsupported=[],
+        )
+
     # Fail closed — honest unsupported note for the remainder.
     card = base(c)
     card["unsupported"] = [f"Full text not yet mapped to IR: {plain[:240]}"]
@@ -1467,7 +1671,7 @@ def main():
             "Null Signal Uprising (NRDB pack ur) — Ashes set 2 of 2; first "
             "legacy backwards wave before System Gateway. urbp titles absorbed. "
             f"In-progress: {full} cards fully mapped, {partial} with unsupported "
-            "notes (wave slice v1.42.0)."
+            "notes (wave slice v1.43.0)."
         ),
         "cards": written,
     }

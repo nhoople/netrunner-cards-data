@@ -5,13 +5,40 @@
   "nrdbCode": "26119",
   "type": "upgrade",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: While the Runner is accessing this upgrade in R&D, they must reveal it. When the Runner accesses this upgrade, you may trash it to choose a rezzed piece of ice protecting this server. The Runner encounters that ice."
-  ],
+  "unsupported": [],
   "subtypes": [
     "ambush"
   ],
   "installCost": 0,
   "rezCost": 0,
-  "trashCost": 3
+  "trashCost": 3,
+  "mustRevealWhenAccessedFromRd": true,
+  "onAccess": {
+    "op": "choose",
+    "chooser": "corp",
+    "options": [
+      {
+        "id": "trash-encounter",
+        "label": "Trash Ganked! to choose rezzed ice protecting this server; Runner encounters it",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "trash_self_choose_rezzed_protecting_ice_encounter"
+          }
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "corp",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  }
 }
