@@ -5,9 +5,7 @@
   "nrdbCode": "22033",
   "type": "upgrade",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: Whenever the Runner makes a successful run on this server, end the run unless they pay 2[credit] for each agenda in their score area."
-  ],
+  "unsupported": [],
   "faction": "haas-bioroid",
   "subtypes": [
     "facility"
@@ -15,5 +13,12 @@
   "installCost": 3,
   "rezCost": 3,
   "trashCost": 3,
-  "unique": true
+  "unique": true,
+  "onSuccessfulRun": {
+    "op": "do",
+    "action": {
+      "kind": "end_the_run_unless_pay_credits_per_runner_scored_agenda",
+      "creditsPer": 2
+    }
+  }
 }

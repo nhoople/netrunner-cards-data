@@ -5,14 +5,42 @@
   "nrdbCode": "22051",
   "type": "agenda",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: When you score this agenda, you may take 1 bad publicity. Place 1 agenda counter on this agenda for each bad publicity you have. Once per turn → [click], hosted agenda counter: Do 2 meat damage."
-  ],
+  "unsupported": [],
   "faction": "weyland-consortium",
   "subtypes": [
     "security",
     "liability"
   ],
   "advancementRequirement": 4,
-  "agendaPoints": 2
+  "agendaPoints": 2,
+  "onScore": {
+    "op": "do",
+    "action": {
+      "kind": "may_take_bad_publicity_then_add_agenda_counters_equal_to_bad_publicity",
+      "amount": 1
+    }
+  },
+  "paidAbilities": [
+    {
+      "id": "broad-daylight-meat",
+      "label": "[click], hosted agenda counter: Do 2 meat damage",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1,
+        "agendaCounters": 1
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "oncePerTurn": true,
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "meat_damage",
+          "amount": 2
+        }
+      }
+    }
+  ]
 }
