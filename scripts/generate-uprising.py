@@ -1953,6 +1953,7 @@ def map_card(c: dict) -> dict:
                     "cost": {},
                     "windows": ["damage_interrupt_paw"],
                     "requirePendingDamageTypes": ["net"],
+                    "oncePerPendingDamageInstance": True,
                     "effect": {
                         "op": "seq",
                         "effects": [

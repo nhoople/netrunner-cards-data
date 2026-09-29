@@ -49,7 +49,8 @@
             }
           }
         ]
-      }
+      },
+      "oncePerPendingDamageInstance": true
     },
     {
       "id": "prana-discharge",

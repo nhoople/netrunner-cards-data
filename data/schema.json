@@ -453,6 +453,10 @@
             },
             "description": "Damage interrupt ability legal only while pendingDamage.type is one of these (Plascrete meat; AirbladeX net)."
           },
+          "oncePerPendingDamageInstance": {
+            "type": "boolean",
+            "description": "Damage interrupt: usable at most once per pendingDamage open (Prāna Condenser; CR 9.12.2b)."
+          },
           "effect": {
             "type": "object"
           },
