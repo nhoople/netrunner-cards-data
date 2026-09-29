@@ -39,7 +39,7 @@ Match this dataset and [netrunner-engine](https://github.com/nhoople/netrunner-e
 
 | Pairing | cards-data | engine |
 |---------|------------|--------|
-| **Current** | [`v1.63.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.63.0) | engine same-semver pin `v1.63.0` |
+| **Current** | [`v1.64.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.64.0) | engine same-semver pin `v1.64.0` |
 | Downfall milestone | [`v1.58.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.58.0) | [`v1.58.0`](https://github.com/nhoople/netrunner-engine/releases/tag/v1.58.0) |
 | Uprising milestone | [`v1.46.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.46.0) | [`v1.46.0`](https://github.com/nhoople/netrunner-engine/releases/tag/v1.46.0) |
 | Post-VP maintenance | [`v1.34.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.34.0) | [`v1.34.0`](https://github.com/nhoople/netrunner-engine/releases/tag/v1.34.0) |
