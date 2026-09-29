@@ -1,0 +1,18 @@
+{
+  "id": "calvin-b4l3y",
+  "title": "Calvin B4L3Y",
+  "wave": "downfall",
+  "nrdbCode": "26033",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: Once per turn → [click]: Draw 2 cards. When the Runner trashes this asset, you may draw 2 cards."
+  ],
+  "subtypes": [
+    "bioroid"
+  ],
+  "installCost": 0,
+  "rezCost": 0,
+  "trashCost": 3,
+  "unique": true
+}

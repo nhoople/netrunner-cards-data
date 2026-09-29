@@ -1,0 +1,16 @@
+{
+  "id": "the-artist",
+  "title": "The Artist",
+  "wave": "downfall",
+  "nrdbCode": "26027",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: Once per turn → [click]: Gain 2[credit]. Once per turn → [click]: Install 1 program or piece of hardware from your grip, paying 1[credit] less."
+  ],
+  "subtypes": [
+    "connection"
+  ],
+  "installCost": 4,
+  "unique": true
+}

@@ -1,0 +1,14 @@
+{
+  "id": "hyoubu-institute-absolute-clarity",
+  "title": "Hyoubu Institute: Absolute Clarity",
+  "wave": "downfall",
+  "nrdbCode": "26039",
+  "type": "identity",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: The first time each turn you reveal a card, gain 1[credit]. [click]: Reveal 1 card from the grip at random or the top card of the stack."
+  ],
+  "subtypes": [
+    "division"
+  ]
+}

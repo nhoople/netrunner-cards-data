@@ -1,0 +1,20 @@
+{
+  "id": "trebuchet",
+  "title": "Trebuchet",
+  "wave": "downfall",
+  "nrdbCode": "26060",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: When you rez this ice, take 1 bad publicity. [subroutine] Trash 1 installed Runner card. [subroutine] Trace[6]. If successful, the Runner cannot steal or trash Corp cards for the remainder of this run."
+  ],
+  "subtypes": [
+    "sentry",
+    "destroyer",
+    "tracer",
+    "liability"
+  ],
+  "installCost": 7,
+  "rezCost": 7,
+  "strength": 6
+}

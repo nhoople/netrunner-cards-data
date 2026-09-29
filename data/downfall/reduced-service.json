@@ -1,0 +1,15 @@
+{
+  "id": "reduced-service",
+  "title": "Reduced Service",
+  "wave": "downfall",
+  "nrdbCode": "26062",
+  "type": "upgrade",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: When you rez this upgrade, you may pay up to 4[credit] to place that many power counters on it. As an additional cost to run this server, the Runner must pay 2[credit] for each hosted power counter. Whenever the Runner makes a successful ru"
+  ],
+  "installCost": 0,
+  "rezCost": 0,
+  "trashCost": 2,
+  "unique": true
+}

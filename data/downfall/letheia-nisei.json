@@ -1,0 +1,19 @@
+{
+  "id": "letheia-nisei",
+  "title": "Letheia Nisei",
+  "wave": "downfall",
+  "nrdbCode": "26046",
+  "type": "upgrade",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: The first time the Runner approaches this server during each run, play a Psi Game. (Players secretly bid 0–2[credit]. Then each player reveals and spends their bid.) If the bids differ, you may trash this upgrade. If you do, the Runner move"
+  ],
+  "subtypes": [
+    "psi",
+    "clone"
+  ],
+  "installCost": 1,
+  "rezCost": 1,
+  "trashCost": 2,
+  "unique": true
+}

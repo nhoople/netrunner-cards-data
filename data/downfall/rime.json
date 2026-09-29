@@ -1,0 +1,17 @@
+{
+  "id": "rime",
+  "title": "Rime",
+  "wave": "downfall",
+  "nrdbCode": "26065",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: During runs against this server, you can rez this ice any time you could rez non-ice cards. Each piece of ice protecting this server gets +1 strength. [subroutine] The Runner loses 1[credit]."
+  ],
+  "subtypes": [
+    "mythic"
+  ],
+  "installCost": 0,
+  "rezCost": 0,
+  "strength": 0
+}

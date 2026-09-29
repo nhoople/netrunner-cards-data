@@ -1,0 +1,12 @@
+{
+  "id": "fully-operational",
+  "title": "Fully Operational",
+  "wave": "downfall",
+  "nrdbCode": "26036",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: Gain 2[credit] or draw 2 cards. Repeat this process for each remote server that has a card in its root and is protected by ice."
+  ],
+  "playCost": 1
+}

@@ -1,0 +1,12 @@
+{
+  "id": "blueberry-diesel",
+  "title": "Blueberry!™ Diesel",
+  "wave": "downfall",
+  "nrdbCode": "26012",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: Look at the top 2 cards of your stack. You may add 1 of those cards to the bottom of your stack. Draw 2 cards."
+  ],
+  "playCost": 0
+}

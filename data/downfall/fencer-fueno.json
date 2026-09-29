@@ -1,0 +1,17 @@
+{
+  "id": "fencer-fueno",
+  "title": "Fencer Fueno",
+  "wave": "downfall",
+  "nrdbCode": "26007",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: When your turn begins and whenever you steal an agenda, place 1[credit] on this resource. Whenever you make a successful run, you can spend hosted credits for the remainder of that run. When your turn ends, if there are 3 or more hosted cre"
+  ],
+  "subtypes": [
+    "companion",
+    "virtual"
+  ],
+  "installCost": 0,
+  "unique": true
+}

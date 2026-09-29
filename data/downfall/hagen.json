@@ -1,0 +1,18 @@
+{
+  "id": "hagen",
+  "title": "Hagen",
+  "wave": "downfall",
+  "nrdbCode": "26035",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: This ice gets −1 strength for each installed icebreaker. [subroutine] Trash 1 installed program that is not a decoder, fracter, or killer. [subroutine] End the run."
+  ],
+  "subtypes": [
+    "barrier",
+    "destroyer"
+  ],
+  "installCost": 4,
+  "rezCost": 4,
+  "strength": 6
+}

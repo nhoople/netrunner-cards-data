@@ -1,0 +1,15 @@
+{
+  "id": "khusyuk",
+  "title": "Khusyuk",
+  "wave": "downfall",
+  "nrdbCode": "26021",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: Run R&D. If successful, instead of breaching R&D, choose an install cost greater than 0[credit]. The Corp sets aside the top X cards of R&D faceup, where X is equal to the number of your installed cards with that printed install cost, up to"
+  ],
+  "subtypes": [
+    "run"
+  ],
+  "playCost": 3
+}

@@ -1,0 +1,15 @@
+{
+  "id": "spec-work",
+  "title": "Spec Work",
+  "wave": "downfall",
+  "nrdbCode": "26022",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: As an additional cost to play this event, trash 1 installed program. Gain 4[credit] and draw 2 cards."
+  ],
+  "subtypes": [
+    "job"
+  ],
+  "playCost": 1
+}

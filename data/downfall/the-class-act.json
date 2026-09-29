@@ -1,0 +1,17 @@
+{
+  "id": "the-class-act",
+  "title": "The Class Act",
+  "wave": "downfall",
+  "nrdbCode": "26018",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: When a discard phase ends, if you installed this resource this turn, draw 4 cards. [interrupt] → The first time each turn you would draw any number of cards, look at the top X cards of your stack. Add 1 of those cards to the bottom of your "
+  ],
+  "subtypes": [
+    "connection",
+    "ritzy"
+  ],
+  "installCost": 4,
+  "unique": true
+}

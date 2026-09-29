@@ -1,0 +1,15 @@
+{
+  "id": "in-the-groove",
+  "title": "In the Groove",
+  "wave": "downfall",
+  "nrdbCode": "26020",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: Play only as your first [click]. For the remainder of this turn, whenever you install a card with a printed install cost of 1[credit] or greater, draw 1 card or gain 1[credit]."
+  ],
+  "subtypes": [
+    "priority"
+  ],
+  "playCost": 0
+}

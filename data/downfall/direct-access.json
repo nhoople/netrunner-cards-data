@@ -1,0 +1,15 @@
+{
+  "id": "direct-access",
+  "title": "Direct Access",
+  "wave": "downfall",
+  "nrdbCode": "26028",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: While you are resolving this event, each playerʼs identity loses all abilities. Run any server. When that run ends, you may shuffle this event into your stack."
+  ],
+  "subtypes": [
+    "run"
+  ],
+  "playCost": 1
+}

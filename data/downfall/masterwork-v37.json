@@ -1,0 +1,16 @@
+{
+  "id": "masterwork-v37",
+  "title": "Masterwork (v37)",
+  "wave": "downfall",
+  "nrdbCode": "26015",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: +1[mu] The first time each turn you install a piece of hardware, draw 1 card. Whenever a run begins, you may install 1 piece of hardware from your grip, paying 1[credit] more. Limit 1 console per player."
+  ],
+  "subtypes": [
+    "console"
+  ],
+  "installCost": 2,
+  "unique": true
+}

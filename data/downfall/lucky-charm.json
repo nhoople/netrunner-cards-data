@@ -1,0 +1,16 @@
+{
+  "id": "lucky-charm",
+  "title": "Lucky Charm",
+  "wave": "downfall",
+  "nrdbCode": "26014",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: [interrupt] → Remove this hardware from the game: Prevent a Corp card ability from ending the run. Use this ability only if you made a successful run on HQ this turn."
+  ],
+  "subtypes": [
+    "chip"
+  ],
+  "installCost": 1,
+  "unique": true
+}

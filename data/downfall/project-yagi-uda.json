@@ -1,0 +1,16 @@
+{
+  "id": "project-yagi-uda",
+  "title": "Project Yagi-Uda",
+  "wave": "downfall",
+  "nrdbCode": "26040",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: When you score this agenda, place 1 agenda counter on it for each hosted advancement counter past 3. Hosted agenda counter: Swap 1 card from HQ with 1 card in the root of or protecting the attacked server. The Runner may jack out. Use this "
+  ],
+  "subtypes": [
+    "research"
+  ],
+  "advancementRequirement": 3,
+  "agendaPoints": 2
+}

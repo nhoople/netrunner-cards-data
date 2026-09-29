@@ -1,0 +1,15 @@
+{
+  "id": "az-mccaffrey-mechanical-prodigy",
+  "title": "Az McCaffrey: Mechanical Prodigy",
+  "wave": "downfall",
+  "nrdbCode": "26010",
+  "type": "identity",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: The first job resource, connection resource, or piece of hardware you install each turn costs 1[credit] less to install."
+  ],
+  "subtypes": [
+    "cyborg"
+  ],
+  "link": 1
+}

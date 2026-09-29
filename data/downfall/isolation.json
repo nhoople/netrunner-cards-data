@@ -1,0 +1,25 @@
+{
+  "id": "isolation",
+  "title": "Isolation",
+  "wave": "downfall",
+  "nrdbCode": "26001",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "playCost": 2,
+  "playRequiresInstalledResource": true,
+  "playAdditionalCost": {
+    "op": "do",
+    "action": {
+      "kind": "trash_own_resource"
+    }
+  },
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "gain_credits",
+      "side": "runner",
+      "amount": 7
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "id": "roughneck-repair-squad",
+  "title": "Roughneck Repair Squad",
+  "wave": "downfall",
+  "nrdbCode": "26057",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: [click][click][click]: Gain 6[credit]. You may remove 1 bad publicity."
+  ],
+  "subtypes": [
+    "industrial"
+  ],
+  "installCost": 0,
+  "rezCost": 0,
+  "trashCost": 3
+}
