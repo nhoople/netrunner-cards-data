@@ -5,9 +5,7 @@
   "nrdbCode": "25112",
   "type": "ice",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: When the Runner encounters this ice, they must take 1 tag or end the run. Hosted power counter: Give the Runner 1 tag. [subroutine] Trace[3]. If successful, place 1 power counter on this ice."
-  ],
+  "unsupported": [],
   "faction": "nbn",
   "subtypes": [
     "sentry",
@@ -16,5 +14,56 @@
   ],
   "installCost": 4,
   "rezCost": 4,
-  "strength": 4
+  "strength": 4,
+  "onEncounter": {
+    "op": "do",
+    "action": {
+      "kind": "end_the_run_unless_take_tags",
+      "amount": 1
+    }
+  },
+  "paidAbilities": [
+    {
+      "id": "data-raven-tag",
+      "label": "Hosted power: Give the Runner 1 tag",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "powerCounters": 1
+      },
+      "windows": [
+        "corp_action_paw",
+        "approach_paw",
+        "encounter_paw",
+        "approach_server_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "give_tags",
+          "amount": 1
+        }
+      }
+    }
+  ],
+  "subroutines": [
+    {
+      "id": "data-raven-trace",
+      "text": "Trace[3]. If successful, place 1 power counter on this ice.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "trace",
+          "strength": 3,
+          "onSuccess": {
+            "op": "do",
+            "action": {
+              "kind": "add_power_counter",
+              "amount": 1
+            }
+          }
+        }
+      }
+    }
+  ]
 }

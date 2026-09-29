@@ -5,13 +5,21 @@
   "nrdbCode": "25086",
   "type": "agenda",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: While the Runner is accessing this agenda in R&D, they must reveal it. When the Runner accesses this agenda anywhere except in Archives, do 2 net damage. As an additional cost to steal this agenda, th"
-  ],
+  "unsupported": [],
   "faction": "jinteki",
   "subtypes": [
     "ambush"
   ],
   "advancementRequirement": 5,
-  "agendaPoints": 2
+  "agendaPoints": 2,
+  "mustRevealWhenAccessedFromRd": true,
+  "skipOnAccessFromArchives": true,
+  "stealAdditionalCredits": 2,
+  "onAccess": {
+    "op": "do",
+    "action": {
+      "kind": "net_damage",
+      "amount": 2
+    }
+  }
 }

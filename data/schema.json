@@ -1051,6 +1051,11 @@
       "minimum": 1,
       "description": "While this card is rezzed, Runner must pay this many credits as an additional cost to steal any agenda (Magistrate Revontulet)."
     },
+    "stealAdditionalCreditsFromProtectingServer": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "While this card is rezzed (or Persistent), Runner must pay this many credits as an additional cost to steal an agenda from this server or its root (Red Herrings)."
+    },
     "runnerLoseCreditsOnBreakPrintedSubroutine": {
       "type": "integer",
       "minimum": 1,
@@ -1939,6 +1944,20 @@
     "rfgWhenPowerEmpty": {
       "type": "boolean",
       "description": "When hosted power counters reach 0, remove this card from the game (Malandragem)."
+    },
+    "scoreWhenPowerEmpty": {
+      "type": "object",
+      "required": [
+        "agendaPoints"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "agendaPoints": {
+          "type": "integer",
+          "minimum": 1
+        }
+      },
+      "description": "When hosted power counters reach 0, add this card to the Corp score area as an agenda worth agendaPoints (Public Support)."
     },
     "badPublicityCountersOnRez": {
       "type": "integer",

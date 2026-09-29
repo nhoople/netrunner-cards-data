@@ -5,11 +5,11 @@
   "nrdbCode": "25121",
   "type": "upgrade",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: Persistent → As an additional cost to steal an agenda from this server or its root, the Runner must pay 5[credit]. (If the Runner trashes this card while accessing it, this ability still applies for t"
-  ],
+  "unsupported": [],
   "faction": "nbn",
   "installCost": 1,
   "rezCost": 1,
-  "trashCost": 1
+  "trashCost": 1,
+  "persistent": true,
+  "stealAdditionalCreditsFromProtectingServer": 5
 }

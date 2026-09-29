@@ -1264,6 +1264,108 @@ def map_card(c: dict) -> dict | None:
             unsupported=[],
         )
 
+    # --- v1.71.0 L-slice: reuse + new Effect IR leaves (fail-closed engine pair) ---
+
+    if cid == "fetal-ai":
+        return base(
+            c,
+            mustRevealWhenAccessedFromRd=True,
+            skipOnAccessFromArchives=True,
+            stealAdditionalCredits=2,
+            onAccess={
+                "op": "do",
+                "action": {"kind": "net_damage", "amount": 2},
+            },
+            unsupported=[],
+        )
+
+    if cid == "data-raven":
+        return base(
+            c,
+            onEncounter={
+                "op": "do",
+                "action": {
+                    "kind": "end_the_run_unless_take_tags",
+                    "amount": 1,
+                },
+            },
+            paidAbilities=[
+                {
+                    "id": "data-raven-tag",
+                    "label": "Hosted power: Give the Runner 1 tag",
+                    "clickCost": 0,
+                    "creditCost": 0,
+                    "cost": {"powerCounters": 1},
+                    "windows": [
+                        "corp_action_paw",
+                        "approach_paw",
+                        "encounter_paw",
+                        "approach_server_paw",
+                    ],
+                    "effect": {
+                        "op": "do",
+                        "action": {"kind": "give_tags", "amount": 1},
+                    },
+                }
+            ],
+            subroutines=[
+                {
+                    "id": "data-raven-trace",
+                    "text": "Trace[3]. If successful, place 1 power counter on this ice.",
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "trace",
+                            "strength": 3,
+                            "onSuccess": {
+                                "op": "do",
+                                "action": {
+                                    "kind": "add_power_counter",
+                                    "amount": 1,
+                                },
+                            },
+                        },
+                    },
+                }
+            ],
+            unsupported=[],
+        )
+
+    if cid == "red-herrings":
+        return base(
+            c,
+            persistent=True,
+            stealAdditionalCreditsFromProtectingServer=5,
+            unsupported=[],
+        )
+
+    if cid == "public-support":
+        return base(
+            c,
+            powerCountersOnRez=3,
+            scoreWhenPowerEmpty={"agendaPoints": 1},
+            onTurnBegin={
+                "op": "do",
+                "action": {"kind": "remove_power_counter", "amount": 1},
+            },
+            unsupported=[],
+        )
+
+    if cid == "project-junebug":
+        return base(
+            c,
+            canAdvance=True,
+            onAccess={
+                "op": "do",
+                "action": {
+                    "kind": "may_pay_credits_for_net_damage_per_advancement",
+                    "amount": 1,
+                    "per": 2,
+                },
+            },
+            unsupported=[],
+        )
+
     card = base(c)
     card["unsupported"] = [
         f"Full text not yet mapped to IR: {plain[:200]}"
@@ -1397,6 +1499,13 @@ def main():
             "stimhack",
             "turing",
             "spear-phishing",
+        ],
+        "lSliceClears": [
+            "fetal-ai",
+            "data-raven",
+            "red-herrings",
+            "public-support",
+            "project-junebug",
         ],
     }
     (OUT / "_manifest.json").write_text(
