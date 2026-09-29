@@ -5,14 +5,47 @@
   "nrdbCode": "26050",
   "type": "ice",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: When the Runner passes this ice, gain 1[credit]. [subroutine] Gain 2[credit]. The Runner gains 1[credit]."
-  ],
+  "unsupported": [],
   "subtypes": [
     "code gate",
     "advertisement"
   ],
   "installCost": 1,
   "rezCost": 1,
-  "strength": 3
+  "strength": 3,
+  "onPass": {
+    "op": "do",
+    "action": {
+      "kind": "gain_credits",
+      "side": "corp",
+      "amount": 1
+    }
+  },
+  "subroutines": [
+    {
+      "id": "congratulations-credits",
+      "text": "Gain 2[credit]. The Runner gains 1[credit].",
+      "effect": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "gain_credits",
+              "side": "corp",
+              "amount": 2
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "gain_credits",
+              "side": "runner",
+              "amount": 1
+            }
+          }
+        ]
+      }
+    }
+  ]
 }

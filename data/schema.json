@@ -1462,6 +1462,10 @@
       "type": "boolean",
       "description": "Play only if the Runner has at least one installed resource (Sell Out)."
     },
+    "playRequiresInstalledProgram": {
+      "type": "boolean",
+      "description": "Play only if the Runner has at least one installed program (Spec Work)."
+    },
     "playRequiresUntagged": {
       "type": "boolean",
       "description": "Play only if the Runner has no tags (Eye for an Eye / Privileged Access)."
@@ -1632,6 +1636,10 @@
     },
     "strengthPerAdvancement": {
       "type": "integer"
+    },
+    "strengthPerVirusCounter": {
+      "type": "integer",
+      "description": "Ice strength modifier per hosted virus counter (Sandstone: -1)."
     },
     "strengthBonusIfNoInstalledSubtype": {
       "type": "object",

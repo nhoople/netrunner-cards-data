@@ -5,11 +5,37 @@
   "nrdbCode": "26022",
   "type": "event",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: As an additional cost to play this event, trash 1 installed program. Gain 4[credit] and draw 2 cards."
-  ],
+  "unsupported": [],
   "subtypes": [
     "job"
   ],
-  "playCost": 1
+  "playCost": 1,
+  "playRequiresInstalledProgram": true,
+  "playAdditionalCost": {
+    "op": "do",
+    "action": {
+      "kind": "trash_own_program"
+    }
+  },
+  "onPlay": {
+    "op": "seq",
+    "effects": [
+      {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "runner",
+          "amount": 4
+        }
+      },
+      {
+        "op": "do",
+        "action": {
+          "kind": "draw",
+          "side": "runner",
+          "amount": 2
+        }
+      }
+    ]
+  }
 }
