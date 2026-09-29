@@ -186,6 +186,117 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
+    # --- v1.36.0 A-slice ---
+
+    if cid == "la-costa-grid":
+        return base(
+            c,
+            remoteOnly=True,
+            onTurnBegin={
+                "op": "do",
+                "action": {
+                    "kind": "place_advancements",
+                    "amount": 1,
+                    "sameServerRootAsSource": True,
+                    "pick": "choose",
+                },
+            },
+            unsupported=[],
+        )
+
+    if cid == "gold-farmer":
+        etr_unless_3 = {
+            "op": "choose",
+            "chooser": "runner",
+            "options": [
+                {
+                    "id": "pay3",
+                    "label": "Pay 3¢",
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "lose_credits",
+                            "side": "runner",
+                            "amount": 3,
+                        },
+                    },
+                },
+                {
+                    "id": "etr",
+                    "label": "End the run",
+                    "effect": {
+                        "op": "do",
+                        "action": {"kind": "end_the_run"},
+                    },
+                },
+            ],
+        }
+        return base(
+            c,
+            runnerLoseCreditsOnBreakPrintedSubroutine=1,
+            subroutines=[
+                {
+                    "id": "gold-farmer-1",
+                    "text": "End the run unless the Runner pays 3[credit].",
+                    "effect": etr_unless_3,
+                },
+                {
+                    "id": "gold-farmer-2",
+                    "text": "End the run unless the Runner pays 3[credit].",
+                    "effect": etr_unless_3,
+                },
+            ],
+            unsupported=[],
+        )
+
+    if cid == "mantle":
+        return base(
+            c,
+            recurringCreditsMax=1,
+            recurringSpendFor=["use_program", "use_hardware"],
+            unsupported=[],
+        )
+
+    if cid == "false-lead":
+        return base(
+            c,
+            paidAbilities=[
+                {
+                    "id": "false-lead-forfeit",
+                    "label": "Forfeit: if Runner has 2+ [click], they lose [click][click]",
+                    "clickCost": 0,
+                    "creditCost": 0,
+                    "cost": {"trashSelf": True},
+                    "windows": ["corp_action_paw"],
+                    "effect": {
+                        "op": "if",
+                        "cond": {
+                            "op": "clicks_gte",
+                            "side": "runner",
+                            "amount": 2,
+                        },
+                        "then": {
+                            "op": "do",
+                            "action": {
+                                "kind": "lose_clicks",
+                                "side": "runner",
+                                "amount": 2,
+                            },
+                        },
+                    },
+                }
+            ],
+            unsupported=[],
+        )
+
+    if cid == "bellona":
+        return base(
+            c,
+            stealAdditionalCredits=5,
+            onScore=gain("corp", 5),
+            unsupported=[],
+        )
+
     # Fail closed — honest unsupported note for the remainder.
     card = base(c)
     card["unsupported"] = [f"Full text not yet mapped to IR: {plain[:240]}"]
@@ -230,8 +341,8 @@ def main():
         "notes": (
             "Null Signal Uprising (NRDB pack ur) — Ashes set 2 of 2; first "
             "legacy backwards wave before System Gateway. urbp titles absorbed. "
-            f"Kickoff extract: fail-closed IR; {full} cards fully mapped, "
-            f"{partial} with unsupported notes (wave kickoff v1.35.0)."
+            f"In-progress: {full} cards fully mapped, {partial} with unsupported "
+            "notes (wave slice v1.36.0)."
         ),
         "cards": written,
     }

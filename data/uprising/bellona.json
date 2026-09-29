@@ -5,12 +5,19 @@
   "nrdbCode": "26114",
   "type": "agenda",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: As an additional cost to steal this agenda, the Runner must pay 5[credit]. When you score this agenda, gain 5[credit]."
-  ],
+  "unsupported": [],
   "subtypes": [
     "expansion"
   ],
   "advancementRequirement": 5,
-  "agendaPoints": 3
+  "agendaPoints": 3,
+  "stealAdditionalCredits": 5,
+  "onScore": {
+    "op": "do",
+    "action": {
+      "kind": "gain_credits",
+      "side": "corp",
+      "amount": 5
+    }
+  }
 }

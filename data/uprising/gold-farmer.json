@@ -5,13 +5,78 @@
   "nrdbCode": "26116",
   "type": "ice",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: Whenever the Runner breaks a printed subroutine on this ice, they lose 1[credit]. [subroutine] End the run unless the Runner pays 3[credit]. [subroutine] End the run unless the Runner pays 3[credit]."
-  ],
+  "unsupported": [],
   "subtypes": [
     "barrier"
   ],
   "installCost": 3,
   "rezCost": 3,
-  "strength": 1
+  "strength": 1,
+  "runnerLoseCreditsOnBreakPrintedSubroutine": 1,
+  "subroutines": [
+    {
+      "id": "gold-farmer-1",
+      "text": "End the run unless the Runner pays 3[credit].",
+      "effect": {
+        "op": "choose",
+        "chooser": "runner",
+        "options": [
+          {
+            "id": "pay3",
+            "label": "Pay 3¢",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "lose_credits",
+                "side": "runner",
+                "amount": 3
+              }
+            }
+          },
+          {
+            "id": "etr",
+            "label": "End the run",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "end_the_run"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "gold-farmer-2",
+      "text": "End the run unless the Runner pays 3[credit].",
+      "effect": {
+        "op": "choose",
+        "chooser": "runner",
+        "options": [
+          {
+            "id": "pay3",
+            "label": "Pay 3¢",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "lose_credits",
+                "side": "runner",
+                "amount": 3
+              }
+            }
+          },
+          {
+            "id": "etr",
+            "label": "End the run",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "end_the_run"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
 }

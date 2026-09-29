@@ -16,7 +16,7 @@
   "waves": {
     "uprising": {
       "status": "in-progress",
-      "notes": "Null Signal Uprising (NRDB pack ur) — Ashes set 2 of 2; first legacy backwards wave before System Gateway. urbp titles absorbed into ur. Kickoff: 3/65 mapped (Daily Casts, Bass CH1R180G4, Makler); remainder fail-closed unsupported (wave kickoff v1.35.0).",
+      "notes": "Null Signal Uprising (NRDB pack ur) — Ashes set 2 of 2; first legacy backwards wave before System Gateway. urbp titles absorbed. In-progress: 8/65 mapped (wave slice v1.36.0).",
       "cards": [
         "hoshiko-shiro-untold-protagonist",
         "moshing",
