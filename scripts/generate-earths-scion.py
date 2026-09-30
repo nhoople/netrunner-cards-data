@@ -153,7 +153,9 @@ def map_card(c: dict) -> dict | None:
             pump_credits=1,
             pump_strength=1,
         )
-        card["onPass"] = do("persephone_may_trash_stack_top_then_trash_rd_per_resolved")
+        card["onPassRezzedIce"] = do(
+            "persephone_may_trash_stack_top_then_trash_rd_per_resolved"
+        )
         return card
 
     if cid == "rubicon-switch":
