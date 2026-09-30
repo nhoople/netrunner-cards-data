@@ -1,0 +1,31 @@
+{
+  "id": "ankusa",
+  "title": "Ankusa",
+  "nrdbCode": "10101",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "subtypes": [
+    "icebreaker",
+    "fracter"
+  ],
+  "installCost": 6,
+  "strength": 0,
+  "memoryCost": 1,
+  "breaker": {
+    "breaksSubtype": "barrier",
+    "strength": 0,
+    "breakCredits": 2,
+    "breakMaxSubs": 1,
+    "pumpCredits": 1,
+    "pumpStrength": 1
+  },
+  "onFullyBreak": {
+    "op": "do",
+    "action": {
+      "kind": "ankusa_add_fully_broken_barrier_to_hq"
+    }
+  },
+  "wave": "fear-the-masses"
+}

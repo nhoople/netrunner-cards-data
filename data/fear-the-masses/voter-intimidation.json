@@ -1,0 +1,30 @@
+{
+  "id": "voter-intimidation",
+  "title": "Voter Intimidation",
+  "nrdbCode": "10106",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "jinteki",
+  "subtypes": [
+    "gray ops",
+    "psi"
+  ],
+  "playCost": 1,
+  "playRequiresAgendaInRunnerScoreArea": true,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "play_psi_game",
+      "maxBid": 2,
+      "ifBidsDiffer": {
+        "op": "do",
+        "action": {
+          "kind": "trash_resource",
+          "pick": "choose"
+        }
+      }
+    }
+  },
+  "wave": "fear-the-masses"
+}

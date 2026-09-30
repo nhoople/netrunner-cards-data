@@ -405,6 +405,11 @@
           "minimum": 0,
           "description": "Vamadeva: only break ice with exactly this many printed subroutines."
         },
+        "breakRequiresIceRezCostGte": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Aghora / Deva: only break ice that has a rez cost of this many or greater."
+        },
         "breakPreventsCardAccessForRun": {
           "type": "boolean",
           "description": "Eater: after using this breaker to break a subroutine, Runner cannot access cards for the remainder of the run."
@@ -4278,6 +4283,35 @@
     "onSuccessfulRunMayPlaceAdvancementOnCanBeAdvanced": {
       "type": "boolean",
       "description": "Puppet Master: whenever the Runner makes a successful run, Corp may place 1 advancement token on a card that can be advanced."
+    },
+    "corpCannotWinExceptFlatline": {
+      "type": "boolean",
+      "description": "The Black File: while installed, the Corp cannot win the game except by flatline."
+    },
+    "playRequiresAgendaInRunnerScoreArea": {
+      "type": "boolean",
+      "description": "Voter Intimidation: play only if there is an agenda in the Runner's score area."
+    },
+    "revealGripWhileRunnerTagged": {
+      "type": "boolean",
+      "description": "Harishchandra Ent.: while the Runner is tagged, they play with the grip revealed."
+    },
+    "hostAssetsOrAgendas": {
+      "type": "boolean",
+      "description": "Full Immersion RecStudio: may host assets and/or agendas (pair with maxHostedCards)."
+    },
+    "trashCostIncreasePerHostedCard": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Full Immersion RecStudio: trash cost increased by this many for each hosted card."
+    },
+    "rezRequiresTagged": {
+      "type": "boolean",
+      "description": "Zealous Judge: can only be rezzed if the Runner is tagged."
+    },
+    "blockRunnerPaidAbilitiesExceptIcebreakersAndMidAccess": {
+      "type": "boolean",
+      "description": "Navi Mumbai City Grid: during runs on this server, Runner cannot use paid abilities on installed cards except mid-access and icebreaker abilities."
     }
   }
 }

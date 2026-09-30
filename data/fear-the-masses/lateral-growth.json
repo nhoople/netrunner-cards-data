@@ -1,0 +1,33 @@
+{
+  "id": "lateral-growth",
+  "title": "Lateral Growth",
+  "nrdbCode": "10104",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "transaction"
+  ],
+  "playCost": 2,
+  "onPlay": {
+    "op": "seq",
+    "effects": [
+      {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "corp",
+          "amount": 4
+        }
+      },
+      {
+        "op": "do",
+        "action": {
+          "kind": "may_install_from_hq_paying_costs"
+        }
+      }
+    ]
+  },
+  "wave": "fear-the-masses"
+}

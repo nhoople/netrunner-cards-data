@@ -1,0 +1,18 @@
+{
+  "id": "navi-mumbai-city-grid",
+  "title": "Navi Mumbai City Grid",
+  "nrdbCode": "10110",
+  "type": "upgrade",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "subtypes": [
+    "region"
+  ],
+  "installCost": 2,
+  "rezCost": 2,
+  "trashCost": 3,
+  "limitOnePerServer": true,
+  "blockRunnerPaidAbilitiesExceptIcebreakersAndMidAccess": true,
+  "wave": "fear-the-masses"
+}

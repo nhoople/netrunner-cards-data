@@ -1,0 +1,16 @@
+{
+  "id": "merger",
+  "title": "Merger",
+  "nrdbCode": "10114",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "neutral-corp",
+  "subtypes": [
+    "expansion"
+  ],
+  "advancementRequirement": 3,
+  "agendaPoints": 2,
+  "agendaPointsModifierInRunnerScoreArea": 1,
+  "wave": "fear-the-masses"
+}

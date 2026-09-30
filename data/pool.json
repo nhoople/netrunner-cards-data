@@ -37,6 +37,7 @@
     "democracy-and-dogma",
     "salsette-island",
     "the-liberated-mind",
+    "fear-the-masses",
     "reign-and-reverie",
     "system-core-2019",
     "downfall",
@@ -2138,6 +2139,31 @@
         "red-tape",
         "consulting-visit",
         "vanilla"
+      ]
+    },
+    "fear-the-masses": {
+      "status": "supported",
+      "notes": "Fear the Masses (ftm) Mumbad #6 set-complete. 18/19 new clears; reprint skip magnet. Pool supported after the-liberated-mind. Paired release v1.121.0. Never kick mo/mor.",
+      "cards": [
+        "fear-the-masses",
+        "aghora",
+        "bhagat",
+        "the-black-file",
+        "the-price-of-freedom",
+        "ankusa",
+        "rigged-results",
+        "magnet",
+        "lateral-growth",
+        "improved-protein-source",
+        "voter-intimidation",
+        "harishchandra-ent-where-youre-the-star",
+        "full-immersion-recstudio",
+        "ibrahim-salem",
+        "navi-mumbai-city-grid",
+        "zealous-judge",
+        "election-day",
+        "subcontract",
+        "merger"
       ]
     }
   }

@@ -1,0 +1,25 @@
+{
+  "id": "the-price-of-freedom",
+  "title": "The Price of Freedom",
+  "nrdbCode": "10100",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "playCost": 0,
+  "playAdditionalCost": {
+    "op": "do",
+    "action": {
+      "kind": "trash_own_resource_with_subtype",
+      "subtype": "connection"
+    }
+  },
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "next_corp_turn_cannot_advance_cards"
+    }
+  },
+  "rfgInsteadOfTrashing": true,
+  "wave": "fear-the-masses"
+}

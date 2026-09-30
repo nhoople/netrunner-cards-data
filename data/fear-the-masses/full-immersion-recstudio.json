@@ -1,0 +1,19 @@
+{
+  "id": "full-immersion-recstudio",
+  "title": "Full Immersion RecStudio",
+  "nrdbCode": "10108",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "subtypes": [
+    "facility"
+  ],
+  "installCost": 2,
+  "rezCost": 2,
+  "trashCost": 3,
+  "maxHostedCards": 2,
+  "hostAssetsOrAgendas": true,
+  "trashCostIncreasePerHostedCard": 3,
+  "wave": "fear-the-masses"
+}

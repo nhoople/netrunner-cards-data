@@ -1,0 +1,31 @@
+{
+  "id": "improved-protein-source",
+  "title": "Improved Protein Source",
+  "nrdbCode": "10105",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "jinteki",
+  "subtypes": [
+    "research"
+  ],
+  "advancementRequirement": 4,
+  "agendaPoints": 3,
+  "onScore": {
+    "op": "do",
+    "action": {
+      "kind": "gain_credits",
+      "side": "runner",
+      "amount": 4
+    }
+  },
+  "onSteal": {
+    "op": "do",
+    "action": {
+      "kind": "gain_credits",
+      "side": "runner",
+      "amount": 4
+    }
+  },
+  "wave": "fear-the-masses"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "rigged-results",
+  "title": "Rigged Results",
+  "nrdbCode": "10102",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "neutral-runner",
+  "playCost": 0,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "rigged_results_secret_spend_guess"
+    }
+  },
+  "wave": "fear-the-masses"
+}

@@ -1,0 +1,39 @@
+{
+  "id": "zealous-judge",
+  "title": "Zealous Judge",
+  "nrdbCode": "10111",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "character"
+  ],
+  "installCost": 2,
+  "rezCost": 2,
+  "trashCost": 2,
+  "rezRequiresTagged": true,
+  "paidAbilities": [
+    {
+      "id": "zealous-judge-tag",
+      "label": "[click], 1¢: Give the Runner 1 tag",
+      "clickCost": 1,
+      "creditCost": 1,
+      "cost": {
+        "clicks": 1,
+        "credits": 1
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "give_tags",
+          "amount": 1
+        }
+      }
+    }
+  ],
+  "wave": "fear-the-masses"
+}

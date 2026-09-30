@@ -1,0 +1,29 @@
+{
+  "id": "ibrahim-salem",
+  "title": "Ibrahim Salem",
+  "nrdbCode": "10109",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "subtypes": [
+    "alliance",
+    "character"
+  ],
+  "installCost": 2,
+  "rezCost": 2,
+  "trashCost": 5,
+  "unique": true,
+  "zeroInfluenceIfNonAllianceFactionCardsGte": {
+    "faction": "nbn",
+    "threshold": 6
+  },
+  "rezAdditionalCostForfeitAgenda": true,
+  "onTurnBegin": {
+    "op": "do",
+    "action": {
+      "kind": "ibrahim_salem_name_type_trash_from_grip"
+    }
+  },
+  "wave": "fear-the-masses"
+}

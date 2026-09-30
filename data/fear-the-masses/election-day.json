@@ -1,0 +1,18 @@
+{
+  "id": "election-day",
+  "title": "Election Day",
+  "nrdbCode": "10112",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "playCost": 0,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "election_day_trash_hq_draw",
+      "amount": 5
+    }
+  },
+  "wave": "fear-the-masses"
+}

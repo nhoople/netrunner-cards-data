@@ -1,0 +1,53 @@
+{
+  "pack": "fear-the-masses",
+  "nrdbPackCode": "ftm",
+  "count": 19,
+  "written": 18,
+  "reprintSkipped": 1,
+  "status": "supported",
+  "notes": "fear-the-masses (ftm) set-complete. Wrote 18; skipped 1 reprints. Clears: 18.",
+  "cards": [
+    "fear-the-masses",
+    "aghora",
+    "bhagat",
+    "the-black-file",
+    "the-price-of-freedom",
+    "ankusa",
+    "rigged-results",
+    "magnet",
+    "lateral-growth",
+    "improved-protein-source",
+    "voter-intimidation",
+    "harishchandra-ent-where-youre-the-star",
+    "full-immersion-recstudio",
+    "ibrahim-salem",
+    "navi-mumbai-city-grid",
+    "zealous-judge",
+    "election-day",
+    "subcontract",
+    "merger"
+  ],
+  "reprintIdsFromEarlierWaves": [
+    "magnet"
+  ],
+  "clears": [
+    "fear-the-masses",
+    "aghora",
+    "bhagat",
+    "the-black-file",
+    "the-price-of-freedom",
+    "ankusa",
+    "rigged-results",
+    "lateral-growth",
+    "improved-protein-source",
+    "voter-intimidation",
+    "harishchandra-ent-where-youre-the-star",
+    "full-immersion-recstudio",
+    "ibrahim-salem",
+    "navi-mumbai-city-grid",
+    "zealous-judge",
+    "election-day",
+    "subcontract",
+    "merger"
+  ]
+}

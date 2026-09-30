@@ -1,0 +1,22 @@
+{
+  "id": "subcontract",
+  "title": "Subcontract",
+  "nrdbCode": "10113",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "gray ops"
+  ],
+  "playCost": 0,
+  "playRequiresTagged": true,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "subcontract_play_ops_from_hq",
+      "max": 2
+    }
+  },
+  "wave": "fear-the-masses"
+}

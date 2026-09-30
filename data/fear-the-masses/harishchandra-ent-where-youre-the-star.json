@@ -1,0 +1,14 @@
+{
+  "id": "harishchandra-ent-where-youre-the-star",
+  "title": "Harishchandra Ent.: Where You're the Star",
+  "nrdbCode": "10107",
+  "type": "identity",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "subtypes": [
+    "division"
+  ],
+  "revealGripWhileRunnerTagged": true,
+  "wave": "fear-the-masses"
+}

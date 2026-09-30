@@ -1,0 +1,33 @@
+{
+  "id": "the-black-file",
+  "title": "The Black File",
+  "nrdbCode": "10099",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "subtypes": [
+    "virtual"
+  ],
+  "installCost": 5,
+  "unique": true,
+  "deckLimit": 1,
+  "corpCannotWinExceptFlatline": true,
+  "onTurnBegin": {
+    "op": "do",
+    "action": {
+      "kind": "add_power_counter",
+      "amount": 1
+    }
+  },
+  "onPowerCountersGte": {
+    "amount": 3,
+    "effect": {
+      "op": "do",
+      "action": {
+        "kind": "rfg_self"
+      }
+    }
+  },
+  "wave": "fear-the-masses"
+}

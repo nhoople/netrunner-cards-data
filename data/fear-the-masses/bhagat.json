@@ -1,0 +1,21 @@
+{
+  "id": "bhagat",
+  "title": "Bhagat",
+  "nrdbCode": "10098",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "subtypes": [
+    "connection"
+  ],
+  "installCost": 3,
+  "unique": true,
+  "onFirstSuccessfulHqRunThisTurn": {
+    "op": "do",
+    "action": {
+      "kind": "trash_top_of_rd"
+    }
+  },
+  "wave": "fear-the-masses"
+}

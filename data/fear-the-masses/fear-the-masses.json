@@ -1,0 +1,26 @@
+{
+  "id": "fear-the-masses",
+  "title": "Fear the Masses",
+  "nrdbCode": "10096",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "subtypes": [
+    "run",
+    "sabotage"
+  ],
+  "playCost": 1,
+  "deckLimit": 6,
+  "runEvent": {
+    "servers": "hq",
+    "skipBreach": true,
+    "onSuccessfulRun": {
+      "op": "do",
+      "action": {
+        "kind": "fear_the_masses_reveal_copies_trash_rd"
+      }
+    }
+  },
+  "wave": "fear-the-masses"
+}
