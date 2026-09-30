@@ -460,7 +460,9 @@
                 "when_encountered_interrupt_paw",
                 "trace_interrupt_paw",
                 "end_the_run_interrupt_paw",
-                "other_priority_window"
+                "other_priority_window",
+                "expose_interrupt_paw",
+                "trash_interrupt_paw"
               ]
             }
           },
@@ -2831,6 +2833,10 @@
     "chooseBonusAccessLessThanVirusOnRdBreach": {
       "type": "boolean",
       "description": "Medium-class: on R&D breach, choose a number less than hosted virus counters for additional access."
+    },
+    "mayRezWhenCardWouldBeExposed": {
+      "type": "boolean",
+      "description": "Zaibatsu-class: may rez this asset when a card would be exposed."
     }
   }
 }

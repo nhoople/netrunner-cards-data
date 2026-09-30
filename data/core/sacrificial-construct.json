@@ -5,12 +5,31 @@
   "nrdbCode": "01048",
   "type": "resource",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: [interrupt] → [trash]: Prevent a player from trashing 1 installed program or piece of hardware."
-  ],
+  "unsupported": [],
   "faction": "shaper",
   "subtypes": [
     "remote"
   ],
-  "installCost": 0
+  "installCost": 0,
+  "paidAbilities": [
+    {
+      "id": "sacrificial-prevent-trash",
+      "label": "[interrupt] → [trash]: Prevent a player from trashing 1 installed program or piece of hardware",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "trashSelf": true
+      },
+      "windows": [
+        "trash_interrupt_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "prevent_pending_installed_trash",
+          "amount": 1
+        }
+      }
+    }
+  ]
 }

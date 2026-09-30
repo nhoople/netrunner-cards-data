@@ -5,9 +5,36 @@
   "nrdbCode": "01049",
   "type": "event",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Gain 2[credit] or expose 1 card."
-  ],
+  "unsupported": [],
   "faction": "neutral-runner",
-  "playCost": 0
+  "playCost": 0,
+  "onPlay": {
+    "op": "choose",
+    "chooser": "runner",
+    "options": [
+      {
+        "id": "gain",
+        "label": "Gain 2¢",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "runner",
+            "amount": 2
+          }
+        }
+      },
+      {
+        "id": "expose",
+        "label": "Expose 1 card",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "expose",
+            "pick": "choose"
+          }
+        }
+      }
+    ]
+  }
 }

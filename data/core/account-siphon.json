@@ -5,13 +5,20 @@
   "nrdbCode": "01018",
   "type": "event",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Run HQ. If successful, instead of breaching HQ, you may force the Corp to lose up to 5[credit], then you gain 2[credit] for each credit lost and take 2 tags."
-  ],
+  "unsupported": [],
   "faction": "criminal",
   "subtypes": [
     "run",
     "sabotage"
   ],
-  "playCost": 0
+  "playCost": 0,
+  "runEvent": {
+    "servers": "hq",
+    "onSuccessfulRun": {
+      "op": "do",
+      "action": {
+        "kind": "account_siphon_may_instead_of_breach"
+      }
+    }
+  }
 }

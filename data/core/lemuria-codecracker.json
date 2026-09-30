@@ -5,9 +5,30 @@
   "nrdbCode": "01023",
   "type": "hardware",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: [click], 1[credit]: Expose 1 card. Use this ability only if you have made a successful run on HQ this turn."
-  ],
+  "unsupported": [],
   "faction": "criminal",
-  "installCost": 1
+  "installCost": 1,
+  "paidAbilities": [
+    {
+      "id": "lemuria-expose",
+      "label": "[click], 1¢: Expose 1 card. Use this ability only if you made a successful run on HQ this turn.",
+      "clickCost": 1,
+      "creditCost": 1,
+      "cost": {
+        "clicks": 1,
+        "credits": 1
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "requiresSuccessfulHqRunThisTurn": true,
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "expose",
+          "pick": "choose"
+        }
+      }
+    }
+  ]
 }
