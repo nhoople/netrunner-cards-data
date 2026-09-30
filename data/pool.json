@@ -42,6 +42,7 @@
     "blood-money",
     "escalation",
     "intervention",
+    "martial-law",
     "reign-and-reverie",
     "system-core-2019",
     "downfall",
@@ -2272,6 +2273,32 @@
         "bulwark",
         "best-defense",
         "preemptive-action"
+      ]
+    },
+    "martial-law": {
+      "status": "supported",
+      "notes": "Martial Law (ml) Flashpoint #5 set-complete. 20/20 new clears; no reprints. Pool supported after intervention. Paired release v1.126.0. Never kick mo/mor.",
+      "cards": [
+        "mkultra",
+        "on-the-lam",
+        "cold-read",
+        "equivocation",
+        "misdirection",
+        "reaver",
+        "interdiction",
+        "baba-yaga",
+        "fairchild",
+        "friends-in-high-places",
+        "manta-grid",
+        "mind-game",
+        "nihongai-grid",
+        "ip-block",
+        "thoth",
+        "anson-rose",
+        "mausolus",
+        "sapper",
+        "show-of-force",
+        "enforced-curfew"
       ]
     }
   }

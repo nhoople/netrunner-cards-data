@@ -1,0 +1,17 @@
+{
+  "id": "enforced-curfew",
+  "title": "Enforced Curfew",
+  "nrdbCode": "11100",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "neutral-corp",
+  "subtypes": [
+    "current"
+  ],
+  "playCost": 0,
+  "lingerAsCurrent": true,
+  "currentTrashOnAgendaStolen": true,
+  "runnerHandSizeBonus": -1,
+  "wave": "martial-law"
+}

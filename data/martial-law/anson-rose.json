@@ -1,0 +1,25 @@
+{
+  "id": "anson-rose",
+  "title": "Anson Rose",
+  "nrdbCode": "11096",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "executive"
+  ],
+  "installCost": 1,
+  "rezCost": 1,
+  "trashCost": 4,
+  "unique": true,
+  "onTurnBegin": {
+    "op": "do",
+    "action": {
+      "kind": "bf_place_advancement_on_self",
+      "amount": 1
+    }
+  },
+  "mayMoveAnyAdvancementsFromSelfToRezzedIce": true,
+  "wave": "martial-law"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "manta-grid",
+  "title": "Manta Grid",
+  "nrdbCode": "11091",
+  "type": "upgrade",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "region"
+  ],
+  "installCost": 1,
+  "rezCost": 1,
+  "trashCost": 5,
+  "unique": true,
+  "additionalClickNextTurnOnSuccessfulRunEndIfRunnerLt6cOrNoClicks": true,
+  "wave": "martial-law"
+}

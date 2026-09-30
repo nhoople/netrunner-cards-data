@@ -1,0 +1,46 @@
+{
+  "id": "mkultra",
+  "title": "MKUltra",
+  "nrdbCode": "11081",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "subtypes": [
+    "icebreaker",
+    "killer"
+  ],
+  "installCost": 2,
+  "strength": 1,
+  "memoryCost": 1,
+  "mayInstallSelfFromHeapOnEncounterSentry": true,
+  "breaker": {
+    "breaksSubtype": "sentry",
+    "strength": 1,
+    "breakCredits": 3,
+    "breakMaxSubs": 2,
+    "breakViaPaidAbilityOnly": true
+  },
+  "paidAbilities": [
+    {
+      "id": "mkultra-pump-break",
+      "label": "3¢: +2 strength. Then, if this can interface with the sentry, break up to 2 subroutines",
+      "clickCost": 0,
+      "creditCost": 3,
+      "cost": {
+        "credits": 3
+      },
+      "windows": [
+        "encounter_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "mkultra_spend_pump_and_break"
+        }
+      },
+      "usableByRunnerOnSelfIce": true
+    }
+  ],
+  "wave": "martial-law"
+}

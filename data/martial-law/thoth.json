@@ -1,0 +1,62 @@
+{
+  "id": "thoth",
+  "title": "Thoth",
+  "nrdbCode": "11095",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "subtypes": [
+    "sentry",
+    "tracer"
+  ],
+  "installCost": 7,
+  "rezCost": 7,
+  "strength": 6,
+  "unique": true,
+  "onEncounter": {
+    "op": "do",
+    "action": {
+      "kind": "give_tags",
+      "amount": 1
+    }
+  },
+  "subroutines": [
+    {
+      "id": "thoth-net-per-tag",
+      "text": "Trace[4]. If successful, do 1 net damage for each tag the Runner has.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "trace",
+          "strength": 4,
+          "onSuccess": {
+            "op": "do",
+            "action": {
+              "kind": "net_damage_per_tag"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "thoth-lose-credits-per-tag",
+      "text": "Trace[4]. If successful, the Runner loses 1¢ for each tag they have.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "trace",
+          "strength": 4,
+          "onSuccess": {
+            "op": "do",
+            "action": {
+              "kind": "lose_credits_per_tag",
+              "side": "runner"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "wave": "martial-law"
+}

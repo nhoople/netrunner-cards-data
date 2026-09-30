@@ -1,0 +1,20 @@
+{
+  "id": "baba-yaga",
+  "title": "Baba Yaga",
+  "nrdbCode": "11088",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "neutral-runner",
+  "subtypes": [
+    "icebreaker",
+    "ai"
+  ],
+  "installCost": 5,
+  "strength": 0,
+  "memoryCost": 1,
+  "maxHostedCards": 99,
+  "hostNonAiIcebreaker": true,
+  "gainsPaidAbilitiesOfHostedIcebreakers": true,
+  "wave": "martial-law"
+}

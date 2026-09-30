@@ -1,0 +1,22 @@
+{
+  "id": "show-of-force",
+  "title": "Show of Force",
+  "nrdbCode": "11099",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "neutral-corp",
+  "subtypes": [
+    "security"
+  ],
+  "advancementRequirement": 4,
+  "agendaPoints": 2,
+  "onScore": {
+    "op": "do",
+    "action": {
+      "kind": "meat_damage",
+      "amount": 2
+    }
+  },
+  "wave": "martial-law"
+}

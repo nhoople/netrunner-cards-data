@@ -1,0 +1,33 @@
+{
+  "id": "misdirection",
+  "title": "Misdirection",
+  "nrdbCode": "11085",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "installCost": 0,
+  "memoryCost": 1,
+  "paidAbilities": [
+    {
+      "id": "misdirection-remove-tags",
+      "label": "[click], [click], X¢: Remove X tags",
+      "clickCost": 2,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 2
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "misdirection_spend_x_remove_tags"
+        }
+      },
+      "usableByRunnerOnSelfIce": true
+    }
+  ],
+  "wave": "martial-law"
+}

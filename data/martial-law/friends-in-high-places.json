@@ -1,0 +1,22 @@
+{
+  "id": "friends-in-high-places",
+  "title": "Friends in High Places",
+  "nrdbCode": "11090",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "terminal"
+  ],
+  "playCost": 2,
+  "endsActionPhase": true,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "install_up_to_n_from_archives_paying",
+      "max": 2
+    }
+  },
+  "wave": "martial-law"
+}

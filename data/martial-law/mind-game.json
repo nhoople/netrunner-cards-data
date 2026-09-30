@@ -1,0 +1,37 @@
+{
+  "id": "mind-game",
+  "title": "Mind Game",
+  "nrdbCode": "11092",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "jinteki",
+  "subtypes": [
+    "code gate",
+    "psi",
+    "deflector"
+  ],
+  "installCost": 0,
+  "rezCost": 0,
+  "strength": 4,
+  "subroutines": [
+    {
+      "id": "mind-game-psi",
+      "text": "Psi game. If bids differ, choose another server; Runner moves to outermost of that server; additional cost to jack out; Runner may jack out.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "play_psi_game",
+          "maxBid": 2,
+          "ifBidsDiffer": {
+            "op": "do",
+            "action": {
+              "kind": "mind_game_psi_differ_redirect"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "wave": "martial-law"
+}

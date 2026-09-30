@@ -1,0 +1,39 @@
+{
+  "id": "sapper",
+  "title": "Sapper",
+  "nrdbCode": "11098",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "sentry",
+    "destroyer"
+  ],
+  "installCost": 3,
+  "rezCost": 3,
+  "trashCost": 2,
+  "strength": 2,
+  "mustRevealWhenAccessedFromRd": true,
+  "skipOnAccessFromArchives": true,
+  "onAccess": {
+    "op": "do",
+    "action": {
+      "kind": "force_encounter_accessed_ice"
+    }
+  },
+  "subroutines": [
+    {
+      "id": "sapper-trash-program",
+      "text": "Trash 1 installed program.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "trash_program",
+          "pick": "choose"
+        }
+      }
+    }
+  ],
+  "wave": "martial-law"
+}

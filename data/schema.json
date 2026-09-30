@@ -4528,6 +4528,30 @@
     "placePowerPerUnbrokenSubOnAnyEncounterEnd": {
       "type": "boolean",
       "description": "Chief Slee: whenever an encounter with a piece of ice ends, place 1 power counter on this for each unbroken subroutine on the encountered ice."
+    },
+    "mayInstallSelfFromHeapOnEncounterSentry": {
+      "type": "boolean",
+      "description": "MKUltra: whenever you encounter a sentry, you may install this program from your heap."
+    },
+    "drawOnFirstTrashInstalledEachTurn": {
+      "type": "boolean",
+      "description": "Reaver: the first time you trash an installed card each turn, draw 1 card."
+    },
+    "cannotRezNonIceDuringRunnerTurn": {
+      "type": "boolean",
+      "description": "Interdiction: the Corp cannot rez non-ice cards during the Runner's turn."
+    },
+    "gainsPaidAbilitiesOfHostedIcebreakers": {
+      "type": "boolean",
+      "description": "Baba Yaga: this program gains the paid abilities of all hosted icebreaker programs."
+    },
+    "additionalClickNextTurnOnSuccessfulRunEndIfRunnerLt6cOrNoClicks": {
+      "type": "boolean",
+      "description": "Manta Grid: if Runner has <6¢ or no unspent clicks when a successful run on this server ends, Corp has +1 click next turn."
+    },
+    "mayMoveAnyAdvancementsFromSelfToRezzedIce": {
+      "type": "boolean",
+      "description": "Anson Rose: whenever you rez ice, you may move any number of advancement tokens from this card to that ice."
     }
   }
 }

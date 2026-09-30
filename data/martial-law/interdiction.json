@@ -1,0 +1,17 @@
+{
+  "id": "interdiction",
+  "title": "Interdiction",
+  "nrdbCode": "11087",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "neutral-runner",
+  "subtypes": [
+    "current"
+  ],
+  "playCost": 1,
+  "lingerAsCurrent": true,
+  "currentTrashOnAgendaScored": true,
+  "cannotRezNonIceDuringRunnerTurn": true,
+  "wave": "martial-law"
+}

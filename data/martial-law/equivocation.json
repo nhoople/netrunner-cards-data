@@ -1,0 +1,19 @@
+{
+  "id": "equivocation",
+  "title": "Equivocation",
+  "nrdbCode": "11084",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "installCost": 2,
+  "memoryCost": 1,
+  "unique": true,
+  "onSuccessfulRunOnRd": {
+    "op": "do",
+    "action": {
+      "kind": "equivocation_may_reveal_force_draw"
+    }
+  },
+  "wave": "martial-law"
+}

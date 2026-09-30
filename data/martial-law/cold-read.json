@@ -1,0 +1,25 @@
+{
+  "id": "cold-read",
+  "title": "Cold Read",
+  "nrdbCode": "11083",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "subtypes": [
+    "run",
+    "stealth"
+  ],
+  "playCost": 0,
+  "runEvent": {
+    "servers": "any",
+    "placeEventCredits": 4,
+    "onRunEnd": {
+      "op": "do",
+      "action": {
+        "kind": "trash_one_program_used_this_run_cannot_prevent"
+      }
+    }
+  },
+  "wave": "martial-law"
+}

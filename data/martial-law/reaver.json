@@ -1,0 +1,13 @@
+{
+  "id": "reaver",
+  "title": "Reaver",
+  "nrdbCode": "11086",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "apex",
+  "installCost": 2,
+  "memoryCost": 1,
+  "drawOnFirstTrashInstalledEachTurn": true,
+  "wave": "martial-law"
+}

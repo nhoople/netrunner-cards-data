@@ -55,6 +55,7 @@ Files under [`data/`](data/) are the API. Clone the repo or fetch a **tagged** r
 | [`data/blood-money/`](data/blood-money/) | Blood Money (NRDB `bm`) — **supported** (Flashpoint) |
 | [`data/escalation/`](data/escalation/) | Escalation (NRDB `es`) — **supported** (Flashpoint) |
 | [`data/intervention/`](data/intervention/) | Intervention (NRDB `in`) — **supported** (Flashpoint) |
+| [`data/martial-law/`](data/martial-law/) | Martial Law (NRDB `ml`) — **supported** (Flashpoint) |
 | [`data/reign-and-reverie/`](data/reign-and-reverie/) | Reign and Reverie (NRDB `rar`) — **supported** (legacy backwards) |
 | [`data/system-core-2019/`](data/system-core-2019/) | System Core 2019 (NRDB `sc19`) — **supported** (legacy backwards) |
 | [`data/downfall/`](data/downfall/) | Downfall (NRDB `df`) — **supported** (legacy backwards) |

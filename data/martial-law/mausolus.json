@@ -1,0 +1,108 @@
+{
+  "id": "mausolus",
+  "title": "Mausolus",
+  "nrdbCode": "11097",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "code gate",
+    "ap"
+  ],
+  "installCost": 4,
+  "rezCost": 4,
+  "strength": 5,
+  "canAdvance": true,
+  "subroutines": [
+    {
+      "id": "mausolus-gain",
+      "text": "Gain 1¢. If 3+ hosted advancement counters, instead gain 3¢.",
+      "effect": {
+        "op": "if",
+        "cond": {
+          "op": "advancements_gte",
+          "amount": 3
+        },
+        "then": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "corp",
+            "amount": 3
+          }
+        },
+        "else": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "corp",
+            "amount": 1
+          }
+        }
+      }
+    },
+    {
+      "id": "mausolus-net",
+      "text": "Do 1 net damage. If 3+ hosted advancement counters, instead do 3 net damage.",
+      "effect": {
+        "op": "if",
+        "cond": {
+          "op": "advancements_gte",
+          "amount": 3
+        },
+        "then": {
+          "op": "do",
+          "action": {
+            "kind": "net_damage",
+            "amount": 3
+          }
+        },
+        "else": {
+          "op": "do",
+          "action": {
+            "kind": "net_damage",
+            "amount": 1
+          }
+        }
+      }
+    },
+    {
+      "id": "mausolus-tag",
+      "text": "Give the Runner 1 tag. If 3+ hosted advancement counters, instead give the Runner 1 tag and end the run.",
+      "effect": {
+        "op": "if",
+        "cond": {
+          "op": "advancements_gte",
+          "amount": 3
+        },
+        "then": {
+          "op": "seq",
+          "effects": [
+            {
+              "op": "do",
+              "action": {
+                "kind": "give_tags",
+                "amount": 1
+              }
+            },
+            {
+              "op": "do",
+              "action": {
+                "kind": "end_the_run"
+              }
+            }
+          ]
+        },
+        "else": {
+          "op": "do",
+          "action": {
+            "kind": "give_tags",
+            "amount": 1
+          }
+        }
+      }
+    }
+  ],
+  "wave": "martial-law"
+}

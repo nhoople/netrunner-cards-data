@@ -1,0 +1,43 @@
+{
+  "id": "on-the-lam",
+  "title": "On the Lam",
+  "nrdbCode": "11082",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "subtypes": [
+    "condition"
+  ],
+  "playCost": 3,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "host_on_installed_resource_as_condition"
+    }
+  },
+  "paidAbilities": [
+    {
+      "id": "on-the-lam-prevent",
+      "label": "[interrupt] → [trash]: Prevent up to 3 tags or up to 3 damage",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "trashSelf": true
+      },
+      "windows": [
+        "tag_interrupt_paw",
+        "damage_interrupt_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "on_the_lam_prevent_tags_or_damage",
+          "max": 3
+        }
+      },
+      "usableByRunnerOnSelfIce": true
+    }
+  ],
+  "wave": "martial-law"
+}
