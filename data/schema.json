@@ -1450,6 +1450,49 @@
       "minimum": 1,
       "description": "While active, Corp cannot install more than N ice per turn (Unscheduled Maintenance)."
     },
+    "strengthPerCorpCardInHq": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Ice strength bonus equal to number of cards in Corp HQ (IQ)."
+    },
+    "rezCostIncreasePerCorpCardInHq": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Rez cost increase equal to number of cards in Corp HQ (IQ)."
+    },
+    "jackOutOnThisServerTrashRunnerProgram": {
+      "type": "boolean",
+      "description": "Additional cost to jack out on this server: trash 1 installed program (Port Anson Grid)."
+    },
+    "runnerCannotPlayCurrentEvents": {
+      "type": "boolean",
+      "description": "While rezzed, Runner cannot play current events (The News Now Hour)."
+    },
+    "morphOddAdvancementSubtypeSwap": {
+      "type": "object",
+      "required": ["gain", "lose"],
+      "properties": {
+        "gain": { "type": "string" },
+        "lose": { "type": "string" }
+      },
+      "description": "While advancement token count is odd, gain/lose ice subtypes (Wendigo)."
+    },
+    "supplierHost": {
+      "type": "boolean",
+      "description": "The Supplier: may host resources/hardware from grip for discounted install."
+    },
+    "onFirstRunnerCreditPoolEmptyThisTurn": {
+      "type": "object",
+      "description": "First time each turn Runner credit pool is empty, resolve effect (Order of Sol)."
+    },
+    "onGripArchivesSuccessInstallSelfIgnoringCosts": {
+      "type": "boolean",
+      "description": "On successful Archives run, may install from grip instead of breaching (Hades Shard)."
+    },
+    "trashSelfWhenRunnerTagged": {
+      "type": "boolean",
+      "description": "Trash this card when the Runner becomes tagged (Rachel Beckman)."
+    },
     "trashWhenHostedCreditsEmpty": {
       "type": "boolean",
       "description": "Trash when hosted credits reach 0 (Ghost Runner)."

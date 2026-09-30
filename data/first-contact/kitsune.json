@@ -1,0 +1,28 @@
+{
+  "id": "kitsune",
+  "title": "Kitsune",
+  "nrdbCode": "06043",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "jinteki",
+  "subtypes": [
+    "trap"
+  ],
+  "installCost": 2,
+  "rezCost": 2,
+  "strength": 3,
+  "subroutines": [
+    {
+      "id": "kitsune-breach",
+      "text": "Choose 1 card in HQ; breach HQ with forced access",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "kitsune_breach_hq"
+        }
+      }
+    }
+  ],
+  "wave": "first-contact"
+}

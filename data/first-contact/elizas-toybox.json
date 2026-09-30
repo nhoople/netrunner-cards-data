@@ -1,0 +1,37 @@
+{
+  "id": "elizas-toybox",
+  "title": "Eliza's Toybox",
+  "nrdbCode": "06042",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "ritzy"
+  ],
+  "installCost": 4,
+  "rezCost": 4,
+  "trashCost": 4,
+  "unique": true,
+  "paidAbilities": [
+    {
+      "id": "eliza-rez",
+      "label": "[click][click][click]: Rez a card, ignoring all costs",
+      "clickCost": 3,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 3
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "rez_ice_ignoring_costs"
+        }
+      }
+    }
+  ],
+  "wave": "first-contact"
+}

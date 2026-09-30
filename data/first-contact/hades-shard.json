@@ -1,0 +1,39 @@
+{
+  "id": "hades-shard",
+  "title": "Hades Shard",
+  "nrdbCode": "06059",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "neutral-runner",
+  "subtypes": [
+    "virtual",
+    "source"
+  ],
+  "installCost": 7,
+  "unique": true,
+  "deckLimitOne": true,
+  "onGripArchivesSuccessInstallSelfIgnoringCosts": true,
+  "paidAbilities": [
+    {
+      "id": "hades-breach",
+      "label": "[trash]: Breach Archives (no root access)",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "trashSelf": true
+      },
+      "windows": [
+        "runner_action_paw",
+        "encounter_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "hades_shard_breach_archives"
+        }
+      }
+    }
+  ],
+  "wave": "first-contact"
+}

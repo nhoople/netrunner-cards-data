@@ -1,0 +1,42 @@
+{
+  "id": "the-supplier",
+  "title": "The Supplier",
+  "nrdbCode": "06056",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "subtypes": [
+    "connection"
+  ],
+  "installCost": 3,
+  "unique": true,
+  "supplierHost": true,
+  "paidAbilities": [
+    {
+      "id": "supplier-host",
+      "label": "[click]: Host a resource or hardware from grip",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "supplier_host_from_grip"
+        }
+      }
+    }
+  ],
+  "onTurnBegin": {
+    "op": "do",
+    "action": {
+      "kind": "supplier_turn_begin_install"
+    }
+  },
+  "wave": "first-contact"
+}

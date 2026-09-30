@@ -1,0 +1,18 @@
+{
+  "id": "port-anson-grid",
+  "title": "Port Anson Grid",
+  "nrdbCode": "06044",
+  "type": "upgrade",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "jinteki",
+  "subtypes": [
+    "region"
+  ],
+  "installCost": 2,
+  "rezCost": 2,
+  "trashCost": 5,
+  "limitOnePerServer": true,
+  "jackOutOnThisServerTrashRunnerProgram": true,
+  "wave": "first-contact"
+}

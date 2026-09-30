@@ -20,6 +20,7 @@
     "honor-and-profit",
     "upstalk",
     "the-spaces-between",
+    "first-contact",
     "reign-and-reverie",
     "system-core-2019",
     "downfall",
@@ -1590,6 +1591,30 @@
         "daily-casts",
         "same-old-thing",
         "the-source"
+      ]
+    },
+    "first-contact": {
+      "status": "supported",
+      "notes": "First Contact (fc) Lunar set-complete. 18/18 FC-only clears; 2 reprints absorbed. Pool supported. Paired release v1.104.0. Never kick mo/mor.",
+      "cards": [
+        "iq",
+        "elizas-toybox",
+        "kitsune",
+        "port-anson-grid",
+        "the-news-now-hour",
+        "manhunt",
+        "wendigo",
+        "chronos-project",
+        "shattered-remains",
+        "lancelot",
+        "blackat",
+        "duggars",
+        "box-e",
+        "the-supplier",
+        "refractor",
+        "order-of-sol",
+        "hades-shard",
+        "rachel-beckman"
       ]
     },
     "the-spaces-between": {

@@ -1,0 +1,23 @@
+{
+  "id": "order-of-sol",
+  "title": "Order of Sol",
+  "nrdbCode": "06058",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "subtypes": [
+    "location"
+  ],
+  "installCost": 2,
+  "unique": true,
+  "onFirstRunnerCreditPoolEmptyThisTurn": {
+    "op": "do",
+    "action": {
+      "kind": "gain_credits",
+      "side": "runner",
+      "amount": 1
+    }
+  },
+  "wave": "first-contact"
+}

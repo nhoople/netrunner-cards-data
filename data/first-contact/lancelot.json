@@ -1,0 +1,37 @@
+{
+  "id": "lancelot",
+  "title": "Lancelot",
+  "nrdbCode": "06051",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "neutral-corp",
+  "subtypes": [
+    "sentry",
+    "grail",
+    "destroyer"
+  ],
+  "installCost": 4,
+  "rezCost": 4,
+  "strength": 2,
+  "onEncounter": {
+    "op": "do",
+    "action": {
+      "kind": "grail_reveal_gain_subroutines",
+      "maxReveal": 2
+    }
+  },
+  "subroutines": [
+    {
+      "id": "lancelot-trash",
+      "text": "Trash 1 installed program",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "trash_one_installed_runner_program"
+        }
+      }
+    }
+  ],
+  "wave": "first-contact"
+}

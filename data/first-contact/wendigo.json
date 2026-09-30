@@ -1,0 +1,33 @@
+{
+  "id": "wendigo",
+  "title": "Wendigo",
+  "nrdbCode": "06047",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "code gate",
+    "morph"
+  ],
+  "installCost": 2,
+  "rezCost": 2,
+  "strength": 4,
+  "morphOddAdvancementSubtypeSwap": {
+    "gain": "barrier",
+    "lose": "code gate"
+  },
+  "subroutines": [
+    {
+      "id": "wendigo-ban",
+      "text": "Choose a program; Runner cannot use it this run",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "wendigo_ban_program"
+        }
+      }
+    }
+  ],
+  "wave": "first-contact"
+}

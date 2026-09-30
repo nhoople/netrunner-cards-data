@@ -1,0 +1,22 @@
+{
+  "id": "shattered-remains",
+  "title": "Shattered Remains",
+  "nrdbCode": "06050",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "neutral-corp",
+  "subtypes": [
+    "ambush"
+  ],
+  "installCost": 0,
+  "rezCost": 0,
+  "trashCost": 0,
+  "onAccess": {
+    "op": "do",
+    "action": {
+      "kind": "shattered_remains_access"
+    }
+  },
+  "wave": "first-contact"
+}

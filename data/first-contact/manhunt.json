@@ -1,0 +1,30 @@
+{
+  "id": "manhunt",
+  "title": "Manhunt",
+  "nrdbCode": "06046",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "subtypes": [
+    "current"
+  ],
+  "playCost": 3,
+  "lingerAsCurrent": true,
+  "currentTrashOnAgendaStolen": true,
+  "onFirstSuccessfulRunThisTurn": {
+    "op": "do",
+    "action": {
+      "kind": "trace",
+      "strength": 2,
+      "onSuccess": {
+        "op": "do",
+        "action": {
+          "kind": "give_tags",
+          "amount": 1
+        }
+      }
+    }
+  },
+  "wave": "first-contact"
+}

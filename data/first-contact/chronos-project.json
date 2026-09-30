@@ -1,0 +1,21 @@
+{
+  "id": "chronos-project",
+  "title": "Chronos Project",
+  "nrdbCode": "06049",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "neutral-corp",
+  "subtypes": [
+    "research"
+  ],
+  "advancementRequirement": 3,
+  "agendaPoints": 1,
+  "onScore": {
+    "op": "do",
+    "action": {
+      "kind": "rfg_runner_heap"
+    }
+  },
+  "wave": "first-contact"
+}

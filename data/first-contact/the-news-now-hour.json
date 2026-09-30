@@ -1,0 +1,17 @@
+{
+  "id": "the-news-now-hour",
+  "title": "The News Now Hour",
+  "nrdbCode": "06045",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "subtypes": [
+    "cast"
+  ],
+  "installCost": 0,
+  "rezCost": 0,
+  "trashCost": 4,
+  "runnerCannotPlayCurrentEvents": true,
+  "wave": "first-contact"
+}

@@ -1,0 +1,30 @@
+{
+  "id": "iq",
+  "title": "IQ",
+  "nrdbCode": "06041",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "code gate"
+  ],
+  "installCost": 0,
+  "rezCost": 0,
+  "strength": 0,
+  "strengthPerCorpCardInHq": 1,
+  "rezCostIncreasePerCorpCardInHq": 1,
+  "subroutines": [
+    {
+      "id": "iq-etr",
+      "text": "End the run.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "end_the_run"
+        }
+      }
+    }
+  ],
+  "wave": "first-contact"
+}

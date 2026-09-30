@@ -1,0 +1,18 @@
+{
+  "id": "box-e",
+  "title": "Box-E",
+  "nrdbCode": "06055",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "subtypes": [
+    "console"
+  ],
+  "installCost": 4,
+  "unique": true,
+  "muBonus": 2,
+  "handSizeBonus": 2,
+  "maxConsole": 1,
+  "wave": "first-contact"
+}

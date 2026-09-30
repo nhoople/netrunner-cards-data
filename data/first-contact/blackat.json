@@ -1,0 +1,65 @@
+{
+  "id": "blackat",
+  "title": "BlacKat",
+  "nrdbCode": "06053",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "subtypes": [
+    "icebreaker",
+    "fracter"
+  ],
+  "installCost": 4,
+  "strength": 3,
+  "memoryCost": 1,
+  "breaker": {
+    "breaksSubtype": "barrier",
+    "strength": 3,
+    "breakCredits": 1,
+    "breakMaxSubs": 1,
+    "pumpCredits": 2,
+    "pumpStrength": 1,
+    "breakViaPaidAbilityOnly": true
+  },
+  "paidAbilities": [
+    {
+      "id": "blackat-break",
+      "label": "1¢: Break 1 barrier subroutine (up to 3 if stealth paid)",
+      "clickCost": 0,
+      "creditCost": 1,
+      "cost": {
+        "credits": 1
+      },
+      "windows": [
+        "encounter_paw"
+      ],
+      "requireEncounterSubtype": "barrier",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "blackat_break_barrier"
+        }
+      }
+    },
+    {
+      "id": "blackat-pump",
+      "label": "2¢: +1 strength (+2 if stealth paid)",
+      "clickCost": 0,
+      "creditCost": 2,
+      "cost": {
+        "credits": 2
+      },
+      "windows": [
+        "encounter_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "blackat_pump_strength"
+        }
+      }
+    }
+  ],
+  "wave": "first-contact"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "rachel-beckman",
+  "title": "Rachel Beckman",
+  "nrdbCode": "06060",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "neutral-runner",
+  "subtypes": [
+    "connection"
+  ],
+  "installCost": 8,
+  "unique": true,
+  "allottedClicksBonus": 1,
+  "trashSelfWhenRunnerTagged": true,
+  "wave": "first-contact"
+}
