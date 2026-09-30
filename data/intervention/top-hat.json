@@ -1,0 +1,12 @@
+{
+  "id": "top-hat",
+  "title": "Top Hat",
+  "nrdbCode": "11067",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "installCost": 0,
+  "mayInsteadOfBreachRdAccessOneOfTopN": 5,
+  "wave": "intervention"
+}

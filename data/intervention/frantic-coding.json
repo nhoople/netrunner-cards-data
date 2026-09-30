@@ -1,0 +1,19 @@
+{
+  "id": "frantic-coding",
+  "title": "Frantic Coding",
+  "nrdbCode": "11062",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "playCost": 3,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "frantic_coding_look_top_install",
+      "n": 10,
+      "discount": 5
+    }
+  },
+  "wave": "intervention"
+}

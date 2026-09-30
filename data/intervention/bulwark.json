@@ -1,0 +1,85 @@
+{
+  "id": "bulwark",
+  "title": "Bulwark",
+  "nrdbCode": "11078",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "barrier",
+    "liability"
+  ],
+  "installCost": 10,
+  "rezCost": 10,
+  "strength": 8,
+  "badPublicityOnRez": 1,
+  "onEncounter": {
+    "op": "do",
+    "action": {
+      "kind": "gain_credits_if_runner_has_installed_subtype",
+      "side": "corp",
+      "amount": 2,
+      "subtype": "ai"
+    }
+  },
+  "subroutines": [
+    {
+      "id": "bulwark-trash-program",
+      "text": "The Runner trashes 1 installed program.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "trash_program"
+        }
+      }
+    },
+    {
+      "id": "bulwark-gain-etr-1",
+      "text": "Gain 2¢. End the run.",
+      "effect": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "gain_credits",
+              "side": "corp",
+              "amount": 2
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "end_the_run"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "bulwark-gain-etr-2",
+      "text": "Gain 2¢. End the run.",
+      "effect": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "gain_credits",
+              "side": "corp",
+              "amount": 2
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "end_the_run"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "wave": "intervention"
+}

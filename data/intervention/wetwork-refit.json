@@ -1,0 +1,33 @@
+{
+  "id": "wetwork-refit",
+  "title": "Wetwork Refit",
+  "nrdbCode": "11071",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "condition"
+  ],
+  "playCost": 1,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "host_on_rezzed_bioroid_ice_as_condition"
+    }
+  },
+  "hostGainsSubroutinesBeforePrinted": [
+    {
+      "id": "wetwork-core",
+      "text": "Do 1 core damage.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "core_damage",
+          "amount": 1
+        }
+      }
+    }
+  ],
+  "wave": "intervention"
+}

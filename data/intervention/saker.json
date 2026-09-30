@@ -1,0 +1,58 @@
+{
+  "id": "saker",
+  "title": "Saker",
+  "nrdbCode": "11064",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "subtypes": [
+    "icebreaker",
+    "fracter"
+  ],
+  "installCost": 4,
+  "strength": 1,
+  "memoryCost": 1,
+  "breaker": {
+    "breaksSubtype": "barrier",
+    "strength": 1,
+    "breakCredits": 1,
+    "breakMaxSubs": 1,
+    "pumpCredits": 2,
+    "pumpStrength": 2
+  },
+  "paidAbilities": [
+    {
+      "id": "saker-derez",
+      "label": "2¢, add this program to your grip: Derez fully broken barrier",
+      "clickCost": 0,
+      "creditCost": 2,
+      "cost": {
+        "credits": 2
+      },
+      "windows": [
+        "encounter_paw"
+      ],
+      "effect": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "derez_encounter_ice"
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "return_source_to_grip"
+            }
+          }
+        ]
+      },
+      "usableByRunnerOnSelfIce": true,
+      "requireFullyBrokenThisEncounter": true
+    }
+  ],
+  "wave": "intervention"
+}

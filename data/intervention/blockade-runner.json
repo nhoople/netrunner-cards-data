@@ -1,0 +1,48 @@
+{
+  "id": "blockade-runner",
+  "title": "Blockade Runner",
+  "nrdbCode": "11065",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "subtypes": [
+    "connection"
+  ],
+  "installCost": 1,
+  "paidAbilities": [
+    {
+      "id": "blockade-runner-draw",
+      "label": "[click],[click]: Draw 3 cards. Shuffle 1 card from your grip into your stack",
+      "clickCost": 2,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 2
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "draw",
+              "side": "runner",
+              "amount": 3
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "shuffle_one_grip_into_stack"
+            }
+          }
+        ]
+      },
+      "usableByRunnerOnSelfIce": true
+    }
+  ],
+  "wave": "intervention"
+}

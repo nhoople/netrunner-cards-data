@@ -1,0 +1,20 @@
+{
+  "id": "best-defense",
+  "title": "Best Defense",
+  "nrdbCode": "11079",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "neutral-corp",
+  "subtypes": [
+    "gray ops"
+  ],
+  "playCost": 2,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "trash_installed_with_install_cost_lte_tags"
+    }
+  },
+  "wave": "intervention"
+}

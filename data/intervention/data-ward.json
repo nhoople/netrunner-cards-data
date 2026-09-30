@@ -1,0 +1,111 @@
+{
+  "id": "data-ward",
+  "title": "Data Ward",
+  "nrdbCode": "11075",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "subtypes": [
+    "barrier"
+  ],
+  "installCost": 6,
+  "rezCost": 6,
+  "strength": 8,
+  "onEncounter": {
+    "op": "choose",
+    "chooser": "runner",
+    "options": [
+      {
+        "id": "pay3",
+        "label": "Pay 3¢",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "lose_credits",
+            "side": "runner",
+            "amount": 3
+          }
+        }
+      },
+      {
+        "id": "tag",
+        "label": "Take 1 tag",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "give_tags",
+            "amount": 1
+          }
+        }
+      }
+    ]
+  },
+  "subroutines": [
+    {
+      "id": "data-ward-etr-1",
+      "text": "End the run if the Runner is tagged.",
+      "effect": {
+        "op": "if",
+        "cond": {
+          "op": "runner_tagged"
+        },
+        "then": {
+          "op": "do",
+          "action": {
+            "kind": "end_the_run"
+          }
+        }
+      }
+    },
+    {
+      "id": "data-ward-etr-2",
+      "text": "End the run if the Runner is tagged.",
+      "effect": {
+        "op": "if",
+        "cond": {
+          "op": "runner_tagged"
+        },
+        "then": {
+          "op": "do",
+          "action": {
+            "kind": "end_the_run"
+          }
+        }
+      }
+    },
+    {
+      "id": "data-ward-etr-3",
+      "text": "End the run if the Runner is tagged.",
+      "effect": {
+        "op": "if",
+        "cond": {
+          "op": "runner_tagged"
+        },
+        "then": {
+          "op": "do",
+          "action": {
+            "kind": "end_the_run"
+          }
+        }
+      }
+    },
+    {
+      "id": "data-ward-etr-4",
+      "text": "End the run if the Runner is tagged.",
+      "effect": {
+        "op": "if",
+        "cond": {
+          "op": "runner_tagged"
+        },
+        "then": {
+          "op": "do",
+          "action": {
+            "kind": "end_the_run"
+          }
+        }
+      }
+    }
+  ],
+  "wave": "intervention"
+}

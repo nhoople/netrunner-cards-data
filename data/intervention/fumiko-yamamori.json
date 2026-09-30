@@ -1,0 +1,18 @@
+{
+  "id": "fumiko-yamamori",
+  "title": "Fumiko Yamamori",
+  "nrdbCode": "11073",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "jinteki",
+  "subtypes": [
+    "character"
+  ],
+  "installCost": 4,
+  "rezCost": 4,
+  "trashCost": 4,
+  "unique": true,
+  "meatDamageWhenSecretSpendAmountsDiffer": 1,
+  "wave": "intervention"
+}

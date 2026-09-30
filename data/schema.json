@@ -491,6 +491,10 @@
                 "type": "integer",
                 "minimum": 0
               },
+              "trashEntireGrip": {
+                "type": "boolean",
+                "description": "Citadel Sanctuary: trash all cards from grip as a cost (legal even when grip is empty)."
+              },
               "agendaCounters": {
                 "type": "integer",
                 "minimum": 0
@@ -4483,6 +4487,47 @@
       "type": "integer",
       "minimum": 0,
       "description": "Scarcity of Resources: install cost of each resource is increased by this many."
+    },
+    "bonusAccessOnHqBreachPerFullyBrokenProtectingIce": {
+      "type": "boolean",
+      "description": "The Gauntlet: whenever you breach HQ during a run, access +1 for each ice protecting HQ that you fully broke during that run."
+    },
+    "mayInsteadOfBreachRdAccessOneOfTopN": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Top Hat: whenever you make a successful run on R&D, instead of breaching R&D you may choose 1 of the top N cards in R&D and access it."
+    },
+    "secretSpendCannotEqual": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Government Investigations: while secretly spending credits, players cannot spend exactly this many credits."
+    },
+    "hostGainsSubroutinesBeforePrinted": {
+      "type": "array",
+      "description": "Wetwork Refit: host ice gains these subroutines before all its other subroutines.",
+      "items": {
+        "type": "object",
+        "required": ["id", "text", "effect"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "type": "string" },
+          "text": { "type": "string" },
+          "effect": { "type": "object" }
+        }
+      }
+    },
+    "meatDamageWhenSecretSpendAmountsDiffer": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Fumiko Yamamori: whenever both sides reveal secretly spent credits and amounts differ, do this much meat damage."
+    },
+    "onRunDeclaredOnThisServerIfTagged": {
+      "type": "object",
+      "description": "Drone Screen: if the Runner is tagged, whenever they initiate a run on this server, fire this Effect IR."
+    },
+    "placePowerPerUnbrokenSubOnAnyEncounterEnd": {
+      "type": "boolean",
+      "description": "Chief Slee: whenever an encounter with a piece of ice ends, place 1 power counter on this for each unbroken subroutine on the encountered ice."
     }
   }
 }

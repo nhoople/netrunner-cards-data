@@ -1,0 +1,23 @@
+{
+  "id": "preemptive-action",
+  "title": "Preemptive Action",
+  "nrdbCode": "11080",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "neutral-corp",
+  "subtypes": [
+    "terminal"
+  ],
+  "playCost": 0,
+  "endsActionPhase": true,
+  "rfgInsteadOfTrashing": true,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "shuffle_archives_to_rd",
+      "amount": 3
+    }
+  },
+  "wave": "intervention"
+}

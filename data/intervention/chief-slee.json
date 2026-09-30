@@ -1,0 +1,40 @@
+{
+  "id": "chief-slee",
+  "title": "Chief Slee",
+  "nrdbCode": "11077",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "character"
+  ],
+  "installCost": 2,
+  "rezCost": 2,
+  "trashCost": 3,
+  "unique": true,
+  "placePowerPerUnbrokenSubOnAnyEncounterEnd": true,
+  "paidAbilities": [
+    {
+      "id": "chief-slee-meat",
+      "label": "[click], 5 hosted power counters: Do 5 meat damage",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1,
+        "powerCounters": 5
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "meat_damage",
+          "amount": 5
+        }
+      }
+    }
+  ],
+  "wave": "intervention"
+}

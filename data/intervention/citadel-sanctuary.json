@@ -1,0 +1,68 @@
+{
+  "id": "citadel-sanctuary",
+  "title": "Citadel Sanctuary",
+  "nrdbCode": "11070",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "neutral-runner",
+  "subtypes": [
+    "location"
+  ],
+  "installCost": 2,
+  "unique": true,
+  "onDiscardPhaseEnd": {
+    "op": "if",
+    "cond": {
+      "op": "runner_tagged"
+    },
+    "then": {
+      "op": "do",
+      "action": {
+        "kind": "trace",
+        "strength": 1,
+        "onSuccess": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "corp",
+            "amount": 0
+          }
+        },
+        "onFailure": {
+          "op": "do",
+          "action": {
+            "kind": "remove_tags",
+            "amount": 1
+          }
+        }
+      }
+    }
+  },
+  "paidAbilities": [
+    {
+      "id": "citadel-prevent-meat",
+      "label": "[interrupt] → [trash], trash all cards from your grip: Prevent all meat damage",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "trashSelf": true,
+        "trashEntireGrip": true
+      },
+      "windows": [
+        "damage_interrupt_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "prevent_pending_damage",
+          "amount": 99
+        }
+      },
+      "requirePendingDamageTypes": [
+        "meat"
+      ]
+    }
+  ],
+  "wave": "intervention"
+}

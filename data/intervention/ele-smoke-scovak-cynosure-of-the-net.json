@@ -1,0 +1,19 @@
+{
+  "id": "ele-smoke-scovak-cynosure-of-the-net",
+  "title": "Ele \"Smoke\" Scovak: Cynosure of the Net",
+  "nrdbCode": "11066",
+  "type": "identity",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "subtypes": [
+    "g-mod",
+    "stealth"
+  ],
+  "link": 0,
+  "recurringCreditsMax": 1,
+  "recurringSpendFor": [
+    "use_program"
+  ],
+  "wave": "intervention"
+}

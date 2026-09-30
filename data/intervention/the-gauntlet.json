@@ -1,0 +1,17 @@
+{
+  "id": "the-gauntlet",
+  "title": "The Gauntlet",
+  "nrdbCode": "11063",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "subtypes": [
+    "console"
+  ],
+  "installCost": 5,
+  "unique": true,
+  "muBonus": 2,
+  "bonusAccessOnHqBreachPerFullyBrokenProtectingIce": true,
+  "wave": "intervention"
+}

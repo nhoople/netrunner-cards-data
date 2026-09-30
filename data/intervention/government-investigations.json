@@ -1,0 +1,17 @@
+{
+  "id": "government-investigations",
+  "title": "Government Investigations",
+  "nrdbCode": "11069",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "neutral-runner",
+  "subtypes": [
+    "current"
+  ],
+  "playCost": 0,
+  "lingerAsCurrent": true,
+  "currentTrashOnAgendaStolen": true,
+  "secretSpendCannotEqual": 2,
+  "wave": "intervention"
+}

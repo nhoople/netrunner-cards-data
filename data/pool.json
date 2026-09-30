@@ -41,6 +41,7 @@
     "twenty-three-seconds",
     "blood-money",
     "escalation",
+    "intervention",
     "reign-and-reverie",
     "system-core-2019",
     "downfall",
@@ -2245,6 +2246,32 @@
         "boom",
         "door-to-door",
         "scarcity-of-resources"
+      ]
+    },
+    "intervention": {
+      "status": "supported",
+      "notes": "Intervention (in) Flashpoint #4 set-complete. 18/20 new clears; reprint skips en-passant, haas-bioroid-architects-of-tomorrow. Pool supported after escalation. Paired release v1.125.0. Never kick mo/mor.",
+      "cards": [
+        "en-passant",
+        "frantic-coding",
+        "the-gauntlet",
+        "saker",
+        "blockade-runner",
+        "ele-smoke-scovak-cynosure-of-the-net",
+        "top-hat",
+        "blackstone",
+        "government-investigations",
+        "citadel-sanctuary",
+        "wetwork-refit",
+        "haas-bioroid-architects-of-tomorrow",
+        "fumiko-yamamori",
+        "hasty-relocation",
+        "data-ward",
+        "drone-screen",
+        "chief-slee",
+        "bulwark",
+        "best-defense",
+        "preemptive-action"
       ]
     }
   }
