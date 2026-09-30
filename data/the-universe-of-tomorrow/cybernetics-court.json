@@ -1,0 +1,19 @@
+{
+  "id": "cybernetics-court",
+  "title": "Cybernetics Court",
+  "nrdbCode": "08109",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "facility",
+    "ritzy"
+  ],
+  "installCost": 0,
+  "rezCost": 0,
+  "trashCost": 5,
+  "unique": true,
+  "handSizeBonus": 4,
+  "wave": "the-universe-of-tomorrow"
+}

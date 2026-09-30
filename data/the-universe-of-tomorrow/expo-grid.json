@@ -1,0 +1,22 @@
+{
+  "id": "expo-grid",
+  "title": "Expo Grid",
+  "nrdbCode": "08119",
+  "type": "upgrade",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "region"
+  ],
+  "installCost": 0,
+  "rezCost": 0,
+  "trashCost": 3,
+  "onTurnBegin": {
+    "op": "do",
+    "action": {
+      "kind": "expo_grid_gain_if_rezzed_asset_in_root"
+    }
+  },
+  "wave": "the-universe-of-tomorrow"
+}

@@ -1,0 +1,19 @@
+{
+  "id": "genetics-pavilion",
+  "title": "Genetics Pavilion",
+  "nrdbCode": "08113",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "jinteki",
+  "subtypes": [
+    "facility",
+    "ritzy"
+  ],
+  "installCost": 1,
+  "rezCost": 1,
+  "trashCost": 5,
+  "unique": true,
+  "runnerCannotDrawMoreThanPerTurn": 2,
+  "wave": "the-universe-of-tomorrow"
+}

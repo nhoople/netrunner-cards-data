@@ -1,0 +1,21 @@
+{
+  "id": "franchise-city",
+  "title": "Franchise City",
+  "nrdbCode": "08114",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "subtypes": [
+    "facility"
+  ],
+  "installCost": 3,
+  "rezCost": 3,
+  "trashCost": 2,
+  "unique": true,
+  "mustRevealAgendasAccessedFromRd": true,
+  "addSelfToCorpScoreOnAgendaAccess": {
+    "agendaPoints": 1
+  },
+  "wave": "the-universe-of-tomorrow"
+}

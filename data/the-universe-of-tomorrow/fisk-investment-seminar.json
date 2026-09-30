@@ -1,0 +1,36 @@
+{
+  "id": "fisk-investment-seminar",
+  "title": "Fisk Investment Seminar",
+  "nrdbCode": "08105",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "subtypes": [
+    "priority"
+  ],
+  "playCost": 0,
+  "playRequiresFirstClick": true,
+  "onPlay": {
+    "op": "seq",
+    "effects": [
+      {
+        "op": "do",
+        "action": {
+          "kind": "draw",
+          "side": "runner",
+          "amount": 3
+        }
+      },
+      {
+        "op": "do",
+        "action": {
+          "kind": "draw",
+          "side": "corp",
+          "amount": 3
+        }
+      }
+    ]
+  },
+  "wave": "the-universe-of-tomorrow"
+}

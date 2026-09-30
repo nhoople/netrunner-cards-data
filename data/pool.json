@@ -30,6 +30,7 @@
     "chrome-city",
     "the-underway",
     "old-hollywood",
+    "the-universe-of-tomorrow",
     "reign-and-reverie",
     "system-core-2019",
     "downfall",
@@ -1919,6 +1920,32 @@
         "hollywood-renovation",
         "back-channels",
         "vanity-project"
+      ]
+    },
+    "the-universe-of-tomorrow": {
+      "status": "supported",
+      "notes": "The Universe of Tomorrow (uot) SanSan set-complete. 18/18 new clears; product-placement and public-support reprints skipped. Pool supported. Paired release v1.114.0. Never kick mo/mor.",
+      "cards": [
+        "power-to-the-people",
+        "surfer",
+        "ddos",
+        "laramy-fisk-savvy-investor",
+        "fisk-investment-seminar",
+        "bookmark",
+        "davinci",
+        "wireless-net-pavilion",
+        "cybernetics-court",
+        "team-sponsorship",
+        "chronos-protocol-selective-mind-mapping",
+        "ancestral-imager",
+        "genetics-pavilion",
+        "franchise-city",
+        "product-placement",
+        "worlds-plaza",
+        "public-support",
+        "tour-guide",
+        "expo-grid",
+        "the-future-is-now"
       ]
     }
   }

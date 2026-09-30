@@ -1,0 +1,34 @@
+{
+  "id": "ddos",
+  "title": "DDoS",
+  "nrdbCode": "08103",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "subtypes": [
+    "virtual"
+  ],
+  "installCost": 3,
+  "paidAbilities": [
+    {
+      "id": "ddos-trash",
+      "label": "[trash]: Corp cannot rez outermost ice during a run this turn",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "trashSelf": true
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "arm_cannot_rez_outermost_ice_this_turn"
+        }
+      }
+    }
+  ],
+  "wave": "the-universe-of-tomorrow"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "chronos-protocol-selective-mind-mapping",
+  "title": "Chronos Protocol: Selective Mind-mapping",
+  "nrdbCode": "08111",
+  "type": "identity",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "jinteki",
+  "subtypes": [
+    "division"
+  ],
+  "corpChoosesFirstNetDamageCardEachTurn": true,
+  "wave": "the-universe-of-tomorrow"
+}

@@ -1,0 +1,16 @@
+{
+  "id": "ancestral-imager",
+  "title": "Ancestral Imager",
+  "nrdbCode": "08112",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "jinteki",
+  "subtypes": [
+    "security"
+  ],
+  "advancementRequirement": 3,
+  "agendaPoints": 1,
+  "netDamageOnJackOut": 1,
+  "wave": "the-universe-of-tomorrow"
+}

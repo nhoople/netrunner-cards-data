@@ -1,0 +1,35 @@
+{
+  "id": "surfer",
+  "title": "Surfer",
+  "nrdbCode": "08102",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "installCost": 2,
+  "memoryCost": 1,
+  "paidAbilities": [
+    {
+      "id": "surfer-swap",
+      "label": "2¢: Swap encountered barrier with ice directly before or after it",
+      "clickCost": 0,
+      "creditCost": 2,
+      "cost": {
+        "credits": 2
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "surfer_swap_encounter_barrier_adjacent"
+        }
+      },
+      "usableByRunnerOnSelfIce": true,
+      "requireEncounterSubtype": "barrier",
+      "requireDuringRun": true
+    }
+  ],
+  "wave": "the-universe-of-tomorrow"
+}

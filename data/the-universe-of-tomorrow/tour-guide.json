@@ -1,0 +1,18 @@
+{
+  "id": "tour-guide",
+  "title": "Tour Guide",
+  "nrdbCode": "08118",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "sentry"
+  ],
+  "installCost": 2,
+  "rezCost": 2,
+  "strength": 0,
+  "etrSubroutinesPerRezzedAsset": true,
+  "subroutines": [],
+  "wave": "the-universe-of-tomorrow"
+}

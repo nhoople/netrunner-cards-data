@@ -1,0 +1,16 @@
+{
+  "id": "wireless-net-pavilion",
+  "title": "Wireless Net Pavilion",
+  "nrdbCode": "08108",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "neutral-runner",
+  "subtypes": [
+    "location"
+  ],
+  "installCost": 1,
+  "unique": true,
+  "basicTrashResourceAdditionalCostCredits": 2,
+  "wave": "the-universe-of-tomorrow"
+}

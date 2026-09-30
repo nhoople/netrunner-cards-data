@@ -1,0 +1,22 @@
+{
+  "id": "power-to-the-people",
+  "title": "Power to the People",
+  "nrdbCode": "08101",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "subtypes": [
+    "priority"
+  ],
+  "playCost": 0,
+  "playRequiresFirstClick": true,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "arm_gain_credits_on_first_agenda_access",
+      "amount": 7
+    }
+  },
+  "wave": "the-universe-of-tomorrow"
+}

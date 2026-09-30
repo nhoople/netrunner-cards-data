@@ -1,0 +1,22 @@
+{
+  "id": "the-future-is-now",
+  "title": "The Future is Now",
+  "nrdbCode": "08120",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "neutral-corp",
+  "subtypes": [
+    "initiative"
+  ],
+  "advancementRequirement": 3,
+  "agendaPoints": 1,
+  "onScore": {
+    "op": "do",
+    "action": {
+      "kind": "search_rd_to_hq",
+      "amount": 1
+    }
+  },
+  "wave": "the-universe-of-tomorrow"
+}

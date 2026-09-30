@@ -1,0 +1,19 @@
+{
+  "id": "team-sponsorship",
+  "title": "Team Sponsorship",
+  "nrdbCode": "08110",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "installCost": 1,
+  "rezCost": 1,
+  "trashCost": 4,
+  "onAgendaScored": {
+    "op": "do",
+    "action": {
+      "kind": "may_install_from_hq_or_archives_ignore_costs"
+    }
+  },
+  "wave": "the-universe-of-tomorrow"
+}

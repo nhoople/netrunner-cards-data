@@ -1,0 +1,68 @@
+{
+  "id": "bookmark",
+  "title": "Bookmark",
+  "nrdbCode": "08106",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "installCost": 0,
+  "maxHostedCards": 3,
+  "paidAbilities": [
+    {
+      "id": "bookmark-host",
+      "label": "[click]: Host up to 3 cards from grip facedown",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "bookmark_host_up_to_3_from_grip_facedown"
+        }
+      }
+    },
+    {
+      "id": "bookmark-to-grip-click",
+      "label": "[click]: Add all hosted cards to grip",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "bookmark_add_all_hosted_to_grip"
+        }
+      }
+    },
+    {
+      "id": "bookmark-to-grip-trash",
+      "label": "[trash]: Add all hosted cards to grip",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "trashSelf": true
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "bookmark_add_all_hosted_to_grip"
+        }
+      }
+    }
+  ],
+  "wave": "the-universe-of-tomorrow"
+}

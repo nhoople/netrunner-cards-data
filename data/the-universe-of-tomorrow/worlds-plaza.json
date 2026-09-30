@@ -1,0 +1,40 @@
+{
+  "id": "worlds-plaza",
+  "title": "Worlds Plaza",
+  "nrdbCode": "08116",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "facility"
+  ],
+  "installCost": 2,
+  "rezCost": 2,
+  "trashCost": 5,
+  "unique": true,
+  "maxHostedCards": 3,
+  "hostAssetsOnly": true,
+  "paidAbilities": [
+    {
+      "id": "worlds-plaza-install",
+      "label": "[click]: Install an asset from HQ on Worlds Plaza and rez it (−2¢)",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "worlds_plaza_install_asset_from_hq_rez_discount",
+          "discount": 2
+        }
+      }
+    }
+  ],
+  "wave": "the-universe-of-tomorrow"
+}

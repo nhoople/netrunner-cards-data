@@ -3846,6 +3846,46 @@
         "bonus": { "type": "integer", "minimum": 1 }
       },
       "description": "Hollywood Renovation: when advanced, may place default (or bonus at/above threshold) advancements on another advanceable card."
+    },
+    "basicTrashResourceAdditionalCostCredits": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Wireless Net Pavilion: as an additional cost to the basic trash-resource action, Corp must pay this many credits."
+    },
+    "corpChoosesFirstNetDamageCardEachTurn": {
+      "type": "boolean",
+      "description": "Chronos Protocol: for the first net damage each turn, Corp looks at grip and chooses which card is trashed."
+    },
+    "netDamageOnJackOut": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Ancestral Imager: whenever the Runner jacks out, do this much net damage."
+    },
+    "runnerCannotDrawMoreThanPerTurn": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Genetics Pavilion: while rezzed, Runner cannot draw more than this many cards during each of their turns."
+    },
+    "mustRevealAgendasAccessedFromRd": {
+      "type": "boolean",
+      "description": "Franchise City: while Runner accesses an agenda in R&D, they must reveal it."
+    },
+    "addSelfToCorpScoreOnAgendaAccess": {
+      "type": "object",
+      "required": ["agendaPoints"],
+      "additionalProperties": false,
+      "properties": {
+        "agendaPoints": { "type": "integer", "minimum": 0 }
+      },
+      "description": "Franchise City: when Runner accesses an agenda, add this asset to Corp score as an agenda worth agendaPoints."
+    },
+    "hostAssetsOnly": {
+      "type": "boolean",
+      "description": "Worlds Plaza: this card may only host assets."
+    },
+    "etrSubroutinesPerRezzedAsset": {
+      "type": "boolean",
+      "description": "Tour Guide: gains an End the run subroutine for each rezzed asset."
     }
   }
 }
