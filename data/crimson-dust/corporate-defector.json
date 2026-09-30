@@ -1,0 +1,15 @@
+{
+  "id": "corporate-defector",
+  "title": "Corporate Defector",
+  "nrdbCode": "12109",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "neutral-runner",
+  "subtypes": [
+    "connection"
+  ],
+  "installCost": 0,
+  "revealCorpBasicActionDraws": true,
+  "wave": "crimson-dust"
+}

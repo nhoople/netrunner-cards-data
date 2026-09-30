@@ -1,0 +1,22 @@
+{
+  "id": "ar-enhanced-security",
+  "title": "AR-Enhanced Security",
+  "nrdbCode": "12115",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "subtypes": [
+    "security"
+  ],
+  "advancementRequirement": 3,
+  "agendaPoints": 1,
+  "onFirstCorpCardTrashEachTurn": {
+    "op": "do",
+    "action": {
+      "kind": "give_tags",
+      "amount": 1
+    }
+  },
+  "wave": "crimson-dust"
+}

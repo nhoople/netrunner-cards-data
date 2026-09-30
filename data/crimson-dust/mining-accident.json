@@ -1,0 +1,31 @@
+{
+  "id": "mining-accident",
+  "title": "Mining Accident",
+  "nrdbCode": "12101",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "playCost": 2,
+  "playRequiresSuccessfulCentralRunThisTurn": true,
+  "onPlay": {
+    "op": "seq",
+    "effects": [
+      {
+        "op": "do",
+        "action": {
+          "kind": "give_bad_publicity_unless_corp_pays",
+          "amount": 1,
+          "credits": 5
+        }
+      },
+      {
+        "op": "do",
+        "action": {
+          "kind": "rfg_self"
+        }
+      }
+    ]
+  },
+  "wave": "crimson-dust"
+}

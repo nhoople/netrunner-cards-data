@@ -1,0 +1,17 @@
+{
+  "id": "fractal-threat-matrix",
+  "title": "Fractal Threat Matrix",
+  "nrdbCode": "12119",
+  "type": "upgrade",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "security protocol"
+  ],
+  "installCost": 4,
+  "rezCost": 4,
+  "trashCost": 3,
+  "trashTopOfStackWhenAllSubsBrokenOnProtectingIce": 2,
+  "wave": "crimson-dust"
+}

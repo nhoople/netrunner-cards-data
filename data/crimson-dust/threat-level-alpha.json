@@ -1,0 +1,28 @@
+{
+  "id": "threat-level-alpha",
+  "title": "Threat Level Alpha",
+  "nrdbCode": "12117",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "subtypes": [
+    "double"
+  ],
+  "playCost": 3,
+  "playAdditionalClick": true,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "trace",
+      "strength": 1,
+      "onSuccess": {
+        "op": "do",
+        "action": {
+          "kind": "give_tags_equal_to_runner_tags_min_1"
+        }
+      }
+    }
+  },
+  "wave": "crimson-dust"
+}

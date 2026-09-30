@@ -1,0 +1,35 @@
+{
+  "id": "breached-dome",
+  "title": "Breached Dome",
+  "nrdbCode": "12113",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "jinteki",
+  "subtypes": [
+    "ambush"
+  ],
+  "installCost": 0,
+  "rezCost": 0,
+  "trashCost": 0,
+  "mustRevealWhenAccessedFromRd": true,
+  "onAccess": {
+    "op": "seq",
+    "effects": [
+      {
+        "op": "do",
+        "action": {
+          "kind": "meat_damage",
+          "amount": 1
+        }
+      },
+      {
+        "op": "do",
+        "action": {
+          "kind": "trash_top_of_stack"
+        }
+      }
+    ]
+  },
+  "wave": "crimson-dust"
+}

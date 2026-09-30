@@ -50,6 +50,7 @@
     "earths-scion",
     "blood-and-water",
     "free-mars",
+    "crimson-dust",
     "reign-and-reverie",
     "system-core-2019",
     "downfall",
@@ -2525,6 +2526,32 @@
         "tithonium",
         "transparency-initiative",
         "rover-algorithm"
+      ]
+    },
+    "crimson-dust": {
+      "status": "supported",
+      "notes": "Crimson Dust (cd) Red Sand #6 set-complete. 20/20 new clears; no reprints. Pool supported after free-mars. Paired release v1.134.0. Never kick mo/mor. Defer tdc.",
+      "cards": [
+        "mining-accident",
+        "respirocytes",
+        "salvaged-vanadis-armory",
+        "aumakua",
+        "caldera",
+        "dianas-hunt",
+        "reshape",
+        "dummy-box",
+        "corporate-defector",
+        "cfc-excavation-contract",
+        "mca-austerity-policy",
+        "restore",
+        "breached-dome",
+        "sand-storm",
+        "ar-enhanced-security",
+        "rolling-brownout",
+        "threat-level-alpha",
+        "priority-construction",
+        "fractal-threat-matrix",
+        "conundrum"
       ]
     }
   }

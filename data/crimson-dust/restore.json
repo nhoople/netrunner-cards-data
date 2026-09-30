@@ -1,0 +1,17 @@
+{
+  "id": "restore",
+  "title": "Restore",
+  "nrdbCode": "12112",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "playCost": 1,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "install_and_rez_from_archives_paying_costs_rfg_other_copies"
+    }
+  },
+  "wave": "crimson-dust"
+}

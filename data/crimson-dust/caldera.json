@@ -1,0 +1,40 @@
+{
+  "id": "caldera",
+  "title": "Caldera",
+  "nrdbCode": "12105",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "subtypes": [
+    "virtual"
+  ],
+  "installCost": 3,
+  "paidAbilities": [
+    {
+      "id": "caldera-prevent",
+      "label": "[interrupt] → 3¢: Prevent 1 core damage or 1 net damage",
+      "clickCost": 0,
+      "creditCost": 3,
+      "cost": {
+        "credits": 3
+      },
+      "windows": [
+        "damage_interrupt_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "prevent_pending_damage",
+          "amount": 1
+        }
+      },
+      "usableByRunnerOnSelfIce": true,
+      "requirePendingDamageTypes": [
+        "net",
+        "core"
+      ]
+    }
+  ],
+  "wave": "crimson-dust"
+}

@@ -1,0 +1,33 @@
+{
+  "id": "dummy-box",
+  "title": "Dummy Box",
+  "nrdbCode": "12108",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "subtypes": [
+    "virtual"
+  ],
+  "installCost": 1,
+  "paidAbilities": [
+    {
+      "id": "dummy-box-prevent",
+      "label": "[interrupt] → Trash 1 card from grip: Prevent Corp trashing 1 installed card of the same type",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {},
+      "windows": [
+        "trash_interrupt_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "dummy_box_trash_grip_same_type_prevent"
+        }
+      },
+      "usableByRunnerOnSelfIce": true
+    }
+  ],
+  "wave": "crimson-dust"
+}

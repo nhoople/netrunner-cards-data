@@ -1,0 +1,22 @@
+{
+  "id": "priority-construction",
+  "title": "Priority Construction",
+  "nrdbCode": "12118",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "double"
+  ],
+  "playCost": 1,
+  "playAdditionalClick": true,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "install_ice_from_hq_outermost_remote_ignore_costs_place_advancements",
+      "advancements": 3
+    }
+  },
+  "wave": "crimson-dust"
+}

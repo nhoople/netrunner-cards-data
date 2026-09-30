@@ -1,0 +1,20 @@
+{
+  "id": "cfc-excavation-contract",
+  "title": "CFC Excavation Contract",
+  "nrdbCode": "12110",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "advancementRequirement": 4,
+  "agendaPoints": 2,
+  "onScore": {
+    "op": "do",
+    "action": {
+      "kind": "gain_credits_per_rezzed_subtype",
+      "subtype": "bioroid",
+      "per": 2
+    }
+  },
+  "wave": "crimson-dust"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "reshape",
+  "title": "Reshape",
+  "nrdbCode": "12107",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "playCost": 3,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "swap_2_unrezzed_ice"
+    }
+  },
+  "wave": "crimson-dust"
+}

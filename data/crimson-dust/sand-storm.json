@@ -1,0 +1,40 @@
+{
+  "id": "sand-storm",
+  "title": "Sand Storm",
+  "nrdbCode": "12114",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "jinteki",
+  "subtypes": [
+    "trap",
+    "deflector"
+  ],
+  "installCost": 2,
+  "rezCost": 2,
+  "strength": 5,
+  "subroutines": [
+    {
+      "id": "sand-storm-move-trash",
+      "text": "If this ice is installed, move it to the outermost position protecting another server. (The run continues from this new position.) Trash this ice.",
+      "effect": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "move_source_ice_to_outermost_another_server_continue_run"
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "trash_self"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "wave": "crimson-dust"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "rolling-brownout",
+  "title": "Rolling Brownout",
+  "nrdbCode": "12116",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "subtypes": [
+    "current"
+  ],
+  "playCost": 2,
+  "lingerAsCurrent": true,
+  "currentTrashOnAgendaStolen": true,
+  "operationAndEventPlayCostIncrease": 1,
+  "corpGainsCreditsOnFirstRunnerEventEachTurn": 1,
+  "wave": "crimson-dust"
+}

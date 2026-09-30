@@ -1,0 +1,71 @@
+{
+  "id": "mca-austerity-policy",
+  "title": "MCA Austerity Policy",
+  "nrdbCode": "12111",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "installCost": 1,
+  "rezCost": 1,
+  "trashCost": 3,
+  "unique": true,
+  "paidAbilities": [
+    {
+      "id": "mca-place-power",
+      "label": "[click]: Place 1 power counter; Runner loses [click] at start of their next turn",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "effect": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "add_power_counter",
+              "amount": 1
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "allotted_clicks_next_turn",
+              "side": "runner",
+              "delta": -1
+            }
+          }
+        ]
+      },
+      "oncePerTurn": true
+    },
+    {
+      "id": "mca-gain-clicks",
+      "label": "[click], [trash], 3 hosted power counters: Gain [click][click][click][click]",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "powerCounters": 3,
+        "clicks": 1,
+        "trashSelf": true
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "gain_clicks",
+          "side": "corp",
+          "amount": 4
+        }
+      }
+    }
+  ],
+  "wave": "crimson-dust"
+}

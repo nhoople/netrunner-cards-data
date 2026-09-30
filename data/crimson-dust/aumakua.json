@@ -1,0 +1,27 @@
+{
+  "id": "aumakua",
+  "title": "Aumakua",
+  "nrdbCode": "12104",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "subtypes": [
+    "icebreaker",
+    "ai",
+    "virus"
+  ],
+  "installCost": 3,
+  "strength": 0,
+  "memoryCost": 1,
+  "strengthPerVirusCounter": 1,
+  "placeVirusCounterOnExposeAnyCard": true,
+  "placeVirusCounterOnFinishBreachIfNoStealOrTrash": true,
+  "breaker": {
+    "breaksSubtype": "*",
+    "strength": 0,
+    "breakCredits": 1,
+    "breakMaxSubs": 1
+  },
+  "wave": "crimson-dust"
+}

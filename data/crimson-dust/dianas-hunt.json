@@ -1,0 +1,19 @@
+{
+  "id": "dianas-hunt",
+  "title": "Diana's Hunt",
+  "nrdbCode": "12106",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "subtypes": [
+    "run"
+  ],
+  "playCost": 4,
+  "runEvent": {
+    "servers": "any",
+    "onEncounterMayInstallProgramFromGripIgnoringCosts": true,
+    "trashProgramsInstalledThisWayOnRunEnd": true
+  },
+  "wave": "crimson-dust"
+}
