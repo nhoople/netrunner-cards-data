@@ -1,0 +1,125 @@
+{
+  "id": "wotan",
+  "title": "Wotan",
+  "wave": "stalwart",
+  "nrdbCode": "04030",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "barrier",
+    "bioroid"
+  ],
+  "installCost": 14,
+  "rezCost": 14,
+  "strength": 10,
+  "unique": true,
+  "subroutines": [
+    {
+      "id": "wotan-clicks",
+      "text": "End the run unless the Runner spends [click][click].",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "end_the_run_unless_runner_spends_clicks",
+          "amount": 2
+        }
+      }
+    },
+    {
+      "id": "wotan-pay",
+      "text": "End the run unless the Runner pays 3[credit].",
+      "effect": {
+        "op": "choose",
+        "chooser": "runner",
+        "options": [
+          {
+            "id": "pay",
+            "label": "Pay 3¢",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "lose_credits",
+                "side": "runner",
+                "amount": 3
+              }
+            }
+          },
+          {
+            "id": "etr",
+            "label": "End the run",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "end_the_run"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "wotan-trash",
+      "text": "End the run unless the Runner trashes 1 installed program.",
+      "effect": {
+        "op": "choose",
+        "chooser": "runner",
+        "options": [
+          {
+            "id": "trash",
+            "label": "Trash 1 installed program",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "trash_program",
+                "pick": "choose"
+              }
+            }
+          },
+          {
+            "id": "etr",
+            "label": "End the run",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "end_the_run"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "wotan-core",
+      "text": "End the run unless the Runner suffers 1 core damage.",
+      "effect": {
+        "op": "choose",
+        "chooser": "runner",
+        "options": [
+          {
+            "id": "core",
+            "label": "Suffer 1 core damage",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "core_damage",
+                "amount": 1
+              }
+            }
+          },
+          {
+            "id": "etr",
+            "label": "End the run",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "end_the_run"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

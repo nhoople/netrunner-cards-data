@@ -12,6 +12,7 @@
     "future-proof",
     "creation-and-control",
     "opening-moves",
+    "stalwart",
     "reign-and-reverie",
     "system-core-2019",
     "downfall",
@@ -1278,6 +1279,32 @@
         "dedicated-response-team",
         "burke-bugs",
         "corporate-war"
+      ]
+    },
+    "stalwart": {
+      "status": "supported",
+      "notes": "Stalwart (st) Spin cycle set-complete. 17/17 ST-only clears; 3 reprints absorbed; pool supported. Paired release v1.96.0. Never kick mo/mor.",
+      "cards": [
+        "bishop",
+        "scheherazade",
+        "hard-at-work",
+        "recon",
+        "copycat",
+        "leviathan",
+        "eureka",
+        "record-reconstructor",
+        "prepaid-voicepad",
+        "wotan",
+        "hellion-alpha-test",
+        "clone-retirement",
+        "swordsman",
+        "shipment-from-sansan",
+        "muckraker",
+        "the-cleaners",
+        "elizabeth-mills",
+        "off-the-grid",
+        "profiteering",
+        "restructure"
       ]
     },
     "opening-moves": {

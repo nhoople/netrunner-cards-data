@@ -1,0 +1,22 @@
+{
+  "id": "restructure",
+  "title": "Restructure",
+  "wave": "stalwart",
+  "nrdbCode": "04040",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "neutral-corp",
+  "subtypes": [
+    "transaction"
+  ],
+  "playCost": 10,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "gain_credits",
+      "side": "corp",
+      "amount": 15
+    }
+  }
+}

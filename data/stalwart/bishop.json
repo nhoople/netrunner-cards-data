@@ -1,0 +1,38 @@
+{
+  "id": "bishop",
+  "title": "Bishop",
+  "wave": "stalwart",
+  "nrdbCode": "04021",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "subtypes": [
+    "caïssa",
+    "trojan"
+  ],
+  "installCost": 0,
+  "memoryCost": 1,
+  "installOnIce": true,
+  "hostStrengthModifier": -2,
+  "paidAbilities": [
+    {
+      "id": "bishop-host",
+      "label": "[click]: Host on ice not hosting a Caïssa program",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "caissa_bishop_host"
+        }
+      }
+    }
+  ]
+}

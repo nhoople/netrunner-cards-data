@@ -1,0 +1,16 @@
+{
+  "id": "off-the-grid",
+  "title": "Off the Grid",
+  "wave": "stalwart",
+  "nrdbCode": "04038",
+  "type": "upgrade",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "installCost": 6,
+  "rezCost": 6,
+  "trashCost": 0,
+  "remoteOnly": true,
+  "blocksRunnerRunsOnHostServer": true,
+  "trashSelfOnCorpSuccessfulHqRun": true
+}

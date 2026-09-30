@@ -1,0 +1,19 @@
+{
+  "id": "scheherazade",
+  "title": "Scheherazade",
+  "wave": "stalwart",
+  "nrdbCode": "04022",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "subtypes": [
+    "daemon"
+  ],
+  "installCost": 0,
+  "memoryCost": 0,
+  "unique": true,
+  "hostsAnyProgramMemoryCostLte": 99,
+  "maxHostedCards": 99,
+  "gainCreditsWhenRunnerHostsProgramOnSelf": 1
+}

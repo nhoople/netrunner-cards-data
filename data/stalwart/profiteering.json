@@ -1,0 +1,21 @@
+{
+  "id": "profiteering",
+  "title": "Profiteering",
+  "wave": "stalwart",
+  "nrdbCode": "04039",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "neutral-corp",
+  "subtypes": [
+    "liability"
+  ],
+  "advancementRequirement": 3,
+  "agendaPoints": 1,
+  "onScore": {
+    "op": "do",
+    "action": {
+      "kind": "profiteering_on_score"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "id": "record-reconstructor",
+  "title": "Record Reconstructor",
+  "wave": "stalwart",
+  "nrdbCode": "04028",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "installCost": 0,
+  "onSuccessfulRun": {
+    "op": "do",
+    "action": {
+      "kind": "record_reconstructor_archives_instead_of_breach"
+    }
+  }
+}

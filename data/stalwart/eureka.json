@@ -1,0 +1,22 @@
+{
+  "id": "eureka",
+  "title": "Eureka!",
+  "wave": "stalwart",
+  "nrdbCode": "04027",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "subtypes": [
+    "double"
+  ],
+  "playCost": 3,
+  "playAdditionalClick": true,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "eureka_reveal_install_or_trash",
+      "discount": 10
+    }
+  }
+}

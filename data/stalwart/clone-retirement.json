@@ -1,0 +1,52 @@
+{
+  "id": "clone-retirement",
+  "title": "Clone Retirement",
+  "wave": "stalwart",
+  "nrdbCode": "04032",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "jinteki",
+  "subtypes": [
+    "initiative",
+    "liability"
+  ],
+  "advancementRequirement": 2,
+  "agendaPoints": 1,
+  "onScore": {
+    "op": "choose",
+    "chooser": "corp",
+    "options": [
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "corp",
+            "amount": 0
+          }
+        }
+      },
+      {
+        "id": "remove-bp",
+        "label": "Remove 1 bad publicity",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "remove_bad_publicity",
+            "amount": 1
+          }
+        }
+      }
+    ]
+  },
+  "onSteal": {
+    "op": "do",
+    "action": {
+      "kind": "give_bad_publicity",
+      "amount": 1
+    }
+  }
+}

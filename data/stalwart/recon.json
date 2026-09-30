@@ -1,0 +1,18 @@
+{
+  "id": "recon",
+  "title": "Recon",
+  "wave": "stalwart",
+  "nrdbCode": "04024",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "subtypes": [
+    "run"
+  ],
+  "playCost": 1,
+  "runEvent": {
+    "servers": "any",
+    "mayJackOutOnFirstIceEncounter": true
+  }
+}

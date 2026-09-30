@@ -1,0 +1,32 @@
+{
+  "id": "hard-at-work",
+  "title": "Hard at Work",
+  "wave": "stalwart",
+  "nrdbCode": "04023",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "installCost": 5,
+  "onTurnBegin": {
+    "op": "seq",
+    "effects": [
+      {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "runner",
+          "amount": 2
+        }
+      },
+      {
+        "op": "do",
+        "action": {
+          "kind": "lose_clicks",
+          "side": "runner",
+          "amount": 1
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "id": "shipment-from-sansan",
+  "title": "Shipment from SanSan",
+  "wave": "stalwart",
+  "nrdbCode": "04034",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "subtypes": [
+    "double"
+  ],
+  "playCost": 0,
+  "playAdditionalClick": true,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "place_advancements",
+      "amount": 2
+    }
+  }
+}

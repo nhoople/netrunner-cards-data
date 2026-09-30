@@ -1,0 +1,97 @@
+{
+  "id": "muckraker",
+  "title": "Muckraker",
+  "wave": "stalwart",
+  "nrdbCode": "04035",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "subtypes": [
+    "sentry",
+    "tracer",
+    "liability"
+  ],
+  "installCost": 5,
+  "rezCost": 5,
+  "strength": 3,
+  "onRez": {
+    "op": "do",
+    "action": {
+      "kind": "give_bad_publicity",
+      "amount": 1
+    }
+  },
+  "subroutines": [
+    {
+      "id": "muck-1",
+      "text": "Trace[1]. If successful, give the Runner 1 tag.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "trace",
+          "strength": 1,
+          "onSuccess": {
+            "op": "do",
+            "action": {
+              "kind": "give_tags",
+              "amount": 1
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "muck-2",
+      "text": "Trace[2]. If successful, give the Runner 1 tag.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "trace",
+          "strength": 2,
+          "onSuccess": {
+            "op": "do",
+            "action": {
+              "kind": "give_tags",
+              "amount": 1
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "muck-3",
+      "text": "Trace[3]. If successful, give the Runner 1 tag.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "trace",
+          "strength": 3,
+          "onSuccess": {
+            "op": "do",
+            "action": {
+              "kind": "give_tags",
+              "amount": 1
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "muck-etr",
+      "text": "End the run if the Runner is tagged.",
+      "effect": {
+        "op": "if",
+        "cond": {
+          "op": "runner_tagged"
+        },
+        "then": {
+          "op": "do",
+          "action": {
+            "kind": "end_the_run"
+          }
+        }
+      }
+    }
+  ]
+}

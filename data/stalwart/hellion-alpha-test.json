@@ -1,0 +1,36 @@
+{
+  "id": "hellion-alpha-test",
+  "title": "Hellion Alpha Test",
+  "wave": "stalwart",
+  "nrdbCode": "04031",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "black ops",
+    "liability"
+  ],
+  "playCost": 1,
+  "playRequiresRunnerInstalledResourceLastTurn": true,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "trace",
+      "strength": 2,
+      "onSuccess": {
+        "op": "do",
+        "action": {
+          "kind": "add_installed_resource_to_stack_top"
+        }
+      },
+      "onFailure": {
+        "op": "do",
+        "action": {
+          "kind": "give_bad_publicity",
+          "amount": 1
+        }
+      }
+    }
+  }
+}

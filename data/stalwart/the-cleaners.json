@@ -1,0 +1,16 @@
+{
+  "id": "the-cleaners",
+  "title": "The Cleaners",
+  "wave": "stalwart",
+  "nrdbCode": "04036",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "security"
+  ],
+  "advancementRequirement": 5,
+  "agendaPoints": 3,
+  "whileScoredMeatDamageIncrease": 1
+}
