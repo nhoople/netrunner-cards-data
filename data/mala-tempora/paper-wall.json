@@ -1,0 +1,29 @@
+{
+  "id": "paper-wall",
+  "title": "Paper Wall",
+  "wave": "mala-tempora",
+  "nrdbCode": "04059",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "neutral-corp",
+  "subtypes": [
+    "barrier"
+  ],
+  "installCost": 0,
+  "rezCost": 0,
+  "strength": 1,
+  "trashSelfWhenFullyBrokenByRunner": true,
+  "subroutines": [
+    {
+      "id": "paper-etr",
+      "text": "End the run.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "end_the_run"
+        }
+      }
+    }
+  ]
+}

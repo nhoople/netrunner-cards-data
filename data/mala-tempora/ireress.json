@@ -1,0 +1,28 @@
+{
+  "id": "ireress",
+  "title": "Ireress",
+  "wave": "mala-tempora",
+  "nrdbCode": "04057",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "code gate"
+  ],
+  "installCost": 0,
+  "rezCost": 0,
+  "strength": 2,
+  "subroutines": [
+    {
+      "id": "ireress-lose",
+      "text": "The Runner loses 1[credit] for each bad publicity the Corp has.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "runner_lose_credits_equal_corp_bad_publicity"
+        }
+      }
+    }
+  ]
+}

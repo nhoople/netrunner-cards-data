@@ -1,0 +1,21 @@
+{
+  "id": "power-shutdown",
+  "title": "Power Shutdown",
+  "wave": "mala-tempora",
+  "nrdbCode": "04058",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "gray ops"
+  ],
+  "playCost": 1,
+  "playRequiresRunnerMadeRunLastTurn": true,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "power_shutdown"
+    }
+  }
+}

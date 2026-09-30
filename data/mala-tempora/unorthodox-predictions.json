@@ -1,0 +1,21 @@
+{
+  "id": "unorthodox-predictions",
+  "title": "Unorthodox Predictions",
+  "wave": "mala-tempora",
+  "nrdbCode": "04053",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "jinteki",
+  "subtypes": [
+    "security"
+  ],
+  "advancementRequirement": 3,
+  "agendaPoints": 1,
+  "onScore": {
+    "op": "do",
+    "action": {
+      "kind": "unorthodox_predictions_on_score"
+    }
+  }
+}

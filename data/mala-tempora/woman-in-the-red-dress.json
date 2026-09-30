@@ -1,0 +1,22 @@
+{
+  "id": "woman-in-the-red-dress",
+  "title": "Woman in the Red Dress",
+  "wave": "mala-tempora",
+  "nrdbCode": "04048",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "subtypes": [
+    "connection",
+    "virtual"
+  ],
+  "installCost": 3,
+  "unique": true,
+  "onTurnBegin": {
+    "op": "do",
+    "action": {
+      "kind": "reveal_top_rd_corp_may_draw"
+    }
+  }
+}

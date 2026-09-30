@@ -1,0 +1,18 @@
+{
+  "id": "deep-red",
+  "title": "Deep Red",
+  "wave": "mala-tempora",
+  "nrdbCode": "04042",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "subtypes": [
+    "console"
+  ],
+  "installCost": 2,
+  "unique": true,
+  "muBonus": 3,
+  "muBonusOnlyForCaissaPrograms": true,
+  "triggerCaissaClickAbilityOnCaissaInstall": true
+}
