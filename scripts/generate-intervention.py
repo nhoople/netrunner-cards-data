@@ -383,7 +383,7 @@ def map_card(c: dict) -> dict | None:
                 {
                     "id": "bulwark-trash-program",
                     "text": "The Runner trashes 1 installed program.",
-                    "effect": do("trash_program"),
+                    "effect": do("trash_program", pick="choose"),
                 },
                 {
                     "id": "bulwark-gain-etr-1",
