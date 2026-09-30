@@ -1,0 +1,25 @@
+{
+  "id": "garrote",
+  "title": "Garrote",
+  "nrdbCode": "04065",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "subtypes": [
+    "icebreaker",
+    "killer"
+  ],
+  "installCost": 7,
+  "strength": 2,
+  "memoryCost": 2,
+  "breaker": {
+    "breaksSubtype": "sentry",
+    "strength": 0,
+    "breakCredits": 1,
+    "breakMaxSubs": 1,
+    "pumpCredits": 1,
+    "pumpStrength": 1
+  },
+  "wave": "true-colors"
+}

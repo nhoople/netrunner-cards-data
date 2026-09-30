@@ -1,0 +1,32 @@
+{
+  "id": "capstone",
+  "title": "Capstone",
+  "nrdbCode": "04068",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "installCost": 2,
+  "unique": true,
+  "paidAbilities": [
+    {
+      "id": "capstone-trash-grip",
+      "label": "[click]: Trash grip copies; draw for installed dupes",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "capstone_trash_grip_draw_for_installed_dupes"
+        }
+      }
+    }
+  ],
+  "wave": "true-colors"
+}

@@ -1,0 +1,48 @@
+{
+  "id": "fenris",
+  "title": "Fenris",
+  "nrdbCode": "04071",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "sentry",
+    "ap",
+    "liability"
+  ],
+  "installCost": 4,
+  "rezCost": 4,
+  "strength": 2,
+  "onRez": {
+    "op": "do",
+    "action": {
+      "kind": "give_bad_publicity",
+      "amount": 1
+    }
+  },
+  "subroutines": [
+    {
+      "id": "fenris-core",
+      "text": "Do 1 core damage.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "core_damage",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "id": "fenris-etr",
+      "text": "End the run.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "end_the_run"
+        }
+      }
+    }
+  ],
+  "wave": "true-colors"
+}

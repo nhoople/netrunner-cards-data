@@ -1,0 +1,25 @@
+{
+  "id": "activist-support",
+  "title": "Activist Support",
+  "nrdbCode": "04062",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "installCost": 1,
+  "onCorpTurnBeginIfRunnerUntagged": {
+    "op": "do",
+    "action": {
+      "kind": "give_tags",
+      "amount": 1
+    }
+  },
+  "onTurnBeginIfCorpNoBadPublicity": {
+    "op": "do",
+    "action": {
+      "kind": "give_bad_publicity",
+      "amount": 1
+    }
+  },
+  "wave": "true-colors"
+}

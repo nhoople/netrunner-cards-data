@@ -1,0 +1,25 @@
+{
+  "id": "starlight-crusade-funding",
+  "title": "Starlight Crusade Funding",
+  "nrdbCode": "04069",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "neutral-runner",
+  "installCost": 1,
+  "onTurnBegin": {
+    "op": "seq",
+    "effects": [
+      {
+        "op": "do",
+        "action": {
+          "kind": "lose_clicks",
+          "side": "runner",
+          "amount": 1
+        }
+      }
+    ]
+  },
+  "ignoreAdditionalCostFirstDoubleEventEachTurn": true,
+  "wave": "true-colors"
+}

@@ -504,6 +504,10 @@
             "type": "boolean",
             "description": "Ability usable only while a run is in progress (Arissana / AirbladeX)."
           },
+          "onlyDuringHqRun": {
+            "type": "boolean",
+            "description": "Ability usable only during a run on HQ (Panic Button)."
+          },
           "requirePendingDamageTypes": {
             "type": "array",
             "minItems": 1,
@@ -2633,6 +2637,31 @@
     "onEachCorpBadPublicityTake": {
       "type": "object",
       "description": "Effect IR whenever the Corp takes bad publicity while this Runner card is installed (Raymond Flint)."
+    },
+    "onCorpTurnBeginIfRunnerUntagged": {
+      "type": "object",
+      "description": "Effect IR at Corp turn begin while installed if Runner has 0 tags (Activist Support)."
+    },
+    "onTurnBeginIfCorpNoBadPublicity": {
+      "type": "object",
+      "description": "Effect IR at Runner turn begin while installed if Corp has 0 bad publicity (Activist Support)."
+    },
+    "ignoreAdditionalCostFirstDoubleEventEachTurn": {
+      "type": "boolean",
+      "description": "Ignore additional costs on the first double event played each turn (Starlight Crusade Funding)."
+    },
+    "trashWhenPowerCountersEmpty": {
+      "type": "boolean",
+      "description": "Trash this card when hosted power counters reach 0 after removal (Rex Campaign)."
+    },
+    "onPowerCountersEmpty": {
+      "type": "object",
+      "description": "Effect IR when hosted power counters reach 0 before trash (Rex Campaign)."
+    },
+    "strengthBonusIfOutermostOnServer": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "+strength while this ice is outermost on its server (Curtain Wall)."
     },
     "trashSelfWhenFullyBrokenByRunner": {
       "type": "boolean",

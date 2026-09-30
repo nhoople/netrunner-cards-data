@@ -1,0 +1,30 @@
+{
+  "id": "rex-campaign",
+  "title": "Rex Campaign",
+  "nrdbCode": "04070",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "advertisement"
+  ],
+  "installCost": 1,
+  "rezCost": 1,
+  "trashCost": 3,
+  "powerCountersOnRez": 3,
+  "trashWhenPowerCountersEmpty": true,
+  "onTurnBegin": {
+    "op": "do",
+    "action": {
+      "kind": "rex_campaign_turn_begin"
+    }
+  },
+  "onPowerCountersEmpty": {
+    "op": "do",
+    "action": {
+      "kind": "rex_campaign_when_empty"
+    }
+  },
+  "wave": "true-colors"
+}

@@ -1,0 +1,23 @@
+{
+  "id": "tgtbt",
+  "title": "TGTBT",
+  "nrdbCode": "04075",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "subtypes": [
+    "ambush"
+  ],
+  "advancementRequirement": 3,
+  "agendaPoints": 1,
+  "mustRevealWhenAccessedFromRd": true,
+  "onAccess": {
+    "op": "do",
+    "action": {
+      "kind": "give_tags",
+      "amount": 1
+    }
+  },
+  "wave": "true-colors"
+}

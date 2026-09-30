@@ -1,0 +1,28 @@
+{
+  "id": "rsvp",
+  "title": "RSVP",
+  "nrdbCode": "04077",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "subtypes": [
+    "code gate"
+  ],
+  "installCost": 3,
+  "rezCost": 3,
+  "strength": 4,
+  "subroutines": [
+    {
+      "id": "rsvp-no-spend",
+      "text": "Runner cannot spend credits for remainder of run.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "forbid_runner_spend_credits_for_run"
+        }
+      }
+    }
+  ],
+  "wave": "true-colors"
+}

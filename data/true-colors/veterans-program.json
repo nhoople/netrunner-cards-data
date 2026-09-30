@@ -1,0 +1,22 @@
+{
+  "id": "veterans-program",
+  "title": "Veterans Program",
+  "nrdbCode": "04080",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "neutral-corp",
+  "subtypes": [
+    "initiative"
+  ],
+  "advancementRequirement": 3,
+  "agendaPoints": 1,
+  "onScore": {
+    "op": "do",
+    "action": {
+      "kind": "remove_bad_publicity_up_to",
+      "max": 2
+    }
+  },
+  "wave": "true-colors"
+}

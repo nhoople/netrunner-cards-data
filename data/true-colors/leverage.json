@@ -1,0 +1,18 @@
+{
+  "id": "leverage",
+  "title": "Leverage",
+  "nrdbCode": "04064",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "playCost": 1,
+  "playRequiresSuccessfulHqRunThisTurn": true,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "leverage"
+    }
+  },
+  "wave": "true-colors"
+}

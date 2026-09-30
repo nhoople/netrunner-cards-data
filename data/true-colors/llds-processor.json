@@ -1,0 +1,15 @@
+{
+  "id": "llds-processor",
+  "title": "LLDS Processor",
+  "nrdbCode": "04066",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "subtypes": [
+    "chip"
+  ],
+  "installCost": 1,
+  "nonAiIcebreakerInstallStrengthBonusThisTurn": 1,
+  "wave": "true-colors"
+}

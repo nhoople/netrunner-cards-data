@@ -1,0 +1,21 @@
+{
+  "id": "lawyer-up",
+  "title": "Lawyer Up",
+  "nrdbCode": "04063",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "subtypes": [
+    "double"
+  ],
+  "playCost": 2,
+  "playAdditionalClick": true,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "lawyer_up"
+    }
+  },
+  "wave": "true-colors"
+}

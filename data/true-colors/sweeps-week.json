@@ -1,0 +1,17 @@
+{
+  "id": "sweeps-week",
+  "title": "Sweeps Week",
+  "nrdbCode": "04076",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "playCost": 1,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "gain_credits_per_runner_grip_size"
+    }
+  },
+  "wave": "true-colors"
+}

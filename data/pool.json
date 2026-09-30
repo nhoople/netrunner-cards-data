@@ -14,6 +14,7 @@
     "opening-moves",
     "stalwart",
     "mala-tempora",
+    "true-colors",
     "reign-and-reverie",
     "system-core-2019",
     "downfall",
@@ -1332,6 +1333,32 @@
         "power-shutdown",
         "paper-wall",
         "interns"
+      ]
+    },
+    "true-colors": {
+      "status": "supported",
+      "notes": "True Colors (tc) Spin cycle set-complete. 18/18 TC-only clears; 2 reprints absorbed; pool supported. Paired release v1.98.0. Never kick mo/mor.",
+      "cards": [
+        "keyhole",
+        "activist-support",
+        "lawyer-up",
+        "leverage",
+        "garrote",
+        "llds-processor",
+        "sharpshooter",
+        "capstone",
+        "starlight-crusade-funding",
+        "rex-campaign",
+        "fenris",
+        "panic-button",
+        "shock",
+        "tsurugi",
+        "tgtbt",
+        "sweeps-week",
+        "rsvp",
+        "curtain-wall",
+        "punitive-counterstrike",
+        "veterans-program"
       ]
     },
     "opening-moves": {

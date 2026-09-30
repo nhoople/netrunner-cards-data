@@ -1,0 +1,49 @@
+{
+  "id": "curtain-wall",
+  "title": "Curtain Wall",
+  "nrdbCode": "04078",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "barrier"
+  ],
+  "installCost": 14,
+  "rezCost": 14,
+  "strength": 6,
+  "strengthBonusIfOutermostOnServer": 4,
+  "subroutines": [
+    {
+      "id": "cw-etr-1",
+      "text": "End the run.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "end_the_run"
+        }
+      }
+    },
+    {
+      "id": "cw-etr-2",
+      "text": "End the run.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "end_the_run"
+        }
+      }
+    },
+    {
+      "id": "cw-etr-3",
+      "text": "End the run.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "end_the_run"
+        }
+      }
+    }
+  ],
+  "wave": "true-colors"
+}

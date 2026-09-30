@@ -1,0 +1,43 @@
+{
+  "id": "keyhole",
+  "title": "Keyhole",
+  "nrdbCode": "04061",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "installCost": 4,
+  "memoryCost": 2,
+  "paidAbilities": [
+    {
+      "id": "keyhole-run",
+      "label": "[click]: Run R&D; on success may look at top 3 and trash 1 program",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "runner",
+          "amount": 0
+        }
+      },
+      "startsRun": {
+        "servers": "rd",
+        "onSuccessfulRun": {
+          "op": "do",
+          "action": {
+            "kind": "keyhole_may_instead_of_breach"
+          }
+        }
+      }
+    }
+  ],
+  "wave": "true-colors"
+}

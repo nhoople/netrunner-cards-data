@@ -1,0 +1,39 @@
+{
+  "id": "panic-button",
+  "title": "Panic Button",
+  "nrdbCode": "04072",
+  "type": "upgrade",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "installCost": 1,
+  "rezCost": 1,
+  "trashCost": 2,
+  "installServers": [
+    "hq"
+  ],
+  "paidAbilities": [
+    {
+      "id": "panic-draw",
+      "label": "1[credit]: Draw 1 during a run on HQ",
+      "clickCost": 0,
+      "creditCost": 1,
+      "cost": {
+        "credits": 1
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "onlyDuringHqRun": true,
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "draw",
+          "side": "runner",
+          "amount": 1
+        }
+      }
+    }
+  ],
+  "wave": "true-colors"
+}

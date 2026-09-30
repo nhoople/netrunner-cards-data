@@ -1,0 +1,45 @@
+{
+  "id": "sharpshooter",
+  "title": "Sharpshooter",
+  "nrdbCode": "04067",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "subtypes": [
+    "icebreaker"
+  ],
+  "installCost": 1,
+  "strength": 3,
+  "memoryCost": 1,
+  "breaker": {
+    "breaksSubtype": "destroyer",
+    "strength": 0,
+    "breakCredits": 0,
+    "breakMaxSubs": 1,
+    "pumpCredits": 1,
+    "pumpStrength": 2
+  },
+  "paidAbilities": [
+    {
+      "id": "sharpshooter-trash-break",
+      "label": "[trash]: Break any number of destroyer subroutines",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "trashSelf": true
+      },
+      "windows": [
+        "encounter_paw"
+      ],
+      "oncePerTurn": true,
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "break_all_destroyer_subroutines_on_encounter"
+        }
+      }
+    }
+  ],
+  "wave": "true-colors"
+}

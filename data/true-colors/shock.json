@@ -1,0 +1,24 @@
+{
+  "id": "shock",
+  "title": "Shock!",
+  "nrdbCode": "04073",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "jinteki",
+  "subtypes": [
+    "ambush"
+  ],
+  "installCost": 0,
+  "rezCost": 0,
+  "trashCost": 2,
+  "mustRevealWhenAccessedFromRd": true,
+  "onAccess": {
+    "op": "do",
+    "action": {
+      "kind": "net_damage",
+      "amount": 1
+    }
+  },
+  "wave": "true-colors"
+}
