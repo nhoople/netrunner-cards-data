@@ -95,6 +95,7 @@ def map_card(c: dict) -> dict | None:
         return base(
             c,
             netDamageWheneverRunnerTrashesCorpCard=1,
+            onTrash=net(1),
         )
 
     if cid == "gemini":

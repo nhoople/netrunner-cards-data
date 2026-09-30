@@ -10,5 +10,12 @@
   "rezCost": 5,
   "trashCost": 5,
   "netDamageWheneverRunnerTrashesCorpCard": 1,
+  "onTrash": {
+    "op": "do",
+    "action": {
+      "kind": "net_damage",
+      "amount": 1
+    }
+  },
   "wave": "all-that-remains"
 }
