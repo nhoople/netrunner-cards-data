@@ -1,0 +1,15 @@
+{
+  "id": "cybsoft-macrodrive",
+  "title": "Cybsoft MacroDrive",
+  "nrdbCode": "06098",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "installCost": 2,
+  "recurringCreditsMax": 1,
+  "recurringSpendFor": [
+    "install_program"
+  ],
+  "wave": "all-that-remains"
+}

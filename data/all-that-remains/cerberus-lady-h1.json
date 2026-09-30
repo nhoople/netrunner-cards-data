@@ -1,0 +1,69 @@
+{
+  "id": "cerberus-lady-h1",
+  "title": "Cerberus \"Lady\" H1",
+  "nrdbCode": "06099",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "subtypes": [
+    "icebreaker",
+    "fracter"
+  ],
+  "installCost": 4,
+  "strength": 3,
+  "memoryCost": 1,
+  "breaker": {
+    "breaksSubtype": "barrier",
+    "strength": 3,
+    "breakCredits": 0,
+    "breakMaxSubs": 1,
+    "pumpCredits": 1,
+    "pumpStrength": 1,
+    "breakViaPaidAbilityOnly": true
+  },
+  "powerCountersOnInstall": 4,
+  "paidAbilities": [
+    {
+      "id": "cerberus-lady-h1-break",
+      "label": "Hosted power counter: Break up to 2 barrier subroutines",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "powerCounters": 1
+      },
+      "windows": [
+        "encounter_paw"
+      ],
+      "requireEncounterSubtype": "barrier",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "break_encounter_subroutine",
+          "maxSubs": 2,
+          "requireSubtype": "barrier"
+        }
+      }
+    },
+    {
+      "id": "cerberus-lady-h1-pump",
+      "label": "1¢: +1 strength",
+      "clickCost": 0,
+      "creditCost": 1,
+      "cost": {
+        "credits": 1
+      },
+      "windows": [
+        "encounter_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "pump_strength",
+          "amount": 1
+        }
+      }
+    }
+  ],
+  "wave": "all-that-remains"
+}

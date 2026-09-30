@@ -1,0 +1,21 @@
+{
+  "id": "bifrost-array",
+  "title": "Bifrost Array",
+  "nrdbCode": "06081",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "initiative"
+  ],
+  "advancementRequirement": 3,
+  "agendaPoints": 1,
+  "onScore": {
+    "op": "do",
+    "action": {
+      "kind": "bifrost_may_trigger_scored_agenda_on_score"
+    }
+  },
+  "wave": "all-that-remains"
+}

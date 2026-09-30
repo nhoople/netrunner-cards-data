@@ -1,0 +1,17 @@
+{
+  "id": "ekomind",
+  "title": "Ekomind",
+  "nrdbCode": "06093",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "subtypes": [
+    "console"
+  ],
+  "installCost": 2,
+  "unique": true,
+  "maxConsole": 1,
+  "memoryLimitEqualsGripSize": true,
+  "wave": "all-that-remains"
+}

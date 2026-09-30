@@ -33,6 +33,9 @@ Files under [`data/`](data/) are the API. Clone the repo or fetch a **tagged** r
 | [`data/honor-and-profit/`](data/honor-and-profit/) | Honor and Profit (NRDB `hap`) — **supported** (deluxe) |
 | [`data/upstalk/`](data/upstalk/) | Upstalk (NRDB `up`) — **supported** (Lunar) |
 | [`data/the-spaces-between/`](data/the-spaces-between/) | The Spaces Between (NRDB `tsb`) — **supported** (Lunar) |
+| [`data/first-contact/`](data/first-contact/) | First Contact (NRDB `fc`) — **supported** (Lunar) |
+| [`data/up-and-over/`](data/up-and-over/) | Up and Over (NRDB `uao`) — **supported** (Lunar) |
+| [`data/all-that-remains/`](data/all-that-remains/) | All That Remains (NRDB `atr`) — **supported** (Lunar) |
 | [`data/reign-and-reverie/`](data/reign-and-reverie/) | Reign and Reverie (NRDB `rar`) — **supported** (legacy backwards) |
 | [`data/system-core-2019/`](data/system-core-2019/) | System Core 2019 (NRDB `sc19`) — **supported** (legacy backwards) |
 | [`data/downfall/`](data/downfall/) | Downfall (NRDB `df`) — **supported** (legacy backwards) |
@@ -57,7 +60,8 @@ Match this dataset and [netrunner-engine](https://github.com/nhoople/netrunner-e
 
 | Pairing | cards-data | engine |
 |---------|------------|--------|
-| **Current** | [`v1.105.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.105.0) | engine same-semver pin `v1.105.0` (Up and Over set-complete **18/18**) |
+| **Current** | [`v1.106.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.106.0) | engine same-semver pin `v1.106.0` (All That Remains set-complete **17/17**) |
+| Up and Over | [`v1.105.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.105.0) | engine same-semver pin `v1.105.0` (Up and Over set-complete **18/18**) |
 | First Contact | [`v1.104.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.104.0) | engine same-semver pin `v1.104.0` (First Contact set-complete **18/18**) |
 | The Spaces Between | [`v1.103.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.103.0) | engine same-semver pin `v1.103.0` (The Spaces Between set-complete **20/20**) |
 | Honor and Profit | [`v1.101.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.101.0) | engine same-semver pin `v1.101.0` (Honor and Profit set-complete **50/50**) |

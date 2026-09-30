@@ -1,0 +1,20 @@
+{
+  "id": "snatch-and-grab",
+  "title": "Snatch and Grab",
+  "nrdbCode": "06090",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "neutral-corp",
+  "subtypes": [
+    "gray ops"
+  ],
+  "playCost": 0,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "snatch_and_grab_on_play"
+    }
+  },
+  "wave": "all-that-remains"
+}

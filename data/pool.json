@@ -22,6 +22,7 @@
     "the-spaces-between",
     "first-contact",
     "up-and-over",
+    "all-that-remains",
     "reign-and-reverie",
     "system-core-2019",
     "downfall",
@@ -1668,6 +1669,32 @@
         "net-celebrity",
         "llds-energy-regulator",
         "ghost-runner"
+      ]
+    },
+    "all-that-remains": {
+      "status": "supported",
+      "notes": "All That Remains (atr) Lunar set-complete. 17/17 ATR-only clears; 3 reprints absorbed. Pool supported. Paired release v1.106.0. Never kick mo/mor.",
+      "cards": [
+        "bifrost-array",
+        "sagittarius",
+        "hostile-infrastructure",
+        "gemini",
+        "license-acquisition",
+        "daily-business-show",
+        "superior-cyberwalls",
+        "executive-boot-camp",
+        "lycan",
+        "snatch-and-grab",
+        "merlin",
+        "shell-corporation",
+        "ekomind",
+        "cerberus-cuj-0-h3",
+        "leela-patel-trained-pragmatist",
+        "cerberus-rex-h2",
+        "zona-sul-shipping",
+        "cybsoft-macrodrive",
+        "cerberus-lady-h1",
+        "utopia-shard"
       ]
     }
   }

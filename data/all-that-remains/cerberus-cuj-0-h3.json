@@ -1,0 +1,69 @@
+{
+  "id": "cerberus-cuj-0-h3",
+  "title": "Cerberus \"Cuj.0\" H3",
+  "nrdbCode": "06094",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "subtypes": [
+    "icebreaker",
+    "killer"
+  ],
+  "installCost": 3,
+  "strength": 0,
+  "memoryCost": 1,
+  "breaker": {
+    "breaksSubtype": "sentry",
+    "strength": 0,
+    "breakCredits": 0,
+    "breakMaxSubs": 1,
+    "pumpCredits": 1,
+    "pumpStrength": 1,
+    "breakViaPaidAbilityOnly": true
+  },
+  "powerCountersOnInstall": 4,
+  "paidAbilities": [
+    {
+      "id": "cerberus-cuj-0-h3-break",
+      "label": "Hosted power counter: Break up to 2 sentry subroutines",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "powerCounters": 1
+      },
+      "windows": [
+        "encounter_paw"
+      ],
+      "requireEncounterSubtype": "sentry",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "break_encounter_subroutine",
+          "maxSubs": 2,
+          "requireSubtype": "sentry"
+        }
+      }
+    },
+    {
+      "id": "cerberus-cuj-0-h3-pump",
+      "label": "1¢: +1 strength",
+      "clickCost": 0,
+      "creditCost": 1,
+      "cost": {
+        "credits": 1
+      },
+      "windows": [
+        "encounter_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "pump_strength",
+          "amount": 1
+        }
+      }
+    }
+  ],
+  "wave": "all-that-remains"
+}

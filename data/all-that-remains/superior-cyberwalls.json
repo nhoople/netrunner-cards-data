@@ -1,0 +1,27 @@
+{
+  "id": "superior-cyberwalls",
+  "title": "Superior Cyberwalls",
+  "nrdbCode": "06087",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "security"
+  ],
+  "advancementRequirement": 3,
+  "agendaPoints": 1,
+  "whileScoredIceSubtypeStrengthBonus": {
+    "subtype": "barrier",
+    "bonus": 1
+  },
+  "onScore": {
+    "op": "do",
+    "action": {
+      "kind": "gain_credits_per_rezzed_subtype",
+      "subtype": "barrier",
+      "per": 1
+    }
+  },
+  "wave": "all-that-remains"
+}

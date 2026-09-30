@@ -1,0 +1,40 @@
+{
+  "id": "zona-sul-shipping",
+  "title": "Zona Sul Shipping",
+  "nrdbCode": "06097",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "installCost": 2,
+  "onTurnBegin": {
+    "op": "do",
+    "action": {
+      "kind": "place_hosted_credits",
+      "amount": 1
+    }
+  },
+  "trashSelfWhenRunnerTagged": true,
+  "paidAbilities": [
+    {
+      "id": "zona-take",
+      "label": "[click]: Take all credits from Zona Sul Shipping",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "take_hosted_credits",
+          "amount": 999
+        }
+      }
+    }
+  ],
+  "wave": "all-that-remains"
+}

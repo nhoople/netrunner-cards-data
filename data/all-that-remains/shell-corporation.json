@@ -1,0 +1,54 @@
+{
+  "id": "shell-corporation",
+  "title": "Shell Corporation",
+  "nrdbCode": "06092",
+  "type": "upgrade",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "neutral-corp",
+  "installCost": 2,
+  "rezCost": 2,
+  "trashCost": 3,
+  "paidAbilitiesOncePerTurn": true,
+  "paidAbilities": [
+    {
+      "id": "shell-place",
+      "label": "[click]: Place 3¢ on Shell Corporation",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "place_hosted_credits",
+          "amount": 3
+        }
+      }
+    },
+    {
+      "id": "shell-take",
+      "label": "[click]: Take all credits from Shell Corporation",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "take_hosted_credits",
+          "amount": 999
+        }
+      }
+    }
+  ],
+  "wave": "all-that-remains"
+}

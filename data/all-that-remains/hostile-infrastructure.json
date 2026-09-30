@@ -1,0 +1,14 @@
+{
+  "id": "hostile-infrastructure",
+  "title": "Hostile Infrastructure",
+  "nrdbCode": "06083",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "jinteki",
+  "installCost": 5,
+  "rezCost": 5,
+  "trashCost": 5,
+  "netDamageWheneverRunnerTrashesCorpCard": 1,
+  "wave": "all-that-remains"
+}

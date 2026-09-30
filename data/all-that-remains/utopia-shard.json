@@ -1,0 +1,40 @@
+{
+  "id": "utopia-shard",
+  "title": "Utopia Shard",
+  "nrdbCode": "06100",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "neutral-runner",
+  "subtypes": [
+    "virtual",
+    "source"
+  ],
+  "installCost": 7,
+  "unique": true,
+  "deckLimitOne": true,
+  "onGripHqSuccessInstallSelfIgnoringCosts": true,
+  "paidAbilities": [
+    {
+      "id": "utopia-discard",
+      "label": "[trash]: Corp discards 2 cards from HQ at random",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "trashSelf": true
+      },
+      "windows": [
+        "runner_action_paw",
+        "encounter_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "corp_discard_random_from_hq",
+          "amount": 2
+        }
+      }
+    }
+  ],
+  "wave": "all-that-remains"
+}

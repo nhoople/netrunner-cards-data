@@ -1,0 +1,35 @@
+{
+  "id": "lycan",
+  "title": "Lycan",
+  "nrdbCode": "06089",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "sentry",
+    "destroyer",
+    "morph"
+  ],
+  "installCost": 6,
+  "rezCost": 6,
+  "strength": 3,
+  "canAdvance": true,
+  "morphOddAdvancementSubtypeSwap": {
+    "gain": "code gate",
+    "lose": "sentry"
+  },
+  "subroutines": [
+    {
+      "id": "lycan-trash",
+      "text": "Trash 1 program.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "trash_one_installed_runner_program"
+        }
+      }
+    }
+  ],
+  "wave": "all-that-remains"
+}

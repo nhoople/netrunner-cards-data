@@ -1,0 +1,30 @@
+{
+  "id": "gemini",
+  "title": "Gemini",
+  "nrdbCode": "06084",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "jinteki",
+  "subtypes": [
+    "sentry",
+    "tracer",
+    "ap"
+  ],
+  "installCost": 3,
+  "rezCost": 3,
+  "strength": 5,
+  "subroutines": [
+    {
+      "id": "gemini-trace",
+      "text": "Trace[2]. If successful, do 1 net damage. If strength ≥5, do 1 net damage.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "gemini_trace_subroutine"
+        }
+      }
+    }
+  ],
+  "wave": "all-that-remains"
+}

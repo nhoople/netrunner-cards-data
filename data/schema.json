@@ -995,7 +995,9 @@
     },
     "onBreakSubroutineMayPayCreditsBreakAnother": {
       "type": "object",
-      "required": ["credits"],
+      "required": [
+        "credits"
+      ],
       "additionalProperties": false,
       "properties": {
         "credits": {
@@ -1421,10 +1423,17 @@
     },
     "whileScoredIceSubtypeStrengthBonus": {
       "type": "object",
-      "required": ["subtype", "bonus"],
+      "required": [
+        "subtype",
+        "bonus"
+      ],
       "properties": {
-        "subtype": { "type": "string" },
-        "bonus": { "type": "integer" }
+        "subtype": {
+          "type": "string"
+        },
+        "bonus": {
+          "type": "integer"
+        }
       },
       "description": "While scored, all ice with subtype get +bonus strength (Encrypted Portals)."
     },
@@ -1470,10 +1479,17 @@
     },
     "morphOddAdvancementSubtypeSwap": {
       "type": "object",
-      "required": ["gain", "lose"],
+      "required": [
+        "gain",
+        "lose"
+      ],
       "properties": {
-        "gain": { "type": "string" },
-        "lose": { "type": "string" }
+        "gain": {
+          "type": "string"
+        },
+        "lose": {
+          "type": "string"
+        }
       },
       "description": "While advancement token count is odd, gain/lose ice subtypes (Wendigo)."
     },
@@ -1864,14 +1880,21 @@
     },
     "agendaAdvancementRequirementBonusIfVirusCountersGte": {
       "type": "object",
-      "required": ["threshold", "bonus"],
+      "required": [
+        "threshold",
+        "bonus"
+      ],
       "properties": {
-        "threshold": { "type": "integer", "minimum": 1 },
-        "bonus": { "type": "integer" }
+        "threshold": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "bonus": {
+          "type": "integer"
+        }
       },
       "description": "Chakana: while virus counters ≥ threshold, increase every agenda's advancement requirement by bonus."
     },
-
     "giveStrengthToInstalledIcebreakers": {
       "type": "object",
       "required": [
@@ -2400,11 +2423,18 @@
     },
     "strengthBonusPerRezzedIceWithSubtype": {
       "type": "object",
-      "required": ["subtype", "bonus"],
+      "required": [
+        "subtype",
+        "bonus"
+      ],
       "additionalProperties": false,
       "properties": {
-        "subtype": { "type": "string" },
-        "bonus": { "type": "integer" }
+        "subtype": {
+          "type": "string"
+        },
+        "bonus": {
+          "type": "integer"
+        }
       },
       "description": "NEXT Bronze-class: +bonus strength for each rezzed ice with subtype."
     },
@@ -3431,15 +3461,27 @@
     },
     "gainsSubroutinesPerAdvancement": {
       "type": "object",
-      "required": ["subroutine"],
+      "required": [
+        "subroutine"
+      ],
       "properties": {
         "subroutine": {
           "type": "object",
-          "required": ["id", "text", "effect"],
+          "required": [
+            "id",
+            "text",
+            "effect"
+          ],
           "properties": {
-            "id": { "type": "string" },
-            "text": { "type": "string" },
-            "effect": { "type": "object" }
+            "id": {
+              "type": "string"
+            },
+            "text": {
+              "type": "string"
+            },
+            "effect": {
+              "type": "object"
+            }
           }
         }
       },
@@ -3448,6 +3490,19 @@
     "mayRezWhenCardWouldBeExposed": {
       "type": "boolean",
       "description": "Zaibatsu-class: may rez this asset when a card would be exposed."
+    },
+    "netDamageWheneverRunnerTrashesCorpCard": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Whenever the Runner trashes a Corp card, do N net damage (Hostile Infrastructure)."
+    },
+    "memoryLimitEqualsGripSize": {
+      "type": "boolean",
+      "description": "Runner memory limit equals cards in grip (Ekomind)."
+    },
+    "onGripHqSuccessInstallSelfIgnoringCosts": {
+      "type": "boolean",
+      "description": "On successful HQ run, may install from grip instead of breaching (Utopia Shard)."
     }
   }
 }

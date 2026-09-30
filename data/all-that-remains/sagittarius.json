@@ -1,0 +1,30 @@
+{
+  "id": "sagittarius",
+  "title": "Sagittarius",
+  "nrdbCode": "06082",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "sentry",
+    "tracer",
+    "destroyer"
+  ],
+  "installCost": 5,
+  "rezCost": 5,
+  "strength": 4,
+  "subroutines": [
+    {
+      "id": "sagittarius-trace",
+      "text": "Trace[2]. If successful, trash 1 program. If strength ≥5, trash 1 program.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "sagittarius_trace_subroutine"
+        }
+      }
+    }
+  ],
+  "wave": "all-that-remains"
+}
