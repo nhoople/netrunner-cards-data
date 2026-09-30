@@ -1,0 +1,21 @@
+{
+  "id": "khondi-plaza",
+  "title": "Khondi Plaza",
+  "nrdbCode": "12019",
+  "type": "upgrade",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "neutral-corp",
+  "subtypes": [
+    "ritzy"
+  ],
+  "installCost": 3,
+  "rezCost": 3,
+  "trashCost": 2,
+  "unique": true,
+  "recurringCreditsMaxEqualsRemoteServers": true,
+  "recurringSpendFor": [
+    "rez_ice_protecting_this_server"
+  ],
+  "wave": "daedalus-complex"
+}

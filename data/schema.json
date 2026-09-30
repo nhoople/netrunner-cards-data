@@ -77,6 +77,24 @@
           "type": "object",
           "description": "Effect IR fired when the run ends (success or not), sourced on the run event/ability card."
         },
+        "icebreakerStrengthBonusIfGripLte": {
+          "type": "object",
+          "required": [
+            "gripMax",
+            "bonus"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "gripMax": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "bonus": {
+              "type": "integer"
+            }
+          },
+          "description": "Pushing the Envelope: if grip size ≤ gripMax when the run begins, each installed icebreaker has +bonus strength until the run ends."
+        },
         "bypassFirstEncounter": {
           "type": "boolean"
         },
@@ -584,6 +602,10 @@
           "onlyDuringHqRun": {
             "type": "boolean",
             "description": "Ability usable only during a run on HQ (Panic Button)."
+          },
+          "onlyDuringArchivesRun": {
+            "type": "boolean",
+            "description": "Ability usable only during a run on Archives (Defense Construct)."
           },
           "requirePendingDamageTypes": {
             "type": "array",
@@ -4581,6 +4603,42 @@
     "nasxMaySpendUpTo2OnAbilityCreditGainToPlacePower": {
       "type": "boolean",
       "description": "NASX: whenever you gain credits through a card ability other than from NASX, you may spend up to 2¢ to place that many power counters on NASX."
+    },
+    "mawFirstAccessNotArchivesNoStealOrTrashForceCorpTrashHq": {
+      "type": "boolean",
+      "description": "Maw: first time each turn you access a card not in Archives and do not steal or trash it, Corp must trash 1 card from HQ at random."
+    },
+    "archivistOnCorpScoresInitiativeOrSecurityTrace": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "The Archivist: whenever Corp scores an initiative or security agenda, they must Trace[N]; if unsuccessful, give them 1 bad publicity."
+    },
+    "iceNotInnermostInstallCostIncrease": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Network Exchange: install cost of each ice not in the innermost position is increased by this many credits."
+    },
+    "synthDnaFirstApSubBrokenEachTurnNetDamage": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Synth DNA Modification: first time a subroutine on AP ice is broken each turn, do this many net damage."
+    },
+    "netAnalyticsMayDrawWhenRunnerAvoidsOrRemovesTags": {
+      "type": "boolean",
+      "description": "Net Analytics: whenever the Runner avoids or removes ≥1 tag, Corp may draw 1 card."
+    },
+    "jemisonOnForfeitPlaceAdvancementsEqualAgendaPointsPlus1": {
+      "type": "boolean",
+      "description": "Jemison Astronautics: whenever you forfeit an agenda, place X advancement counters on 1 installed card (X = printed AP of forfeited agenda + 1)."
+    },
+    "oberthFirstAdvanceThisServerAdditionalAdvancement": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Oberth Protocol: first time each turn you advance a card in the root of or protecting this server, place this many additional advancement counters on that card."
+    },
+    "recurringCreditsMaxEqualsRemoteServers": {
+      "type": "boolean",
+      "description": "Khondi Plaza: recurring credits max equals the number of remote servers."
     }
   }
 }

@@ -1,0 +1,38 @@
+{
+  "id": "signal-jamming",
+  "title": "Signal Jamming",
+  "nrdbCode": "12020",
+  "type": "upgrade",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "neutral-corp",
+  "installCost": 0,
+  "rezCost": 0,
+  "trashCost": 2,
+  "paidAbilities": [
+    {
+      "id": "signal-jamming-forbid",
+      "label": "[trash]: Cards cannot be installed until the end of the run (run on this server)",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "trashSelf": true
+      },
+      "windows": [
+        "corp_action_paw",
+        "approach_paw",
+        "encounter_paw",
+        "approach_server_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "signal_jamming_forbid_installs_until_run_end"
+        }
+      },
+      "requireDuringRun": true,
+      "requireThisServer": true
+    }
+  ],
+  "wave": "daedalus-complex"
+}

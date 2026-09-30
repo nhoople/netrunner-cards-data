@@ -1,0 +1,39 @@
+{
+  "id": "defense-construct",
+  "title": "Defense Construct",
+  "nrdbCode": "12011",
+  "type": "upgrade",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "installCost": 2,
+  "rezCost": 2,
+  "trashCost": 0,
+  "canAdvance": true,
+  "paidAbilities": [
+    {
+      "id": "defense-construct-archives",
+      "label": "[trash]: Add 1 facedown card from Archives to HQ per advancement (Archives run)",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "trashSelf": true
+      },
+      "windows": [
+        "corp_action_paw",
+        "approach_paw",
+        "encounter_paw",
+        "approach_server_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "defense_construct_add_facedown_archives_to_hq_per_advancement"
+        }
+      },
+      "requireDuringRun": true,
+      "onlyDuringArchivesRun": true
+    }
+  ],
+  "wave": "daedalus-complex"
+}

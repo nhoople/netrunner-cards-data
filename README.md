@@ -57,6 +57,7 @@ Files under [`data/`](data/) are the API. Clone the repo or fetch a **tagged** r
 | [`data/intervention/`](data/intervention/) | Intervention (NRDB `in`) — **supported** (Flashpoint) |
 | [`data/martial-law/`](data/martial-law/) | Martial Law (NRDB `ml`) — **supported** (Flashpoint) |
 | [`data/quorum/`](data/quorum/) | Quorum (NRDB `qu`) — **supported** (Flashpoint) |
+| [`data/daedalus-complex/`](data/daedalus-complex/) | Daedalus Complex (NRDB `dc`) — **supported** (Red Sand) |
 | [`data/reign-and-reverie/`](data/reign-and-reverie/) | Reign and Reverie (NRDB `rar`) — **supported** (legacy backwards) |
 | [`data/system-core-2019/`](data/system-core-2019/) | System Core 2019 (NRDB `sc19`) — **supported** (legacy backwards) |
 | [`data/downfall/`](data/downfall/) | Downfall (NRDB `df`) — **supported** (legacy backwards) |

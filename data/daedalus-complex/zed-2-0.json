@@ -1,0 +1,56 @@
+{
+  "id": "zed-2-0",
+  "title": "Zed 2.0",
+  "nrdbCode": "12010",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "sentry",
+    "bioroid",
+    "ap",
+    "destroyer"
+  ],
+  "installCost": 6,
+  "rezCost": 6,
+  "strength": 4,
+  "bioroidBreakMaxSubs": 2,
+  "subroutines": [
+    {
+      "id": "zed-2-0-trash-hw-1",
+      "text": "Trash 1 installed piece of hardware.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "trash_hardware",
+          "pick": "choose"
+        }
+      }
+    },
+    {
+      "id": "zed-2-0-trash-hw-2",
+      "text": "Trash 1 installed piece of hardware.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "trash_hardware",
+          "pick": "choose"
+        }
+      }
+    },
+    {
+      "id": "zed-2-0-core",
+      "text": "If the Runner has lost [click] to break a subroutine during this run, do 2 core damage.",
+      "requireLostClickToBreakThisRun": true,
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "core_damage",
+          "amount": 2
+        }
+      }
+    }
+  ],
+  "wave": "daedalus-complex"
+}

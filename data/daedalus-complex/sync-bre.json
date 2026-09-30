@@ -1,0 +1,55 @@
+{
+  "id": "sync-bre",
+  "title": "SYNC BRE",
+  "nrdbCode": "12015",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "subtypes": [
+    "sentry",
+    "tracer"
+  ],
+  "installCost": 4,
+  "rezCost": 4,
+  "strength": 6,
+  "subroutines": [
+    {
+      "id": "sync-bre-tag",
+      "text": "Trace[4]. If successful, give the Runner 1 tag.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "trace",
+          "strength": 4,
+          "onSuccess": {
+            "op": "do",
+            "action": {
+              "kind": "give_tags",
+              "amount": 1
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "sync-bre-access",
+      "text": "Trace[2]. If successful, whenever the Runner breaches a server for the remainder of this run, they access 1 fewer card.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "trace",
+          "strength": 2,
+          "onSuccess": {
+            "op": "do",
+            "action": {
+              "kind": "reduce_breach_access_remainder_of_run",
+              "amount": 1
+            }
+          }
+        }
+      }
+    }
+  ],
+  "wave": "daedalus-complex"
+}

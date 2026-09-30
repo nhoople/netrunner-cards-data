@@ -1,0 +1,17 @@
+{
+  "id": "the-archivist",
+  "title": "The Archivist",
+  "nrdbCode": "12003",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "subtypes": [
+    "connection"
+  ],
+  "installCost": 1,
+  "unique": true,
+  "link": 1,
+  "archivistOnCorpScoresInitiativeOrSecurityTrace": 1,
+  "wave": "daedalus-complex"
+}

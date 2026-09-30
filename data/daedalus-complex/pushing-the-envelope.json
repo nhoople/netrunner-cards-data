@@ -1,0 +1,21 @@
+{
+  "id": "pushing-the-envelope",
+  "title": "Pushing the Envelope",
+  "nrdbCode": "12001",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "subtypes": [
+    "run"
+  ],
+  "playCost": 3,
+  "runEvent": {
+    "servers": "any",
+    "icebreakerStrengthBonusIfGripLte": {
+      "gripMax": 2,
+      "bonus": 2
+    }
+  },
+  "wave": "daedalus-complex"
+}

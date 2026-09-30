@@ -1,0 +1,15 @@
+{
+  "id": "network-exchange",
+  "title": "Network Exchange",
+  "nrdbCode": "12007",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "subtypes": [
+    "virtual"
+  ],
+  "installCost": 2,
+  "iceNotInnermostInstallCostIncrease": 1,
+  "wave": "daedalus-complex"
+}

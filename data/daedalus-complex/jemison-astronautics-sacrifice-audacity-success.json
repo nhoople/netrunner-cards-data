@@ -1,0 +1,14 @@
+{
+  "id": "jemison-astronautics-sacrifice-audacity-success",
+  "title": "Jemison Astronautics: Sacrifice. Audacity. Success.",
+  "nrdbCode": "12016",
+  "type": "identity",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "corp"
+  ],
+  "jemisonOnForfeitPlaceAdvancementsEqualAgendaPointsPlus1": true,
+  "wave": "daedalus-complex"
+}

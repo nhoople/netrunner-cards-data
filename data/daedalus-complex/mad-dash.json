@@ -1,0 +1,23 @@
+{
+  "id": "mad-dash",
+  "title": "Mad Dash",
+  "nrdbCode": "12008",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "neutral-runner",
+  "subtypes": [
+    "run"
+  ],
+  "playCost": 0,
+  "runEvent": {
+    "servers": "any",
+    "onRunEnd": {
+      "op": "do",
+      "action": {
+        "kind": "mad_dash_on_run_end"
+      }
+    }
+  },
+  "wave": "daedalus-complex"
+}

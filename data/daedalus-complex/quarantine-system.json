@@ -1,0 +1,33 @@
+{
+  "id": "quarantine-system",
+  "title": "Quarantine System",
+  "nrdbCode": "12017",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "installCost": 1,
+  "rezCost": 1,
+  "trashCost": 3,
+  "paidAbilities": [
+    {
+      "id": "quarantine-rez",
+      "label": "Forfeit an agenda: Rez up to 3 pieces of ice, lowering each by 2¢ per printed AP",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "forfeitAgenda": true
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "quarantine_system_rez_up_to_3_ice_discount"
+        }
+      }
+    }
+  ],
+  "wave": "daedalus-complex"
+}

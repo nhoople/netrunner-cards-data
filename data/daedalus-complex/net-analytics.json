@@ -1,0 +1,14 @@
+{
+  "id": "net-analytics",
+  "title": "Net Analytics",
+  "nrdbCode": "12014",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "installCost": 0,
+  "rezCost": 0,
+  "trashCost": 3,
+  "netAnalyticsMayDrawWhenRunnerAvoidsOrRemovesTags": true,
+  "wave": "daedalus-complex"
+}

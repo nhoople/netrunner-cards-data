@@ -1,0 +1,39 @@
+{
+  "id": "bio-modeled-network",
+  "title": "Bio-Modeled Network",
+  "nrdbCode": "12006",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "subtypes": [
+    "virtual"
+  ],
+  "installCost": 1,
+  "paidAbilities": [
+    {
+      "id": "bio-modeled-prevent",
+      "label": "[interrupt] → [trash]: Prevent all but 1 net damage",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "trashSelf": true
+      },
+      "windows": [
+        "damage_interrupt_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "prevent_all_but_n_pending_damage",
+          "leave": 1
+        }
+      },
+      "usableByRunnerOnSelfIce": true,
+      "requirePendingDamageTypes": [
+        "net"
+      ]
+    }
+  ],
+  "wave": "daedalus-complex"
+}

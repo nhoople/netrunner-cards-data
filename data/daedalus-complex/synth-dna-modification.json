@@ -1,0 +1,14 @@
+{
+  "id": "synth-dna-modification",
+  "title": "Synth DNA Modification",
+  "nrdbCode": "12012",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "jinteki",
+  "installCost": 2,
+  "rezCost": 2,
+  "trashCost": 2,
+  "synthDnaFirstApSubBrokenEachTurnNetDamage": 1,
+  "wave": "daedalus-complex"
+}

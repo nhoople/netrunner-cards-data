@@ -1,0 +1,17 @@
+{
+  "id": "maw",
+  "title": "Maw",
+  "nrdbCode": "12002",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "subtypes": [
+    "console"
+  ],
+  "installCost": 6,
+  "unique": true,
+  "muBonus": 2,
+  "mawFirstAccessNotArchivesNoStealOrTrashForceCorpTrashHq": true,
+  "wave": "daedalus-complex"
+}

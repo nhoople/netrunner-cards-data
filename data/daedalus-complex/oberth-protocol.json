@@ -1,0 +1,16 @@
+{
+  "id": "oberth-protocol",
+  "title": "Oberth Protocol",
+  "nrdbCode": "12018",
+  "type": "upgrade",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "installCost": 2,
+  "rezCost": 2,
+  "trashCost": 2,
+  "unique": true,
+  "rezAdditionalCostForfeitAgenda": true,
+  "oberthFirstAdvanceThisServerAdditionalAdvancement": 1,
+  "wave": "daedalus-complex"
+}

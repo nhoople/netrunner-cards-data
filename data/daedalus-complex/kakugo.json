@@ -1,0 +1,36 @@
+{
+  "id": "kakugo",
+  "title": "Kakugo",
+  "nrdbCode": "12013",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "jinteki",
+  "subtypes": [
+    "barrier",
+    "ap"
+  ],
+  "installCost": 4,
+  "rezCost": 4,
+  "strength": 1,
+  "onPass": {
+    "op": "do",
+    "action": {
+      "kind": "net_damage",
+      "amount": 1
+    }
+  },
+  "subroutines": [
+    {
+      "id": "kakugo-etr",
+      "text": "End the run.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "end_the_run"
+        }
+      }
+    }
+  ],
+  "wave": "daedalus-complex"
+}
