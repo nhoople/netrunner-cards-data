@@ -55,6 +55,7 @@
     "sovereign-sight",
     "down-the-white-nile",
     "council-of-the-crest",
+    "the-devil-and-the-dragon",
     "reign-and-reverie",
     "system-core-2019",
     "downfall",
@@ -2772,6 +2773,32 @@
         "death-and-taxes",
         "trojan-horse",
         "technoco"
+      ]
+    },
+    "the-devil-and-the-dragon": {
+      "status": "supported",
+      "notes": "The Devil and the Dragon (tdatd) Kitara #4 set-complete. 20/20 new clears; no reprints. Pool supported after council-of-the-crest. Paired release v1.139.0. Never kick mo/mor. Defer tdc.",
+      "cards": [
+        "glut-cipher",
+        "knobkierie",
+        "419-amoral-scammer",
+        "falsified-credentials",
+        "rogue-trading",
+        "because-i-can",
+        "nyashia",
+        "consume",
+        "malia-z0l0k4",
+        "kill-switch",
+        "tempus",
+        "bio-vault",
+        "sadaka",
+        "endless-eula",
+        "sandman",
+        "amani-senai",
+        "sso-industries-fueling-innovation",
+        "city-works-project",
+        "oduduwa",
+        "rashida-jaheem"
       ]
     }
   }

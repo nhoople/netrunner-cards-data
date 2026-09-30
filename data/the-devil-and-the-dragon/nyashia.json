@@ -1,0 +1,16 @@
+{
+  "id": "nyashia",
+  "title": "Nyashia",
+  "nrdbCode": "21067",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "installCost": 2,
+  "memoryCost": 1,
+  "powerCountersOnInstall": 3,
+  "maySpendPowerCountersForBonusRdAccess": {
+    "max": 1
+  },
+  "wave": "the-devil-and-the-dragon"
+}

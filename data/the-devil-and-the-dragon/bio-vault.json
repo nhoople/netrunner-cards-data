@@ -1,0 +1,42 @@
+{
+  "id": "bio-vault",
+  "title": "Bio Vault",
+  "nrdbCode": "21072",
+  "type": "upgrade",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "jinteki",
+  "subtypes": [
+    "off-site"
+  ],
+  "installCost": 0,
+  "rezCost": 0,
+  "trashCost": 2,
+  "remoteOnly": true,
+  "canAdvance": true,
+  "paidAbilities": [
+    {
+      "id": "bio-vault-etr",
+      "label": "[trash], 2 hosted advancement counters: End the run",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "advancementTokens": 2,
+        "trashSelf": true
+      },
+      "windows": [
+        "approach_paw",
+        "encounter_paw",
+        "approach_server_paw",
+        "other_priority_window"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "end_the_run"
+        }
+      }
+    }
+  ],
+  "wave": "the-devil-and-the-dragon"
+}

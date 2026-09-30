@@ -1,0 +1,45 @@
+{
+  "id": "oduduwa",
+  "title": "Oduduwa",
+  "nrdbCode": "21079",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "code gate"
+  ],
+  "installCost": 7,
+  "rezCost": 7,
+  "strength": 5,
+  "unique": true,
+  "onEncounter": {
+    "op": "do",
+    "action": {
+      "kind": "tdatd_oduduwa_encounter"
+    }
+  },
+  "subroutines": [
+    {
+      "id": "oduduwa-etr-1",
+      "text": "End the run.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "end_the_run"
+        }
+      }
+    },
+    {
+      "id": "oduduwa-etr-2",
+      "text": "End the run.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "end_the_run"
+        }
+      }
+    }
+  ],
+  "wave": "the-devil-and-the-dragon"
+}

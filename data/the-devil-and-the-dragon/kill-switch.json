@@ -1,0 +1,31 @@
+{
+  "id": "kill-switch",
+  "title": "Kill Switch",
+  "nrdbCode": "21070",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "current"
+  ],
+  "playCost": 1,
+  "lingerAsCurrent": true,
+  "currentTrashOnAgendaStolen": true,
+  "mustRevealAgendasAccessedFromRd": true,
+  "onAgendaAccessedOrScored": {
+    "op": "do",
+    "action": {
+      "kind": "trace",
+      "strength": 3,
+      "onSuccess": {
+        "op": "do",
+        "action": {
+          "kind": "core_damage",
+          "amount": 1
+        }
+      }
+    }
+  },
+  "wave": "the-devil-and-the-dragon"
+}

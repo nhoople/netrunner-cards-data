@@ -1,0 +1,45 @@
+{
+  "id": "knobkierie",
+  "title": "Knobkierie",
+  "nrdbCode": "21062",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "subtypes": [
+    "console"
+  ],
+  "installCost": 5,
+  "unique": true,
+  "muBonus": 3,
+  "muBonusOnlyForVirusPrograms": true,
+  "onFirstSuccessfulRunThisTurn": {
+    "op": "choose",
+    "chooser": "runner",
+    "options": [
+      {
+        "id": "accept",
+        "label": "Place 1 virus counter on an installed virus program",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "tdatd_knobkierie_place_virus"
+          }
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "runner",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  },
+  "wave": "the-devil-and-the-dragon"
+}

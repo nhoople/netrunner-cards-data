@@ -1,0 +1,106 @@
+{
+  "id": "sadaka",
+  "title": "Sadaka",
+  "nrdbCode": "21073",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "jinteki",
+  "subtypes": [
+    "trap"
+  ],
+  "installCost": 2,
+  "rezCost": 2,
+  "strength": 3,
+  "subroutines": [
+    {
+      "id": "sadaka-look",
+      "text": "Look at the top 3 cards of R&D and either arrange them in any order or shuffle R&D. You may draw 1 card.",
+      "effect": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "tdatd_sadaka_look_top_3"
+            }
+          },
+          {
+            "op": "choose",
+            "chooser": "corp",
+            "options": [
+              {
+                "id": "accept",
+                "label": "Draw 1 card",
+                "effect": {
+                  "op": "do",
+                  "action": {
+                    "kind": "draw",
+                    "side": "corp",
+                    "amount": 1
+                  }
+                }
+              },
+              {
+                "id": "decline",
+                "label": "Decline",
+                "effect": {
+                  "op": "do",
+                  "action": {
+                    "kind": "gain_credits",
+                    "side": "corp",
+                    "amount": 0
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "sadaka-trash",
+      "text": "You may trash 1 card in HQ. If you do, trash 1 resource. Trash Sadaka.",
+      "effect": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "choose",
+            "chooser": "corp",
+            "options": [
+              {
+                "id": "accept",
+                "label": "Trash 1 card in HQ; if you do, trash 1 resource",
+                "effect": {
+                  "op": "do",
+                  "action": {
+                    "kind": "tdatd_sadaka_trash_hq_then_resource"
+                  }
+                }
+              },
+              {
+                "id": "decline",
+                "label": "Decline",
+                "effect": {
+                  "op": "do",
+                  "action": {
+                    "kind": "gain_credits",
+                    "side": "corp",
+                    "amount": 0
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "trash_self"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "wave": "the-devil-and-the-dragon"
+}

@@ -1,0 +1,23 @@
+{
+  "id": "malia-z0l0k4",
+  "title": "Malia Z0L0K4",
+  "nrdbCode": "21069",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "bioroid"
+  ],
+  "installCost": 1,
+  "rezCost": 1,
+  "trashCost": 3,
+  "unique": true,
+  "onRez": {
+    "op": "do",
+    "action": {
+      "kind": "tdatd_malia_choose_resource"
+    }
+  },
+  "wave": "the-devil-and-the-dragon"
+}

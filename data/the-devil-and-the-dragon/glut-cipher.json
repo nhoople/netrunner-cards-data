@@ -1,0 +1,25 @@
+{
+  "id": "glut-cipher",
+  "title": "Glut Cipher",
+  "nrdbCode": "21061",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "subtypes": [
+    "run",
+    "sabotage"
+  ],
+  "playCost": 2,
+  "runEvent": {
+    "servers": "archives",
+    "skipBreach": true,
+    "onSuccessfulRun": {
+      "op": "do",
+      "action": {
+        "kind": "tdatd_glut_cipher"
+      }
+    }
+  },
+  "wave": "the-devil-and-the-dragon"
+}

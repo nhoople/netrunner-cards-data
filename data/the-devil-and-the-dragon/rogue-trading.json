@@ -1,0 +1,50 @@
+{
+  "id": "rogue-trading",
+  "title": "Rogue Trading",
+  "nrdbCode": "21065",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "subtypes": [
+    "job"
+  ],
+  "installCost": 0,
+  "hostedCreditsOnInstall": 18,
+  "trashWhenHostedCreditsEmpty": true,
+  "paidAbilities": [
+    {
+      "id": "rogue-trading-take",
+      "label": "[click], [click]: Take 6¢ from Rogue Trading and take 1 tag",
+      "clickCost": 2,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 2
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "take_hosted_credits",
+              "amount": 6
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "give_tags",
+              "amount": 1
+            }
+          }
+        ]
+      },
+      "usableByRunnerOnSelfIce": true
+    }
+  ],
+  "wave": "the-devil-and-the-dragon"
+}

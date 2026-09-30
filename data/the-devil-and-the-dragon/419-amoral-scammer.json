@@ -1,0 +1,15 @@
+{
+  "id": "419-amoral-scammer",
+  "title": "419: Amoral Scammer",
+  "nrdbCode": "21063",
+  "type": "identity",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "subtypes": [
+    "natural"
+  ],
+  "link": 1,
+  "mayExposeFirstCorpInstallEachTurnUnlessCorpPays": 1,
+  "wave": "the-devil-and-the-dragon"
+}

@@ -5057,6 +5057,15 @@
     "mayGainCreditWhenRunnerInstallsProgramHardwareOrVirtual": {
       "type": "boolean",
       "description": "TechnoCo: whenever the Runner installs a program, piece of hardware, or virtual resource, you may gain 1 credit."
+    },
+    "mayExposeFirstCorpInstallEachTurnUnlessCorpPays": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "419: Amoral Scammer: the first time the Corp installs a card each turn, you may expose that card unless the Corp pays this many credits."
+    },
+    "onAgendaAccessedOrScored": {
+      "type": "object",
+      "description": "Kill Switch: whenever an agenda is accessed or scored, resolve this effect (typically Trace)."
     }
   }
 }

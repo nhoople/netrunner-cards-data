@@ -1,0 +1,31 @@
+{
+  "id": "tempus",
+  "title": "Tempus",
+  "nrdbCode": "21071",
+  "type": "upgrade",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "ambush"
+  ],
+  "installCost": 0,
+  "rezCost": 0,
+  "trashCost": 0,
+  "mustRevealWhenAccessedFromRd": true,
+  "skipOnAccessFromArchives": true,
+  "onAccess": {
+    "op": "do",
+    "action": {
+      "kind": "trace",
+      "strength": 3,
+      "onSuccess": {
+        "op": "do",
+        "action": {
+          "kind": "tdatd_tempus_resolve"
+        }
+      }
+    }
+  },
+  "wave": "the-devil-and-the-dragon"
+}

@@ -1,0 +1,23 @@
+{
+  "id": "city-works-project",
+  "title": "City Works Project",
+  "nrdbCode": "21078",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "public"
+  ],
+  "advancementRequirement": 5,
+  "agendaPoints": 3,
+  "installFaceup": true,
+  "onAccessRequiresInstalled": true,
+  "onAccess": {
+    "op": "do",
+    "action": {
+      "kind": "tdatd_city_works_meat"
+    }
+  },
+  "wave": "the-devil-and-the-dragon"
+}

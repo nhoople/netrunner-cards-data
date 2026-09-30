@@ -1,0 +1,45 @@
+{
+  "id": "amani-senai",
+  "title": "Amani Senai",
+  "nrdbCode": "21076",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "subtypes": [
+    "character"
+  ],
+  "installCost": 2,
+  "rezCost": 2,
+  "trashCost": 4,
+  "unique": true,
+  "onAgendaScoredOrStolen": {
+    "op": "choose",
+    "chooser": "corp",
+    "options": [
+      {
+        "id": "accept",
+        "label": "Trace[X] (X = advancement requirement of the agenda)",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "tdatd_amani_trace"
+          }
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "corp",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  },
+  "wave": "the-devil-and-the-dragon"
+}

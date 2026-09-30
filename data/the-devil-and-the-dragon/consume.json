@@ -1,0 +1,50 @@
+{
+  "id": "consume",
+  "title": "Consume",
+  "nrdbCode": "21068",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "apex",
+  "subtypes": [
+    "virus"
+  ],
+  "installCost": 2,
+  "memoryCost": 0,
+  "mayPlaceVirusCounterWhenCorpCardTrashed": true,
+  "paidAbilities": [
+    {
+      "id": "consume-cash",
+      "label": "[click]: Gain 2¢ for each hosted virus counter, then remove all virus counters",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "gain_credits_per_virus",
+              "per": 2
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "remove_virus_counters",
+              "amount": 99
+            }
+          }
+        ]
+      },
+      "usableByRunnerOnSelfIce": true
+    }
+  ],
+  "wave": "the-devil-and-the-dragon"
+}

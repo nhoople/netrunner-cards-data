@@ -1,0 +1,90 @@
+{
+  "id": "endless-eula",
+  "title": "Endless EULA",
+  "nrdbCode": "21074",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "subtypes": [
+    "barrier"
+  ],
+  "installCost": 6,
+  "rezCost": 6,
+  "strength": 0,
+  "subroutines": [
+    {
+      "id": "endless-eula-1",
+      "text": "End the run unless the Runner pays 1¢.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "end_the_run_unless_pay_credits",
+          "side": "runner",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "id": "endless-eula-2",
+      "text": "End the run unless the Runner pays 1¢.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "end_the_run_unless_pay_credits",
+          "side": "runner",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "id": "endless-eula-3",
+      "text": "End the run unless the Runner pays 1¢.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "end_the_run_unless_pay_credits",
+          "side": "runner",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "id": "endless-eula-4",
+      "text": "End the run unless the Runner pays 1¢.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "end_the_run_unless_pay_credits",
+          "side": "runner",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "id": "endless-eula-5",
+      "text": "End the run unless the Runner pays 1¢.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "end_the_run_unless_pay_credits",
+          "side": "runner",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "id": "endless-eula-6",
+      "text": "End the run unless the Runner pays 1¢.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "end_the_run_unless_pay_credits",
+          "side": "runner",
+          "amount": 1
+        }
+      }
+    }
+  ],
+  "wave": "the-devil-and-the-dragon"
+}

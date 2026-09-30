@@ -1,0 +1,46 @@
+{
+  "id": "because-i-can",
+  "title": "Because I Can",
+  "nrdbCode": "21066",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "subtypes": [
+    "run"
+  ],
+  "playCost": 0,
+  "runEvent": {
+    "servers": "remote",
+    "skipBreach": true,
+    "onSuccessfulRun": {
+      "op": "choose",
+      "chooser": "runner",
+      "options": [
+        {
+          "id": "accept",
+          "label": "Force Corp to shuffle all cards in the root into R&D",
+          "effect": {
+            "op": "do",
+            "action": {
+              "kind": "tdatd_because_i_can_shuffle_root"
+            }
+          }
+        },
+        {
+          "id": "decline",
+          "label": "Decline",
+          "effect": {
+            "op": "do",
+            "action": {
+              "kind": "gain_credits",
+              "side": "runner",
+              "amount": 0
+            }
+          }
+        }
+      ]
+    }
+  },
+  "wave": "the-devil-and-the-dragon"
+}
