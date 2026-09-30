@@ -1,0 +1,16 @@
+{
+  "id": "sacrificial-construct",
+  "title": "Sacrificial Construct",
+  "wave": "core",
+  "nrdbCode": "01048",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: [interrupt] → [trash]: Prevent a player from trashing 1 installed program or piece of hardware."
+  ],
+  "faction": "shaper",
+  "subtypes": [
+    "remote"
+  ],
+  "installCost": 0
+}

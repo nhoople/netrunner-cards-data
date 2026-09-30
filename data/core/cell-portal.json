@@ -1,0 +1,19 @@
+{
+  "id": "cell-portal",
+  "title": "Cell Portal",
+  "wave": "core",
+  "nrdbCode": "01074",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: [subroutine] The Runner moves to the outermost position of the attacked server. They may jack out. Derez this ice."
+  ],
+  "faction": "jinteki",
+  "subtypes": [
+    "code gate",
+    "deflector"
+  ],
+  "installCost": 5,
+  "rezCost": 5,
+  "strength": 7
+}

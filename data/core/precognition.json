@@ -1,0 +1,18 @@
+{
+  "id": "precognition",
+  "title": "Precognition",
+  "wave": "core",
+  "nrdbCode": "01073",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "jinteki",
+  "playCost": 0,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "look_top_n_rd_arrange",
+      "n": 5
+    }
+  }
+}

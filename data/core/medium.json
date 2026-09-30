@@ -1,0 +1,17 @@
+{
+  "id": "medium",
+  "title": "Medium",
+  "wave": "core",
+  "nrdbCode": "01010",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: Whenever you make a successful run on R&D, place 1 virus counter on this program. Whenever you breach R&D, choose a number less than the number of hosted virus counters. Access that many additional cards."
+  ],
+  "faction": "anarch",
+  "subtypes": [
+    "virus"
+  ],
+  "installCost": 3,
+  "memoryCost": 1
+}

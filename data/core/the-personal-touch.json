@@ -1,0 +1,16 @@
+{
+  "id": "the-personal-touch",
+  "title": "The Personal Touch",
+  "wave": "core",
+  "nrdbCode": "01040",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: Install The Personal Touch only on an icebreaker. Host icebreaker has +1 strength."
+  ],
+  "faction": "shaper",
+  "subtypes": [
+    "mod"
+  ],
+  "installCost": 2
+}

@@ -1,0 +1,16 @@
+{
+  "id": "kate-mac-mccaffrey-digital-tinker",
+  "title": "Kate \"Mac\" McCaffrey: Digital Tinker",
+  "wave": "core",
+  "nrdbCode": "01033",
+  "type": "identity",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: Lower the install cost of the first program or piece of hardware you install each turn by 1."
+  ],
+  "faction": "shaper",
+  "subtypes": [
+    "natural"
+  ],
+  "link": 1
+}

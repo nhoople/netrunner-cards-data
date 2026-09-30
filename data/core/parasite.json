@@ -1,0 +1,27 @@
+{
+  "id": "parasite",
+  "title": "Parasite",
+  "wave": "core",
+  "nrdbCode": "01012",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [
+    "Auto-trash host ice when its strength is 0 or less (continuous check not yet modeled; Chisel-class is encounter-timed only)."
+  ],
+  "faction": "anarch",
+  "subtypes": [
+    "virus",
+    "trojan"
+  ],
+  "installCost": 2,
+  "memoryCost": 1,
+  "installOnIce": true,
+  "hostStrengthPerVirusCounter": -1,
+  "onTurnBegin": {
+    "op": "do",
+    "action": {
+      "kind": "add_virus_counter",
+      "amount": 1
+    }
+  }
+}

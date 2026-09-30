@@ -1,0 +1,24 @@
+{
+  "id": "yog-0",
+  "title": "Yog.0",
+  "wave": "core",
+  "nrdbCode": "01014",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "subtypes": [
+    "icebreaker",
+    "decoder"
+  ],
+  "installCost": 5,
+  "strength": 3,
+  "memoryCost": 1,
+  "breaker": {
+    "breaksSubtype": "code gate",
+    "strength": 3,
+    "breakCredits": 0,
+    "breakMaxSubs": 1
+  },
+  "paidAbilities": []
+}

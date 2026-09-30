@@ -1,0 +1,19 @@
+{
+  "id": "shipment-from-kaguya",
+  "title": "Shipment from Kaguya",
+  "wave": "core",
+  "nrdbCode": "01100",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "playCost": 0,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "place_advancements_on_up_to",
+      "amountEach": 1,
+      "maxCards": 2
+    }
+  }
+}

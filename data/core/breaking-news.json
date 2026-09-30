@@ -1,0 +1,32 @@
+{
+  "id": "breaking-news",
+  "title": "Breaking News",
+  "wave": "core",
+  "nrdbCode": "01082",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "advancementRequirement": 2,
+  "agendaPoints": 1,
+  "onScore": {
+    "op": "do",
+    "action": {
+      "kind": "give_tags",
+      "amount": 2
+    }
+  },
+  "onDiscardPhaseEnd": {
+    "op": "if",
+    "cond": {
+      "op": "self_scored_this_turn"
+    },
+    "then": {
+      "op": "do",
+      "action": {
+        "kind": "remove_tags",
+        "amount": 2
+      }
+    }
+  }
+}

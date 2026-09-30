@@ -1,0 +1,16 @@
+{
+  "id": "rabbit-hole",
+  "title": "Rabbit Hole",
+  "wave": "core",
+  "nrdbCode": "01039",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: +1[link] When Rabbit Hole is installed, you may search your stack for another copy of Rabbit Hole and install it by paying its install cost. Shuffle your stack."
+  ],
+  "faction": "shaper",
+  "subtypes": [
+    "link"
+  ],
+  "installCost": 2
+}

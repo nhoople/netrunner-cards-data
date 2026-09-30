@@ -1,0 +1,22 @@
+{
+  "id": "scorched-earth",
+  "title": "Scorched Earth",
+  "wave": "core",
+  "nrdbCode": "01099",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "black ops"
+  ],
+  "playCost": 3,
+  "playRequiresTagged": true,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "meat_damage",
+      "amount": 4
+    }
+  }
+}

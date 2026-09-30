@@ -1,0 +1,46 @@
+{
+  "id": "ninja",
+  "title": "Ninja",
+  "wave": "core",
+  "nrdbCode": "01027",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "subtypes": [
+    "icebreaker",
+    "killer"
+  ],
+  "installCost": 4,
+  "strength": 0,
+  "memoryCost": 1,
+  "breaker": {
+    "breaksSubtype": "sentry",
+    "strength": 0,
+    "breakCredits": 1,
+    "breakMaxSubs": 1,
+    "pumpCredits": 3,
+    "pumpStrength": 5
+  },
+  "paidAbilities": [
+    {
+      "id": "ninja-pump",
+      "label": "Pump Ninja +5 strength",
+      "clickCost": 0,
+      "creditCost": 3,
+      "cost": {
+        "credits": 3
+      },
+      "windows": [
+        "encounter_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "pump_strength",
+          "amount": 5
+        }
+      }
+    }
+  ]
+}

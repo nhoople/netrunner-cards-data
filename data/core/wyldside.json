@@ -1,0 +1,37 @@
+{
+  "id": "wyldside",
+  "title": "Wyldside",
+  "wave": "core",
+  "nrdbCode": "01016",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "subtypes": [
+    "location",
+    "seedy"
+  ],
+  "installCost": 3,
+  "unique": true,
+  "onTurnBegin": {
+    "op": "seq",
+    "effects": [
+      {
+        "op": "do",
+        "action": {
+          "kind": "draw",
+          "side": "runner",
+          "amount": 2
+        }
+      },
+      {
+        "op": "do",
+        "action": {
+          "kind": "lose_clicks",
+          "side": "runner",
+          "amount": 1
+        }
+      }
+    ]
+  }
+}

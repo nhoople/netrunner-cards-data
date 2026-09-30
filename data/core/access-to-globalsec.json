@@ -1,0 +1,15 @@
+{
+  "id": "access-to-globalsec",
+  "title": "Access to Globalsec",
+  "wave": "core",
+  "nrdbCode": "01052",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "neutral-runner",
+  "subtypes": [
+    "link"
+  ],
+  "installCost": 1,
+  "link": 1
+}

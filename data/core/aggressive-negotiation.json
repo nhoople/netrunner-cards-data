@@ -1,0 +1,13 @@
+{
+  "id": "aggressive-negotiation",
+  "title": "Aggressive Negotiation",
+  "wave": "core",
+  "nrdbCode": "01097",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: Play only if you scored an agenda this turn. Search R&D for 1 card and add it to HQ. Shuffle R&D."
+  ],
+  "faction": "weyland-consortium",
+  "playCost": 1
+}

@@ -1,8 +1,9 @@
 {
   "version": 1,
-  "description": "Declared supported card pool for the engine. Releases expand as IR/mechanics allow. Cards with partial fidelity list explicit unsupported notes \u2014 never silent wrong behavior.",
+  "description": "Declared supported card pool for the engine. Releases expand as IR/mechanics allow. Cards with partial fidelity list explicit unsupported notes — never silent wrong behavior.",
   "agendaPointsToWinDefault": 7,
   "corpusOrder": [
+    "core",
     "reign-and-reverie",
     "system-core-2019",
     "downfall",
@@ -19,7 +20,7 @@
   "waves": {
     "system-core-2019": {
       "status": "supported",
-      "notes": "Null Signal System Core 2019 (NRDB pack sc19) \u2014 legacy backwards after Downfall. 147 titles; 63 Gateway/SU21 reprints absorbed. Fully supported: 84/147 SC19-only clears (wave gate v1.74.0). Skip mo/mor.",
+      "notes": "Null Signal System Core 2019 (NRDB pack sc19) — legacy backwards after Downfall. 147 titles; 63 Gateway/SU21 reprints absorbed. Fully supported: 84/147 SC19-only clears (wave gate v1.74.0). Skip mo/mor.",
       "cards": [
         "reina-roja-freedom-fighter",
         "quetzal-free-spirit",
@@ -172,7 +173,7 @@
     },
     "downfall": {
       "status": "supported",
-      "notes": "Null Signal Downfall (NRDB pack df) \u2014 Ashes set 1 of 2; legacy backwards before Uprising. Skip Magnum Opus Reprint (mor). Fully supported: all 65 cards mapped (wave gate v1.58.0).",
+      "notes": "Null Signal Downfall (NRDB pack df) — Ashes set 1 of 2; legacy backwards before Uprising. Skip Magnum Opus Reprint (mor). Fully supported: all 65 cards mapped (wave gate v1.58.0).",
       "cards": [
         "isolation",
         "demolisher",
@@ -243,7 +244,7 @@
     },
     "uprising": {
       "status": "supported",
-      "notes": "Null Signal Uprising (NRDB pack ur) \u2014 Ashes set 2 of 2; 65 cards. Fully supported: all 65 cards mapped (wave gate v1.46.0).",
+      "notes": "Null Signal Uprising (NRDB pack ur) — Ashes set 2 of 2; 65 cards. Fully supported: all 65 cards mapped (wave gate v1.46.0).",
       "cards": [
         "hoshiko-shiro-untold-protagonist",
         "moshing",
@@ -314,7 +315,7 @@
     },
     "system-gateway": {
       "status": "supported",
-      "notes": "Null Signal System Gateway (NRDB pack sg) learner/starter set \u2014 77 cards. Corpus order: System Gateway \u2192 System Update 2021 \u2192 later releases. Includes Sure Gamble and Hedge Fund as Gateway printings.",
+      "notes": "Null Signal System Gateway (NRDB pack sg) learner/starter set — 77 cards. Corpus order: System Gateway → System Update 2021 → later releases. Includes Sure Gamble and Hedge Fund as Gateway printings.",
       "cards": [
         "rene-loup-arcemont-party-animal",
         "wildcat-strike",
@@ -397,7 +398,7 @@
     },
     "system-update-2021": {
       "status": "supported",
-      "notes": "Null Signal System Update 2021 (NRDB pack su21) \u2014 82 classic reprints, the set immediately after System Gateway. Fully supported. Next corpus wave is Midnight Sun.",
+      "notes": "Null Signal System Update 2021 (NRDB pack su21) — 82 classic reprints, the set immediately after System Gateway. Fully supported. Next corpus wave is Midnight Sun.",
       "cards": [
         "quetzal-free-spirit",
         "reina-roja-freedom-fighter",
@@ -485,7 +486,7 @@
     },
     "midnight-sun": {
       "status": "supported",
-      "notes": "Null Signal Midnight Sun (NRDB pack ms) \u2014 65 cards, Borealis set 1. Midnight Sun Booster Pack (msbp) titles absorbed into ms printings (no separate wave). Fully supported: every card has unsupported: []. Wave gate met.",
+      "notes": "Null Signal Midnight Sun (NRDB pack ms) — 65 cards, Borealis set 1. Midnight Sun Booster Pack (msbp) titles absorbed into ms printings (no separate wave). Fully supported: every card has unsupported: []. Wave gate met.",
       "cards": [
         "esa-afontov-eco-insurrectionist",
         "chastushka",
@@ -556,7 +557,7 @@
     },
     "parhelion": {
       "status": "supported",
-      "notes": "Null Signal Parhelion (NRDB pack ph) \u2014 Borealis set 2 of 2. Fully supported: all 63 cards mapped (wave gate v0.71.0).",
+      "notes": "Null Signal Parhelion (NRDB pack ph) — Borealis set 2 of 2. Fully supported: all 63 cards mapped (wave gate v0.71.0).",
       "cards": [
         "finality",
         "katorga-breakout",
@@ -625,7 +626,7 @@
     },
     "the-automata-initiative": {
       "status": "supported",
-      "notes": "Null Signal The Automata Initiative (NRDB pack tai) \u2014 Liberation set 1 of 2; 65 cards. Fully supported: all 65 cards mapped (wave gate v0.86.0).",
+      "notes": "Null Signal The Automata Initiative (NRDB pack tai) — Liberation set 1 of 2; 65 cards. Fully supported: all 65 cards mapped (wave gate v0.86.0).",
       "cards": [
         "strike-fund",
         "the-price",
@@ -696,7 +697,7 @@
     },
     "rebellion-without-rehearsal": {
       "status": "supported",
-      "notes": "Null Signal Rebellion Without Rehearsal (NRDB pack rwr) \u2014 Liberation set 2 of 2; 65 cards. Fully supported: all 65 cards mapped (wave gate v1.00.0).",
+      "notes": "Null Signal Rebellion Without Rehearsal (NRDB pack rwr) — Liberation set 2 of 2; 65 cards. Fully supported: all 65 cards mapped (wave gate v1.00.0).",
       "cards": [
         "sebastiao-souza-pessoa-activist-organizer",
         "eye-for-an-eye",
@@ -767,7 +768,7 @@
     },
     "elevation": {
       "status": "supported",
-      "notes": "Null Signal Elevation (NRDB pack elev) \u2014 82 cards. Fully supported: all 82 cards mapped (wave gate v1.12.0).",
+      "notes": "Null Signal Elevation (NRDB pack elev) — 82 cards. Fully supported: all 82 cards mapped (wave gate v1.12.0).",
       "cards": [
         "ryo-phoenix-ono-out-of-the-ashes",
         "topan-ormas-leader",
@@ -855,7 +856,7 @@
     },
     "vantage-point": {
       "status": "supported",
-      "notes": "Null Signal Vantage Point (NRDB pack vp) \u2014 66/66 mapped; pool supported (wave gate v1.33.0).",
+      "notes": "Null Signal Vantage Point (NRDB pack vp) — 66/66 mapped; pool supported (wave gate v1.33.0).",
       "cards": [
         "chain-reaction",
         "take-a-dive",
@@ -927,14 +928,14 @@
     },
     "fixtures": {
       "status": "fixture",
-      "notes": "CR-example / host-test cards outside corpusOrder (Plascrete Carapace meat-prevent interrupt). Not part of Gateway\u2192VP wave gates; excluded from supportedCardIds().",
+      "notes": "CR-example / host-test cards outside corpusOrder (Plascrete Carapace meat-prevent interrupt). Not part of Gateway→VP wave gates; excluded from supportedCardIds().",
       "cards": [
         "plascrete-carapace"
       ]
     },
     "reign-and-reverie": {
       "status": "supported",
-      "notes": "Null Signal Reign and Reverie (NRDB pack rar) \u2014 legacy backwards after System Core 2019. 58 titles; 2 SC19 reprints absorbed (Patchwork, Paragon). Fully supported: 56/56 RaR-only clears (wave gate v1.86.0).",
+      "notes": "Null Signal Reign and Reverie (NRDB pack rar) — legacy backwards after System Core 2019. 58 titles; 2 SC19 reprints absorbed (Patchwork, Paragon). Fully supported: 56/56 RaR-only clears (wave gate v1.86.0).",
       "cards": [
         "nathaniel-gnat-hall-one-of-a-kind",
         "divide-and-conquer",
@@ -994,6 +995,125 @@
         "too-big-to-fail",
         "under-the-bus",
         "lady-liberty"
+      ]
+    },
+    "core": {
+      "status": "in-progress",
+      "notes": "FFG Core Set (NRDB pack core) — Core-forward kickoff from floor v1.86.0. 113 titles; 64 Gateway/SU21/SC19 reprints absorbed. Kickoff full clears: 22/49 Core-only (86/113 including absorbs). Never kick mo/mor. Releases only at set-complete.",
+      "cards": [
+        "noise-hacker-extraordinaire",
+        "deja-vu",
+        "demolition-run",
+        "stimhack",
+        "cyberfeeder",
+        "grimoire",
+        "corroder",
+        "datasucker",
+        "djinn",
+        "medium",
+        "mimic",
+        "parasite",
+        "wyrm",
+        "yog-0",
+        "ice-carver",
+        "wyldside",
+        "gabriel-santiago-consummate-professional",
+        "account-siphon",
+        "easy-mark",
+        "forged-activation-orders",
+        "inside-job",
+        "special-order",
+        "lemuria-codecracker",
+        "desperado",
+        "aurora",
+        "femme-fatale",
+        "ninja",
+        "sneakdoor-beta",
+        "bank-job",
+        "crash-space",
+        "data-dealer",
+        "decoy",
+        "kate-mac-mccaffrey-digital-tinker",
+        "diesel",
+        "modded",
+        "the-makers-eye",
+        "tinkering",
+        "akamatsu-mem-chip",
+        "rabbit-hole",
+        "the-personal-touch",
+        "the-toolbox",
+        "battering-ram",
+        "gordian-blade",
+        "magnum-opus",
+        "net-shield",
+        "pipeline",
+        "aesops-pawnshop",
+        "sacrificial-construct",
+        "infiltration",
+        "sure-gamble",
+        "crypsis",
+        "access-to-globalsec",
+        "armitage-codebusting",
+        "haas-bioroid-engineering-the-future",
+        "accelerated-beta-test",
+        "adonis-campaign",
+        "aggressive-secretary",
+        "archived-memories",
+        "biotic-labor",
+        "shipment-from-mirrormorph",
+        "heimdall-1-0",
+        "ichi-1-0",
+        "viktor-1-0",
+        "rototurret",
+        "corporate-troubleshooter",
+        "experiential-data",
+        "jinteki-personal-evolution",
+        "nisei-mk-ii",
+        "project-junebug",
+        "snare",
+        "zaibatsu-loyalty",
+        "neural-emp",
+        "precognition",
+        "cell-portal",
+        "chum",
+        "data-mine",
+        "neural-katana",
+        "wall-of-thorns",
+        "akitaro-watanabe",
+        "nbn-making-news",
+        "astroscript-pilot-program",
+        "breaking-news",
+        "anonymous-tip",
+        "closed-accounts",
+        "psychographics",
+        "sea-source",
+        "ghost-branch",
+        "data-raven",
+        "matrix-analyzer",
+        "tollbooth",
+        "red-herrings",
+        "sansan-city-grid",
+        "weyland-consortium-building-a-better-world",
+        "hostile-takeover",
+        "posted-bounty",
+        "security-subcontract",
+        "aggressive-negotiation",
+        "beanstalk-royalties",
+        "scorched-earth",
+        "shipment-from-kaguya",
+        "archer",
+        "hadrians-wall",
+        "ice-wall",
+        "shadow",
+        "research-station",
+        "priority-requisition",
+        "private-security-force",
+        "melange-mining-corp",
+        "pad-campaign",
+        "hedge-fund",
+        "enigma",
+        "hunter",
+        "wall-of-static"
       ]
     }
   }

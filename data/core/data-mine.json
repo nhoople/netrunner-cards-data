@@ -1,0 +1,41 @@
+{
+  "id": "data-mine",
+  "title": "Data Mine",
+  "wave": "core",
+  "nrdbCode": "01076",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "jinteki",
+  "subtypes": [
+    "trap",
+    "ap"
+  ],
+  "installCost": 0,
+  "rezCost": 0,
+  "strength": 2,
+  "subroutines": [
+    {
+      "id": "data-mine-net-trash",
+      "text": "Do 1 net damage. Trash Data Mine.",
+      "effect": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "net_damage",
+              "amount": 1
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "trash_self"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

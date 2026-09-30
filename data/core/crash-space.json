@@ -1,0 +1,41 @@
+{
+  "id": "crash-space",
+  "title": "Crash Space",
+  "wave": "core",
+  "nrdbCode": "01030",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [
+    "Recurring credits spendable for the basic remove-tag action (no RecurringSpendPurpose for basic_remove_tag yet)."
+  ],
+  "faction": "criminal",
+  "subtypes": [
+    "location"
+  ],
+  "installCost": 2,
+  "recurringCreditsMax": 2,
+  "paidAbilities": [
+    {
+      "id": "crash-space-prevent-meat",
+      "label": "[interrupt] → [trash]: Prevent up to 3 meat damage",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "trashSelf": true
+      },
+      "windows": [
+        "damage_interrupt_paw"
+      ],
+      "requirePendingDamageTypes": [
+        "meat"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "prevent_pending_damage",
+          "amount": 3
+        }
+      }
+    }
+  ]
+}

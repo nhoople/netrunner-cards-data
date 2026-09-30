@@ -1,0 +1,37 @@
+{
+  "id": "net-shield",
+  "title": "Net Shield",
+  "wave": "core",
+  "nrdbCode": "01045",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "installCost": 2,
+  "memoryCost": 1,
+  "paidAbilities": [
+    {
+      "id": "net-shield-prevent",
+      "label": "[interrupt] → 1¢: Prevent 1 net damage (first each turn)",
+      "clickCost": 0,
+      "creditCost": 1,
+      "cost": {
+        "credits": 1
+      },
+      "windows": [
+        "damage_interrupt_paw"
+      ],
+      "requirePendingDamageTypes": [
+        "net"
+      ],
+      "oncePerTurn": true,
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "prevent_pending_damage",
+          "amount": 1
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "id": "demolition-run",
+  "title": "Demolition Run",
+  "wave": "core",
+  "nrdbCode": "01003",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: Run HQ or R&D. Access → 0[credit]: Trash the card you are accessing."
+  ],
+  "faction": "anarch",
+  "subtypes": [
+    "run",
+    "sabotage"
+  ],
+  "playCost": 2
+}

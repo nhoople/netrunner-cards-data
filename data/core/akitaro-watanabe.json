@@ -1,0 +1,19 @@
+{
+  "id": "akitaro-watanabe",
+  "title": "Akitaro Watanabe",
+  "wave": "core",
+  "nrdbCode": "01079",
+  "type": "upgrade",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "jinteki",
+  "subtypes": [
+    "sysop",
+    "unorthodox"
+  ],
+  "installCost": 1,
+  "rezCost": 1,
+  "trashCost": 3,
+  "unique": true,
+  "iceRezCostReductionProtectingThisServer": 2
+}

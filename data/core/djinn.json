@@ -1,0 +1,17 @@
+{
+  "id": "djinn",
+  "title": "Djinn",
+  "wave": "core",
+  "nrdbCode": "01009",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: Djinn can host up to 3[mu] of non-icebreaker programs. The memory costs of hosted programs do not count against your memory limit. [click], 1[credit]: Search your stack for a virus program, reveal it, and add it to your grip. Shuffle your s"
+  ],
+  "faction": "anarch",
+  "subtypes": [
+    "daemon"
+  ],
+  "installCost": 2,
+  "memoryCost": 1
+}

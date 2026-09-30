@@ -1,0 +1,35 @@
+{
+  "id": "decoy",
+  "title": "Decoy",
+  "wave": "core",
+  "nrdbCode": "01032",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "subtypes": [
+    "connection"
+  ],
+  "installCost": 1,
+  "paidAbilities": [
+    {
+      "id": "decoy-prevent-tag",
+      "label": "[interrupt] → [trash]: Prevent 1 tag",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "trashSelf": true
+      },
+      "windows": [
+        "tag_interrupt_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "prevent_pending_tags",
+          "amount": 1
+        }
+      }
+    }
+  ]
+}

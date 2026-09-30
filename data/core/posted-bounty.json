@@ -1,0 +1,18 @@
+{
+  "id": "posted-bounty",
+  "title": "Posted Bounty",
+  "wave": "core",
+  "nrdbCode": "01095",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: When you score this agenda, you may forfeit it. If you do, give the Runner 1 tag and take 1 bad publicity."
+  ],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "security",
+    "liability"
+  ],
+  "advancementRequirement": 3,
+  "agendaPoints": 1
+}

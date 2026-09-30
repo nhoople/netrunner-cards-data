@@ -1,0 +1,13 @@
+{
+  "id": "infiltration",
+  "title": "Infiltration",
+  "wave": "core",
+  "nrdbCode": "01049",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: Gain 2[credit] or expose 1 card."
+  ],
+  "faction": "neutral-runner",
+  "playCost": 0
+}

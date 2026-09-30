@@ -1,0 +1,13 @@
+{
+  "id": "shipment-from-mirrormorph",
+  "title": "Shipment from MirrorMorph",
+  "wave": "core",
+  "nrdbCode": "01060",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: Install up to 3 cards from HQ (one at a time and paying all install costs)."
+  ],
+  "faction": "haas-bioroid",
+  "playCost": 1
+}

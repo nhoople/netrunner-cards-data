@@ -1,0 +1,35 @@
+{
+  "id": "melange-mining-corp",
+  "title": "Melange Mining Corp.",
+  "wave": "core",
+  "nrdbCode": "01108",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "neutral-corp",
+  "installCost": 1,
+  "rezCost": 1,
+  "trashCost": 1,
+  "paidAbilities": [
+    {
+      "id": "melange-mining-corp-gain",
+      "label": "[click][click][click]: Gain 7¢",
+      "clickCost": 3,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 3
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "corp",
+          "amount": 7
+        }
+      }
+    }
+  ]
+}

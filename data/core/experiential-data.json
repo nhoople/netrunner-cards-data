@@ -1,0 +1,15 @@
+{
+  "id": "experiential-data",
+  "title": "Experiential Data",
+  "wave": "core",
+  "nrdbCode": "01066",
+  "type": "upgrade",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: All ice protecting this server has +1 strength."
+  ],
+  "faction": "haas-bioroid",
+  "installCost": 2,
+  "rezCost": 2,
+  "trashCost": 2
+}

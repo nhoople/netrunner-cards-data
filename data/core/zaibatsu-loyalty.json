@@ -1,0 +1,15 @@
+{
+  "id": "zaibatsu-loyalty",
+  "title": "Zaibatsu Loyalty",
+  "wave": "core",
+  "nrdbCode": "01071",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: [interrupt] → When a card would be exposed, you may rez this asset. [interrupt] → 1[credit] or [trash]: Prevent 1 card from being exposed."
+  ],
+  "faction": "jinteki",
+  "installCost": 0,
+  "rezCost": 0,
+  "trashCost": 4
+}

@@ -1,0 +1,15 @@
+{
+  "id": "haas-bioroid-engineering-the-future",
+  "title": "Haas-Bioroid: Engineering the Future",
+  "wave": "core",
+  "nrdbCode": "01054",
+  "type": "identity",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: The first time you install a card each turn, gain 1[credit]."
+  ],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "megacorp"
+  ]
+}

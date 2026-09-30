@@ -1,0 +1,16 @@
+{
+  "id": "noise-hacker-extraordinaire",
+  "title": "Noise: Hacker Extraordinaire",
+  "wave": "core",
+  "nrdbCode": "01001",
+  "type": "identity",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: Whenever you install a virus program, the Corp trashes the top card of R&D."
+  ],
+  "faction": "anarch",
+  "subtypes": [
+    "g-mod"
+  ],
+  "link": 0
+}

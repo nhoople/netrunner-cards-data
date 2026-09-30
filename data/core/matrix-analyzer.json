@@ -1,0 +1,20 @@
+{
+  "id": "matrix-analyzer",
+  "title": "Matrix Analyzer",
+  "wave": "core",
+  "nrdbCode": "01089",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: When the Runner encounters Matrix Analyzer, you may pay 1[credit] to place 1 advancement token on a card that can be advanced. [subroutine] Trace[2]. If successful, give the Runner 1 tag."
+  ],
+  "faction": "nbn",
+  "subtypes": [
+    "sentry",
+    "tracer",
+    "observer"
+  ],
+  "installCost": 1,
+  "rezCost": 1,
+  "strength": 3
+}

@@ -1,0 +1,19 @@
+{
+  "id": "anonymous-tip",
+  "title": "Anonymous Tip",
+  "wave": "core",
+  "nrdbCode": "01083",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "playCost": 0,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "draw",
+      "side": "corp",
+      "amount": 3
+    }
+  }
+}

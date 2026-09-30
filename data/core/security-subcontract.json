@@ -1,0 +1,18 @@
+{
+  "id": "security-subcontract",
+  "title": "Security Subcontract",
+  "wave": "core",
+  "nrdbCode": "01096",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [
+    "Full text not yet mapped to IR: [click], trash a rezzed piece of ice: Gain 4[credit]."
+  ],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "transaction"
+  ],
+  "installCost": 0,
+  "rezCost": 0,
+  "trashCost": 3
+}

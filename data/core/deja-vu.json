@@ -1,0 +1,13 @@
+{
+  "id": "deja-vu",
+  "title": "Déjà Vu",
+  "wave": "core",
+  "nrdbCode": "01002",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [
+    "Full text not yet mapped to IR: Add 1 card (or up to 2 virus cards) from your heap to your grip."
+  ],
+  "faction": "anarch",
+  "playCost": 2
+}

@@ -1,0 +1,51 @@
+{
+  "id": "shadow",
+  "title": "Shadow",
+  "wave": "core",
+  "nrdbCode": "01104",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "sentry",
+    "tracer"
+  ],
+  "installCost": 3,
+  "rezCost": 3,
+  "strength": 1,
+  "canAdvance": true,
+  "strengthPerAdvancement": 1,
+  "subroutines": [
+    {
+      "id": "shadow-gain",
+      "text": "The Corp gains 2¢.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "corp",
+          "amount": 2
+        }
+      }
+    },
+    {
+      "id": "shadow-trace-tag",
+      "text": "Trace[3]. If successful, give the Runner 1 tag.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "trace",
+          "strength": 3,
+          "onSuccess": {
+            "op": "do",
+            "action": {
+              "kind": "give_tags",
+              "amount": 1
+            }
+          }
+        }
+      }
+    }
+  ]
+}

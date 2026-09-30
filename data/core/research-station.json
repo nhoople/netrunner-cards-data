@@ -1,0 +1,20 @@
+{
+  "id": "research-station",
+  "title": "Research Station",
+  "wave": "core",
+  "nrdbCode": "01105",
+  "type": "upgrade",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "facility"
+  ],
+  "installCost": 2,
+  "rezCost": 2,
+  "trashCost": 3,
+  "installServers": [
+    "hq"
+  ],
+  "handSizeBonus": 2
+}
