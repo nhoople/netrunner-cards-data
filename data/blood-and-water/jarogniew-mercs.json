@@ -30,7 +30,7 @@
       }
     ]
   },
-  "trashSelfWhenNoPowerCounters": true,
+  "trashWhenPowerEmpty": true,
   "corpCannotTrashWhileOtherResourceInstalled": true,
   "paidAbilities": [
     {

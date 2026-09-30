@@ -166,7 +166,7 @@ def map_card(c: dict) -> dict | None:
                 do("give_tags", amount=1),
                 do("jarogniew_load_power_equal_tags_plus_3"),
             ),
-            trashSelfWhenNoPowerCounters=True,
+            trashWhenPowerEmpty=True,
             corpCannotTrashWhileOtherResourceInstalled=True,
             paidAbilities=[prevent],
         )
@@ -184,8 +184,9 @@ def map_card(c: dict) -> dict | None:
     if cid == "bug-out-bag":
         return base(
             c,
+            installCost=0,
             installCostX=True,
-            powerCountersOnInstallEqualPaidX=True,
+            onInstall=do("bug_out_bag_choose_x_and_load_power"),
             onTurnEndIfGripEmptyDrawPerPowerThenTrash=True,
         )
 
