@@ -203,7 +203,7 @@ def map_card(c: dict) -> dict | None:
             c,
             subtypes=["job"],
             unique=True,
-            chooseServerOnInstall=True,
+            onInstall=do("choose_server_runner"),
             hostedCreditsOnInstall=20,
             onSuccessfulRun={
                 "op": "if",

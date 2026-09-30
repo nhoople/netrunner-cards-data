@@ -11,7 +11,12 @@
   ],
   "installCost": 4,
   "unique": true,
-  "chooseServerOnInstall": true,
+  "onInstall": {
+    "op": "do",
+    "action": {
+      "kind": "choose_server_runner"
+    }
+  },
   "hostedCreditsOnInstall": 20,
   "onSuccessfulRun": {
     "op": "if",
