@@ -1,0 +1,72 @@
+{
+  "id": "ichi-2-0",
+  "title": "Ichi 2.0",
+  "wave": "creation-and-control",
+  "nrdbCode": "03017",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "sentry",
+    "bioroid",
+    "destroyer",
+    "tracer"
+  ],
+  "installCost": 8,
+  "rezCost": 8,
+  "strength": 5,
+  "bioroidBreakMaxSubs": 2,
+  "subroutines": [
+    {
+      "id": "ichi-2-0-trash-1",
+      "text": "Trash 1 installed program.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "trash_own_program"
+        }
+      }
+    },
+    {
+      "id": "ichi-2-0-trash-2",
+      "text": "Trash 1 installed program.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "trash_own_program"
+        }
+      }
+    },
+    {
+      "id": "ichi-2-0-trace",
+      "text": "Trace[3]. If successful, do 1 core damage and give the Runner 1 tag.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "trace",
+          "strength": 3,
+          "onSuccess": {
+            "op": "seq",
+            "effects": [
+              {
+                "op": "do",
+                "action": {
+                  "kind": "core_damage",
+                  "amount": 1
+                }
+              },
+              {
+                "op": "do",
+                "action": {
+                  "kind": "give_tags",
+                  "amount": 1
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

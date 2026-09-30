@@ -1,0 +1,38 @@
+{
+  "id": "levy-university",
+  "title": "Levy University",
+  "wave": "creation-and-control",
+  "nrdbCode": "03024",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "neutral-corp",
+  "subtypes": [
+    "ritzy"
+  ],
+  "installCost": 3,
+  "rezCost": 3,
+  "trashCost": 1,
+  "unique": true,
+  "paidAbilities": [
+    {
+      "id": "levy-u-search",
+      "label": "[click], 1¢: Search R&D for ice → HQ",
+      "clickCost": 1,
+      "creditCost": 1,
+      "cost": {
+        "clicks": 1,
+        "credits": 1
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "search_rd_ice_to_hq"
+        }
+      }
+    }
+  ]
+}

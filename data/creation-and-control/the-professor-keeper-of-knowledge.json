@@ -1,0 +1,14 @@
+{
+  "id": "the-professor-keeper-of-knowledge",
+  "title": "The Professor: Keeper of Knowledge",
+  "wave": "creation-and-control",
+  "nrdbCode": "03029",
+  "type": "identity",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "subtypes": [
+    "natural"
+  ],
+  "link": 0
+}

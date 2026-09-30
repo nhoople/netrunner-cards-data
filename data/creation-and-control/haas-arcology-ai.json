@@ -1,0 +1,38 @@
+{
+  "id": "haas-arcology-ai",
+  "title": "Haas Arcology AI",
+  "wave": "creation-and-control",
+  "nrdbCode": "03011",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "installCost": 2,
+  "rezCost": 2,
+  "trashCost": 1,
+  "canAdvance": true,
+  "paidAbilities": [
+    {
+      "id": "haai-clicks",
+      "label": "[click], hosted advancement counter: Gain [click][click]",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1,
+        "advancementTokens": 1
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "oncePerTurn": true,
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "gain_clicks",
+          "side": "corp",
+          "amount": 2
+        }
+      }
+    }
+  ]
+}

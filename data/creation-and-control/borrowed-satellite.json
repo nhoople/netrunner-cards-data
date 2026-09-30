@@ -1,0 +1,16 @@
+{
+  "id": "borrowed-satellite",
+  "title": "Borrowed Satellite",
+  "wave": "creation-and-control",
+  "nrdbCode": "03050",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "subtypes": [
+    "link"
+  ],
+  "installCost": 3,
+  "link": 1,
+  "handSizeBonus": 1
+}

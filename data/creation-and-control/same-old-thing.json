@@ -1,0 +1,32 @@
+{
+  "id": "same-old-thing",
+  "title": "Same Old Thing",
+  "wave": "creation-and-control",
+  "nrdbCode": "03054",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "neutral-runner",
+  "installCost": 0,
+  "paidAbilities": [
+    {
+      "id": "sot-play",
+      "label": "[click], [click], [trash]: Play an event from heap",
+      "clickCost": 2,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 2,
+        "trashSelf": true
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "may_play_event_from_heap"
+        }
+      }
+    }
+  ]
+}

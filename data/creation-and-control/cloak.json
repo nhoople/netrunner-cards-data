@@ -1,0 +1,19 @@
+{
+  "id": "cloak",
+  "title": "Cloak",
+  "wave": "creation-and-control",
+  "nrdbCode": "03041",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "subtypes": [
+    "stealth"
+  ],
+  "installCost": 1,
+  "memoryCost": 1,
+  "recurringCreditsMax": 1,
+  "recurringSpendFor": [
+    "use_program"
+  ]
+}

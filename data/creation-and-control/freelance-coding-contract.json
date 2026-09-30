@@ -1,0 +1,25 @@
+{
+  "id": "freelance-coding-contract",
+  "title": "Freelance Coding Contract",
+  "wave": "creation-and-control",
+  "nrdbCode": "03033",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "subtypes": [
+    "job"
+  ],
+  "playCost": 0,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "trash_up_to_grip_cards_gain_credits_each",
+      "remaining": 5,
+      "per": 2,
+      "types": [
+        "program"
+      ]
+    }
+  }
+}

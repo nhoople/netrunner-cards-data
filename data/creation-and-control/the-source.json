@@ -1,0 +1,23 @@
+{
+  "id": "the-source",
+  "title": "The Source",
+  "wave": "creation-and-control",
+  "nrdbCode": "03055",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "neutral-runner",
+  "subtypes": [
+    "connection"
+  ],
+  "installCost": 2,
+  "unique": true,
+  "agendaAdvancementRequirementBonus": 1,
+  "stealAdditionalCreditsWhileRezzed": 3,
+  "onAgendaScoredOrStolen": {
+    "op": "do",
+    "action": {
+      "kind": "trash_self"
+    }
+  }
+}

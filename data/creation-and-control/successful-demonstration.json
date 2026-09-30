@@ -1,0 +1,23 @@
+{
+  "id": "successful-demonstration",
+  "title": "Successful Demonstration",
+  "wave": "creation-and-control",
+  "nrdbCode": "03014",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "transaction"
+  ],
+  "playCost": 2,
+  "playRequiresUnsuccessfulRunLastTurn": true,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "gain_credits",
+      "side": "corp",
+      "amount": 7
+    }
+  }
+}

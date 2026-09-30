@@ -1,0 +1,64 @@
+{
+  "id": "heimdall-2-0",
+  "title": "Heimdall 2.0",
+  "wave": "creation-and-control",
+  "nrdbCode": "03015",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "barrier",
+    "bioroid",
+    "ap"
+  ],
+  "installCost": 11,
+  "rezCost": 11,
+  "strength": 7,
+  "bioroidBreakMaxSubs": 2,
+  "subroutines": [
+    {
+      "id": "heimdall-2-0-core",
+      "text": "Do 1 core damage.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "core_damage",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "id": "heimdall-2-0-core-etr",
+      "text": "Do 1 core damage and end the run.",
+      "effect": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "core_damage",
+              "amount": 1
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "end_the_run"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "heimdall-2-0-etr",
+      "text": "End the run.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "end_the_run"
+        }
+      }
+    }
+  ]
+}

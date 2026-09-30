@@ -1,0 +1,22 @@
+{
+  "id": "sentinel-defense-program",
+  "title": "Sentinel Defense Program",
+  "wave": "creation-and-control",
+  "nrdbCode": "03007",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "security"
+  ],
+  "advancementRequirement": 4,
+  "agendaPoints": 2,
+  "onSufferCoreDamage": {
+    "op": "do",
+    "action": {
+      "kind": "net_damage",
+      "amount": 1
+    }
+  }
+}

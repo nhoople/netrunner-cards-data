@@ -1,0 +1,74 @@
+{
+  "id": "viktor-2-0",
+  "title": "Viktor 2.0",
+  "wave": "creation-and-control",
+  "nrdbCode": "03019",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "code gate",
+    "bioroid",
+    "tracer",
+    "ap"
+  ],
+  "installCost": 5,
+  "rezCost": 5,
+  "strength": 5,
+  "bioroidBreakMaxSubs": 2,
+  "paidAbilities": [
+    {
+      "id": "viktor-2-0-core",
+      "label": "Hosted power counter: Do 1 core damage",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "powerCounters": 1
+      },
+      "windows": [
+        "corp_action_paw",
+        "approach_paw",
+        "encounter_paw",
+        "approach_server_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "core_damage",
+          "amount": 1
+        }
+      }
+    }
+  ],
+  "subroutines": [
+    {
+      "id": "viktor-2-0-trace",
+      "text": "Trace[2]. If successful, place 1 power counter on this ice.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "trace",
+          "strength": 2,
+          "onSuccess": {
+            "op": "do",
+            "action": {
+              "kind": "add_power_counter",
+              "amount": 1
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "viktor-2-0-etr",
+      "text": "End the run.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "end_the_run"
+        }
+      }
+    }
+  ]
+}

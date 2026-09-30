@@ -1,0 +1,14 @@
+{
+  "id": "awakening-center",
+  "title": "Awakening Center",
+  "wave": "creation-and-control",
+  "nrdbCode": "03021",
+  "type": "upgrade",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "installCost": 2,
+  "rezCost": 2,
+  "trashCost": 3,
+  "hostsBioroidIceIgnoreInstallCost": true
+}

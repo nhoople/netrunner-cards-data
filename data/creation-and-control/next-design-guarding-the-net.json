@@ -1,0 +1,33 @@
+{
+  "id": "next-design-guarding-the-net",
+  "title": "NEXT Design: Guarding the Net",
+  "wave": "creation-and-control",
+  "nrdbCode": "03003",
+  "type": "identity",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "division"
+  ],
+  "onGameStart": {
+    "op": "seq",
+    "effects": [
+      {
+        "op": "do",
+        "action": {
+          "kind": "next_design_may_install_ice",
+          "remaining": 3,
+          "usedServerIds": []
+        }
+      },
+      {
+        "op": "do",
+        "action": {
+          "kind": "draw_until_hq_has",
+          "amount": 5
+        }
+      }
+    ]
+  }
+}

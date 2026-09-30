@@ -1,0 +1,23 @@
+{
+  "id": "escher",
+  "title": "Escher",
+  "wave": "creation-and-control",
+  "nrdbCode": "03031",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "subtypes": [
+    "run"
+  ],
+  "playCost": 3,
+  "runEvent": {
+    "servers": "hq",
+    "onSuccessfulRun": {
+      "op": "do",
+      "action": {
+        "kind": "escher_may_instead_of_breach"
+      }
+    }
+  }
+}

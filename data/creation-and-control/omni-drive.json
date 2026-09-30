@@ -1,0 +1,19 @@
+{
+  "id": "omni-drive",
+  "title": "Omni-drive",
+  "wave": "creation-and-control",
+  "nrdbCode": "03039",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "subtypes": [
+    "gear"
+  ],
+  "installCost": 3,
+  "hostsAnyProgramMemoryCostLte": 1,
+  "recurringCreditsMax": 1,
+  "recurringSpendFor": [
+    "use_program"
+  ]
+}

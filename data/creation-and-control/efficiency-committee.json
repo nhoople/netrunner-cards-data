@@ -1,0 +1,56 @@
+{
+  "id": "efficiency-committee",
+  "title": "Efficiency Committee",
+  "wave": "creation-and-control",
+  "nrdbCode": "03005",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "initiative"
+  ],
+  "advancementRequirement": 4,
+  "agendaPoints": 2,
+  "onScore": {
+    "op": "do",
+    "action": {
+      "kind": "add_agenda_counter",
+      "amount": 3
+    }
+  },
+  "paidAbilities": [
+    {
+      "id": "ec-clicks",
+      "label": "[click], hosted agenda counter: Gain [click][click]",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1,
+        "agendaCounters": 1
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "effect": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "gain_clicks",
+              "side": "corp",
+              "amount": 2
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "forbid_advance_this_turn"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

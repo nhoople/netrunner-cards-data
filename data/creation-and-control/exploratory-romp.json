@@ -1,0 +1,24 @@
+{
+  "id": "exploratory-romp",
+  "title": "Exploratory Romp",
+  "wave": "creation-and-control",
+  "nrdbCode": "03032",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "subtypes": [
+    "run"
+  ],
+  "playCost": 1,
+  "runEvent": {
+    "servers": "any",
+    "onSuccessfulRun": {
+      "op": "do",
+      "action": {
+        "kind": "exploratory_romp_may_instead_of_breach",
+        "amount": 3
+      }
+    }
+  }
+}

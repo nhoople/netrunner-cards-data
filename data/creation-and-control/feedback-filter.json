@@ -1,0 +1,60 @@
+{
+  "id": "feedback-filter",
+  "title": "Feedback Filter",
+  "wave": "creation-and-control",
+  "nrdbCode": "03037",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "subtypes": [
+    "gear"
+  ],
+  "installCost": 2,
+  "paidAbilities": [
+    {
+      "id": "ff-net",
+      "label": "[interrupt] → 3¢: Prevent 1 net damage",
+      "clickCost": 0,
+      "creditCost": 3,
+      "cost": {
+        "credits": 3
+      },
+      "windows": [
+        "damage_interrupt_paw"
+      ],
+      "requirePendingDamageTypes": [
+        "net"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "prevent_pending_damage",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "id": "ff-core",
+      "label": "[interrupt] → [trash]: Prevent up to 2 core damage",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "trashSelf": true
+      },
+      "windows": [
+        "damage_interrupt_paw"
+      ],
+      "requirePendingDamageTypes": [
+        "core"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "prevent_pending_damage",
+          "amount": 2
+        }
+      }
+    }
+  ]
+}

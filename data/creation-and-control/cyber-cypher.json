@@ -1,0 +1,32 @@
+{
+  "id": "cyber-cypher",
+  "title": "Cyber-Cypher",
+  "wave": "creation-and-control",
+  "nrdbCode": "03044",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "subtypes": [
+    "icebreaker",
+    "decoder"
+  ],
+  "installCost": 2,
+  "strength": 4,
+  "memoryCost": 1,
+  "onInstall": {
+    "op": "do",
+    "action": {
+      "kind": "choose_server_runner"
+    }
+  },
+  "interfaceRequiresChosenServer": true,
+  "breaker": {
+    "breaksSubtype": "code gate",
+    "strength": 0,
+    "breakCredits": 1,
+    "breakMaxSubs": 1,
+    "pumpCredits": 1,
+    "pumpStrength": 1
+  }
+}

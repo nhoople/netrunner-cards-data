@@ -1,0 +1,26 @@
+{
+  "id": "bioroid-efficiency-research",
+  "title": "Bioroid Efficiency Research",
+  "wave": "creation-and-control",
+  "nrdbCode": "03013",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "condition"
+  ],
+  "playCost": 3,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "ber_rez_bioroid_and_host"
+    }
+  },
+  "onHostFullyBrokenThisEncounter": {
+    "op": "do",
+    "action": {
+      "kind": "trash_self_and_derez_host"
+    }
+  }
+}

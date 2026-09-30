@@ -1,0 +1,40 @@
+{
+  "id": "alix-t4lb07",
+  "title": "Alix T4LB07",
+  "wave": "creation-and-control",
+  "nrdbCode": "03008",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "bioroid"
+  ],
+  "installCost": 1,
+  "rezCost": 1,
+  "trashCost": 2,
+  "unique": true,
+  "powerCounterOnAnyCorpInstall": 1,
+  "paidAbilities": [
+    {
+      "id": "alix-cash",
+      "label": "[click], [trash]: Gain 2¢ per power counter",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1,
+        "trashSelf": true
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits_per_power_counter",
+          "per": 2
+        }
+      }
+    }
+  ]
+}

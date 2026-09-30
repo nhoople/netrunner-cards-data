@@ -1,0 +1,23 @@
+{
+  "id": "scavenge",
+  "title": "Scavenge",
+  "wave": "creation-and-control",
+  "nrdbCode": "03034",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "playCost": 0,
+  "playAdditionalCost": {
+    "op": "do",
+    "action": {
+      "kind": "trash_own_program"
+    }
+  },
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "scavenge_install_program"
+    }
+  }
+}

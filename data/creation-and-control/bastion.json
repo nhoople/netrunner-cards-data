@@ -1,0 +1,28 @@
+{
+  "id": "bastion",
+  "title": "Bastion",
+  "wave": "creation-and-control",
+  "nrdbCode": "03026",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "neutral-corp",
+  "subtypes": [
+    "barrier"
+  ],
+  "installCost": 4,
+  "rezCost": 4,
+  "strength": 4,
+  "subroutines": [
+    {
+      "id": "bastion-etr",
+      "text": "End the run.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "end_the_run"
+        }
+      }
+    }
+  ]
+}

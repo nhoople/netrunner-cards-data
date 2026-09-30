@@ -1,0 +1,28 @@
+{
+  "id": "howler",
+  "title": "Howler",
+  "wave": "creation-and-control",
+  "nrdbCode": "03016",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "trap"
+  ],
+  "installCost": 1,
+  "rezCost": 1,
+  "strength": 0,
+  "subroutines": [
+    {
+      "id": "howler-install",
+      "text": "You may install and rez 1 bioroid ice from HQ or Archives directly inward, ignoring all costs.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "howler_install_rez_bioroid_inward"
+        }
+      }
+    }
+  ]
+}

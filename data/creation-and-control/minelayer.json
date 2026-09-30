@@ -1,0 +1,28 @@
+{
+  "id": "minelayer",
+  "title": "Minelayer",
+  "wave": "creation-and-control",
+  "nrdbCode": "03018",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "code gate"
+  ],
+  "installCost": 1,
+  "rezCost": 1,
+  "strength": 4,
+  "subroutines": [
+    {
+      "id": "minelayer-install",
+      "text": "You may install 1 ice from HQ protecting this server, ignoring the install cost.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "may_install_ice_from_hq_protecting_this_server_ignore_costs"
+        }
+      }
+    }
+  ]
+}

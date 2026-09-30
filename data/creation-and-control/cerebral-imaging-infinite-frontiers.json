@@ -1,0 +1,14 @@
+{
+  "id": "cerebral-imaging-infinite-frontiers",
+  "title": "Cerebral Imaging: Infinite Frontiers",
+  "wave": "creation-and-control",
+  "nrdbCode": "03001",
+  "type": "identity",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "division"
+  ],
+  "handSizeEqualsCredits": true
+}

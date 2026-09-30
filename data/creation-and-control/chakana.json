@@ -1,0 +1,26 @@
+{
+  "id": "chakana",
+  "title": "Chakana",
+  "wave": "creation-and-control",
+  "nrdbCode": "03043",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "subtypes": [
+    "virus"
+  ],
+  "installCost": 2,
+  "memoryCost": 1,
+  "onSuccessfulRunOnRd": {
+    "op": "do",
+    "action": {
+      "kind": "add_virus_counter",
+      "amount": 1
+    }
+  },
+  "agendaAdvancementRequirementBonusIfVirusCountersGte": {
+    "threshold": 3,
+    "bonus": 1
+  }
+}

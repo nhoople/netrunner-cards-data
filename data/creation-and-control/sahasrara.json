@@ -1,0 +1,16 @@
+{
+  "id": "sahasrara",
+  "title": "Sahasrara",
+  "wave": "creation-and-control",
+  "nrdbCode": "03047",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "installCost": 2,
+  "memoryCost": 1,
+  "recurringCreditsMax": 2,
+  "recurringSpendFor": [
+    "install_program"
+  ]
+}

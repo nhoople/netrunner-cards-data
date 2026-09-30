@@ -1,0 +1,25 @@
+{
+  "id": "director-haas",
+  "title": "Director Haas",
+  "wave": "creation-and-control",
+  "nrdbCode": "03010",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "executive"
+  ],
+  "installCost": 3,
+  "rezCost": 3,
+  "trashCost": 5,
+  "unique": true,
+  "allottedClicksBonus": 1,
+  "onTrashWhileAccessed": {
+    "op": "do",
+    "action": {
+      "kind": "add_to_runner_score_as_agenda",
+      "agendaPoints": 2
+    }
+  }
+}

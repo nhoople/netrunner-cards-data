@@ -1,0 +1,22 @@
+{
+  "id": "exile-streethawk",
+  "title": "Exile: Streethawk",
+  "wave": "creation-and-control",
+  "nrdbCode": "03030",
+  "type": "identity",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "subtypes": [
+    "natural"
+  ],
+  "link": 1,
+  "onInstallProgramFromHeap": {
+    "op": "do",
+    "action": {
+      "kind": "draw",
+      "side": "runner",
+      "amount": 1
+    }
+  }
+}

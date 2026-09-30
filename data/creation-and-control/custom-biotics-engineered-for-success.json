@@ -1,0 +1,13 @@
+{
+  "id": "custom-biotics-engineered-for-success",
+  "title": "Custom Biotics: Engineered for Success",
+  "wave": "creation-and-control",
+  "nrdbCode": "03002",
+  "type": "identity",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "division"
+  ]
+}

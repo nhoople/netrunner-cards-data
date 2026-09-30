@@ -1,0 +1,36 @@
+{
+  "id": "levy-ar-lab-access",
+  "title": "Levy AR Lab Access",
+  "wave": "creation-and-control",
+  "nrdbCode": "03035",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "playCost": 5,
+  "onPlay": {
+    "op": "seq",
+    "effects": [
+      {
+        "op": "do",
+        "action": {
+          "kind": "shuffle_grip_and_heap_into_stack"
+        }
+      },
+      {
+        "op": "do",
+        "action": {
+          "kind": "draw",
+          "side": "runner",
+          "amount": 5
+        }
+      },
+      {
+        "op": "do",
+        "action": {
+          "kind": "rfg_self"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "director-haas-pet-project",
+  "title": "Director Haas' Pet Project",
+  "wave": "creation-and-control",
+  "nrdbCode": "03004",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "initiative"
+  ],
+  "advancementRequirement": 3,
+  "agendaPoints": 1,
+  "unique": true,
+  "deckLimit": 1,
+  "onScore": {
+    "op": "do",
+    "action": {
+      "kind": "haas_pet_project_setup",
+      "remaining": 3
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "id": "server-diagnostics",
+  "title": "Server Diagnostics",
+  "wave": "creation-and-control",
+  "nrdbCode": "03025",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "neutral-corp",
+  "installCost": 3,
+  "rezCost": 3,
+  "trashCost": 2,
+  "trashSelfOnCorpIceInstall": true,
+  "onTurnBegin": {
+    "op": "do",
+    "action": {
+      "kind": "gain_credits",
+      "side": "corp",
+      "amount": 2
+    }
+  }
+}

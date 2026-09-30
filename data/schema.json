@@ -279,6 +279,10 @@
           },
           "effect": {
             "type": "object"
+          },
+          "requireLostClickToBreakThisRun": {
+            "type": "boolean",
+            "description": "Zed 1.0: subroutine resolves only if the Runner lost a click to break a subroutine this run."
           }
         }
       }
@@ -463,6 +467,10 @@
               "forfeitAgenda": {
                 "type": "boolean",
                 "description": "Forfeit 1 scored agenda as a cost (Data Dealer)."
+              },
+              "trashProgramFromGrip": {
+                "type": "boolean",
+                "description": "Monolith: trash a program from grip as a cost."
               }
             }
           },
@@ -483,7 +491,8 @@
                 "end_the_run_interrupt_paw",
                 "other_priority_window",
                 "expose_interrupt_paw",
-                "trash_interrupt_paw"
+                "trash_interrupt_paw",
+                "break_interrupt_paw"
               ]
             }
           },
@@ -1624,10 +1633,87 @@
       "type": "integer",
       "description": "Modifier to controller max hand size while installed/scored."
     },
+    "handSizeEqualsCredits": {
+      "type": "boolean",
+      "description": "Cerebral Imaging: Corp max hand size equals credits in the credit pool."
+    },
     "allottedClicksBonus": {
       "type": "integer",
       "description": "Modifier to allotted clicks each of the controller's turns while installed (Basilar Synthgland)."
     },
+    "onGameStart": {
+      "type": "object",
+      "description": "NEXT Design: effect evaluated once when the game is created (pre-first-turn setup)."
+    },
+    "onSufferCoreDamage": {
+      "type": "object",
+      "description": "Sentinel Defense: effect when the Runner suffers at least 1 core damage (scored agenda continuous)."
+    },
+    "onTrashWhileAccessed": {
+      "type": "object",
+      "description": "Director Haas: effect when this card is trashed while being accessed."
+    },
+    "onInstallProgramFromHeap": {
+      "type": "object",
+      "description": "Exile: effect whenever you install a program from the heap."
+    },
+    "onSuccessfulRunOnRd": {
+      "type": "object",
+      "description": "Chakana: effect on a successful run on R&D."
+    },
+    "onHostFullyBrokenThisEncounter": {
+      "type": "object",
+      "description": "Bioroid Efficiency Research: effect when host ice is fully broken in a single encounter."
+    },
+    "playRequiresUnsuccessfulRunLastTurn": {
+      "type": "boolean",
+      "description": "Successful Demonstration: play only if the Runner made an unsuccessful run last turn."
+    },
+    "powerCounterOnAnyCorpInstall": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Alix T4LB07: place this many power counters whenever the Corp installs a card."
+    },
+    "bioroidBreakMaxSubs": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Heimdall/Ichi/Viktor 2.0: lose N clicks to break up to N subroutines in one paid ability."
+    },
+    "trashSelfOnCorpIceInstall": {
+      "type": "boolean",
+      "description": "Server Diagnostics: trash this card when the Corp installs a piece of ice."
+    },
+    "hostsBioroidIceIgnoreInstallCost": {
+      "type": "boolean",
+      "description": "Awakening Center: may host bioroid ice at no install cost; pass-all may rez hosted −7 and encounter."
+    },
+    "preventSubroutineBreakOnBioroidByTrash": {
+      "type": "boolean",
+      "description": "Tyr's Hand: may rez as break interrupt; while rezzed, trash to prevent a pending bioroid subroutine break."
+    },
+    "hostsAnyProgramMemoryCostLte": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Omni-drive: host one program with printed memory cost ≤ this value; hosted program MU-exempt."
+    },
+    "interfaceRequiresChosenServer": {
+      "type": "boolean",
+      "description": "Cyber-Cypher: breaker usable only during runs on the server chosen on install."
+    },
+    "agendaAdvancementRequirementBonus": {
+      "type": "integer",
+      "description": "The Source: increase every agenda's advancement requirement by this while installed."
+    },
+    "agendaAdvancementRequirementBonusIfVirusCountersGte": {
+      "type": "object",
+      "required": ["threshold", "bonus"],
+      "properties": {
+        "threshold": { "type": "integer", "minimum": 1 },
+        "bonus": { "type": "integer" }
+      },
+      "description": "Chakana: while virus counters ≥ threshold, increase every agenda's advancement requirement by bonus."
+    },
+
     "giveStrengthToInstalledIcebreakers": {
       "type": "object",
       "required": [

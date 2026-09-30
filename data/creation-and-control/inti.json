@@ -1,0 +1,45 @@
+{
+  "id": "inti",
+  "title": "Inti",
+  "wave": "creation-and-control",
+  "nrdbCode": "03048",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "subtypes": [
+    "icebreaker",
+    "fracter"
+  ],
+  "installCost": 0,
+  "strength": 1,
+  "memoryCost": 1,
+  "breaker": {
+    "breaksSubtype": "barrier",
+    "strength": 1,
+    "breakCredits": 1,
+    "breakMaxSubs": 1
+  },
+  "paidAbilities": [
+    {
+      "id": "inti-pump",
+      "label": "2¢: +1 strength for the remainder of this run",
+      "clickCost": 0,
+      "creditCost": 2,
+      "cost": {
+        "credits": 2
+      },
+      "windows": [
+        "encounter_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "pump_strength",
+          "amount": 1,
+          "duration": "run"
+        }
+      }
+    }
+  ]
+}

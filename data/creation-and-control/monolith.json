@@ -1,0 +1,49 @@
+{
+  "id": "monolith",
+  "title": "Monolith",
+  "wave": "creation-and-control",
+  "nrdbCode": "03036",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "subtypes": [
+    "console"
+  ],
+  "installCost": 18,
+  "unique": true,
+  "muBonus": 3,
+  "onInstall": {
+    "op": "do",
+    "action": {
+      "kind": "install_up_to_n_programs_from_grip_discount",
+      "remaining": 3,
+      "discount": 4
+    }
+  },
+  "paidAbilities": [
+    {
+      "id": "monolith-prevent",
+      "label": "[interrupt] → Trash 1 program from grip: Prevent 1 core or net damage",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "trashProgramFromGrip": true
+      },
+      "windows": [
+        "damage_interrupt_paw"
+      ],
+      "requirePendingDamageTypes": [
+        "core",
+        "net"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "prevent_pending_damage",
+          "amount": 1
+        }
+      }
+    }
+  ]
+}

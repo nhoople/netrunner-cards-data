@@ -1,0 +1,40 @@
+{
+  "id": "datapike",
+  "title": "Datapike",
+  "wave": "creation-and-control",
+  "nrdbCode": "03027",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "neutral-corp",
+  "subtypes": [
+    "code gate"
+  ],
+  "installCost": 4,
+  "rezCost": 4,
+  "strength": 2,
+  "subroutines": [
+    {
+      "id": "datapike-pay",
+      "text": "The Runner must pay 2¢, if able. If they cannot, end the run.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "pay_credits_or_etr",
+          "side": "runner",
+          "amount": 2
+        }
+      }
+    },
+    {
+      "id": "datapike-etr",
+      "text": "End the run.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "end_the_run"
+        }
+      }
+    }
+  ]
+}

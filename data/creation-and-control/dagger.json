@@ -1,0 +1,26 @@
+{
+  "id": "dagger",
+  "title": "Dagger",
+  "wave": "creation-and-control",
+  "nrdbCode": "03042",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "subtypes": [
+    "icebreaker",
+    "killer"
+  ],
+  "installCost": 3,
+  "strength": 0,
+  "memoryCost": 1,
+  "paidAbilitiesUseStealthCreditsOnly": true,
+  "breaker": {
+    "breaksSubtype": "sentry",
+    "strength": 0,
+    "breakCredits": 1,
+    "breakMaxSubs": 1,
+    "pumpCredits": 1,
+    "pumpStrength": 5
+  }
+}

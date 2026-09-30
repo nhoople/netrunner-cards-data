@@ -1,0 +1,37 @@
+{
+  "id": "clone-chip",
+  "title": "Clone Chip",
+  "wave": "creation-and-control",
+  "nrdbCode": "03038",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "subtypes": [
+    "chip"
+  ],
+  "installCost": 1,
+  "paidAbilities": [
+    {
+      "id": "clone-chip-install",
+      "label": "[trash]: Install a program from your heap",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "trashSelf": true
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "may_install_from_heap",
+          "types": [
+            "program"
+          ]
+        }
+      }
+    }
+  ]
+}
