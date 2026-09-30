@@ -1,0 +1,19 @@
+{
+  "id": "bribery",
+  "title": "Bribery",
+  "nrdbCode": "06118",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "subtypes": [
+    "run"
+  ],
+  "playCost": 0,
+  "briberyPlayCostX": true,
+  "runEvent": {
+    "servers": "any",
+    "briberyFirstIceAdditionalRezEqualsX": true
+  },
+  "wave": "the-source"
+}

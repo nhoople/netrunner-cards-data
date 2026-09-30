@@ -1,0 +1,36 @@
+{
+  "id": "self-destruct",
+  "title": "Self-destruct",
+  "nrdbCode": "06112",
+  "type": "upgrade",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "neutral-corp",
+  "installCost": 2,
+  "rezCost": 2,
+  "trashCost": 0,
+  "remoteOnly": true,
+  "paidAbilities": [
+    {
+      "id": "self-destruct-fire",
+      "label": "[trash]: Trash all cards in/protecting this server; Trace[X] for 3 net damage",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "trashSelf": true
+      },
+      "windows": [
+        "approach_paw",
+        "encounter_paw",
+        "approach_server_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "self_destruct_ability"
+        }
+      }
+    }
+  ],
+  "wave": "the-source"
+}

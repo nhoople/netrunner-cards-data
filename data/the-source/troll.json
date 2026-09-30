@@ -1,0 +1,22 @@
+{
+  "id": "troll",
+  "title": "Troll",
+  "nrdbCode": "06108",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "subtypes": [
+    "sentry"
+  ],
+  "installCost": 1,
+  "rezCost": 1,
+  "strength": 3,
+  "onEncounter": {
+    "op": "do",
+    "action": {
+      "kind": "troll_encounter_trace"
+    }
+  },
+  "wave": "the-source"
+}

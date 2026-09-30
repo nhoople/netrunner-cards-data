@@ -141,6 +141,10 @@
         "accessTrashFree": {
           "type": "boolean",
           "description": "Demolition Run-class: during this run, access → trash accessed card for 0¢."
+        },
+        "briberyFirstIceAdditionalRezEqualsX": {
+          "type": "boolean",
+          "description": "Bribery: first unrezzed ice approached this run costs +X to rez (X = play cost chosen)."
         }
       }
     }
@@ -3503,6 +3507,45 @@
     "onGripHqSuccessInstallSelfIgnoringCosts": {
       "type": "boolean",
       "description": "On successful HQ run, may install from grip instead of breaching (Utopia Shard)."
+    },
+    "trashCostIncreasePerFacedownArchivesCard": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Industrial Genomics: trash cost of each card +N per facedown Archives card."
+    },
+    "gainCreditsOnCreateServer": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Turtlebacks: gain N¢ whenever you create a server."
+    },
+    "whileScoredStealAdditionalCreditsPerAdvancement": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Utopia Fragment: while scored, Runner pays N¢ per advancement token as additional steal cost."
+    },
+    "gainCreditsWhenCorpLosesCredits": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Ixodidae: whenever Corp loses ≥1¢, gain N¢."
+    },
+    "drawWhenCorpRezzesIce": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Collective Consciousness: draw N whenever Corp rezzes ice."
+    },
+    "strengthBonusPerUnusedMu": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Sage: +N strength per unused MU."
+    },
+    "briberyPlayCostX": {
+      "type": "boolean",
+      "description": "Bribery: play cost is X; Runner chooses X when playing."
+    },
+    "gainCreditsOnJackOut": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Au Revoir: gain N¢ whenever you jack out."
     }
   }
 }

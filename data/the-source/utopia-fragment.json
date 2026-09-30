@@ -1,0 +1,18 @@
+{
+  "id": "utopia-fragment",
+  "title": "Utopia Fragment",
+  "nrdbCode": "06110",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "neutral-corp",
+  "subtypes": [
+    "source"
+  ],
+  "advancementRequirement": 5,
+  "agendaPoints": 3,
+  "unique": true,
+  "deckLimitOne": true,
+  "whileScoredStealAdditionalCreditsPerAdvancement": 2,
+  "wave": "the-source"
+}

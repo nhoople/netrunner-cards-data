@@ -1,0 +1,14 @@
+{
+  "id": "industrial-genomics-growing-solutions",
+  "title": "Industrial Genomics: Growing Solutions",
+  "nrdbCode": "06105",
+  "type": "identity",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "jinteki",
+  "subtypes": [
+    "division"
+  ],
+  "trashCostIncreasePerFacedownArchivesCard": 1,
+  "wave": "the-source"
+}

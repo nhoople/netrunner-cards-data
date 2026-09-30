@@ -1,0 +1,54 @@
+{
+  "id": "it-department",
+  "title": "IT Department",
+  "nrdbCode": "06103",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "installCost": 2,
+  "rezCost": 2,
+  "trashCost": 4,
+  "paidAbilities": [
+    {
+      "id": "it-department-place",
+      "label": "[click]: Place 1 power counter on IT Department",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "add_power_counter",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "id": "it-department-boost",
+      "label": "Hosted power counter: Choose rezzed ice; +1 strength per power (incl. spent) until end of turn",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "powerCounters": 1
+      },
+      "windows": [
+        "corp_action_paw",
+        "approach_paw",
+        "encounter_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "it_department_boost_ice"
+        }
+      }
+    }
+  ],
+  "wave": "the-source"
+}

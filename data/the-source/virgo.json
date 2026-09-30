@@ -1,0 +1,29 @@
+{
+  "id": "virgo",
+  "title": "Virgo",
+  "nrdbCode": "06109",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "subtypes": [
+    "sentry",
+    "tracer"
+  ],
+  "installCost": 4,
+  "rezCost": 4,
+  "strength": 5,
+  "subroutines": [
+    {
+      "id": "virgo-trace",
+      "text": "Trace[2]. If successful, give the Runner 1 tag. If strength ≥5, give the Runner 1 tag.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "virgo_trace_subroutine"
+        }
+      }
+    }
+  ],
+  "wave": "the-source"
+}

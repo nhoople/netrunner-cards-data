@@ -1,0 +1,21 @@
+{
+  "id": "shoot-the-moon",
+  "title": "Shoot the Moon",
+  "nrdbCode": "06107",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "subtypes": [
+    "double"
+  ],
+  "playCost": 3,
+  "playAdditionalClick": true,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "shoot_the_moon_rez_ice_per_tag"
+    }
+  },
+  "wave": "the-source"
+}

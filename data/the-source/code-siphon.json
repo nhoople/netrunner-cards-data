@@ -1,0 +1,23 @@
+{
+  "id": "code-siphon",
+  "title": "Code Siphon",
+  "nrdbCode": "06115",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "subtypes": [
+    "run"
+  ],
+  "playCost": 0,
+  "runEvent": {
+    "servers": "rd",
+    "onSuccessfulRun": {
+      "op": "do",
+      "action": {
+        "kind": "code_siphon_may_instead_of_breach"
+      }
+    }
+  },
+  "wave": "the-source"
+}

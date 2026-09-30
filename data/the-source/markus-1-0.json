@@ -1,0 +1,61 @@
+{
+  "id": "markus-1-0",
+  "title": "Markus 1.0",
+  "nrdbCode": "06104",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "barrier",
+    "bioroid"
+  ],
+  "installCost": 4,
+  "rezCost": 4,
+  "strength": 3,
+  "paidAbilities": [
+    {
+      "id": "markus-break",
+      "label": "Lose [click]: Break 1 subroutine on Markus 1.0",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1
+      },
+      "windows": [
+        "encounter_paw"
+      ],
+      "usableByRunnerOnSelfIce": true,
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "break_subroutine_on_self",
+          "amount": 1
+        }
+      }
+    }
+  ],
+  "subroutines": [
+    {
+      "id": "markus-trash",
+      "text": "The Runner trashes 1 of their installed cards.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "runner_trashes_one_installed"
+        }
+      }
+    },
+    {
+      "id": "markus-etr",
+      "text": "End the run.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "end_the_run"
+        }
+      }
+    }
+  ],
+  "wave": "the-source"
+}

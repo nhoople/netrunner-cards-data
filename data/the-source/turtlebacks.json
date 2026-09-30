@@ -1,0 +1,17 @@
+{
+  "id": "turtlebacks",
+  "title": "Turtlebacks",
+  "nrdbCode": "06106",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "jinteki",
+  "subtypes": [
+    "clone"
+  ],
+  "installCost": 2,
+  "rezCost": 2,
+  "trashCost": 4,
+  "gainCreditsOnCreateServer": 1,
+  "wave": "the-source"
+}

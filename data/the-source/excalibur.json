@@ -1,0 +1,30 @@
+{
+  "id": "excalibur",
+  "title": "Excalibur",
+  "nrdbCode": "06111",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "neutral-corp",
+  "subtypes": [
+    "mythic",
+    "grail"
+  ],
+  "installCost": 2,
+  "rezCost": 2,
+  "strength": 3,
+  "unique": true,
+  "subroutines": [
+    {
+      "id": "excalibur-no-run",
+      "text": "The Runner cannot make another run this turn.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "forbid_runner_runs_this_turn"
+        }
+      }
+    }
+  ],
+  "wave": "the-source"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "helium-3-deposit",
+  "title": "Helium-3 Deposit",
+  "nrdbCode": "06101",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "advancementRequirement": 4,
+  "agendaPoints": 2,
+  "onScore": {
+    "op": "do",
+    "action": {
+      "kind": "helium3_place_up_to_2_power"
+    }
+  },
+  "wave": "the-source"
+}

@@ -23,6 +23,7 @@
     "first-contact",
     "up-and-over",
     "all-that-remains",
+    "the-source",
     "reign-and-reverie",
     "system-core-2019",
     "downfall",
@@ -1695,6 +1696,32 @@
         "cybsoft-macrodrive",
         "cerberus-lady-h1",
         "utopia-shard"
+      ]
+    },
+    "the-source": {
+      "status": "supported",
+      "notes": "The Source (ts) Lunar set-complete. 19/19 TS-only clears; 1 reprint absorbed (earthrise-hotel). Pool supported. Paired release v1.107.0. Never kick mo/mor.",
+      "cards": [
+        "helium-3-deposit",
+        "errand-boy",
+        "it-department",
+        "markus-1-0",
+        "industrial-genomics-growing-solutions",
+        "turtlebacks",
+        "shoot-the-moon",
+        "troll",
+        "virgo",
+        "utopia-fragment",
+        "excalibur",
+        "self-destruct",
+        "incubator",
+        "ixodidae",
+        "code-siphon",
+        "collective-consciousness",
+        "sage",
+        "bribery",
+        "au-revoir",
+        "earthrise-hotel"
       ]
     }
   }

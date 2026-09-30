@@ -1,0 +1,43 @@
+{
+  "id": "incubator",
+  "title": "Incubator",
+  "nrdbCode": "06113",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "subtypes": [
+    "virus"
+  ],
+  "installCost": 3,
+  "memoryCost": 1,
+  "onTurnBegin": {
+    "op": "do",
+    "action": {
+      "kind": "add_virus_counter",
+      "amount": 1
+    }
+  },
+  "paidAbilities": [
+    {
+      "id": "incubator-move",
+      "label": "[click], [trash]: Move all virus counters to another installed virus program",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1,
+        "trashSelf": true
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "incubator_move_virus_counters"
+        }
+      }
+    }
+  ],
+  "wave": "the-source"
+}

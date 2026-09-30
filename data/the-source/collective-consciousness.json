@@ -1,0 +1,13 @@
+{
+  "id": "collective-consciousness",
+  "title": "Collective Consciousness",
+  "nrdbCode": "06116",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "installCost": 2,
+  "memoryCost": 2,
+  "drawWhenCorpRezzesIce": 1,
+  "wave": "the-source"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "ixodidae",
+  "title": "Ixodidae",
+  "nrdbCode": "06114",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "subtypes": [
+    "virus"
+  ],
+  "installCost": 1,
+  "memoryCost": 1,
+  "trashOnVirusPurge": true,
+  "gainCreditsWhenCorpLosesCredits": 1,
+  "wave": "the-source"
+}

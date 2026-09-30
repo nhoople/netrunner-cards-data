@@ -1,0 +1,120 @@
+{
+  "id": "errand-boy",
+  "title": "Errand Boy",
+  "nrdbCode": "06102",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "sentry"
+  ],
+  "installCost": 4,
+  "rezCost": 4,
+  "strength": 1,
+  "subroutines": [
+    {
+      "id": "errand-boy-1",
+      "text": "The Corp gains 1[credit] or draws 1 card.",
+      "effect": {
+        "op": "choose",
+        "chooser": "corp",
+        "options": [
+          {
+            "id": "errand-gain-1",
+            "label": "Gain 1¢",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "gain_credits",
+                "side": "corp",
+                "amount": 1
+              }
+            }
+          },
+          {
+            "id": "errand-draw-1",
+            "label": "Draw 1 card",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "draw",
+                "side": "corp",
+                "amount": 1
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "errand-boy-2",
+      "text": "The Corp gains 1[credit] or draws 1 card.",
+      "effect": {
+        "op": "choose",
+        "chooser": "corp",
+        "options": [
+          {
+            "id": "errand-gain-2",
+            "label": "Gain 1¢",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "gain_credits",
+                "side": "corp",
+                "amount": 1
+              }
+            }
+          },
+          {
+            "id": "errand-draw-2",
+            "label": "Draw 1 card",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "draw",
+                "side": "corp",
+                "amount": 1
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "errand-boy-3",
+      "text": "The Corp gains 1[credit] or draws 1 card.",
+      "effect": {
+        "op": "choose",
+        "chooser": "corp",
+        "options": [
+          {
+            "id": "errand-gain-3",
+            "label": "Gain 1¢",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "gain_credits",
+                "side": "corp",
+                "amount": 1
+              }
+            }
+          },
+          {
+            "id": "errand-draw-3",
+            "label": "Draw 1 card",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "draw",
+                "side": "corp",
+                "amount": 1
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "wave": "the-source"
+}

@@ -1,0 +1,13 @@
+{
+  "id": "au-revoir",
+  "title": "Au Revoir",
+  "nrdbCode": "06119",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "installCost": 1,
+  "memoryCost": 1,
+  "gainCreditsOnJackOut": 1,
+  "wave": "the-source"
+}
