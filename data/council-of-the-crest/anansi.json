@@ -1,0 +1,130 @@
+{
+  "id": "anansi",
+  "title": "Anansi",
+  "nrdbCode": "21051",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "jinteki",
+  "subtypes": [
+    "sentry",
+    "ap"
+  ],
+  "installCost": 8,
+  "rezCost": 8,
+  "strength": 5,
+  "onEncounterEndIfNotFullyBroken": {
+    "op": "do",
+    "action": {
+      "kind": "net_damage",
+      "amount": 3
+    }
+  },
+  "subroutines": [
+    {
+      "id": "anansi-arrange",
+      "text": "Look at the top 5 cards of R&D and arrange them in any order.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "cotc_anansi_arrange_rd",
+          "amount": 5
+        }
+      }
+    },
+    {
+      "id": "anansi-draw",
+      "text": "You may draw 1 card. The Runner may pay 2 credits to draw 1 card.",
+      "effect": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "choose",
+            "chooser": "corp",
+            "options": [
+              {
+                "id": "accept",
+                "label": "Draw 1 card",
+                "effect": {
+                  "op": "do",
+                  "action": {
+                    "kind": "draw",
+                    "side": "corp",
+                    "amount": 1
+                  }
+                }
+              },
+              {
+                "id": "decline",
+                "label": "Decline",
+                "effect": {
+                  "op": "do",
+                  "action": {
+                    "kind": "gain_credits",
+                    "side": "corp",
+                    "amount": 0
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "op": "choose",
+            "chooser": "runner",
+            "options": [
+              {
+                "id": "accept",
+                "label": "Pay 2¢ to draw 1 card",
+                "effect": {
+                  "op": "seq",
+                  "effects": [
+                    {
+                      "op": "do",
+                      "action": {
+                        "kind": "lose_credits",
+                        "side": "runner",
+                        "amount": 2
+                      }
+                    },
+                    {
+                      "op": "do",
+                      "action": {
+                        "kind": "draw",
+                        "side": "runner",
+                        "amount": 1
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "decline",
+                "label": "Decline",
+                "effect": {
+                  "op": "do",
+                  "action": {
+                    "kind": "gain_credits",
+                    "side": "runner",
+                    "amount": 0
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "anansi-net",
+      "text": "Do 1 net damage.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "net_damage",
+          "amount": 1
+        }
+      }
+    }
+  ],
+  "wave": "council-of-the-crest"
+}

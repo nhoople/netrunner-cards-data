@@ -1,0 +1,18 @@
+{
+  "id": "white-hat",
+  "title": "White Hat",
+  "nrdbCode": "21048",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "sunny-lebeau",
+  "playCost": 0,
+  "playRequiresSuccessfulCentralRunThisTurn": true,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "cotc_white_hat"
+    }
+  },
+  "wave": "council-of-the-crest"
+}

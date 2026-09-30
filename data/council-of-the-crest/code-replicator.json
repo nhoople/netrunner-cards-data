@@ -1,0 +1,41 @@
+{
+  "id": "code-replicator",
+  "title": "Code Replicator",
+  "nrdbCode": "21052",
+  "type": "upgrade",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "jinteki",
+  "installCost": 2,
+  "rezCost": 2,
+  "trashCost": 2,
+  "onPassRezzedIceProtectingThisServer": {
+    "op": "choose",
+    "chooser": "corp",
+    "options": [
+      {
+        "id": "accept",
+        "label": "Trash Code Replicator: Runner approaches that ice again (may jack out)",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "cotc_code_replicator"
+          }
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "corp",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  },
+  "wave": "council-of-the-crest"
+}

@@ -1,0 +1,61 @@
+{
+  "id": "no-one-home",
+  "title": "No One Home",
+  "nrdbCode": "21045",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "subtypes": [
+    "virtual"
+  ],
+  "installCost": 0,
+  "paidAbilities": [
+    {
+      "id": "no-one-home-tags",
+      "label": "[interrupt] → [trash]: first tags this turn — Corp Trace[0]; if unsuccessful, prevent all tags",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "trashSelf": true
+      },
+      "windows": [
+        "tag_interrupt_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "cotc_no_one_home",
+          "mode": "tags"
+        }
+      },
+      "oncePerTurn": true,
+      "usableByRunnerOnSelfIce": true
+    },
+    {
+      "id": "no-one-home-net",
+      "label": "[interrupt] → [trash]: first net damage this turn — Corp Trace[0]; if unsuccessful, prevent all net damage",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "trashSelf": true
+      },
+      "windows": [
+        "damage_interrupt_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "cotc_no_one_home",
+          "mode": "net"
+        }
+      },
+      "oncePerTurn": true,
+      "usableByRunnerOnSelfIce": true,
+      "requirePendingDamageTypes": [
+        "net"
+      ]
+    }
+  ],
+  "wave": "council-of-the-crest"
+}

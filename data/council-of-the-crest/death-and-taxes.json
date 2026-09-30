@@ -1,0 +1,18 @@
+{
+  "id": "death-and-taxes",
+  "title": "Death and Taxes",
+  "nrdbCode": "21058",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "current",
+    "transaction"
+  ],
+  "playCost": 2,
+  "lingerAsCurrent": true,
+  "currentTrashOnAgendaStolen": true,
+  "mayGainCreditWhenRunnerInstallsOrTrashesInstalled": true,
+  "wave": "council-of-the-crest"
+}

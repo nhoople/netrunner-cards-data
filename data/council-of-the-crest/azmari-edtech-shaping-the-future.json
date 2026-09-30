@@ -1,0 +1,42 @@
+{
+  "id": "azmari-edtech-shaping-the-future",
+  "title": "Azmari EdTech: Shaping the Future",
+  "nrdbCode": "21054",
+  "type": "identity",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "subtypes": [
+    "division"
+  ],
+  "onCorpTurnEnd": {
+    "op": "choose",
+    "chooser": "corp",
+    "options": [
+      {
+        "id": "accept",
+        "label": "Name a card type",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "cotc_azmari_name_card_type"
+          }
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "corp",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  },
+  "gainCreditsOnFirstRunnerPlayOrInstallNamedType": 2,
+  "wave": "council-of-the-crest"
+}

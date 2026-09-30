@@ -1,0 +1,22 @@
+{
+  "id": "degree-mill",
+  "title": "Degree Mill",
+  "nrdbCode": "21055",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "subtypes": [
+    "initiative"
+  ],
+  "advancementRequirement": 5,
+  "agendaPoints": 3,
+  "stealAdditionalCost": {
+    "op": "do",
+    "action": {
+      "kind": "cotc_shuffle_n_installed_runner_into_stack",
+      "amount": 2
+    }
+  },
+  "wave": "council-of-the-crest"
+}

@@ -1,0 +1,45 @@
+{
+  "id": "kuwinda-k4h1u3",
+  "title": "Kuwinda K4H1U3",
+  "nrdbCode": "21049",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "bioroid"
+  ],
+  "installCost": 3,
+  "rezCost": 3,
+  "trashCost": 3,
+  "unique": true,
+  "onTurnBegin": {
+    "op": "choose",
+    "chooser": "corp",
+    "options": [
+      {
+        "id": "accept",
+        "label": "Trace[X] (X = hosted power counters)",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "cotc_kuwinda_trace"
+          }
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "corp",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  },
+  "wave": "council-of-the-crest"
+}

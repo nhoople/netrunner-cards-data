@@ -1,0 +1,43 @@
+{
+  "id": "armed-intimidation",
+  "title": "Armed Intimidation",
+  "nrdbCode": "21057",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "security"
+  ],
+  "advancementRequirement": 4,
+  "agendaPoints": 2,
+  "onScore": {
+    "op": "choose",
+    "chooser": "runner",
+    "options": [
+      {
+        "id": "meat",
+        "label": "Suffer 5 meat damage",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "meat_damage",
+            "amount": 5
+          }
+        }
+      },
+      {
+        "id": "tags",
+        "label": "Take 2 tags",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "give_tags",
+            "amount": 2
+          }
+        }
+      }
+    ]
+  },
+  "wave": "council-of-the-crest"
+}

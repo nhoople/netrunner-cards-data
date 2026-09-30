@@ -1,0 +1,28 @@
+{
+  "id": "exer",
+  "title": "eXer",
+  "nrdbCode": "21041",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "subtypes": [
+    "virus"
+  ],
+  "installCost": 2,
+  "memoryCost": 1,
+  "onBreachRd": {
+    "op": "do",
+    "action": {
+      "kind": "bonus_access",
+      "amount": 1
+    }
+  },
+  "onVirusPurge": {
+    "op": "do",
+    "action": {
+      "kind": "trash_self"
+    }
+  },
+  "wave": "council-of-the-crest"
+}

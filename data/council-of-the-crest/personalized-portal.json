@@ -1,0 +1,54 @@
+{
+  "id": "personalized-portal",
+  "title": "Personalized Portal",
+  "nrdbCode": "21056",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "installCost": 3,
+  "rezCost": 3,
+  "trashCost": 3,
+  "onTurnBegin": {
+    "op": "seq",
+    "effects": [
+      {
+        "op": "do",
+        "action": {
+          "kind": "draw",
+          "side": "runner",
+          "amount": 1
+        }
+      },
+      {
+        "op": "choose",
+        "chooser": "corp",
+        "options": [
+          {
+            "id": "accept",
+            "label": "Gain 1¢ for every 2 cards in the grip",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "cotc_personalized_portal_gain"
+              }
+            }
+          },
+          {
+            "id": "decline",
+            "label": "Decline",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "gain_credits",
+                "side": "corp",
+                "amount": 0
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "wave": "council-of-the-crest"
+}

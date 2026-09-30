@@ -67,6 +67,7 @@ Files under [`data/`](data/) are the API. Clone the repo or fetch a **tagged** r
 | [`data/revised-core/`](data/revised-core/) | Revised Core Set (NRDB `core2`) — **supported** (132/132 reprints absorbed; 0 new clears) |
 | [`data/sovereign-sight/`](data/sovereign-sight/) | Sovereign Sight (NRDB `ss`) — **supported** (Kitara) |
 | [`data/down-the-white-nile/`](data/down-the-white-nile/) | Down the White Nile (NRDB `dtwn`) — **supported** (Kitara) |
+| [`data/council-of-the-crest/`](data/council-of-the-crest/) | Council of the Crest (NRDB `cotc`) — **supported** (Kitara) |
 | [`data/reign-and-reverie/`](data/reign-and-reverie/) | Reign and Reverie (NRDB `rar`) — **supported** (legacy backwards) |
 | [`data/system-core-2019/`](data/system-core-2019/) | System Core 2019 (NRDB `sc19`) — **supported** (legacy backwards) |
 | [`data/downfall/`](data/downfall/) | Downfall (NRDB `df`) — **supported** (legacy backwards) |

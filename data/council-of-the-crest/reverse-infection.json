@@ -1,0 +1,39 @@
+{
+  "id": "reverse-infection",
+  "title": "Reverse Infection",
+  "nrdbCode": "21053",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "jinteki",
+  "playCost": 0,
+  "onPlay": {
+    "op": "choose",
+    "chooser": "corp",
+    "options": [
+      {
+        "id": "purge",
+        "label": "Purge virus counters; trash 1 from stack top per 3 purged",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "cotc_reverse_infection_purge"
+          }
+        }
+      },
+      {
+        "id": "credits",
+        "label": "Gain 2¢",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "corp",
+            "amount": 2
+          }
+        }
+      }
+    ]
+  },
+  "wave": "council-of-the-crest"
+}

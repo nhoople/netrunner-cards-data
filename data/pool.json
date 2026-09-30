@@ -54,6 +54,7 @@
     "revised-core",
     "sovereign-sight",
     "down-the-white-nile",
+    "council-of-the-crest",
     "reign-and-reverie",
     "system-core-2019",
     "downfall",
@@ -2745,6 +2746,32 @@
         "ssl-endorsement",
         "ngo-front",
         "distract-the-masses"
+      ]
+    },
+    "council-of-the-crest": {
+      "status": "supported",
+      "notes": "Council of the Crest (cotc) Kitara #3 set-complete. 20/20 new clears; no reprints. Pool supported after down-the-white-nile. Paired release v1.138.0. Never kick mo/mor. Defer tdc.",
+      "cards": [
+        "exer",
+        "friday-chip",
+        "crypt",
+        "corporate-grant",
+        "no-one-home",
+        "marathon",
+        "gbahali",
+        "white-hat",
+        "kuwinda-k4h1u3",
+        "next-sapphire",
+        "anansi",
+        "code-replicator",
+        "reverse-infection",
+        "azmari-edtech-shaping-the-future",
+        "degree-mill",
+        "personalized-portal",
+        "armed-intimidation",
+        "death-and-taxes",
+        "trojan-horse",
+        "technoco"
       ]
     }
   }

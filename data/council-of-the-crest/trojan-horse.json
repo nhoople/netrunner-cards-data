@@ -1,0 +1,28 @@
+{
+  "id": "trojan-horse",
+  "title": "Trojan Horse",
+  "nrdbCode": "21059",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "gray ops"
+  ],
+  "playCost": 1,
+  "playRequiresRunnerAccessedCardLastTurn": true,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "trace",
+      "strength": 4,
+      "onSuccess": {
+        "op": "do",
+        "action": {
+          "kind": "cotc_trojan_horse_trash"
+        }
+      }
+    }
+  },
+  "wave": "council-of-the-crest"
+}

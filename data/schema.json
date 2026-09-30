@@ -5016,6 +5016,47 @@
       "type": "integer",
       "minimum": 0,
       "description": "Jinja City Grid: whenever you draw a piece of ice, you may reveal it and install it protecting this server, paying this many credits less."
+    },
+    "mayPlaceVirusCounterWhenCorpCardTrashed": {
+      "type": "boolean",
+      "description": "Friday Chip: whenever you trash a Corp card, you may place 1 virus counter on this card."
+    },
+    "corpLosesCreditsOnFirstRunnerInstallEachTurn": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Corporate Grant: the first time the Runner installs a card each turn, the Corp loses this many credits."
+    },
+    "onEncounterEndIfNotFullyBroken": {
+      "type": "object",
+      "description": "Anansi: when an encounter with this ice ends, if the Runner did not fully break it, resolve this effect."
+    },
+    "gainCreditsOnFirstRunnerPlayOrInstallNamedType": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Azmari EdTech: gain this many credits the first time each turn the Runner plays or installs a card of the type last named by this identity."
+    },
+    "mayGainCreditWhenRunnerInstallsOrTrashesInstalled": {
+      "type": "boolean",
+      "description": "Death and Taxes: whenever the Runner installs a card or trashes an installed card, you may gain 1 credit."
+    },
+    "programInstallCostIncrease": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "TechnoCo: while rezzed, each program's install cost is increased by this amount."
+    },
+    "hardwareInstallCostIncrease": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "TechnoCo: while rezzed, each piece of hardware's install cost is increased by this amount."
+    },
+    "virtualResourceInstallCostIncrease": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "TechnoCo: while rezzed, each virtual resource's install cost is increased by this amount."
+    },
+    "mayGainCreditWhenRunnerInstallsProgramHardwareOrVirtual": {
+      "type": "boolean",
+      "description": "TechnoCo: whenever the Runner installs a program, piece of hardware, or virtual resource, you may gain 1 credit."
     }
   }
 }

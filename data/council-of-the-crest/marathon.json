@@ -1,0 +1,29 @@
+{
+  "id": "marathon",
+  "title": "Marathon",
+  "nrdbCode": "21046",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "subtypes": [
+    "run"
+  ],
+  "playCost": 1,
+  "runEvent": {
+    "servers": "remote",
+    "onRunEnd": {
+      "op": "if",
+      "cond": {
+        "op": "run_successful"
+      },
+      "then": {
+        "op": "do",
+        "action": {
+          "kind": "cotc_marathon_resolve"
+        }
+      }
+    }
+  },
+  "wave": "council-of-the-crest"
+}

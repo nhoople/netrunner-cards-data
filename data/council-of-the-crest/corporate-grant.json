@@ -1,0 +1,17 @@
+{
+  "id": "corporate-grant",
+  "title": "Corporate \"Grant\"",
+  "nrdbCode": "21044",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "subtypes": [
+    "current"
+  ],
+  "playCost": 1,
+  "lingerAsCurrent": true,
+  "currentTrashOnAgendaScored": true,
+  "corpLosesCreditsOnFirstRunnerInstallEachTurn": 1,
+  "wave": "council-of-the-crest"
+}

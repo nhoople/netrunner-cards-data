@@ -1,0 +1,21 @@
+{
+  "id": "technoco",
+  "title": "TechnoCo",
+  "nrdbCode": "21060",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "neutral-corp",
+  "subtypes": [
+    "corporation"
+  ],
+  "installCost": 2,
+  "rezCost": 2,
+  "trashCost": 2,
+  "unique": true,
+  "programInstallCostIncrease": 1,
+  "hardwareInstallCostIncrease": 1,
+  "virtualResourceInstallCostIncrease": 1,
+  "mayGainCreditWhenRunnerInstallsProgramHardwareOrVirtual": true,
+  "wave": "council-of-the-crest"
+}

@@ -1,0 +1,35 @@
+{
+  "id": "gbahali",
+  "title": "Gbahali",
+  "nrdbCode": "21047",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "subtypes": [
+    "virtual"
+  ],
+  "installCost": 2,
+  "paidAbilities": [
+    {
+      "id": "gbahali-break",
+      "label": "[trash]: Break the last subroutine on the encountered piece of ice",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "trashSelf": true
+      },
+      "windows": [
+        "encounter_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "cotc_break_last_subroutine"
+        }
+      },
+      "usableByRunnerOnSelfIce": true
+    }
+  ],
+  "wave": "council-of-the-crest"
+}
