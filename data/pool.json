@@ -26,6 +26,7 @@
     "the-source",
     "order-and-chaos",
     "the-valley",
+    "breaker-bay",
     "reign-and-reverie",
     "system-core-2019",
     "downfall",
@@ -1811,6 +1812,32 @@
         "capital-investors",
         "negotiator",
         "tech-startup"
+      ]
+    },
+    "breaker-bay": {
+      "status": "supported",
+      "notes": "Breaker Bay (bb) SanSan set-complete. 18/18 new clears; career-fair + turing reprints skipped. Pool supported. Paired release v1.110.0. Never kick mo/mor.",
+      "cards": [
+        "hacktivist-meeting",
+        "off-campus-apartment",
+        "career-fair",
+        "dorm-computer",
+        "hayley-kaplan-universal-scholar",
+        "game-day",
+        "comet",
+        "study-guide",
+        "london-library",
+        "tyson-observatory",
+        "beach-party",
+        "research-grant",
+        "turing",
+        "crick",
+        "recruiting-trip",
+        "blacklist",
+        "gutenberg",
+        "student-loans",
+        "meru-mati",
+        "breaker-bay-grid"
       ]
     }
   }

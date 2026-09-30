@@ -1,0 +1,38 @@
+{
+  "id": "gutenberg",
+  "title": "Gutenberg",
+  "nrdbCode": "08037",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "subtypes": [
+    "sentry",
+    "tracer"
+  ],
+  "installCost": 2,
+  "rezCost": 2,
+  "strength": 3,
+  "strengthBonusProtectingRd": 3,
+  "subroutines": [
+    {
+      "id": "gutenberg-trace",
+      "text": "Trace[7]. If successful, give the Runner 1 tag.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "trace",
+          "strength": 7,
+          "onSuccess": {
+            "op": "do",
+            "action": {
+              "kind": "give_tags",
+              "amount": 1
+            }
+          }
+        }
+      }
+    }
+  ],
+  "wave": "breaker-bay"
+}

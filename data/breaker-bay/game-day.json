@@ -1,0 +1,21 @@
+{
+  "id": "game-day",
+  "title": "Game Day",
+  "nrdbCode": "08026",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "subtypes": [
+    "double"
+  ],
+  "playCost": 1,
+  "playAdditionalClick": true,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "draw_until_grip_equals_max_hand_size"
+    }
+  },
+  "wave": "breaker-bay"
+}

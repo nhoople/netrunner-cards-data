@@ -1,0 +1,29 @@
+{
+  "id": "meru-mati",
+  "title": "Meru Mati",
+  "nrdbCode": "08039",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "barrier"
+  ],
+  "installCost": 2,
+  "rezCost": 2,
+  "strength": 1,
+  "strengthBonusProtectingHq": 3,
+  "subroutines": [
+    {
+      "id": "meru-mati-etr",
+      "text": "End the run.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "end_the_run"
+        }
+      }
+    }
+  ],
+  "wave": "breaker-bay"
+}

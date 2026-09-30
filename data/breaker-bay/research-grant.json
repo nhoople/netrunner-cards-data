@@ -1,0 +1,43 @@
+{
+  "id": "research-grant",
+  "title": "Research Grant",
+  "nrdbCode": "08032",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "research"
+  ],
+  "advancementRequirement": 3,
+  "agendaPoints": 1,
+  "onScore": {
+    "op": "choose",
+    "chooser": "corp",
+    "options": [
+      {
+        "id": "accept",
+        "label": "Score another installed Research Grant",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "score_another_installed_copy_of_self"
+          }
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "corp",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  },
+  "wave": "breaker-bay"
+}

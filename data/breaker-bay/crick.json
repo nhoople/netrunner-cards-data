@@ -1,0 +1,35 @@
+{
+  "id": "crick",
+  "title": "Crick",
+  "nrdbCode": "08034",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "jinteki",
+  "subtypes": [
+    "code gate"
+  ],
+  "installCost": 1,
+  "rezCost": 1,
+  "strength": 3,
+  "strengthBonusProtectingArchives": 3,
+  "subroutines": [
+    {
+      "id": "crick-install",
+      "text": "Install a card from Archives (paying its install cost).",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "install_from_archives",
+          "types": [
+            "agenda",
+            "asset",
+            "ice",
+            "upgrade"
+          ]
+        }
+      }
+    }
+  ],
+  "wave": "breaker-bay"
+}

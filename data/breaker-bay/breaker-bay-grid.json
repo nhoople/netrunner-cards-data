@@ -1,0 +1,17 @@
+{
+  "id": "breaker-bay-grid",
+  "title": "Breaker Bay Grid",
+  "nrdbCode": "08040",
+  "type": "upgrade",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "neutral-corp",
+  "subtypes": [
+    "region"
+  ],
+  "installCost": 0,
+  "rezCost": 0,
+  "trashCost": 2,
+  "rootRezCostReductionThisServer": 5,
+  "wave": "breaker-bay"
+}

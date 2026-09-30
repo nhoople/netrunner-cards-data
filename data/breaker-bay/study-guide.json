@@ -1,0 +1,46 @@
+{
+  "id": "study-guide",
+  "title": "Study Guide",
+  "nrdbCode": "08028",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "subtypes": [
+    "icebreaker",
+    "decoder"
+  ],
+  "installCost": 3,
+  "strength": 0,
+  "memoryCost": 1,
+  "breaker": {
+    "breaksSubtype": "code gate",
+    "strength": 0,
+    "breakCredits": 1,
+    "breakMaxSubs": 1
+  },
+  "strengthPerPowerCounter": true,
+  "paidAbilities": [
+    {
+      "id": "study-guide-power",
+      "label": "2¢: Place 1 power counter on this program",
+      "clickCost": 0,
+      "creditCost": 2,
+      "cost": {
+        "credits": 2
+      },
+      "windows": [
+        "runner_action_paw",
+        "encounter_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "add_power_counter",
+          "amount": 1
+        }
+      }
+    }
+  ],
+  "wave": "breaker-bay"
+}

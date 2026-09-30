@@ -1,0 +1,36 @@
+{
+  "id": "tyson-observatory",
+  "title": "Tyson Observatory",
+  "nrdbCode": "08030",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "subtypes": [
+    "location"
+  ],
+  "installCost": 2,
+  "unique": true,
+  "paidAbilities": [
+    {
+      "id": "tyson-search-hardware",
+      "label": "[click][click]: Search stack for a piece of hardware, reveal it, add to grip; shuffle",
+      "clickCost": 2,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 2
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "search_stack_type_add_to_grip",
+          "cardType": "hardware"
+        }
+      }
+    }
+  ],
+  "wave": "breaker-bay"
+}

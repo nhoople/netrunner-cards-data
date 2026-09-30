@@ -1,0 +1,54 @@
+{
+  "id": "london-library",
+  "title": "London Library",
+  "nrdbCode": "08029",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "subtypes": [
+    "location"
+  ],
+  "installCost": 3,
+  "unique": true,
+  "trashHostedProgramsOnTurnEnd": true,
+  "paidAbilities": [
+    {
+      "id": "london-library-host",
+      "label": "[click]: Install a non-virus program from grip on London Library, ignoring install cost",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "london_library_host_non_virus_program_ignore_cost"
+        }
+      }
+    },
+    {
+      "id": "london-library-to-grip",
+      "label": "[click]: Add a program on London Library to your grip",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "london_library_add_hosted_program_to_grip"
+        }
+      }
+    }
+  ],
+  "wave": "breaker-bay"
+}

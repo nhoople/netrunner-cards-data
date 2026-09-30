@@ -1,0 +1,14 @@
+{
+  "id": "student-loans",
+  "title": "Student Loans",
+  "nrdbCode": "08038",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "installCost": 2,
+  "rezCost": 2,
+  "trashCost": 3,
+  "eventPlayExtraCostIfCopyInHeap": 2,
+  "wave": "breaker-bay"
+}

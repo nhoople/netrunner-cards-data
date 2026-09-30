@@ -1,0 +1,33 @@
+{
+  "id": "dorm-computer",
+  "title": "Dorm Computer",
+  "nrdbCode": "08024",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "installCost": 0,
+  "powerCountersOnInstall": 4,
+  "paidAbilities": [
+    {
+      "id": "dorm-computer-run",
+      "label": "[click], hosted power counter: Run any server; prevent all tags this run",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1,
+        "powerCounters": 1
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "dorm_computer_run_prevent_all_tags"
+        }
+      }
+    }
+  ],
+  "wave": "breaker-bay"
+}

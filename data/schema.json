@@ -3696,6 +3696,53 @@
     "onFullyBreakProtectingIce": {
       "type": "object",
       "description": "Valley Grid: effect whenever the Runner fully breaks a piece of ice protecting this server."
+    },
+    "rezNonIceAdditionalCostRandomTrashHq": {
+      "type": "boolean",
+      "description": "Hacktivist Meeting: as an additional cost to rez a non-ice card, Corp must randomly trash a card from HQ."
+    },
+    "hostsConnectionResources": {
+      "type": "boolean",
+      "description": "Off-Campus Apartment: can host any number of connection resources."
+    },
+    "drawOnHostConnectionInstall": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Off-Campus Apartment: draw N when a connection is installed hosted on this card."
+    },
+    "onFirstEventEachTurnMayPlayAnother": {
+      "type": "boolean",
+      "description": "Comet: the first time you play an event each turn, you may play another event without spending a click after the first resolves."
+    },
+    "trashHostedProgramsOnTurnEnd": {
+      "type": "boolean",
+      "description": "London Library: trash all programs hosted on this card when your turn ends."
+    },
+    "playCostX": {
+      "type": "boolean",
+      "description": "Recruiting Trip–class: play cost is a chosen X credits (CR §8.6.2a)."
+    },
+    "cardsCannotLeaveRunnerHeap": {
+      "type": "boolean",
+      "description": "Blacklist: while rezzed, cards cannot leave the Runner's heap for any reason."
+    },
+    "strengthBonusProtectingRd": {
+      "type": "integer",
+      "description": "Gutenberg: +N strength while protecting R&D."
+    },
+    "strengthBonusProtectingHq": {
+      "type": "integer",
+      "description": "Meru Mati: +N strength while protecting HQ."
+    },
+    "eventPlayExtraCostIfCopyInHeap": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Student Loans: as an additional cost to play an event, if a copy is in the heap, Runner must pay N credits."
+    },
+    "rootRezCostReductionThisServer": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Breaker Bay Grid: rez cost of each card in the root of this server is lowered by N."
     }
   }
 }

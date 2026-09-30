@@ -1,0 +1,14 @@
+{
+  "id": "blacklist",
+  "title": "Blacklist",
+  "nrdbCode": "08036",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "installCost": 0,
+  "rezCost": 0,
+  "trashCost": 3,
+  "cardsCannotLeaveRunnerHeap": true,
+  "wave": "breaker-bay"
+}

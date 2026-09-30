@@ -1,0 +1,16 @@
+{
+  "id": "off-campus-apartment",
+  "title": "Off-Campus Apartment",
+  "nrdbCode": "08022",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "subtypes": [
+    "location"
+  ],
+  "installCost": 0,
+  "hostsConnectionResources": true,
+  "drawOnHostConnectionInstall": 1,
+  "wave": "breaker-bay"
+}

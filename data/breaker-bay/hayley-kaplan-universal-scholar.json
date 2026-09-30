@@ -1,0 +1,41 @@
+{
+  "id": "hayley-kaplan-universal-scholar",
+  "title": "Hayley Kaplan: Universal Scholar",
+  "nrdbCode": "08025",
+  "type": "identity",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "subtypes": [
+    "g-mod"
+  ],
+  "onFirstInstallEachTurn": {
+    "op": "choose",
+    "chooser": "runner",
+    "options": [
+      {
+        "id": "accept",
+        "label": "Install another card of the same type from grip",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "hayley_install_same_type_from_grip"
+          }
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "runner",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  },
+  "wave": "breaker-bay"
+}
