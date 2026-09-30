@@ -282,6 +282,7 @@ def map_card(c: dict) -> dict | None:
             onPlay=do(
                 "trace",
                 strength=4,
+                onSuccess=gain("runner", 0),
                 onFailure=do("ka_black_hat_bonus_access"),
             ),
         )
