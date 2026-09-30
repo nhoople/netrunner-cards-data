@@ -1,0 +1,40 @@
+{
+  "id": "the-helpful-ai",
+  "title": "The Helpful AI",
+  "wave": "what-lies-ahead",
+  "nrdbCode": "02008",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "subtypes": [
+    "connection",
+    "link",
+    "virtual"
+  ],
+  "installCost": 2,
+  "unique": true,
+  "link": 1,
+  "paidAbilities": [
+    {
+      "id": "the-helpful-ai-boost",
+      "label": "[trash]: Choose an icebreaker. That icebreaker has +2 strength until end of turn",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "trashSelf": true
+      },
+      "windows": [
+        "runner_action_paw",
+        "encounter_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "choose_icebreaker_gain_strength_this_turn",
+          "amount": 2
+        }
+      }
+    }
+  ]
+}

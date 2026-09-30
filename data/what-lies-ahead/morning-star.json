@@ -1,0 +1,24 @@
+{
+  "id": "morning-star",
+  "title": "Morning Star",
+  "wave": "what-lies-ahead",
+  "nrdbCode": "02004",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "subtypes": [
+    "icebreaker",
+    "fracter"
+  ],
+  "installCost": 8,
+  "strength": 5,
+  "memoryCost": 2,
+  "breaker": {
+    "breaksSubtype": "barrier",
+    "strength": 5,
+    "breakCredits": 1,
+    "breakMaxSubs": 99
+  },
+  "paidAbilities": []
+}

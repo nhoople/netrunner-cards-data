@@ -16,7 +16,8 @@ Files under [`data/`](data/) are the API. Clone the repo or fetch a **tagged** r
 | --- | --- |
 | [`data/schema.json`](data/schema.json) | JSON Schema for card definitions |
 | [`data/pool.json`](data/pool.json) | Declared supported corpus / release order |
-| [`data/core/`](data/core/) | FFG Core Set (NRDB `core`) — **in-progress** (Core-forward) |
+| [`data/core/`](data/core/) | FFG Core Set (NRDB `core`) — **supported** (Core-forward) |
+| [`data/what-lies-ahead/`](data/what-lies-ahead/) | What Lies Ahead (NRDB `wla`) — **supported** (Genesis) |
 | [`data/reign-and-reverie/`](data/reign-and-reverie/) | Reign and Reverie (NRDB `rar`) — **supported** (legacy backwards) |
 | [`data/system-core-2019/`](data/system-core-2019/) | System Core 2019 (NRDB `sc19`) — **supported** (legacy backwards) |
 | [`data/downfall/`](data/downfall/) | Downfall (NRDB `df`) — **supported** (legacy backwards) |
@@ -31,7 +32,7 @@ Files under [`data/`](data/) are the API. Clone the repo or fetch a **tagged** r
 | [`data/vantage-point/`](data/vantage-point/) | Vantage Point (NRDB `vp`) — **supported** |
 | [`data/fixtures/`](data/fixtures/) | CR-example / host-test cards outside corpus order (e.g. Plascrete) |
 
-**Corpus order:** FFG Core Set (Core-forward, in-progress) → Reign and Reverie (legacy backwards, supported) → System Core 2019 (legacy backwards, supported) → Downfall (legacy backwards, supported) → Uprising (legacy backwards, supported) → System Gateway → System Update 2021 → Midnight Sun → Parhelion → The Automata Initiative → Rebellion Without Rehearsal → Elevation → Vantage Point → later releases.
+**Corpus order:** FFG Core Set (Core-forward, supported) → What Lies Ahead (Genesis, supported) → Reign and Reverie (legacy backwards, supported) → System Core 2019 (legacy backwards, supported) → Downfall (legacy backwards, supported) → Uprising (legacy backwards, supported) → System Gateway → System Update 2021 → Midnight Sun → Parhelion → The Automata Initiative → Rebellion Without Rehearsal → Elevation → Vantage Point → later releases.
 
 Partial cards list unimplemented clauses in an `unsupported` array — never silent wrong behavior. A wave marked `supported` in [`data/pool.json`](data/pool.json) must keep those arrays empty unless the card is listed with a reason in [`data/supported-unsupported-allowlist.json`](data/supported-unsupported-allowlist.json) (enforced by `scripts/validate-cards.py`). See [`CONTRIBUTING.md`](CONTRIBUTING.md) for the CR gate PR template.
 
@@ -41,7 +42,8 @@ Match this dataset and [netrunner-engine](https://github.com/nhoople/netrunner-e
 
 | Pairing | cards-data | engine |
 |---------|------------|--------|
-| **Current** | [`v1.87.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.87.0) | engine same-semver pin `v1.87.0` (Core Set set-complete **49/49**) |
+| **Current** | [`v1.88.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.88.0) | engine same-semver pin `v1.88.0` (What Lies Ahead set-complete **14/14**) |
+| Core Set | [`v1.87.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.87.0) | engine same-semver pin `v1.87.0` (Core Set set-complete **49/49**) |
 | RaR set-complete | [`v1.86.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.86.0) | engine same-semver pin `v1.86.0` (RaR set-complete **56/56**) |
 | RaR J-slice | [`v1.85.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.85.0) | engine same-semver pin `v1.85.0` |
 | RaR I-slice | [`v1.84.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.84.0) | engine same-semver pin `v1.84.0` |
@@ -97,9 +99,9 @@ console.log(pool.corpusOrder, marjanah.title);
 
 | Release | Count | Notes |
 |---------|------:|-------|
-| core | 113 | FFG Core Set (`core`); **in-progress** (kickoff; 22/49 Core-only clears; 64 Gateway/SU21/SC19 reprints absorbed; never kick `mo`/`mor`) |
-| reign-and-reverie | 58 | Null Signal Reign and Reverie (`rar`); **supported** (wave gate `v1.86.0`; 56/56 RaR-only; 2 SC19 reprints absorbed) |
 | core | 113 | FFG Core Set (`core`); **supported** (wave gate `v1.87.0`; 49/49 Core-only; 64 Gateway/SU21/SC19 reprints absorbed) |
+| what-lies-ahead | 20 | FFG What Lies Ahead (`wla`); **supported** (wave gate `v1.88.0`; 14/14 WLA-only; 6 reprints absorbed; never kick `mo`/`mor`) |
+| reign-and-reverie | 58 | Null Signal Reign and Reverie (`rar`); **supported** (wave gate `v1.86.0`; 56/56 RaR-only; 2 SC19 reprints absorbed) |
 | system-core-2019 | 147 | Null Signal System Core 2019 (`sc19`); **supported** (wave gate `v1.74.0`; 84/147 SC19-only; 63 Gateway/SU21 reprints absorbed; skip `mo`/`mor`) |
 | downfall | 65 | Null Signal Downfall (`df`); Ashes set 1; **supported** (**65/65** mapped; wave gate `v1.58.0`; skip `mor`) |
 | uprising | 65 | Null Signal Uprising (`ur`); Ashes set 2; **supported** (**65/65** mapped; wave gate `v1.46.0`; `urbp` absorbed) |
@@ -114,9 +116,9 @@ console.log(pool.corpusOrder, marjanah.title);
 
 Synthetic stubs and early wave1/wave2 dirs were removed in `v0.2.0`. Reprints that previously lived only under those waves now ship under their Null Signal release directories.
 
-Parhelion is fully supported (wave gate `v0.71.0`). The Automata Initiative is fully supported (wave gate `v0.86.0`). Rebellion Without Rehearsal is fully supported (wave gate `v1.00.0`). Elevation is fully supported (wave gate `v1.12.0`). Vantage Point is fully supported (wave gate `v1.33.0`). Uprising is fully supported (wave gate `v1.46.0`). **Downfall** is fully supported (wave gate `v1.58.0`, **65/65**). **System Core 2019** is fully supported (wave gate `v1.74.0`, **84/147** SC19-only). **Reign and Reverie** is fully supported (wave gate `v1.86.0`, **56/56**). **FFG Core Set** is fully supported (wave gate `v1.87.0`, **49/49** Core-only).
+Parhelion is fully supported (wave gate `v0.71.0`). The Automata Initiative is fully supported (wave gate `v0.86.0`). Rebellion Without Rehearsal is fully supported (wave gate `v1.00.0`). Elevation is fully supported (wave gate `v1.12.0`). Vantage Point is fully supported (wave gate `v1.33.0`). Uprising is fully supported (wave gate `v1.46.0`). **Downfall** is fully supported (wave gate `v1.58.0`, **65/65**). **System Core 2019** is fully supported (wave gate `v1.74.0`, **84/147** SC19-only). **Reign and Reverie** is fully supported (wave gate `v1.86.0`, **56/56**). **FFG Core Set** is fully supported (wave gate `v1.87.0`, **49/49** Core-only). **What Lies Ahead** is fully supported (wave gate `v1.88.0`, **14/14** WLA-only).
 
-**Next:** Genesis cycle (`wla` → …) under the FFG Core-forward campaign. Pair every clear with the engine CR adherence gate; GitHub Releases only at set-complete. Never kick `mo`/`mor`.
+**Next:** Genesis continue (`ta` → `ce` → `asis` → `hs` → `fp`). Pair every clear with the engine CR adherence gate; GitHub Releases only at set-complete. Never kick `mo`/`mor`.
 
 ## Versioning
 

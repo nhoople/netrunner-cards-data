@@ -926,6 +926,10 @@
       "type": "object",
       "description": "Effect IR when the Runner makes a successful run while this card is installed, is the Runner identity, or is an active lockdown in corp:play-area (Argus Crackdown / Hyoubu Precog Manifold)."
     },
+    "onSuccessfulTraceDuringRun": {
+      "type": "object",
+      "description": "Effect IR when a trace resolves successfully during a run while this card is installed (Spinal Modem)."
+    },
     "onSuccessfulRunOncePerTurn": {
       "type": "boolean",
       "description": "When true, onSuccessfulRun fires at most once per turn for this instance (e.g. first successful run on the mark)."
@@ -1577,6 +1581,11 @@
       "minimum": 0,
       "description": "Memory units used by this program (default 1)."
     },
+    "memoryCostZeroIfLinkGte": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Cloud: when Runner link is at least this value, this program's memory cost is 0 (ZU.13 Key Master)."
+    },
     "muBonus": {
       "type": "integer",
       "description": "Bonus to Runner memory limit while installed."
@@ -1959,6 +1968,11 @@
     "iceRezCostIncrease": {
       "type": "integer",
       "minimum": 0
+    },
+    "iceRezCostReductionPerAgendaCounter": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "While scored: reduce rez cost of all ice by this × hosted agenda counters (Braintrust)."
     },
     "iceRezCostIncreaseBySubtype": {
       "type": "object",

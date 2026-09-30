@@ -1,0 +1,37 @@
+{
+  "id": "cortez-chip",
+  "title": "Cortez Chip",
+  "wave": "what-lies-ahead",
+  "nrdbCode": "02005",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "subtypes": [
+    "chip"
+  ],
+  "installCost": 0,
+  "paidAbilities": [
+    {
+      "id": "cortez-chip-rez",
+      "label": "[trash]: Choose a piece of ice. +2¢ additional cost to rez that ice until end of turn",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "trashSelf": true
+      },
+      "windows": [
+        "runner_action_paw",
+        "approach_paw",
+        "encounter_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "choose_ice_additional_rez_cost_this_turn",
+          "amount": 2
+        }
+      }
+    }
+  ]
+}

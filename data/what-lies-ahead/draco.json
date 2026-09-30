@@ -1,0 +1,52 @@
+{
+  "id": "draco",
+  "title": "Dracō",
+  "wave": "what-lies-ahead",
+  "nrdbCode": "02020",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "neutral-corp",
+  "subtypes": [
+    "sentry",
+    "tracer"
+  ],
+  "installCost": 1,
+  "rezCost": 1,
+  "strength": 0,
+  "rezSpendCreditsForPowerCounters": {
+    "max": 99
+  },
+  "strengthPerPowerCounter": true,
+  "subroutines": [
+    {
+      "id": "draco-trace",
+      "text": "Trace[2]. If successful, give the Runner 1 tag and end the run.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "trace",
+          "strength": 2,
+          "onSuccess": {
+            "op": "seq",
+            "effects": [
+              {
+                "op": "do",
+                "action": {
+                  "kind": "give_tags",
+                  "amount": 1
+                }
+              },
+              {
+                "op": "do",
+                "action": {
+                  "kind": "end_the_run"
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

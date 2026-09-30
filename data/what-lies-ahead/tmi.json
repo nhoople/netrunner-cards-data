@@ -1,0 +1,41 @@
+{
+  "id": "tmi",
+  "title": "TMI",
+  "wave": "what-lies-ahead",
+  "nrdbCode": "02017",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "subtypes": [
+    "barrier"
+  ],
+  "installCost": 3,
+  "rezCost": 3,
+  "strength": 5,
+  "onRez": {
+    "op": "do",
+    "action": {
+      "kind": "trace",
+      "strength": 2,
+      "onFailure": {
+        "op": "do",
+        "action": {
+          "kind": "derez_source"
+        }
+      }
+    }
+  },
+  "subroutines": [
+    {
+      "id": "tmi-etr",
+      "text": "End the run.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "end_the_run"
+        }
+      }
+    }
+  ]
+}

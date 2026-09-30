@@ -1,0 +1,16 @@
+{
+  "id": "mandatory-upgrades",
+  "title": "Mandatory Upgrades",
+  "wave": "what-lies-ahead",
+  "nrdbCode": "02011",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "initiative"
+  ],
+  "advancementRequirement": 6,
+  "agendaPoints": 2,
+  "allottedClicksBonus": 1
+}

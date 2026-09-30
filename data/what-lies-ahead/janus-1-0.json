@@ -1,0 +1,64 @@
+{
+  "id": "janus-1-0",
+  "title": "Janus 1.0",
+  "wave": "what-lies-ahead",
+  "nrdbCode": "02012",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "sentry",
+    "bioroid",
+    "ap"
+  ],
+  "installCost": 15,
+  "rezCost": 15,
+  "strength": 8,
+  "subroutines": [
+    {
+      "id": "janus-1-0-core-1",
+      "text": "Do 1 core damage.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "core_damage",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "id": "janus-1-0-core-2",
+      "text": "Do 1 core damage.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "core_damage",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "id": "janus-1-0-core-3",
+      "text": "Do 1 core damage.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "core_damage",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "id": "janus-1-0-core-4",
+      "text": "Do 1 core damage.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "core_damage",
+          "amount": 1
+        }
+      }
+    }
+  ]
+}

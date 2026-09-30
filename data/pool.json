@@ -4,6 +4,7 @@
   "agendaPointsToWinDefault": 7,
   "corpusOrder": [
     "core",
+    "what-lies-ahead",
     "reign-and-reverie",
     "system-core-2019",
     "downfall",
@@ -995,6 +996,32 @@
         "too-big-to-fail",
         "under-the-bus",
         "lady-liberty"
+      ]
+    },
+    "what-lies-ahead": {
+      "status": "supported",
+      "notes": "FFG What Lies Ahead (NRDB pack wla) — Genesis set-complete from floor v1.87.0 → v1.88.0. 20 titles; 6 Gateway/SU21/SC19 reprints absorbed; 14/14 WLA-only clears. Never kick mo/mor. CR pin v26.03.",
+      "cards": [
+        "whizzard-master-gamer",
+        "spinal-modem",
+        "imp",
+        "morning-star",
+        "cortez-chip",
+        "peacock",
+        "zu-13-key-master",
+        "the-helpful-ai",
+        "plascrete-carapace",
+        "haas-bioroid-stronger-together",
+        "mandatory-upgrades",
+        "janus-1-0",
+        "ash-2x3zb9cy",
+        "braintrust",
+        "snowflake",
+        "restructured-datapool",
+        "tmi",
+        "project-atlas",
+        "caduceus",
+        "draco"
       ]
     },
     "core": {

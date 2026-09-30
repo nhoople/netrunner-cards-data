@@ -1,0 +1,36 @@
+{
+  "id": "snowflake",
+  "title": "Snowflake",
+  "wave": "what-lies-ahead",
+  "nrdbCode": "02015",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "jinteki",
+  "subtypes": [
+    "barrier",
+    "psi"
+  ],
+  "installCost": 1,
+  "rezCost": 1,
+  "strength": 3,
+  "subroutines": [
+    {
+      "id": "snowflake-psi",
+      "text": "You and the Runner secretly spend 0¢, 1¢, or 2¢. Reveal spent credits. End the run if you and the Runner spent a different number of credits.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "play_psi_game",
+          "maxBid": 2,
+          "ifBidsDiffer": {
+            "op": "do",
+            "action": {
+              "kind": "end_the_run"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "whizzard-master-gamer",
+  "title": "Whizzard: Master Gamer",
+  "wave": "what-lies-ahead",
+  "nrdbCode": "02001",
+  "type": "identity",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "subtypes": [
+    "natural"
+  ],
+  "link": 0,
+  "recurringCreditsMax": 3,
+  "recurringSpendFor": [
+    "trash"
+  ]
+}

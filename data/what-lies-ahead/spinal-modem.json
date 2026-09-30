@@ -1,0 +1,27 @@
+{
+  "id": "spinal-modem",
+  "title": "Spinal Modem",
+  "wave": "what-lies-ahead",
+  "nrdbCode": "02002",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "subtypes": [
+    "console"
+  ],
+  "installCost": 4,
+  "unique": true,
+  "muBonus": 1,
+  "recurringCreditsMax": 2,
+  "recurringSpendFor": [
+    "use_program"
+  ],
+  "onSuccessfulTraceDuringRun": {
+    "op": "do",
+    "action": {
+      "kind": "core_damage",
+      "amount": 1
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "id": "restructured-datapool",
+  "title": "Restructured Datapool",
+  "wave": "what-lies-ahead",
+  "nrdbCode": "02016",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "subtypes": [
+    "initiative"
+  ],
+  "advancementRequirement": 5,
+  "agendaPoints": 3,
+  "paidAbilities": [
+    {
+      "id": "restructured-datapool-trace",
+      "label": "[click]: Trace[2]. If successful, give the Runner 1 tag",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "trace",
+          "strength": 2,
+          "onSuccess": {
+            "op": "do",
+            "action": {
+              "kind": "give_tags",
+              "amount": 1
+            }
+          }
+        }
+      }
+    }
+  ]
+}

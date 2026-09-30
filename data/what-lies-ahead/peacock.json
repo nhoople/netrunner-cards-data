@@ -1,0 +1,46 @@
+{
+  "id": "peacock",
+  "title": "Peacock",
+  "wave": "what-lies-ahead",
+  "nrdbCode": "02006",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "subtypes": [
+    "icebreaker",
+    "decoder"
+  ],
+  "installCost": 3,
+  "strength": 2,
+  "memoryCost": 1,
+  "breaker": {
+    "breaksSubtype": "code gate",
+    "strength": 2,
+    "breakCredits": 2,
+    "breakMaxSubs": 1,
+    "pumpCredits": 2,
+    "pumpStrength": 3
+  },
+  "paidAbilities": [
+    {
+      "id": "peacock-pump",
+      "label": "Pump Peacock +3 strength",
+      "clickCost": 0,
+      "creditCost": 2,
+      "cost": {
+        "credits": 2
+      },
+      "windows": [
+        "encounter_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "pump_strength",
+          "amount": 3
+        }
+      }
+    }
+  ]
+}

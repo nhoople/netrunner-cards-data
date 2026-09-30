@@ -1,0 +1,24 @@
+{
+  "id": "braintrust",
+  "title": "Braintrust",
+  "wave": "what-lies-ahead",
+  "nrdbCode": "02014",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "jinteki",
+  "subtypes": [
+    "research"
+  ],
+  "advancementRequirement": 3,
+  "agendaPoints": 2,
+  "onScore": {
+    "op": "do",
+    "action": {
+      "kind": "add_agenda_counters_from_overadvance",
+      "past": 3,
+      "per": 2
+    }
+  },
+  "iceRezCostReductionPerAgendaCounter": 1
+}
