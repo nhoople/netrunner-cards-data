@@ -1,0 +1,18 @@
+{
+  "id": "standard-procedure",
+  "title": "Standard Procedure",
+  "nrdbCode": "21097",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "playCost": 0,
+  "playRequiresSuccessfulRunLastTurn": true,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "win_standard_procedure"
+    }
+  },
+  "wave": "whispers-in-nalubaale"
+}

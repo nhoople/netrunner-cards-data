@@ -1,0 +1,51 @@
+{
+  "id": "compile",
+  "title": "Compile",
+  "nrdbCode": "21088",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "subtypes": [
+    "run"
+  ],
+  "playCost": 2,
+  "runEvent": {
+    "servers": "any",
+    "onFirstEncounterThisRun": {
+      "op": "choose",
+      "chooser": "runner",
+      "options": [
+        {
+          "id": "accept",
+          "label": "Search stack or heap for a program and install it, ignoring all costs",
+          "effect": {
+            "op": "do",
+            "action": {
+              "kind": "win_compile_install_program"
+            }
+          }
+        },
+        {
+          "id": "decline",
+          "label": "Decline",
+          "effect": {
+            "op": "do",
+            "action": {
+              "kind": "gain_credits",
+              "side": "runner",
+              "amount": 0
+            }
+          }
+        }
+      ]
+    },
+    "onRunEnd": {
+      "op": "do",
+      "action": {
+        "kind": "win_compile_bottom_of_stack"
+      }
+    }
+  },
+  "wave": "whispers-in-nalubaale"
+}

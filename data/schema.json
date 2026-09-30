@@ -82,6 +82,10 @@
           "type": "object",
           "description": "Effect IR fired when the run ends (success or not), sourced on the run event/ability card."
         },
+        "onFirstEncounterThisRun": {
+          "type": "object",
+          "description": "Compile: the first time you encounter ice during this run, resolve this effect."
+        },
         "icebreakerStrengthBonusIfGripLte": {
           "type": "object",
           "required": [
@@ -5066,6 +5070,61 @@
     "onAgendaAccessedOrScored": {
       "type": "object",
       "description": "Kill Switch: whenever an agenda is accessed or scored, resolve this effect (typically Trace)."
+    },
+    "accessTrashNonAgendaWithVirusEqualPrintedCost": {
+      "type": "boolean",
+      "description": "Freedom Khumalo: once per turn during access, spend virus counters equal to the accessed non-agenda's rez or play cost to trash it."
+    },
+    "trashHostAtVirus": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Trypano: when hosted virus counters reach this threshold, trash host ice."
+    },
+    "onEncounterMayPayCreditsGrantIceSubtype": {
+      "type": "object",
+      "required": ["credits", "subtype"],
+      "additionalProperties": false,
+      "properties": {
+        "credits": { "type": "integer", "minimum": 1 },
+        "subtype": { "type": "string" },
+        "oncePerTurn": { "type": "boolean" }
+      },
+      "description": "Laamb: once per turn when you encounter ice, may pay credits to grant it a subtype for the remainder of that encounter."
+    },
+    "hostIcebreakerStrengthIncreasesLastRemainderOfTurn": {
+      "type": "boolean",
+      "description": "Gebrselassie: abilities that increase host icebreaker's strength last for the remainder of the turn."
+    },
+    "onAgendaAddedToRunnerScore": {
+      "type": "object",
+      "description": "Jackpot!: whenever an agenda is added to the Runner's score area, resolve this effect."
+    },
+    "bioroidIceGainsLoseClickSubroutineBeforeOthers": {
+      "type": "boolean",
+      "description": "Warden Fatuma: each rezzed bioroid ice gains 'The Runner loses [click]' before its other subroutines."
+    },
+    "onScoreTurnEnd": {
+      "type": "object",
+      "description": "Viral Weaponization: when the turn on which you scored this agenda ends, resolve this effect."
+    },
+    "hqOrRdRootOnly": {
+      "type": "boolean",
+      "description": "Mwanza City Grid: install only in the root of HQ or R&D."
+    },
+    "gainCreditsPerCardAccessedDuringBreach": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Mwanza City Grid: when a breach of this server ends, gain this many credits for each card accessed during that breach."
+    },
+    "mayPayCreditsToTagWhenRunnerTrashesFromThisServerOrRoot": {
+      "type": "object",
+      "required": ["credits", "tags"],
+      "additionalProperties": false,
+      "properties": {
+        "credits": { "type": "integer", "minimum": 1 },
+        "tags": { "type": "integer", "minimum": 1 }
+      },
+      "description": "Overseer Matrix (persistent): whenever the Runner trashes a card from this server or its root, you may pay credits to give tags."
     }
   }
 }

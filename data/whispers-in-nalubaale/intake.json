@@ -1,0 +1,31 @@
+{
+  "id": "intake",
+  "title": "Intake",
+  "nrdbCode": "21098",
+  "type": "upgrade",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "subtypes": [
+    "ambush"
+  ],
+  "installCost": 0,
+  "rezCost": 0,
+  "trashCost": 0,
+  "mustRevealWhenAccessedFromRd": true,
+  "skipOnAccessFromArchives": true,
+  "onAccess": {
+    "op": "do",
+    "action": {
+      "kind": "trace",
+      "strength": 4,
+      "onSuccess": {
+        "op": "do",
+        "action": {
+          "kind": "win_intake_bounce"
+        }
+      }
+    }
+  },
+  "wave": "whispers-in-nalubaale"
+}

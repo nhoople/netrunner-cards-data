@@ -1,0 +1,42 @@
+{
+  "id": "slipstream",
+  "title": "Slipstream",
+  "nrdbCode": "21085",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "subtypes": [
+    "virtual"
+  ],
+  "installCost": 0,
+  "onPassRezzedIce": {
+    "op": "choose",
+    "chooser": "runner",
+    "options": [
+      {
+        "id": "accept",
+        "label": "Trash Slipstream to move to ice in the same position protecting a central",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "win_slipstream"
+          }
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "runner",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  },
+  "wave": "whispers-in-nalubaale"
+}

@@ -1,0 +1,47 @@
+{
+  "id": "trypano",
+  "title": "Trypano",
+  "nrdbCode": "21082",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "subtypes": [
+    "virus",
+    "trojan"
+  ],
+  "installCost": 2,
+  "memoryCost": 1,
+  "installOnIce": true,
+  "trashHostAtVirus": 5,
+  "onTurnBegin": {
+    "op": "choose",
+    "chooser": "runner",
+    "options": [
+      {
+        "id": "accept",
+        "label": "Place 1 virus counter on Trypano",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "add_virus_counter",
+            "amount": 1
+          }
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "runner",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  },
+  "wave": "whispers-in-nalubaale"
+}

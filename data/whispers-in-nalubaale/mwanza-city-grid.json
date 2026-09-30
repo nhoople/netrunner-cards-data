@@ -1,0 +1,21 @@
+{
+  "id": "mwanza-city-grid",
+  "title": "Mwanza City Grid",
+  "nrdbCode": "21096",
+  "type": "upgrade",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "jinteki",
+  "subtypes": [
+    "region"
+  ],
+  "installCost": 0,
+  "rezCost": 0,
+  "trashCost": 5,
+  "hqOrRdRootOnly": true,
+  "bonusAccessOnHqBreach": 3,
+  "bonusAccessOnRdBreach": 3,
+  "gainCreditsPerCardAccessedDuringBreach": 2,
+  "limitOnePerServer": true,
+  "wave": "whispers-in-nalubaale"
+}

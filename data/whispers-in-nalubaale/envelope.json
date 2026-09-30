@@ -1,0 +1,40 @@
+{
+  "id": "envelope",
+  "title": "Envelope",
+  "nrdbCode": "21095",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "jinteki",
+  "subtypes": [
+    "barrier",
+    "ap"
+  ],
+  "installCost": 4,
+  "rezCost": 4,
+  "strength": 3,
+  "subroutines": [
+    {
+      "id": "envelope-net",
+      "text": "Do 1 net damage.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "net_damage",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "id": "envelope-etr",
+      "text": "End the run.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "end_the_run"
+        }
+      }
+    }
+  ],
+  "wave": "whispers-in-nalubaale"
+}

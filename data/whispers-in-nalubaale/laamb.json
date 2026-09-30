@@ -1,0 +1,30 @@
+{
+  "id": "laamb",
+  "title": "Laamb",
+  "nrdbCode": "21086",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "subtypes": [
+    "icebreaker",
+    "fracter"
+  ],
+  "installCost": 4,
+  "strength": 2,
+  "memoryCost": 2,
+  "breaker": {
+    "breaksSubtype": "barrier",
+    "strength": 2,
+    "breakCredits": 2,
+    "breakMaxSubs": 99,
+    "pumpCredits": 3,
+    "pumpStrength": 6
+  },
+  "onEncounterMayPayCreditsGrantIceSubtype": {
+    "credits": 2,
+    "subtype": "barrier",
+    "oncePerTurn": true
+  },
+  "wave": "whispers-in-nalubaale"
+}

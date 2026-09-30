@@ -1,0 +1,37 @@
+{
+  "id": "masvingo",
+  "title": "Masvingo",
+  "nrdbCode": "21099",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "barrier"
+  ],
+  "installCost": 3,
+  "rezCost": 3,
+  "strength": 3,
+  "canAdvance": true,
+  "onRez": {
+    "op": "do",
+    "action": {
+      "kind": "win_place_advancement_on_self",
+      "amount": 1
+    }
+  },
+  "gainsSubroutinesPerAdvancement": {
+    "subroutine": {
+      "id": "masvingo-etr",
+      "text": "End the run.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "end_the_run"
+        }
+      }
+    }
+  },
+  "subroutines": [],
+  "wave": "whispers-in-nalubaale"
+}

@@ -1,0 +1,46 @@
+{
+  "id": "logic-bomb",
+  "title": "Logic Bomb",
+  "nrdbCode": "21089",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "adam",
+  "subtypes": [
+    "virtual"
+  ],
+  "installCost": 0,
+  "paidAbilities": [
+    {
+      "id": "logic-bomb-bypass",
+      "label": "[trash]: Bypass the ice you are encountering; lose remaining clicks",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "trashSelf": true
+      },
+      "windows": [
+        "encounter_paw"
+      ],
+      "effect": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "win_bypass_encountered_ice"
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "win_lose_remaining_clicks"
+            }
+          }
+        ]
+      },
+      "usableByRunnerOnSelfIce": true
+    }
+  ],
+  "wave": "whispers-in-nalubaale"
+}

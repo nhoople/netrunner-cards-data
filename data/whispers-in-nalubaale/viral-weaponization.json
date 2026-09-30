@@ -1,0 +1,22 @@
+{
+  "id": "viral-weaponization",
+  "title": "Viral Weaponization",
+  "nrdbCode": "21094",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "jinteki",
+  "subtypes": [
+    "research",
+    "security"
+  ],
+  "advancementRequirement": 4,
+  "agendaPoints": 2,
+  "onScoreTurnEnd": {
+    "op": "do",
+    "action": {
+      "kind": "win_viral_weaponization"
+    }
+  },
+  "wave": "whispers-in-nalubaale"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "overseer-matrix",
+  "title": "Overseer Matrix",
+  "nrdbCode": "21100",
+  "type": "upgrade",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "installCost": 1,
+  "rezCost": 1,
+  "trashCost": 2,
+  "persistent": true,
+  "mayPayCreditsToTagWhenRunnerTrashesFromThisServerOrRoot": {
+    "credits": 1,
+    "tags": 1
+  },
+  "wave": "whispers-in-nalubaale"
+}

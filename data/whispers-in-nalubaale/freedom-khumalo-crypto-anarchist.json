@@ -1,0 +1,15 @@
+{
+  "id": "freedom-khumalo-crypto-anarchist",
+  "title": "Freedom Khumalo: Crypto-Anarchist",
+  "nrdbCode": "21081",
+  "type": "identity",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "subtypes": [
+    "cyborg"
+  ],
+  "link": 0,
+  "accessTrashNonAgendaWithVirusEqualPrintedCost": true,
+  "wave": "whispers-in-nalubaale"
+}

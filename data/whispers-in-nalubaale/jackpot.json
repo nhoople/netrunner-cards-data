@@ -1,0 +1,67 @@
+{
+  "id": "jackpot",
+  "title": "Jackpot!",
+  "nrdbCode": "21090",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "neutral-runner",
+  "installCost": 0,
+  "onTurnBegin": {
+    "op": "choose",
+    "chooser": "runner",
+    "options": [
+      {
+        "id": "accept",
+        "label": "Place 1¢ on Jackpot!",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "win_jackpot_place_credit"
+          }
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "runner",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  },
+  "onAgendaAddedToRunnerScore": {
+    "op": "choose",
+    "chooser": "runner",
+    "options": [
+      {
+        "id": "accept",
+        "label": "Take any number of credits from Jackpot! and trash it",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "win_jackpot_take_credits"
+          }
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "runner",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  },
+  "wave": "whispers-in-nalubaale"
+}

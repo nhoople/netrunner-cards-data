@@ -1,0 +1,25 @@
+{
+  "id": "embezzle",
+  "title": "Embezzle",
+  "nrdbCode": "21084",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "subtypes": [
+    "run",
+    "sabotage"
+  ],
+  "playCost": 1,
+  "runEvent": {
+    "servers": "hq",
+    "skipBreach": true,
+    "onSuccessfulRun": {
+      "op": "do",
+      "action": {
+        "kind": "win_embezzle"
+      }
+    }
+  },
+  "wave": "whispers-in-nalubaale"
+}

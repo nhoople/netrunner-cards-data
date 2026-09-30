@@ -56,6 +56,7 @@
     "down-the-white-nile",
     "council-of-the-crest",
     "the-devil-and-the-dragon",
+    "whispers-in-nalubaale",
     "reign-and-reverie",
     "system-core-2019",
     "downfall",
@@ -2799,6 +2800,32 @@
         "city-works-project",
         "oduduwa",
         "rashida-jaheem"
+      ]
+    },
+    "whispers-in-nalubaale": {
+      "status": "supported",
+      "notes": "Whispers in Nalubaale (win) Kitara #5 set-complete. 20/20 new clears; no reprints. Pool supported after the-devil-and-the-dragon. Paired release v1.140.0. Never kick mo/mor. Defer tdc.",
+      "cards": [
+        "freedom-khumalo-crypto-anarchist",
+        "trypano",
+        "contaminate",
+        "embezzle",
+        "slipstream",
+        "laamb",
+        "gebrselassie",
+        "compile",
+        "logic-bomb",
+        "jackpot",
+        "remote-enforcement",
+        "kamali-1-0",
+        "warden-fatuma",
+        "viral-weaponization",
+        "envelope",
+        "mwanza-city-grid",
+        "standard-procedure",
+        "intake",
+        "masvingo",
+        "overseer-matrix"
       ]
     }
   }
