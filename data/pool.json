@@ -998,8 +998,8 @@
       ]
     },
     "core": {
-      "status": "in-progress",
-      "notes": "FFG Core Set (NRDB pack core) — Core-forward kickoff from floor v1.86.0. 113 titles; 64 Gateway/SU21/SC19 reprints absorbed. Kickoff full clears: 22/49 Core-only (86/113 including absorbs). Never kick mo/mor. Releases only at set-complete.",
+      "status": "supported",
+      "notes": "FFG Core Set (NRDB pack core) — set-complete from floor v1.86.0 → v1.87.0. 113 titles; 64 Gateway/SU21/SC19 reprints absorbed; 49/49 Core-only clears. Never kick mo/mor. CR pin v26.03.",
       "cards": [
         "noise-hacker-extraordinaire",
         "deja-vu",
