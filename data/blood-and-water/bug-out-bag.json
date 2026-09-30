@@ -6,8 +6,14 @@
   "side": "runner",
   "unsupported": [],
   "faction": "criminal",
+  "installCost": 0,
   "installCostX": true,
-  "powerCountersOnInstallEqualPaidX": true,
+  "onInstall": {
+    "op": "do",
+    "action": {
+      "kind": "bug_out_bag_choose_x_and_load_power"
+    }
+  },
   "onTurnEndIfGripEmptyDrawPerPowerThenTrash": true,
   "wave": "blood-and-water"
 }
