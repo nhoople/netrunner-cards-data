@@ -1,0 +1,14 @@
+{
+  "id": "harmony-medtech-biomedical-pioneer",
+  "title": "Harmony Medtech: Biomedical Pioneer",
+  "nrdbCode": "05001",
+  "type": "identity",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "jinteki",
+  "subtypes": [
+    "division"
+  ],
+  "agendaPointsToWinModifierBoth": -1,
+  "wave": "honor-and-profit"
+}

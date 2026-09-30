@@ -1,0 +1,23 @@
+{
+  "id": "plan-b",
+  "title": "Plan B",
+  "nrdbCode": "05023",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "neutral-corp",
+  "subtypes": [
+    "ambush"
+  ],
+  "installCost": 0,
+  "rezCost": 0,
+  "trashCost": 1,
+  "canAdvance": true,
+  "onAccessWhileInstalled": {
+    "op": "do",
+    "action": {
+      "kind": "plan_b_reveal_score_from_hq"
+    }
+  },
+  "wave": "honor-and-profit"
+}

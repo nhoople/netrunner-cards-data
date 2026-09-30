@@ -1,0 +1,18 @@
+{
+  "id": "express-delivery",
+  "title": "Express Delivery",
+  "nrdbCode": "05033",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "playCost": 1,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "look_top_n_stack_add_one_to_grip_shuffle",
+      "n": 4
+    }
+  },
+  "wave": "honor-and-profit"
+}

@@ -1,0 +1,44 @@
+{
+  "id": "tri-maf-contact",
+  "title": "Tri-maf Contact",
+  "nrdbCode": "05050",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "subtypes": [
+    "connection"
+  ],
+  "installCost": 2,
+  "paidAbilitiesOncePerTurn": true,
+  "paidAbilities": [
+    {
+      "id": "tri-maf-gain",
+      "label": "[click]: Gain 2[credit]",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "runner",
+          "amount": 2
+        }
+      }
+    }
+  ],
+  "onTrash": {
+    "op": "do",
+    "action": {
+      "kind": "give_tags",
+      "amount": 1
+    }
+  },
+  "wave": "honor-and-profit"
+}

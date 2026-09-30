@@ -1,0 +1,16 @@
+{
+  "id": "medical-breakthrough",
+  "title": "Medical Breakthrough",
+  "nrdbCode": "05005",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "jinteki",
+  "subtypes": [
+    "research"
+  ],
+  "advancementRequirement": 4,
+  "agendaPoints": 2,
+  "advancementRequirementReductionPerSameTitleAnywhere": 1,
+  "wave": "honor-and-profit"
+}

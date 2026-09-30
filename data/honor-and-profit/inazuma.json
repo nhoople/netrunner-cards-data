@@ -1,0 +1,38 @@
+{
+  "id": "inazuma",
+  "title": "Inazuma",
+  "nrdbCode": "05016",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "jinteki",
+  "subtypes": [
+    "code gate"
+  ],
+  "installCost": 3,
+  "rezCost": 3,
+  "strength": 5,
+  "subroutines": [
+    {
+      "id": "inazuma-lock",
+      "text": "Next encounter this run Runner cannot break subroutines on encountered ice.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "inazuma_lock_breaking_next_encounter"
+        }
+      }
+    },
+    {
+      "id": "inazuma-etr",
+      "text": "End the run.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "end_the_run"
+        }
+      }
+    }
+  ],
+  "wave": "honor-and-profit"
+}

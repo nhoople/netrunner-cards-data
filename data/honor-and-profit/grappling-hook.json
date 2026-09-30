@@ -1,0 +1,33 @@
+{
+  "id": "grappling-hook",
+  "title": "Grappling Hook",
+  "nrdbCode": "05045",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "installCost": 2,
+  "memoryCost": 1,
+  "paidAbilities": [
+    {
+      "id": "grappling-break",
+      "label": "[trash]: Break all but 1 subroutine on a piece of ice",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "trashSelf": true
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "break_all_but_n_subroutines_on_encounter",
+          "leave": 1
+        }
+      }
+    }
+  ],
+  "wave": "honor-and-profit"
+}

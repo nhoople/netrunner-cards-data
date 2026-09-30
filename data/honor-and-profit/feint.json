@@ -1,0 +1,19 @@
+{
+  "id": "feint",
+  "title": "Feint",
+  "nrdbCode": "05034",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "subtypes": [
+    "run"
+  ],
+  "playCost": 2,
+  "runEvent": {
+    "servers": "hq",
+    "bypassEncountersRemaining": 2,
+    "skipBreach": true
+  },
+  "wave": "honor-and-profit"
+}

@@ -1,0 +1,36 @@
+{
+  "id": "early-bird",
+  "title": "Early Bird",
+  "nrdbCode": "05032",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "subtypes": [
+    "priority",
+    "run"
+  ],
+  "playCost": 1,
+  "playRequiresFirstClick": true,
+  "onPlay": {
+    "op": "seq",
+    "effects": [
+      {
+        "op": "do",
+        "action": {
+          "kind": "gain_clicks",
+          "side": "runner",
+          "amount": 1
+        }
+      },
+      {
+        "op": "do",
+        "action": {
+          "kind": "may_start_run",
+          "servers": "any"
+        }
+      }
+    ]
+  },
+  "wave": "honor-and-profit"
+}

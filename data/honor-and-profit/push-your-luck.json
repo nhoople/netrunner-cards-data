@@ -1,0 +1,17 @@
+{
+  "id": "push-your-luck",
+  "title": "Push Your Luck",
+  "nrdbCode": "05047",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "playCost": 2,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "push_your_luck_secret_spend_guess"
+    }
+  },
+  "wave": "honor-and-profit"
+}

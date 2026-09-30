@@ -1,0 +1,19 @@
+{
+  "id": "iain-stirling-retired-spook",
+  "title": "Iain Stirling: Retired Spook",
+  "nrdbCode": "05028",
+  "type": "identity",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "subtypes": [
+    "natural"
+  ],
+  "onTurnBegin": {
+    "op": "do",
+    "action": {
+      "kind": "iain_gain_if_corp_ahead_on_agenda"
+    }
+  },
+  "wave": "honor-and-profit"
+}

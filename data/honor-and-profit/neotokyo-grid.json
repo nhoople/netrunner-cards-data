@@ -1,0 +1,25 @@
+{
+  "id": "neotokyo-grid",
+  "title": "NeoTokyo Grid",
+  "nrdbCode": "05021",
+  "type": "upgrade",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "jinteki",
+  "subtypes": [
+    "region"
+  ],
+  "installCost": 2,
+  "rezCost": 2,
+  "trashCost": 5,
+  "onFirstAdvancementOnServerThisTurn": {
+    "op": "do",
+    "action": {
+      "kind": "gain_credits",
+      "side": "corp",
+      "amount": 1
+    }
+  },
+  "oncePerTurn": true,
+  "wave": "honor-and-profit"
+}

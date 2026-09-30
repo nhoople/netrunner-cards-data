@@ -1,0 +1,23 @@
+{
+  "id": "theophilius-bagbiter",
+  "title": "Theophilius Bagbiter",
+  "nrdbCode": "05049",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "subtypes": [
+    "connection"
+  ],
+  "installCost": 3,
+  "unique": true,
+  "onInstall": {
+    "op": "do",
+    "action": {
+      "kind": "lose_all_credits",
+      "side": "runner"
+    }
+  },
+  "handSizeEqualsCredits": true,
+  "wave": "honor-and-profit"
+}

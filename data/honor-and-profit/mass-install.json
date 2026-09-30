@@ -1,0 +1,19 @@
+{
+  "id": "mass-install",
+  "title": "Mass Install",
+  "nrdbCode": "05051",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "neutral-runner",
+  "playCost": 1,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "install_up_to_n_programs_from_grip_discount",
+      "remaining": 3,
+      "discount": 0
+    }
+  },
+  "wave": "honor-and-profit"
+}

@@ -1,0 +1,16 @@
+{
+  "id": "q-coherence-chip",
+  "title": "Q-Coherence Chip",
+  "nrdbCode": "05052",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "neutral-runner",
+  "subtypes": [
+    "chip"
+  ],
+  "installCost": 0,
+  "muBonus": 1,
+  "trashSelfWhenInstalledProgramTrashed": true,
+  "wave": "honor-and-profit"
+}

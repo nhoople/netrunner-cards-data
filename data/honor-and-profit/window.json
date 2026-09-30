@@ -1,0 +1,33 @@
+{
+  "id": "window",
+  "title": "Window",
+  "nrdbCode": "05040",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "installCost": 2,
+  "paidAbilities": [
+    {
+      "id": "window-draw",
+      "label": "[click]: Draw 1 from bottom of stack",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "draw_from_stack_bottom",
+          "side": "runner",
+          "amount": 1
+        }
+      }
+    }
+  ],
+  "wave": "honor-and-profit"
+}

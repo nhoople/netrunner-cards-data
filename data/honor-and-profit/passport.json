@@ -1,0 +1,25 @@
+{
+  "id": "passport",
+  "title": "Passport",
+  "nrdbCode": "05046",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "subtypes": [
+    "icebreaker",
+    "decoder"
+  ],
+  "installCost": 1,
+  "strength": 2,
+  "memoryCost": 1,
+  "breaker": {
+    "breaksSubtype": "code gate",
+    "strength": 1,
+    "breakCredits": 1,
+    "breakMaxSubs": 1,
+    "pumpCredits": 2,
+    "pumpStrength": 2
+  },
+  "wave": "honor-and-profit"
+}

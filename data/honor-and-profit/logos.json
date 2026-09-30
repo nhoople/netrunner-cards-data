@@ -1,0 +1,24 @@
+{
+  "id": "logos",
+  "title": "Logos",
+  "nrdbCode": "05037",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "subtypes": [
+    "console"
+  ],
+  "installCost": 4,
+  "unique": true,
+  "muBonus": 1,
+  "handSizeBonus": 1,
+  "onAgendaScored": {
+    "op": "do",
+    "action": {
+      "kind": "search_stack_take_to_grip",
+      "max": 1
+    }
+  },
+  "wave": "honor-and-profit"
+}

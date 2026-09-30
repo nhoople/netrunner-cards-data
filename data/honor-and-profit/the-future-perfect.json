@@ -1,0 +1,38 @@
+{
+  "id": "the-future-perfect",
+  "title": "The Future Perfect",
+  "nrdbCode": "05007",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "jinteki",
+  "subtypes": [
+    "initiative",
+    "psi"
+  ],
+  "advancementRequirement": 5,
+  "agendaPoints": 3,
+  "onAccessWhileUninstalled": {
+    "op": "do",
+    "action": {
+      "kind": "play_psi_game",
+      "maxBid": 2,
+      "ifBidsMatch": {
+        "op": "do",
+        "action": {
+          "kind": "net_damage",
+          "amount": 1
+        }
+      },
+      "ifBidsDiffer": {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "corp",
+          "amount": 0
+        }
+      }
+    }
+  },
+  "wave": "honor-and-profit"
+}

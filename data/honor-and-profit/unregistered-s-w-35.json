@@ -1,0 +1,35 @@
+{
+  "id": "unregistered-s-w-35",
+  "title": "Unregistered S&W '35",
+  "nrdbCode": "05039",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "subtypes": [
+    "weapon"
+  ],
+  "installCost": 1,
+  "playRequiresSuccessfulHqRunThisTurn": true,
+  "paidAbilities": [
+    {
+      "id": "unregistered-trash",
+      "label": "[click][click]: Trash 1 rezzed ice, gain 2[credit] per strength",
+      "clickCost": 2,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 2
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "unregistered_trash_rezzed_ice_gain_per_strength"
+        }
+      }
+    }
+  ],
+  "wave": "honor-and-profit"
+}

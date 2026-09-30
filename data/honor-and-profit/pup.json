@@ -1,0 +1,41 @@
+{
+  "id": "pup",
+  "title": "Pup",
+  "nrdbCode": "05018",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "jinteki",
+  "subtypes": [
+    "sentry",
+    "ap"
+  ],
+  "installCost": 1,
+  "rezCost": 1,
+  "strength": 0,
+  "subroutines": [
+    {
+      "id": "pup-1",
+      "text": "Do 1 net unless Runner pays 1[credit].",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "pup_pay_or_net",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "id": "pup-2",
+      "text": "Do 1 net unless Runner pays 1[credit].",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "pup_pay_or_net",
+          "amount": 1
+        }
+      }
+    }
+  ],
+  "wave": "honor-and-profit"
+}

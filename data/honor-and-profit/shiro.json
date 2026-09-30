@@ -1,0 +1,41 @@
+{
+  "id": "shiro",
+  "title": "Shiro",
+  "nrdbCode": "05019",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "jinteki",
+  "subtypes": [
+    "code gate"
+  ],
+  "installCost": 6,
+  "rezCost": 6,
+  "strength": 5,
+  "subroutines": [
+    {
+      "id": "shiro-arrange",
+      "text": "Look at top 3 of R&D and arrange them.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "look_top_n_rd_arrange",
+          "n": 3
+        }
+      }
+    },
+    {
+      "id": "shiro-pay",
+      "text": "You may pay 1[credit]. If you do, do 1 net damage.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "corp_may_pay_net",
+          "creditCost": 1,
+          "damage": 1
+        }
+      }
+    }
+  ],
+  "wave": "honor-and-profit"
+}

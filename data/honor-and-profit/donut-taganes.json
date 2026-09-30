@@ -1,0 +1,16 @@
+{
+  "id": "donut-taganes",
+  "title": "Donut Taganes",
+  "nrdbCode": "05055",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "neutral-runner",
+  "subtypes": [
+    "connection"
+  ],
+  "installCost": 3,
+  "unique": true,
+  "corpPlayCostIncreaseForRunnerEventsOps": 1,
+  "wave": "honor-and-profit"
+}

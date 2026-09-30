@@ -1,0 +1,30 @@
+{
+  "id": "rainbow",
+  "title": "Rainbow",
+  "nrdbCode": "05025",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "neutral-corp",
+  "subtypes": [
+    "sentry",
+    "code gate",
+    "barrier"
+  ],
+  "installCost": 3,
+  "rezCost": 3,
+  "strength": 4,
+  "subroutines": [
+    {
+      "id": "rainbow-etr",
+      "text": "End the run.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "end_the_run"
+        }
+      }
+    }
+  ],
+  "wave": "honor-and-profit"
+}

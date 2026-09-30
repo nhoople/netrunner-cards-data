@@ -1,0 +1,36 @@
+{
+  "id": "oracle-may",
+  "title": "Oracle May",
+  "nrdbCode": "05054",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "neutral-runner",
+  "subtypes": [
+    "connection"
+  ],
+  "installCost": 1,
+  "unique": true,
+  "paidAbilitiesOncePerTurn": true,
+  "paidAbilities": [
+    {
+      "id": "oracle-may",
+      "label": "[click]: Choose type; reveal top of stack; install if match",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "oracle_may_choose_type_reveal_install"
+        }
+      }
+    }
+  ],
+  "wave": "honor-and-profit"
+}

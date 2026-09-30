@@ -1,0 +1,23 @@
+{
+  "id": "tori-hanzo",
+  "title": "Tori Hanzō",
+  "nrdbCode": "05022",
+  "type": "upgrade",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "jinteki",
+  "subtypes": [
+    "sysop"
+  ],
+  "installCost": 3,
+  "rezCost": 3,
+  "trashCost": 2,
+  "unique": true,
+  "onFirstNetDamageThisRunOnServer": {
+    "op": "do",
+    "action": {
+      "kind": "tori_hanzo_pay_instead_net"
+    }
+  },
+  "wave": "honor-and-profit"
+}

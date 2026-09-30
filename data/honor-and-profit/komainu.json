@@ -1,0 +1,23 @@
+{
+  "id": "komainu",
+  "title": "Komainu",
+  "nrdbCode": "05017",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "jinteki",
+  "subtypes": [
+    "sentry",
+    "ap"
+  ],
+  "installCost": 5,
+  "rezCost": 5,
+  "strength": 1,
+  "onEncounter": {
+    "op": "do",
+    "action": {
+      "kind": "komainu_add_net_subs_for_rezzed_ice"
+    }
+  },
+  "wave": "honor-and-profit"
+}

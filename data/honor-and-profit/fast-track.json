@@ -1,0 +1,17 @@
+{
+  "id": "fast-track",
+  "title": "Fast Track",
+  "nrdbCode": "05027",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "neutral-corp",
+  "playCost": 0,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "search_rd_agenda_to_hq"
+    }
+  },
+  "wave": "honor-and-profit"
+}

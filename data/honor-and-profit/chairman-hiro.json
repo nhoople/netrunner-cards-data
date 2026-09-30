@@ -1,0 +1,25 @@
+{
+  "id": "chairman-hiro",
+  "title": "Chairman Hiro",
+  "nrdbCode": "05008",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "jinteki",
+  "subtypes": [
+    "executive"
+  ],
+  "installCost": 2,
+  "rezCost": 2,
+  "trashCost": 6,
+  "unique": true,
+  "runnerHandSizeBonus": -2,
+  "onTrashWhileAccessed": {
+    "op": "do",
+    "action": {
+      "kind": "add_to_runner_score_as_agenda",
+      "agendaPoints": -2
+    }
+  },
+  "wave": "honor-and-profit"
+}

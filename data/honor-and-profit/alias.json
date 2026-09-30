@@ -1,0 +1,25 @@
+{
+  "id": "alias",
+  "title": "Alias",
+  "nrdbCode": "05041",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "subtypes": [
+    "icebreaker",
+    "killer"
+  ],
+  "installCost": 3,
+  "strength": 1,
+  "memoryCost": 1,
+  "breaker": {
+    "breaksSubtype": "sentry",
+    "strength": 1,
+    "breakCredits": 1,
+    "breakMaxSubs": 1,
+    "pumpCredits": 2,
+    "pumpStrength": 3
+  },
+  "wave": "honor-and-profit"
+}

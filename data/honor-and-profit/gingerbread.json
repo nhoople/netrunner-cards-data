@@ -1,0 +1,24 @@
+{
+  "id": "gingerbread",
+  "title": "Gingerbread",
+  "nrdbCode": "05044",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "subtypes": [
+    "icebreaker"
+  ],
+  "installCost": 2,
+  "strength": 2,
+  "memoryCost": 1,
+  "breaker": {
+    "breaksSubtype": "tracer",
+    "strength": 1,
+    "breakCredits": 1,
+    "breakMaxSubs": 1,
+    "pumpCredits": 2,
+    "pumpStrength": 3
+  },
+  "wave": "honor-and-profit"
+}

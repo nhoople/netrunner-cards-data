@@ -1,0 +1,30 @@
+{
+  "id": "susanoo-no-mikoto",
+  "title": "Susanoo-no-Mikoto",
+  "nrdbCode": "05020",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "jinteki",
+  "subtypes": [
+    "sentry",
+    "deflector"
+  ],
+  "installCost": 9,
+  "rezCost": 9,
+  "strength": 7,
+  "unique": true,
+  "subroutines": [
+    {
+      "id": "susanoo-redirect",
+      "text": "If server is not Archives, move to outermost Archives instead of passing.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "susanoo_redirect_to_archives"
+        }
+      }
+    }
+  ],
+  "wave": "honor-and-profit"
+}

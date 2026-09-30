@@ -1,0 +1,22 @@
+{
+  "id": "shi-kyu",
+  "title": "Shi.Kyū",
+  "nrdbCode": "05011",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "jinteki",
+  "subtypes": [
+    "ambush"
+  ],
+  "installCost": 0,
+  "rezCost": 0,
+  "trashCost": 0,
+  "onAccessNotFromRd": {
+    "op": "do",
+    "action": {
+      "kind": "shi_kyu_spend_for_net_damage"
+    }
+  },
+  "wave": "honor-and-profit"
+}

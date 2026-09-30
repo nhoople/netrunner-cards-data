@@ -1,0 +1,61 @@
+{
+  "id": "psychic-field",
+  "title": "Psychic Field",
+  "nrdbCode": "05010",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "jinteki",
+  "subtypes": [
+    "ambush",
+    "psi"
+  ],
+  "installCost": 0,
+  "rezCost": 0,
+  "trashCost": 2,
+  "onAccessWhileInstalled": {
+    "op": "do",
+    "action": {
+      "kind": "play_psi_game",
+      "maxBid": 3,
+      "ifBidsMatch": {
+        "op": "do",
+        "action": {
+          "kind": "net_damage",
+          "amount": 2
+        }
+      },
+      "ifBidsDiffer": {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "corp",
+          "amount": 0
+        }
+      }
+    }
+  },
+  "onExposeWhileInstalled": {
+    "op": "do",
+    "action": {
+      "kind": "play_psi_game",
+      "maxBid": 3,
+      "ifBidsMatch": {
+        "op": "do",
+        "action": {
+          "kind": "net_damage",
+          "amount": 2
+        }
+      },
+      "ifBidsDiffer": {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "corp",
+          "amount": 0
+        }
+      }
+    }
+  },
+  "wave": "honor-and-profit"
+}

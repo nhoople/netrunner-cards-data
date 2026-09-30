@@ -1,0 +1,25 @@
+{
+  "id": "mental-health-clinic",
+  "title": "Mental Health Clinic",
+  "nrdbCode": "05009",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "jinteki",
+  "subtypes": [
+    "facility"
+  ],
+  "installCost": 0,
+  "rezCost": 0,
+  "trashCost": 3,
+  "onTurnBegin": {
+    "op": "do",
+    "action": {
+      "kind": "gain_credits",
+      "side": "corp",
+      "amount": 1
+    }
+  },
+  "runnerHandSizeBonus": 1,
+  "wave": "honor-and-profit"
+}

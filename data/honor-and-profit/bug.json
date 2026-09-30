@@ -1,0 +1,19 @@
+{
+  "id": "bug",
+  "title": "Bug",
+  "nrdbCode": "05043",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "installCost": 0,
+  "memoryCost": 1,
+  "playRequiresSuccessfulHqRunThisTurn": true,
+  "onCorpDrawCard": {
+    "op": "do",
+    "action": {
+      "kind": "bug_may_pay_reveal_top"
+    }
+  },
+  "wave": "honor-and-profit"
+}

@@ -1,0 +1,42 @@
+{
+  "id": "silhouette-stealth-operative",
+  "title": "Silhouette: Stealth Operative",
+  "nrdbCode": "05030",
+  "type": "identity",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "subtypes": [
+    "natural"
+  ],
+  "onFirstSuccessfulHqRunThisTurn": {
+    "op": "choose",
+    "chooser": "runner",
+    "options": [
+      {
+        "id": "expose",
+        "label": "Expose 1 card",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "expose_up_to",
+            "max": 1
+          }
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "runner",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  },
+  "wave": "honor-and-profit"
+}

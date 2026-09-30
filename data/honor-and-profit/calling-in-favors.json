@@ -1,0 +1,18 @@
+{
+  "id": "calling-in-favors",
+  "title": "Calling in Favors",
+  "nrdbCode": "05031",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "playCost": 0,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "gain_credits_per_installed_subtype",
+      "subtype": "connection"
+    }
+  },
+  "wave": "honor-and-profit"
+}

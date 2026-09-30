@@ -1,0 +1,21 @@
+{
+  "id": "diversified-portfolio",
+  "title": "Diversified Portfolio",
+  "nrdbCode": "05026",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "neutral-corp",
+  "subtypes": [
+    "transaction"
+  ],
+  "playCost": 1,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "gain_credits_per_remote_with_root_card",
+      "per": 1
+    }
+  },
+  "wave": "honor-and-profit"
+}

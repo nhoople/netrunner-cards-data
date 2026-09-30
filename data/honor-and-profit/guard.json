@@ -1,0 +1,29 @@
+{
+  "id": "guard",
+  "title": "Guard",
+  "nrdbCode": "05024",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "neutral-corp",
+  "subtypes": [
+    "sentry"
+  ],
+  "installCost": 4,
+  "rezCost": 4,
+  "strength": 2,
+  "cannotBeBypassed": true,
+  "subroutines": [
+    {
+      "id": "guard-etr",
+      "text": "End the run.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "end_the_run"
+        }
+      }
+    }
+  ],
+  "wave": "honor-and-profit"
+}

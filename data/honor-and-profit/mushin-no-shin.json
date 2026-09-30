@@ -1,0 +1,21 @@
+{
+  "id": "mushin-no-shin",
+  "title": "Mushin No Shin",
+  "nrdbCode": "05015",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "jinteki",
+  "subtypes": [
+    "double"
+  ],
+  "playCost": 0,
+  "playAdditionalClick": true,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "mushin_install_from_hq_root"
+    }
+  },
+  "wave": "honor-and-profit"
+}

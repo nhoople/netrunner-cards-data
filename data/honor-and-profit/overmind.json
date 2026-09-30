@@ -1,0 +1,25 @@
+{
+  "id": "overmind",
+  "title": "Overmind",
+  "nrdbCode": "05053",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "neutral-runner",
+  "subtypes": [
+    "icebreaker",
+    "ai"
+  ],
+  "installCost": 4,
+  "strength": 0,
+  "memoryCost": 1,
+  "breaker": {
+    "breaksSubtype": "*",
+    "strength": 0,
+    "breakCredits": 1,
+    "breakMaxSubs": 99
+  },
+  "powerCountersOnInstallFromUnusedMu": true,
+  "strengthPerPowerCounter": true,
+  "wave": "honor-and-profit"
+}

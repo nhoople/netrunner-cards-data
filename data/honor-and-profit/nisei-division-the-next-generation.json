@@ -1,0 +1,21 @@
+{
+  "id": "nisei-division-the-next-generation",
+  "title": "Nisei Division: The Next Generation",
+  "nrdbCode": "05002",
+  "type": "identity",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "jinteki",
+  "subtypes": [
+    "division"
+  ],
+  "onPsiCreditsRevealed": {
+    "op": "do",
+    "action": {
+      "kind": "gain_credits",
+      "side": "corp",
+      "amount": 1
+    }
+  },
+  "wave": "honor-and-profit"
+}

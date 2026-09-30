@@ -1,0 +1,38 @@
+{
+  "id": "cerebral-cast",
+  "title": "Cerebral Cast",
+  "nrdbCode": "05013",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "jinteki",
+  "subtypes": [
+    "gray ops",
+    "psi"
+  ],
+  "playCost": 1,
+  "playRequiresSuccessfulRunLastTurn": true,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "play_psi_game",
+      "maxBid": 3,
+      "ifBidsMatch": {
+        "op": "do",
+        "action": {
+          "kind": "net_damage",
+          "amount": 2
+        }
+      },
+      "ifBidsDiffer": {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "corp",
+          "amount": 0
+        }
+      }
+    }
+  },
+  "wave": "honor-and-profit"
+}
