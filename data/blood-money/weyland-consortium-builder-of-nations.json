@@ -1,0 +1,14 @@
+{
+  "id": "weyland-consortium-builder-of-nations",
+  "title": "Weyland Consortium: Builder of Nations",
+  "nrdbCode": "11038",
+  "type": "identity",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "megacorp"
+  ],
+  "firstAdvancedIceEncounterEndMeatDamageEachTurn": true,
+  "wave": "blood-money"
+}

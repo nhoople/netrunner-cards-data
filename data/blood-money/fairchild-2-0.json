@@ -1,0 +1,56 @@
+{
+  "id": "fairchild-2-0",
+  "title": "Fairchild 2.0",
+  "nrdbCode": "11031",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "code gate",
+    "bioroid",
+    "ap"
+  ],
+  "installCost": 4,
+  "rezCost": 4,
+  "strength": 3,
+  "bioroidBreakMaxSubs": 2,
+  "subroutines": [
+    {
+      "id": "fairchild-2-0-pay-or-trash-1",
+      "text": "The Runner must pay 2¢ or trash 1 of their installed cards.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "pay_credits_or_trash_installed",
+          "side": "runner",
+          "amount": 2
+        }
+      }
+    },
+    {
+      "id": "fairchild-2-0-pay-or-trash-2",
+      "text": "The Runner must pay 2¢ or trash 1 of their installed cards.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "pay_credits_or_trash_installed",
+          "side": "runner",
+          "amount": 2
+        }
+      }
+    },
+    {
+      "id": "fairchild-2-0-core",
+      "text": "Do 1 core damage.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "core_damage",
+          "amount": 1
+        }
+      }
+    }
+  ],
+  "wave": "blood-money"
+}

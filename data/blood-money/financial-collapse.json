@@ -1,0 +1,18 @@
+{
+  "id": "financial-collapse",
+  "title": "Financial Collapse",
+  "nrdbCode": "11039",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "neutral-corp",
+  "playCost": 0,
+  "playRequiresRunnerCreditsGte": 6,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "financial_collapse_lose_2_per_resource_or_trash"
+    }
+  },
+  "wave": "blood-money"
+}

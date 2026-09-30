@@ -1,0 +1,30 @@
+{
+  "id": "temujin-contract",
+  "title": "Temüjin Contract",
+  "nrdbCode": "11026",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "subtypes": [
+    "job"
+  ],
+  "installCost": 4,
+  "unique": true,
+  "chooseServerOnInstall": true,
+  "hostedCreditsOnInstall": 20,
+  "onSuccessfulRun": {
+    "op": "if",
+    "cond": {
+      "op": "attacking_chosen_server"
+    },
+    "then": {
+      "op": "do",
+      "action": {
+        "kind": "take_hosted_credits",
+        "amount": 4
+      }
+    }
+  },
+  "wave": "blood-money"
+}

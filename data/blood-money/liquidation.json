@@ -1,0 +1,23 @@
+{
+  "id": "liquidation",
+  "title": "Liquidation",
+  "nrdbCode": "11037",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "double",
+    "gray ops",
+    "transaction"
+  ],
+  "playCost": 1,
+  "playAdditionalClick": true,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "liquidation_trash_any_rezzed_gain_3_each"
+    }
+  },
+  "wave": "blood-money"
+}

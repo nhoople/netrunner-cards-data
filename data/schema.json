@@ -169,6 +169,10 @@
         "onPassIceMayTrashEqualStrengthToTrashIce": {
           "type": "boolean",
           "description": "Prey: once during this run, when you pass ice, may trash installed cards equal to its strength to trash that ice."
+        },
+        "trashFirstNonAgendaAccessCorpMayPayRezOrPlayCostToPrevent": {
+          "type": "boolean",
+          "description": "Credit Crash: trash the first non-agenda card accessed during this run at no cost; Corp may spend credits equal to its rez or play cost to prevent."
         }
       }
     }
@@ -4357,6 +4361,27 @@
         "bonus": { "type": "integer" }
       },
       "description": "Sandburg: if Corp has ≥ threshold credits, each ice gets +bonus strength per perCredits in Corp credit pool."
+    },
+    "blankUniqueNonRegionAssetUpgradePrintedAbilities": {
+      "type": "boolean",
+      "description": "Rumor Mill: each unique non-region asset and upgrade loses its printed abilities."
+    },
+    "mayInstallSelfFromHeapOnEncounterBarrier": {
+      "type": "boolean",
+      "description": "Paperclip: whenever you encounter a barrier, you may install this program from your heap."
+    },
+    "onFirstPassIceEachTurn": {
+      "type": "object",
+      "description": "Khan: Effect IR the first time you pass a piece of ice each turn."
+    },
+    "playRequiresRunnerCreditsGte": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Financial Collapse: play only if the Runner has at least this many credits."
+    },
+    "firstAdvancedIceEncounterEndMeatDamageEachTurn": {
+      "type": "boolean",
+      "description": "Weyland Builder of Nations: the first time each turn an encounter with an advanced piece of ice ends, do 1 meat damage."
     }
   }
 }

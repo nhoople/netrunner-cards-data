@@ -39,6 +39,7 @@
     "the-liberated-mind",
     "fear-the-masses",
     "twenty-three-seconds",
+    "blood-money",
     "reign-and-reverie",
     "system-core-2019",
     "downfall",
@@ -2191,6 +2192,32 @@
         "crisis-management",
         "stock-buy-back",
         "sandburg"
+      ]
+    },
+    "blood-money": {
+      "status": "supported",
+      "notes": "Blood Money (bm) Flashpoint #2 set-complete. 20/20 new clears; no reprints. Pool supported after twenty-three-seconds. Paired release v1.123.0. Never kick mo/mor.",
+      "cards": [
+        "credit-crash",
+        "rumor-mill",
+        "nfr",
+        "paperclip",
+        "golden",
+        "temujin-contract",
+        "khan-savvy-skiptracer",
+        "data-breach",
+        "algo-trading",
+        "beth-kilrain-chang",
+        "fairchild-2-0",
+        "aiki",
+        "enforcing-loyalty",
+        "hatchet-job",
+        "special-report",
+        "c-i-fund",
+        "liquidation",
+        "weyland-consortium-builder-of-nations",
+        "financial-collapse",
+        "prisec"
       ]
     }
   }

@@ -1,0 +1,61 @@
+{
+  "id": "c-i-fund",
+  "title": "C.I. Fund",
+  "nrdbCode": "11036",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "installCost": 0,
+  "rezCost": 0,
+  "trashCost": 2,
+  "onTurnBegin": {
+    "op": "seq",
+    "effects": [
+      {
+        "op": "do",
+        "action": {
+          "kind": "may_move_up_to_credits_from_pool_to_self",
+          "amount": 3
+        }
+      },
+      {
+        "op": "if",
+        "cond": {
+          "op": "hosted_credits_gte",
+          "amount": 6
+        },
+        "then": {
+          "op": "do",
+          "action": {
+            "kind": "place_hosted_credits",
+            "amount": 2
+          }
+        }
+      }
+    ]
+  },
+  "paidAbilities": [
+    {
+      "id": "ci-fund-take",
+      "label": "2¢,[trash]: Take all credits from C.I. Fund",
+      "clickCost": 0,
+      "creditCost": 2,
+      "cost": {
+        "credits": 2,
+        "trashSelf": true
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "take_hosted_credits",
+          "amount": 999
+        }
+      }
+    }
+  ],
+  "wave": "blood-money"
+}

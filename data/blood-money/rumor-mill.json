@@ -1,0 +1,17 @@
+{
+  "id": "rumor-mill",
+  "title": "Rumor Mill",
+  "nrdbCode": "11022",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "subtypes": [
+    "current"
+  ],
+  "playCost": 1,
+  "lingerAsCurrent": true,
+  "currentTrashOnAgendaScored": true,
+  "blankUniqueNonRegionAssetUpgradePrintedAbilities": true,
+  "wave": "blood-money"
+}

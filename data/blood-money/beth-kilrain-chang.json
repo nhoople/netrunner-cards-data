@@ -1,0 +1,21 @@
+{
+  "id": "beth-kilrain-chang",
+  "title": "Beth Kilrain-Chang",
+  "nrdbCode": "11030",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "subtypes": [
+    "connection"
+  ],
+  "installCost": 2,
+  "unique": true,
+  "onTurnBegin": {
+    "op": "do",
+    "action": {
+      "kind": "beth_kilrain_corp_credit_tiers"
+    }
+  },
+  "wave": "blood-money"
+}

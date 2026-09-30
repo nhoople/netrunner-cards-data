@@ -1,0 +1,18 @@
+{
+  "id": "credit-crash",
+  "title": "Credit Crash",
+  "nrdbCode": "11021",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "subtypes": [
+    "run"
+  ],
+  "playCost": 1,
+  "runEvent": {
+    "servers": "any",
+    "trashFirstNonAgendaAccessCorpMayPayRezOrPlayCostToPrevent": true
+  },
+  "wave": "blood-money"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "special-report",
+  "title": "Special Report",
+  "nrdbCode": "11035",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "playCost": 1,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "special_report_shuffle_any_hq_draw"
+    }
+  },
+  "wave": "blood-money"
+}

@@ -1,0 +1,30 @@
+{
+  "id": "hatchet-job",
+  "title": "Hatchet Job",
+  "nrdbCode": "11034",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "subtypes": [
+    "double",
+    "gray ops"
+  ],
+  "playCost": 2,
+  "trashCost": 0,
+  "playAdditionalClick": true,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "trace",
+      "strength": 5,
+      "onSuccess": {
+        "op": "do",
+        "action": {
+          "kind": "add_installed_non_virtual_runner_to_grip"
+        }
+      }
+    }
+  },
+  "wave": "blood-money"
+}

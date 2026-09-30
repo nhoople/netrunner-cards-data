@@ -52,6 +52,7 @@ Files under [`data/`](data/) are the API. Clone the repo or fetch a **tagged** r
 | [`data/the-liberated-mind/`](data/the-liberated-mind/) | The Liberated Mind (NRDB `tlm`) — **supported** (Mumbad) |
 | [`data/fear-the-masses/`](data/fear-the-masses/) | Fear the Masses (NRDB `ftm`) — **supported** (Mumbad) |
 | [`data/twenty-three-seconds/`](data/twenty-three-seconds/) | 23 Seconds (NRDB `23s`) — **supported** (Flashpoint) |
+| [`data/blood-money/`](data/blood-money/) | Blood Money (NRDB `bm`) — **supported** (Flashpoint) |
 | [`data/reign-and-reverie/`](data/reign-and-reverie/) | Reign and Reverie (NRDB `rar`) — **supported** (legacy backwards) |
 | [`data/system-core-2019/`](data/system-core-2019/) | System Core 2019 (NRDB `sc19`) — **supported** (legacy backwards) |
 | [`data/downfall/`](data/downfall/) | Downfall (NRDB `df`) — **supported** (legacy backwards) |

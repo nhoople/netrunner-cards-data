@@ -1,0 +1,58 @@
+{
+  "id": "golden",
+  "title": "Golden",
+  "nrdbCode": "11025",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "subtypes": [
+    "icebreaker",
+    "killer"
+  ],
+  "installCost": 5,
+  "strength": 1,
+  "memoryCost": 1,
+  "breaker": {
+    "breaksSubtype": "sentry",
+    "strength": 1,
+    "breakCredits": 2,
+    "breakMaxSubs": 2,
+    "pumpCredits": 2,
+    "pumpStrength": 4
+  },
+  "paidAbilities": [
+    {
+      "id": "golden-derez",
+      "label": "2¢, add this program to your grip: Derez fully broken sentry",
+      "clickCost": 0,
+      "creditCost": 2,
+      "cost": {
+        "credits": 2
+      },
+      "windows": [
+        "encounter_paw"
+      ],
+      "effect": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "derez_encounter_ice"
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "return_source_to_grip"
+            }
+          }
+        ]
+      },
+      "usableByRunnerOnSelfIce": true,
+      "requireFullyBrokenThisEncounter": true
+    }
+  ],
+  "wave": "blood-money"
+}

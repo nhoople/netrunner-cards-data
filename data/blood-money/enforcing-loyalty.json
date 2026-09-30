@@ -1,0 +1,30 @@
+{
+  "id": "enforcing-loyalty",
+  "title": "Enforcing Loyalty",
+  "nrdbCode": "11033",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "jinteki",
+  "subtypes": [
+    "double",
+    "gray ops"
+  ],
+  "playCost": 2,
+  "trashCost": 1,
+  "playAdditionalClick": true,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "trace",
+      "strength": 3,
+      "onSuccess": {
+        "op": "do",
+        "action": {
+          "kind": "trash_installed_not_matching_runner_identity_faction"
+        }
+      }
+    }
+  },
+  "wave": "blood-money"
+}

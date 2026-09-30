@@ -1,0 +1,47 @@
+{
+  "id": "khan-savvy-skiptracer",
+  "title": "Khan: Savvy Skiptracer",
+  "nrdbCode": "11027",
+  "type": "identity",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "subtypes": [
+    "natural"
+  ],
+  "link": 0,
+  "onFirstPassIceEachTurn": {
+    "op": "choose",
+    "chooser": "runner",
+    "options": [
+      {
+        "id": "accept",
+        "label": "Install an icebreaker from grip, lowering install cost by 1",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "may_install_from_grip",
+            "types": [
+              "program"
+            ],
+            "subtype": "icebreaker",
+            "discount": 1
+          }
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "runner",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  },
+  "wave": "blood-money"
+}

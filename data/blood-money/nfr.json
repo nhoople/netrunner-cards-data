@@ -1,0 +1,31 @@
+{
+  "id": "nfr",
+  "title": "Nfr",
+  "nrdbCode": "11023",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "subtypes": [
+    "icebreaker",
+    "fracter"
+  ],
+  "installCost": 3,
+  "strength": 1,
+  "memoryCost": 1,
+  "strengthPerPowerCounter": true,
+  "onFullyBreak": {
+    "op": "do",
+    "action": {
+      "kind": "add_power_counter",
+      "amount": 1
+    }
+  },
+  "breaker": {
+    "breaksSubtype": "barrier",
+    "strength": 1,
+    "breakCredits": 1,
+    "breakMaxSubs": 1
+  },
+  "wave": "blood-money"
+}
