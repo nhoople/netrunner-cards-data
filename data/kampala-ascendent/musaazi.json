@@ -1,0 +1,96 @@
+{
+  "id": "musaazi",
+  "title": "Musaazi",
+  "nrdbCode": "21102",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "subtypes": [
+    "icebreaker",
+    "killer",
+    "virus"
+  ],
+  "installCost": 1,
+  "strength": 1,
+  "memoryCost": 2,
+  "onSuccessfulRun": {
+    "op": "choose",
+    "chooser": "runner",
+    "options": [
+      {
+        "id": "accept",
+        "label": "Place 1 virus counter on Musaazi",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "add_virus_counter",
+            "amount": 1
+          }
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "runner",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  },
+  "paidAbilities": [
+    {
+      "id": "musaazi-break",
+      "label": "Any virus counter: Break sentry subroutine",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "virusCounters": 1
+      },
+      "windows": [
+        "encounter_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "break_encounter_subroutine",
+          "maxSubs": 1
+        }
+      },
+      "usableByRunnerOnSelfIce": true
+    },
+    {
+      "id": "musaazi-pump",
+      "label": "Any virus counter: +1 strength",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "virusCounters": 1
+      },
+      "windows": [
+        "encounter_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "pump_strength",
+          "amount": 1
+        }
+      },
+      "usableByRunnerOnSelfIce": true
+    }
+  ],
+  "breaker": {
+    "breaksSubtype": "sentry",
+    "strength": 1,
+    "breakCredits": 0,
+    "breakMaxSubs": 1,
+    "breakViaPaidAbilityOnly": true
+  },
+  "wave": "kampala-ascendent"
+}

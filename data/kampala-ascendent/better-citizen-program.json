@@ -1,0 +1,16 @@
+{
+  "id": "better-citizen-program",
+  "title": "Better Citizen Program",
+  "nrdbCode": "21116",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "subtypes": [
+    "initiative"
+  ],
+  "advancementRequirement": 4,
+  "agendaPoints": 2,
+  "mayTagOnFirstRunEventOrIcebreakerInstallEachTurn": true,
+  "wave": "kampala-ascendent"
+}

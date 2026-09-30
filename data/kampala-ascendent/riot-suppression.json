@@ -1,0 +1,46 @@
+{
+  "id": "riot-suppression",
+  "title": "Riot Suppression",
+  "nrdbCode": "21113",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "reprisal",
+    "gray ops"
+  ],
+  "playCost": 2,
+  "playRequiresRunnerTrashedCorpCardLastTurn": true,
+  "rfgInsteadOfTrashing": true,
+  "onPlay": {
+    "op": "choose",
+    "chooser": "runner",
+    "options": [
+      {
+        "id": "suffer-core",
+        "label": "Suffer 1 core damage",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "core_damage",
+            "amount": 1
+          }
+        }
+      },
+      {
+        "id": "lose-clicks",
+        "label": "Get −3 allotted [click] for your next turn",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "allotted_clicks_next_turn",
+            "side": "runner",
+            "delta": -3
+          }
+        }
+      }
+    ]
+  },
+  "wave": "kampala-ascendent"
+}

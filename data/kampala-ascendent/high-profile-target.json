@@ -1,0 +1,22 @@
+{
+  "id": "high-profile-target",
+  "title": "High-Profile Target",
+  "nrdbCode": "21119",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "black ops"
+  ],
+  "playCost": 2,
+  "playRequiresTagged": true,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "ka_meat_damage_per_tag",
+      "amountPerTag": 2
+    }
+  },
+  "wave": "kampala-ascendent"
+}

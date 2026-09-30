@@ -1,0 +1,42 @@
+{
+  "id": "mti-mwekundu-life-improved",
+  "title": "Mti Mwekundu: Life Improved",
+  "nrdbCode": "21114",
+  "type": "identity",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "jinteki",
+  "subtypes": [
+    "division"
+  ],
+  "onApproachServerOncePerTurn": true,
+  "onApproachServer": {
+    "op": "choose",
+    "chooser": "corp",
+    "options": [
+      {
+        "id": "accept",
+        "label": "Install 1 ice from HQ innermost protecting this server, ignoring all costs",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "ka_mti_install_ice_innermost_from_hq"
+          }
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "corp",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  },
+  "wave": "kampala-ascendent"
+}

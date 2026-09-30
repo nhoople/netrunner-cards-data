@@ -1,0 +1,34 @@
+{
+  "id": "reclaim",
+  "title": "Reclaim",
+  "nrdbCode": "21107",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "installCost": 0,
+  "paidAbilities": [
+    {
+      "id": "reclaim",
+      "label": "[click], [trash], trash a card from grip: Install program/hardware/virtual from heap paying cost",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1,
+        "trashSelf": true,
+        "trashFromGrip": 1
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "ka_reclaim_install_from_heap"
+        }
+      },
+      "usableByRunnerOnSelfIce": true
+    }
+  ],
+  "wave": "kampala-ascendent"
+}

@@ -1,0 +1,33 @@
+{
+  "id": "amina",
+  "title": "Amina",
+  "nrdbCode": "21104",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "subtypes": [
+    "icebreaker",
+    "decoder"
+  ],
+  "installCost": 7,
+  "strength": 3,
+  "memoryCost": 1,
+  "breaker": {
+    "breaksSubtype": "code gate",
+    "strength": 3,
+    "breakCredits": 2,
+    "breakMaxSubs": 3,
+    "pumpCredits": 2,
+    "pumpStrength": 3
+  },
+  "onFullyBreakOncePerTurn": {
+    "op": "do",
+    "action": {
+      "kind": "lose_credits",
+      "side": "corp",
+      "amount": 1
+    }
+  },
+  "wave": "kampala-ascendent"
+}

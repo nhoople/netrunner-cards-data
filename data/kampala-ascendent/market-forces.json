@@ -1,0 +1,21 @@
+{
+  "id": "market-forces",
+  "title": "Market Forces",
+  "nrdbCode": "21117",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "subtypes": [
+    "gray ops"
+  ],
+  "playCost": 0,
+  "playRequiresTagged": true,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "ka_market_forces"
+    }
+  },
+  "wave": "kampala-ascendent"
+}

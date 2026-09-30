@@ -70,6 +70,7 @@ Files under [`data/`](data/) are the API. Clone the repo or fetch a **tagged** r
 | [`data/council-of-the-crest/`](data/council-of-the-crest/) | Council of the Crest (NRDB `cotc`) — **supported** (Kitara) |
 | [`data/the-devil-and-the-dragon/`](data/the-devil-and-the-dragon/) | The Devil and the Dragon (NRDB `tdatd`) — **supported** (Kitara) |
 | [`data/whispers-in-nalubaale/`](data/whispers-in-nalubaale/) | Whispers in Nalubaale (NRDB `win`) — **supported** (Kitara) |
+| [`data/kampala-ascendent/`](data/kampala-ascendent/) | Kampala Ascendent (NRDB `ka`) — **supported** (Kitara) |
 | [`data/reign-and-reverie/`](data/reign-and-reverie/) | Reign and Reverie (NRDB `rar`) — **supported** (legacy backwards) |
 | [`data/system-core-2019/`](data/system-core-2019/) | System Core 2019 (NRDB `sc19`) — **supported** (legacy backwards) |
 | [`data/downfall/`](data/downfall/) | Downfall (NRDB `df`) — **supported** (legacy backwards) |

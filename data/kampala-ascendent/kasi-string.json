@@ -1,0 +1,20 @@
+{
+  "id": "kasi-string",
+  "title": "Kasi String",
+  "nrdbCode": "21111",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "neutral-runner",
+  "subtypes": [
+    "virtual"
+  ],
+  "installCost": 1,
+  "unique": true,
+  "placePowerOnFirstSuccessfulRemoteRunEndIfBreachedNoSteal": true,
+  "scoreWhenPowerGte": {
+    "threshold": 4,
+    "agendaPoints": 1
+  },
+  "wave": "kampala-ascendent"
+}

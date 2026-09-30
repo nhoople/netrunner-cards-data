@@ -1,0 +1,50 @@
+{
+  "id": "zer0",
+  "title": "Zer0",
+  "nrdbCode": "21101",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "installCost": 1,
+  "unique": true,
+  "paidAbilities": [
+    {
+      "id": "zer0",
+      "label": "Once per turn → [click], suffer 1 net damage: Gain 1¢ and draw 2 cards",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1,
+        "netDamage": 1
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "gain_credits",
+              "side": "runner",
+              "amount": 1
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "draw",
+              "side": "runner",
+              "amount": 2
+            }
+          }
+        ]
+      },
+      "oncePerTurn": true,
+      "usableByRunnerOnSelfIce": true
+    }
+  ],
+  "wave": "kampala-ascendent"
+}

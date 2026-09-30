@@ -1,0 +1,24 @@
+{
+  "id": "black-hat",
+  "title": "Black Hat",
+  "nrdbCode": "21110",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "sunny-lebeau",
+  "playCost": 2,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "trace",
+      "strength": 4,
+      "onFailure": {
+        "op": "do",
+        "action": {
+          "kind": "ka_black_hat_bonus_access"
+        }
+      }
+    }
+  },
+  "wave": "kampala-ascendent"
+}

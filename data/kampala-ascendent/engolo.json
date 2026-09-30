@@ -1,0 +1,30 @@
+{
+  "id": "engolo",
+  "title": "Engolo",
+  "nrdbCode": "21108",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "subtypes": [
+    "icebreaker",
+    "decoder"
+  ],
+  "installCost": 5,
+  "strength": 2,
+  "memoryCost": 2,
+  "breaker": {
+    "breaksSubtype": "code gate",
+    "strength": 2,
+    "breakCredits": 1,
+    "breakMaxSubs": 1,
+    "pumpCredits": 2,
+    "pumpStrength": 4
+  },
+  "onEncounterMayPayCreditsGrantIceSubtype": {
+    "credits": 2,
+    "subtype": "code gate",
+    "oncePerTurn": true
+  },
+  "wave": "kampala-ascendent"
+}

@@ -1,0 +1,45 @@
+{
+  "id": "false-flag",
+  "title": "False Flag",
+  "nrdbCode": "21120",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "ambush"
+  ],
+  "installCost": 2,
+  "rezCost": 2,
+  "trashCost": 2,
+  "canAdvance": true,
+  "onAccess": {
+    "op": "do",
+    "action": {
+      "kind": "ka_give_tags_per_two_advancements"
+    }
+  },
+  "paidAbilities": [
+    {
+      "id": "false-flag-score",
+      "label": "[click], 7 hosted advancement tokens: add False Flag to score area as 3AP agenda",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1,
+        "advancementTokens": 7
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "score_self_as_agenda",
+          "agendaPoints": 3
+        }
+      }
+    }
+  ],
+  "wave": "kampala-ascendent"
+}

@@ -1,0 +1,20 @@
+{
+  "id": "flame-out",
+  "title": "Flame-out",
+  "nrdbCode": "21109",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "subtypes": [
+    "mod"
+  ],
+  "installCost": 2,
+  "unique": true,
+  "maxHostedCards": 1,
+  "hostsAnyProgramMemoryCostLte": 99,
+  "hostedCreditsOnInstall": 9,
+  "spendHostedCreditsToUseHostedProgram": true,
+  "trashHostedProgramAtEndOfTurnIfHostedCreditsUsed": true,
+  "wave": "kampala-ascendent"
+}

@@ -1,0 +1,13 @@
+{
+  "id": "hippo",
+  "title": "Hippo",
+  "nrdbCode": "21103",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "installCost": 2,
+  "unique": true,
+  "mayRfgSelfToTrashOutermostIceOnFirstFullBreakEachTurn": true,
+  "wave": "kampala-ascendent"
+}

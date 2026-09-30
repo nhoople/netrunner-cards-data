@@ -1,0 +1,58 @@
+{
+  "id": "next-diamond",
+  "title": "NEXT Diamond",
+  "nrdbCode": "21112",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "sentry",
+    "next",
+    "destroyer",
+    "ap"
+  ],
+  "installCost": 10,
+  "rezCost": 10,
+  "strength": 6,
+  "rezCostDiscountPerRezzedSubtype": {
+    "subtype": "next",
+    "amount": 1
+  },
+  "subroutines": [
+    {
+      "id": "next-diamond-core-1",
+      "text": "Do 1 core damage.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "core_damage",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "id": "next-diamond-core-2",
+      "text": "Do 1 core damage.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "core_damage",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "id": "next-diamond-trash",
+      "text": "Trash 1 installed Runner card.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "trash_installed_runner",
+          "pick": "choose"
+        }
+      }
+    }
+  ],
+  "wave": "kampala-ascendent"
+}

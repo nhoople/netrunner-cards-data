@@ -1,0 +1,53 @@
+{
+  "id": "surveyor",
+  "title": "Surveyor",
+  "nrdbCode": "21118",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "sentry",
+    "tracer"
+  ],
+  "installCost": 5,
+  "rezCost": 5,
+  "strength": 0,
+  "strengthBonusPerIceProtectingThisServer": 2,
+  "subroutines": [
+    {
+      "id": "surveyor-tags",
+      "text": "Trace[X]. If successful, give the Runner 2 tags.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "ka_trace_strength_equal_source_strength",
+          "onSuccess": {
+            "op": "do",
+            "action": {
+              "kind": "give_tags",
+              "amount": 2
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "surveyor-etr",
+      "text": "Trace[X]. If successful, end the run.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "ka_trace_strength_equal_source_strength",
+          "onSuccess": {
+            "op": "do",
+            "action": {
+              "kind": "end_the_run"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "wave": "kampala-ascendent"
+}

@@ -1,0 +1,34 @@
+{
+  "id": "pad-tap",
+  "title": "PAD Tap",
+  "nrdbCode": "21106",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "installCost": 0,
+  "mayGainCreditOnFirstCorpCardAbilityCreditGainEachTurn": true,
+  "paidAbilities": [
+    {
+      "id": "pad-tap-corp-trash",
+      "label": "[click], 3¢: Trash PAD Tap (Corp only)",
+      "clickCost": 1,
+      "creditCost": 3,
+      "cost": {
+        "clicks": 1,
+        "credits": 3
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "trash_self"
+        }
+      },
+      "usableByAnyPlayer": true
+    }
+  ],
+  "wave": "kampala-ascendent"
+}

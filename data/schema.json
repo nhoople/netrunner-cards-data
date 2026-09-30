@@ -130,7 +130,6 @@
           "type": "boolean",
           "description": "Diana's Hunt: when the run ends, trash all programs installed via onEncounterMayInstallProgramFromGripIgnoringCosts."
         },
-
         "bypassFirstEncounter": {
           "type": "boolean"
         },
@@ -602,6 +601,11 @@
                 "type": "integer",
                 "minimum": 1,
                 "description": "Houdini: at least this many of the credit cost must be spent from stealth cards."
+              },
+              "netDamage": {
+                "type": "integer",
+                "minimum": 0,
+                "description": "Suffer this much net damage as a cost (Zer0)."
               }
             }
           },
@@ -4577,12 +4581,22 @@
       "description": "Wetwork Refit: host ice gains these subroutines before all its other subroutines.",
       "items": {
         "type": "object",
-        "required": ["id", "text", "effect"],
+        "required": [
+          "id",
+          "text",
+          "effect"
+        ],
         "additionalProperties": false,
         "properties": {
-          "id": { "type": "string" },
-          "text": { "type": "string" },
-          "effect": { "type": "object" }
+          "id": {
+            "type": "string"
+          },
+          "text": {
+            "type": "string"
+          },
+          "effect": {
+            "type": "object"
+          }
         }
       }
     },
@@ -4774,11 +4788,20 @@
     },
     "hostGainsPumpAbility": {
       "type": "object",
-      "required": ["credits", "strength"],
+      "required": [
+        "credits",
+        "strength"
+      ],
       "additionalProperties": false,
       "properties": {
-        "credits": { "type": "integer", "minimum": 0 },
-        "strength": { "type": "integer", "minimum": 1 }
+        "credits": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "strength": {
+          "type": "integer",
+          "minimum": 1
+        }
       },
       "description": "Dedicated Processor: host icebreaker gains Credits: +Strength pump."
     },
@@ -4793,18 +4816,34 @@
     },
     "gainsSubroutinesPerRezzedIceWithSubtype": {
       "type": "object",
-      "required": ["subtype", "subroutine"],
+      "required": [
+        "subtype",
+        "subroutine"
+      ],
       "additionalProperties": false,
       "properties": {
-        "subtype": { "type": "string", "minLength": 1 },
+        "subtype": {
+          "type": "string",
+          "minLength": 1
+        },
         "subroutine": {
           "type": "object",
-          "required": ["id", "text", "effect"],
+          "required": [
+            "id",
+            "text",
+            "effect"
+          ],
           "additionalProperties": false,
           "properties": {
-            "id": { "type": "string" },
-            "text": { "type": "string" },
-            "effect": { "type": "object" }
+            "id": {
+              "type": "string"
+            },
+            "text": {
+              "type": "string"
+            },
+            "effect": {
+              "type": "object"
+            }
           }
         }
       },
@@ -4859,11 +4898,20 @@
     },
     "drawOnFirstRunEachTurnIfServerIceGte": {
       "type": "object",
-      "required": ["ice", "draw"],
+      "required": [
+        "ice",
+        "draw"
+      ],
       "additionalProperties": false,
       "properties": {
-        "ice": { "type": "integer", "minimum": 1 },
-        "draw": { "type": "integer", "minimum": 1 }
+        "ice": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "draw": {
+          "type": "integer",
+          "minimum": 1
+        }
       },
       "description": "Daredevil: first run each turn on a server with ≥ice pieces, draw this many cards."
     },
@@ -5082,12 +5130,22 @@
     },
     "onEncounterMayPayCreditsGrantIceSubtype": {
       "type": "object",
-      "required": ["credits", "subtype"],
+      "required": [
+        "credits",
+        "subtype"
+      ],
       "additionalProperties": false,
       "properties": {
-        "credits": { "type": "integer", "minimum": 1 },
-        "subtype": { "type": "string" },
-        "oncePerTurn": { "type": "boolean" }
+        "credits": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "subtype": {
+          "type": "string"
+        },
+        "oncePerTurn": {
+          "type": "boolean"
+        }
       },
       "description": "Laamb: once per turn when you encounter ice, may pay credits to grant it a subtype for the remainder of that encounter."
     },
@@ -5118,13 +5176,69 @@
     },
     "mayPayCreditsToTagWhenRunnerTrashesFromThisServerOrRoot": {
       "type": "object",
-      "required": ["credits", "tags"],
+      "required": [
+        "credits",
+        "tags"
+      ],
       "additionalProperties": false,
       "properties": {
-        "credits": { "type": "integer", "minimum": 1 },
-        "tags": { "type": "integer", "minimum": 1 }
+        "credits": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "tags": {
+          "type": "integer",
+          "minimum": 1
+        }
       },
       "description": "Overseer Matrix (persistent): whenever the Runner trashes a card from this server or its root, you may pay credits to give tags."
+    },
+    "mayRfgSelfToTrashOutermostIceOnFirstFullBreakEachTurn": {
+      "type": "boolean",
+      "description": "Hippo: the first time each turn you fully break the outermost ice protecting the attacked server, you may RFG this hardware to trash that ice."
+    },
+    "mayGainCreditOnFirstCorpCardAbilityCreditGainEachTurn": {
+      "type": "boolean",
+      "description": "PAD Tap: the first time the Corp gains credits through a card ability each turn, you may gain 1 credit."
+    },
+    "spendHostedCreditsToUseHostedProgram": {
+      "type": "boolean",
+      "description": "Flame-out: hosted credits may be spent to pay for using the hosted program."
+    },
+    "trashHostedProgramAtEndOfTurnIfHostedCreditsUsed": {
+      "type": "boolean",
+      "description": "Flame-out: when a turn ends in which you used credits on this card, trash the hosted program."
+    },
+    "placePowerOnFirstSuccessfulRemoteRunEndIfBreachedNoSteal": {
+      "type": "boolean",
+      "description": "Kasi String: first successful remote run end each turn if breached with no agenda stolen → may place 1 power counter."
+    },
+    "scoreWhenPowerGte": {
+      "type": "object",
+      "required": [
+        "threshold",
+        "agendaPoints"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "threshold": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "agendaPoints": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "description": "Kasi String: when this card has threshold or more hosted power counters, add it to the Runner's score area as an agenda worth agendaPoints."
+    },
+    "onApproachServerOncePerTurn": {
+      "type": "boolean",
+      "description": "Mti Mwekundu: fire onApproachServer at most once per turn."
+    },
+    "mayTagOnFirstRunEventOrIcebreakerInstallEachTurn": {
+      "type": "boolean",
+      "description": "Better Citizen Program: the first time the Runner plays a run event or installs an icebreaker each turn, you may give the Runner 1 tag."
     }
   }
 }

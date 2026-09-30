@@ -1,0 +1,26 @@
+{
+  "id": "diversion-of-funds",
+  "title": "Diversion of Funds",
+  "nrdbCode": "21105",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "subtypes": [
+    "double",
+    "run",
+    "sabotage"
+  ],
+  "playCost": 1,
+  "playAdditionalClick": true,
+  "runEvent": {
+    "servers": "hq",
+    "onSuccessfulRun": {
+      "op": "do",
+      "action": {
+        "kind": "ka_diversion_of_funds_may_instead_of_breach"
+      }
+    }
+  },
+  "wave": "kampala-ascendent"
+}
