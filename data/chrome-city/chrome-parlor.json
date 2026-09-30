@@ -1,0 +1,15 @@
+{
+  "id": "chrome-parlor",
+  "title": "Chrome Parlor",
+  "nrdbCode": "08044",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "subtypes": [
+    "location"
+  ],
+  "installCost": 1,
+  "preventCyberneticInstallDamage": true,
+  "wave": "chrome-city"
+}

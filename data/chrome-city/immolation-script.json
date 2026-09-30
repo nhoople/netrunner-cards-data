@@ -1,0 +1,18 @@
+{
+  "id": "immolation-script",
+  "title": "Immolation Script",
+  "nrdbCode": "08041",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "subtypes": [
+    "run"
+  ],
+  "playCost": 0,
+  "runEvent": {
+    "servers": "archives",
+    "immolationScriptAccessReplace": true
+  },
+  "wave": "chrome-city"
+}

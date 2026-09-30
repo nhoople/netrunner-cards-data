@@ -1,0 +1,23 @@
+{
+  "id": "skulljack",
+  "title": "Skulljack",
+  "nrdbCode": "08042",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "subtypes": [
+    "cybernetic"
+  ],
+  "installCost": 2,
+  "unique": true,
+  "corpCardTrashCostReduction": 1,
+  "onInstall": {
+    "op": "do",
+    "action": {
+      "kind": "core_damage",
+      "amount": 1
+    }
+  },
+  "wave": "chrome-city"
+}

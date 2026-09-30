@@ -1,0 +1,43 @@
+{
+  "id": "ryon-knight",
+  "title": "Ryon Knight",
+  "nrdbCode": "08054",
+  "type": "upgrade",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "sysop"
+  ],
+  "installCost": 2,
+  "rezCost": 2,
+  "trashCost": 3,
+  "unique": true,
+  "paidAbilities": [
+    {
+      "id": "ryon-knight-core",
+      "label": "[trash]: Do 1 core damage (run against this server; Runner has no unspent clicks)",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "trashSelf": true
+      },
+      "windows": [
+        "approach_paw",
+        "encounter_paw",
+        "approach_server_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "core_damage",
+          "amount": 1
+        }
+      },
+      "requireDuringRun": true,
+      "requireThisServer": true,
+      "requireRunnerClicksEq": 0
+    }
+  ],
+  "wave": "chrome-city"
+}

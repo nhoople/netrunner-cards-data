@@ -1,0 +1,23 @@
+{
+  "id": "net-ready-eyes",
+  "title": "Net-Ready Eyes",
+  "nrdbCode": "08047",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "subtypes": [
+    "cybernetic"
+  ],
+  "installCost": 0,
+  "unique": true,
+  "onRunBeginChooseIcebreakerStrengthBonus": 1,
+  "onInstall": {
+    "op": "do",
+    "action": {
+      "kind": "meat_damage",
+      "amount": 2
+    }
+  },
+  "wave": "chrome-city"
+}

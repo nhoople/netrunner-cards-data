@@ -1,0 +1,23 @@
+{
+  "id": "titanium-ribs",
+  "title": "Titanium Ribs",
+  "nrdbCode": "08045",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "subtypes": [
+    "cybernetic"
+  ],
+  "installCost": 1,
+  "unique": true,
+  "runnerChoosesDamageTrashFromGrip": true,
+  "onInstall": {
+    "op": "do",
+    "action": {
+      "kind": "meat_damage",
+      "amount": 2
+    }
+  },
+  "wave": "chrome-city"
+}

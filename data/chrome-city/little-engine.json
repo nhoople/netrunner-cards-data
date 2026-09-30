@@ -1,0 +1,50 @@
+{
+  "id": "little-engine",
+  "title": "Little Engine",
+  "nrdbCode": "08057",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "subtypes": [
+    "code gate"
+  ],
+  "installCost": 5,
+  "rezCost": 5,
+  "strength": 7,
+  "subroutines": [
+    {
+      "id": "little-engine-etr-1",
+      "text": "End the run.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "end_the_run"
+        }
+      }
+    },
+    {
+      "id": "little-engine-etr-2",
+      "text": "End the run.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "end_the_run"
+        }
+      }
+    },
+    {
+      "id": "little-engine-gain",
+      "text": "The Runner gains 5 credits.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "runner",
+          "amount": 5
+        }
+      }
+    }
+  ],
+  "wave": "chrome-city"
+}

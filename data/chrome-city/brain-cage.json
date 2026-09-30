@@ -1,0 +1,23 @@
+{
+  "id": "brain-cage",
+  "title": "Brain Cage",
+  "nrdbCode": "08049",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "neutral-runner",
+  "subtypes": [
+    "cybernetic"
+  ],
+  "installCost": 1,
+  "unique": true,
+  "handSizeBonus": 3,
+  "onInstall": {
+    "op": "do",
+    "action": {
+      "kind": "core_damage",
+      "amount": 1
+    }
+  },
+  "wave": "chrome-city"
+}

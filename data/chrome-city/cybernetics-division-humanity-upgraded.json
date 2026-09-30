@@ -1,0 +1,15 @@
+{
+  "id": "cybernetics-division-humanity-upgraded",
+  "title": "Cybernetics Division: Humanity Upgraded",
+  "nrdbCode": "08050",
+  "type": "identity",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "division"
+  ],
+  "handSizeBonus": -1,
+  "runnerHandSizeBonus": -1,
+  "wave": "chrome-city"
+}

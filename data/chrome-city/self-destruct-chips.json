@@ -1,0 +1,16 @@
+{
+  "id": "self-destruct-chips",
+  "title": "Self-Destruct Chips",
+  "nrdbCode": "08051",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "security"
+  ],
+  "advancementRequirement": 3,
+  "agendaPoints": 1,
+  "runnerHandSizeBonus": -1,
+  "wave": "chrome-city"
+}

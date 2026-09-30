@@ -27,6 +27,7 @@
     "order-and-chaos",
     "the-valley",
     "breaker-bay",
+    "chrome-city",
     "reign-and-reverie",
     "system-core-2019",
     "downfall",
@@ -1838,6 +1839,32 @@
         "student-loans",
         "meru-mati",
         "breaker-bay-grid"
+      ]
+    },
+    "chrome-city": {
+      "status": "supported",
+      "notes": "Chrome City (cc) SanSan set-complete. 18/18 new clears; oaktown-renovation + corporate-town reprints skipped. Pool supported. Paired release v1.111.0. Never kick mo/mor.",
+      "cards": [
+        "immolation-script",
+        "skulljack",
+        "turntable",
+        "chrome-parlor",
+        "titanium-ribs",
+        "crowbar",
+        "net-ready-eyes",
+        "analog-dreamers",
+        "brain-cage",
+        "cybernetics-division-humanity-upgraded",
+        "self-destruct-chips",
+        "lab-dog",
+        "oaktown-grid",
+        "ryon-knight",
+        "clairvoyant-monitor",
+        "lockdown",
+        "little-engine",
+        "oaktown-renovation",
+        "corporate-town",
+        "quicksand"
       ]
     }
   }

@@ -1,0 +1,44 @@
+{
+  "id": "clairvoyant-monitor",
+  "title": "Clairvoyant Monitor",
+  "nrdbCode": "08055",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "jinteki",
+  "subtypes": [
+    "code gate",
+    "psi"
+  ],
+  "installCost": 4,
+  "rezCost": 4,
+  "strength": 3,
+  "subroutines": [
+    {
+      "id": "clairvoyant-monitor-psi",
+      "text": "Psi game. If bids differ, place 1 advancement token on an installed card and end the run.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "play_psi_game",
+          "maxBid": 2,
+          "ifBidsDiffer": {
+            "op": "do",
+            "action": {
+              "kind": "place_advancements",
+              "amount": 1,
+              "pick": "choose",
+              "then": {
+                "op": "do",
+                "action": {
+                  "kind": "end_the_run"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ],
+  "wave": "chrome-city"
+}

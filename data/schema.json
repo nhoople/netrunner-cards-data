@@ -122,6 +122,10 @@
           "type": "boolean",
           "description": "On successful run, skip breaching the attacked server (e.g. Chastushka replace-breach)."
         },
+        "immolationScriptAccessReplace": {
+          "type": "boolean",
+          "description": "Immolation Script: once this run, when accessing faceup ice in Archives, may instead trash 1 rezzed copy of that ice."
+        },
         "blankAttackedServerRoot": {
           "type": "boolean",
           "description": "During this run, cards in the root of the attacked server lose all abilities (Light the Fire!)."
@@ -620,6 +624,15 @@
           "requireOtherServer": {
             "type": "boolean",
             "description": "Ability usable only during a run against a different server than the one hosting this card (B-1001)."
+          },
+          "requireThisServer": {
+            "type": "boolean",
+            "description": "Ability usable only during a run against the server hosting this card (Ryon Knight)."
+          },
+          "requireRunnerClicksEq": {
+            "type": "integer",
+            "minimum": 0,
+            "description": "Ability usable only while the Runner has exactly this many unspent clicks (Ryon Knight: 0)."
           },
           "formicaryApproachAnyServer": {
             "type": "boolean",
@@ -3743,6 +3756,24 @@
       "type": "integer",
       "minimum": 1,
       "description": "Breaker Bay Grid: rez cost of each card in the root of this server is lowered by N."
+    },
+    "rootTrashCostIncreaseThisServer": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Oaktown Grid: trash cost of each card in the root of this server is increased by N."
+    },
+    "preventCyberneticInstallDamage": {
+      "type": "boolean",
+      "description": "Chrome Parlor: interrupt — prevent all damage from a when-installed ability on cybernetic hardware."
+    },
+    "runnerChoosesDamageTrashFromGrip": {
+      "type": "boolean",
+      "description": "Titanium Ribs: Runner chooses which grip cards to trash whenever they take damage."
+    },
+    "onRunBeginChooseIcebreakerStrengthBonus": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Net-Ready Eyes: whenever you initiate a run, choose an icebreaker; it gets +N strength for the remainder of the run."
     }
   }
 }

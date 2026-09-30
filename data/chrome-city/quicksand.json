@@ -1,0 +1,36 @@
+{
+  "id": "quicksand",
+  "title": "Quicksand",
+  "nrdbCode": "08060",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "neutral-corp",
+  "subtypes": [
+    "barrier"
+  ],
+  "installCost": 3,
+  "rezCost": 3,
+  "strength": 0,
+  "strengthPerPowerCounter": true,
+  "onEncounter": {
+    "op": "do",
+    "action": {
+      "kind": "add_power_counter",
+      "amount": 1
+    }
+  },
+  "subroutines": [
+    {
+      "id": "quicksand-etr",
+      "text": "End the run.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "end_the_run"
+        }
+      }
+    }
+  ],
+  "wave": "chrome-city"
+}

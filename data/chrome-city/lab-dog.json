@@ -1,0 +1,40 @@
+{
+  "id": "lab-dog",
+  "title": "Lab Dog",
+  "nrdbCode": "08052",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "trap"
+  ],
+  "installCost": 2,
+  "rezCost": 2,
+  "strength": 0,
+  "subroutines": [
+    {
+      "id": "lab-dog-trash-hardware",
+      "text": "The Runner trashes an installed piece of hardware. Trash Lab Dog.",
+      "effect": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "trash_hardware",
+              "pick": "choose"
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "trash_self"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "wave": "chrome-city"
+}

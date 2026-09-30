@@ -1,0 +1,32 @@
+{
+  "id": "analog-dreamers",
+  "title": "Analog Dreamers",
+  "nrdbCode": "08048",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "installCost": 2,
+  "memoryCost": 1,
+  "paidAbilities": [
+    {
+      "id": "analog-dreamers-run",
+      "label": "[click]: Run R&D. If successful, instead of breaching, may shuffle an unrezzed non-ice card with no advancements into R&D",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "analog_dreamers_run_rd"
+        }
+      }
+    }
+  ],
+  "wave": "chrome-city"
+}
