@@ -5,9 +5,7 @@
   "nrdbCode": "01030",
   "type": "resource",
   "side": "runner",
-  "unsupported": [
-    "Recurring credits spendable for the basic remove-tag action (no RecurringSpendPurpose for basic_remove_tag yet)."
-  ],
+  "unsupported": [],
   "faction": "criminal",
   "subtypes": [
     "location"
@@ -37,5 +35,8 @@
         }
       }
     }
+  ],
+  "recurringSpendFor": [
+    "basic_remove_tag"
   ]
 }

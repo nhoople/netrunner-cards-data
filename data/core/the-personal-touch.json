@@ -5,12 +5,19 @@
   "nrdbCode": "01040",
   "type": "hardware",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Install The Personal Touch only on an icebreaker. Host icebreaker has +1 strength."
-  ],
+  "unsupported": [],
   "faction": "shaper",
   "subtypes": [
     "mod"
   ],
-  "installCost": 2
+  "installCost": 2,
+  "onInstall": {
+    "op": "do",
+    "action": {
+      "kind": "gamedragon_may_host_on_icebreaker",
+      "allowAi": true,
+      "requireHost": true
+    }
+  },
+  "hostIcebreakerStrengthBonus": 1
 }

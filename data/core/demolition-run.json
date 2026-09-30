@@ -5,13 +5,15 @@
   "nrdbCode": "01003",
   "type": "event",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Run HQ or R&D. Access → 0[credit]: Trash the card you are accessing."
-  ],
+  "unsupported": [],
   "faction": "anarch",
   "subtypes": [
     "run",
     "sabotage"
   ],
-  "playCost": 2
+  "playCost": 2,
+  "runEvent": {
+    "servers": "hq_rd",
+    "accessTrashFree": true
+  }
 }

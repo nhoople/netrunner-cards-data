@@ -5,9 +5,7 @@
   "nrdbCode": "01089",
   "type": "ice",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: When the Runner encounters Matrix Analyzer, you may pay 1[credit] to place 1 advancement token on a card that can be advanced. [subroutine] Trace[2]. If successful, give the Runner 1 tag."
-  ],
+  "unsupported": [],
   "faction": "nbn",
   "subtypes": [
     "sentry",
@@ -16,5 +14,67 @@
   ],
   "installCost": 1,
   "rezCost": 1,
-  "strength": 3
+  "strength": 3,
+  "onEncounter": {
+    "op": "choose",
+    "chooser": "corp",
+    "options": [
+      {
+        "id": "pay-adv",
+        "label": "Pay 1¢: place 1 advancement on a card that can be advanced",
+        "effect": {
+          "op": "seq",
+          "effects": [
+            {
+              "op": "do",
+              "action": {
+                "kind": "lose_credits",
+                "side": "corp",
+                "amount": 1
+              }
+            },
+            {
+              "op": "do",
+              "action": {
+                "kind": "place_advancements",
+                "amount": 1
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "corp",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  },
+  "subroutines": [
+    {
+      "id": "matrix-analyzer-trace",
+      "text": "Trace[2]. If successful, give the Runner 1 tag.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "trace",
+          "strength": 2,
+          "onSuccess": {
+            "op": "do",
+            "action": {
+              "kind": "give_tags",
+              "amount": 1
+            }
+          }
+        }
+      }
+    }
+  ]
 }

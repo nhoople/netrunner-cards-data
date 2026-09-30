@@ -5,9 +5,15 @@
   "nrdbCode": "01097",
   "type": "operation",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: Play only if you scored an agenda this turn. Search R&D for 1 card and add it to HQ. Shuffle R&D."
-  ],
+  "unsupported": [],
   "faction": "weyland-consortium",
-  "playCost": 1
+  "playCost": 1,
+  "playRequiresScoredAgendaThisTurn": true,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "search_rd_to_hq",
+      "amount": 1
+    }
+  }
 }

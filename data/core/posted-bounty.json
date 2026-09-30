@@ -5,14 +5,59 @@
   "nrdbCode": "01095",
   "type": "agenda",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: When you score this agenda, you may forfeit it. If you do, give the Runner 1 tag and take 1 bad publicity."
-  ],
+  "unsupported": [],
   "faction": "weyland-consortium",
   "subtypes": [
     "security",
     "liability"
   ],
   "advancementRequirement": 3,
-  "agendaPoints": 1
+  "agendaPoints": 1,
+  "onScore": {
+    "op": "choose",
+    "chooser": "corp",
+    "options": [
+      {
+        "id": "forfeit",
+        "label": "Forfeit Posted Bounty: give 1 tag and take 1 bad publicity",
+        "effect": {
+          "op": "seq",
+          "effects": [
+            {
+              "op": "do",
+              "action": {
+                "kind": "forfeit_self"
+              }
+            },
+            {
+              "op": "do",
+              "action": {
+                "kind": "give_tags",
+                "amount": 1
+              }
+            },
+            {
+              "op": "do",
+              "action": {
+                "kind": "give_bad_publicity",
+                "amount": 1
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "corp",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  }
 }

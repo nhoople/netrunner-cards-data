@@ -5,9 +5,13 @@
   "nrdbCode": "01002",
   "type": "event",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Add 1 card (or up to 2 virus cards) from your heap to your grip."
-  ],
+  "unsupported": [],
   "faction": "anarch",
-  "playCost": 2
+  "playCost": 2,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "deja_vu_from_heap"
+    }
+  }
 }

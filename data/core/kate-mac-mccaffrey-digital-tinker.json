@@ -5,12 +5,11 @@
   "nrdbCode": "01033",
   "type": "identity",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Lower the install cost of the first program or piece of hardware you install each turn by 1."
-  ],
+  "unsupported": [],
   "faction": "shaper",
   "subtypes": [
     "natural"
   ],
-  "link": 1
+  "link": 1,
+  "firstProgramOrHardwareInstallDiscount": 1
 }

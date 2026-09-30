@@ -5,9 +5,7 @@
   "nrdbCode": "01012",
   "type": "program",
   "side": "runner",
-  "unsupported": [
-    "Auto-trash host ice when its strength is 0 or less (continuous check not yet modeled; Chisel-class is encounter-timed only)."
-  ],
+  "unsupported": [],
   "faction": "anarch",
   "subtypes": [
     "virus",
@@ -23,5 +21,6 @@
       "kind": "add_virus_counter",
       "amount": 1
     }
-  }
+  },
+  "trashHostWhenStrengthLte": 0
 }

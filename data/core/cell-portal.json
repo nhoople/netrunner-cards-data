@@ -5,9 +5,7 @@
   "nrdbCode": "01074",
   "type": "ice",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: [subroutine] The Runner moves to the outermost position of the attacked server. They may jack out. Derez this ice."
-  ],
+  "unsupported": [],
   "faction": "jinteki",
   "subtypes": [
     "code gate",
@@ -15,5 +13,34 @@
   ],
   "installCost": 5,
   "rezCost": 5,
-  "strength": 7
+  "strength": 7,
+  "subroutines": [
+    {
+      "id": "cell-portal-move",
+      "text": "The Runner moves to the outermost position of the attacked server. They may jack out. Derez this ice.",
+      "effect": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "move_runner_to_outermost_attacked"
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "offer_jack_out"
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "derez_encounter_ice"
+            }
+          }
+        ]
+      }
+    }
+  ]
 }

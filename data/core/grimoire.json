@@ -5,13 +5,13 @@
   "nrdbCode": "01006",
   "type": "hardware",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: +2[mu] Whenever you install a virus program, place 1 virus counter on that program. Limit 1 console per player."
-  ],
+  "unsupported": [],
   "faction": "anarch",
   "subtypes": [
     "console"
   ],
   "installCost": 3,
-  "unique": true
+  "unique": true,
+  "muBonus": 2,
+  "placeVirusCounterOnInstalledVirusProgram": true
 }

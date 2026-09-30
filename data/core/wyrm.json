@@ -5,9 +5,7 @@
   "nrdbCode": "01013",
   "type": "program",
   "side": "runner",
-  "unsupported": [
-    "Break ability requires ice with 0 or less strength (breakRequiresStrengthLte not yet modeled; break is always offered when interfacing)."
-  ],
+  "unsupported": [],
   "faction": "anarch",
   "subtypes": [
     "icebreaker",
@@ -22,7 +20,8 @@
     "breakCredits": 3,
     "breakMaxSubs": 1,
     "pumpCredits": 1,
-    "pumpStrength": 1
+    "pumpStrength": 1,
+    "breakRequiresIceStrengthLte": 0
   },
   "paidAbilities": [
     {

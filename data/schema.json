@@ -124,6 +124,10 @@
         "mayRezEventDerezzedIceOnRunEndIgnoreCosts": {
           "type": "boolean",
           "description": "When this run ends, Corp may rez the ice derezzed by this event, ignoring all costs (Window of Opportunity)."
+        },
+        "accessTrashFree": {
+          "type": "boolean",
+          "description": "Demolition Run-class: during this run, access → trash accessed card for 0¢."
         }
       }
     }
@@ -320,6 +324,10 @@
         "breakRequiresAttackingMark": {
           "type": "boolean",
           "description": "Standard credit break only while attacking the mark (Tunnel Vision)."
+        },
+        "breakRequiresIceStrengthLte": {
+          "type": "integer",
+          "description": "Wyrm-class: only break when encountered ice strength ≤ this."
         }
       }
     },
@@ -588,6 +596,10 @@
           "requireInstalledVirtualResourcesGte": {
             "type": "integer",
             "minimum": 0
+          },
+          "requiresRezzedIce": {
+            "type": "boolean",
+            "description": "Security Subcontract-class: usable only if Corp has at least one rezzed ice."
           }
         }
       }
@@ -1128,7 +1140,9 @@
     },
     "rezSpendCreditsForPowerCounters": {
       "type": "object",
-      "required": ["max"],
+      "required": [
+        "max"
+      ],
       "additionalProperties": false,
       "properties": {
         "max": {
@@ -1419,21 +1433,39 @@
     },
     "onSuccessfulHqRunMayPayForBonusAccess": {
       "type": "object",
-      "required": ["credits", "bonusAccess"],
+      "required": [
+        "credits",
+        "bonusAccess"
+      ],
       "additionalProperties": false,
       "properties": {
-        "credits": { "type": "integer", "minimum": 1 },
-        "bonusAccess": { "type": "integer", "minimum": 1 }
+        "credits": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "bonusAccess": {
+          "type": "integer",
+          "minimum": 1
+        }
       },
       "description": "On successful HQ run, may pay credits for bonusAccess on the upcoming breach (Mu Safecracker)."
     },
     "onSuccessfulRdRunMayPayForBonusAccess": {
       "type": "object",
-      "required": ["credits", "bonusAccess"],
+      "required": [
+        "credits",
+        "bonusAccess"
+      ],
       "additionalProperties": false,
       "properties": {
-        "credits": { "type": "integer", "minimum": 1 },
-        "bonusAccess": { "type": "integer", "minimum": 1 }
+        "credits": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "bonusAccess": {
+          "type": "integer",
+          "minimum": 1
+        }
       },
       "description": "On successful R&D run, may pay credits for bonusAccess on the upcoming breach (Mu Safecracker)."
     },
@@ -1643,7 +1675,10 @@
     },
     "remainderOfTurnOnInstallPrintedCostGte": {
       "type": "object",
-      "required": ["min", "effect"],
+      "required": [
+        "min",
+        "effect"
+      ],
       "additionalProperties": false,
       "properties": {
         "min": {
@@ -1765,7 +1800,6 @@
       "type": "boolean",
       "description": "Play only if the Corp has at least one installed card (Hangeki)."
     },
-
     "onFirstRunnerStoleOrTrashedCorpCardThisTurn": {
       "type": "object",
       "description": "Effect IR the first time each turn the Runner steals or trashes a Corp card (Epiphany identity; Cacophony resource)."
@@ -2755,6 +2789,48 @@
       "type": "integer",
       "minimum": 1,
       "description": "While encountering the outermost ice protecting any server, the Runner is considered to have this many additional tags (Acme Consulting)."
+    },
+    "firstProgramOrHardwareInstallDiscount": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Kate-class: first program or hardware install each turn costs this many credits less."
+    },
+    "iceProtectingThisServerStrengthBonus": {
+      "type": "integer",
+      "description": "Experiential Data-class: while rezzed, ice protecting this server gets +N strength."
+    },
+    "trashHostWhenStrengthLte": {
+      "type": "integer",
+      "description": "Parasite-class: trash host ice when its effective strength is ≤ this value."
+    },
+    "onVirusProgramInstall": {
+      "type": "object",
+      "description": "Noise-class: Effect IR whenever a virus program is installed (every time)."
+    },
+    "placeVirusCounterOnInstalledVirusProgram": {
+      "type": "boolean",
+      "description": "Grimoire-class: place 1 virus counter on a virus program when it is installed."
+    },
+    "onFirstCorpCardInstallEachTurn": {
+      "type": "object",
+      "description": "HB ETF-class: Effect IR the first time each turn Corp installs any card."
+    },
+    "playRequiresScoredAgendaThisTurn": {
+      "type": "boolean",
+      "description": "Aggressive Negotiation-class: play only if Corp scored an agenda this turn."
+    },
+    "daemonHostMaxMu": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Djinn-class: max total memory cost of programs hosted on this daemon."
+    },
+    "daemonHostExcludeIcebreaker": {
+      "type": "boolean",
+      "description": "Djinn-class: only non-icebreaker programs may host on this daemon."
+    },
+    "chooseBonusAccessLessThanVirusOnRdBreach": {
+      "type": "boolean",
+      "description": "Medium-class: on R&D breach, choose a number less than hosted virus counters for additional access."
     }
   }
 }

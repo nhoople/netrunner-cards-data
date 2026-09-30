@@ -5,9 +5,14 @@
   "nrdbCode": "01060",
   "type": "operation",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: Install up to 3 cards from HQ (one at a time and paying all install costs)."
-  ],
+  "unsupported": [],
   "faction": "haas-bioroid",
-  "playCost": 1
+  "playCost": 1,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "install_up_to_from_hq_paying_costs",
+      "max": 3
+    }
+  }
 }

@@ -5,12 +5,17 @@
   "nrdbCode": "01039",
   "type": "hardware",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: +1[link] When Rabbit Hole is installed, you may search your stack for another copy of Rabbit Hole and install it by paying its install cost. Shuffle your stack."
-  ],
+  "unsupported": [],
   "faction": "shaper",
   "subtypes": [
     "link"
   ],
-  "installCost": 2
+  "installCost": 2,
+  "link": 1,
+  "onInstall": {
+    "op": "do",
+    "action": {
+      "kind": "search_stack_same_title_may_install_paying"
+    }
+  }
 }

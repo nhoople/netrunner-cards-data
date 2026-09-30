@@ -5,13 +5,37 @@
   "nrdbCode": "01009",
   "type": "program",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Djinn can host up to 3[mu] of non-icebreaker programs. The memory costs of hosted programs do not count against your memory limit. [click], 1[credit]: Search your stack for a virus program, reveal it, and add it to your grip. Shuffle your s"
-  ],
+  "unsupported": [],
   "faction": "anarch",
   "subtypes": [
     "daemon"
   ],
   "installCost": 2,
-  "memoryCost": 1
+  "memoryCost": 1,
+  "daemonHost": true,
+  "daemonHostMaxMu": 3,
+  "daemonHostExcludeIcebreaker": true,
+  "paidAbilities": [
+    {
+      "id": "djinn-search-virus",
+      "label": "[click], 1¢: Search your stack for a virus program, reveal it, and add it to your grip. Shuffle your stack.",
+      "clickCost": 1,
+      "creditCost": 1,
+      "cost": {
+        "clicks": 1,
+        "credits": 1
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "search_stack_subtype_add_to_grip",
+          "subtype": "virus",
+          "type": "program"
+        }
+      }
+    }
+  ]
 }

@@ -5,12 +5,16 @@
   "nrdbCode": "01001",
   "type": "identity",
   "side": "runner",
-  "unsupported": [
-    "Full text not yet mapped to IR: Whenever you install a virus program, the Corp trashes the top card of R&D."
-  ],
+  "unsupported": [],
   "faction": "anarch",
   "subtypes": [
     "g-mod"
   ],
-  "link": 0
+  "link": 0,
+  "onVirusProgramInstall": {
+    "op": "do",
+    "action": {
+      "kind": "trash_top_of_rd"
+    }
+  }
 }

@@ -5,11 +5,17 @@
   "nrdbCode": "01054",
   "type": "identity",
   "side": "corp",
-  "unsupported": [
-    "Full text not yet mapped to IR: The first time you install a card each turn, gain 1[credit]."
-  ],
+  "unsupported": [],
   "faction": "haas-bioroid",
   "subtypes": [
     "megacorp"
-  ]
+  ],
+  "onFirstCorpCardInstallEachTurn": {
+    "op": "do",
+    "action": {
+      "kind": "gain_credits",
+      "side": "corp",
+      "amount": 1
+    }
+  }
 }
