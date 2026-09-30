@@ -1,0 +1,35 @@
+{
+  "id": "assimilator",
+  "title": "Assimilator",
+  "nrdbCode": "21008",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "apex",
+  "subtypes": [
+    "virtual"
+  ],
+  "installCost": 5,
+  "paidAbilities": [
+    {
+      "id": "assimilator-faceup",
+      "label": "[click][click]: Turn one of your facedown installed cards faceup. If that card is an event, trash it.",
+      "clickCost": 2,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 2
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "ss_assimilator_turn_facedown_faceup"
+        }
+      },
+      "usableByRunnerOnSelfIce": true
+    }
+  ],
+  "wave": "sovereign-sight"
+}

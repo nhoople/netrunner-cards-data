@@ -1,0 +1,34 @@
+{
+  "id": "echo-chamber",
+  "title": "Echo Chamber",
+  "nrdbCode": "21015",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "installCost": 4,
+  "rezCost": 4,
+  "trashCost": 1,
+  "paidAbilities": [
+    {
+      "id": "echo-chamber-score",
+      "label": "[click][click][click]: Add Echo Chamber to your score area as an agenda worth 1 agenda point",
+      "clickCost": 3,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 3
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "score_self_as_agenda",
+          "agendaPoints": 1
+        }
+      }
+    }
+  ],
+  "wave": "sovereign-sight"
+}

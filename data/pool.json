@@ -52,6 +52,7 @@
     "free-mars",
     "crimson-dust",
     "revised-core",
+    "sovereign-sight",
     "reign-and-reverie",
     "system-core-2019",
     "downfall",
@@ -2691,6 +2692,32 @@
         "hunter",
         "wall-of-static",
         "hedge-fund"
+      ]
+    },
+    "sovereign-sight": {
+      "status": "supported",
+      "notes": "Sovereign Sight (ss) Kitara #1 set-complete. 20/20 new clears; no reprints. Pool supported after revised-core. Paired release v1.136.0. Never kick mo/mor. Defer tdc.",
+      "cards": [
+        "by-any-means",
+        "yusuf",
+        "zamba",
+        "puffer",
+        "lewi-guilherme",
+        "cyberdelia",
+        "upya",
+        "assimilator",
+        "asa-group-security-through-vigilance",
+        "ikawah-project",
+        "najja-1-0",
+        "gene-splicer",
+        "mganga",
+        "genotyping",
+        "echo-chamber",
+        "self-growth-program",
+        "calibration-testing",
+        "urban-renewal",
+        "wake-up-call",
+        "reconstruction-contract"
       ]
     }
   }

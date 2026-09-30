@@ -1,0 +1,96 @@
+{
+  "id": "yusuf",
+  "title": "Yusuf",
+  "nrdbCode": "21002",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "subtypes": [
+    "icebreaker",
+    "fracter",
+    "virus"
+  ],
+  "installCost": 1,
+  "strength": 3,
+  "memoryCost": 2,
+  "onSuccessfulRun": {
+    "op": "choose",
+    "chooser": "runner",
+    "options": [
+      {
+        "id": "accept",
+        "label": "Place 1 virus counter on Yusuf",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "add_virus_counter",
+            "amount": 1
+          }
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "runner",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  },
+  "paidAbilities": [
+    {
+      "id": "yusuf-break",
+      "label": "Any virus counter: Break 1 barrier subroutine",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "virusCounters": 1
+      },
+      "windows": [
+        "encounter_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "break_encounter_subroutine",
+          "maxSubs": 1
+        }
+      },
+      "usableByRunnerOnSelfIce": true
+    },
+    {
+      "id": "yusuf-pump",
+      "label": "Any virus counter: +1 strength",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "virusCounters": 1
+      },
+      "windows": [
+        "encounter_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "pump_strength",
+          "amount": 1
+        }
+      },
+      "usableByRunnerOnSelfIce": true
+    }
+  ],
+  "breaker": {
+    "breaksSubtype": "barrier",
+    "strength": 3,
+    "breakCredits": 0,
+    "breakMaxSubs": 1,
+    "breakViaPaidAbilityOnly": true
+  },
+  "wave": "sovereign-sight"
+}

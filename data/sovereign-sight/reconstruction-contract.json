@@ -1,0 +1,34 @@
+{
+  "id": "reconstruction-contract",
+  "title": "Reconstruction Contract",
+  "nrdbCode": "21020",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "installCost": 1,
+  "rezCost": 1,
+  "trashCost": 4,
+  "placeAdvancementOnSufferMeatDamage": true,
+  "paidAbilities": [
+    {
+      "id": "reconstruction-move",
+      "label": "[trash]: Move any number of advancement tokens from Reconstruction Contract to a card that can be advanced",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "trashSelf": true
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "ss_move_any_advancements_from_self_to_advanceable"
+        }
+      }
+    }
+  ],
+  "wave": "sovereign-sight"
+}

@@ -1,0 +1,24 @@
+{
+  "id": "wake-up-call",
+  "title": "Wake Up Call",
+  "nrdbCode": "21019",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "reprisal",
+    "gray ops"
+  ],
+  "playCost": 1,
+  "playRequiresRunnerTrashedCorpCardLastTurn": true,
+  "playRequiresRunnerHasInstalledHardwareOrNonVirtualResource": true,
+  "rfgInsteadOfTrashing": true,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "ss_wake_up_call"
+    }
+  },
+  "wave": "sovereign-sight"
+}

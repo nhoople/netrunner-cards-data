@@ -1,0 +1,17 @@
+{
+  "id": "ikawah-project",
+  "title": "Ikawah Project",
+  "nrdbCode": "21010",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "security"
+  ],
+  "advancementRequirement": 5,
+  "agendaPoints": 3,
+  "stealAdditionalClicks": 1,
+  "stealAdditionalCredits": 2,
+  "wave": "sovereign-sight"
+}

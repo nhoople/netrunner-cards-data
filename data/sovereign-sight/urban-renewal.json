@@ -1,0 +1,32 @@
+{
+  "id": "urban-renewal",
+  "title": "Urban Renewal",
+  "nrdbCode": "21018",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "hostile"
+  ],
+  "installCost": 1,
+  "rezCost": 1,
+  "trashCost": 3,
+  "powerCountersOnRez": 3,
+  "trashWhenPowerEmpty": true,
+  "onPowerCountersEmpty": {
+    "op": "do",
+    "action": {
+      "kind": "meat_damage",
+      "amount": 4
+    }
+  },
+  "onTurnBegin": {
+    "op": "do",
+    "action": {
+      "kind": "remove_power_counter",
+      "amount": 1
+    }
+  },
+  "wave": "sovereign-sight"
+}

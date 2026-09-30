@@ -1,0 +1,39 @@
+{
+  "id": "najja-1-0",
+  "title": "Najja 1.0",
+  "nrdbCode": "21011",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "barrier",
+    "bioroid"
+  ],
+  "installCost": 2,
+  "rezCost": 2,
+  "strength": 2,
+  "subroutines": [
+    {
+      "id": "najja-etr-1",
+      "text": "End the run.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "end_the_run"
+        }
+      }
+    },
+    {
+      "id": "najja-etr-2",
+      "text": "End the run.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "end_the_run"
+        }
+      }
+    }
+  ],
+  "wave": "sovereign-sight"
+}

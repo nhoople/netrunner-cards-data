@@ -1,0 +1,37 @@
+{
+  "id": "calibration-testing",
+  "title": "Calibration Testing",
+  "nrdbCode": "21017",
+  "type": "upgrade",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "subtypes": [
+    "off-site"
+  ],
+  "installCost": 3,
+  "rezCost": 3,
+  "trashCost": 2,
+  "remoteOnly": true,
+  "paidAbilities": [
+    {
+      "id": "calibration-adv",
+      "label": "[trash]: Place 1 advancement counter on a card installed in the root of this server",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "trashSelf": true
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "ss_place_advancement_on_root_of_this_server"
+        }
+      }
+    }
+  ],
+  "wave": "sovereign-sight"
+}

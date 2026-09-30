@@ -1,0 +1,17 @@
+{
+  "id": "zamba",
+  "title": "Zamba",
+  "nrdbCode": "21003",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "subtypes": [
+    "console"
+  ],
+  "installCost": 4,
+  "unique": true,
+  "muBonus": 2,
+  "mayGainCreditsOnCorpCardExposed": 1,
+  "wave": "sovereign-sight"
+}

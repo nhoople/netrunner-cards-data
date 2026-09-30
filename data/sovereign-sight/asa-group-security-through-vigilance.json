@@ -1,0 +1,41 @@
+{
+  "id": "asa-group-security-through-vigilance",
+  "title": "Asa Group: Security Through Vigilance",
+  "nrdbCode": "21009",
+  "type": "identity",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "division"
+  ],
+  "onFirstCorpCardInstallEachTurn": {
+    "op": "choose",
+    "chooser": "corp",
+    "options": [
+      {
+        "id": "accept",
+        "label": "Install 1 non-agenda from HQ in/protecting the same server",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "ss_asa_install_non_agenda_same_server"
+          }
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "corp",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  },
+  "wave": "sovereign-sight"
+}

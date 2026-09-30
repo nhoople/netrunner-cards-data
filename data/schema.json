@@ -4972,6 +4972,33 @@
         }
       },
       "description": "Conundrum: this ice has +bonus strength if there is an installed card with the given subtype (e.g. AI)."
+    },
+    "mayGainCreditsOnCorpCardExposed": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Zamba: whenever a Corp card is exposed, you may gain this many credits."
+    },
+    "memoryCostPerPowerCounter": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Puffer: this program costs +N MU for each hosted power counter."
+    },
+    "corpHandSizeBonusWhileInstalled": {
+      "type": "integer",
+      "description": "Lewi Guilherme: while installed, Corp maximum hand size is modified by this amount (typically −1)."
+    },
+    "gainCreditsOnFirstFullyBreakEachTurn": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Cyberdelia: the first time each turn you fully break a piece of ice, gain this many credits."
+    },
+    "placeAdvancementOnSufferMeatDamage": {
+      "type": "boolean",
+      "description": "Reconstruction Contract: whenever the Runner suffers any amount of meat damage, you may place 1 advancement token on this card."
+    },
+    "playRequiresRunnerHasInstalledHardwareOrNonVirtualResource": {
+      "type": "boolean",
+      "description": "Wake Up Call: play only if the Runner has at least 1 installed piece of hardware or non-virtual resource."
     }
   }
 }

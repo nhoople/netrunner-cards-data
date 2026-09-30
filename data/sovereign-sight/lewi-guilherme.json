@@ -1,0 +1,44 @@
+{
+  "id": "lewi-guilherme",
+  "title": "Lewi Guilherme",
+  "nrdbCode": "21005",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "subtypes": [
+    "connection"
+  ],
+  "installCost": 0,
+  "unique": true,
+  "corpHandSizeBonusWhileInstalled": -1,
+  "onTurnBegin": {
+    "op": "choose",
+    "chooser": "runner",
+    "options": [
+      {
+        "id": "lose-credit",
+        "label": "Lose 1¢",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "lose_credits",
+            "side": "runner",
+            "amount": 1
+          }
+        }
+      },
+      {
+        "id": "trash-lewi",
+        "label": "Trash Lewi Guilherme",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "trash_self"
+          }
+        }
+      }
+    ]
+  },
+  "wave": "sovereign-sight"
+}

@@ -1,0 +1,66 @@
+{
+  "id": "upya",
+  "title": "Upya",
+  "nrdbCode": "21007",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "installCost": 0,
+  "memoryCost": 1,
+  "onSuccessfulRunOnRd": {
+    "op": "choose",
+    "chooser": "runner",
+    "options": [
+      {
+        "id": "accept",
+        "label": "Place 1 power counter on Upya",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "add_power_counter",
+            "amount": 1
+          }
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "runner",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  },
+  "paidAbilities": [
+    {
+      "id": "upya-clicks",
+      "label": "[click], 3 hosted power counters: Gain [click][click]",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "powerCounters": 3,
+        "clicks": 1
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "gain_clicks",
+          "side": "runner",
+          "amount": 2
+        }
+      },
+      "oncePerTurn": true,
+      "usableByRunnerOnSelfIce": true
+    }
+  ],
+  "wave": "sovereign-sight"
+}

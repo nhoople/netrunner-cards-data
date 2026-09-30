@@ -1,0 +1,48 @@
+{
+  "id": "puffer",
+  "title": "Puffer",
+  "nrdbCode": "21004",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "subtypes": [
+    "icebreaker",
+    "killer"
+  ],
+  "installCost": 4,
+  "strength": 2,
+  "memoryCost": 1,
+  "strengthPerPowerCounter": true,
+  "memoryCostPerPowerCounter": 1,
+  "paidAbilities": [
+    {
+      "id": "puffer-power",
+      "label": "[click]: Place 1 power counter on this program or remove 1 hosted power counter",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "ss_puffer_add_or_remove_power"
+        }
+      },
+      "usableByRunnerOnSelfIce": true
+    }
+  ],
+  "breaker": {
+    "breaksSubtype": "sentry",
+    "strength": 2,
+    "breakCredits": 1,
+    "breakMaxSubs": 1,
+    "pumpCredits": 2,
+    "pumpStrength": 1
+  },
+  "wave": "sovereign-sight"
+}

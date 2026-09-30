@@ -1,0 +1,16 @@
+{
+  "id": "cyberdelia",
+  "title": "Cyberdelia",
+  "nrdbCode": "21006",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "subtypes": [
+    "chip"
+  ],
+  "installCost": 3,
+  "muBonus": 1,
+  "gainCreditsOnFirstFullyBreakEachTurn": 1,
+  "wave": "sovereign-sight"
+}

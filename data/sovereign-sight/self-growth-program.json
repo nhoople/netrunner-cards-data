@@ -1,0 +1,22 @@
+{
+  "id": "self-growth-program",
+  "title": "Self-Growth Program",
+  "nrdbCode": "21016",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "subtypes": [
+    "gray ops"
+  ],
+  "playCost": 0,
+  "playRequiresTagged": true,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "ss_add_n_installed_runner_to_grip",
+      "amount": 2
+    }
+  },
+  "wave": "sovereign-sight"
+}

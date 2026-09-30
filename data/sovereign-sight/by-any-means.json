@@ -1,0 +1,22 @@
+{
+  "id": "by-any-means",
+  "title": "By Any Means",
+  "nrdbCode": "21001",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "subtypes": [
+    "priority",
+    "sabotage"
+  ],
+  "playCost": 2,
+  "playRequiresFirstClick": true,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "ss_activate_by_any_means"
+    }
+  },
+  "wave": "sovereign-sight"
+}
