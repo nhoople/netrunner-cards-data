@@ -5,6 +5,7 @@
   "corpusOrder": [
     "core",
     "what-lies-ahead",
+    "trace-amount",
     "reign-and-reverie",
     "system-core-2019",
     "downfall",
@@ -1141,6 +1142,32 @@
         "enigma",
         "hunter",
         "wall-of-static"
+      ]
+    },
+    "trace-amount": {
+      "status": "supported",
+      "notes": "FFG Trace Amount (NRDB pack ta) — Genesis set-complete from floor v1.88.0 → v1.89.0. 20 titles; 5 Core/SC19 reprints absorbed; 15/15 TA-only clears. Never kick mo/mor. CR pin v26.03.",
+      "cards": [
+        "vamp",
+        "liberated-account",
+        "satellite-uplink",
+        "e3-feedback-implants",
+        "compromised-employee",
+        "notoriety",
+        "snowball",
+        "dyson-mem-chip",
+        "encryption-protocol",
+        "sherlock-1-0",
+        "jinteki-replicating-perfection",
+        "fetal-ai",
+        "trick-of-light",
+        "sensei",
+        "big-brother",
+        "chilo-city-grid",
+        "power-grid-overload",
+        "amazon-industrial-zone",
+        "executive-retreat",
+        "freelancer"
       ]
     }
   }

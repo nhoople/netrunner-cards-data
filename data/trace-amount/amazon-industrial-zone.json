@@ -1,0 +1,17 @@
+{
+  "id": "amazon-industrial-zone",
+  "title": "Amazon Industrial Zone",
+  "wave": "trace-amount",
+  "nrdbCode": "02038",
+  "type": "upgrade",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "region"
+  ],
+  "installCost": 4,
+  "rezCost": 4,
+  "trashCost": 2,
+  "mayImmediatelyRezIceOnInstallProtectingThisServerDiscount": 3
+}

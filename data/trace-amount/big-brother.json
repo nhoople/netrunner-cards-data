@@ -1,0 +1,22 @@
+{
+  "id": "big-brother",
+  "title": "Big Brother",
+  "wave": "trace-amount",
+  "nrdbCode": "02035",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "subtypes": [
+    "gray ops"
+  ],
+  "playCost": 0,
+  "playRequiresTagged": true,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "give_tags",
+      "amount": 2
+    }
+  }
+}

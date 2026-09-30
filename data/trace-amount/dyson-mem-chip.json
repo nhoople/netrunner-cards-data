@@ -1,0 +1,17 @@
+{
+  "id": "dyson-mem-chip",
+  "title": "Dyson Mem Chip",
+  "wave": "trace-amount",
+  "nrdbCode": "02028",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "neutral-runner",
+  "subtypes": [
+    "chip",
+    "link"
+  ],
+  "installCost": 3,
+  "muBonus": 1,
+  "link": 1
+}

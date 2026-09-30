@@ -1,0 +1,23 @@
+{
+  "id": "chilo-city-grid",
+  "title": "ChiLo City Grid",
+  "wave": "trace-amount",
+  "nrdbCode": "02036",
+  "type": "upgrade",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "subtypes": [
+    "region"
+  ],
+  "installCost": 3,
+  "rezCost": 3,
+  "trashCost": 6,
+  "onSuccessfulTraceDuringRun": {
+    "op": "do",
+    "action": {
+      "kind": "give_tags",
+      "amount": 1
+    }
+  }
+}

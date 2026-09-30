@@ -1,0 +1,24 @@
+{
+  "id": "vamp",
+  "title": "Vamp",
+  "wave": "trace-amount",
+  "nrdbCode": "02021",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "subtypes": [
+    "run",
+    "sabotage"
+  ],
+  "playCost": 0,
+  "runEvent": {
+    "servers": "hq",
+    "onSuccessfulRun": {
+      "op": "do",
+      "action": {
+        "kind": "vamp_may_instead_of_breach"
+      }
+    }
+  }
+}

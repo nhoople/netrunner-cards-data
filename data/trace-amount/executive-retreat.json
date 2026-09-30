@@ -1,0 +1,54 @@
+{
+  "id": "executive-retreat",
+  "title": "Executive Retreat",
+  "wave": "trace-amount",
+  "nrdbCode": "02039",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "neutral-corp",
+  "advancementRequirement": 5,
+  "agendaPoints": 3,
+  "onScore": {
+    "op": "seq",
+    "effects": [
+      {
+        "op": "do",
+        "action": {
+          "kind": "add_agenda_counter",
+          "amount": 1
+        }
+      },
+      {
+        "op": "do",
+        "action": {
+          "kind": "shuffle_hq_to_rd",
+          "amount": 99
+        }
+      }
+    ]
+  },
+  "paidAbilities": [
+    {
+      "id": "executive-retreat-draw",
+      "label": "[click], hosted agenda counter: Draw 5 cards",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1,
+        "agendaCounters": 1
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "draw",
+          "side": "corp",
+          "amount": 5
+        }
+      }
+    }
+  ]
+}

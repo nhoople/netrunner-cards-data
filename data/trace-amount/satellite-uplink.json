@@ -1,0 +1,18 @@
+{
+  "id": "satellite-uplink",
+  "title": "Satellite Uplink",
+  "wave": "trace-amount",
+  "nrdbCode": "02023",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "playCost": 2,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "expose_up_to",
+      "max": 2
+    }
+  }
+}

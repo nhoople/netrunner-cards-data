@@ -1,0 +1,26 @@
+{
+  "id": "power-grid-overload",
+  "title": "Power Grid Overload",
+  "wave": "trace-amount",
+  "nrdbCode": "02037",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "playCost": 1,
+  "playRequiresSuccessfulRunLastTurn": true,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "trace",
+      "strength": 2,
+      "onSuccess": {
+        "op": "do",
+        "action": {
+          "kind": "trash_hardware_install_cost_lte_last_trace_excess",
+          "pick": "choose"
+        }
+      }
+    }
+  }
+}

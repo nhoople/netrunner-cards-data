@@ -1,0 +1,28 @@
+{
+  "id": "compromised-employee",
+  "title": "Compromised Employee",
+  "wave": "trace-amount",
+  "nrdbCode": "02025",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "subtypes": [
+    "connection",
+    "link"
+  ],
+  "installCost": 2,
+  "link": 1,
+  "recurringCreditsMax": 1,
+  "recurringSpendFor": [
+    "trace"
+  ],
+  "onAnyIceRez": {
+    "op": "do",
+    "action": {
+      "kind": "gain_credits",
+      "side": "runner",
+      "amount": 1
+    }
+  }
+}

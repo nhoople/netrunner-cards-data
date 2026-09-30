@@ -1,0 +1,14 @@
+{
+  "id": "encryption-protocol",
+  "title": "Encryption Protocol",
+  "wave": "trace-amount",
+  "nrdbCode": "02029",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "installCost": 0,
+  "rezCost": 0,
+  "trashCost": 2,
+  "installedCardsTrashCostBonus": 1
+}

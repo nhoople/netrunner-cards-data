@@ -1,0 +1,28 @@
+{
+  "id": "sensei",
+  "title": "Sensei",
+  "wave": "trace-amount",
+  "nrdbCode": "02034",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "jinteki",
+  "subtypes": [
+    "code gate"
+  ],
+  "installCost": 3,
+  "rezCost": 3,
+  "strength": 5,
+  "subroutines": [
+    {
+      "id": "sensei-etr-other",
+      "text": "For the remainder of this run, while the Runner is encountering another piece of ice, it gains \"[subroutine] End the run.\" after its other subroutines.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "sensei_register_etr_on_other_ice_for_run"
+        }
+      }
+    }
+  ]
+}

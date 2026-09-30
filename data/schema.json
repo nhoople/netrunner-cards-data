@@ -928,7 +928,37 @@
     },
     "onSuccessfulTraceDuringRun": {
       "type": "object",
-      "description": "Effect IR when a trace resolves successfully during a run while this card is installed (Spinal Modem)."
+      "description": "Effect IR when a trace resolves successfully during a run while this card is installed (Spinal Modem / ChiLo City Grid). Host fires for Runner identity/rig and rezzed Corp root cards protecting the attacked server."
+    },
+    "onBreakSubroutine": {
+      "type": "object",
+      "description": "Effect IR fired after any subroutine is broken while this card is installed (e3 Feedback Implants-class)."
+    },
+    "onBreakSubroutineMayPayCreditsBreakAnother": {
+      "type": "object",
+      "required": ["credits"],
+      "additionalProperties": false,
+      "properties": {
+        "credits": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "description": "After any subroutine is broken, may pay this many credits to break another subroutine on the encountered ice (e3 Feedback Implants)."
+    },
+    "strengthBonusOnBreakSubForRun": {
+      "type": "integer",
+      "description": "When this icebreaker breaks a subroutine, gain this much strength for the remainder of the run (Snowball)."
+    },
+    "installedCardsTrashCostBonus": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "While rezzed: increase the trash cost of all installed cards by this amount (Encryption Protocol)."
+    },
+    "mayImmediatelyRezIceOnInstallProtectingThisServerDiscount": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Amazon Industrial Zone: whenever Corp installs ice protecting this server, may immediately rez it lowering rez cost by this amount."
     },
     "onSuccessfulRunOncePerTurn": {
       "type": "boolean",
@@ -1265,7 +1295,7 @@
     },
     "onAnyIceRez": {
       "type": "object",
-      "description": "Runner identity: whenever Corp rezzes ice (Barry Wong)."
+      "description": "Whenever Corp rezzes ice while this card is the Runner identity or installed in the Runner's rig (Barry Wong / Compromised Employee)."
     },
     "serverRootAssetTrashCostBonus": {
       "type": "integer",
