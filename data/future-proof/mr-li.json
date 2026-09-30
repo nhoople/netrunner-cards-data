@@ -1,0 +1,36 @@
+{
+  "id": "mr-li",
+  "title": "Mr. Li",
+  "wave": "future-proof",
+  "nrdbCode": "02105",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "subtypes": [
+    "connection"
+  ],
+  "installCost": 3,
+  "unique": true,
+  "paidAbilities": [
+    {
+      "id": "mr-li-draw",
+      "label": "[click]: Draw 2 cards; put 1 of those on bottom of stack",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "draw_n_then_bottom_one_of_drawn",
+          "amount": 2
+        }
+      }
+    }
+  ]
+}

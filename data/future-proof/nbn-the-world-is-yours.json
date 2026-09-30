@@ -1,0 +1,14 @@
+{
+  "id": "nbn-the-world-is-yours",
+  "title": "NBN: The World is Yours*",
+  "wave": "future-proof",
+  "nrdbCode": "02114",
+  "type": "identity",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "subtypes": [
+    "megacorp"
+  ],
+  "handSizeBonus": 1
+}

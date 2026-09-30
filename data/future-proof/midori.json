@@ -1,0 +1,24 @@
+{
+  "id": "midori",
+  "title": "Midori",
+  "wave": "future-proof",
+  "nrdbCode": "02113",
+  "type": "upgrade",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "jinteki",
+  "subtypes": [
+    "sysop"
+  ],
+  "installCost": 0,
+  "rezCost": 0,
+  "trashCost": 3,
+  "unique": true,
+  "onApproachIceOncePerRun": true,
+  "onApproachIce": {
+    "op": "do",
+    "action": {
+      "kind": "midori_may_swap_approached_ice_with_hq"
+    }
+  }
+}

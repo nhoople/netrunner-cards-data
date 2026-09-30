@@ -1,0 +1,29 @@
+{
+  "id": "dedicated-response-team",
+  "title": "Dedicated Response Team",
+  "wave": "future-proof",
+  "nrdbCode": "02118",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "hostile"
+  ],
+  "installCost": 2,
+  "rezCost": 2,
+  "trashCost": 3,
+  "onSuccessfulRunEnd": {
+    "op": "if",
+    "cond": {
+      "op": "runner_tagged"
+    },
+    "then": {
+      "op": "do",
+      "action": {
+        "kind": "meat_damage",
+        "amount": 2
+      }
+    }
+  }
+}

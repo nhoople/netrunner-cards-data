@@ -9,6 +9,7 @@
     "cyber-exodus",
     "a-study-in-static",
     "humanitys-shadow",
+    "future-proof",
     "reign-and-reverie",
     "system-core-2019",
     "downfall",
@@ -1249,6 +1250,32 @@
         "salvage",
         "simone-diego",
         "foxfire"
+      ]
+    },
+    "future-proof": {
+      "status": "supported",
+      "notes": "FFG Future Proof (NRDB pack fp) — Genesis set-complete from floor v1.92.0 → v1.93.0. 20 titles; 7 SC19/SU21 reprints absorbed; 13/13 FP-only clears. Never kick mo/mor. CR pin v26.03.",
+      "cards": [
+        "retrieval-run",
+        "darwin",
+        "data-leak-reversal",
+        "faerie",
+        "mr-li",
+        "indexing",
+        "r-d-interface",
+        "deep-thought",
+        "new-angeles-city-hall",
+        "eli-1-0",
+        "ruhr-valley",
+        "ronin",
+        "midori",
+        "nbn-the-world-is-yours",
+        "project-beale",
+        "midseason-replacements",
+        "flare",
+        "dedicated-response-team",
+        "burke-bugs",
+        "corporate-war"
       ]
     }
   }

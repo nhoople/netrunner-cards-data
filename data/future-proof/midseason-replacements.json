@@ -1,0 +1,25 @@
+{
+  "id": "midseason-replacements",
+  "title": "Midseason Replacements",
+  "wave": "future-proof",
+  "nrdbCode": "02116",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "playCost": 5,
+  "playRequiresAgendaStolenLastTurn": true,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "trace",
+      "strength": 6,
+      "onSuccess": {
+        "op": "do",
+        "action": {
+          "kind": "give_tags_equal_to_last_trace_excess"
+        }
+      }
+    }
+  }
+}

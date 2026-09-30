@@ -1203,6 +1203,19 @@
       },
       "description": "Rezzed upgrade protecting a server: additional run-initiate cost of clicks/credits × hosted power counters (Reduced Service / Cold Site; Earth Station timing)."
     },
+    "additionalRunInitiateClicks": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Rezzed upgrade: flat additional click cost to initiate a run on this server (Ruhr Valley)."
+    },
+    "onApproachIceOncePerRun": {
+      "type": "boolean",
+      "description": "onApproachIce fires at most once per run (Midori)."
+    },
+    "onSuccessfulRunEnd": {
+      "type": "object",
+      "description": "Whenever a successful run ends, evaluate this effect while rezzed (Dedicated Response Team; typically gated by runner_tagged)."
+    },
     "rezSpendCreditsForPowerCounters": {
       "type": "object",
       "required": [

@@ -1,0 +1,43 @@
+{
+  "id": "new-angeles-city-hall",
+  "title": "New Angeles City Hall",
+  "wave": "future-proof",
+  "nrdbCode": "02109",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "neutral-runner",
+  "subtypes": [
+    "location",
+    "government"
+  ],
+  "installCost": 1,
+  "unique": true,
+  "paidAbilities": [
+    {
+      "id": "nach-prevent-tag",
+      "label": "[interrupt] → 2¢: Prevent 1 tag",
+      "clickCost": 0,
+      "creditCost": 2,
+      "cost": {
+        "credits": 2
+      },
+      "windows": [
+        "tag_interrupt_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "prevent_pending_tags",
+          "amount": 1
+        }
+      }
+    }
+  ],
+  "onStealAgenda": {
+    "op": "do",
+    "action": {
+      "kind": "trash_self"
+    }
+  }
+}

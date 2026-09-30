@@ -1,0 +1,23 @@
+{
+  "id": "indexing",
+  "title": "Indexing",
+  "wave": "future-proof",
+  "nrdbCode": "02106",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "subtypes": [
+    "run"
+  ],
+  "playCost": 0,
+  "runEvent": {
+    "servers": "rd",
+    "onSuccessfulRun": {
+      "op": "do",
+      "action": {
+        "kind": "indexing_may_instead_of_breach"
+      }
+    }
+  }
+}

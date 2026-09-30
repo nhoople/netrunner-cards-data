@@ -1,0 +1,64 @@
+{
+  "id": "deep-thought",
+  "title": "Deep Thought",
+  "wave": "future-proof",
+  "nrdbCode": "02108",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "subtypes": [
+    "virus"
+  ],
+  "installCost": 1,
+  "memoryCost": 1,
+  "onSuccessfulRun": {
+    "op": "if",
+    "cond": {
+      "op": "attacking_rd"
+    },
+    "then": {
+      "op": "do",
+      "action": {
+        "kind": "add_virus_counter",
+        "amount": 1
+      }
+    }
+  },
+  "onTurnBegin": {
+    "op": "if",
+    "cond": {
+      "op": "virus_counters_gte",
+      "amount": 3
+    },
+    "then": {
+      "op": "choose",
+      "chooser": "runner",
+      "options": [
+        {
+          "id": "look",
+          "label": "Look at the top card of R&D",
+          "effect": {
+            "op": "do",
+            "action": {
+              "kind": "look_top_n_rd_peek",
+              "n": 1
+            }
+          }
+        },
+        {
+          "id": "decline",
+          "label": "Decline",
+          "effect": {
+            "op": "do",
+            "action": {
+              "kind": "gain_credits",
+              "side": "runner",
+              "amount": 0
+            }
+          }
+        }
+      ]
+    }
+  }
+}

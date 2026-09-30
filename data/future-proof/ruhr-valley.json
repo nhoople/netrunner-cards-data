@@ -1,0 +1,17 @@
+{
+  "id": "ruhr-valley",
+  "title": "Ruhr Valley",
+  "wave": "future-proof",
+  "nrdbCode": "02111",
+  "type": "upgrade",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "region"
+  ],
+  "installCost": 6,
+  "rezCost": 6,
+  "trashCost": 4,
+  "additionalRunInitiateClicks": 1
+}

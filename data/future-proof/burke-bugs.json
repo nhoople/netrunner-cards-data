@@ -1,0 +1,36 @@
+{
+  "id": "burke-bugs",
+  "title": "Burke Bugs",
+  "wave": "future-proof",
+  "nrdbCode": "02119",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "sentry",
+    "destroyer"
+  ],
+  "installCost": 0,
+  "rezCost": 0,
+  "strength": 0,
+  "subroutines": [
+    {
+      "id": "burke-bugs-trace",
+      "text": "Trace[0]. If successful, the Runner trashes 1 program.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "trace",
+          "strength": 0,
+          "onSuccess": {
+            "op": "do",
+            "action": {
+              "kind": "trash_own_program"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

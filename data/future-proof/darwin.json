@@ -1,0 +1,67 @@
+{
+  "id": "darwin",
+  "title": "Darwin",
+  "wave": "future-proof",
+  "nrdbCode": "02102",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "subtypes": [
+    "icebreaker",
+    "ai",
+    "virus"
+  ],
+  "installCost": 3,
+  "memoryCost": 1,
+  "strength": 0,
+  "strengthPerVirusCounter": 1,
+  "breaker": {
+    "breaksSubtype": "*",
+    "strength": 0,
+    "breakCredits": 2,
+    "breakMaxSubs": 1
+  },
+  "onTurnBegin": {
+    "op": "choose",
+    "chooser": "runner",
+    "options": [
+      {
+        "id": "pay-virus",
+        "label": "Pay 1¢: place 1 virus counter on Darwin",
+        "effect": {
+          "op": "seq",
+          "effects": [
+            {
+              "op": "do",
+              "action": {
+                "kind": "lose_credits",
+                "side": "runner",
+                "amount": 1
+              }
+            },
+            {
+              "op": "do",
+              "action": {
+                "kind": "add_virus_counter",
+                "amount": 1
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "runner",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  }
+}
