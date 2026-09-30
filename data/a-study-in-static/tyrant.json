@@ -1,0 +1,31 @@
+{
+  "id": "tyrant",
+  "title": "Tyrant",
+  "wave": "a-study-in-static",
+  "nrdbCode": "02078",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "barrier"
+  ],
+  "installCost": 7,
+  "rezCost": 7,
+  "strength": 4,
+  "canAdvance": true,
+  "canAdvanceOnlyWhenRezzed": true,
+  "gainsSubroutinesPerAdvancement": {
+    "subroutine": {
+      "id": "tyrant-etr",
+      "text": "End the run.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "end_the_run"
+        }
+      }
+    }
+  },
+  "subroutines": []
+}

@@ -1,0 +1,34 @@
+{
+  "id": "all-nighter",
+  "title": "All-nighter",
+  "wave": "a-study-in-static",
+  "nrdbCode": "02067",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "installCost": 0,
+  "paidAbilities": [
+    {
+      "id": "all-nighter-clicks",
+      "label": "[click], [trash]: Gain [click][click]",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1,
+        "trashSelf": true
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "gain_clicks",
+          "side": "runner",
+          "amount": 2
+        }
+      }
+    }
+  ]
+}

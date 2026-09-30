@@ -1,0 +1,18 @@
+{
+  "id": "inside-man",
+  "title": "Inside Man",
+  "wave": "a-study-in-static",
+  "nrdbCode": "02068",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "neutral-runner",
+  "subtypes": [
+    "connection"
+  ],
+  "installCost": 3,
+  "recurringCreditsMax": 2,
+  "recurringSpendFor": [
+    "install_hardware"
+  ]
+}

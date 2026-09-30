@@ -1,0 +1,29 @@
+{
+  "id": "underworld-contact",
+  "title": "Underworld Contact",
+  "wave": "a-study-in-static",
+  "nrdbCode": "02069",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "neutral-runner",
+  "subtypes": [
+    "connection"
+  ],
+  "installCost": 2,
+  "onTurnBegin": {
+    "op": "if",
+    "cond": {
+      "op": "link_gte",
+      "amount": 2
+    },
+    "then": {
+      "op": "do",
+      "action": {
+        "kind": "gain_credits",
+        "side": "runner",
+        "amount": 1
+      }
+    }
+  }
+}

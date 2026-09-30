@@ -1,0 +1,37 @@
+{
+  "id": "bullfrog",
+  "title": "Bullfrog",
+  "wave": "a-study-in-static",
+  "nrdbCode": "02073",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "jinteki",
+  "subtypes": [
+    "code gate",
+    "deflector",
+    "psi"
+  ],
+  "installCost": 3,
+  "rezCost": 3,
+  "strength": 4,
+  "subroutines": [
+    {
+      "id": "bullfrog-psi",
+      "text": "You and the Runner secretly spend 0¢, 1¢ or 2¢. Reveal spent credits. If you and the Runner spent a different number of credits and this ice is installed, move this ice to the outermost position protecting another server. (The run continues from this new position.)",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "play_psi_game",
+          "maxBid": 2,
+          "ifBidsDiffer": {
+            "op": "do",
+            "action": {
+              "kind": "move_source_ice_to_outermost_another_server_continue_run"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

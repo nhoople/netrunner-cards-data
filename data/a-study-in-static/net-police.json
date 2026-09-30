@@ -1,0 +1,17 @@
+{
+  "id": "net-police",
+  "title": "Net Police",
+  "wave": "a-study-in-static",
+  "nrdbCode": "02075",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "installCost": 1,
+  "rezCost": 1,
+  "trashCost": 1,
+  "recurringCreditsMaxEqualsRunnerLink": true,
+  "recurringSpendFor": [
+    "trace"
+  ]
+}

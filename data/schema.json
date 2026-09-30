@@ -236,6 +236,10 @@
       "type": "integer",
       "minimum": 0
     },
+    "recurringCreditsMaxEqualsRunnerLink": {
+      "type": "boolean",
+      "description": "Net Police: recurring credit pool max equals the Runner's link when refilled/rezzed."
+    },
     "link": {
       "type": "integer",
       "minimum": 0
@@ -602,6 +606,14 @@
           "requiresRezzedIce": {
             "type": "boolean",
             "description": "Security Subcontract-class: usable only if Corp has at least one rezzed ice."
+          },
+          "requireBrokenSubThisEncounter": {
+            "type": "boolean",
+            "description": "Usable only if at least one subroutine is already broken this encounter (Poison Vial)."
+          },
+          "requireFullyBrokenThisEncounter": {
+            "type": "boolean",
+            "description": "Usable only if the Runner fully broke the encountered ice this encounter (Crescentus)."
           }
         }
       }
@@ -2384,6 +2396,10 @@
     "onSuccessfulRunOtherServerOncePerTurn": {
       "type": "object",
       "description": "Once per turn when the Runner makes a successful run on another server, evaluate this effect (Sacrifice Zone Expansion)."
+    },
+    "onSuccessfulRunEndOncePerTurn": {
+      "type": "object",
+      "description": "Once per turn when a successful run ends, evaluate this effect (Doppelgänger may_start_run)."
     },
     "onSpendCreditsOutsidePoolDuringRunOncePerTurn": {
       "type": "object",

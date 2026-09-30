@@ -1,0 +1,34 @@
+{
+  "id": "government-contracts",
+  "title": "Government Contracts",
+  "wave": "a-study-in-static",
+  "nrdbCode": "02077",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "advancementRequirement": 5,
+  "agendaPoints": 3,
+  "paidAbilities": [
+    {
+      "id": "government-contracts-credits",
+      "label": "[click], [click]: Gain 4¢",
+      "clickCost": 2,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 2
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "corp",
+          "amount": 4
+        }
+      }
+    }
+  ]
+}

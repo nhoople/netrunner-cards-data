@@ -1,0 +1,54 @@
+{
+  "id": "hourglass",
+  "title": "Hourglass",
+  "wave": "a-study-in-static",
+  "nrdbCode": "02071",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "code gate"
+  ],
+  "installCost": 5,
+  "rezCost": 5,
+  "strength": 4,
+  "subroutines": [
+    {
+      "id": "hourglass-lose-click-1",
+      "text": "The Runner loses [click], if able.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "lose_clicks",
+          "side": "runner",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "id": "hourglass-lose-click-2",
+      "text": "The Runner loses [click], if able.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "lose_clicks",
+          "side": "runner",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "id": "hourglass-lose-click-3",
+      "text": "The Runner loses [click], if able.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "lose_clicks",
+          "side": "runner",
+          "amount": 1
+        }
+      }
+    }
+  ]
+}

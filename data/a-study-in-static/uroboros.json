@@ -1,0 +1,53 @@
+{
+  "id": "uroboros",
+  "title": "Uroboros",
+  "wave": "a-study-in-static",
+  "nrdbCode": "02074",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "subtypes": [
+    "sentry",
+    "tracer"
+  ],
+  "installCost": 6,
+  "rezCost": 6,
+  "strength": 4,
+  "subroutines": [
+    {
+      "id": "uroboros-trace-no-run",
+      "text": "Trace[4]. If successful, the Runner cannot make another run this turn.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "trace",
+          "strength": 4,
+          "onSuccess": {
+            "op": "do",
+            "action": {
+              "kind": "forbid_runner_runs_this_turn"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "uroboros-trace-etr",
+      "text": "Trace[4]. If successful, end the run.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "trace",
+          "strength": 4,
+          "onSuccess": {
+            "op": "do",
+            "action": {
+              "kind": "end_the_run"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "id": "crescentus",
+  "title": "Crescentus",
+  "wave": "a-study-in-static",
+  "nrdbCode": "02065",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "installCost": 1,
+  "memoryCost": 1,
+  "paidAbilities": [
+    {
+      "id": "crescentus-derez",
+      "label": "[trash]: Derez ice fully broken this encounter",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "trashSelf": true
+      },
+      "windows": [
+        "encounter_paw"
+      ],
+      "requireFullyBrokenThisEncounter": true,
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "derez_encounter_ice"
+        }
+      }
+    }
+  ]
+}

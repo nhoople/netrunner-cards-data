@@ -1,0 +1,33 @@
+{
+  "id": "disrupter",
+  "title": "Disrupter",
+  "wave": "a-study-in-static",
+  "nrdbCode": "02061",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "installCost": 1,
+  "memoryCost": 1,
+  "paidAbilities": [
+    {
+      "id": "disrupter-trace",
+      "label": "[interrupt] → [trash]: Reduce base trace strength to 0",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "trashSelf": true
+      },
+      "windows": [
+        "trace_interrupt_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "set_trace_base_strength",
+          "amount": 0
+        }
+      }
+    }
+  ]
+}

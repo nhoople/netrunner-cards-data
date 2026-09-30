@@ -1,0 +1,20 @@
+{
+  "id": "dedicated-server",
+  "title": "Dedicated Server",
+  "wave": "a-study-in-static",
+  "nrdbCode": "02072",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "jinteki",
+  "subtypes": [
+    "facility"
+  ],
+  "installCost": 3,
+  "rezCost": 3,
+  "trashCost": 3,
+  "recurringCreditsMax": 2,
+  "recurringSpendFor": [
+    "rez_ice"
+  ]
+}

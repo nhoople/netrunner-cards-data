@@ -7,6 +7,7 @@
     "what-lies-ahead",
     "trace-amount",
     "cyber-exodus",
+    "a-study-in-static",
     "reign-and-reverie",
     "system-core-2019",
     "downfall",
@@ -1195,6 +1196,32 @@
         "commercialization",
         "private-contracts",
         "chimera"
+      ]
+    },
+    "a-study-in-static": {
+      "status": "supported",
+      "notes": "FFG A Study in Static (NRDB pack asis) — Genesis set-complete from floor v1.90.0 → v1.91.0. 20 titles; 5 SC19/SU21/Uprising reprints absorbed; 15/15 ASIS-only clears. Never kick mo/mor. CR pin v26.03.",
+      "cards": [
+        "disrupter",
+        "force-of-nature",
+        "scrubber",
+        "doppelganger",
+        "crescentus",
+        "deus-x",
+        "all-nighter",
+        "inside-man",
+        "underworld-contact",
+        "green-level-clearance",
+        "hourglass",
+        "dedicated-server",
+        "bullfrog",
+        "uroboros",
+        "net-police",
+        "weyland-consortium-because-we-built-it",
+        "government-contracts",
+        "tyrant",
+        "oversight-ai",
+        "false-lead"
       ]
     }
   }

@@ -1,0 +1,17 @@
+{
+  "id": "weyland-consortium-because-we-built-it",
+  "title": "Weyland Consortium: Because We Built It",
+  "wave": "a-study-in-static",
+  "nrdbCode": "02076",
+  "type": "identity",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "megacorp"
+  ],
+  "recurringCreditsMax": 1,
+  "recurringSpendFor": [
+    "advance_ice"
+  ]
+}
