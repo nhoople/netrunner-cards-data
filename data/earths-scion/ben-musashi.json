@@ -14,6 +14,12 @@
   "trashCost": 3,
   "unique": true,
   "persistent": true,
-  "additionalCostStealAgendaFromThisServerOrRootNetDamage": 2,
+  "stealAdditionalCostFromProtectingServer": {
+    "op": "do",
+    "action": {
+      "kind": "net_damage",
+      "amount": 2
+    }
+  },
   "wave": "earths-scion"
 }

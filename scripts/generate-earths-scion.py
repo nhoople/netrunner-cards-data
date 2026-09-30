@@ -21,6 +21,8 @@ from spin_common import (
     do,
     etr,
     gain,
+    net,
+    seq,
     slugify,
     write_manifest,
 )
@@ -317,14 +319,17 @@ def map_card(c: dict) -> dict | None:
             subtypes=["clone"],
             unique=True,
             persistent=True,
-            additionalCostStealAgendaFromThisServerOrRootNetDamage=2,
+            stealAdditionalCostFromProtectingServer=net(2),
         )
 
     if cid == "authenticator":
         return base(
             c,
             subtypes=["code gate"],
-            mayTakeTagToBypassOnEncounter=True,
+            onEncounter=may(
+                seq(do("give_tags", amount=1), do("bypass_current_ice")),
+                label="Take 1 tag to bypass",
+            ),
             subroutines=[
                 {
                     "id": "authenticator-gain",

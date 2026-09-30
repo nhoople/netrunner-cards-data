@@ -12,7 +12,46 @@
   "installCost": 2,
   "rezCost": 2,
   "strength": 4,
-  "mayTakeTagToBypassOnEncounter": true,
+  "onEncounter": {
+    "op": "choose",
+    "chooser": "runner",
+    "options": [
+      {
+        "id": "accept",
+        "label": "Take 1 tag to bypass",
+        "effect": {
+          "op": "seq",
+          "effects": [
+            {
+              "op": "do",
+              "action": {
+                "kind": "give_tags",
+                "amount": 1
+              }
+            },
+            {
+              "op": "do",
+              "action": {
+                "kind": "bypass_current_ice"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "runner",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  },
   "subroutines": [
     {
       "id": "authenticator-gain",

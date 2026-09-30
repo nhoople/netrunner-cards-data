@@ -4775,11 +4775,6 @@
       "type": "boolean",
       "description": "Bioroid Work Crew: trash ability usable only during the next paid ability window after playing and resolving an operation."
     },
-    "additionalCostStealAgendaFromThisServerOrRootNetDamage": {
-      "type": "integer",
-      "minimum": 1,
-      "description": "Ben Musashi (persistent): as an additional cost to steal an agenda from this server or its root, the Runner must suffer this many net damage."
-    },
     "mayTakeTagToBypassOnEncounter": {
       "type": "boolean",
       "description": "Authenticator: when the Runner encounters this ice, they may take 1 tag to bypass it."
