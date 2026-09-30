@@ -1,0 +1,18 @@
+{
+  "id": "peak-efficiency",
+  "title": "Peak Efficiency",
+  "nrdbCode": "06062",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "playCost": 1,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "gain_credits_per_rezzed_ice",
+      "per": 1
+    }
+  },
+  "wave": "up-and-over"
+}

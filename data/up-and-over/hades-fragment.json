@@ -1,0 +1,23 @@
+{
+  "id": "hades-fragment",
+  "title": "Hades Fragment",
+  "nrdbCode": "06071",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "neutral-corp",
+  "subtypes": [
+    "source"
+  ],
+  "advancementRequirement": 5,
+  "agendaPoints": 3,
+  "unique": true,
+  "deckLimitOne": true,
+  "onTurnBegin": {
+    "op": "do",
+    "action": {
+      "kind": "may_add_archives_card_to_rd_bottom_only"
+    }
+  },
+  "wave": "up-and-over"
+}

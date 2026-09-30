@@ -1,0 +1,41 @@
+{
+  "id": "angel-arena",
+  "title": "Angel Arena",
+  "nrdbCode": "06080",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "neutral-runner",
+  "subtypes": [
+    "location"
+  ],
+  "unique": true,
+  "onInstall": {
+    "op": "do",
+    "action": {
+      "kind": "angel_arena_place_x_counters"
+    }
+  },
+  "trashWhenPowerEmpty": true,
+  "paidAbilities": [
+    {
+      "id": "angel-reveal",
+      "label": "Hosted power counter: reveal top of stack; may bottom",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "powerCounters": 1
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "angel_arena_reveal_top_may_bottom"
+        }
+      }
+    }
+  ],
+  "wave": "up-and-over"
+}

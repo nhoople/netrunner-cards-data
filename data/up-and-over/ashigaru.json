@@ -1,0 +1,17 @@
+{
+  "id": "ashigaru",
+  "title": "Ashigaru",
+  "nrdbCode": "06064",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "jinteki",
+  "subtypes": [
+    "barrier"
+  ],
+  "installCost": 9,
+  "rezCost": 9,
+  "strength": 4,
+  "dynamicEtrSubroutineCountFromCorpHandSize": true,
+  "wave": "up-and-over"
+}

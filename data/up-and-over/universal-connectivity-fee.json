@@ -1,0 +1,28 @@
+{
+  "id": "universal-connectivity-fee",
+  "title": "Universal Connectivity Fee",
+  "nrdbCode": "06067",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "subtypes": [
+    "trap"
+  ],
+  "installCost": 2,
+  "rezCost": 2,
+  "strength": 2,
+  "subroutines": [
+    {
+      "id": "ucf",
+      "text": "Untagged lose 1¢; tagged lose all ¢ and trash this ice",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "universal_connectivity_fee_sub"
+        }
+      }
+    }
+  ],
+  "wave": "up-and-over"
+}

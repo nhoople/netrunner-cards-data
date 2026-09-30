@@ -57,7 +57,8 @@ Match this dataset and [netrunner-engine](https://github.com/nhoople/netrunner-e
 
 | Pairing | cards-data | engine |
 |---------|------------|--------|
-| **Current** | [`v1.104.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.104.0) | engine same-semver pin `v1.104.0` (First Contact set-complete **18/18**) |
+| **Current** | [`v1.105.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.105.0) | engine same-semver pin `v1.105.0` (Up and Over set-complete **18/18**) |
+| First Contact | [`v1.104.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.104.0) | engine same-semver pin `v1.104.0` (First Contact set-complete **18/18**) |
 | The Spaces Between | [`v1.103.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.103.0) | engine same-semver pin `v1.103.0` (The Spaces Between set-complete **20/20**) |
 | Honor and Profit | [`v1.101.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.101.0) | engine same-semver pin `v1.101.0` (Honor and Profit set-complete **50/50**) |
 | Double Time | [`v1.100.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.100.0) | engine same-semver pin `v1.100.0` (Double Time set-complete **19/19**) |

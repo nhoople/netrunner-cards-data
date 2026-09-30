@@ -1,0 +1,20 @@
+{
+  "id": "fester",
+  "title": "Fester",
+  "nrdbCode": "06075",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "subtypes": [
+    "virtual"
+  ],
+  "installCost": 1,
+  "onVirusPurge": {
+    "op": "do",
+    "action": {
+      "kind": "fester_corp_lose_two_if_can"
+    }
+  },
+  "wave": "up-and-over"
+}

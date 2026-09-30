@@ -1,0 +1,40 @@
+{
+  "id": "architect",
+  "title": "Architect",
+  "nrdbCode": "06061",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "sentry"
+  ],
+  "installCost": 4,
+  "rezCost": 4,
+  "strength": 3,
+  "playersCannotTrashThisIce": true,
+  "subroutines": [
+    {
+      "id": "architect-rd",
+      "text": "Look at top 5 of R&D; may install 1 ignoring cost",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "look_top_n_rd_may_install_and_rez_ignore_costs",
+          "n": 5
+        }
+      }
+    },
+    {
+      "id": "architect-hq-arch",
+      "text": "May install 1 card from Archives or HQ",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "install_from_hq_or_archives"
+        }
+      }
+    }
+  ],
+  "wave": "up-and-over"
+}

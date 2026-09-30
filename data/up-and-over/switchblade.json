@@ -1,0 +1,71 @@
+{
+  "id": "switchblade",
+  "title": "Switchblade",
+  "nrdbCode": "06077",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "subtypes": [
+    "icebreaker",
+    "killer"
+  ],
+  "installCost": 3,
+  "strength": 0,
+  "memoryCost": 1,
+  "breaker": {
+    "breaksSubtype": "sentry",
+    "strength": 0,
+    "breakCredits": 1,
+    "breakMaxSubs": 1,
+    "pumpCredits": 1,
+    "pumpStrength": 7,
+    "breakViaPaidAbilityOnly": true
+  },
+  "paidAbilitiesUseStealthCreditsOnly": true,
+  "paidAbilities": [
+    {
+      "id": "switchblade-break",
+      "label": "1¢ (stealth): Break any number of sentry subroutines",
+      "clickCost": 0,
+      "creditCost": 1,
+      "cost": {
+        "credits": 1,
+        "creditsFromStealthOnly": true
+      },
+      "windows": [
+        "encounter_paw"
+      ],
+      "requireEncounterSubtype": "sentry",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "break_encounter_subroutine",
+          "maxSubs": 99,
+          "requireSubtype": "sentry"
+        }
+      }
+    },
+    {
+      "id": "switchblade-pump",
+      "label": "1¢ (stealth): +7 strength",
+      "clickCost": 0,
+      "creditCost": 1,
+      "cost": {
+        "credits": 1,
+        "creditsFromStealthOnly": true
+      },
+      "windows": [
+        "encounter_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "pump_strength",
+          "amount": 7
+        }
+      }
+    }
+  ],
+  "wave": "up-and-over"
+}

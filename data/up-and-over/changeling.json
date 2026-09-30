@@ -1,0 +1,34 @@
+{
+  "id": "changeling",
+  "title": "Changeling",
+  "nrdbCode": "06069",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "barrier",
+    "morph"
+  ],
+  "installCost": 5,
+  "rezCost": 5,
+  "strength": 4,
+  "canAdvance": true,
+  "morphOddAdvancementSubtypeSwap": {
+    "gain": "sentry",
+    "lose": "barrier"
+  },
+  "subroutines": [
+    {
+      "id": "changeling-etr",
+      "text": "End the run",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "end_the_run"
+        }
+      }
+    }
+  ],
+  "wave": "up-and-over"
+}

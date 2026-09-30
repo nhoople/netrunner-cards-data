@@ -1,0 +1,17 @@
+{
+  "id": "inject",
+  "title": "Inject",
+  "nrdbCode": "06073",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "playCost": 1,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "inject_reveal_top_four"
+    }
+  },
+  "wave": "up-and-over"
+}

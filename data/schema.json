@@ -1493,6 +1493,32 @@
       "type": "boolean",
       "description": "Trash this card when the Runner becomes tagged (Rachel Beckman)."
     },
+    "playersCannotTrashThisIce": {
+      "type": "boolean",
+      "description": "Players cannot trash this ice (Architect)."
+    },
+    "dynamicEtrSubroutineCountFromCorpHandSize": {
+      "type": "boolean",
+      "description": "While encountering, gain ETR subroutines equal to cards in Corp HQ (Ashigaru)."
+    },
+    "runnerFirstInstallCostIncreasePerPowerCounterOnThis": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Runner's first install each turn costs +N per power counter on this card (Docklands Crackdown)."
+    },
+    "handSizeBonusPerInstalledCopyWithSameDefId": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Max hand size +N per copy of this card installed (Origami)."
+    },
+    "trashSelfOnUnsuccessfulRunThisTurn": {
+      "type": "boolean",
+      "description": "Trash when the Runner makes an unsuccessful run this turn (Autoscripter)."
+    },
+    "onCorpRemoteServerCreated": {
+      "type": "object",
+      "description": "When Corp creates a remote server, resolve effect (Astrolabe)."
+    },
     "trashWhenHostedCreditsEmpty": {
       "type": "boolean",
       "description": "Trash when hosted credits reach 0 (Ghost Runner)."

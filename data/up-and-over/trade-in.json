@@ -1,0 +1,23 @@
+{
+  "id": "trade-in",
+  "title": "Trade-In",
+  "nrdbCode": "06078",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "playCost": 1,
+  "playAdditionalCost": {
+    "op": "do",
+    "action": {
+      "kind": "trade_in_trash_hardware_additional_cost"
+    }
+  },
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "trade_in_resolve"
+    }
+  },
+  "wave": "up-and-over"
+}

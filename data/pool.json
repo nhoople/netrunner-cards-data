@@ -21,6 +21,7 @@
     "upstalk",
     "the-spaces-between",
     "first-contact",
+    "up-and-over",
     "reign-and-reverie",
     "system-core-2019",
     "downfall",
@@ -1591,6 +1592,32 @@
         "daily-casts",
         "same-old-thing",
         "the-source"
+      ]
+    },
+    "up-and-over": {
+      "status": "supported",
+      "notes": "Up and Over (uao) Lunar set-complete. 18/18 UAO-only clears; 2 reprints absorbed. Pool supported. Paired release v1.105.0. Never kick mo/mor.",
+      "cards": [
+        "architect",
+        "peak-efficiency",
+        "labyrinthine-servers",
+        "ashigaru",
+        "mamba",
+        "reversed-accounts",
+        "universal-connectivity-fee",
+        "blue-sun-powering-the-future",
+        "changeling",
+        "reuse",
+        "hades-fragment",
+        "docklands-crackdown",
+        "inject",
+        "origami",
+        "fester",
+        "autoscripter",
+        "switchblade",
+        "trade-in",
+        "astrolabe",
+        "angel-arena"
       ]
     },
     "first-contact": {

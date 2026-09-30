@@ -1,0 +1,13 @@
+{
+  "id": "origami",
+  "title": "Origami",
+  "nrdbCode": "06074",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "installCost": 0,
+  "memoryCost": 1,
+  "handSizeBonusPerInstalledCopyWithSameDefId": 1,
+  "wave": "up-and-over"
+}

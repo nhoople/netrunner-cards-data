@@ -1,0 +1,21 @@
+{
+  "id": "autoscripter",
+  "title": "Autoscripter",
+  "nrdbCode": "06076",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "installCost": 3,
+  "unique": true,
+  "onFirstProgramInstallEachTurn": {
+    "op": "do",
+    "action": {
+      "kind": "gain_clicks",
+      "side": "runner",
+      "amount": 1
+    }
+  },
+  "trashSelfOnUnsuccessfulRunThisTurn": true,
+  "wave": "up-and-over"
+}
