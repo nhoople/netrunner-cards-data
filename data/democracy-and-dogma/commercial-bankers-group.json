@@ -1,0 +1,30 @@
+{
+  "id": "commercial-bankers-group",
+  "title": "Commercial Bankers Group",
+  "nrdbCode": "10054",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "political"
+  ],
+  "installCost": 1,
+  "rezCost": 1,
+  "trashCost": 2,
+  "onTurnBegin": {
+    "op": "if",
+    "cond": {
+      "op": "host_server_unprotected_by_ice"
+    },
+    "then": {
+      "op": "do",
+      "action": {
+        "kind": "gain_credits",
+        "side": "corp",
+        "amount": 3
+      }
+    }
+  },
+  "wave": "democracy-and-dogma"
+}

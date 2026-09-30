@@ -34,6 +34,7 @@
     "data-and-destiny",
     "kala-ghoda",
     "business-first",
+    "democracy-and-dogma",
     "reign-and-reverie",
     "system-core-2019",
     "downfall",
@@ -2060,6 +2061,31 @@
         "mumbad-construction-co",
         "corporate-sales-team",
         "pad-factory"
+      ]
+    },
+    "democracy-and-dogma": {
+      "status": "supported",
+      "notes": "Democracy and Dogma (dag) Mumbad #3 set-complete. 19/19 new clears; no reprints. Pool supported after business-first. Paired release v1.118.0. Never kick mo/mor.",
+      "cards": [
+        "political-graffiti",
+        "nero-severn-information-broker",
+        "reflection",
+        "spy-camera",
+        "political-operative",
+        "sadyojata",
+        "freedom-through-equality",
+        "akshara-sareen",
+        "councilman",
+        "voting-machine-initiative",
+        "clone-suffrage-movement",
+        "bio-ethics-association",
+        "political-dealings",
+        "clones-are-not-people",
+        "sensie-actors-union",
+        "commercial-bankers-group",
+        "mumbad-city-hall",
+        "bailiff",
+        "surat-city-grid"
       ]
     }
   }

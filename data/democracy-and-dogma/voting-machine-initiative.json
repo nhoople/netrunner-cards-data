@@ -1,0 +1,50 @@
+{
+  "id": "voting-machine-initiative",
+  "title": "Voting Machine Initiative",
+  "nrdbCode": "10048",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "initiative"
+  ],
+  "advancementRequirement": 5,
+  "agendaPoints": 3,
+  "onScore": {
+    "op": "do",
+    "action": {
+      "kind": "add_agenda_counter",
+      "amount": 3
+    }
+  },
+  "onRunnerTurnBegin": {
+    "op": "choose",
+    "chooser": "corp",
+    "options": [
+      {
+        "id": "accept",
+        "label": "Spend 1 agenda counter: Runner loses [click], if able",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "spend_agenda_counter_runner_lose_click"
+          }
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "corp",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  },
+  "wave": "democracy-and-dogma"
+}

@@ -1,0 +1,25 @@
+{
+  "id": "political-graffiti",
+  "title": "Political Graffiti",
+  "nrdbCode": "10039",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "subtypes": [
+    "run"
+  ],
+  "playCost": 0,
+  "hostAgendaPointsModifier": -1,
+  "trashOnVirusPurge": true,
+  "runEvent": {
+    "servers": "archives",
+    "onSuccessfulRun": {
+      "op": "do",
+      "action": {
+        "kind": "political_graffiti_host_on_scored_agenda"
+      }
+    }
+  },
+  "wave": "democracy-and-dogma"
+}

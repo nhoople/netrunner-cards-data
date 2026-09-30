@@ -1,0 +1,37 @@
+{
+  "id": "mumbad-city-hall",
+  "title": "Mumbad City Hall",
+  "nrdbCode": "10055",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "facility",
+    "government"
+  ],
+  "installCost": 1,
+  "rezCost": 1,
+  "trashCost": 3,
+  "paidAbilities": [
+    {
+      "id": "mumbad-city-hall-alliance",
+      "label": "[click]: Search R&D for an alliance card, reveal it, and play or install it (paying all costs). Shuffle R&D",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "mumbad_city_hall_search_alliance_play_or_install"
+        }
+      }
+    }
+  ],
+  "wave": "democracy-and-dogma"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "akshara-sareen",
+  "title": "Akshara Sareen",
+  "nrdbCode": "10046",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "neutral-runner",
+  "subtypes": [
+    "connection"
+  ],
+  "installCost": 0,
+  "unique": true,
+  "allottedClicksBonus": 1,
+  "corpAllottedClicksBonusWhileInstalled": 1,
+  "wave": "democracy-and-dogma"
+}

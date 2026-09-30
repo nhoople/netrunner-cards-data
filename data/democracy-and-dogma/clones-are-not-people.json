@@ -1,0 +1,23 @@
+{
+  "id": "clones-are-not-people",
+  "title": "\"Clones are not People\"",
+  "nrdbCode": "10052",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "jinteki",
+  "subtypes": [
+    "current"
+  ],
+  "playCost": 3,
+  "lingerAsCurrent": true,
+  "currentTrashOnAgendaStolen": true,
+  "onAgendaScored": {
+    "op": "do",
+    "action": {
+      "kind": "add_to_corp_score_as_agenda",
+      "agendaPoints": 1
+    }
+  },
+  "wave": "democracy-and-dogma"
+}

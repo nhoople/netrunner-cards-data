@@ -1,0 +1,63 @@
+{
+  "id": "sensie-actors-union",
+  "title": "Sensie Actors Union",
+  "nrdbCode": "10053",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "subtypes": [
+    "political"
+  ],
+  "installCost": 0,
+  "rezCost": 0,
+  "trashCost": 2,
+  "onTurnBegin": {
+    "op": "if",
+    "cond": {
+      "op": "host_server_unprotected_by_ice"
+    },
+    "then": {
+      "op": "choose",
+      "chooser": "corp",
+      "options": [
+        {
+          "id": "accept",
+          "label": "Draw 3 cards, then add 1 card from HQ to bottom of R&D",
+          "effect": {
+            "op": "seq",
+            "effects": [
+              {
+                "op": "do",
+                "action": {
+                  "kind": "draw",
+                  "side": "corp",
+                  "amount": 3
+                }
+              },
+              {
+                "op": "do",
+                "action": {
+                  "kind": "sensie_add_one_hq_to_bottom_rd"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "decline",
+          "label": "Decline",
+          "effect": {
+            "op": "do",
+            "action": {
+              "kind": "gain_credits",
+              "side": "corp",
+              "amount": 0
+            }
+          }
+        }
+      ]
+    }
+  },
+  "wave": "democracy-and-dogma"
+}

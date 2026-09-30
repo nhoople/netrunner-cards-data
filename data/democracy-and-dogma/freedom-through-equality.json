@@ -1,0 +1,23 @@
+{
+  "id": "freedom-through-equality",
+  "title": "\"Freedom Through Equality\"",
+  "nrdbCode": "10045",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "neutral-runner",
+  "subtypes": [
+    "current"
+  ],
+  "playCost": 3,
+  "lingerAsCurrent": true,
+  "currentTrashOnAgendaScored": true,
+  "onStealAgenda": {
+    "op": "do",
+    "action": {
+      "kind": "add_to_runner_score_as_agenda",
+      "agendaPoints": 1
+    }
+  },
+  "wave": "democracy-and-dogma"
+}

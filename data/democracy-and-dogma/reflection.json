@@ -1,0 +1,19 @@
+{
+  "id": "reflection",
+  "title": "Reflection",
+  "nrdbCode": "10041",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "subtypes": [
+    "console"
+  ],
+  "installCost": 2,
+  "unique": true,
+  "muBonus": 1,
+  "link": 1,
+  "maxConsole": 1,
+  "revealRandomHqOnJackOut": true,
+  "wave": "democracy-and-dogma"
+}

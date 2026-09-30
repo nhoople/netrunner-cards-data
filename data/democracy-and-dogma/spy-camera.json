@@ -1,0 +1,55 @@
+{
+  "id": "spy-camera",
+  "title": "Spy Camera",
+  "nrdbCode": "10042",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "subtypes": [
+    "consumer-grade"
+  ],
+  "installCost": 0,
+  "deckLimit": 6,
+  "paidAbilities": [
+    {
+      "id": "spy-camera-arrange",
+      "label": "[click]: Look at the top X cards of your stack and arrange them (X = installed Spy Camera copies)",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "spy_camera_look_top_x_stack_arrange"
+        }
+      },
+      "usableByRunnerOnSelfIce": true
+    },
+    {
+      "id": "spy-camera-rd",
+      "label": "[trash]: Look at the top card of R&D",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "trashSelf": true
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "look_top_1_rd"
+        }
+      },
+      "usableByRunnerOnSelfIce": true
+    }
+  ],
+  "wave": "democracy-and-dogma"
+}

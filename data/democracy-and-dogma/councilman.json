@@ -1,0 +1,15 @@
+{
+  "id": "councilman",
+  "title": "Councilman",
+  "nrdbCode": "10047",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "neutral-runner",
+  "subtypes": [
+    "connection"
+  ],
+  "installCost": 0,
+  "onCorpRezAssetOrUpgradeMayPayRezCostTrashSelfDerez": true,
+  "wave": "democracy-and-dogma"
+}

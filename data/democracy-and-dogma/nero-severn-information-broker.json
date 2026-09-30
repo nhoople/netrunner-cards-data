@@ -1,0 +1,15 @@
+{
+  "id": "nero-severn-information-broker",
+  "title": "Nero Severn: Information Broker",
+  "nrdbCode": "10040",
+  "type": "identity",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "subtypes": [
+    "natural"
+  ],
+  "link": 1,
+  "mayJackOutOnEncounterSentryOncePerTurn": true,
+  "wave": "democracy-and-dogma"
+}

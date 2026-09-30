@@ -1,0 +1,36 @@
+{
+  "id": "political-operative",
+  "title": "Political Operative",
+  "nrdbCode": "10043",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "subtypes": [
+    "connection"
+  ],
+  "installCost": 1,
+  "installRequiresSuccessfulHqRunThisTurn": true,
+  "paidAbilities": [
+    {
+      "id": "political-operative-trash",
+      "label": "[trash], X¢: Trash 1 rezzed card with trash cost equal to X",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "trashSelf": true
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "political_operative_trash_rezzed_paying_trash_cost"
+        }
+      },
+      "usableByRunnerOnSelfIce": true
+    }
+  ],
+  "wave": "democracy-and-dogma"
+}

@@ -391,6 +391,11 @@
           "type": "integer",
           "description": "Wyrm-class: only break when encountered ice strength ≤ this."
         },
+        "breakRequiresIceSubtypeCountGte": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Sadyojata / Deva: only break ice that has at least this many subtypes."
+        },
         "breakPreventsCardAccessForRun": {
           "type": "boolean",
           "description": "Eater: after using this breaker to break a subroutine, Runner cannot access cards for the remainder of the run."
@@ -4141,6 +4146,43 @@
         "threshold": { "type": "integer", "minimum": 1 }
       },
       "description": "PAD Factory: 0 influence if deck has ≥ threshold copies of cardId."
+    },
+    "mayJackOutOnEncounterSentryOncePerTurn": {
+      "type": "boolean",
+      "description": "Nero Severn: once per turn when encountering a sentry, may jack out."
+    },
+    "revealRandomHqOnJackOut": {
+      "type": "boolean",
+      "description": "Reflection: whenever you jack out, Corp reveals 1 random HQ card."
+    },
+    "installRequiresSuccessfulHqRunThisTurn": {
+      "type": "boolean",
+      "description": "Political Operative: install only if you made a successful run on HQ this turn."
+    },
+    "corpAllottedClicksBonusWhileInstalled": {
+      "type": "integer",
+      "description": "Akshara Sareen: Corp gets +N allotted clicks while this Runner card is installed."
+    },
+    "onCorpRezAssetOrUpgradeMayPayRezCostTrashSelfDerez": {
+      "type": "boolean",
+      "description": "Councilman: whenever Corp rezzes an asset or upgrade, may pay its rez cost and trash this to derez it (cannot rez again this turn)."
+    },
+    "onDrawAgendaMayRevealAndInstall": {
+      "type": "boolean",
+      "description": "Political Dealings: whenever you draw an agenda, may reveal and install it."
+    },
+    "gainCreditWheneverRunnerBreaksSubroutine": {
+      "type": "boolean",
+      "description": "Bailiff: whenever the Runner breaks a subroutine on this ice, gain 1¢."
+    },
+    "onRezOtherCardInRootOrProtectingMayRezDiscount": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Surat City Grid: whenever you rez another card in the root of or protecting this server, may rez 1 card paying this many credits less."
+    },
+    "hostAgendaPointsModifier": {
+      "type": "integer",
+      "description": "Political Graffiti condition: host agenda is worth this many fewer/more agenda points while hosted."
     }
   }
 }

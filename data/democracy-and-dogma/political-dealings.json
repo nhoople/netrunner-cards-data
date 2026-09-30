@@ -1,0 +1,17 @@
+{
+  "id": "political-dealings",
+  "title": "Political Dealings",
+  "nrdbCode": "10051",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "jinteki",
+  "subtypes": [
+    "seedy"
+  ],
+  "installCost": 4,
+  "rezCost": 4,
+  "trashCost": 3,
+  "onDrawAgendaMayRevealAndInstall": true,
+  "wave": "democracy-and-dogma"
+}
