@@ -1,0 +1,22 @@
+{
+  "id": "making-an-entrance",
+  "title": "Making an Entrance",
+  "nrdbCode": "10058",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "subtypes": [
+    "priority"
+  ],
+  "playCost": 0,
+  "playRequiresFirstClick": true,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "look_top_n_stack_trash_any_arrange_rest",
+      "n": 6
+    }
+  },
+  "wave": "salsette-island"
+}

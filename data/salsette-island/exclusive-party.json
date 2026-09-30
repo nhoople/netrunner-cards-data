@@ -1,0 +1,33 @@
+{
+  "id": "exclusive-party",
+  "title": "Exclusive Party",
+  "nrdbCode": "10060",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "playCost": 0,
+  "deckLimit": 6,
+  "onPlay": {
+    "op": "seq",
+    "effects": [
+      {
+        "op": "do",
+        "action": {
+          "kind": "draw",
+          "side": "runner",
+          "amount": 1
+        }
+      },
+      {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits_per_copies_in_heap",
+          "side": "runner",
+          "per": 1
+        }
+      }
+    ]
+  },
+  "wave": "salsette-island"
+}

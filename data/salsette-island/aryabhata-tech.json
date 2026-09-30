@@ -1,0 +1,20 @@
+{
+  "id": "aryabhata-tech",
+  "title": "Aryabhata Tech",
+  "nrdbCode": "10070",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "subtypes": [
+    "ritzy"
+  ],
+  "installCost": 2,
+  "rezCost": 2,
+  "trashCost": 3,
+  "onAnySuccessfulTraceGainAndRunnerLose": {
+    "gain": 1,
+    "lose": 1
+  },
+  "wave": "salsette-island"
+}

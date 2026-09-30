@@ -1,0 +1,17 @@
+{
+  "id": "localized-product-line",
+  "title": "Localized Product Line",
+  "nrdbCode": "10075",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "neutral-corp",
+  "playCost": 4,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "localized_product_line_search_rd_copies_to_hq"
+    }
+  },
+  "wave": "salsette-island"
+}

@@ -1,0 +1,46 @@
+{
+  "id": "executive-search-firm",
+  "title": "Executive Search Firm",
+  "nrdbCode": "10072",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "alliance",
+    "ritzy"
+  ],
+  "installCost": 0,
+  "rezCost": 0,
+  "trashCost": 3,
+  "zeroInfluenceIfNonAllianceFactionCardsGte": {
+    "faction": "weyland-consortium",
+    "threshold": 6
+  },
+  "paidAbilities": [
+    {
+      "id": "executive-search-firm-search",
+      "label": "[click]: Search R&D for an executive, sysop, or character, reveal it, and add it to HQ. Shuffle R&D",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "search_rd_for_any_subtype_to_hq",
+          "subtypes": [
+            "executive",
+            "sysop",
+            "character"
+          ]
+        }
+      }
+    }
+  ],
+  "wave": "salsette-island"
+}

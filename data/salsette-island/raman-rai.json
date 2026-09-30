@@ -1,0 +1,23 @@
+{
+  "id": "raman-rai",
+  "title": "Raman Rai",
+  "nrdbCode": "10068",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "jinteki",
+  "subtypes": [
+    "alliance",
+    "executive"
+  ],
+  "installCost": 1,
+  "rezCost": 1,
+  "trashCost": 3,
+  "unique": true,
+  "zeroInfluenceIfNonAllianceFactionCardsGte": {
+    "faction": "jinteki",
+    "threshold": 6
+  },
+  "onDrawMayLoseClickRevealSwapArchivesSameTypeOncePerTurn": true,
+  "wave": "salsette-island"
+}

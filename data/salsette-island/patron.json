@@ -1,0 +1,15 @@
+{
+  "id": "patron",
+  "title": "Patron",
+  "nrdbCode": "10063",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "subtypes": [
+    "connection"
+  ],
+  "installCost": 3,
+  "patronChooseServerDrawInsteadOfBreach": 2,
+  "wave": "salsette-island"
+}

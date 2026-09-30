@@ -1,0 +1,22 @@
+{
+  "id": "jeeves-model-bioroids",
+  "title": "Jeeves Model Bioroids",
+  "nrdbCode": "10067",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "alliance"
+  ],
+  "installCost": 2,
+  "rezCost": 2,
+  "trashCost": 5,
+  "unique": true,
+  "zeroInfluenceIfNonAllianceFactionCardsGte": {
+    "faction": "haas-bioroid",
+    "threshold": 6
+  },
+  "gainClickFirstTimeSpendClicksGteOnSameActionEachTurn": 3,
+  "wave": "salsette-island"
+}

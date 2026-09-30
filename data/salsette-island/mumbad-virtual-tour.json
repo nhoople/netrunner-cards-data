@@ -1,0 +1,18 @@
+{
+  "id": "mumbad-virtual-tour",
+  "title": "Mumbad Virtual Tour",
+  "nrdbCode": "10076",
+  "type": "upgrade",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "neutral-corp",
+  "subtypes": [
+    "alliance"
+  ],
+  "installCost": 0,
+  "rezCost": 0,
+  "trashCost": 5,
+  "zeroInfluenceIfAssetsInDeckGte": 7,
+  "mustTrashWhenAccessedWhileInstalled": true,
+  "wave": "salsette-island"
+}

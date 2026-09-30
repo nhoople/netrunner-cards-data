@@ -1,0 +1,26 @@
+{
+  "id": "brahman",
+  "title": "Brahman",
+  "nrdbCode": "10062",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "subtypes": [
+    "icebreaker",
+    "ai"
+  ],
+  "installCost": 4,
+  "strength": 3,
+  "memoryCost": 2,
+  "breaker": {
+    "breaksSubtype": "*",
+    "strength": 3,
+    "breakCredits": 1,
+    "breakMaxSubs": 2,
+    "pumpCredits": 2,
+    "pumpStrength": 1
+  },
+  "addInstalledNonVirusProgramToStackTopOnEncounterEndIfBroke": true,
+  "wave": "salsette-island"
+}

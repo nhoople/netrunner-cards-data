@@ -1,0 +1,49 @@
+{
+  "id": "upayoga",
+  "title": "Upayoga",
+  "nrdbCode": "10069",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "jinteki",
+  "subtypes": [
+    "code gate",
+    "psi"
+  ],
+  "installCost": 3,
+  "rezCost": 3,
+  "strength": 4,
+  "subroutines": [
+    {
+      "id": "upayoga-psi",
+      "text": "Psi game. If bids differ, the Runner loses 2¢.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "play_psi_game",
+          "maxBid": 2,
+          "ifBidsDiffer": {
+            "op": "do",
+            "action": {
+              "kind": "lose_credits",
+              "side": "runner",
+              "amount": 2
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "upayoga-resolve-psi",
+      "text": "Resolve a subroutine on a piece of rezzed psi ice.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "may_resolve_subroutine_on_rezzed_ice",
+          "subtype": "psi"
+        }
+      }
+    }
+  ],
+  "wave": "salsette-island"
+}

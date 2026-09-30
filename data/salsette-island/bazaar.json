@@ -1,0 +1,16 @@
+{
+  "id": "bazaar",
+  "title": "Bazaar",
+  "nrdbCode": "10065",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "neutral-runner",
+  "subtypes": [
+    "location",
+    "ritzy"
+  ],
+  "installCost": 1,
+  "onInstallHardwareFromGripMayInstallAnotherCopy": true,
+  "wave": "salsette-island"
+}

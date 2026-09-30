@@ -1,0 +1,38 @@
+{
+  "id": "sports-hopper",
+  "title": "Sports Hopper",
+  "nrdbCode": "10064",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "neutral-runner",
+  "subtypes": [
+    "vehicle"
+  ],
+  "installCost": 3,
+  "link": 1,
+  "paidAbilities": [
+    {
+      "id": "sports-hopper-draw",
+      "label": "[trash]: Draw 3 cards",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "trashSelf": true
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "draw",
+          "side": "runner",
+          "amount": 3
+        }
+      },
+      "usableByRunnerOnSelfIce": true
+    }
+  ],
+  "wave": "salsette-island"
+}

@@ -1,0 +1,25 @@
+{
+  "id": "salems-hospitality",
+  "title": "Salem's Hospitality",
+  "nrdbCode": "10071",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "subtypes": [
+    "alliance",
+    "gray ops"
+  ],
+  "playCost": 2,
+  "zeroInfluenceIfNonAllianceFactionCardsGte": {
+    "faction": "nbn",
+    "threshold": 6
+  },
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "salems_hospitality_name_reveal_trash_grip_copies"
+    }
+  },
+  "wave": "salsette-island"
+}

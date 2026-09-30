@@ -1,0 +1,16 @@
+{
+  "id": "personality-profiles",
+  "title": "Personality Profiles",
+  "nrdbCode": "10066",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "security"
+  ],
+  "advancementRequirement": 3,
+  "agendaPoints": 1,
+  "onRunnerSearchStackOrInstallFromHeapTrashRandomFromGrip": true,
+  "wave": "salsette-island"
+}

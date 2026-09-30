@@ -35,6 +35,7 @@
     "kala-ghoda",
     "business-first",
     "democracy-and-dogma",
+    "salsette-island",
     "reign-and-reverie",
     "system-core-2019",
     "downfall",
@@ -2086,6 +2087,31 @@
         "mumbad-city-hall",
         "bailiff",
         "surat-city-grid"
+      ]
+    },
+    "salsette-island": {
+      "status": "supported",
+      "notes": "Salsette Island (si) Mumbad #4 set-complete. 19/19 new clears; no reprints. Pool supported after democracy-and-dogma. Paired release v1.119.0. Never kick mo/mor.",
+      "cards": [
+        "making-an-entrance",
+        "salsette-slums",
+        "exclusive-party",
+        "vamadeva",
+        "brahman",
+        "patron",
+        "sports-hopper",
+        "bazaar",
+        "personality-profiles",
+        "jeeves-model-bioroids",
+        "raman-rai",
+        "upayoga",
+        "aryabhata-tech",
+        "salems-hospitality",
+        "executive-search-firm",
+        "indian-union-stock-exchange",
+        "cobra",
+        "localized-product-line",
+        "mumbad-virtual-tour"
       ]
     }
   }

@@ -1,0 +1,16 @@
+{
+  "id": "salsette-slums",
+  "title": "Salsette Slums",
+  "nrdbCode": "10059",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "subtypes": [
+    "location",
+    "seedy"
+  ],
+  "installCost": 2,
+  "accessPayTrashCostRemoveFromGameOncePerTurn": true,
+  "wave": "salsette-island"
+}

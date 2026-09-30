@@ -396,6 +396,11 @@
           "minimum": 1,
           "description": "Sadyojata / Deva: only break ice that has at least this many subtypes."
         },
+        "breakRequiresIceExactSubroutineCount": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Vamadeva: only break ice with exactly this many printed subroutines."
+        },
         "breakPreventsCardAccessForRun": {
           "type": "boolean",
           "description": "Eater: after using this breaker to break a subroutine, Runner cannot access cards for the remainder of the run."
@@ -4183,6 +4188,60 @@
     "hostAgendaPointsModifier": {
       "type": "integer",
       "description": "Political Graffiti condition: host agenda is worth this many fewer/more agenda points while hosted."
+    },
+    "accessPayTrashCostRemoveFromGameOncePerTurn": {
+      "type": "boolean",
+      "description": "Salsette Slums: once per turn during access, pay the accessed card's trash cost to remove it from the game instead of Archives."
+    },
+    "addInstalledNonVirusProgramToStackTopOnEncounterEndIfBroke": {
+      "type": "boolean",
+      "description": "Brahman: when an encounter ends, if this program broke a subroutine during that encounter, add 1 installed non-virus program to the top of the stack."
+    },
+    "patronChooseServerDrawInsteadOfBreach": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Patron: at turn begin choose a server; first successful run there draws this many cards instead of breaching."
+    },
+    "onInstallHardwareFromGripMayInstallAnotherCopy": {
+      "type": "boolean",
+      "description": "Bazaar: whenever you install hardware from grip, may install another copy of that hardware from grip (paying all costs)."
+    },
+    "onRunnerSearchStackOrInstallFromHeapTrashRandomFromGrip": {
+      "type": "boolean",
+      "description": "Personality Profiles: whenever the Runner searches the stack or installs a card from the heap, they trash 1 card from the grip at random."
+    },
+    "gainClickFirstTimeSpendClicksGteOnSameActionEachTurn": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Jeeves Model Bioroids: first time each turn you spend this many clicks on the same action/ability, gain [click]."
+    },
+    "onDrawMayLoseClickRevealSwapArchivesSameTypeOncePerTurn": {
+      "type": "boolean",
+      "description": "Raman Rai: once per turn when you draw a card, may lose [click] to reveal that card and 1 Archives card of the same type, then swap them."
+    },
+    "onAnySuccessfulTraceGainAndRunnerLose": {
+      "type": "object",
+      "required": ["gain", "lose"],
+      "additionalProperties": false,
+      "properties": {
+        "gain": { "type": "integer", "minimum": 0 },
+        "lose": { "type": "integer", "minimum": 0 }
+      },
+      "description": "Aryabhata Tech: whenever there is a successful trace, Corp gains gain¢ and Runner loses lose¢."
+    },
+    "onRezOrPlayOutOfFactionGainCredits": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Indian Union Stock Exchange: whenever you rez or play an out-of-faction card (including this), gain this many credits."
+    },
+    "zeroInfluenceIfAssetsInDeckGte": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Mumbad Virtual Tour: 0 influence if deck has ≥ this many assets."
+    },
+    "mustTrashWhenAccessedWhileInstalled": {
+      "type": "boolean",
+      "description": "Mumbad Virtual Tour: when the Runner accesses this upgrade while it is installed, they must trash it, if able."
     }
   }
 }
