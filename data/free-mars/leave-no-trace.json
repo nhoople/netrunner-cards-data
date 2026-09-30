@@ -1,0 +1,23 @@
+{
+  "id": "leave-no-trace",
+  "title": "Leave No Trace",
+  "nrdbCode": "12083",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "subtypes": [
+    "run"
+  ],
+  "playCost": 2,
+  "runEvent": {
+    "servers": "any",
+    "onRunEnd": {
+      "op": "do",
+      "action": {
+        "kind": "derez_all_ice_rezzed_this_run"
+      }
+    }
+  },
+  "wave": "free-mars"
+}

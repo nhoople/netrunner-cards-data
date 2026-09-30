@@ -1,0 +1,26 @@
+{
+  "id": "nanotk",
+  "title": "Na'Not'K",
+  "nrdbCode": "12088",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "subtypes": [
+    "icebreaker",
+    "killer"
+  ],
+  "installCost": 4,
+  "strength": 1,
+  "memoryCost": 1,
+  "strengthBonusPerIceProtectingAttackedServerDuringRun": 1,
+  "breaker": {
+    "breaksSubtype": "sentry",
+    "strength": 1,
+    "breakCredits": 1,
+    "breakMaxSubs": 1,
+    "pumpCredits": 3,
+    "pumpStrength": 2
+  },
+  "wave": "free-mars"
+}

@@ -1,0 +1,51 @@
+{
+  "id": "data-loop",
+  "title": "Data Loop",
+  "nrdbCode": "12095",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "subtypes": [
+    "barrier"
+  ],
+  "installCost": 7,
+  "rezCost": 7,
+  "strength": 4,
+  "onEncounter": {
+    "op": "do",
+    "action": {
+      "kind": "choose_n_grip_to_stack_top",
+      "count": 2
+    }
+  },
+  "subroutines": [
+    {
+      "id": "data-loop-etr-if-tagged",
+      "text": "End the run if the Runner is tagged.",
+      "effect": {
+        "op": "if",
+        "cond": {
+          "op": "runner_tagged"
+        },
+        "then": {
+          "op": "do",
+          "action": {
+            "kind": "end_the_run"
+          }
+        }
+      }
+    },
+    {
+      "id": "data-loop-etr",
+      "text": "End the run.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "end_the_run"
+        }
+      }
+    }
+  ],
+  "wave": "free-mars"
+}

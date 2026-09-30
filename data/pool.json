@@ -49,6 +49,7 @@
     "terminal-directive",
     "earths-scion",
     "blood-and-water",
+    "free-mars",
     "reign-and-reverie",
     "system-core-2019",
     "downfall",
@@ -2498,6 +2499,32 @@
         "success",
         "whampoa-reclamation",
         "mass-commercialization"
+      ]
+    },
+    "free-mars": {
+      "status": "supported",
+      "notes": "Free Mars (fm) Red Sand #5 set-complete. 20/20 new clears; no reprints. Pool supported after blood-and-water. Paired release v1.133.0. Never kick mo/mor. Defer tdc.",
+      "cards": [
+        "mars-for-martians",
+        "god-of-war",
+        "leave-no-trace",
+        "rip-deal",
+        "flashbang",
+        "lean-and-mean",
+        "maven",
+        "nanotk",
+        "bloo-moose",
+        "o2-shortage",
+        "helheim-servers",
+        "mandatory-seed-replacement",
+        "water-monopoly",
+        "metamorph",
+        "data-loop",
+        "biased-reporting",
+        "open-forum",
+        "tithonium",
+        "transparency-initiative",
+        "rover-algorithm"
       ]
     }
   }

@@ -1,0 +1,28 @@
+{
+  "id": "rover-algorithm",
+  "title": "Rover Algorithm",
+  "nrdbCode": "12100",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "neutral-corp",
+  "subtypes": [
+    "condition"
+  ],
+  "playCost": 2,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "host_on_rezzed_ice_as_condition"
+    }
+  },
+  "hostStrengthPerPowerCounter": 1,
+  "onPassHost": {
+    "op": "do",
+    "action": {
+      "kind": "add_power_counter",
+      "amount": 1
+    }
+  },
+  "wave": "free-mars"
+}

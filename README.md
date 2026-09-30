@@ -62,6 +62,7 @@ Files under [`data/`](data/) are the API. Clone the repo or fetch a **tagged** r
 | [`data/terminal-directive/`](data/terminal-directive/) | Terminal Directive Cards (NRDB `td`) — **supported** (Red Sand deluxe; defer `tdc`) |
 | [`data/earths-scion/`](data/earths-scion/) | Earth's Scion (NRDB `eas`) — **supported** (Red Sand) |
 | [`data/blood-and-water/`](data/blood-and-water/) | Blood and Water (NRDB `baw`) — **supported** (Red Sand) |
+| [`data/free-mars/`](data/free-mars/) | Free Mars (NRDB `fm`) — **supported** (Red Sand) |
 | [`data/reign-and-reverie/`](data/reign-and-reverie/) | Reign and Reverie (NRDB `rar`) — **supported** (legacy backwards) |
 | [`data/system-core-2019/`](data/system-core-2019/) | System Core 2019 (NRDB `sc19`) — **supported** (legacy backwards) |
 | [`data/downfall/`](data/downfall/) | Downfall (NRDB `df`) — **supported** (legacy backwards) |

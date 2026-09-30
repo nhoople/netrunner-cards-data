@@ -1,0 +1,21 @@
+{
+  "id": "mandatory-seed-replacement",
+  "title": "Mandatory Seed Replacement",
+  "nrdbCode": "12092",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "jinteki",
+  "subtypes": [
+    "security"
+  ],
+  "advancementRequirement": 4,
+  "agendaPoints": 2,
+  "onScore": {
+    "op": "do",
+    "action": {
+      "kind": "rearrange_ice_protecting_all_servers"
+    }
+  },
+  "wave": "free-mars"
+}

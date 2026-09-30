@@ -1,0 +1,90 @@
+{
+  "id": "god-of-war",
+  "title": "God of War",
+  "nrdbCode": "12082",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "subtypes": [
+    "icebreaker",
+    "ai",
+    "virus"
+  ],
+  "installCost": 4,
+  "strength": 0,
+  "memoryCost": 1,
+  "onTurnBegin": {
+    "op": "choose",
+    "chooser": "runner",
+    "options": [
+      {
+        "id": "accept",
+        "label": "Take 1 tag to place 2 virus counters",
+        "effect": {
+          "op": "seq",
+          "effects": [
+            {
+              "op": "do",
+              "action": {
+                "kind": "give_tags",
+                "amount": 1
+              }
+            },
+            {
+              "op": "do",
+              "action": {
+                "kind": "add_virus_counter",
+                "amount": 2
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "runner",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  },
+  "paidAbilities": [
+    {
+      "id": "god-of-war-break",
+      "label": "Hosted virus counter: Break 1 subroutine",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "virusCounters": 1
+      },
+      "windows": [
+        "encounter_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "break_encounter_subroutine",
+          "maxSubs": 1
+        }
+      },
+      "usableByRunnerOnSelfIce": true
+    }
+  ],
+  "breaker": {
+    "breaksSubtype": "*",
+    "strength": 0,
+    "breakCredits": 0,
+    "breakMaxSubs": 1,
+    "pumpCredits": 2,
+    "pumpStrength": 1,
+    "breakViaPaidAbilityOnly": true
+  },
+  "wave": "free-mars"
+}

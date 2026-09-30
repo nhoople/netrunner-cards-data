@@ -1,0 +1,34 @@
+{
+  "id": "mars-for-martians",
+  "title": "Mars for Martians",
+  "nrdbCode": "12081",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "subtypes": [
+    "priority"
+  ],
+  "playCost": 0,
+  "playRequiresFirstClick": true,
+  "onPlay": {
+    "op": "seq",
+    "effects": [
+      {
+        "op": "do",
+        "action": {
+          "kind": "draw_per_installed_clan_resource",
+          "per": 1
+        }
+      },
+      {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits_per_runner_tags",
+          "per": 1
+        }
+      }
+    ]
+  },
+  "wave": "free-mars"
+}

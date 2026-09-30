@@ -1,0 +1,29 @@
+{
+  "id": "transparency-initiative",
+  "title": "Transparency Initiative",
+  "nrdbCode": "12099",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "condition"
+  ],
+  "playCost": 0,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "transparency_initiative_host_on_agenda"
+    }
+  },
+  "onAdvance": {
+    "op": "do",
+    "action": {
+      "kind": "gain_credits",
+      "side": "corp",
+      "amount": 1
+    }
+  },
+  "hostAgendaGainsPublic": true,
+  "wave": "free-mars"
+}

@@ -1,0 +1,16 @@
+{
+  "id": "water-monopoly",
+  "title": "Water Monopoly",
+  "nrdbCode": "12093",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "jinteki",
+  "subtypes": [
+    "initiative"
+  ],
+  "advancementRequirement": 3,
+  "agendaPoints": 1,
+  "nonVirtualResourceInstallCostIncrease": 1,
+  "wave": "free-mars"
+}

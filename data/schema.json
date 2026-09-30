@@ -100,6 +100,25 @@
           },
           "description": "Pushing the Envelope: if grip size ≤ gripMax when the run begins, each installed icebreaker has +bonus strength until the run ends."
         },
+        "icebreakerStrengthBonusIfInstalledProgramsLte": {
+          "type": "object",
+          "required": [
+            "programsMax",
+            "bonus"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "programsMax": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "bonus": {
+              "type": "integer"
+            }
+          },
+          "description": "Lean and Mean: if installed programs ≤ programsMax when the run begins, each icebreaker has +bonus strength until the run ends."
+        },
+
         "bypassFirstEncounter": {
           "type": "boolean"
         },
@@ -4848,6 +4867,43 @@
     "onRezIceProtectingThisServer": {
       "type": "object",
       "description": "Traffic Analyzer: whenever you rez ice protecting this server, resolve this effect."
+    },
+    "ripDealHeapInsteadOfHqAccess": {
+      "type": "boolean",
+      "description": "Rip Deal: on HQ breach access count, may add that many from heap to grip and skip HQ card access (root still accessible)."
+    },
+    "rfgSelfOnRunEnd": {
+      "type": "boolean",
+      "description": "Rip Deal: when the run ends, remove this event from the game."
+    },
+    "strengthBonusPerInstalledProgram": {
+      "type": "integer",
+      "description": "Maven: this program gets +N strength for each installed program."
+    },
+    "strengthBonusPerIceProtectingAttackedServerDuringRun": {
+      "type": "integer",
+      "description": "Na'Not'K: during runs, +N strength per ice protecting the attacked server."
+    },
+    "nonVirtualResourceInstallCostIncrease": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Water Monopoly: install cost of each non-virtual resource is increased by this many."
+    },
+    "cannotHostCards": {
+      "type": "boolean",
+      "description": "Tithonium: this card cannot host cards."
+    },
+    "afterMandatoryDraw": {
+      "type": "object",
+      "description": "Open Forum: after Corp mandatory draw, resolve this effect (while rezzed)."
+    },
+    "hostAgendaGainsPublic": {
+      "type": "boolean",
+      "description": "Transparency Initiative: when hosted on an agenda, host agenda gains public."
+    },
+    "hostStrengthPerPowerCounter": {
+      "type": "integer",
+      "description": "Rover Algorithm: while hosted on ice, host ice has +N strength per power counter on this card."
     }
   }
 }

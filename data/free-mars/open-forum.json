@@ -1,0 +1,19 @@
+{
+  "id": "open-forum",
+  "title": "Open Forum",
+  "nrdbCode": "12097",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "installCost": 1,
+  "rezCost": 1,
+  "trashCost": 3,
+  "afterMandatoryDraw": {
+    "op": "do",
+    "action": {
+      "kind": "open_forum_reveal_top_rd_to_hq_then_hq_to_rd_top"
+    }
+  },
+  "wave": "free-mars"
+}

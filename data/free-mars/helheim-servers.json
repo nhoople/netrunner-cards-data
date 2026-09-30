@@ -1,0 +1,41 @@
+{
+  "id": "helheim-servers",
+  "title": "Helheim Servers",
+  "nrdbCode": "12091",
+  "type": "upgrade",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "facility"
+  ],
+  "installCost": 2,
+  "rezCost": 2,
+  "trashCost": 3,
+  "unique": true,
+  "paidAbilities": [
+    {
+      "id": "helheim-boost",
+      "label": "Trash 1 card from HQ: All ice protecting this server has +2 strength until end of run",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "trashFromHq": 1
+      },
+      "windows": [
+        "approach_paw",
+        "encounter_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "helheim_ice_protecting_this_server_strength_until_end_of_run",
+          "amount": 2
+        }
+      },
+      "requireDuringRun": true,
+      "requireThisServer": true
+    }
+  ],
+  "wave": "free-mars"
+}

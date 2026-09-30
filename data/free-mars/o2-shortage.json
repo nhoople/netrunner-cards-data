@@ -1,0 +1,17 @@
+{
+  "id": "o2-shortage",
+  "title": "O₂ Shortage",
+  "nrdbCode": "12090",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "playCost": 3,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "o2_shortage_runner_may_trash_random_grip_or_corp_gains_clicks"
+    }
+  },
+  "wave": "free-mars"
+}

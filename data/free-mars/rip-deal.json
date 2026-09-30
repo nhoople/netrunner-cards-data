@@ -1,0 +1,19 @@
+{
+  "id": "rip-deal",
+  "title": "Rip Deal",
+  "nrdbCode": "12084",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "subtypes": [
+    "run"
+  ],
+  "playCost": 3,
+  "ripDealHeapInsteadOfHqAccess": true,
+  "rfgSelfOnRunEnd": true,
+  "runEvent": {
+    "servers": "hq"
+  },
+  "wave": "free-mars"
+}

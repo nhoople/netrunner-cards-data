@@ -1,0 +1,17 @@
+{
+  "id": "biased-reporting",
+  "title": "Biased Reporting",
+  "nrdbCode": "12096",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "playCost": 2,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "biased_reporting_choose_type"
+    }
+  },
+  "wave": "free-mars"
+}

@@ -1,0 +1,45 @@
+{
+  "id": "bloo-moose",
+  "title": "Bloo Moose",
+  "nrdbCode": "12089",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "neutral-runner",
+  "subtypes": [
+    "location",
+    "seedy"
+  ],
+  "installCost": 4,
+  "unique": true,
+  "onTurnBegin": {
+    "op": "choose",
+    "chooser": "runner",
+    "options": [
+      {
+        "id": "accept",
+        "label": "Remove 1 card in the heap from the game to gain 2¢",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "bloo_moose_rfg_heap_gain_credits",
+            "credits": 2
+          }
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "runner",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  },
+  "wave": "free-mars"
+}

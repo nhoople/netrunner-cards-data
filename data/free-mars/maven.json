@@ -1,0 +1,24 @@
+{
+  "id": "maven",
+  "title": "Maven",
+  "nrdbCode": "12087",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "subtypes": [
+    "icebreaker",
+    "ai"
+  ],
+  "installCost": 5,
+  "strength": 0,
+  "memoryCost": 2,
+  "strengthBonusPerInstalledProgram": 1,
+  "breaker": {
+    "breaksSubtype": "*",
+    "strength": 0,
+    "breakCredits": 2,
+    "breakMaxSubs": 1
+  },
+  "wave": "free-mars"
+}
