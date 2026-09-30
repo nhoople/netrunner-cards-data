@@ -24,43 +24,55 @@
   },
   "subroutines": [
     {
-      "op": "do",
-      "action": {
-        "kind": "trace",
-        "strength": 1,
-        "onSuccess": {
-          "op": "do",
-          "action": {
-            "kind": "net_damage",
-            "amount": 1
+      "id": "shinobi-trace-1",
+      "text": "Trace 1 — If successful, do 1 net damage.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "trace",
+          "strength": 1,
+          "onSuccess": {
+            "op": "do",
+            "action": {
+              "kind": "net_damage",
+              "amount": 1
+            }
           }
         }
       }
     },
     {
-      "op": "do",
-      "action": {
-        "kind": "trace",
-        "strength": 2,
-        "onSuccess": {
-          "op": "do",
-          "action": {
-            "kind": "net_damage",
-            "amount": 2
+      "id": "shinobi-trace-2",
+      "text": "Trace 2 — If successful, do 2 net damage.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "trace",
+          "strength": 2,
+          "onSuccess": {
+            "op": "do",
+            "action": {
+              "kind": "net_damage",
+              "amount": 2
+            }
           }
         }
       }
     },
     {
-      "op": "do",
-      "action": {
-        "kind": "trace",
-        "strength": 3,
-        "onSuccess": {
-          "op": "do",
-          "action": {
-            "kind": "net_damage",
-            "amount": 3
+      "id": "shinobi-trace-3",
+      "text": "Trace 3 — If successful, do 3 net damage.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "trace",
+          "strength": 3,
+          "onSuccess": {
+            "op": "do",
+            "action": {
+              "kind": "net_damage",
+              "amount": 3
+            }
           }
         }
       }
