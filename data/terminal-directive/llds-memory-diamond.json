@@ -1,0 +1,17 @@
+{
+  "id": "llds-memory-diamond",
+  "title": "LLDS Memory Diamond",
+  "nrdbCode": "13015",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "subtypes": [
+    "mod"
+  ],
+  "installCost": 4,
+  "muBonus": 1,
+  "link": 1,
+  "handSizeBonus": 1,
+  "wave": "terminal-directive"
+}

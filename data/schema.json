@@ -49,6 +49,11 @@
           "type": "integer",
           "minimum": 0
         },
+        "bonusAccessUnusedMuCapped": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Deep Data Mining: on successful R&D breach, bonus access = min(unused MU, this cap)."
+        },
         "iceRezCostIncrease": {
           "type": "integer",
           "minimum": 0
@@ -764,6 +769,10 @@
           "requireSufferedCorpDamageThisTurn": {
             "type": "boolean",
             "description": "First Responders: usable only if the Runner suffered damage from a Corp card ability this turn."
+          },
+          "requireSufferedMeatDamageThisTurn": {
+            "type": "boolean",
+            "description": "Officer Frank: usable only if the Runner suffered meat damage this turn."
           }
         }
       }
@@ -4657,6 +4666,55 @@
       "type": "integer",
       "minimum": 1,
       "description": "CPC Generator: first time each turn the Runner spends a click to gain 1¢ (basic action), Corp gains this many credits."
+    },
+    "daemonHostInstallCreditDiscount": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Dhegdheer: each program installed onto this daemon costs this many credits less to install."
+    },
+    "basicDrawBonus": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Laguna Velasco District: whenever you take the basic action to draw cards, increase the number drawn by this many."
+    },
+    "polyhistorPassAllHqIceMayDrawForceCorpDraw": {
+      "type": "boolean",
+      "description": "Polyhistor: first time each turn you pass all ice protecting HQ, you may draw 1 to force Corp to draw 1."
+    },
+    "maxwellJamesRequireAfterSuccessfulHqRunPaidWindow": {
+      "type": "boolean",
+      "description": "Maxwell James: trash ability usable only during the next paid ability window after a successful HQ run ends."
+    },
+    "placePowerCounterOnInstallCardInRemoteRoot": {
+      "type": "boolean",
+      "description": "Estelle Moon: whenever you install a card in the root of a remote server, place 1 power counter on this asset."
+    },
+    "onSuccessfulRunThisServer": {
+      "type": "object",
+      "description": "Effect IR whenever the Runner makes a successful run on this server (Black Level Clearance)."
+    },
+    "skorpiosRfgOneTrashedRunnerCardOncePerTurn": {
+      "type": "boolean",
+      "description": "Skorpios: interrupt when Runner cards would be trashed — may RFG 1 set-aside card once per turn."
+    },
+    "onTrashWhileRezzedTakeBadPublicity": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Illegal Arms Factory: when the Runner trashes this asset while rezzed, take this many bad publicity."
+    },
+    "meatDamageWhenRunnerTakesTags": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Mr. Stone: whenever the Runner takes 1 or more tags, do this many meat damage."
+    },
+    "playOnlyIfRunnerStoleAgendaLastTurn": {
+      "type": "boolean",
+      "description": "Hunter Seeker: play only if the Runner stole an agenda during their last turn."
+    },
+    "longTermInvestmentGainAbilityAtHostedCredits": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Long-Term Investment: gains click take-any-hosted-credits ability while hosted credits ≥ this threshold."
     }
   }
 }

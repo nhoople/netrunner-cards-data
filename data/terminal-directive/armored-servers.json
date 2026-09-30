@@ -1,0 +1,46 @@
+{
+  "id": "armored-servers",
+  "title": "Armored Servers",
+  "nrdbCode": "13042",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "security"
+  ],
+  "advancementRequirement": 4,
+  "agendaPoints": 2,
+  "onScore": {
+    "op": "do",
+    "action": {
+      "kind": "add_agenda_counter",
+      "amount": 1
+    }
+  },
+  "paidAbilities": [
+    {
+      "id": "armored-servers-activate",
+      "label": "Hosted agenda counter: Remainder of run, trash 1 grip as additional cost to jack out or break a subroutine",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "agendaCounters": 1
+      },
+      "windows": [
+        "corp_action_paw",
+        "approach_paw",
+        "encounter_paw",
+        "approach_server_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "armored_servers_activate_this_run"
+        }
+      },
+      "requireDuringRun": true
+    }
+  ],
+  "wave": "terminal-directive"
+}

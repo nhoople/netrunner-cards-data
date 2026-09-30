@@ -1,0 +1,18 @@
+{
+  "id": "deep-data-mining",
+  "title": "Deep Data Mining",
+  "nrdbCode": "13014",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "subtypes": [
+    "run"
+  ],
+  "playCost": 3,
+  "runEvent": {
+    "servers": "rd",
+    "bonusAccessUnusedMuCapped": 4
+  },
+  "wave": "terminal-directive"
+}

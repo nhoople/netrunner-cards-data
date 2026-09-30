@@ -1,0 +1,41 @@
+{
+  "id": "graft",
+  "title": "Graft",
+  "nrdbCode": "13044",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "advancementRequirement": 5,
+  "agendaPoints": 3,
+  "onScore": {
+    "op": "choose",
+    "chooser": "corp",
+    "options": [
+      {
+        "id": "accept",
+        "label": "Search R&D for up to 3 cards",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "search_rd_to_hq",
+            "amount": 3
+          }
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "corp",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  },
+  "wave": "terminal-directive"
+}

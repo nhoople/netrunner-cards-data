@@ -1,0 +1,23 @@
+{
+  "id": "k-p-lynn",
+  "title": "K. P. Lynn",
+  "nrdbCode": "13052",
+  "type": "upgrade",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "executive"
+  ],
+  "installCost": 1,
+  "rezCost": 1,
+  "trashCost": 3,
+  "unique": true,
+  "onPassAllIceProtectingServer": {
+    "op": "do",
+    "action": {
+      "kind": "k_p_lynn_tag_or_end_the_run"
+    }
+  },
+  "wave": "terminal-directive"
+}

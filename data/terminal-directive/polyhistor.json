@@ -1,0 +1,19 @@
+{
+  "id": "polyhistor",
+  "title": "Polyhistor",
+  "nrdbCode": "13005",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "subtypes": [
+    "console"
+  ],
+  "installCost": 4,
+  "unique": true,
+  "maxConsole": 1,
+  "muBonus": 1,
+  "link": 1,
+  "polyhistorPassAllHqIceMayDrawForceCorpDraw": true,
+  "wave": "terminal-directive"
+}

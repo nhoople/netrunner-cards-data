@@ -1,0 +1,38 @@
+{
+  "id": "estelle-moon",
+  "title": "Estelle Moon",
+  "nrdbCode": "13032",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "executive"
+  ],
+  "installCost": 2,
+  "rezCost": 2,
+  "trashCost": 3,
+  "unique": true,
+  "placePowerCounterOnInstallCardInRemoteRoot": true,
+  "paidAbilities": [
+    {
+      "id": "estelle-moon-cash",
+      "label": "[trash]: For each power counter, gain 2¢ and draw 1 card",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "trashSelf": true
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "estelle_moon_trash_per_power"
+        }
+      }
+    }
+  ],
+  "wave": "terminal-directive"
+}

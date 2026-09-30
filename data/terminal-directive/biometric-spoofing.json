@@ -1,0 +1,33 @@
+{
+  "id": "biometric-spoofing",
+  "title": "Biometric Spoofing",
+  "nrdbCode": "13026",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "neutral-runner",
+  "installCost": 2,
+  "paidAbilities": [
+    {
+      "id": "biometric-spoofing-prevent",
+      "label": "[interrupt] → [trash]: Prevent 2 damage",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "trashSelf": true
+      },
+      "windows": [
+        "damage_interrupt_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "prevent_pending_damage",
+          "amount": 2
+        }
+      },
+      "usableByRunnerOnSelfIce": true
+    }
+  ],
+  "wave": "terminal-directive"
+}

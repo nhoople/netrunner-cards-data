@@ -1,0 +1,47 @@
+{
+  "id": "adept",
+  "title": "Adept",
+  "nrdbCode": "13017",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "subtypes": [
+    "icebreaker",
+    "fracter",
+    "killer"
+  ],
+  "installCost": 5,
+  "strength": 2,
+  "memoryCost": 2,
+  "strengthBonusPerUnusedMu": 1,
+  "breaker": {
+    "breaksSubtype": "sentry",
+    "strength": 2,
+    "breakCredits": 2,
+    "breakMaxSubs": 1,
+    "breakViaPaidAbilityOnly": true
+  },
+  "paidAbilities": [
+    {
+      "id": "adept-break",
+      "label": "2¢: Break 1 sentry or barrier subroutine",
+      "clickCost": 0,
+      "creditCost": 2,
+      "cost": {
+        "credits": 2
+      },
+      "windows": [
+        "encounter_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "adept_break_sentry_or_barrier"
+        }
+      },
+      "usableByRunnerOnSelfIce": true
+    }
+  ],
+  "wave": "terminal-directive"
+}

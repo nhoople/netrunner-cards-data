@@ -1,0 +1,19 @@
+{
+  "id": "dhegdheer",
+  "title": "Dhegdheer",
+  "nrdbCode": "13020",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "subtypes": [
+    "daemon"
+  ],
+  "installCost": 2,
+  "memoryCost": 0,
+  "daemonHost": true,
+  "daemonHostMaxMu": 99,
+  "maxHostedCards": 1,
+  "daemonHostInstallCreditDiscount": 1,
+  "wave": "terminal-directive"
+}

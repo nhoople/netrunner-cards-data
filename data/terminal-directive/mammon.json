@@ -1,0 +1,102 @@
+{
+  "id": "mammon",
+  "title": "Mammon",
+  "nrdbCode": "13009",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "subtypes": [
+    "icebreaker",
+    "ai"
+  ],
+  "installCost": 3,
+  "strength": 0,
+  "memoryCost": 1,
+  "breaker": {
+    "breaksSubtype": "*",
+    "strength": 0,
+    "breakCredits": 0,
+    "breakMaxSubs": 1,
+    "breakViaPaidAbilityOnly": true,
+    "pumpCredits": 2,
+    "pumpStrength": 2
+  },
+  "onRunnerTurnBegin": {
+    "op": "choose",
+    "chooser": "runner",
+    "options": [
+      {
+        "id": "accept",
+        "label": "Spend credits to place power counters",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "mammon_spend_credits_place_power_counters"
+          }
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "runner",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  },
+  "onDiscardPhaseEnd": {
+    "op": "do",
+    "action": {
+      "kind": "remove_all_power_counters"
+    }
+  },
+  "paidAbilities": [
+    {
+      "id": "mammon-break",
+      "label": "Hosted power counter: Break 1 subroutine",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "powerCounters": 1
+      },
+      "windows": [
+        "encounter_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "break_encounter_subroutine",
+          "maxSubs": 1
+        }
+      },
+      "usableByRunnerOnSelfIce": true
+    },
+    {
+      "id": "mammon-pump",
+      "label": "2¢: +2 strength",
+      "clickCost": 0,
+      "creditCost": 2,
+      "cost": {
+        "credits": 2
+      },
+      "windows": [
+        "encounter_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "pump_strength",
+          "amount": 2
+        }
+      },
+      "usableByRunnerOnSelfIce": true
+    }
+  ],
+  "wave": "terminal-directive"
+}

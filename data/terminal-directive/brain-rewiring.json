@@ -1,0 +1,43 @@
+{
+  "id": "brain-rewiring",
+  "title": "Brain Rewiring",
+  "nrdbCode": "13029",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "security"
+  ],
+  "advancementRequirement": 3,
+  "agendaPoints": 1,
+  "onScore": {
+    "op": "choose",
+    "chooser": "corp",
+    "options": [
+      {
+        "id": "accept",
+        "label": "Spend credits; Runner bottoms that many then draws 1",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "brain_rewiring_spend_credits_force_bottom_draw"
+          }
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "corp",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  },
+  "wave": "terminal-directive"
+}

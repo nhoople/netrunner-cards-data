@@ -1,0 +1,14 @@
+{
+  "id": "skorpios-defense-systems-persuasive-power",
+  "title": "Skorpios Defense Systems: Persuasive Power",
+  "nrdbCode": "13041",
+  "type": "identity",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "subsidiary"
+  ],
+  "skorpiosRfgOneTrashedRunnerCardOncePerTurn": true,
+  "wave": "terminal-directive"
+}

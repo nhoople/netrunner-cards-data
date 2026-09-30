@@ -1,0 +1,39 @@
+{
+  "id": "maxwell-james",
+  "title": "Maxwell James",
+  "nrdbCode": "13011",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "subtypes": [
+    "connection"
+  ],
+  "installCost": 1,
+  "unique": true,
+  "link": 1,
+  "maxwellJamesRequireAfterSuccessfulHqRunPaidWindow": true,
+  "paidAbilities": [
+    {
+      "id": "maxwell-james-derez",
+      "label": "[trash]: Derez a piece of ice protecting a remote server",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "trashSelf": true
+      },
+      "windows": [
+        "runner_action_paw",
+        "corp_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "maxwell_james_derez_remote_ice"
+        }
+      },
+      "usableByRunnerOnSelfIce": true
+    }
+  ],
+  "wave": "terminal-directive"
+}

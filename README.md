@@ -59,6 +59,7 @@ Files under [`data/`](data/) are the API. Clone the repo or fetch a **tagged** r
 | [`data/quorum/`](data/quorum/) | Quorum (NRDB `qu`) — **supported** (Flashpoint) |
 | [`data/daedalus-complex/`](data/daedalus-complex/) | Daedalus Complex (NRDB `dc`) — **supported** (Red Sand) |
 | [`data/station-one/`](data/station-one/) | Station One (NRDB `so`) — **supported** (Red Sand) |
+| [`data/terminal-directive/`](data/terminal-directive/) | Terminal Directive Cards (NRDB `td`) — **supported** (Red Sand deluxe; defer `tdc`) |
 | [`data/reign-and-reverie/`](data/reign-and-reverie/) | Reign and Reverie (NRDB `rar`) — **supported** (legacy backwards) |
 | [`data/system-core-2019/`](data/system-core-2019/) | System Core 2019 (NRDB `sc19`) — **supported** (legacy backwards) |
 | [`data/downfall/`](data/downfall/) | Downfall (NRDB `df`) — **supported** (legacy backwards) |

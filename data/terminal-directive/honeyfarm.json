@@ -1,0 +1,25 @@
+{
+  "id": "honeyfarm",
+  "title": "Honeyfarm",
+  "nrdbCode": "13054",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "neutral-corp",
+  "subtypes": [
+    "ambush"
+  ],
+  "installCost": 0,
+  "rezCost": 0,
+  "trashCost": 2,
+  "mustRevealWhenAccessedFromRd": true,
+  "onAccess": {
+    "op": "do",
+    "action": {
+      "kind": "lose_credits",
+      "side": "runner",
+      "amount": 1
+    }
+  },
+  "wave": "terminal-directive"
+}

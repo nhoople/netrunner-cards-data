@@ -1,0 +1,39 @@
+{
+  "id": "dean-lister",
+  "title": "Dean Lister",
+  "nrdbCode": "13025",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "neutral-runner",
+  "subtypes": [
+    "connection"
+  ],
+  "installCost": 2,
+  "unique": true,
+  "paidAbilities": [
+    {
+      "id": "dean-lister-boost",
+      "label": "[trash]: Choose an icebreaker; +1 strength per grip card until end of run",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "trashSelf": true
+      },
+      "windows": [
+        "runner_action_paw",
+        "encounter_paw",
+        "approach_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "dean_lister_boost_icebreaker"
+        }
+      },
+      "usableByRunnerOnSelfIce": true,
+      "requireDuringRun": true
+    }
+  ],
+  "wave": "terminal-directive"
+}

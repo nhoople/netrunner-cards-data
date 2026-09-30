@@ -1,0 +1,23 @@
+{
+  "id": "hunter-seeker",
+  "title": "Hunter Seeker",
+  "nrdbCode": "13051",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "gray ops",
+    "double"
+  ],
+  "playCost": 2,
+  "playAdditionalClick": true,
+  "playOnlyIfRunnerStoleAgendaLastTurn": true,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "hunter_seeker_trash_installed"
+    }
+  },
+  "wave": "terminal-directive"
+}

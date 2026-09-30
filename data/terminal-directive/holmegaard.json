@@ -1,0 +1,47 @@
+{
+  "id": "holmegaard",
+  "title": "Holmegaard",
+  "nrdbCode": "13036",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "sentry",
+    "tracer",
+    "destroyer"
+  ],
+  "installCost": 7,
+  "rezCost": 7,
+  "strength": 5,
+  "subroutines": [
+    {
+      "id": "holmegaard-trace",
+      "text": "Trace[4]. If successful, the Runner cannot access cards or breach the attacked server for the remainder of this run.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "trace",
+          "strength": 4,
+          "onSuccess": {
+            "op": "do",
+            "action": {
+              "kind": "holmegaard_forbid_access_and_breach_this_run"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "holmegaard-trash-breaker",
+      "text": "Trash 1 installed icebreaker.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "holmegaard_trash_installed_icebreaker"
+        }
+      }
+    }
+  ],
+  "wave": "terminal-directive"
+}

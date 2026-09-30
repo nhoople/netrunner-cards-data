@@ -1,0 +1,65 @@
+{
+  "id": "ultraviolet-clearance",
+  "title": "Ultraviolet Clearance",
+  "nrdbCode": "13038",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "transaction",
+    "double"
+  ],
+  "playCost": 6,
+  "playAdditionalClicks": 2,
+  "onPlay": {
+    "op": "seq",
+    "effects": [
+      {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "corp",
+          "amount": 10
+        }
+      },
+      {
+        "op": "do",
+        "action": {
+          "kind": "draw",
+          "side": "corp",
+          "amount": 4
+        }
+      },
+      {
+        "op": "choose",
+        "chooser": "corp",
+        "options": [
+          {
+            "id": "accept",
+            "label": "Install 1 card from HQ",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "may_install_from_hq_paying_costs"
+              }
+            }
+          },
+          {
+            "id": "decline",
+            "label": "Decline",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "gain_credits",
+                "side": "corp",
+                "amount": 0
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "wave": "terminal-directive"
+}

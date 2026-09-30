@@ -1,0 +1,22 @@
+{
+  "id": "black-level-clearance",
+  "title": "Black Level Clearance",
+  "nrdbCode": "13039",
+  "type": "upgrade",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "security protocol"
+  ],
+  "installCost": 4,
+  "rezCost": 4,
+  "trashCost": 1,
+  "onSuccessfulRunThisServer": {
+    "op": "do",
+    "action": {
+      "kind": "black_level_clearance_core_or_jack_out"
+    }
+  },
+  "wave": "terminal-directive"
+}

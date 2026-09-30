@@ -1,0 +1,18 @@
+{
+  "id": "mr-stone",
+  "title": "Mr. Stone",
+  "nrdbCode": "13046",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "executive"
+  ],
+  "installCost": 2,
+  "rezCost": 2,
+  "trashCost": 2,
+  "unique": true,
+  "meatDamageWhenRunnerTakesTags": 1,
+  "wave": "terminal-directive"
+}

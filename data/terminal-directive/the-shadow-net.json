@@ -1,0 +1,37 @@
+{
+  "id": "the-shadow-net",
+  "title": "The Shadow Net",
+  "nrdbCode": "13027",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "neutral-runner",
+  "subtypes": [
+    "virtual"
+  ],
+  "installCost": 0,
+  "unique": true,
+  "paidAbilities": [
+    {
+      "id": "shadow-net-play",
+      "label": "[click], forfeit an agenda: Play an event from your heap, ignoring all costs",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "forfeitAgenda": true,
+        "clicks": 1
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "the_shadow_net_play_event_from_heap"
+        }
+      },
+      "usableByRunnerOnSelfIce": true
+    }
+  ],
+  "wave": "terminal-directive"
+}

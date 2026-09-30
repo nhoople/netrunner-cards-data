@@ -1,0 +1,17 @@
+{
+  "id": "laguna-velasco-district",
+  "title": "Laguna Velasco District",
+  "nrdbCode": "13022",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "subtypes": [
+    "location",
+    "ritzy"
+  ],
+  "installCost": 5,
+  "unique": true,
+  "basicDrawBonus": 1,
+  "wave": "terminal-directive"
+}

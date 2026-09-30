@@ -1,0 +1,35 @@
+{
+  "id": "charlatan",
+  "title": "Charlatan",
+  "nrdbCode": "13010",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "subtypes": [
+    "virtual"
+  ],
+  "installCost": 5,
+  "paidAbilities": [
+    {
+      "id": "charlatan-run",
+      "label": "[click][click]: Run any server; first approach rezzed ice may pay strength to bypass",
+      "clickCost": 2,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 2
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "charlatan_run_any_server"
+        }
+      },
+      "usableByRunnerOnSelfIce": true
+    }
+  ],
+  "wave": "terminal-directive"
+}

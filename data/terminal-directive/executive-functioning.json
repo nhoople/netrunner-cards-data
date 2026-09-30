@@ -1,0 +1,37 @@
+{
+  "id": "executive-functioning",
+  "title": "Executive Functioning",
+  "nrdbCode": "13035",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "code gate",
+    "ap"
+  ],
+  "installCost": 2,
+  "rezCost": 2,
+  "strength": 1,
+  "subroutines": [
+    {
+      "id": "executive-functioning-trace",
+      "text": "Trace[4]. If successful, do 1 core damage.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "trace",
+          "strength": 4,
+          "onSuccess": {
+            "op": "do",
+            "action": {
+              "kind": "core_damage",
+              "amount": 1
+            }
+          }
+        }
+      }
+    }
+  ],
+  "wave": "terminal-directive"
+}

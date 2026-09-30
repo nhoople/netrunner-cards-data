@@ -1,0 +1,68 @@
+{
+  "id": "lustig",
+  "title": "Lustig",
+  "nrdbCode": "13007",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "subtypes": [
+    "icebreaker",
+    "killer"
+  ],
+  "installCost": 5,
+  "strength": 1,
+  "memoryCost": 1,
+  "breaker": {
+    "breaksSubtype": "sentry",
+    "strength": 1,
+    "breakCredits": 1,
+    "breakMaxSubs": 1,
+    "pumpCredits": 3,
+    "pumpStrength": 5
+  },
+  "paidAbilities": [
+    {
+      "id": "lustig-pump",
+      "label": "3¢: +5 strength",
+      "clickCost": 0,
+      "creditCost": 3,
+      "cost": {
+        "credits": 3
+      },
+      "windows": [
+        "encounter_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "pump_strength",
+          "amount": 5
+        }
+      },
+      "usableByRunnerOnSelfIce": true
+    },
+    {
+      "id": "lustig-bypass",
+      "label": "[trash]: Bypass the sentry you are encountering",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "trashSelf": true
+      },
+      "windows": [
+        "encounter_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "bypass_current_ice",
+          "requireSubtype": "sentry"
+        }
+      },
+      "usableByRunnerOnSelfIce": true,
+      "requireEncounterSubtype": "sentry"
+    }
+  ],
+  "wave": "terminal-directive"
+}

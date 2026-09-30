@@ -1,0 +1,29 @@
+{
+  "id": "bloodletter",
+  "title": "Bloodletter",
+  "nrdbCode": "13047",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "sentry",
+    "destroyer"
+  ],
+  "installCost": 3,
+  "rezCost": 3,
+  "strength": 4,
+  "subroutines": [
+    {
+      "id": "bloodletter-trash",
+      "text": "The Runner must trash either 1 installed program or the top 2 cards of the stack.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "bloodletter_trash_program_or_top_2_stack"
+        }
+      }
+    }
+  ],
+  "wave": "terminal-directive"
+}

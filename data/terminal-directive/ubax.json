@@ -1,0 +1,25 @@
+{
+  "id": "ubax",
+  "title": "Ubax",
+  "nrdbCode": "13016",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "subtypes": [
+    "console"
+  ],
+  "installCost": 5,
+  "unique": true,
+  "maxConsole": 1,
+  "muBonus": 1,
+  "onRunnerTurnBegin": {
+    "op": "do",
+    "action": {
+      "kind": "draw",
+      "side": "runner",
+      "amount": 1
+    }
+  },
+  "wave": "terminal-directive"
+}

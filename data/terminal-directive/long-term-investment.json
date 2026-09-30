@@ -1,0 +1,41 @@
+{
+  "id": "long-term-investment",
+  "title": "Long-Term Investment",
+  "nrdbCode": "13055",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "neutral-corp",
+  "installCost": 2,
+  "rezCost": 2,
+  "trashCost": 4,
+  "onTurnBegin": {
+    "op": "do",
+    "action": {
+      "kind": "place_hosted_credits",
+      "amount": 2
+    }
+  },
+  "longTermInvestmentGainAbilityAtHostedCredits": 8,
+  "paidAbilities": [
+    {
+      "id": "lti-take",
+      "label": "[click]: Take any number of credits from Long-Term Investment",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "long_term_investment_take_any_hosted_credits"
+        }
+      }
+    }
+  ],
+  "wave": "terminal-directive"
+}

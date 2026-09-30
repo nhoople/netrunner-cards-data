@@ -1,0 +1,56 @@
+{
+  "id": "illicit-sales",
+  "title": "Illicit Sales",
+  "nrdbCode": "13043",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "expansion"
+  ],
+  "advancementRequirement": 3,
+  "agendaPoints": 1,
+  "onScore": {
+    "op": "seq",
+    "effects": [
+      {
+        "op": "choose",
+        "chooser": "corp",
+        "options": [
+          {
+            "id": "accept",
+            "label": "Take 1 bad publicity",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "give_bad_publicity",
+                "amount": 1
+              }
+            }
+          },
+          {
+            "id": "decline",
+            "label": "Decline",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "gain_credits",
+                "side": "corp",
+                "amount": 0
+              }
+            }
+          }
+        ]
+      },
+      {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits_per_bad_publicity",
+          "per": 3
+        }
+      }
+    ]
+  },
+  "wave": "terminal-directive"
+}

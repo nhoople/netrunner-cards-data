@@ -1,0 +1,40 @@
+{
+  "id": "weir",
+  "title": "Weir",
+  "nrdbCode": "13056",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "neutral-corp",
+  "subtypes": [
+    "code gate"
+  ],
+  "installCost": 3,
+  "rezCost": 3,
+  "strength": 3,
+  "subroutines": [
+    {
+      "id": "weir-lose-click",
+      "text": "The Runner loses [click].",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "lose_clicks",
+          "side": "runner",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "id": "weir-trash-grip",
+      "text": "The Runner trashes 1 card from their grip.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "weir_trash_one_from_grip"
+        }
+      }
+    }
+  ],
+  "wave": "terminal-directive"
+}

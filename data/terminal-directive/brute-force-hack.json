@@ -1,0 +1,22 @@
+{
+  "id": "brute-force-hack",
+  "title": "Brute-Force-Hack",
+  "nrdbCode": "13002",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "subtypes": [
+    "double"
+  ],
+  "playCost": 0,
+  "playCostX": true,
+  "playAdditionalClick": true,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "brute_force_hack_derez_ice_rez_cost_lte_x"
+    }
+  },
+  "wave": "terminal-directive"
+}

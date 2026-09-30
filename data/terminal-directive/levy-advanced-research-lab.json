@@ -1,0 +1,36 @@
+{
+  "id": "levy-advanced-research-lab",
+  "title": "Levy Advanced Research Lab",
+  "nrdbCode": "13021",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "subtypes": [
+    "location",
+    "ritzy"
+  ],
+  "installCost": 4,
+  "paidAbilities": [
+    {
+      "id": "levy-reveal",
+      "label": "[click]: Reveal top 4 of stack; may add 1 program to grip; rest to bottom",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "levy_advanced_research_lab_reveal"
+        }
+      },
+      "usableByRunnerOnSelfIce": true
+    }
+  ],
+  "wave": "terminal-directive"
+}

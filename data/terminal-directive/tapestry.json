@@ -1,0 +1,97 @@
+{
+  "id": "tapestry",
+  "title": "Tapestry",
+  "nrdbCode": "13037",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "code gate"
+  ],
+  "installCost": 5,
+  "rezCost": 5,
+  "strength": 6,
+  "subroutines": [
+    {
+      "id": "tapestry-lose-click",
+      "text": "The Runner loses [click], if able.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "lose_clicks",
+          "side": "runner",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "id": "tapestry-corp-draw",
+      "text": "The Corp may draw 1 card.",
+      "effect": {
+        "op": "choose",
+        "chooser": "corp",
+        "options": [
+          {
+            "id": "accept",
+            "label": "Draw 1",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "draw",
+                "side": "corp",
+                "amount": 1
+              }
+            }
+          },
+          {
+            "id": "decline",
+            "label": "Decline",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "gain_credits",
+                "side": "corp",
+                "amount": 0
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "tapestry-hq-to-rd",
+      "text": "The Corp may add 1 card from HQ to the top of R&D.",
+      "effect": {
+        "op": "choose",
+        "chooser": "corp",
+        "options": [
+          {
+            "id": "accept",
+            "label": "Add 1 from HQ to top of R&D",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "hq_to_top_rd",
+                "pick": "choose"
+              }
+            }
+          },
+          {
+            "id": "decline",
+            "label": "Decline",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "gain_credits",
+                "side": "corp",
+                "amount": 0
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "wave": "terminal-directive"
+}
