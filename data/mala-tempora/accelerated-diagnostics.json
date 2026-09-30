@@ -1,0 +1,17 @@
+{
+  "id": "accelerated-diagnostics",
+  "title": "Accelerated Diagnostics",
+  "wave": "mala-tempora",
+  "nrdbCode": "04052",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "playCost": 1,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "accelerated_diagnostics"
+    }
+  }
+}

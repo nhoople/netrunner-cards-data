@@ -13,6 +13,7 @@
     "creation-and-control",
     "opening-moves",
     "stalwart",
+    "mala-tempora",
     "reign-and-reverie",
     "system-core-2019",
     "downfall",
@@ -1305,6 +1306,32 @@
         "off-the-grid",
         "profiteering",
         "restructure"
+      ]
+    },
+    "mala-tempora": {
+      "status": "supported",
+      "notes": "Mala Tempora (mt) Spin cycle set-complete. 18/18 MT-only clears; 2 reprints absorbed; pool supported. Paired release v1.97.0. Never kick mo/mor.",
+      "cards": [
+        "reina-roja-freedom-fighter",
+        "deep-red",
+        "knight",
+        "running-interference",
+        "expert-schedule-analyzer",
+        "grifter",
+        "torch",
+        "woman-in-the-red-dress",
+        "raymond-flint",
+        "isabel-mcguire",
+        "hudson-1-0",
+        "accelerated-diagnostics",
+        "unorthodox-predictions",
+        "sundew",
+        "city-surveillance",
+        "snoop",
+        "ireress",
+        "power-shutdown",
+        "paper-wall",
+        "interns"
       ]
     },
     "opening-moves": {

@@ -1,0 +1,42 @@
+{
+  "id": "raymond-flint",
+  "title": "Raymond Flint",
+  "wave": "mala-tempora",
+  "nrdbCode": "04049",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "neutral-runner",
+  "subtypes": [
+    "connection"
+  ],
+  "installCost": 2,
+  "unique": true,
+  "onEachCorpBadPublicityTake": {
+    "op": "do",
+    "action": {
+      "kind": "raymond_flint_breach_hq_no_root"
+    }
+  },
+  "paidAbilities": [
+    {
+      "id": "raymond-expose",
+      "label": "[trash]: Expose 1 card",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "trashSelf": true
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "expose",
+          "pick": "choose"
+        }
+      }
+    }
+  ]
+}

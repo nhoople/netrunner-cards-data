@@ -1,0 +1,38 @@
+{
+  "id": "isabel-mcguire",
+  "title": "Isabel McGuire",
+  "wave": "mala-tempora",
+  "nrdbCode": "04050",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "executive"
+  ],
+  "installCost": 0,
+  "rezCost": 0,
+  "trashCost": 3,
+  "unique": true,
+  "paidAbilities": [
+    {
+      "id": "isabel-to-hq",
+      "label": "[click]: Add 1 of your installed cards to HQ",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "return_installed_corp_to_hq",
+          "pick": "choose"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "id": "city-surveillance",
+  "title": "City Surveillance",
+  "wave": "mala-tempora",
+  "nrdbCode": "04055",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "installCost": 5,
+  "rezCost": 5,
+  "trashCost": 3,
+  "onRunnerTurnBegin": {
+    "op": "choose",
+    "chooser": "runner",
+    "options": [
+      {
+        "id": "pay",
+        "label": "Pay 1[credit]",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "lose_credits",
+            "side": "runner",
+            "amount": 1
+          }
+        }
+      },
+      {
+        "id": "tag",
+        "label": "Take 1 tag",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "give_tags",
+            "amount": 1
+          }
+        }
+      }
+    ]
+  }
+}

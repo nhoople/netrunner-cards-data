@@ -49,6 +49,10 @@
           "type": "integer",
           "minimum": 0
         },
+        "iceRezAdditionalCostEqualsPrintedRezCost": {
+          "type": "boolean",
+          "description": "During this run, Corp pays additional rez cost equal to each ice's printed rez cost (Running Interference)."
+        },
         "placeEventCredits": {
           "type": "integer",
           "minimum": 0
@@ -530,6 +534,10 @@
           "oncePerEncounter": {
             "type": "boolean",
             "description": "Enforce once-per-encounter usage (Slap Vandal break host)."
+          },
+          "usableByRunnerOnSelfIce": {
+            "type": "boolean",
+            "description": "Runner may use this paid ability on the ice card hosting this encounter (Hudson 1.0)."
           },
           "usableFromHq": {
             "type": "boolean",
@@ -1748,6 +1756,14 @@
       "type": "integer",
       "description": "Bonus to Runner memory limit while installed."
     },
+    "muBonusOnlyForCaissaPrograms": {
+      "type": "boolean",
+      "description": "Deep Red: MU from this card counts only toward Caïssa programs."
+    },
+    "triggerCaissaClickAbilityOnCaissaInstall": {
+      "type": "boolean",
+      "description": "Deep Red: when installing a Caïssa program, may resolve its [click] host ability without spending a click."
+    },
     "corpCardTrashCostReduction": {
       "type": "integer",
       "minimum": 0,
@@ -2609,6 +2625,18 @@
     "onRunnerTurnEnd": {
       "type": "object",
       "description": "Effect IR at the end of the Runner's turn while this card is installed or is the Runner identity (Amanuensis / Hoshiko Shiro)."
+    },
+    "onRunnerTurnBegin": {
+      "type": "object",
+      "description": "Effect IR when the Runner's turn begins while this Corp card is rezzed (City Surveillance)."
+    },
+    "onEachCorpBadPublicityTake": {
+      "type": "object",
+      "description": "Effect IR whenever the Corp takes bad publicity while this Runner card is installed (Raymond Flint)."
+    },
+    "trashSelfWhenFullyBrokenByRunner": {
+      "type": "boolean",
+      "description": "When the Runner fully breaks this ice, trash it (Paper Wall)."
     },
     "onFirstGripOrStackTrashBatchEachTurn": {
       "type": "object",

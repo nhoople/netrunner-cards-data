@@ -1,0 +1,20 @@
+{
+  "id": "running-interference",
+  "title": "Running Interference",
+  "wave": "mala-tempora",
+  "nrdbCode": "04044",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "subtypes": [
+    "double",
+    "run"
+  ],
+  "playCost": 4,
+  "playAdditionalClick": true,
+  "runEvent": {
+    "servers": "any",
+    "iceRezAdditionalCostEqualsPrintedRezCost": true
+  }
+}

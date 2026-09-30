@@ -1,0 +1,25 @@
+{
+  "id": "torch",
+  "title": "Torch",
+  "wave": "mala-tempora",
+  "nrdbCode": "04047",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "subtypes": [
+    "icebreaker",
+    "decoder"
+  ],
+  "installCost": 9,
+  "strength": 4,
+  "memoryCost": 1,
+  "breaker": {
+    "breaksSubtype": "code gate",
+    "strength": 0,
+    "breakCredits": 1,
+    "breakMaxSubs": 1,
+    "pumpCredits": 1,
+    "pumpStrength": 1
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "id": "snoop",
+  "title": "Snoop",
+  "wave": "mala-tempora",
+  "nrdbCode": "04056",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "subtypes": [
+    "sentry",
+    "tracer"
+  ],
+  "installCost": 6,
+  "rezCost": 6,
+  "strength": 6,
+  "onEncounter": {
+    "op": "do",
+    "action": {
+      "kind": "reveal_grip"
+    }
+  },
+  "paidAbilities": [
+    {
+      "id": "snoop-counter-reveal",
+      "label": "Hosted power counter: Reveal grip; trash 1 card",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "powerCounters": 1
+      },
+      "windows": [
+        "encounter_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "reveal_grip_may_trash_one"
+        }
+      }
+    }
+  ],
+  "subroutines": [
+    {
+      "id": "snoop-trace",
+      "text": "Trace[3]. If successful, place 1 power counter on Snoop.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "trace",
+          "strength": 3,
+          "onSuccess": {
+            "op": "do",
+            "action": {
+              "kind": "add_power_counter",
+              "amount": 1
+            }
+          }
+        }
+      }
+    }
+  ]
+}

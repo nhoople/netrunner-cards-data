@@ -1,0 +1,63 @@
+{
+  "id": "hudson-1-0",
+  "title": "Hudson 1.0",
+  "wave": "mala-tempora",
+  "nrdbCode": "04051",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "code gate",
+    "bioroid"
+  ],
+  "installCost": 3,
+  "rezCost": 3,
+  "strength": 5,
+  "paidAbilities": [
+    {
+      "id": "hudson-break",
+      "label": "Lose [click]: Break 1 subroutine on Hudson 1.0",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1
+      },
+      "windows": [
+        "encounter_paw"
+      ],
+      "usableByRunnerOnSelfIce": true,
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "break_subroutine_on_self",
+          "amount": 1
+        }
+      }
+    }
+  ],
+  "subroutines": [
+    {
+      "id": "hudson-cap-1",
+      "text": "The Runner cannot access more than 1 card during this run.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "cap_run_access_remaining",
+          "max": 1
+        }
+      }
+    },
+    {
+      "id": "hudson-cap-2",
+      "text": "The Runner cannot access more than 1 card during this run.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "cap_run_access_remaining",
+          "max": 1
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "id": "interns",
+  "title": "Interns",
+  "wave": "mala-tempora",
+  "nrdbCode": "04060",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "neutral-corp",
+  "subtypes": [
+    "double"
+  ],
+  "playCost": 0,
+  "playAdditionalClick": true,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "install_from_hq_or_archives"
+    }
+  }
+}

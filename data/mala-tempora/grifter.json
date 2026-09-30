@@ -1,0 +1,34 @@
+{
+  "id": "grifter",
+  "title": "Grifter",
+  "wave": "mala-tempora",
+  "nrdbCode": "04046",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "subtypes": [
+    "virtual"
+  ],
+  "installCost": 2,
+  "onRunnerTurnEnd": {
+    "op": "if",
+    "cond": {
+      "op": "successful_run_this_turn"
+    },
+    "then": {
+      "op": "do",
+      "action": {
+        "kind": "gain_credits",
+        "side": "runner",
+        "amount": 1
+      }
+    },
+    "else": {
+      "op": "do",
+      "action": {
+        "kind": "trash_self"
+      }
+    }
+  }
+}

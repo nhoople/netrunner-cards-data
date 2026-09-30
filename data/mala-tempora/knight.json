@@ -1,0 +1,58 @@
+{
+  "id": "knight",
+  "title": "Knight",
+  "wave": "mala-tempora",
+  "nrdbCode": "04043",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "subtypes": [
+    "icebreaker",
+    "ai",
+    "caïssa",
+    "trojan"
+  ],
+  "installCost": 2,
+  "strength": 7,
+  "memoryCost": 1,
+  "installOnIce": true,
+  "paidAbilities": [
+    {
+      "id": "knight-break",
+      "label": "2[credit]: Break 1 subroutine on host ice",
+      "clickCost": 0,
+      "creditCost": 2,
+      "cost": {
+        "credits": 2
+      },
+      "windows": [
+        "encounter_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "break_host_subroutine"
+        }
+      }
+    },
+    {
+      "id": "knight-host",
+      "label": "[click]: Host on ice not hosting a Caïssa program",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "caissa_rook_host"
+        }
+      }
+    }
+  ]
+}
