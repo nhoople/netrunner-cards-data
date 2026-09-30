@@ -1,0 +1,14 @@
+{
+  "id": "palana-foods-sustainable-growth",
+  "title": "Pālanā Foods: Sustainable Growth",
+  "nrdbCode": "10030",
+  "type": "identity",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "jinteki",
+  "subtypes": [
+    "division"
+  ],
+  "gainCreditOnFirstRunnerDrawEachTurn": true,
+  "wave": "business-first"
+}

@@ -1,0 +1,20 @@
+{
+  "id": "populist-rally",
+  "title": "Populist Rally",
+  "nrdbCode": "10026",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "neutral-runner",
+  "playCost": 2,
+  "playRequiresInstalledSubtype": "seedy",
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "allotted_clicks_next_turn",
+      "side": "corp",
+      "delta": -1
+    }
+  },
+  "wave": "business-first"
+}

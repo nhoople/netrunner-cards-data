@@ -1,0 +1,18 @@
+{
+  "id": "corporate-scandal",
+  "title": "Corporate Scandal",
+  "nrdbCode": "10025",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "neutral-runner",
+  "subtypes": [
+    "current"
+  ],
+  "playCost": 3,
+  "lingerAsCurrent": true,
+  "currentTrashOnAgendaScored": true,
+  "corpAdditionalBadPublicity": 1,
+  "corpAdditionalBadPublicityCannotBeRemoved": true,
+  "wave": "business-first"
+}

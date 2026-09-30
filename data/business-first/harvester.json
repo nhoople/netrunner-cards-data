@@ -1,0 +1,40 @@
+{
+  "id": "harvester",
+  "title": "Harvester",
+  "nrdbCode": "10032",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "jinteki",
+  "subtypes": [
+    "code gate"
+  ],
+  "installCost": 1,
+  "rezCost": 1,
+  "strength": 3,
+  "subroutines": [
+    {
+      "id": "harvester-draw-discard-1",
+      "text": "The Runner draws 3 cards and then discards down to their maximum hand size.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "harvester_draw_then_discard_down_to_hand_size",
+          "drawAmount": 3
+        }
+      }
+    },
+    {
+      "id": "harvester-draw-discard-2",
+      "text": "The Runner draws 3 cards and then discards down to their maximum hand size.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "harvester_draw_then_discard_down_to_hand_size",
+          "drawAmount": 3
+        }
+      }
+    }
+  ],
+  "wave": "business-first"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "lakshmi-smartfabrics",
+  "title": "Lakshmi Smartfabrics",
+  "nrdbCode": "10028",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "installCost": 1,
+  "rezCost": 1,
+  "trashCost": 3,
+  "placePowerCounterOnAnyCardRez": true,
+  "paidAbilities": [
+    {
+      "id": "lakshmi-reveal",
+      "label": "X hosted power counters: Reveal an agenda worth X from HQ; Runner cannot steal copies this turn",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {},
+      "windows": [
+        "corp_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "lakshmi_reveal_agenda_cannot_steal_copies"
+        }
+      }
+    }
+  ],
+  "wave": "business-first"
+}

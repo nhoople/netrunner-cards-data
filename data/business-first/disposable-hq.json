@@ -1,0 +1,45 @@
+{
+  "id": "disposable-hq",
+  "title": "Disposable HQ",
+  "nrdbCode": "10034",
+  "type": "upgrade",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "subtypes": [
+    "ambush"
+  ],
+  "installCost": 0,
+  "rezCost": 0,
+  "trashCost": 5,
+  "mustRevealWhenAccessedFromRd": true,
+  "onAccess": {
+    "op": "choose",
+    "chooser": "corp",
+    "options": [
+      {
+        "id": "accept",
+        "label": "Add any number of cards from HQ to the bottom of R&D",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "disposable_hq_add_hq_to_bottom_rd"
+          }
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "corp",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  },
+  "wave": "business-first"
+}

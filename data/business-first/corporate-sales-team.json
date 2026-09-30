@@ -1,0 +1,36 @@
+{
+  "id": "corporate-sales-team",
+  "title": "Corporate Sales Team",
+  "nrdbCode": "10037",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "neutral-corp",
+  "subtypes": [
+    "expansion"
+  ],
+  "advancementRequirement": 4,
+  "agendaPoints": 2,
+  "onScore": {
+    "op": "do",
+    "action": {
+      "kind": "place_hosted_credits",
+      "amount": 10
+    }
+  },
+  "onTurnBegin": {
+    "op": "do",
+    "action": {
+      "kind": "take_hosted_credits",
+      "amount": 1
+    }
+  },
+  "onRunnerTurnBegin": {
+    "op": "do",
+    "action": {
+      "kind": "take_hosted_credits",
+      "amount": 1
+    }
+  },
+  "wave": "business-first"
+}

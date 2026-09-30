@@ -33,6 +33,7 @@
     "the-universe-of-tomorrow",
     "data-and-destiny",
     "kala-ghoda",
+    "business-first",
     "reign-and-reverie",
     "system-core-2019",
     "downfall",
@@ -2034,6 +2035,31 @@
         "dedication-ceremony",
         "mumba-temple",
         "museum-of-history"
+      ]
+    },
+    "business-first": {
+      "status": "supported",
+      "notes": "Business First (bf) Mumbad #2 set-complete. 19/19 new clears; no reprints. Pool supported after kala-ghoda. Paired release v1.117.0. Never kick mo/mor.",
+      "cards": [
+        "emp-device",
+        "diwan",
+        "cbi-raid",
+        "tech-trader",
+        "netchip",
+        "corporate-scandal",
+        "populist-rally",
+        "advanced-assembly-lines",
+        "lakshmi-smartfabrics",
+        "product-recall",
+        "palana-foods-sustainable-growth",
+        "palana-agroplex",
+        "harvester",
+        "remote-data-farm",
+        "disposable-hq",
+        "new-construction",
+        "mumbad-construction-co",
+        "corporate-sales-team",
+        "pad-factory"
       ]
     }
   }

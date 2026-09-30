@@ -1,0 +1,40 @@
+{
+  "id": "mumbad-construction-co",
+  "title": "Mumbad Construction Co.",
+  "nrdbCode": "10036",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "installCost": 4,
+  "rezCost": 4,
+  "trashCost": 3,
+  "onTurnBegin": {
+    "op": "do",
+    "action": {
+      "kind": "bf_place_advancement_on_self",
+      "amount": 1
+    }
+  },
+  "paidAbilities": [
+    {
+      "id": "mcc-move-adv",
+      "label": "2¢: Move 1 advancement token from Mumbad Construction Co. to a faceup card",
+      "clickCost": 0,
+      "creditCost": 2,
+      "cost": {
+        "credits": 2
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "mumbad_construction_move_advancement_to_faceup"
+        }
+      }
+    }
+  ],
+  "wave": "business-first"
+}

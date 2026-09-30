@@ -1,0 +1,18 @@
+{
+  "id": "diwan",
+  "title": "Diwan",
+  "nrdbCode": "10021",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "subtypes": [
+    "virus"
+  ],
+  "installCost": 1,
+  "memoryCost": 1,
+  "chooseServerOnInstall": true,
+  "additionalCreditCostToInstallInChosenServer": 1,
+  "trashOnVirusPurge": true,
+  "wave": "business-first"
+}

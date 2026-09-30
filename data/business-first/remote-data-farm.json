@@ -1,0 +1,16 @@
+{
+  "id": "remote-data-farm",
+  "title": "Remote Data Farm",
+  "nrdbCode": "10033",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "subtypes": [
+    "expansion"
+  ],
+  "advancementRequirement": 4,
+  "agendaPoints": 2,
+  "handSizeBonus": 2,
+  "wave": "business-first"
+}

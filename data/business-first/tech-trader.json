@@ -1,0 +1,15 @@
+{
+  "id": "tech-trader",
+  "title": "Tech Trader",
+  "nrdbCode": "10023",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "subtypes": [
+    "connection"
+  ],
+  "installCost": 1,
+  "gainCreditOnTrashAbilityUse": true,
+  "wave": "business-first"
+}

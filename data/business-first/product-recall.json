@@ -1,0 +1,24 @@
+{
+  "id": "product-recall",
+  "title": "Product Recall",
+  "nrdbCode": "10029",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "alliance"
+  ],
+  "playCost": 0,
+  "zeroInfluenceIfNonAllianceFactionCardsGte": {
+    "faction": "haas-bioroid",
+    "threshold": 6
+  },
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "product_recall_trash_rezzed_gain_trash_cost"
+    }
+  },
+  "wave": "business-first"
+}

@@ -1,0 +1,38 @@
+{
+  "id": "emp-device",
+  "title": "EMP Device",
+  "nrdbCode": "10020",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "subtypes": [
+    "weapon"
+  ],
+  "installCost": 1,
+  "paidAbilities": [
+    {
+      "id": "emp-device-limit-rez",
+      "label": "[trash]: Corp cannot rez more than 1 ice for the remainder of this run",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "trashSelf": true
+      },
+      "windows": [
+        "approach_paw",
+        "encounter_paw",
+        "approach_server_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "emp_device_limit_ice_rez_this_run"
+        }
+      },
+      "usableByRunnerOnSelfIce": true,
+      "requireDuringRun": true
+    }
+  ],
+  "wave": "business-first"
+}

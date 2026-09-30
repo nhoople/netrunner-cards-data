@@ -1,0 +1,37 @@
+{
+  "id": "palana-agroplex",
+  "title": "Pālanā Agroplex",
+  "nrdbCode": "10031",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "jinteki",
+  "subtypes": [
+    "facility"
+  ],
+  "installCost": 1,
+  "rezCost": 1,
+  "trashCost": 5,
+  "onTurnBegin": {
+    "op": "seq",
+    "effects": [
+      {
+        "op": "do",
+        "action": {
+          "kind": "draw",
+          "side": "corp",
+          "amount": 1
+        }
+      },
+      {
+        "op": "do",
+        "action": {
+          "kind": "draw",
+          "side": "runner",
+          "amount": 1
+        }
+      }
+    ]
+  },
+  "wave": "business-first"
+}

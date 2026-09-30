@@ -1,0 +1,19 @@
+{
+  "id": "netchip",
+  "title": "NetChip",
+  "nrdbCode": "10024",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "subtypes": [
+    "chip"
+  ],
+  "installCost": 1,
+  "deckLimit": 6,
+  "daemonHost": true,
+  "maxHostedCards": 1,
+  "daemonHostMaxMuFromInstalledCopiesOfSelf": true,
+  "hostedProgramMemoryDoesNotCount": true,
+  "wave": "business-first"
+}

@@ -541,6 +541,10 @@
             "type": "boolean",
             "description": "Ability usable only while a run is in progress (Arissana / AirbladeX)."
           },
+          "forbidDuringRun": {
+            "type": "boolean",
+            "description": "Advanced Assembly Lines: ability cannot be used during a run."
+          },
           "onlyDuringHqRun": {
             "type": "boolean",
             "description": "Ability usable only during a run on HQ (Panic Button)."
@@ -4081,6 +4085,62 @@
       "type": "integer",
       "minimum": 1,
       "description": "Museum of History: 0 influence if deck has ≥ N cards (deckbuilding)."
+    },
+    "chooseServerOnInstall": {
+      "type": "boolean",
+      "description": "Diwan: choose a server when installing this program."
+    },
+    "additionalCreditCostToInstallInChosenServer": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Diwan: Corp pays this many extra credits to install in/protecting the chosen server."
+    },
+    "gainCreditOnTrashAbilityUse": {
+      "type": "boolean",
+      "description": "Tech Trader: whenever you use a trash ability, gain 1¢."
+    },
+    "daemonHostMaxMuFromInstalledCopiesOfSelf": {
+      "type": "boolean",
+      "description": "NetChip: hosted program MU must be ≤ number of installed copies of this card."
+    },
+    "hostedProgramMemoryDoesNotCount": {
+      "type": "boolean",
+      "description": "NetChip: hosted program memory cost does not count against memory limit."
+    },
+    "corpAdditionalBadPublicity": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Corporate Scandal: Corp is considered to have this many additional bad publicity."
+    },
+    "corpAdditionalBadPublicityCannotBeRemoved": {
+      "type": "boolean",
+      "description": "Corporate Scandal: the additional bad publicity cannot be removed."
+    },
+    "playRequiresInstalledSubtype": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Populist Rally: play only if Runner has an installed card with this subtype."
+    },
+    "placePowerCounterOnAnyCardRez": {
+      "type": "boolean",
+      "description": "Lakshmi Smartfabrics: whenever you rez a card, place 1 power counter on this card."
+    },
+    "gainCreditOnFirstRunnerDrawEachTurn": {
+      "type": "boolean",
+      "description": "Pālanā Foods: first time each turn the Runner draws a card, gain 1¢."
+    },
+    "onAdvance": {
+      "type": "object",
+      "description": "New Construction: fire when this card is advanced."
+    },
+    "zeroInfluenceIfCardCopiesGte": {
+      "type": "object",
+      "required": ["cardId", "threshold"],
+      "properties": {
+        "cardId": { "type": "string", "minLength": 1 },
+        "threshold": { "type": "integer", "minimum": 1 }
+      },
+      "description": "PAD Factory: 0 influence if deck has ≥ threshold copies of cardId."
     }
   }
 }

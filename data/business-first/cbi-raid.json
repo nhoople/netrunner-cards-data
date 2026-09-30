@@ -1,0 +1,23 @@
+{
+  "id": "cbi-raid",
+  "title": "CBI Raid",
+  "nrdbCode": "10022",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "subtypes": [
+    "run"
+  ],
+  "playCost": 3,
+  "runEvent": {
+    "servers": "hq",
+    "onSuccessfulRun": {
+      "op": "do",
+      "action": {
+        "kind": "cbi_raid_instead_of_breach"
+      }
+    }
+  },
+  "wave": "business-first"
+}

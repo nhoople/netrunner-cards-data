@@ -1,0 +1,41 @@
+{
+  "id": "pad-factory",
+  "title": "PAD Factory",
+  "nrdbCode": "10038",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "neutral-corp",
+  "subtypes": [
+    "alliance",
+    "facility"
+  ],
+  "installCost": 2,
+  "rezCost": 2,
+  "trashCost": 3,
+  "zeroInfluenceIfCardCopiesGte": {
+    "cardId": "pad-campaign",
+    "threshold": 3
+  },
+  "paidAbilities": [
+    {
+      "id": "pad-factory-advance",
+      "label": "[click]: Place 1 advancement token on a card; cannot score it until your next turn begins",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "pad_factory_place_advancement_cannot_score_until_next_turn"
+        }
+      }
+    }
+  ],
+  "wave": "business-first"
+}
