@@ -1,0 +1,16 @@
+{
+  "id": "keros-mcintyre",
+  "title": "Keros Mcintyre",
+  "nrdbCode": "12065",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "subtypes": [
+    "connection"
+  ],
+  "installCost": 2,
+  "unique": true,
+  "gainCreditsOnFirstDerezIceEachTurn": 2,
+  "wave": "blood-and-water"
+}

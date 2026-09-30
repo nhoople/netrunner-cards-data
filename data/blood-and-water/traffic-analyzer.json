@@ -1,0 +1,28 @@
+{
+  "id": "traffic-analyzer",
+  "title": "Traffic Analyzer",
+  "nrdbCode": "12075",
+  "type": "upgrade",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "installCost": 0,
+  "rezCost": 0,
+  "trashCost": 3,
+  "onRezIceProtectingThisServer": {
+    "op": "do",
+    "action": {
+      "kind": "trace",
+      "strength": 2,
+      "onSuccess": {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "corp",
+          "amount": 1
+        }
+      }
+    }
+  },
+  "wave": "blood-and-water"
+}

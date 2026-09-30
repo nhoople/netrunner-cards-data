@@ -1,0 +1,20 @@
+{
+  "id": "maui",
+  "title": "Māui",
+  "nrdbCode": "12063",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "subtypes": [
+    "console"
+  ],
+  "installCost": 5,
+  "unique": true,
+  "muBonus": 2,
+  "recurringCreditsMaxEqualsIceProtectingHq": true,
+  "recurringSpendFor": [
+    "run_hq"
+  ],
+  "wave": "blood-and-water"
+}

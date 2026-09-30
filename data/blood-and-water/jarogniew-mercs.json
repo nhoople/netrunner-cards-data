@@ -1,0 +1,60 @@
+{
+  "id": "jarogniew-mercs",
+  "title": "Jarogniew Mercs",
+  "nrdbCode": "12062",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "subtypes": [
+    "clan",
+    "connection"
+  ],
+  "installCost": 0,
+  "unique": true,
+  "onInstall": {
+    "op": "seq",
+    "effects": [
+      {
+        "op": "do",
+        "action": {
+          "kind": "give_tags",
+          "amount": 1
+        }
+      },
+      {
+        "op": "do",
+        "action": {
+          "kind": "jarogniew_load_power_equal_tags_plus_3"
+        }
+      }
+    ]
+  },
+  "trashSelfWhenNoPowerCounters": true,
+  "corpCannotTrashWhileOtherResourceInstalled": true,
+  "paidAbilities": [
+    {
+      "id": "jarogniew-prevent-meat",
+      "label": "[interrupt] → Hosted power counter: Prevent 1 meat damage",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "powerCounters": 1
+      },
+      "windows": [
+        "damage_interrupt_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "prevent_pending_damage",
+          "amount": 1
+        }
+      },
+      "requirePendingDamageTypes": [
+        "meat"
+      ]
+    }
+  ],
+  "wave": "blood-and-water"
+}

@@ -1,0 +1,30 @@
+{
+  "id": "warroid-tracker",
+  "title": "Warroid Tracker",
+  "nrdbCode": "12068",
+  "type": "upgrade",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "bioroid"
+  ],
+  "installCost": 2,
+  "rezCost": 2,
+  "trashCost": 4,
+  "onRunnerTrashFromThisServerRootOrProtecting": {
+    "op": "do",
+    "action": {
+      "kind": "trace",
+      "strength": 4,
+      "onSuccess": {
+        "op": "do",
+        "action": {
+          "kind": "warroid_runner_trashes_installed",
+          "amount": 2
+        }
+      }
+    }
+  },
+  "wave": "blood-and-water"
+}

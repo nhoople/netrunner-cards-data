@@ -4788,6 +4788,66 @@
       "type": "integer",
       "minimum": 1,
       "description": "Audacity: play only if there are at least this many other cards in HQ."
+    },
+    "trashSelfWhenNoPowerCounters": {
+      "type": "boolean",
+      "description": "Jarogniew Mercs: whenever this has no hosted power counters, trash it."
+    },
+    "corpCannotTrashWhileOtherResourceInstalled": {
+      "type": "boolean",
+      "description": "Jarogniew Mercs: Corp cannot trash this resource while another resource is installed."
+    },
+    "recurringCreditsMaxEqualsIceProtectingHq": {
+      "type": "boolean",
+      "description": "Māui: recurring credits max equals the number of ice protecting HQ."
+    },
+    "installCostX": {
+      "type": "boolean",
+      "description": "Bug Out Bag: install cost is X (variable)."
+    },
+    "powerCountersOnInstallEqualPaidX": {
+      "type": "boolean",
+      "description": "Bug Out Bag: place X power counters on install equal to the install cost paid."
+    },
+    "onTurnEndIfGripEmptyDrawPerPowerThenTrash": {
+      "type": "boolean",
+      "description": "Bug Out Bag: at turn end, if grip empty, draw 1 per power then trash this."
+    },
+    "gainCreditsOnFirstDerezIceEachTurn": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Keros Mcintyre: first time you derez ice each turn, gain this many credits."
+    },
+    "drawOnFirstRunEachTurnIfServerIceGte": {
+      "type": "object",
+      "required": ["ice", "draw"],
+      "additionalProperties": false,
+      "properties": {
+        "ice": { "type": "integer", "minimum": 1 },
+        "draw": { "type": "integer", "minimum": 1 }
+      },
+      "description": "Daredevil: first run each turn on a server with ≥ice pieces, draw this many cards."
+    },
+    "fullyBreakNextEncounterFirstNSubsDoNotResolve": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Mass-Driver: whenever this fully breaks ice, first N subs of the next encounter this run do not resolve."
+    },
+    "onRunnerTrashFromThisServerRootOrProtecting": {
+      "type": "object",
+      "description": "Warroid Tracker: whenever Runner trashes ≥1 from this server/root/protecting ice, resolve this effect (typically Trace)."
+    },
+    "onEncounterEndIfPrintedSubroutineBroken": {
+      "type": "object",
+      "description": "Mirāju: when an encounter with this ice ends, if the Runner broke its printed subroutine, resolve this effect."
+    },
+    "playRequiresNoSuccessfulRunLastTurn": {
+      "type": "boolean",
+      "description": "Shipment from Tennin: play only if the Runner made no successful run during their last turn."
+    },
+    "onRezIceProtectingThisServer": {
+      "type": "object",
+      "description": "Traffic Analyzer: whenever you rez ice protecting this server, resolve this effect."
     }
   }
 }

@@ -1,0 +1,28 @@
+{
+  "id": "alice-merchant-clan-agitator",
+  "title": "Alice Merchant: Clan Agitator",
+  "nrdbCode": "12061",
+  "type": "identity",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "subtypes": [
+    "cyborg"
+  ],
+  "onSuccessfulRunOncePerTurn": true,
+  "onSuccessfulRun": {
+    "op": "if",
+    "cond": {
+      "op": "attacking_archives"
+    },
+    "then": {
+      "op": "do",
+      "action": {
+        "kind": "trash_hq",
+        "amount": 1,
+        "pick": "choose"
+      }
+    }
+  },
+  "wave": "blood-and-water"
+}

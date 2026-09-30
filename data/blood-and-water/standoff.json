@@ -1,0 +1,18 @@
+{
+  "id": "standoff",
+  "title": "Standoff",
+  "nrdbCode": "12077",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "advancementRequirement": 2,
+  "agendaPoints": 0,
+  "onScore": {
+    "op": "do",
+    "action": {
+      "kind": "standoff_trash_loop"
+    }
+  },
+  "wave": "blood-and-water"
+}

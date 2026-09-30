@@ -1,0 +1,35 @@
+{
+  "id": "loki",
+  "title": "Loki",
+  "nrdbCode": "12069",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "bioroid"
+  ],
+  "installCost": 6,
+  "rezCost": 6,
+  "strength": 3,
+  "unique": true,
+  "onEncounter": {
+    "op": "do",
+    "action": {
+      "kind": "loki_choose_rezzed_ice_gain_subs_subtypes_for_run"
+    }
+  },
+  "subroutines": [
+    {
+      "id": "loki-etr-unless-shuffle-grip",
+      "text": "End the run unless the Runner shuffles all cards from the grip into the stack.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "end_the_run_unless_shuffle_grip_into_stack"
+        }
+      }
+    }
+  ],
+  "wave": "blood-and-water"
+}

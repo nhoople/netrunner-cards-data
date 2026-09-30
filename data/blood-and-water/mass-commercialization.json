@@ -1,0 +1,21 @@
+{
+  "id": "mass-commercialization",
+  "title": "Mass Commercialization",
+  "nrdbCode": "12080",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "neutral-corp",
+  "subtypes": [
+    "transaction"
+  ],
+  "playCost": 0,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "gain_credits_per_card_with_advancement_tokens",
+      "per": 2
+    }
+  },
+  "wave": "blood-and-water"
+}

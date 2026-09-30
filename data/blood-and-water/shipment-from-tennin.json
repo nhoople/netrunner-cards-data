@@ -1,0 +1,19 @@
+{
+  "id": "shipment-from-tennin",
+  "title": "Shipment from Tennin",
+  "nrdbCode": "12072",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "jinteki",
+  "playCost": 2,
+  "playRequiresNoSuccessfulRunLastTurn": true,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "place_advancements",
+      "amount": 2
+    }
+  },
+  "wave": "blood-and-water"
+}

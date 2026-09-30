@@ -1,0 +1,71 @@
+{
+  "id": "miraju",
+  "title": "Mirāju",
+  "nrdbCode": "12071",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "jinteki",
+  "subtypes": [
+    "code gate",
+    "deflector"
+  ],
+  "installCost": 2,
+  "rezCost": 2,
+  "strength": 0,
+  "onEncounterEndIfPrintedSubroutineBroken": {
+    "op": "do",
+    "action": {
+      "kind": "miraju_move_archives_may_jack_out_derez"
+    }
+  },
+  "subroutines": [
+    {
+      "id": "miraju-draw-shuffle",
+      "text": "You may draw 1 card. Then, shuffle 1 card from HQ into R&D.",
+      "effect": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "choose",
+            "chooser": "corp",
+            "options": [
+              {
+                "id": "accept",
+                "label": "Draw 1 card",
+                "effect": {
+                  "op": "do",
+                  "action": {
+                    "kind": "draw",
+                    "side": "corp",
+                    "amount": 1
+                  }
+                }
+              },
+              {
+                "id": "decline",
+                "label": "Decline",
+                "effect": {
+                  "op": "do",
+                  "action": {
+                    "kind": "gain_credits",
+                    "side": "corp",
+                    "amount": 0
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "shuffle_hq_to_rd",
+              "amount": 1
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "wave": "blood-and-water"
+}

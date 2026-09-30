@@ -1,0 +1,13 @@
+{
+  "id": "bug-out-bag",
+  "title": "Bug Out Bag",
+  "nrdbCode": "12064",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "installCostX": true,
+  "powerCountersOnInstallEqualPaidX": true,
+  "onTurnEndIfGripEmptyDrawPerPowerThenTrash": true,
+  "wave": "blood-and-water"
+}

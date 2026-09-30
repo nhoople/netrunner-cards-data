@@ -1,0 +1,22 @@
+{
+  "id": "obokata-protocol",
+  "title": "Obokata Protocol",
+  "nrdbCode": "12070",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "jinteki",
+  "subtypes": [
+    "ambush"
+  ],
+  "advancementRequirement": 5,
+  "agendaPoints": 3,
+  "stealAdditionalCost": {
+    "op": "do",
+    "action": {
+      "kind": "net_damage",
+      "amount": 4
+    }
+  },
+  "wave": "blood-and-water"
+}

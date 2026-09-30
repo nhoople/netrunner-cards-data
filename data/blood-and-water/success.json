@@ -1,0 +1,22 @@
+{
+  "id": "success",
+  "title": "Success",
+  "nrdbCode": "12078",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "triple"
+  ],
+  "playCost": 0,
+  "playAdditionalClicks": 2,
+  "playAdditionalCostForfeitAgenda": true,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "success_advance_equal_forfeit_advancement_requirement"
+    }
+  },
+  "wave": "blood-and-water"
+}

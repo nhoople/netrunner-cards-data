@@ -48,6 +48,7 @@
     "station-one",
     "terminal-directive",
     "earths-scion",
+    "blood-and-water",
     "reign-and-reverie",
     "system-core-2019",
     "downfall",
@@ -2471,6 +2472,32 @@
         "audacity",
         "red-planet-couriers",
         "owl"
+      ]
+    },
+    "blood-and-water": {
+      "status": "supported",
+      "notes": "Blood and Water (baw) Red Sand #4 set-complete. 20/20 new clears; no reprints. Pool supported after earths-scion. Paired release v1.132.0. Never kick mo/mor. Defer tdc.",
+      "cards": [
+        "alice-merchant-clan-agitator",
+        "jarogniew-mercs",
+        "maui",
+        "bug-out-bag",
+        "keros-mcintyre",
+        "daredevil",
+        "mass-driver",
+        "warroid-tracker",
+        "loki",
+        "obokata-protocol",
+        "miraju",
+        "shipment-from-tennin",
+        "escalate-vitriol",
+        "reeducation",
+        "traffic-analyzer",
+        "meteor-mining",
+        "standoff",
+        "success",
+        "whampoa-reclamation",
+        "mass-commercialization"
       ]
     }
   }

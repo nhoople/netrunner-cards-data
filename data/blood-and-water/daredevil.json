@@ -1,0 +1,20 @@
+{
+  "id": "daredevil",
+  "title": "Daredevil",
+  "nrdbCode": "12066",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "subtypes": [
+    "console"
+  ],
+  "installCost": 5,
+  "unique": true,
+  "muBonus": 2,
+  "drawOnFirstRunEachTurnIfServerIceGte": {
+    "ice": 2,
+    "draw": 2
+  },
+  "wave": "blood-and-water"
+}

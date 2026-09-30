@@ -1,0 +1,21 @@
+{
+  "id": "reeducation",
+  "title": "Reeducation",
+  "nrdbCode": "12074",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "subtypes": [
+    "initiative"
+  ],
+  "advancementRequirement": 5,
+  "agendaPoints": 3,
+  "onScore": {
+    "op": "do",
+    "action": {
+      "kind": "reeducation_hq_bottom_rd_draw_runner_grip_to_stack"
+    }
+  },
+  "wave": "blood-and-water"
+}

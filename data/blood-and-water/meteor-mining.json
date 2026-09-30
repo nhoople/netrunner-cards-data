@@ -1,0 +1,18 @@
+{
+  "id": "meteor-mining",
+  "title": "Meteor Mining",
+  "nrdbCode": "12076",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "advancementRequirement": 5,
+  "agendaPoints": 2,
+  "onScore": {
+    "op": "do",
+    "action": {
+      "kind": "meteor_mining_may_gain_7_or_7_meat_if_tagged"
+    }
+  },
+  "wave": "blood-and-water"
+}
