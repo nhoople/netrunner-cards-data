@@ -1,0 +1,21 @@
+{
+  "id": "cyber-threat",
+  "title": "Cyber Threat",
+  "nrdbCode": "06013",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "subtypes": [
+    "priority"
+  ],
+  "playCost": 1,
+  "playRequiresFirstClick": true,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "cyber_threat"
+    }
+  },
+  "wave": "upstalk"
+}

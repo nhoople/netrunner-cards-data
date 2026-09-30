@@ -1,0 +1,21 @@
+{
+  "id": "social-engineering",
+  "title": "Social Engineering",
+  "nrdbCode": "06018",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "subtypes": [
+    "priority"
+  ],
+  "playCost": 2,
+  "playRequiresFirstClick": true,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "social_engineering"
+    }
+  },
+  "wave": "upstalk"
+}

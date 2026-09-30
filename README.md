@@ -31,6 +31,7 @@ Files under [`data/`](data/) are the API. Clone the repo or fetch a **tagged** r
 | [`data/fear-and-loathing/`](data/fear-and-loathing/) | Fear and Loathing (NRDB `fal`) — **supported** (Spin) |
 | [`data/double-time/`](data/double-time/) | Double Time (NRDB `dt`) — **supported** (Spin) |
 | [`data/honor-and-profit/`](data/honor-and-profit/) | Honor and Profit (NRDB `hap`) — **supported** (deluxe) |
+| [`data/upstalk/`](data/upstalk/) | Upstalk (NRDB `up`) — **supported** (Lunar) |
 | [`data/reign-and-reverie/`](data/reign-and-reverie/) | Reign and Reverie (NRDB `rar`) — **supported** (legacy backwards) |
 | [`data/system-core-2019/`](data/system-core-2019/) | System Core 2019 (NRDB `sc19`) — **supported** (legacy backwards) |
 | [`data/downfall/`](data/downfall/) | Downfall (NRDB `df`) — **supported** (legacy backwards) |

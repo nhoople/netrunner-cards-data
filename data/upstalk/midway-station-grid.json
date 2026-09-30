@@ -1,0 +1,18 @@
+{
+  "id": "midway-station-grid",
+  "title": "Midway Station Grid",
+  "nrdbCode": "06007",
+  "type": "upgrade",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "subtypes": [
+    "beanstalk",
+    "region"
+  ],
+  "installCost": 4,
+  "rezCost": 4,
+  "trashCost": 4,
+  "runnerIcebreakerAbilityAdditionalCostOnThisServer": 1,
+  "wave": "upstalk"
+}

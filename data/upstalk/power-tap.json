@@ -1,0 +1,12 @@
+{
+  "id": "power-tap",
+  "title": "Power Tap",
+  "nrdbCode": "06016",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "installCost": 2,
+  "gainCreditsOnTraceInitiated": 1,
+  "wave": "upstalk"
+}

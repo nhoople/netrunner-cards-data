@@ -2579,6 +2579,21 @@
     "hostGainsAllIceSubtypes": {
       "type": "boolean"
     },
+    "dynamicEtrSubroutineCountFromRezzedIceSubtype": {
+      "type": "string"
+    },
+    "runnerIcebreakerAbilityAdditionalCostOnThisServer": {
+      "type": "integer"
+    },
+    "gainCreditsOnTraceInitiated": {
+      "type": "integer"
+    },
+    "onGripRdSuccessInstallSelfIgnoringCosts": {
+      "type": "boolean"
+    },
+    "onEncounterRezzedAfterApproach": {
+      "type": "object"
+    },
     "recurringSpendFor": {
       "type": "array",
       "items": {

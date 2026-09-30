@@ -1,0 +1,20 @@
+{
+  "id": "primary-transmission-dish",
+  "title": "Primary Transmission Dish",
+  "nrdbCode": "06006",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "subtypes": [
+    "beanstalk"
+  ],
+  "installCost": 2,
+  "rezCost": 2,
+  "trashCost": 3,
+  "recurringCreditsMax": 3,
+  "recurringSpendFor": [
+    "trace"
+  ],
+  "wave": "upstalk"
+}

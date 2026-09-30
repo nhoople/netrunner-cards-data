@@ -1,0 +1,17 @@
+{
+  "id": "eden-shard",
+  "title": "Eden Shard",
+  "nrdbCode": "06020",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "neutral-runner",
+  "subtypes": [
+    "virtual",
+    "source"
+  ],
+  "installCost": 7,
+  "unique": true,
+  "onGripRdSuccessInstallSelfIgnoringCosts": true,
+  "wave": "upstalk"
+}

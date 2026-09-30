@@ -1,0 +1,34 @@
+{
+  "id": "domestic-sleepers",
+  "title": "Domestic Sleepers",
+  "nrdbCode": "06001",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "advancementRequirement": 2,
+  "agendaPoints": 0,
+  "agendaPointsPerAgendaCounter": 1,
+  "paidAbilities": [
+    {
+      "id": "domestic-sleepers-counter",
+      "label": "[click][click][click]: Place 1 agenda counter on Domestic Sleepers",
+      "clickCost": 3,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 3
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "add_agenda_counter",
+          "amount": 1
+        }
+      }
+    }
+  ],
+  "wave": "upstalk"
+}

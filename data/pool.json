@@ -18,6 +18,7 @@
     "fear-and-loathing",
     "double-time",
     "honor-and-profit",
+    "upstalk",
     "reign-and-reverie",
     "system-core-2019",
     "downfall",
@@ -1423,6 +1424,32 @@
         "overmind",
         "oracle-may",
         "donut-taganes"
+      ]
+    },
+    "upstalk": {
+      "status": "supported",
+      "notes": "Upstalk (up) Lunar cycle set-complete. 17/17 UP-only clears; 3 reprints absorbed; pool supported. Paired release v1.102.0. Never kick mo/mor.",
+      "cards": [
+        "domestic-sleepers",
+        "next-silver",
+        "lotus-field",
+        "mutate",
+        "near-earth-hub-broadcast-center",
+        "primary-transmission-dish",
+        "midway-station-grid",
+        "the-root",
+        "taurus",
+        "mother-goddess",
+        "galahad",
+        "bad-times",
+        "cyber-threat",
+        "lamprey",
+        "paper-tripping",
+        "power-tap",
+        "nasir-meidan-cyber-explorer",
+        "social-engineering",
+        "leprechaun",
+        "eden-shard"
       ]
     },
     "fear-and-loathing": {

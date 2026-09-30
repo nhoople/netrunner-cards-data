@@ -1,0 +1,17 @@
+{
+  "id": "leprechaun",
+  "title": "Leprechaun",
+  "nrdbCode": "06019",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "subtypes": [
+    "daemon"
+  ],
+  "installCost": 2,
+  "memoryCost": 1,
+  "daemonHost": true,
+  "daemonHostMaxMu": 2,
+  "wave": "upstalk"
+}

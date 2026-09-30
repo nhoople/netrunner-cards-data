@@ -1,0 +1,21 @@
+{
+  "id": "paper-tripping",
+  "title": "Paper Tripping",
+  "nrdbCode": "06015",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "subtypes": [
+    "priority"
+  ],
+  "playCost": 4,
+  "playRequiresFirstClick": true,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "remove_all_tags"
+    }
+  },
+  "wave": "upstalk"
+}

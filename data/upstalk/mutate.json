@@ -1,0 +1,23 @@
+{
+  "id": "mutate",
+  "title": "Mutate",
+  "nrdbCode": "06004",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "jinteki",
+  "playCost": 2,
+  "playAdditionalCost": {
+    "op": "do",
+    "action": {
+      "kind": "mutate_trash_rezzed_ice_additional_cost"
+    }
+  },
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "mutate_operation_resolve"
+    }
+  },
+  "wave": "upstalk"
+}

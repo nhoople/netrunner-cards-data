@@ -1,0 +1,24 @@
+{
+  "id": "the-root",
+  "title": "The Root",
+  "nrdbCode": "06008",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "beanstalk"
+  ],
+  "installCost": 6,
+  "rezCost": 6,
+  "trashCost": 4,
+  "unique": true,
+  "recurringCreditsMax": 3,
+  "recurringSpendFor": [
+    "advance_ice",
+    "install_hardware",
+    "install_program",
+    "rez_ice"
+  ],
+  "wave": "upstalk"
+}

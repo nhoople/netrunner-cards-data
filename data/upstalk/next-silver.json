@@ -1,0 +1,19 @@
+{
+  "id": "next-silver",
+  "title": "NEXT Silver",
+  "nrdbCode": "06002",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "barrier",
+    "next"
+  ],
+  "installCost": 3,
+  "rezCost": 3,
+  "strength": 1,
+  "dynamicEtrSubroutineCountFromRezzedIceSubtype": "next",
+  "subroutines": [],
+  "wave": "upstalk"
+}

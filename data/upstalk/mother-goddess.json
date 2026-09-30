@@ -1,0 +1,30 @@
+{
+  "id": "mother-goddess",
+  "title": "Mother Goddess",
+  "nrdbCode": "06010",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "neutral-corp",
+  "subtypes": [
+    "mythic"
+  ],
+  "installCost": 4,
+  "rezCost": 4,
+  "strength": 4,
+  "unique": true,
+  "hostGainsAllIceSubtypes": true,
+  "subroutines": [
+    {
+      "id": "mother-goddess-etr",
+      "text": "End the run.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "end_the_run"
+        }
+      }
+    }
+  ],
+  "wave": "upstalk"
+}

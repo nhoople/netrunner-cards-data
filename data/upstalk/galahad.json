@@ -1,0 +1,36 @@
+{
+  "id": "galahad",
+  "title": "Galahad",
+  "nrdbCode": "06011",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "neutral-corp",
+  "subtypes": [
+    "barrier",
+    "grail"
+  ],
+  "installCost": 2,
+  "rezCost": 2,
+  "strength": 1,
+  "onEncounter": {
+    "op": "do",
+    "action": {
+      "kind": "grail_reveal_gain_subroutines",
+      "maxReveal": 2
+    }
+  },
+  "subroutines": [
+    {
+      "id": "galahad-etr",
+      "text": "End the run.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "end_the_run"
+        }
+      }
+    }
+  ],
+  "wave": "upstalk"
+}

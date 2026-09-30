@@ -1,0 +1,19 @@
+{
+  "id": "nasir-meidan-cyber-explorer",
+  "title": "Nasir Meidan: Cyber Explorer",
+  "nrdbCode": "06017",
+  "type": "identity",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "subtypes": [
+    "cyborg"
+  ],
+  "onEncounterRezzedAfterApproach": {
+    "op": "do",
+    "action": {
+      "kind": "nasir_lose_all_credits"
+    }
+  },
+  "wave": "upstalk"
+}

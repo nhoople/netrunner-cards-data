@@ -1,0 +1,22 @@
+{
+  "id": "bad-times",
+  "title": "Bad Times",
+  "nrdbCode": "06012",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "neutral-corp",
+  "subtypes": [
+    "gray ops"
+  ],
+  "playCost": 4,
+  "playRequiresTagged": true,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "runner_mu_modifier_until_turn_end",
+      "delta": -2
+    }
+  },
+  "wave": "upstalk"
+}

@@ -1,0 +1,29 @@
+{
+  "id": "taurus",
+  "title": "Taurus",
+  "nrdbCode": "06009",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "sentry",
+    "tracer"
+  ],
+  "installCost": 5,
+  "rezCost": 5,
+  "strength": 5,
+  "subroutines": [
+    {
+      "id": "taurus-trace",
+      "text": "Trace[2]. If successful, trash 1 hardware; if strength ≥5 trash another.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "taurus_trace_subroutine"
+        }
+      }
+    }
+  ],
+  "wave": "upstalk"
+}
