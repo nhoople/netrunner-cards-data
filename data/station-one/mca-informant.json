@@ -1,0 +1,21 @@
+{
+  "id": "mca-informant",
+  "title": "MCA Informant",
+  "nrdbCode": "12036",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "subtypes": [
+    "gray ops"
+  ],
+  "playCost": 4,
+  "endsActionPhase": true,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "mca_informant_host_on_connection"
+    }
+  },
+  "wave": "station-one"
+}

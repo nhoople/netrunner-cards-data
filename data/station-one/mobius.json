@@ -1,0 +1,23 @@
+{
+  "id": "mobius",
+  "title": "Möbius",
+  "nrdbCode": "12024",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "subtypes": [
+    "run"
+  ],
+  "playCost": 0,
+  "runEvent": {
+    "servers": "rd",
+    "onRunEnd": {
+      "op": "do",
+      "action": {
+        "kind": "mobius_on_run_end"
+      }
+    }
+  },
+  "wave": "station-one"
+}

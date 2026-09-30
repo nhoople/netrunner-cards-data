@@ -1,0 +1,113 @@
+{
+  "id": "nerine-2-0",
+  "title": "Nerine 2.0",
+  "nrdbCode": "12030",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "code gate",
+    "bioroid",
+    "ap"
+  ],
+  "installCost": 6,
+  "rezCost": 6,
+  "strength": 4,
+  "bioroidBreakMaxSubs": 2,
+  "subroutines": [
+    {
+      "id": "nerine-2-0-core-1",
+      "text": "Do 1 core damage. You may draw 1 card.",
+      "effect": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "core_damage",
+              "amount": 1
+            }
+          },
+          {
+            "op": "choose",
+            "chooser": "corp",
+            "options": [
+              {
+                "id": "accept",
+                "label": "Draw 1",
+                "effect": {
+                  "op": "do",
+                  "action": {
+                    "kind": "draw",
+                    "side": "corp",
+                    "amount": 1
+                  }
+                }
+              },
+              {
+                "id": "decline",
+                "label": "Decline",
+                "effect": {
+                  "op": "do",
+                  "action": {
+                    "kind": "gain_credits",
+                    "side": "corp",
+                    "amount": 0
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "nerine-2-0-core-2",
+      "text": "Do 1 core damage. You may draw 1 card.",
+      "effect": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "core_damage",
+              "amount": 1
+            }
+          },
+          {
+            "op": "choose",
+            "chooser": "corp",
+            "options": [
+              {
+                "id": "accept",
+                "label": "Draw 1",
+                "effect": {
+                  "op": "do",
+                  "action": {
+                    "kind": "draw",
+                    "side": "corp",
+                    "amount": 1
+                  }
+                }
+              },
+              {
+                "id": "decline",
+                "label": "Decline",
+                "effect": {
+                  "op": "do",
+                  "action": {
+                    "kind": "gain_credits",
+                    "side": "corp",
+                    "amount": 0
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "wave": "station-one"
+}

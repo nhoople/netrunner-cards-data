@@ -1,0 +1,36 @@
+{
+  "id": "clan-vengeance",
+  "title": "Clan Vengeance",
+  "nrdbCode": "12022",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "subtypes": [
+    "clan"
+  ],
+  "installCost": 3,
+  "placePowerCounterOnSufferAnyDamage": true,
+  "paidAbilities": [
+    {
+      "id": "clan-vengeance-trash-hq",
+      "label": "[trash]: Trash 1 card from HQ at random per power counter",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "trashSelf": true
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "trash_random_hq_per_power_on_self"
+        }
+      },
+      "usableByRunnerOnSelfIce": true
+    }
+  ],
+  "wave": "station-one"
+}

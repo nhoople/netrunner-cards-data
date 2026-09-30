@@ -1,0 +1,29 @@
+{
+  "id": "seidr-adaptive-barrier",
+  "title": "Seidr Adaptive Barrier",
+  "nrdbCode": "12029",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "barrier"
+  ],
+  "installCost": 4,
+  "rezCost": 4,
+  "strength": 2,
+  "strengthBonusPerIceProtectingThisServer": 1,
+  "subroutines": [
+    {
+      "id": "seidr-etr",
+      "text": "End the run.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "end_the_run"
+        }
+      }
+    }
+  ],
+  "wave": "station-one"
+}

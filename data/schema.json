@@ -4639,6 +4639,24 @@
     "recurringCreditsMaxEqualsRemoteServers": {
       "type": "boolean",
       "description": "Khondi Plaza: recurring credits max equals the number of remote servers."
+    },
+    "placePowerCounterOnSufferAnyDamage": {
+      "type": "boolean",
+      "description": "Clan Vengeance: whenever you suffer any amount of damage, place 1 power counter on this card."
+    },
+    "strengthBonusPerIceProtectingThisServer": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Seidr Adaptive Barrier: +N strength for each piece of ice protecting this server."
+    },
+    "systemSeizureFirstPumpStrengthLastsRemainderOfRun": {
+      "type": "boolean",
+      "description": "System Seizure: first time each turn Runner would increase an icebreaker strength, for the remainder of the run that icebreaker's strength increases last for the remainder of the run."
+    },
+    "corpGainsOnFirstRunnerBasicGainCreditEachTurn": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "CPC Generator: first time each turn the Runner spends a click to gain 1¢ (basic action), Corp gains this many credits."
     }
   }
 }

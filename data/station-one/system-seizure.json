@@ -1,0 +1,17 @@
+{
+  "id": "system-seizure",
+  "title": "System Seizure",
+  "nrdbCode": "12026",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "subtypes": [
+    "current"
+  ],
+  "playCost": 0,
+  "lingerAsCurrent": true,
+  "currentTrashOnAgendaScored": true,
+  "systemSeizureFirstPumpStrengthLastsRemainderOfRun": true,
+  "wave": "station-one"
+}

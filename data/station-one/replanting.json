@@ -1,0 +1,32 @@
+{
+  "id": "replanting",
+  "title": "Replanting",
+  "nrdbCode": "12033",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "jinteki",
+  "subtypes": [
+    "double"
+  ],
+  "playCost": 1,
+  "playAdditionalClick": true,
+  "onPlay": {
+    "op": "seq",
+    "effects": [
+      {
+        "op": "do",
+        "action": {
+          "kind": "replanting_add_installed_to_hq"
+        }
+      },
+      {
+        "op": "do",
+        "action": {
+          "kind": "replanting_install_2_from_hq_ignore_costs"
+        }
+      }
+    ]
+  },
+  "wave": "station-one"
+}

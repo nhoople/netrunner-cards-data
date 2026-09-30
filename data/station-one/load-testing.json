@@ -1,0 +1,19 @@
+{
+  "id": "load-testing",
+  "title": "Load Testing",
+  "nrdbCode": "12031",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "playCost": 0,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "allotted_clicks_next_turn",
+      "side": "runner",
+      "delta": -1
+    }
+  },
+  "wave": "station-one"
+}

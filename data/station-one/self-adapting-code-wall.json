@@ -1,0 +1,29 @@
+{
+  "id": "self-adapting-code-wall",
+  "title": "Self-Adapting Code Wall",
+  "nrdbCode": "12040",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "neutral-corp",
+  "subtypes": [
+    "barrier"
+  ],
+  "installCost": 3,
+  "rezCost": 3,
+  "strength": 1,
+  "strengthCannotBeLowered": true,
+  "subroutines": [
+    {
+      "id": "sacw-etr",
+      "text": "End the run.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "end_the_run"
+        }
+      }
+    }
+  ],
+  "wave": "station-one"
+}

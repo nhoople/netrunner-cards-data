@@ -1,0 +1,39 @@
+{
+  "id": "bloom",
+  "title": "Bloom",
+  "nrdbCode": "12032",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "jinteki",
+  "subtypes": [
+    "code gate",
+    "observer"
+  ],
+  "installCost": 2,
+  "rezCost": 2,
+  "strength": 3,
+  "subroutines": [
+    {
+      "id": "bloom-other-server",
+      "text": "You may install 1 piece of ice from HQ protecting another server, ignoring all costs.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "may_install_ice_from_hq_other_server_ignore_costs"
+        }
+      }
+    },
+    {
+      "id": "bloom-inward",
+      "text": "You may install 1 piece of ice from HQ directly inward from this ice, ignoring all costs.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "may_install_ice_from_hq_inward_of_source_ignore_costs"
+        }
+      }
+    }
+  ],
+  "wave": "station-one"
+}

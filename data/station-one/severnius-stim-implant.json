@@ -1,0 +1,35 @@
+{
+  "id": "severnius-stim-implant",
+  "title": "Severnius Stim Implant",
+  "nrdbCode": "12021",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "subtypes": [
+    "cybernetic"
+  ],
+  "installCost": 2,
+  "paidAbilities": [
+    {
+      "id": "severnius-run",
+      "label": "[click]: Trash 2 or more cards from grip. Run HQ or R&D; +1 access per 2 trashed",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "severnius_trash_grip_run_hq_or_rd"
+        }
+      },
+      "usableByRunnerOnSelfIce": true
+    }
+  ],
+  "wave": "station-one"
+}

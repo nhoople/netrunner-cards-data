@@ -1,0 +1,23 @@
+{
+  "id": "clyde-van-rite",
+  "title": "Clyde Van Rite",
+  "nrdbCode": "12037",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "executive"
+  ],
+  "installCost": 2,
+  "rezCost": 2,
+  "trashCost": 3,
+  "unique": true,
+  "onTurnBegin": {
+    "op": "do",
+    "action": {
+      "kind": "clyde_van_rite_pay_or_trash_top_stack"
+    }
+  },
+  "wave": "station-one"
+}

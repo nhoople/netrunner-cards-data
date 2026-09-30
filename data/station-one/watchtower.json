@@ -1,0 +1,29 @@
+{
+  "id": "watchtower",
+  "title": "Watchtower",
+  "nrdbCode": "12038",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "code gate"
+  ],
+  "installCost": 4,
+  "rezCost": 4,
+  "strength": 3,
+  "subroutines": [
+    {
+      "id": "watchtower-search",
+      "text": "Search R&D for a card and add it to HQ. Shuffle R&D.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "search_rd_to_hq",
+          "amount": 1
+        }
+      }
+    }
+  ],
+  "wave": "station-one"
+}

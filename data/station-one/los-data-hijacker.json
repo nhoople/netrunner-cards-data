@@ -1,0 +1,21 @@
+{
+  "id": "los-data-hijacker",
+  "title": "Los: Data Hijacker",
+  "nrdbCode": "12025",
+  "type": "identity",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "subtypes": [
+    "natural"
+  ],
+  "onFirstIceRezEachTurn": {
+    "op": "do",
+    "action": {
+      "kind": "gain_credits",
+      "side": "runner",
+      "amount": 2
+    }
+  },
+  "wave": "station-one"
+}

@@ -45,6 +45,7 @@
     "martial-law",
     "quorum",
     "daedalus-complex",
+    "station-one",
     "reign-and-reverie",
     "system-core-2019",
     "downfall",
@@ -2353,6 +2354,32 @@
         "oberth-protocol",
         "khondi-plaza",
         "signal-jamming"
+      ]
+    },
+    "station-one": {
+      "status": "supported",
+      "notes": "Station One (so) Red Sand #2 set-complete. 20/20 new clears; no reprints. Pool supported after daedalus-complex. Paired release v1.129.0. Never kick mo/mor.",
+      "cards": [
+        "severnius-stim-implant",
+        "clan-vengeance",
+        "counter-surveillance",
+        "mobius",
+        "los-data-hijacker",
+        "system-seizure",
+        "customized-secretary",
+        "build-script",
+        "seidr-adaptive-barrier",
+        "nerine-2-0",
+        "load-testing",
+        "bloom",
+        "replanting",
+        "cpc-generator",
+        "free-lunch",
+        "mca-informant",
+        "clyde-van-rite",
+        "watchtower",
+        "sacrifice",
+        "self-adapting-code-wall"
       ]
     }
   }
