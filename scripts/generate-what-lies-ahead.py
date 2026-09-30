@@ -377,6 +377,7 @@ def map_card(c: dict) -> dict | None:
                 "action": {
                     "kind": "trace",
                     "strength": 2,
+                    "onSuccess": gain("corp", 0),
                     "onFailure": {
                         "op": "do",
                         "action": {"kind": "derez_source"},

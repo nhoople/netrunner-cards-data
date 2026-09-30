@@ -18,6 +18,14 @@
     "action": {
       "kind": "trace",
       "strength": 2,
+      "onSuccess": {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "corp",
+          "amount": 0
+        }
+      },
       "onFailure": {
         "op": "do",
         "action": {
