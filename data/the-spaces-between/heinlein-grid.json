@@ -1,0 +1,18 @@
+{
+  "id": "heinlein-grid",
+  "title": "Heinlein Grid",
+  "nrdbCode": "06023",
+  "type": "upgrade",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "region"
+  ],
+  "installCost": 3,
+  "rezCost": 3,
+  "trashCost": 3,
+  "limitOnePerServer": true,
+  "runnerLosesAllCreditsOnClickLossDuringRunOnThisServer": true,
+  "wave": "the-spaces-between"
+}

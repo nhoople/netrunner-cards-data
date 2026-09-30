@@ -1,0 +1,18 @@
+{
+  "id": "ghost-runner",
+  "title": "Ghost Runner",
+  "nrdbCode": "06040",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "neutral-runner",
+  "subtypes": [
+    "stealth",
+    "virtual"
+  ],
+  "installCost": 1,
+  "hostedCreditsOnInstall": 3,
+  "spendHostedCreditsDuringRuns": true,
+  "trashWhenHostedCreditsEmpty": true,
+  "wave": "the-spaces-between"
+}

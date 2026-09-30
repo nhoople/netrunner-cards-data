@@ -1,0 +1,72 @@
+{
+  "id": "sealed-vault",
+  "title": "Sealed Vault",
+  "nrdbCode": "06029",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "facility"
+  ],
+  "installCost": 0,
+  "rezCost": 0,
+  "trashCost": 8,
+  "paidAbilities": [
+    {
+      "id": "sealed-vault-store",
+      "label": "1[credit]: Move any number of credits from credit pool to Sealed Vault",
+      "clickCost": 0,
+      "creditCost": 1,
+      "cost": {
+        "credits": 1
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "sealed_vault_store_from_pool"
+        }
+      }
+    },
+    {
+      "id": "sealed-vault-take-click",
+      "label": "[click]: Take any number of credits from Sealed Vault",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "sealed_vault_take_to_pool"
+        }
+      }
+    },
+    {
+      "id": "sealed-vault-take-trash",
+      "label": "[trash]: Take any number of credits from Sealed Vault",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "trashSelf": true
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "sealed_vault_take_to_pool"
+        }
+      }
+    }
+  ],
+  "wave": "the-spaces-between"
+}

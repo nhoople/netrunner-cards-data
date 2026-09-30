@@ -1,0 +1,19 @@
+{
+  "id": "the-foundry-refining-the-process",
+  "title": "The Foundry: Refining the Process",
+  "nrdbCode": "06021",
+  "type": "identity",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "division"
+  ],
+  "onFirstIceRezEachTurn": {
+    "op": "do",
+    "action": {
+      "kind": "foundry_search_copy_to_hq"
+    }
+  },
+  "wave": "the-spaces-between"
+}

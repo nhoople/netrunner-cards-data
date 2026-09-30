@@ -1,0 +1,21 @@
+{
+  "id": "three-steps-ahead",
+  "title": "Three Steps Ahead",
+  "nrdbCode": "06035",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "subtypes": [
+    "priority"
+  ],
+  "playCost": 1,
+  "playRequiresFirstClick": true,
+  "onRunnerTurnEnd": {
+    "op": "do",
+    "action": {
+      "kind": "three_steps_ahead_payout"
+    }
+  },
+  "wave": "the-spaces-between"
+}

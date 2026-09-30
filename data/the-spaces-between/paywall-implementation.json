@@ -1,0 +1,25 @@
+{
+  "id": "paywall-implementation",
+  "title": "Paywall Implementation",
+  "nrdbCode": "06028",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "current",
+    "transaction"
+  ],
+  "playCost": 0,
+  "lingerAsCurrent": true,
+  "currentTrashOnAgendaStolen": true,
+  "onSuccessfulRun": {
+    "op": "do",
+    "action": {
+      "kind": "gain_credits",
+      "side": "corp",
+      "amount": 1
+    }
+  },
+  "wave": "the-spaces-between"
+}

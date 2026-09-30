@@ -1,0 +1,17 @@
+{
+  "id": "cerebral-static",
+  "title": "Cerebral Static",
+  "nrdbCode": "06025",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "jinteki",
+  "subtypes": [
+    "current"
+  ],
+  "playCost": 2,
+  "lingerAsCurrent": true,
+  "currentTrashOnAgendaStolen": true,
+  "blankRunnerIdentityPrintedAbilities": true,
+  "wave": "the-spaces-between"
+}

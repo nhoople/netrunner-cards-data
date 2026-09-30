@@ -1,0 +1,17 @@
+{
+  "id": "scrubbed",
+  "title": "Scrubbed",
+  "nrdbCode": "06034",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "subtypes": [
+    "current"
+  ],
+  "playCost": 2,
+  "lingerAsCurrent": true,
+  "currentTrashOnAgendaScored": true,
+  "firstEncounteredIceStrengthPenaltyThisRun": 2,
+  "wave": "the-spaces-between"
+}

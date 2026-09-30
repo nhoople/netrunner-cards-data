@@ -1,0 +1,17 @@
+{
+  "id": "lag-time",
+  "title": "Lag Time",
+  "nrdbCode": "06031",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "neutral-corp",
+  "subtypes": [
+    "current"
+  ],
+  "playCost": 2,
+  "lingerAsCurrent": true,
+  "currentTrashOnAgendaStolen": true,
+  "allIceStrengthBonus": 1,
+  "wave": "the-spaces-between"
+}

@@ -19,6 +19,7 @@
     "double-time",
     "honor-and-profit",
     "upstalk",
+    "the-spaces-between",
     "reign-and-reverie",
     "system-core-2019",
     "downfall",
@@ -1589,6 +1590,32 @@
         "daily-casts",
         "same-old-thing",
         "the-source"
+      ]
+    },
+    "the-spaces-between": {
+      "status": "supported",
+      "notes": "The Spaces Between (tsb) Lunar set-complete. 20/20 TSB-only clears; pool supported. Paired release v1.103.0. Never kick mo/mor.",
+      "cards": [
+        "the-foundry-refining-the-process",
+        "enhanced-login-protocol",
+        "heinlein-grid",
+        "encrypted-portals",
+        "cerebral-static",
+        "targeted-marketing",
+        "information-overload",
+        "paywall-implementation",
+        "sealed-vault",
+        "eden-fragment",
+        "lag-time",
+        "will-o-the-wisp",
+        "d4v1d",
+        "scrubbed",
+        "three-steps-ahead",
+        "unscheduled-maintenance",
+        "cache",
+        "net-celebrity",
+        "llds-energy-regulator",
+        "ghost-runner"
       ]
     }
   }

@@ -1,0 +1,25 @@
+{
+  "id": "encrypted-portals",
+  "title": "Encrypted Portals",
+  "nrdbCode": "06024",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "jinteki",
+  "subtypes": [
+    "security"
+  ],
+  "advancementRequirement": 3,
+  "agendaPoints": 1,
+  "whileScoredIceSubtypeStrengthBonus": {
+    "subtype": "code gate",
+    "bonus": 1
+  },
+  "onScore": {
+    "op": "do",
+    "action": {
+      "kind": "encrypted_portals_on_score"
+    }
+  },
+  "wave": "the-spaces-between"
+}

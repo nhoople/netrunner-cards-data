@@ -1,0 +1,35 @@
+{
+  "id": "information-overload",
+  "title": "Information Overload",
+  "nrdbCode": "06027",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "subtypes": [
+    "sentry",
+    "tracer"
+  ],
+  "installCost": 6,
+  "rezCost": 6,
+  "strength": 4,
+  "onEncounter": {
+    "op": "do",
+    "action": {
+      "kind": "information_overload_encounter"
+    }
+  },
+  "subroutines": [
+    {
+      "id": "information-overload-dynamic",
+      "text": "The Runner trashes 1 installed card for each tag they have.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "information_overload_trash_per_tag"
+        }
+      }
+    }
+  ],
+  "wave": "the-spaces-between"
+}

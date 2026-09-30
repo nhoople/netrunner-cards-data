@@ -1,0 +1,18 @@
+{
+  "id": "eden-fragment",
+  "title": "Eden Fragment",
+  "nrdbCode": "06030",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "neutral-corp",
+  "subtypes": [
+    "source"
+  ],
+  "advancementRequirement": 5,
+  "agendaPoints": 3,
+  "unique": true,
+  "ignoreInstallCostFirstIceEachTurn": true,
+  "deckLimitOne": true,
+  "wave": "the-spaces-between"
+}

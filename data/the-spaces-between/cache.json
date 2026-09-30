@@ -1,0 +1,45 @@
+{
+  "id": "cache",
+  "title": "Cache",
+  "nrdbCode": "06037",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "subtypes": [
+    "virus"
+  ],
+  "installCost": 1,
+  "memoryCost": 1,
+  "onInstall": {
+    "op": "do",
+    "action": {
+      "kind": "add_virus_counter",
+      "amount": 3
+    }
+  },
+  "paidAbilities": [
+    {
+      "id": "cache-cash",
+      "label": "Hosted virus counter: Gain 1[credit]",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "virusCounters": 1
+      },
+      "windows": [
+        "runner_action_paw",
+        "encounter_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "runner",
+          "amount": 1
+        }
+      }
+    }
+  ],
+  "wave": "the-spaces-between"
+}

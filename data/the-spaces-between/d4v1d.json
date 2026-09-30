@@ -1,0 +1,34 @@
+{
+  "id": "d4v1d",
+  "title": "D4v1d",
+  "nrdbCode": "06033",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "installCost": 3,
+  "memoryCost": 1,
+  "powerCountersOnInstall": 3,
+  "paidAbilities": [
+    {
+      "id": "d4v1d-break",
+      "label": "Hosted power counter: Break 1 subroutine on ice strength 5+",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "powerCounters": 1
+      },
+      "windows": [
+        "encounter_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "break_encounter_subroutine",
+          "requireMinStrength": 5
+        }
+      }
+    }
+  ],
+  "wave": "the-spaces-between"
+}

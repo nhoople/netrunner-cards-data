@@ -1386,6 +1386,74 @@
       "type": "boolean",
       "description": "Corp lockdown: after play, remain faceup in corp:play-area (not trashed to Archives) until Corp's next turn begins; trash at that turn-begin checkpoint before pending conditionals (CR §8.6.6c / §3.5.1c)."
     },
+    "lingerAsCurrent": {
+      "type": "boolean",
+      "description": "Current: after play, remain in play-area until trashed by current rules (another current played, or agenda stolen/scored per flags)."
+    },
+    "currentTrashOnAgendaStolen": {
+      "type": "boolean",
+      "description": "Active current is trashed when the Runner steals an agenda."
+    },
+    "currentTrashOnAgendaScored": {
+      "type": "boolean",
+      "description": "Active current is trashed when the Corp scores an agenda."
+    },
+    "runnerFirstRunEachTurnAdditionalCost": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "While active, Runner pays this many additional credits on their first basic run action each turn (Enhanced Login Protocol)."
+    },
+    "blankRunnerIdentityPrintedAbilities": {
+      "type": "boolean",
+      "description": "While active, Runner identity loses printed abilities (Cerebral Static)."
+    },
+    "onFirstIceRezEachTurn": {
+      "type": "object",
+      "description": "Corp identity: first time each turn a piece of ice is rezzed (The Foundry)."
+    },
+    "limitOnePerServer": {
+      "type": "boolean",
+      "description": "Only 1 copy of this card per server (region upgrades)."
+    },
+    "runnerLosesAllCreditsOnClickLossDuringRunOnThisServer": {
+      "type": "boolean",
+      "description": "During a run on this server, when Runner loses/spends a click, lose all credits in pool (Heinlein Grid)."
+    },
+    "whileScoredIceSubtypeStrengthBonus": {
+      "type": "object",
+      "required": ["subtype", "bonus"],
+      "properties": {
+        "subtype": { "type": "string" },
+        "bonus": { "type": "integer" }
+      },
+      "description": "While scored, all ice with subtype get +bonus strength (Encrypted Portals)."
+    },
+    "ignoreInstallCostFirstIceEachTurn": {
+      "type": "boolean",
+      "description": "Ignore install cost of first ice installed each turn (Eden Fragment)."
+    },
+    "deckLimitOne": {
+      "type": "boolean",
+      "description": "Limit 1 per deck (source agendas)."
+    },
+    "onSuccessfulRunOnThisServer": {
+      "type": "object",
+      "description": "When Runner makes a successful run on the server hosting this card."
+    },
+    "firstEncounteredIceStrengthPenaltyThisRun": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "First ice encountered each run gets −N strength for remainder of run (Scrubbed)."
+    },
+    "corpMaxIceInstallsPerTurn": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "While active, Corp cannot install more than N ice per turn (Unscheduled Maintenance)."
+    },
+    "trashWhenHostedCreditsEmpty": {
+      "type": "boolean",
+      "description": "Trash when hosted credits reach 0 (Ghost Runner)."
+    },
     "stealAdditionalCreditsFormula": {
       "type": "object",
       "required": [

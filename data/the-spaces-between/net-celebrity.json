@@ -1,0 +1,20 @@
+{
+  "id": "net-celebrity",
+  "title": "Net Celebrity",
+  "nrdbCode": "06038",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "subtypes": [
+    "current"
+  ],
+  "playCost": 1,
+  "lingerAsCurrent": true,
+  "currentTrashOnAgendaScored": true,
+  "recurringCreditsMax": 1,
+  "recurringSpendFor": [
+    "run"
+  ],
+  "wave": "the-spaces-between"
+}

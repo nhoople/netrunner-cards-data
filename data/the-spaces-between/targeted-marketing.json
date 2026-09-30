@@ -1,0 +1,22 @@
+{
+  "id": "targeted-marketing",
+  "title": "Targeted Marketing",
+  "nrdbCode": "06026",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "subtypes": [
+    "current"
+  ],
+  "playCost": 0,
+  "lingerAsCurrent": true,
+  "currentTrashOnAgendaStolen": true,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "targeted_marketing_name_card"
+    }
+  },
+  "wave": "the-spaces-between"
+}

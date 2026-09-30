@@ -1,0 +1,19 @@
+{
+  "id": "will-o-the-wisp",
+  "title": "Will-o'-the-Wisp",
+  "nrdbCode": "06032",
+  "type": "upgrade",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "neutral-corp",
+  "installCost": 4,
+  "rezCost": 4,
+  "trashCost": 1,
+  "onSuccessfulRunOnThisServer": {
+    "op": "do",
+    "action": {
+      "kind": "will_o_wisp_trash_breaker_used"
+    }
+  },
+  "wave": "the-spaces-between"
+}

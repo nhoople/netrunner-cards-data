@@ -1,0 +1,17 @@
+{
+  "id": "enhanced-login-protocol",
+  "title": "Enhanced Login Protocol",
+  "nrdbCode": "06022",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "current"
+  ],
+  "playCost": 2,
+  "lingerAsCurrent": true,
+  "currentTrashOnAgendaStolen": true,
+  "runnerFirstRunEachTurnAdditionalCost": 10,
+  "wave": "the-spaces-between"
+}

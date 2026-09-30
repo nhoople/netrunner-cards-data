@@ -1,0 +1,30 @@
+{
+  "id": "llds-energy-regulator",
+  "title": "LLDS Energy Regulator",
+  "nrdbCode": "06039",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "installCost": 0,
+  "memoryCost": 1,
+  "paidAbilities": [
+    {
+      "id": "llds-prevent",
+      "label": "3[credit] or [trash]: Prevent trashing 1 installed hardware",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {},
+      "windows": [
+        "trash_interrupt_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "llds_prevent_trash_hardware"
+        }
+      }
+    }
+  ],
+  "wave": "the-spaces-between"
+}

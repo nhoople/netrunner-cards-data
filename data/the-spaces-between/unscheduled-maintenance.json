@@ -1,0 +1,17 @@
+{
+  "id": "unscheduled-maintenance",
+  "title": "Unscheduled Maintenance",
+  "nrdbCode": "06036",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "subtypes": [
+    "current"
+  ],
+  "playCost": 1,
+  "lingerAsCurrent": true,
+  "currentTrashOnAgendaStolen": true,
+  "corpMaxIceInstallsPerTurn": 1,
+  "wave": "the-spaces-between"
+}
