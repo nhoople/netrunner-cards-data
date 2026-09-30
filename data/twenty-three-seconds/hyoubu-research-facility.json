@@ -1,0 +1,18 @@
+{
+  "id": "hyoubu-research-facility",
+  "title": "Hyoubu Research Facility",
+  "nrdbCode": "11012",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "jinteki",
+  "subtypes": [
+    "facility"
+  ],
+  "installCost": 0,
+  "rezCost": 0,
+  "trashCost": 4,
+  "unique": true,
+  "firstRevealSecretlySpentCreditsGainThatManyEachTurn": true,
+  "wave": "twenty-three-seconds"
+}

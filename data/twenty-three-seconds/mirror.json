@@ -1,0 +1,18 @@
+{
+  "id": "mirror",
+  "title": "Mirror",
+  "nrdbCode": "11005",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "subtypes": [
+    "console"
+  ],
+  "installCost": 3,
+  "unique": true,
+  "muBonus": 2,
+  "maxConsole": 1,
+  "onSuccessfulRdRunMayReplaceSpentRecurringCredit": true,
+  "wave": "twenty-three-seconds"
+}

@@ -1,0 +1,22 @@
+{
+  "id": "another-day-another-paycheck",
+  "title": "Another Day, Another Paycheck",
+  "nrdbCode": "11007",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "sunny-lebeau",
+  "subtypes": [
+    "current"
+  ],
+  "playCost": 0,
+  "lingerAsCurrent": true,
+  "currentTrashOnAgendaScored": true,
+  "onStealAgenda": {
+    "op": "do",
+    "action": {
+      "kind": "another_day_force_corp_trace0_gain_ap_credits"
+    }
+  },
+  "wave": "twenty-three-seconds"
+}

@@ -4312,6 +4312,51 @@
     "blockRunnerPaidAbilitiesExceptIcebreakersAndMidAccess": {
       "type": "boolean",
       "description": "Navi Mumbai City Grid: during runs on this server, Runner cannot use paid abilities on installed cards except mid-access and icebreaker abilities."
+    },
+    "corpLosesCreditsOnNonFirstDrawThisTurn": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "System Outage: whenever the Corp draws 1+ cards, if it is not their first draw this turn, they lose this many credits."
+    },
+    "mayExposeApproachedIceThenMayTrashSelfToJackOut": {
+      "type": "boolean",
+      "description": "GPI Net Tap: whenever approaching ice, may expose it; then may trash this card to jack out."
+    },
+    "additionalIceRezCostEqualToSubroutineCountWhenCorpCreditsGte": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Hernando Cortez: if Corp has at least this many credits, ice rez costs +1 per printed subroutine."
+    },
+    "onSuccessfulRdRunMayReplaceSpentRecurringCredit": {
+      "type": "boolean",
+      "description": "Mirror: on successful R&D run, may replace 1 spent recurring credit."
+    },
+    "firstRevealSecretlySpentCreditsGainThatManyEachTurn": {
+      "type": "boolean",
+      "description": "Hyoubu Research Facility: first time each turn Corp reveals secretly spent credits, gain that many credits."
+    },
+    "onUnsuccessfulRunOnThisServer": {
+      "type": "object",
+      "description": "Georgia Emelyov: Effect IR when the Runner makes an unsuccessful run on this server."
+    },
+    "firstIceRezCostReductionPerRunnerTag": {
+      "type": "boolean",
+      "description": "Watchdog: first ice rez each turn costs 1 less per Runner tag."
+    },
+    "onTurnBeginIfRunnerTagged": {
+      "type": "object",
+      "description": "Crisis Management: while scored, if the Runner is tagged, fire this Effect IR when Corp turn begins."
+    },
+    "iceStrengthBonusPerFiveCorpCreditsWhenCorpCreditsGte": {
+      "type": "object",
+      "required": ["threshold", "perCredits", "bonus"],
+      "additionalProperties": false,
+      "properties": {
+        "threshold": { "type": "integer", "minimum": 0 },
+        "perCredits": { "type": "integer", "minimum": 1 },
+        "bonus": { "type": "integer" }
+      },
+      "description": "Sandburg: if Corp has ≥ threshold credits, each ice gets +bonus strength per perCredits in Corp credit pool."
     }
   }
 }

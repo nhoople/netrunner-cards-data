@@ -1,0 +1,17 @@
+{
+  "id": "deuces-wild",
+  "title": "Deuces Wild",
+  "nrdbCode": "11008",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "neutral-runner",
+  "playCost": 2,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "deuces_wild_resolve_two"
+    }
+  },
+  "wave": "twenty-three-seconds"
+}

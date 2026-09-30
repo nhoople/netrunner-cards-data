@@ -1,0 +1,44 @@
+{
+  "id": "fairchild-1-0",
+  "title": "Fairchild 1.0",
+  "nrdbCode": "11010",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "code gate",
+    "bioroid"
+  ],
+  "installCost": 1,
+  "rezCost": 1,
+  "strength": 2,
+  "bioroidBreakMaxSubs": 1,
+  "subroutines": [
+    {
+      "id": "fairchild-1-0-pay-or-trash-1",
+      "text": "The Runner must pay 1¢ or trash 1 of their installed cards.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "pay_credits_or_trash_installed",
+          "side": "runner",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "id": "fairchild-1-0-pay-or-trash-2",
+      "text": "The Runner must pay 1¢ or trash 1 of their installed cards.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "pay_credits_or_trash_installed",
+          "side": "runner",
+          "amount": 1
+        }
+      }
+    }
+  ],
+  "wave": "twenty-three-seconds"
+}

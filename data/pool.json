@@ -38,6 +38,7 @@
     "salsette-island",
     "the-liberated-mind",
     "fear-the-masses",
+    "twenty-three-seconds",
     "reign-and-reverie",
     "system-core-2019",
     "downfall",
@@ -2164,6 +2165,32 @@
         "election-day",
         "subcontract",
         "merger"
+      ]
+    },
+    "twenty-three-seconds": {
+      "status": "supported",
+      "notes": "23 Seconds (23s) Flashpoint #1 set-complete. 20/20 new clears; no reprints. Pool supported after fear-the-masses. Paired release v1.122.0. Never kick mo/mor.",
+      "cards": [
+        "system-outage",
+        "null-whistleblower",
+        "gpi-net-tap",
+        "hernando-cortez",
+        "mirror",
+        "dai-v",
+        "another-day-another-paycheck",
+        "deuces-wild",
+        "injection-attack",
+        "fairchild-1-0",
+        "sherlock-2-0",
+        "hyoubu-research-facility",
+        "chrysalis",
+        "georgia-emelyov",
+        "watchdog",
+        "hard-hitting-news",
+        "nbn-controlling-the-message",
+        "crisis-management",
+        "stock-buy-back",
+        "sandburg"
       ]
     }
   }

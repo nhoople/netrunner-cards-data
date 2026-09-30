@@ -1,0 +1,12 @@
+{
+  "id": "gpi-net-tap",
+  "title": "GPI Net Tap",
+  "nrdbCode": "11003",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "installCost": 3,
+  "mayExposeApproachedIceThenMayTrashSelfToJackOut": true,
+  "wave": "twenty-three-seconds"
+}

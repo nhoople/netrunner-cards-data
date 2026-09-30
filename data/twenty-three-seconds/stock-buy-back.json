@@ -1,0 +1,24 @@
+{
+  "id": "stock-buy-back",
+  "title": "Stock Buy-Back",
+  "nrdbCode": "11019",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "terminal",
+    "transaction"
+  ],
+  "playCost": 1,
+  "endsActionPhase": true,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "gain_credits_per_agenda_in_runner_score",
+      "side": "corp",
+      "per": 3
+    }
+  },
+  "wave": "twenty-three-seconds"
+}

@@ -1,0 +1,43 @@
+{
+  "id": "null-whistleblower",
+  "title": "Null: Whistleblower",
+  "nrdbCode": "11002",
+  "type": "identity",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "subtypes": [
+    "natural"
+  ],
+  "link": 0,
+  "onEncounterAnyIceOncePerTurn": {
+    "op": "choose",
+    "chooser": "runner",
+    "options": [
+      {
+        "id": "accept",
+        "label": "Trash 1 from grip: encountered ice gets −2 strength this run",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "null_trash_grip_lower_encountered_ice_strength",
+            "amount": 2
+          }
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "runner",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  },
+  "wave": "twenty-three-seconds"
+}

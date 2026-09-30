@@ -1,0 +1,14 @@
+{
+  "id": "watchdog",
+  "title": "Watchdog",
+  "nrdbCode": "11015",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "installCost": 0,
+  "rezCost": 0,
+  "trashCost": 4,
+  "firstIceRezCostReductionPerRunnerTag": true,
+  "wave": "twenty-three-seconds"
+}

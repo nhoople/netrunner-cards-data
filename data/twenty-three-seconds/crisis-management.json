@@ -1,0 +1,22 @@
+{
+  "id": "crisis-management",
+  "title": "Crisis Management",
+  "nrdbCode": "11018",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "security"
+  ],
+  "advancementRequirement": 3,
+  "agendaPoints": 1,
+  "onTurnBeginIfRunnerTagged": {
+    "op": "do",
+    "action": {
+      "kind": "meat_damage",
+      "amount": 1
+    }
+  },
+  "wave": "twenty-three-seconds"
+}

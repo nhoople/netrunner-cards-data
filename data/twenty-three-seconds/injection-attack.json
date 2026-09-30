@@ -1,0 +1,21 @@
+{
+  "id": "injection-attack",
+  "title": "Injection Attack",
+  "nrdbCode": "11009",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "neutral-runner",
+  "subtypes": [
+    "run"
+  ],
+  "playCost": 1,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "injection_attack_choose_breaker_run",
+      "strengthBonus": 2
+    }
+  },
+  "wave": "twenty-three-seconds"
+}

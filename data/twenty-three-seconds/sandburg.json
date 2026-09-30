@@ -1,0 +1,19 @@
+{
+  "id": "sandburg",
+  "title": "Sandburg",
+  "nrdbCode": "11020",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "neutral-corp",
+  "installCost": 0,
+  "rezCost": 0,
+  "trashCost": 4,
+  "unique": true,
+  "iceStrengthBonusPerFiveCorpCreditsWhenCorpCreditsGte": {
+    "threshold": 10,
+    "perCredits": 5,
+    "bonus": 1
+  },
+  "wave": "twenty-three-seconds"
+}

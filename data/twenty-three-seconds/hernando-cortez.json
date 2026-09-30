@@ -1,0 +1,16 @@
+{
+  "id": "hernando-cortez",
+  "title": "Hernando Cortez",
+  "nrdbCode": "11004",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "subtypes": [
+    "connection"
+  ],
+  "installCost": 2,
+  "unique": true,
+  "additionalIceRezCostEqualToSubroutineCountWhenCorpCreditsGte": 10,
+  "wave": "twenty-three-seconds"
+}

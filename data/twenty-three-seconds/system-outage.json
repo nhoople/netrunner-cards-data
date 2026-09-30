@@ -1,0 +1,17 @@
+{
+  "id": "system-outage",
+  "title": "System Outage",
+  "nrdbCode": "11001",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "subtypes": [
+    "current"
+  ],
+  "playCost": 1,
+  "lingerAsCurrent": true,
+  "currentTrashOnAgendaScored": true,
+  "corpLosesCreditsOnNonFirstDrawThisTurn": 1,
+  "wave": "twenty-three-seconds"
+}

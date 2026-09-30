@@ -1,0 +1,30 @@
+{
+  "id": "hard-hitting-news",
+  "title": "Hard-Hitting News",
+  "nrdbCode": "11016",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "subtypes": [
+    "terminal"
+  ],
+  "playCost": 3,
+  "endsActionPhase": true,
+  "playRequiresRunnerMadeRunLastTurn": true,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "trace",
+      "strength": 4,
+      "onSuccess": {
+        "op": "do",
+        "action": {
+          "kind": "give_tags",
+          "amount": 4
+        }
+      }
+    }
+  },
+  "wave": "twenty-three-seconds"
+}

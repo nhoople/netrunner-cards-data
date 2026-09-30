@@ -1,0 +1,66 @@
+{
+  "id": "sherlock-2-0",
+  "title": "Sherlock 2.0",
+  "nrdbCode": "11011",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "sentry",
+    "bioroid",
+    "tracer"
+  ],
+  "installCost": 7,
+  "rezCost": 7,
+  "strength": 6,
+  "bioroidBreakMaxSubs": 2,
+  "subroutines": [
+    {
+      "id": "sherlock-2-0-trace-1",
+      "text": "Trace[4]. If successful, add 1 installed program to the bottom of the Runner's stack.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "trace",
+          "strength": 4,
+          "onSuccess": {
+            "op": "do",
+            "action": {
+              "kind": "add_installed_program_to_stack_bottom"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "sherlock-2-0-trace-2",
+      "text": "Trace[4]. If successful, add 1 installed program to the bottom of the Runner's stack.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "trace",
+          "strength": 4,
+          "onSuccess": {
+            "op": "do",
+            "action": {
+              "kind": "add_installed_program_to_stack_bottom"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "sherlock-2-0-tag",
+      "text": "Give the Runner 1 tag.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "give_tags",
+          "amount": 1
+        }
+      }
+    }
+  ],
+  "wave": "twenty-three-seconds"
+}
