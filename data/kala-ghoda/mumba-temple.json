@@ -1,0 +1,22 @@
+{
+  "id": "mumba-temple",
+  "title": "Mumba Temple",
+  "nrdbCode": "10018",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "neutral-corp",
+  "subtypes": [
+    "alliance",
+    "facility"
+  ],
+  "installCost": 1,
+  "rezCost": 1,
+  "trashCost": 3,
+  "zeroInfluenceIfIceInDeckLte": 15,
+  "recurringCreditsMax": 2,
+  "recurringSpendFor": [
+    "rez"
+  ],
+  "wave": "kala-ghoda"
+}

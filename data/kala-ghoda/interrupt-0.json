@@ -1,0 +1,40 @@
+{
+  "id": "interrupt-0",
+  "title": "Interrupt 0",
+  "nrdbCode": "10016",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "subtypes": [
+    "code gate"
+  ],
+  "installCost": 2,
+  "rezCost": 2,
+  "strength": 4,
+  "subroutines": [
+    {
+      "id": "interrupt-0-break-cost-1",
+      "text": "For the remainder of this run, icebreaker break abilities cost +1¢.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "arm_icebreaker_break_additional_cost_this_run",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "id": "interrupt-0-break-cost-2",
+      "text": "For the remainder of this run, icebreaker break abilities cost +1¢.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "arm_icebreaker_break_additional_cost_this_run",
+          "amount": 1
+        }
+      }
+    }
+  ],
+  "wave": "kala-ghoda"
+}

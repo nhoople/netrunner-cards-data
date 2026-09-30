@@ -1,0 +1,15 @@
+{
+  "id": "jesminder-sareen-girl-behind-the-curtain",
+  "title": "Jesminder Sareen: Girl Behind the Curtain",
+  "nrdbCode": "10006",
+  "type": "identity",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "subtypes": [
+    "natural"
+  ],
+  "link": 0,
+  "preventFirstTagThisTurn": true,
+  "wave": "kala-ghoda"
+}

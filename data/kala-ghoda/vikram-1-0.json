@@ -1,0 +1,68 @@
+{
+  "id": "vikram-1-0",
+  "title": "Vikram 1.0",
+  "nrdbCode": "10012",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "sentry",
+    "bioroid",
+    "tracer",
+    "ap"
+  ],
+  "installCost": 6,
+  "rezCost": 6,
+  "strength": 5,
+  "bioroidBreakMaxSubs": 1,
+  "subroutines": [
+    {
+      "id": "vikram-no-programs",
+      "text": "The Runner cannot use programs for the remainder of this run.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "kg_cannot_use_programs_this_run"
+        }
+      }
+    },
+    {
+      "id": "vikram-trace-core-1",
+      "text": "Trace[4]. If successful, do 1 core damage.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "trace",
+          "strength": 4,
+          "onSuccess": {
+            "op": "do",
+            "action": {
+              "kind": "core_damage",
+              "amount": 1
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "vikram-trace-core-2",
+      "text": "Trace[4]. If successful, do 1 core damage.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "trace",
+          "strength": 4,
+          "onSuccess": {
+            "op": "do",
+            "action": {
+              "kind": "core_damage",
+              "amount": 1
+            }
+          }
+        }
+      }
+    }
+  ],
+  "wave": "kala-ghoda"
+}

@@ -1,0 +1,47 @@
+{
+  "id": "museum-of-history",
+  "title": "Museum of History",
+  "nrdbCode": "10019",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "neutral-corp",
+  "subtypes": [
+    "alliance",
+    "ritzy"
+  ],
+  "installCost": 1,
+  "rezCost": 1,
+  "trashCost": 3,
+  "unique": true,
+  "zeroInfluenceIfCardsInDeckGte": 50,
+  "onTurnBegin": {
+    "op": "choose",
+    "chooser": "corp",
+    "options": [
+      {
+        "id": "accept",
+        "label": "Shuffle 1 card from Archives into R&D",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "kg_shuffle_one_archives_into_rd"
+          }
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "corp",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  },
+  "wave": "kala-ghoda"
+}

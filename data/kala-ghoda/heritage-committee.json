@@ -1,0 +1,38 @@
+{
+  "id": "heritage-committee",
+  "title": "Heritage Committee",
+  "nrdbCode": "10013",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "jinteki",
+  "subtypes": [
+    "alliance"
+  ],
+  "playCost": 1,
+  "zeroInfluenceIfNonAllianceFactionCardsGte": {
+    "faction": "jinteki",
+    "threshold": 6
+  },
+  "onPlay": {
+    "op": "seq",
+    "effects": [
+      {
+        "op": "do",
+        "action": {
+          "kind": "draw",
+          "side": "corp",
+          "amount": 3
+        }
+      },
+      {
+        "op": "do",
+        "action": {
+          "kind": "hq_to_top_rd",
+          "pick": "choose"
+        }
+      }
+    ]
+  },
+  "wave": "kala-ghoda"
+}

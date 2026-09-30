@@ -32,6 +32,7 @@
     "old-hollywood",
     "the-universe-of-tomorrow",
     "data-and-destiny",
+    "kala-ghoda",
     "reign-and-reverie",
     "system-core-2019",
     "downfall",
@@ -2008,6 +2009,31 @@
         "employee-strike",
         "windfall",
         "technical-writer"
+      ]
+    },
+    "kala-ghoda": {
+      "status": "supported",
+      "notes": "Kala Ghoda (kg) Mumbad #1 set-complete. 18/18 new clears; run-amok reprint skipped. Pool supported after data-and-destiny. Paired release v1.116.0. Never kick mo/mor.",
+      "cards": [
+        "run-amok",
+        "ramujan-reliant-550-bmi",
+        "street-magic",
+        "high-stakes-job",
+        "mongoose",
+        "jesminder-sareen-girl-behind-the-curtain",
+        "maya",
+        "panchatantra",
+        "artist-colony",
+        "chatterjee-university",
+        "advanced-concept-hopper",
+        "vikram-1-0",
+        "heritage-committee",
+        "mumbad-city-grid",
+        "kala-ghoda-real-tv",
+        "interrupt-0",
+        "dedication-ceremony",
+        "mumba-temple",
+        "museum-of-history"
       ]
     }
   }

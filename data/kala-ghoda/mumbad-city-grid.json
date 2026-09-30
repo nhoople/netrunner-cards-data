@@ -1,0 +1,17 @@
+{
+  "id": "mumbad-city-grid",
+  "title": "Mumbad City Grid",
+  "nrdbCode": "10014",
+  "type": "upgrade",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "jinteki",
+  "subtypes": [
+    "region"
+  ],
+  "installCost": 3,
+  "rezCost": 3,
+  "trashCost": 3,
+  "onPassIceProtectingThisServerMaySwap": true,
+  "wave": "kala-ghoda"
+}

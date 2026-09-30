@@ -38,6 +38,10 @@
           "type": "boolean",
           "description": "Only servers protected by at least one piece of ice are legal run targets (Kompromat)."
         },
+        "requiresUnrezzedIce": {
+          "type": "boolean",
+          "description": "Only servers protected by at least one unrezzed piece of ice are legal run targets (High-Stakes Job)."
+        },
         "bonusAccessFromVirus": {
           "type": "boolean"
         },
@@ -4038,6 +4042,45 @@
       "type": "integer",
       "minimum": 1,
       "description": "Technical Writer: place N credits from bank when Runner installs hardware or program."
+    },
+    "runnerChoosesUnbrokenSubroutineOrder": {
+      "type": "boolean",
+      "description": "Street Magic: unbroken subroutines resolve in the Runner's chosen order."
+    },
+    "breakOnAtMostOneIcePerRun": {
+      "type": "boolean",
+      "description": "Mongoose: cannot use this program to break subroutines on more than one ice per run."
+    },
+    "onFinishAccessRdOncePerTurn": {
+      "type": "object",
+      "description": "Maya: once per turn when finishing access of a card in R&D, fire this effect."
+    },
+    "onEncounterAnyIceOncePerTurn": {
+      "type": "object",
+      "description": "Panchatantra: once per turn when encountering any ice, fire this effect while installed."
+    },
+    "zeroInfluenceIfNonAllianceFactionCardsGte": {
+      "type": "object",
+      "required": ["faction", "threshold"],
+      "properties": {
+        "faction": { "type": "string", "minLength": 1 },
+        "threshold": { "type": "integer", "minimum": 1 }
+      },
+      "description": "Heritage Committee: 0 influence if deck has ≥ threshold non-alliance cards of faction (deckbuilding)."
+    },
+    "onPassIceProtectingThisServerMaySwap": {
+      "type": "boolean",
+      "description": "Mumbad City Grid: when Runner passes ice protecting this server, Corp may swap it with another ice protecting this server."
+    },
+    "zeroInfluenceIfIceInDeckLte": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Mumba Temple: 0 influence if deck has ≤ N ice (deckbuilding)."
+    },
+    "zeroInfluenceIfCardsInDeckGte": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Museum of History: 0 influence if deck has ≥ N cards (deckbuilding)."
     }
   }
 }

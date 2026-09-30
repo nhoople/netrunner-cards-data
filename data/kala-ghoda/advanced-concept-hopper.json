@@ -1,0 +1,67 @@
+{
+  "id": "advanced-concept-hopper",
+  "title": "Advanced Concept Hopper",
+  "nrdbCode": "10011",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "research"
+  ],
+  "advancementRequirement": 4,
+  "agendaPoints": 2,
+  "onFirstRunBeginThisTurn": {
+    "op": "choose",
+    "chooser": "corp",
+    "options": [
+      {
+        "id": "accept",
+        "label": "Draw 1 or gain 1¢",
+        "effect": {
+          "op": "choose",
+          "chooser": "corp",
+          "options": [
+            {
+              "id": "draw",
+              "label": "Draw 1 card",
+              "effect": {
+                "op": "do",
+                "action": {
+                  "kind": "draw",
+                  "side": "corp",
+                  "amount": 1
+                }
+              }
+            },
+            {
+              "id": "credit",
+              "label": "Gain 1¢",
+              "effect": {
+                "op": "do",
+                "action": {
+                  "kind": "gain_credits",
+                  "side": "corp",
+                  "amount": 1
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "corp",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  },
+  "wave": "kala-ghoda"
+}

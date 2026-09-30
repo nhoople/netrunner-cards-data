@@ -1,0 +1,53 @@
+{
+  "pack": "kala-ghoda",
+  "nrdbPackCode": "kg",
+  "count": 19,
+  "written": 18,
+  "reprintSkipped": 1,
+  "status": "supported",
+  "notes": "kala-ghoda (kg) set-complete. Wrote 18; skipped 1 reprints. Clears: 18.",
+  "cards": [
+    "run-amok",
+    "ramujan-reliant-550-bmi",
+    "street-magic",
+    "high-stakes-job",
+    "mongoose",
+    "jesminder-sareen-girl-behind-the-curtain",
+    "maya",
+    "panchatantra",
+    "artist-colony",
+    "chatterjee-university",
+    "advanced-concept-hopper",
+    "vikram-1-0",
+    "heritage-committee",
+    "mumbad-city-grid",
+    "kala-ghoda-real-tv",
+    "interrupt-0",
+    "dedication-ceremony",
+    "mumba-temple",
+    "museum-of-history"
+  ],
+  "reprintIdsFromEarlierWaves": [
+    "run-amok"
+  ],
+  "clears": [
+    "ramujan-reliant-550-bmi",
+    "street-magic",
+    "high-stakes-job",
+    "mongoose",
+    "jesminder-sareen-girl-behind-the-curtain",
+    "maya",
+    "panchatantra",
+    "artist-colony",
+    "chatterjee-university",
+    "advanced-concept-hopper",
+    "vikram-1-0",
+    "heritage-committee",
+    "mumbad-city-grid",
+    "kala-ghoda-real-tv",
+    "interrupt-0",
+    "dedication-ceremony",
+    "mumba-temple",
+    "museum-of-history"
+  ]
+}

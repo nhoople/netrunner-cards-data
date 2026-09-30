@@ -1,0 +1,56 @@
+{
+  "id": "maya",
+  "title": "Maya",
+  "nrdbCode": "10007",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "subtypes": [
+    "console"
+  ],
+  "installCost": 3,
+  "unique": true,
+  "muBonus": 2,
+  "onFinishAccessRdOncePerTurn": {
+    "op": "choose",
+    "chooser": "runner",
+    "options": [
+      {
+        "id": "accept",
+        "label": "Add accessed card to bottom of R&D; take 1 tag",
+        "effect": {
+          "op": "seq",
+          "effects": [
+            {
+              "op": "do",
+              "action": {
+                "kind": "maya_move_accessed_to_bottom_rd"
+              }
+            },
+            {
+              "op": "do",
+              "action": {
+                "kind": "give_tags",
+                "amount": 1
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "runner",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  },
+  "wave": "kala-ghoda"
+}

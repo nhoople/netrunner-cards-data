@@ -1,0 +1,27 @@
+{
+  "id": "high-stakes-job",
+  "title": "High-Stakes Job",
+  "nrdbCode": "10004",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "subtypes": [
+    "run",
+    "job"
+  ],
+  "playCost": 6,
+  "runEvent": {
+    "servers": "any",
+    "requiresUnrezzedIce": true,
+    "onSuccessfulRun": {
+      "op": "do",
+      "action": {
+        "kind": "gain_credits",
+        "side": "runner",
+        "amount": 12
+      }
+    }
+  },
+  "wave": "kala-ghoda"
+}

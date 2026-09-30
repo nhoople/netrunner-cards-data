@@ -1,0 +1,26 @@
+{
+  "id": "mongoose",
+  "title": "Mongoose",
+  "nrdbCode": "10005",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "subtypes": [
+    "icebreaker",
+    "killer"
+  ],
+  "installCost": 3,
+  "strength": 1,
+  "memoryCost": 1,
+  "breaker": {
+    "breaksSubtype": "sentry",
+    "strength": 1,
+    "breakCredits": 1,
+    "breakMaxSubs": 2,
+    "pumpCredits": 2,
+    "pumpStrength": 2
+  },
+  "breakOnAtMostOneIcePerRun": true,
+  "wave": "kala-ghoda"
+}

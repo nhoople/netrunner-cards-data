@@ -1,0 +1,15 @@
+{
+  "id": "street-magic",
+  "title": "Street Magic",
+  "nrdbCode": "10003",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "subtypes": [
+    "virtual"
+  ],
+  "installCost": 0,
+  "runnerChoosesUnbrokenSubroutineOrder": true,
+  "wave": "kala-ghoda"
+}

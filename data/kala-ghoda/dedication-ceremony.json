@@ -1,0 +1,21 @@
+{
+  "id": "dedication-ceremony",
+  "title": "Dedication Ceremony",
+  "nrdbCode": "10017",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "playCost": 1,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "place_advancements",
+      "amount": 3,
+      "pick": "choose",
+      "faceupOnly": true,
+      "cannotScoreTargetThisTurn": true
+    }
+  },
+  "wave": "kala-ghoda"
+}

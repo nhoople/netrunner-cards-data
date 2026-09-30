@@ -1,0 +1,40 @@
+{
+  "id": "ramujan-reliant-550-bmi",
+  "title": "Ramujan-reliant 550 BMI",
+  "nrdbCode": "10002",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "subtypes": [
+    "consumer-grade"
+  ],
+  "installCost": 1,
+  "deckLimit": 6,
+  "paidAbilities": [
+    {
+      "id": "ramujan-prevent",
+      "label": "[interrupt] → [trash]: Prevent up to X net or core damage; trash that many from stack",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "trashSelf": true
+      },
+      "windows": [
+        "damage_interrupt_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "ramujan_prevent_damage_trash_stack"
+        }
+      },
+      "usableByRunnerOnSelfIce": true,
+      "requirePendingDamageTypes": [
+        "net",
+        "core"
+      ]
+    }
+  ],
+  "wave": "kala-ghoda"
+}
