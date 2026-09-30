@@ -1,0 +1,36 @@
+{
+  "id": "security-chip",
+  "title": "Security Chip",
+  "nrdbCode": "09046",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "sunny-lebeau",
+  "subtypes": [
+    "chip"
+  ],
+  "installCost": 0,
+  "paidAbilities": [
+    {
+      "id": "security-chip-boost",
+      "label": "[trash]: Chosen icebreaker(s) gain +1 strength per link this run",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "trashSelf": true
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "security_chip_boost_breakers_per_link"
+        }
+      },
+      "usableByRunnerOnSelfIce": true,
+      "requireDuringRun": true
+    }
+  ],
+  "wave": "data-and-destiny"
+}

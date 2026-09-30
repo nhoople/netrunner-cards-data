@@ -1,0 +1,18 @@
+{
+  "id": "the-all-seeing-i",
+  "title": "The All-Seeing I",
+  "nrdbCode": "09022",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "playCost": 1,
+  "playRequiresTagged": true,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "trash_all_resources_unless_remove_bad_publicity"
+    }
+  },
+  "wave": "data-and-destiny"
+}

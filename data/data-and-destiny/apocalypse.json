@@ -1,0 +1,29 @@
+{
+  "id": "apocalypse",
+  "title": "Apocalypse",
+  "nrdbCode": "09030",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "apex",
+  "playCost": 3,
+  "playRequiresSuccessfulAllCentralsThisTurn": true,
+  "onPlay": {
+    "op": "seq",
+    "effects": [
+      {
+        "op": "do",
+        "action": {
+          "kind": "trash_all_installed_corp_cards"
+        }
+      },
+      {
+        "op": "do",
+        "action": {
+          "kind": "turn_all_installed_runner_cards_facedown"
+        }
+      }
+    ]
+  },
+  "wave": "data-and-destiny"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "prey",
+  "title": "Prey",
+  "nrdbCode": "09031",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "apex",
+  "subtypes": [
+    "run"
+  ],
+  "playCost": 0,
+  "runEvent": {
+    "servers": "any",
+    "onPassIceMayTrashEqualStrengthToTrashIce": true
+  },
+  "wave": "data-and-destiny"
+}

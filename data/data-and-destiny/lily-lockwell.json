@@ -1,0 +1,46 @@
+{
+  "id": "lily-lockwell",
+  "title": "Lily Lockwell",
+  "nrdbCode": "09008",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "subtypes": [
+    "character"
+  ],
+  "installCost": 2,
+  "rezCost": 2,
+  "trashCost": 3,
+  "unique": true,
+  "onRez": {
+    "op": "do",
+    "action": {
+      "kind": "draw",
+      "side": "corp",
+      "amount": 3
+    }
+  },
+  "paidAbilities": [
+    {
+      "id": "lily-search",
+      "label": "[click], remove 1 tag: Search R&D for an operation; add to top of R&D",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "removeTags": 1,
+        "clicks": 1
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "search_rd_operation_to_top_rd"
+        }
+      }
+    }
+  ],
+  "wave": "data-and-destiny"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "24-7-news-cycle",
+  "title": "24/7 News Cycle",
+  "nrdbCode": "09019",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "playCost": 0,
+  "playAdditionalCostForfeitAgenda": true,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "resolve_when_scored_on_scored_agenda"
+    }
+  },
+  "wave": "data-and-destiny"
+}

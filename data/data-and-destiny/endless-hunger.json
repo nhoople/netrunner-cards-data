@@ -1,0 +1,44 @@
+{
+  "id": "endless-hunger",
+  "title": "Endless Hunger",
+  "nrdbCode": "09033",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "apex",
+  "subtypes": [
+    "icebreaker"
+  ],
+  "installCost": 0,
+  "strength": 11,
+  "memoryCost": 4,
+  "breaker": {
+    "breaksSubtype": "end-the-run",
+    "strength": 11,
+    "breakCredits": 0,
+    "breakMaxSubs": 1,
+    "breakCostTrashInstalled": 1,
+    "breakViaPaidAbilityOnly": true
+  },
+  "paidAbilities": [
+    {
+      "id": "endless-hunger-break",
+      "label": "Trash 1 installed card: Break 1 End the run subroutine",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {},
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "break_etr_subroutine_trash_installed"
+        }
+      },
+      "usableByRunnerOnSelfIce": true,
+      "requireDuringRun": true
+    }
+  ],
+  "wave": "data-and-destiny"
+}

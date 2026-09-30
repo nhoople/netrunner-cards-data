@@ -1,0 +1,17 @@
+{
+  "id": "employee-strike",
+  "title": "Employee Strike",
+  "nrdbCode": "09053",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "neutral-runner",
+  "subtypes": [
+    "current"
+  ],
+  "playCost": 1,
+  "lingerAsCurrent": true,
+  "currentTrashOnAgendaScored": true,
+  "blankCorpIdentityPrintedAbilities": true,
+  "wave": "data-and-destiny"
+}

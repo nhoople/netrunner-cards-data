@@ -1,0 +1,44 @@
+{
+  "id": "jak-sinclair",
+  "title": "Jak Sinclair",
+  "nrdbCode": "09052",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "sunny-lebeau",
+  "subtypes": [
+    "connection"
+  ],
+  "installCost": 3,
+  "unique": true,
+  "installCostReductionPerLink": 1,
+  "onTurnBegin": {
+    "op": "choose",
+    "chooser": "runner",
+    "options": [
+      {
+        "id": "accept",
+        "label": "Make a run (cannot use programs)",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "jak_sinclair_run_without_programs"
+          }
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "runner",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  },
+  "wave": "data-and-destiny"
+}

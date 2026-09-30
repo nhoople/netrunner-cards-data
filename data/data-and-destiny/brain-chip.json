@@ -1,0 +1,17 @@
+{
+  "id": "brain-chip",
+  "title": "Brain Chip",
+  "nrdbCode": "09039",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "adam",
+  "subtypes": [
+    "console"
+  ],
+  "installCost": 2,
+  "unique": true,
+  "muEqualsAgendaPoints": true,
+  "handSizeEqualsAgendaPoints": true,
+  "wave": "data-and-destiny"
+}

@@ -1,0 +1,41 @@
+{
+  "id": "new-angeles-sol-your-news",
+  "title": "New Angeles Sol: Your News",
+  "nrdbCode": "09002",
+  "type": "identity",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "subtypes": [
+    "division"
+  ],
+  "onAgendaScoredOrStolen": {
+    "op": "choose",
+    "chooser": "corp",
+    "options": [
+      {
+        "id": "accept",
+        "label": "Play 1 current from HQ or Archives",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "play_current_from_hq_or_archives"
+          }
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "corp",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  },
+  "wave": "data-and-destiny"
+}

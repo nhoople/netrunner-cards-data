@@ -1,0 +1,36 @@
+{
+  "id": "heartbeat",
+  "title": "Heartbeat",
+  "nrdbCode": "09032",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "apex",
+  "subtypes": [
+    "console"
+  ],
+  "installCost": 2,
+  "unique": true,
+  "muBonus": 1,
+  "paidAbilities": [
+    {
+      "id": "heartbeat-prevent",
+      "label": "[interrupt] → Trash 1 installed card: Prevent 1 damage",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {},
+      "windows": [
+        "damage_interrupt_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "heartbeat_trash_installed_prevent_damage",
+          "amount": 1
+        }
+      },
+      "usableByRunnerOnSelfIce": true
+    }
+  ],
+  "wave": "data-and-destiny"
+}

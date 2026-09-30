@@ -1,0 +1,38 @@
+{
+  "id": "security-nexus",
+  "title": "Security Nexus",
+  "nrdbCode": "09047",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "sunny-lebeau",
+  "subtypes": [
+    "console"
+  ],
+  "installCost": 8,
+  "unique": true,
+  "muBonus": 1,
+  "link": 1,
+  "paidAbilities": [
+    {
+      "id": "security-nexus-trace",
+      "label": "Once per turn → On encounter: Corp traces[5]; success tag+ETR, fail bypass",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {},
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "security_nexus_trace_bypass_or_tag_etr"
+        }
+      },
+      "oncePerTurn": true,
+      "usableByRunnerOnSelfIce": true,
+      "requireDuringRun": true
+    }
+  ],
+  "wave": "data-and-destiny"
+}

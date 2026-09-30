@@ -1,0 +1,35 @@
+{
+  "id": "sync-everything-everywhere",
+  "title": "SYNC: Everything, Everywhere",
+  "nrdbCode": "09001",
+  "type": "identity",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "subtypes": [
+    "division"
+  ],
+  "paidAbilities": [
+    {
+      "id": "sync-flip",
+      "label": "[click]: Flip this identity",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "flip_identity"
+        }
+      }
+    }
+  ],
+  "basicRemoveTagAdditionalCostCreditsWhileUnflipped": 1,
+  "basicTrashResourceCreditReductionWhileFlipped": 2,
+  "wave": "data-and-destiny"
+}

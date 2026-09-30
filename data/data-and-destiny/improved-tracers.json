@@ -1,0 +1,20 @@
+{
+  "id": "improved-tracers",
+  "title": "Improved Tracers",
+  "nrdbCode": "09005",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "subtypes": [
+    "security"
+  ],
+  "advancementRequirement": 3,
+  "agendaPoints": 1,
+  "iceStrengthBonusForSubtype": {
+    "subtype": "tracer",
+    "bonus": 1
+  },
+  "subroutineTraceBaseStrengthBonus": 1,
+  "wave": "data-and-destiny"
+}

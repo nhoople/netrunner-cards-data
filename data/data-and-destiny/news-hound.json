@@ -1,0 +1,38 @@
+{
+  "id": "news-hound",
+  "title": "News Hound",
+  "nrdbCode": "09014",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "subtypes": [
+    "sentry",
+    "tracer"
+  ],
+  "installCost": 2,
+  "rezCost": 2,
+  "strength": 4,
+  "gainsEtrSubroutineWhileCurrentActive": true,
+  "subroutines": [
+    {
+      "id": "news-hound-trace",
+      "text": "Trace[3]. If successful, give the Runner 1 tag.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "trace",
+          "strength": 3,
+          "onSuccess": {
+            "op": "do",
+            "action": {
+              "kind": "give_tags",
+              "amount": 1
+            }
+          }
+        }
+      }
+    }
+  ],
+  "wave": "data-and-destiny"
+}

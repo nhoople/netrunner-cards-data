@@ -1,0 +1,18 @@
+{
+  "id": "safety-first",
+  "title": "Safety First",
+  "nrdbCode": "09044",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "adam",
+  "subtypes": [
+    "directive",
+    "virtual"
+  ],
+  "installCost": 0,
+  "unique": true,
+  "handSizeBonus": -2,
+  "drawAtTurnEndIfGripBelowMaxHandSize": 1,
+  "wave": "data-and-destiny"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "dr-lovegood",
+  "title": "Dr. Lovegood",
+  "nrdbCode": "09042",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "adam",
+  "subtypes": [
+    "connection"
+  ],
+  "installCost": 2,
+  "unique": true,
+  "onTurnBegin": {
+    "op": "do",
+    "action": {
+      "kind": "dr_lovegood_blank_installed_abilities"
+    }
+  },
+  "wave": "data-and-destiny"
+}

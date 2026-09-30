@@ -1,0 +1,45 @@
+{
+  "id": "news-team",
+  "title": "News Team",
+  "nrdbCode": "09009",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "subtypes": [
+    "ambush"
+  ],
+  "installCost": 0,
+  "rezCost": 0,
+  "trashCost": 0,
+  "mustRevealWhenAccessedFromRd": true,
+  "onAccess": {
+    "op": "choose",
+    "chooser": "runner",
+    "options": [
+      {
+        "id": "tags",
+        "label": "Take 2 tags",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "give_tags",
+            "amount": 2
+          }
+        }
+      },
+      {
+        "id": "score",
+        "label": "Add News Team to score area as −1 agenda point",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "add_to_runner_score_as_agenda",
+            "agendaPoints": -1
+          }
+        }
+      }
+    ]
+  },
+  "wave": "data-and-destiny"
+}

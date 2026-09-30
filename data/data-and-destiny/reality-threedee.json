@@ -1,0 +1,23 @@
+{
+  "id": "reality-threedee",
+  "title": "Reality Threedee",
+  "nrdbCode": "09012",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "subtypes": [
+    "liability"
+  ],
+  "installCost": 0,
+  "rezCost": 0,
+  "trashCost": 6,
+  "badPublicityOnRez": 1,
+  "onTurnBegin": {
+    "op": "do",
+    "action": {
+      "kind": "reality_threedee_gain_credits"
+    }
+  },
+  "wave": "data-and-destiny"
+}

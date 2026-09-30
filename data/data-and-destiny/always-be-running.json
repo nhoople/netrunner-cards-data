@@ -1,0 +1,40 @@
+{
+  "id": "always-be-running",
+  "title": "Always Be Running",
+  "nrdbCode": "09041",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "adam",
+  "subtypes": [
+    "directive",
+    "virtual"
+  ],
+  "installCost": 0,
+  "unique": true,
+  "firstClickMustBeRunOrRunEvent": true,
+  "paidAbilities": [
+    {
+      "id": "abr-break",
+      "label": "Once per turn → Lose [click][click]: Break 1 subroutine",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 2
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "break_any_subroutine"
+        }
+      },
+      "oncePerTurn": true,
+      "usableByRunnerOnSelfIce": true,
+      "requireDuringRun": true
+    }
+  ],
+  "wave": "data-and-destiny"
+}

@@ -1,0 +1,43 @@
+{
+  "id": "apex-invasive-predator",
+  "title": "Apex: Invasive Predator",
+  "nrdbCode": "09029",
+  "type": "identity",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "apex",
+  "subtypes": [
+    "digital"
+  ],
+  "link": 0,
+  "cannotInstallNonVirtualResources": true,
+  "onTurnBegin": {
+    "op": "choose",
+    "chooser": "runner",
+    "options": [
+      {
+        "id": "accept",
+        "label": "Install 1 card from grip facedown",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "install_from_grip_facedown"
+          }
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "runner",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  },
+  "wave": "data-and-destiny"
+}

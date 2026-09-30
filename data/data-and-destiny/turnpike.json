@@ -1,0 +1,45 @@
+{
+  "id": "turnpike",
+  "title": "Turnpike",
+  "nrdbCode": "09018",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "subtypes": [
+    "sentry",
+    "tracer"
+  ],
+  "installCost": 2,
+  "rezCost": 2,
+  "strength": 3,
+  "onEncounter": {
+    "op": "do",
+    "action": {
+      "kind": "lose_credits",
+      "side": "runner",
+      "amount": 1
+    }
+  },
+  "subroutines": [
+    {
+      "id": "turnpike-trace",
+      "text": "Trace[5]. If successful, give the Runner 1 tag.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "trace",
+          "strength": 5,
+          "onSuccess": {
+            "op": "do",
+            "action": {
+              "kind": "give_tags",
+              "amount": 1
+            }
+          }
+        }
+      }
+    }
+  ],
+  "wave": "data-and-destiny"
+}

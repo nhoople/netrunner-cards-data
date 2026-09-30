@@ -1,0 +1,27 @@
+{
+  "id": "gs-striker-m1",
+  "title": "GS Striker M1",
+  "nrdbCode": "09048",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "sunny-lebeau",
+  "subtypes": [
+    "icebreaker",
+    "decoder",
+    "cloud"
+  ],
+  "installCost": 4,
+  "strength": 1,
+  "memoryCost": 1,
+  "memoryCostZeroIfLinkGte": 2,
+  "breaker": {
+    "breaksSubtype": "code gate",
+    "strength": 1,
+    "breakCredits": 2,
+    "breakMaxSubs": 99,
+    "pumpCredits": 2,
+    "pumpStrength": 3
+  },
+  "wave": "data-and-destiny"
+}

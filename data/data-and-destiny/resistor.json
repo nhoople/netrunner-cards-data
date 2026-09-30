@@ -1,0 +1,37 @@
+{
+  "id": "resistor",
+  "title": "Resistor",
+  "nrdbCode": "09015",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "subtypes": [
+    "barrier",
+    "tracer"
+  ],
+  "installCost": 0,
+  "rezCost": 0,
+  "strength": 0,
+  "strengthBonusPerRunnerTag": 1,
+  "subroutines": [
+    {
+      "id": "resistor-trace",
+      "text": "Trace[4]. If successful, end the run.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "trace",
+          "strength": 4,
+          "onSuccess": {
+            "op": "do",
+            "action": {
+              "kind": "end_the_run"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "wave": "data-and-destiny"
+}

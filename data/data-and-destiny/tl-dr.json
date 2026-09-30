@@ -1,0 +1,28 @@
+{
+  "id": "tl-dr",
+  "title": "TL;DR",
+  "nrdbCode": "09017",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "subtypes": [
+    "code gate"
+  ],
+  "installCost": 1,
+  "rezCost": 1,
+  "strength": 4,
+  "subroutines": [
+    {
+      "id": "tl-dr-duplicate",
+      "text": "Next ice encounter this run gains a second copy of each subroutine.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "arm_duplicate_subs_on_next_ice_encounter"
+        }
+      }
+    }
+  ],
+  "wave": "data-and-destiny"
+}

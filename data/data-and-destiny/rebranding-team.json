@@ -1,0 +1,16 @@
+{
+  "id": "rebranding-team",
+  "title": "Rebranding Team",
+  "nrdbCode": "09006",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "subtypes": [
+    "initiative"
+  ],
+  "advancementRequirement": 4,
+  "agendaPoints": 2,
+  "assetsGainSubtype": "advertisement",
+  "wave": "data-and-destiny"
+}

@@ -1,0 +1,80 @@
+{
+  "id": "archangel",
+  "title": "Archangel",
+  "nrdbCode": "09013",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "subtypes": [
+    "code gate",
+    "tracer",
+    "ambush"
+  ],
+  "installCost": 4,
+  "rezCost": 4,
+  "strength": 6,
+  "mustRevealWhenAccessedFromRd": true,
+  "skipOnAccessFromArchives": true,
+  "onAccess": {
+    "op": "choose",
+    "chooser": "corp",
+    "options": [
+      {
+        "id": "accept",
+        "label": "Pay 3¢: Runner encounters Archangel",
+        "effect": {
+          "op": "seq",
+          "effects": [
+            {
+              "op": "do",
+              "action": {
+                "kind": "lose_credits",
+                "side": "corp",
+                "amount": 3
+              }
+            },
+            {
+              "op": "do",
+              "action": {
+                "kind": "force_encounter_accessed_ice"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "corp",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  },
+  "subroutines": [
+    {
+      "id": "archangel-trace",
+      "text": "Trace[6]. If successful, add 1 installed Runner card to the grip.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "trace",
+          "strength": 6,
+          "onSuccess": {
+            "op": "do",
+            "action": {
+              "kind": "add_installed_runner_to_grip"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "wave": "data-and-destiny"
+}

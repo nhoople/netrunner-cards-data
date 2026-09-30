@@ -1,0 +1,13 @@
+{
+  "id": "harbinger",
+  "title": "Harbinger",
+  "nrdbCode": "09034",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "apex",
+  "installCost": 0,
+  "memoryCost": 0,
+  "turnFacedownInsteadOfHeapWhenTrashed": true,
+  "wave": "data-and-destiny"
+}

@@ -1,0 +1,16 @@
+{
+  "id": "wasteland",
+  "title": "Wasteland",
+  "nrdbCode": "09036",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "apex",
+  "subtypes": [
+    "location",
+    "virtual"
+  ],
+  "installCost": 2,
+  "gainCreditsOnFirstOwnInstalledTrashEachTurn": 1,
+  "wave": "data-and-destiny"
+}

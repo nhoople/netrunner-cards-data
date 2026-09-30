@@ -1,0 +1,16 @@
+{
+  "id": "multithreader",
+  "title": "Multithreader",
+  "nrdbCode": "09040",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "adam",
+  "installCost": 3,
+  "memoryCost": 1,
+  "recurringCreditsMax": 2,
+  "recurringSpendFor": [
+    "use_program"
+  ],
+  "wave": "data-and-destiny"
+}

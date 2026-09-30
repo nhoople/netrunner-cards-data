@@ -1,0 +1,17 @@
+{
+  "id": "windfall",
+  "title": "Windfall",
+  "nrdbCode": "09054",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "neutral-runner",
+  "playCost": 0,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "windfall_shuffle_trash_top_gain_install_cost"
+    }
+  },
+  "wave": "data-and-destiny"
+}

@@ -1,0 +1,22 @@
+{
+  "id": "ad-blitz",
+  "title": "Ad Blitz",
+  "nrdbCode": "09020",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "subtypes": [
+    "double"
+  ],
+  "playCost": 0,
+  "playCostX": true,
+  "playAdditionalClicks": 1,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "install_and_rez_x_advertisements_from_hq_or_archives"
+    }
+  },
+  "wave": "data-and-destiny"
+}

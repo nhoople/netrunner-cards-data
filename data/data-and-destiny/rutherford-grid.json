@@ -1,0 +1,17 @@
+{
+  "id": "rutherford-grid",
+  "title": "Rutherford Grid",
+  "nrdbCode": "09025",
+  "type": "upgrade",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "subtypes": [
+    "region"
+  ],
+  "installCost": 0,
+  "rezCost": 0,
+  "trashCost": 4,
+  "traceBaseStrengthBonusDuringRunOnThisServer": 2,
+  "wave": "data-and-destiny"
+}

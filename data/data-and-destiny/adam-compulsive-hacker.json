@@ -1,0 +1,15 @@
+{
+  "id": "adam-compulsive-hacker",
+  "title": "Adam: Compulsive Hacker",
+  "nrdbCode": "09037",
+  "type": "identity",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "adam",
+  "subtypes": [
+    "bioroid"
+  ],
+  "link": 0,
+  "startWithDirectiveCards": 3,
+  "wave": "data-and-destiny"
+}

@@ -1,0 +1,34 @@
+{
+  "id": "technical-writer",
+  "title": "Technical Writer",
+  "nrdbCode": "09055",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "neutral-runner",
+  "installCost": 0,
+  "hostedCreditsOnProgramOrHardwareInstall": 1,
+  "paidAbilities": [
+    {
+      "id": "technical-writer-take",
+      "label": "[click],[trash]: Take all credits from Technical Writer",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1,
+        "trashSelf": true
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "take_all_hosted_credits"
+        }
+      },
+      "usableByRunnerOnSelfIce": true
+    }
+  ],
+  "wave": "data-and-destiny"
+}

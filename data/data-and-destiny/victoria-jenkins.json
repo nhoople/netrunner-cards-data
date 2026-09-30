@@ -1,0 +1,25 @@
+{
+  "id": "victoria-jenkins",
+  "title": "Victoria Jenkins",
+  "nrdbCode": "09011",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "subtypes": [
+    "executive"
+  ],
+  "installCost": 3,
+  "rezCost": 3,
+  "trashCost": 5,
+  "unique": true,
+  "runnerAllottedClicksBonus": -1,
+  "onTrashWhileAccessed": {
+    "op": "do",
+    "action": {
+      "kind": "add_to_runner_score_as_agenda",
+      "agendaPoints": 2
+    }
+  },
+  "wave": "data-and-destiny"
+}

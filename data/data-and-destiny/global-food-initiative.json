@@ -1,0 +1,16 @@
+{
+  "id": "global-food-initiative",
+  "title": "Global Food Initiative",
+  "nrdbCode": "09026",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "neutral-corp",
+  "subtypes": [
+    "initiative"
+  ],
+  "advancementRequirement": 5,
+  "agendaPoints": 3,
+  "agendaPointsModifierInRunnerScoreArea": -1,
+  "wave": "data-and-destiny"
+}

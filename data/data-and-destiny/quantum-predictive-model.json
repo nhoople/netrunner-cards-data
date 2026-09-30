@@ -1,0 +1,17 @@
+{
+  "id": "quantum-predictive-model",
+  "title": "Quantum Predictive Model",
+  "nrdbCode": "09007",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "subtypes": [
+    "security"
+  ],
+  "advancementRequirement": 3,
+  "agendaPoints": 1,
+  "mustRevealWhenAccessedFromRd": true,
+  "addToCorpScoreOnAccessIfRunnerTagged": true,
+  "wave": "data-and-destiny"
+}

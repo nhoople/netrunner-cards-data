@@ -1,0 +1,35 @@
+{
+  "id": "15-minutes",
+  "title": "15 Minutes",
+  "nrdbCode": "09004",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "advancementRequirement": 2,
+  "agendaPoints": 1,
+  "unique": true,
+  "deckLimit": 1,
+  "paidAbilities": [
+    {
+      "id": "15-minutes-shuffle",
+      "label": "[click]: Shuffle 15 Minutes into R&D",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "shuffle_source_into_rd"
+        }
+      },
+      "usableFromRunnerScoreArea": true
+    }
+  ],
+  "wave": "data-and-destiny"
+}

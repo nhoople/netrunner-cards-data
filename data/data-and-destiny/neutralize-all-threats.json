@@ -1,0 +1,18 @@
+{
+  "id": "neutralize-all-threats",
+  "title": "Neutralize All Threats",
+  "nrdbCode": "09043",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "adam",
+  "subtypes": [
+    "directive",
+    "virtual"
+  ],
+  "installCost": 0,
+  "unique": true,
+  "mustTrashFirstAccessedCardWithTrashCostEachTurn": true,
+  "bonusAccessOnHqBreach": 1,
+  "wave": "data-and-destiny"
+}

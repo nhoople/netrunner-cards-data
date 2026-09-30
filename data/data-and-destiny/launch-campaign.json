@@ -1,0 +1,31 @@
+{
+  "id": "launch-campaign",
+  "title": "Launch Campaign",
+  "nrdbCode": "09027",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "neutral-corp",
+  "subtypes": [
+    "advertisement"
+  ],
+  "installCost": 1,
+  "rezCost": 1,
+  "trashCost": 2,
+  "onRez": {
+    "op": "do",
+    "action": {
+      "kind": "place_hosted_credits",
+      "amount": 6
+    }
+  },
+  "onTurnBegin": {
+    "op": "do",
+    "action": {
+      "kind": "take_hosted_credits",
+      "amount": 2
+    }
+  },
+  "trashWhenHostedCreditsEmpty": true,
+  "wave": "data-and-destiny"
+}

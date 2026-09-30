@@ -1,0 +1,27 @@
+{
+  "id": "gs-sherman-m3",
+  "title": "GS Sherman M3",
+  "nrdbCode": "09050",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "sunny-lebeau",
+  "subtypes": [
+    "icebreaker",
+    "fracter",
+    "cloud"
+  ],
+  "installCost": 3,
+  "strength": 1,
+  "memoryCost": 1,
+  "memoryCostZeroIfLinkGte": 2,
+  "breaker": {
+    "breaksSubtype": "barrier",
+    "strength": 1,
+    "breakCredits": 2,
+    "breakMaxSubs": 99,
+    "pumpCredits": 2,
+    "pumpStrength": 3
+  },
+  "wave": "data-and-destiny"
+}

@@ -157,6 +157,10 @@
         "trashFirstFullyBrokenSubtype": {
           "type": "string",
           "description": "Knifed/Spooned/Forked: first time you fully break ice of this subtype during the run, trash that ice."
+        },
+        "onPassIceMayTrashEqualStrengthToTrashIce": {
+          "type": "boolean",
+          "description": "Prey: once during this run, when you pass ice, may trash installed cards equal to its strength to trash that ice."
         }
       }
     }
@@ -3648,10 +3652,14 @@
     },
     "archivesAccessMayRfgInstead": {
       "type": "object",
-      "required": ["oncePerArchivesBreach"],
+      "required": [
+        "oncePerArchivesBreach"
+      ],
       "additionalProperties": false,
       "properties": {
-        "oncePerArchivesBreach": {"type": "boolean"}
+        "oncePerArchivesBreach": {
+          "type": "boolean"
+        }
       },
       "description": "Archives Interface: may RFG a card instead of accessing it in Archives (once per breach)."
     },
@@ -3693,11 +3701,21 @@
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["id", "label", "onFlip"],
+        "required": [
+          "id",
+          "label",
+          "onFlip"
+        ],
         "additionalProperties": false,
         "properties": {
-          "id": { "type": "string", "minLength": 1 },
-          "label": { "type": "string", "minLength": 1 },
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "label": {
+            "type": "string",
+            "minLength": 1
+          },
           "onFlip": {
             "type": "object",
             "description": "Effect IR when this identity is flipped with the chosen face."
@@ -3786,12 +3804,23 @@
     },
     "trashTopOfStackOnAdvance": {
       "type": "object",
-      "required": ["default"],
+      "required": [
+        "default"
+      ],
       "additionalProperties": false,
       "properties": {
-        "default": { "type": "integer", "minimum": 1 },
-        "atOrAbove": { "type": "integer", "minimum": 1 },
-        "bonus": { "type": "integer", "minimum": 1 }
+        "default": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "atOrAbove": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "bonus": {
+          "type": "integer",
+          "minimum": 1
+        }
       },
       "description": "Underway Renovation: when advanced, trash top N of Runner stack (bonus amount at/above threshold)."
     },
@@ -3838,12 +3867,23 @@
     },
     "placeAdvancementOnAnotherOnAdvance": {
       "type": "object",
-      "required": ["default"],
+      "required": [
+        "default"
+      ],
       "additionalProperties": false,
       "properties": {
-        "default": { "type": "integer", "minimum": 1 },
-        "atOrAbove": { "type": "integer", "minimum": 1 },
-        "bonus": { "type": "integer", "minimum": 1 }
+        "default": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "atOrAbove": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "bonus": {
+          "type": "integer",
+          "minimum": 1
+        }
       },
       "description": "Hollywood Renovation: when advanced, may place default (or bonus at/above threshold) advancements on another advanceable card."
     },
@@ -3872,10 +3912,15 @@
     },
     "addSelfToCorpScoreOnAgendaAccess": {
       "type": "object",
-      "required": ["agendaPoints"],
+      "required": [
+        "agendaPoints"
+      ],
       "additionalProperties": false,
       "properties": {
-        "agendaPoints": { "type": "integer", "minimum": 0 }
+        "agendaPoints": {
+          "type": "integer",
+          "minimum": 0
+        }
       },
       "description": "Franchise City: when Runner accesses an agenda, add this asset to Corp score as an agenda worth agendaPoints."
     },
@@ -3886,6 +3931,113 @@
     "etrSubroutinesPerRezzedAsset": {
       "type": "boolean",
       "description": "Tour Guide: gains an End the run subroutine for each rezzed asset."
+    },
+    "basicRemoveTagAdditionalCostCreditsWhileUnflipped": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "SYNC (front): basic remove-tag action costs this many additional credits while identity is unflipped."
+    },
+    "basicTrashResourceCreditReductionWhileFlipped": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "SYNC (back): basic trash-resource action costs this many fewer credits while identity is flipped."
+    },
+    "subroutineTraceBaseStrengthBonus": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Improved Tracers: base trace strength of each subroutine increased by this amount."
+    },
+    "assetsGainSubtype": {
+      "type": "string",
+      "description": "Rebranding Team: all assets gain this subtype while scored."
+    },
+    "addToCorpScoreOnAccessIfRunnerTagged": {
+      "type": "boolean",
+      "description": "Quantum Predictive Model: when accessed while Runner tagged, add to Corp score area."
+    },
+    "runnerAllottedClicksBonus": {
+      "type": "integer",
+      "description": "Victoria Jenkins: Runner allotted clicks modified by this while rezzed."
+    },
+    "gainsEtrSubroutineWhileCurrentActive": {
+      "type": "boolean",
+      "description": "News Hound: gains End the run subroutine while a current is active."
+    },
+    "strengthBonusPerRunnerTag": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Resistor: +N strength per Runner tag."
+    },
+    "playAdditionalCostForfeitAgenda": {
+      "type": "boolean",
+      "description": "24/7 News Cycle: as an additional cost to play, forfeit an agenda."
+    },
+    "runnerSpendsFirstForTracesDuringRun": {
+      "type": "boolean",
+      "description": "Surveillance Sweep: Runner spends credits first for each trace during a run."
+    },
+    "traceBaseStrengthBonusDuringRunOnThisServer": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Rutherford Grid: base trace strength +N during a run on this server."
+    },
+    "cannotInstallNonVirtualResources": {
+      "type": "boolean",
+      "description": "Apex: cannot install non-virtual resources."
+    },
+    "turnFacedownInsteadOfHeapWhenTrashed": {
+      "type": "boolean",
+      "description": "Harbinger: when would be trashed, turn facedown instead of adding to heap."
+    },
+    "gainCreditsOnFirstOwnInstalledTrashEachTurn": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Wasteland: first time each turn you trash one of your installed cards, gain N credits."
+    },
+    "startWithDirectiveCards": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Adam: start the game with N different directive cards installed."
+    },
+    "muEqualsAgendaPoints": {
+      "type": "boolean",
+      "description": "Brain Chip: +X MU where X is Runner agenda points."
+    },
+    "handSizeEqualsAgendaPoints": {
+      "type": "boolean",
+      "description": "Brain Chip: maximum hand size increased by X agenda points."
+    },
+    "firstClickMustBeRunOrRunEvent": {
+      "type": "boolean",
+      "description": "Always Be Running: first click each turn must be basic run or play a run event."
+    },
+    "mustTrashFirstAccessedCardWithTrashCostEachTurn": {
+      "type": "boolean",
+      "description": "Neutralize All Threats: first accessed card with trash cost each turn must be trashed if able."
+    },
+    "drawAtTurnEndIfGripBelowMaxHandSize": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Safety First: at turn end, draw N if grip size < max hand size."
+    },
+    "installRequiresLinkGte": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Globalsec Security Clearance: install only if Runner link ≥ N."
+    },
+    "installCostReductionPerLink": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Jak Sinclair: reduce install cost by N per link."
+    },
+    "blankCorpIdentityPrintedAbilities": {
+      "type": "boolean",
+      "description": "Employee Strike: Corp identity loses printed abilities while this current is active."
+    },
+    "hostedCreditsOnProgramOrHardwareInstall": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Technical Writer: place N credits from bank when Runner installs hardware or program."
     }
   }
 }

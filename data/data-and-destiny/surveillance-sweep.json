@@ -1,0 +1,17 @@
+{
+  "id": "surveillance-sweep",
+  "title": "Surveillance Sweep",
+  "nrdbCode": "09023",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "subtypes": [
+    "current"
+  ],
+  "playCost": 2,
+  "lingerAsCurrent": true,
+  "currentTrashOnAgendaStolen": true,
+  "runnerSpendsFirstForTracesDuringRun": true,
+  "wave": "data-and-destiny"
+}

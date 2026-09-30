@@ -1,0 +1,14 @@
+{
+  "id": "sunny-lebeau-security-specialist",
+  "title": "Sunny Lebeau: Security Specialist",
+  "nrdbCode": "09045",
+  "type": "identity",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "sunny-lebeau",
+  "subtypes": [
+    "natural"
+  ],
+  "link": 2,
+  "wave": "data-and-destiny"
+}

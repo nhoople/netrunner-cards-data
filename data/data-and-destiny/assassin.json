@@ -1,0 +1,57 @@
+{
+  "id": "assassin",
+  "title": "Assassin",
+  "nrdbCode": "09028",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "neutral-corp",
+  "subtypes": [
+    "sentry",
+    "destroyer",
+    "ap",
+    "tracer"
+  ],
+  "installCost": 7,
+  "rezCost": 7,
+  "strength": 5,
+  "subroutines": [
+    {
+      "id": "assassin-net",
+      "text": "Trace[5]. If successful, do 3 net damage.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "trace",
+          "strength": 5,
+          "onSuccess": {
+            "op": "do",
+            "action": {
+              "kind": "net_damage",
+              "amount": 3
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "assassin-trash",
+      "text": "Trace[4]. If successful, trash 1 program.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "trace",
+          "strength": 4,
+          "onSuccess": {
+            "op": "do",
+            "action": {
+              "kind": "trash_program",
+              "pick": "choose"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "wave": "data-and-destiny"
+}

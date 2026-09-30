@@ -44,6 +44,7 @@ Files under [`data/`](data/) are the API. Clone the repo or fetch a **tagged** r
 | [`data/the-underway/`](data/the-underway/) | The Underway (NRDB `uw`) — **supported** (SanSan) |
 | [`data/old-hollywood/`](data/old-hollywood/) | Old Hollywood (NRDB `oh`) — **supported** (SanSan) |
 | [`data/the-universe-of-tomorrow/`](data/the-universe-of-tomorrow/) | The Universe of Tomorrow (NRDB `uot`) — **supported** (SanSan) |
+| [`data/data-and-destiny/`](data/data-and-destiny/) | Data and Destiny (NRDB `dad`) — **supported** (deluxe) |
 | [`data/reign-and-reverie/`](data/reign-and-reverie/) | Reign and Reverie (NRDB `rar`) — **supported** (legacy backwards) |
 | [`data/system-core-2019/`](data/system-core-2019/) | System Core 2019 (NRDB `sc19`) — **supported** (legacy backwards) |
 | [`data/downfall/`](data/downfall/) | Downfall (NRDB `df`) — **supported** (legacy backwards) |
@@ -68,7 +69,8 @@ Match this dataset and [netrunner-engine](https://github.com/nhoople/netrunner-e
 
 | Pairing | cards-data | engine |
 |---------|------------|--------|
-| **Current** | [`v1.114.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.114.0) | engine same-semver pin `v1.114.0` (The Universe of Tomorrow set-complete **18/18**) |
+| **Current** | [`v1.115.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.115.0) | engine same-semver pin `v1.115.0` (Data and Destiny set-complete **54/54**) |
+| The Universe of Tomorrow | [`v1.114.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.114.0) | engine same-semver pin `v1.114.0` (The Universe of Tomorrow set-complete **18/18**) |
 | Old Hollywood | [`v1.113.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.113.0) | engine same-semver pin `v1.113.0` (Old Hollywood set-complete **19/19**) |
 | The Underway | [`v1.112.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.112.0) | engine same-semver pin `v1.112.0` (The Underway set-complete **17/17**) |
 | Chrome City | [`v1.111.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.111.0) | engine same-semver pin `v1.111.0` (Chrome City set-complete **18/18**) |
