@@ -1,0 +1,44 @@
+{
+  "id": "private-contracts",
+  "title": "Private Contracts",
+  "wave": "cyber-exodus",
+  "nrdbCode": "02059",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "neutral-corp",
+  "subtypes": [
+    "transaction"
+  ],
+  "installCost": 3,
+  "rezCost": 3,
+  "trashCost": 5,
+  "onRez": {
+    "op": "do",
+    "action": {
+      "kind": "place_hosted_credits",
+      "amount": 14
+    }
+  },
+  "paidAbilities": [
+    {
+      "id": "private-contracts-take",
+      "label": "[click]: Take 2¢ from Private Contracts",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "take_hosted_credits",
+          "amount": 2
+        }
+      }
+    }
+  ]
+}

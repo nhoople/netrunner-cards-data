@@ -1,0 +1,59 @@
+{
+  "id": "personal-workshop",
+  "title": "Personal Workshop",
+  "wave": "cyber-exodus",
+  "nrdbCode": "02049",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "subtypes": [
+    "location"
+  ],
+  "installCost": 1,
+  "personalWorkshop": true,
+  "paidAbilities": [
+    {
+      "id": "personal-workshop-host",
+      "label": "[click]: Host a program or hardware from grip; place power counters equal to its install cost",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "host_grip_program_or_hardware_with_power_equal_install_cost"
+        }
+      }
+    },
+    {
+      "id": "personal-workshop-remove",
+      "label": "1¢: Remove 1 power counter from a hosted card (install ignoring costs at 0)",
+      "clickCost": 0,
+      "creditCost": 1,
+      "cost": {
+        "credits": 1
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "remove_power_from_hosted_card_install_at_zero_ignore_costs"
+        }
+      }
+    }
+  ],
+  "onTurnBegin": {
+    "op": "do",
+    "action": {
+      "kind": "remove_power_from_hosted_card_install_at_zero_ignore_costs"
+    }
+  }
+}

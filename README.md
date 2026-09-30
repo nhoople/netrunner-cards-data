@@ -19,6 +19,7 @@ Files under [`data/`](data/) are the API. Clone the repo or fetch a **tagged** r
 | [`data/core/`](data/core/) | FFG Core Set (NRDB `core`) — **supported** (Core-forward) |
 | [`data/what-lies-ahead/`](data/what-lies-ahead/) | What Lies Ahead (NRDB `wla`) — **supported** (Genesis) |
 | [`data/trace-amount/`](data/trace-amount/) | Trace Amount (NRDB `ta`) — **supported** (Genesis) |
+| [`data/cyber-exodus/`](data/cyber-exodus/) | Cyber Exodus (NRDB `ce`) — **supported** (Genesis) |
 | [`data/reign-and-reverie/`](data/reign-and-reverie/) | Reign and Reverie (NRDB `rar`) — **supported** (legacy backwards) |
 | [`data/system-core-2019/`](data/system-core-2019/) | System Core 2019 (NRDB `sc19`) — **supported** (legacy backwards) |
 | [`data/downfall/`](data/downfall/) | Downfall (NRDB `df`) — **supported** (legacy backwards) |
@@ -33,7 +34,7 @@ Files under [`data/`](data/) are the API. Clone the repo or fetch a **tagged** r
 | [`data/vantage-point/`](data/vantage-point/) | Vantage Point (NRDB `vp`) — **supported** |
 | [`data/fixtures/`](data/fixtures/) | CR-example / host-test cards outside corpus order (e.g. Plascrete) |
 
-**Corpus order:** FFG Core Set (Core-forward, supported) → What Lies Ahead (Genesis, supported) → Trace Amount (Genesis, supported) → Reign and Reverie (legacy backwards, supported) → System Core 2019 (legacy backwards, supported) → Downfall (legacy backwards, supported) → Uprising (legacy backwards, supported) → System Gateway → System Update 2021 → Midnight Sun → Parhelion → The Automata Initiative → Rebellion Without Rehearsal → Elevation → Vantage Point → later releases.
+**Corpus order:** FFG Core Set (Core-forward, supported) → What Lies Ahead (Genesis, supported) → Trace Amount (Genesis, supported) → Cyber Exodus (Genesis, supported) → Reign and Reverie (legacy backwards, supported) → System Core 2019 (legacy backwards, supported) → Downfall (legacy backwards, supported) → Uprising (legacy backwards, supported) → System Gateway → System Update 2021 → Midnight Sun → Parhelion → The Automata Initiative → Rebellion Without Rehearsal → Elevation → Vantage Point → later releases.
 
 Partial cards list unimplemented clauses in an `unsupported` array — never silent wrong behavior. A wave marked `supported` in [`data/pool.json`](data/pool.json) must keep those arrays empty unless the card is listed with a reason in [`data/supported-unsupported-allowlist.json`](data/supported-unsupported-allowlist.json) (enforced by `scripts/validate-cards.py`). See [`CONTRIBUTING.md`](CONTRIBUTING.md) for the CR gate PR template.
 
@@ -43,7 +44,8 @@ Match this dataset and [netrunner-engine](https://github.com/nhoople/netrunner-e
 
 | Pairing | cards-data | engine |
 |---------|------------|--------|
-| **Current** | [`v1.89.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.89.0) | engine same-semver pin `v1.89.0` (Trace Amount set-complete **15/15**) |
+| **Current** | [`v1.90.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.90.0) | engine same-semver pin `v1.90.0` (Cyber Exodus set-complete **13/13**) |
+| Trace Amount | [`v1.89.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.89.0) | engine same-semver pin `v1.89.0` (Trace Amount set-complete **15/15**) |
 | What Lies Ahead | [`v1.88.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.88.0) | engine same-semver pin `v1.88.0` (What Lies Ahead set-complete **14/14**) |
 | Core Set | [`v1.87.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.87.0) | engine same-semver pin `v1.87.0` (Core Set set-complete **49/49**) |
 | RaR set-complete | [`v1.86.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.86.0) | engine same-semver pin `v1.86.0` (RaR set-complete **56/56**) |
@@ -103,6 +105,8 @@ console.log(pool.corpusOrder, marjanah.title);
 |---------|------:|-------|
 | core | 113 | FFG Core Set (`core`); **supported** (wave gate `v1.87.0`; 49/49 Core-only; 64 Gateway/SU21/SC19 reprints absorbed) |
 | what-lies-ahead | 20 | FFG What Lies Ahead (`wla`); **supported** (wave gate `v1.88.0`; 14/14 WLA-only; 6 reprints absorbed; never kick `mo`/`mor`) |
+| trace-amount | 20 | FFG Trace Amount (`ta`); **supported** (wave gate `v1.89.0`; 15/15 TA-only; 5 reprints absorbed; never kick `mo`/`mor`) |
+| cyber-exodus | 20 | FFG Cyber Exodus (`ce`); **supported** (wave gate `v1.90.0`; 13/13 CE-only; 7 reprints absorbed; never kick `mo`/`mor`) |
 | reign-and-reverie | 58 | Null Signal Reign and Reverie (`rar`); **supported** (wave gate `v1.86.0`; 56/56 RaR-only; 2 SC19 reprints absorbed) |
 | system-core-2019 | 147 | Null Signal System Core 2019 (`sc19`); **supported** (wave gate `v1.74.0`; 84/147 SC19-only; 63 Gateway/SU21 reprints absorbed; skip `mo`/`mor`) |
 | downfall | 65 | Null Signal Downfall (`df`); Ashes set 1; **supported** (**65/65** mapped; wave gate `v1.58.0`; skip `mor`) |

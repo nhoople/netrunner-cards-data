@@ -1,0 +1,29 @@
+{
+  "id": "nerve-agent",
+  "title": "Nerve Agent",
+  "wave": "cyber-exodus",
+  "nrdbCode": "02041",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "subtypes": [
+    "virus"
+  ],
+  "installCost": 3,
+  "memoryCost": 1,
+  "onSuccessfulRun": {
+    "op": "if",
+    "cond": {
+      "op": "attacking_hq"
+    },
+    "then": {
+      "op": "do",
+      "action": {
+        "kind": "add_virus_counter",
+        "amount": 1
+      }
+    }
+  },
+  "chooseBonusAccessLessThanVirusOnHqBreach": true
+}

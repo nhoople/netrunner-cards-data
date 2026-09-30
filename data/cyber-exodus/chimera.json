@@ -1,0 +1,35 @@
+{
+  "id": "chimera",
+  "title": "Chimera",
+  "wave": "cyber-exodus",
+  "nrdbCode": "02060",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "neutral-corp",
+  "subtypes": [
+    "mythic"
+  ],
+  "installCost": 2,
+  "rezCost": 2,
+  "strength": 0,
+  "onRez": {
+    "op": "do",
+    "action": {
+      "kind": "choose_one_subtype_until_derez"
+    }
+  },
+  "derezAtAnyTurnEnd": true,
+  "subroutines": [
+    {
+      "id": "chimera-etr",
+      "text": "End the run.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "end_the_run"
+        }
+      }
+    }
+  ]
+}

@@ -6,6 +6,7 @@
     "core",
     "what-lies-ahead",
     "trace-amount",
+    "cyber-exodus",
     "reign-and-reverie",
     "system-core-2019",
     "downfall",
@@ -1168,6 +1169,32 @@
         "amazon-industrial-zone",
         "executive-retreat",
         "freelancer"
+      ]
+    },
+    "cyber-exodus": {
+      "status": "supported",
+      "notes": "FFG Cyber Exodus (NRDB pack ce) — Genesis set-complete from floor v1.89.0 → v1.90.0. 20 titles; 7 Core/SC19/SU21 reprints absorbed; 13/13 CE-only clears. Never kick mo/mor. CR pin v26.03.",
+      "cards": [
+        "nerve-agent",
+        "joshua-b",
+        "emergency-shutdown",
+        "muresh-bodysuit",
+        "snitch",
+        "chaos-theory-wunderkind",
+        "test-run",
+        "dinosaurus",
+        "personal-workshop",
+        "public-sympathy",
+        "project-vitruvius",
+        "viper",
+        "edge-of-world",
+        "sunset",
+        "marked-accounts",
+        "pop-up-window",
+        "woodcutter",
+        "commercialization",
+        "private-contracts",
+        "chimera"
       ]
     }
   }

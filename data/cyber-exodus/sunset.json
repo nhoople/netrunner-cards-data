@@ -1,0 +1,17 @@
+{
+  "id": "sunset",
+  "title": "Sunset",
+  "wave": "cyber-exodus",
+  "nrdbCode": "02054",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "jinteki",
+  "playCost": 0,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "choose_server_rearrange_ice"
+    }
+  }
+}

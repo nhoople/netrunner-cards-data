@@ -2878,6 +2878,42 @@
       "type": "boolean",
       "description": "Medium-class: on R&D breach, choose a number less than hosted virus counters for additional access."
     },
+    "chooseBonusAccessLessThanVirusOnHqBreach": {
+      "type": "boolean",
+      "description": "Nerve Agent-class: on HQ breach, choose a number less than hosted virus counters for additional access."
+    },
+    "mayExposeApproachedUnrezzedIceOncePerRunThenMayJackOut": {
+      "type": "boolean",
+      "description": "Snitch-class: once per run when approaching unrezzed ice, may expose it then may jack out."
+    },
+    "personalWorkshop": {
+      "type": "boolean",
+      "description": "Personal Workshop-class host: programs/hardware hosted with power equal to install cost; install ignoring costs at 0 power."
+    },
+    "onAccessRequiresInstalled": {
+      "type": "boolean",
+      "description": "Edge of World-class: onAccess fires only while this card is installed (not from HQ/Archives hand zones)."
+    },
+    "canAdvanceOnlyWhenRezzed": {
+      "type": "boolean",
+      "description": "Woodcutter-class: canAdvance applies only while this card is rezzed."
+    },
+    "gainsSubroutinesPerAdvancement": {
+      "type": "object",
+      "required": ["subroutine"],
+      "properties": {
+        "subroutine": {
+          "type": "object",
+          "required": ["id", "text", "effect"],
+          "properties": {
+            "id": { "type": "string" },
+            "text": { "type": "string" },
+            "effect": { "type": "object" }
+          }
+        }
+      },
+      "description": "Woodcutter/Tyrant-class: gains one copy of subroutine per hosted advancement counter."
+    },
     "mayRezWhenCardWouldBeExposed": {
       "type": "boolean",
       "description": "Zaibatsu-class: may rez this asset when a card would be exposed."

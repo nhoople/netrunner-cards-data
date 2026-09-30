@@ -1,0 +1,20 @@
+{
+  "id": "commercialization",
+  "title": "Commercialization",
+  "wave": "cyber-exodus",
+  "nrdbCode": "02058",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "transaction"
+  ],
+  "playCost": 0,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "choose_ice_gain_credits_per_advancement"
+    }
+  }
+}

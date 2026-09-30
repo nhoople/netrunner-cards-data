@@ -1,0 +1,13 @@
+{
+  "id": "snitch",
+  "title": "Snitch",
+  "wave": "cyber-exodus",
+  "nrdbCode": "02045",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "installCost": 3,
+  "memoryCost": 1,
+  "mayExposeApproachedUnrezzedIceOncePerRunThenMayJackOut": true
+}

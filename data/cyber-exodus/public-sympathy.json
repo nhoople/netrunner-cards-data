@@ -1,0 +1,12 @@
+{
+  "id": "public-sympathy",
+  "title": "Public Sympathy",
+  "wave": "cyber-exodus",
+  "nrdbCode": "02050",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "neutral-runner",
+  "installCost": 2,
+  "handSizeBonus": 2
+}

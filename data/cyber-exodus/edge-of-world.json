@@ -1,0 +1,24 @@
+{
+  "id": "edge-of-world",
+  "title": "Edge of World",
+  "wave": "cyber-exodus",
+  "nrdbCode": "02053",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "jinteki",
+  "subtypes": [
+    "ambush"
+  ],
+  "installCost": 0,
+  "rezCost": 0,
+  "trashCost": 0,
+  "onAccessRequiresInstalled": true,
+  "onAccess": {
+    "op": "do",
+    "action": {
+      "kind": "may_pay_credits_for_core_damage_per_ice_protecting_this_server",
+      "amount": 3
+    }
+  }
+}

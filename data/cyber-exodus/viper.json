@@ -1,0 +1,55 @@
+{
+  "id": "viper",
+  "title": "Viper",
+  "wave": "cyber-exodus",
+  "nrdbCode": "02052",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "code gate",
+    "tracer"
+  ],
+  "installCost": 3,
+  "rezCost": 3,
+  "strength": 4,
+  "subroutines": [
+    {
+      "id": "viper-trace-click",
+      "text": "Trace[3]. If successful, the Runner loses [click], if able.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "trace",
+          "strength": 3,
+          "onSuccess": {
+            "op": "do",
+            "action": {
+              "kind": "lose_clicks",
+              "side": "runner",
+              "amount": 1
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "viper-trace-etr",
+      "text": "Trace[3]. If successful, end the run.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "trace",
+          "strength": 3,
+          "onSuccess": {
+            "op": "do",
+            "action": {
+              "kind": "end_the_run"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

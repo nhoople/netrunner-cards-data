@@ -1,0 +1,21 @@
+{
+  "id": "joshua-b",
+  "title": "Joshua B.",
+  "wave": "cyber-exodus",
+  "nrdbCode": "02042",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "subtypes": [
+    "connection"
+  ],
+  "installCost": 1,
+  "unique": true,
+  "onTurnBegin": {
+    "op": "do",
+    "action": {
+      "kind": "may_gain_click_then_tag_at_turn_end"
+    }
+  }
+}

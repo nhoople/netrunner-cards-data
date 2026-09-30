@@ -1,0 +1,37 @@
+{
+  "id": "muresh-bodysuit",
+  "title": "Muresh Bodysuit",
+  "wave": "cyber-exodus",
+  "nrdbCode": "02044",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "subtypes": [
+    "gear"
+  ],
+  "installCost": 1,
+  "paidAbilities": [
+    {
+      "id": "muresh-bodysuit-prevent",
+      "label": "[interrupt] → Prevent 1 meat damage (first each turn)",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {},
+      "windows": [
+        "damage_interrupt_paw"
+      ],
+      "requirePendingDamageTypes": [
+        "meat"
+      ],
+      "oncePerTurn": true,
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "prevent_pending_damage",
+          "amount": 1
+        }
+      }
+    }
+  ]
+}
