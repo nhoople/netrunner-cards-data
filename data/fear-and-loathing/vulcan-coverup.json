@@ -1,0 +1,30 @@
+{
+  "id": "vulcan-coverup",
+  "title": "Vulcan Coverup",
+  "nrdbCode": "04098",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "security",
+    "liability"
+  ],
+  "advancementRequirement": 3,
+  "agendaPoints": 1,
+  "onScore": {
+    "op": "do",
+    "action": {
+      "kind": "meat_damage",
+      "amount": 2
+    }
+  },
+  "onSteal": {
+    "op": "do",
+    "action": {
+      "kind": "give_bad_publicity",
+      "amount": 1
+    }
+  },
+  "wave": "fear-and-loathing"
+}

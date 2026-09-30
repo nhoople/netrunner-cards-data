@@ -1,0 +1,15 @@
+{
+  "id": "cybersolutions-mem-chip",
+  "title": "CyberSolutions Mem Chip",
+  "nrdbCode": "04086",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "subtypes": [
+    "chip"
+  ],
+  "installCost": 4,
+  "muBonus": 2,
+  "wave": "fear-and-loathing"
+}

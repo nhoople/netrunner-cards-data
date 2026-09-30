@@ -1,0 +1,17 @@
+{
+  "id": "market-research",
+  "title": "Market Research",
+  "nrdbCode": "04095",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "subtypes": [
+    "research"
+  ],
+  "advancementRequirement": 4,
+  "agendaPoints": 2,
+  "onScoreIfRunnerTaggedPlaceAgendaCounter": true,
+  "agendaPointsPerAgendaCounter": 1,
+  "wave": "fear-and-loathing"
+}

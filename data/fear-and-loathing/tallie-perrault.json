@@ -1,0 +1,50 @@
+{
+  "id": "tallie-perrault",
+  "title": "Tallie Perrault",
+  "nrdbCode": "04083",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "subtypes": [
+    "resource"
+  ],
+  "installCost": 2,
+  "unique": true,
+  "onGrayOrBlackOpsTrashedAfterResolve": {
+    "op": "do",
+    "action": {
+      "kind": "tallie_perrault_on_ops_trashed"
+    }
+  },
+  "paidAbilities": [
+    {
+      "id": "tallie-draw",
+      "label": "[trash]: Draw 1 if you have at least 1 tag",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "trashSelf": true
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "if",
+        "cond": {
+          "op": "tags_gte",
+          "amount": 1
+        },
+        "then": {
+          "op": "do",
+          "action": {
+            "kind": "draw",
+            "side": "runner",
+            "amount": 1
+          }
+        }
+      }
+    }
+  ],
+  "wave": "fear-and-loathing"
+}

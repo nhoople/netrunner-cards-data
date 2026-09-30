@@ -15,6 +15,7 @@
     "stalwart",
     "mala-tempora",
     "true-colors",
+    "fear-and-loathing",
     "reign-and-reverie",
     "system-core-2019",
     "downfall",
@@ -1333,6 +1334,32 @@
         "power-shutdown",
         "paper-wall",
         "interns"
+      ]
+    },
+    "fear-and-loathing": {
+      "status": "supported",
+      "notes": "Fear and Loathing (fal) Spin cycle set-complete. 15/15 FAL-only clears; 5 reprints absorbed; pool supported. Paired release v1.99.0. Never kick mo/mor.",
+      "cards": [
+        "quest-completed",
+        "hemorrhage",
+        "tallie-perrault",
+        "executive-wiretaps",
+        "blackguard",
+        "cybersolutions-mem-chip",
+        "alpha",
+        "omega",
+        "blackmail",
+        "blue-level-clearance",
+        "strongbox",
+        "toshiyuki-sakai",
+        "yagura",
+        "restoring-face",
+        "market-research",
+        "wraparound",
+        "grndl-power-unleashed",
+        "vulcan-coverup",
+        "grndl-refinery",
+        "subliminal-messaging"
       ]
     },
     "true-colors": {

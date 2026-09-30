@@ -1,0 +1,17 @@
+{
+  "id": "strongbox",
+  "title": "Strongbox",
+  "nrdbCode": "04091",
+  "type": "upgrade",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "persistent"
+  ],
+  "installCost": 3,
+  "rezCost": 3,
+  "trashCost": 1,
+  "stealAdditionalClicks": 1,
+  "wave": "fear-and-loathing"
+}

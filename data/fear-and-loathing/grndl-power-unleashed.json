@@ -1,0 +1,34 @@
+{
+  "id": "grndl-power-unleashed",
+  "title": "GRNDL: Power Unleashed",
+  "nrdbCode": "04097",
+  "type": "identity",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "division",
+    "liability"
+  ],
+  "onGameStart": {
+    "op": "seq",
+    "effects": [
+      {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "corp",
+          "amount": 10
+        }
+      },
+      {
+        "op": "do",
+        "action": {
+          "kind": "give_bad_publicity",
+          "amount": 1
+        }
+      }
+    ]
+  },
+  "wave": "fear-and-loathing"
+}

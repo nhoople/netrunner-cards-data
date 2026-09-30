@@ -1,0 +1,39 @@
+{
+  "id": "grndl-refinery",
+  "title": "GRNDL Refinery",
+  "nrdbCode": "04099",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "facility"
+  ],
+  "installCost": 0,
+  "rezCost": 0,
+  "trashCost": 2,
+  "canAdvance": true,
+  "paidAbilities": [
+    {
+      "id": "grndl-refinery-cash",
+      "label": "[click], [trash]: Gain 4[credit] per advancement token",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1,
+        "trashSelf": true
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits_per_advancement",
+          "per": 4
+        }
+      }
+    }
+  ],
+  "wave": "fear-and-loathing"
+}

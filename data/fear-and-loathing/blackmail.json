@@ -1,0 +1,19 @@
+{
+  "id": "blackmail",
+  "title": "Blackmail",
+  "nrdbCode": "04089",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "neutral-runner",
+  "subtypes": [
+    "run"
+  ],
+  "playCost": 1,
+  "playRequiresCorpBadPublicityGte": 1,
+  "runEvent": {
+    "servers": "any",
+    "forbidCorpRezIceDuringRun": true
+  },
+  "wave": "fear-and-loathing"
+}

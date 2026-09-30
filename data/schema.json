@@ -129,6 +129,10 @@
           "type": "boolean",
           "description": "When this run ends, Corp may rez the ice derezzed by this event, ignoring all costs (Window of Opportunity)."
         },
+        "forbidCorpRezIceDuringRun": {
+          "type": "boolean",
+          "description": "While this run is active, the Corp cannot rez ice (Blackmail)."
+        },
         "accessTrashFree": {
           "type": "boolean",
           "description": "Demolition Run-class: during this run, access → trash accessed card for 0¢."
@@ -2662,6 +2666,36 @@
       "type": "integer",
       "minimum": 1,
       "description": "+strength while this ice is outermost on its server (Curtain Wall)."
+    },
+    "breakerOnlyOutermostIce": {
+      "type": "boolean",
+      "description": "This breaker can only interface with the outermost ice protecting a server (Alpha)."
+    },
+    "breakerOnlyInnermostIce": {
+      "type": "boolean",
+      "description": "This breaker can only interface with the innermost ice protecting a server (Omega)."
+    },
+    "blackguardForceRezOnExpose": {
+      "type": "boolean",
+      "description": "Whenever the Runner exposes a card, Corp must rez it by paying its rez cost if able (Blackguard)."
+    },
+    "maxConsole": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Limit N console hardware per player (Blackguard: 1)."
+    },
+    "playRequiresCorpBadPublicityGte": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Play only if the Corp has at least this much bad publicity (Blackmail)."
+    },
+    "onGrayOrBlackOpsTrashedAfterResolve": {
+      "type": "object",
+      "description": "When a gray ops or black ops operation is trashed after resolving (Tallie Perrault)."
+    },
+    "onScoreIfRunnerTaggedPlaceAgendaCounter": {
+      "type": "boolean",
+      "description": "When scored, if Runner is tagged, place 1 agenda counter on this agenda (Market Research)."
     },
     "trashSelfWhenFullyBrokenByRunner": {
       "type": "boolean",

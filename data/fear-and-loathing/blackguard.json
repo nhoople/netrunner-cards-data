@@ -1,0 +1,18 @@
+{
+  "id": "blackguard",
+  "title": "Blackguard",
+  "nrdbCode": "04085",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "subtypes": [
+    "console"
+  ],
+  "installCost": 11,
+  "unique": true,
+  "muBonus": 2,
+  "maxConsole": 1,
+  "blackguardForceRezOnExpose": true,
+  "wave": "fear-and-loathing"
+}

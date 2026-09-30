@@ -1,0 +1,23 @@
+{
+  "id": "executive-wiretaps",
+  "title": "Executive Wiretaps",
+  "nrdbCode": "04084",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "subtypes": [
+    "double"
+  ],
+  "playCost": 4,
+  "playAdditionalClick": true,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "reveal_hq_gain_credits",
+      "maxCards": 99,
+      "creditsEach": 0
+    }
+  },
+  "wave": "fear-and-loathing"
+}

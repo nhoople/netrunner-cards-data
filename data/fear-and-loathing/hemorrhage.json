@@ -1,0 +1,43 @@
+{
+  "id": "hemorrhage",
+  "title": "Hemorrhage",
+  "nrdbCode": "04082",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "subtypes": [
+    "virus"
+  ],
+  "installCost": 3,
+  "memoryCost": 1,
+  "onSuccessfulRun": {
+    "op": "do",
+    "action": {
+      "kind": "add_virus_counter",
+      "amount": 1
+    }
+  },
+  "paidAbilities": [
+    {
+      "id": "hemorrhage-trash-hq",
+      "label": "[click], 2 virus counters: Corp trashes 1 card from HQ",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1,
+        "virusCounters": 2
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "hemorrhage_corp_trash_from_hq"
+        }
+      }
+    }
+  ],
+  "wave": "fear-and-loathing"
+}

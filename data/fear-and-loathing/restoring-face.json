@@ -1,0 +1,17 @@
+{
+  "id": "restoring-face",
+  "title": "Restoring Face",
+  "nrdbCode": "04094",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "jinteki",
+  "playCost": 0,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "restoring_face_trash_exec_sysop_clone_remove_bp"
+    }
+  },
+  "wave": "fear-and-loathing"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "omega",
+  "title": "Omega",
+  "nrdbCode": "04088",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "subtypes": [
+    "icebreaker",
+    "ai"
+  ],
+  "installCost": 7,
+  "strength": 1,
+  "memoryCost": 1,
+  "breaker": {
+    "breaksSubtype": "sentry",
+    "strength": 0,
+    "breakCredits": 1,
+    "breakMaxSubs": 1,
+    "pumpCredits": 1,
+    "pumpStrength": 1
+  },
+  "breakerOnlyInnermostIce": true,
+  "wave": "fear-and-loathing"
+}

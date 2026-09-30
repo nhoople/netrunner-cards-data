@@ -28,6 +28,7 @@ Files under [`data/`](data/) are the API. Clone the repo or fetch a **tagged** r
 | [`data/stalwart/`](data/stalwart/) | Stalwart (NRDB `st`) — **supported** (Spin) |
 | [`data/mala-tempora/`](data/mala-tempora/) | Mala Tempora (NRDB `mt`) — **supported** (Spin) |
 | [`data/true-colors/`](data/true-colors/) | True Colors (NRDB `tc`) — **supported** (Spin) |
+| [`data/fear-and-loathing/`](data/fear-and-loathing/) | Fear and Loathing (NRDB `fal`) — **supported** (Spin) |
 | [`data/reign-and-reverie/`](data/reign-and-reverie/) | Reign and Reverie (NRDB `rar`) — **supported** (legacy backwards) |
 | [`data/system-core-2019/`](data/system-core-2019/) | System Core 2019 (NRDB `sc19`) — **supported** (legacy backwards) |
 | [`data/downfall/`](data/downfall/) | Downfall (NRDB `df`) — **supported** (legacy backwards) |

@@ -1,0 +1,25 @@
+{
+  "id": "toshiyuki-sakai",
+  "title": "Toshiyuki Sakai",
+  "nrdbCode": "04092",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "jinteki",
+  "subtypes": [
+    "sysop"
+  ],
+  "installCost": 0,
+  "rezCost": 0,
+  "trashCost": 2,
+  "unique": true,
+  "canAdvance": true,
+  "onAccess": {
+    "op": "do",
+    "action": {
+      "kind": "toshiyuki_sakai_swap_with_hq"
+    }
+  },
+  "onAccessRequiresInstalled": true,
+  "wave": "fear-and-loathing"
+}
