@@ -24,6 +24,8 @@ Files under [`data/`](data/) are the API. Clone the repo or fetch a **tagged** r
 | [`data/humanitys-shadow/`](data/humanitys-shadow/) | Humanity's Shadow (NRDB `hs`) — **supported** (Genesis) |
 | [`data/future-proof/`](data/future-proof/) | Future Proof (NRDB `fp`) — **supported** (Genesis) |
 | [`data/creation-and-control/`](data/creation-and-control/) | Creation and Control (NRDB `cac`) — **supported** |
+| [`data/opening-moves/`](data/opening-moves/) | Opening Moves (NRDB `om`) — **supported** (Spin) |
+| [`data/stalwart/`](data/stalwart/) | Stalwart (NRDB `st`) — **supported** (Spin) |
 | [`data/reign-and-reverie/`](data/reign-and-reverie/) | Reign and Reverie (NRDB `rar`) — **supported** (legacy backwards) |
 | [`data/system-core-2019/`](data/system-core-2019/) | System Core 2019 (NRDB `sc19`) — **supported** (legacy backwards) |
 | [`data/downfall/`](data/downfall/) | Downfall (NRDB `df`) — **supported** (legacy backwards) |
