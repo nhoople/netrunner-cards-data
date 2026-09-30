@@ -1,0 +1,32 @@
+{
+  "id": "amped-up",
+  "title": "Amped Up",
+  "nrdbCode": "07031",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "playCost": 1,
+  "onPlay": {
+    "op": "seq",
+    "effects": [
+      {
+        "op": "do",
+        "action": {
+          "kind": "gain_clicks",
+          "side": "runner",
+          "amount": 3
+        }
+      },
+      {
+        "op": "do",
+        "action": {
+          "kind": "core_damage",
+          "amount": 1,
+          "cannotPrevent": true
+        }
+      }
+    ]
+  },
+  "wave": "order-and-chaos"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "patch",
+  "title": "Patch",
+  "nrdbCode": "07021",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "condition"
+  ],
+  "playCost": 0,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "host_on_ice_as_condition"
+    }
+  },
+  "hostStrengthModifier": 2,
+  "wave": "order-and-chaos"
+}

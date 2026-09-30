@@ -1,0 +1,41 @@
+{
+  "id": "argus-security-protection-guaranteed",
+  "title": "Argus Security: Protection Guaranteed",
+  "nrdbCode": "07001",
+  "type": "identity",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "corp"
+  ],
+  "onAgendaStolen": {
+    "op": "choose",
+    "chooser": "runner",
+    "options": [
+      {
+        "id": "tag",
+        "label": "Take 1 tag",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "give_tags",
+            "amount": 1
+          }
+        }
+      },
+      {
+        "id": "meat",
+        "label": "Suffer 2 meat damage",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "meat_damage",
+            "amount": 2
+          }
+        }
+      }
+    ]
+  },
+  "wave": "order-and-chaos"
+}

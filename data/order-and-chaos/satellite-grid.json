@@ -1,0 +1,17 @@
+{
+  "id": "satellite-grid",
+  "title": "Satellite Grid",
+  "nrdbCode": "07023",
+  "type": "upgrade",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "region"
+  ],
+  "installCost": 1,
+  "rezCost": 1,
+  "trashCost": 3,
+  "iceProtectingThisServerAdditionalAdvancementTokens": 1,
+  "wave": "order-and-chaos"
+}

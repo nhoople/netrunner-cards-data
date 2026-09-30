@@ -1,0 +1,16 @@
+{
+  "id": "memstrips",
+  "title": "MemStrips",
+  "nrdbCode": "07046",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "subtypes": [
+    "chip"
+  ],
+  "installCost": 3,
+  "muBonus": 3,
+  "muBonusOnlyForVirusPrograms": true,
+  "wave": "order-and-chaos"
+}

@@ -1,0 +1,38 @@
+{
+  "id": "government-takeover",
+  "title": "Government Takeover",
+  "nrdbCode": "07006",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "expansion"
+  ],
+  "advancementRequirement": 9,
+  "agendaPoints": 6,
+  "unique": true,
+  "paidAbilities": [
+    {
+      "id": "gov-takeover-credits",
+      "label": "[click]: Gain 3[credit]",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "corp",
+          "amount": 3
+        }
+      }
+    }
+  ],
+  "wave": "order-and-chaos"
+}

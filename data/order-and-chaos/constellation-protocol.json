@@ -1,0 +1,41 @@
+{
+  "id": "constellation-protocol",
+  "title": "Constellation Protocol",
+  "nrdbCode": "07008",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "installCost": 0,
+  "rezCost": 0,
+  "trashCost": 4,
+  "onTurnBegin": {
+    "op": "choose",
+    "chooser": "corp",
+    "options": [
+      {
+        "id": "accept",
+        "label": "Move an advancement token between ice",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "constellation_move_advancement_between_ice"
+          }
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "corp",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  },
+  "wave": "order-and-chaos"
+}

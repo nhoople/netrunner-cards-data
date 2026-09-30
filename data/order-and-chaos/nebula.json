@@ -1,0 +1,32 @@
+{
+  "id": "nebula",
+  "title": "Nebula",
+  "nrdbCode": "07014",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "sentry",
+    "destroyer"
+  ],
+  "installCost": 9,
+  "rezCost": 9,
+  "strength": 5,
+  "canAdvance": true,
+  "rezCostReductionPerAdvancement": 3,
+  "subroutines": [
+    {
+      "id": "nebula-trash",
+      "text": "Trash 1 program.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "trash_program",
+          "pick": "choose"
+        }
+      }
+    }
+  ],
+  "wave": "order-and-chaos"
+}

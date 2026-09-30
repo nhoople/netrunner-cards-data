@@ -1,0 +1,22 @@
+{
+  "id": "data-folding",
+  "title": "Data Folding",
+  "nrdbCode": "07055",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "neutral-runner",
+  "subtypes": [
+    "virtual"
+  ],
+  "installCost": 3,
+  "onTurnBegin": {
+    "op": "do",
+    "action": {
+      "kind": "data_folding_gain_if_unused_mu_gte",
+      "amount": 1,
+      "threshold": 2
+    }
+  },
+  "wave": "order-and-chaos"
+}

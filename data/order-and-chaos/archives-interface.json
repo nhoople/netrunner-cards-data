@@ -1,0 +1,14 @@
+{
+  "id": "archives-interface",
+  "title": "Archives Interface",
+  "nrdbCode": "07044",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "installCost": 3,
+  "archivesAccessMayRfgInstead": {
+    "oncePerArchivesBreach": true
+  },
+  "wave": "order-and-chaos"
+}

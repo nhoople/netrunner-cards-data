@@ -1,0 +1,30 @@
+{
+  "id": "fire-wall",
+  "title": "Fire Wall",
+  "nrdbCode": "07018",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "barrier"
+  ],
+  "installCost": 5,
+  "rezCost": 5,
+  "strength": 5,
+  "canAdvance": true,
+  "strengthPerAdvancement": 1,
+  "subroutines": [
+    {
+      "id": "firewall-etr",
+      "text": "End the run.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "end_the_run"
+        }
+      }
+    }
+  ],
+  "wave": "order-and-chaos"
+}

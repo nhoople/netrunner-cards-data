@@ -1,0 +1,24 @@
+{
+  "id": "wanton-destruction",
+  "title": "Wanton Destruction",
+  "nrdbCode": "07035",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "subtypes": [
+    "run",
+    "sabotage"
+  ],
+  "playCost": 1,
+  "runEvent": {
+    "servers": "hq",
+    "onSuccessfulRun": {
+      "op": "do",
+      "action": {
+        "kind": "wanton_destruction_instead_of_breach"
+      }
+    }
+  },
+  "wave": "order-and-chaos"
+}

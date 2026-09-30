@@ -1,0 +1,39 @@
+{
+  "id": "checkpoint",
+  "title": "Checkpoint",
+  "nrdbCode": "07017",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "code gate",
+    "tracer",
+    "liability"
+  ],
+  "installCost": 4,
+  "rezCost": 4,
+  "strength": 7,
+  "badPublicityOnRez": 1,
+  "subroutines": [
+    {
+      "id": "checkpoint-trace",
+      "text": "Trace[5]. If successful, do 3 meat damage when this run becomes successful.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "trace",
+          "strength": 5,
+          "onSuccess": {
+            "op": "do",
+            "action": {
+              "kind": "checkpoint_schedule_meat_on_successful_run",
+              "amount": 3
+            }
+          }
+        }
+      }
+    }
+  ],
+  "wave": "order-and-chaos"
+}

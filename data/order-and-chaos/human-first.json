@@ -1,0 +1,21 @@
+{
+  "id": "human-first",
+  "title": "Human First",
+  "nrdbCode": "07048",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "subtypes": [
+    "connection"
+  ],
+  "installCost": 1,
+  "unique": true,
+  "onAgendaScoredOrStolen": {
+    "op": "do",
+    "action": {
+      "kind": "gain_credits_equal_to_agenda_points_of_trigger"
+    }
+  },
+  "wave": "order-and-chaos"
+}

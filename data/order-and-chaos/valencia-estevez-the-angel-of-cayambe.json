@@ -1,0 +1,14 @@
+{
+  "id": "valencia-estevez-the-angel-of-cayambe",
+  "title": "Valencia Estevez: The Angel of Cayambe",
+  "nrdbCode": "07030",
+  "type": "identity",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "subtypes": [
+    "natural"
+  ],
+  "corpStartsWithBadPublicity": 1,
+  "wave": "order-and-chaos"
+}

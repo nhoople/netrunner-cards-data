@@ -1,0 +1,20 @@
+{
+  "id": "stim-dealer",
+  "title": "Stim Dealer",
+  "nrdbCode": "07051",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "subtypes": [
+    "connection"
+  ],
+  "installCost": 4,
+  "onTurnBegin": {
+    "op": "do",
+    "action": {
+      "kind": "stim_dealer_turn_begin"
+    }
+  },
+  "wave": "order-and-chaos"
+}

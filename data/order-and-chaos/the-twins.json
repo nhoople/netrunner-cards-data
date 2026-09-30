@@ -1,0 +1,45 @@
+{
+  "id": "the-twins",
+  "title": "The Twins",
+  "nrdbCode": "07024",
+  "type": "upgrade",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "sysop"
+  ],
+  "installCost": 2,
+  "rezCost": 2,
+  "trashCost": 2,
+  "unique": true,
+  "onPassRezzedIceProtectingThisServer": {
+    "op": "choose",
+    "chooser": "corp",
+    "options": [
+      {
+        "id": "accept",
+        "label": "Reveal and trash a copy from HQ; Runner encounters again",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "twins_trash_hq_copy_reencounter"
+          }
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "corp",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  },
+  "wave": "order-and-chaos"
+}

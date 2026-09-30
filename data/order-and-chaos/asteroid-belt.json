@@ -1,0 +1,30 @@
+{
+  "id": "asteroid-belt",
+  "title": "Asteroid Belt",
+  "nrdbCode": "07012",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "barrier"
+  ],
+  "installCost": 9,
+  "rezCost": 9,
+  "strength": 6,
+  "canAdvance": true,
+  "rezCostReductionPerAdvancement": 3,
+  "subroutines": [
+    {
+      "id": "asteroid-etr",
+      "text": "End the run.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "end_the_run"
+        }
+      }
+    }
+  ],
+  "wave": "order-and-chaos"
+}

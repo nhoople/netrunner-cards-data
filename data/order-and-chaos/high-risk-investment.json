@@ -1,0 +1,43 @@
+{
+  "id": "high-risk-investment",
+  "title": "High-Risk Investment",
+  "nrdbCode": "07007",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "expansion"
+  ],
+  "advancementRequirement": 5,
+  "agendaPoints": 3,
+  "onScore": {
+    "op": "do",
+    "action": {
+      "kind": "add_agenda_counter",
+      "amount": 1
+    }
+  },
+  "paidAbilities": [
+    {
+      "id": "hri-cash",
+      "label": "[click], hosted agenda counter: Gain 1¢ per Runner credit",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1,
+        "agendaCounters": 1
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits_equal_to_runner_credits"
+        }
+      }
+    }
+  ],
+  "wave": "order-and-chaos"
+}

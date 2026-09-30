@@ -1,0 +1,54 @@
+{
+  "id": "glenn-station",
+  "title": "Glenn Station",
+  "nrdbCode": "07005",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "expansion"
+  ],
+  "advancementRequirement": 4,
+  "agendaPoints": 2,
+  "maxHostedCards": 1,
+  "paidAbilities": [
+    {
+      "id": "glenn-host",
+      "label": "[click]: Host a card from HQ facedown on Glenn Station",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "glenn_host_from_hq"
+        }
+      }
+    },
+    {
+      "id": "glenn-retrieve",
+      "label": "[click]: Add a card on Glenn Station to HQ",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "glenn_retrieve_to_hq"
+        }
+      }
+    }
+  ],
+  "wave": "order-and-chaos"
+}

@@ -1,0 +1,45 @@
+{
+  "id": "space-camp",
+  "title": "Space Camp",
+  "nrdbCode": "07010",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "ambush"
+  ],
+  "installCost": 0,
+  "rezCost": 0,
+  "trashCost": 3,
+  "mustRevealWhenAccessedFromRd": true,
+  "onAccess": {
+    "op": "choose",
+    "chooser": "corp",
+    "options": [
+      {
+        "id": "accept",
+        "label": "Place 1 advancement on an advanceable installed card",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "place_advancement_on_advanceable_installed"
+          }
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "corp",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  },
+  "wave": "order-and-chaos"
+}

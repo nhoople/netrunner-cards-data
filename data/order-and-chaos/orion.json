@@ -1,0 +1,54 @@
+{
+  "id": "orion",
+  "title": "Orion",
+  "nrdbCode": "07015",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "sentry",
+    "code gate",
+    "barrier"
+  ],
+  "installCost": 15,
+  "rezCost": 15,
+  "strength": 8,
+  "unique": true,
+  "canAdvance": true,
+  "rezCostReductionPerAdvancement": 3,
+  "subroutines": [
+    {
+      "id": "orion-trash",
+      "text": "Trash 1 program.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "trash_program",
+          "pick": "choose"
+        }
+      }
+    },
+    {
+      "id": "orion-resolve",
+      "text": "Resolve a subroutine on another piece of rezzed ice.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "may_resolve_subroutine_on_rezzed_ice"
+        }
+      }
+    },
+    {
+      "id": "orion-etr",
+      "text": "End the run.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "end_the_run"
+        }
+      }
+    }
+  ],
+  "wave": "order-and-chaos"
+}

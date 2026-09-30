@@ -1,0 +1,17 @@
+{
+  "id": "dedicated-technician-team",
+  "title": "Dedicated Technician Team",
+  "nrdbCode": "07026",
+  "type": "upgrade",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "neutral-corp",
+  "installCost": 1,
+  "rezCost": 1,
+  "trashCost": 1,
+  "recurringCreditsMax": 2,
+  "recurringSpendFor": [
+    "install_ice_this_server"
+  ],
+  "wave": "order-and-chaos"
+}

@@ -1,0 +1,38 @@
+{
+  "id": "maxx-maximum-punk-rock",
+  "title": "MaxX: Maximum Punk Rock",
+  "nrdbCode": "07029",
+  "type": "identity",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "subtypes": [
+    "g-mod"
+  ],
+  "onTurnBegin": {
+    "op": "seq",
+    "effects": [
+      {
+        "op": "do",
+        "action": {
+          "kind": "trash_top_of_stack"
+        }
+      },
+      {
+        "op": "do",
+        "action": {
+          "kind": "trash_top_of_stack"
+        }
+      },
+      {
+        "op": "do",
+        "action": {
+          "kind": "draw",
+          "side": "runner",
+          "amount": 1
+        }
+      }
+    ]
+  },
+  "wave": "order-and-chaos"
+}

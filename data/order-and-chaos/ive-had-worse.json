@@ -1,0 +1,27 @@
+{
+  "id": "ive-had-worse",
+  "title": "I've Had Worse",
+  "nrdbCode": "07032",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "playCost": 1,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "draw",
+      "side": "runner",
+      "amount": 3
+    }
+  },
+  "onTrashFromGripOrStack": {
+    "op": "do",
+    "action": {
+      "kind": "draw",
+      "side": "runner",
+      "amount": 3
+    }
+  },
+  "wave": "order-and-chaos"
+}

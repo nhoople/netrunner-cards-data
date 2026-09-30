@@ -1,0 +1,19 @@
+{
+  "id": "spooned",
+  "title": "Spooned",
+  "nrdbCode": "07039",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "subtypes": [
+    "run",
+    "sabotage"
+  ],
+  "playCost": 2,
+  "runEvent": {
+    "servers": "any",
+    "trashFirstFullyBrokenSubtype": "code gate"
+  },
+  "wave": "order-and-chaos"
+}

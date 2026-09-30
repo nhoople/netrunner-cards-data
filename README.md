@@ -37,6 +37,7 @@ Files under [`data/`](data/) are the API. Clone the repo or fetch a **tagged** r
 | [`data/up-and-over/`](data/up-and-over/) | Up and Over (NRDB `uao`) — **supported** (Lunar) |
 | [`data/all-that-remains/`](data/all-that-remains/) | All That Remains (NRDB `atr`) — **supported** (Lunar) |
 | [`data/the-source/`](data/the-source/) | The Source (NRDB `ts`) — **supported** (Lunar) |
+| [`data/order-and-chaos/`](data/order-and-chaos/) | Order and Chaos (NRDB `oac`) — **supported** (deluxe) |
 | [`data/reign-and-reverie/`](data/reign-and-reverie/) | Reign and Reverie (NRDB `rar`) — **supported** (legacy backwards) |
 | [`data/system-core-2019/`](data/system-core-2019/) | System Core 2019 (NRDB `sc19`) — **supported** (legacy backwards) |
 | [`data/downfall/`](data/downfall/) | Downfall (NRDB `df`) — **supported** (legacy backwards) |

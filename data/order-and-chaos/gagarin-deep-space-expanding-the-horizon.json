@@ -1,0 +1,14 @@
+{
+  "id": "gagarin-deep-space-expanding-the-horizon",
+  "title": "Gagarin Deep Space: Expanding the Horizon",
+  "nrdbCode": "07002",
+  "type": "identity",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "corp"
+  ],
+  "additionalCreditsToAccessRemoteRoot": 1,
+  "wave": "order-and-chaos"
+}

@@ -1,0 +1,24 @@
+{
+  "id": "hivemind",
+  "title": "Hivemind",
+  "nrdbCode": "07042",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "subtypes": [
+    "virus"
+  ],
+  "installCost": 3,
+  "memoryCost": 2,
+  "unique": true,
+  "onInstall": {
+    "op": "do",
+    "action": {
+      "kind": "add_virus_counter",
+      "amount": 1
+    }
+  },
+  "hivemindSharesVirusCounters": true,
+  "wave": "order-and-chaos"
+}

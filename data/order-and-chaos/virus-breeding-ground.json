@@ -1,0 +1,41 @@
+{
+  "id": "virus-breeding-ground",
+  "title": "Virus Breeding Ground",
+  "nrdbCode": "07052",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "subtypes": [
+    "virtual"
+  ],
+  "installCost": 2,
+  "onTurnBegin": {
+    "op": "do",
+    "action": {
+      "kind": "add_virus_counter",
+      "amount": 1
+    }
+  },
+  "paidAbilities": [
+    {
+      "id": "vbg-move",
+      "label": "[click]: Move 1 virus counter to another card with a virus counter",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "virus_breeding_ground_move_counter"
+        }
+      }
+    }
+  ],
+  "wave": "order-and-chaos"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "progenitor",
+  "title": "Progenitor",
+  "nrdbCode": "07043",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "subtypes": [
+    "daemon"
+  ],
+  "installCost": 0,
+  "memoryCost": 0,
+  "daemonHost": true,
+  "daemonHostMaxMu": 99,
+  "maxHostedCards": 1,
+  "daemonHostVirusProgramsOnly": true,
+  "hostedIcebreakerMemoryDoesNotCount": true,
+  "preventOneVirusPurgeOnHostedProgram": true,
+  "wave": "order-and-chaos"
+}

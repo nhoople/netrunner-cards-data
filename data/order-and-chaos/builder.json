@@ -1,0 +1,58 @@
+{
+  "id": "builder",
+  "title": "Builder",
+  "nrdbCode": "07016",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "code gate"
+  ],
+  "installCost": 2,
+  "rezCost": 2,
+  "strength": 4,
+  "paidAbilities": [
+    {
+      "id": "builder-move",
+      "label": "[click]: Move this ice to the outermost position of any server",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "builder_move_to_outermost"
+        }
+      }
+    }
+  ],
+  "subroutines": [
+    {
+      "id": "builder-adv-1",
+      "text": "Place 1 advancement on ice protecting this server that can be advanced.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "place_advancement_on_advanceable_ice_protecting_this_server"
+        }
+      }
+    },
+    {
+      "id": "builder-adv-2",
+      "text": "Place 1 advancement on ice protecting this server that can be advanced.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "place_advancement_on_advanceable_ice_protecting_this_server"
+        }
+      }
+    }
+  ],
+  "wave": "order-and-chaos"
+}

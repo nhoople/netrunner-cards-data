@@ -1,0 +1,18 @@
+{
+  "id": "housekeeping",
+  "title": "Housekeeping",
+  "nrdbCode": "07020",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "current",
+    "gray ops"
+  ],
+  "playCost": 2,
+  "lingerAsCurrent": true,
+  "currentTrashOnAgendaStolen": true,
+  "firstRunnerInstallTrashFromGripEachTurn": true,
+  "wave": "order-and-chaos"
+}

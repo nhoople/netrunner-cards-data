@@ -1,0 +1,44 @@
+{
+  "id": "firmware-updates",
+  "title": "Firmware Updates",
+  "nrdbCode": "07004",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "security"
+  ],
+  "advancementRequirement": 3,
+  "agendaPoints": 1,
+  "onScore": {
+    "op": "do",
+    "action": {
+      "kind": "add_agenda_counter",
+      "amount": 3
+    }
+  },
+  "paidAbilitiesOncePerTurn": true,
+  "paidAbilities": [
+    {
+      "id": "firmware-advance",
+      "label": "Hosted agenda counter: Place 1 advancement on advanceable ice",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "agendaCounters": 1
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "firmware_place_advancement_on_advanceable_ice"
+        }
+      },
+      "oncePerTurn": true
+    }
+  ],
+  "wave": "order-and-chaos"
+}

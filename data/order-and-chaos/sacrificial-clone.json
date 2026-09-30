@@ -1,0 +1,31 @@
+{
+  "id": "sacrificial-clone",
+  "title": "Sacrificial Clone",
+  "nrdbCode": "07050",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "installCost": 3,
+  "paidAbilities": [
+    {
+      "id": "sac-clone-prevent",
+      "label": "[interrupt] → [trash]: Prevent all damage",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "trashSelf": true
+      },
+      "windows": [
+        "damage_interrupt_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "sacrificial_clone_prevent_all_damage"
+        }
+      }
+    }
+  ],
+  "wave": "order-and-chaos"
+}

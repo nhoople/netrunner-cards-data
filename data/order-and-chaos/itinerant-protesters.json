@@ -1,0 +1,17 @@
+{
+  "id": "itinerant-protesters",
+  "title": "Itinerant Protesters",
+  "nrdbCode": "07033",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "subtypes": [
+    "current"
+  ],
+  "playCost": 2,
+  "lingerAsCurrent": true,
+  "currentTrashOnAgendaScored": true,
+  "corpHandSizeBonusPerBadPublicity": -1,
+  "wave": "order-and-chaos"
+}

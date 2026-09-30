@@ -1,0 +1,18 @@
+{
+  "id": "showing-off",
+  "title": "Showing Off",
+  "nrdbCode": "07034",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "subtypes": [
+    "run"
+  ],
+  "playCost": 2,
+  "runEvent": {
+    "servers": "rd",
+    "accessFromBottomOfRd": true
+  },
+  "wave": "order-and-chaos"
+}

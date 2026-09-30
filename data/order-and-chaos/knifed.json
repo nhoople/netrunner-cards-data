@@ -1,0 +1,19 @@
+{
+  "id": "knifed",
+  "title": "Knifed",
+  "nrdbCode": "07038",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "subtypes": [
+    "run",
+    "sabotage"
+  ],
+  "playCost": 1,
+  "runEvent": {
+    "servers": "any",
+    "trashFirstFullyBrokenSubtype": "barrier"
+  },
+  "wave": "order-and-chaos"
+}

@@ -1,0 +1,67 @@
+{
+  "id": "cyberdex-virus-suite",
+  "title": "Cyberdex Virus Suite",
+  "nrdbCode": "07027",
+  "type": "upgrade",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "neutral-corp",
+  "subtypes": [
+    "ambush"
+  ],
+  "installCost": 3,
+  "rezCost": 3,
+  "trashCost": 1,
+  "mustRevealWhenAccessedFromRd": true,
+  "onAccess": {
+    "op": "choose",
+    "chooser": "corp",
+    "options": [
+      {
+        "id": "accept",
+        "label": "Purge virus counters",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "purge_virus_counters"
+          }
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "corp",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  },
+  "paidAbilities": [
+    {
+      "id": "cvs-purge",
+      "label": "[trash]: Purge virus counters",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "trashSelf": true
+      },
+      "windows": [
+        "corp_action_paw",
+        "approach_paw",
+        "encounter_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "purge_virus_counters"
+        }
+      }
+    }
+  ],
+  "wave": "order-and-chaos"
+}

@@ -1,0 +1,30 @@
+{
+  "id": "wormhole",
+  "title": "Wormhole",
+  "nrdbCode": "07013",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "code gate"
+  ],
+  "installCost": 9,
+  "rezCost": 9,
+  "strength": 7,
+  "canAdvance": true,
+  "rezCostReductionPerAdvancement": 3,
+  "subroutines": [
+    {
+      "id": "wormhole-resolve",
+      "text": "Resolve a subroutine on another piece of rezzed ice.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "may_resolve_subroutine_on_rezzed_ice"
+        }
+      }
+    }
+  ],
+  "wave": "order-and-chaos"
+}

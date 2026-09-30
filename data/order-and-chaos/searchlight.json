@@ -1,0 +1,55 @@
+{
+  "id": "searchlight",
+  "title": "Searchlight",
+  "nrdbCode": "07019",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "sentry",
+    "tracer",
+    "observer"
+  ],
+  "installCost": 1,
+  "rezCost": 1,
+  "strength": 3,
+  "canAdvance": true,
+  "subroutines": [
+    {
+      "id": "searchlight-trace-1",
+      "text": "Trace[X]. If successful, give the Runner 1 tag. X = advancements.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "trace_strength_equal_source_advancements",
+          "onSuccess": {
+            "op": "do",
+            "action": {
+              "kind": "give_tags",
+              "amount": 1
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "searchlight-trace-2",
+      "text": "Trace[X]. If successful, give the Runner 1 tag. X = advancements.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "trace_strength_equal_source_advancements",
+          "onSuccess": {
+            "op": "do",
+            "action": {
+              "kind": "give_tags",
+              "amount": 1
+            }
+          }
+        }
+      }
+    }
+  ],
+  "wave": "order-and-chaos"
+}

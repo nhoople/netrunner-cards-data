@@ -1,0 +1,40 @@
+{
+  "id": "chop-bot-3000",
+  "title": "Chop Bot 3000",
+  "nrdbCode": "07045",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "installCost": 1,
+  "unique": true,
+  "onTurnBegin": {
+    "op": "choose",
+    "chooser": "runner",
+    "options": [
+      {
+        "id": "accept",
+        "label": "Trash another installed card",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "chop_bot_trash_installed_then_draw_or_remove_tag"
+          }
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "runner",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  },
+  "wave": "order-and-chaos"
+}

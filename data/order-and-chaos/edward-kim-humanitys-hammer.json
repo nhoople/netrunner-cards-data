@@ -1,0 +1,14 @@
+{
+  "id": "edward-kim-humanitys-hammer",
+  "title": "Edward Kim: Humanity's Hammer",
+  "nrdbCode": "07028",
+  "type": "identity",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "subtypes": [
+    "natural"
+  ],
+  "firstAccessedOperationTrashFreeEachTurn": true,
+  "wave": "order-and-chaos"
+}

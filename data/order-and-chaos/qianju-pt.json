@@ -1,0 +1,42 @@
+{
+  "id": "qianju-pt",
+  "title": "Qianju PT",
+  "nrdbCode": "07054",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "neutral-runner",
+  "subtypes": [
+    "vehicle"
+  ],
+  "installCost": 2,
+  "onTurnBegin": {
+    "op": "choose",
+    "chooser": "runner",
+    "options": [
+      {
+        "id": "accept",
+        "label": "Lose [click]: prevent 1 tag until your next turn",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "qianju_lose_click_prevent_tag_until_next_turn"
+          }
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "runner",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  },
+  "wave": "order-and-chaos"
+}

@@ -1,0 +1,20 @@
+{
+  "id": "day-job",
+  "title": "Day Job",
+  "nrdbCode": "07036",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "playCost": 2,
+  "playAdditionalClicks": 3,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "gain_credits",
+      "side": "runner",
+      "amount": 10
+    }
+  },
+  "wave": "order-and-chaos"
+}

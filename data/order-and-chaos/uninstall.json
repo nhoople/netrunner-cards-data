@@ -1,0 +1,17 @@
+{
+  "id": "uninstall",
+  "title": "Uninstall",
+  "nrdbCode": "07053",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "neutral-runner",
+  "playCost": 0,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "uninstall_program_or_hardware_to_grip"
+    }
+  },
+  "wave": "order-and-chaos"
+}

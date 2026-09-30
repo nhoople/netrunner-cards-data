@@ -1,0 +1,23 @@
+{
+  "id": "vigil",
+  "title": "Vigil",
+  "nrdbCode": "07047",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "subtypes": [
+    "console"
+  ],
+  "installCost": 2,
+  "unique": true,
+  "maxConsole": 1,
+  "muBonus": 1,
+  "onTurnBegin": {
+    "op": "do",
+    "action": {
+      "kind": "vigil_draw_if_hq_full"
+    }
+  },
+  "wave": "order-and-chaos"
+}

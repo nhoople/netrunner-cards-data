@@ -1,0 +1,56 @@
+{
+  "id": "mark-yale",
+  "title": "Mark Yale",
+  "nrdbCode": "07009",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "executive"
+  ],
+  "installCost": 1,
+  "rezCost": 1,
+  "trashCost": 3,
+  "unique": true,
+  "gainCreditsOnSpendAgendaCounter": 1,
+  "paidAbilities": [
+    {
+      "id": "mark-yale-trash",
+      "label": "[trash]: Gain 2[credit]",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "trashSelf": true
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "corp",
+          "amount": 2
+        }
+      }
+    },
+    {
+      "id": "mark-yale-agenda",
+      "label": "Any agenda counter: Gain 2[credit]",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {},
+      "windows": [
+        "corp_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "mark_yale_spend_any_agenda_counter_gain_2"
+        }
+      }
+    }
+  ],
+  "wave": "order-and-chaos"
+}

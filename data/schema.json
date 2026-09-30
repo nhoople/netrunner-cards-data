@@ -145,6 +145,14 @@
         "briberyFirstIceAdditionalRezEqualsX": {
           "type": "boolean",
           "description": "Bribery: first unrezzed ice approached this run costs +X to rez (X = play cost chosen)."
+        },
+        "accessFromBottomOfRd": {
+          "type": "boolean",
+          "description": "Showing Off: when breaching R&D, access from the bottom instead of the top."
+        },
+        "trashFirstFullyBrokenSubtype": {
+          "type": "string",
+          "description": "Knifed/Spooned/Forked: first time you fully break ice of this subtype during the run, trash that ice."
         }
       }
     }
@@ -370,6 +378,10 @@
         "breakRequiresIceStrengthLte": {
           "type": "integer",
           "description": "Wyrm-class: only break when encountered ice strength ≤ this."
+        },
+        "breakPreventsCardAccessForRun": {
+          "type": "boolean",
+          "description": "Eater: after using this breaker to break a subroutine, Runner cannot access cards for the remainder of the run."
         }
       }
     },
@@ -3546,6 +3558,89 @@
       "type": "integer",
       "minimum": 1,
       "description": "Au Revoir: gain N¢ whenever you jack out."
+    },
+    "additionalCreditsToAccessRemoteRoot": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Gagarin: additional credits to access a card in the root of a remote server."
+    },
+    "rezCostReductionPerAdvancement": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Space ice: rez cost lowered by N per advancement token."
+    },
+    "gainCreditsOnSpendAgendaCounter": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Mark Yale: gain N¢ whenever you spend an agenda counter."
+    },
+    "badPublicityOnRez": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Checkpoint: take N bad publicity when this ice is rezzed."
+    },
+    "firstRunnerInstallTrashFromGripEachTurn": {
+      "type": "boolean",
+      "description": "Housekeeping: first time each turn Runner installs, they trash 1 from grip."
+    },
+    "hostGainsBarrierAndEtrSubroutine": {
+      "type": "boolean",
+      "description": "Sub Boost: host ice gains barrier and an ETR subroutine after its others."
+    },
+    "iceProtectingThisServerAdditionalAdvancementTokens": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Satellite Grid: each ice protecting this server is considered to have N additional advancement tokens."
+    },
+    "firstAccessedOperationTrashFreeEachTurn": {
+      "type": "boolean",
+      "description": "Edward Kim: trash the first operation accessed each turn at no cost."
+    },
+    "corpStartsWithBadPublicity": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Valencia: Corp starts the game with N bad publicity."
+    },
+    "corpHandSizeBonusPerBadPublicity": {
+      "type": "integer",
+      "description": "Itinerant Protesters: Corp max hand size += N × bad publicity (usually negative)."
+    },
+    "installRequiresCorpBadPublicityGte": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Investigative Journalism: install only if Corp has ≥ N bad publicity."
+    },
+    "placeVirusCounterWhenInstalledCorpCardTrashed": {
+      "type": "boolean",
+      "description": "Gravedigger: place 1 virus counter whenever an installed Corp card is trashed."
+    },
+    "hivemindSharesVirusCounters": {
+      "type": "boolean",
+      "description": "Hivemind: virus counters here are considered hosted on all other virus programs."
+    },
+    "daemonHostVirusProgramsOnly": {
+      "type": "boolean",
+      "description": "Progenitor: can only host virus programs."
+    },
+    "preventOneVirusPurgeOnHostedProgram": {
+      "type": "boolean",
+      "description": "Progenitor: when viruses purged, prevent 1 virus counter removal on hosted program."
+    },
+    "muBonusOnlyForVirusPrograms": {
+      "type": "boolean",
+      "description": "MemStrips: MU bonus only usable for virus programs."
+    },
+    "onPassRezzedIceProtectingThisServer": {
+      "description": "The Twins: effect when Runner passes rezzed ice protecting this server."
+    },
+    "archivesAccessMayRfgInstead": {
+      "type": "object",
+      "required": ["oncePerArchivesBreach"],
+      "additionalProperties": false,
+      "properties": {
+        "oncePerArchivesBreach": {"type": "boolean"}
+      },
+      "description": "Archives Interface: may RFG a card instead of accessing it in Archives (once per breach)."
     }
   }
 }

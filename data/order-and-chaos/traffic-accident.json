@@ -1,0 +1,22 @@
+{
+  "id": "traffic-accident",
+  "title": "Traffic Accident",
+  "nrdbCode": "07022",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "black ops"
+  ],
+  "playCost": 0,
+  "playRequiresMinTags": 2,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "meat_damage",
+      "amount": 2
+    }
+  },
+  "wave": "order-and-chaos"
+}

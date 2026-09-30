@@ -1,0 +1,19 @@
+{
+  "id": "forked",
+  "title": "Forked",
+  "nrdbCode": "07037",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "subtypes": [
+    "run",
+    "sabotage"
+  ],
+  "playCost": 2,
+  "runEvent": {
+    "servers": "any",
+    "trashFirstFullyBrokenSubtype": "sentry"
+  },
+  "wave": "order-and-chaos"
+}
