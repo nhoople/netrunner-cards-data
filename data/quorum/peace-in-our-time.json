@@ -1,0 +1,43 @@
+{
+  "id": "peace-in-our-time",
+  "title": "Peace in Our Time",
+  "nrdbCode": "11109",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "neutral-runner",
+  "subtypes": [
+    "priority"
+  ],
+  "playCost": 1,
+  "playRequiresFirstClick": true,
+  "playRequiresCorpScoredNoAgendasLastTurn": true,
+  "onPlay": {
+    "op": "seq",
+    "effects": [
+      {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "runner",
+          "amount": 10
+        }
+      },
+      {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "corp",
+          "amount": 5
+        }
+      },
+      {
+        "op": "do",
+        "action": {
+          "kind": "forbid_runner_runs_this_turn"
+        }
+      }
+    ]
+  },
+  "wave": "quorum"
+}

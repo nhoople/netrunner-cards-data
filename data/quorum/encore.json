@@ -1,0 +1,19 @@
+{
+  "id": "encore",
+  "title": "Encore",
+  "nrdbCode": "11107",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "playCost": 0,
+  "playRequiresSuccessfulAllCentralsThisTurn": true,
+  "rfgInsteadOfTrashing": true,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "schedule_additional_runner_turn"
+    }
+  },
+  "wave": "quorum"
+}

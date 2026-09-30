@@ -1,0 +1,17 @@
+{
+  "id": "sifr",
+  "title": "Şifr",
+  "nrdbCode": "11101",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "subtypes": [
+    "console"
+  ],
+  "installCost": 5,
+  "unique": true,
+  "muBonus": 2,
+  "sifrMayZeroEncounterIceStrengthOncePerTurn": true,
+  "wave": "quorum"
+}

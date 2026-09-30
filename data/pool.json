@@ -43,6 +43,7 @@
     "escalation",
     "intervention",
     "martial-law",
+    "quorum",
     "reign-and-reverie",
     "system-core-2019",
     "downfall",
@@ -2299,6 +2300,32 @@
         "sapper",
         "show-of-force",
         "enforced-curfew"
+      ]
+    },
+    "quorum": {
+      "status": "supported",
+      "notes": "Quorum (qu) Flashpoint #6 cycle closer set-complete. 20/20 new clears; no reprints. Pool supported after martial-law. Paired release v1.127.0. Never kick mo/mor.",
+      "cards": [
+        "sifr",
+        "sunya",
+        "recon-drone",
+        "tapwrm",
+        "tracker",
+        "aaron-marron",
+        "encore",
+        "fawkes",
+        "peace-in-our-time",
+        "sensor-net-activation",
+        "violet-level-clearance",
+        "chiyashi",
+        "psychokinesis",
+        "net-quarantine",
+        "herald",
+        "veritas",
+        "bryan-stinson",
+        "nasx",
+        "macrophage",
+        "tribunal"
       ]
     }
   }

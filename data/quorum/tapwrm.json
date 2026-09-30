@@ -1,0 +1,23 @@
+{
+  "id": "tapwrm",
+  "title": "Tapwrm",
+  "nrdbCode": "11104",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "subtypes": [
+    "virus"
+  ],
+  "installCost": 0,
+  "memoryCost": 1,
+  "installRequiresSuccessfulCentralRunThisTurn": true,
+  "trashOnVirusPurge": true,
+  "onRunnerTurnBegin": {
+    "op": "do",
+    "action": {
+      "kind": "tapwrm_gain_credits_per_corp_credits"
+    }
+  },
+  "wave": "quorum"
+}

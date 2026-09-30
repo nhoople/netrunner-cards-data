@@ -1,0 +1,17 @@
+{
+  "id": "net-quarantine",
+  "title": "Net Quarantine",
+  "nrdbCode": "11114",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "subtypes": [
+    "security"
+  ],
+  "advancementRequirement": 4,
+  "agendaPoints": 2,
+  "firstTraceEachTurnRunnerLinkTreatedAs0": true,
+  "gainCreditsWhenRunnerSpendsForLinkPer2Spent": true,
+  "wave": "quorum"
+}

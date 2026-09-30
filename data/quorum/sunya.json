@@ -1,0 +1,31 @@
+{
+  "id": "sunya",
+  "title": "Sūnya",
+  "nrdbCode": "11102",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "subtypes": [
+    "icebreaker",
+    "killer"
+  ],
+  "installCost": 3,
+  "strength": 1,
+  "memoryCost": 1,
+  "strengthPerPowerCounter": true,
+  "onFullyBreak": {
+    "op": "do",
+    "action": {
+      "kind": "add_power_counter",
+      "amount": 1
+    }
+  },
+  "breaker": {
+    "breaksSubtype": "sentry",
+    "strength": 1,
+    "breakCredits": 2,
+    "breakMaxSubs": 1
+  },
+  "wave": "quorum"
+}

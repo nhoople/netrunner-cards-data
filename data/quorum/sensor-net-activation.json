@@ -1,0 +1,43 @@
+{
+  "id": "sensor-net-activation",
+  "title": "Sensor Net Activation",
+  "nrdbCode": "11110",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "security"
+  ],
+  "advancementRequirement": 3,
+  "agendaPoints": 1,
+  "onScore": {
+    "op": "do",
+    "action": {
+      "kind": "add_agenda_counter",
+      "amount": 1
+    }
+  },
+  "paidAbilities": [
+    {
+      "id": "sensor-net-rez",
+      "label": "Hosted agenda counter: Rez a bioroid, ignoring all costs; derez at turn end",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "agendaCounters": 1
+      },
+      "windows": [
+        "corp_action_paw",
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "sensor_net_rez_bioroid_ignoring_costs_derez_turn_end"
+        }
+      }
+    }
+  ],
+  "wave": "quorum"
+}

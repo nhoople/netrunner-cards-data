@@ -1,0 +1,32 @@
+{
+  "id": "recon-drone",
+  "title": "Recon Drone",
+  "nrdbCode": "11103",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "installCost": 1,
+  "paidAbilities": [
+    {
+      "id": "recon-drone-prevent",
+      "label": "[interrupt] → X¢, [trash]: Prevent X damage from a card you are accessing",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "trashSelf": true
+      },
+      "windows": [
+        "damage_interrupt_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "recon_drone_prevent_x_damage"
+        }
+      },
+      "usableByRunnerOnSelfIce": true
+    }
+  ],
+  "wave": "quorum"
+}

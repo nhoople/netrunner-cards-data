@@ -1,0 +1,62 @@
+{
+  "id": "tracker",
+  "title": "Tracker",
+  "nrdbCode": "11105",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "installCost": 0,
+  "memoryCost": 2,
+  "onRunnerTurnBegin": {
+    "op": "choose",
+    "chooser": "runner",
+    "options": [
+      {
+        "id": "accept",
+        "label": "Choose a server",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "choose_server_runner"
+          }
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "runner",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  },
+  "paidAbilities": [
+    {
+      "id": "tracker-run",
+      "label": "[click], 2¢: Run the chosen server; prevent first subroutine that would resolve",
+      "clickCost": 1,
+      "creditCost": 2,
+      "cost": {
+        "clicks": 1,
+        "credits": 2
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "tracker_run_chosen_prevent_first_sub"
+        }
+      },
+      "usableByRunnerOnSelfIce": true
+    }
+  ],
+  "wave": "quorum"
+}

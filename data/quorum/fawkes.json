@@ -1,0 +1,44 @@
+{
+  "id": "fawkes",
+  "title": "Fawkes",
+  "nrdbCode": "11108",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "subtypes": [
+    "icebreaker",
+    "killer"
+  ],
+  "installCost": 5,
+  "strength": 1,
+  "memoryCost": 1,
+  "breaker": {
+    "breaksSubtype": "sentry",
+    "strength": 1,
+    "breakCredits": 1,
+    "breakMaxSubs": 1
+  },
+  "paidAbilities": [
+    {
+      "id": "fawkes-pump",
+      "label": "X¢ (≥1 stealth): +X strength for the remainder of this run",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "minCreditsFromStealth": 1
+      },
+      "windows": [
+        "encounter_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "fawkes_spend_x_pump"
+        }
+      },
+      "usableByRunnerOnSelfIce": true
+    }
+  ],
+  "wave": "quorum"
+}

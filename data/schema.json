@@ -4552,6 +4552,35 @@
     "mayMoveAnyAdvancementsFromSelfToRezzedIce": {
       "type": "boolean",
       "description": "Anson Rose: whenever you rez ice, you may move any number of advancement tokens from this card to that ice."
+    },
+    "sifrMayZeroEncounterIceStrengthOncePerTurn": {
+      "type": "boolean",
+      "description": "Şifr: once per turn when you encounter ice, you may get −1 max hand size until your next turn begins; if you do, that ice's strength is lowered to 0 for the remainder of the encounter."
+    },
+    "playRequiresCorpScoredNoAgendasLastTurn": {
+      "type": "boolean",
+      "description": "Peace in Our Time: play only if the Corp scored no agendas during their last turn."
+    },
+    "trashTopOfStackOnBreakSubIfRunnerHasAi": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Chiyashi: whenever the Runner breaks a subroutine on this ice while an AI is installed, trash this many cards from the top of the stack."
+    },
+    "firstTraceEachTurnRunnerLinkTreatedAs0": {
+      "type": "boolean",
+      "description": "Net Quarantine: for the first trace each turn, the Runner's link is treated as 0."
+    },
+    "gainCreditsWhenRunnerSpendsForLinkPer2Spent": {
+      "type": "boolean",
+      "description": "Net Quarantine: whenever the Runner spends credits to increase their link strength, Corp gains 1¢ for every 2¢ spent."
+    },
+    "bryanStinsonPlayArchivesTransactionWhileRunnerLt6c": {
+      "type": "boolean",
+      "description": "Bryan Stinson: while the Runner has fewer than 6¢, this card gains [click]: play a transaction from Archives ignoring all costs, then RFG it."
+    },
+    "nasxMaySpendUpTo2OnAbilityCreditGainToPlacePower": {
+      "type": "boolean",
+      "description": "NASX: whenever you gain credits through a card ability other than from NASX, you may spend up to 2¢ to place that many power counters on NASX."
     }
   }
 }

@@ -1,0 +1,38 @@
+{
+  "id": "violet-level-clearance",
+  "title": "Violet Level Clearance",
+  "nrdbCode": "11111",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "terminal",
+    "transaction"
+  ],
+  "playCost": 5,
+  "trashCost": 1,
+  "endsActionPhase": true,
+  "onPlay": {
+    "op": "seq",
+    "effects": [
+      {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "corp",
+          "amount": 8
+        }
+      },
+      {
+        "op": "do",
+        "action": {
+          "kind": "draw",
+          "side": "corp",
+          "amount": 4
+        }
+      }
+    ]
+  },
+  "wave": "quorum"
+}

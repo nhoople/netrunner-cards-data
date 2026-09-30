@@ -1,0 +1,18 @@
+{
+  "id": "bryan-stinson",
+  "title": "Bryan Stinson",
+  "nrdbCode": "11117",
+  "type": "upgrade",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "character"
+  ],
+  "installCost": 2,
+  "rezCost": 2,
+  "trashCost": 5,
+  "unique": true,
+  "bryanStinsonPlayArchivesTransactionWhileRunnerLt6c": true,
+  "wave": "quorum"
+}

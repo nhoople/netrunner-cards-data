@@ -1,0 +1,45 @@
+{
+  "id": "nasx",
+  "title": "NASX",
+  "nrdbCode": "11118",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "neutral-corp",
+  "installCost": 2,
+  "rezCost": 2,
+  "trashCost": 4,
+  "unique": true,
+  "onTurnBegin": {
+    "op": "do",
+    "action": {
+      "kind": "gain_credits",
+      "side": "corp",
+      "amount": 1
+    }
+  },
+  "nasxMaySpendUpTo2OnAbilityCreditGainToPlacePower": true,
+  "paidAbilities": [
+    {
+      "id": "nasx-cash-out",
+      "label": "[click], [trash]: Gain 2¢ for each power counter on NASX",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1,
+        "trashSelf": true
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits_per_power_counter",
+          "per": 2
+        }
+      }
+    }
+  ],
+  "wave": "quorum"
+}

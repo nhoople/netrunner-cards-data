@@ -1,0 +1,51 @@
+{
+  "id": "tribunal",
+  "title": "Tribunal",
+  "nrdbCode": "11120",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "neutral-corp",
+  "subtypes": [
+    "sentry"
+  ],
+  "installCost": 7,
+  "rezCost": 7,
+  "strength": 3,
+  "subroutines": [
+    {
+      "id": "tribunal-trash-1",
+      "text": "The Runner trashes 1 of their installed cards.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "trash_installed_runner",
+          "pick": "choose"
+        }
+      }
+    },
+    {
+      "id": "tribunal-trash-2",
+      "text": "The Runner trashes 1 of their installed cards.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "trash_installed_runner",
+          "pick": "choose"
+        }
+      }
+    },
+    {
+      "id": "tribunal-trash-3",
+      "text": "The Runner trashes 1 of their installed cards.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "trash_installed_runner",
+          "pick": "choose"
+        }
+      }
+    }
+  ],
+  "wave": "quorum"
+}

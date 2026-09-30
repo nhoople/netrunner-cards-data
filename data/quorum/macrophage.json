@@ -1,0 +1,88 @@
+{
+  "id": "macrophage",
+  "title": "Macrophage",
+  "nrdbCode": "11119",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "neutral-corp",
+  "subtypes": [
+    "code gate",
+    "tracer"
+  ],
+  "installCost": 3,
+  "rezCost": 3,
+  "strength": 7,
+  "subroutines": [
+    {
+      "id": "macrophage-purge",
+      "text": "Trace[4]. If successful, purge virus counters.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "trace",
+          "strength": 4,
+          "onSuccess": {
+            "op": "do",
+            "action": {
+              "kind": "purge_virus_counters"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "macrophage-trash-virus",
+      "text": "Trace[3]. If successful, trash 1 virus.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "trace",
+          "strength": 3,
+          "onSuccess": {
+            "op": "do",
+            "action": {
+              "kind": "trash_installed_virus",
+              "pick": "choose"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "macrophage-rfg-heap-virus",
+      "text": "Trace[2]. If successful, remove a virus in the heap from the game.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "trace",
+          "strength": 2,
+          "onSuccess": {
+            "op": "do",
+            "action": {
+              "kind": "rfg_virus_from_heap"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "macrophage-etr",
+      "text": "Trace[1]. If successful, end the run.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "trace",
+          "strength": 1,
+          "onSuccess": {
+            "op": "do",
+            "action": {
+              "kind": "end_the_run"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "wave": "quorum"
+}

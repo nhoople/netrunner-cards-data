@@ -1,0 +1,50 @@
+{
+  "id": "herald",
+  "title": "Herald",
+  "nrdbCode": "11115",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "subtypes": [
+    "code gate"
+  ],
+  "installCost": 2,
+  "rezCost": 2,
+  "trashCost": 1,
+  "strength": 1,
+  "mustRevealWhenAccessedFromRd": true,
+  "skipOnAccessFromArchives": true,
+  "onAccess": {
+    "op": "do",
+    "action": {
+      "kind": "force_encounter_accessed_ice"
+    }
+  },
+  "subroutines": [
+    {
+      "id": "herald-gain",
+      "text": "Gain 2¢.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "corp",
+          "amount": 2
+        }
+      }
+    },
+    {
+      "id": "herald-advance",
+      "text": "You may pay up to 2¢ to place that many advancement counters on 1 installed card you can advance.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "herald_pay_up_to_place_advancements",
+          "max": 2
+        }
+      }
+    }
+  ],
+  "wave": "quorum"
+}

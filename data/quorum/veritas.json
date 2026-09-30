@@ -1,0 +1,61 @@
+{
+  "id": "veritas",
+  "title": "Veritas",
+  "nrdbCode": "11116",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "sentry",
+    "tracer"
+  ],
+  "installCost": 4,
+  "rezCost": 4,
+  "strength": 2,
+  "subroutines": [
+    {
+      "id": "veritas-gain",
+      "text": "The Corp gains 2¢.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "corp",
+          "amount": 2
+        }
+      }
+    },
+    {
+      "id": "veritas-lose",
+      "text": "The Runner loses 2¢.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "lose_credits",
+          "side": "runner",
+          "amount": 2
+        }
+      }
+    },
+    {
+      "id": "veritas-trace",
+      "text": "Trace[2]. If successful, give the Runner 1 tag.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "trace",
+          "strength": 2,
+          "onSuccess": {
+            "op": "do",
+            "action": {
+              "kind": "give_tags",
+              "amount": 1
+            }
+          }
+        }
+      }
+    }
+  ],
+  "wave": "quorum"
+}
