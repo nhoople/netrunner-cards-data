@@ -1,0 +1,17 @@
+{
+  "id": "dedicated-neural-net",
+  "title": "Dedicated Neural Net",
+  "nrdbCode": "10088",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "jinteki",
+  "subtypes": [
+    "initiative",
+    "psi"
+  ],
+  "advancementRequirement": 3,
+  "agendaPoints": 1,
+  "firstSuccessfulHqRunEachTurnPsiCorpChoosesAccess": true,
+  "wave": "the-liberated-mind"
+}

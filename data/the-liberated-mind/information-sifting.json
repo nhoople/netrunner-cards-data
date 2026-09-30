@@ -1,0 +1,24 @@
+{
+  "id": "information-sifting",
+  "title": "Information Sifting",
+  "nrdbCode": "10079",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "subtypes": [
+    "run"
+  ],
+  "playCost": 1,
+  "runEvent": {
+    "servers": "hq",
+    "skipBreach": true,
+    "onSuccessfulRun": {
+      "op": "do",
+      "action": {
+        "kind": "information_sifting_corp_split_hq"
+      }
+    }
+  },
+  "wave": "the-liberated-mind"
+}

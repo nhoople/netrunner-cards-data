@@ -1,0 +1,16 @@
+{
+  "id": "puppet-master",
+  "title": "Puppet Master",
+  "nrdbCode": "10090",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "subtypes": [
+    "initiative"
+  ],
+  "advancementRequirement": 5,
+  "agendaPoints": 3,
+  "onSuccessfulRunMayPlaceAdvancementOnCanBeAdvanced": true,
+  "wave": "the-liberated-mind"
+}

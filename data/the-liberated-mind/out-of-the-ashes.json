@@ -1,0 +1,19 @@
+{
+  "id": "out-of-the-ashes",
+  "title": "Out of the Ashes",
+  "nrdbCode": "10080",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "subtypes": [
+    "run"
+  ],
+  "playCost": 1,
+  "deckLimit": 6,
+  "runEvent": {
+    "servers": "any"
+  },
+  "heapOnTurnBeginMayRfgSelfToMakeRun": true,
+  "wave": "the-liberated-mind"
+}

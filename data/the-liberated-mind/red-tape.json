@@ -1,0 +1,29 @@
+{
+  "id": "red-tape",
+  "title": "Red Tape",
+  "nrdbCode": "10093",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "code gate"
+  ],
+  "installCost": 2,
+  "rezCost": 2,
+  "strength": 5,
+  "subroutines": [
+    {
+      "id": "red-tape-fortify",
+      "text": "All ice has +3 strength for the remainder of this run.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "fortify_all_ice",
+          "amount": 3
+        }
+      }
+    }
+  ],
+  "wave": "the-liberated-mind"
+}

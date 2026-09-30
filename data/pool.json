@@ -36,6 +36,7 @@
     "business-first",
     "democracy-and-dogma",
     "salsette-island",
+    "the-liberated-mind",
     "reign-and-reverie",
     "system-core-2019",
     "downfall",
@@ -2112,6 +2113,31 @@
         "cobra",
         "localized-product-line",
         "mumbad-virtual-tour"
+      ]
+    },
+    "the-liberated-mind": {
+      "status": "supported",
+      "notes": "The Liberated Mind (tlm) Mumbad #5 set-complete. 18/19 new clears; reprint skip ravana-1-0. Pool supported after salsette-island. Paired release v1.120.0. Never kick mo/mor.",
+      "cards": [
+        "the-noble-path",
+        "emptied-mind",
+        "information-sifting",
+        "out-of-the-ashes",
+        "liberated-chela",
+        "temple-of-the-liberated-mind",
+        "rebirth",
+        "guru-davinder",
+        "the-turning-wheel",
+        "brainstorm",
+        "ravana-1-0",
+        "dedicated-neural-net",
+        "chetana",
+        "puppet-master",
+        "waiver",
+        "exchange-of-information",
+        "red-tape",
+        "consulting-visit",
+        "vanilla"
       ]
     }
   }

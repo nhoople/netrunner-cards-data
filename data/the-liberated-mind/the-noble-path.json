@@ -1,0 +1,24 @@
+{
+  "id": "the-noble-path",
+  "title": "The Noble Path",
+  "nrdbCode": "10077",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "subtypes": [
+    "run"
+  ],
+  "playCost": 0,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "trash_all_cards_from_grip"
+    }
+  },
+  "runEvent": {
+    "servers": "any",
+    "preventAllDamageThisRun": true
+  },
+  "wave": "the-liberated-mind"
+}

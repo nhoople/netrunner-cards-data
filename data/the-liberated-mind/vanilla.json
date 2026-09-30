@@ -1,0 +1,28 @@
+{
+  "id": "vanilla",
+  "title": "Vanilla",
+  "nrdbCode": "10095",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "neutral-corp",
+  "subtypes": [
+    "barrier"
+  ],
+  "installCost": 0,
+  "rezCost": 0,
+  "strength": 0,
+  "subroutines": [
+    {
+      "id": "vanilla-etr",
+      "text": "End the run.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "end_the_run"
+        }
+      }
+    }
+  ],
+  "wave": "the-liberated-mind"
+}

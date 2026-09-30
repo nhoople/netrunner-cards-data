@@ -1,0 +1,21 @@
+{
+  "id": "exchange-of-information",
+  "title": "Exchange of Information",
+  "nrdbCode": "10092",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "subtypes": [
+    "gray ops"
+  ],
+  "playCost": 0,
+  "playRequiresTagged": true,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "exchange_of_information_swap_scored_agendas"
+    }
+  },
+  "wave": "the-liberated-mind"
+}

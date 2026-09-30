@@ -1,0 +1,39 @@
+{
+  "id": "the-turning-wheel",
+  "title": "The Turning Wheel",
+  "nrdbCode": "10085",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "neutral-runner",
+  "subtypes": [
+    "virtual"
+  ],
+  "installCost": 2,
+  "unique": true,
+  "placePowerOnHqOrRdRunEndIfNoAgendaStolen": true,
+  "paidAbilities": [
+    {
+      "id": "turning-wheel-bonus-access",
+      "label": "2 hosted power counters: Choose HQ or R&D; +1 access when breaching that server this run",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "powerCounters": 2
+      },
+      "windows": [
+        "runner_action_paw",
+        "approach_paw",
+        "encounter_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "turning_wheel_choose_central_bonus_access"
+        }
+      },
+      "usableByRunnerOnSelfIce": true
+    }
+  ],
+  "wave": "the-liberated-mind"
+}

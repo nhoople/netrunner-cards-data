@@ -126,6 +126,10 @@
           "type": "boolean",
           "description": "On successful run, skip breaching the attacked server (e.g. Chastushka replace-breach)."
         },
+        "preventAllDamageThisRun": {
+          "type": "boolean",
+          "description": "The Noble Path: whenever the Runner would take damage during this run, prevent all of that damage."
+        },
         "immolationScriptAccessReplace": {
           "type": "boolean",
           "description": "Immolation Script: once this run, when accessing faceup ice in Archives, may instead trash 1 rezzed copy of that ice."
@@ -4242,6 +4246,38 @@
     "mustTrashWhenAccessedWhileInstalled": {
       "type": "boolean",
       "description": "Mumbad Virtual Tour: when the Runner accesses this upgrade while it is installed, they must trash it, if able."
+    },
+    "heapOnTurnBeginMayRfgSelfToMakeRun": {
+      "type": "boolean",
+      "description": "Out of the Ashes: when your turn begins, if this is in your heap, you may remove it from the game to make a run."
+    },
+    "autoPreventNetOrMeatDamagePayOrTrash": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Guru Davinder: auto-prevent all net/meat damage; whenever this prevents ≥1 damage, trash unless you pay this many credits."
+    },
+    "placePowerOnHqOrRdRunEndIfNoAgendaStolen": {
+      "type": "boolean",
+      "description": "The Turning Wheel: whenever a run on HQ or R&D ends, place 1 power counter if you stole no agendas during that run."
+    },
+    "gainsSubroutinesOnEncounterEqualGripSize": {
+      "type": "object",
+      "required": ["id", "text", "effect"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "text": { "type": "string" },
+        "effect": { "type": "object" }
+      },
+      "description": "Brainstorm: on encounter, gains X copies of this subroutine for the remainder of the run; X = cards in grip."
+    },
+    "firstSuccessfulHqRunEachTurnPsiCorpChoosesAccess": {
+      "type": "boolean",
+      "description": "Dedicated Neural Net: first successful HQ run each turn → psi; if bids differ, Corp chooses which HQ cards the Runner accesses for the remainder of the run."
+    },
+    "onSuccessfulRunMayPlaceAdvancementOnCanBeAdvanced": {
+      "type": "boolean",
+      "description": "Puppet Master: whenever the Runner makes a successful run, Corp may place 1 advancement token on a card that can be advanced."
     }
   }
 }

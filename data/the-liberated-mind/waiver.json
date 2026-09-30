@@ -1,0 +1,36 @@
+{
+  "id": "waiver",
+  "title": "Waiver",
+  "nrdbCode": "10091",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "subtypes": [
+    "code gate",
+    "tracer"
+  ],
+  "installCost": 5,
+  "rezCost": 5,
+  "strength": 5,
+  "subroutines": [
+    {
+      "id": "waiver-trace",
+      "text": "Trace[5]. If successful, reveal grip; trash each card with play/install cost ≤ excess.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "trace",
+          "strength": 5,
+          "onSuccess": {
+            "op": "do",
+            "action": {
+              "kind": "waiver_reveal_grip_trash_cost_lte_excess"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "wave": "the-liberated-mind"
+}

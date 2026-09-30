@@ -1,0 +1,19 @@
+{
+  "id": "rebirth",
+  "title": "Rebirth",
+  "nrdbCode": "10083",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "neutral-runner",
+  "playCost": 0,
+  "deckLimit": 1,
+  "rfgInsteadOfTrashing": true,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "rebirth_switch_identity_same_faction"
+    }
+  },
+  "wave": "the-liberated-mind"
+}

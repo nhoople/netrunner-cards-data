@@ -1,0 +1,26 @@
+{
+  "id": "consulting-visit",
+  "title": "Consulting Visit",
+  "nrdbCode": "10094",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "alliance",
+    "double"
+  ],
+  "playCost": 2,
+  "playAdditionalClick": true,
+  "zeroInfluenceIfNonAllianceFactionCardsGte": {
+    "faction": "weyland-consortium",
+    "threshold": 6
+  },
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "consulting_visit_search_rd_play_operation"
+    }
+  },
+  "wave": "the-liberated-mind"
+}

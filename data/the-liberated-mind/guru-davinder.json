@@ -1,0 +1,16 @@
+{
+  "id": "guru-davinder",
+  "title": "Guru Davinder",
+  "nrdbCode": "10084",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "neutral-runner",
+  "subtypes": [
+    "connection"
+  ],
+  "installCost": 1,
+  "unique": true,
+  "autoPreventNetOrMeatDamagePayOrTrash": 4,
+  "wave": "the-liberated-mind"
+}

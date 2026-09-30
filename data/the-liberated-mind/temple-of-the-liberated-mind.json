@@ -1,0 +1,60 @@
+{
+  "id": "temple-of-the-liberated-mind",
+  "title": "Temple of the Liberated Mind",
+  "nrdbCode": "10082",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "subtypes": [
+    "location",
+    "ritzy"
+  ],
+  "installCost": 2,
+  "unique": true,
+  "paidAbilities": [
+    {
+      "id": "temple-place-power",
+      "label": "[click]: Place 1 power counter on this resource",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "add_power_counter",
+          "amount": 1
+        }
+      },
+      "usableByRunnerOnSelfIce": true
+    },
+    {
+      "id": "temple-spend-power",
+      "label": "Hosted power counter: Gain [click]",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "powerCounters": 1
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "gain_clicks",
+          "side": "runner",
+          "amount": 1
+        }
+      },
+      "oncePerTurn": true,
+      "usableByRunnerOnSelfIce": true
+    }
+  ],
+  "wave": "the-liberated-mind"
+}

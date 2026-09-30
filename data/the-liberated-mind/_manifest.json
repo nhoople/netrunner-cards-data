@@ -1,0 +1,53 @@
+{
+  "pack": "the-liberated-mind",
+  "nrdbPackCode": "tlm",
+  "count": 19,
+  "written": 18,
+  "reprintSkipped": 1,
+  "status": "supported",
+  "notes": "the-liberated-mind (tlm) set-complete. Wrote 18; skipped 1 reprints. Clears: 18.",
+  "cards": [
+    "the-noble-path",
+    "emptied-mind",
+    "information-sifting",
+    "out-of-the-ashes",
+    "liberated-chela",
+    "temple-of-the-liberated-mind",
+    "rebirth",
+    "guru-davinder",
+    "the-turning-wheel",
+    "brainstorm",
+    "ravana-1-0",
+    "dedicated-neural-net",
+    "chetana",
+    "puppet-master",
+    "waiver",
+    "exchange-of-information",
+    "red-tape",
+    "consulting-visit",
+    "vanilla"
+  ],
+  "reprintIdsFromEarlierWaves": [
+    "ravana-1-0"
+  ],
+  "clears": [
+    "the-noble-path",
+    "emptied-mind",
+    "information-sifting",
+    "out-of-the-ashes",
+    "liberated-chela",
+    "temple-of-the-liberated-mind",
+    "rebirth",
+    "guru-davinder",
+    "the-turning-wheel",
+    "brainstorm",
+    "dedicated-neural-net",
+    "chetana",
+    "puppet-master",
+    "waiver",
+    "exchange-of-information",
+    "red-tape",
+    "consulting-visit",
+    "vanilla"
+  ]
+}
