@@ -14,8 +14,7 @@
   "onScore": {
     "op": "do",
     "action": {
-      "kind": "search_rd_to_hq",
-      "amount": 1
+      "kind": "search_rd_any_card_to_hq"
     }
   },
   "wave": "the-universe-of-tomorrow"

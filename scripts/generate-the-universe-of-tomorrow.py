@@ -307,7 +307,7 @@ def map_card(c: dict) -> dict | None:
         return base(
             c,
             subtypes=["initiative"],
-            onScore=do("search_rd_to_hq", amount=1),
+            onScore=do("search_rd_any_card_to_hq"),
         )
 
     card = base(c)
