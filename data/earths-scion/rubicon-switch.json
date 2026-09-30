@@ -1,0 +1,34 @@
+{
+  "id": "rubicon-switch",
+  "title": "Rubicon Switch",
+  "nrdbCode": "12043",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "installCost": 3,
+  "unique": true,
+  "paidAbilities": [
+    {
+      "id": "rubicon-switch-derez",
+      "label": "Once per turn → [click], X¢: Derez 1 ice with printed rez cost X rezzed this turn",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "rubicon_switch_derez_rezzed_this_turn"
+        }
+      },
+      "oncePerTurn": true,
+      "usableByRunnerOnSelfIce": true
+    }
+  ],
+  "wave": "earths-scion"
+}

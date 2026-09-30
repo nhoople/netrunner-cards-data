@@ -4715,6 +4715,84 @@
       "type": "integer",
       "minimum": 1,
       "description": "Long-Term Investment: gains click take-any-hosted-credits ability while hosted credits ≥ this threshold."
+    },
+    "strengthBonusPerSubroutineOnEncounteredBarrier": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Berserker: whenever you encounter a barrier, for the remainder of that encounter this program gets +N strength per subroutine on that barrier."
+    },
+    "aeneasInformantRevealGainOnAccessWithoutTrash": {
+      "type": "boolean",
+      "description": "Aeneas Informant: whenever you access a card with a trash cost not in Archives and do not trash it, you may reveal it and gain 1¢."
+    },
+    "hostGainsAiSubtype": {
+      "type": "boolean",
+      "description": "Adjusted Matrix: host icebreaker gains the AI subtype."
+    },
+    "hostGainsLoseClickBreakAnySubroutine": {
+      "type": "boolean",
+      "description": "Adjusted Matrix: host icebreaker gains Interface → Lose [click]: Break 1 subroutine."
+    },
+    "hostGainsPumpAbility": {
+      "type": "object",
+      "required": ["credits", "strength"],
+      "additionalProperties": false,
+      "properties": {
+        "credits": { "type": "integer", "minimum": 0 },
+        "strength": { "type": "integer", "minimum": 1 }
+      },
+      "description": "Dedicated Processor: host icebreaker gains Credits: +Strength pump."
+    },
+    "inversificatorSwapIceAfterFullyBrokeOncePerTurn": {
+      "type": "boolean",
+      "description": "Inversificator: first time each turn you pass ice after an encounter where this fully broke it, you may swap that ice with another installed ice."
+    },
+    "trashSelfAndMeatDamageWhenCreditsZero": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Dadiana Chacon: whenever you have 0 credits, trash this and take this many meat damage."
+    },
+    "gainsSubroutinesPerRezzedIceWithSubtype": {
+      "type": "object",
+      "required": ["subtype", "subroutine"],
+      "additionalProperties": false,
+      "properties": {
+        "subtype": { "type": "string", "minLength": 1 },
+        "subroutine": {
+          "type": "object",
+          "required": ["id", "text", "effect"],
+          "additionalProperties": false,
+          "properties": {
+            "id": { "type": "string" },
+            "text": { "type": "string" },
+            "effect": { "type": "object" }
+          }
+        }
+      },
+      "description": "NEXT Opal: this ice gains the given subroutine once for each rezzed ice with the subtype."
+    },
+    "bioroidWorkCrewRequireAfterOperationPaidWindow": {
+      "type": "boolean",
+      "description": "Bioroid Work Crew: trash ability usable only during the next paid ability window after playing and resolving an operation."
+    },
+    "additionalCostStealAgendaFromThisServerOrRootNetDamage": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Ben Musashi (persistent): as an additional cost to steal an agenda from this server or its root, the Runner must suffer this many net damage."
+    },
+    "mayTakeTagToBypassOnEncounter": {
+      "type": "boolean",
+      "description": "Authenticator: when the Runner encounters this ice, they may take 1 tag to bypass it."
+    },
+    "gainCreditsOnBreakSubThisServerIfTagged": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Henry Phillips: whenever the Runner breaks a subroutine during a run on this server, gain this many credits if they are tagged."
+    },
+    "playRequiresOtherCardsInHq": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Audacity: play only if there are at least this many other cards in HQ."
     }
   }
 }

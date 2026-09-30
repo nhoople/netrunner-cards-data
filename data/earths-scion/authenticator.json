@@ -1,0 +1,41 @@
+{
+  "id": "authenticator",
+  "title": "Authenticator",
+  "nrdbCode": "12055",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "subtypes": [
+    "code gate"
+  ],
+  "installCost": 2,
+  "rezCost": 2,
+  "strength": 4,
+  "mayTakeTagToBypassOnEncounter": true,
+  "subroutines": [
+    {
+      "id": "authenticator-gain",
+      "text": "The Corp gains 2 credits.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "corp",
+          "amount": 2
+        }
+      }
+    },
+    {
+      "id": "authenticator-etr",
+      "text": "End the run.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "end_the_run"
+        }
+      }
+    }
+  ],
+  "wave": "earths-scion"
+}

@@ -47,6 +47,7 @@
     "daedalus-complex",
     "station-one",
     "terminal-directive",
+    "earths-scion",
     "reign-and-reverie",
     "system-core-2019",
     "downfall",
@@ -2444,6 +2445,32 @@
         "long-term-investment",
         "weir",
         "ipo"
+      ]
+    },
+    "earths-scion": {
+      "status": "supported",
+      "notes": "Earth's Scion (eas) Red Sand #3 set-complete. 20/20 new clears; no reprints. Pool supported after terminal-directive. Paired release v1.131.0. Never kick mo/mor. Defer tdc.",
+      "cards": [
+        "berserker",
+        "persephone",
+        "rubicon-switch",
+        "aeneas-informant",
+        "rosetta-2-0",
+        "adjusted-matrix",
+        "dedicated-processor",
+        "inversificator",
+        "dadiana-chacon",
+        "next-opal",
+        "bioroid-work-crew",
+        "aginfusion-new-miracles-for-a-new-world",
+        "bamboo-dome",
+        "ben-musashi",
+        "authenticator",
+        "henry-phillips",
+        "battlement",
+        "audacity",
+        "red-planet-couriers",
+        "owl"
       ]
     }
   }

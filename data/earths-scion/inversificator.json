@@ -1,0 +1,26 @@
+{
+  "id": "inversificator",
+  "title": "Inversificator",
+  "nrdbCode": "12048",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "subtypes": [
+    "icebreaker",
+    "decoder"
+  ],
+  "installCost": 6,
+  "strength": 2,
+  "memoryCost": 1,
+  "breaker": {
+    "breaksSubtype": "code gate",
+    "strength": 2,
+    "breakCredits": 1,
+    "breakMaxSubs": 1,
+    "pumpCredits": 1,
+    "pumpStrength": 1
+  },
+  "inversificatorSwapIceAfterFullyBrokeOncePerTurn": true,
+  "wave": "earths-scion"
+}

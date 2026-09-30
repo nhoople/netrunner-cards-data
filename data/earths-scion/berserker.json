@@ -1,0 +1,24 @@
+{
+  "id": "berserker",
+  "title": "Berserker",
+  "nrdbCode": "12041",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "subtypes": [
+    "icebreaker",
+    "fracter"
+  ],
+  "installCost": 4,
+  "strength": 2,
+  "memoryCost": 1,
+  "strengthBonusPerSubroutineOnEncounteredBarrier": 1,
+  "breaker": {
+    "breaksSubtype": "barrier",
+    "strength": 2,
+    "breakCredits": 2,
+    "breakMaxSubs": 2
+  },
+  "wave": "earths-scion"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "dedicated-processor",
+  "title": "Dedicated Processor",
+  "nrdbCode": "12047",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "subtypes": [
+    "mod"
+  ],
+  "installCost": 2,
+  "onInstall": {
+    "op": "do",
+    "action": {
+      "kind": "gamedragon_may_host_on_icebreaker",
+      "allowAi": false,
+      "requireHost": true
+    }
+  },
+  "hostGainsPumpAbility": {
+    "credits": 2,
+    "strength": 4
+  },
+  "wave": "earths-scion"
+}

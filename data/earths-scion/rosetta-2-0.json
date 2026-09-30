@@ -1,0 +1,35 @@
+{
+  "id": "rosetta-2-0",
+  "title": "Rosetta 2.0",
+  "nrdbCode": "12045",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "subtypes": [
+    "virtual"
+  ],
+  "installCost": 3,
+  "paidAbilities": [
+    {
+      "id": "rosetta-2-0-search",
+      "label": "[click], remove an installed program from the game: Search stack for non-virus program, install lowering by RFG cost",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "rosetta_rfg_program_search_install_non_virus"
+        }
+      },
+      "usableByRunnerOnSelfIce": true
+    }
+  ],
+  "wave": "earths-scion"
+}

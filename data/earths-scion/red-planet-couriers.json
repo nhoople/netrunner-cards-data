@@ -1,0 +1,21 @@
+{
+  "id": "red-planet-couriers",
+  "title": "Red Planet Couriers",
+  "nrdbCode": "12059",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "triple"
+  ],
+  "playCost": 5,
+  "playAdditionalClicks": 2,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "red_planet_couriers_move_all_advancements"
+    }
+  },
+  "wave": "earths-scion"
+}

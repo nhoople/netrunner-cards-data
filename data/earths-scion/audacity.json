@@ -1,0 +1,18 @@
+{
+  "id": "audacity",
+  "title": "Audacity",
+  "nrdbCode": "12058",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "playCost": 0,
+  "playRequiresOtherCardsInHq": 2,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "audacity_trash_hq_place_total_2_advancements"
+    }
+  },
+  "wave": "earths-scion"
+}

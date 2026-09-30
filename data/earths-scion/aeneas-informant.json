@@ -1,0 +1,15 @@
+{
+  "id": "aeneas-informant",
+  "title": "Aeneas Informant",
+  "nrdbCode": "12044",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "subtypes": [
+    "connection"
+  ],
+  "installCost": 0,
+  "aeneasInformantRevealGainOnAccessWithoutTrash": true,
+  "wave": "earths-scion"
+}

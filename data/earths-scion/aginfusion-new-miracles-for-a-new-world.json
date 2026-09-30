@@ -1,0 +1,33 @@
+{
+  "id": "aginfusion-new-miracles-for-a-new-world",
+  "title": "AgInfusion: New Miracles for a New World",
+  "nrdbCode": "12052",
+  "type": "identity",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "jinteki",
+  "subtypes": [
+    "division"
+  ],
+  "paidAbilities": [
+    {
+      "id": "aginfusion-redirect",
+      "label": "Once per turn → Trash approached unrezzed ice: move Runner to outermost of another server",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {},
+      "windows": [
+        "approach_paw",
+        "corp_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "aginfusion_trash_approached_unrezzed_redirect"
+        }
+      },
+      "oncePerTurn": true
+    }
+  ],
+  "wave": "earths-scion"
+}

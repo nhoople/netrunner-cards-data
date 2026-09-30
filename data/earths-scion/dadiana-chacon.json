@@ -1,0 +1,32 @@
+{
+  "id": "dadiana-chacon",
+  "title": "Dadiana Chacon",
+  "nrdbCode": "12049",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "neutral-runner",
+  "subtypes": [
+    "connection"
+  ],
+  "installCost": 0,
+  "unique": true,
+  "onTurnBegin": {
+    "op": "if",
+    "cond": {
+      "op": "credits_lte",
+      "side": "runner",
+      "amount": 5
+    },
+    "then": {
+      "op": "do",
+      "action": {
+        "kind": "gain_credits",
+        "side": "runner",
+        "amount": 1
+      }
+    }
+  },
+  "trashSelfAndMeatDamageWhenCreditsZero": 3,
+  "wave": "earths-scion"
+}

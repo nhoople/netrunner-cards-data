@@ -1,0 +1,18 @@
+{
+  "id": "henry-phillips",
+  "title": "Henry Phillips",
+  "nrdbCode": "12056",
+  "type": "upgrade",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "subtypes": [
+    "sysop"
+  ],
+  "installCost": 2,
+  "rezCost": 2,
+  "trashCost": 2,
+  "unique": true,
+  "gainCreditsOnBreakSubThisServerIfTagged": 2,
+  "wave": "earths-scion"
+}

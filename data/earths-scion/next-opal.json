@@ -1,0 +1,32 @@
+{
+  "id": "next-opal",
+  "title": "NEXT Opal",
+  "nrdbCode": "12050",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "code gate",
+    "observer",
+    "next"
+  ],
+  "installCost": 4,
+  "rezCost": 4,
+  "strength": 3,
+  "gainsSubroutinesPerRezzedIceWithSubtype": {
+    "subtype": "next",
+    "subroutine": {
+      "id": "next-opal-install",
+      "text": "You may install 1 card from HQ.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "may_install_from_hq_paying_costs"
+        }
+      }
+    }
+  },
+  "subroutines": [],
+  "wave": "earths-scion"
+}

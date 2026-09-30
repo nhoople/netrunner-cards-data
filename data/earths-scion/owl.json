@@ -1,0 +1,28 @@
+{
+  "id": "owl",
+  "title": "Owl",
+  "nrdbCode": "12060",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "neutral-corp",
+  "subtypes": [
+    "sentry"
+  ],
+  "installCost": 2,
+  "rezCost": 2,
+  "strength": 1,
+  "subroutines": [
+    {
+      "id": "owl-stack",
+      "text": "Add 1 installed program to the top of the stack.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "add_installed_program_to_stack_top"
+        }
+      }
+    }
+  ],
+  "wave": "earths-scion"
+}
