@@ -1,0 +1,17 @@
+{
+  "id": "brain-taping-warehouse",
+  "title": "Brain-Taping Warehouse",
+  "nrdbCode": "08010",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "facility"
+  ],
+  "installCost": 1,
+  "rezCost": 1,
+  "trashCost": 4,
+  "bioroidIceRezCostReductionPerRunnerClickRemaining": 1,
+  "wave": "the-valley"
+}

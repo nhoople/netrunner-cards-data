@@ -1,0 +1,15 @@
+{
+  "id": "gene-conditioning-shoppe",
+  "title": "Gene Conditioning Shoppe",
+  "nrdbCode": "08006",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "subtypes": [
+    "location"
+  ],
+  "installCost": 2,
+  "geneticsAlsoTriggerSecondTime": true,
+  "wave": "the-valley"
+}

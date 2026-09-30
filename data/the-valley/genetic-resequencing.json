@@ -1,0 +1,43 @@
+{
+  "id": "genetic-resequencing",
+  "title": "Genetic Resequencing",
+  "nrdbCode": "08013",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "jinteki",
+  "subtypes": [
+    "research"
+  ],
+  "advancementRequirement": 3,
+  "agendaPoints": 1,
+  "onScore": {
+    "op": "choose",
+    "chooser": "corp",
+    "options": [
+      {
+        "id": "accept",
+        "label": "Place 1 agenda counter on a scored agenda",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "genetic_resequencing_place_agenda_counter"
+          }
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "corp",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  },
+  "wave": "the-valley"
+}

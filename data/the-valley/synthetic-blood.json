@@ -1,0 +1,23 @@
+{
+  "id": "synthetic-blood",
+  "title": "Synthetic Blood",
+  "nrdbCode": "08007",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "subtypes": [
+    "genetics"
+  ],
+  "installCost": 3,
+  "unique": true,
+  "onFirstDamageEachTurn": {
+    "op": "do",
+    "action": {
+      "kind": "draw",
+      "side": "runner",
+      "amount": 1
+    }
+  },
+  "wave": "the-valley"
+}

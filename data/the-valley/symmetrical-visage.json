@@ -1,0 +1,23 @@
+{
+  "id": "symmetrical-visage",
+  "title": "Symmetrical Visage",
+  "nrdbCode": "08009",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "neutral-runner",
+  "subtypes": [
+    "genetics"
+  ],
+  "installCost": 2,
+  "unique": true,
+  "onFirstBasicClickDrawEachTurn": {
+    "op": "do",
+    "action": {
+      "kind": "gain_credits",
+      "side": "runner",
+      "amount": 1
+    }
+  },
+  "wave": "the-valley"
+}

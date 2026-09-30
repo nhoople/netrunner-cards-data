@@ -1,0 +1,63 @@
+{
+  "id": "negotiator",
+  "title": "Negotiator",
+  "nrdbCode": "08019",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "sentry",
+    "destroyer"
+  ],
+  "installCost": 4,
+  "rezCost": 4,
+  "strength": 3,
+  "paidAbilities": [
+    {
+      "id": "negotiator-break",
+      "label": "2¢: Break 1 subroutine on this ice (Runner only)",
+      "clickCost": 0,
+      "creditCost": 2,
+      "cost": {
+        "credits": 2
+      },
+      "windows": [
+        "encounter_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "break_subroutine_on_self",
+          "amount": 1
+        }
+      },
+      "usableByRunnerOnSelfIce": true
+    }
+  ],
+  "subroutines": [
+    {
+      "id": "negotiator-gain",
+      "text": "Gain 2¢.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "corp",
+          "amount": 2
+        }
+      }
+    },
+    {
+      "id": "negotiator-trash",
+      "text": "Trash 1 installed program.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "trash_program"
+        }
+      }
+    }
+  ],
+  "wave": "the-valley"
+}

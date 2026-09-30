@@ -1,0 +1,21 @@
+{
+  "id": "enhanced-vision",
+  "title": "Enhanced Vision",
+  "nrdbCode": "08005",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "subtypes": [
+    "genetics"
+  ],
+  "installCost": 1,
+  "unique": true,
+  "onFirstSuccessfulRunThisTurn": {
+    "op": "do",
+    "action": {
+      "kind": "reveal_random_hq_card"
+    }
+  },
+  "wave": "the-valley"
+}

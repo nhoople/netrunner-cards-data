@@ -1,0 +1,17 @@
+{
+  "id": "predictive-algorithm",
+  "title": "Predictive Algorithm",
+  "nrdbCode": "08017",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "subtypes": [
+    "current"
+  ],
+  "playCost": 0,
+  "lingerAsCurrent": true,
+  "currentTrashOnAgendaStolen": true,
+  "stealAdditionalCreditsWhileRezzed": 2,
+  "wave": "the-valley"
+}

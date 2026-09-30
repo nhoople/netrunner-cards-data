@@ -1,0 +1,35 @@
+{
+  "id": "capital-investors",
+  "title": "Capital Investors",
+  "nrdbCode": "08018",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "installCost": 2,
+  "rezCost": 2,
+  "trashCost": 2,
+  "paidAbilities": [
+    {
+      "id": "capital-investors-gain",
+      "label": "[click]: Gain 2¢",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "corp",
+          "amount": 2
+        }
+      }
+    }
+  ],
+  "wave": "the-valley"
+}

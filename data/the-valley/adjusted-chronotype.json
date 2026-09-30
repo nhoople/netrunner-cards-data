@@ -1,0 +1,23 @@
+{
+  "id": "adjusted-chronotype",
+  "title": "Adjusted Chronotype",
+  "nrdbCode": "08003",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "subtypes": [
+    "genetics"
+  ],
+  "installCost": 3,
+  "unique": true,
+  "onFirstClickLossEachTurnExceptPaidAbility": {
+    "op": "do",
+    "action": {
+      "kind": "gain_clicks",
+      "side": "runner",
+      "amount": 1
+    }
+  },
+  "wave": "the-valley"
+}

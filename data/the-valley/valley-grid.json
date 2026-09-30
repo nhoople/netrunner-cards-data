@@ -1,0 +1,22 @@
+{
+  "id": "valley-grid",
+  "title": "Valley Grid",
+  "nrdbCode": "08015",
+  "type": "upgrade",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "jinteki",
+  "subtypes": [
+    "region"
+  ],
+  "installCost": 3,
+  "rezCost": 3,
+  "trashCost": 3,
+  "onFullyBreakProtectingIce": {
+    "op": "do",
+    "action": {
+      "kind": "valley_grid_hand_size_penalty_until_next_corp_turn"
+    }
+  },
+  "wave": "the-valley"
+}

@@ -1,0 +1,52 @@
+{
+  "id": "tech-startup",
+  "title": "Tech Startup",
+  "nrdbCode": "08020",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "neutral-corp",
+  "installCost": 0,
+  "rezCost": 0,
+  "trashCost": 1,
+  "onTurnBegin": {
+    "op": "choose",
+    "chooser": "corp",
+    "options": [
+      {
+        "id": "accept",
+        "label": "Trash Tech Startup → search R&D for an asset",
+        "effect": {
+          "op": "seq",
+          "effects": [
+            {
+              "op": "do",
+              "action": {
+                "kind": "trash_self"
+              }
+            },
+            {
+              "op": "do",
+              "action": {
+                "kind": "tech_startup_search_rd_asset_install"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "corp",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  },
+  "wave": "the-valley"
+}

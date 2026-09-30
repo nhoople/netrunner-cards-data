@@ -1,0 +1,41 @@
+{
+  "id": "next-gold",
+  "title": "NEXT Gold",
+  "nrdbCode": "08011",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "sentry",
+    "next",
+    "ap",
+    "destroyer"
+  ],
+  "installCost": 8,
+  "rezCost": 8,
+  "strength": 4,
+  "subroutines": [
+    {
+      "id": "next-gold-net",
+      "text": "Do X net damage.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "next_gold_net_damage"
+        }
+      }
+    },
+    {
+      "id": "next-gold-trash",
+      "text": "Trash X programs.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "next_gold_trash_programs"
+        }
+      }
+    }
+  ],
+  "wave": "the-valley"
+}

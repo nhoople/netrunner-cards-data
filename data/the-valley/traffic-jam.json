@@ -1,0 +1,17 @@
+{
+  "id": "traffic-jam",
+  "title": "Traffic Jam",
+  "nrdbCode": "08008",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "neutral-runner",
+  "subtypes": [
+    "current"
+  ],
+  "playCost": 2,
+  "lingerAsCurrent": true,
+  "currentTrashOnAgendaScored": true,
+  "agendaAdvancementRequirementBonusPerCopyInCorpScore": 1,
+  "wave": "the-valley"
+}

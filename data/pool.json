@@ -25,6 +25,7 @@
     "all-that-remains",
     "the-source",
     "order-and-chaos",
+    "the-valley",
     "reign-and-reverie",
     "system-core-2019",
     "downfall",
@@ -1784,6 +1785,32 @@
         "uninstall",
         "qianju-pt",
         "data-folding"
+      ]
+    },
+    "the-valley": {
+      "status": "supported",
+      "notes": "The Valley (val) SanSan set-complete. 19/19 new clears; clot reprint skipped. Pool supported. Paired release v1.109.0. Never kick mo/mor.",
+      "cards": [
+        "clot",
+        "paige-piper",
+        "adjusted-chronotype",
+        "spike",
+        "enhanced-vision",
+        "gene-conditioning-shoppe",
+        "synthetic-blood",
+        "traffic-jam",
+        "symmetrical-visage",
+        "brain-taping-warehouse",
+        "next-gold",
+        "jinteki-biotech-life-imagined",
+        "genetic-resequencing",
+        "cortex-lock",
+        "valley-grid",
+        "bandwidth",
+        "predictive-algorithm",
+        "capital-investors",
+        "negotiator",
+        "tech-startup"
       ]
     }
   }

@@ -1,0 +1,43 @@
+{
+  "id": "paige-piper",
+  "title": "Paige Piper",
+  "nrdbCode": "08002",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "subtypes": [
+    "connection"
+  ],
+  "installCost": 0,
+  "unique": true,
+  "onFirstInstallEachTurn": {
+    "op": "choose",
+    "chooser": "runner",
+    "options": [
+      {
+        "id": "accept",
+        "label": "Search stack for copies → heap",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "paige_piper_search_stack_copies_to_heap"
+          }
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "runner",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  },
+  "wave": "the-valley"
+}

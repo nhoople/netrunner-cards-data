@@ -3641,6 +3641,61 @@
         "oncePerArchivesBreach": {"type": "boolean"}
       },
       "description": "Archives Interface: may RFG a card instead of accessing it in Archives (once per breach)."
+    },
+    "onFirstInstallEachTurn": {
+      "type": "object",
+      "description": "Paige Piper: effect the first time the Runner installs a card each turn (including this card)."
+    },
+    "onFirstClickLossEachTurnExceptPaidAbility": {
+      "type": "object",
+      "description": "Adjusted Chronotype: effect the first time each turn the Runner loses a click except by paying a paid-ability trigger cost."
+    },
+    "geneticsAlsoTriggerSecondTime": {
+      "type": "boolean",
+      "description": "Gene Conditioning Shoppe: Genetics cards also trigger the second time each turn their condition is met."
+    },
+    "onFirstDamageEachTurn": {
+      "type": "object",
+      "description": "Synthetic Blood: effect the first time the Runner takes damage each turn."
+    },
+    "agendaAdvancementRequirementBonusPerCopyInCorpScore": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Traffic Jam: each agenda's advancement requirement is increased by N for each copy of that agenda in the Corp's score area."
+    },
+    "onFirstBasicClickDrawEachTurn": {
+      "type": "object",
+      "description": "Symmetrical Visage: effect the first time each turn the Runner spends a click to draw 1 card (basic action)."
+    },
+    "bioroidIceRezCostReductionPerRunnerClickRemaining": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Brain-Taping Warehouse: bioroid ice rez cost lowered by N per unspent Runner click."
+    },
+    "chooseIdentityFaceBeforeFirstTurn": {
+      "type": "boolean",
+      "description": "Jinteki Biotech: before first Corp turn, choose one identity face."
+    },
+    "identityFaceOptions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "label", "onFlip"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "type": "string", "minLength": 1 },
+          "label": { "type": "string", "minLength": 1 },
+          "onFlip": {
+            "type": "object",
+            "description": "Effect IR when this identity is flipped with the chosen face."
+          }
+        }
+      },
+      "description": "Jinteki Biotech switchable faces (Brewery / Agriculture / Warehouse)."
+    },
+    "onFullyBreakProtectingIce": {
+      "type": "object",
+      "description": "Valley Grid: effect whenever the Runner fully breaks a piece of ice protecting this server."
     }
   }
 }
