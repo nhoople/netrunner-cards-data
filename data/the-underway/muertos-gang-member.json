@@ -1,0 +1,70 @@
+{
+  "id": "muertos-gang-member",
+  "title": "Muertos Gang Member",
+  "nrdbCode": "08068",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "subtypes": [
+    "connection"
+  ],
+  "installCost": 0,
+  "onInstall": {
+    "op": "do",
+    "action": {
+      "kind": "corp_must_derez_a_card"
+    }
+  },
+  "onUninstall": {
+    "op": "choose",
+    "chooser": "corp",
+    "options": [
+      {
+        "id": "accept",
+        "label": "Rez a card, ignoring the rez cost",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "corp_may_rez_ignoring_cost"
+          }
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "corp",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  },
+  "paidAbilities": [
+    {
+      "id": "muertos-draw",
+      "label": "[trash]: Draw 1 card",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "trashSelf": true
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "draw",
+          "side": "runner",
+          "amount": 1
+        }
+      }
+    }
+  ],
+  "wave": "the-underway"
+}

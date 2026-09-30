@@ -41,6 +41,7 @@ Files under [`data/`](data/) are the API. Clone the repo or fetch a **tagged** r
 | [`data/the-valley/`](data/the-valley/) | The Valley (NRDB `val`) — **supported** (SanSan) |
 | [`data/breaker-bay/`](data/breaker-bay/) | Breaker Bay (NRDB `bb`) — **supported** (SanSan) |
 | [`data/chrome-city/`](data/chrome-city/) | Chrome City (NRDB `cc`) — **supported** (SanSan) |
+| [`data/the-underway/`](data/the-underway/) | The Underway (NRDB `uw`) — **supported** (SanSan) |
 | [`data/reign-and-reverie/`](data/reign-and-reverie/) | Reign and Reverie (NRDB `rar`) — **supported** (legacy backwards) |
 | [`data/system-core-2019/`](data/system-core-2019/) | System Core 2019 (NRDB `sc19`) — **supported** (legacy backwards) |
 | [`data/downfall/`](data/downfall/) | Downfall (NRDB `df`) — **supported** (legacy backwards) |
@@ -65,7 +66,8 @@ Match this dataset and [netrunner-engine](https://github.com/nhoople/netrunner-e
 
 | Pairing | cards-data | engine |
 |---------|------------|--------|
-| **Current** | [`v1.111.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.111.0) | engine same-semver pin `v1.111.0` (Chrome City set-complete **18/18**) |
+| **Current** | [`v1.112.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.112.0) | engine same-semver pin `v1.112.0` (The Underway set-complete **17/17**) |
+| Chrome City | [`v1.111.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.111.0) | engine same-semver pin `v1.111.0` (Chrome City set-complete **18/18**) |
 | Breaker Bay | [`v1.110.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.110.0) | engine same-semver pin `v1.110.0` (Breaker Bay set-complete **18/18**) |
 | The Valley | [`v1.109.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.109.0) | engine same-semver pin `v1.109.0` (The Valley set-complete **19/19**) |
 | Order and Chaos | [`v1.108.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.108.0) | engine same-semver pin `v1.108.0` (Order and Chaos set-complete **55/55**) |

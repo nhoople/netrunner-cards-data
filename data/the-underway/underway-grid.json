@@ -1,0 +1,18 @@
+{
+  "id": "underway-grid",
+  "title": "Underway Grid",
+  "nrdbCode": "08080",
+  "type": "upgrade",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "neutral-corp",
+  "subtypes": [
+    "region"
+  ],
+  "installCost": 0,
+  "rezCost": 0,
+  "trashCost": 3,
+  "iceCannotBeBypassedThisServer": true,
+  "cardsCannotBeExposedThisServer": true,
+  "wave": "the-underway"
+}

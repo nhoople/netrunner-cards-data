@@ -1,0 +1,17 @@
+{
+  "id": "defective-brainchips",
+  "title": "Defective Brainchips",
+  "nrdbCode": "08072",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "current"
+  ],
+  "playCost": 2,
+  "lingerAsCurrent": true,
+  "currentTrashOnAgendaStolen": true,
+  "increaseFirstCoreDamagePerTurn": 1,
+  "wave": "the-underway"
+}

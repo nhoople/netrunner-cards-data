@@ -1,0 +1,20 @@
+{
+  "id": "gang-sign",
+  "title": "Gang Sign",
+  "nrdbCode": "08067",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "subtypes": [
+    "virtual"
+  ],
+  "installCost": 1,
+  "onAgendaScored": {
+    "op": "do",
+    "action": {
+      "kind": "raymond_flint_breach_hq_no_root"
+    }
+  },
+  "wave": "the-underway"
+}

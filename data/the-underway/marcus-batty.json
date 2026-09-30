@@ -1,0 +1,49 @@
+{
+  "id": "marcus-batty",
+  "title": "Marcus Batty",
+  "nrdbCode": "08074",
+  "type": "upgrade",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "jinteki",
+  "subtypes": [
+    "sysop",
+    "psi"
+  ],
+  "installCost": 0,
+  "rezCost": 0,
+  "trashCost": 1,
+  "unique": true,
+  "paidAbilities": [
+    {
+      "id": "marcus-batty-psi",
+      "label": "[trash]: Psi game; if bids differ, resolve 1 sub on rezzed ice protecting this server",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "trashSelf": true
+      },
+      "windows": [
+        "approach_paw",
+        "encounter_paw",
+        "approach_server_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "play_psi_game",
+          "maxBid": 2,
+          "ifBidsDiffer": {
+            "op": "do",
+            "action": {
+              "kind": "resolve_subroutine_on_rezzed_ice_protecting_this_server"
+            }
+          }
+        }
+      },
+      "requireDuringRun": true,
+      "requireThisServer": true
+    }
+  ],
+  "wave": "the-underway"
+}

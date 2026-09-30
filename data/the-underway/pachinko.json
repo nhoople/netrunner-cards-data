@@ -1,0 +1,50 @@
+{
+  "id": "pachinko",
+  "title": "Pachinko",
+  "nrdbCode": "08076",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "subtypes": [
+    "barrier"
+  ],
+  "installCost": 1,
+  "rezCost": 1,
+  "strength": 4,
+  "subroutines": [
+    {
+      "id": "pachinko-etr-1",
+      "text": "End the run if the Runner is tagged.",
+      "effect": {
+        "op": "if",
+        "cond": {
+          "op": "runner_tagged"
+        },
+        "then": {
+          "op": "do",
+          "action": {
+            "kind": "end_the_run"
+          }
+        }
+      }
+    },
+    {
+      "id": "pachinko-etr-2",
+      "text": "End the run if the Runner is tagged.",
+      "effect": {
+        "op": "if",
+        "cond": {
+          "op": "runner_tagged"
+        },
+        "then": {
+          "op": "do",
+          "action": {
+            "kind": "end_the_run"
+          }
+        }
+      }
+    }
+  ],
+  "wave": "the-underway"
+}

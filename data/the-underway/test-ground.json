@@ -1,0 +1,34 @@
+{
+  "id": "test-ground",
+  "title": "Test Ground",
+  "nrdbCode": "08071",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "installCost": 0,
+  "rezCost": 0,
+  "trashCost": 2,
+  "canAdvance": true,
+  "paidAbilities": [
+    {
+      "id": "test-ground-derez",
+      "label": "[trash]: Derez 1 card for each advancement token on Test Ground",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "trashSelf": true
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "derez_per_advancement_on_self"
+        }
+      }
+    }
+  ],
+  "wave": "the-underway"
+}

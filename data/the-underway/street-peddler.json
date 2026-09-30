@@ -1,0 +1,43 @@
+{
+  "id": "street-peddler",
+  "title": "Street Peddler",
+  "nrdbCode": "08062",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "subtypes": [
+    "connection",
+    "seedy"
+  ],
+  "installCost": 0,
+  "onInstall": {
+    "op": "do",
+    "action": {
+      "kind": "host_top_n_of_stack_facedown",
+      "amount": 3
+    }
+  },
+  "paidAbilities": [
+    {
+      "id": "street-peddler-install",
+      "label": "[trash]: Install 1 hosted card, lowering install cost by 1",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "trashSelf": true
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "street_peddler_install_hosted",
+          "discount": 1
+        }
+      }
+    }
+  ],
+  "wave": "the-underway"
+}

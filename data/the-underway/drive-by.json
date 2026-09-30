@@ -1,0 +1,21 @@
+{
+  "id": "drive-by",
+  "title": "Drive By",
+  "nrdbCode": "08064",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "subtypes": [
+    "double"
+  ],
+  "playCost": 0,
+  "playAdditionalClick": true,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "drive_by_expose_and_trash_remote_root"
+    }
+  },
+  "wave": "the-underway"
+}

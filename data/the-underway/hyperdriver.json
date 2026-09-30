@@ -1,0 +1,53 @@
+{
+  "id": "hyperdriver",
+  "title": "Hyperdriver",
+  "nrdbCode": "08070",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "installCost": 1,
+  "memoryCost": 3,
+  "onTurnBegin": {
+    "op": "choose",
+    "chooser": "runner",
+    "options": [
+      {
+        "id": "accept",
+        "label": "Remove Hyperdriver from the game: gain [click][click][click]",
+        "effect": {
+          "op": "seq",
+          "effects": [
+            {
+              "op": "do",
+              "action": {
+                "kind": "rfg_self"
+              }
+            },
+            {
+              "op": "do",
+              "action": {
+                "kind": "gain_clicks",
+                "side": "runner",
+                "amount": 3
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "runner",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  },
+  "wave": "the-underway"
+}

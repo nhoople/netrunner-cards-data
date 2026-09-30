@@ -1,0 +1,64 @@
+{
+  "id": "faust",
+  "title": "Faust",
+  "nrdbCode": "08061",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "subtypes": [
+    "icebreaker",
+    "ai"
+  ],
+  "installCost": 3,
+  "strength": 2,
+  "memoryCost": 1,
+  "breaker": {
+    "breaksSubtype": "*",
+    "strength": 2,
+    "breakCredits": 0,
+    "breakMaxSubs": 1,
+    "breakViaPaidAbilityOnly": true
+  },
+  "paidAbilities": [
+    {
+      "id": "faust-break",
+      "label": "Trash a card from your grip: Break 1 subroutine",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "trashFromGrip": 1
+      },
+      "windows": [
+        "encounter_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "break_encounter_subroutine",
+          "maxSubs": 1
+        }
+      }
+    },
+    {
+      "id": "faust-pump",
+      "label": "Trash a card from your grip: +2 strength",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "trashFromGrip": 1
+      },
+      "windows": [
+        "encounter_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "pump_strength",
+          "amount": 2
+        }
+      }
+    }
+  ],
+  "wave": "the-underway"
+}

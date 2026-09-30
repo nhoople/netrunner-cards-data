@@ -1,0 +1,22 @@
+{
+  "id": "underway-renovation",
+  "title": "Underway Renovation",
+  "nrdbCode": "08077",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "initiative",
+    "public"
+  ],
+  "advancementRequirement": 3,
+  "agendaPoints": 1,
+  "installFaceup": true,
+  "trashTopOfStackOnAdvance": {
+    "default": 1,
+    "atOrAbove": 4,
+    "bonus": 2
+  },
+  "wave": "the-underway"
+}

@@ -1,0 +1,15 @@
+{
+  "id": "armand-geist-walker-tech-lord",
+  "title": "Armand \"Geist\" Walker: Tech Lord",
+  "nrdbCode": "08063",
+  "type": "identity",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "subtypes": [
+    "g-mod"
+  ],
+  "link": 1,
+  "drawOnUseTrashAbility": 1,
+  "wave": "the-underway"
+}

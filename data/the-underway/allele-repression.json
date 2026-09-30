@@ -1,0 +1,34 @@
+{
+  "id": "allele-repression",
+  "title": "Allele Repression",
+  "nrdbCode": "08073",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "jinteki",
+  "installCost": 2,
+  "rezCost": 2,
+  "trashCost": 2,
+  "canAdvance": true,
+  "paidAbilities": [
+    {
+      "id": "allele-swap",
+      "label": "[trash]: Swap 1 HQ ↔ Archives card per advancement",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "trashSelf": true
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "swap_hq_archives_per_advancement_on_self"
+        }
+      }
+    }
+  ],
+  "wave": "the-underway"
+}

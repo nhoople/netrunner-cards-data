@@ -3769,6 +3769,39 @@
     "runnerChoosesDamageTrashFromGrip": {
       "type": "boolean",
       "description": "Titanium Ribs: Runner chooses which grip cards to trash whenever they take damage."
+    },
+    "onUninstall": {
+      "type": "object",
+      "description": "Effect IR when this card is uninstalled (Muertos Gang Member)."
+    },
+    "drawOnUseTrashAbility": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Armand Geist: whenever you use a [trash] ability, draw N cards."
+    },
+    "increaseFirstCoreDamagePerTurn": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Defective Brainchips: the first time each turn the Runner would suffer core damage, increase that damage by N."
+    },
+    "trashTopOfStackOnAdvance": {
+      "type": "object",
+      "required": ["default"],
+      "additionalProperties": false,
+      "properties": {
+        "default": { "type": "integer", "minimum": 1 },
+        "atOrAbove": { "type": "integer", "minimum": 1 },
+        "bonus": { "type": "integer", "minimum": 1 }
+      },
+      "description": "Underway Renovation: when advanced, trash top N of Runner stack (bonus amount at/above threshold)."
+    },
+    "iceCannotBeBypassedThisServer": {
+      "type": "boolean",
+      "description": "Underway Grid: ice protecting this server cannot be bypassed."
+    },
+    "cardsCannotBeExposedThisServer": {
+      "type": "boolean",
+      "description": "Underway Grid: cards in the root of and/or protecting this server cannot be exposed."
     }
   }
 }

@@ -28,6 +28,7 @@
     "the-valley",
     "breaker-bay",
     "chrome-city",
+    "the-underway",
     "reign-and-reverie",
     "system-core-2019",
     "downfall",
@@ -1865,6 +1866,32 @@
         "oaktown-renovation",
         "corporate-town",
         "quicksand"
+      ]
+    },
+    "the-underway": {
+      "status": "supported",
+      "notes": "The Underway (uw) SanSan set-complete. 17/17 new clears; chameleon + contract-killer + spiderweb reprints skipped. Pool supported. Paired release v1.112.0. Never kick mo/mor.",
+      "cards": [
+        "faust",
+        "street-peddler",
+        "armand-geist-walker-tech-lord",
+        "drive-by",
+        "forger",
+        "shiv",
+        "gang-sign",
+        "muertos-gang-member",
+        "chameleon",
+        "hyperdriver",
+        "test-ground",
+        "defective-brainchips",
+        "allele-repression",
+        "marcus-batty",
+        "expose",
+        "pachinko",
+        "underway-renovation",
+        "contract-killer",
+        "spiderweb",
+        "underway-grid"
       ]
     }
   }

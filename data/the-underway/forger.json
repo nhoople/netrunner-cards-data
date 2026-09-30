@@ -1,0 +1,57 @@
+{
+  "id": "forger",
+  "title": "Forger",
+  "nrdbCode": "08065",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "subtypes": [
+    "console"
+  ],
+  "installCost": 1,
+  "unique": false,
+  "link": 1,
+  "maxConsole": 1,
+  "paidAbilities": [
+    {
+      "id": "forger-prevent-tag",
+      "label": "[interrupt] → [trash]: Prevent 1 tag",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "trashSelf": true
+      },
+      "windows": [
+        "tag_interrupt_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "prevent_pending_tags",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "id": "forger-remove-tag",
+      "label": "[trash]: Remove 1 tag",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "trashSelf": true
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "remove_tags",
+          "amount": 1
+        }
+      }
+    }
+  ],
+  "wave": "the-underway"
+}

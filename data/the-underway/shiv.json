@@ -1,0 +1,49 @@
+{
+  "id": "shiv",
+  "title": "Shiv",
+  "nrdbCode": "08066",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "subtypes": [
+    "icebreaker",
+    "killer",
+    "cloud"
+  ],
+  "installCost": 0,
+  "strength": 0,
+  "memoryCost": 1,
+  "breaker": {
+    "breaksSubtype": "sentry",
+    "strength": 0,
+    "breakCredits": 0,
+    "breakMaxSubs": 3,
+    "breakViaPaidAbilityOnly": true
+  },
+  "memoryCostZeroIfLinkGte": 2,
+  "strengthBonusPerIcebreaker": 1,
+  "paidAbilities": [
+    {
+      "id": "shiv-break",
+      "label": "[trash]: Break up to 3 sentry subroutines",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "trashSelf": true
+      },
+      "windows": [
+        "encounter_paw"
+      ],
+      "requireEncounterSubtype": "sentry",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "break_encounter_subroutine",
+          "maxSubs": 3
+        }
+      }
+    }
+  ],
+  "wave": "the-underway"
+}
