@@ -1,0 +1,18 @@
+{
+  "id": "ronald-five",
+  "title": "Ronald Five",
+  "nrdbCode": "08088",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "bioroid"
+  ],
+  "installCost": 3,
+  "rezCost": 3,
+  "trashCost": 3,
+  "unique": true,
+  "runnerLosesClickWhenTrashesCorpCard": true,
+  "wave": "old-hollywood"
+}

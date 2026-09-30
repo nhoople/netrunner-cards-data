@@ -3802,6 +3802,50 @@
     "cardsCannotBeExposedThisServer": {
       "type": "boolean",
       "description": "Underway Grid: cards in the root of and/or protecting this server cannot be exposed."
+    },
+    "onCorpTurnBegin": {
+      "type": "object",
+      "description": "Effect IR when the Corp's turn begins (Drug Dealer draw)."
+    },
+    "hostAgendaCapacity": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Film Critic: max agendas this card may host."
+    },
+    "mayHostAccessedAgenda": {
+      "type": "boolean",
+      "description": "Film Critic: whenever you access an agenda, you may host it on this card instead of continuing access."
+    },
+    "countsAsTagged": {
+      "type": "boolean",
+      "description": "Paparazzi: while installed, the Runner is considered tagged."
+    },
+    "preventAllMeatDamage": {
+      "type": "boolean",
+      "description": "Paparazzi: interrupt — prevent all pending meat damage."
+    },
+    "runnerLosesClickWhenTrashesCorpCard": {
+      "type": "boolean",
+      "description": "Ronald Five: whenever the Runner trashes a Corp card, they lose [click]."
+    },
+    "cannotStealMoreThanOneAgendaPerTurn": {
+      "type": "boolean",
+      "description": "Haarpsichord Studios: the Runner cannot steal more than one agenda each turn."
+    },
+    "cannotStealUnlessCopyInRunnerScore": {
+      "type": "boolean",
+      "description": "Old Hollywood Grid (persistent): Runner cannot steal agendas from this server unless they have a copy of that agenda in their score area."
+    },
+    "placeAdvancementOnAnotherOnAdvance": {
+      "type": "object",
+      "required": ["default"],
+      "additionalProperties": false,
+      "properties": {
+        "default": { "type": "integer", "minimum": 1 },
+        "atOrAbove": { "type": "integer", "minimum": 1 },
+        "bonus": { "type": "integer", "minimum": 1 }
+      },
+      "description": "Hollywood Renovation: when advanced, may place default (or bonus at/above threshold) advancements on another advanceable card."
     }
   }
 }

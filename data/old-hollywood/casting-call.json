@@ -1,0 +1,20 @@
+{
+  "id": "casting-call",
+  "title": "Casting Call",
+  "nrdbCode": "08096",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "subtypes": [
+    "condition"
+  ],
+  "playCost": 0,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "casting_call_install_agenda_faceup"
+    }
+  },
+  "wave": "old-hollywood"
+}

@@ -1,0 +1,22 @@
+{
+  "id": "hollywood-renovation",
+  "title": "Hollywood Renovation",
+  "nrdbCode": "08098",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "initiative",
+    "public"
+  ],
+  "advancementRequirement": 5,
+  "agendaPoints": 3,
+  "installFaceup": true,
+  "placeAdvancementOnAnotherOnAdvance": {
+    "default": 1,
+    "atOrAbove": 6,
+    "bonus": 2
+  },
+  "wave": "old-hollywood"
+}

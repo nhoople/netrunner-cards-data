@@ -1,0 +1,12 @@
+{
+  "id": "vanity-project",
+  "title": "Vanity Project",
+  "nrdbCode": "08100",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "neutral-corp",
+  "advancementRequirement": 6,
+  "agendaPoints": 4,
+  "wave": "old-hollywood"
+}

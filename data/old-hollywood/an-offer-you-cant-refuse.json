@@ -1,0 +1,17 @@
+{
+  "id": "an-offer-you-cant-refuse",
+  "title": "An Offer You Can’t Refuse",
+  "nrdbCode": "08091",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "jinteki",
+  "playCost": 4,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "an_offer_you_cant_refuse"
+    }
+  },
+  "wave": "old-hollywood"
+}

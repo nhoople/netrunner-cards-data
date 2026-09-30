@@ -1,0 +1,20 @@
+{
+  "id": "spoilers",
+  "title": "Spoilers",
+  "nrdbCode": "08082",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "subtypes": [
+    "virtual"
+  ],
+  "installCost": 1,
+  "onAgendaScored": {
+    "op": "do",
+    "action": {
+      "kind": "trash_top_of_rd"
+    }
+  },
+  "wave": "old-hollywood"
+}

@@ -1,0 +1,30 @@
+{
+  "id": "drug-dealer",
+  "title": "Drug Dealer",
+  "nrdbCode": "08083",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "subtypes": [
+    "connection"
+  ],
+  "installCost": 1,
+  "onTurnBegin": {
+    "op": "do",
+    "action": {
+      "kind": "lose_credits",
+      "side": "runner",
+      "amount": 1
+    }
+  },
+  "onCorpTurnBegin": {
+    "op": "do",
+    "action": {
+      "kind": "draw",
+      "side": "runner",
+      "amount": 1
+    }
+  },
+  "wave": "old-hollywood"
+}

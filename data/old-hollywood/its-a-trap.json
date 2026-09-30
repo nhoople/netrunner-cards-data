@@ -1,0 +1,46 @@
+{
+  "id": "its-a-trap",
+  "title": "It's a Trap!",
+  "nrdbCode": "08090",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "jinteki",
+  "subtypes": [
+    "trap"
+  ],
+  "installCost": 2,
+  "rezCost": 2,
+  "strength": 0,
+  "onExposeWhileInstalled": {
+    "op": "do",
+    "action": {
+      "kind": "net_damage",
+      "amount": 2
+    }
+  },
+  "subroutines": [
+    {
+      "id": "its-a-trap-trash",
+      "text": "The Runner trashes 1 of their installed cards. Trash this ice.",
+      "effect": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "runner_trashes_one_installed"
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "trash_self"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "wave": "old-hollywood"
+}

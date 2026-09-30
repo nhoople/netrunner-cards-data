@@ -1,0 +1,18 @@
+{
+  "id": "old-hollywood-grid",
+  "title": "Old Hollywood Grid",
+  "nrdbCode": "08097",
+  "type": "upgrade",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "subtypes": [
+    "region"
+  ],
+  "installCost": 5,
+  "rezCost": 5,
+  "trashCost": 4,
+  "persistent": true,
+  "cannotStealUnlessCopyInRunnerScore": true,
+  "wave": "old-hollywood"
+}

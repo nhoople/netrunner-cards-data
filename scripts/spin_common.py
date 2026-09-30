@@ -15,7 +15,13 @@ def slugify(title: str) -> str:
     t = "".join(c for c in t if not unicodedata.combining(c))
     t = t.lower()
     t = t.replace(""", "").replace(""", "").replace('"', "")
-    t = t.replace("'", "").replace("'", "").replace("ʼ", "")
+    # Strip ASCII/curly/modifier apostrophes (U+0027, U+2018, U+2019, U+02BC).
+    t = (
+        t.replace("'", "")
+        .replace("\u2018", "")
+        .replace("\u2019", "")
+        .replace("ʼ", "")
+    )
     t = t.replace(".", "-").replace(":", " ").replace("!", "").replace("*", "")
     t = t.replace("(", " ").replace(")", " ")
     t = re.sub(r"[^a-z0-9]+", "-", t)

@@ -1,0 +1,21 @@
+{
+  "id": "fan-site",
+  "title": "Fan Site",
+  "nrdbCode": "08085",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "subtypes": [
+    "virtual"
+  ],
+  "installCost": 0,
+  "onAgendaScored": {
+    "op": "do",
+    "action": {
+      "kind": "add_to_runner_score_as_agenda",
+      "agendaPoints": 0
+    }
+  },
+  "wave": "old-hollywood"
+}

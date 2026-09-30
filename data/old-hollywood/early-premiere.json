@@ -1,0 +1,41 @@
+{
+  "id": "early-premiere",
+  "title": "Early Premiere",
+  "nrdbCode": "08095",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "installCost": 0,
+  "rezCost": 0,
+  "trashCost": 2,
+  "onTurnBegin": {
+    "op": "choose",
+    "chooser": "corp",
+    "options": [
+      {
+        "id": "accept",
+        "label": "Pay 1¢: place 1 advancement on an advanceable card in a remote root",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "early_premiere_pay_place_advancement"
+          }
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "corp",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  },
+  "wave": "old-hollywood"
+}

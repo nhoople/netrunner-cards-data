@@ -29,6 +29,7 @@
     "breaker-bay",
     "chrome-city",
     "the-underway",
+    "old-hollywood",
     "reign-and-reverie",
     "system-core-2019",
     "downfall",
@@ -1892,6 +1893,32 @@
         "contract-killer",
         "spiderweb",
         "underway-grid"
+      ]
+    },
+    "old-hollywood": {
+      "status": "supported",
+      "notes": "Old Hollywood (oh) SanSan set-complete. 19/19 new clears; explode-a-palooza reprint skipped. Pool supported. Paired release v1.113.0. Never kick mo/mor.",
+      "cards": [
+        "trope",
+        "spoilers",
+        "drug-dealer",
+        "rolodex",
+        "fan-site",
+        "film-critic",
+        "paparazzi",
+        "ronald-five",
+        "enforcer-1-0",
+        "its-a-trap",
+        "an-offer-you-cant-refuse",
+        "haarpsichord-studios-entertainment-unleashed",
+        "award-bait",
+        "explode-a-palooza",
+        "early-premiere",
+        "casting-call",
+        "old-hollywood-grid",
+        "hollywood-renovation",
+        "back-channels",
+        "vanity-project"
       ]
     }
   }

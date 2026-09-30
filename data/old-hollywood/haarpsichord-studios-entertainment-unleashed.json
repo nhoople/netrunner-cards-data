@@ -1,0 +1,14 @@
+{
+  "id": "haarpsichord-studios-entertainment-unleashed",
+  "title": "Haarpsichord Studios: Entertainment Unleashed",
+  "nrdbCode": "08092",
+  "type": "identity",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "subtypes": [
+    "division"
+  ],
+  "cannotStealMoreThanOneAgendaPerTurn": true,
+  "wave": "old-hollywood"
+}

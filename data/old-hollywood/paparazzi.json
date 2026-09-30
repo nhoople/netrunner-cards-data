@@ -1,0 +1,13 @@
+{
+  "id": "paparazzi",
+  "title": "Paparazzi",
+  "nrdbCode": "08087",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "neutral-runner",
+  "installCost": 0,
+  "countsAsTagged": true,
+  "preventAllMeatDamage": true,
+  "wave": "old-hollywood"
+}
