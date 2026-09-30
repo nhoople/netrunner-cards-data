@@ -1,0 +1,31 @@
+{
+  "id": "distract-the-masses",
+  "title": "Distract the Masses",
+  "nrdbCode": "21040",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "neutral-corp",
+  "playCost": 0,
+  "rfgInsteadOfTrashing": true,
+  "onPlay": {
+    "op": "seq",
+    "effects": [
+      {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "runner",
+          "amount": 2
+        }
+      },
+      {
+        "op": "do",
+        "action": {
+          "kind": "dtwn_distract_trash_hq_shuffle_archives"
+        }
+      }
+    ]
+  },
+  "wave": "down-the-white-nile"
+}

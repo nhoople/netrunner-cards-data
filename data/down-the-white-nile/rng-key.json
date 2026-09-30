@@ -1,0 +1,41 @@
+{
+  "id": "rng-key",
+  "title": "RNG Key",
+  "nrdbCode": "21029",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "neutral-runner",
+  "installCost": 0,
+  "memoryCost": 1,
+  "unique": true,
+  "onFirstSuccessfulHqOrRdRunThisTurn": {
+    "op": "choose",
+    "chooser": "runner",
+    "options": [
+      {
+        "id": "accept",
+        "label": "Name a number (reveal next access this run)",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "dtwn_rng_key"
+          }
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "runner",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  },
+  "wave": "down-the-white-nile"
+}

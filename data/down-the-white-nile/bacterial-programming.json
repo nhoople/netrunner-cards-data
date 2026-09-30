@@ -1,0 +1,71 @@
+{
+  "id": "bacterial-programming",
+  "title": "Bacterial Programming",
+  "nrdbCode": "21033",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "jinteki",
+  "subtypes": [
+    "research"
+  ],
+  "advancementRequirement": 5,
+  "agendaPoints": 3,
+  "onScore": {
+    "op": "choose",
+    "chooser": "corp",
+    "options": [
+      {
+        "id": "accept",
+        "label": "Look at top 7 of R&D; HQ/trash/arrange",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "dtwn_bacterial_programming"
+          }
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "corp",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  },
+  "onSteal": {
+    "op": "choose",
+    "chooser": "corp",
+    "options": [
+      {
+        "id": "accept",
+        "label": "Look at top 7 of R&D; HQ/trash/arrange",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "dtwn_bacterial_programming"
+          }
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "corp",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  },
+  "wave": "down-the-white-nile"
+}

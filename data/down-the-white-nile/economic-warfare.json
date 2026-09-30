@@ -1,0 +1,31 @@
+{
+  "id": "economic-warfare",
+  "title": "Economic Warfare",
+  "nrdbCode": "21036",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "gray ops"
+  ],
+  "playCost": 0,
+  "playRequiresSuccessfulRunLastTurn": true,
+  "onPlay": {
+    "op": "if",
+    "cond": {
+      "op": "credits_gte",
+      "side": "runner",
+      "amount": 4
+    },
+    "then": {
+      "op": "do",
+      "action": {
+        "kind": "lose_credits",
+        "side": "runner",
+        "amount": 4
+      }
+    }
+  },
+  "wave": "down-the-white-nile"
+}

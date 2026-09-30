@@ -1,0 +1,32 @@
+{
+  "id": "forced-connection",
+  "title": "Forced Connection",
+  "nrdbCode": "21037",
+  "type": "upgrade",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "ambush"
+  ],
+  "installCost": 0,
+  "rezCost": 0,
+  "trashCost": 0,
+  "mustRevealWhenAccessedFromRd": true,
+  "skipOnAccessFromArchives": true,
+  "onAccess": {
+    "op": "do",
+    "action": {
+      "kind": "trace",
+      "strength": 3,
+      "onSuccess": {
+        "op": "do",
+        "action": {
+          "kind": "give_tags",
+          "amount": 2
+        }
+      }
+    }
+  },
+  "wave": "down-the-white-nile"
+}

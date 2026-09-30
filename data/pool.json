@@ -53,6 +53,7 @@
     "crimson-dust",
     "revised-core",
     "sovereign-sight",
+    "down-the-white-nile",
     "reign-and-reverie",
     "system-core-2019",
     "downfall",
@@ -2718,6 +2719,32 @@
         "urban-renewal",
         "wake-up-call",
         "reconstruction-contract"
+      ]
+    },
+    "down-the-white-nile": {
+      "status": "supported",
+      "notes": "Down the White Nile (dtwn) Kitara #2 set-complete. 20/20 new clears; no reprints. Pool supported after sovereign-sight. Paired release v1.137.0. Never kick mo/mor. Defer tdc.",
+      "cards": [
+        "acacia",
+        "plague",
+        "credit-kiting",
+        "wari",
+        "kabonesa-wu-netspace-thrillseeker",
+        "takobi",
+        "kongamato",
+        "emergent-creativity",
+        "rng-key",
+        "nightdancer",
+        "jinja-city-grid",
+        "aimor",
+        "bacterial-programming",
+        "jua",
+        "threat-assessment",
+        "economic-warfare",
+        "forced-connection",
+        "ssl-endorsement",
+        "ngo-front",
+        "distract-the-masses"
       ]
     }
   }

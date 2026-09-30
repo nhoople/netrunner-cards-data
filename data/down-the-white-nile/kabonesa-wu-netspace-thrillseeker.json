@@ -1,0 +1,35 @@
+{
+  "id": "kabonesa-wu-netspace-thrillseeker",
+  "title": "Kabonesa Wu: Netspace Thrillseeker",
+  "nrdbCode": "21025",
+  "type": "identity",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "subtypes": [
+    "g-mod"
+  ],
+  "link": 1,
+  "paidAbilities": [
+    {
+      "id": "kabonesa-search",
+      "label": "[click]: Search stack for a non-virus program and install it, lowering install cost by 1¢; RFG it if still installed at turn end",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "dtwn_kabonesa_search_install"
+        }
+      },
+      "usableByRunnerOnSelfIce": true
+    }
+  ],
+  "wave": "down-the-white-nile"
+}

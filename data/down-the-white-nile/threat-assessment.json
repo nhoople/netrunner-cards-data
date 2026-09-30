@@ -1,0 +1,24 @@
+{
+  "id": "threat-assessment",
+  "title": "Threat Assessment",
+  "nrdbCode": "21035",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "subtypes": [
+    "reprisal",
+    "gray ops"
+  ],
+  "playCost": 1,
+  "playRequiresRunnerTrashedCorpCardLastTurn": true,
+  "playRequiresRunnerHasInstalledCard": true,
+  "rfgInsteadOfTrashing": true,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "dtwn_threat_assessment"
+    }
+  },
+  "wave": "down-the-white-nile"
+}

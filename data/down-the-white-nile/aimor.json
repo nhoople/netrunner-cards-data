@@ -1,0 +1,51 @@
+{
+  "id": "aimor",
+  "title": "Aimor",
+  "nrdbCode": "21032",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "jinteki",
+  "subtypes": [
+    "trap"
+  ],
+  "installCost": 0,
+  "rezCost": 0,
+  "strength": 1,
+  "subroutines": [
+    {
+      "id": "aimor-trash",
+      "text": "Trash the top 3 cards of the stack. Trash Aimor.",
+      "effect": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "trash_top_of_stack"
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "trash_top_of_stack"
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "trash_top_of_stack"
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "trash_self"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "wave": "down-the-white-nile"
+}

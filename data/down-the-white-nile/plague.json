@@ -1,0 +1,56 @@
+{
+  "id": "plague",
+  "title": "Plague",
+  "nrdbCode": "21022",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "subtypes": [
+    "virus"
+  ],
+  "installCost": 2,
+  "memoryCost": 1,
+  "onInstall": {
+    "op": "do",
+    "action": {
+      "kind": "choose_server_runner"
+    }
+  },
+  "onSuccessfulRun": {
+    "op": "if",
+    "cond": {
+      "op": "attacking_chosen_server"
+    },
+    "then": {
+      "op": "choose",
+      "chooser": "runner",
+      "options": [
+        {
+          "id": "accept",
+          "label": "Place 2 virus counters on Plague",
+          "effect": {
+            "op": "do",
+            "action": {
+              "kind": "add_virus_counter",
+              "amount": 2
+            }
+          }
+        },
+        {
+          "id": "decline",
+          "label": "Decline",
+          "effect": {
+            "op": "do",
+            "action": {
+              "kind": "gain_credits",
+              "side": "runner",
+              "amount": 0
+            }
+          }
+        }
+      ]
+    }
+  },
+  "wave": "down-the-white-nile"
+}

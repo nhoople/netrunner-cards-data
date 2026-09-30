@@ -1,0 +1,50 @@
+{
+  "id": "acacia",
+  "title": "Acacia",
+  "nrdbCode": "21021",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "installCost": 1,
+  "onVirusPurge": {
+    "op": "choose",
+    "chooser": "runner",
+    "options": [
+      {
+        "id": "accept",
+        "label": "Gain 1¢ per virus purged and trash Acacia",
+        "effect": {
+          "op": "seq",
+          "effects": [
+            {
+              "op": "do",
+              "action": {
+                "kind": "dtwn_gain_credits_equal_to_last_purged_viruses"
+              }
+            },
+            {
+              "op": "do",
+              "action": {
+                "kind": "trash_self"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "runner",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  },
+  "wave": "down-the-white-nile"
+}

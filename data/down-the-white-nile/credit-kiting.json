@@ -1,0 +1,36 @@
+{
+  "id": "credit-kiting",
+  "title": "Credit Kiting",
+  "nrdbCode": "21023",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "playCost": 0,
+  "playRequiresSuccessfulCentralRunThisTurn": true,
+  "onPlay": {
+    "op": "seq",
+    "effects": [
+      {
+        "op": "do",
+        "action": {
+          "kind": "install_from_grip_discount",
+          "types": [
+            "program",
+            "hardware",
+            "resource"
+          ],
+          "discount": 8
+        }
+      },
+      {
+        "op": "do",
+        "action": {
+          "kind": "give_tags",
+          "amount": 1
+        }
+      }
+    ]
+  },
+  "wave": "down-the-white-nile"
+}

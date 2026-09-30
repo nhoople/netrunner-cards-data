@@ -1,0 +1,64 @@
+{
+  "id": "nightdancer",
+  "title": "Nightdancer",
+  "nrdbCode": "21030",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "code gate"
+  ],
+  "installCost": 6,
+  "rezCost": 6,
+  "strength": 4,
+  "subroutines": [
+    {
+      "id": "nightdancer-1",
+      "text": "The Runner loses [click], if able. You have an additional [click] to spend during your next turn.",
+      "effect": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "lose_clicks",
+              "side": "runner",
+              "amount": 1
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "dtwn_corp_additional_click_next_turn"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "nightdancer-2",
+      "text": "The Runner loses [click], if able. You have an additional [click] to spend during your next turn.",
+      "effect": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "lose_clicks",
+              "side": "runner",
+              "amount": 1
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "dtwn_corp_additional_click_next_turn"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "wave": "down-the-white-nile"
+}

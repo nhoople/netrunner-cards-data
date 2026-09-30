@@ -4999,6 +4999,23 @@
     "playRequiresRunnerHasInstalledHardwareOrNonVirtualResource": {
       "type": "boolean",
       "description": "Wake Up Call: play only if the Runner has at least 1 installed piece of hardware or non-virtual resource."
+    },
+    "onFirstSuccessfulHqOrRdRunThisTurn": {
+      "type": "object",
+      "description": "RNG Key: the first time each turn you make a successful run on HQ or R&D, resolve this effect."
+    },
+    "playRequiresRunnerHasInstalledCard": {
+      "type": "boolean",
+      "description": "Threat Assessment: play only if the Runner has at least 1 installed card."
+    },
+    "onTurnBeginFromRunnerScoreOnCorpTurn": {
+      "type": "boolean",
+      "description": "SSL Endorsement: while this agenda is in the Runner's score area, its onTurnBegin still fires at the start of the Corp's turn."
+    },
+    "onDrawIceMayRevealAndInstallProtectingThisServerPayingLess": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Jinja City Grid: whenever you draw a piece of ice, you may reveal it and install it protecting this server, paying this many credits less."
     }
   }
 }

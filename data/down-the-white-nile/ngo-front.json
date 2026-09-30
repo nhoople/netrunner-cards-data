@@ -1,0 +1,58 @@
+{
+  "id": "ngo-front",
+  "title": "NGO Front",
+  "nrdbCode": "21039",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "neutral-corp",
+  "installCost": 0,
+  "rezCost": 0,
+  "trashCost": 1,
+  "canAdvance": true,
+  "paidAbilities": [
+    {
+      "id": "ngo-5",
+      "label": "[trash], 1 hosted advancement token: Gain 5¢",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "advancementTokens": 1,
+        "trashSelf": true
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "corp",
+          "amount": 5
+        }
+      }
+    },
+    {
+      "id": "ngo-8",
+      "label": "[trash], 2 hosted advancement tokens: Gain 8¢",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "advancementTokens": 2,
+        "trashSelf": true
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "corp",
+          "amount": 8
+        }
+      }
+    }
+  ],
+  "wave": "down-the-white-nile"
+}

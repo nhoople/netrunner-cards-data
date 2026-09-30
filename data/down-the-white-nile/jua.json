@@ -1,0 +1,34 @@
+{
+  "id": "jua",
+  "title": "Jua",
+  "nrdbCode": "21034",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "subtypes": [
+    "sentry"
+  ],
+  "installCost": 2,
+  "rezCost": 2,
+  "strength": 3,
+  "onEncounter": {
+    "op": "do",
+    "action": {
+      "kind": "dtwn_jua_forbid_install_remainder_of_turn"
+    }
+  },
+  "subroutines": [
+    {
+      "id": "jua-bounce",
+      "text": "Choose 2 installed Runner cards, if able. The Runner must add 1 of the chosen cards to the top of the stack.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "dtwn_jua_choose_two_bounce_one"
+        }
+      }
+    }
+  ],
+  "wave": "down-the-white-nile"
+}

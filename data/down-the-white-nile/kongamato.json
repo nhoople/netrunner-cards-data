@@ -1,0 +1,35 @@
+{
+  "id": "kongamato",
+  "title": "Kongamato",
+  "nrdbCode": "21027",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "subtypes": [
+    "virtual"
+  ],
+  "installCost": 1,
+  "paidAbilities": [
+    {
+      "id": "kongamato-break",
+      "label": "[trash]: Break the first subroutine on the encountered piece of ice",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "trashSelf": true
+      },
+      "windows": [
+        "encounter_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "dtwn_break_first_subroutine"
+        }
+      },
+      "usableByRunnerOnSelfIce": true
+    }
+  ],
+  "wave": "down-the-white-nile"
+}
