@@ -1,0 +1,45 @@
+{
+  "id": "find-the-truth",
+  "title": "Find the Truth",
+  "nrdbCode": "11047",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "adam",
+  "subtypes": [
+    "directive",
+    "virtual"
+  ],
+  "installCost": 0,
+  "unique": true,
+  "revealDrawnCards": true,
+  "onFirstSuccessfulRunThisTurn": {
+    "op": "choose",
+    "chooser": "runner",
+    "options": [
+      {
+        "id": "accept",
+        "label": "Look at the top card of R&D",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "look_top_1_rd"
+          }
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "runner",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  },
+  "wave": "escalation"
+}

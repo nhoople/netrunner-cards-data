@@ -173,6 +173,10 @@
         "trashFirstNonAgendaAccessCorpMayPayRezOrPlayCostToPrevent": {
           "type": "boolean",
           "description": "Credit Crash: trash the first non-agenda card accessed during this run at no cost; Corp may spend credits equal to its rez or play cost to prevent."
+        },
+        "redirectSuccessChooseHqOrRd": {
+          "type": "boolean",
+          "description": "Omar Keung: if the run would be declared successful, Runner chooses HQ or R&D as the attacked server for the remainder of that run."
         }
       }
     }
@@ -535,6 +539,11 @@
               "trashProgramFromGrip": {
                 "type": "boolean",
                 "description": "Monolith: trash a program from grip as a cost."
+              },
+              "minCreditsFromStealth": {
+                "type": "integer",
+                "minimum": 1,
+                "description": "Houdini: at least this many of the credit cost must be spent from stealth cards."
               }
             }
           },
@@ -725,6 +734,10 @@
           "requireFullyBrokenThisEncounter": {
             "type": "boolean",
             "description": "Usable only if the Runner fully broke the encountered ice this encounter (Crescentus)."
+          },
+          "requireSufferedCorpDamageThisTurn": {
+            "type": "boolean",
+            "description": "First Responders: usable only if the Runner suffered damage from a Corp card ability this turn."
           }
         }
       }
@@ -4088,10 +4101,19 @@
     },
     "zeroInfluenceIfNonAllianceFactionCardsGte": {
       "type": "object",
-      "required": ["faction", "threshold"],
+      "required": [
+        "faction",
+        "threshold"
+      ],
       "properties": {
-        "faction": { "type": "string", "minLength": 1 },
-        "threshold": { "type": "integer", "minimum": 1 }
+        "faction": {
+          "type": "string",
+          "minLength": 1
+        },
+        "threshold": {
+          "type": "integer",
+          "minimum": 1
+        }
       },
       "description": "Heritage Committee: 0 influence if deck has ≥ threshold non-alliance cards of faction (deckbuilding)."
     },
@@ -4158,10 +4180,19 @@
     },
     "zeroInfluenceIfCardCopiesGte": {
       "type": "object",
-      "required": ["cardId", "threshold"],
+      "required": [
+        "cardId",
+        "threshold"
+      ],
       "properties": {
-        "cardId": { "type": "string", "minLength": 1 },
-        "threshold": { "type": "integer", "minimum": 1 }
+        "cardId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "threshold": {
+          "type": "integer",
+          "minimum": 1
+        }
       },
       "description": "PAD Factory: 0 influence if deck has ≥ threshold copies of cardId."
     },
@@ -4234,11 +4265,20 @@
     },
     "onAnySuccessfulTraceGainAndRunnerLose": {
       "type": "object",
-      "required": ["gain", "lose"],
+      "required": [
+        "gain",
+        "lose"
+      ],
       "additionalProperties": false,
       "properties": {
-        "gain": { "type": "integer", "minimum": 0 },
-        "lose": { "type": "integer", "minimum": 0 }
+        "gain": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "lose": {
+          "type": "integer",
+          "minimum": 0
+        }
       },
       "description": "Aryabhata Tech: whenever there is a successful trace, Corp gains gain¢ and Runner loses lose¢."
     },
@@ -4271,12 +4311,23 @@
     },
     "gainsSubroutinesOnEncounterEqualGripSize": {
       "type": "object",
-      "required": ["id", "text", "effect"],
+      "required": [
+        "id",
+        "text",
+        "effect"
+      ],
       "additionalProperties": false,
       "properties": {
-        "id": { "type": "string", "minLength": 1 },
-        "text": { "type": "string" },
-        "effect": { "type": "object" }
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "text": {
+          "type": "string"
+        },
+        "effect": {
+          "type": "object"
+        }
       },
       "description": "Brainstorm: on encounter, gains X copies of this subroutine for the remainder of the run; X = cards in grip."
     },
@@ -4353,12 +4404,24 @@
     },
     "iceStrengthBonusPerFiveCorpCreditsWhenCorpCreditsGte": {
       "type": "object",
-      "required": ["threshold", "perCredits", "bonus"],
+      "required": [
+        "threshold",
+        "perCredits",
+        "bonus"
+      ],
       "additionalProperties": false,
       "properties": {
-        "threshold": { "type": "integer", "minimum": 0 },
-        "perCredits": { "type": "integer", "minimum": 1 },
-        "bonus": { "type": "integer" }
+        "threshold": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "perCredits": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "bonus": {
+          "type": "integer"
+        }
       },
       "description": "Sandburg: if Corp has ≥ threshold credits, each ice gets +bonus strength per perCredits in Corp credit pool."
     },
@@ -4382,6 +4445,44 @@
     "firstAdvancedIceEncounterEndMeatDamageEachTurn": {
       "type": "boolean",
       "description": "Weyland Builder of Nations: the first time each turn an encounter with an advanced piece of ice ends, do 1 meat damage."
+    },
+    "handSizeBonusPerTag": {
+      "type": "integer",
+      "description": "Obelus: Runner max hand size +N per tag."
+    },
+    "drawPerAccessOnFirstSuccessfulHqOrRdRunEndEachTurn": {
+      "type": "boolean",
+      "description": "Obelus: first successful HQ/R&D run end each turn → draw 1 per access during that run."
+    },
+    "mayInstallSelfFromHeapOnEncounterCodeGate": {
+      "type": "boolean",
+      "description": "Black Orchestra: whenever you encounter a code gate, you may install this program from your heap."
+    },
+    "firstStealthSpendEachRunPlaceCreditOrDraw": {
+      "type": "boolean",
+      "description": "Net Mercur: first stealth credit spend each run → place 1¢ on this or draw 1."
+    },
+    "spendHostedCreditsForAnything": {
+      "type": "boolean",
+      "description": "Net Mercur: hosted credits may be spent for anything."
+    },
+    "revealDrawnCards": {
+      "type": "boolean",
+      "description": "Find the Truth: whenever you draw a card, reveal that card."
+    },
+    "playRequiresRunnerCreditsLt": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Observe and Destroy: play only if the Runner has fewer than this many credits."
+    },
+    "trashTopOfStackOnRunnerNetDamage": {
+      "type": "boolean",
+      "description": "Jinteki Potential Unleashed: whenever the Runner takes ≥1 net damage, trash the top card of the stack."
+    },
+    "resourceInstallCostIncrease": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Scarcity of Resources: install cost of each resource is increased by this many."
     }
   }
 }

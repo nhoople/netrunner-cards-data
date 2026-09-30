@@ -1,0 +1,37 @@
+{
+  "id": "alexa-belsky",
+  "title": "Alexa Belsky",
+  "nrdbCode": "11055",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "subtypes": [
+    "character"
+  ],
+  "installCost": 1,
+  "rezCost": 1,
+  "trashCost": 5,
+  "unique": true,
+  "paidAbilities": [
+    {
+      "id": "alexa-shuffle",
+      "label": "[trash]: Shuffle HQ into R&D; Runner may pay 2¢ each to trash instead of shuffling",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "trashSelf": true
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "alexa_belsky_shuffle_hq"
+        }
+      }
+    }
+  ],
+  "wave": "escalation"
+}

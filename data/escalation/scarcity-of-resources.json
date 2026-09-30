@@ -1,0 +1,17 @@
+{
+  "id": "scarcity-of-resources",
+  "title": "Scarcity of Resources",
+  "nrdbCode": "11060",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "neutral-corp",
+  "subtypes": [
+    "current"
+  ],
+  "playCost": 1,
+  "lingerAsCurrent": true,
+  "currentTrashOnAgendaStolen": true,
+  "resourceInstallCostIncrease": 2,
+  "wave": "escalation"
+}

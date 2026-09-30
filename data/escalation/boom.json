@@ -1,0 +1,25 @@
+{
+  "id": "boom",
+  "title": "BOOM!",
+  "nrdbCode": "11058",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "double",
+    "black ops"
+  ],
+  "playCost": 4,
+  "trashCost": 1,
+  "playRequiresMinTags": 2,
+  "playAdditionalClick": true,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "meat_damage",
+      "amount": 7
+    }
+  },
+  "wave": "escalation"
+}

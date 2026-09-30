@@ -1,0 +1,69 @@
+{
+  "id": "houdini",
+  "title": "Houdini",
+  "nrdbCode": "11045",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "subtypes": [
+    "icebreaker",
+    "decoder"
+  ],
+  "installCost": 2,
+  "strength": 2,
+  "memoryCost": 1,
+  "breaker": {
+    "breaksSubtype": "code gate",
+    "strength": 2,
+    "breakCredits": 1,
+    "breakMaxSubs": 1,
+    "breakViaPaidAbilityOnly": false
+  },
+  "paidAbilities": [
+    {
+      "id": "houdini-break",
+      "label": "1¢: Break 1 code gate subroutine",
+      "clickCost": 0,
+      "creditCost": 1,
+      "cost": {
+        "credits": 1
+      },
+      "windows": [
+        "encounter_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "break_encounter_subroutine",
+          "maxSubs": 1,
+          "requireSubtype": "code gate"
+        }
+      },
+      "usableByRunnerOnSelfIce": true
+    },
+    {
+      "id": "houdini-pump",
+      "label": "2¢ (≥1 stealth): +4 strength for the remainder of this run",
+      "clickCost": 0,
+      "creditCost": 2,
+      "cost": {
+        "credits": 2,
+        "minCreditsFromStealth": 1
+      },
+      "windows": [
+        "encounter_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "pump_strength",
+          "amount": 4,
+          "duration": "run"
+        }
+      },
+      "usableByRunnerOnSelfIce": true
+    }
+  ],
+  "wave": "escalation"
+}

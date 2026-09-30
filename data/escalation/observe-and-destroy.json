@@ -1,0 +1,29 @@
+{
+  "id": "observe-and-destroy",
+  "title": "Observe and Destroy",
+  "nrdbCode": "11056",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "subtypes": [
+    "gray ops"
+  ],
+  "playCost": 0,
+  "playRequiresRunnerCreditsLt": 6,
+  "playAdditionalCost": {
+    "op": "do",
+    "action": {
+      "kind": "remove_tags",
+      "amount": 1
+    }
+  },
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "trash_installed_runner",
+      "pick": "choose"
+    }
+  },
+  "wave": "escalation"
+}

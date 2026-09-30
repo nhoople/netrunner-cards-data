@@ -1,0 +1,17 @@
+{
+  "id": "service-outage",
+  "title": "Service Outage",
+  "nrdbCode": "11057",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "subtypes": [
+    "current"
+  ],
+  "playCost": 1,
+  "lingerAsCurrent": true,
+  "currentTrashOnAgendaStolen": true,
+  "runnerFirstRunEachTurnAdditionalCost": 1,
+  "wave": "escalation"
+}

@@ -40,6 +40,7 @@
     "fear-the-masses",
     "twenty-three-seconds",
     "blood-money",
+    "escalation",
     "reign-and-reverie",
     "system-core-2019",
     "downfall",
@@ -2218,6 +2219,32 @@
         "weyland-consortium-builder-of-nations",
         "financial-collapse",
         "prisec"
+      ]
+    },
+    "escalation": {
+      "status": "supported",
+      "notes": "Escalation (es) Flashpoint #3 set-complete. 20/20 new clears; no reprints. Pool supported after blood-money. Paired release v1.124.0. Never kick mo/mor.",
+      "cards": [
+        "obelus",
+        "black-orchestra",
+        "omar-keung-conspiracy-theorist",
+        "peregrine",
+        "houdini",
+        "net-mercur",
+        "find-the-truth",
+        "first-responders",
+        "fairchild-3-0",
+        "ark-lockdown",
+        "hellion-beta-test",
+        "project-kusanagi",
+        "dna-tracker",
+        "jinteki-potential-unleashed",
+        "alexa-belsky",
+        "observe-and-destroy",
+        "service-outage",
+        "boom",
+        "door-to-door",
+        "scarcity-of-resources"
       ]
     }
   }

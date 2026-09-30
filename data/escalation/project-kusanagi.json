@@ -1,0 +1,45 @@
+{
+  "id": "project-kusanagi",
+  "title": "Project Kusanagi",
+  "nrdbCode": "11052",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "jinteki",
+  "subtypes": [
+    "security"
+  ],
+  "advancementRequirement": 2,
+  "agendaPoints": 0,
+  "onScore": {
+    "op": "do",
+    "action": {
+      "kind": "add_agenda_counters_from_overadvance",
+      "past": 2,
+      "per": 1
+    }
+  },
+  "paidAbilities": [
+    {
+      "id": "kusanagi-net-sub",
+      "label": "Hosted agenda counter: choose ice to gain '[subroutine] Do 1 net damage' this run",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "agendaCounters": 1
+      },
+      "windows": [
+        "corp_action_paw",
+        "encounter_paw",
+        "approach_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "kusanagi_grant_net_subroutine_this_run"
+        }
+      }
+    }
+  ],
+  "wave": "escalation"
+}

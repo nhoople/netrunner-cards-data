@@ -1,0 +1,18 @@
+{
+  "id": "net-mercur",
+  "title": "Net Mercur",
+  "nrdbCode": "11046",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "subtypes": [
+    "stealth",
+    "virtual"
+  ],
+  "installCost": 3,
+  "unique": true,
+  "firstStealthSpendEachRunPlaceCreditOrDraw": true,
+  "spendHostedCreditsForAnything": true,
+  "wave": "escalation"
+}

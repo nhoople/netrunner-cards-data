@@ -1,0 +1,17 @@
+{
+  "id": "ark-lockdown",
+  "title": "Ark Lockdown",
+  "nrdbCode": "11050",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "playCost": 1,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "ark_lockdown_name_and_rfg_heap_copies"
+    }
+  },
+  "wave": "escalation"
+}

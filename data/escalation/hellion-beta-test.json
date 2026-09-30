@@ -1,0 +1,36 @@
+{
+  "id": "hellion-beta-test",
+  "title": "Hellion Beta Test",
+  "nrdbCode": "11051",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "black ops",
+    "liability"
+  ],
+  "playCost": 1,
+  "playRequiresRunnerTrashedCorpCardLastTurn": true,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "trace",
+      "strength": 2,
+      "onSuccess": {
+        "op": "do",
+        "action": {
+          "kind": "hellion_beta_trash_two_installed_non_program"
+        }
+      },
+      "onFailure": {
+        "op": "do",
+        "action": {
+          "kind": "give_bad_publicity",
+          "amount": 1
+        }
+      }
+    }
+  },
+  "wave": "escalation"
+}

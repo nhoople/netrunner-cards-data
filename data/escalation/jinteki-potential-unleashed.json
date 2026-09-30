@@ -1,0 +1,14 @@
+{
+  "id": "jinteki-potential-unleashed",
+  "title": "Jinteki: Potential Unleashed",
+  "nrdbCode": "11054",
+  "type": "identity",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "jinteki",
+  "subtypes": [
+    "megacorp"
+  ],
+  "trashTopOfStackOnRunnerNetDamage": true,
+  "wave": "escalation"
+}

@@ -1,0 +1,42 @@
+{
+  "id": "omar-keung-conspiracy-theorist",
+  "title": "Omar Keung: Conspiracy Theorist",
+  "nrdbCode": "11043",
+  "type": "identity",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "subtypes": [
+    "natural"
+  ],
+  "link": 0,
+  "paidAbilities": [
+    {
+      "id": "omar-archives",
+      "label": "[click]: Run Archives. If that run would be successful, change attacked server to HQ or R&D",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "runner",
+          "amount": 0
+        }
+      },
+      "oncePerTurn": true,
+      "usableByRunnerOnSelfIce": true,
+      "startsRun": {
+        "servers": "archives",
+        "redirectSuccessChooseHqOrRd": true
+      }
+    }
+  ],
+  "wave": "escalation"
+}

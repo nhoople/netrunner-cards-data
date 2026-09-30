@@ -1,0 +1,91 @@
+{
+  "id": "dna-tracker",
+  "title": "DNA Tracker",
+  "nrdbCode": "11053",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "jinteki",
+  "subtypes": [
+    "code gate",
+    "ap"
+  ],
+  "installCost": 8,
+  "rezCost": 8,
+  "strength": 6,
+  "subroutines": [
+    {
+      "id": "dna-tracker-1",
+      "text": "Do 1 net damage. The Runner loses 2¢.",
+      "effect": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "net_damage",
+              "amount": 1
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "lose_credits",
+              "side": "runner",
+              "amount": 2
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "dna-tracker-2",
+      "text": "Do 1 net damage. The Runner loses 2¢.",
+      "effect": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "net_damage",
+              "amount": 1
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "lose_credits",
+              "side": "runner",
+              "amount": 2
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "dna-tracker-3",
+      "text": "Do 1 net damage. The Runner loses 2¢.",
+      "effect": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "net_damage",
+              "amount": 1
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "lose_credits",
+              "side": "runner",
+              "amount": 2
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "wave": "escalation"
+}

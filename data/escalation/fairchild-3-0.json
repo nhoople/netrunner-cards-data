@@ -1,0 +1,76 @@
+{
+  "id": "fairchild-3-0",
+  "title": "Fairchild 3.0",
+  "nrdbCode": "11049",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "code gate",
+    "bioroid",
+    "ap"
+  ],
+  "installCost": 6,
+  "rezCost": 6,
+  "strength": 5,
+  "bioroidBreakMaxSubs": 3,
+  "subroutines": [
+    {
+      "id": "fairchild-3-0-pay-or-trash-1",
+      "text": "The Runner must pay 3¢ or trash 1 of their installed cards.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "pay_credits_or_trash_installed",
+          "side": "runner",
+          "amount": 3
+        }
+      }
+    },
+    {
+      "id": "fairchild-3-0-pay-or-trash-2",
+      "text": "The Runner must pay 3¢ or trash 1 of their installed cards.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "pay_credits_or_trash_installed",
+          "side": "runner",
+          "amount": 3
+        }
+      }
+    },
+    {
+      "id": "fairchild-3-0-core-or-etr",
+      "text": "Do 1 core damage or end the run.",
+      "effect": {
+        "op": "choose",
+        "chooser": "corp",
+        "options": [
+          {
+            "id": "core",
+            "label": "Do 1 core damage",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "core_damage",
+                "amount": 1
+              }
+            }
+          },
+          {
+            "id": "etr",
+            "label": "End the run",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "end_the_run"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "wave": "escalation"
+}

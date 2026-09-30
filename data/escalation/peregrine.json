@@ -1,0 +1,58 @@
+{
+  "id": "peregrine",
+  "title": "Peregrine",
+  "nrdbCode": "11044",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "subtypes": [
+    "icebreaker",
+    "decoder"
+  ],
+  "installCost": 5,
+  "strength": 2,
+  "memoryCost": 1,
+  "breaker": {
+    "breaksSubtype": "code gate",
+    "strength": 2,
+    "breakCredits": 1,
+    "breakMaxSubs": 1,
+    "pumpCredits": 3,
+    "pumpStrength": 3
+  },
+  "paidAbilities": [
+    {
+      "id": "peregrine-derez",
+      "label": "2¢, add this program to your grip: Derez fully broken code gate",
+      "clickCost": 0,
+      "creditCost": 2,
+      "cost": {
+        "credits": 2
+      },
+      "windows": [
+        "encounter_paw"
+      ],
+      "effect": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "derez_encounter_ice"
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "return_source_to_grip"
+            }
+          }
+        ]
+      },
+      "usableByRunnerOnSelfIce": true,
+      "requireFullyBrokenThisEncounter": true
+    }
+  ],
+  "wave": "escalation"
+}

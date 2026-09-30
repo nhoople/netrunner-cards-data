@@ -1,0 +1,44 @@
+{
+  "id": "door-to-door",
+  "title": "Door to Door",
+  "nrdbCode": "11059",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "current",
+    "black ops"
+  ],
+  "playCost": 3,
+  "lingerAsCurrent": true,
+  "currentTrashOnAgendaStolen": true,
+  "onRunnerTurnBegin": {
+    "op": "do",
+    "action": {
+      "kind": "trace",
+      "strength": 1,
+      "onSuccess": {
+        "op": "if",
+        "cond": {
+          "op": "runner_tagged"
+        },
+        "then": {
+          "op": "do",
+          "action": {
+            "kind": "meat_damage",
+            "amount": 1
+          }
+        },
+        "else": {
+          "op": "do",
+          "action": {
+            "kind": "give_tags",
+            "amount": 1
+          }
+        }
+      }
+    }
+  },
+  "wave": "escalation"
+}

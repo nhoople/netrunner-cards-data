@@ -1,0 +1,38 @@
+{
+  "id": "first-responders",
+  "title": "First Responders",
+  "nrdbCode": "11048",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "neutral-runner",
+  "subtypes": [
+    "connection"
+  ],
+  "installCost": 2,
+  "paidAbilities": [
+    {
+      "id": "first-responders-draw",
+      "label": "2¢: Draw 1 card (if suffered Corp damage this turn)",
+      "clickCost": 0,
+      "creditCost": 2,
+      "cost": {
+        "credits": 2
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "draw",
+          "side": "runner",
+          "amount": 1
+        }
+      },
+      "usableByRunnerOnSelfIce": true,
+      "requireSufferedCorpDamageThisTurn": true
+    }
+  ],
+  "wave": "escalation"
+}
