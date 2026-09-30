@@ -240,6 +240,23 @@
       "type": "boolean",
       "description": "Net Police: recurring credit pool max equals the Runner's link when refilled/rezzed."
     },
+    "recurringCreditsMaxEqualsVirusCounters": {
+      "type": "boolean",
+      "description": "Pheromones: recurring credit pool max equals virus counters on this card when refilled / when virus changes."
+    },
+    "startingHandSize": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Identity: draw this many cards for the starting hand instead of 5 (Andromeda: 9)."
+    },
+    "playRequiresVirusCounterPlacedOnProgramThisTurn": {
+      "type": "boolean",
+      "description": "Surge: play only if you placed ≥1 virus counter on a program this turn."
+    },
+    "onHardwareInstall": {
+      "type": "object",
+      "description": "Effect IR whenever the Runner installs any hardware (including this card). Replicator; uses turn.lastHardwareInstalledId."
+    },
     "link": {
       "type": "integer",
       "minimum": 0

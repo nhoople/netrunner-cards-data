@@ -1,0 +1,17 @@
+{
+  "id": "replicator",
+  "title": "Replicator",
+  "wave": "humanitys-shadow",
+  "nrdbCode": "02088",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "installCost": 2,
+  "onHardwareInstall": {
+    "op": "do",
+    "action": {
+      "kind": "may_search_stack_copy_of_last_installed_hardware_add_to_grip"
+    }
+  }
+}

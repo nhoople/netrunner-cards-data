@@ -1,0 +1,15 @@
+{
+  "id": "andromeda-dispossessed-ristie",
+  "title": "Andromeda: Dispossessed Ristie",
+  "wave": "humanitys-shadow",
+  "nrdbCode": "02083",
+  "type": "identity",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "subtypes": [
+    "natural"
+  ],
+  "link": 1,
+  "startingHandSize": 9
+}

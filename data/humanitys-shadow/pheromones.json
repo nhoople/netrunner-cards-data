@@ -1,0 +1,32 @@
+{
+  "id": "pheromones",
+  "title": "Pheromones",
+  "wave": "humanitys-shadow",
+  "nrdbCode": "02086",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "subtypes": [
+    "virus"
+  ],
+  "installCost": 2,
+  "memoryCost": 1,
+  "recurringCreditsMaxEqualsVirusCounters": true,
+  "recurringSpendFor": [
+    "run_hq"
+  ],
+  "onSuccessfulRun": {
+    "op": "if",
+    "cond": {
+      "op": "attacking_hq"
+    },
+    "then": {
+      "op": "do",
+      "action": {
+        "kind": "add_virus_counter",
+        "amount": 1
+      }
+    }
+  }
+}

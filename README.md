@@ -21,6 +21,7 @@ Files under [`data/`](data/) are the API. Clone the repo or fetch a **tagged** r
 | [`data/trace-amount/`](data/trace-amount/) | Trace Amount (NRDB `ta`) — **supported** (Genesis) |
 | [`data/cyber-exodus/`](data/cyber-exodus/) | Cyber Exodus (NRDB `ce`) — **supported** (Genesis) |
 | [`data/a-study-in-static/`](data/a-study-in-static/) | A Study in Static (NRDB `asis`) — **supported** (Genesis) |
+| [`data/humanitys-shadow/`](data/humanitys-shadow/) | Humanity's Shadow (NRDB `hs`) — **supported** (Genesis) |
 | [`data/reign-and-reverie/`](data/reign-and-reverie/) | Reign and Reverie (NRDB `rar`) — **supported** (legacy backwards) |
 | [`data/system-core-2019/`](data/system-core-2019/) | System Core 2019 (NRDB `sc19`) — **supported** (legacy backwards) |
 | [`data/downfall/`](data/downfall/) | Downfall (NRDB `df`) — **supported** (legacy backwards) |
@@ -35,7 +36,7 @@ Files under [`data/`](data/) are the API. Clone the repo or fetch a **tagged** r
 | [`data/vantage-point/`](data/vantage-point/) | Vantage Point (NRDB `vp`) — **supported** |
 | [`data/fixtures/`](data/fixtures/) | CR-example / host-test cards outside corpus order (e.g. Plascrete) |
 
-**Corpus order:** FFG Core Set (Core-forward, supported) → What Lies Ahead (Genesis, supported) → Trace Amount (Genesis, supported) → Cyber Exodus (Genesis, supported) → A Study in Static (Genesis, supported) → Reign and Reverie (legacy backwards, supported) → System Core 2019 (legacy backwards, supported) → Downfall (legacy backwards, supported) → Uprising (legacy backwards, supported) → System Gateway → System Update 2021 → Midnight Sun → Parhelion → The Automata Initiative → Rebellion Without Rehearsal → Elevation → Vantage Point → later releases.
+**Corpus order:** FFG Core Set (Core-forward, supported) → What Lies Ahead (Genesis, supported) → Trace Amount (Genesis, supported) → Cyber Exodus (Genesis, supported) → A Study in Static (Genesis, supported) → Humanity's Shadow (Genesis, supported) → Reign and Reverie (legacy backwards, supported) → System Core 2019 (legacy backwards, supported) → Downfall (legacy backwards, supported) → Uprising (legacy backwards, supported) → System Gateway → System Update 2021 → Midnight Sun → Parhelion → The Automata Initiative → Rebellion Without Rehearsal → Elevation → Vantage Point → later releases.
 
 Partial cards list unimplemented clauses in an `unsupported` array — never silent wrong behavior. A wave marked `supported` in [`data/pool.json`](data/pool.json) must keep those arrays empty unless the card is listed with a reason in [`data/supported-unsupported-allowlist.json`](data/supported-unsupported-allowlist.json) (enforced by `scripts/validate-cards.py`). See [`CONTRIBUTING.md`](CONTRIBUTING.md) for the CR gate PR template.
 
@@ -45,7 +46,8 @@ Match this dataset and [netrunner-engine](https://github.com/nhoople/netrunner-e
 
 | Pairing | cards-data | engine |
 |---------|------------|--------|
-| **Current** | [`v1.91.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.91.0) | engine same-semver pin `v1.91.0` (A Study in Static set-complete **15/15**) |
+| **Current** | [`v1.92.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.92.0) | engine same-semver pin `v1.92.0` (Humanity's Shadow set-complete **15/15**) |
+| A Study in Static | [`v1.91.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.91.0) | engine same-semver pin `v1.91.0` (A Study in Static set-complete **15/15**) |
 | Cyber Exodus | [`v1.90.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.90.0) | engine same-semver pin `v1.90.0` (Cyber Exodus set-complete **13/13**) |
 | Trace Amount | [`v1.89.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.89.0) | engine same-semver pin `v1.89.0` (Trace Amount set-complete **15/15**) |
 | What Lies Ahead | [`v1.88.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.88.0) | engine same-semver pin `v1.88.0` (What Lies Ahead set-complete **14/14**) |

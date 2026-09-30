@@ -1,0 +1,18 @@
+{
+  "id": "kraken",
+  "title": "Kraken",
+  "wave": "humanitys-shadow",
+  "nrdbCode": "02090",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "neutral-runner",
+  "playCost": 3,
+  "playRequiresAgendaStolenThisTurn": true,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "choose_server_corp_trash_ice_protecting"
+    }
+  }
+}

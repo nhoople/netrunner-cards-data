@@ -1,0 +1,37 @@
+{
+  "id": "bernice-mai",
+  "title": "Bernice Mai",
+  "wave": "humanitys-shadow",
+  "nrdbCode": "02097",
+  "type": "upgrade",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "subtypes": [
+    "sysop"
+  ],
+  "installCost": 0,
+  "rezCost": 0,
+  "trashCost": 3,
+  "unique": true,
+  "onSuccessfulRun": {
+    "op": "do",
+    "action": {
+      "kind": "trace",
+      "strength": 5,
+      "onSuccess": {
+        "op": "do",
+        "action": {
+          "kind": "give_tags",
+          "amount": 1
+        }
+      },
+      "onFailure": {
+        "op": "do",
+        "action": {
+          "kind": "trash_self"
+        }
+      }
+    }
+  }
+}

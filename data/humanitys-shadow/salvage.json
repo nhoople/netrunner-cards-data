@@ -1,0 +1,40 @@
+{
+  "id": "salvage",
+  "title": "Salvage",
+  "wave": "humanitys-shadow",
+  "nrdbCode": "02098",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "code gate",
+    "tracer"
+  ],
+  "installCost": 2,
+  "rezCost": 2,
+  "strength": 0,
+  "canAdvance": true,
+  "canAdvanceOnlyWhenRezzed": true,
+  "gainsSubroutinesPerAdvancement": {
+    "subroutine": {
+      "id": "salvage-trace-tag",
+      "text": "Trace[2]. If successful, give the Runner 1 tag.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "trace",
+          "strength": 2,
+          "onSuccess": {
+            "op": "do",
+            "action": {
+              "kind": "give_tags",
+              "amount": 1
+            }
+          }
+        }
+      }
+    }
+  },
+  "subroutines": []
+}

@@ -8,6 +8,7 @@
     "trace-amount",
     "cyber-exodus",
     "a-study-in-static",
+    "humanitys-shadow",
     "reign-and-reverie",
     "system-core-2019",
     "downfall",
@@ -1222,6 +1223,32 @@
         "tyrant",
         "oversight-ai",
         "false-lead"
+      ]
+    },
+    "humanitys-shadow": {
+      "status": "supported",
+      "notes": "FFG Humanity's Shadow (NRDB pack hs) — Genesis set-complete from floor v1.91.0 → v1.92.0. 20 titles; 5 SC19/SU21 reprints absorbed; 15/15 HS-only clears. Never kick mo/mor. CR pin v26.03.",
+      "cards": [
+        "surge",
+        "xanadu",
+        "andromeda-dispossessed-ristie",
+        "networking",
+        "hq-interface",
+        "pheromones",
+        "quality-time",
+        "replicator",
+        "creeper",
+        "kraken",
+        "kati-jones",
+        "eve-campaign",
+        "rework",
+        "whirlpool",
+        "hokusai-grid",
+        "data-hound",
+        "bernice-mai",
+        "salvage",
+        "simone-diego",
+        "foxfire"
       ]
     }
   }

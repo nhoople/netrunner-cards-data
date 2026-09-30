@@ -1,0 +1,37 @@
+{
+  "id": "data-hound",
+  "title": "Data Hound",
+  "wave": "humanitys-shadow",
+  "nrdbCode": "02096",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "subtypes": [
+    "sentry",
+    "tracer",
+    "observer"
+  ],
+  "installCost": 1,
+  "rezCost": 1,
+  "strength": 2,
+  "subroutines": [
+    {
+      "id": "data-hound-trace",
+      "text": "Trace[2]. If successful, look at the top X cards of the stack, where X is equal to the amount by which your trace strength exceeded the Runner's link strength. Trash 1 of those cards and arrange the rest in any order.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "trace",
+          "strength": 2,
+          "onSuccess": {
+            "op": "do",
+            "action": {
+              "kind": "look_top_last_trace_excess_stack_trash_one_arrange_rest"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

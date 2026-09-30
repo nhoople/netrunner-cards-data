@@ -1,0 +1,21 @@
+{
+  "id": "simone-diego",
+  "title": "Simone Diego",
+  "wave": "humanitys-shadow",
+  "nrdbCode": "02099",
+  "type": "upgrade",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "sysop"
+  ],
+  "installCost": 4,
+  "rezCost": 4,
+  "trashCost": 3,
+  "unique": true,
+  "recurringCreditsMax": 2,
+  "recurringSpendFor": [
+    "advance_cards_this_server"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "rework",
+  "title": "Rework",
+  "wave": "humanitys-shadow",
+  "nrdbCode": "02093",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "playCost": 0,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "shuffle_hq_to_rd",
+      "amount": 1
+    }
+  }
+}

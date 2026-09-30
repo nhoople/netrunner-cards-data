@@ -1,0 +1,19 @@
+{
+  "id": "surge",
+  "title": "Surge",
+  "wave": "humanitys-shadow",
+  "nrdbCode": "02081",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "playCost": 0,
+  "playRequiresVirusCounterPlacedOnProgramThisTurn": true,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "place_virus_on_program_that_received_virus_this_turn",
+      "amount": 2
+    }
+  }
+}

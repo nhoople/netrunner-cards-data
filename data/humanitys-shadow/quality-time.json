@@ -1,0 +1,19 @@
+{
+  "id": "quality-time",
+  "title": "Quality Time",
+  "wave": "humanitys-shadow",
+  "nrdbCode": "02087",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "playCost": 3,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "draw",
+      "side": "runner",
+      "amount": 5
+    }
+  }
+}

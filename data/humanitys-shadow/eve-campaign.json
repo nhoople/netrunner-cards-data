@@ -1,0 +1,30 @@
+{
+  "id": "eve-campaign",
+  "title": "Eve Campaign",
+  "wave": "humanitys-shadow",
+  "nrdbCode": "02092",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "advertisement"
+  ],
+  "installCost": 5,
+  "rezCost": 5,
+  "trashCost": 5,
+  "onRez": {
+    "op": "do",
+    "action": {
+      "kind": "place_hosted_credits",
+      "amount": 16
+    }
+  },
+  "onTurnBegin": {
+    "op": "do",
+    "action": {
+      "kind": "take_hosted_credits",
+      "amount": 2
+    }
+  }
+}
