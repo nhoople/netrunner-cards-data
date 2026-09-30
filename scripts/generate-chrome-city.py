@@ -191,8 +191,8 @@ def map_card(c: dict) -> dict | None:
             c,
             subtypes=["cybernetic"],
             unique=True,
-            onRunBeginChooseIcebreakerStrengthBonus=1,
             onInstall=do("meat_damage", amount=2),
+            onRunBegin=do("net_ready_eyes_choose_icebreaker_strength", amount=1),
         )
 
     if cid == "analog-dreamers":

@@ -11,12 +11,18 @@
   ],
   "installCost": 0,
   "unique": true,
-  "onRunBeginChooseIcebreakerStrengthBonus": 1,
   "onInstall": {
     "op": "do",
     "action": {
       "kind": "meat_damage",
       "amount": 2
+    }
+  },
+  "onRunBegin": {
+    "op": "do",
+    "action": {
+      "kind": "net_ready_eyes_choose_icebreaker_strength",
+      "amount": 1
     }
   },
   "wave": "chrome-city"
