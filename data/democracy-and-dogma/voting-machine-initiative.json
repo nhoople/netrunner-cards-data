@@ -19,32 +19,10 @@
     }
   },
   "onRunnerTurnBegin": {
-    "op": "choose",
-    "chooser": "corp",
-    "options": [
-      {
-        "id": "accept",
-        "label": "Spend 1 agenda counter: Runner loses [click], if able",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "spend_agenda_counter_runner_lose_click"
-          }
-        }
-      },
-      {
-        "id": "decline",
-        "label": "Decline",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "gain_credits",
-            "side": "corp",
-            "amount": 0
-          }
-        }
-      }
-    ]
+    "op": "do",
+    "action": {
+      "kind": "voting_machine_may_spend_lose_click"
+    }
   },
   "wave": "democracy-and-dogma"
 }

@@ -250,11 +250,7 @@ def map_card(c: dict) -> dict | None:
             c,
             subtypes=["initiative"],
             onScore=do("add_agenda_counter", amount=3),
-            onRunnerTurnBegin=may(
-                do("spend_agenda_counter_runner_lose_click"),
-                label="Spend 1 agenda counter: Runner loses [click], if able",
-                decline_side="corp",
-            ),
+            onRunnerTurnBegin=do("voting_machine_may_spend_lose_click"),
         )
 
     if cid == "clone-suffrage-movement":
