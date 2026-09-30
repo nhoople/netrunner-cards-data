@@ -24,7 +24,8 @@
       "effect": {
         "op": "do",
         "action": {
-          "kind": "take_all_hosted_credits"
+          "kind": "take_hosted_credits",
+          "amount": 99
         }
       },
       "usableByRunnerOnSelfIce": true

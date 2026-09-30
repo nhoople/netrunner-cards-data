@@ -773,7 +773,7 @@ def map_card(c: dict) -> dict | None:
                 paid(
                     "technical-writer-take",
                     "[click],[trash]: Take all credits from Technical Writer",
-                    do("take_all_hosted_credits"),
+                    do("take_hosted_credits", amount=99),
                     clicks=1,
                     trash_self=True,
                     windows=["runner_action_paw"],
