@@ -3769,11 +3769,6 @@
     "runnerChoosesDamageTrashFromGrip": {
       "type": "boolean",
       "description": "Titanium Ribs: Runner chooses which grip cards to trash whenever they take damage."
-    },
-    "onRunBeginChooseIcebreakerStrengthBonus": {
-      "type": "integer",
-      "minimum": 1,
-      "description": "Net-Ready Eyes: whenever you initiate a run, choose an icebreaker; it gets +N strength for the remainder of the run."
     }
   }
 }
