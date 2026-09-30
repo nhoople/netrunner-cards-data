@@ -23,45 +23,11 @@
     "breakMaxSubs": 1
   },
   "onTurnBegin": {
-    "op": "choose",
-    "chooser": "runner",
-    "options": [
-      {
-        "id": "pay-virus",
-        "label": "Pay 1¢: place 1 virus counter on Darwin",
-        "effect": {
-          "op": "seq",
-          "effects": [
-            {
-              "op": "do",
-              "action": {
-                "kind": "lose_credits",
-                "side": "runner",
-                "amount": 1
-              }
-            },
-            {
-              "op": "do",
-              "action": {
-                "kind": "add_virus_counter",
-                "amount": 1
-              }
-            }
-          ]
-        }
-      },
-      {
-        "id": "decline",
-        "label": "Decline",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "gain_credits",
-            "side": "runner",
-            "amount": 0
-          }
-        }
-      }
-    ]
+    "op": "do",
+    "action": {
+      "kind": "may_pay_credits_add_virus_counter",
+      "credits": 1,
+      "amount": 1
+    }
   }
 }

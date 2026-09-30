@@ -149,25 +149,12 @@ def map_card(c: dict) -> dict | None:
                 "breakMaxSubs": 1,
             },
             onTurnBegin={
-                "op": "choose",
-                "chooser": "runner",
-                "options": [
-                    {
-                        "id": "pay-virus",
-                        "label": "Pay 1¢: place 1 virus counter on Darwin",
-                        "effect": seq(
-                            lose("runner", 1),
-                            {
-                                "op": "do",
-                                "action": {
-                                    "kind": "add_virus_counter",
-                                    "amount": 1,
-                                },
-                            },
-                        ),
-                    },
-                    decline("runner"),
-                ],
+                "op": "do",
+                "action": {
+                    "kind": "may_pay_credits_add_virus_counter",
+                    "credits": 1,
+                    "amount": 1,
+                },
             },
             unsupported=[],
         )
