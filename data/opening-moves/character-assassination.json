@@ -1,0 +1,23 @@
+{
+  "id": "character-assassination",
+  "title": "Character Assassination",
+  "wave": "opening-moves",
+  "nrdbCode": "04014",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "subtypes": [
+    "security"
+  ],
+  "advancementRequirement": 4,
+  "agendaPoints": 2,
+  "onScore": {
+    "op": "do",
+    "action": {
+      "kind": "trash_resource",
+      "pick": "choose",
+      "cannotPrevent": true
+    }
+  }
+}

@@ -11,6 +11,7 @@
     "humanitys-shadow",
     "future-proof",
     "creation-and-control",
+    "opening-moves",
     "reign-and-reverie",
     "system-core-2019",
     "downfall",
@@ -1277,6 +1278,32 @@
         "dedicated-response-team",
         "burke-bugs",
         "corporate-war"
+      ]
+    },
+    "opening-moves": {
+      "status": "supported",
+      "notes": "Opening Moves (om) Spin cycle set-complete. 16/16 OM-only clears; 4 reprints absorbed; pool supported. Paired release v1.95.0. Never kick mo/mor.",
+      "cards": [
+        "frame-job",
+        "pawn",
+        "rook",
+        "hostage",
+        "gorman-drip-v1",
+        "lockpick",
+        "false-echo",
+        "motivation",
+        "john-masanori",
+        "project-ares",
+        "next-bronze",
+        "celebrity-gift",
+        "himitsu-bako",
+        "character-assassination",
+        "jackson-howard",
+        "invasion-of-privacy",
+        "geothermal-fracking",
+        "swarm",
+        "cyberdex-trial",
+        "grim"
       ]
     },
     "creation-and-control": {

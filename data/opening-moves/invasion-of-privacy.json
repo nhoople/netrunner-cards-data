@@ -1,0 +1,24 @@
+{
+  "id": "invasion-of-privacy",
+  "title": "Invasion of Privacy",
+  "wave": "opening-moves",
+  "nrdbCode": "04016",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "subtypes": [
+    "double",
+    "gray ops",
+    "liability"
+  ],
+  "playCost": 2,
+  "playAdditionalClick": true,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "invasion_of_privacy",
+      "traceStrength": 2
+    }
+  }
+}

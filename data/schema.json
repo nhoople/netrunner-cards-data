@@ -2150,6 +2150,33 @@
       },
       "description": "While installed, increase rez cost of ice with this subtype by amount credits (CR §1.16.2a / §8.1.2d; e.g. Cat's Cradle code-gate-only)."
     },
+    "iceRezCostIncreaseProtectingHostedServer": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "While hosted on ice, increase rez cost of each ice protecting that ice's server (Rook)."
+    },
+    "strengthBonusPerRezzedIceWithSubtype": {
+      "type": "object",
+      "required": ["subtype", "bonus"],
+      "additionalProperties": false,
+      "properties": {
+        "subtype": { "type": "string" },
+        "bonus": { "type": "integer" }
+      },
+      "description": "NEXT Bronze-class: +bonus strength for each rezzed ice with subtype."
+    },
+    "caissaAdvanceOnSuccessfulRun": {
+      "type": "boolean",
+      "description": "Pawn-class: after a successful run while hosted on ice, advance host inward or install another Caïssa."
+    },
+    "onPassUnrezzedIce": {
+      "type": "object",
+      "description": "False Echo-class: fires when the Runner passes unrezzed ice."
+    },
+    "onCorpBasicClickForCreditOrDraw": {
+      "type": "object",
+      "description": "Gorman Drip v1-class: fires when Corp spends a click on basic gain credit or draw."
+    },
     "rezCostDiscountPerRezzedSubtype": {
       "type": "object",
       "required": [

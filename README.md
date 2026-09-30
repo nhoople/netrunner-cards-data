@@ -48,7 +48,8 @@ Match this dataset and [netrunner-engine](https://github.com/nhoople/netrunner-e
 
 | Pairing | cards-data | engine |
 |---------|------------|--------|
-| **Current** | [`v1.94.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.94.0) | engine same-semver pin `v1.94.0` (Creation and Control set-complete **46/46**) |
+| **Current** | [`v1.95.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.95.0) | engine same-semver pin `v1.95.0` (Opening Moves set-complete **16/16**) |
+| Creation and Control | [`v1.94.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.94.0) | engine same-semver pin `v1.94.0` (Creation and Control set-complete **46/46**) |
 | Humanity's Shadow | [`v1.92.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.92.0) | engine same-semver pin `v1.92.0` (Humanity's Shadow set-complete **15/15**) |
 | A Study in Static | [`v1.91.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.91.0) | engine same-semver pin `v1.91.0` (A Study in Static set-complete **15/15**) |
 | Cyber Exodus | [`v1.90.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.90.0) | engine same-semver pin `v1.90.0` (Cyber Exodus set-complete **13/13**) |

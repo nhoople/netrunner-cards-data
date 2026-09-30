@@ -1,0 +1,17 @@
+{
+  "id": "cyberdex-trial",
+  "title": "Cyberdex Trial",
+  "wave": "opening-moves",
+  "nrdbCode": "04019",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "neutral-corp",
+  "playCost": 0,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "purge_virus_counters"
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "id": "geothermal-fracking",
+  "title": "Geothermal Fracking",
+  "wave": "opening-moves",
+  "nrdbCode": "04017",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "expansion",
+    "liability"
+  ],
+  "advancementRequirement": 4,
+  "agendaPoints": 2,
+  "onScore": {
+    "op": "do",
+    "action": {
+      "kind": "add_agenda_counter",
+      "amount": 2
+    }
+  },
+  "paidAbilities": [
+    {
+      "id": "geothermal-cash",
+      "label": "[click], hosted agenda counter: Gain 7[credit] and take 1 bad publicity",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1,
+        "agendaCounters": 1
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "effect": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "gain_credits",
+              "side": "corp",
+              "amount": 7
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "give_bad_publicity",
+              "amount": 1
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

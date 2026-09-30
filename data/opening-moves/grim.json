@@ -1,0 +1,38 @@
+{
+  "id": "grim",
+  "title": "Grim",
+  "wave": "opening-moves",
+  "nrdbCode": "04020",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "neutral-corp",
+  "subtypes": [
+    "sentry",
+    "destroyer",
+    "liability"
+  ],
+  "installCost": 5,
+  "rezCost": 5,
+  "strength": 5,
+  "onRez": {
+    "op": "do",
+    "action": {
+      "kind": "give_bad_publicity",
+      "amount": 1
+    }
+  },
+  "subroutines": [
+    {
+      "id": "grim-trash-prog",
+      "text": "Trash 1 installed program.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "trash_program",
+          "pick": "choose"
+        }
+      }
+    }
+  ]
+}

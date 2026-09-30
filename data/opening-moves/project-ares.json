@@ -1,0 +1,23 @@
+{
+  "id": "project-ares",
+  "title": "Project Ares",
+  "wave": "opening-moves",
+  "nrdbCode": "04010",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "security",
+    "liability"
+  ],
+  "advancementRequirement": 4,
+  "agendaPoints": 2,
+  "onScore": {
+    "op": "do",
+    "action": {
+      "kind": "project_ares_on_score",
+      "past": 4
+    }
+  }
+}

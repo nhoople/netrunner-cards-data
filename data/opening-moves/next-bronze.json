@@ -1,0 +1,33 @@
+{
+  "id": "next-bronze",
+  "title": "NEXT Bronze",
+  "wave": "opening-moves",
+  "nrdbCode": "04011",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "code gate",
+    "next"
+  ],
+  "installCost": 2,
+  "rezCost": 2,
+  "strength": 0,
+  "strengthBonusPerRezzedIceWithSubtype": {
+    "subtype": "next",
+    "bonus": 1
+  },
+  "subroutines": [
+    {
+      "id": "next-bronze-etr",
+      "text": "End the run.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "end_the_run"
+        }
+      }
+    }
+  ]
+}

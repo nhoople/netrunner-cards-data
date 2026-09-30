@@ -1,0 +1,63 @@
+{
+  "id": "swarm",
+  "title": "Swarm",
+  "wave": "opening-moves",
+  "nrdbCode": "04018",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "sentry",
+    "destroyer",
+    "liability"
+  ],
+  "installCost": 8,
+  "rezCost": 8,
+  "strength": 5,
+  "onRez": {
+    "op": "do",
+    "action": {
+      "kind": "give_bad_publicity",
+      "amount": 1
+    }
+  },
+  "canAdvance": true,
+  "canAdvanceOnlyWhenRezzed": true,
+  "gainsSubroutinesPerAdvancement": {
+    "subroutine": {
+      "id": "swarm-trash-prog",
+      "text": "Trash 1 installed program unless the Runner pays 3[credit].",
+      "effect": {
+        "op": "choose",
+        "chooser": "runner",
+        "options": [
+          {
+            "id": "pay3",
+            "label": "Pay 3¢",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "lose_credits",
+                "side": "runner",
+                "amount": 3
+              }
+            }
+          },
+          {
+            "id": "trash",
+            "label": "Trash 1 installed program",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "trash_program",
+                "pick": "choose"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "subroutines": []
+}

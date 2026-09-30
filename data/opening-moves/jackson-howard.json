@@ -1,0 +1,58 @@
+{
+  "id": "jackson-howard",
+  "title": "Jackson Howard",
+  "wave": "opening-moves",
+  "nrdbCode": "04015",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "subtypes": [
+    "executive"
+  ],
+  "installCost": 0,
+  "rezCost": 0,
+  "trashCost": 3,
+  "unique": true,
+  "paidAbilities": [
+    {
+      "id": "jackson-draw",
+      "label": "[click]: Draw 2 cards",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "draw",
+          "side": "corp",
+          "amount": 2
+        }
+      }
+    },
+    {
+      "id": "jackson-rfg",
+      "label": "Remove Jackson Howard from the game: Shuffle up to 3 from Archives into R&D",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "rfgSelf": true
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "shuffle_archives_to_rd",
+          "amount": 3
+        }
+      }
+    }
+  ]
+}

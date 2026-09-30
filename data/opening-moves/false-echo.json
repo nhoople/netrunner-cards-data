@@ -1,0 +1,40 @@
+{
+  "id": "false-echo",
+  "title": "False Echo",
+  "wave": "opening-moves",
+  "nrdbCode": "04007",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "installCost": 1,
+  "memoryCost": 1,
+  "onPassUnrezzedIce": {
+    "op": "choose",
+    "chooser": "runner",
+    "options": [
+      {
+        "id": "trash",
+        "label": "Trash False Echo",
+        "effect": {
+          "op": "do",
+          "action": {
+                        "kind": "false_echo_trash_then_corp_rez_or_hq"
+          }
+        }
+      },
+      {
+        "id": "decline",
+        "label": "Decline",
+        "effect": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "runner",
+            "amount": 0
+          }
+        }
+      }
+    ]
+  }
+}

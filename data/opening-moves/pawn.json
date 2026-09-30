@@ -1,0 +1,38 @@
+{
+  "id": "pawn",
+  "title": "Pawn",
+  "wave": "opening-moves",
+  "nrdbCode": "04002",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "subtypes": [
+    "caïssa",
+    "trojan"
+  ],
+  "installCost": 0,
+  "memoryCost": 0,
+  "installOnIce": true,
+  "caissaAdvanceOnSuccessfulRun": true,
+  "paidAbilities": [
+    {
+      "id": "pawn-host",
+      "label": "[click]: Host on outermost ice protecting a central server",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "caissa_pawn_host_outermost_central"
+        }
+      }
+    }
+  ]
+}

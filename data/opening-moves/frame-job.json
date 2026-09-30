@@ -1,0 +1,28 @@
+{
+  "id": "frame-job",
+  "title": "Frame Job",
+  "wave": "opening-moves",
+  "nrdbCode": "04001",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "subtypes": [
+    "double"
+  ],
+  "playCost": 1,
+  "playAdditionalClick": true,
+  "playAdditionalCost": {
+    "op": "do",
+    "action": {
+      "kind": "choose_forfeit_runner_scored_agenda"
+    }
+  },
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "give_bad_publicity",
+      "amount": 1
+    }
+  }
+}
