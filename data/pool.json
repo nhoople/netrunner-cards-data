@@ -16,6 +16,7 @@
     "mala-tempora",
     "true-colors",
     "fear-and-loathing",
+    "double-time",
     "reign-and-reverie",
     "system-core-2019",
     "downfall",
@@ -1334,6 +1335,32 @@
         "power-shutdown",
         "paper-wall",
         "interns"
+      ]
+    },
+    "double-time": {
+      "status": "supported",
+      "notes": "Double Time (dt) Spin cycle set-complete. 19/19 DT-only clears; 1 reprint absorbed; pool supported. Paired release v1.100.0. Never kick mo/mor.",
+      "cards": [
+        "singularity",
+        "queens-gambit",
+        "dyson-fractal-generator",
+        "silencer",
+        "savoir-faire",
+        "fall-guy",
+        "power-nap",
+        "paintbrush",
+        "lucky-find",
+        "gyri-labyrinth",
+        "reclamation-order",
+        "broadcast-square",
+        "corporate-shuffle",
+        "caprice-nisei",
+        "shinobi",
+        "marker",
+        "hive",
+        "witness-tampering",
+        "napd-contract",
+        "quandary"
       ]
     },
     "fear-and-loathing": {

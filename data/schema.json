@@ -2693,6 +2693,27 @@
       "type": "object",
       "description": "When a gray ops or black ops operation is trashed after resolving (Tallie Perrault)."
     },
+    "onPassAllIceProtectingServer": {
+      "type": "object",
+      "description": "When the Runner passes all ice protecting this server (Caprice Nisei)."
+    },
+    "onWouldTakeBadPublicity": {
+      "type": "object",
+      "description": "When the Corp would take bad publicity (Broadcast Square)."
+    },
+    "dynamicEtrSubroutineCountFromCorpAgendaPoints": {
+      "type": "boolean",
+      "description": "Only the first N printed subroutines apply, where N = Corp agenda points (Hive)."
+    },
+    "advancementRequirementIncreasePerCorpBadPublicity": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Advancement requirement +N per Corp bad publicity (NAPD Contract)."
+    },
+    "oncePerTurnPaidAbilities": {
+      "type": "boolean",
+      "description": "Each paid ability on this card may be used at most once per turn (Savoir-faire)."
+    },
     "onScoreIfRunnerTaggedPlaceAgendaCounter": {
       "type": "boolean",
       "description": "When scored, if Runner is tagged, place 1 agenda counter on this agenda (Market Research)."

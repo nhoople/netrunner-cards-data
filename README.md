@@ -29,6 +29,7 @@ Files under [`data/`](data/) are the API. Clone the repo or fetch a **tagged** r
 | [`data/mala-tempora/`](data/mala-tempora/) | Mala Tempora (NRDB `mt`) — **supported** (Spin) |
 | [`data/true-colors/`](data/true-colors/) | True Colors (NRDB `tc`) — **supported** (Spin) |
 | [`data/fear-and-loathing/`](data/fear-and-loathing/) | Fear and Loathing (NRDB `fal`) — **supported** (Spin) |
+| [`data/double-time/`](data/double-time/) | Double Time (NRDB `dt`) — **supported** (Spin) |
 | [`data/reign-and-reverie/`](data/reign-and-reverie/) | Reign and Reverie (NRDB `rar`) — **supported** (legacy backwards) |
 | [`data/system-core-2019/`](data/system-core-2019/) | System Core 2019 (NRDB `sc19`) — **supported** (legacy backwards) |
 | [`data/downfall/`](data/downfall/) | Downfall (NRDB `df`) — **supported** (legacy backwards) |
@@ -53,7 +54,7 @@ Match this dataset and [netrunner-engine](https://github.com/nhoople/netrunner-e
 
 | Pairing | cards-data | engine |
 |---------|------------|--------|
-| **Current** | [`v1.98.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.98.0) | engine same-semver pin `v1.98.0` (True Colors set-complete **18/18**) |
+| **Current** | [`v1.100.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.100.0) | engine same-semver pin `v1.100.0` (Double Time set-complete **19/19**) |
 | Mala Tempora | [`v1.97.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.97.0) | engine same-semver pin `v1.97.0` (Mala Tempora set-complete **18/18**) |
 | Opening Moves / Stalwart | [`v1.96.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.96.0) | engine same-semver pin `v1.96.0` (Stalwart set-complete **17/17**) |
 | Opening Moves | [`v1.95.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.95.0) | engine same-semver pin `v1.95.0` (Opening Moves set-complete **16/16**) |

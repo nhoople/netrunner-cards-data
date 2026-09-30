@@ -1,0 +1,28 @@
+{
+  "id": "quandary",
+  "title": "Quandary",
+  "nrdbCode": "04120",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "neutral-corp",
+  "subtypes": [
+    "code gate"
+  ],
+  "installCost": 1,
+  "rezCost": 1,
+  "strength": 0,
+  "subroutines": [
+    {
+      "id": "quandary-etr",
+      "text": "End the run.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "end_the_run"
+        }
+      }
+    }
+  ],
+  "wave": "double-time"
+}

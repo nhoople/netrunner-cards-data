@@ -1,0 +1,33 @@
+{
+  "id": "savoir-faire",
+  "title": "Savoir-faire",
+  "nrdbCode": "04105",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "installCost": 0,
+  "memoryCost": 1,
+  "oncePerTurnPaidAbilities": true,
+  "paidAbilities": [
+    {
+      "id": "savoir-faire-install",
+      "label": "2[credit]: Install a program from grip paying install cost",
+      "clickCost": 0,
+      "creditCost": 2,
+      "cost": {
+        "credits": 2
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "savoir_faire_install_program_from_grip"
+        }
+      }
+    }
+  ],
+  "wave": "double-time"
+}

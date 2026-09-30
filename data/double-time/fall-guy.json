@@ -1,0 +1,54 @@
+{
+  "id": "fall-guy",
+  "title": "Fall Guy",
+  "nrdbCode": "04106",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "subtypes": [
+    "connection"
+  ],
+  "installCost": 0,
+  "paidAbilities": [
+    {
+      "id": "fall-guy-prevent",
+      "label": "[interrupt] [trash]: Prevent trash of another resource",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "trashSelf": true
+      },
+      "windows": [
+        "trash_interrupt_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "fall_guy_prevent_trash_resource"
+        }
+      }
+    },
+    {
+      "id": "fall-guy-credits",
+      "label": "[trash]: Gain 2[credit]",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "trashSelf": true
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "runner",
+          "amount": 2
+        }
+      }
+    }
+  ],
+  "wave": "double-time"
+}

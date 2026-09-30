@@ -1,0 +1,21 @@
+{
+  "id": "reclamation-order",
+  "title": "Reclamation Order",
+  "nrdbCode": "04111",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "double"
+  ],
+  "playCost": 1,
+  "playAdditionalClick": true,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "reclamation_order_archives_to_hq"
+    }
+  },
+  "wave": "double-time"
+}

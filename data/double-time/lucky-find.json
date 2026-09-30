@@ -1,0 +1,23 @@
+{
+  "id": "lucky-find",
+  "title": "Lucky Find",
+  "nrdbCode": "04109",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "neutral-runner",
+  "subtypes": [
+    "double"
+  ],
+  "playCost": 3,
+  "playAdditionalClick": true,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "gain_credits",
+      "side": "runner",
+      "amount": 9
+    }
+  },
+  "wave": "double-time"
+}

@@ -1,0 +1,22 @@
+{
+  "id": "corporate-shuffle",
+  "title": "Corporate Shuffle",
+  "nrdbCode": "04113",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "subtypes": [
+    "double"
+  ],
+  "playCost": 0,
+  "playAdditionalClick": true,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "corporate_shuffle_hq_to_rd_draw",
+      "draw": 5
+    }
+  },
+  "wave": "double-time"
+}

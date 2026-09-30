@@ -1,0 +1,28 @@
+{
+  "id": "gyri-labyrinth",
+  "title": "Gyri Labyrinth",
+  "nrdbCode": "04110",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "haas-bioroid",
+  "subtypes": [
+    "code gate"
+  ],
+  "installCost": 2,
+  "rezCost": 2,
+  "strength": 2,
+  "subroutines": [
+    {
+      "id": "gyri-hand",
+      "text": "Runner max hand size -2 until Corp next turn.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "gyri_labyrinth_reduce_max_hand"
+        }
+      }
+    }
+  ],
+  "wave": "double-time"
+}

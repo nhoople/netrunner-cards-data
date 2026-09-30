@@ -1,0 +1,17 @@
+{
+  "id": "napd-contract",
+  "title": "NAPD Contract",
+  "nrdbCode": "04119",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "neutral-corp",
+  "subtypes": [
+    "security"
+  ],
+  "advancementRequirement": 4,
+  "agendaPoints": 2,
+  "stealAdditionalCredits": 4,
+  "advancementRequirementIncreasePerCorpBadPublicity": 1,
+  "wave": "double-time"
+}

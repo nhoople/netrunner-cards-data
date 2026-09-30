@@ -1,0 +1,24 @@
+{
+  "id": "caprice-nisei",
+  "title": "Caprice Nisei",
+  "nrdbCode": "04114",
+  "type": "upgrade",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "jinteki",
+  "subtypes": [
+    "clone",
+    "psi"
+  ],
+  "installCost": 2,
+  "rezCost": 2,
+  "trashCost": 1,
+  "unique": true,
+  "onPassAllIceProtectingServer": {
+    "op": "do",
+    "action": {
+      "kind": "caprice_nisei_secret_spend"
+    }
+  },
+  "wave": "double-time"
+}

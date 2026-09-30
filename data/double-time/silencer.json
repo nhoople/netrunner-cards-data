@@ -1,0 +1,19 @@
+{
+  "id": "silencer",
+  "title": "Silencer",
+  "nrdbCode": "04104",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "subtypes": [
+    "chip",
+    "stealth"
+  ],
+  "installCost": 1,
+  "recurringCreditsMax": 1,
+  "recurringSpendFor": [
+    "use_killer"
+  ],
+  "wave": "double-time"
+}

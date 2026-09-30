@@ -1,0 +1,70 @@
+{
+  "id": "shinobi",
+  "title": "Shinobi",
+  "nrdbCode": "04115",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "jinteki",
+  "subtypes": [
+    "sentry",
+    "tracer",
+    "ap",
+    "liability"
+  ],
+  "installCost": 7,
+  "rezCost": 7,
+  "strength": 5,
+  "onRez": {
+    "op": "do",
+    "action": {
+      "kind": "give_bad_publicity",
+      "amount": 1
+    }
+  },
+  "subroutines": [
+    {
+      "op": "do",
+      "action": {
+        "kind": "trace",
+        "strength": 1,
+        "onSuccess": {
+          "op": "do",
+          "action": {
+            "kind": "net_damage",
+            "amount": 1
+          }
+        }
+      }
+    },
+    {
+      "op": "do",
+      "action": {
+        "kind": "trace",
+        "strength": 2,
+        "onSuccess": {
+          "op": "do",
+          "action": {
+            "kind": "net_damage",
+            "amount": 2
+          }
+        }
+      }
+    },
+    {
+      "op": "do",
+      "action": {
+        "kind": "trace",
+        "strength": 3,
+        "onSuccess": {
+          "op": "do",
+          "action": {
+            "kind": "net_damage",
+            "amount": 3
+          }
+        }
+      }
+    }
+  ],
+  "wave": "double-time"
+}

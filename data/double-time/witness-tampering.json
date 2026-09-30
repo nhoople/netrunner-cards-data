@@ -1,0 +1,23 @@
+{
+  "id": "witness-tampering",
+  "title": "Witness Tampering",
+  "nrdbCode": "04118",
+  "type": "operation",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "double",
+    "gray ops"
+  ],
+  "playCost": 4,
+  "playAdditionalClick": true,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "remove_bad_publicity_up_to",
+      "max": 2
+    }
+  },
+  "wave": "double-time"
+}

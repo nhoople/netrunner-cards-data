@@ -1,0 +1,19 @@
+{
+  "id": "dyson-fractal-generator",
+  "title": "Dyson Fractal Generator",
+  "nrdbCode": "04103",
+  "type": "hardware",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "subtypes": [
+    "chip",
+    "stealth"
+  ],
+  "installCost": 1,
+  "recurringCreditsMax": 1,
+  "recurringSpendFor": [
+    "use_fracter"
+  ],
+  "wave": "double-time"
+}

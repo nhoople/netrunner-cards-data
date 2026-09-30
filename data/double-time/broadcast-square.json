@@ -1,0 +1,23 @@
+{
+  "id": "broadcast-square",
+  "title": "Broadcast Square",
+  "nrdbCode": "04112",
+  "type": "asset",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "nbn",
+  "subtypes": [
+    "facility"
+  ],
+  "installCost": 2,
+  "rezCost": 2,
+  "trashCost": 5,
+  "unique": true,
+  "onWouldTakeBadPublicity": {
+    "op": "do",
+    "action": {
+      "kind": "broadcast_square_trace_prevent_bad_publicity"
+    }
+  },
+  "wave": "double-time"
+}

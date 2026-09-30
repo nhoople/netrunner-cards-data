@@ -1,0 +1,32 @@
+{
+  "id": "paintbrush",
+  "title": "Paintbrush",
+  "nrdbCode": "04108",
+  "type": "program",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "installCost": 3,
+  "memoryCost": 2,
+  "paidAbilities": [
+    {
+      "id": "paintbrush-paint",
+      "label": "[click]: Choose rezzed ice; gain subtype until end of next run",
+      "clickCost": 1,
+      "creditCost": 0,
+      "cost": {
+        "clicks": 1
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "paintbrush_choose_ice_gain_subtype"
+        }
+      }
+    }
+  ],
+  "wave": "double-time"
+}

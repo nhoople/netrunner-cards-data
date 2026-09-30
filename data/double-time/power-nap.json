@@ -1,0 +1,21 @@
+{
+  "id": "power-nap",
+  "title": "Power Nap",
+  "nrdbCode": "04107",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "shaper",
+  "subtypes": [
+    "double"
+  ],
+  "playCost": 0,
+  "playAdditionalClick": true,
+  "onPlay": {
+    "op": "do",
+    "action": {
+      "kind": "power_nap_gain_per_double_in_heap"
+    }
+  },
+  "wave": "double-time"
+}

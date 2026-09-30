@@ -1,0 +1,25 @@
+{
+  "id": "singularity",
+  "title": "Singularity",
+  "nrdbCode": "04101",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "anarch",
+  "subtypes": [
+    "double",
+    "run"
+  ],
+  "playCost": 4,
+  "playAdditionalClick": true,
+  "runEvent": {
+    "servers": "remote",
+    "onSuccessfulRun": {
+      "op": "do",
+      "action": {
+        "kind": "singularity_instead_of_breach_trash_root"
+      }
+    }
+  },
+  "wave": "double-time"
+}
