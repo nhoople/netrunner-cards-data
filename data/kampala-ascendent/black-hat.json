@@ -12,6 +12,14 @@
     "action": {
       "kind": "trace",
       "strength": 4,
+      "onSuccess": {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "runner",
+          "amount": 0
+        }
+      },
       "onFailure": {
         "op": "do",
         "action": {
