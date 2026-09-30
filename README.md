@@ -122,9 +122,9 @@ console.log(pool.corpusOrder, marjanah.title);
 
 Synthetic stubs and early wave1/wave2 dirs were removed in `v0.2.0`. Reprints that previously lived only under those waves now ship under their Null Signal release directories.
 
-Parhelion is fully supported (wave gate `v0.71.0`). The Automata Initiative is fully supported (wave gate `v0.86.0`). Rebellion Without Rehearsal is fully supported (wave gate `v1.00.0`). Elevation is fully supported (wave gate `v1.12.0`). Vantage Point is fully supported (wave gate `v1.33.0`). Uprising is fully supported (wave gate `v1.46.0`). **Downfall** is fully supported (wave gate `v1.58.0`, **65/65**). **System Core 2019** is fully supported (wave gate `v1.74.0`, **84/147** SC19-only). **Reign and Reverie** is fully supported (wave gate `v1.86.0`, **56/56**). **FFG Core Set** is fully supported (wave gate `v1.87.0`, **49/49** Core-only). **What Lies Ahead** is fully supported (wave gate `v1.88.0`, **14/14** WLA-only).
+Parhelion is fully supported (wave gate `v0.71.0`). The Automata Initiative is fully supported (wave gate `v0.86.0`). Rebellion Without Rehearsal is fully supported (wave gate `v1.00.0`). Elevation is fully supported (wave gate `v1.12.0`). Vantage Point is fully supported (wave gate `v1.33.0`). Uprising is fully supported (wave gate `v1.46.0`). **Downfall** is fully supported (wave gate `v1.58.0`, **65/65**). **System Core 2019** is fully supported (wave gate `v1.74.0`, **84/147** SC19-only). **Reign and Reverie** is fully supported (wave gate `v1.86.0`, **56/56**). **FFG Core Set** is fully supported (wave gate `v1.87.0`, **49/49** Core-only). **What Lies Ahead** is fully supported (wave gate `v1.88.0`, **14/14** WLA-only). **Trace Amount** is fully supported (wave gate `v1.89.0`, **15/15** TA-only). **Cyber Exodus** is fully supported (wave gate `v1.90.0`, **13/13** CE-only).
 
-**Next:** Genesis continue (`ta` → `ce` → `asis` → `hs` → `fp`). Pair every clear with the engine CR adherence gate; GitHub Releases only at set-complete. Never kick `mo`/`mor`.
+**Next:** Genesis continue (`asis` → `hs` → `fp`). Pair every clear with the engine CR adherence gate; GitHub Releases only at set-complete. Never kick `mo`/`mor`.
 
 ## Versioning
 
