@@ -335,7 +335,7 @@ def map_card(c: dict) -> dict | None:
                 {
                     "id": "negotiator-trash",
                     "text": "Trash 1 installed program.",
-                    "effect": do("trash_program"),
+                    "effect": do("trash_program", pick="choose"),
                 },
             ],
         )
