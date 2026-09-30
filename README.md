@@ -56,7 +56,8 @@ Match this dataset and [netrunner-engine](https://github.com/nhoople/netrunner-e
 
 | Pairing | cards-data | engine |
 |---------|------------|--------|
-| **Current** | [`v1.101.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.101.0) | engine same-semver pin `v1.101.0` (Honor and Profit set-complete **50/50**) |
+| **Current** | [`v1.102.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.102.0) | engine same-semver pin `v1.102.0` (Upstalk set-complete **17/17**) |
+| Honor and Profit | [`v1.101.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.101.0) | engine same-semver pin `v1.101.0` (Honor and Profit set-complete **50/50**) |
 | Double Time | [`v1.100.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.100.0) | engine same-semver pin `v1.100.0` (Double Time set-complete **19/19**) |
 | Mala Tempora | [`v1.97.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.97.0) | engine same-semver pin `v1.97.0` (Mala Tempora set-complete **18/18**) |
 | Opening Moves / Stalwart | [`v1.96.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.96.0) | engine same-semver pin `v1.96.0` (Stalwart set-complete **17/17**) |
