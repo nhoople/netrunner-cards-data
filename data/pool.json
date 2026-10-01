@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "description": "Declared supported card pool for the engine. Releases expand as IR/mechanics allow. Cards with partial fidelity list explicit unsupported notes — never silent wrong behavior.",
+  "description": "Declared supported card pool for the engine. Releases expand as IR/mechanics allow. Cards with partial fidelity list explicit unsupported notes \u2014 never silent wrong behavior.",
   "agendaPointsToWinDefault": 7,
   "corpusOrder": [
     "core",
@@ -75,7 +75,7 @@
   "waves": {
     "system-core-2019": {
       "status": "supported",
-      "notes": "Null Signal System Core 2019 (NRDB pack sc19) — legacy backwards after Downfall. 147 titles; 63 Gateway/SU21 reprints absorbed. Fully supported: 84/147 SC19-only clears (wave gate v1.74.0). Skip mo/mor.",
+      "notes": "Null Signal System Core 2019 (NRDB pack sc19) \u2014 legacy backwards after Downfall. 147 titles; 63 Gateway/SU21 reprints absorbed. Fully supported: 84/147 SC19-only clears (wave gate v1.74.0).",
       "cards": [
         "reina-roja-freedom-fighter",
         "quetzal-free-spirit",
@@ -228,7 +228,7 @@
     },
     "downfall": {
       "status": "supported",
-      "notes": "Null Signal Downfall (NRDB pack df) — Ashes set 1 of 2; legacy backwards before Uprising. Skip Magnum Opus Reprint (mor). Fully supported: all 65 cards mapped (wave gate v1.58.0).",
+      "notes": "Null Signal Downfall (NRDB pack df) \u2014 Ashes set 1 of 2; legacy backwards before Uprising. Fully supported: all 65 cards mapped (wave gate v1.58.0).",
       "cards": [
         "isolation",
         "demolisher",
@@ -299,7 +299,7 @@
     },
     "uprising": {
       "status": "supported",
-      "notes": "Null Signal Uprising (NRDB pack ur) — Ashes set 2 of 2; 65 cards. Fully supported: all 65 cards mapped (wave gate v1.46.0).",
+      "notes": "Null Signal Uprising (NRDB pack ur) \u2014 Ashes set 2 of 2; 65 cards. Fully supported: all 65 cards mapped (wave gate v1.46.0).",
       "cards": [
         "hoshiko-shiro-untold-protagonist",
         "moshing",
@@ -370,7 +370,7 @@
     },
     "system-gateway": {
       "status": "supported",
-      "notes": "Null Signal System Gateway (NRDB pack sg) learner/starter set — 77 cards. Corpus order: System Gateway → System Update 2021 → later releases. Includes Sure Gamble and Hedge Fund as Gateway printings.",
+      "notes": "Null Signal System Gateway (NRDB pack sg) learner/starter set \u2014 77 cards. Corpus order: System Gateway \u2192 System Update 2021 \u2192 later releases. Includes Sure Gamble and Hedge Fund as Gateway printings.",
       "cards": [
         "rene-loup-arcemont-party-animal",
         "wildcat-strike",
@@ -453,7 +453,7 @@
     },
     "system-update-2021": {
       "status": "supported",
-      "notes": "Null Signal System Update 2021 (NRDB pack su21) — 82 classic reprints, the set immediately after System Gateway. Fully supported. Next corpus wave is Midnight Sun.",
+      "notes": "Null Signal System Update 2021 (NRDB pack su21) \u2014 82 classic reprints, the set immediately after System Gateway. Fully supported. Next corpus wave is Midnight Sun.",
       "cards": [
         "quetzal-free-spirit",
         "reina-roja-freedom-fighter",
@@ -541,7 +541,7 @@
     },
     "midnight-sun": {
       "status": "supported",
-      "notes": "Null Signal Midnight Sun (NRDB pack ms) — 65 cards, Borealis set 1. Midnight Sun Booster Pack (msbp) titles absorbed into ms printings (no separate wave). Fully supported: every card has unsupported: []. Wave gate met.",
+      "notes": "Null Signal Midnight Sun (NRDB pack ms) \u2014 65 cards, Borealis set 1. Midnight Sun Booster Pack (msbp) titles absorbed into ms printings (no separate wave). Fully supported: every card has unsupported: []. Wave gate met.",
       "cards": [
         "esa-afontov-eco-insurrectionist",
         "chastushka",
@@ -612,7 +612,7 @@
     },
     "parhelion": {
       "status": "supported",
-      "notes": "Null Signal Parhelion (NRDB pack ph) — Borealis set 2 of 2. Fully supported: all 63 cards mapped (wave gate v0.71.0).",
+      "notes": "Null Signal Parhelion (NRDB pack ph) \u2014 Borealis set 2 of 2. Fully supported: all 63 cards mapped (wave gate v0.71.0).",
       "cards": [
         "finality",
         "katorga-breakout",
@@ -681,7 +681,7 @@
     },
     "the-automata-initiative": {
       "status": "supported",
-      "notes": "Null Signal The Automata Initiative (NRDB pack tai) — Liberation set 1 of 2; 65 cards. Fully supported: all 65 cards mapped (wave gate v0.86.0).",
+      "notes": "Null Signal The Automata Initiative (NRDB pack tai) \u2014 Liberation set 1 of 2; 65 cards. Fully supported: all 65 cards mapped (wave gate v0.86.0).",
       "cards": [
         "strike-fund",
         "the-price",
@@ -752,7 +752,7 @@
     },
     "rebellion-without-rehearsal": {
       "status": "supported",
-      "notes": "Null Signal Rebellion Without Rehearsal (NRDB pack rwr) — Liberation set 2 of 2; 65 cards. Fully supported: all 65 cards mapped (wave gate v1.00.0).",
+      "notes": "Null Signal Rebellion Without Rehearsal (NRDB pack rwr) \u2014 Liberation set 2 of 2; 65 cards. Fully supported: all 65 cards mapped (wave gate v1.00.0).",
       "cards": [
         "sebastiao-souza-pessoa-activist-organizer",
         "eye-for-an-eye",
@@ -823,7 +823,7 @@
     },
     "elevation": {
       "status": "supported",
-      "notes": "Null Signal Elevation (NRDB pack elev) — 82 cards. Fully supported: all 82 cards mapped (wave gate v1.12.0).",
+      "notes": "Null Signal Elevation (NRDB pack elev) \u2014 82 cards. Fully supported: all 82 cards mapped (wave gate v1.12.0).",
       "cards": [
         "ryo-phoenix-ono-out-of-the-ashes",
         "topan-ormas-leader",
@@ -911,7 +911,7 @@
     },
     "vantage-point": {
       "status": "supported",
-      "notes": "Null Signal Vantage Point (NRDB pack vp) — 66/66 mapped; pool supported (wave gate v1.33.0).",
+      "notes": "Null Signal Vantage Point (NRDB pack vp) \u2014 66/66 mapped; pool supported (wave gate v1.33.0).",
       "cards": [
         "chain-reaction",
         "take-a-dive",
@@ -983,14 +983,14 @@
     },
     "fixtures": {
       "status": "fixture",
-      "notes": "CR-example / host-test cards outside corpusOrder (Plascrete Carapace meat-prevent interrupt). Not part of Gateway→VP wave gates; excluded from supportedCardIds().",
+      "notes": "CR-example / host-test cards outside corpusOrder (Plascrete Carapace meat-prevent interrupt). Not part of Gateway\u2192VP wave gates; excluded from supportedCardIds().",
       "cards": [
         "plascrete-carapace"
       ]
     },
     "reign-and-reverie": {
       "status": "supported",
-      "notes": "Null Signal Reign and Reverie (NRDB pack rar) — legacy backwards after System Core 2019. 58 titles; 2 SC19 reprints absorbed (Patchwork, Paragon). Fully supported: 56/56 RaR-only clears (wave gate v1.86.0).",
+      "notes": "Null Signal Reign and Reverie (NRDB pack rar) \u2014 legacy backwards after System Core 2019. 58 titles; 2 SC19 reprints absorbed (Patchwork, Paragon). Fully supported: 56/56 RaR-only clears (wave gate v1.86.0).",
       "cards": [
         "nathaniel-gnat-hall-one-of-a-kind",
         "divide-and-conquer",
@@ -1054,7 +1054,7 @@
     },
     "what-lies-ahead": {
       "status": "supported",
-      "notes": "FFG What Lies Ahead (NRDB pack wla) — Genesis set-complete from floor v1.87.0 → v1.88.0. 20 titles; 6 Gateway/SU21/SC19 reprints absorbed; 14/14 WLA-only clears. Never kick mo/mor. CR pin v26.03.",
+      "notes": "FFG What Lies Ahead (NRDB pack wla) \u2014 Genesis set-complete from floor v1.87.0 \u2192 v1.88.0. 20 titles; 6 Gateway/SU21/SC19 reprints absorbed; 14/14 WLA-only clears. CR pin v26.03.",
       "cards": [
         "whizzard-master-gamer",
         "spinal-modem",
@@ -1080,7 +1080,7 @@
     },
     "core": {
       "status": "supported",
-      "notes": "FFG Core Set (NRDB pack core) — set-complete from floor v1.86.0 → v1.87.0. 113 titles; 64 Gateway/SU21/SC19 reprints absorbed; 49/49 Core-only clears. Never kick mo/mor. CR pin v26.03.",
+      "notes": "FFG Core Set (NRDB pack core) \u2014 set-complete from floor v1.86.0 \u2192 v1.87.0. 113 titles; 64 Gateway/SU21/SC19 reprints absorbed; 49/49 Core-only clears. CR pin v26.03.",
       "cards": [
         "noise-hacker-extraordinaire",
         "deja-vu",
@@ -1199,7 +1199,7 @@
     },
     "trace-amount": {
       "status": "supported",
-      "notes": "FFG Trace Amount (NRDB pack ta) — Genesis set-complete from floor v1.88.0 → v1.89.0. 20 titles; 5 Core/SC19 reprints absorbed; 15/15 TA-only clears. Never kick mo/mor. CR pin v26.03.",
+      "notes": "FFG Trace Amount (NRDB pack ta) \u2014 Genesis set-complete from floor v1.88.0 \u2192 v1.89.0. 20 titles; 5 Core/SC19 reprints absorbed; 15/15 TA-only clears. CR pin v26.03.",
       "cards": [
         "vamp",
         "liberated-account",
@@ -1225,7 +1225,7 @@
     },
     "cyber-exodus": {
       "status": "supported",
-      "notes": "FFG Cyber Exodus (NRDB pack ce) — Genesis set-complete from floor v1.89.0 → v1.90.0. 20 titles; 7 Core/SC19/SU21 reprints absorbed; 13/13 CE-only clears. Never kick mo/mor. CR pin v26.03.",
+      "notes": "FFG Cyber Exodus (NRDB pack ce) \u2014 Genesis set-complete from floor v1.89.0 \u2192 v1.90.0. 20 titles; 7 Core/SC19/SU21 reprints absorbed; 13/13 CE-only clears. CR pin v26.03.",
       "cards": [
         "nerve-agent",
         "joshua-b",
@@ -1251,7 +1251,7 @@
     },
     "a-study-in-static": {
       "status": "supported",
-      "notes": "FFG A Study in Static (NRDB pack asis) — Genesis set-complete from floor v1.90.0 → v1.91.0. 20 titles; 5 SC19/SU21/Uprising reprints absorbed; 15/15 ASIS-only clears. Never kick mo/mor. CR pin v26.03.",
+      "notes": "FFG A Study in Static (NRDB pack asis) \u2014 Genesis set-complete from floor v1.90.0 \u2192 v1.91.0. 20 titles; 5 SC19/SU21/Uprising reprints absorbed; 15/15 ASIS-only clears. CR pin v26.03.",
       "cards": [
         "disrupter",
         "force-of-nature",
@@ -1277,7 +1277,7 @@
     },
     "humanitys-shadow": {
       "status": "supported",
-      "notes": "FFG Humanity's Shadow (NRDB pack hs) — Genesis set-complete from floor v1.91.0 → v1.92.0. 20 titles; 5 SC19/SU21 reprints absorbed; 15/15 HS-only clears. Never kick mo/mor. CR pin v26.03.",
+      "notes": "FFG Humanity's Shadow (NRDB pack hs) \u2014 Genesis set-complete from floor v1.91.0 \u2192 v1.92.0. 20 titles; 5 SC19/SU21 reprints absorbed; 15/15 HS-only clears. CR pin v26.03.",
       "cards": [
         "surge",
         "xanadu",
@@ -1303,7 +1303,7 @@
     },
     "future-proof": {
       "status": "supported",
-      "notes": "FFG Future Proof (NRDB pack fp) — Genesis set-complete from floor v1.92.0 → v1.93.0. 20 titles; 7 SC19/SU21 reprints absorbed; 13/13 FP-only clears. Never kick mo/mor. CR pin v26.03.",
+      "notes": "FFG Future Proof (NRDB pack fp) \u2014 Genesis set-complete from floor v1.92.0 \u2192 v1.93.0. 20 titles; 7 SC19/SU21 reprints absorbed; 13/13 FP-only clears. CR pin v26.03.",
       "cards": [
         "retrieval-run",
         "darwin",
@@ -1329,7 +1329,7 @@
     },
     "stalwart": {
       "status": "supported",
-      "notes": "Stalwart (st) Spin cycle set-complete. 17/17 ST-only clears; 3 reprints absorbed; pool supported. Paired release v1.96.0. Never kick mo/mor.",
+      "notes": "Stalwart (st) Spin cycle set-complete. 17/17 ST-only clears; 3 reprints absorbed; pool supported. Paired release v1.96.0.",
       "cards": [
         "bishop",
         "scheherazade",
@@ -1355,7 +1355,7 @@
     },
     "mala-tempora": {
       "status": "supported",
-      "notes": "Mala Tempora (mt) Spin cycle set-complete. 18/18 MT-only clears; 2 reprints absorbed; pool supported. Paired release v1.97.0. Never kick mo/mor.",
+      "notes": "Mala Tempora (mt) Spin cycle set-complete. 18/18 MT-only clears; 2 reprints absorbed; pool supported. Paired release v1.97.0.",
       "cards": [
         "reina-roja-freedom-fighter",
         "deep-red",
@@ -1381,7 +1381,7 @@
     },
     "double-time": {
       "status": "supported",
-      "notes": "Double Time (dt) Spin cycle set-complete. 19/19 DT-only clears; 1 reprint absorbed; pool supported. Paired release v1.100.0. Never kick mo/mor.",
+      "notes": "Double Time (dt) Spin cycle set-complete. 19/19 DT-only clears; 1 reprint absorbed; pool supported. Paired release v1.100.0.",
       "cards": [
         "singularity",
         "queens-gambit",
@@ -1407,7 +1407,7 @@
     },
     "honor-and-profit": {
       "status": "supported",
-      "notes": "Honor and Profit (hap) deluxe set-complete. 50/50 HAP-only clears; 5 reprints absorbed; pool supported. Paired release v1.101.0. Never kick mo/mor.",
+      "notes": "Honor and Profit (hap) deluxe set-complete. 50/50 HAP-only clears; 5 reprints absorbed; pool supported. Paired release v1.101.0.",
       "cards": [
         "harmony-medtech-biomedical-pioneer",
         "nisei-division-the-next-generation",
@@ -1468,7 +1468,7 @@
     },
     "upstalk": {
       "status": "supported",
-      "notes": "Upstalk (up) Lunar cycle set-complete. 17/17 UP-only clears; 3 reprints absorbed; pool supported. Paired release v1.102.0. Never kick mo/mor.",
+      "notes": "Upstalk (up) Lunar cycle set-complete. 17/17 UP-only clears; 3 reprints absorbed; pool supported. Paired release v1.102.0.",
       "cards": [
         "domestic-sleepers",
         "next-silver",
@@ -1494,7 +1494,7 @@
     },
     "fear-and-loathing": {
       "status": "supported",
-      "notes": "Fear and Loathing (fal) Spin cycle set-complete. 15/15 FAL-only clears; 5 reprints absorbed; pool supported. Paired release v1.99.0. Never kick mo/mor.",
+      "notes": "Fear and Loathing (fal) Spin cycle set-complete. 15/15 FAL-only clears; 5 reprints absorbed; pool supported. Paired release v1.99.0.",
       "cards": [
         "quest-completed",
         "hemorrhage",
@@ -1520,7 +1520,7 @@
     },
     "true-colors": {
       "status": "supported",
-      "notes": "True Colors (tc) Spin cycle set-complete. 18/18 TC-only clears; 2 reprints absorbed; pool supported. Paired release v1.98.0. Never kick mo/mor.",
+      "notes": "True Colors (tc) Spin cycle set-complete. 18/18 TC-only clears; 2 reprints absorbed; pool supported. Paired release v1.98.0.",
       "cards": [
         "keyhole",
         "activist-support",
@@ -1546,7 +1546,7 @@
     },
     "opening-moves": {
       "status": "supported",
-      "notes": "Opening Moves (om) Spin cycle set-complete. 16/16 OM-only clears; 4 reprints absorbed; pool supported. Paired release v1.95.0. Never kick mo/mor.",
+      "notes": "Opening Moves (om) Spin cycle set-complete. 16/16 OM-only clears; 4 reprints absorbed; pool supported. Paired release v1.95.0.",
       "cards": [
         "frame-job",
         "pawn",
@@ -1572,7 +1572,7 @@
     },
     "creation-and-control": {
       "status": "supported",
-      "notes": "Creation and Control (cac) deluxe set-complete. 46/46 CAC-only clears; 9 reprints absorbed; pool supported. Paired release v1.94.0. Never kick mo/mor.",
+      "notes": "Creation and Control (cac) deluxe set-complete. 46/46 CAC-only clears; 9 reprints absorbed; pool supported. Paired release v1.94.0.",
       "cards": [
         "cerebral-imaging-infinite-frontiers",
         "custom-biotics-engineered-for-success",
@@ -1633,7 +1633,7 @@
     },
     "up-and-over": {
       "status": "supported",
-      "notes": "Up and Over (uao) Lunar set-complete. 18/18 UAO-only clears; 2 reprints absorbed. Pool supported. Paired release v1.105.0. Never kick mo/mor.",
+      "notes": "Up and Over (uao) Lunar set-complete. 18/18 UAO-only clears; 2 reprints absorbed. Pool supported. Paired release v1.105.0.",
       "cards": [
         "architect",
         "peak-efficiency",
@@ -1659,7 +1659,7 @@
     },
     "first-contact": {
       "status": "supported",
-      "notes": "First Contact (fc) Lunar set-complete. 18/18 FC-only clears; 2 reprints absorbed. Pool supported. Paired release v1.104.0. Never kick mo/mor.",
+      "notes": "First Contact (fc) Lunar set-complete. 18/18 FC-only clears; 2 reprints absorbed. Pool supported. Paired release v1.104.0.",
       "cards": [
         "iq",
         "elizas-toybox",
@@ -1683,7 +1683,7 @@
     },
     "the-spaces-between": {
       "status": "supported",
-      "notes": "The Spaces Between (tsb) Lunar set-complete. 20/20 TSB-only clears; pool supported. Paired release v1.103.0. Never kick mo/mor.",
+      "notes": "The Spaces Between (tsb) Lunar set-complete. 20/20 TSB-only clears; pool supported. Paired release v1.103.0.",
       "cards": [
         "the-foundry-refining-the-process",
         "enhanced-login-protocol",
@@ -1709,7 +1709,7 @@
     },
     "all-that-remains": {
       "status": "supported",
-      "notes": "All That Remains (atr) Lunar set-complete. 17/17 ATR-only clears; 3 reprints absorbed. Pool supported. Paired release v1.106.0. Never kick mo/mor.",
+      "notes": "All That Remains (atr) Lunar set-complete. 17/17 ATR-only clears; 3 reprints absorbed. Pool supported. Paired release v1.106.0.",
       "cards": [
         "bifrost-array",
         "sagittarius",
@@ -1735,7 +1735,7 @@
     },
     "the-source": {
       "status": "supported",
-      "notes": "The Source (ts) Lunar set-complete. 19/19 TS-only clears; 1 reprint absorbed (earthrise-hotel). Pool supported. Paired release v1.107.0. Never kick mo/mor.",
+      "notes": "The Source (ts) Lunar set-complete. 19/19 TS-only clears; 1 reprint absorbed (earthrise-hotel). Pool supported. Paired release v1.107.0.",
       "cards": [
         "helium-3-deposit",
         "errand-boy",
@@ -1761,7 +1761,7 @@
     },
     "order-and-chaos": {
       "status": "supported",
-      "notes": "Order and Chaos (oac) deluxe set-complete. 55/55 new clears (0 reprints). Pool supported. Paired release v1.108.0. Never kick mo/mor.",
+      "notes": "Order and Chaos (oac) deluxe set-complete. 55/55 new clears (0 reprints). Pool supported. Paired release v1.108.0.",
       "cards": [
         "argus-security-protection-guaranteed",
         "gagarin-deep-space-expanding-the-horizon",
@@ -1822,7 +1822,7 @@
     },
     "the-valley": {
       "status": "supported",
-      "notes": "The Valley (val) SanSan set-complete. 19/19 new clears; clot reprint skipped. Pool supported. Paired release v1.109.0. Never kick mo/mor.",
+      "notes": "The Valley (val) SanSan set-complete. 19/19 new clears; clot reprint skipped. Pool supported. Paired release v1.109.0.",
       "cards": [
         "clot",
         "paige-piper",
@@ -1848,7 +1848,7 @@
     },
     "breaker-bay": {
       "status": "supported",
-      "notes": "Breaker Bay (bb) SanSan set-complete. 18/18 new clears; career-fair + turing reprints skipped. Pool supported. Paired release v1.110.0. Never kick mo/mor.",
+      "notes": "Breaker Bay (bb) SanSan set-complete. 18/18 new clears; career-fair + turing reprints skipped. Pool supported. Paired release v1.110.0.",
       "cards": [
         "hacktivist-meeting",
         "off-campus-apartment",
@@ -1874,7 +1874,7 @@
     },
     "chrome-city": {
       "status": "supported",
-      "notes": "Chrome City (cc) SanSan set-complete. 18/18 new clears; oaktown-renovation + corporate-town reprints skipped. Pool supported. Paired release v1.111.0. Never kick mo/mor.",
+      "notes": "Chrome City (cc) SanSan set-complete. 18/18 new clears; oaktown-renovation + corporate-town reprints skipped. Pool supported. Paired release v1.111.0.",
       "cards": [
         "immolation-script",
         "skulljack",
@@ -1900,7 +1900,7 @@
     },
     "the-underway": {
       "status": "supported",
-      "notes": "The Underway (uw) SanSan set-complete. 17/17 new clears; chameleon + contract-killer + spiderweb reprints skipped. Pool supported. Paired release v1.112.0. Never kick mo/mor.",
+      "notes": "The Underway (uw) SanSan set-complete. 17/17 new clears; chameleon + contract-killer + spiderweb reprints skipped. Pool supported. Paired release v1.112.0.",
       "cards": [
         "faust",
         "street-peddler",
@@ -1926,7 +1926,7 @@
     },
     "old-hollywood": {
       "status": "supported",
-      "notes": "Old Hollywood (oh) SanSan set-complete. 19/19 new clears; explode-a-palooza reprint skipped. Pool supported. Paired release v1.113.0. Never kick mo/mor.",
+      "notes": "Old Hollywood (oh) SanSan set-complete. 19/19 new clears; explode-a-palooza reprint skipped. Pool supported. Paired release v1.113.0.",
       "cards": [
         "trope",
         "spoilers",
@@ -1952,7 +1952,7 @@
     },
     "the-universe-of-tomorrow": {
       "status": "supported",
-      "notes": "The Universe of Tomorrow (uot) SanSan set-complete. 18/18 new clears; product-placement and public-support reprints skipped. Pool supported. Paired release v1.114.0. Never kick mo/mor.",
+      "notes": "The Universe of Tomorrow (uot) SanSan set-complete. 18/18 new clears; product-placement and public-support reprints skipped. Pool supported. Paired release v1.114.0.",
       "cards": [
         "power-to-the-people",
         "surfer",
@@ -1978,7 +1978,7 @@
     },
     "data-and-destiny": {
       "status": "supported",
-      "notes": "Data and Destiny (dad) deluxe set-complete. 54/54 new clears; spark-agency-worldswide-reach reprint skipped. Pool supported. Paired release v1.115.0. Never kick mo/mor.",
+      "notes": "Data and Destiny (dad) deluxe set-complete. 54/54 new clears; spark-agency-worldswide-reach reprint skipped. Pool supported. Paired release v1.115.0.",
       "cards": [
         "sync-everything-everywhere",
         "new-angeles-sol-your-news",
@@ -2039,7 +2039,7 @@
     },
     "kala-ghoda": {
       "status": "supported",
-      "notes": "Kala Ghoda (kg) Mumbad #1 set-complete. 18/18 new clears; run-amok reprint skipped. Pool supported after data-and-destiny. Paired release v1.116.0. Never kick mo/mor.",
+      "notes": "Kala Ghoda (kg) Mumbad #1 set-complete. 18/18 new clears; run-amok reprint skipped. Pool supported after data-and-destiny. Paired release v1.116.0.",
       "cards": [
         "run-amok",
         "ramujan-reliant-550-bmi",
@@ -2064,7 +2064,7 @@
     },
     "business-first": {
       "status": "supported",
-      "notes": "Business First (bf) Mumbad #2 set-complete. 19/19 new clears; no reprints. Pool supported after kala-ghoda. Paired release v1.117.0. Never kick mo/mor.",
+      "notes": "Business First (bf) Mumbad #2 set-complete. 19/19 new clears; no reprints. Pool supported after kala-ghoda. Paired release v1.117.0.",
       "cards": [
         "emp-device",
         "diwan",
@@ -2089,7 +2089,7 @@
     },
     "democracy-and-dogma": {
       "status": "supported",
-      "notes": "Democracy and Dogma (dag) Mumbad #3 set-complete. 19/19 new clears; no reprints. Pool supported after business-first. Paired release v1.118.0. Never kick mo/mor.",
+      "notes": "Democracy and Dogma (dag) Mumbad #3 set-complete. 19/19 new clears; no reprints. Pool supported after business-first. Paired release v1.118.0.",
       "cards": [
         "political-graffiti",
         "nero-severn-information-broker",
@@ -2114,7 +2114,7 @@
     },
     "salsette-island": {
       "status": "supported",
-      "notes": "Salsette Island (si) Mumbad #4 set-complete. 19/19 new clears; no reprints. Pool supported after democracy-and-dogma. Paired release v1.119.0. Never kick mo/mor.",
+      "notes": "Salsette Island (si) Mumbad #4 set-complete. 19/19 new clears; no reprints. Pool supported after democracy-and-dogma. Paired release v1.119.0.",
       "cards": [
         "making-an-entrance",
         "salsette-slums",
@@ -2139,7 +2139,7 @@
     },
     "the-liberated-mind": {
       "status": "supported",
-      "notes": "The Liberated Mind (tlm) Mumbad #5 set-complete. 18/19 new clears; reprint skip ravana-1-0. Pool supported after salsette-island. Paired release v1.120.0. Never kick mo/mor.",
+      "notes": "The Liberated Mind (tlm) Mumbad #5 set-complete. 18/19 new clears; reprint skip ravana-1-0. Pool supported after salsette-island. Paired release v1.120.0.",
       "cards": [
         "the-noble-path",
         "emptied-mind",
@@ -2164,7 +2164,7 @@
     },
     "fear-the-masses": {
       "status": "supported",
-      "notes": "Fear the Masses (ftm) Mumbad #6 set-complete. 18/19 new clears; reprint skip magnet. Pool supported after the-liberated-mind. Paired release v1.121.0. Never kick mo/mor.",
+      "notes": "Fear the Masses (ftm) Mumbad #6 set-complete. 18/19 new clears; reprint skip magnet. Pool supported after the-liberated-mind. Paired release v1.121.0.",
       "cards": [
         "fear-the-masses",
         "aghora",
@@ -2189,7 +2189,7 @@
     },
     "twenty-three-seconds": {
       "status": "supported",
-      "notes": "23 Seconds (23s) Flashpoint #1 set-complete. 20/20 new clears; no reprints. Pool supported after fear-the-masses. Paired release v1.122.0. Never kick mo/mor.",
+      "notes": "23 Seconds (23s) Flashpoint #1 set-complete. 20/20 new clears; no reprints. Pool supported after fear-the-masses. Paired release v1.122.0.",
       "cards": [
         "system-outage",
         "null-whistleblower",
@@ -2215,7 +2215,7 @@
     },
     "blood-money": {
       "status": "supported",
-      "notes": "Blood Money (bm) Flashpoint #2 set-complete. 20/20 new clears; no reprints. Pool supported after twenty-three-seconds. Paired release v1.123.0. Never kick mo/mor.",
+      "notes": "Blood Money (bm) Flashpoint #2 set-complete. 20/20 new clears; no reprints. Pool supported after twenty-three-seconds. Paired release v1.123.0.",
       "cards": [
         "credit-crash",
         "rumor-mill",
@@ -2241,7 +2241,7 @@
     },
     "escalation": {
       "status": "supported",
-      "notes": "Escalation (es) Flashpoint #3 set-complete. 20/20 new clears; no reprints. Pool supported after blood-money. Paired release v1.124.0. Never kick mo/mor.",
+      "notes": "Escalation (es) Flashpoint #3 set-complete. 20/20 new clears; no reprints. Pool supported after blood-money. Paired release v1.124.0.",
       "cards": [
         "obelus",
         "black-orchestra",
@@ -2267,7 +2267,7 @@
     },
     "intervention": {
       "status": "supported",
-      "notes": "Intervention (in) Flashpoint #4 set-complete. 18/20 new clears; reprint skips en-passant, haas-bioroid-architects-of-tomorrow. Pool supported after escalation. Paired release v1.125.0. Never kick mo/mor.",
+      "notes": "Intervention (in) Flashpoint #4 set-complete. 18/20 new clears; reprint skips en-passant, haas-bioroid-architects-of-tomorrow. Pool supported after escalation. Paired release v1.125.0.",
       "cards": [
         "en-passant",
         "frantic-coding",
@@ -2293,7 +2293,7 @@
     },
     "martial-law": {
       "status": "supported",
-      "notes": "Martial Law (ml) Flashpoint #5 set-complete. 20/20 new clears; no reprints. Pool supported after intervention. Paired release v1.126.0. Never kick mo/mor.",
+      "notes": "Martial Law (ml) Flashpoint #5 set-complete. 20/20 new clears; no reprints. Pool supported after intervention. Paired release v1.126.0.",
       "cards": [
         "mkultra",
         "on-the-lam",
@@ -2319,7 +2319,7 @@
     },
     "quorum": {
       "status": "supported",
-      "notes": "Quorum (qu) Flashpoint #6 cycle closer set-complete. 20/20 new clears; no reprints. Pool supported after martial-law. Paired release v1.127.0. Never kick mo/mor.",
+      "notes": "Quorum (qu) Flashpoint #6 cycle closer set-complete. 20/20 new clears; no reprints. Pool supported after martial-law. Paired release v1.127.0.",
       "cards": [
         "sifr",
         "sunya",
@@ -2345,7 +2345,7 @@
     },
     "daedalus-complex": {
       "status": "supported",
-      "notes": "Daedalus Complex (dc) Red Sand #1 set-complete. 20/20 new clears; no reprints. Pool supported after quorum. Paired release v1.128.0. Never kick mo/mor.",
+      "notes": "Daedalus Complex (dc) Red Sand #1 set-complete. 20/20 new clears; no reprints. Pool supported after quorum. Paired release v1.128.0.",
       "cards": [
         "pushing-the-envelope",
         "maw",
@@ -2371,7 +2371,7 @@
     },
     "station-one": {
       "status": "supported",
-      "notes": "Station One (so) Red Sand #2 set-complete. 20/20 new clears; no reprints. Pool supported after daedalus-complex. Paired release v1.129.0. Never kick mo/mor.",
+      "notes": "Station One (so) Red Sand #2 set-complete. 20/20 new clears; no reprints. Pool supported after daedalus-complex. Paired release v1.129.0.",
       "cards": [
         "severnius-stim-implant",
         "clan-vengeance",
@@ -2397,7 +2397,7 @@
     },
     "terminal-directive": {
       "status": "supported",
-      "notes": "Terminal Directive Cards (td) Red Sand deluxe set-complete. 43/43 new clears; 14 reprint skips. Defer tdc campaign scenarios. Pool supported after station-one. Paired release v1.130.0. Never kick mo/mor.",
+      "notes": "Terminal Directive Cards (td) Red Sand deluxe set-complete. 43/43 new clears; 14 reprint skips. Defer tdc campaign scenarios. Pool supported after station-one. Paired release v1.130.0.",
       "cards": [
         "steve-cambridge-master-grifter",
         "brute-force-hack",
@@ -2460,7 +2460,7 @@
     },
     "earths-scion": {
       "status": "supported",
-      "notes": "Earth's Scion (eas) Red Sand #3 set-complete. 20/20 new clears; no reprints. Pool supported after terminal-directive. Paired release v1.131.0. Never kick mo/mor. Defer tdc.",
+      "notes": "Earth's Scion (eas) Red Sand #3 set-complete. 20/20 new clears; no reprints. Pool supported after terminal-directive. Paired release v1.131.0. Defer tdc.",
       "cards": [
         "berserker",
         "persephone",
@@ -2486,7 +2486,7 @@
     },
     "blood-and-water": {
       "status": "supported",
-      "notes": "Blood and Water (baw) Red Sand #4 set-complete. 20/20 new clears; no reprints. Pool supported after earths-scion. Paired release v1.132.0. Never kick mo/mor. Defer tdc.",
+      "notes": "Blood and Water (baw) Red Sand #4 set-complete. 20/20 new clears; no reprints. Pool supported after earths-scion. Paired release v1.132.0. Defer tdc.",
       "cards": [
         "alice-merchant-clan-agitator",
         "jarogniew-mercs",
@@ -2512,7 +2512,7 @@
     },
     "free-mars": {
       "status": "supported",
-      "notes": "Free Mars (fm) Red Sand #5 set-complete. 20/20 new clears; no reprints. Pool supported after blood-and-water. Paired release v1.133.0. Never kick mo/mor. Defer tdc.",
+      "notes": "Free Mars (fm) Red Sand #5 set-complete. 20/20 new clears; no reprints. Pool supported after blood-and-water. Paired release v1.133.0. Defer tdc.",
       "cards": [
         "mars-for-martians",
         "god-of-war",
@@ -2538,7 +2538,7 @@
     },
     "crimson-dust": {
       "status": "supported",
-      "notes": "Crimson Dust (cd) Red Sand #6 set-complete. 20/20 new clears; no reprints. Pool supported after free-mars. Paired release v1.134.0. Never kick mo/mor. Defer tdc.",
+      "notes": "Crimson Dust (cd) Red Sand #6 set-complete. 20/20 new clears; no reprints. Pool supported after free-mars. Paired release v1.134.0. Defer tdc.",
       "cards": [
         "mining-accident",
         "respirocytes",
@@ -2564,7 +2564,7 @@
     },
     "revised-core": {
       "status": "supported",
-      "notes": "FFG Revised Core Set (NRDB pack core2) — reprints absorb from floor v1.134.0 → v1.135.0. 132/132 reprints absorbed; 0 new clears. Never kick mo/mor. Defer tdc. CR pin v26.03.",
+      "notes": "FFG Revised Core Set (NRDB pack core2) \u2014 reprints absorb from floor v1.134.0 \u2192 v1.135.0. 132/132 reprints absorbed; 0 new clears. Defer tdc. CR pin v26.03.",
       "cards": [
         "reina-roja-freedom-fighter",
         "demolition-run",
@@ -2702,7 +2702,7 @@
     },
     "sovereign-sight": {
       "status": "supported",
-      "notes": "Sovereign Sight (ss) Kitara #1 set-complete. 20/20 new clears; no reprints. Pool supported after revised-core. Paired release v1.136.0. Never kick mo/mor. Defer tdc.",
+      "notes": "Sovereign Sight (ss) Kitara #1 set-complete. 20/20 new clears; no reprints. Pool supported after revised-core. Paired release v1.136.0. Defer tdc.",
       "cards": [
         "by-any-means",
         "yusuf",
@@ -2728,7 +2728,7 @@
     },
     "down-the-white-nile": {
       "status": "supported",
-      "notes": "Down the White Nile (dtwn) Kitara #2 set-complete. 20/20 new clears; no reprints. Pool supported after sovereign-sight. Paired release v1.137.0. Never kick mo/mor. Defer tdc.",
+      "notes": "Down the White Nile (dtwn) Kitara #2 set-complete. 20/20 new clears; no reprints. Pool supported after sovereign-sight. Paired release v1.137.0. Defer tdc.",
       "cards": [
         "acacia",
         "plague",
@@ -2754,7 +2754,7 @@
     },
     "council-of-the-crest": {
       "status": "supported",
-      "notes": "Council of the Crest (cotc) Kitara #3 set-complete. 20/20 new clears; no reprints. Pool supported after down-the-white-nile. Paired release v1.138.0. Never kick mo/mor. Defer tdc.",
+      "notes": "Council of the Crest (cotc) Kitara #3 set-complete. 20/20 new clears; no reprints. Pool supported after down-the-white-nile. Paired release v1.138.0. Defer tdc.",
       "cards": [
         "exer",
         "friday-chip",
@@ -2780,7 +2780,7 @@
     },
     "the-devil-and-the-dragon": {
       "status": "supported",
-      "notes": "The Devil and the Dragon (tdatd) Kitara #4 set-complete. 20/20 new clears; no reprints. Pool supported after council-of-the-crest. Paired release v1.139.0. Never kick mo/mor. Defer tdc.",
+      "notes": "The Devil and the Dragon (tdatd) Kitara #4 set-complete. 20/20 new clears; no reprints. Pool supported after council-of-the-crest. Paired release v1.139.0. Defer tdc.",
       "cards": [
         "glut-cipher",
         "knobkierie",
@@ -2806,7 +2806,7 @@
     },
     "whispers-in-nalubaale": {
       "status": "supported",
-      "notes": "Whispers in Nalubaale (win) Kitara #5 set-complete. 20/20 new clears; no reprints. Pool supported after the-devil-and-the-dragon. Paired release v1.140.0. Never kick mo/mor. Defer tdc.",
+      "notes": "Whispers in Nalubaale (win) Kitara #5 set-complete. 20/20 new clears; no reprints. Pool supported after the-devil-and-the-dragon. Paired release v1.140.0. Defer tdc.",
       "cards": [
         "freedom-khumalo-crypto-anarchist",
         "trypano",
@@ -2832,7 +2832,7 @@
     },
     "kampala-ascendent": {
       "status": "supported",
-      "notes": "Kampala Ascendent (ka) Kitara #6 set-complete. 20/20 new clears; no reprints. Pool supported after whispers-in-nalubaale. Paired release v1.141.0. Never kick mo/mor. Defer tdc. NRDB pack name spelling Ascendent.",
+      "notes": "Kampala Ascendent (ka) Kitara #6 set-complete. 20/20 new clears; no reprints. Pool supported after whispers-in-nalubaale. Paired release v1.141.0. Defer tdc. NRDB pack name spelling Ascendent.",
       "cards": [
         "zer0",
         "musaazi",

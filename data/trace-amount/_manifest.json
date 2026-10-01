@@ -5,7 +5,7 @@
   "written": 15,
   "reprintSkipped": 5,
   "status": "supported",
-  "notes": "Trace Amount (ta) Genesis set-complete from floor v1.88.0 → v1.89.0. Wrote 15 files; skipped 5 reprints. Full clears among written: 15; partial: 0. Never kick mo/mor packs.",
+  "notes": "Trace Amount (ta) Genesis set-complete from floor v1.88.0 \u2192 v1.89.0. Wrote 15 files; skipped 5 reprints. Full clears among written: 15; partial: 0.",
   "cards": [
     "vamp",
     "liberated-account",

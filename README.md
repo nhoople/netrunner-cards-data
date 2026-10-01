@@ -86,7 +86,7 @@ Files under [`data/`](data/) are the API. Clone the repo or fetch a **tagged** r
 | [`data/vantage-point/`](data/vantage-point/) | Vantage Point (NRDB `vp`) — **supported** |
 | [`data/fixtures/`](data/fixtures/) | CR-example / host-test cards outside corpus order (e.g. Plascrete) |
 
-**Corpus order:** FFG Core Set (Core-forward, supported) → What Lies Ahead (Genesis, supported) → Trace Amount (Genesis, supported) → Cyber Exodus (Genesis, supported) → A Study in Static (Genesis, supported) → Humanity's Shadow (Genesis, supported) → Future Proof (Genesis, supported) → Creation and Control (supported) → Reign and Reverie (legacy backwards, supported) → System Core 2019 (legacy backwards, supported) → Downfall (legacy backwards, supported) → Uprising (legacy backwards, supported) → System Gateway → System Update 2021 → Midnight Sun → Parhelion → The Automata Initiative → Rebellion Without Rehearsal → Elevation → Vantage Point → later releases.
+**Corpus order:** FFG Core Set → Genesis → CAC → Spin → HAP → Lunar → OAC → SanSan → DAD → Mumbad → Flashpoint → Red Sand + `td` → `core2` → Kitara → RaR → **Magnum Opus** (`mor` absorbed) → SC19 → Downfall → Uprising → Gateway → SU21 → Midnight Sun → Parhelion → TAI → RWR → Elevation → Vantage Point. Floor **`v1.142.0`**. Skip `napd`/draft/championship; defer `tdc`.
 
 Partial cards list unimplemented clauses in an `unsupported` array — never silent wrong behavior. A wave marked `supported` in [`data/pool.json`](data/pool.json) must keep those arrays empty unless the card is listed with a reason in [`data/supported-unsupported-allowlist.json`](data/supported-unsupported-allowlist.json) (enforced by `scripts/validate-cards.py`). See [`CONTRIBUTING.md`](CONTRIBUTING.md) for the CR gate PR template.
 
@@ -157,14 +157,14 @@ npm run demo:library  # createGame → queryLegality → applyIntent → getPubl
 Example raw URL base (match the **current** pairing tag):
 
 ```text
-https://raw.githubusercontent.com/nhoople/netrunner-cards-data/v1.38.0/data
+https://raw.githubusercontent.com/nhoople/netrunner-cards-data/v1.142.0/data
 ```
 
 JavaScript — load the pool and one card from a tagged release:
 
 ```js
 const base =
-  "https://raw.githubusercontent.com/nhoople/netrunner-cards-data/v1.38.0/data";
+  "https://raw.githubusercontent.com/nhoople/netrunner-cards-data/v1.142.0/data";
 const pool = await fetch(`${base}/pool.json`).then((r) => r.json());
 const marjanah = await fetch(`${base}/system-gateway/marjanah.json`).then((r) =>
   r.json(),
@@ -177,13 +177,14 @@ console.log(pool.corpusOrder, marjanah.title);
 | Release | Count | Notes |
 |---------|------:|-------|
 | core | 113 | FFG Core Set (`core`); **supported** (wave gate `v1.87.0`; 49/49 Core-only; 64 Gateway/SU21/SC19 reprints absorbed) |
-| what-lies-ahead | 20 | FFG What Lies Ahead (`wla`); **supported** (wave gate `v1.88.0`; 14/14 WLA-only; 6 reprints absorbed; never kick `mo`/`mor`) |
-| trace-amount | 20 | FFG Trace Amount (`ta`); **supported** (wave gate `v1.89.0`; 15/15 TA-only; 5 reprints absorbed; never kick `mo`/`mor`) |
-| cyber-exodus | 20 | FFG Cyber Exodus (`ce`); **supported** (wave gate `v1.90.0`; 13/13 CE-only; 7 reprints absorbed; never kick `mo`/`mor`) |
-| a-study-in-static | 20 | FFG A Study in Static (`asis`); **supported** (wave gate `v1.91.0`; 15/15 ASIS-only; 5 reprints absorbed; never kick `mo`/`mor`) |
+| what-lies-ahead | 20 | FFG What Lies Ahead (`wla`); **supported** (wave gate `v1.88.0`; 14/14 WLA-only; 6 reprints absorbed) |
+| trace-amount | 20 | FFG Trace Amount (`ta`); **supported** (wave gate `v1.89.0`; 15/15 TA-only; 5 reprints absorbed) |
+| cyber-exodus | 20 | FFG Cyber Exodus (`ce`); **supported** (wave gate `v1.90.0`; 13/13 CE-only; 7 reprints absorbed) |
+| a-study-in-static | 20 | FFG A Study in Static (`asis`); **supported** (wave gate `v1.91.0`; 15/15 ASIS-only; 5 reprints absorbed) |
 | reign-and-reverie | 58 | Null Signal Reign and Reverie (`rar`); **supported** (wave gate `v1.86.0`; 56/56 RaR-only; 2 SC19 reprints absorbed) |
-| system-core-2019 | 147 | Null Signal System Core 2019 (`sc19`); **supported** (wave gate `v1.74.0`; 84/147 SC19-only; 63 Gateway/SU21 reprints absorbed; skip `mo`/`mor`) |
-| downfall | 65 | Null Signal Downfall (`df`); Ashes set 1; **supported** (**65/65** mapped; wave gate `v1.58.0`; skip `mor`) |
+| magnum-opus | 8 | Null Signal Magnum Opus (`mo`); **supported** (wave gate `v1.142.0`; **8/8**; `mor` absorbed) |
+| system-core-2019 | 147 | Null Signal System Core 2019 (`sc19`); **supported** (wave gate `v1.74.0`; 84/147 SC19-only; 63 Gateway/SU21 reprints absorbed) |
+| downfall | 65 | Null Signal Downfall (`df`); Ashes set 1; **supported** (**65/65** mapped; wave gate `v1.58.0`) |
 | uprising | 65 | Null Signal Uprising (`ur`); Ashes set 2; **supported** (**65/65** mapped; wave gate `v1.46.0`; `urbp` absorbed) |
 | system-gateway | 77 | Null Signal System Gateway (fully supported) |
 | system-update-2021 | 82 | Null Signal System Update 2021 (fully supported) |
@@ -196,9 +197,9 @@ console.log(pool.corpusOrder, marjanah.title);
 
 Synthetic stubs and early wave1/wave2 dirs were removed in `v0.2.0`. Reprints that previously lived only under those waves now ship under their Null Signal release directories.
 
-Parhelion is fully supported (wave gate `v0.71.0`). The Automata Initiative is fully supported (wave gate `v0.86.0`). Rebellion Without Rehearsal is fully supported (wave gate `v1.00.0`). Elevation is fully supported (wave gate `v1.12.0`). Vantage Point is fully supported (wave gate `v1.33.0`). Uprising is fully supported (wave gate `v1.46.0`). **Downfall** is fully supported (wave gate `v1.58.0`, **65/65**). **System Core 2019** is fully supported (wave gate `v1.74.0`, **84/147** SC19-only). **Reign and Reverie** is fully supported (wave gate `v1.86.0`, **56/56**). **FFG Core Set** is fully supported (wave gate `v1.87.0`, **49/49** Core-only). **What Lies Ahead** is fully supported (wave gate `v1.88.0`, **14/14** WLA-only). **Trace Amount** is fully supported (wave gate `v1.89.0`, **15/15** TA-only). **Cyber Exodus** is fully supported (wave gate `v1.90.0`, **13/13** CE-only). **A Study in Static** is fully supported (wave gate `v1.91.0`, **15/15** ASIS-only).
+**Floor `v1.142.0`:** Magnum Opus complete (**8/8**; `mor` absorbed). FFG Core-forward through Kitara, RaR, SC19→VP all `supported`. Eternal + RAM unique-title Magnum Opus gaps closed. Core Sets / Standard / Startup already full.
 
-**Next:** Idle / absorb-only until next NSG pack after VP or CR bump. Skip `napd`/draft/championship; defer `tdc`.
+**Next:** Idle / absorb-only until next NSG pack after VP or CR bump. Skip `napd`/draft/championship; defer `tdc`. GitHub Releases only at set-complete or explicit manual — not per-slice.
 
 ## Versioning
 
