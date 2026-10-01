@@ -33,12 +33,12 @@ EXPECTED = 20
 # Already clear under Gateway / SU21 / SC19 / Core / fixtures.
 REPRINTS = {
     "imp",
-    "plascrete-carapace",
     "haas-bioroid-stronger-together",
     "ash-2x3zb9cy",
     "project-atlas",
     "caduceus",
 }
+# plascrete-carapace is authored under this wave (moved from fixtures).
 
 
 def slugify(title: str) -> str:

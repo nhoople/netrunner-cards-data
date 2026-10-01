@@ -8,7 +8,8 @@
   "faction": "haas-bioroid",
   "subtypes": [
     "code gate",
-    "ap"
+    "ap",
+    "tracer"
   ],
   "installCost": 2,
   "rezCost": 2,

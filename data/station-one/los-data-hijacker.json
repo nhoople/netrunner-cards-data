@@ -7,7 +7,7 @@
   "unsupported": [],
   "faction": "criminal",
   "subtypes": [
-    "natural"
+    "g-mod"
   ],
   "onFirstIceRezEachTurn": {
     "op": "do",
@@ -17,5 +17,6 @@
       "amount": 2
     }
   },
-  "wave": "station-one"
+  "wave": "station-one",
+  "link": 0
 }

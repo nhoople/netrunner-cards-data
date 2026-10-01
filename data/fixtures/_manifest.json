@@ -1,11 +1,9 @@
 {
   "pack": "fixtures",
   "nrdbPackCode": null,
-  "count": 1,
-  "written": 1,
+  "count": 0,
+  "written": 0,
   "status": "fixture",
-  "notes": "CR-example / host-test cards outside NSG corpus order (e.g. Plascrete Carapace for meat damage interrupt PAW). Not part of Gateway→VP wave gates; excluded from supportedCardIds().",
-  "cards": [
-    "plascrete-carapace"
-  ]
+  "notes": "CR-example / host-test slot outside corpusOrder. Plascrete Carapace now lives under what-lies-ahead (supported). Keep this wave for future fixture-only cards; excluded from supportedCardIds().",
+  "cards": []
 }

@@ -7,7 +7,8 @@
   "unsupported": [],
   "faction": "weyland-consortium",
   "subtypes": [
-    "expansion"
+    "expansion",
+    "liability"
   ],
   "advancementRequirement": 3,
   "agendaPoints": 1,

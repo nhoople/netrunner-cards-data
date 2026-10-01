@@ -7,7 +7,7 @@
   "unsupported": [],
   "faction": "nbn",
   "subtypes": [
-    "gray ops"
+    "terminal"
   ],
   "playCost": 4,
   "endsActionPhase": true,

@@ -11,7 +11,7 @@
   ],
   "installCost": 0,
   "rezCost": 0,
-  "trashCost": 2,
+  "trashCost": 0,
   "canAdvance": true,
   "onAccess": {
     "op": "do",

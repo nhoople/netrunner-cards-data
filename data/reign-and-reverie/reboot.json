@@ -6,7 +6,7 @@
   "type": "event",
   "side": "runner",
   "unsupported": [],
-  "faction": "criminal",
+  "faction": "apex",
   "subtypes": [
     "run"
   ],

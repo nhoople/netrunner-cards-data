@@ -983,10 +983,8 @@
     },
     "fixtures": {
       "status": "fixture",
-      "notes": "CR-example / host-test cards outside corpusOrder (Plascrete Carapace meat-prevent interrupt). Not part of Gateway\u2192VP wave gates; excluded from supportedCardIds().",
-      "cards": [
-        "plascrete-carapace"
-      ]
+      "notes": "CR-example / host-test slot outside corpusOrder. Plascrete Carapace now lives under what-lies-ahead (supported). Keep this wave for future fixture-only cards; excluded from supportedCardIds().",
+      "cards": []
     },
     "reign-and-reverie": {
       "status": "supported",

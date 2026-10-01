@@ -16,5 +16,8 @@
       "amount": 1
     }
   },
-  "unsupported": []
+  "unsupported": [],
+  "subtypes": [
+    "advertisement"
+  ]
 }

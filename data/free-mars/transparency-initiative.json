@@ -6,9 +6,6 @@
   "side": "corp",
   "unsupported": [],
   "faction": "weyland-consortium",
-  "subtypes": [
-    "condition"
-  ],
   "playCost": 0,
   "onPlay": {
     "op": "do",

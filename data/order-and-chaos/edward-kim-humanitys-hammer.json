@@ -10,5 +10,6 @@
     "natural"
   ],
   "firstAccessedOperationTrashFreeEachTurn": true,
-  "wave": "order-and-chaos"
+  "wave": "order-and-chaos",
+  "link": 1
 }

@@ -40,5 +40,6 @@
   ],
   "unsupported": [],
   "installCost": 3,
-  "strengthBonusPerIcebreaker": 1
+  "strengthBonusPerIcebreaker": 1,
+  "memoryCost": 1
 }
