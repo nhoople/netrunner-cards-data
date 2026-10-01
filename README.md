@@ -194,13 +194,15 @@ Synthetic stubs and early wave1/wave2 dirs were removed in `v0.2.0`. Reprints th
 
 Tag dataset releases as `vMAJOR.MINOR.PATCH` (e.g. `v1.35.0`). Bump when card JSON, pool, or schema that consumers rely on changes. Keep the README pairing line in sync after each pin bump (no new tag for README-only).
 
-## Catalog extract source
+## Data pipeline / catalog extract source
 
-Pack metadata for generate/extract scripts comes from the pinned [Null-Signal-Games/netrunner-cards-json](https://github.com/Null-Signal-Games/netrunner-cards-json) repo (`pack/{code}.json`), **not** the live NetrunnerDB public API.
+**Pipeline:** pinned [Null-Signal-Games/netrunner-cards-json](https://github.com/Null-Signal-Games/netrunner-cards-json) (NSG source of truth; NRDB is downstream) → author Effect IR into this repo → [nhoople/netrunner-engine](https://github.com/nhoople/netrunner-engine) pins our tags.
+
+Pack metadata for generate/extract scripts comes from that NSG repo (`pack/{code}.json`). The NetrunnerDB public API is **not** the preferred ingest. NRDB codes may still appear as identifiers (pack codes, card ids); that does not make NRDB the catalog source. Watch new packs by diffing NSG against [`data/pool.json`](data/pool.json).
 
 | Path | Use |
 | --- | --- |
-| [`data/nrdb-catalog-pin.json`](data/nrdb-catalog-pin.json) | Upstream repo URL + commit SHA pin |
+| [`data/nrdb-catalog-pin.json`](data/nrdb-catalog-pin.json) | Upstream NSG repo URL + commit SHA pin |
 | [`scripts/nrdb_catalog.py`](scripts/nrdb_catalog.py) | Fetch helper (caches under `tmp/nrdb-catalog/`) |
 
 ```bash
