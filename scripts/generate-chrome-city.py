@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Generate Chrome City (cc) card JSON from pinned pack `cc`.
 
-Fetch: python3 scripts/nrdb_catalog.py fetch cc
+Fetch: python3 scripts/nsg_catalog.py fetch cc
 SanSan cycle after Breaker Bay (floor v1.110.0 → v1.111.0).
 Reprint skip: oaktown-renovation, corporate-town (system-update-2021).
 """
@@ -12,7 +12,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from nrdb_catalog import load_pack_cards
+from nsg_catalog import load_pack_cards
 from spin_common import (
     base,
     breaker_card,

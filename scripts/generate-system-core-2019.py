@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Generate System Core 2019 card JSON from pinned pack `sc19`.
 
-Catalog source: Null-Signal-Games/netrunner-cards-json (see data/nrdb-catalog-pin.json).
-Fetch with: python3 scripts/nrdb_catalog.py fetch sc19
+Catalog source: Null-Signal-Games/netrunner-cards-json (see data/nsg-catalog-pin.json).
+Fetch with: python3 scripts/nsg_catalog.py fetch sc19
 
 System Core 2019 is the next legacy-backwards wave after Downfall. Magnum Opus
 (`mo`) and Magnum Opus Reprint (`mor`) are skipped/absorbed — not corpus waves.
@@ -22,7 +22,7 @@ import re
 import unicodedata
 from pathlib import Path
 
-from nrdb_catalog import load_pack_cards
+from nsg_catalog import load_pack_cards
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "data" / "system-core-2019"

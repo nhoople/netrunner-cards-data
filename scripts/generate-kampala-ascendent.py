@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """Generate Kampala Ascendent (ka) card JSON from pinned pack `ka`.
 
-Fetch: python3 scripts/nrdb_catalog.py fetch ka
+Fetch: python3 scripts/nsg_catalog.py fetch ka
 Kitara #6 after Whispers in Nalubaale (floor v1.140.0 → v1.141.0).
 Reprint skips: none (20/20 new clears).
-Follow NRDB stripped_text (not IR-hint paraphrases).
+Follow NSG pack stripped_text (not IR-hint paraphrases).
 NRDB pack name is **Kampala Ascendent** (with e) — folder `kampala-ascendent`.
 Slug via spin_common.slugify (Zer0→zer0, Flame-out→flame-out,
 Mti Mwekundu: Life Improved→mti-mwekundu-life-improved,
@@ -19,7 +19,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from nrdb_catalog import load_pack_cards
+from nsg_catalog import load_pack_cards
 from spin_common import (
     base,
     core,

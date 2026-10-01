@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """Generate Station One (so) card JSON from pinned pack `so`.
 
-Fetch: python3 scripts/nrdb_catalog.py fetch so
+Fetch: python3 scripts/nsg_catalog.py fetch so
 Red Sand #2 after Daedalus Complex (floor v1.128.0 → v1.129.0).
 Reprint skips: none (20/20 new clears).
-Follow NRDB stripped_text (not IR-hint paraphrases).
+Follow NSG pack stripped_text (not IR-hint paraphrases).
 Slug via spin_common.slugify (Möbius→mobius, Los: Data Hijacker→los-data-hijacker).
 """
 from __future__ import annotations
@@ -14,7 +14,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from nrdb_catalog import load_pack_cards
+from nsg_catalog import load_pack_cards
 from spin_common import (
     base,
     core,

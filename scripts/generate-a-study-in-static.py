@@ -1,15 +1,14 @@
 #!/usr/bin/env python3
 """Generate A Study in Static card JSON from pinned pack `asis`.
 
-Catalog source: Null-Signal-Games/netrunner-cards-json (see data/nrdb-catalog-pin.json).
-Fetch with: python3 scripts/nrdb_catalog.py fetch asis
+Catalog source: Null-Signal-Games/netrunner-cards-json (see data/nsg-catalog-pin.json).
+Fetch with: python3 scripts/nsg_catalog.py fetch asis
 
 Fourth Genesis-cycle wave after Cyber Exodus set-complete (floor v1.90.0).
 Titles already clear under earlier waves are treated as reprints: skip emitting
 duplicate files; list their ids in pool.json.
 
 Hand-mapped Effect IR only — empty unsupported for set-complete.
-Never kick Magnum Opus packs (`mo` / `mor`).
 
 Usage: python3 scripts/generate-a-study-in-static.py
 """
@@ -20,7 +19,7 @@ import re
 import unicodedata
 from pathlib import Path
 
-from nrdb_catalog import load_pack_cards
+from nsg_catalog import load_pack_cards
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "data" / "a-study-in-static"
@@ -432,7 +431,7 @@ def main():
             f"v1.90.0 → v1.91.0. Wrote {len(written)} files; skipped "
             f"{len(skipped)} reprints. Full clears among written: "
             f"{len(clear_written)}; partial: {len(partial_written)}. "
-            "Never kick mo/mor."
+            ""
         ),
         "cards": pool_ids,
         "reprintIdsFromEarlierWaves": sorted(skipped),

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Generate Upstalk (up) card JSON from pinned pack `up`.
 
-Fetch: python3 scripts/nrdb_catalog.py fetch up
+Fetch: python3 scripts/nsg_catalog.py fetch up
 Lunar cycle after Honor and Profit (floor v1.101.0 → v1.102.0).
 """
 from __future__ import annotations
@@ -11,7 +11,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from nrdb_catalog import load_pack_cards
+from nsg_catalog import load_pack_cards
 from spin_common import (
     base,
     do,

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Generate Double Time (dt) card JSON from pinned pack `dt`.
 
-Fetch: python3 scripts/nrdb_catalog.py fetch dt
+Fetch: python3 scripts/nsg_catalog.py fetch dt
 Spin cycle after Fear and Loathing (floor v1.99.0 → v1.100.0).
 """
 from __future__ import annotations
@@ -11,7 +11,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from nrdb_catalog import load_pack_cards
+from nsg_catalog import load_pack_cards
 from spin_common import (
     base,
     do,

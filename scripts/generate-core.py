@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Generate FFG Core Set card JSON from pinned pack `core`.
 
-Catalog source: Null-Signal-Games/netrunner-cards-json (see data/nrdb-catalog-pin.json).
-Fetch with: python3 scripts/nrdb_catalog.py fetch core
+Catalog source: Null-Signal-Games/netrunner-cards-json (see data/nsg-catalog-pin.json).
+Fetch with: python3 scripts/nsg_catalog.py fetch core
 
 Core Set is the first FFG Core-forward wave from floor v1.86.0.
 Titles already clear under Gateway / SU21 / SC19 (etc.) are treated as reprints:
@@ -11,8 +11,7 @@ skip emitting duplicate files; list their ids in pool.json.
 Hand-mapped Effect IR only where existing primitives fully cover the card;
 everything else lists honest unsupported notes — never invent IR.
 
-Note: Magnum Opus the *program* is Core Set content. Magnum Opus packs
-(`mo` / `mor`) remain skipped corpus waves.
+Note: Magnum Opus the *program* is Core Set content (distinct from packs `mo`/`mor`).
 
 Usage: python3 scripts/generate-core.py
 """
@@ -23,7 +22,7 @@ import re
 import unicodedata
 from pathlib import Path
 
-from nrdb_catalog import load_pack_cards
+from nsg_catalog import load_pack_cards
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "data" / "core"
@@ -698,7 +697,7 @@ def main():
             f"Wrote {len(written)} files; skipped {len(skipped)} reprints "
             f"(Gateway/SU21/SC19). Kickoff full clears among written: "
             f"{len(clear_written)}; partial: {len(partial_written)}. "
-            "Never kick mo/mor packs."
+            ""
         ),
         "cards": pool_ids,
         "reprintIdsFromEarlierWaves": sorted(skipped),

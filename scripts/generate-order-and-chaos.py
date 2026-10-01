@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Generate Order and Chaos (oac) card JSON from pinned pack `oac`.
 
-Fetch: python3 scripts/nrdb_catalog.py fetch oac
+Fetch: python3 scripts/nsg_catalog.py fetch oac
 Deluxe after The Source / Lunar (floor v1.107.0 → v1.108.0).
 All 55 cards are new clears (0 reprints).
 """
@@ -12,7 +12,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from nrdb_catalog import load_pack_cards
+from nsg_catalog import load_pack_cards
 from spin_common import (
     base,
     breaker_card,

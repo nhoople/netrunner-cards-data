@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Generate The Universe of Tomorrow (uot) card JSON from pinned pack `uot`.
 
-Fetch: python3 scripts/nrdb_catalog.py fetch uot
+Fetch: python3 scripts/nsg_catalog.py fetch uot
 SanSan cycle after Old Hollywood (floor v1.113.0 → v1.114.0).
 Reprint skip: product-placement, public-support.
 """
@@ -12,7 +12,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from nrdb_catalog import load_pack_cards
+from nsg_catalog import load_pack_cards
 from spin_common import (
     base,
     do,

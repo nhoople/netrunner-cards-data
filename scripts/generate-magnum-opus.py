@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """Generate Magnum Opus (mo) card JSON from pinned pack `mo`.
 
-Fetch: python3 scripts/nrdb_catalog.py fetch mo
-Floor v1.141.0 → set-complete v1.142.0.
+Fetch: python3 scripts/nsg_catalog.py fetch mo
+Set-complete at floor v1.142.0 (current host floor v1.142.2).
 All 8 titles are unique (mor reprints absorbed — do not generate a mor wave).
-Follow NRDB stripped_text (not IR-hint paraphrases).
+Follow NSG pack stripped_text (not IR-hint paraphrases).
 Slug via spin_common.slugify.
 """
 from __future__ import annotations
@@ -14,7 +14,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from nrdb_catalog import load_pack_cards
+from nsg_catalog import load_pack_cards
 from spin_common import (
     base,
     do,

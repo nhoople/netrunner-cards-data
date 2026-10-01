@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Generate Breaker Bay (bb) card JSON from pinned pack `bb`.
 
-Fetch: python3 scripts/nrdb_catalog.py fetch bb
+Fetch: python3 scripts/nsg_catalog.py fetch bb
 SanSan cycle after The Valley (floor v1.109.0 → v1.110.0).
 Reprint skip: career-fair (system-update-2021), turing (system-core-2019).
 """
@@ -12,7 +12,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from nrdb_catalog import load_pack_cards
+from nsg_catalog import load_pack_cards
 from spin_common import (
     base,
     breaker_card,

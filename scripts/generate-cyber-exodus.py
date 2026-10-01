@@ -1,15 +1,14 @@
 #!/usr/bin/env python3
 """Generate Cyber Exodus card JSON from pinned pack `ce`.
 
-Catalog source: Null-Signal-Games/netrunner-cards-json (see data/nrdb-catalog-pin.json).
-Fetch with: python3 scripts/nrdb_catalog.py fetch ce
+Catalog source: Null-Signal-Games/netrunner-cards-json (see data/nsg-catalog-pin.json).
+Fetch with: python3 scripts/nsg_catalog.py fetch ce
 
 Third Genesis-cycle wave after Trace Amount set-complete (floor v1.89.0).
 Titles already clear under earlier waves are treated as reprints: skip emitting
 duplicate files; list their ids in pool.json.
 
 Hand-mapped Effect IR only — empty unsupported for set-complete.
-Never kick Magnum Opus packs (`mo` / `mor`).
 
 Usage: python3 scripts/generate-cyber-exodus.py
 """
@@ -20,7 +19,7 @@ import re
 import unicodedata
 from pathlib import Path
 
-from nrdb_catalog import load_pack_cards
+from nsg_catalog import load_pack_cards
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "data" / "cyber-exodus"
@@ -431,7 +430,7 @@ def main():
             "Cyber Exodus (ce) Genesis set-complete from floor v1.89.0 → v1.90.0. "
             f"Wrote {len(written)} files; skipped {len(skipped)} reprints. "
             f"Full clears among written: {len(clear_written)}; "
-            f"partial: {len(partial_written)}. Never kick mo/mor."
+            f"partial: {len(partial_written)}."
         ),
         "cards": pool_ids,
         "reprintIdsFromEarlierWaves": sorted(skipped),

@@ -85,7 +85,7 @@ Files under [`data/`](data/) are the API. Clone the repo or fetch a **tagged** r
 | [`data/elevation/`](data/elevation/) | Elevation (NRDB `elev`) — **supported** |
 | [`data/vantage-point/`](data/vantage-point/) | Vantage Point (NRDB `vp`) — **supported** |
 
-**Corpus order:** FFG Core Set → Genesis → CAC → Spin → HAP → Lunar → OAC → SanSan → DAD → Mumbad → Flashpoint → Red Sand + `td` → `core2` → Kitara → RaR → **Magnum Opus** (`mor` absorbed) → SC19 → Downfall → Uprising → Gateway → SU21 → Midnight Sun → Parhelion → TAI → RWR → Elevation → Vantage Point. Floor **`v1.142.1`**. Skip `napd`/draft/championship; defer `tdc`.
+**Corpus order:** FFG Core Set → Genesis → CAC → Spin → HAP → Lunar → OAC → SanSan → DAD → Mumbad → Flashpoint → Red Sand + `td` → `core2` → Kitara → RaR → **Magnum Opus** (`mor` absorbed) → SC19 → Downfall → Uprising → Gateway → SU21 → Midnight Sun → Parhelion → TAI → RWR → Elevation → Vantage Point. Floor **`v1.142.2`**. Skip `napd`/draft/championship; defer `tdc`.
 
 Partial cards list unimplemented clauses in an `unsupported` array — never silent wrong behavior. A wave marked `supported` in [`data/pool.json`](data/pool.json) must keep those arrays empty unless the card is listed with a reason in [`data/supported-unsupported-allowlist.json`](data/supported-unsupported-allowlist.json) (enforced by `scripts/validate-cards.py`). See [`CONTRIBUTING.md`](CONTRIBUTING.md) for the CR gate PR template.
 
@@ -95,41 +95,11 @@ Match this dataset and [netrunner-engine](https://github.com/nhoople/netrunner-e
 
 | Pairing | cards-data | engine |
 |---------|------------|--------|
-| **Current** | [`v1.142.1`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.142.1) | engine same-semver pin `v1.142.1` (Magnum Opus floor + NSG catalog field corrections) |
-| The Universe of Tomorrow | [`v1.114.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.114.0) | engine same-semver pin `v1.114.0` (The Universe of Tomorrow set-complete **18/18**) |
-| Old Hollywood | [`v1.113.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.113.0) | engine same-semver pin `v1.113.0` (Old Hollywood set-complete **19/19**) |
-| The Underway | [`v1.112.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.112.0) | engine same-semver pin `v1.112.0` (The Underway set-complete **17/17**) |
-| Chrome City | [`v1.111.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.111.0) | engine same-semver pin `v1.111.0` (Chrome City set-complete **18/18**) |
-| Breaker Bay | [`v1.110.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.110.0) | engine same-semver pin `v1.110.0` (Breaker Bay set-complete **18/18**) |
-| The Valley | [`v1.109.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.109.0) | engine same-semver pin `v1.109.0` (The Valley set-complete **19/19**) |
-| Order and Chaos | [`v1.108.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.108.0) | engine same-semver pin `v1.108.0` (Order and Chaos set-complete **55/55**) |
-| The Source | [`v1.107.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.107.0) | engine same-semver pin `v1.107.0` (The Source set-complete **19/19**) |
-| All That Remains | [`v1.106.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.106.0) | engine same-semver pin `v1.106.0` (All That Remains set-complete **17/17**) |
-| Up and Over | [`v1.105.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.105.0) | engine same-semver pin `v1.105.0` (Up and Over set-complete **18/18**) |
-| First Contact | [`v1.104.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.104.0) | engine same-semver pin `v1.104.0` (First Contact set-complete **18/18**) |
-| The Spaces Between | [`v1.103.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.103.0) | engine same-semver pin `v1.103.0` (The Spaces Between set-complete **20/20**) |
-| Honor and Profit | [`v1.101.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.101.0) | engine same-semver pin `v1.101.0` (Honor and Profit set-complete **50/50**) |
-| Double Time | [`v1.100.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.100.0) | engine same-semver pin `v1.100.0` (Double Time set-complete **19/19**) |
-| Mala Tempora | [`v1.97.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.97.0) | engine same-semver pin `v1.97.0` (Mala Tempora set-complete **18/18**) |
-| Opening Moves / Stalwart | [`v1.96.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.96.0) | engine same-semver pin `v1.96.0` (Stalwart set-complete **17/17**) |
-| Opening Moves | [`v1.95.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.95.0) | engine same-semver pin `v1.95.0` (Opening Moves set-complete **16/16**) |
-| Creation and Control | [`v1.94.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.94.0) | engine same-semver pin `v1.94.0` (Creation and Control set-complete **46/46**) |
-| Humanity's Shadow | [`v1.92.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.92.0) | engine same-semver pin `v1.92.0` (Humanity's Shadow set-complete **15/15**) |
-| A Study in Static | [`v1.91.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.91.0) | engine same-semver pin `v1.91.0` (A Study in Static set-complete **15/15**) |
-| Cyber Exodus | [`v1.90.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.90.0) | engine same-semver pin `v1.90.0` (Cyber Exodus set-complete **13/13**) |
-| Trace Amount | [`v1.89.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.89.0) | engine same-semver pin `v1.89.0` (Trace Amount set-complete **15/15**) |
-| What Lies Ahead | [`v1.88.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.88.0) | engine same-semver pin `v1.88.0` (What Lies Ahead set-complete **14/14**) |
-| Core Set | [`v1.87.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.87.0) | engine same-semver pin `v1.87.0` (Core Set set-complete **49/49**) |
-| RaR set-complete | [`v1.86.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.86.0) | engine same-semver pin `v1.86.0` (RaR set-complete **56/56**) |
-| SC19 set-complete | [`v1.74.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.74.0) | [`v1.74.0`](https://github.com/nhoople/netrunner-engine/releases/tag/v1.74.0) |
-| Downfall set-complete | [`v1.58.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.58.0) | [`v1.58.0`](https://github.com/nhoople/netrunner-engine/releases/tag/v1.58.0) |
-| Uprising set-complete | [`v1.46.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.46.0) | [`v1.46.0`](https://github.com/nhoople/netrunner-engine/releases/tag/v1.46.0) |
-| Post-VP maintenance | [`v1.34.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.34.0) | [`v1.34.0`](https://github.com/nhoople/netrunner-engine/releases/tag/v1.34.0) |
-| Vantage Point set-complete | [`v1.33.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.33.0) | [`v1.33.0`](https://github.com/nhoople/netrunner-engine/releases/tag/v1.33.0) |
-| Elevation set-complete | [`v1.12.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.12.0) | [`v1.12.0`](https://github.com/nhoople/netrunner-engine/releases/tag/v1.12.0) |
-| RWR set-complete | [`v1.00.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.00.0) | [`v1.00.0`](https://github.com/nhoople/netrunner-engine/releases/tag/v1.00.0) |
+| **Current** | [`v1.142.2`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.142.2) | engine same-semver pin `v1.142.2` (empty fixtures wave removed; Plascrete under WLA) |
 
-GitHub Releases are cut at **set-complete** (wave pool status → `supported`, advertised host floor) or by **explicit manual** release. Pack IR work lands as PR merges; pin consumers to a release tag, not `master`. Intermediate progress tags may still exist on GitHub history — prefer the set-complete / current floor tags above.
+Prior set-complete / maintenance tags: [cards Releases](https://github.com/nhoople/netrunner-cards-data/releases) · [engine Releases](https://github.com/nhoople/netrunner-engine/releases).
+
+GitHub Releases are cut at **set-complete** (wave pool status → `supported`, advertised host floor) or by **explicit manual** release. Pack IR work lands as PR merges; pin consumers to a release tag, not `master`. Intermediate progress tags may still exist on GitHub history — prefer the **Current** floor tag above.
 
 The engine declares the pin in [`data/cards-pin.json`](https://github.com/nhoople/netrunner-engine/blob/master/data/cards-pin.json) and fetches with:
 
@@ -145,14 +115,14 @@ npm run demo:library  # createGame → queryLegality → applyIntent → getPubl
 Example raw URL base (match the **current** pairing tag):
 
 ```text
-https://raw.githubusercontent.com/nhoople/netrunner-cards-data/v1.142.0/data
+https://raw.githubusercontent.com/nhoople/netrunner-cards-data/v1.142.2/data
 ```
 
 JavaScript — load the pool and one card from a tagged release:
 
 ```js
 const base =
-  "https://raw.githubusercontent.com/nhoople/netrunner-cards-data/v1.142.0/data";
+  "https://raw.githubusercontent.com/nhoople/netrunner-cards-data/v1.142.2/data";
 const pool = await fetch(`${base}/pool.json`).then((r) => r.json());
 const marjanah = await fetch(`${base}/system-gateway/marjanah.json`).then((r) =>
   r.json(),
@@ -162,30 +132,9 @@ console.log(pool.corpusOrder, marjanah.title);
 
 ## Current corpus
 
-| Release | Count | Notes |
-|---------|------:|-------|
-| core | 113 | FFG Core Set (`core`); **supported** (wave gate `v1.87.0`; 49/49 Core-only; 64 Gateway/SU21/SC19 reprints absorbed) |
-| what-lies-ahead | 20 | FFG What Lies Ahead (`wla`); **supported** (wave gate `v1.88.0`; 14/14 WLA-only; 6 reprints absorbed) |
-| trace-amount | 20 | FFG Trace Amount (`ta`); **supported** (wave gate `v1.89.0`; 15/15 TA-only; 5 reprints absorbed) |
-| cyber-exodus | 20 | FFG Cyber Exodus (`ce`); **supported** (wave gate `v1.90.0`; 13/13 CE-only; 7 reprints absorbed) |
-| a-study-in-static | 20 | FFG A Study in Static (`asis`); **supported** (wave gate `v1.91.0`; 15/15 ASIS-only; 5 reprints absorbed) |
-| reign-and-reverie | 58 | Null Signal Reign and Reverie (`rar`); **supported** (wave gate `v1.86.0`; 56/56 RaR-only; 2 SC19 reprints absorbed) |
-| magnum-opus | 8 | Null Signal Magnum Opus (`mo`); **supported** (wave gate `v1.142.0`; **8/8**; `mor` absorbed) |
-| system-core-2019 | 147 | Null Signal System Core 2019 (`sc19`); **supported** (wave gate `v1.74.0`; 84/147 SC19-only; 63 Gateway/SU21 reprints absorbed) |
-| downfall | 65 | Null Signal Downfall (`df`); Ashes set 1; **supported** (**65/65** mapped; wave gate `v1.58.0`) |
-| uprising | 65 | Null Signal Uprising (`ur`); Ashes set 2; **supported** (**65/65** mapped; wave gate `v1.46.0`; `urbp` absorbed) |
-| system-gateway | 77 | Null Signal System Gateway (fully supported) |
-| system-update-2021 | 82 | Null Signal System Update 2021 (fully supported) |
-| midnight-sun | 65 | Null Signal Midnight Sun (`ms`); `msbp` titles absorbed; fully supported |
-| parhelion | 63 | Null Signal Parhelion (`ph`); status `supported` (wave gate `v0.71.0`; 63/63 mapped) |
-| the-automata-initiative | 65 | Null Signal The Automata Initiative (`tai`); status `supported` (wave gate `v0.86.0`; 65/65 mapped) |
-| rebellion-without-rehearsal | 65 | Null Signal Rebellion Without Rehearsal (`rwr`); status `supported` (**65/65** mapped; wave gate `v1.00.0`) |
-| elevation | 82 | Null Signal Elevation (`elev`); status `supported` (**82/82** mapped; wave gate `v1.12.0`) |
-| vantage-point | 66 | Null Signal Vantage Point (`vp`); status `supported` (`v1.33.0`; **66/66** mapped) |
+**Authoritative list:** [`data/pool.json`](data/pool.json) — **68/68** waves `supported` (see `corpusOrder` + each wave’s `status` / card counts). The directory table under **Consume the data** mirrors those wave dirs; do not treat any shorter summary table as the corpus.
 
-Synthetic stubs and early wave1/wave2 dirs were removed in `v0.2.0`. Reprints that previously lived only under those waves now ship under their Null Signal release directories.
-
-**Floor `v1.142.0`:** Magnum Opus complete (**8/8**; `mor` absorbed). FFG Core-forward through Kitara, RaR, SC19→VP all `supported`. Eternal + RAM unique-title Magnum Opus gaps closed. Core Sets / Standard / Startup already full.
+**Floor `v1.142.2`:** Magnum Opus complete (**8/8**; `mor` absorbed). Fixtures wave removed (Plascrete under WLA). FFG Core-forward through Kitara, RaR, SC19→VP all `supported`. Eternal + RAM unique-title Magnum Opus gaps closed. Core Sets / Standard / Startup already full.
 
 **Next:** Idle / absorb-only until next NSG pack after VP or CR bump. Skip `napd`/draft/championship; defer `tdc`. GitHub Releases only at set-complete or explicit manual — not per-slice.
 
@@ -201,16 +150,16 @@ Pack metadata for generate/extract scripts comes from that NSG repo (`pack/{code
 
 | Path | Use |
 | --- | --- |
-| [`data/nrdb-catalog-pin.json`](data/nrdb-catalog-pin.json) | Upstream NSG repo URL + commit SHA pin |
-| [`scripts/nrdb_catalog.py`](scripts/nrdb_catalog.py) | Fetch helper (caches under `tmp/nrdb-catalog/`) |
+| [`data/nsg-catalog-pin.json`](data/nsg-catalog-pin.json) | Upstream NSG repo URL + commit SHA pin |
+| [`scripts/nsg_catalog.py`](scripts/nsg_catalog.py) | Fetch helper (caches under `tmp/nsg-catalog/`) |
 
 ```bash
-python3 scripts/nrdb_catalog.py show-pin
-python3 scripts/nrdb_catalog.py fetch rar sc19 df ur sg su21 ms msbp ph tai rwr elev vp
+python3 scripts/nsg_catalog.py show-pin
+python3 scripts/nsg_catalog.py fetch rar sc19 df ur sg su21 ms msbp ph tai rwr elev vp
 # then: python3 scripts/generate-<set>.py
 ```
 
-To bump the catalog: set `ref` in the pin to a newer commit SHA on `main`, clear `tmp/nrdb-catalog/`, and re-fetch. Effect IR remains hand-authored in this repo.
+To bump the catalog: set `ref` in the pin to a newer commit SHA on `main`, clear `tmp/nsg-catalog/`, and re-fetch. Effect IR remains hand-authored in this repo.
 
 ## License
 

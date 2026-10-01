@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
 """Fetch pinned Null Signal Games pack JSON for card extract scripts.
 
-Upstream: Null-Signal-Games/netrunner-cards-json (see data/nrdb-catalog-pin.json).
+Upstream: Null-Signal-Games/netrunner-cards-json (see data/nsg-catalog-pin.json).
 Pack files live at pack/{code}.json on the pinned ref.
 
 Usage:
-  python3 scripts/nrdb_catalog.py fetch sg
-  python3 scripts/nrdb_catalog.py fetch ms msbp
-  python3 scripts/nrdb_catalog.py show-pin
+  python3 scripts/nsg_catalog.py fetch sg
+  python3 scripts/nsg_catalog.py fetch ms msbp
+  python3 scripts/nsg_catalog.py show-pin
 
-Generators import load_pack_cards(code) instead of curling the live NRDB API.
+Generators import load_pack_cards(code) from the pinned NSG pack JSON (not the live NRDB API).
 Fails closed on missing pin, HTTP errors, or invalid JSON.
 """
 from __future__ import annotations
@@ -22,7 +22,7 @@ import urllib.request
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-PIN_PATH = ROOT / "data" / "nrdb-catalog-pin.json"
+PIN_PATH = ROOT / "data" / "nsg-catalog-pin.json"
 
 
 def load_pin() -> dict:
@@ -125,7 +125,7 @@ def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     sub = parser.add_subparsers(dest="cmd", required=True)
 
-    p_show = sub.add_parser("show-pin", help="Print data/nrdb-catalog-pin.json")
+    p_show = sub.add_parser("show-pin", help="Print data/nsg-catalog-pin.json")
     p_show.set_defaults(func=cmd_show_pin)
 
     p_fetch = sub.add_parser(

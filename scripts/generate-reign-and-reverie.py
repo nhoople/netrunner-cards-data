@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Generate Reign and Reverie card JSON from pinned pack `rar`.
 
-Catalog source: Null-Signal-Games/netrunner-cards-json (see data/nrdb-catalog-pin.json).
-Fetch with: python3 scripts/nrdb_catalog.py fetch rar
+Catalog source: Null-Signal-Games/netrunner-cards-json (see data/nsg-catalog-pin.json).
+Fetch with: python3 scripts/nsg_catalog.py fetch rar
 
 Reign and Reverie is the next legacy-backwards wave after System Core 2019.
 Titles already clear under SC19 / Gateway / SU21 are treated as reprints:
@@ -20,7 +20,7 @@ import re
 import unicodedata
 from pathlib import Path
 
-from nrdb_catalog import load_pack_cards
+from nsg_catalog import load_pack_cards
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "data" / "reign-and-reverie"

@@ -1,15 +1,14 @@
 #!/usr/bin/env python3
 """Generate Future Proof card JSON from pinned pack `fp`.
 
-Catalog source: Null-Signal-Games/netrunner-cards-json (see data/nrdb-catalog-pin.json).
-Fetch with: python3 scripts/nrdb_catalog.py fetch fp
+Catalog source: Null-Signal-Games/netrunner-cards-json (see data/nsg-catalog-pin.json).
+Fetch with: python3 scripts/nsg_catalog.py fetch fp
 
 Sixth Genesis-cycle wave after Humanity's Shadow set-complete (floor v1.92.0).
 Titles already clear under earlier waves are treated as reprints: skip emitting
 duplicate files; list their ids in pool.json.
 
 Hand-mapped Effect IR only — empty unsupported for set-complete.
-Never kick Magnum Opus packs (`mo` / `mor`).
 
 Usage: python3 scripts/generate-future-proof.py
 """
@@ -20,7 +19,7 @@ import re
 import unicodedata
 from pathlib import Path
 
-from nrdb_catalog import load_pack_cards
+from nsg_catalog import load_pack_cards
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "data" / "future-proof"
@@ -435,7 +434,7 @@ def main():
             f"v1.92.0 → v1.93.0. Wrote {len(written)} files; skipped "
             f"{len(skipped)} reprints. Full clears among written: "
             f"{len(clear_written)}; partial: {len(partial_written)}. "
-            "Never kick mo/mor."
+            ""
         ),
         "cards": pool_ids,
         "reprintIdsFromEarlierWaves": sorted(skipped),

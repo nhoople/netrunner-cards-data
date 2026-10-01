@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Generate Democracy and Dogma (dag) card JSON from pinned pack `dag`.
 
-Fetch: python3 scripts/nrdb_catalog.py fetch dag
+Fetch: python3 scripts/nsg_catalog.py fetch dag
 Mumbad cycle after Business First (floor v1.117.0 → v1.118.0).
 No reprints (19/19 new).
 """
@@ -12,7 +12,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from nrdb_catalog import load_pack_cards
+from nsg_catalog import load_pack_cards
 from spin_common import (
     base,
     do,

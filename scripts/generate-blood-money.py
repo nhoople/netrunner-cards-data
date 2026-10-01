@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """Generate Blood Money (bm) card JSON from pinned pack `bm`.
 
-Fetch: python3 scripts/nrdb_catalog.py fetch bm
+Fetch: python3 scripts/nsg_catalog.py fetch bm
 Flashpoint #2 after 23 Seconds (floor v1.122.0 → v1.123.0).
 Reprint skip: none (20/20 new clears).
-Follow NRDB stripped_text (not IR-hint paraphrases).
+Follow NSG pack stripped_text (not IR-hint paraphrases).
 """
 from __future__ import annotations
 
@@ -13,7 +13,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from nrdb_catalog import load_pack_cards
+from nsg_catalog import load_pack_cards
 from spin_common import (
     base,
     do,
