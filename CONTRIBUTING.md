@@ -23,4 +23,4 @@ CI runs `python3 scripts/validate-cards.py`, which enforces schema, pool consist
 
 When marking a wave `supported`, keep README pairing + `pool.json` in sync with the matching engine same-semver tag. Interaction smoke at set-complete is required for each **new** pack (Project `docs/interaction-smoke-samples.md`); Gateway → Vantage Point already passed once via engine [#193](https://github.com/nhoople/netrunner-engine/pull/193).
 
-**Current floor:** Magnum Opus `supported` at **`v1.142.0`** (pair with engine `v1.142.0`; `mor` absorbed). Idle until next NSG pack after VP or a CR bump. Skip `napd`/draft/championship; defer `tdc`. CR pin in the engine is `v26.03`.
+**Current floor:** Magnum Opus `supported` at **`v1.142.1`** (pair with engine `v1.142.1`; `mor` absorbed). Idle until next NSG pack after VP or a CR bump. Skip `napd`/draft/championship; defer `tdc`. CR pin in the engine is `v26.03`.

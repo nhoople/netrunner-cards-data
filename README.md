@@ -86,7 +86,7 @@ Files under [`data/`](data/) are the API. Clone the repo or fetch a **tagged** r
 | [`data/vantage-point/`](data/vantage-point/) | Vantage Point (NRDB `vp`) — **supported** |
 | [`data/fixtures/`](data/fixtures/) | CR-example / host-test slot outside corpus order (empty; Plascrete lives under What Lies Ahead) |
 
-**Corpus order:** FFG Core Set → Genesis → CAC → Spin → HAP → Lunar → OAC → SanSan → DAD → Mumbad → Flashpoint → Red Sand + `td` → `core2` → Kitara → RaR → **Magnum Opus** (`mor` absorbed) → SC19 → Downfall → Uprising → Gateway → SU21 → Midnight Sun → Parhelion → TAI → RWR → Elevation → Vantage Point. Floor **`v1.142.0`**. Skip `napd`/draft/championship; defer `tdc`.
+**Corpus order:** FFG Core Set → Genesis → CAC → Spin → HAP → Lunar → OAC → SanSan → DAD → Mumbad → Flashpoint → Red Sand + `td` → `core2` → Kitara → RaR → **Magnum Opus** (`mor` absorbed) → SC19 → Downfall → Uprising → Gateway → SU21 → Midnight Sun → Parhelion → TAI → RWR → Elevation → Vantage Point. Floor **`v1.142.1`**. Skip `napd`/draft/championship; defer `tdc`.
 
 Partial cards list unimplemented clauses in an `unsupported` array — never silent wrong behavior. A wave marked `supported` in [`data/pool.json`](data/pool.json) must keep those arrays empty unless the card is listed with a reason in [`data/supported-unsupported-allowlist.json`](data/supported-unsupported-allowlist.json) (enforced by `scripts/validate-cards.py`). See [`CONTRIBUTING.md`](CONTRIBUTING.md) for the CR gate PR template.
 
@@ -96,7 +96,7 @@ Match this dataset and [netrunner-engine](https://github.com/nhoople/netrunner-e
 
 | Pairing | cards-data | engine |
 |---------|------------|--------|
-| **Current** | [`v1.142.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.142.0) | engine same-semver pin `v1.142.0` (Magnum Opus set-complete **8/8**; `mor` absorbed) |
+| **Current** | [`v1.142.1`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.142.1) | engine same-semver pin `v1.142.1` (Magnum Opus floor + NSG catalog field corrections) |
 | The Universe of Tomorrow | [`v1.114.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.114.0) | engine same-semver pin `v1.114.0` (The Universe of Tomorrow set-complete **18/18**) |
 | Old Hollywood | [`v1.113.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.113.0) | engine same-semver pin `v1.113.0` (Old Hollywood set-complete **19/19**) |
 | The Underway | [`v1.112.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.112.0) | engine same-semver pin `v1.112.0` (The Underway set-complete **17/17**) |
