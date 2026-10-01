@@ -1,0 +1,62 @@
+{
+  "id": "border-control",
+  "title": "Border Control",
+  "nrdbCode": "23054",
+  "type": "ice",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "weyland-consortium",
+  "subtypes": [
+    "barrier"
+  ],
+  "installCost": 4,
+  "rezCost": 4,
+  "strength": 1,
+  "paidAbilities": [
+    {
+      "id": "border-control-trash-etr",
+      "label": "[trash]: End the run (run on this server)",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "trashSelf": true
+      },
+      "windows": [
+        "approach_paw",
+        "encounter_paw",
+        "approach_server_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "end_the_run"
+        }
+      },
+      "requireDuringRun": true
+    }
+  ],
+  "subroutines": [
+    {
+      "id": "border-gain-per-ice",
+      "text": "Gain 1 credit for each piece of ice protecting this server.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "mo_gain_credits_per_ice_protecting_this_server",
+          "per": 1
+        }
+      }
+    },
+    {
+      "id": "border-etr",
+      "text": "End the run.",
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "end_the_run"
+        }
+      }
+    }
+  ],
+  "wave": "magnum-opus"
+}

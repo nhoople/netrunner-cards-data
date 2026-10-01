@@ -1,0 +1,42 @@
+{
+  "id": "timely-public-release",
+  "title": "Timely Public Release",
+  "nrdbCode": "23027",
+  "type": "agenda",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "neutral-corp",
+  "subtypes": [
+    "initiative"
+  ],
+  "advancementRequirement": 4,
+  "agendaPoints": 2,
+  "onScore": {
+    "op": "do",
+    "action": {
+      "kind": "add_agenda_counter",
+      "amount": 1
+    }
+  },
+  "paidAbilities": [
+    {
+      "id": "timely-install-ice",
+      "label": "Hosted agenda counter: Install 1 ice from HQ or Archives in any position protecting a server, ignoring all costs",
+      "clickCost": 0,
+      "creditCost": 0,
+      "cost": {
+        "agendaCounters": 1
+      },
+      "windows": [
+        "corp_action_paw"
+      ],
+      "effect": {
+        "op": "do",
+        "action": {
+          "kind": "mo_install_ice_hq_or_archives_any_position_ignore_costs"
+        }
+      }
+    }
+  ],
+  "wave": "magnum-opus"
+}

@@ -1,0 +1,23 @@
+{
+  "id": "watch-the-world-burn",
+  "title": "Watch the World Burn",
+  "nrdbCode": "23100",
+  "type": "event",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "neutral-runner",
+  "subtypes": [
+    "orgcrime",
+    "run",
+    "terminal"
+  ],
+  "playCost": 3,
+  "endsActionPhase": true,
+  "deckLimit": 1,
+  "runEvent": {
+    "servers": "remote",
+    "rfgFirstNonAgendaAccess": true,
+    "lastingRfgCopiesOnAccess": true
+  },
+  "wave": "magnum-opus"
+}

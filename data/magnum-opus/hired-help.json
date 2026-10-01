@@ -1,0 +1,19 @@
+{
+  "id": "hired-help",
+  "title": "Hired Help",
+  "nrdbCode": "23101",
+  "type": "upgrade",
+  "side": "corp",
+  "unsupported": [],
+  "faction": "neutral-corp",
+  "subtypes": [
+    "orgcrime",
+    "enforcer"
+  ],
+  "installCost": 1,
+  "rezCost": 1,
+  "trashCost": 3,
+  "deckLimit": 1,
+  "additionalRunCostTrashAgendaFromScoreUnlessSuccessfulHqThisTurn": true,
+  "wave": "magnum-opus"
+}

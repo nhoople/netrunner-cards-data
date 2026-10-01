@@ -227,6 +227,14 @@
           "type": "boolean",
           "description": "Credit Crash: trash the first non-agenda card accessed during this run at no cost; Corp may spend credits equal to its rez or play cost to prevent."
         },
+        "rfgFirstNonAgendaAccess": {
+          "type": "boolean",
+          "description": "Watch the World Burn: remove the first non-agenda card accessed during this run from the game."
+        },
+        "lastingRfgCopiesOnAccess": {
+          "type": "boolean",
+          "description": "Watch the World Burn: until the game ends, whenever you access a copy of the RFG'd title, remove it from the game."
+        },
         "redirectSuccessChooseHqOrRd": {
           "type": "boolean",
           "description": "Omar Keung: if the run would be declared successful, Runner chooses HQ or R&D as the attacked server for the remainder of that run."
@@ -2892,7 +2900,15 @@
     },
     "endsActionPhase": {
       "type": "boolean",
-      "description": "Terminal: end the action phase after resolving this operation (Big Deal)."
+      "description": "Terminal: end the action phase after resolving this operation or event (Big Deal / Watch the World Burn)."
+    },
+    "removePowerCounterOnAnySuccessfulRun": {
+      "type": "boolean",
+      "description": "Embolus: whenever the Runner makes a successful run (any server), remove 1 power counter from this upgrade."
+    },
+    "additionalRunCostTrashAgendaFromScoreUnlessSuccessfulHqThisTurn": {
+      "type": "boolean",
+      "description": "Hired Help: as an additional cost to run this server, the Runner must trash 1 agenda from their score area, unless they made a successful run on HQ this turn."
     },
     "playAdditionalCost": {
       "type": "object",
