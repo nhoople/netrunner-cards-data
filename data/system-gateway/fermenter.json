@@ -45,5 +45,6 @@
       }
     }
   ],
-  "unsupported": []
+  "unsupported": [],
+  "memoryCost": 1
 }

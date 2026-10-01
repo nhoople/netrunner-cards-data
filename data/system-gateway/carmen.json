@@ -40,5 +40,6 @@
   ],
   "unsupported": [],
   "installCost": 5,
-  "installCostDiscountIfSuccessfulRunThisTurn": 2
+  "installCostDiscountIfSuccessfulRunThisTurn": 2,
+  "memoryCost": 1
 }

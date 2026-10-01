@@ -1,7 +1,7 @@
 {
   "id": "plascrete-carapace",
   "title": "Plascrete Carapace",
-  "wave": "fixtures",
+  "wave": "what-lies-ahead",
   "nrdbCode": "02009",
   "type": "hardware",
   "side": "runner",
@@ -35,5 +35,6 @@
         }
       }
     }
-  ]
+  ],
+  "faction": "neutral-runner"
 }

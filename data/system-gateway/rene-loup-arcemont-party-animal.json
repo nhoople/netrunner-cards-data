@@ -8,8 +8,7 @@
   "link": 0,
   "unsupported": [],
   "subtypes": [
-    "g",
-    "mod"
+    "g-mod"
   ],
   "onAccessTrashGain": {
     "credits": 1,

@@ -2,10 +2,10 @@
   "pack": "what-lies-ahead",
   "nrdbPackCode": "wla",
   "count": 20,
-  "written": 14,
-  "reprintSkipped": 6,
+  "written": 15,
+  "reprintSkipped": 5,
   "status": "supported",
-  "notes": "What Lies Ahead (wla) Genesis set-complete from floor v1.87.0 \u2192 v1.88.0. Wrote 14 files; skipped 6 reprints (Gateway/SU21/SC19/Core). Full clears among written: 14; partial: 0.",
+  "notes": "What Lies Ahead (wla) Genesis set-complete from floor v1.87.0 \u2192 v1.88.0. Wrote 15 files; skipped 5 reprints. Plascrete Carapace promoted from fixtures into this wave (catalog home).",
   "cards": [
     "whizzard-master-gamer",
     "spinal-modem",
@@ -33,7 +33,6 @@
     "caduceus",
     "haas-bioroid-stronger-together",
     "imp",
-    "plascrete-carapace",
     "project-atlas"
   ],
   "kickoffClears": [
@@ -50,7 +49,8 @@
     "snowflake",
     "restructured-datapool",
     "tmi",
-    "draco"
+    "draco",
+    "plascrete-carapace"
   ],
   "partialMapped": []
 }

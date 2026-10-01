@@ -7,7 +7,7 @@
   "unsupported": [],
   "faction": "anarch",
   "subtypes": [
-    "resource"
+    "connection"
   ],
   "installCost": 2,
   "unique": true,

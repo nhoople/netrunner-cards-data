@@ -37,5 +37,6 @@
       }
     ]
   },
-  "wave": "breaker-bay"
+  "wave": "breaker-bay",
+  "link": 0
 }

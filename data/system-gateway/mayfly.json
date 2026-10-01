@@ -40,5 +40,6 @@
   ],
   "unsupported": [],
   "installCost": 1,
-  "trashAfterBreakingThisRun": true
+  "trashAfterBreakingThisRun": true,
+  "memoryCost": 2
 }

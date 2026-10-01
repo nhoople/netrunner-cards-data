@@ -6,9 +6,6 @@
   "side": "corp",
   "unsupported": [],
   "faction": "neutral-corp",
-  "subtypes": [
-    "condition"
-  ],
   "playCost": 2,
   "onPlay": {
     "op": "do",

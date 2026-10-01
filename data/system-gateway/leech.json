@@ -43,5 +43,6 @@
         "amount": 1
       }
     }
-  }
+  },
+  "memoryCost": 1
 }

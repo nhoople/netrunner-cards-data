@@ -30,5 +30,6 @@
         "action": { "kind": "break_host_subroutine" }
       }
     }
-  ]
+  ],
+  "memoryCost": 1
 }

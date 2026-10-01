@@ -7,8 +7,8 @@
   "unsupported": [],
   "faction": "weyland-consortium",
   "subtypes": [
-    "gray ops",
-    "double"
+    "double",
+    "gray ops"
   ],
   "playCost": 2,
   "playAdditionalClick": true,

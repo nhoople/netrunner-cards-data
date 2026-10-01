@@ -8,7 +8,7 @@
   "unsupported": [],
   "subtypes": [
     "terminal",
-    "gray ops"
+    "black ops"
   ],
   "playCost": 0,
   "playRequiresRunnerStoleOrTrashedCorpCardLastTurn": true,

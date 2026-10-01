@@ -17,5 +17,6 @@
   "onTurnBegin": {
     "op": "do",
     "action": { "kind": "add_virus_counter", "amount": 1 }
-  }
+  },
+  "memoryCost": 1
 }

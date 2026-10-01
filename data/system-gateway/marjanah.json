@@ -40,5 +40,6 @@
     }
   ],
   "unsupported": [],
-  "installCost": 0
+  "installCost": 0,
+  "memoryCost": 1
 }

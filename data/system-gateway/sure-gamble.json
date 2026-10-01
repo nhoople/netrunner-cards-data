@@ -4,7 +4,7 @@
   "type": "event",
   "side": "runner",
   "wave": "system-gateway",
-  "nrdbCode": "01008",
+  "nrdbCode": "30030",
   "playCost": 5,
   "onPlay": {
     "op": "do",

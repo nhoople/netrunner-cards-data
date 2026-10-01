@@ -7,7 +7,8 @@
   "unsupported": [],
   "faction": "weyland-consortium",
   "subtypes": [
-    "facility"
+    "facility",
+    "liability"
   ],
   "installCost": 3,
   "rezCost": 3,

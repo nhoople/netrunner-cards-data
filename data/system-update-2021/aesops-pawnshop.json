@@ -36,5 +36,9 @@
         }
       }
     ]
-  }
+  },
+  "subtypes": [
+    "connection",
+    "location"
+  ]
 }
