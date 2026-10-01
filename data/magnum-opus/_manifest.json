@@ -1,0 +1,30 @@
+{
+  "pack": "magnum-opus",
+  "nrdbPackCode": "mo",
+  "count": 8,
+  "written": 8,
+  "reprintSkipped": 0,
+  "status": "supported",
+  "notes": "Magnum Opus (mo) set-complete. Wrote 8; skipped 0 reprints. Clears: 8. mor absorbed. Paired v1.142.0.",
+  "cards": [
+    "labor-rights",
+    "crowdfunding",
+    "slot-machine",
+    "border-control",
+    "timely-public-release",
+    "embolus",
+    "watch-the-world-burn",
+    "hired-help"
+  ],
+  "reprintIdsFromEarlierWaves": [],
+  "clears": [
+    "labor-rights",
+    "crowdfunding",
+    "slot-machine",
+    "border-control",
+    "timely-public-release",
+    "embolus",
+    "watch-the-world-burn",
+    "hired-help"
+  ]
+}

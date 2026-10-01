@@ -59,6 +59,7 @@
     "whispers-in-nalubaale",
     "kampala-ascendent",
     "reign-and-reverie",
+    "magnum-opus",
     "system-core-2019",
     "downfall",
     "uprising",
@@ -2853,6 +2854,20 @@
         "surveyor",
         "high-profile-target",
         "false-flag"
+      ]
+    },
+    "magnum-opus": {
+      "status": "supported",
+      "notes": "Magnum Opus (mo) set-complete. 8/8 unique titles (6 Eternal/RAM playables + 2 community). Magnum Opus Reprint (mor) absorbed (all reprints of mo titles). Paired release v1.142.0. CR v26.03. Skip napd/draft/championship; defer tdc.",
+      "cards": [
+        "labor-rights",
+        "crowdfunding",
+        "slot-machine",
+        "border-control",
+        "timely-public-release",
+        "embolus",
+        "watch-the-world-burn",
+        "hired-help"
       ]
     }
   }

@@ -1,0 +1,31 @@
+{
+  "id": "crowdfunding",
+  "title": "Crowdfunding",
+  "nrdbCode": "23013",
+  "type": "resource",
+  "side": "runner",
+  "unsupported": [],
+  "faction": "criminal",
+  "subtypes": [
+    "seedy",
+    "virtual"
+  ],
+  "installCost": 0,
+  "hostedCreditsOnInstall": 3,
+  "drawOnHostedEmpty": 1,
+  "onTurnBegin": {
+    "op": "do",
+    "action": {
+      "kind": "take_hosted_credits",
+      "amount": 1
+    }
+  },
+  "onRunnerTurnEnd": {
+    "op": "do",
+    "action": {
+      "kind": "mo_crowdfunding_may_install_from_heap_ignore_costs",
+      "minSuccessfulRuns": 3
+    }
+  },
+  "wave": "magnum-opus"
+}

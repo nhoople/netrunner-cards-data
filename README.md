@@ -72,6 +72,7 @@ Files under [`data/`](data/) are the API. Clone the repo or fetch a **tagged** r
 | [`data/whispers-in-nalubaale/`](data/whispers-in-nalubaale/) | Whispers in Nalubaale (NRDB `win`) — **supported** (Kitara) |
 | [`data/kampala-ascendent/`](data/kampala-ascendent/) | Kampala Ascendent (NRDB `ka`) — **supported** (Kitara) |
 | [`data/reign-and-reverie/`](data/reign-and-reverie/) | Reign and Reverie (NRDB `rar`) — **supported** (legacy backwards) |
+| [`data/magnum-opus/`](data/magnum-opus/) | Magnum Opus (NRDB `mo`) — **supported** (`mor` absorbed) |
 | [`data/system-core-2019/`](data/system-core-2019/) | System Core 2019 (NRDB `sc19`) — **supported** (legacy backwards) |
 | [`data/downfall/`](data/downfall/) | Downfall (NRDB `df`) — **supported** (legacy backwards) |
 | [`data/uprising/`](data/uprising/) | Uprising (NRDB `ur`) — **supported** (legacy backwards) |
@@ -95,7 +96,7 @@ Match this dataset and [netrunner-engine](https://github.com/nhoople/netrunner-e
 
 | Pairing | cards-data | engine |
 |---------|------------|--------|
-| **Current** | [`v1.115.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.115.0) | engine same-semver pin `v1.115.0` (Data and Destiny set-complete **54/54**) |
+| **Current** | [`v1.142.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.142.0) | engine same-semver pin `v1.142.0` (Magnum Opus set-complete **8/8**; `mor` absorbed) |
 | The Universe of Tomorrow | [`v1.114.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.114.0) | engine same-semver pin `v1.114.0` (The Universe of Tomorrow set-complete **18/18**) |
 | Old Hollywood | [`v1.113.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.113.0) | engine same-semver pin `v1.113.0` (Old Hollywood set-complete **19/19**) |
 | The Underway | [`v1.112.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.112.0) | engine same-semver pin `v1.112.0` (The Underway set-complete **17/17**) |
@@ -197,7 +198,7 @@ Synthetic stubs and early wave1/wave2 dirs were removed in `v0.2.0`. Reprints th
 
 Parhelion is fully supported (wave gate `v0.71.0`). The Automata Initiative is fully supported (wave gate `v0.86.0`). Rebellion Without Rehearsal is fully supported (wave gate `v1.00.0`). Elevation is fully supported (wave gate `v1.12.0`). Vantage Point is fully supported (wave gate `v1.33.0`). Uprising is fully supported (wave gate `v1.46.0`). **Downfall** is fully supported (wave gate `v1.58.0`, **65/65**). **System Core 2019** is fully supported (wave gate `v1.74.0`, **84/147** SC19-only). **Reign and Reverie** is fully supported (wave gate `v1.86.0`, **56/56**). **FFG Core Set** is fully supported (wave gate `v1.87.0`, **49/49** Core-only). **What Lies Ahead** is fully supported (wave gate `v1.88.0`, **14/14** WLA-only). **Trace Amount** is fully supported (wave gate `v1.89.0`, **15/15** TA-only). **Cyber Exodus** is fully supported (wave gate `v1.90.0`, **13/13** CE-only). **A Study in Static** is fully supported (wave gate `v1.91.0`, **15/15** ASIS-only).
 
-**Next:** Genesis continue (`hs` → `fp`). Pair every clear with the engine CR adherence gate; GitHub Releases only at set-complete. Never kick `mo`/`mor`.
+**Next:** Idle / absorb-only until next NSG pack after VP or CR bump. Skip `napd`/draft/championship; defer `tdc`.
 
 ## Versioning
 
