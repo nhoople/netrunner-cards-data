@@ -1,5 +1,9 @@
 # Contributing
 
+## Catalog source
+
+Pack extracts come from pinned [Null-Signal-Games/netrunner-cards-json](https://github.com/Null-Signal-Games/netrunner-cards-json) (NSG source of truth; NRDB is downstream). See README **Data pipeline / catalog extract source**. NRDB codes may appear as identifiers; do not ingest from the NRDB API. Watch new packs by diffing NSG against `data/pool.json`.
+
 ## Pack card work / Effect IR
 
 1. Map printed text to Effect IR; list every deferred clause in `unsupported` (never silent wrong behavior).
