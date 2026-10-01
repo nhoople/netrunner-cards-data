@@ -84,7 +84,6 @@ Files under [`data/`](data/) are the API. Clone the repo or fetch a **tagged** r
 | [`data/rebellion-without-rehearsal/`](data/rebellion-without-rehearsal/) | Rebellion Without Rehearsal (NRDB `rwr`) — **supported** |
 | [`data/elevation/`](data/elevation/) | Elevation (NRDB `elev`) — **supported** |
 | [`data/vantage-point/`](data/vantage-point/) | Vantage Point (NRDB `vp`) — **supported** |
-| [`data/fixtures/`](data/fixtures/) | CR-example / host-test slot outside corpus order (empty; Plascrete lives under What Lies Ahead) |
 
 **Corpus order:** FFG Core Set → Genesis → CAC → Spin → HAP → Lunar → OAC → SanSan → DAD → Mumbad → Flashpoint → Red Sand + `td` → `core2` → Kitara → RaR → **Magnum Opus** (`mor` absorbed) → SC19 → Downfall → Uprising → Gateway → SU21 → Midnight Sun → Parhelion → TAI → RWR → Elevation → Vantage Point. Floor **`v1.142.1`**. Skip `napd`/draft/championship; defer `tdc`.
 
