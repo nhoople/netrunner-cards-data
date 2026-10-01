@@ -64,7 +64,7 @@ Files under [`data/`](data/) are the API. Clone the repo or fetch a **tagged** r
 | [`data/blood-and-water/`](data/blood-and-water/) | Blood and Water (NRDB `baw`) — **supported** (Red Sand) |
 | [`data/free-mars/`](data/free-mars/) | Free Mars (NRDB `fm`) — **supported** (Red Sand) |
 | [`data/crimson-dust/`](data/crimson-dust/) | Crimson Dust (NRDB `cd`) — **supported** (Red Sand) |
-| [`data/revised-core/`](data/revised-core/) | Revised Core Set (NRDB `core2`) — **supported** (132/132 reprints absorbed; 0 new clears) |
+| [`data/revised-core/`](data/revised-core/) | Revised Core Set (NRDB `core2`) — **supported** (132/132 reprints absorbed; 0 new titles) |
 | [`data/sovereign-sight/`](data/sovereign-sight/) | Sovereign Sight (NRDB `ss`) — **supported** (Kitara) |
 | [`data/down-the-white-nile/`](data/down-the-white-nile/) | Down the White Nile (NRDB `dtwn`) — **supported** (Kitara) |
 | [`data/council-of-the-crest/`](data/council-of-the-crest/) | Council of the Crest (NRDB `cotc`) — **supported** (Kitara) |
@@ -122,26 +122,15 @@ Match this dataset and [netrunner-engine](https://github.com/nhoople/netrunner-e
 | What Lies Ahead | [`v1.88.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.88.0) | engine same-semver pin `v1.88.0` (What Lies Ahead set-complete **14/14**) |
 | Core Set | [`v1.87.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.87.0) | engine same-semver pin `v1.87.0` (Core Set set-complete **49/49**) |
 | RaR set-complete | [`v1.86.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.86.0) | engine same-semver pin `v1.86.0` (RaR set-complete **56/56**) |
-| RaR J-slice | [`v1.85.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.85.0) | engine same-semver pin `v1.85.0` |
-| RaR I-slice | [`v1.84.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.84.0) | engine same-semver pin `v1.84.0` |
-| RaR H-slice | [`v1.83.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.83.0) | engine same-semver pin `v1.83.0` |
-| RaR G-slice | [`v1.82.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.82.0) | engine same-semver pin `v1.82.0` |
-| RaR F-slice | [`v1.81.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.81.0) | engine same-semver pin `v1.81.0` |
-| RaR E-slice | [`v1.80.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.80.0) | engine same-semver pin `v1.80.0` |
-| RaR D-slice | [`v1.79.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.79.0) | engine same-semver pin `v1.79.0` |
-| RaR C-slice | [`v1.78.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.78.0) | engine same-semver pin `v1.78.0` |
-| RaR B-slice | [`v1.77.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.77.0) | engine same-semver pin `v1.77.0` |
-| RaR A-slice | [`v1.76.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.76.0) | engine same-semver pin `v1.76.0` |
-| RaR kickoff | [`v1.75.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.75.0) | engine same-semver pin `v1.75.0` |
-| SC19 milestone | [`v1.74.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.74.0) | [`v1.74.0`](https://github.com/nhoople/netrunner-engine/releases/tag/v1.74.0) |
-| Downfall milestone | [`v1.58.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.58.0) | [`v1.58.0`](https://github.com/nhoople/netrunner-engine/releases/tag/v1.58.0) |
-| Uprising milestone | [`v1.46.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.46.0) | [`v1.46.0`](https://github.com/nhoople/netrunner-engine/releases/tag/v1.46.0) |
+| SC19 set-complete | [`v1.74.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.74.0) | [`v1.74.0`](https://github.com/nhoople/netrunner-engine/releases/tag/v1.74.0) |
+| Downfall set-complete | [`v1.58.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.58.0) | [`v1.58.0`](https://github.com/nhoople/netrunner-engine/releases/tag/v1.58.0) |
+| Uprising set-complete | [`v1.46.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.46.0) | [`v1.46.0`](https://github.com/nhoople/netrunner-engine/releases/tag/v1.46.0) |
 | Post-VP maintenance | [`v1.34.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.34.0) | [`v1.34.0`](https://github.com/nhoople/netrunner-engine/releases/tag/v1.34.0) |
-| Vantage Point milestone | [`v1.33.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.33.0) | [`v1.33.0`](https://github.com/nhoople/netrunner-engine/releases/tag/v1.33.0) |
-| Elevation milestone | [`v1.12.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.12.0) | [`v1.12.0`](https://github.com/nhoople/netrunner-engine/releases/tag/v1.12.0) |
-| RWR milestone | [`v1.00.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.00.0) | [`v1.00.0`](https://github.com/nhoople/netrunner-engine/releases/tag/v1.00.0) |
+| Vantage Point set-complete | [`v1.33.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.33.0) | [`v1.33.0`](https://github.com/nhoople/netrunner-engine/releases/tag/v1.33.0) |
+| Elevation set-complete | [`v1.12.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.12.0) | [`v1.12.0`](https://github.com/nhoople/netrunner-engine/releases/tag/v1.12.0) |
+| RWR set-complete | [`v1.00.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.00.0) | [`v1.00.0`](https://github.com/nhoople/netrunner-engine/releases/tag/v1.00.0) |
 
-Incremental wave tags are the day-to-day IR/wiring contract. A set-complete **milestone** GitHub Release is cut only when a wave’s pool status → `supported` (advertised host floor for that set). Maintenance / quality tags (e.g. `v1.34.0`) still publish GitHub Releases when consumers should pin past a prior milestone.
+GitHub Releases are cut at **set-complete** (wave pool status → `supported`, advertised host floor) or by **explicit manual** release. Pack IR work lands as PR merges; pin consumers to a release tag, not `master`. Intermediate progress tags may still exist on GitHub history — prefer the set-complete / current floor tags above.
 
 The engine declares the pin in [`data/cards-pin.json`](https://github.com/nhoople/netrunner-engine/blob/master/data/cards-pin.json) and fetches with:
 
@@ -189,8 +178,8 @@ console.log(pool.corpusOrder, marjanah.title);
 | system-gateway | 77 | Null Signal System Gateway (fully supported) |
 | system-update-2021 | 82 | Null Signal System Update 2021 (fully supported) |
 | midnight-sun | 65 | Null Signal Midnight Sun (`ms`); `msbp` titles absorbed; fully supported |
-| parhelion | 63 | Null Signal Parhelion (`ph`); status `supported` (wave gate `v0.71.0`; all 63 clear) |
-| the-automata-initiative | 65 | Null Signal The Automata Initiative (`tai`); status `supported` (wave gate `v0.86.0`) |
+| parhelion | 63 | Null Signal Parhelion (`ph`); status `supported` (wave gate `v0.71.0`; 63/63 mapped) |
+| the-automata-initiative | 65 | Null Signal The Automata Initiative (`tai`); status `supported` (wave gate `v0.86.0`; 65/65 mapped) |
 | rebellion-without-rehearsal | 65 | Null Signal Rebellion Without Rehearsal (`rwr`); status `supported` (**65/65** mapped; wave gate `v1.00.0`) |
 | elevation | 82 | Null Signal Elevation (`elev`); status `supported` (**82/82** mapped; wave gate `v1.12.0`) |
 | vantage-point | 66 | Null Signal Vantage Point (`vp`); status `supported` (`v1.33.0`; **66/66** mapped) |
