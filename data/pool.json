@@ -981,11 +981,6 @@
         "let-them-dream"
       ]
     },
-    "fixtures": {
-      "status": "fixture",
-      "notes": "CR-example / host-test slot outside corpusOrder. Plascrete Carapace now lives under what-lies-ahead (supported). Keep this wave for future fixture-only cards; excluded from supportedCardIds().",
-      "cards": []
-    },
     "reign-and-reverie": {
       "status": "supported",
       "notes": "Null Signal Reign and Reverie (NRDB pack rar) \u2014 legacy backwards after System Core 2019. 58 titles; 2 SC19 reprints absorbed (Patchwork, Paragon). Fully supported: 56/56 RaR-only clears (wave gate v1.86.0).",

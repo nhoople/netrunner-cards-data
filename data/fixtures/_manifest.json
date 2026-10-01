@@ -1,9 +1,0 @@
-{
-  "pack": "fixtures",
-  "nrdbPackCode": null,
-  "count": 0,
-  "written": 0,
-  "status": "fixture",
-  "notes": "CR-example / host-test slot outside corpusOrder. Plascrete Carapace now lives under what-lies-ahead (supported). Keep this wave for future fixture-only cards; excluded from supportedCardIds().",
-  "cards": []
-}

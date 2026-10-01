@@ -30,7 +30,7 @@ WAVE = "what-lies-ahead"
 PACK = "wla"
 EXPECTED = 20
 
-# Already clear under Gateway / SU21 / SC19 / Core / fixtures.
+# Already clear under Gateway / SU21 / SC19 / Core.
 REPRINTS = {
     "imp",
     "haas-bioroid-stronger-together",
@@ -38,7 +38,7 @@ REPRINTS = {
     "project-atlas",
     "caduceus",
 }
-# plascrete-carapace is authored under this wave (moved from fixtures).
+# plascrete-carapace is authored under this wave (catalog home).
 
 
 def slugify(title: str) -> str:
