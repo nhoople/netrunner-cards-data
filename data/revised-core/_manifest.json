@@ -5,7 +5,7 @@
   "written": 0,
   "reprintSkipped": 132,
   "status": "supported",
-  "notes": "Revised Core Set (core2) reprints absorb v1.135.0. Wrote 0 files; absorbed 132/132 titles as reprints of earlier waves (0 new clears). Slug mismatches (Doppelgänger / Wünderkind / Maker's Eye / Aesop's / Hadrian's) resolve to existing corpus ids via spin_common.slugify. Never kick mo/mor. Defer tdc. CR pin v26.03.",
+  "notes": "Revised Core Set (core2) reprints absorb v1.135.0. Wrote 0 files; absorbed 132/132 titles as reprints of earlier waves (0 new clears). Slug mismatches (Doppelg\u00e4nger / W\u00fcnderkind / Maker's Eye / Aesop's / Hadrian's) resolve to existing corpus ids via spin_common.slugify. Defer tdc. CR pin v26.03.",
   "cards": [
     "reina-roja-freedom-fighter",
     "demolition-run",
