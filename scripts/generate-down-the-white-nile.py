@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """Generate Down the White Nile (dtwn) card JSON from pinned pack `dtwn`.
 
-Fetch: python3 scripts/nrdb_catalog.py fetch dtwn
+Fetch: python3 scripts/nsg_catalog.py fetch dtwn
 Kitara #2 after Sovereign Sight (floor v1.136.0 → v1.137.0).
 Reprint skips: none (20/20 new clears).
-Follow NRDB stripped_text (not IR-hint paraphrases).
+Follow NSG pack stripped_text (not IR-hint paraphrases).
 Slug via spin_common.slugify (Kabonesa Wu: Netspace Thrillseeker→kabonesa-wu-netspace-thrillseeker).
 """
 from __future__ import annotations
@@ -14,7 +14,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from nrdb_catalog import load_pack_cards
+from nsg_catalog import load_pack_cards
 from spin_common import (
     base,
     do,

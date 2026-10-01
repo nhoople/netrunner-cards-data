@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Generate What Lies Ahead card JSON from pinned pack `wla`.
 
-Catalog source: Null-Signal-Games/netrunner-cards-json (see data/nrdb-catalog-pin.json).
-Fetch with: python3 scripts/nrdb_catalog.py fetch wla
+Catalog source: Null-Signal-Games/netrunner-cards-json (see data/nsg-catalog-pin.json).
+Fetch with: python3 scripts/nsg_catalog.py fetch wla
 
 First Genesis-cycle wave after FFG Core Set set-complete (floor v1.87.0).
 Titles already clear under Gateway / SU21 / SC19 / Core (etc.) are treated as
@@ -11,7 +11,6 @@ reprints: skip emitting duplicate files; list their ids in pool.json.
 Hand-mapped Effect IR only where existing primitives fully cover the card;
 everything else lists honest unsupported notes — never invent IR.
 
-Never kick Magnum Opus packs (`mo` / `mor`).
 
 Usage: python3 scripts/generate-what-lies-ahead.py
 """
@@ -22,7 +21,7 @@ import re
 import unicodedata
 from pathlib import Path
 
-from nrdb_catalog import load_pack_cards
+from nsg_catalog import load_pack_cards
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "data" / "what-lies-ahead"
@@ -475,7 +474,7 @@ def main():
             f"Wrote {len(written)} files; skipped {len(skipped)} reprints "
             f"(Gateway/SU21/SC19/Core). Full clears among written: "
             f"{len(clear_written)}; partial: {len(partial_written)}. "
-            "Never kick mo/mor packs."
+            ""
         ),
         "cards": pool_ids,
         "reprintIdsFromEarlierWaves": sorted(skipped),

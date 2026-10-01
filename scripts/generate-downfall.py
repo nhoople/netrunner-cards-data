@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Generate Downfall card JSON from pinned pack `df`.
 
-Catalog source: Null-Signal-Games/netrunner-cards-json (see data/nrdb-catalog-pin.json).
-Fetch with: python3 scripts/nrdb_catalog.py fetch df
+Catalog source: Null-Signal-Games/netrunner-cards-json (see data/nsg-catalog-pin.json).
+Fetch with: python3 scripts/nsg_catalog.py fetch df
 
 Downfall is Ashes set 1 of 2 (Uprising is set 2). Magnum Opus Reprint (`mor`)
 is skipped/absorbed — not a corpus wave.
@@ -19,7 +19,7 @@ import re
 import unicodedata
 from pathlib import Path
 
-from nrdb_catalog import load_pack_cards
+from nsg_catalog import load_pack_cards
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "data" / "downfall"

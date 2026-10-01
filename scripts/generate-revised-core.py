@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """Absorb Revised Core Set (core2) — reprints only; write manifest, no card JSON.
 
-Fetch: python3 scripts/nrdb_catalog.py fetch core2
+Fetch: python3 scripts/nsg_catalog.py fetch core2
 Floor v1.134.0 (Crimson Dust) → paired v1.135.0.
 All 132 titles already exist under normalized corpus ids (0 new clears).
-Never kick mo/mor. Defer tdc.
+Defer tdc.
 
 Slug via spin_common.slugify (apostrophes/umlauts). Fail closed if any
 title cannot be matched to an existing corpus id. Known naive→corpus
@@ -24,7 +24,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from nrdb_catalog import load_pack_cards
+from nsg_catalog import load_pack_cards
 from spin_common import ROOT, slugify
 
 OUT = ROOT / "data" / "revised-core"
@@ -50,7 +50,7 @@ def corpus_ids() -> set[str]:
     skip_names = {
         "pool.json",
         "schema.json",
-        "nrdb-catalog-pin.json",
+        "nsg-catalog-pin.json",
         "supported-unsupported-allowlist.json",
     }
     for path in data.rglob("*.json"):
@@ -117,7 +117,7 @@ def main() -> None:
             "waves (0 new clears). Slug mismatches "
             "(Doppelgänger / Wünderkind / Maker's Eye / Aesop's / Hadrian's) "
             "resolve to existing corpus ids via spin_common.slugify. "
-            "Never kick mo/mor. Defer tdc. CR pin v26.03."
+            " Defer tdc. CR pin v26.03."
         ),
         "cards": reprint_ids,
         "reprintIdsFromEarlierWaves": sorted(reprint_ids),

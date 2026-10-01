@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Generate Mala Tempora (mt) card JSON from pinned pack `mt`.
 
-Fetch: python3 scripts/nrdb_catalog.py fetch mt
+Fetch: python3 scripts/nsg_catalog.py fetch mt
 Spin cycle after Stalwart (floor v1.96.0 → v1.97.0).
 """
 from __future__ import annotations
@@ -11,7 +11,7 @@ import re
 import unicodedata
 from pathlib import Path
 
-from nrdb_catalog import load_pack_cards
+from nsg_catalog import load_pack_cards
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "data" / "mala-tempora"

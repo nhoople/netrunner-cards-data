@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Generate Fear and Loathing (fal) card JSON from pinned pack `fal`.
 
-Fetch: python3 scripts/nrdb_catalog.py fetch fal
+Fetch: python3 scripts/nsg_catalog.py fetch fal
 Spin cycle after True Colors (floor v1.98.0 → v1.99.0).
 """
 from __future__ import annotations
@@ -11,7 +11,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from nrdb_catalog import load_pack_cards
+from nsg_catalog import load_pack_cards
 from spin_common import (
     base,
     breaker_card,

@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """Generate Daedalus Complex (dc) card JSON from pinned pack `dc`.
 
-Fetch: python3 scripts/nrdb_catalog.py fetch dc
+Fetch: python3 scripts/nsg_catalog.py fetch dc
 Red Sand #1 after Quorum / Flashpoint closer (floor v1.127.0 → v1.128.0).
 Reprint skips: none (20/20 new clears).
-Follow NRDB stripped_text (not IR-hint paraphrases).
+Follow NSG pack stripped_text (not IR-hint paraphrases).
 """
 from __future__ import annotations
 
@@ -13,7 +13,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from nrdb_catalog import load_pack_cards
+from nsg_catalog import load_pack_cards
 from spin_common import (
     base,
     core,

@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Generate Midnight Sun card JSON from pinned pack `ms`.
 
-Catalog source: Null-Signal-Games/netrunner-cards-json (see data/nrdb-catalog-pin.json).
-Fetch with: python3 scripts/nrdb_catalog.py fetch ms msbp
+Catalog source: Null-Signal-Games/netrunner-cards-json (see data/nsg-catalog-pin.json).
+Fetch with: python3 scripts/nsg_catalog.py fetch ms msbp
 
 Midnight Sun Booster Pack (`msbp`) titles all reprint in `ms` — absorb under
 midnight-sun/; do not emit a separate msbp wave.
@@ -20,7 +20,7 @@ import re
 import unicodedata
 from pathlib import Path
 
-from nrdb_catalog import load_pack_cards
+from nsg_catalog import load_pack_cards
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "data" / "midnight-sun"

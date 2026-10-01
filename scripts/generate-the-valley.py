@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Generate The Valley (val) card JSON from pinned pack `val`.
 
-Fetch: python3 scripts/nrdb_catalog.py fetch val
+Fetch: python3 scripts/nsg_catalog.py fetch val
 SanSan cycle after Order and Chaos (floor v1.108.0 → v1.109.0).
 Reprint skip: clot (already in system-update-2021).
 """
@@ -12,7 +12,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from nrdb_catalog import load_pack_cards
+from nsg_catalog import load_pack_cards
 from spin_common import (
     base,
     breaker_card,

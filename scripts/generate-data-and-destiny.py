@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Generate Data and Destiny (dad) card JSON from pinned pack `dad`.
 
-Fetch: python3 scripts/nrdb_catalog.py fetch dad
+Fetch: python3 scripts/nsg_catalog.py fetch dad
 Deluxe after The Universe of Tomorrow / SanSan (floor v1.114.0 → v1.115.0).
 Reprint skip: spark-agency-worldswide-reach (SC19).
 """
@@ -12,7 +12,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from nrdb_catalog import load_pack_cards
+from nsg_catalog import load_pack_cards
 from spin_common import (
     base,
     do,

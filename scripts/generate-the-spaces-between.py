@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Generate The Spaces Between (tsb) card JSON from pinned pack `tsb`.
 
-Fetch: python3 scripts/nrdb_catalog.py fetch tsb
+Fetch: python3 scripts/nsg_catalog.py fetch tsb
 Lunar cycle after Upstalk (floor v1.102.0 → v1.103.0).
 """
 from __future__ import annotations
@@ -11,7 +11,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from nrdb_catalog import load_pack_cards
+from nsg_catalog import load_pack_cards
 from spin_common import (
     base,
     breaker_card,

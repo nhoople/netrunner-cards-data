@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Generate First Contact (fc) card JSON from pinned pack `fc`.
 
-Fetch: python3 scripts/nrdb_catalog.py fetch fc
+Fetch: python3 scripts/nsg_catalog.py fetch fc
 Lunar cycle after The Spaces Between (floor v1.103.0 → v1.104.0).
 """
 from __future__ import annotations
@@ -11,7 +11,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from nrdb_catalog import load_pack_cards
+from nsg_catalog import load_pack_cards
 from spin_common import (
     base,
     breaker_card,

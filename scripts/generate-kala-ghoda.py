@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Generate Kala Ghoda (kg) card JSON from pinned pack `kg`.
 
-Fetch: python3 scripts/nrdb_catalog.py fetch kg
+Fetch: python3 scripts/nsg_catalog.py fetch kg
 Mumbad cycle after Data and Destiny (floor v1.115.0 → v1.116.0).
 Reprint skip: run-amok (system-core-2019).
 """
@@ -12,7 +12,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from nrdb_catalog import load_pack_cards
+from nsg_catalog import load_pack_cards
 from spin_common import (
     base,
     breaker_card,

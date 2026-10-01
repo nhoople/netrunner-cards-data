@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """Generate Earth's Scion (eas) card JSON from pinned pack `eas`.
 
-Fetch: python3 scripts/nrdb_catalog.py fetch eas
+Fetch: python3 scripts/nsg_catalog.py fetch eas
 Red Sand #3 after Terminal Directive Cards (floor v1.130.0 → v1.131.0).
 Reprint skips: none (20/20 new clears).
-Follow NRDB stripped_text (not IR-hint paraphrases).
+Follow NSG pack stripped_text (not IR-hint paraphrases).
 Slug via spin_common.slugify (Rosetta 2.0→rosetta-2-0,
 AgInfusion: New Miracles for a New World→aginfusion-new-miracles-for-a-new-world).
 """
@@ -15,7 +15,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from nrdb_catalog import load_pack_cards
+from nsg_catalog import load_pack_cards
 from spin_common import (
     base,
     do,

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Generate Honor and Profit (hap) card JSON from pinned pack `hap`.
 
-Fetch: python3 scripts/nrdb_catalog.py fetch hap
+Fetch: python3 scripts/nsg_catalog.py fetch hap
 Deluxe after Double Time (floor v1.100.0 → v1.101.0).
 """
 from __future__ import annotations
@@ -11,7 +11,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from nrdb_catalog import load_pack_cards
+from nsg_catalog import load_pack_cards
 from spin_common import (
     base,
     breaker_card,

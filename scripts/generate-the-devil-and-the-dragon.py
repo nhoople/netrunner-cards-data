@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """Generate The Devil and the Dragon (tdatd) card JSON from pinned pack `tdatd`.
 
-Fetch: python3 scripts/nrdb_catalog.py fetch tdatd
+Fetch: python3 scripts/nsg_catalog.py fetch tdatd
 Kitara #4 after Council of the Crest (floor v1.138.0 → v1.139.0).
 Reprint skips: none (20/20 new clears).
-Follow NRDB stripped_text (not IR-hint paraphrases).
+Follow NSG pack stripped_text (not IR-hint paraphrases).
 Slug via spin_common.slugify (419: Amoral Scammer→419-amoral-scammer,
 Malia Z0L0K4→malia-z0l0k4, SSO Industries: Fueling Innovation→
 sso-industries-fueling-innovation, Endless EULA→endless-eula).
@@ -16,7 +16,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from nrdb_catalog import load_pack_cards
+from nsg_catalog import load_pack_cards
 from spin_common import (
     base,
     do,
