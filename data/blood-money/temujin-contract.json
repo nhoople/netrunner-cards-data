@@ -18,6 +18,7 @@
     }
   },
   "hostedCreditsOnInstall": 20,
+  "trashWhenHostedCreditsEmpty": true,
   "onSuccessfulRun": {
     "op": "if",
     "cond": {

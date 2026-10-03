@@ -14,6 +14,7 @@
   "rezCost": 4,
   "trashCost": 3,
   "hostedCreditsOnInstall": 12,
+  "trashWhenHostedCreditsEmpty": true,
   "onTurnBegin": {
     "op": "do",
     "action": {

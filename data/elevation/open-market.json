@@ -12,6 +12,7 @@
   ],
   "installCost": 2,
   "hostedCreditsOnInstall": 6,
+  "trashWhenHostedCreditsEmpty": true,
   "hostedCreditsSpendFor": [
     "install"
   ],

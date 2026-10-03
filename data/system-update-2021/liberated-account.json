@@ -8,6 +8,7 @@
   "unsupported": [],
   "installCost": 6,
   "hostedCreditsOnInstall": 16,
+  "trashWhenHostedCreditsEmpty": true,
   "paidAbilities": [
     {
       "id": "lib-account",

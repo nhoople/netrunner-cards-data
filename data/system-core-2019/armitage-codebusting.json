@@ -12,6 +12,7 @@
   ],
   "installCost": 1,
   "hostedCreditsOnInstall": 12,
+  "trashWhenHostedCreditsEmpty": true,
   "paidAbilities": [
     {
       "id": "armitage-codebusting-take",

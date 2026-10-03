@@ -8,6 +8,7 @@
   "unsupported": [],
   "installCost": 3,
   "hostedCreditsOnInstall": 8,
+  "trashWhenHostedCreditsEmpty": true,
   "onTurnBegin": {
     "op": "do",
     "action": {
