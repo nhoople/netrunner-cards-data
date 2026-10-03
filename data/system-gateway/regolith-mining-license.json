@@ -8,6 +8,7 @@
   "installCost": 0,
   "rezCost": 2,
   "trashCost": 3,
+  "trashWhenHostedCreditsEmpty": true,
   "onRez": {
     "op": "do",
     "action": {

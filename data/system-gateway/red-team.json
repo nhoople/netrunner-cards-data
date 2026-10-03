@@ -8,6 +8,7 @@
   "installCost": 5,
   "subtypes": ["job"],
   "hostedCreditsOnInstall": 12,
+  "trashWhenHostedCreditsEmpty": true,
   "unsupported": [],
   "paidAbilities": [
     {

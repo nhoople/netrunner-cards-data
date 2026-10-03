@@ -10,6 +10,7 @@
     "job"
   ],
   "hostedCreditsOnInstall": 9,
+  "trashWhenHostedCreditsEmpty": true,
   "paidAbilities": [
     {
       "id": "telework-take",
