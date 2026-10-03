@@ -95,7 +95,7 @@ Match this dataset and [netrunner-engine](https://github.com/nhoople/netrunner-e
 
 | Pairing | cards-data | engine |
 |---------|------------|--------|
-| **Current** | [`v1.143.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.143.0) | [`v1.143.1`](https://github.com/nhoople/netrunner-engine/releases/tag/v1.143.1) (paired with engine mulligan floor; corpus unchanged from v1.142.2) |
+| **Current** | [`v1.143.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.143.0) | [`v1.143.2`](https://github.com/nhoople/netrunner-engine/releases/tag/v1.143.2) (paired with engine empty hosted-credit take floor; corpus unchanged from v1.142.2) |
 
 Prior set-complete / maintenance tags: [cards Releases](https://github.com/nhoople/netrunner-cards-data/releases) · [engine Releases](https://github.com/nhoople/netrunner-engine/releases).
 
