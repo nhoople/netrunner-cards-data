@@ -4,7 +4,7 @@
 
 ## CR adherence gate (required for Effect IR / card mapping)
 
-For any PR that adds Effect IR or marks cards fully mapped for engine consumption: fill the recording template (Project Context `docs/cr-adherence-gate.md`). Do **not** delete this section.
+For any PR that adds Effect IR or marks cards fully mapped for engine consumption: fill the recording template (`docs/cr-adherence-gate.md` in the Netrunner workspace, the parent of this repository). Do **not** delete this section.
 
 Pure schema / pool / generate / validate / docs changes: leave the template and write `Verdict: n/a — <one-line reason>`.
 
