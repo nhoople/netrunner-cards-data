@@ -1010,7 +1010,16 @@ def map_card(c: dict) -> dict | None:
                     "windows": ["corp_action_paw"],
                     "effect": {
                         "op": "do",
-                        "action": {"kind": "lose_credits_per_advancement", "per": 4},
+                        "action": {
+                            "kind": "lose_credits",
+                            "side": "runner",
+                            "amount": 0,
+                            "tally": {
+                                "count": "source_advancement_tokens",
+                                "per": 4,
+                                "side": "runner",
+                            },
+                        },
                     },
                 }
             ],

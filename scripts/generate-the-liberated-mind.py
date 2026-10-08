@@ -266,7 +266,15 @@ def map_card(c: dict) -> dict | None:
                         "action": {
                             "kind": "play_psi_game",
                             "maxBid": 2,
-                            "ifBidsDiffer": do("net_damage_per_runner_grip_card"),
+                            "ifBidsDiffer": do(
+                                "net_damage",
+                                amount=0,
+                                tally={
+                                    "count": "runner_grip",
+                                    "per": 1,
+                                    "side": "runner",
+                                },
+                            ),
                         },
                     },
                 },

@@ -836,9 +836,13 @@ def map_card(c: dict) -> dict | None:
                         "effect": {
                             "op": "do",
                             "action": {
-                                "kind": "give_tags_per_advancement",
-                                "base": 0,
-                                "per": 1,
+                                "kind": "give_tags",
+                                "amount": 0,
+                                "tally": {
+                                    "count": "source_advancement_tokens",
+                                    "per": 1,
+                                    "side": "source",
+                                },
                             },
                         },
                     },
@@ -966,7 +970,15 @@ def map_card(c: dict) -> dict | None:
             deckLimit=1,
             onScore={
                 "op": "do",
-                "action": {"kind": "net_damage_per_runner_scored_agenda"},
+                "action": {
+                    "kind": "net_damage",
+                    "amount": 0,
+                    "tally": {
+                        "count": "runner_score",
+                        "per": 1,
+                        "side": "runner",
+                    },
+                },
             },
             unsupported=[],
         )

@@ -16,7 +16,13 @@
   "onAccess": {
     "op": "do",
     "action": {
-      "kind": "net_damage_per_advancement"
+      "kind": "net_damage",
+      "amount": 0,
+      "tally": {
+        "count": "source_advancement_tokens",
+        "per": 1,
+        "side": "source"
+      }
     }
   },
   "paidAbilities": [

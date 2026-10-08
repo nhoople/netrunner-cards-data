@@ -10,8 +10,14 @@
   "onPlay": {
     "op": "do",
     "action": {
-      "kind": "draw_per_clicks_remaining",
-      "side": "runner"
+      "kind": "draw",
+      "side": "runner",
+      "amount": 0,
+      "tally": {
+        "count": "clicks_remaining",
+        "per": 1,
+        "side": "runner"
+      }
     }
   }
 }

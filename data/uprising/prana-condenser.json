@@ -67,7 +67,13 @@
       "effect": {
         "op": "do",
         "action": {
-          "kind": "deal_net_damage_per_power_counter"
+          "kind": "net_damage",
+          "amount": 0,
+          "tally": {
+            "count": "source_power_counters",
+            "per": 1,
+            "side": "source"
+          }
         }
       }
     }

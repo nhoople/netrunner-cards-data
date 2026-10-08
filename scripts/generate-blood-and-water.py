@@ -23,6 +23,7 @@ from spin_common import (
     draw,
     etr,
     gain,
+    nested_unless,
     net,
     seq,
     slugify,
@@ -239,7 +240,11 @@ def map_card(c: dict) -> dict | None:
                 {
                     "id": "loki-etr-unless-shuffle-grip",
                     "text": "End the run unless the Runner shuffles all cards from the grip into the stack.",
-                    "effect": do("end_the_run_unless_shuffle_grip_into_stack"),
+                    "effect": nested_unless(
+                        "runner",
+                        do("shuffle_all_grip_into_stack"),
+                        etr(),
+                    ),
                 },
             ],
         )

@@ -146,7 +146,15 @@ def map_card(c: dict) -> dict | None:
         return base(
             c,
             playRequiresFirstClick=True,
-            onPlay=do("remove_all_tags"),
+            onPlay=do(
+                "remove_tags",
+                amount=0,
+                tally={
+                    "count": "runner_tags",
+                    "per": 1,
+                    "side": "runner",
+                },
+            ),
         )
 
     if cid == "power-tap":

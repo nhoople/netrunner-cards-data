@@ -899,9 +899,14 @@ def map_card(c: dict) -> dict:
             onAccess={
                 "op": "do",
                 "action": {
-                    "kind": "give_tags_per_advancement",
-                    "base": 1,
-                    "per": 1,
+                    "kind": "give_tags",
+                    "amount": 0,
+                    "tally": {
+                        "count": "source_advancement_tokens",
+                        "per": 1,
+                        "side": "source",
+                        "base": 1,
+                    },
                 },
             },
             unsupported=[],

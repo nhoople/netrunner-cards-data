@@ -623,10 +623,32 @@ def map_card(c: dict) -> dict:
                 {
                     "id": "vicsek-x",
                     "text": "Do X net damage and give the Runner X tags. X is equal to the number of tags the Runner has.",
-                    "effect": {
-                        "op": "do",
-                        "action": {"kind": "net_damage_and_tags_equal_runner_tags"},
-                    },
+                    "effect": seq(
+                        {
+                            "op": "do",
+                            "action": {
+                                "kind": "net_damage",
+                                "amount": 0,
+                                "tally": {
+                                    "count": "runner_tags",
+                                    "per": 1,
+                                    "side": "runner",
+                                },
+                            },
+                        },
+                        {
+                            "op": "do",
+                            "action": {
+                                "kind": "give_tags",
+                                "amount": 0,
+                                "tally": {
+                                    "count": "runner_tags",
+                                    "per": 1,
+                                    "side": "runner",
+                                },
+                            },
+                        },
+                    ),
                 },
                 {
                     "id": "vicsek-trash",
@@ -714,7 +736,18 @@ def map_card(c: dict) -> dict:
                 "op": "if",
                 "cond": {"op": "self_scored_this_turn"},
                 "then": seq(
-                    {"op": "do", "action": {"kind": "remove_all_tags"}},
+                    {
+                        "op": "do",
+                        "action": {
+                            "kind": "remove_tags",
+                            "amount": 0,
+                            "tally": {
+                                "count": "runner_tags",
+                                "per": 1,
+                                "side": "runner",
+                            },
+                        },
+                    },
                     tags(3),
                 ),
             },

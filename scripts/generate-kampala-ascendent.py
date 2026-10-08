@@ -425,7 +425,11 @@ def map_card(c: dict) -> dict | None:
             c,
             subtypes=["black ops"],
             playRequiresTagged=True,
-            onPlay=do("meat_damage_per_tag", amountPerTag=2),
+            onPlay=do(
+                "meat_damage",
+                amount=0,
+                tally={"count": "runner_tags", "per": 2, "side": "runner"},
+            ),
         )
 
     if cid == "false-flag":

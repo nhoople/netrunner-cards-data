@@ -17,8 +17,15 @@
       {
         "op": "do",
         "action": {
-          "kind": "draw_per_installed_clan_resource",
-          "per": 1
+          "kind": "draw",
+          "side": "runner",
+          "amount": 0,
+          "tally": {
+            "count": "installed_resource_subtype",
+            "per": 1,
+            "side": "runner",
+            "subtype": "clan"
+          }
         }
       },
       {

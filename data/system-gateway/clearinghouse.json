@@ -25,7 +25,13 @@
             {
               "op": "do",
               "action": {
-                "kind": "meat_damage_per_advancement"
+                "kind": "meat_damage",
+                "amount": 0,
+                "tally": {
+                  "count": "source_advancement_tokens",
+                  "per": 1,
+                  "side": "source"
+                }
               }
             },
             {
