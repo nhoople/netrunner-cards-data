@@ -34,7 +34,7 @@
       "effect": {
         "op": "do",
         "action": {
-          "kind": "incubator_move_virus_counters"
+          "kind": "move_virus_counters"
         }
       }
     }

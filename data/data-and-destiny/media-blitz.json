@@ -15,7 +15,7 @@
   "onPlay": {
     "op": "do",
     "action": {
-      "kind": "media_blitz_gain_text_of_runner_scored_agenda"
+      "kind": "gain_text_of_runner_scored_agenda"
     }
   },
   "wave": "data-and-destiny"

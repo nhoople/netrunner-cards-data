@@ -17,7 +17,7 @@
   "onPlay": {
     "op": "do",
     "action": {
-      "kind": "hangeki_choose_installed_runner_may_access",
+      "kind": "choose_installed_runner_may_access",
       "onAccess": {
         "op": "do",
         "action": {

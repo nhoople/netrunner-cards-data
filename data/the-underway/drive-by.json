@@ -14,7 +14,7 @@
   "onPlay": {
     "op": "do",
     "action": {
-      "kind": "drive_by_expose_and_trash_remote_root"
+      "kind": "expose_and_trash_remote_root"
     }
   },
   "wave": "the-underway"

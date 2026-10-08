@@ -30,7 +30,7 @@
       "effect": {
         "op": "do",
         "action": {
-          "kind": "hades_shard_breach_archives"
+          "kind": "breach_archives"
         }
       }
     }

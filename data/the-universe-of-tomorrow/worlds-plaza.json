@@ -30,7 +30,7 @@
       "effect": {
         "op": "do",
         "action": {
-          "kind": "worlds_plaza_install_asset_from_hq_rez_discount",
+          "kind": "install_asset_from_hq_rez_discount",
           "discount": 2
         }
       }

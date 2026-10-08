@@ -32,7 +32,7 @@
       "effect": {
         "op": "do",
         "action": {
-          "kind": "next_gold_trash_programs"
+          "kind": "trash_programs"
         }
       }
     }

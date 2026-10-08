@@ -10,7 +10,7 @@
   "onPlay": {
     "op": "do",
     "action": {
-      "kind": "independent_thinking_trash_draw"
+      "kind": "trash_draw"
     }
   },
   "wave": "data-and-destiny"

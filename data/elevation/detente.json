@@ -21,7 +21,7 @@
         "effect": {
           "op": "do",
           "action": {
-            "kind": "detente_host_random_hq"
+            "kind": "host_random_hq"
           }
         }
       },
@@ -56,7 +56,7 @@
       "effect": {
         "op": "do",
         "action": {
-          "kind": "detente_return_two_hosted_may_access"
+          "kind": "return_two_hosted_may_access"
         }
       }
     }

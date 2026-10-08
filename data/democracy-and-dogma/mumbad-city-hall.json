@@ -28,7 +28,7 @@
       "effect": {
         "op": "do",
         "action": {
-          "kind": "mumbad_city_hall_search_alliance_play_or_install"
+          "kind": "search_alliance_play_or_install"
         }
       }
     }

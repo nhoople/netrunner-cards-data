@@ -18,7 +18,7 @@
   "onPlay": {
     "op": "do",
     "action": {
-      "kind": "salems_hospitality_name_reveal_trash_grip_copies"
+      "kind": "name_reveal_trash_grip_copies"
     }
   },
   "wave": "salsette-island"

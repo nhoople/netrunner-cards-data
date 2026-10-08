@@ -19,7 +19,7 @@
   "onPlay": {
     "op": "do",
     "action": {
-      "kind": "consulting_visit_search_rd_play_operation"
+      "kind": "search_rd_play_operation"
     }
   },
   "wave": "the-liberated-mind"

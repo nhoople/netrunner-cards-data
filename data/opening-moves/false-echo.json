@@ -19,7 +19,7 @@
         "effect": {
           "op": "do",
           "action": {
-                        "kind": "false_echo_trash_then_corp_rez_or_hq"
+                        "kind": "trash_then_corp_rez_or_hq"
           }
         }
       },

@@ -27,7 +27,7 @@
       "effect": {
         "op": "do",
         "action": {
-          "kind": "builder_move_to_outermost"
+          "kind": "move_to_outermost"
         }
       }
     }

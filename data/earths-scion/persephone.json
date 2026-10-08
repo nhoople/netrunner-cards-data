@@ -24,7 +24,7 @@
   "onPassRezzedIce": {
     "op": "do",
     "action": {
-      "kind": "persephone_may_trash_stack_top_then_trash_rd_per_resolved"
+      "kind": "may_trash_stack_top_then_trash_rd_per_resolved"
     }
   },
   "wave": "earths-scion"

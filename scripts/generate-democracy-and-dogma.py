@@ -131,7 +131,7 @@ def map_card(c: dict) -> dict | None:
             trashOnVirusPurge=True,
             runEvent={
                 "servers": "archives",
-                "onSuccessfulRun": do("political_graffiti_host_on_scored_agenda"),
+                "onSuccessfulRun": do("host_on_scored_agenda"),
             },
         )
 
@@ -162,7 +162,7 @@ def map_card(c: dict) -> dict | None:
                 paid(
                     "spy-camera-arrange",
                     "[click]: Look at the top X cards of your stack and arrange them (X = installed Spy Camera copies)",
-                    do("spy_camera_look_top_x_stack_arrange"),
+                    do("look_top_x_stack_arrange"),
                     clicks=1,
                     windows=["runner_action_paw"],
                     usable_by_runner=True,
@@ -187,7 +187,7 @@ def map_card(c: dict) -> dict | None:
                 paid(
                     "political-operative-trash",
                     "[trash], X¢: Trash 1 rezzed card with trash cost equal to X",
-                    do("political_operative_trash_rezzed_paying_trash_cost"),
+                    do("trash_rezzed_paying_trash_cost"),
                     trash_self=True,
                     windows=["runner_action_paw"],
                     usable_by_runner=True,
@@ -320,7 +320,7 @@ def map_card(c: dict) -> dict | None:
                 paid(
                     "mumbad-city-hall-alliance",
                     "[click]: Search R&D for an alliance card, reveal it, and play or install it (paying all costs). Shuffle R&D",
-                    do("mumbad_city_hall_search_alliance_play_or_install"),
+                    do("search_alliance_play_or_install"),
                     clicks=1,
                     windows=["corp_action_paw"],
                 )

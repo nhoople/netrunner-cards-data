@@ -95,7 +95,7 @@ def map_card(c: dict) -> dict | None:
                     "creditCost": 0,
                     "cost": {"powerCounters": 1},
                     "windows": ["corp_action_paw", "approach_paw", "encounter_paw"],
-                    "effect": do("it_department_boost_ice"),
+                    "effect": do("boost_ice"),
                 },
             ],
         )
@@ -149,7 +149,7 @@ def map_card(c: dict) -> dict | None:
             c,
             subtypes=["double"],
             playAdditionalClick=True,
-            onPlay=do("shoot_the_moon_rez_ice_per_tag"),
+            onPlay=do("rez_ice_per_tag"),
         )
 
     if cid == "troll":
@@ -223,7 +223,7 @@ def map_card(c: dict) -> dict | None:
                     "creditCost": 0,
                     "cost": {"clicks": 1, "trashSelf": True},
                     "windows": ["runner_action_paw"],
-                    "effect": do("incubator_move_virus_counters"),
+                    "effect": do("move_virus_counters"),
                 }
             ],
         )
@@ -270,7 +270,7 @@ def map_card(c: dict) -> dict | None:
                 "creditCost": 2,
                 "cost": {"credits": 2},
                 "windows": ["encounter_paw"],
-                "effect": do("sage_break_code_gate_or_barrier"),
+                "effect": do("break_code_gate_or_barrier"),
             }
         ]
         return card

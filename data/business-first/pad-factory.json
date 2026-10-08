@@ -32,7 +32,7 @@
       "effect": {
         "op": "do",
         "action": {
-          "kind": "pad_factory_place_advancement_cannot_score_until_next_turn"
+          "kind": "place_advancement_cannot_score_until_next_turn"
         }
       }
     }

@@ -23,7 +23,7 @@
       "effect": {
         "op": "do",
         "action": {
-          "kind": "rubicon_switch_derez_rezzed_this_turn"
+          "kind": "derez_rezzed_this_turn"
         }
       },
       "oncePerTurn": true,

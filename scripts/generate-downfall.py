@@ -858,7 +858,7 @@ def map_card(c: dict) -> dict:
                     "effect": {
                         "op": "do",
                         "action": {
-                            "kind": "loot_box_reveal_top_n",
+                            "kind": "reveal_top_n",
                             "n": 3,
                         },
                     },
@@ -1213,7 +1213,7 @@ def map_card(c: dict) -> dict:
             playRequiresSuccessfulRunLastTurn=True,
             onPlay={
                 "op": "do",
-                "action": {"kind": "focus_group_reveal_may_advance"},
+                "action": {"kind": "reveal_may_advance"},
             },
             unsupported=[],
         )
@@ -1224,7 +1224,7 @@ def map_card(c: dict) -> dict:
             onOtherAgendaStolen={
                 "op": "do",
                 "action": {
-                    "kind": "divested_trust_may_forfeit_return_stolen",
+                    "kind": "may_forfeit_return_stolen",
                     "gainCredits": 5,
                 },
             },
@@ -1367,7 +1367,7 @@ def map_card(c: dict) -> dict:
                     {
                         "op": "do",
                         "action": {
-                            "kind": "game_over_trash_type_may_pay_3_prevent",
+                            "kind": "trash_type_may_pay_3_prevent",
                         },
                     },
                     {
@@ -1702,7 +1702,7 @@ def map_card(c: dict) -> dict:
             endsActionPhase=True,
             onPlay={
                 "op": "do",
-                "action": {"kind": "complete_image_name_net_damage_loop"},
+                "action": {"kind": "name_net_damage_loop"},
             },
             unsupported=[],
         )

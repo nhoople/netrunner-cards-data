@@ -13,13 +13,13 @@
   "playAdditionalCost": {
     "op": "do",
     "action": {
-      "kind": "reuse_spend_click_additional_cost"
+      "kind": "spend_click_additional_cost"
     }
   },
   "onPlay": {
     "op": "do",
     "action": {
-      "kind": "reuse_trash_hq_gain_credits"
+      "kind": "trash_hq_gain_credits"
     }
   },
   "wave": "up-and-over"

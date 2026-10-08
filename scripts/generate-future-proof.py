@@ -295,7 +295,7 @@ def map_card(c: dict) -> dict | None:
             onApproachIceOncePerRun=True,
             onApproachIce={
                 "op": "do",
-                "action": {"kind": "midori_may_swap_approached_ice_with_hq"},
+                "action": {"kind": "may_swap_approached_ice_with_hq"},
             },
             unsupported=[],
         )

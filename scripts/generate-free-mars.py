@@ -266,7 +266,7 @@ def map_card(c: dict) -> dict | None:
             subtypes=["location", "seedy"],
             unique=True,
             onTurnBegin=may(
-                do("bloo_moose_rfg_heap_gain_credits", credits=2),
+                do("rfg_heap_gain_credits", credits=2),
                 label="Remove 1 card in the heap from the game to gain 2¢",
             ),
         )
@@ -322,7 +322,7 @@ def map_card(c: dict) -> dict | None:
                 {
                     "id": "metamorph-swap",
                     "text": "Swap 2 other installed pieces of ice or 2 of your installed non-ice cards.",
-                    "effect": do("metamorph_swap_2_other_ice_or_2_non_ice"),
+                    "effect": do("swap_2_other_ice_or_2_non_ice"),
                 },
             ],
         )
@@ -353,13 +353,13 @@ def map_card(c: dict) -> dict | None:
     if cid == "biased-reporting":
         return base(
             c,
-            onPlay=do("biased_reporting_choose_type"),
+            onPlay=do("choose_type"),
         )
 
     if cid == "open-forum":
         return base(
             c,
-            afterMandatoryDraw=do("open_forum_reveal_top_rd_to_hq_then_hq_to_rd_top"),
+            afterMandatoryDraw=do("reveal_top_rd_to_hq_then_hq_to_rd_top"),
         )
 
     if cid == "tithonium":
@@ -394,7 +394,7 @@ def map_card(c: dict) -> dict | None:
         return base(
             c,
             subtypes=["condition"],
-            onPlay=do("transparency_initiative_host_on_agenda"),
+            onPlay=do("host_on_agenda"),
             onAdvance=gain("corp", 1),
             hostAgendaGainsPublic=True,
         )

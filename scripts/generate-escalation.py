@@ -141,7 +141,7 @@ def map_card(c: dict) -> dict | None:
                 paid(
                     "black-orchestra-x",
                     "3¢: +2 strength. Then, if this can interface, break up to 2 code gate subroutines",
-                    do("black_orchestra_spend_pump_and_break"),
+                    do("spend_pump_and_break"),
                     credits=3,
                     windows=["encounter_paw"],
                     usable_by_runner=True,
@@ -326,7 +326,7 @@ def map_card(c: dict) -> dict | None:
     if cid == "ark-lockdown":
         return base(
             c,
-            onPlay=do("ark_lockdown_name_and_rfg_heap_copies"),
+            onPlay=do("name_and_rfg_heap_copies"),
         )
 
     if cid == "hellion-beta-test":
@@ -394,7 +394,7 @@ def map_card(c: dict) -> dict | None:
                 paid(
                     "alexa-shuffle",
                     "[trash]: Shuffle HQ into R&D; Runner may pay 2¢ each to trash instead of shuffling",
-                    do("alexa_belsky_shuffle_hq"),
+                    do("shuffle_hq"),
                     trash_self=True,
                     windows=["corp_action_paw"],
                 ),

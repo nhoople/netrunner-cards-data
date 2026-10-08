@@ -15,13 +15,13 @@
   "rezAdditionalCost": {
     "op": "do",
     "action": {
-      "kind": "plutus_pay_rez_additional_cost"
+      "kind": "pay_rez_additional_cost"
     }
   },
   "onTurnBegin": {
     "op": "do",
     "action": {
-      "kind": "plutus_may_play_transaction_from_archives"
+      "kind": "may_play_transaction_from_archives"
     }
   }
 }

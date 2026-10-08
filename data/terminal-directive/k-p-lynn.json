@@ -16,7 +16,7 @@
   "onPassAllIceProtectingServer": {
     "op": "do",
     "action": {
-      "kind": "k_p_lynn_tag_or_end_the_run"
+      "kind": "tag_or_end_the_run"
     }
   },
   "wave": "terminal-directive"

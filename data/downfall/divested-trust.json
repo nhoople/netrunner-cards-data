@@ -12,7 +12,7 @@
   "onOtherAgendaStolen": {
     "op": "do",
     "action": {
-      "kind": "divested_trust_may_forfeit_return_stolen",
+      "kind": "may_forfeit_return_stolen",
       "gainCredits": 5
     }
   }

@@ -25,7 +25,7 @@
         "effect": {
           "op": "do",
           "action": {
-            "kind": "kg_shuffle_one_archives_into_rd"
+            "kind": "shuffle_one_archives_into_rd"
           }
         }
       },

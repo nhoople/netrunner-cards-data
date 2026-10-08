@@ -152,8 +152,8 @@ def map_card(c: dict) -> dict | None:
         return base(
             c,
             subtypes=["double"],
-            playAdditionalCost=do("reuse_spend_click_additional_cost"),
-            onPlay=do("reuse_trash_hq_gain_credits"),
+            playAdditionalCost=do("spend_click_additional_cost"),
+            onPlay=do("trash_hq_gain_credits"),
         )
 
     if cid == "hades-fragment":
@@ -183,7 +183,7 @@ def map_card(c: dict) -> dict | None:
         )
 
     if cid == "inject":
-        return base(c, onPlay=do("inject_reveal_top_four"))
+        return base(c, onPlay=do("reveal_top_four"))
 
     if cid == "origami":
         return base(c, handSizeBonusPerInstalledCopyWithSameDefId=1)
@@ -192,7 +192,7 @@ def map_card(c: dict) -> dict | None:
         return base(
             c,
             subtypes=["virtual"],
-            onVirusPurge=do("fester_corp_lose_two_if_can"),
+            onVirusPurge=do("corp_lose_two_if_can"),
         )
 
     if cid == "autoscripter":
@@ -237,7 +237,7 @@ def map_card(c: dict) -> dict | None:
     if cid == "trade-in":
         return base(
             c,
-            playAdditionalCost=do("trade_in_trash_hardware_additional_cost"),
+            playAdditionalCost=do("trash_hardware_additional_cost"),
             onPlay=do("trade_in_resolve"),
         )
 
@@ -256,7 +256,7 @@ def map_card(c: dict) -> dict | None:
             c,
             subtypes=["location"],
             unique=True,
-            onInstall=do("angel_arena_place_x_counters"),
+            onInstall=do("place_x_counters"),
             trashWhenPowerEmpty=True,
             paidAbilities=[
                 {
@@ -266,7 +266,7 @@ def map_card(c: dict) -> dict | None:
                     "creditCost": 0,
                     "cost": {"powerCounters": 1},
                     "windows": ["runner_action_paw"],
-                    "effect": do("angel_arena_reveal_top_may_bottom"),
+                    "effect": do("reveal_top_may_bottom"),
                 }
             ],
         )

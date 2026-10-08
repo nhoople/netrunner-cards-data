@@ -37,7 +37,7 @@
       "effect": {
         "op": "do",
         "action": {
-          "kind": "adept_break_sentry_or_barrier"
+          "kind": "break_sentry_or_barrier"
         }
       },
       "usableByRunnerOnSelfIce": true

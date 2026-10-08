@@ -10,7 +10,7 @@
   "playAdditionalCost": {
     "op": "do",
     "action": {
-      "kind": "trade_in_trash_hardware_additional_cost"
+      "kind": "trash_hardware_additional_cost"
     }
   },
   "onPlay": {

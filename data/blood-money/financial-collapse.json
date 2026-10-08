@@ -11,7 +11,7 @@
   "onPlay": {
     "op": "do",
     "action": {
-      "kind": "financial_collapse_lose_2_per_resource_or_trash"
+      "kind": "lose_2_per_resource_or_trash"
     }
   },
   "wave": "blood-money"

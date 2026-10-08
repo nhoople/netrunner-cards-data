@@ -28,7 +28,7 @@
       "effect": {
         "op": "do",
         "action": {
-          "kind": "dean_lister_boost_icebreaker"
+          "kind": "boost_icebreaker"
         }
       },
       "usableByRunnerOnSelfIce": true,

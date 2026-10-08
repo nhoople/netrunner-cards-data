@@ -164,7 +164,7 @@ def map_card(c: dict) -> dict | None:
         )
 
     if cid == "komainu":
-        return base(c, onEncounter=do("komainu_add_net_subs_for_rezzed_ice"))
+        return base(c, onEncounter=do("add_net_subs_for_rezzed_ice"))
 
     if cid == "pup":
         return base(
@@ -237,7 +237,7 @@ def map_card(c: dict) -> dict | None:
         return base(
             c,
             canAdvance=True,
-            onAccessWhileInstalled=do("plan_b_reveal_score_from_hq"),
+            onAccessWhileInstalled=do("reveal_score_from_hq"),
         )
 
     if cid == "guard":
@@ -334,7 +334,7 @@ def map_card(c: dict) -> dict | None:
         return base(
             c,
             playAdditionalClick=True,
-            onPlay=do("planned_assault_play_run_event_from_stack"),
+            onPlay=do("play_run_event_from_stack"),
         )
 
     if cid == "logos":
@@ -404,7 +404,7 @@ def map_card(c: dict) -> dict | None:
         return base(
             c,
             playRequiresSuccessfulHqRunThisTurn=True,
-            onCorpDrawCard=do("bug_may_pay_reveal_top"),
+            onCorpDrawCard=do("may_pay_reveal_top"),
         )
 
     if cid == "grappling-hook":
@@ -492,7 +492,7 @@ def map_card(c: dict) -> dict | None:
                     "creditCost": 0,
                     "cost": {"clicks": 1},
                     "windows": ["runner_action_paw"],
-                    "effect": do("oracle_may_choose_type_reveal_install"),
+                    "effect": do("choose_type_reveal_install"),
                 }
             ],
         )

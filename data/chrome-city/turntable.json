@@ -23,7 +23,7 @@
         "effect": {
           "op": "do",
           "action": {
-            "kind": "turntable_swap_stolen_with_corp_scored"
+            "kind": "swap_stolen_with_corp_scored"
           }
         }
       },

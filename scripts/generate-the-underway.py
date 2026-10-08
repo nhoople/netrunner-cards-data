@@ -161,7 +161,7 @@ def map_card(c: dict) -> dict | None:
                 paid(
                     "street-peddler-install",
                     "[trash]: Install 1 hosted card, lowering install cost by 1",
-                    do("street_peddler_install_hosted", discount=1),
+                    do("install_hosted", discount=1),
                     trash_self=True,
                     windows=["runner_action_paw"],
                 )
@@ -181,7 +181,7 @@ def map_card(c: dict) -> dict | None:
             c,
             subtypes=["double"],
             playAdditionalClick=True,
-            onPlay=do("drive_by_expose_and_trash_remote_root"),
+            onPlay=do("expose_and_trash_remote_root"),
         )
 
     if cid == "forger":
@@ -237,7 +237,7 @@ def map_card(c: dict) -> dict | None:
         return base(
             c,
             subtypes=["virtual"],
-            onAgendaScored=do("raymond_flint_breach_hq_no_root"),
+            onAgendaScored=do("breach_hq_no_root"),
         )
 
     if cid == "muertos-gang-member":

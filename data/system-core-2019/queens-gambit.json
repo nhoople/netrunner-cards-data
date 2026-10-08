@@ -15,7 +15,7 @@
   "onPlay": {
     "op": "do",
     "action": {
-      "kind": "queens_gambit_place_up_to",
+      "kind": "place_up_to",
       "max": 3,
       "creditsPer": 2
     }

@@ -21,7 +21,7 @@
         "effect": {
           "op": "do",
           "action": {
-            "kind": "paige_piper_search_stack_copies_to_heap"
+            "kind": "search_stack_copies_to_heap"
           }
         }
       },

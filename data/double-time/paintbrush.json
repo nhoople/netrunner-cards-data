@@ -23,7 +23,7 @@
       "effect": {
         "op": "do",
         "action": {
-          "kind": "paintbrush_choose_ice_gain_subtype"
+          "kind": "choose_ice_gain_subtype"
         }
       }
     }

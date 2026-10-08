@@ -27,7 +27,7 @@
       "effect": {
         "op": "do",
         "action": {
-          "kind": "signal_jamming_forbid_installs_until_run_end"
+          "kind": "forbid_installs_until_run_end"
         }
       },
       "requireDuringRun": true,

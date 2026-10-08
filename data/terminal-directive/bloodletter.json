@@ -20,7 +20,7 @@
       "effect": {
         "op": "do",
         "action": {
-          "kind": "bloodletter_trash_program_or_top_2_stack"
+          "kind": "trash_program_or_top_2_stack"
         }
       }
     }

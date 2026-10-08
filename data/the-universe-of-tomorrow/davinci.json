@@ -30,7 +30,7 @@
       "effect": {
         "op": "do",
         "action": {
-          "kind": "davinci_install_from_grip_ignore_cost"
+          "kind": "install_from_grip_ignore_cost"
         }
       }
     }

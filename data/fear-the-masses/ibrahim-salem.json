@@ -22,7 +22,7 @@
   "onTurnBegin": {
     "op": "do",
     "action": {
-      "kind": "ibrahim_salem_name_type_trash_from_grip"
+      "kind": "name_type_trash_from_grip"
     }
   },
   "wave": "fear-the-masses"

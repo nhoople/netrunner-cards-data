@@ -202,14 +202,14 @@ def map_card(c: dict) -> dict | None:
     if cid == "deuces-wild":
         return base(
             c,
-            onPlay=do("deuces_wild_resolve_two"),
+            onPlay=do("resolve_two"),
         )
 
     if cid == "injection-attack":
         return base(
             c,
             subtypes=["run"],
-            onPlay=do("injection_attack_choose_breaker_run", strengthBonus=2),
+            onPlay=do("choose_breaker_run", strengthBonus=2),
         )
 
     if cid == "fairchild-1-0":

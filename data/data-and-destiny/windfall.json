@@ -10,7 +10,7 @@
   "onPlay": {
     "op": "do",
     "action": {
-      "kind": "windfall_shuffle_trash_top_gain_install_cost"
+      "kind": "shuffle_trash_top_gain_install_cost"
     }
   },
   "wave": "data-and-destiny"

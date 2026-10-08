@@ -26,7 +26,7 @@
           "ifBidsDiffer": {
             "op": "do",
             "action": {
-              "kind": "mind_game_psi_differ_redirect"
+              "kind": "psi_differ_redirect"
             }
           }
         }

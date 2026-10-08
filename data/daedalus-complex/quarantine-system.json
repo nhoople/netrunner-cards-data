@@ -24,7 +24,7 @@
       "effect": {
         "op": "do",
         "action": {
-          "kind": "quarantine_system_rez_up_to_3_ice_discount"
+          "kind": "rez_up_to_3_ice_discount"
         }
       }
     }

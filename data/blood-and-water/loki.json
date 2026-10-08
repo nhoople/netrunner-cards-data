@@ -16,7 +16,7 @@
   "onEncounter": {
     "op": "do",
     "action": {
-      "kind": "loki_choose_rezzed_ice_gain_subs_subtypes_for_run"
+      "kind": "choose_rezzed_ice_gain_subs_subtypes_for_run"
     }
   },
   "subroutines": [

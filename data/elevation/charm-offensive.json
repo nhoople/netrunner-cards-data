@@ -15,7 +15,7 @@
     "onRunEnd": {
       "op": "do",
       "action": {
-        "kind": "charm_offensive_trash_rezzed_accessed"
+        "kind": "trash_rezzed_accessed"
       }
     }
   }

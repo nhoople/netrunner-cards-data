@@ -12,7 +12,7 @@
   "onCorpDrawCard": {
     "op": "do",
     "action": {
-      "kind": "bug_may_pay_reveal_top"
+      "kind": "may_pay_reveal_top"
     }
   },
   "wave": "honor-and-profit"

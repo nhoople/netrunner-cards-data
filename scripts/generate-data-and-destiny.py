@@ -402,7 +402,7 @@ def map_card(c: dict) -> dict | None:
             subtypes=["current"],
             lingerAsCurrent=True,
             currentTrashOnAgendaStolen=True,
-            onPlay=do("media_blitz_gain_text_of_runner_scored_agenda"),
+            onPlay=do("gain_text_of_runner_scored_agenda"),
         )
 
     if cid == "the-all-seeing-i":
@@ -531,7 +531,7 @@ def map_card(c: dict) -> dict | None:
                 paid(
                     "heartbeat-prevent",
                     "[interrupt] → Trash 1 installed card: Prevent 1 damage",
-                    do("heartbeat_trash_installed_prevent_damage", amount=1),
+                    do("trash_installed_prevent_damage", amount=1),
                     windows=["damage_interrupt_paw"],
                     usable_by_runner=True,
                 )
@@ -611,7 +611,7 @@ def map_card(c: dict) -> dict | None:
     if cid == "independent-thinking":
         return base(
             c,
-            onPlay=do("independent_thinking_trash_draw"),
+            onPlay=do("trash_draw"),
         )
 
     if cid == "brain-chip":
@@ -653,7 +653,7 @@ def map_card(c: dict) -> dict | None:
         return base(
             c,
             subtypes=["connection"],
-            onTurnBegin=do("dr_lovegood_blank_installed_abilities"),
+            onTurnBegin=do("blank_installed_abilities"),
         )
 
     if cid == "neutralize-all-threats":
@@ -684,7 +684,7 @@ def map_card(c: dict) -> dict | None:
                 paid(
                     "security-chip-boost",
                     "[trash]: Chosen icebreaker(s) gain +1 strength per link this run",
-                    do("security_chip_boost_breakers_per_link"),
+                    do("boost_breakers_per_link"),
                     trash_self=True,
                     windows=["runner_action_paw"],
                     usable_by_runner=True,
@@ -704,7 +704,7 @@ def map_card(c: dict) -> dict | None:
                 paid(
                     "security-nexus-trace",
                     "Once per turn → On encounter: Corp traces[5]; success tag+ETR, fail bypass",
-                    do("security_nexus_trace_bypass_or_tag_etr"),
+                    do("trace_bypass_or_tag_etr"),
                     once_per_turn=True,
                     windows=["runner_action_paw"],
                     usable_by_runner=True,
@@ -762,7 +762,7 @@ def map_card(c: dict) -> dict | None:
     if cid == "windfall":
         return base(
             c,
-            onPlay=do("windfall_shuffle_trash_top_gain_install_cost"),
+            onPlay=do("shuffle_trash_top_gain_install_cost"),
         )
 
     if cid == "technical-writer":

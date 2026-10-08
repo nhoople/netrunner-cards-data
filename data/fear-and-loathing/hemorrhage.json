@@ -34,7 +34,7 @@
       "effect": {
         "op": "do",
         "action": {
-          "kind": "hemorrhage_corp_trash_from_hq"
+          "kind": "corp_trash_from_hq"
         }
       }
     }

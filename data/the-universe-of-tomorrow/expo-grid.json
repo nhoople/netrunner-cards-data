@@ -15,7 +15,7 @@
   "onTurnBegin": {
     "op": "do",
     "action": {
-      "kind": "expo_grid_gain_if_rezzed_asset_in_root"
+      "kind": "gain_if_rezzed_asset_in_root"
     }
   },
   "wave": "the-universe-of-tomorrow"

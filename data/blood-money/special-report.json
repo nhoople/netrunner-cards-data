@@ -10,7 +10,7 @@
   "onPlay": {
     "op": "do",
     "action": {
-      "kind": "special_report_shuffle_any_hq_draw"
+      "kind": "shuffle_any_hq_draw"
     }
   },
   "wave": "blood-money"

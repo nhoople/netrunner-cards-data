@@ -23,7 +23,7 @@
       "effect": {
         "op": "do",
         "action": {
-          "kind": "surfer_swap_encounter_barrier_adjacent"
+          "kind": "swap_encounter_barrier_adjacent"
         }
       },
       "usableByRunnerOnSelfIce": true,

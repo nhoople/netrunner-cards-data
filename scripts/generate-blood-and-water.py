@@ -186,7 +186,7 @@ def map_card(c: dict) -> dict | None:
             c,
             installCost=0,
             installCostX=True,
-            onInstall=do("bug_out_bag_choose_x_and_load_power"),
+            onInstall=do("choose_x_and_load_power"),
             onTurnEndIfGripEmptyDrawPerPowerThenTrash=True,
         )
 
@@ -234,7 +234,7 @@ def map_card(c: dict) -> dict | None:
             c,
             subtypes=["bioroid"],
             unique=True,
-            onEncounter=do("loki_choose_rezzed_ice_gain_subs_subtypes_for_run"),
+            onEncounter=do("choose_rezzed_ice_gain_subs_subtypes_for_run"),
             subroutines=[
                 {
                     "id": "loki-etr-unless-shuffle-grip",
@@ -317,13 +317,13 @@ def map_card(c: dict) -> dict | None:
     if cid == "meteor-mining":
         return base(
             c,
-            onScore=do("meteor_mining_may_gain_7_or_7_meat_if_tagged"),
+            onScore=do("may_gain_7_or_7_meat_if_tagged"),
         )
 
     if cid == "standoff":
         return base(
             c,
-            onScore=do("standoff_trash_loop"),
+            onScore=do("trash_loop"),
         )
 
     if cid == "success":
@@ -332,7 +332,7 @@ def map_card(c: dict) -> dict | None:
             subtypes=["triple"],
             playAdditionalClicks=2,
             playAdditionalCostForfeitAgenda=True,
-            onPlay=do("success_advance_equal_forfeit_advancement_requirement"),
+            onPlay=do("advance_equal_forfeit_advancement_requirement"),
         )
 
     if cid == "whampoa-reclamation":

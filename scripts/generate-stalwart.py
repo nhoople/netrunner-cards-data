@@ -238,7 +238,7 @@ def map_card(c: dict) -> dict | None:
         return base(
             c,
             playAdditionalClick=True,
-            onPlay=do("eureka_reveal_install_or_trash", discount=10),
+            onPlay=do("reveal_install_or_trash", discount=10),
         )
 
     if cid == "record-reconstructor":

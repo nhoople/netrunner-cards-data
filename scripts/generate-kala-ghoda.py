@@ -173,7 +173,7 @@ def map_card(c: dict) -> dict | None:
             muBonus=2,
             onFinishAccessRdOncePerTurn=may(
                 seq(
-                    do("maya_move_accessed_to_bottom_rd"),
+                    do("move_accessed_to_bottom_rd"),
                     do("give_tags", amount=1),
                 ),
                 label="Add accessed card to bottom of R&D; take 1 tag",
@@ -185,7 +185,7 @@ def map_card(c: dict) -> dict | None:
         return base(
             c,
             onEncounterAnyIceOncePerTurn=may(
-                do("panchatantra_choose_subtype_for_encounter"),
+                do("choose_subtype_for_encounter"),
                 label="Choose a subtype for encountered ice this run",
                 decline_side="runner",
             ),
@@ -199,7 +199,7 @@ def map_card(c: dict) -> dict | None:
                 paid(
                     "artist-colony-search",
                     "Forfeit 1 agenda: Search stack for a program, resource, or hardware and install it",
-                    do("artist_colony_search_stack_install"),
+                    do("search_stack_install"),
                     forfeit_agenda=True,
                     windows=["runner_action_paw"],
                     usable_by_runner=True,
@@ -375,7 +375,7 @@ def map_card(c: dict) -> dict | None:
             unique=True,
             zeroInfluenceIfCardsInDeckGte=50,
             onTurnBegin=may(
-                do("kg_shuffle_one_archives_into_rd"),
+                do("shuffle_one_archives_into_rd"),
                 label="Shuffle 1 card from Archives into R&D",
                 decline_side="corp",
             ),

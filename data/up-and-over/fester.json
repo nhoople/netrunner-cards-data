@@ -13,7 +13,7 @@
   "onVirusPurge": {
     "op": "do",
     "action": {
-      "kind": "fester_corp_lose_two_if_can"
+      "kind": "corp_lose_two_if_can"
     }
   },
   "wave": "up-and-over"

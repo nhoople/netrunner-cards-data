@@ -199,7 +199,7 @@ def map_card(c: dict) -> dict | None:
     if cid == "raymond-flint":
         return base(
             c,
-            onEachCorpBadPublicityTake=do("raymond_flint_breach_hq_no_root"),
+            onEachCorpBadPublicityTake=do("breach_hq_no_root"),
             paidAbilities=[
                 {
                     "id": "raymond-expose",

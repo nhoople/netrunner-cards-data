@@ -11,7 +11,7 @@
   "onScore": {
     "op": "do",
     "action": {
-      "kind": "meteor_mining_may_gain_7_or_7_meat_if_tagged"
+      "kind": "may_gain_7_or_7_meat_if_tagged"
     }
   },
   "wave": "blood-and-water"

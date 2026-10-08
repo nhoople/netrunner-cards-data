@@ -106,7 +106,7 @@ def map_card(c: dict) -> dict | None:
                 {
                     "id": "gemini-trace",
                     "text": "Trace[2]. If successful, do 1 net damage. If strength ≥5, do 1 net damage.",
-                    "effect": do("gemini_trace_subroutine"),
+                    "effect": do("trace_subroutine"),
                 }
             ],
         )

@@ -148,7 +148,7 @@ def map_card(c: dict) -> dict | None:
             playCost=0,
             playCostX=True,
             playAdditionalClick=True,
-            onPlay=do("brute_force_hack_derez_ice_rez_cost_lte_x"),
+            onPlay=do("derez_ice_rez_cost_lte_x"),
         )
 
     if cid == "syn-attack":
@@ -217,7 +217,7 @@ def map_card(c: dict) -> dict | None:
                 "pumpStrength": 2,
             },
             onRunnerTurnBegin=may(
-                do("mammon_spend_credits_place_power_counters"),
+                do("spend_credits_place_power_counters"),
                 label="Spend credits to place power counters",
                 decline_side="runner",
             ),
@@ -267,7 +267,7 @@ def map_card(c: dict) -> dict | None:
                 paid(
                     "maxwell-james-derez",
                     "[trash]: Derez a piece of ice protecting a remote server",
-                    do("maxwell_james_derez_remote_ice"),
+                    do("derez_remote_ice"),
                     trash_self=True,
                     windows=["runner_action_paw", "corp_action_paw"],
                     usable_by_runner=True,
@@ -281,7 +281,7 @@ def map_card(c: dict) -> dict | None:
             c,
             subtypes=["priority"],
             playRequiresFirstClick=True,
-            onPlay=do("careful_planning_choose_remote_card_cannot_rez_this_turn"),
+            onPlay=do("choose_remote_card_cannot_rez_this_turn"),
         )
 
     if cid == "deep-data-mining":
@@ -329,7 +329,7 @@ def map_card(c: dict) -> dict | None:
                 paid(
                     "adept-break",
                     "2¢: Break 1 sentry or barrier subroutine",
-                    do("adept_break_sentry_or_barrier"),
+                    do("break_sentry_or_barrier"),
                     credits=2,
                     windows=["encounter_paw"],
                     usable_by_runner=True,
@@ -353,7 +353,7 @@ def map_card(c: dict) -> dict | None:
                 paid(
                     "savant-break",
                     "2¢: Break 1 sentry or 2 code gate subroutines",
-                    do("savant_break_sentry_or_code_gates"),
+                    do("break_sentry_or_code_gates"),
                     credits=2,
                     windows=["encounter_paw"],
                     usable_by_runner=True,
@@ -428,7 +428,7 @@ def map_card(c: dict) -> dict | None:
                 paid(
                     "dean-lister-boost",
                     "[trash]: Choose an icebreaker; +1 strength per grip card until end of run",
-                    do("dean_lister_boost_icebreaker"),
+                    do("boost_icebreaker"),
                     trash_self=True,
                     windows=["runner_action_paw", "encounter_paw", "approach_paw"],
                     usable_by_runner=True,
@@ -461,7 +461,7 @@ def map_card(c: dict) -> dict | None:
                 paid(
                     "shadow-net-play",
                     "[click], forfeit an agenda: Play an event from your heap, ignoring all costs",
-                    do("the_shadow_net_play_event_from_heap"),
+                    do("play_event_from_heap"),
                     clicks=1,
                     cost={"forfeitAgenda": True},
                     usable_by_runner=True,
@@ -508,7 +508,7 @@ def map_card(c: dict) -> dict | None:
                 paid(
                     "estelle-moon-cash",
                     "[trash]: For each power counter, gain 2¢ and draw 1 card",
-                    do("estelle_moon_trash_per_power"),
+                    do("trash_per_power"),
                     trash_self=True,
                 ),
             ],
@@ -560,13 +560,13 @@ def map_card(c: dict) -> dict | None:
                     "id": "holmegaard-trace",
                     "text": "Trace[4]. If successful, the Runner cannot access cards or breach the attacked server for the remainder of this run.",
                     "effect": trace_sub(
-                        4, do("holmegaard_forbid_access_and_breach_this_run")
+                        4, do("forbid_access_and_breach_this_run")
                     ),
                 },
                 {
                     "id": "holmegaard-trash-breaker",
                     "text": "Trash 1 installed icebreaker.",
-                    "effect": do("holmegaard_trash_installed_icebreaker"),
+                    "effect": do("trash_installed_icebreaker"),
                 },
             ],
         )
@@ -618,7 +618,7 @@ def map_card(c: dict) -> dict | None:
         return base(
             c,
             subtypes=["security protocol"],
-            onSuccessfulRunThisServer=do("black_level_clearance_core_or_jack_out"),
+            onSuccessfulRunThisServer=do("core_or_jack_out"),
         )
 
     # --- Weyland ---
@@ -704,7 +704,7 @@ def map_card(c: dict) -> dict | None:
                 {
                     "id": "bloodletter-trash",
                     "text": "The Runner must trash either 1 installed program or the top 2 cards of the stack.",
-                    "effect": do("bloodletter_trash_program_or_top_2_stack"),
+                    "effect": do("trash_program_or_top_2_stack"),
                 },
             ],
         )
@@ -741,7 +741,7 @@ def map_card(c: dict) -> dict | None:
             c,
             subtypes=["executive"],
             unique=True,
-            onPassAllIceProtectingServer=do("k_p_lynn_tag_or_end_the_run"),
+            onPassAllIceProtectingServer=do("tag_or_end_the_run"),
         )
 
     # --- Neutral corp ---
@@ -761,7 +761,7 @@ def map_card(c: dict) -> dict | None:
                 paid(
                     "lti-take",
                     "[click]: Take any number of credits from Long-Term Investment",
-                    do("long_term_investment_take_any_hosted_credits"),
+                    do("take_any_hosted_credits"),
                     clicks=1,
                 ),
             ],
@@ -780,7 +780,7 @@ def map_card(c: dict) -> dict | None:
                 {
                     "id": "weir-trash-grip",
                     "text": "The Runner trashes 1 card from their grip.",
-                    "effect": do("weir_trash_one_from_grip"),
+                    "effect": do("trash_one_from_grip"),
                 },
             ],
         )

@@ -11,7 +11,7 @@
   "onPlay": {
     "op": "do",
     "action": {
-      "kind": "audacity_trash_hq_place_total_2_advancements"
+      "kind": "trash_hq_place_total_2_advancements"
     }
   },
   "wave": "earths-scion"

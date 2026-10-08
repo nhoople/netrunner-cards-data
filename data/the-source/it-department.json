@@ -45,7 +45,7 @@
       "effect": {
         "op": "do",
         "action": {
-          "kind": "it_department_boost_ice"
+          "kind": "boost_ice"
         }
       }
     }

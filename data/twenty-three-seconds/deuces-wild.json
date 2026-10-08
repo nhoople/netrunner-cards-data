@@ -10,7 +10,7 @@
   "onPlay": {
     "op": "do",
     "action": {
-      "kind": "deuces_wild_resolve_two"
+      "kind": "resolve_two"
     }
   },
   "wave": "twenty-three-seconds"

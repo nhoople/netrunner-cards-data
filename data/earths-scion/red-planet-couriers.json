@@ -14,7 +14,7 @@
   "onPlay": {
     "op": "do",
     "action": {
-      "kind": "red_planet_couriers_move_all_advancements"
+      "kind": "move_all_advancements"
     }
   },
   "wave": "earths-scion"

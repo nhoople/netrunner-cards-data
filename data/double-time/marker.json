@@ -19,7 +19,7 @@
       "effect": {
         "op": "do",
         "action": {
-          "kind": "marker_add_etr_to_next_ice"
+          "kind": "add_etr_to_next_ice"
         }
       }
     }

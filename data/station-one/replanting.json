@@ -17,13 +17,13 @@
       {
         "op": "do",
         "action": {
-          "kind": "replanting_add_installed_to_hq"
+          "kind": "add_installed_to_hq"
         }
       },
       {
         "op": "do",
         "action": {
-          "kind": "replanting_install_2_from_hq_ignore_costs"
+          "kind": "install_2_from_hq_ignore_costs"
         }
       }
     ]

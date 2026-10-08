@@ -14,7 +14,7 @@
   "onPlay": {
     "op": "do",
     "action": {
-      "kind": "oversight_ai_rez_and_host"
+      "kind": "rez_and_host"
     }
   },
   "trashHostIfAllSubsBrokenThisEncounter": true

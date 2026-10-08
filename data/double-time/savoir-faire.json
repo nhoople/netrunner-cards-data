@@ -24,7 +24,7 @@
       "effect": {
         "op": "do",
         "action": {
-          "kind": "savoir_faire_install_program_from_grip"
+          "kind": "install_program_from_grip"
         }
       }
     }

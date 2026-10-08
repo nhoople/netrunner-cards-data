@@ -30,7 +30,7 @@
       "effect": {
         "op": "do",
         "action": {
-          "kind": "bamboo_dome_reveal_top_3"
+          "kind": "reveal_top_3"
         }
       }
     }

@@ -23,7 +23,7 @@
       "effect": {
         "op": "do",
         "action": {
-          "kind": "misdirection_spend_x_remove_tags"
+          "kind": "spend_x_remove_tags"
         }
       },
       "usableByRunnerOnSelfIce": true

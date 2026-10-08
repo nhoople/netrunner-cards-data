@@ -141,7 +141,7 @@ def map_card(c: dict) -> dict | None:
                 paid(
                     "recon-drone-prevent",
                     "[interrupt] → X¢, [trash]: Prevent X damage from a card you are accessing",
-                    do("recon_drone_prevent_x_damage"),
+                    do("prevent_x_damage"),
                     cost={"trashSelf": True},
                     windows=["damage_interrupt_paw"],
                     usable_by_runner=True,
@@ -156,7 +156,7 @@ def map_card(c: dict) -> dict | None:
             memoryCost=1,
             installRequiresSuccessfulCentralRunThisTurn=True,
             trashOnVirusPurge=True,
-            onRunnerTurnBegin=do("tapwrm_gain_credits_per_corp_credits"),
+            onRunnerTurnBegin=do("gain_credits_per_corp_credits"),
         )
 
     if cid == "tracker":
@@ -223,7 +223,7 @@ def map_card(c: dict) -> dict | None:
                 paid(
                     "fawkes-pump",
                     "X¢ (≥1 stealth): +X strength for the remainder of this run",
-                    do("fawkes_spend_x_pump"),
+                    do("spend_x_pump"),
                     cost={"minCreditsFromStealth": 1},
                     windows=["encounter_paw"],
                     usable_by_runner=True,
@@ -297,7 +297,7 @@ def map_card(c: dict) -> dict | None:
             c,
             subtypes=["terminal"],
             endsActionPhase=True,
-            onPlay=do("psychokinesis_look_top5_may_install_remote"),
+            onPlay=do("look_top5_may_install_remote"),
         )
 
     if cid == "net-quarantine":
@@ -324,7 +324,7 @@ def map_card(c: dict) -> dict | None:
                 {
                     "id": "herald-advance",
                     "text": "You may pay up to 2¢ to place that many advancement counters on 1 installed card you can advance.",
-                    "effect": do("herald_pay_up_to_place_advancements", max=2),
+                    "effect": do("pay_up_to_place_advancements", max=2),
                 },
             ],
         )

@@ -167,7 +167,7 @@ def map_card(c: dict) -> dict | None:
                 paid(
                     "on-the-lam-prevent",
                     "[interrupt] → [trash]: Prevent up to 3 tags or up to 3 damage",
-                    do("on_the_lam_prevent_tags_or_damage", max=3),
+                    do("prevent_tags_or_damage", max=3),
                     cost={"trashSelf": True},
                     windows=["tag_interrupt_paw", "damage_interrupt_paw"],
                     usable_by_runner=True,
@@ -193,7 +193,7 @@ def map_card(c: dict) -> dict | None:
             c,
             unique=True,
             memoryCost=1,
-            onSuccessfulRunOnRd=do("equivocation_may_reveal_force_draw"),
+            onSuccessfulRunOnRd=do("may_reveal_force_draw"),
         )
 
     if cid == "misdirection":
@@ -204,7 +204,7 @@ def map_card(c: dict) -> dict | None:
                 paid(
                     "misdirection-remove-tags",
                     "[click], [click], X¢: Remove X tags",
-                    do("misdirection_spend_x_remove_tags"),
+                    do("spend_x_remove_tags"),
                     clicks=2,
                     windows=["runner_action_paw"],
                     usable_by_runner=True,
@@ -312,7 +312,7 @@ def map_card(c: dict) -> dict | None:
                     "effect": do(
                         "play_psi_game",
                         maxBid=2,
-                        ifBidsDiffer=do("mind_game_psi_differ_redirect"),
+                        ifBidsDiffer=do("psi_differ_redirect"),
                     ),
                 },
             ],

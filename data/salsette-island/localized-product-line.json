@@ -10,7 +10,7 @@
   "onPlay": {
     "op": "do",
     "action": {
-      "kind": "localized_product_line_search_rd_copies_to_hq"
+      "kind": "search_rd_copies_to_hq"
     }
   },
   "wave": "salsette-island"

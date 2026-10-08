@@ -31,7 +31,7 @@
       "effect": {
         "op": "do",
         "action": {
-          "kind": "weir_trash_one_from_grip"
+          "kind": "trash_one_from_grip"
         }
       }
     }

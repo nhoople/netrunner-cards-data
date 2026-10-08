@@ -128,7 +128,7 @@ def map_card(c: dict) -> dict | None:
     if cid == "frantic-coding":
         return base(
             c,
-            onPlay=do("frantic_coding_look_top_install", n=10, discount=5),
+            onPlay=do("look_top_install", n=10, discount=5),
         )
 
     if cid == "the-gauntlet":

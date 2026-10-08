@@ -23,7 +23,7 @@
         "effect": {
           "op": "do",
           "action": {
-            "kind": "disposable_hq_add_hq_to_bottom_rd"
+            "kind": "add_hq_to_bottom_rd"
           }
         }
       },

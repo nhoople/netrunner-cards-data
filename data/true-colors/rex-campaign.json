@@ -17,7 +17,7 @@
   "onTurnBegin": {
     "op": "do",
     "action": {
-      "kind": "rex_campaign_turn_begin"
+      "kind": "turn_begin"
     }
   },
   "onPowerCountersEmpty": {

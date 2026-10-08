@@ -14,7 +14,7 @@
   "onPlay": {
     "op": "do",
     "action": {
-      "kind": "psychokinesis_look_top5_may_install_remote"
+      "kind": "look_top5_may_install_remote"
     }
   },
   "wave": "quorum"

@@ -33,7 +33,7 @@
       "effect": {
         "op": "do",
         "action": {
-          "kind": "street_peddler_install_hosted",
+          "kind": "install_hosted",
           "discount": 1
         }
       }

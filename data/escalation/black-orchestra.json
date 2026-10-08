@@ -36,7 +36,7 @@
       "effect": {
         "op": "do",
         "action": {
-          "kind": "black_orchestra_spend_pump_and_break"
+          "kind": "spend_pump_and_break"
         }
       },
       "usableByRunnerOnSelfIce": true

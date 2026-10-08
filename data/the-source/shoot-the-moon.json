@@ -14,7 +14,7 @@
   "onPlay": {
     "op": "do",
     "action": {
-      "kind": "shoot_the_moon_rez_ice_per_tag"
+      "kind": "rez_ice_per_tag"
     }
   },
   "wave": "the-source"

@@ -14,7 +14,7 @@
   "onPlay": {
     "op": "do",
     "action": {
-      "kind": "ber_rez_bioroid_and_host"
+      "kind": "rez_bioroid_and_host"
     }
   },
   "onHostFullyBrokenThisEncounter": {

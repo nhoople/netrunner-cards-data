@@ -20,7 +20,7 @@
       "effect": {
         "op": "do",
         "action": {
-          "kind": "howler_install_rez_bioroid_inward"
+          "kind": "install_rez_bioroid_inward"
         }
       }
     }

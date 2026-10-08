@@ -16,7 +16,7 @@
   "onTurnBegin": {
     "op": "do",
     "action": {
-      "kind": "vigil_draw_if_hq_full"
+      "kind": "draw_if_hq_full"
     }
   },
   "wave": "order-and-chaos"

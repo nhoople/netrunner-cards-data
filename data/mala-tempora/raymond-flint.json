@@ -15,7 +15,7 @@
   "onEachCorpBadPublicityTake": {
     "op": "do",
     "action": {
-      "kind": "raymond_flint_breach_hq_no_root"
+      "kind": "breach_hq_no_root"
     }
   },
   "paidAbilities": [

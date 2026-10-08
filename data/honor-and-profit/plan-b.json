@@ -16,7 +16,7 @@
   "onAccessWhileInstalled": {
     "op": "do",
     "action": {
-      "kind": "plan_b_reveal_score_from_hq"
+      "kind": "reveal_score_from_hq"
     }
   },
   "wave": "honor-and-profit"

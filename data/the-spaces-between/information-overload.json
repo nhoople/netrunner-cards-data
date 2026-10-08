@@ -26,7 +26,7 @@
       "effect": {
         "op": "do",
         "action": {
-          "kind": "information_overload_trash_per_tag"
+          "kind": "trash_per_tag"
         }
       }
     }

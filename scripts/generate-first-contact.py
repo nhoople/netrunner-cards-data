@@ -86,7 +86,7 @@ def map_card(c: dict) -> dict | None:
                 {
                     "id": "kitsune-breach",
                     "text": "Choose 1 card in HQ; breach HQ with forced access",
-                    "effect": do("kitsune_breach_hq"),
+                    "effect": do("breach_hq"),
                 }
             ],
         )
@@ -164,7 +164,7 @@ def map_card(c: dict) -> dict | None:
                 "cost": {"credits": 1},
                 "windows": ["encounter_paw"],
                 "requireEncounterSubtype": "barrier",
-                "effect": do("blackat_break_barrier"),
+                "effect": do("break_barrier"),
             },
             {
                 "id": "blackat-pump",
@@ -279,7 +279,7 @@ def map_card(c: dict) -> dict | None:
                     "creditCost": 0,
                     "cost": {"trashSelf": True},
                     "windows": ["runner_action_paw", "encounter_paw"],
-                    "effect": do("hades_shard_breach_archives"),
+                    "effect": do("breach_archives"),
                 }
             ],
         )

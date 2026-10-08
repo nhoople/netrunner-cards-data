@@ -15,7 +15,7 @@
   "onInstall": {
     "op": "do",
     "action": {
-      "kind": "muse_search_install_non_daemon"
+      "kind": "search_install_non_daemon"
     }
   }
 }

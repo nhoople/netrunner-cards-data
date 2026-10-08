@@ -15,7 +15,7 @@
   "onPlay": {
     "op": "do",
     "action": {
-      "kind": "brute_force_hack_derez_ice_rez_cost_lte_x"
+      "kind": "derez_ice_rez_cost_lte_x"
     }
   },
   "wave": "terminal-directive"

@@ -28,7 +28,7 @@
             {
               "op": "do",
               "action": {
-                "kind": "tech_startup_search_rd_asset_install"
+                "kind": "search_rd_asset_install"
               }
             }
           ]

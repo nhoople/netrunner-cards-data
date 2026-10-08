@@ -25,7 +25,7 @@
       {
         "op": "do",
         "action": {
-          "kind": "touch_ups_choose_type_shuffle_grip",
+          "kind": "choose_type_shuffle_grip",
           "maxCards": 2
         }
       }

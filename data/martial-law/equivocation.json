@@ -12,7 +12,7 @@
   "onSuccessfulRunOnRd": {
     "op": "do",
     "action": {
-      "kind": "equivocation_may_reveal_force_draw"
+      "kind": "may_reveal_force_draw"
     }
   },
   "wave": "martial-law"

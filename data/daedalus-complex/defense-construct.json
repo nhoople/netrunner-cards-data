@@ -28,7 +28,7 @@
       "effect": {
         "op": "do",
         "action": {
-          "kind": "defense_construct_add_facedown_archives_to_hq_per_advancement"
+          "kind": "add_facedown_archives_to_hq_per_advancement"
         }
       },
       "requireDuringRun": true,

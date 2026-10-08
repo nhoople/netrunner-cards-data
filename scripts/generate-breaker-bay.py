@@ -196,14 +196,14 @@ def map_card(c: dict) -> dict | None:
                 paid(
                     "london-library-host",
                     "[click]: Install a non-virus program from grip on London Library, ignoring install cost",
-                    do("london_library_host_non_virus_program_ignore_cost"),
+                    do("host_non_virus_program_ignore_cost"),
                     clicks=1,
                     windows=["runner_action_paw"],
                 ),
                 paid(
                     "london-library-to-grip",
                     "[click]: Add a program on London Library to your grip",
-                    do("london_library_add_hosted_program_to_grip"),
+                    do("add_hosted_program_to_grip"),
                     clicks=1,
                     windows=["runner_action_paw"],
                 ),

@@ -23,7 +23,7 @@
       "effect": {
         "op": "do",
         "action": {
-          "kind": "capstone_trash_grip_draw_for_installed_dupes"
+          "kind": "trash_grip_draw_for_installed_dupes"
         }
       }
     }

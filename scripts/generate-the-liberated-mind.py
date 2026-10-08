@@ -294,7 +294,7 @@ def map_card(c: dict) -> dict | None:
                             "kind": "trace",
                             "strength": 5,
                             "onSuccess": do(
-                                "waiver_reveal_grip_trash_cost_lte_excess"
+                                "reveal_grip_trash_cost_lte_excess"
                             ),
                         },
                     },
@@ -307,7 +307,7 @@ def map_card(c: dict) -> dict | None:
             c,
             subtypes=["gray ops"],
             playRequiresTagged=True,
-            onPlay=do("exchange_of_information_swap_scored_agendas"),
+            onPlay=do("swap_scored_agendas"),
         )
 
     if cid == "red-tape":
@@ -332,7 +332,7 @@ def map_card(c: dict) -> dict | None:
                 "faction": "weyland-consortium",
                 "threshold": 6,
             },
-            onPlay=do("consulting_visit_search_rd_play_operation"),
+            onPlay=do("search_rd_play_operation"),
         )
 
     if cid == "vanilla":

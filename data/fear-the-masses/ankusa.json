@@ -24,7 +24,7 @@
   "onFullyBreak": {
     "op": "do",
     "action": {
-      "kind": "ankusa_add_fully_broken_barrier_to_hq"
+      "kind": "add_fully_broken_barrier_to_hq"
     }
   },
   "wave": "fear-the-masses"

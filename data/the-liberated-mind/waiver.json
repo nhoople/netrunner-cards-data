@@ -25,7 +25,7 @@
           "onSuccess": {
             "op": "do",
             "action": {
-              "kind": "waiver_reveal_grip_trash_cost_lte_excess"
+              "kind": "reveal_grip_trash_cost_lte_excess"
             }
           }
         }
