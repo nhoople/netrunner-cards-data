@@ -19,31 +19,24 @@
       "id": "semak-samun-etr",
       "text": "End the run unless the Runner suffers 3 net damage.",
       "effect": {
-        "op": "choose",
-        "chooser": "runner",
-        "options": [
-          {
-            "id": "net",
-            "label": "Suffer 3 net damage",
-            "effect": {
-              "op": "do",
-              "action": {
-                "kind": "net_damage",
-                "amount": 3
-              }
+        "op": "do",
+        "action": {
+          "kind": "unless",
+          "payer": "runner",
+          "cost": {
+            "op": "do",
+            "action": {
+              "kind": "net_damage",
+              "amount": 3
             }
           },
-          {
-            "id": "etr",
-            "label": "End the run",
-            "effect": {
-              "op": "do",
-              "action": {
-                "kind": "end_the_run"
-              }
+          "instruction": {
+            "op": "do",
+            "action": {
+              "kind": "end_the_run"
             }
           }
-        ]
+        }
       }
     }
   ]

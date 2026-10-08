@@ -20,6 +20,7 @@ from spin_common import (
     do,
     draw,
     etr,
+    nested_unless,
     gain,
     net,
     seq,
@@ -248,19 +249,19 @@ def map_card(c: dict) -> dict | None:
                 {
                     "id": "fairchild-etr-pay-1",
                     "text": "End the run unless the Runner pays 4¢.",
-                    "effect": do(
-                        "end_the_run_unless_pay_credits",
-                        side="runner",
-                        amount=4,
+                    "effect": nested_unless(
+                        "runner",
+                        do("lose_credits", side="runner", amount=4),
+                        etr(),
                     ),
                 },
                 {
                     "id": "fairchild-etr-pay-2",
                     "text": "End the run unless the Runner pays 4¢.",
-                    "effect": do(
-                        "end_the_run_unless_pay_credits",
-                        side="runner",
-                        amount=4,
+                    "effect": nested_unless(
+                        "runner",
+                        do("lose_credits", side="runner", amount=4),
+                        etr(),
                     ),
                 },
                 {
@@ -271,9 +272,10 @@ def map_card(c: dict) -> dict | None:
                 {
                     "id": "fairchild-etr-core",
                     "text": "End the run unless the Runner suffers 1 core damage.",
-                    "effect": do(
-                        "end_the_run_unless_core_damage",
-                        amount=1,
+                    "effect": nested_unless(
+                        "runner",
+                        core(1),
+                        etr(),
                     ),
                 },
             ],

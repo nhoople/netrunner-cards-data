@@ -19,7 +19,7 @@
   "paidAbilities": [
     {
       "id": "ebc-search",
-      "label": "1¢,[trash]: Search R&D for an asset, reveal it, add to HQ",
+      "label": "1\u00a2,[trash]: Search R&D for an asset, reveal it, add to HQ",
       "clickCost": 0,
       "creditCost": 1,
       "cost": {
@@ -32,7 +32,9 @@
       "effect": {
         "op": "do",
         "action": {
-          "kind": "search_rd_asset_to_hq"
+          "kind": "search_rd_type_to_hq",
+          "cardType": "asset",
+          "shuffleIfNone": true
         }
       }
     }

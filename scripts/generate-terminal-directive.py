@@ -661,7 +661,12 @@ def map_card(c: dict) -> dict | None:
                     label="Take 1 bad publicity",
                     decline_side="corp",
                 ),
-                do("gain_credits_per_bad_publicity", per=3),
+                do(
+                    "gain_credits",
+                    side="corp",
+                    amount=0,
+                    tally={"count": "bad_publicity", "per": 3, "side": "corp"},
+                ),
             ),
         )
 

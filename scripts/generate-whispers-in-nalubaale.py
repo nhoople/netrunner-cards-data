@@ -232,7 +232,7 @@ def map_card(c: dict) -> dict | None:
                     "[trash]: Bypass the ice you are encountering; lose remaining clicks",
                     seq(
                         do("win_bypass_encountered_ice"),
-                        do("win_lose_remaining_clicks"),
+                        do("lose_remaining_clicks"),
                     ),
                     trash_self=True,
                     windows=["encounter_paw"],
@@ -373,7 +373,7 @@ def map_card(c: dict) -> dict | None:
             c,
             subtypes=["barrier"],
             canAdvance=True,
-            onRez=do("win_place_advancement_on_self", amount=1),
+            onRez=do("place_advancement_on_self", amount=1),
             gainsSubroutinesPerAdvancement={
                 "subroutine": {
                     "id": "masvingo-etr",

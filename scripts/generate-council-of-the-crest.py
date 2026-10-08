@@ -205,7 +205,7 @@ def map_card(c: dict) -> dict | None:
                 paid(
                     "gbahali-break",
                     "[trash]: Break the last subroutine on the encountered piece of ice",
-                    do("cotc_break_last_subroutine"),
+                    do("break_last_subroutine"),
                     trash_self=True,
                     windows=["encounter_paw"],
                     usable_by_runner=True,
@@ -333,7 +333,7 @@ def map_card(c: dict) -> dict | None:
         return base(
             c,
             subtypes=["initiative"],
-            stealAdditionalCost=do("cotc_shuffle_n_installed_runner_into_stack", amount=2),
+            stealAdditionalCost=do("shuffle_n_installed_runner_into_stack", amount=2),
         )
 
     if cid == "personalized-portal":

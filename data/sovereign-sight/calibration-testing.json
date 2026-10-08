@@ -28,7 +28,7 @@
       "effect": {
         "op": "do",
         "action": {
-          "kind": "ss_place_advancement_on_root_of_this_server"
+          "kind": "place_advancement_on_root_of_this_server"
         }
       }
     }

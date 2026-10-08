@@ -18,7 +18,7 @@
   "paidAbilities": [
     {
       "id": "alix-cash",
-      "label": "[click], [trash]: Gain 2¢ per power counter",
+      "label": "[click], [trash]: Gain 2\u00a2 per power counter",
       "clickCost": 1,
       "creditCost": 0,
       "cost": {
@@ -31,8 +31,14 @@
       "effect": {
         "op": "do",
         "action": {
-          "kind": "gain_credits_per_power_counter",
-          "per": 2
+          "kind": "gain_credits",
+          "side": "corp",
+          "amount": 0,
+          "tally": {
+            "count": "source_power_counters",
+            "per": 2,
+            "side": "source"
+          }
         }
       }
     }

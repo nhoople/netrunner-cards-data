@@ -15,7 +15,7 @@
   "paidAbilities": [
     {
       "id": "consume-cash",
-      "label": "[click]: Gain 2¢ for each hosted virus counter, then remove all virus counters",
+      "label": "[click]: Gain 2\u00a2 for each hosted virus counter, then remove all virus counters",
       "clickCost": 1,
       "creditCost": 0,
       "cost": {
@@ -30,8 +30,14 @@
           {
             "op": "do",
             "action": {
-              "kind": "gain_credits_per_virus",
-              "per": 2
+              "kind": "gain_credits",
+              "side": "runner",
+              "amount": 0,
+              "tally": {
+                "count": "source_virus_counters",
+                "per": 2,
+                "side": "source"
+              }
             }
           },
           {

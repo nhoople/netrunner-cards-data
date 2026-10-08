@@ -351,7 +351,12 @@ def map_card(c: dict) -> dict | None:
             c,
             subtypes=["terminal", "transaction"],
             endsActionPhase=True,
-            onPlay=do("gain_credits_per_agenda_in_runner_score", side="corp", per=3),
+            onPlay=do(
+                "gain_credits",
+                side="corp",
+                amount=0,
+                tally={"count": "runner_score", "per": 3, "side": "corp"},
+            ),
         )
 
     if cid == "sandburg":

@@ -162,7 +162,7 @@ def map_card(c: dict) -> dict | None:
                     "timely-install-ice",
                     "Hosted agenda counter: Install 1 ice from HQ or Archives "
                     "in any position protecting a server, ignoring all costs",
-                    do("mo_install_ice_hq_or_archives_any_position_ignore_costs"),
+                    do("install_ice_hq_or_archives_any_position_ignore_costs"),
                     cost={"agendaCounters": 1},
                     windows=["corp_action_paw"],
                 ),
@@ -231,8 +231,14 @@ def map_card(c: dict) -> dict | None:
                     "id": "border-gain-per-ice",
                     "text": "Gain 1 credit for each piece of ice protecting this server.",
                     "effect": do(
-                        "mo_gain_credits_per_ice_protecting_this_server",
-                        per=1,
+                        "gain_credits",
+                        side="corp",
+                        amount=0,
+                        tally={
+                            "count": "ice_protecting_source_server",
+                            "per": 1,
+                            "side": "corp",
+                        },
                     ),
                 },
                 {

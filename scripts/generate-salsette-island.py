@@ -125,7 +125,16 @@ def map_card(c: dict) -> dict | None:
             deckLimit=6,
             onPlay=seq(
                 draw("runner", 1),
-                do("gain_credits_per_copies_in_heap", side="runner", per=1),
+                do(
+                    "gain_credits",
+                    side="runner",
+                    amount=0,
+                    tally={
+                        "count": "copies_in_runner_heap",
+                        "per": 1,
+                        "side": "runner",
+                    },
+                ),
             ),
         )
 

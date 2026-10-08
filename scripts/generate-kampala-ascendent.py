@@ -405,7 +405,7 @@ def map_card(c: dict) -> dict | None:
                     "id": "surveyor-tags",
                     "text": "Trace[X]. If successful, give the Runner 2 tags.",
                     "effect": do(
-                        "ka_trace_strength_equal_source_strength",
+                        "trace_strength_equal_source_strength",
                         onSuccess=do("give_tags", amount=2),
                     ),
                 },
@@ -413,7 +413,7 @@ def map_card(c: dict) -> dict | None:
                     "id": "surveyor-etr",
                     "text": "Trace[X]. If successful, end the run.",
                     "effect": do(
-                        "ka_trace_strength_equal_source_strength",
+                        "trace_strength_equal_source_strength",
                         onSuccess=etr(),
                     ),
                 },
@@ -425,7 +425,7 @@ def map_card(c: dict) -> dict | None:
             c,
             subtypes=["black ops"],
             playRequiresTagged=True,
-            onPlay=do("ka_meat_damage_per_tag", amountPerTag=2),
+            onPlay=do("meat_damage_per_tag", amountPerTag=2),
         )
 
     if cid == "false-flag":
@@ -433,7 +433,7 @@ def map_card(c: dict) -> dict | None:
             c,
             subtypes=["ambush"],
             canAdvance=True,
-            onAccess=do("ka_give_tags_per_two_advancements"),
+            onAccess=do("give_tags_per_two_advancements"),
             paidAbilities=[
                 paid(
                     "false-flag-score",

@@ -13,8 +13,14 @@
   "onPlay": {
     "op": "do",
     "action": {
-      "kind": "gain_credits_per_card_with_advancement_tokens",
-      "per": 2
+      "kind": "gain_credits",
+      "side": "corp",
+      "amount": 0,
+      "tally": {
+        "count": "installed_corp_advanced",
+        "per": 2,
+        "side": "corp"
+      }
     }
   },
   "wave": "blood-and-water"

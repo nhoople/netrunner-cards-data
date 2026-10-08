@@ -18,7 +18,7 @@
   "paidAbilities": [
     {
       "id": "thomas-cash",
-      "label": "[trash]: Gain 2¢ per advancement token",
+      "label": "[trash]: Gain 2\u00a2 per advancement token",
       "clickCost": 0,
       "creditCost": 0,
       "cost": {
@@ -30,8 +30,14 @@
       "effect": {
         "op": "do",
         "action": {
-          "kind": "gain_credits_per_advancement",
-          "per": 2
+          "kind": "gain_credits",
+          "side": "corp",
+          "amount": 0,
+          "tally": {
+            "count": "source_advancement_tokens",
+            "per": 2,
+            "side": "source"
+          }
         }
       }
     }

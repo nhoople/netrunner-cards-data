@@ -15,9 +15,14 @@
   "onPlay": {
     "op": "do",
     "action": {
-      "kind": "gain_credits_per_agenda_in_runner_score",
+      "kind": "gain_credits",
       "side": "corp",
-      "per": 3
+      "amount": 0,
+      "tally": {
+        "count": "runner_score",
+        "per": 3,
+        "side": "corp"
+      }
     }
   },
   "wave": "twenty-three-seconds"

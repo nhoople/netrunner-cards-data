@@ -29,33 +29,26 @@
       "id": "lionsmane-pay",
       "text": "Do 2 net damage unless the Runner pays 3[credit].",
       "effect": {
-        "op": "choose",
-        "chooser": "runner",
-        "options": [
-          {
-            "id": "pay",
-            "label": "Pay 3¢",
-            "effect": {
-              "op": "do",
-              "action": {
-                "kind": "lose_credits",
-                "side": "runner",
-                "amount": 3
-              }
+        "op": "do",
+        "action": {
+          "kind": "unless",
+          "payer": "runner",
+          "cost": {
+            "op": "do",
+            "action": {
+              "kind": "lose_credits",
+              "side": "runner",
+              "amount": 3
             }
           },
-          {
-            "id": "net",
-            "label": "Suffer 2 net damage",
-            "effect": {
-              "op": "do",
-              "action": {
-                "kind": "net_damage",
-                "amount": 2
-              }
+          "instruction": {
+            "op": "do",
+            "action": {
+              "kind": "net_damage",
+              "amount": 2
             }
           }
-        ]
+        }
       }
     },
     {

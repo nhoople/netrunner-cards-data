@@ -18,8 +18,21 @@
   "onEncounter": {
     "op": "do",
     "action": {
-      "kind": "end_the_run_unless_take_tags",
-      "amount": 1
+      "kind": "unless",
+      "payer": "runner",
+      "cost": {
+        "op": "do",
+        "action": {
+          "kind": "give_tags",
+          "amount": 1
+        }
+      },
+      "instruction": {
+        "op": "do",
+        "action": {
+          "kind": "end_the_run"
+        }
+      }
     }
   },
   "paidAbilities": [

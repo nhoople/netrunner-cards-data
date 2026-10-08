@@ -1064,8 +1064,20 @@ def map_card(c: dict) -> dict | None:
                     "effect": {
                         "op": "do",
                         "action": {
-                            "kind": "end_the_run_unless_corp_pays",
-                            "amount": 1,
+                            "kind": "unless",
+                            "payer": "corp",
+                            "cost": {
+                                "op": "do",
+                                "action": {
+                                    "kind": "lose_credits",
+                                    "side": "corp",
+                                    "amount": 1,
+                                },
+                            },
+                            "instruction": {
+                                "op": "do",
+                                "action": {"kind": "end_the_run"},
+                            },
                         },
                     },
                 },
@@ -1245,8 +1257,20 @@ def map_card(c: dict) -> dict | None:
                     "effect": {
                         "op": "do",
                         "action": {
-                            "kind": "end_the_run_unless_runner_spends_clicks",
-                            "amount": 3,
+                            "kind": "unless",
+                            "payer": "runner",
+                            "cost": {
+                                "op": "do",
+                                "action": {
+                                    "kind": "lose_clicks",
+                                    "side": "runner",
+                                    "amount": 3,
+                                },
+                            },
+                            "instruction": {
+                                "op": "do",
+                                "action": {"kind": "end_the_run"},
+                            },
                         },
                     },
                 }
@@ -1285,8 +1309,16 @@ def map_card(c: dict) -> dict | None:
             onEncounter={
                 "op": "do",
                 "action": {
-                    "kind": "end_the_run_unless_take_tags",
-                    "amount": 1,
+                    "kind": "unless",
+                    "payer": "runner",
+                    "cost": {
+                        "op": "do",
+                        "action": {"kind": "give_tags", "amount": 1},
+                    },
+                    "instruction": {
+                        "op": "do",
+                        "action": {"kind": "end_the_run"},
+                    },
                 },
             },
             paidAbilities=[

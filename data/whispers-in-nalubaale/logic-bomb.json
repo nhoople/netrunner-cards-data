@@ -34,7 +34,7 @@
           {
             "op": "do",
             "action": {
-              "kind": "win_lose_remaining_clicks"
+              "kind": "lose_remaining_clicks"
             }
           }
         ]

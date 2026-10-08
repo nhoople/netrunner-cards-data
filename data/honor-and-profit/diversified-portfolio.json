@@ -13,8 +13,14 @@
   "onPlay": {
     "op": "do",
     "action": {
-      "kind": "gain_credits_per_remote_with_root_card",
-      "per": 1
+      "kind": "gain_credits",
+      "side": "corp",
+      "amount": 0,
+      "tally": {
+        "count": "remotes_with_root",
+        "per": 1,
+        "side": "corp"
+      }
     }
   },
   "wave": "honor-and-profit"

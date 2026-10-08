@@ -374,7 +374,7 @@ def map_card(c: dict) -> dict | None:
             c,
             subtypes=["gray ops"],
             playRequiresTagged=True,
-            onPlay=do("ss_add_n_installed_runner_to_grip", amount=2),
+            onPlay=do("add_n_installed_runner_to_grip", amount=2),
         )
 
     if cid == "calibration-testing":
@@ -386,7 +386,7 @@ def map_card(c: dict) -> dict | None:
                 paid(
                     "calibration-adv",
                     "[trash]: Place 1 advancement counter on a card installed in the root of this server",
-                    do("ss_place_advancement_on_root_of_this_server"),
+                    do("place_advancement_on_root_of_this_server"),
                     trash_self=True,
                     windows=["corp_action_paw"],
                 ),
@@ -421,7 +421,7 @@ def map_card(c: dict) -> dict | None:
                 paid(
                     "reconstruction-move",
                     "[trash]: Move any number of advancement tokens from Reconstruction Contract to a card that can be advanced",
-                    do("ss_move_any_advancements_from_self_to_advanceable"),
+                    do("move_any_advancements_from_self_to_advanceable"),
                     trash_self=True,
                     windows=["corp_action_paw"],
                 ),

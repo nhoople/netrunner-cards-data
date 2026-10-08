@@ -30,33 +30,26 @@
       "id": "lamplighter-tag",
       "text": "Give the Runner 1 tag unless they pay 3[credit].",
       "effect": {
-        "op": "choose",
-        "chooser": "runner",
-        "options": [
-          {
-            "id": "pay",
-            "label": "Pay 3¢",
-            "effect": {
-              "op": "do",
-              "action": {
-                "kind": "lose_credits",
-                "side": "runner",
-                "amount": 3
-              }
+        "op": "do",
+        "action": {
+          "kind": "unless",
+          "payer": "runner",
+          "cost": {
+            "op": "do",
+            "action": {
+              "kind": "lose_credits",
+              "side": "runner",
+              "amount": 3
             }
           },
-          {
-            "id": "tag",
-            "label": "Take 1 tag",
-            "effect": {
-              "op": "do",
-              "action": {
-                "kind": "give_tags",
-                "amount": 1
-              }
+          "instruction": {
+            "op": "do",
+            "action": {
+              "kind": "give_tags",
+              "amount": 1
             }
           }
-        ]
+        }
       }
     },
     {

@@ -14,7 +14,8 @@
       {
         "op": "do",
         "action": {
-          "kind": "search_rd_agenda_to_hq"
+          "kind": "search_rd_type_to_hq",
+          "cardType": "agenda"
         }
       },
       {

@@ -25,32 +25,25 @@
         "approach_paw"
       ],
       "effect": {
-        "op": "choose",
-        "chooser": "runner",
-        "options": [
-          {
-            "id": "spend-click",
-            "label": "Spend [click]",
-            "effect": {
-              "op": "do",
-              "action": {
-                "kind": "lose_clicks",
-                "side": "runner",
-                "amount": 1
-              }
+        "op": "do",
+        "action": {
+          "kind": "unless",
+          "payer": "runner",
+          "cost": {
+            "op": "do",
+            "action": {
+              "kind": "lose_clicks",
+              "side": "runner",
+              "amount": 1
             }
           },
-          {
-            "id": "etr",
-            "label": "End the run",
-            "effect": {
-              "op": "do",
-              "action": {
-                "kind": "end_the_run"
-              }
+          "instruction": {
+            "op": "do",
+            "action": {
+              "kind": "end_the_run"
             }
           }
-        ]
+        }
       }
     }
   ],

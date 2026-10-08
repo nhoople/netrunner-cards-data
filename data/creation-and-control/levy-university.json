@@ -17,7 +17,7 @@
   "paidAbilities": [
     {
       "id": "levy-u-search",
-      "label": "[click], 1¢: Search R&D for ice → HQ",
+      "label": "[click], 1\u00a2: Search R&D for ice \u2192 HQ",
       "clickCost": 1,
       "creditCost": 1,
       "cost": {
@@ -30,7 +30,8 @@
       "effect": {
         "op": "do",
         "action": {
-          "kind": "search_rd_ice_to_hq"
+          "kind": "search_rd_type_to_hq",
+          "cardType": "ice"
         }
       }
     }

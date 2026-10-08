@@ -11,9 +11,15 @@
   "onScore": {
     "op": "do",
     "action": {
-      "kind": "gain_credits_per_rezzed_subtype",
-      "subtype": "bioroid",
-      "per": 2
+      "kind": "gain_credits",
+      "side": "corp",
+      "amount": 0,
+      "tally": {
+        "count": "rezzed_ice_subtype",
+        "per": 2,
+        "side": "corp",
+        "subtype": "bioroid"
+      }
     }
   },
   "wave": "crimson-dust"

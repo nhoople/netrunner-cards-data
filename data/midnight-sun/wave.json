@@ -28,7 +28,8 @@
           "effect": {
             "op": "do",
             "action": {
-              "kind": "search_rd_ice_to_hq"
+              "kind": "search_rd_type_to_hq",
+              "cardType": "ice"
             }
           }
         },
@@ -54,9 +55,15 @@
       "effect": {
         "op": "do",
         "action": {
-          "kind": "gain_credits_per_rezzed_subtype",
-          "subtype": "harmonic",
-          "per": 1
+          "kind": "gain_credits",
+          "side": "corp",
+          "amount": 0,
+          "tally": {
+            "count": "rezzed_ice_subtype",
+            "per": 1,
+            "side": "corp",
+            "subtype": "harmonic"
+          }
         }
       }
     }

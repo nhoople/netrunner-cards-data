@@ -102,7 +102,7 @@ def map_card(c: dict) -> dict | None:
             c,
             onVirusPurge=may(
                 seq(
-                    do("dtwn_gain_credits_equal_to_last_purged_viruses"),
+                    do("gain_credits_equal_to_last_purged_viruses"),
                     do("trash_self"),
                 ),
                 label="Gain 1¢ per virus purged and trash Acacia",
@@ -191,7 +191,7 @@ def map_card(c: dict) -> dict | None:
                 paid(
                     "kongamato-break",
                     "[trash]: Break the first subroutine on the encountered piece of ice",
-                    do("dtwn_break_first_subroutine"),
+                    do("break_first_subroutine"),
                     trash_self=True,
                     windows=["encounter_paw"],
                     usable_by_runner=True,
@@ -226,7 +226,7 @@ def map_card(c: dict) -> dict | None:
                     "text": "The Runner loses [click], if able. You have an additional [click] to spend during your next turn.",
                     "effect": seq(
                         do("lose_clicks", side="runner", amount=1),
-                        do("dtwn_corp_additional_click_next_turn"),
+                        do("corp_additional_click_next_turn"),
                     ),
                 },
                 {
@@ -234,7 +234,7 @@ def map_card(c: dict) -> dict | None:
                     "text": "The Runner loses [click], if able. You have an additional [click] to spend during your next turn.",
                     "effect": seq(
                         do("lose_clicks", side="runner", amount=1),
-                        do("dtwn_corp_additional_click_next_turn"),
+                        do("corp_additional_click_next_turn"),
                     ),
                 },
             ],

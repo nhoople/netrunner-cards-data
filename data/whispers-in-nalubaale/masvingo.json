@@ -16,7 +16,7 @@
   "onRez": {
     "op": "do",
     "action": {
-      "kind": "win_place_advancement_on_self",
+      "kind": "place_advancement_on_self",
       "amount": 1
     }
   },

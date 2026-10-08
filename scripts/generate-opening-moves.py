@@ -116,22 +116,12 @@ def base(c, **extra):
 
 
 def trash_prog_unless_pay3():
-    return {
-        "op": "choose",
-        "chooser": "runner",
-        "options": [
-            {
-                "id": "pay3",
-                "label": "Pay 3¢",
-                "effect": do("lose_credits", side="runner", amount=3),
-            },
-            {
-                "id": "trash",
-                "label": "Trash 1 installed program",
-                "effect": do("trash_program", pick="choose"),
-            },
-        ],
-    }
+    return do(
+        "unless",
+        payer="runner",
+        cost=do("lose_credits", side="runner", amount=3),
+        instruction=do("trash_program", pick="choose"),
+    )
 
 
 def map_card(c: dict) -> dict | None:
@@ -198,7 +188,16 @@ def map_card(c: dict) -> dict | None:
                     "creditCost": 0,
                     "cost": {"clicks": 1, "trashSelf": True},
                     "windows": ["runner_action_paw"],
-                    "effect": do("gain_credits_per_virus", per=1),
+                    "effect": do(
+                        "gain_credits",
+                        side="runner",
+                        amount=0,
+                        tally={
+                            "count": "source_virus_counters",
+                            "per": 1,
+                            "side": "source",
+                        },
+                    ),
                 }
             ],
             unsupported=[],

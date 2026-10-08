@@ -21,8 +21,22 @@
       "effect": {
         "op": "do",
         "action": {
-          "kind": "end_the_run_unless_corp_pays",
-          "amount": 1
+          "kind": "unless",
+          "payer": "corp",
+          "cost": {
+            "op": "do",
+            "action": {
+              "kind": "lose_credits",
+              "side": "corp",
+              "amount": 1
+            }
+          },
+          "instruction": {
+            "op": "do",
+            "action": {
+              "kind": "end_the_run"
+            }
+          }
         }
       }
     },

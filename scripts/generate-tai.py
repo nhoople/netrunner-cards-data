@@ -237,7 +237,12 @@ def map_card(c: dict) -> dict:
             c,
             onPlay={
                 "op": "do",
-                "action": {"kind": "gain_credits_per_hq_card", "per": 1},
+                "action": {
+                    "kind": "gain_credits",
+                    "side": "corp",
+                    "amount": 0,
+                    "tally": {"count": "hq_cards", "per": 1, "side": "corp"},
+                },
             },
             unsupported=[],
         )
@@ -413,21 +418,15 @@ def map_card(c: dict) -> dict:
         )
 
     if cid == "attini":
-        pay_or_net = choose(
-            "runner",
-            [
-                {
-                    "id": "pay",
-                    "label": "Pay 2¢",
-                    "effect": lose("runner", 2),
-                },
-                {
-                    "id": "net",
-                    "label": "Suffer 1 net damage",
-                    "effect": net(1),
-                },
-            ],
-        )
+        pay_or_net = {
+            "op": "do",
+            "action": {
+                "kind": "unless",
+                "payer": "runner",
+                "cost": lose("runner", 2),
+                "instruction": net(1),
+            },
+        }
         # Threat 3: Runner cannot spend credits while these resolve →
         # pay path is impossible; take net. Spend-block also covers prevention.
         sub_fx = {
@@ -515,28 +514,22 @@ def map_card(c: dict) -> dict:
                     "creditCost": 0,
                     "cost": {"trashSelf": True},
                     "windows": ["approach_paw"],
-                    "effect": choose(
-                        "runner",
-                        [
-                            {
-                                "id": "spend-click",
-                                "label": "Spend [click]",
-                                "effect": {
-                                    "op": "do",
-                                    "action": {
-                                        "kind": "lose_clicks",
-                                        "side": "runner",
-                                        "amount": 1,
-                                    },
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "unless",
+                            "payer": "runner",
+                            "cost": {
+                                "op": "do",
+                                "action": {
+                                    "kind": "lose_clicks",
+                                    "side": "runner",
+                                    "amount": 1,
                                 },
                             },
-                            {
-                                "id": "etr",
-                                "label": "End the run",
-                                "effect": etr(),
-                            },
-                        ],
-                    ),
+                            "instruction": etr(),
+                        },
+                    },
                 }
             ],
             subroutines=[

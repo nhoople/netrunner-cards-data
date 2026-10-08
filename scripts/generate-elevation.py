@@ -467,27 +467,20 @@ def map_card(c: dict) -> dict:
                     "id": "lamplighter-tag",
                     "text": "Give the Runner 1 tag unless they pay 3[credit].",
                     "effect": {
-                        "op": "choose",
-                        "chooser": "runner",
-                        "options": [
-                            {
-                                "id": "pay",
-                                "label": "Pay 3¢",
-                                "effect": {
-                                    "op": "do",
-                                    "action": {
-                                        "kind": "lose_credits",
-                                        "side": "runner",
-                                        "amount": 3,
-                                    },
+                        "op": "do",
+                        "action": {
+                            "kind": "unless",
+                            "payer": "runner",
+                            "cost": {
+                                "op": "do",
+                                "action": {
+                                    "kind": "lose_credits",
+                                    "side": "runner",
+                                    "amount": 3,
                                 },
                             },
-                            {
-                                "id": "tag",
-                                "label": "Take 1 tag",
-                                "effect": tags(1),
-                            },
-                        ],
+                            "instruction": tags(1),
+                        },
                     },
                 },
                 {
@@ -581,8 +574,14 @@ def map_card(c: dict) -> dict:
                             {
                                 "op": "do",
                                 "action": {
-                                    "kind": "gain_credits_per_advancement",
-                                    "per": 3,
+                                    "kind": "gain_credits",
+                                    "side": "corp",
+                                    "amount": 0,
+                                    "tally": {
+                                        "count": "source_advancement_tokens",
+                                        "per": 3,
+                                        "side": "source",
+                                    },
                                 },
                             },
                             {
@@ -798,20 +797,13 @@ def map_card(c: dict) -> dict:
                     "id": "semak-samun-etr",
                     "text": "End the run unless the Runner suffers 3 net damage.",
                     "effect": {
-                        "op": "choose",
-                        "chooser": "runner",
-                        "options": [
-                            {
-                                "id": "net",
-                                "label": "Suffer 3 net damage",
-                                "effect": net(3),
-                            },
-                            {
-                                "id": "etr",
-                                "label": "End the run",
-                                "effect": etr(),
-                            },
-                        ],
+                        "op": "do",
+                        "action": {
+                            "kind": "unless",
+                            "payer": "runner",
+                            "cost": net(3),
+                            "instruction": etr(),
+                        },
                     },
                 },
             ],

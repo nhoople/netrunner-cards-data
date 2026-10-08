@@ -18,6 +18,7 @@ from spin_common import (
     do,
     draw,
     etr,
+    nested_unless,
     gain,
     net,
     seq,
@@ -172,12 +173,20 @@ def map_card(c: dict) -> dict | None:
                 {
                     "id": "pup-1",
                     "text": "Do 1 net unless Runner pays 1[credit].",
-                    "effect": do("pup_pay_or_net", amount=1),
+                    "effect": nested_unless(
+                        "runner",
+                        do("runner_pay_credits", amount=1),
+                        net(1),
+                    ),
                 },
                 {
                     "id": "pup-2",
                     "text": "Do 1 net unless Runner pays 1[credit].",
-                    "effect": do("pup_pay_or_net", amount=1),
+                    "effect": nested_unless(
+                        "runner",
+                        do("runner_pay_credits", amount=1),
+                        net(1),
+                    ),
                 },
             ],
         )
@@ -247,11 +256,16 @@ def map_card(c: dict) -> dict | None:
     if cid == "diversified-portfolio":
         return base(
             c,
-            onPlay=do("gain_credits_per_remote_with_root_card", per=1),
+            onPlay=do(
+                "gain_credits",
+                side="corp",
+                amount=0,
+                tally={"count": "remotes_with_root", "per": 1, "side": "corp"},
+            ),
         )
 
     if cid == "fast-track":
-        return base(c, onPlay=do("search_rd_agenda_to_hq"))
+        return base(c, onPlay=do("search_rd_type_to_hq", cardType="agenda"))
 
     if cid == "iain-stirling-retired-spook":
         return base(
@@ -279,7 +293,17 @@ def map_card(c: dict) -> dict | None:
     if cid == "calling-in-favors":
         return base(
             c,
-            onPlay=do("gain_credits_per_installed_subtype", subtype="connection"),
+            onPlay=do(
+                "gain_credits",
+                side="runner",
+                amount=0,
+                tally={
+                    "count": "installed_resource_subtype",
+                    "per": 1,
+                    "side": "runner",
+                    "subtype": "connection",
+                },
+            ),
         )
 
     if cid == "early-bird":

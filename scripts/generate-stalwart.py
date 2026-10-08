@@ -56,22 +56,12 @@ def gain(side: str, n: int):
 
 
 def etr_unless_pay_runner(amount: int):
-    return {
-        "op": "choose",
-        "chooser": "runner",
-        "options": [
-            {
-                "id": "pay",
-                "label": f"Pay {amount}¢",
-                "effect": do("lose_credits", side="runner", amount=amount),
-            },
-            {
-                "id": "etr",
-                "label": "End the run",
-                "effect": do("end_the_run"),
-            },
-        ],
-    }
+    return do(
+        "unless",
+        payer="runner",
+        cost=do("lose_credits", side="runner", amount=amount),
+        instruction=do("end_the_run"),
+    )
 
 
 def etr_unless_trash_program():
@@ -94,22 +84,12 @@ def etr_unless_trash_program():
 
 
 def etr_unless_core(amount: int):
-    return {
-        "op": "choose",
-        "chooser": "runner",
-        "options": [
-            {
-                "id": "core",
-                "label": f"Suffer {amount} core damage",
-                "effect": do("core_damage", amount=amount),
-            },
-            {
-                "id": "etr",
-                "label": "End the run",
-                "effect": do("end_the_run"),
-            },
-        ],
-    }
+    return do(
+        "unless",
+        payer="runner",
+        cost=do("core_damage", amount=amount),
+        instruction=do("end_the_run"),
+    )
 
 
 def trace_sub(strength: int, on_success, on_failure=None):
@@ -274,7 +254,12 @@ def map_card(c: dict) -> dict | None:
                 {
                     "id": "wotan-clicks",
                     "text": "End the run unless the Runner spends [click][click].",
-                    "effect": do("end_the_run_unless_runner_spends_clicks", amount=2),
+                    "effect": do(
+                        "unless",
+                        payer="runner",
+                        cost=do("lose_clicks", side="runner", amount=2),
+                        instruction=do("end_the_run"),
+                    ),
                 },
                 {
                     "id": "wotan-pay",

@@ -178,7 +178,16 @@ def map_card(c: dict) -> dict | None:
                     "creditCost": 0,
                     "cost": {"clicks": 1, "trashSelf": True},
                     "windows": ["corp_action_paw"],
-                    "effect": do("gain_credits_per_advancement", per=4),
+                    "effect": do(
+                        "gain_credits",
+                        side="corp",
+                        amount=0,
+                        tally={
+                            "count": "source_advancement_tokens",
+                            "per": 4,
+                            "side": "source",
+                        },
+                    ),
                 }
             ],
         )
