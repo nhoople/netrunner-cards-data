@@ -13,7 +13,14 @@
   "onPlay": {
     "op": "do",
     "action": {
-      "kind": "gain_clicks_equal_to_runner_scored_agendas"
+      "kind": "gain_clicks",
+      "side": "corp",
+      "amount": 0,
+      "tally": {
+        "count": "runner_score",
+        "per": 1,
+        "side": "corp"
+      }
     }
   }
 }

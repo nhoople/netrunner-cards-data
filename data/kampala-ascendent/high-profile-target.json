@@ -14,8 +14,13 @@
   "onPlay": {
     "op": "do",
     "action": {
-      "kind": "meat_damage_per_tag",
-      "amountPerTag": 2
+      "kind": "meat_damage",
+      "amount": 0,
+      "tally": {
+        "count": "runner_tags",
+        "per": 2,
+        "side": "runner"
+      }
     }
   },
   "wave": "kampala-ascendent"

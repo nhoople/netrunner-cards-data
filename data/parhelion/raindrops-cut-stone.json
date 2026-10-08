@@ -19,9 +19,14 @@
         {
           "op": "do",
           "action": {
-            "kind": "draw_per_power_counter",
+            "kind": "draw",
             "side": "runner",
-            "per": 1
+            "amount": 0,
+            "tally": {
+              "count": "source_power_counters",
+              "per": 1,
+              "side": "source"
+            }
           }
         },
         {

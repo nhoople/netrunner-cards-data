@@ -1076,10 +1076,15 @@ def map_card(c: dict) -> dict:
                 "onRunEnd": {
                     "op": "do",
                     "action": {
-                        "kind": "gain_credits_base_plus_per_passed_ice",
+                        "kind": "gain_credits",
                         "side": "runner",
-                        "base": 6,
-                        "per": 1,
+                        "amount": 0,
+                        "tally": {
+                            "count": "passed_ice",
+                            "per": 1,
+                            "side": "runner",
+                            "base": 6,
+                        },
                     },
                 },
             },
@@ -1981,7 +1986,13 @@ def map_card(c: dict) -> dict:
                     "effect": {
                         "op": "do",
                         "action": {
-                            "kind": "deal_net_damage_per_power_counter"
+                            "kind": "net_damage",
+                            "amount": 0,
+                            "tally": {
+                                "count": "source_power_counters",
+                                "per": 1,
+                                "side": "source",
+                            },
                         },
                     },
                 },

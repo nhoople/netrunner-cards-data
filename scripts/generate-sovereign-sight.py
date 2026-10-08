@@ -307,7 +307,15 @@ def map_card(c: dict) -> dict | None:
             c,
             subtypes=["ambush"],
             canAdvance=True,
-            onAccess=do("net_damage_per_advancement"),
+            onAccess=do(
+                "net_damage",
+                amount=0,
+                tally={
+                    "count": "source_advancement_tokens",
+                    "per": 1,
+                    "side": "source",
+                },
+            ),
             paidAbilities=[
                 paid(
                     "gene-splicer-score",

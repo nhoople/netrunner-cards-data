@@ -34,10 +34,15 @@
       "effect": {
         "op": "do",
         "action": {
-          "kind": "lose_credits_per_rezzed_subtype",
+          "kind": "lose_credits",
           "side": "runner",
-          "subtype": "harmonic",
-          "per": 1
+          "amount": 0,
+          "tally": {
+            "count": "rezzed_ice_subtype",
+            "per": 1,
+            "side": "runner",
+            "subtype": "harmonic"
+          }
         }
       }
     },

@@ -14,7 +14,13 @@
   "onPlay": {
     "op": "do",
     "action": {
-      "kind": "remove_all_tags"
+      "kind": "remove_tags",
+      "amount": 0,
+      "tally": {
+        "count": "runner_tags",
+        "per": 1,
+        "side": "runner"
+      }
     }
   },
   "wave": "upstalk"

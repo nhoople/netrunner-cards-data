@@ -33,7 +33,13 @@
           "onSuccess": {
             "op": "do",
             "action": {
-              "kind": "net_damage_per_tag"
+              "kind": "net_damage",
+              "amount": 0,
+              "tally": {
+                "count": "runner_tags",
+                "per": 1,
+                "side": "runner"
+              }
             }
           }
         }
@@ -50,8 +56,14 @@
           "onSuccess": {
             "op": "do",
             "action": {
-              "kind": "lose_credits_per_tag",
-              "side": "runner"
+              "kind": "lose_credits",
+              "side": "runner",
+              "amount": 0,
+              "tally": {
+                "count": "runner_tags",
+                "per": 1,
+                "side": "runner"
+              }
             }
           }
         }

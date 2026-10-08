@@ -362,10 +362,15 @@ def map_card(c: dict) -> dict:
                     "effect": {
                         "op": "do",
                         "action": {
-                            "kind": "lose_credits_per_rezzed_subtype",
+                            "kind": "lose_credits",
                             "side": "runner",
-                            "subtype": "harmonic",
-                            "per": 1,
+                            "amount": 0,
+                            "tally": {
+                                "count": "rezzed_ice_subtype",
+                                "per": 1,
+                                "side": "runner",
+                                "subtype": "harmonic",
+                            },
                         },
                     },
                 },
@@ -433,9 +438,14 @@ def map_card(c: dict) -> dict:
                     {
                         "op": "do",
                         "action": {
-                            "kind": "draw_per_power_counter",
+                            "kind": "draw",
                             "side": "runner",
-                            "per": 1,
+                            "amount": 0,
+                            "tally": {
+                                "count": "source_power_counters",
+                                "per": 1,
+                                "side": "source",
+                            },
                         },
                     },
                     gain("runner", 3),

@@ -147,7 +147,17 @@ def map_card(c: dict) -> dict | None:
             subtypes=["priority"],
             playRequiresFirstClick=True,
             onPlay=seq(
-                do("draw_per_installed_clan_resource", per=1),
+                do(
+                    "draw",
+                    side="runner",
+                    amount=0,
+                    tally={
+                        "count": "installed_resource_subtype",
+                        "per": 1,
+                        "side": "runner",
+                        "subtype": "clan",
+                    },
+                ),
                 do(
                     "gain_credits",
                     side="corp",

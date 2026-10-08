@@ -17,8 +17,27 @@
   "onSuccessfulRun": {
     "op": "do",
     "action": {
-      "kind": "end_the_run_unless_pay_credits_per_runner_scored_agenda",
-      "creditsPer": 2
+      "kind": "unless",
+      "payer": "runner",
+      "cost": {
+        "op": "do",
+        "action": {
+          "kind": "lose_credits",
+          "side": "runner",
+          "amount": 0,
+          "tally": {
+            "count": "runner_score",
+            "per": 2,
+            "side": "runner"
+          }
+        }
+      },
+      "instruction": {
+        "op": "do",
+        "action": {
+          "kind": "end_the_run"
+        }
+      }
     }
   }
 }

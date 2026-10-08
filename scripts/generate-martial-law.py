@@ -267,7 +267,11 @@ def map_card(c: dict) -> dict | None:
                 {
                     "id": "fairchild-etr-trash",
                     "text": "End the run unless the Runner trashes 1 of their installed cards.",
-                    "effect": do("end_the_run_unless_trash_installed"),
+                    "effect": nested_unless(
+                        "runner",
+                        do("trash_installed_runner", pick="choose"),
+                        etr(),
+                    ),
                 },
                 {
                     "id": "fairchild-etr-core",
@@ -359,12 +363,35 @@ def map_card(c: dict) -> dict | None:
                 {
                     "id": "thoth-net-per-tag",
                     "text": "Trace[4]. If successful, do 1 net damage for each tag the Runner has.",
-                    "effect": trace_sub(4, do("net_damage_per_tag")),
+                    "effect": trace_sub(
+                        4,
+                        do(
+                            "net_damage",
+                            amount=0,
+                            tally={
+                                "count": "runner_tags",
+                                "per": 1,
+                                "side": "runner",
+                            },
+                        ),
+                    ),
                 },
                 {
                     "id": "thoth-lose-credits-per-tag",
                     "text": "Trace[4]. If successful, the Runner loses 1¢ for each tag they have.",
-                    "effect": trace_sub(4, do("lose_credits_per_tag", side="runner")),
+                    "effect": trace_sub(
+                        4,
+                        do(
+                            "lose_credits",
+                            side="runner",
+                            amount=0,
+                            tally={
+                                "count": "runner_tags",
+                                "per": 1,
+                                "side": "runner",
+                            },
+                        ),
+                    ),
                 },
             ],
         )

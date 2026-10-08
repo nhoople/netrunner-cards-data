@@ -51,7 +51,13 @@
           "ifBidsDiffer": {
             "op": "do",
             "action": {
-              "kind": "net_damage_per_runner_grip_card"
+              "kind": "net_damage",
+              "amount": 0,
+              "tally": {
+                "count": "runner_grip",
+                "per": 1,
+                "side": "runner"
+              }
             }
           }
         }

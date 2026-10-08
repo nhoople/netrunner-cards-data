@@ -352,7 +352,15 @@ def map_card(c: dict) -> dict | None:
                 paid(
                     "expose-remove-bp",
                     "[trash]: Remove 1 bad publicity per advancement",
-                    do("remove_bad_publicity_per_advancement_on_self"),
+                    do(
+                        "remove_bad_publicity",
+                        amount=0,
+                        tally={
+                            "count": "source_advancement_tokens",
+                            "per": 1,
+                            "side": "source",
+                        },
+                    ),
                     trash_self=True,
                     windows=["corp_action_paw"],
                 )

@@ -39,8 +39,14 @@
             {
               "op": "do",
               "action": {
-                "kind": "lose_credits_per_advancement",
-                "per": 2
+                "kind": "lose_credits",
+                "side": "runner",
+                "amount": 0,
+                "tally": {
+                  "count": "source_advancement_tokens",
+                  "per": 2,
+                  "side": "runner"
+                }
               }
             },
             {

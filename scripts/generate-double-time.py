@@ -108,7 +108,17 @@ def map_card(c: dict) -> dict | None:
         return base(
             c,
             playAdditionalClick=True,
-            onPlay=do("gain_per_double_in_heap"),
+            onPlay=do(
+                "gain_credits",
+                side="runner",
+                amount=0,
+                tally={
+                    "count": "runner_heap_subtype",
+                    "per": 1,
+                    "side": "runner",
+                    "subtype": "double",
+                },
+            ),
         )
 
     if cid == "paintbrush":

@@ -25,7 +25,13 @@
       "effect": {
         "op": "do",
         "action": {
-          "kind": "remove_bad_publicity_per_advancement_on_self"
+          "kind": "remove_bad_publicity",
+          "amount": 0,
+          "tally": {
+            "count": "source_advancement_tokens",
+            "per": 1,
+            "side": "source"
+          }
         }
       }
     }

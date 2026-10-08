@@ -26,7 +26,20 @@
       "effect": {
         "op": "do",
         "action": {
-          "kind": "end_the_run_unless_shuffle_grip_into_stack"
+          "kind": "unless",
+          "payer": "runner",
+          "cost": {
+            "op": "do",
+            "action": {
+              "kind": "shuffle_all_grip_into_stack"
+            }
+          },
+          "instruction": {
+            "op": "do",
+            "action": {
+              "kind": "end_the_run"
+            }
+          }
         }
       }
     }

@@ -587,8 +587,14 @@ def map_card(c: dict) -> dict:
                             {
                                 "op": "do",
                                 "action": {
-                                    "kind": "lose_credits_per_advancement",
-                                    "per": 2,
+                                    "kind": "lose_credits",
+                                    "side": "runner",
+                                    "amount": 0,
+                                    "tally": {
+                                        "count": "source_advancement_tokens",
+                                        "per": 2,
+                                        "side": "runner",
+                                    },
                                 },
                             },
                             {
@@ -884,7 +890,16 @@ def map_card(c: dict) -> dict:
             c,
             onPlay={
                 "op": "do",
-                "action": {"kind": "draw_per_clicks_remaining", "side": "runner"},
+                "action": {
+                    "kind": "draw",
+                    "side": "runner",
+                    "amount": 0,
+                    "tally": {
+                        "count": "clicks_remaining",
+                        "per": 1,
+                        "side": "runner",
+                    },
+                },
             },
             unsupported=[],
         )
