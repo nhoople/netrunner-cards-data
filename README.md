@@ -85,7 +85,7 @@ Files under [`data/`](data/) are the API. Clone the repo or fetch a **tagged** r
 | [`data/elevation/`](data/elevation/) | Elevation (NRDB `elev`) — **supported** |
 | [`data/vantage-point/`](data/vantage-point/) | Vantage Point (NRDB `vp`) — **supported** |
 
-**Corpus order:** FFG Core Set → Genesis → CAC → Spin → HAP → Lunar → OAC → SanSan → DAD → Mumbad → Flashpoint → Red Sand + `td` → `core2` → Kitara → RaR → **Magnum Opus** (`mor` absorbed) → SC19 → Downfall → Uprising → Gateway → SU21 → Midnight Sun → Parhelion → TAI → RWR → Elevation → Vantage Point. Floor **`v1.144.0`**. Skip `napd`/draft/championship; defer `tdc`.
+**Corpus order:** FFG Core Set → Genesis → CAC → Spin → HAP → Lunar → OAC → SanSan → DAD → Mumbad → Flashpoint → Red Sand + `td` → `core2` → Kitara → RaR → **Magnum Opus** (`mor` absorbed) → SC19 → Downfall → Uprising → Gateway → SU21 → Midnight Sun → Parhelion → TAI → RWR → Elevation → Vantage Point. Floor **`v1.145.0`**. Skip `napd`/draft/championship; defer `tdc`.
 
 Partial cards list unimplemented clauses in an `unsupported` array — never silent wrong behavior. A wave marked `supported` in [`data/pool.json`](data/pool.json) must keep those arrays empty unless the card is listed with a reason in [`data/supported-unsupported-allowlist.json`](data/supported-unsupported-allowlist.json) (enforced by `scripts/validate-cards.py`). See [`CONTRIBUTING.md`](CONTRIBUTING.md) for the CR gate PR template.
 
@@ -95,7 +95,7 @@ Match this dataset and [netrunner-engine](https://github.com/nhoople/netrunner-e
 
 | Pairing | cards-data | engine |
 |---------|------------|--------|
-| **Current** | [`v1.144.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.144.0) | [`v1.144.0`](https://github.com/nhoople/netrunner-engine/releases/tag/v1.144.0) (shared credit tallies, unless costs, and R&D type searches; printed corpus unchanged from v1.143.0) |
+| **Current** | [`v1.145.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.145.0) | [`v1.145.0`](https://github.com/nhoople/netrunner-engine/releases/tag/v1.145.0) (counted effects use a shared tally; kinds are named for the procedure; printed corpus unchanged from v1.143.0) |
 
 Prior set-complete / maintenance tags: [cards Releases](https://github.com/nhoople/netrunner-cards-data/releases) · [engine Releases](https://github.com/nhoople/netrunner-engine/releases).
 
@@ -115,14 +115,14 @@ npm run demo:library  # createGame → queryLegality → applyIntent → getPubl
 Example raw URL base (match the **current** pairing tag):
 
 ```text
-https://raw.githubusercontent.com/nhoople/netrunner-cards-data/v1.144.0/data
+https://raw.githubusercontent.com/nhoople/netrunner-cards-data/v1.145.0/data
 ```
 
 JavaScript — load the pool and one card from a tagged release:
 
 ```js
 const base =
-  "https://raw.githubusercontent.com/nhoople/netrunner-cards-data/v1.144.0/data";
+  "https://raw.githubusercontent.com/nhoople/netrunner-cards-data/v1.145.0/data";
 const pool = await fetch(`${base}/pool.json`).then((r) => r.json());
 const marjanah = await fetch(`${base}/system-gateway/marjanah.json`).then((r) =>
   r.json(),
@@ -134,7 +134,7 @@ console.log(pool.corpusOrder, marjanah.title);
 
 **Authoritative list:** [`data/pool.json`](data/pool.json) — **68/68** waves `supported` (see `corpusOrder` + each wave’s `status` / card counts). The directory table under **Consume the data** mirrors those wave dirs; do not treat any shorter summary table as the corpus.
 
-**Floor `v1.144.0`:** Magnum Opus complete (**8/8**; `mor` absorbed). Fixtures wave removed (Plascrete under WLA). FFG Core-forward through Kitara, RaR, SC19→VP all `supported`. Eternal + RAM unique-title Magnum Opus gaps closed. Core Sets / Standard / Startup already full. Printed corpus unchanged from `v1.143.0`. Credit gains that scale with a count use `gain_credits` plus a tally, “unless” costs use the shared `unless` procedure, and typed R&D-to-HQ searches use `search_rd_type_to_hq`. Paired with engine `v1.144.0`.
+**Floor `v1.145.0`:** Magnum Opus complete (**8/8**; `mor` absorbed). Fixtures wave removed (Plascrete under WLA). FFG Core-forward through Kitara, RaR, SC19→VP all `supported`. Eternal + RAM unique-title Magnum Opus gaps closed. Core Sets / Standard / Startup already full. Printed corpus unchanged from `v1.143.0`. Counted effects use a shared tally, and effect kinds are named for the procedure. Paired with engine `v1.145.0`.
 
 **Next:** Idle / absorb-only until next NSG pack after VP or CR bump. Skip `napd`/draft/championship; defer `tdc`. GitHub Releases only at set-complete or explicit manual — not per-slice.
 
