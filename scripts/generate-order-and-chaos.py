@@ -336,7 +336,7 @@ def map_card(c: dict) -> dict | None:
                 paid(
                     "builder-move",
                     "[click]: Move this ice to the outermost position of any server",
-                    do("builder_move_to_outermost"),
+                    do("move_to_outermost"),
                     clicks=1,
                 )
             ],
@@ -675,7 +675,7 @@ def map_card(c: dict) -> dict | None:
             subtypes=["console"],
             maxConsole=1,
             muBonus=1,
-            onTurnBegin=do("vigil_draw_if_hq_full"),
+            onTurnBegin=do("draw_if_hq_full"),
         )
 
     if cid == "qianju-pt":
@@ -727,7 +727,7 @@ def map_card(c: dict) -> dict | None:
                     "creditCost": 0,
                     "cost": {"trashSelf": True},
                     "windows": ["damage_interrupt_paw"],
-                    "effect": do("sacrificial_clone_prevent_all_damage"),
+                    "effect": do("prevent_all_damage"),
                 }
             ],
         )
@@ -747,7 +747,7 @@ def map_card(c: dict) -> dict | None:
                 paid(
                     "vbg-move",
                     "[click]: Move 1 virus counter to another card with a virus counter",
-                    do("virus_breeding_ground_move_counter"),
+                    do("move_counter"),
                     clicks=1,
                     windows=["runner_action_paw"],
                     usable_by_runner=True,
@@ -759,7 +759,7 @@ def map_card(c: dict) -> dict | None:
         return base(
             c,
             subtypes=["virtual"],
-            onTurnBegin=do("data_folding_gain_if_unused_mu_gte", amount=1, threshold=2),
+            onTurnBegin=do("gain_if_unused_mu_gte", amount=1, threshold=2),
         )
 
     card = base(c)

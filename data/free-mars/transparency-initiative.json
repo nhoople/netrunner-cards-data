@@ -10,7 +10,7 @@
   "onPlay": {
     "op": "do",
     "action": {
-      "kind": "transparency_initiative_host_on_agenda"
+      "kind": "host_on_agenda"
     }
   },
   "onAdvance": {

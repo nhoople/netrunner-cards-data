@@ -11,7 +11,7 @@
   "onScore": {
     "op": "do",
     "action": {
-      "kind": "standoff_trash_loop"
+      "kind": "trash_loop"
     }
   },
   "wave": "blood-and-water"

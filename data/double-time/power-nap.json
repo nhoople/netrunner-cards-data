@@ -14,7 +14,7 @@
   "onPlay": {
     "op": "do",
     "action": {
-      "kind": "power_nap_gain_per_double_in_heap"
+      "kind": "gain_per_double_in_heap"
     }
   },
   "wave": "double-time"

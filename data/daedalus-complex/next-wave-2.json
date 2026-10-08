@@ -14,7 +14,7 @@
   "onScore": {
     "op": "do",
     "action": {
-      "kind": "next_wave_2_may_core_if_rezzed_next_ice"
+      "kind": "may_core_if_rezzed_next_ice"
     }
   },
   "wave": "daedalus-complex"

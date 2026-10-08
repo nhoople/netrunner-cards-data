@@ -1551,7 +1551,7 @@ def map_card(c: dict) -> dict | None:
             onPlay={
                 "op": "do",
                 "action": {
-                    "kind": "queens_gambit_place_up_to",
+                    "kind": "place_up_to",
                     "max": 3,
                     "creditsPer": 2,
                 },
@@ -1739,7 +1739,7 @@ def map_card(c: dict) -> dict | None:
             c,
             onPlay={
                 "op": "do",
-                "action": {"kind": "oversight_ai_rez_and_host"},
+                "action": {"kind": "rez_and_host"},
             },
             trashHostIfAllSubsBrokenThisEncounter=True,
             unsupported=[],

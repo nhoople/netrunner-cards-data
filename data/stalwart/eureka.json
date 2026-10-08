@@ -15,7 +15,7 @@
   "onPlay": {
     "op": "do",
     "action": {
-      "kind": "eureka_reveal_install_or_trash",
+      "kind": "reveal_install_or_trash",
       "discount": 10
     }
   }

@@ -17,7 +17,7 @@
     "onSuccessfulRun": {
       "op": "do",
       "action": {
-        "kind": "political_graffiti_host_on_scored_agenda"
+        "kind": "host_on_scored_agenda"
       }
     }
   },

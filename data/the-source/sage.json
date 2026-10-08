@@ -37,7 +37,7 @@
       "effect": {
         "op": "do",
         "action": {
-          "kind": "sage_break_code_gate_or_barrier"
+          "kind": "break_code_gate_or_barrier"
         }
       }
     }

@@ -357,7 +357,7 @@ def map_card(c: dict) -> dict | None:
         return base(
             c,
             subtypes=["condition"],
-            onPlay=do("ber_rez_bioroid_and_host"),
+            onPlay=do("rez_bioroid_and_host"),
             onHostFullyBrokenThisEncounter=do("trash_self_and_derez_host"),
             unsupported=[],
         )
@@ -405,7 +405,7 @@ def map_card(c: dict) -> dict | None:
                         "You may install and rez 1 bioroid ice from HQ or "
                         "Archives directly inward, ignoring all costs."
                     ),
-                    "effect": do("howler_install_rez_bioroid_inward"),
+                    "effect": do("install_rez_bioroid_inward"),
                 }
             ],
             unsupported=[],

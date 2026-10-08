@@ -55,7 +55,7 @@ def map_card(c: dict) -> dict | None:
                     "creditCost": 0,
                     "cost": {"clicks": 1, "virusCounters": 2},
                     "windows": ["runner_action_paw"],
-                    "effect": do("hemorrhage_corp_trash_from_hq"),
+                    "effect": do("corp_trash_from_hq"),
                 }
             ],
         )
@@ -133,14 +133,14 @@ def map_card(c: dict) -> dict | None:
             c,
             subtypes=["sysop"],
             canAdvance=True,
-            onAccess=do("toshiyuki_sakai_swap_with_hq"),
+            onAccess=do("swap_with_hq"),
             onAccessRequiresInstalled=True,
         )
 
     if cid == "restoring-face":
         return base(
             c,
-            onPlay=do("restoring_face_trash_exec_sysop_clone_remove_bp"),
+            onPlay=do("trash_exec_sysop_clone_remove_bp"),
         )
 
     if cid == "market-research":

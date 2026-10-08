@@ -2273,7 +2273,7 @@ def map_card(c: dict) -> dict:
             daemonHost=True,
             onInstall={
                 "op": "do",
-                "action": {"kind": "muse_search_install_non_daemon"},
+                "action": {"kind": "search_install_non_daemon"},
             },
             unsupported=[],
         )

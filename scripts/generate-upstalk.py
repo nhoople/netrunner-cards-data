@@ -69,7 +69,7 @@ def map_card(c: dict) -> dict | None:
     if cid == "mutate":
         return base(
             c,
-            playAdditionalCost=do("mutate_trash_rezzed_ice_additional_cost"),
+            playAdditionalCost=do("trash_rezzed_ice_additional_cost"),
             onPlay=do("mutate_operation_resolve"),
         )
 

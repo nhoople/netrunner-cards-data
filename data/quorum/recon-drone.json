@@ -22,7 +22,7 @@
       "effect": {
         "op": "do",
         "action": {
-          "kind": "recon_drone_prevent_x_damage"
+          "kind": "prevent_x_damage"
         }
       },
       "usableByRunnerOnSelfIce": true

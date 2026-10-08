@@ -16,7 +16,7 @@
   "onTurnBegin": {
     "op": "do",
     "action": {
-      "kind": "clyde_van_rite_pay_or_trash_top_stack"
+      "kind": "pay_or_trash_top_stack"
     }
   },
   "wave": "station-one"

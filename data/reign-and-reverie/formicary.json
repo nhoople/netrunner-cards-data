@@ -27,7 +27,7 @@
       "effect": {
         "op": "do",
         "action": {
-          "kind": "formicary_rez_move_innermost",
+          "kind": "rez_move_innermost",
           "rezDiscount": 0
         }
       }

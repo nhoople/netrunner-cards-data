@@ -13,7 +13,7 @@
   "onInstall": {
     "op": "do",
     "action": {
-      "kind": "angel_arena_place_x_counters"
+      "kind": "place_x_counters"
     }
   },
   "trashWhenPowerEmpty": true,
@@ -32,7 +32,7 @@
       "effect": {
         "op": "do",
         "action": {
-          "kind": "angel_arena_reveal_top_may_bottom"
+          "kind": "reveal_top_may_bottom"
         }
       }
     }

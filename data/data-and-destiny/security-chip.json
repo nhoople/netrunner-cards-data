@@ -25,7 +25,7 @@
       "effect": {
         "op": "do",
         "action": {
-          "kind": "security_chip_boost_breakers_per_link"
+          "kind": "boost_breakers_per_link"
         }
       },
       "usableByRunnerOnSelfIce": true,

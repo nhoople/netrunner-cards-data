@@ -182,7 +182,7 @@ def map_card(c: dict) -> dict | None:
     if cid == "customized-secretary":
         return base(
             c,
-            onInstall=do("customized_secretary_reveal_host_programs"),
+            onInstall=do("reveal_host_programs"),
             paidAbilities=[
                 paid(
                     "customized-secretary-install",
@@ -272,8 +272,8 @@ def map_card(c: dict) -> dict | None:
             c,
             playAdditionalClick=True,
             onPlay=seq(
-                do("replanting_add_installed_to_hq"),
-                do("replanting_install_2_from_hq_ignore_costs"),
+                do("add_installed_to_hq"),
+                do("install_2_from_hq_ignore_costs"),
             ),
         )
 
@@ -320,7 +320,7 @@ def map_card(c: dict) -> dict | None:
             c,
             subtypes=["gray ops"],
             endsActionPhase=True,
-            onPlay=do("mca_informant_host_on_connection"),
+            onPlay=do("host_on_connection"),
         )
 
     if cid == "clyde-van-rite":
@@ -328,7 +328,7 @@ def map_card(c: dict) -> dict | None:
             c,
             subtypes=["executive"],
             unique=True,
-            onTurnBegin=do("clyde_van_rite_pay_or_trash_top_stack"),
+            onTurnBegin=do("pay_or_trash_top_stack"),
         )
 
     if cid == "watchtower":
@@ -348,7 +348,7 @@ def map_card(c: dict) -> dict | None:
         return base(
             c,
             playAdditionalCostForfeitAgenda=True,
-            onPlay=do("sacrifice_remove_bp_equal_forfeited_ap_gain_credits"),
+            onPlay=do("remove_bp_equal_forfeited_ap_gain_credits"),
         )
 
     if cid == "self-adapting-code-wall":

@@ -26,7 +26,7 @@
       "effect": {
         "op": "do",
         "action": {
-          "kind": "security_nexus_trace_bypass_or_tag_etr"
+          "kind": "trace_bypass_or_tag_etr"
         }
       },
       "oncePerTurn": true,

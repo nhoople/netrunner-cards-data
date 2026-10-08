@@ -16,7 +16,7 @@
   "onInstall": {
     "op": "do",
     "action": {
-      "kind": "fenris_host_gmod_identity_from_outside_game",
+      "kind": "host_gmod_identity_from_outside_game",
       "requireFactionMismatchWithRunnerIdentity": true
     }
   },

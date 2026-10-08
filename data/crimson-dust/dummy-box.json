@@ -23,7 +23,7 @@
       "effect": {
         "op": "do",
         "action": {
-          "kind": "dummy_box_trash_grip_same_type_prevent"
+          "kind": "trash_grip_same_type_prevent"
         }
       },
       "usableByRunnerOnSelfIce": true

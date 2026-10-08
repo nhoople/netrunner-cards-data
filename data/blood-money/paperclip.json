@@ -34,7 +34,7 @@
       "effect": {
         "op": "do",
         "action": {
-          "kind": "paperclip_spend_x_pump_and_break"
+          "kind": "spend_x_pump_and_break"
         }
       },
       "usableByRunnerOnSelfIce": true

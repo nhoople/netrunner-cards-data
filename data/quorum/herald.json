@@ -40,7 +40,7 @@
       "effect": {
         "op": "do",
         "action": {
-          "kind": "herald_pay_up_to_place_advancements",
+          "kind": "pay_up_to_place_advancements",
           "max": 2
         }
       }

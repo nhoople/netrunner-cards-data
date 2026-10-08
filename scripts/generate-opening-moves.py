@@ -222,7 +222,7 @@ def map_card(c: dict) -> dict | None:
                         "id": "trash",
                         "label": "Trash False Echo",
                         "effect": do(
-                            "false_echo_trash_then_corp_rez_or_hq",
+                            "trash_then_corp_rez_or_hq",
                             iceIdFromPass=True,
                         ),
                     },

@@ -23,7 +23,7 @@
       "effect": {
         "op": "do",
         "action": {
-          "kind": "bookmark_host_up_to_3_from_grip_facedown"
+          "kind": "host_up_to_3_from_grip_facedown"
         }
       }
     },
@@ -41,7 +41,7 @@
       "effect": {
         "op": "do",
         "action": {
-          "kind": "bookmark_add_all_hosted_to_grip"
+          "kind": "add_all_hosted_to_grip"
         }
       }
     },
@@ -59,7 +59,7 @@
       "effect": {
         "op": "do",
         "action": {
-          "kind": "bookmark_add_all_hosted_to_grip"
+          "kind": "add_all_hosted_to_grip"
         }
       }
     }

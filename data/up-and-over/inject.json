@@ -10,7 +10,7 @@
   "onPlay": {
     "op": "do",
     "action": {
-      "kind": "inject_reveal_top_four"
+      "kind": "reveal_top_four"
     }
   },
   "wave": "up-and-over"

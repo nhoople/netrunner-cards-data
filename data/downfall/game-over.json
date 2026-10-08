@@ -19,7 +19,7 @@
       {
         "op": "do",
         "action": {
-          "kind": "game_over_trash_type_may_pay_3_prevent"
+          "kind": "trash_type_may_pay_3_prevent"
         }
       },
       {

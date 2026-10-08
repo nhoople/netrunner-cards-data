@@ -27,7 +27,7 @@
       "effect": {
         "op": "do",
         "action": {
-          "kind": "oracle_may_choose_type_reveal_install"
+          "kind": "choose_type_reveal_install"
         }
       }
     }

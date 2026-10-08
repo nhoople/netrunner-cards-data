@@ -13,7 +13,7 @@
   "onPlay": {
     "op": "do",
     "action": {
-      "kind": "back_channels_trash_remote_root"
+      "kind": "trash_remote_root"
     }
   },
   "wave": "old-hollywood"

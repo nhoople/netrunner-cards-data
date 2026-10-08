@@ -17,7 +17,7 @@
   "onPlay": {
     "op": "do",
     "action": {
-      "kind": "product_recall_trash_rezzed_gain_trash_cost"
+      "kind": "trash_rezzed_gain_trash_cost"
     }
   },
   "wave": "business-first"

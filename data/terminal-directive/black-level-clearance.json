@@ -15,7 +15,7 @@
   "onSuccessfulRunThisServer": {
     "op": "do",
     "action": {
-      "kind": "black_level_clearance_core_or_jack_out"
+      "kind": "core_or_jack_out"
     }
   },
   "wave": "terminal-directive"

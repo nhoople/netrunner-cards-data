@@ -29,7 +29,7 @@
             {
               "op": "do",
               "action": {
-                "kind": "daruma_swap_this_root_with_other_root_or_hq",
+                "kind": "swap_this_root_with_other_root_or_hq",
                 "onSuccess": {
                   "op": "do",
                   "action": {

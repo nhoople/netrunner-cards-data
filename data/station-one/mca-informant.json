@@ -14,7 +14,7 @@
   "onPlay": {
     "op": "do",
     "action": {
-      "kind": "mca_informant_host_on_connection"
+      "kind": "host_on_connection"
     }
   },
   "wave": "station-one"

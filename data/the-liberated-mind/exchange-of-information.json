@@ -14,7 +14,7 @@
   "onPlay": {
     "op": "do",
     "action": {
-      "kind": "exchange_of_information_swap_scored_agendas"
+      "kind": "swap_scored_agendas"
     }
   },
   "wave": "the-liberated-mind"

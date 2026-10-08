@@ -14,7 +14,7 @@
   "onTurnBegin": {
     "op": "do",
     "action": {
-      "kind": "dr_lovegood_blank_installed_abilities"
+      "kind": "blank_installed_abilities"
     }
   },
   "wave": "data-and-destiny"

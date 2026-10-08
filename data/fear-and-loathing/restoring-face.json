@@ -10,7 +10,7 @@
   "onPlay": {
     "op": "do",
     "action": {
-      "kind": "restoring_face_trash_exec_sysop_clone_remove_bp"
+      "kind": "trash_exec_sysop_clone_remove_bp"
     }
   },
   "wave": "fear-and-loathing"

@@ -283,7 +283,7 @@ def map_card(c: dict) -> dict | None:
                 "faction": "nbn",
                 "threshold": 6,
             },
-            onPlay=do("salems_hospitality_name_reveal_trash_grip_copies"),
+            onPlay=do("name_reveal_trash_grip_copies"),
         )
 
     if cid == "executive-search-firm":
@@ -335,7 +335,7 @@ def map_card(c: dict) -> dict | None:
     if cid == "localized-product-line":
         return base(
             c,
-            onPlay=do("localized_product_line_search_rd_copies_to_hq"),
+            onPlay=do("search_rd_copies_to_hq"),
         )
 
     if cid == "mumbad-virtual-tour":

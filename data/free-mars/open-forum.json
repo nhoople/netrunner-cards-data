@@ -12,7 +12,7 @@
   "afterMandatoryDraw": {
     "op": "do",
     "action": {
-      "kind": "open_forum_reveal_top_rd_to_hq_then_hq_to_rd_top"
+      "kind": "reveal_top_rd_to_hq_then_hq_to_rd_top"
     }
   },
   "wave": "free-mars"

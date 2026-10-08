@@ -20,7 +20,7 @@
       "effect": {
         "op": "do",
         "action": {
-          "kind": "kitsune_breach_hq"
+          "kind": "breach_hq"
         }
       }
     }

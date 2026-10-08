@@ -16,7 +16,7 @@
   "onEncounter": {
     "op": "do",
     "action": {
-      "kind": "komainu_add_net_subs_for_rezzed_ice"
+      "kind": "add_net_subs_for_rezzed_ice"
     }
   },
   "wave": "honor-and-profit"

@@ -13,7 +13,7 @@
   "onPlay": {
     "op": "do",
     "action": {
-      "kind": "injection_attack_choose_breaker_run",
+      "kind": "choose_breaker_run",
       "strengthBonus": 2
     }
   },

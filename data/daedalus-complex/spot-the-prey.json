@@ -10,7 +10,7 @@
   "onPlay": {
     "op": "do",
     "action": {
-      "kind": "spot_the_prey_expose_non_ice_then_run"
+      "kind": "expose_non_ice_then_run"
     }
   },
   "wave": "daedalus-complex"

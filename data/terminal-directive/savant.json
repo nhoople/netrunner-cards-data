@@ -37,7 +37,7 @@
       "effect": {
         "op": "do",
         "action": {
-          "kind": "savant_break_sentry_or_code_gates"
+          "kind": "break_sentry_or_code_gates"
         }
       },
       "usableByRunnerOnSelfIce": true

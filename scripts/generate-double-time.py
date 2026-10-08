@@ -74,7 +74,7 @@ def map_card(c: dict) -> dict | None:
                     "creditCost": 2,
                     "cost": {"credits": 2},
                     "windows": ["runner_action_paw"],
-                    "effect": do("savoir_faire_install_program_from_grip"),
+                    "effect": do("install_program_from_grip"),
                 }
             ],
         )
@@ -90,7 +90,7 @@ def map_card(c: dict) -> dict | None:
                     "creditCost": 0,
                     "cost": {"trashSelf": True},
                     "windows": ["trash_interrupt_paw"],
-                    "effect": do("fall_guy_prevent_trash_resource"),
+                    "effect": do("prevent_trash_resource"),
                 },
                 {
                     "id": "fall-guy-credits",
@@ -108,7 +108,7 @@ def map_card(c: dict) -> dict | None:
         return base(
             c,
             playAdditionalClick=True,
-            onPlay=do("power_nap_gain_per_double_in_heap"),
+            onPlay=do("gain_per_double_in_heap"),
         )
 
     if cid == "paintbrush":
@@ -122,7 +122,7 @@ def map_card(c: dict) -> dict | None:
                     "creditCost": 0,
                     "cost": {"clicks": 1},
                     "windows": ["runner_action_paw"],
-                    "effect": do("paintbrush_choose_ice_gain_subtype"),
+                    "effect": do("choose_ice_gain_subtype"),
                 }
             ],
         )
@@ -152,7 +152,7 @@ def map_card(c: dict) -> dict | None:
     if cid == "broadcast-square":
         return base(
             c,
-            onWouldTakeBadPublicity=do("broadcast_square_trace_prevent_bad_publicity"),
+            onWouldTakeBadPublicity=do("trace_prevent_bad_publicity"),
         )
 
     if cid == "corporate-shuffle":
@@ -198,7 +198,7 @@ def map_card(c: dict) -> dict | None:
                 {
                     "id": "marker-etr-next",
                     "text": "Next ice encountered gains ETR after its subroutines.",
-                    "effect": do("marker_add_etr_to_next_ice"),
+                    "effect": do("add_etr_to_next_ice"),
                 }
             ],
         )

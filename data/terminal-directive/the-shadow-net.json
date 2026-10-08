@@ -27,7 +27,7 @@
       "effect": {
         "op": "do",
         "action": {
-          "kind": "the_shadow_net_play_event_from_heap"
+          "kind": "play_event_from_heap"
         }
       },
       "usableByRunnerOnSelfIce": true

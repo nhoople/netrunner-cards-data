@@ -16,7 +16,7 @@
   "onWouldTakeBadPublicity": {
     "op": "do",
     "action": {
-      "kind": "broadcast_square_trace_prevent_bad_publicity"
+      "kind": "trace_prevent_bad_publicity"
     }
   },
   "wave": "double-time"

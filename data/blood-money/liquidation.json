@@ -16,7 +16,7 @@
   "onPlay": {
     "op": "do",
     "action": {
-      "kind": "liquidation_trash_any_rezzed_gain_3_each"
+      "kind": "trash_any_rezzed_gain_3_each"
     }
   },
   "wave": "blood-money"

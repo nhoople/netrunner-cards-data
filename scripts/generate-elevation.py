@@ -1542,7 +1542,7 @@ def map_card(c: dict) -> dict:
                 {
                     "op": "do",
                     "action": {
-                        "kind": "touch_ups_choose_type_shuffle_grip",
+                        "kind": "choose_type_shuffle_grip",
                         "maxCards": 2,
                     },
                 },
@@ -1879,11 +1879,11 @@ def map_card(c: dict) -> dict:
             c,
             rezAdditionalCost={
                 "op": "do",
-                "action": {"kind": "plutus_pay_rez_additional_cost"},
+                "action": {"kind": "pay_rez_additional_cost"},
             },
             onTurnBegin={
                 "op": "do",
-                "action": {"kind": "plutus_may_play_transaction_from_archives"},
+                "action": {"kind": "may_play_transaction_from_archives"},
             },
             unsupported=[],
         )
@@ -1897,7 +1897,7 @@ def map_card(c: dict) -> dict:
             },
             onPlay={
                 "op": "do",
-                "action": {"kind": "ip_enforcement_install_from_runner_score"},
+                "action": {"kind": "install_from_runner_score"},
             },
             unsupported=[],
         )
@@ -1992,7 +1992,7 @@ def map_card(c: dict) -> dict:
                 "servers": "archives",
                 "onRunEnd": {
                     "op": "do",
-                    "action": {"kind": "charm_offensive_trash_rezzed_accessed"},
+                    "action": {"kind": "trash_rezzed_accessed"},
                 },
             },
             unsupported=[],
@@ -2110,7 +2110,7 @@ def map_card(c: dict) -> dict:
                         "label": "Host 1 card from HQ at random faceup",
                         "effect": {
                             "op": "do",
-                            "action": {"kind": "detente_host_random_hq"},
+                            "action": {"kind": "host_random_hq"},
                         },
                     },
                     decline("runner"),
@@ -2131,7 +2131,7 @@ def map_card(c: dict) -> dict:
                     "effect": {
                         "op": "do",
                         "action": {
-                            "kind": "detente_return_two_hosted_may_access"
+                            "kind": "return_two_hosted_may_access"
                         },
                     },
                 }

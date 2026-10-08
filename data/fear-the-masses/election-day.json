@@ -10,7 +10,7 @@
   "onPlay": {
     "op": "do",
     "action": {
-      "kind": "election_day_trash_hq_draw",
+      "kind": "trash_hq_draw",
       "amount": 5
     }
   },

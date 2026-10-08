@@ -695,7 +695,7 @@ def map_card(c: dict) -> dict:
             },
             onPlay={
                 "op": "do",
-                "action": {"kind": "unleash_rez_may_resolve_sub"},
+                "action": {"kind": "rez_may_resolve_sub"},
             },
             unsupported=[],
         )

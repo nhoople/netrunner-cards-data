@@ -15,7 +15,7 @@
   "onPlay": {
     "op": "do",
     "action": {
-      "kind": "targeted_marketing_name_card"
+      "kind": "name_card"
     }
   },
   "wave": "the-spaces-between"

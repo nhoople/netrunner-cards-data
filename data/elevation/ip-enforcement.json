@@ -19,7 +19,7 @@
   "onPlay": {
     "op": "do",
     "action": {
-      "kind": "ip_enforcement_install_from_runner_score"
+      "kind": "install_from_runner_score"
     }
   }
 }

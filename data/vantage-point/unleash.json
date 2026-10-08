@@ -21,7 +21,7 @@
   "onPlay": {
     "op": "do",
     "action": {
-      "kind": "unleash_rez_may_resolve_sub"
+      "kind": "rez_may_resolve_sub"
     }
   }
 }

@@ -18,7 +18,7 @@
         "effect": {
           "op": "do",
           "action": {
-            "kind": "panchatantra_choose_subtype_for_encounter"
+            "kind": "choose_subtype_for_encounter"
           }
         }
       },

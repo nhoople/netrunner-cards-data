@@ -20,7 +20,7 @@
       "effect": {
         "op": "do",
         "action": {
-          "kind": "metamorph_swap_2_other_ice_or_2_non_ice"
+          "kind": "swap_2_other_ice_or_2_non_ice"
         }
       }
     }

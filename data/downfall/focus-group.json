@@ -12,7 +12,7 @@
   "onPlay": {
     "op": "do",
     "action": {
-      "kind": "focus_group_reveal_may_advance"
+      "kind": "reveal_may_advance"
     }
   }
 }

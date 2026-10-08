@@ -162,7 +162,7 @@ def map_card(c: dict) -> dict | None:
                 paid(
                     "paperclip-x",
                     "X¢: +X strength. Then break up to X barrier subroutines",
-                    do("paperclip_spend_x_pump_and_break"),
+                    do("spend_x_pump_and_break"),
                     windows=["encounter_paw"],
                     usable_by_runner=True,
                 ),
@@ -359,7 +359,7 @@ def map_card(c: dict) -> dict | None:
     if cid == "special-report":
         return base(
             c,
-            onPlay=do("special_report_shuffle_any_hq_draw"),
+            onPlay=do("shuffle_any_hq_draw"),
         )
 
     if cid == "c-i-fund":
@@ -390,7 +390,7 @@ def map_card(c: dict) -> dict | None:
             c,
             subtypes=["double", "gray ops", "transaction"],
             playAdditionalClick=True,
-            onPlay=do("liquidation_trash_any_rezzed_gain_3_each"),
+            onPlay=do("trash_any_rezzed_gain_3_each"),
         )
 
     if cid == "weyland-consortium-builder-of-nations":
@@ -404,7 +404,7 @@ def map_card(c: dict) -> dict | None:
         return base(
             c,
             playRequiresRunnerCreditsGte=6,
-            onPlay=do("financial_collapse_lose_2_per_resource_or_trash"),
+            onPlay=do("lose_2_per_resource_or_trash"),
         )
 
     if cid == "prisec":

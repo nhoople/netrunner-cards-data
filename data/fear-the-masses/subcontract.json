@@ -14,7 +14,7 @@
   "onPlay": {
     "op": "do",
     "action": {
-      "kind": "subcontract_play_ops_from_hq",
+      "kind": "play_ops_from_hq",
       "max": 2
     }
   },

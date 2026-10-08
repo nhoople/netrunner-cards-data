@@ -14,7 +14,7 @@
   "onPlay": {
     "op": "do",
     "action": {
-      "kind": "careful_planning_choose_remote_card_cannot_rez_this_turn"
+      "kind": "choose_remote_card_cannot_rez_this_turn"
     }
   },
   "wave": "terminal-directive"

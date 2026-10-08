@@ -125,7 +125,7 @@ def map_card(c: dict) -> dict | None:
                 paid(
                     "surfer-swap",
                     "2¢: Swap encountered barrier with ice directly before or after it",
-                    do("surfer_swap_encounter_barrier_adjacent"),
+                    do("swap_encounter_barrier_adjacent"),
                     credits=2,
                     windows=["runner_action_paw"],
                     usable_by_runner=True,
@@ -181,21 +181,21 @@ def map_card(c: dict) -> dict | None:
                 paid(
                     "bookmark-host",
                     "[click]: Host up to 3 cards from grip facedown",
-                    do("bookmark_host_up_to_3_from_grip_facedown"),
+                    do("host_up_to_3_from_grip_facedown"),
                     clicks=1,
                     windows=["runner_action_paw"],
                 ),
                 paid(
                     "bookmark-to-grip-click",
                     "[click]: Add all hosted cards to grip",
-                    do("bookmark_add_all_hosted_to_grip"),
+                    do("add_all_hosted_to_grip"),
                     clicks=1,
                     windows=["runner_action_paw"],
                 ),
                 paid(
                     "bookmark-to-grip-trash",
                     "[trash]: Add all hosted cards to grip",
-                    do("bookmark_add_all_hosted_to_grip"),
+                    do("add_all_hosted_to_grip"),
                     trash_self=True,
                     windows=["runner_action_paw"],
                 ),
@@ -210,7 +210,7 @@ def map_card(c: dict) -> dict | None:
                 paid(
                     "davinci-install",
                     "[trash]: Install a grip card costing ≤ power counters, ignoring install cost",
-                    do("davinci_install_from_grip_ignore_cost"),
+                    do("install_from_grip_ignore_cost"),
                     trash_self=True,
                     windows=["runner_action_paw"],
                 )
@@ -281,7 +281,7 @@ def map_card(c: dict) -> dict | None:
                 paid(
                     "worlds-plaza-install",
                     "[click]: Install an asset from HQ on Worlds Plaza and rez it (−2¢)",
-                    do("worlds_plaza_install_asset_from_hq_rez_discount", discount=2),
+                    do("install_asset_from_hq_rez_discount", discount=2),
                     clicks=1,
                     windows=["corp_action_paw"],
                 )
@@ -300,7 +300,7 @@ def map_card(c: dict) -> dict | None:
         return base(
             c,
             subtypes=["region"],
-            onTurnBegin=do("expo_grid_gain_if_rezzed_asset_in_root"),
+            onTurnBegin=do("gain_if_rezzed_asset_in_root"),
         )
 
     if cid == "the-future-is-now":

@@ -18,7 +18,7 @@
   "onApproachIce": {
     "op": "do",
     "action": {
-      "kind": "midori_may_swap_approached_ice_with_hq"
+      "kind": "may_swap_approached_ice_with_hq"
     }
   }
 }

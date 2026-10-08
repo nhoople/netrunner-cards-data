@@ -29,7 +29,7 @@
       "effect": {
         "op": "do",
         "action": {
-          "kind": "maxwell_james_derez_remote_ice"
+          "kind": "derez_remote_ice"
         }
       },
       "usableByRunnerOnSelfIce": true

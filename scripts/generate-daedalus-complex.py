@@ -163,7 +163,7 @@ def map_card(c: dict) -> dict | None:
     if cid == "spot-the-prey":
         return base(
             c,
-            onPlay=do("spot_the_prey_expose_non_ice_then_run"),
+            onPlay=do("expose_non_ice_then_run"),
         )
 
     if cid == "bio-modeled-network":
@@ -204,7 +204,7 @@ def map_card(c: dict) -> dict | None:
         return base(
             c,
             subtypes=["next"],
-            onScore=do("next_wave_2_may_core_if_rezzed_next_ice"),
+            onScore=do("may_core_if_rezzed_next_ice"),
         )
 
     if cid == "zed-2-0":
@@ -240,7 +240,7 @@ def map_card(c: dict) -> dict | None:
                 paid(
                     "defense-construct-archives",
                     "[trash]: Add 1 facedown card from Archives to HQ per advancement (Archives run)",
-                    do("defense_construct_add_facedown_archives_to_hq_per_advancement"),
+                    do("add_facedown_archives_to_hq_per_advancement"),
                     trash_self=True,
                     windows=["corp_action_paw", "approach_paw", "encounter_paw", "approach_server_paw"],
                     require_during_run=True,
@@ -309,7 +309,7 @@ def map_card(c: dict) -> dict | None:
                 paid(
                     "quarantine-rez",
                     "Forfeit an agenda: Rez up to 3 pieces of ice, lowering each by 2¢ per printed AP",
-                    do("quarantine_system_rez_up_to_3_ice_discount"),
+                    do("rez_up_to_3_ice_discount"),
                     cost={"forfeitAgenda": True},
                     windows=["corp_action_paw"],
                 ),
@@ -340,7 +340,7 @@ def map_card(c: dict) -> dict | None:
                 paid(
                     "signal-jamming-forbid",
                     "[trash]: Cards cannot be installed until the end of the run (run on this server)",
-                    do("signal_jamming_forbid_installs_until_run_end"),
+                    do("forbid_installs_until_run_end"),
                     trash_self=True,
                     windows=["corp_action_paw", "approach_paw", "encounter_paw", "approach_server_paw"],
                     require_during_run=True,

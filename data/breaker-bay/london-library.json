@@ -27,7 +27,7 @@
       "effect": {
         "op": "do",
         "action": {
-          "kind": "london_library_host_non_virus_program_ignore_cost"
+          "kind": "host_non_virus_program_ignore_cost"
         }
       }
     },
@@ -45,7 +45,7 @@
       "effect": {
         "op": "do",
         "action": {
-          "kind": "london_library_add_hosted_program_to_grip"
+          "kind": "add_hosted_program_to_grip"
         }
       }
     }

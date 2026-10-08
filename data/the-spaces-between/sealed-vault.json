@@ -45,7 +45,7 @@
       "effect": {
         "op": "do",
         "action": {
-          "kind": "sealed_vault_take_to_pool"
+          "kind": "take_to_pool"
         }
       }
     },
@@ -63,7 +63,7 @@
       "effect": {
         "op": "do",
         "action": {
-          "kind": "sealed_vault_take_to_pool"
+          "kind": "take_to_pool"
         }
       }
     }

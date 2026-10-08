@@ -13,7 +13,7 @@
   "onPlay": {
     "op": "do",
     "action": {
-      "kind": "casting_call_install_agenda_faceup"
+      "kind": "install_agenda_faceup"
     }
   },
   "wave": "old-hollywood"

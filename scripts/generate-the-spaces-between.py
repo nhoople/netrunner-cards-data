@@ -89,7 +89,7 @@ def map_card(c: dict) -> dict | None:
         return current_corp(c, blankRunnerIdentityPrintedAbilities=True)
 
     if cid == "targeted-marketing":
-        return current_corp(c, onPlay=do("targeted_marketing_name_card"))
+        return current_corp(c, onPlay=do("name_card"))
 
     if cid == "information-overload":
         return base(
@@ -99,7 +99,7 @@ def map_card(c: dict) -> dict | None:
                 {
                     "id": "information-overload-dynamic",
                     "text": "The Runner trashes 1 installed card for each tag they have.",
-                    "effect": do("information_overload_trash_per_tag"),
+                    "effect": do("trash_per_tag"),
                 }
             ],
         )
@@ -129,7 +129,7 @@ def map_card(c: dict) -> dict | None:
                     "creditCost": 0,
                     "cost": {"clicks": 1},
                     "windows": ["corp_action_paw"],
-                    "effect": do("sealed_vault_take_to_pool"),
+                    "effect": do("take_to_pool"),
                 },
                 {
                     "id": "sealed-vault-take-trash",
@@ -138,7 +138,7 @@ def map_card(c: dict) -> dict | None:
                     "creditCost": 0,
                     "cost": {"trashSelf": True},
                     "windows": ["corp_action_paw"],
-                    "effect": do("sealed_vault_take_to_pool"),
+                    "effect": do("take_to_pool"),
                 },
             ],
         )

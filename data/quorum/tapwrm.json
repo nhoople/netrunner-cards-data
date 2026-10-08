@@ -16,7 +16,7 @@
   "onRunnerTurnBegin": {
     "op": "do",
     "action": {
-      "kind": "tapwrm_gain_credits_per_corp_credits"
+      "kind": "gain_credits_per_corp_credits"
     }
   },
   "wave": "quorum"

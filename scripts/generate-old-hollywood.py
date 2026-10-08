@@ -286,7 +286,7 @@ def map_card(c: dict) -> dict | None:
         return base(
             c,
             onTurnBegin=may(
-                do("early_premiere_pay_place_advancement"),
+                do("pay_place_advancement"),
                 label="Pay 1¢: place 1 advancement on an advanceable card in a remote root",
                 decline_side="corp",
             ),
@@ -296,7 +296,7 @@ def map_card(c: dict) -> dict | None:
         return base(
             c,
             subtypes=["condition"],
-            onPlay=do("casting_call_install_agenda_faceup"),
+            onPlay=do("install_agenda_faceup"),
         )
 
     if cid == "old-hollywood-grid":
@@ -323,7 +323,7 @@ def map_card(c: dict) -> dict | None:
         return base(
             c,
             subtypes=["transaction"],
-            onPlay=do("back_channels_trash_remote_root"),
+            onPlay=do("trash_remote_root"),
         )
 
     if cid == "vanity-project":

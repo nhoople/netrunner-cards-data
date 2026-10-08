@@ -111,7 +111,7 @@ def map_card(c: dict) -> dict | None:
             c,
             subtypes=["connection"],
             onFirstInstallEachTurn=may(
-                do("paige_piper_search_stack_copies_to_heap"),
+                do("search_stack_copies_to_heap"),
                 label="Search stack for copies → heap",
                 decline_side="runner",
             ),
@@ -205,7 +205,7 @@ def map_card(c: dict) -> dict | None:
                 {
                     "id": "next-gold-trash",
                     "text": "Trash X programs.",
-                    "effect": do("next_gold_trash_programs"),
+                    "effect": do("trash_programs"),
                 },
             ],
         )
@@ -248,7 +248,7 @@ def map_card(c: dict) -> dict | None:
             c,
             subtypes=["research"],
             onScore=may(
-                do("genetic_resequencing_place_agenda_counter"),
+                do("place_agenda_counter"),
                 label="Place 1 agenda counter on a scored agenda",
                 decline_side="corp",
             ),
@@ -284,7 +284,7 @@ def map_card(c: dict) -> dict | None:
                 {
                     "id": "bandwidth-tag",
                     "text": "Give the Runner 1 tag. If this run is successful, the Runner removes 1 tag.",
-                    "effect": do("bandwidth_give_tag_remove_if_successful"),
+                    "effect": do("give_tag_remove_if_successful"),
                 }
             ],
         )
@@ -346,7 +346,7 @@ def map_card(c: dict) -> dict | None:
             onTurnBegin=may(
                 seq(
                     do("trash_self"),
-                    do("tech_startup_search_rd_asset_install"),
+                    do("search_rd_asset_install"),
                 ),
                 label="Trash Tech Startup → search R&D for an asset",
                 decline_side="corp",

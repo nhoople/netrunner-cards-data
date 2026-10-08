@@ -22,7 +22,7 @@
         "effect": {
           "op": "do",
           "action": {
-            "kind": "bloo_moose_rfg_heap_gain_credits",
+            "kind": "rfg_heap_gain_credits",
             "credits": 2
           }
         }

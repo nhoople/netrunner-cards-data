@@ -11,7 +11,7 @@
   "onPlay": {
     "op": "do",
     "action": {
-      "kind": "sacrifice_remove_bp_equal_forfeited_ap_gain_credits"
+      "kind": "remove_bp_equal_forfeited_ap_gain_credits"
     }
   },
   "wave": "station-one"

@@ -16,7 +16,7 @@
   "onEncounter": {
     "op": "do",
     "action": {
-      "kind": "peeping_tom_choose_type_reveal_gain_etr_unless_tag_for_run"
+      "kind": "choose_type_reveal_gain_etr_unless_tag_for_run"
     }
   },
   "subroutines": []

@@ -25,7 +25,7 @@
       "effect": {
         "op": "do",
         "action": {
-          "kind": "artist_colony_search_stack_install"
+          "kind": "search_stack_install"
         }
       },
       "usableByRunnerOnSelfIce": true

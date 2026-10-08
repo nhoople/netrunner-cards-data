@@ -29,7 +29,7 @@
       "effect": {
         "op": "do",
         "action": {
-          "kind": "estelle_moon_trash_per_power"
+          "kind": "trash_per_power"
         }
       }
     }

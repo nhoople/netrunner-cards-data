@@ -10,7 +10,7 @@
   "onPlay": {
     "op": "do",
     "action": {
-      "kind": "biased_reporting_choose_type"
+      "kind": "choose_type"
     }
   },
   "wave": "free-mars"

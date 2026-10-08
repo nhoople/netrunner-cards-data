@@ -222,7 +222,7 @@ def map_card(c: dict) -> dict | None:
                 "faction": "haas-bioroid",
                 "threshold": 6,
             },
-            onPlay=do("product_recall_trash_rezzed_gain_trash_cost"),
+            onPlay=do("trash_rezzed_gain_trash_cost"),
         )
 
     if cid == "palana-foods-sustainable-growth":
@@ -247,7 +247,7 @@ def map_card(c: dict) -> dict | None:
                     "id": "harvester-draw-discard-1",
                     "text": "The Runner draws 3 cards and then discards down to their maximum hand size.",
                     "effect": do(
-                        "harvester_draw_then_discard_down_to_hand_size",
+                        "draw_then_discard_down_to_hand_size",
                         drawAmount=3,
                     ),
                 },
@@ -255,7 +255,7 @@ def map_card(c: dict) -> dict | None:
                     "id": "harvester-draw-discard-2",
                     "text": "The Runner draws 3 cards and then discards down to their maximum hand size.",
                     "effect": do(
-                        "harvester_draw_then_discard_down_to_hand_size",
+                        "draw_then_discard_down_to_hand_size",
                         drawAmount=3,
                     ),
                 },
@@ -273,7 +273,7 @@ def map_card(c: dict) -> dict | None:
             c,
             mustRevealWhenAccessedFromRd=True,
             onAccess=may(
-                do("disposable_hq_add_hq_to_bottom_rd"),
+                do("add_hq_to_bottom_rd"),
                 label="Add any number of cards from HQ to the bottom of R&D",
                 decline_side="corp",
             ),
@@ -285,7 +285,7 @@ def map_card(c: dict) -> dict | None:
             subtypes=["public"],
             installFaceup=True,
             onAdvance=may(
-                do("new_construction_install_from_hq_new_remote"),
+                do("install_from_hq_new_remote"),
                 label="Install 1 card from HQ in the root of a new server",
                 decline_side="corp",
             ),
@@ -325,7 +325,7 @@ def map_card(c: dict) -> dict | None:
                 paid(
                     "pad-factory-advance",
                     "[click]: Place 1 advancement token on a card; cannot score it until your next turn begins",
-                    do("pad_factory_place_advancement_cannot_score_until_next_turn"),
+                    do("place_advancement_cannot_score_until_next_turn"),
                     clicks=1,
                     windows=["corp_action_paw"],
                 )

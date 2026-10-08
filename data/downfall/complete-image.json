@@ -19,7 +19,7 @@
   "onPlay": {
     "op": "do",
     "action": {
-      "kind": "complete_image_name_net_damage_loop"
+      "kind": "name_net_damage_loop"
     }
   }
 }

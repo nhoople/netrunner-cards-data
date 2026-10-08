@@ -19,7 +19,7 @@
       "effect": {
         "op": "do",
         "action": {
-          "kind": "bandwidth_give_tag_remove_if_successful"
+          "kind": "give_tag_remove_if_successful"
         }
       }
     }

@@ -11,7 +11,7 @@
   "onInstall": {
     "op": "do",
     "action": {
-      "kind": "bug_out_bag_choose_x_and_load_power"
+      "kind": "choose_x_and_load_power"
     }
   },
   "onTurnEndIfGripEmptyDrawPerPowerThenTrash": true,

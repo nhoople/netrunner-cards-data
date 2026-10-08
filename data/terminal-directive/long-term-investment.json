@@ -32,7 +32,7 @@
       "effect": {
         "op": "do",
         "action": {
-          "kind": "long_term_investment_take_any_hosted_credits"
+          "kind": "take_any_hosted_credits"
         }
       }
     }

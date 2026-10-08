@@ -117,7 +117,7 @@ def map_card(c: dict) -> dict | None:
                     "creditCost": 0,
                     "cost": {"clicks": 1},
                     "windows": ["runner_action_paw"],
-                    "effect": do("capstone_trash_grip_draw_for_installed_dupes"),
+                    "effect": do("trash_grip_draw_for_installed_dupes"),
                 }
             ],
         )
@@ -136,7 +136,7 @@ def map_card(c: dict) -> dict | None:
             c,
             powerCountersOnRez=3,
             trashWhenPowerCountersEmpty=True,
-            onTurnBegin=do("rex_campaign_turn_begin"),
+            onTurnBegin=do("turn_begin"),
             onPowerCountersEmpty=do("rex_campaign_when_empty"),
         )
 

@@ -22,7 +22,7 @@
       "effect": {
         "op": "do",
         "action": {
-          "kind": "sacrificial_clone_prevent_all_damage"
+          "kind": "prevent_all_damage"
         }
       }
     }

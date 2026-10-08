@@ -107,7 +107,7 @@ def map_card(c: dict) -> dict | None:
             runEvent={
                 "servers": "hq",
                 "skipBreach": True,
-                "onSuccessfulRun": do("fear_the_masses_reveal_copies_trash_rd"),
+                "onSuccessfulRun": do("reveal_copies_trash_rd"),
             },
         )
 
@@ -183,7 +183,7 @@ def map_card(c: dict) -> dict | None:
                 "pumpCredits": 1,
                 "pumpStrength": 1,
             },
-            onFullyBreak=do("ankusa_add_fully_broken_barrier_to_hq"),
+            onFullyBreak=do("add_fully_broken_barrier_to_hq"),
         )
 
     if cid == "rigged-results":
@@ -251,7 +251,7 @@ def map_card(c: dict) -> dict | None:
                 "threshold": 6,
             },
             rezAdditionalCostForfeitAgenda=True,
-            onTurnBegin=do("ibrahim_salem_name_type_trash_from_grip"),
+            onTurnBegin=do("name_type_trash_from_grip"),
         )
 
     if cid == "navi-mumbai-city-grid":
@@ -282,7 +282,7 @@ def map_card(c: dict) -> dict | None:
     if cid == "election-day":
         return base(
             c,
-            onPlay=do("election_day_trash_hq_draw", amount=5),
+            onPlay=do("trash_hq_draw", amount=5),
         )
 
     if cid == "subcontract":
@@ -290,7 +290,7 @@ def map_card(c: dict) -> dict | None:
             c,
             subtypes=["gray ops"],
             playRequiresTagged=True,
-            onPlay=do("subcontract_play_ops_from_hq", max=2),
+            onPlay=do("play_ops_from_hq", max=2),
         )
 
     if cid == "merger":

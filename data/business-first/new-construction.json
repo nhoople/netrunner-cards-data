@@ -22,7 +22,7 @@
         "effect": {
           "op": "do",
           "action": {
-            "kind": "new_construction_install_from_hq_new_remote"
+            "kind": "install_from_hq_new_remote"
           }
         }
       },

@@ -34,7 +34,7 @@
       "effect": {
         "op": "do",
         "action": {
-          "kind": "fawkes_spend_x_pump"
+          "kind": "spend_x_pump"
         }
       },
       "usableByRunnerOnSelfIce": true

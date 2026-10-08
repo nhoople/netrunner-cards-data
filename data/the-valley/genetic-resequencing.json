@@ -21,7 +21,7 @@
         "effect": {
           "op": "do",
           "action": {
-            "kind": "genetic_resequencing_place_agenda_counter"
+            "kind": "place_agenda_counter"
           }
         }
       },

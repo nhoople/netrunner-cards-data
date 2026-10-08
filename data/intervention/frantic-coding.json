@@ -10,7 +10,7 @@
   "onPlay": {
     "op": "do",
     "action": {
-      "kind": "frantic_coding_look_top_install",
+      "kind": "look_top_install",
       "n": 10,
       "discount": 5
     }

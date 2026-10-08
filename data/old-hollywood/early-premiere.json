@@ -19,7 +19,7 @@
         "effect": {
           "op": "do",
           "action": {
-            "kind": "early_premiere_pay_place_advancement"
+            "kind": "pay_place_advancement"
           }
         }
       },

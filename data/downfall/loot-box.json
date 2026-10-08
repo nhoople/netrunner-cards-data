@@ -45,7 +45,7 @@
       "effect": {
         "op": "do",
         "action": {
-          "kind": "loot_box_reveal_top_n",
+          "kind": "reveal_top_n",
           "n": 3
         }
       }

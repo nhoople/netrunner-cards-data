@@ -17,7 +17,7 @@
   "onAccess": {
     "op": "do",
     "action": {
-      "kind": "toshiyuki_sakai_swap_with_hq"
+      "kind": "swap_with_hq"
     }
   },
   "onAccessRequiresInstalled": true,

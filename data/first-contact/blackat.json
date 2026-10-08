@@ -38,7 +38,7 @@
       "effect": {
         "op": "do",
         "action": {
-          "kind": "blackat_break_barrier"
+          "kind": "break_barrier"
         }
       }
     },

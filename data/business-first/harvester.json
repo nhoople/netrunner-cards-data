@@ -19,7 +19,7 @@
       "effect": {
         "op": "do",
         "action": {
-          "kind": "harvester_draw_then_discard_down_to_hand_size",
+          "kind": "draw_then_discard_down_to_hand_size",
           "drawAmount": 3
         }
       }
@@ -30,7 +30,7 @@
       "effect": {
         "op": "do",
         "action": {
-          "kind": "harvester_draw_then_discard_down_to_hand_size",
+          "kind": "draw_then_discard_down_to_hand_size",
           "drawAmount": 3
         }
       }

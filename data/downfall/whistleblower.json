@@ -15,7 +15,7 @@
   "onSuccessfulRun": {
     "op": "do",
     "action": {
-      "kind": "whistleblower_may_trash_name_agenda_steal_ignore_costs"
+      "kind": "may_trash_name_agenda_steal_ignore_costs"
     }
   }
 }

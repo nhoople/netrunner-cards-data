@@ -28,7 +28,7 @@
       "effect": {
         "op": "do",
         "action": {
-          "kind": "alexa_belsky_shuffle_hq"
+          "kind": "shuffle_hq"
         }
       }
     }

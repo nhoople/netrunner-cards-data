@@ -14,7 +14,7 @@
   "onPlay": {
     "op": "do",
     "action": {
-      "kind": "planned_assault_play_run_event_from_stack"
+      "kind": "play_run_event_from_stack"
     }
   },
   "wave": "honor-and-profit"

@@ -10,7 +10,7 @@
   "onPlay": {
     "op": "do",
     "action": {
-      "kind": "ark_lockdown_name_and_rfg_heap_copies"
+      "kind": "name_and_rfg_heap_copies"
     }
   },
   "wave": "escalation"

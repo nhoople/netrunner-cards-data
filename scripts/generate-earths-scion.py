@@ -154,7 +154,7 @@ def map_card(c: dict) -> dict | None:
             pump_strength=1,
         )
         card["onPassRezzedIce"] = do(
-            "persephone_may_trash_stack_top_then_trash_rd_per_resolved"
+            "may_trash_stack_top_then_trash_rd_per_resolved"
         )
         return card
 
@@ -166,7 +166,7 @@ def map_card(c: dict) -> dict | None:
                 paid(
                     "rubicon-switch-derez",
                     "Once per turn → [click], X¢: Derez 1 ice with printed rez cost X rezzed this turn",
-                    do("rubicon_switch_derez_rezzed_this_turn"),
+                    do("derez_rezzed_this_turn"),
                     clicks=1,
                     once_per_turn=True,
                     usable_by_runner=True,
@@ -309,7 +309,7 @@ def map_card(c: dict) -> dict | None:
                 paid(
                     "bamboo-dome-arrange",
                     "[click]: Reveal top 3 of R&D; secretly add 1 to HQ; return others to top in any order",
-                    do("bamboo_dome_reveal_top_3"),
+                    do("reveal_top_3"),
                     clicks=1,
                 ),
             ],
@@ -376,7 +376,7 @@ def map_card(c: dict) -> dict | None:
         return base(
             c,
             playRequiresOtherCardsInHq=2,
-            onPlay=do("audacity_trash_hq_place_total_2_advancements"),
+            onPlay=do("trash_hq_place_total_2_advancements"),
         )
 
     if cid == "red-planet-couriers":
@@ -384,7 +384,7 @@ def map_card(c: dict) -> dict | None:
             c,
             subtypes=["triple"],
             playAdditionalClicks=2,
-            onPlay=do("red_planet_couriers_move_all_advancements"),
+            onPlay=do("move_all_advancements"),
         )
 
     if cid == "owl":

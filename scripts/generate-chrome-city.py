@@ -142,7 +142,7 @@ def map_card(c: dict) -> dict | None:
             maxConsole=1,
             muBonus=1,
             onStealAgenda=may(
-                do("turntable_swap_stolen_with_corp_scored"),
+                do("swap_stolen_with_corp_scored"),
                 label="Swap stolen agenda with one in Corp score area",
                 decline_side="runner",
             ),

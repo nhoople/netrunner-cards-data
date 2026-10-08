@@ -25,7 +25,7 @@
         {
           "op": "do",
           "action": {
-            "kind": "khusyuk_choose_install_cost_set_aside_access_shuffle"
+            "kind": "choose_install_cost_set_aside_access_shuffle"
           }
         }
       ]
