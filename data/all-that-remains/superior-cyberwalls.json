@@ -18,9 +18,15 @@
   "onScore": {
     "op": "do",
     "action": {
-      "kind": "gain_credits_per_rezzed_subtype",
-      "subtype": "barrier",
-      "per": 1
+      "kind": "gain_credits",
+      "side": "corp",
+      "amount": 0,
+      "tally": {
+        "count": "rezzed_ice_subtype",
+        "per": 1,
+        "side": "corp",
+        "subtype": "barrier"
+      }
     }
   },
   "wave": "all-that-remains"

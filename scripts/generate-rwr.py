@@ -260,8 +260,14 @@ def map_card(c: dict) -> dict:
                     "effect": {
                         "op": "do",
                         "action": {
-                            "kind": "gain_credits_per_runner_tags",
-                            "per": 1,
+                            "kind": "gain_credits",
+                            "side": "corp",
+                            "amount": 0,
+                            "tally": {
+                                "count": "runner_tags",
+                                "per": 1,
+                                "side": "corp",
+                            },
                         },
                     },
                 },

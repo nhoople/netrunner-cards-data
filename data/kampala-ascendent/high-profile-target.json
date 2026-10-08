@@ -14,7 +14,7 @@
   "onPlay": {
     "op": "do",
     "action": {
-      "kind": "ka_meat_damage_per_tag",
+      "kind": "meat_damage_per_tag",
       "amountPerTag": 2
     }
   },

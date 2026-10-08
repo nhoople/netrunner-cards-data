@@ -372,28 +372,22 @@ def map_card(c: dict) -> dict:
                 {
                     "id": "pulse-etr",
                     "text": "End the run unless the Runner spends [click].",
-                    "effect": choose(
-                        "runner",
-                        [
-                            {
-                                "id": "spend-click",
-                                "label": "Spend [click]",
-                                "effect": {
-                                    "op": "do",
-                                    "action": {
-                                        "kind": "lose_clicks",
-                                        "side": "runner",
-                                        "amount": 1,
-                                    },
+                    "effect": {
+                        "op": "do",
+                        "action": {
+                            "kind": "unless",
+                            "payer": "runner",
+                            "cost": {
+                                "op": "do",
+                                "action": {
+                                    "kind": "lose_clicks",
+                                    "side": "runner",
+                                    "amount": 1,
                                 },
                             },
-                            {
-                                "id": "etr",
-                                "label": "End the run",
-                                "effect": etr(),
-                            },
-                        ],
-                    ),
+                            "instruction": etr(),
+                        },
+                    },
                 },
             ],
             unsupported=[],
@@ -558,7 +552,7 @@ def map_card(c: dict) -> dict:
                             trash_self(),
                             {
                                 "op": "do",
-                                "action": {"kind": "search_rd_operation_to_hq"},
+                                "action": {"kind": "search_rd_type_to_hq", "cardType": "operation"},
                             },
                         ),
                     },

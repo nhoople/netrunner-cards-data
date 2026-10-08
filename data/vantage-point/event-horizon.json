@@ -41,65 +41,51 @@
       "id": "event-horizon-trash-prog",
       "text": "Trash 1 installed program unless the Runner pays 3[credit].",
       "effect": {
-        "op": "choose",
-        "chooser": "runner",
-        "options": [
-          {
-            "id": "pay3",
-            "label": "Pay 3¢",
-            "effect": {
-              "op": "do",
-              "action": {
-                "kind": "lose_credits",
-                "side": "runner",
-                "amount": 3
-              }
+        "op": "do",
+        "action": {
+          "kind": "unless",
+          "payer": "runner",
+          "cost": {
+            "op": "do",
+            "action": {
+              "kind": "lose_credits",
+              "side": "runner",
+              "amount": 3
             }
           },
-          {
-            "id": "trash",
-            "label": "Trash 1 installed program",
-            "effect": {
-              "op": "do",
-              "action": {
-                "kind": "trash_program",
-                "pick": "choose"
-              }
+          "instruction": {
+            "op": "do",
+            "action": {
+              "kind": "trash_program",
+              "pick": "choose"
             }
           }
-        ]
+        }
       }
     },
     {
       "id": "event-horizon-etr",
       "text": "End the run unless the Runner pays 3[credit].",
       "effect": {
-        "op": "choose",
-        "chooser": "runner",
-        "options": [
-          {
-            "id": "pay3",
-            "label": "Pay 3¢",
-            "effect": {
-              "op": "do",
-              "action": {
-                "kind": "lose_credits",
-                "side": "runner",
-                "amount": 3
-              }
+        "op": "do",
+        "action": {
+          "kind": "unless",
+          "payer": "runner",
+          "cost": {
+            "op": "do",
+            "action": {
+              "kind": "lose_credits",
+              "side": "runner",
+              "amount": 3
             }
           },
-          {
-            "id": "etr",
-            "label": "End the run",
-            "effect": {
-              "op": "do",
-              "action": {
-                "kind": "end_the_run"
-              }
+          "instruction": {
+            "op": "do",
+            "action": {
+              "kind": "end_the_run"
             }
           }
-        ]
+        }
       }
     }
   ]

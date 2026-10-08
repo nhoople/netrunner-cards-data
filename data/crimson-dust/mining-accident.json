@@ -14,9 +14,22 @@
       {
         "op": "do",
         "action": {
-          "kind": "give_bad_publicity_unless_corp_pays",
-          "amount": 1,
-          "credits": 5
+          "kind": "unless",
+          "payer": "corp",
+          "cost": {
+            "op": "do",
+            "action": {
+              "kind": "cd_corp_pay_credits",
+              "amount": 5
+            }
+          },
+          "instruction": {
+            "op": "do",
+            "action": {
+              "kind": "give_bad_publicity",
+              "amount": 1
+            }
+          }
         }
       },
       {

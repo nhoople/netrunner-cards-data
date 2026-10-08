@@ -22,7 +22,7 @@
   "paidAbilities": [
     {
       "id": "gorman-cash",
-      "label": "[click], [trash]: Gain 1¢ per virus counter",
+      "label": "[click], [trash]: Gain 1\u00a2 per virus counter",
       "clickCost": 1,
       "creditCost": 0,
       "cost": {
@@ -35,8 +35,14 @@
       "effect": {
         "op": "do",
         "action": {
-          "kind": "gain_credits_per_virus",
-          "per": 1
+          "kind": "gain_credits",
+          "side": "runner",
+          "amount": 0,
+          "tally": {
+            "count": "source_virus_counters",
+            "per": 1,
+            "side": "source"
+          }
         }
       }
     }

@@ -285,7 +285,12 @@ def map_card(c: dict) -> dict | None:
                 paid(
                     "escalate-vitriol-gain",
                     "Once per turn → [click]: Gain 1¢ for each tag the Runner has",
-                    do("gain_credits_per_runner_tags", per=1),
+                    do(
+                        "gain_credits",
+                        side="corp",
+                        amount=0,
+                        tally={"count": "runner_tags", "per": 1, "side": "corp"},
+                    ),
                     clicks=1,
                     once_per_turn=True,
                 ),
@@ -349,7 +354,16 @@ def map_card(c: dict) -> dict | None:
         return base(
             c,
             subtypes=["transaction"],
-            onPlay=do("gain_credits_per_card_with_advancement_tokens", per=2),
+            onPlay=do(
+                "gain_credits",
+                side="corp",
+                amount=0,
+                tally={
+                    "count": "installed_corp_advanced",
+                    "per": 2,
+                    "side": "corp",
+                },
+            ),
         )
 
     card = base(c)

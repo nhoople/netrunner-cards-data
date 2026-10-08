@@ -22,8 +22,22 @@
       "effect": {
         "op": "do",
         "action": {
-          "kind": "end_the_run_unless_runner_spends_clicks",
-          "amount": 3
+          "kind": "unless",
+          "payer": "runner",
+          "cost": {
+            "op": "do",
+            "action": {
+              "kind": "lose_clicks",
+              "side": "runner",
+              "amount": 3
+            }
+          },
+          "instruction": {
+            "op": "do",
+            "action": {
+              "kind": "end_the_run"
+            }
+          }
         }
       }
     }

@@ -23,9 +23,22 @@
       "effect": {
         "op": "do",
         "action": {
-          "kind": "end_the_run_unless_pay_credits",
-          "side": "runner",
-          "amount": 4
+          "kind": "unless",
+          "payer": "runner",
+          "cost": {
+            "op": "do",
+            "action": {
+              "kind": "lose_credits",
+              "side": "runner",
+              "amount": 4
+            }
+          },
+          "instruction": {
+            "op": "do",
+            "action": {
+              "kind": "end_the_run"
+            }
+          }
         }
       }
     },
@@ -35,9 +48,22 @@
       "effect": {
         "op": "do",
         "action": {
-          "kind": "end_the_run_unless_pay_credits",
-          "side": "runner",
-          "amount": 4
+          "kind": "unless",
+          "payer": "runner",
+          "cost": {
+            "op": "do",
+            "action": {
+              "kind": "lose_credits",
+              "side": "runner",
+              "amount": 4
+            }
+          },
+          "instruction": {
+            "op": "do",
+            "action": {
+              "kind": "end_the_run"
+            }
+          }
         }
       }
     },
@@ -57,8 +83,21 @@
       "effect": {
         "op": "do",
         "action": {
-          "kind": "end_the_run_unless_core_damage",
-          "amount": 1
+          "kind": "unless",
+          "payer": "runner",
+          "cost": {
+            "op": "do",
+            "action": {
+              "kind": "core_damage",
+              "amount": 1
+            }
+          },
+          "instruction": {
+            "op": "do",
+            "action": {
+              "kind": "end_the_run"
+            }
+          }
         }
       }
     }

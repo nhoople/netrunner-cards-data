@@ -14,7 +14,7 @@
   "paidAbilities": [
     {
       "id": "escalate-vitriol-gain",
-      "label": "Once per turn → [click]: Gain 1¢ for each tag the Runner has",
+      "label": "Once per turn \u2192 [click]: Gain 1\u00a2 for each tag the Runner has",
       "clickCost": 1,
       "creditCost": 0,
       "cost": {
@@ -26,8 +26,14 @@
       "effect": {
         "op": "do",
         "action": {
-          "kind": "gain_credits_per_runner_tags",
-          "per": 1
+          "kind": "gain_credits",
+          "side": "corp",
+          "amount": 0,
+          "tally": {
+            "count": "runner_tags",
+            "per": 1,
+            "side": "corp"
+          }
         }
       },
       "oncePerTurn": true

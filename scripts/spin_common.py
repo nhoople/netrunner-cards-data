@@ -48,6 +48,11 @@ def etr():
     return do("end_the_run")
 
 
+def nested_unless(payer: str, cost: dict, instruction: dict):
+    """[instruction] unless [payer] [cost] (CR 1.16.11b)."""
+    return do("unless", payer=payer, cost=cost, instruction=instruction)
+
+
 def net(n: int):
     return do("net_damage", amount=n)
 

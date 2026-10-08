@@ -10,7 +10,14 @@
   "onPlay": {
     "op": "do",
     "action": {
-      "kind": "gain_credits_per_runner_grip_size"
+      "kind": "gain_credits",
+      "side": "runner",
+      "amount": 0,
+      "tally": {
+        "count": "runner_grip",
+        "per": 1,
+        "side": "runner"
+      }
     }
   },
   "wave": "true-colors"

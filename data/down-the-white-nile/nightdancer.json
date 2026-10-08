@@ -30,7 +30,7 @@
           {
             "op": "do",
             "action": {
-              "kind": "dtwn_corp_additional_click_next_turn"
+              "kind": "corp_additional_click_next_turn"
             }
           }
         ]
@@ -53,7 +53,7 @@
           {
             "op": "do",
             "action": {
-              "kind": "dtwn_corp_additional_click_next_turn"
+              "kind": "corp_additional_click_next_turn"
             }
           }
         ]

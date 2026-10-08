@@ -25,7 +25,7 @@
       "effect": {
         "op": "do",
         "action": {
-          "kind": "cotc_break_last_subroutine"
+          "kind": "break_last_subroutine"
         }
       },
       "usableByRunnerOnSelfIce": true

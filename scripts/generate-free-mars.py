@@ -148,7 +148,12 @@ def map_card(c: dict) -> dict | None:
             playRequiresFirstClick=True,
             onPlay=seq(
                 do("draw_per_installed_clan_resource", per=1),
-                do("gain_credits_per_runner_tags", per=1),
+                do(
+                    "gain_credits",
+                    side="corp",
+                    amount=0,
+                    tally={"count": "runner_tags", "per": 1, "side": "corp"},
+                ),
             ),
         )
 

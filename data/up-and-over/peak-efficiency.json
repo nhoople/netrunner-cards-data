@@ -10,8 +10,14 @@
   "onPlay": {
     "op": "do",
     "action": {
-      "kind": "gain_credits_per_rezzed_ice",
-      "per": 1
+      "kind": "gain_credits",
+      "side": "corp",
+      "amount": 0,
+      "tally": {
+        "count": "rezzed_ice",
+        "per": 1,
+        "side": "corp"
+      }
     }
   },
   "wave": "up-and-over"

@@ -33,7 +33,7 @@
       "effect": {
         "op": "do",
         "action": {
-          "kind": "mo_install_ice_hq_or_archives_any_position_ignore_costs"
+          "kind": "install_ice_hq_or_archives_any_position_ignore_costs"
         }
       }
     }

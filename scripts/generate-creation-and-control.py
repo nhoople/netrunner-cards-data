@@ -253,7 +253,16 @@ def map_card(c: dict) -> dict | None:
                     "creditCost": 0,
                     "cost": {"clicks": 1, "trashSelf": True},
                     "windows": ["corp_action_paw"],
-                    "effect": do("gain_credits_per_power_counter", per=2),
+                    "effect": do(
+                        "gain_credits",
+                        side="corp",
+                        amount=0,
+                        tally={
+                            "count": "source_power_counters",
+                            "per": 2,
+                            "side": "source",
+                        },
+                    ),
                 }
             ],
             unsupported=[],
@@ -303,7 +312,16 @@ def map_card(c: dict) -> dict | None:
                     "creditCost": 0,
                     "cost": {"trashSelf": True},
                     "windows": ["corp_action_paw"],
-                    "effect": do("gain_credits_per_advancement", per=2),
+                    "effect": do(
+                        "gain_credits",
+                        side="corp",
+                        amount=0,
+                        tally={
+                            "count": "source_advancement_tokens",
+                            "per": 2,
+                            "side": "source",
+                        },
+                    ),
                 }
             ],
             unsupported=[],
@@ -320,7 +338,7 @@ def map_card(c: dict) -> dict | None:
                     "creditCost": 1,
                     "cost": {"clicks": 1, "credits": 1},
                     "windows": ["corp_action_paw"],
-                    "effect": do("search_rd_ice_to_hq"),
+                    "effect": do("search_rd_type_to_hq", cardType="ice"),
                 }
             ],
             unsupported=[],

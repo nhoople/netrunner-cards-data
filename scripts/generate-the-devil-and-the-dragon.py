@@ -22,6 +22,7 @@ from spin_common import (
     do,
     draw,
     etr,
+    nested_unless,
     gain,
     seq,
     slugify,
@@ -189,7 +190,16 @@ def map_card(c: dict) -> dict | None:
                     "consume-cash",
                     "[click]: Gain 2¢ for each hosted virus counter, then remove all virus counters",
                     seq(
-                        do("gain_credits_per_virus", per=2),
+                        do(
+                            "gain_credits",
+                            side="runner",
+                            amount=0,
+                            tally={
+                                "count": "source_virus_counters",
+                                "per": 2,
+                                "side": "source",
+                            },
+                        ),
                         do("remove_virus_counters", amount=99),
                     ),
                     clicks=1,
@@ -293,10 +303,10 @@ def map_card(c: dict) -> dict | None:
                 {
                     "id": f"endless-eula-{i}",
                     "text": "End the run unless the Runner pays 1¢.",
-                    "effect": do(
-                        "end_the_run_unless_pay_credits",
-                        side="runner",
-                        amount=1,
+                    "effect": nested_unless(
+                        "runner",
+                        do("lose_credits", side="runner", amount=1),
+                        etr(),
                     ),
                 }
                 for i in range(1, 7)

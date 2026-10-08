@@ -206,30 +206,23 @@ def map_card(c: dict) -> dict:
 
     if cid == "gold-farmer":
         etr_unless_3 = {
-            "op": "choose",
-            "chooser": "runner",
-            "options": [
-                {
-                    "id": "pay3",
-                    "label": "Pay 3¢",
-                    "effect": {
-                        "op": "do",
-                        "action": {
-                            "kind": "lose_credits",
-                            "side": "runner",
-                            "amount": 3,
-                        },
+            "op": "do",
+            "action": {
+                "kind": "unless",
+                "payer": "runner",
+                "cost": {
+                    "op": "do",
+                    "action": {
+                        "kind": "lose_credits",
+                        "side": "runner",
+                        "amount": 3,
                     },
                 },
-                {
-                    "id": "etr",
-                    "label": "End the run",
-                    "effect": {
-                        "op": "do",
-                        "action": {"kind": "end_the_run"},
-                    },
+                "instruction": {
+                    "op": "do",
+                    "action": {"kind": "end_the_run"},
                 },
-            ],
+            },
         }
         return base(
             c,
@@ -1807,7 +1800,7 @@ def map_card(c: dict) -> dict:
                 "effects": [
                     {
                         "op": "do",
-                        "action": {"kind": "search_rd_agenda_to_hq"},
+                        "action": {"kind": "search_rd_type_to_hq", "cardType": "agenda"},
                     },
                     {
                         "op": "do",

@@ -61,7 +61,12 @@ def map_card(c: dict) -> dict | None:
         )
 
     if cid == "peak-efficiency":
-        return base(c, onPlay=do("gain_credits_per_rezzed_ice", per=1))
+        return base(c, onPlay=do(
+            "gain_credits",
+            side="corp",
+            amount=0,
+            tally={"count": "rezzed_ice", "per": 1, "side": "corp"},
+        ))
 
     if cid == "labyrinthine-servers":
         return base(

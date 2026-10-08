@@ -19,15 +19,21 @@
     "options": [
       {
         "id": "detonate",
-        "label": "Trash: gain 3¢ and Runner loses 2¢ per advancement",
+        "label": "Trash: gain 3\u00a2 and Runner loses 2\u00a2 per advancement",
         "effect": {
           "op": "seq",
           "effects": [
             {
               "op": "do",
               "action": {
-                "kind": "gain_credits_per_advancement",
-                "per": 3
+                "kind": "gain_credits",
+                "side": "corp",
+                "amount": 0,
+                "tally": {
+                  "count": "source_advancement_tokens",
+                  "per": 3,
+                  "side": "source"
+                }
               }
             },
             {

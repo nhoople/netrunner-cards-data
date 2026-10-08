@@ -116,7 +116,17 @@ def map_card(c: dict) -> dict | None:
             c,
             subtypes=["security"],
             whileScoredIceSubtypeStrengthBonus={"subtype": "barrier", "bonus": 1},
-            onScore=do("gain_credits_per_rezzed_subtype", subtype="barrier", per=1),
+            onScore=do(
+                "gain_credits",
+                side="corp",
+                amount=0,
+                tally={
+                    "count": "rezzed_ice_subtype",
+                    "per": 1,
+                    "side": "corp",
+                    "subtype": "barrier",
+                },
+            ),
         )
 
     if cid == "executive-boot-camp":
@@ -131,7 +141,11 @@ def map_card(c: dict) -> dict | None:
                     "creditCost": 1,
                     "cost": {"credits": 1, "trashSelf": True},
                     "windows": ["corp_action_paw"],
-                    "effect": do("search_rd_asset_to_hq"),
+                    "effect": do(
+                        "search_rd_type_to_hq",
+                        cardType="asset",
+                        shuffleIfNone=True,
+                    ),
                 }
             ],
         )

@@ -22,7 +22,7 @@
   "paidAbilities": [
     {
       "id": "nasx-cash-out",
-      "label": "[click], [trash]: Gain 2¢ for each power counter on NASX",
+      "label": "[click], [trash]: Gain 2\u00a2 for each power counter on NASX",
       "clickCost": 1,
       "creditCost": 0,
       "cost": {
@@ -35,8 +35,14 @@
       "effect": {
         "op": "do",
         "action": {
-          "kind": "gain_credits_per_power_counter",
-          "per": 2
+          "kind": "gain_credits",
+          "side": "corp",
+          "amount": 0,
+          "tally": {
+            "count": "source_power_counters",
+            "per": 2,
+            "side": "source"
+          }
         }
       }
     }

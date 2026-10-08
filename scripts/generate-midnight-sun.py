@@ -934,7 +934,16 @@ def map_card(c: dict) -> dict:
             canAdvance=True,
             onTurnBegin={
                 "op": "do",
-                "action": {"kind": "gain_credits_per_advancement", "per": 1},
+                "action": {
+                    "kind": "gain_credits",
+                    "side": "corp",
+                    "amount": 0,
+                    "tally": {
+                        "count": "source_advancement_tokens",
+                        "per": 1,
+                        "side": "source",
+                    },
+                },
             },
             unsupported=[],
         )

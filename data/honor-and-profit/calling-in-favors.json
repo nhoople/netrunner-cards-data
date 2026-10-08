@@ -10,8 +10,15 @@
   "onPlay": {
     "op": "do",
     "action": {
-      "kind": "gain_credits_per_installed_subtype",
-      "subtype": "connection"
+      "kind": "gain_credits",
+      "side": "runner",
+      "amount": 0,
+      "tally": {
+        "count": "installed_resource_subtype",
+        "per": 1,
+        "side": "runner",
+        "subtype": "connection"
+      }
     }
   },
   "wave": "honor-and-profit"

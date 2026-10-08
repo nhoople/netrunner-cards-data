@@ -16,7 +16,7 @@
   "onAccess": {
     "op": "do",
     "action": {
-      "kind": "ka_give_tags_per_two_advancements"
+      "kind": "give_tags_per_two_advancements"
     }
   },
   "paidAbilities": [

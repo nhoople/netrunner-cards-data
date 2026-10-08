@@ -183,7 +183,12 @@ def map_card(c: dict) -> dict | None:
         )
 
     if cid == "sweeps-week":
-        return base(c, onPlay=do("gain_credits_per_runner_grip_size"))
+        return base(c, onPlay=do(
+                "gain_credits",
+                side="runner",
+                amount=0,
+                tally={"count": "runner_grip", "per": 1, "side": "runner"},
+            ))
 
     if cid == "rsvp":
         return base(

@@ -20,6 +20,7 @@ from spin_common import (
     do,
     draw,
     etr,
+    nested_unless,
     gain,
     seq,
     slugify,
@@ -154,7 +155,11 @@ def map_card(c: dict) -> dict | None:
             c,
             playRequiresSuccessfulCentralRunThisTurn=True,
             onPlay=seq(
-                do("give_bad_publicity_unless_corp_pays", amount=1, credits=5),
+                nested_unless(
+                    "corp",
+                    do("cd_corp_pay_credits", amount=5),
+                    do("give_bad_publicity", amount=1),
+                ),
                 do("rfg_self"),
             ),
         )
@@ -268,9 +273,15 @@ def map_card(c: dict) -> dict | None:
         return base(
             c,
             onScore=do(
-                "gain_credits_per_rezzed_subtype",
-                subtype="bioroid",
-                per=2,
+                "gain_credits",
+                side="corp",
+                amount=0,
+                tally={
+                    "count": "rezzed_ice_subtype",
+                    "per": 2,
+                    "side": "corp",
+                    "subtype": "bioroid",
+                },
             ),
         )
 

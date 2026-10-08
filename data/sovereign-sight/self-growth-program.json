@@ -14,7 +14,7 @@
   "onPlay": {
     "op": "do",
     "action": {
-      "kind": "ss_add_n_installed_runner_to_grip",
+      "kind": "add_n_installed_runner_to_grip",
       "amount": 2
     }
   },

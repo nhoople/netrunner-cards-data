@@ -47,8 +47,14 @@
       {
         "op": "do",
         "action": {
-          "kind": "gain_credits_per_bad_publicity",
-          "per": 3
+          "kind": "gain_credits",
+          "side": "corp",
+          "amount": 0,
+          "tally": {
+            "count": "bad_publicity",
+            "per": 3,
+            "side": "corp"
+          }
         }
       }
     ]

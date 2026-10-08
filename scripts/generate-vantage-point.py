@@ -205,27 +205,20 @@ def map_card(c: dict) -> dict:
 
     if cid == "paywall":
         etr_unless_pay1 = {
-            "op": "choose",
-            "chooser": "runner",
-            "options": [
-                {
-                    "id": "pay1",
-                    "label": "Pay 1¢",
-                    "effect": {
-                        "op": "do",
-                        "action": {
-                            "kind": "lose_credits",
-                            "side": "runner",
-                            "amount": 1,
-                        },
+            "op": "do",
+            "action": {
+                "kind": "unless",
+                "payer": "runner",
+                "cost": {
+                    "op": "do",
+                    "action": {
+                        "kind": "lose_credits",
+                        "side": "runner",
+                        "amount": 1,
                     },
                 },
-                {
-                    "id": "etr",
-                    "label": "End the run",
-                    "effect": etr(),
-                },
-            ],
+                "instruction": etr(),
+            },
         }
         return base(
             c,
@@ -289,27 +282,20 @@ def map_card(c: dict) -> dict:
     if cid == "lionsmane":
         net2 = net(2)
         net2_unless_pay3 = {
-            "op": "choose",
-            "chooser": "runner",
-            "options": [
-                {
-                    "id": "pay",
-                    "label": "Pay 3¢",
-                    "effect": {
-                        "op": "do",
-                        "action": {
-                            "kind": "lose_credits",
-                            "side": "runner",
-                            "amount": 3,
-                        },
+            "op": "do",
+            "action": {
+                "kind": "unless",
+                "payer": "runner",
+                "cost": {
+                    "op": "do",
+                    "action": {
+                        "kind": "lose_credits",
+                        "side": "runner",
+                        "amount": 3,
                     },
                 },
-                {
-                    "id": "net",
-                    "label": "Suffer 2 net damage",
-                    "effect": net2,
-                },
-            ],
+                "instruction": net2,
+            },
         }
         net2_unless_jack = {
             "op": "choose",
@@ -452,27 +438,20 @@ def map_card(c: dict) -> dict:
 
     if cid == "grubber":
         etr_unless_pay3 = {
-            "op": "choose",
-            "chooser": "runner",
-            "options": [
-                {
-                    "id": "pay3",
-                    "label": "Pay 3¢",
-                    "effect": {
-                        "op": "do",
-                        "action": {
-                            "kind": "lose_credits",
-                            "side": "runner",
-                            "amount": 3,
-                        },
+            "op": "do",
+            "action": {
+                "kind": "unless",
+                "payer": "runner",
+                "cost": {
+                    "op": "do",
+                    "action": {
+                        "kind": "lose_credits",
+                        "side": "runner",
+                        "amount": 3,
                     },
                 },
-                {
-                    "id": "etr",
-                    "label": "End the run",
-                    "effect": etr(),
-                },
-            ],
+                "instruction": etr(),
+            },
         }
         sub = {
             "id": "grubber-etr",
@@ -570,53 +549,39 @@ def map_card(c: dict) -> dict:
 
     if cid == "event-horizon":
         trash_prog_unless_pay3 = {
-            "op": "choose",
-            "chooser": "runner",
-            "options": [
-                {
-                    "id": "pay3",
-                    "label": "Pay 3¢",
-                    "effect": {
-                        "op": "do",
-                        "action": {
-                            "kind": "lose_credits",
-                            "side": "runner",
-                            "amount": 3,
-                        },
+            "op": "do",
+            "action": {
+                "kind": "unless",
+                "payer": "runner",
+                "cost": {
+                    "op": "do",
+                    "action": {
+                        "kind": "lose_credits",
+                        "side": "runner",
+                        "amount": 3,
                     },
                 },
-                {
-                    "id": "trash",
-                    "label": "Trash 1 installed program",
-                    "effect": {
-                        "op": "do",
-                        "action": {"kind": "trash_program", "pick": "choose"},
-                    },
+                "instruction": {
+                    "op": "do",
+                    "action": {"kind": "trash_program", "pick": "choose"},
                 },
-            ],
+            },
         }
         etr_unless_pay3 = {
-            "op": "choose",
-            "chooser": "runner",
-            "options": [
-                {
-                    "id": "pay3",
-                    "label": "Pay 3¢",
-                    "effect": {
-                        "op": "do",
-                        "action": {
-                            "kind": "lose_credits",
-                            "side": "runner",
-                            "amount": 3,
-                        },
+            "op": "do",
+            "action": {
+                "kind": "unless",
+                "payer": "runner",
+                "cost": {
+                    "op": "do",
+                    "action": {
+                        "kind": "lose_credits",
+                        "side": "runner",
+                        "amount": 3,
                     },
                 },
-                {
-                    "id": "etr",
-                    "label": "End the run",
-                    "effect": etr(),
-                },
-            ],
+                "instruction": etr(),
+            },
         }
         return base(
             c,

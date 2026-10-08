@@ -20,7 +20,7 @@
             {
               "op": "do",
               "action": {
-                "kind": "dtwn_gain_credits_equal_to_last_purged_viruses"
+                "kind": "gain_credits_equal_to_last_purged_viruses"
               }
             },
             {

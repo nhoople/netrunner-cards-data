@@ -39,8 +39,14 @@
       "effect": {
         "op": "do",
         "action": {
-          "kind": "gain_credits_per_virus",
-          "per": 2
+          "kind": "gain_credits",
+          "side": "runner",
+          "amount": 0,
+          "tally": {
+            "count": "source_virus_counters",
+            "per": 2,
+            "side": "source"
+          }
         }
       }
     }

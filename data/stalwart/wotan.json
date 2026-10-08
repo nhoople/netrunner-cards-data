@@ -22,8 +22,22 @@
       "effect": {
         "op": "do",
         "action": {
-          "kind": "end_the_run_unless_runner_spends_clicks",
-          "amount": 2
+          "kind": "unless",
+          "payer": "runner",
+          "cost": {
+            "op": "do",
+            "action": {
+              "kind": "lose_clicks",
+              "side": "runner",
+              "amount": 2
+            }
+          },
+          "instruction": {
+            "op": "do",
+            "action": {
+              "kind": "end_the_run"
+            }
+          }
         }
       }
     },
@@ -31,32 +45,25 @@
       "id": "wotan-pay",
       "text": "End the run unless the Runner pays 3[credit].",
       "effect": {
-        "op": "choose",
-        "chooser": "runner",
-        "options": [
-          {
-            "id": "pay",
-            "label": "Pay 3¢",
-            "effect": {
-              "op": "do",
-              "action": {
-                "kind": "lose_credits",
-                "side": "runner",
-                "amount": 3
-              }
+        "op": "do",
+        "action": {
+          "kind": "unless",
+          "payer": "runner",
+          "cost": {
+            "op": "do",
+            "action": {
+              "kind": "lose_credits",
+              "side": "runner",
+              "amount": 3
             }
           },
-          {
-            "id": "etr",
-            "label": "End the run",
-            "effect": {
-              "op": "do",
-              "action": {
-                "kind": "end_the_run"
-              }
+          "instruction": {
+            "op": "do",
+            "action": {
+              "kind": "end_the_run"
             }
           }
-        ]
+        }
       }
     },
     {
@@ -94,31 +101,24 @@
       "id": "wotan-core",
       "text": "End the run unless the Runner suffers 1 core damage.",
       "effect": {
-        "op": "choose",
-        "chooser": "runner",
-        "options": [
-          {
-            "id": "core",
-            "label": "Suffer 1 core damage",
-            "effect": {
-              "op": "do",
-              "action": {
-                "kind": "core_damage",
-                "amount": 1
-              }
+        "op": "do",
+        "action": {
+          "kind": "unless",
+          "payer": "runner",
+          "cost": {
+            "op": "do",
+            "action": {
+              "kind": "core_damage",
+              "amount": 1
             }
           },
-          {
-            "id": "etr",
-            "label": "End the run",
-            "effect": {
-              "op": "do",
-              "action": {
-                "kind": "end_the_run"
-              }
+          "instruction": {
+            "op": "do",
+            "action": {
+              "kind": "end_the_run"
             }
           }
-        ]
+        }
       }
     }
   ]

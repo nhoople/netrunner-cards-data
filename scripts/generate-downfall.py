@@ -833,30 +833,23 @@ def map_card(c: dict) -> dict:
                     "id": "loot-box-pay",
                     "text": "End the run unless the Runner pays 2[credit].",
                     "effect": {
-                        "op": "choose",
-                        "chooser": "runner",
-                        "options": [
-                            {
-                                "id": "pay2",
-                                "label": "Pay 2¢",
-                                "effect": {
-                                    "op": "do",
-                                    "action": {
-                                        "kind": "lose_credits",
-                                        "side": "runner",
-                                        "amount": 2,
-                                    },
+                        "op": "do",
+                        "action": {
+                            "kind": "unless",
+                            "payer": "runner",
+                            "cost": {
+                                "op": "do",
+                                "action": {
+                                    "kind": "lose_credits",
+                                    "side": "runner",
+                                    "amount": 2,
                                 },
                             },
-                            {
-                                "id": "etr",
-                                "label": "End the run",
-                                "effect": {
-                                    "op": "do",
-                                    "action": {"kind": "end_the_run"},
-                                },
+                            "instruction": {
+                                "op": "do",
+                                "action": {"kind": "end_the_run"},
                             },
-                        ],
+                        },
                     },
                 },
                 {

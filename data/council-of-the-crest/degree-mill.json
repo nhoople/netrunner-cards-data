@@ -14,7 +14,7 @@
   "stealAdditionalCost": {
     "op": "do",
     "action": {
-      "kind": "cotc_shuffle_n_installed_runner_into_stack",
+      "kind": "shuffle_n_installed_runner_into_stack",
       "amount": 2
     }
   },

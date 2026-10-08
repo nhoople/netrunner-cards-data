@@ -25,7 +25,7 @@
       "effect": {
         "op": "do",
         "action": {
-          "kind": "dtwn_break_first_subroutine"
+          "kind": "break_first_subroutine"
         }
       },
       "usableByRunnerOnSelfIce": true

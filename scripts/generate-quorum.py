@@ -370,7 +370,16 @@ def map_card(c: dict) -> dict | None:
                 paid(
                     "nasx-cash-out",
                     "[click], [trash]: Gain 2¢ for each power counter on NASX",
-                    do("gain_credits_per_power_counter", per=2),
+                    do(
+                        "gain_credits",
+                        side="corp",
+                        amount=0,
+                        tally={
+                            "count": "source_power_counters",
+                            "per": 2,
+                            "side": "source",
+                        },
+                    ),
                     clicks=1,
                     trash_self=True,
                     windows=["corp_action_paw"],
