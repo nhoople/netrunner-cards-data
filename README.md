@@ -1,6 +1,6 @@
 # Netrunner cards data
 
-These repositories stay separate and are consumed by release tag.
+Part of [nhoople/netrunner](https://github.com/nhoople/netrunner). These repositories stay separate and are consumed by release tag.
 
 Unofficial, machine-readable **card definitions** for Android: Netrunner, authored for the [nhoople/netrunner-engine](https://github.com/nhoople/netrunner-engine) rules library.
 
