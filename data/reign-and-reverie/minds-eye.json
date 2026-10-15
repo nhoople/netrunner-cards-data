@@ -11,49 +11,64 @@
     "console"
   ],
   "installCost": 3,
-  "unique": true,
-  "muBonus": 1,
-  "onSuccessfulRun": {
-    "op": "if",
-    "cond": {
-      "op": "attacking_rd"
-    },
-    "then": {
-      "op": "choose",
-      "chooser": "runner",
-      "options": [
-        {
-          "id": "place-power",
-          "label": "Place 1 power counter on Mind's Eye",
-          "effect": {
-            "op": "do",
-            "action": {
-              "kind": "add_power_counter",
-              "amount": 1
-            }
-          }
-        },
-        {
-          "id": "decline",
-          "label": "Decline",
-          "effect": {
-            "op": "do",
-            "action": {
-              "kind": "gain_credits",
-              "side": "runner",
-              "amount": 0
-            }
-          }
-        }
-      ]
-    }
-  },
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "muBonus",
+        "value": 1
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "successful_run",
+      "instructions": {
+        "op": "if",
+        "cond": {
+          "op": "attacking_rd"
+        },
+        "then": {
+          "op": "choose",
+          "chooser": "runner",
+          "options": [
+            {
+              "id": "place-power",
+              "label": "Place 1 power counter on Mind's Eye",
+              "effect": {
+                "op": "do",
+                "action": {
+                  "kind": "add_power_counter",
+                  "amount": 1
+                }
+              }
+            },
+            {
+              "id": "decline",
+              "label": "Decline",
+              "effect": {
+                "op": "do",
+                "action": {
+                  "kind": "gain_credits",
+                  "side": "runner",
+                  "amount": 0
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "class": "paid",
       "id": "minds-eye-breach-rd",
       "label": "[click], 3 hosted power counters: Breach R&D (cannot access root)",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1,
         "powerCounters": 3
@@ -61,7 +76,7 @@
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "breach_server_standalone",

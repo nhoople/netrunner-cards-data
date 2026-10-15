@@ -12,6 +12,14 @@
   "installCost": 1,
   "rezCost": 1,
   "trashCost": 3,
-  "iceProtectingThisServerAdditionalAdvancementTokens": 1,
-  "wave": "order-and-chaos"
+  "wave": "order-and-chaos",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "iceProtectingThisServerAdditionalAdvancementTokens",
+        "value": 1
+      }
+    }
+  ]
 }

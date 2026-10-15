@@ -10,19 +10,19 @@
     "connection"
   ],
   "installCost": 2,
-  "paidAbilities": [
+  "wave": "escalation",
+  "abilities": [
     {
+      "class": "paid",
       "id": "first-responders-draw",
       "label": "2¢: Draw 1 card (if suffered Corp damage this turn)",
-      "clickCost": 0,
-      "creditCost": 2,
       "cost": {
         "credits": 2
       },
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "draw",
@@ -33,6 +33,5 @@
       "usableByRunnerOnSelfIce": true,
       "requireSufferedCorpDamageThisTurn": true
     }
-  ],
-  "wave": "escalation"
+  ]
 }

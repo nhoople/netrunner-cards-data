@@ -9,7 +9,21 @@
   "subtypes": [
     "natural"
   ],
-  "link": 1,
-  "mayJackOutOnEncounterSentryOncePerTurn": true,
-  "wave": "democracy-and-dogma"
+  "wave": "democracy-and-dogma",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "link",
+        "value": 1
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "mayJackOutOnEncounterSentryOncePerTurn",
+        "value": true
+      }
+    }
+  ]
 }

@@ -10,5 +10,13 @@
   "subtypes": [
     "megacorp"
   ],
-  "cannotRunRemotesUntilCentralRunThisTurn": true
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "cannotRunRemotesUntilCentralRunThisTurn",
+        "value": true
+      }
+    }
+  ]
 }

@@ -13,33 +13,32 @@
   "installCost": 4,
   "rezCost": 4,
   "strength": 3,
-  "paidAbilities": [
+  "wave": "the-source",
+  "abilities": [
     {
+      "class": "paid",
       "id": "markus-break",
       "label": "Lose [click]: Break 1 subroutine on Markus 1.0",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1
       },
       "windows": [
         "encounter_paw"
       ],
-      "usableByRunnerOnSelfIce": true,
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "break_subroutine_on_self",
           "amount": 1
         }
-      }
-    }
-  ],
-  "subroutines": [
+      },
+      "usableByRunnerOnSelfIce": true
+    },
     {
+      "class": "subroutine",
       "id": "markus-trash",
       "text": "The Runner trashes 1 of their installed cards.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "runner_trashes_one_installed"
@@ -47,15 +46,15 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "markus-etr",
       "text": "End the run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "end_the_run"
         }
       }
     }
-  ],
-  "wave": "the-source"
+  ]
 }

@@ -11,6 +11,20 @@
   ],
   "installCost": 0,
   "memoryCost": 1,
-  "installOnIce": true,
-  "chargeOnFirstBreakDuringHostEncounter": true
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "installOnIce",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "chargeOnFirstBreakDuringHostEncounter",
+        "value": true
+      }
+    }
+  ]
 }

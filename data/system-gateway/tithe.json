@@ -12,11 +12,13 @@
     "sentry",
     "ap"
   ],
-  "subroutines": [
+  "unsupported": [],
+  "abilities": [
     {
+      "class": "subroutine",
       "id": "tithe-net",
       "text": "Do 1 net damage.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "net_damage",
@@ -25,9 +27,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "tithe-gain",
-      "text": "Gain 1\u00a2.",
-      "effect": {
+      "text": "Gain 1¢.",
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "gain_credits",
@@ -36,6 +39,5 @@
         }
       }
     }
-  ],
-  "unsupported": []
+  ]
 }

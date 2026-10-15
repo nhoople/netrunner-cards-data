@@ -12,15 +12,22 @@
   "installCost": 2,
   "rezCost": 2,
   "strength": 0,
-  "strengthBonusIfNoInstalledSubtype": {
-    "subtype": "fracter",
-    "bonus": 7
-  },
-  "subroutines": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "strengthBonusIfNoInstalledSubtype",
+        "value": {
+          "subtype": "fracter",
+          "bonus": 7
+        }
+      }
+    },
+    {
+      "class": "subroutine",
       "id": "wrap-etr",
       "text": "End the run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "end_the_run"

@@ -10,16 +10,39 @@
     "run"
   ],
   "playCost": 2,
-  "playRequiresAgendaStolenThisTurn": true,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "return_installed_corp_to_hq",
-      "pick": "choose"
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "playRequiresAgendaStolenThisTurn",
+        "value": true
+      }
+    },
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "return_installed_corp_to_hq",
+          "pick": "choose"
+        }
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "runEvent",
+        "value": {
+          "servers": "any"
+        }
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "runEventOptional",
+        "value": true
+      }
     }
-  },
-  "runEvent": {
-    "servers": "any"
-  },
-  "runEventOptional": true
+  ]
 }

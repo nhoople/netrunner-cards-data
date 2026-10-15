@@ -14,33 +14,44 @@
   "installCost": 0,
   "strength": 2,
   "memoryCost": 1,
-  "breaker": {
-    "breaksSubtype": "sentry",
-    "strength": 2,
-    "breakCredits": 0,
-    "pumpCredits": 1,
-    "pumpStrength": 1
-  },
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "breaker",
+        "value": {
+          "breaksSubtype": "sentry",
+          "strength": 2,
+          "breakCredits": 0,
+          "pumpCredits": 1,
+          "pumpStrength": 1
+        }
+      }
+    },
+    {
+      "class": "paid",
       "id": "faerie-pump",
       "label": "Pump Faerie +1 strength",
-      "clickCost": 0,
-      "creditCost": 1,
       "cost": {
         "credits": 1
       },
       "windows": [
         "encounter_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "pump_strength",
           "amount": 1
         }
       }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "trashAfterBreakingThisRun",
+        "value": true
+      }
     }
-  ],
-  "trashAfterBreakingThisRun": true
+  ]
 }

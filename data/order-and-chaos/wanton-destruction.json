@@ -11,14 +11,22 @@
     "sabotage"
   ],
   "playCost": 1,
-  "runEvent": {
-    "servers": "hq",
-    "onSuccessfulRun": {
-      "op": "do",
-      "action": {
-        "kind": "wanton_destruction_instead_of_breach"
+  "wave": "order-and-chaos",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "runEvent",
+        "value": {
+          "servers": "hq",
+          "onSuccessfulRun": {
+            "op": "do",
+            "action": {
+              "kind": "wanton_destruction_instead_of_breach"
+            }
+          }
+        }
       }
     }
-  },
-  "wave": "order-and-chaos"
+  ]
 }

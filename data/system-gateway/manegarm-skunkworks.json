@@ -9,5 +9,16 @@
   "rezCost": 2,
   "trashCost": 3,
   "unsupported": [],
-  "approachServerTax": { "clicks": 2, "credits": 5 }
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "approachServerTax",
+        "value": {
+          "clicks": 2,
+          "credits": 5
+        }
+      }
+    }
+  ]
 }

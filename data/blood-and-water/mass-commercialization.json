@@ -10,18 +10,23 @@
     "transaction"
   ],
   "playCost": 0,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "gain_credits",
-      "side": "corp",
-      "amount": 0,
-      "tally": {
-        "count": "installed_corp_advanced",
-        "per": 2,
-        "side": "corp"
+  "wave": "blood-and-water",
+  "abilities": [
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "corp",
+          "amount": 0,
+          "tally": {
+            "count": "installed_corp_advanced",
+            "per": 2,
+            "side": "corp"
+          }
+        }
       }
     }
-  },
-  "wave": "blood-and-water"
+  ]
 }

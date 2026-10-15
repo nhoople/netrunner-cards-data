@@ -12,12 +12,24 @@
   "installCost": 1,
   "rezCost": 1,
   "trashCost": 3,
-  "unique": true,
-  "onPassAllIceProtectingServer": {
-    "op": "do",
-    "action": {
-      "kind": "tag_or_end_the_run"
+  "wave": "terminal-directive",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "pass_all_ice_protecting_server",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "tag_or_end_the_run"
+        }
+      }
     }
-  },
-  "wave": "terminal-directive"
+  ]
 }

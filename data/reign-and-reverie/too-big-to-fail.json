@@ -13,25 +13,36 @@
   ],
   "playCost": 0,
   "trashCost": 5,
-  "playRequiresCreditsLt": 10,
-  "onPlay": {
-    "op": "seq",
-    "effects": [
-      {
-        "op": "do",
-        "action": {
-          "kind": "gain_credits",
-          "side": "corp",
-          "amount": 7
-        }
-      },
-      {
-        "op": "do",
-        "action": {
-          "kind": "give_bad_publicity",
-          "amount": 1
-        }
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "playRequiresCreditsLt",
+        "value": 10
       }
-    ]
-  }
+    },
+    {
+      "class": "play",
+      "instructions": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "gain_credits",
+              "side": "corp",
+              "amount": 7
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "give_bad_publicity",
+              "amount": 1
+            }
+          }
+        ]
+      }
+    }
+  ]
 }

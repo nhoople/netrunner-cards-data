@@ -13,24 +13,29 @@
   "installCost": 2,
   "rezCost": 2,
   "strength": 2,
-  "onPass": {
-    "op": "if",
-    "cond": {
-      "op": "did_not_break_printed_sub_with_decoder_this_encounter"
-    },
-    "then": {
-      "op": "do",
-      "action": {
-        "kind": "give_tags",
-        "amount": 1
-      }
-    }
-  },
-  "subroutines": [
+  "abilities": [
     {
+      "class": "conditional",
+      "trigger": "pass",
+      "instructions": {
+        "op": "if",
+        "cond": {
+          "op": "did_not_break_printed_sub_with_decoder_this_encounter"
+        },
+        "then": {
+          "op": "do",
+          "action": {
+            "kind": "give_tags",
+            "amount": 1
+          }
+        }
+      }
+    },
+    {
+      "class": "subroutine",
       "id": "vsa-lose",
       "text": "The Runner loses 1[credit].",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "lose_credits",

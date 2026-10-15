@@ -12,15 +12,23 @@
   "installCost": 8,
   "rezCost": 8,
   "strength": 4,
-  "strengthBonusIfInstalledSubtype": {
-    "subtype": "ai",
-    "bonus": 3
-  },
-  "subroutines": [
+  "wave": "crimson-dust",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "strengthBonusIfInstalledSubtype",
+        "value": {
+          "subtype": "ai",
+          "bonus": 3
+        }
+      }
+    },
+    {
+      "class": "subroutine",
       "id": "conundrum-trash-program",
       "text": "The Runner trashes an installed program.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "trash_program",
@@ -29,9 +37,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "conundrum-lose-click",
       "text": "The Runner loses [click], if able.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "lose_clicks",
@@ -41,15 +50,15 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "conundrum-etr",
       "text": "End the run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "end_the_run"
         }
       }
     }
-  ],
-  "wave": "crimson-dust"
+  ]
 }

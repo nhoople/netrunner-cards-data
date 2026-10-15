@@ -8,23 +8,24 @@
   "faction": "shaper",
   "installCost": 0,
   "memoryCost": 1,
-  "paidAbilities": [
+  "wave": "the-spaces-between",
+  "abilities": [
     {
+      "class": "paid",
       "id": "llds-prevent",
       "label": "3[credit] or [trash]: Prevent trashing 1 installed hardware",
-      "clickCost": 0,
-      "creditCost": 0,
-      "cost": {},
+      "cost": {
+        "credits": 0
+      },
       "windows": [
         "trash_interrupt_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "llds_prevent_trash_hardware"
         }
       }
     }
-  ],
-  "wave": "the-spaces-between"
+  ]
 }

@@ -8,27 +8,37 @@
   "installCost": 0,
   "rezCost": 2,
   "trashCost": 3,
-  "trashWhenHostedCreditsEmpty": true,
-  "onRez": {
-    "op": "do",
-    "action": {
-      "kind": "place_hosted_credits",
-      "amount": 15
-    }
-  },
-  "paidAbilities": [
+  "unsupported": [],
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "trashWhenHostedCreditsEmpty",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "rez",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "place_hosted_credits",
+          "amount": 15
+        }
+      }
+    },
+    {
+      "class": "paid",
       "id": "regolith-take",
-      "label": "Take 3\u00a2",
-      "clickCost": 1,
-      "creditCost": 0,
+      "label": "Take 3¢",
       "cost": {
         "clicks": 1
       },
       "windows": [
         "corp_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "take_hosted_credits",
@@ -36,6 +46,5 @@
         }
       }
     }
-  ],
-  "unsupported": []
+  ]
 }

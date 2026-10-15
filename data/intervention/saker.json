@@ -13,27 +13,33 @@
   "installCost": 4,
   "strength": 1,
   "memoryCost": 1,
-  "breaker": {
-    "breaksSubtype": "barrier",
-    "strength": 1,
-    "breakCredits": 1,
-    "breakMaxSubs": 1,
-    "pumpCredits": 2,
-    "pumpStrength": 2
-  },
-  "paidAbilities": [
+  "wave": "intervention",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "breaker",
+        "value": {
+          "breaksSubtype": "barrier",
+          "strength": 1,
+          "breakCredits": 1,
+          "breakMaxSubs": 1,
+          "pumpCredits": 2,
+          "pumpStrength": 2
+        }
+      }
+    },
+    {
+      "class": "paid",
       "id": "saker-derez",
       "label": "2¢, add this program to your grip: Derez fully broken barrier",
-      "clickCost": 0,
-      "creditCost": 2,
       "cost": {
         "credits": 2
       },
       "windows": [
         "encounter_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "seq",
         "effects": [
           {
@@ -53,6 +59,5 @@
       "usableByRunnerOnSelfIce": true,
       "requireFullyBrokenThisEncounter": true
     }
-  ],
-  "wave": "intervention"
+  ]
 }

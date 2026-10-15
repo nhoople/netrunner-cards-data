@@ -9,6 +9,14 @@
   "installCost": 3,
   "rezCost": 3,
   "trashCost": 1,
-  "stealAdditionalClicks": 1,
-  "wave": "fear-and-loathing"
+  "wave": "fear-and-loathing",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "stealAdditionalClicks",
+        "value": 1
+      }
+    }
+  ]
 }

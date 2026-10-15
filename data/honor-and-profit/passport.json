@@ -13,13 +13,21 @@
   "installCost": 1,
   "strength": 2,
   "memoryCost": 1,
-  "breaker": {
-    "breaksSubtype": "code gate",
-    "strength": 1,
-    "breakCredits": 1,
-    "breakMaxSubs": 1,
-    "pumpCredits": 2,
-    "pumpStrength": 2
-  },
-  "wave": "honor-and-profit"
+  "wave": "honor-and-profit",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "breaker",
+        "value": {
+          "breaksSubtype": "code gate",
+          "strength": 1,
+          "breakCredits": 1,
+          "breakMaxSubs": 1,
+          "pumpCredits": 2,
+          "pumpStrength": 2
+        }
+      }
+    }
+  ]
 }

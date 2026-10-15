@@ -9,7 +9,21 @@
   "subtypes": [
     "g-mod"
   ],
-  "link": 1,
-  "drawOnUseTrashAbility": 1,
-  "wave": "the-underway"
+  "wave": "the-underway",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "link",
+        "value": 1
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "drawOnUseTrashAbility",
+        "value": 1
+      }
+    }
+  ]
 }

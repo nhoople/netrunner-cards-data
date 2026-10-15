@@ -13,18 +13,29 @@
   "installCost": 3,
   "rezCost": 3,
   "strength": 1,
-  "onRez": {
-    "op": "do",
-    "action": {
-      "kind": "lycian_choose_subtypes"
-    }
-  },
-  "derezAtAnyTurnEnd": true,
-  "subroutines": [
+  "abilities": [
     {
+      "class": "conditional",
+      "trigger": "rez",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "lycian_choose_subtypes"
+        }
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "derezAtAnyTurnEnd",
+        "value": true
+      }
+    },
+    {
+      "class": "subroutine",
       "id": "lycian-cg",
       "text": "If code gate: Runner loses [click] and 1¢.",
-      "effect": {
+      "instructions": {
         "op": "if",
         "cond": {
           "op": "source_has_subtype",
@@ -54,9 +65,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "lycian-sentry",
       "text": "If sentry: Trash 1 installed program.",
-      "effect": {
+      "instructions": {
         "op": "if",
         "cond": {
           "op": "source_has_subtype",
@@ -72,9 +84,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "lycian-barrier",
       "text": "If barrier: Gain 1¢ and end the run.",
-      "effect": {
+      "instructions": {
         "op": "if",
         "cond": {
           "op": "source_has_subtype",

@@ -13,11 +13,12 @@
   "installCost": 0,
   "rezCost": 0,
   "strength": 3,
-  "subroutines": [
+  "abilities": [
     {
+      "class": "subroutine",
       "id": "loot-box-pay",
       "text": "End the run unless the Runner pays 2[credit].",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "unless",
@@ -40,9 +41,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "loot-box-reveal",
       "text": "Reveal the top 3 cards of the stack. Add 1 of those cards to the grip and gain X[credit], where X is equal to that card's play or install cost. The Runner shuffles the remaining cards into the stack.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "reveal_top_n",

@@ -12,11 +12,25 @@
   ],
   "advancementRequirement": 5,
   "agendaPoints": 3,
-  "installFaceup": true,
-  "placeAdvancementOnAnotherOnAdvance": {
-    "default": 1,
-    "atOrAbove": 6,
-    "bonus": 2
-  },
-  "wave": "old-hollywood"
+  "wave": "old-hollywood",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "installFaceup",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "placeAdvancementOnAnotherOnAdvance",
+        "value": {
+          "default": 1,
+          "atOrAbove": 6,
+          "bonus": 2
+        }
+      }
+    }
+  ]
 }

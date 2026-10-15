@@ -10,9 +10,35 @@
     "current"
   ],
   "playCost": 2,
-  "lingerAsCurrent": true,
-  "currentTrashOnAgendaStolen": true,
-  "operationAndEventPlayCostIncrease": 1,
-  "corpGainsCreditsOnFirstRunnerEventEachTurn": 1,
-  "wave": "crimson-dust"
+  "wave": "crimson-dust",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "lingerAsCurrent",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "currentTrashOnAgendaStolen",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "operationAndEventPlayCostIncrease",
+        "value": 1
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "corpGainsCreditsOnFirstRunnerEventEachTurn",
+        "value": 1
+      }
+    }
+  ]
 }

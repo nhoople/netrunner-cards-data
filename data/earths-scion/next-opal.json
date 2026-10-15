@@ -14,19 +14,26 @@
   "installCost": 4,
   "rezCost": 4,
   "strength": 3,
-  "gainsSubroutinesPerRezzedIceWithSubtype": {
-    "subtype": "next",
-    "subroutine": {
-      "id": "next-opal-install",
-      "text": "You may install 1 card from HQ.",
-      "effect": {
-        "op": "do",
-        "action": {
-          "kind": "may_install_from_hq_paying_costs"
+  "wave": "earths-scion",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "gainsSubroutinesPerRezzedIceWithSubtype",
+        "value": {
+          "subtype": "next",
+          "subroutine": {
+            "id": "next-opal-install",
+            "text": "You may install 1 card from HQ.",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "may_install_from_hq_paying_costs"
+              }
+            }
+          }
         }
       }
     }
-  },
-  "subroutines": [],
-  "wave": "earths-scion"
+  ]
 }

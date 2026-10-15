@@ -11,8 +11,28 @@
     "virtual"
   ],
   "installCost": 1,
-  "hostedCreditsOnInstall": 3,
-  "spendHostedCreditsDuringRuns": true,
-  "trashWhenHostedCreditsEmpty": true,
-  "wave": "the-spaces-between"
+  "wave": "the-spaces-between",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "hostedCreditsOnInstall",
+        "value": 3
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "spendHostedCreditsDuringRuns",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "trashWhenHostedCreditsEmpty",
+        "value": true
+      }
+    }
+  ]
 }

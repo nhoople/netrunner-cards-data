@@ -11,21 +11,33 @@
   ],
   "advancementRequirement": 3,
   "agendaPoints": 1,
-  "whileScoredBreakerStrengthPenaltyIfIceDerezzedThisRun": 2,
-  "onFirstRunBeginThisTurn": {
-    "op": "do",
-    "action": {
-      "kind": "may_derez_installed",
-      "onlyIce": true,
-      "excludeProtectingAttackedServer": true,
-      "then": {
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "whileScoredBreakerStrengthPenaltyIfIceDerezzedThisRun",
+        "value": 2
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "first_run_begin_this_turn",
+      "instructions": {
         "op": "do",
         "action": {
-          "kind": "gain_credits",
-          "side": "corp",
-          "amount": 1
+          "kind": "may_derez_installed",
+          "onlyIce": true,
+          "excludeProtectingAttackedServer": true,
+          "then": {
+            "op": "do",
+            "action": {
+              "kind": "gain_credits",
+              "side": "corp",
+              "amount": 1
+            }
+          }
         }
       }
     }
-  }
+  ]
 }

@@ -7,29 +7,34 @@
   "side": "corp",
   "unsupported": [],
   "playCost": 2,
-  "onPlay": {
-    "op": "seq",
-    "effects": [
-      {
-        "op": "do",
-        "action": {
-          "kind": "draw",
-          "side": "corp",
-          "amount": 2
-        }
-      },
-      {
-        "op": "do",
-        "action": {
-          "kind": "may_install_from_hq_paying_costs"
-        }
-      },
-      {
-        "op": "do",
-        "action": {
-          "kind": "may_install_from_hq_paying_costs"
-        }
+  "abilities": [
+    {
+      "class": "play",
+      "instructions": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "draw",
+              "side": "corp",
+              "amount": 2
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "may_install_from_hq_paying_costs"
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "may_install_from_hq_paying_costs"
+            }
+          }
+        ]
       }
-    ]
-  }
+    }
+  ]
 }

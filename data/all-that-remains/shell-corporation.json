@@ -9,20 +9,26 @@
   "installCost": 2,
   "rezCost": 2,
   "trashCost": 3,
-  "paidAbilitiesOncePerTurn": true,
-  "paidAbilities": [
+  "wave": "all-that-remains",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "paidAbilitiesOncePerTurn",
+        "value": true
+      }
+    },
+    {
+      "class": "paid",
       "id": "shell-place",
       "label": "[click]: Place 3¢ on Shell Corporation",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1
       },
       "windows": [
         "corp_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "place_hosted_credits",
@@ -31,17 +37,16 @@
       }
     },
     {
+      "class": "paid",
       "id": "shell-take",
       "label": "[click]: Take all credits from Shell Corporation",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1
       },
       "windows": [
         "corp_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "take_hosted_credits",
@@ -49,6 +54,5 @@
         }
       }
     }
-  ],
-  "wave": "all-that-remains"
+  ]
 }

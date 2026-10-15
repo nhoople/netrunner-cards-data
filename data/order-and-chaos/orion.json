@@ -14,14 +14,34 @@
   "installCost": 15,
   "rezCost": 15,
   "strength": 8,
-  "unique": true,
-  "canAdvance": true,
-  "rezCostReductionPerAdvancement": 3,
-  "subroutines": [
+  "wave": "order-and-chaos",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "canAdvance",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "rezCostReductionPerAdvancement",
+        "value": 3
+      }
+    },
+    {
+      "class": "subroutine",
       "id": "orion-trash",
       "text": "Trash 1 program.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "trash_program",
@@ -30,9 +50,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "orion-resolve",
       "text": "Resolve a subroutine on another piece of rezzed ice.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "may_resolve_subroutine_on_rezzed_ice"
@@ -40,15 +61,15 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "orion-etr",
       "text": "End the run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "end_the_run"
         }
       }
     }
-  ],
-  "wave": "order-and-chaos"
+  ]
 }

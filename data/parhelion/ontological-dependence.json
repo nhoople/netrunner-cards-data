@@ -11,5 +11,13 @@
   ],
   "advancementRequirement": 4,
   "agendaPoints": 2,
-  "advancementRequirementReductionPerCoreDamageThisGame": 1
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "advancementRequirementReductionPerCoreDamageThisGame",
+        "value": 1
+      }
+    }
+  ]
 }

@@ -11,34 +11,46 @@
   ],
   "advancementRequirement": 4,
   "agendaPoints": 2,
-  "installFaceup": true,
-  "onAdvance": {
-    "op": "choose",
-    "chooser": "corp",
-    "options": [
-      {
-        "id": "accept",
-        "label": "Install 1 card from HQ in the root of a new server",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "install_from_hq_new_remote"
-          }
-        }
-      },
-      {
-        "id": "decline",
-        "label": "Decline",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "gain_credits",
-            "side": "corp",
-            "amount": 0
-          }
-        }
+  "wave": "business-first",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "installFaceup",
+        "value": true
       }
-    ]
-  },
-  "wave": "business-first"
+    },
+    {
+      "class": "conditional",
+      "trigger": "advance",
+      "instructions": {
+        "op": "choose",
+        "chooser": "corp",
+        "options": [
+          {
+            "id": "accept",
+            "label": "Install 1 card from HQ in the root of a new server",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "install_from_hq_new_remote"
+              }
+            }
+          },
+          {
+            "id": "decline",
+            "label": "Decline",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "gain_credits",
+                "side": "corp",
+                "amount": 0
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
 }

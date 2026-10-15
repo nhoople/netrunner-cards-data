@@ -10,12 +10,17 @@
     "liability"
   ],
   "playCost": 2,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "install_and_rez_ice_from_archives",
-      "totalDiscount": 10,
-      "badPublicityIfNotSubtype": "liability"
+  "abilities": [
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "install_and_rez_ice_from_archives",
+          "totalDiscount": 10,
+          "badPublicityIfNotSubtype": "liability"
+        }
+      }
     }
-  }
+  ]
 }

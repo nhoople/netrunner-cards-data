@@ -13,12 +13,20 @@
   "installCost": 4,
   "rezCost": 4,
   "strength": 5,
-  "canAdvance": true,
-  "subroutines": [
+  "wave": "martial-law",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "canAdvance",
+        "value": true
+      }
+    },
+    {
+      "class": "subroutine",
       "id": "mausolus-gain",
       "text": "Gain 1¢. If 3+ hosted advancement counters, instead gain 3¢.",
-      "effect": {
+      "instructions": {
         "op": "if",
         "cond": {
           "op": "advancements_gte",
@@ -43,9 +51,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "mausolus-net",
       "text": "Do 1 net damage. If 3+ hosted advancement counters, instead do 3 net damage.",
-      "effect": {
+      "instructions": {
         "op": "if",
         "cond": {
           "op": "advancements_gte",
@@ -68,9 +77,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "mausolus-tag",
       "text": "Give the Runner 1 tag. If 3+ hosted advancement counters, instead give the Runner 1 tag and end the run.",
-      "effect": {
+      "instructions": {
         "op": "if",
         "cond": {
           "op": "advancements_gte",
@@ -103,6 +113,5 @@
         }
       }
     }
-  ],
-  "wave": "martial-law"
+  ]
 }

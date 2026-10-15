@@ -14,6 +14,20 @@
   "installCost": 1,
   "rezCost": 1,
   "trashCost": 3,
-  "unique": true,
-  "iceRezCostReductionProtectingThisServer": 2
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "iceRezCostReductionProtectingThisServer",
+        "value": 2
+      }
+    }
+  ]
 }

@@ -12,11 +12,13 @@
   "installCost": 2,
   "rezCost": 2,
   "strength": 3,
-  "subroutines": [
+  "wave": "the-devil-and-the-dragon",
+  "abilities": [
     {
+      "class": "subroutine",
       "id": "sadaka-look",
       "text": "Look at the top 3 cards of R&D and either arrange them in any order or shuffle R&D. You may draw 1 card.",
-      "effect": {
+      "instructions": {
         "op": "seq",
         "effects": [
           {
@@ -59,9 +61,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "sadaka-trash",
       "text": "You may trash 1 card in HQ. If you do, trash 1 resource. Trash Sadaka.",
-      "effect": {
+      "instructions": {
         "op": "seq",
         "effects": [
           {
@@ -101,6 +104,5 @@
         ]
       }
     }
-  ],
-  "wave": "the-devil-and-the-dragon"
+  ]
 }

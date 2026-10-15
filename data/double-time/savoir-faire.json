@@ -8,26 +8,31 @@
   "faction": "criminal",
   "installCost": 0,
   "memoryCost": 1,
-  "oncePerTurnPaidAbilities": true,
-  "paidAbilities": [
+  "wave": "double-time",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "oncePerTurnPaidAbilities",
+        "value": true
+      }
+    },
+    {
+      "class": "paid",
       "id": "savoir-faire-install",
       "label": "2[credit]: Install a program from grip paying install cost",
-      "clickCost": 0,
-      "creditCost": 2,
       "cost": {
         "credits": 2
       },
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "install_program_from_grip"
         }
       }
     }
-  ],
-  "wave": "double-time"
+  ]
 }

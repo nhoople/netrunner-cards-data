@@ -10,19 +10,19 @@
     "virtual"
   ],
   "installCost": 5,
-  "paidAbilities": [
+  "wave": "sovereign-sight",
+  "abilities": [
     {
+      "class": "paid",
       "id": "assimilator-faceup",
       "label": "[click][click]: Turn one of your facedown installed cards faceup. If that card is an event, trash it.",
-      "clickCost": 2,
-      "creditCost": 0,
       "cost": {
         "clicks": 2
       },
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "ss_assimilator_turn_facedown_faceup"
@@ -30,6 +30,5 @@
       },
       "usableByRunnerOnSelfIce": true
     }
-  ],
-  "wave": "sovereign-sight"
+  ]
 }

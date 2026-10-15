@@ -10,47 +10,51 @@
     "virtual"
   ],
   "installCost": 0,
-  "onSuccessfulRun": {
-    "op": "if",
-    "cond": {
-      "op": "attacking_archives"
-    },
-    "then": {
-      "op": "choose",
-      "chooser": "runner",
-      "options": [
-        {
-          "id": "accept",
-          "label": "Place 1 virus counter on Crypt",
-          "effect": {
-            "op": "do",
-            "action": {
-              "kind": "add_virus_counter",
-              "amount": 1
-            }
-          }
-        },
-        {
-          "id": "decline",
-          "label": "Decline",
-          "effect": {
-            "op": "do",
-            "action": {
-              "kind": "gain_credits",
-              "side": "runner",
-              "amount": 0
-            }
-          }
-        }
-      ]
-    }
-  },
-  "paidAbilities": [
+  "wave": "council-of-the-crest",
+  "abilities": [
     {
+      "class": "conditional",
+      "trigger": "successful_run",
+      "instructions": {
+        "op": "if",
+        "cond": {
+          "op": "attacking_archives"
+        },
+        "then": {
+          "op": "choose",
+          "chooser": "runner",
+          "options": [
+            {
+              "id": "accept",
+              "label": "Place 1 virus counter on Crypt",
+              "effect": {
+                "op": "do",
+                "action": {
+                  "kind": "add_virus_counter",
+                  "amount": 1
+                }
+              }
+            },
+            {
+              "id": "decline",
+              "label": "Decline",
+              "effect": {
+                "op": "do",
+                "action": {
+                  "kind": "gain_credits",
+                  "side": "runner",
+                  "amount": 0
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "class": "paid",
       "id": "crypt-search",
       "label": "[click], [trash], 3 hosted virus counters: Search stack for a virus program and install it (paying its install cost), then shuffle",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "virusCounters": 3,
         "clicks": 1,
@@ -59,7 +63,7 @@
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "cotc_crypt_search_install"
@@ -67,6 +71,5 @@
       },
       "usableByRunnerOnSelfIce": true
     }
-  ],
-  "wave": "council-of-the-crest"
+  ]
 }

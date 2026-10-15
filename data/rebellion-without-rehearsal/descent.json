@@ -13,40 +13,43 @@
   "installCost": 2,
   "rezCost": 2,
   "strength": 1,
-  "onTurnBegin": {
-    "op": "choose",
-    "chooser": "corp",
-    "options": [
-      {
-        "id": "to-hq",
-        "label": "Add Descent to HQ",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "return_source_to_hq"
-          }
-        }
-      },
-      {
-        "id": "decline",
-        "label": "Decline",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "gain_credits",
-            "side": "corp",
-            "amount": 0
-          }
-        }
-      }
-    ]
-  },
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "conditional",
+      "trigger": "turn_begin",
+      "instructions": {
+        "op": "choose",
+        "chooser": "corp",
+        "options": [
+          {
+            "id": "to-hq",
+            "label": "Add Descent to HQ",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "return_source_to_hq"
+              }
+            }
+          },
+          {
+            "id": "decline",
+            "label": "Decline",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "gain_credits",
+                "side": "corp",
+                "amount": 0
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "class": "paid",
       "id": "descent-expend",
       "label": "[click], 1¢, reveal and trash from HQ: Draw 1; shuffle up to 2 agendas into R&D",
-      "clickCost": 1,
-      "creditCost": 1,
       "cost": {
         "clicks": 1,
         "credits": 1,
@@ -55,8 +58,7 @@
       "windows": [
         "corp_action_paw"
       ],
-      "usableFromHq": true,
-      "effect": {
+      "instructions": {
         "op": "seq",
         "effects": [
           {
@@ -75,14 +77,14 @@
             }
           }
         ]
-      }
-    }
-  ],
-  "subroutines": [
+      },
+      "usableFromHq": true
+    },
     {
+      "class": "subroutine",
       "id": "descent-etr",
       "text": "End the run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "end_the_run"

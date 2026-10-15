@@ -12,12 +12,19 @@
   "installCost": 4,
   "rezCost": 4,
   "strength": 3,
-  "strengthBonusWhileTagged": 2,
-  "subroutines": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "strengthBonusWhileTagged",
+        "value": 2
+      }
+    },
+    {
+      "class": "subroutine",
       "id": "capacitor-credits",
       "text": "Gain 1[credit] for each tag the Runner has.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "gain_credits",
@@ -32,9 +39,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "capacitor-etr",
       "text": "End the run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "end_the_run"

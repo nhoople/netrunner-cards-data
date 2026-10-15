@@ -11,13 +11,31 @@
   ],
   "installCost": 0,
   "memoryCost": 1,
-  "installRequiresSuccessfulCentralRunThisTurn": true,
-  "trashOnVirusPurge": true,
-  "onRunnerTurnBegin": {
-    "op": "do",
-    "action": {
-      "kind": "gain_credits_per_corp_credits"
+  "wave": "quorum",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "installRequiresSuccessfulCentralRunThisTurn",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "trashOnVirusPurge",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "runner_turn_begin",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits_per_corp_credits"
+        }
+      }
     }
-  },
-  "wave": "quorum"
+  ]
 }

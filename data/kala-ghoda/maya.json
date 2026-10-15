@@ -10,47 +10,65 @@
     "console"
   ],
   "installCost": 3,
-  "unique": true,
-  "muBonus": 2,
-  "onFinishAccessRdOncePerTurn": {
-    "op": "choose",
-    "chooser": "runner",
-    "options": [
-      {
-        "id": "accept",
-        "label": "Add accessed card to bottom of R&D; take 1 tag",
-        "effect": {
-          "op": "seq",
-          "effects": [
-            {
+  "wave": "kala-ghoda",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "muBonus",
+        "value": 2
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "finish_access_rd_once_per_turn",
+      "instructions": {
+        "op": "choose",
+        "chooser": "runner",
+        "options": [
+          {
+            "id": "accept",
+            "label": "Add accessed card to bottom of R&D; take 1 tag",
+            "effect": {
+              "op": "seq",
+              "effects": [
+                {
+                  "op": "do",
+                  "action": {
+                    "kind": "move_accessed_to_bottom_rd"
+                  }
+                },
+                {
+                  "op": "do",
+                  "action": {
+                    "kind": "give_tags",
+                    "amount": 1
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "id": "decline",
+            "label": "Decline",
+            "effect": {
               "op": "do",
               "action": {
-                "kind": "move_accessed_to_bottom_rd"
-              }
-            },
-            {
-              "op": "do",
-              "action": {
-                "kind": "give_tags",
-                "amount": 1
+                "kind": "gain_credits",
+                "side": "runner",
+                "amount": 0
               }
             }
-          ]
-        }
-      },
-      {
-        "id": "decline",
-        "label": "Decline",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "gain_credits",
-            "side": "runner",
-            "amount": 0
           }
-        }
+        ]
       }
-    ]
-  },
-  "wave": "kala-ghoda"
+    }
+  ]
 }

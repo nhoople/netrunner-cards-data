@@ -11,5 +11,13 @@
     "chip"
   ],
   "installCost": 1,
-  "muBonus": 1
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "muBonus",
+        "value": 1
+      }
+    }
+  ]
 }

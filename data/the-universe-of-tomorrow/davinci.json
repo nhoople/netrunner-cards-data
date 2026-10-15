@@ -8,32 +8,35 @@
   "faction": "shaper",
   "installCost": 1,
   "memoryCost": 1,
-  "onSuccessfulRun": {
-    "op": "do",
-    "action": {
-      "kind": "add_power_counter",
-      "amount": 1
-    }
-  },
-  "paidAbilities": [
+  "wave": "the-universe-of-tomorrow",
+  "abilities": [
     {
+      "class": "conditional",
+      "trigger": "successful_run",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "add_power_counter",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "class": "paid",
       "id": "davinci-install",
       "label": "[trash]: Install a grip card costing ≤ power counters, ignoring install cost",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "trashSelf": true
       },
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "install_from_grip_ignore_cost"
         }
       }
     }
-  ],
-  "wave": "the-universe-of-tomorrow"
+  ]
 }

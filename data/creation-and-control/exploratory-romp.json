@@ -11,14 +11,22 @@
     "run"
   ],
   "playCost": 1,
-  "runEvent": {
-    "servers": "any",
-    "onSuccessfulRun": {
-      "op": "do",
-      "action": {
-        "kind": "exploratory_romp_may_instead_of_breach",
-        "amount": 3
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "runEvent",
+        "value": {
+          "servers": "any",
+          "onSuccessfulRun": {
+            "op": "do",
+            "action": {
+              "kind": "exploratory_romp_may_instead_of_breach",
+              "amount": 3
+            }
+          }
+        }
       }
     }
-  }
+  ]
 }

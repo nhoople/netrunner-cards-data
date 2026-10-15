@@ -11,32 +11,38 @@
   ],
   "advancementRequirement": 2,
   "agendaPoints": 1,
-  "onScore": {
-    "op": "choose",
-    "chooser": "corp",
-    "options": [
-      {
-        "id": "install",
-        "label": "Install 1 facedown card from Archives",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "may_install_facedown_from_archives"
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "score",
+      "instructions": {
+        "op": "choose",
+        "chooser": "corp",
+        "options": [
+          {
+            "id": "install",
+            "label": "Install 1 facedown card from Archives",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "may_install_facedown_from_archives"
+              }
+            }
+          },
+          {
+            "id": "decline",
+            "label": "Decline",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "gain_credits",
+                "side": "corp",
+                "amount": 0
+              }
+            }
           }
-        }
-      },
-      {
-        "id": "decline",
-        "label": "Decline",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "gain_credits",
-            "side": "corp",
-            "amount": 0
-          }
-        }
+        ]
       }
-    ]
-  }
+    }
+  ]
 }

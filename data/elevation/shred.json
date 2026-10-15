@@ -10,8 +10,16 @@
     "run"
   ],
   "playCost": 1,
-  "runEvent": {
-    "servers": "any",
-    "shredPreventFirstEndTheRun": true
-  }
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "runEvent",
+        "value": {
+          "servers": "any",
+          "shredPreventFirstEndTheRun": true
+        }
+      }
+    }
+  ]
 }

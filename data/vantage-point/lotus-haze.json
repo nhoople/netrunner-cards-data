@@ -11,26 +11,29 @@
   ],
   "advancementRequirement": 4,
   "agendaPoints": 2,
-  "onScore": {
-    "op": "do",
-    "action": {
-      "kind": "add_agenda_counter",
-      "amount": 3
-    }
-  },
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "conditional",
+      "trigger": "score",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "add_agenda_counter",
+          "amount": 3
+        }
+      }
+    },
+    {
+      "class": "paid",
       "id": "lotus-haze-move",
       "label": "Hosted agenda counter: Move 1 rezzed upgrade to another server",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "agendaCounters": 1
       },
       "windows": [
         "corp_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "may_move_rezzed_upgrade_to_another_server_root"

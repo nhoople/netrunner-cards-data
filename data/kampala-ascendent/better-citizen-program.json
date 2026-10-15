@@ -11,6 +11,14 @@
   ],
   "advancementRequirement": 4,
   "agendaPoints": 2,
-  "mayTagOnFirstRunEventOrIcebreakerInstallEachTurn": true,
-  "wave": "kampala-ascendent"
+  "wave": "kampala-ascendent",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "mayTagOnFirstRunEventOrIcebreakerInstallEachTurn",
+        "value": true
+      }
+    }
+  ]
 }

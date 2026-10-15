@@ -11,18 +11,26 @@
     "run"
   ],
   "playCost": 3,
-  "runEvent": {
-    "servers": "archives",
-    "onSuccessfulRun": {
-      "op": "do",
-      "action": {
-        "kind": "queue_breaches_after_current",
-        "servers": [
-          "hq",
-          "rd"
-        ],
-        "cannotAccessRoot": true
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "runEvent",
+        "value": {
+          "servers": "archives",
+          "onSuccessfulRun": {
+            "op": "do",
+            "action": {
+              "kind": "queue_breaches_after_current",
+              "servers": [
+                "hq",
+                "rd"
+              ],
+              "cannotAccessRoot": true
+            }
+          }
+        }
       }
     }
-  }
+  ]
 }

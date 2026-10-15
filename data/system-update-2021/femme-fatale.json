@@ -13,33 +13,44 @@
   "installCost": 9,
   "strength": 2,
   "memoryCost": 1,
-  "breaker": {
-    "breaksSubtype": "sentry",
-    "strength": 2,
-    "breakCredits": 1,
-    "pumpCredits": 2,
-    "pumpStrength": 1
-  },
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "breaker",
+        "value": {
+          "breaksSubtype": "sentry",
+          "strength": 2,
+          "breakCredits": 1,
+          "pumpCredits": 2,
+          "pumpStrength": 1
+        }
+      }
+    },
+    {
+      "class": "paid",
       "id": "femme-fatale-pump",
       "label": "Pump Femme Fatale +1 strength",
-      "clickCost": 0,
-      "creditCost": 2,
       "cost": {
         "credits": 2
       },
       "windows": [
         "encounter_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "pump_strength",
           "amount": 1
         }
       }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "chooseIceOnInstallForBypass",
+        "value": true
+      }
     }
-  ],
-  "chooseIceOnInstallForBypass": true
+  ]
 }

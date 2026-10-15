@@ -10,34 +10,43 @@
     "connection"
   ],
   "installCost": 1,
-  "hostedCreditsOnRunEventPlay": 1,
-  "onInstall": {
-    "op": "if",
-    "cond": {
-      "op": "threat",
-      "level": 4
-    },
-    "then": {
-      "op": "do",
-      "action": {
-        "kind": "place_hosted_credits",
-        "amount": 2
-      }
-    }
-  },
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "hostedCreditsOnRunEventPlay",
+        "value": 1
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "install",
+      "instructions": {
+        "op": "if",
+        "cond": {
+          "op": "threat",
+          "level": 4
+        },
+        "then": {
+          "op": "do",
+          "action": {
+            "kind": "place_hosted_credits",
+            "amount": 2
+          }
+        }
+      }
+    },
+    {
+      "class": "paid",
       "id": "debbie-run",
       "label": "[click]: Run any server; spend hosted credits during that run",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1
       },
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "gain_credits",

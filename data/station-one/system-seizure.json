@@ -10,8 +10,28 @@
     "current"
   ],
   "playCost": 0,
-  "lingerAsCurrent": true,
-  "currentTrashOnAgendaScored": true,
-  "systemSeizureFirstPumpStrengthLastsRemainderOfRun": true,
-  "wave": "station-one"
+  "wave": "station-one",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "lingerAsCurrent",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "currentTrashOnAgendaScored",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "systemSeizureFirstPumpStrengthLastsRemainderOfRun",
+        "value": true
+      }
+    }
+  ]
 }

@@ -10,12 +10,11 @@
     "connection"
   ],
   "installCost": 3,
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "paid",
       "id": "fof-untag",
       "label": "[click], [trash]: Gain 5¢ and remove 1 tag",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1,
         "trashSelf": true
@@ -23,7 +22,7 @@
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "seq",
         "effects": [
           {
@@ -45,10 +44,9 @@
       }
     },
     {
+      "class": "paid",
       "id": "fof-tag",
       "label": "[click], [trash]: Gain 9¢ and take 1 tag (if untagged)",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1,
         "trashSelf": true
@@ -56,8 +54,7 @@
       "windows": [
         "runner_action_paw"
       ],
-      "requiresUntagged": true,
-      "effect": {
+      "instructions": {
         "op": "seq",
         "effects": [
           {
@@ -76,7 +73,8 @@
             }
           }
         ]
-      }
+      },
+      "requiresUntagged": true
     }
   ]
 }

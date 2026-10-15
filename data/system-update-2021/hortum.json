@@ -12,13 +12,26 @@
   "installCost": 4,
   "rezCost": 4,
   "strength": 4,
-  "canAdvance": true,
-  "cannotBreakWithAiAtAdvancements": 3,
-  "subroutines": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "canAdvance",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "cannotBreakWithAiAtAdvancements",
+        "value": 3
+      }
+    },
+    {
+      "class": "subroutine",
       "id": "hortum-gain",
       "text": "Gain 1¢ (4¢ if 3+ advancements).",
-      "effect": {
+      "instructions": {
         "op": "if",
         "cond": {
           "op": "advancements_gte",
@@ -43,9 +56,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "hortum-etr",
       "text": "End the run. If 3+ advancements, search R&D for up to 2 cards then ETR.",
-      "effect": {
+      "instructions": {
         "op": "if",
         "cond": {
           "op": "advancements_gte",

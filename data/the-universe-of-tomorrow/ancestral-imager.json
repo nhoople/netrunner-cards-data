@@ -11,6 +11,14 @@
   ],
   "advancementRequirement": 3,
   "agendaPoints": 1,
-  "netDamageOnJackOut": 1,
-  "wave": "the-universe-of-tomorrow"
+  "wave": "the-universe-of-tomorrow",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "netDamageOnJackOut",
+        "value": 1
+      }
+    }
+  ]
 }

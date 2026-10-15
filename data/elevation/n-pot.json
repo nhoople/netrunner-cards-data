@@ -12,31 +12,29 @@
   "installCost": 4,
   "rezCost": 4,
   "strength": 4,
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "paid",
       "id": "n-pot-break",
       "label": "3¢: Break 1 subroutine on N-Pot",
-      "clickCost": 0,
-      "creditCost": 3,
       "cost": {
         "credits": 3
       },
       "windows": [
         "encounter_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "break_host_subroutine"
         }
       }
-    }
-  ],
-  "subroutines": [
+    },
     {
+      "class": "subroutine",
       "id": "n-pot-etr",
       "text": "End the run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "end_the_run"
@@ -44,9 +42,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "n-pot-threat-2",
       "text": "If threat ≥ 2, end the run.",
-      "effect": {
+      "instructions": {
         "op": "if",
         "cond": {
           "op": "threat",
@@ -61,9 +60,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "n-pot-threat-4",
       "text": "If threat ≥ 4, end the run.",
-      "effect": {
+      "instructions": {
         "op": "if",
         "cond": {
           "op": "threat",

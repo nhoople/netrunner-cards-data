@@ -7,10 +7,15 @@
   "side": "runner",
   "unsupported": [],
   "playCost": 3,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "install_program_from_stack_or_heap_free"
+  "abilities": [
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "install_program_from_stack_or_heap_free"
+        }
+      }
     }
-  }
+  ]
 }

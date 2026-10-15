@@ -10,21 +10,33 @@
     "location"
   ],
   "installCost": 3,
-  "unique": true,
-  "trashHostedProgramsOnTurnEnd": true,
-  "paidAbilities": [
+  "wave": "breaker-bay",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "trashHostedProgramsOnTurnEnd",
+        "value": true
+      }
+    },
+    {
+      "class": "paid",
       "id": "london-library-host",
       "label": "[click]: Install a non-virus program from grip on London Library, ignoring install cost",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1
       },
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "host_non_virus_program_ignore_cost"
@@ -32,23 +44,21 @@
       }
     },
     {
+      "class": "paid",
       "id": "london-library-to-grip",
       "label": "[click]: Add a program on London Library to your grip",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1
       },
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "add_hosted_program_to_grip"
         }
       }
     }
-  ],
-  "wave": "breaker-bay"
+  ]
 }

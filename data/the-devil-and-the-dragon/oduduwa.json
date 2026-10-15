@@ -12,18 +12,30 @@
   "installCost": 7,
   "rezCost": 7,
   "strength": 5,
-  "unique": true,
-  "onEncounter": {
-    "op": "do",
-    "action": {
-      "kind": "tdatd_oduduwa_encounter"
-    }
-  },
-  "subroutines": [
+  "wave": "the-devil-and-the-dragon",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "encounter",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "tdatd_oduduwa_encounter"
+        }
+      }
+    },
+    {
+      "class": "subroutine",
       "id": "oduduwa-etr-1",
       "text": "End the run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "end_the_run"
@@ -31,15 +43,15 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "oduduwa-etr-2",
       "text": "End the run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "end_the_run"
         }
       }
     }
-  ],
-  "wave": "the-devil-and-the-dragon"
+  ]
 }

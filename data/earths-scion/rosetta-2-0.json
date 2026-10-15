@@ -10,19 +10,19 @@
     "virtual"
   ],
   "installCost": 3,
-  "paidAbilities": [
+  "wave": "earths-scion",
+  "abilities": [
     {
+      "class": "paid",
       "id": "rosetta-2-0-search",
       "label": "[click], remove an installed program from the game: Search stack for non-virus program, install lowering by RFG cost",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1
       },
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "rosetta_rfg_program_search_install_non_virus"
@@ -30,6 +30,5 @@
       },
       "usableByRunnerOnSelfIce": true
     }
-  ],
-  "wave": "earths-scion"
+  ]
 }

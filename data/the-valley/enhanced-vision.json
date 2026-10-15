@@ -10,12 +10,24 @@
     "genetics"
   ],
   "installCost": 1,
-  "unique": true,
-  "onFirstSuccessfulRunThisTurn": {
-    "op": "do",
-    "action": {
-      "kind": "reveal_random_hq_card"
+  "wave": "the-valley",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "first_successful_run_this_turn",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "reveal_random_hq_card"
+        }
+      }
     }
-  },
-  "wave": "the-valley"
+  ]
 }

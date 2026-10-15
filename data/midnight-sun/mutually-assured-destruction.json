@@ -10,11 +10,22 @@
     "triple"
   ],
   "playCost": 4,
-  "playAdditionalClicks": 2,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "trash_any_rezzed_give_tags"
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "playAdditionalClicks",
+        "value": 2
+      }
+    },
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "trash_any_rezzed_give_tags"
+        }
+      }
     }
-  }
+  ]
 }

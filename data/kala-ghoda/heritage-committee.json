@@ -10,29 +10,40 @@
     "alliance"
   ],
   "playCost": 1,
-  "zeroInfluenceIfNonAllianceFactionCardsGte": {
-    "faction": "jinteki",
-    "threshold": 6
-  },
-  "onPlay": {
-    "op": "seq",
-    "effects": [
-      {
-        "op": "do",
-        "action": {
-          "kind": "draw",
-          "side": "corp",
-          "amount": 3
-        }
-      },
-      {
-        "op": "do",
-        "action": {
-          "kind": "hq_to_top_rd",
-          "pick": "choose"
+  "wave": "kala-ghoda",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "zeroInfluenceIfNonAllianceFactionCardsGte",
+        "value": {
+          "faction": "jinteki",
+          "threshold": 6
         }
       }
-    ]
-  },
-  "wave": "kala-ghoda"
+    },
+    {
+      "class": "play",
+      "instructions": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "draw",
+              "side": "corp",
+              "amount": 3
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "hq_to_top_rd",
+              "pick": "choose"
+            }
+          }
+        ]
+      }
+    }
+  ]
 }

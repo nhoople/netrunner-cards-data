@@ -13,12 +13,18 @@
   "installCost": 0,
   "rezCost": 0,
   "trashCost": 3,
-  "onFirstRunBeginThisTurn": {
-    "op": "do",
-    "action": {
-      "kind": "gain_credits",
-      "side": "corp",
-      "amount": 1
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "first_run_begin_this_turn",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "corp",
+          "amount": 1
+        }
+      }
     }
-  }
+  ]
 }

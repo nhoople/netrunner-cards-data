@@ -13,8 +13,22 @@
   "installCost": 3,
   "rezCost": 3,
   "trashCost": 3,
-  "recurringCreditsMax": 2,
-  "recurringSpendFor": [
-    "rez_ice"
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "recurringCreditsMax",
+        "value": 2
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "recurringSpendFor",
+        "value": [
+          "rez_ice"
+        ]
+      }
+    }
   ]
 }

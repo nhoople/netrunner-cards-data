@@ -13,46 +13,51 @@
   "installCost": 2,
   "rezCost": 2,
   "strength": 3,
-  "onRez": {
-    "op": "if",
-    "cond": {
-      "op": "source_protects_attacked_server"
-    },
-    "then": {
-      "op": "choose",
-      "chooser": "corp",
-      "options": [
-        {
-          "id": "search",
-          "label": "Search R&D for an ice",
-          "effect": {
-            "op": "do",
-            "action": {
-              "kind": "search_rd_type_to_hq",
-              "cardType": "ice"
-            }
-          }
-        },
-        {
-          "id": "decline",
-          "label": "Decline",
-          "effect": {
-            "op": "do",
-            "action": {
-              "kind": "gain_credits",
-              "side": "corp",
-              "amount": 0
-            }
-          }
-        }
-      ]
-    }
-  },
-  "subroutines": [
+  "abilities": [
     {
+      "class": "conditional",
+      "trigger": "rez",
+      "instructions": {
+        "op": "if",
+        "cond": {
+          "op": "source_protects_attacked_server"
+        },
+        "then": {
+          "op": "choose",
+          "chooser": "corp",
+          "options": [
+            {
+              "id": "search",
+              "label": "Search R&D for an ice",
+              "effect": {
+                "op": "do",
+                "action": {
+                  "kind": "search_rd_type_to_hq",
+                  "cardType": "ice"
+                }
+              }
+            },
+            {
+              "id": "decline",
+              "label": "Decline",
+              "effect": {
+                "op": "do",
+                "action": {
+                  "kind": "gain_credits",
+                  "side": "corp",
+                  "amount": 0
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "class": "subroutine",
       "id": "wave-harmonic",
-      "text": "Gain 1\u00a2 for each rezzed piece of harmonic ice.",
-      "effect": {
+      "text": "Gain 1¢ for each rezzed piece of harmonic ice.",
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "gain_credits",

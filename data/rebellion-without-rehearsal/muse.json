@@ -11,11 +11,23 @@
   ],
   "installCost": 2,
   "memoryCost": 1,
-  "daemonHost": true,
-  "onInstall": {
-    "op": "do",
-    "action": {
-      "kind": "search_install_non_daemon"
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "daemonHost",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "install",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "search_install_non_daemon"
+        }
+      }
     }
-  }
+  ]
 }

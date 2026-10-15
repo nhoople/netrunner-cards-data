@@ -14,30 +14,35 @@
   "installCost": 5,
   "rezCost": 5,
   "strength": 4,
-  "onRez": {
-    "op": "if",
-    "cond": {
-      "op": "source_protects_attacked_server"
-    },
-    "then": {
-      "op": "do",
-      "action": {
-        "kind": "may_derez_installed",
-        "excludeSelf": true,
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "rez",
+      "instructions": {
+        "op": "if",
+        "cond": {
+          "op": "source_protects_attacked_server"
+        },
         "then": {
           "op": "do",
           "action": {
-            "kind": "forbid_bioroid_ice_paid_abilities_this_turn"
+            "kind": "may_derez_installed",
+            "excludeSelf": true,
+            "then": {
+              "op": "do",
+              "action": {
+                "kind": "forbid_bioroid_ice_paid_abilities_this_turn"
+              }
+            }
           }
         }
       }
-    }
-  },
-  "subroutines": [
+    },
     {
+      "class": "subroutine",
       "id": "hakarl-core",
       "text": "Do 1 core damage.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "core_damage",
@@ -46,29 +51,27 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "hakarl-etr",
       "text": "End the run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "end_the_run"
         }
       }
-    }
-  ],
-  "paidAbilities": [
+    },
     {
+      "class": "paid",
       "id": "hakarl-click-break",
       "label": "Lose [click]: Break 1 subroutine on Hákarl 1.0",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1
       },
       "windows": [
         "encounter_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "break_host_subroutine"

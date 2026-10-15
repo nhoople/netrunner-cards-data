@@ -11,41 +11,57 @@
   ],
   "advancementRequirement": 4,
   "agendaPoints": 2,
-  "onVirusPurgeOncePerTurn": true,
-  "onVirusPurge": {
-    "op": "do",
-    "action": {
-      "kind": "gain_credits",
-      "side": "corp",
-      "amount": 4
-    }
-  },
-  "onScore": {
-    "op": "choose",
-    "chooser": "corp",
-    "options": [
-      {
-        "id": "purge",
-        "label": "Purge virus counters",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "purge_virus_counters"
-          }
-        }
-      },
-      {
-        "id": "decline",
-        "label": "Decline",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "gain_credits",
-            "side": "corp",
-            "amount": 0
-          }
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "onVirusPurgeOncePerTurn",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "virus_purge",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "corp",
+          "amount": 4
         }
       }
-    ]
-  }
+    },
+    {
+      "class": "conditional",
+      "trigger": "score",
+      "instructions": {
+        "op": "choose",
+        "chooser": "corp",
+        "options": [
+          {
+            "id": "purge",
+            "label": "Purge virus counters",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "purge_virus_counters"
+              }
+            }
+          },
+          {
+            "id": "decline",
+            "label": "Decline",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "gain_credits",
+                "side": "corp",
+                "amount": 0
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
 }

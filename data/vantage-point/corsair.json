@@ -13,17 +13,22 @@
   "installCost": 3,
   "strength": 0,
   "memoryCost": 1,
-  "breaker": {
-    "breaksSubtype": "barrier",
-    "strength": 0,
-    "breakCredits": 1
-  },
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "breaker",
+        "value": {
+          "breaksSubtype": "barrier",
+          "strength": 0,
+          "breakCredits": 1
+        }
+      }
+    },
+    {
+      "class": "paid",
       "id": "corsair-weaken",
       "label": "1[credit] from stealth: barrier gets −3 strength",
-      "clickCost": 0,
-      "creditCost": 1,
       "cost": {
         "credits": 1,
         "creditsFromStealthOnly": true
@@ -31,14 +36,14 @@
       "windows": [
         "encounter_paw"
       ],
-      "requireEncounterSubtype": "barrier",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "weaken_ice",
           "amount": 3
         }
-      }
+      },
+      "requireEncounterSubtype": "barrier"
     }
   ]
 }

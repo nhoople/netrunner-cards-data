@@ -9,6 +9,14 @@
   "installCost": 0,
   "rezCost": 0,
   "trashCost": 3,
-  "cardsCannotLeaveRunnerHeap": true,
-  "wave": "breaker-bay"
+  "wave": "breaker-bay",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "cardsCannotLeaveRunnerHeap",
+        "value": true
+      }
+    }
+  ]
 }

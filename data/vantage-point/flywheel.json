@@ -12,11 +12,12 @@
   "installCost": 2,
   "rezCost": 2,
   "strength": 3,
-  "subroutines": [
+  "abilities": [
     {
+      "class": "subroutine",
       "id": "flywheel-1",
       "text": "Gain 1[credit]. You may draw 1 card.",
-      "effect": {
+      "instructions": {
         "op": "seq",
         "effects": [
           {
@@ -61,9 +62,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "flywheel-2",
       "text": "Gain 1[credit]. You may draw 1 card.",
-      "effect": {
+      "instructions": {
         "op": "seq",
         "effects": [
           {

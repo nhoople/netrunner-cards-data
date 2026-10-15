@@ -10,18 +10,21 @@
     "condition"
   ],
   "playCost": 3,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "host_on_installed_resource_as_condition"
-    }
-  },
-  "paidAbilities": [
+  "wave": "martial-law",
+  "abilities": [
     {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "host_on_installed_resource_as_condition"
+        }
+      }
+    },
+    {
+      "class": "paid",
       "id": "on-the-lam-prevent",
       "label": "[interrupt] → [trash]: Prevent up to 3 tags or up to 3 damage",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "trashSelf": true
       },
@@ -29,7 +32,7 @@
         "tag_interrupt_paw",
         "damage_interrupt_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "prevent_tags_or_damage",
@@ -38,6 +41,5 @@
       },
       "usableByRunnerOnSelfIce": true
     }
-  ],
-  "wave": "martial-law"
+  ]
 }

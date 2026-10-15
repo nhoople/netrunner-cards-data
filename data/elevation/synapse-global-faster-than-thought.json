@@ -9,18 +9,21 @@
   "subtypes": [
     "division"
   ],
-  "onRemoveTags": {
-    "op": "do",
-    "action": {
-      "kind": "may_install_from_hq_ignore_costs"
-    }
-  },
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "conditional",
+      "trigger": "remove_tags",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "may_install_from_hq_ignore_costs"
+        }
+      }
+    },
+    {
+      "class": "paid",
       "id": "synapse-untag",
       "label": "[click], remove 1 tag: Gain 2¢",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1,
         "removeTags": 1
@@ -28,7 +31,7 @@
       "windows": [
         "corp_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "gain_credits",

@@ -10,60 +10,65 @@
     "transaction"
   ],
   "playCost": 5,
-  "onPlay": {
-    "op": "choose",
-    "chooser": "corp",
-    "options": [
-      {
-        "id": "gain6",
-        "label": "Gain 6¢; Runner −1 allotted click next turn",
-        "effect": {
-          "op": "seq",
-          "effects": [
-            {
-              "op": "do",
-              "action": {
-                "kind": "gain_credits",
-                "side": "corp",
-                "amount": 6
-              }
-            },
-            {
-              "op": "do",
-              "action": {
-                "kind": "allotted_clicks_next_turn",
-                "side": "runner",
-                "delta": -1
-              }
+  "abilities": [
+    {
+      "class": "play",
+      "instructions": {
+        "op": "choose",
+        "chooser": "corp",
+        "options": [
+          {
+            "id": "gain6",
+            "label": "Gain 6¢; Runner −1 allotted click next turn",
+            "effect": {
+              "op": "seq",
+              "effects": [
+                {
+                  "op": "do",
+                  "action": {
+                    "kind": "gain_credits",
+                    "side": "corp",
+                    "amount": 6
+                  }
+                },
+                {
+                  "op": "do",
+                  "action": {
+                    "kind": "allotted_clicks_next_turn",
+                    "side": "runner",
+                    "delta": -1
+                  }
+                }
+              ]
             }
-          ]
-        }
-      },
-      {
-        "id": "gain10",
-        "label": "Gain 10¢; Runner +1 allotted click next turn",
-        "effect": {
-          "op": "seq",
-          "effects": [
-            {
-              "op": "do",
-              "action": {
-                "kind": "gain_credits",
-                "side": "corp",
-                "amount": 10
-              }
-            },
-            {
-              "op": "do",
-              "action": {
-                "kind": "allotted_clicks_next_turn",
-                "side": "runner",
-                "delta": 1
-              }
+          },
+          {
+            "id": "gain10",
+            "label": "Gain 10¢; Runner +1 allotted click next turn",
+            "effect": {
+              "op": "seq",
+              "effects": [
+                {
+                  "op": "do",
+                  "action": {
+                    "kind": "gain_credits",
+                    "side": "corp",
+                    "amount": 10
+                  }
+                },
+                {
+                  "op": "do",
+                  "action": {
+                    "kind": "allotted_clicks_next_turn",
+                    "side": "runner",
+                    "delta": 1
+                  }
+                }
+              ]
             }
-          ]
-        }
+          }
+        ]
       }
-    ]
-  }
+    }
+  ]
 }

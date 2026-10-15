@@ -12,9 +12,17 @@
   "installCost": 2,
   "rezCost": 2,
   "trashCost": 3,
-  "onAnySuccessfulTraceGainAndRunnerLose": {
-    "gain": 1,
-    "lose": 1
-  },
-  "wave": "salsette-island"
+  "wave": "salsette-island",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "onAnySuccessfulTraceGainAndRunnerLose",
+        "value": {
+          "gain": 1,
+          "lose": 1
+        }
+      }
+    }
+  ]
 }

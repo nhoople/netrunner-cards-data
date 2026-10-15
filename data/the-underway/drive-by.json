@@ -10,12 +10,23 @@
     "double"
   ],
   "playCost": 0,
-  "playAdditionalClick": true,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "expose_and_trash_remote_root"
+  "wave": "the-underway",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "playAdditionalClick",
+        "value": true
+      }
+    },
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "expose_and_trash_remote_root"
+        }
+      }
     }
-  },
-  "wave": "the-underway"
+  ]
 }

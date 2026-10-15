@@ -11,7 +11,21 @@
     "ritzy"
   ],
   "installCost": 5,
-  "unique": true,
-  "basicDrawBonus": 1,
-  "wave": "terminal-directive"
+  "wave": "terminal-directive",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "basicDrawBonus",
+        "value": 1
+      }
+    }
+  ]
 }

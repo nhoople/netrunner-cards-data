@@ -13,11 +13,13 @@
   "installCost": 4,
   "rezCost": 4,
   "strength": 2,
-  "subroutines": [
+  "wave": "council-of-the-crest",
+  "abilities": [
     {
+      "class": "subroutine",
       "id": "next-sapphire-draw",
       "text": "Draw up to X cards.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "cotc_next_sapphire_draw"
@@ -25,9 +27,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "next-sapphire-archives",
       "text": "Add up to X cards from Archives to HQ.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "cotc_next_sapphire_archives_to_hq"
@@ -35,15 +38,15 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "next-sapphire-shuffle",
       "text": "Shuffle up to X cards from HQ into R&D.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "cotc_next_sapphire_hq_to_rd"
         }
       }
     }
-  ],
-  "wave": "council-of-the-crest"
+  ]
 }

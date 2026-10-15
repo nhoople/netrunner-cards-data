@@ -10,11 +10,23 @@
   "subtypes": [
     "g-mod"
   ],
-  "link": 0,
-  "onVirusProgramInstall": {
-    "op": "do",
-    "action": {
-      "kind": "trash_top_of_rd"
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "link",
+        "value": 0
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "virus_program_install",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "trash_top_of_rd"
+        }
+      }
     }
-  }
+  ]
 }

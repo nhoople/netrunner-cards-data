@@ -13,11 +13,12 @@
   "installCost": 3,
   "rezCost": 3,
   "strength": 4,
-  "subroutines": [
+  "abilities": [
     {
+      "class": "subroutine",
       "id": "eli-etr1",
       "text": "End the run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "end_the_run"
@@ -25,9 +26,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "eli-etr2",
       "text": "End the run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "end_the_run"

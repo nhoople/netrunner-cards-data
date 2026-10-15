@@ -13,70 +13,76 @@
   "installCost": 0,
   "rezCost": 0,
   "trashCost": 2,
-  "onTurnBegin": {
-    "op": "choose",
-    "chooser": "corp",
-    "options": [
-      {
-        "id": "look",
-        "label": "Look at top 3 of R&D and arrange",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "look_top_n_rd_arrange",
-            "n": 3,
-            "thenMayDrawIfUnprotected": true
-          }
-        }
-      },
-      {
-        "id": "decline-look",
-        "label": "Decline to look",
-        "effect": {
-          "op": "if",
-          "cond": {
-            "op": "host_server_unprotected_by_ice"
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "turn_begin",
+      "instructions": {
+        "op": "choose",
+        "chooser": "corp",
+        "options": [
+          {
+            "id": "look",
+            "label": "Look at top 3 of R&D and arrange",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "look_top_n_rd_arrange",
+                "n": 3,
+                "thenMayDrawIfUnprotected": true
+              }
+            }
           },
-          "then": {
-            "op": "choose",
-            "chooser": "corp",
-            "options": [
-              {
-                "id": "draw",
-                "label": "Draw 1 card",
-                "effect": {
-                  "op": "do",
-                  "action": {
-                    "kind": "draw",
-                    "side": "corp",
-                    "amount": 1
-                  }
-                }
+          {
+            "id": "decline-look",
+            "label": "Decline to look",
+            "effect": {
+              "op": "if",
+              "cond": {
+                "op": "host_server_unprotected_by_ice"
               },
-              {
-                "id": "decline",
-                "label": "Decline to draw",
-                "effect": {
-                  "op": "do",
-                  "action": {
-                    "kind": "gain_credits",
-                    "side": "corp",
-                    "amount": 0
+              "then": {
+                "op": "choose",
+                "chooser": "corp",
+                "options": [
+                  {
+                    "id": "draw",
+                    "label": "Draw 1 card",
+                    "effect": {
+                      "op": "do",
+                      "action": {
+                        "kind": "draw",
+                        "side": "corp",
+                        "amount": 1
+                      }
+                    }
+                  },
+                  {
+                    "id": "decline",
+                    "label": "Decline to draw",
+                    "effect": {
+                      "op": "do",
+                      "action": {
+                        "kind": "gain_credits",
+                        "side": "corp",
+                        "amount": 0
+                      }
+                    }
                   }
+                ]
+              },
+              "else": {
+                "op": "do",
+                "action": {
+                  "kind": "gain_credits",
+                  "side": "corp",
+                  "amount": 0
                 }
               }
-            ]
-          },
-          "else": {
-            "op": "do",
-            "action": {
-              "kind": "gain_credits",
-              "side": "corp",
-              "amount": 0
             }
           }
-        }
+        ]
       }
-    ]
-  }
+    }
+  ]
 }

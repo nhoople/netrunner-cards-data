@@ -10,20 +10,36 @@
     "gray ops"
   ],
   "playCost": 0,
-  "playRequiresRunnerCreditsLt": 6,
-  "playAdditionalCost": {
-    "op": "do",
-    "action": {
-      "kind": "remove_tags",
-      "amount": 1
+  "wave": "escalation",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "playRequiresRunnerCreditsLt",
+        "value": 6
+      }
+    },
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "trash_installed_runner",
+          "pick": "choose"
+        }
+      },
+      "restrictions": [
+        {
+          "appliesTo": "play",
+          "effect": {
+            "op": "do",
+            "action": {
+              "kind": "remove_tags",
+              "amount": 1
+            }
+          }
+        }
+      ]
     }
-  },
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "trash_installed_runner",
-      "pick": "choose"
-    }
-  },
-  "wave": "escalation"
+  ]
 }

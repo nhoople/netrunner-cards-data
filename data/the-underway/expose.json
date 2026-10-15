@@ -9,20 +9,26 @@
   "installCost": 2,
   "rezCost": 2,
   "trashCost": 2,
-  "canAdvance": true,
-  "paidAbilities": [
+  "wave": "the-underway",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "canAdvance",
+        "value": true
+      }
+    },
+    {
+      "class": "paid",
       "id": "expose-remove-bp",
       "label": "[trash]: Remove 1 bad publicity per advancement",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "trashSelf": true
       },
       "windows": [
         "corp_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "remove_bad_publicity",
@@ -35,6 +41,5 @@
         }
       }
     }
-  ],
-  "wave": "the-underway"
+  ]
 }

@@ -11,19 +11,25 @@
     "connection"
   ],
   "installCost": 2,
-  "onTurnBegin": {
-    "op": "if",
-    "cond": {
-      "op": "link_gte",
-      "amount": 2
-    },
-    "then": {
-      "op": "do",
-      "action": {
-        "kind": "gain_credits",
-        "side": "runner",
-        "amount": 1
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "turn_begin",
+      "instructions": {
+        "op": "if",
+        "cond": {
+          "op": "link_gte",
+          "amount": 2
+        },
+        "then": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "runner",
+            "amount": 1
+          }
+        }
       }
     }
-  }
+  ]
 }

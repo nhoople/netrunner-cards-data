@@ -12,28 +12,33 @@
   "installCost": 1,
   "rezCost": 1,
   "trashCost": 2,
-  "installServers": [
-    "rd"
-  ],
-  "paidAbilities": [
+  "wave": "earths-scion",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "installServers",
+        "value": [
+          "rd"
+        ]
+      }
+    },
+    {
+      "class": "paid",
       "id": "bamboo-dome-arrange",
       "label": "[click]: Reveal top 3 of R&D; secretly add 1 to HQ; return others to top in any order",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1
       },
       "windows": [
         "corp_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "reveal_top_3"
         }
       }
     }
-  ],
-  "wave": "earths-scion"
+  ]
 }

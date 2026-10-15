@@ -11,8 +11,28 @@
     "virtual"
   ],
   "installCost": 0,
-  "unique": true,
-  "mustTrashFirstAccessedCardWithTrashCostEachTurn": true,
-  "bonusAccessOnHqBreach": 1,
-  "wave": "data-and-destiny"
+  "wave": "data-and-destiny",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "mustTrashFirstAccessedCardWithTrashCostEachTurn",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "bonusAccessOnHqBreach",
+        "value": 1
+      }
+    }
+  ]
 }

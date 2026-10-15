@@ -12,31 +12,29 @@
   "installCost": 1,
   "rezCost": 1,
   "strength": 3,
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "paid",
       "id": "ezam-swap",
       "label": "[click]: Swap this ice with another installed ice",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1
       },
       "windows": [
         "corp_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "swap_source_ice_with_other"
         }
       }
-    }
-  ],
-  "subroutines": [
+    },
     {
+      "class": "subroutine",
       "id": "ezam-look",
       "text": "Look at the top card of R&D. You may add that card to the bottom of R&D.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "look_top_rd_may_bottom"
@@ -44,9 +42,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "ezam-fortify",
       "text": "Each piece of ice gets +1 strength for the remainder of this run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "fortify_all_ice",

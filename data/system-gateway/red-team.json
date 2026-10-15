@@ -6,28 +6,52 @@
   "type": "resource",
   "side": "runner",
   "installCost": 5,
-  "subtypes": ["job"],
-  "hostedCreditsOnInstall": 12,
-  "trashWhenHostedCreditsEmpty": true,
+  "subtypes": [
+    "job"
+  ],
   "unsupported": [],
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "hostedCreditsOnInstall",
+        "value": 12
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "trashWhenHostedCreditsEmpty",
+        "value": true
+      }
+    },
+    {
+      "class": "paid",
       "id": "run-central",
       "label": "Run a central not run this turn; if successful take 3¢",
-      "clickCost": 1,
-      "creditCost": 0,
-      "cost": { "clicks": 1 },
-      "windows": ["runner_action_paw"],
-      "effect": {
+      "cost": {
+        "clicks": 1
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "instructions": {
         "op": "do",
-        "action": { "kind": "gain_credits", "side": "runner", "amount": 0 }
+        "action": {
+          "kind": "gain_credits",
+          "side": "runner",
+          "amount": 0
+        }
       },
       "startsRun": {
         "servers": "central",
         "requireNotRunThisTurn": true,
         "onSuccessfulRun": {
           "op": "do",
-          "action": { "kind": "take_hosted_credits", "amount": 3 }
+          "action": {
+            "kind": "take_hosted_credits",
+            "amount": 3
+          }
         }
       }
     }

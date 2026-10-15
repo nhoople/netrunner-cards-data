@@ -11,15 +11,26 @@
     "gray ops"
   ],
   "playCost": 2,
-  "zeroInfluenceIfNonAllianceFactionCardsGte": {
-    "faction": "nbn",
-    "threshold": 6
-  },
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "name_reveal_trash_grip_copies"
+  "wave": "salsette-island",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "zeroInfluenceIfNonAllianceFactionCardsGte",
+        "value": {
+          "faction": "nbn",
+          "threshold": 6
+        }
+      }
+    },
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "name_reveal_trash_grip_copies"
+        }
+      }
     }
-  },
-  "wave": "salsette-island"
+  ]
 }

@@ -8,19 +8,19 @@
   "faction": "criminal",
   "installCost": 2,
   "memoryCost": 1,
-  "paidAbilities": [
+  "wave": "honor-and-profit",
+  "abilities": [
     {
+      "class": "paid",
       "id": "grappling-break",
       "label": "[trash]: Break all but 1 subroutine on a piece of ice",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "trashSelf": true
       },
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "break_all_but_n_subroutines_on_encounter",
@@ -28,6 +28,5 @@
         }
       }
     }
-  ],
-  "wave": "honor-and-profit"
+  ]
 }

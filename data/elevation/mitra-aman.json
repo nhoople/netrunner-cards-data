@@ -12,32 +12,38 @@
   "installCost": 0,
   "rezCost": 0,
   "trashCost": 3,
-  "onApproachIce": {
-    "op": "choose",
-    "chooser": "corp",
-    "options": [
-      {
-        "id": "decline",
-        "label": "Decline",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "gain_credits",
-            "side": "corp",
-            "amount": 0
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "approach_ice",
+      "instructions": {
+        "op": "choose",
+        "chooser": "corp",
+        "options": [
+          {
+            "id": "decline",
+            "label": "Decline",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "gain_credits",
+                "side": "corp",
+                "amount": 0
+              }
+            }
+          },
+          {
+            "id": "activate",
+            "label": "Trash this upgrade: gain 3[credit] and may swap approached ice",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "mitra_aman_approach_ice"
+              }
+            }
           }
-        }
-      },
-      {
-        "id": "activate",
-        "label": "Trash this upgrade: gain 3[credit] and may swap approached ice",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "mitra_aman_approach_ice"
-          }
-        }
+        ]
       }
-    ]
-  }
+    }
+  ]
 }

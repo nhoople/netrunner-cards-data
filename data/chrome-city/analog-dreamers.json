@@ -8,25 +8,24 @@
   "faction": "shaper",
   "installCost": 2,
   "memoryCost": 1,
-  "paidAbilities": [
+  "wave": "chrome-city",
+  "abilities": [
     {
+      "class": "paid",
       "id": "analog-dreamers-run",
       "label": "[click]: Run R&D. If successful, instead of breaching, may shuffle an unrezzed non-ice card with no advancements into R&D",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1
       },
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "analog_dreamers_run_rd"
         }
       }
     }
-  ],
-  "wave": "chrome-city"
+  ]
 }

@@ -13,20 +13,25 @@
   "installCost": 0,
   "rezCost": 0,
   "trashCost": 3,
-  "unique": true,
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "paid",
       "id": "jackson-draw",
       "label": "[click]: Draw 2 cards",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1
       },
       "windows": [
         "corp_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "draw",
@@ -36,17 +41,16 @@
       }
     },
     {
+      "class": "paid",
       "id": "jackson-rfg",
       "label": "Remove Jackson Howard from the game: Shuffle up to 3 from Archives into R&D",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "rfgSelf": true
       },
       "windows": [
         "corp_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "shuffle_archives_to_rd",

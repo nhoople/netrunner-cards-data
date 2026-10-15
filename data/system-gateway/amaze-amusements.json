@@ -9,5 +9,13 @@
   "rezCost": 1,
   "trashCost": 3,
   "unsupported": [],
-  "tagsIfAgendaStolenThisRun": 2
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "tagsIfAgendaStolenThisRun",
+        "value": 2
+      }
+    }
+  ]
 }

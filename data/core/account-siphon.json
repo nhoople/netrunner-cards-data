@@ -12,13 +12,21 @@
     "sabotage"
   ],
   "playCost": 0,
-  "runEvent": {
-    "servers": "hq",
-    "onSuccessfulRun": {
-      "op": "do",
-      "action": {
-        "kind": "account_siphon_may_instead_of_breach"
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "runEvent",
+        "value": {
+          "servers": "hq",
+          "onSuccessfulRun": {
+            "op": "do",
+            "action": {
+              "kind": "account_siphon_may_instead_of_breach"
+            }
+          }
+        }
       }
     }
-  }
+  ]
 }

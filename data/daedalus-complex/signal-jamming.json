@@ -9,12 +9,12 @@
   "installCost": 0,
   "rezCost": 0,
   "trashCost": 2,
-  "paidAbilities": [
+  "wave": "daedalus-complex",
+  "abilities": [
     {
+      "class": "paid",
       "id": "signal-jamming-forbid",
       "label": "[trash]: Cards cannot be installed until the end of the run (run on this server)",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "trashSelf": true
       },
@@ -24,7 +24,7 @@
         "encounter_paw",
         "approach_server_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "forbid_installs_until_run_end"
@@ -33,6 +33,5 @@
       "requireDuringRun": true,
       "requireThisServer": true
     }
-  ],
-  "wave": "daedalus-complex"
+  ]
 }

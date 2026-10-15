@@ -7,11 +7,16 @@
   "unsupported": [],
   "faction": "jinteki",
   "playCost": 4,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "an_offer_you_cant_refuse"
+  "wave": "old-hollywood",
+  "abilities": [
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "an_offer_you_cant_refuse"
+        }
+      }
     }
-  },
-  "wave": "old-hollywood"
+  ]
 }

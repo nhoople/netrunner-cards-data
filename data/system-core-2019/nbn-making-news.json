@@ -10,8 +10,22 @@
   "subtypes": [
     "megacorp"
   ],
-  "recurringCreditsMax": 2,
-  "recurringSpendFor": [
-    "trace"
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "recurringCreditsMax",
+        "value": 2
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "recurringSpendFor",
+        "value": [
+          "trace"
+        ]
+      }
+    }
   ]
 }

@@ -7,19 +7,29 @@
   "unsupported": [],
   "faction": "anarch",
   "installCost": 1,
-  "onCorpTurnBeginIfRunnerUntagged": {
-    "op": "do",
-    "action": {
-      "kind": "give_tags",
-      "amount": 1
+  "wave": "true-colors",
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "corp_turn_begin_if_runner_untagged",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "give_tags",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "turn_begin_if_corp_no_bad_publicity",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "give_bad_publicity",
+          "amount": 1
+        }
+      }
     }
-  },
-  "onTurnBeginIfCorpNoBadPublicity": {
-    "op": "do",
-    "action": {
-      "kind": "give_bad_publicity",
-      "amount": 1
-    }
-  },
-  "wave": "true-colors"
+  ]
 }

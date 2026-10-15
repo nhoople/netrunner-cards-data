@@ -8,5 +8,13 @@
   "unsupported": [],
   "faction": "shaper",
   "installCost": 4,
-  "bonusAccessOnRdBreach": 1
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "bonusAccessOnRdBreach",
+        "value": 1
+      }
+    }
+  ]
 }

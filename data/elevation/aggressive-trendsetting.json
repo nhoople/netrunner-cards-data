@@ -11,34 +11,40 @@
   ],
   "advancementRequirement": 3,
   "agendaPoints": 1,
-  "onFirstCorpCardTrashEachTurn": {
-    "op": "choose",
-    "chooser": "runner",
-    "options": [
-      {
-        "id": "spend-click",
-        "label": "Spend [click]",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "lose_clicks",
-            "side": "runner",
-            "amount": 1
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "first_corp_card_trash_each_turn",
+      "instructions": {
+        "op": "choose",
+        "chooser": "runner",
+        "options": [
+          {
+            "id": "spend-click",
+            "label": "Spend [click]",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "lose_clicks",
+                "side": "runner",
+                "amount": 1
+              }
+            }
+          },
+          {
+            "id": "corp-click",
+            "label": "Decline — Corp gets +1 allotted click next turn",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "allotted_clicks_next_turn",
+                "side": "corp",
+                "delta": 1
+              }
+            }
           }
-        }
-      },
-      {
-        "id": "corp-click",
-        "label": "Decline — Corp gets +1 allotted click next turn",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "allotted_clicks_next_turn",
-            "side": "corp",
-            "delta": 1
-          }
-        }
+        ]
       }
-    ]
-  }
+    }
+  ]
 }

@@ -10,16 +10,40 @@
     "console"
   ],
   "installCost": 5,
-  "unique": true,
-  "maxConsole": 1,
-  "muBonus": 1,
-  "onRunnerTurnBegin": {
-    "op": "do",
-    "action": {
-      "kind": "draw",
-      "side": "runner",
-      "amount": 1
+  "wave": "terminal-directive",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "maxConsole",
+        "value": 1
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "muBonus",
+        "value": 1
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "runner_turn_begin",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "draw",
+          "side": "runner",
+          "amount": 1
+        }
+      }
     }
-  },
-  "wave": "terminal-directive"
+  ]
 }

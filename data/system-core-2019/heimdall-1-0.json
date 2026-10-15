@@ -15,11 +15,12 @@
   "installCost": 8,
   "rezCost": 8,
   "strength": 6,
-  "subroutines": [
+  "abilities": [
     {
+      "class": "subroutine",
       "id": "heimdall-1-0-core",
       "text": "Do 1 core damage.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "core_damage",
@@ -28,9 +29,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "heimdall-1-0-etr-1",
       "text": "End the run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "end_the_run"
@@ -38,9 +40,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "heimdall-1-0-etr-2",
       "text": "End the run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "end_the_run"

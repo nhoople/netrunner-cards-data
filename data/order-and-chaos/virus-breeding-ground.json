@@ -10,32 +10,35 @@
     "virtual"
   ],
   "installCost": 2,
-  "onTurnBegin": {
-    "op": "do",
-    "action": {
-      "kind": "add_virus_counter",
-      "amount": 1
-    }
-  },
-  "paidAbilities": [
+  "wave": "order-and-chaos",
+  "abilities": [
     {
+      "class": "conditional",
+      "trigger": "turn_begin",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "add_virus_counter",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "class": "paid",
       "id": "vbg-move",
       "label": "[click]: Move 1 virus counter to another card with a virus counter",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1
       },
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "move_counter"
         }
       }
     }
-  ],
-  "wave": "order-and-chaos"
+  ]
 }

@@ -12,20 +12,38 @@
   "installCost": 0,
   "rezCost": 0,
   "trashCost": 0,
-  "mustRevealWhenAccessedFromRd": true,
-  "skipOnAccessFromArchives": true,
-  "onAccess": {
-    "op": "do",
-    "action": {
-      "kind": "trace",
-      "strength": 4,
-      "onSuccess": {
+  "wave": "whispers-in-nalubaale",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "mustRevealWhenAccessedFromRd",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "skipOnAccessFromArchives",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "access",
+      "instructions": {
         "op": "do",
         "action": {
-          "kind": "win_intake_bounce"
+          "kind": "trace",
+          "strength": 4,
+          "onSuccess": {
+            "op": "do",
+            "action": {
+              "kind": "win_intake_bounce"
+            }
+          }
         }
       }
     }
-  },
-  "wave": "whispers-in-nalubaale"
+  ]
 }

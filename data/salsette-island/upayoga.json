@@ -13,11 +13,13 @@
   "installCost": 3,
   "rezCost": 3,
   "strength": 4,
-  "subroutines": [
+  "wave": "salsette-island",
+  "abilities": [
     {
+      "class": "subroutine",
       "id": "upayoga-psi",
       "text": "Psi game. If bids differ, the Runner loses 2¢.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "play_psi_game",
@@ -34,9 +36,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "upayoga-resolve-psi",
       "text": "Resolve a subroutine on a piece of rezzed psi ice.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "may_resolve_subroutine_on_rezzed_ice",
@@ -44,6 +47,5 @@
         }
       }
     }
-  ],
-  "wave": "salsette-island"
+  ]
 }

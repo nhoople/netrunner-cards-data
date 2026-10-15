@@ -14,11 +14,13 @@
   "installCost": 1,
   "rezCost": 1,
   "strength": 3,
-  "subroutines": [
+  "wave": "sovereign-sight",
+  "abilities": [
     {
+      "class": "subroutine",
       "id": "mganga-psi",
       "text": "You and the Runner secretly spend 0¢, 1¢, or 2¢. Reveal spent credits. If you and the Runner spend a different number of credits, do 2 net damage; otherwise do 1 net damage. Trash Mganga.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "play_psi_game",
@@ -62,6 +64,5 @@
         }
       }
     }
-  ],
-  "wave": "sovereign-sight"
+  ]
 }

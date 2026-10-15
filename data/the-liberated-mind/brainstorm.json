@@ -13,16 +13,24 @@
   "installCost": 9,
   "rezCost": 9,
   "strength": 2,
-  "gainsSubroutinesOnEncounterEqualGripSize": {
-    "id": "brainstorm-core",
-    "text": "Do 1 core damage.",
-    "effect": {
-      "op": "do",
-      "action": {
-        "kind": "core_damage",
-        "amount": 1
+  "wave": "the-liberated-mind",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "gainsSubroutinesOnEncounterEqualGripSize",
+        "value": {
+          "id": "brainstorm-core",
+          "text": "Do 1 core damage.",
+          "effect": {
+            "op": "do",
+            "action": {
+              "kind": "core_damage",
+              "amount": 1
+            }
+          }
+        }
       }
     }
-  },
-  "wave": "the-liberated-mind"
+  ]
 }

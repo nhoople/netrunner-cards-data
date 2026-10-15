@@ -8,9 +8,23 @@
   "faction": "adam",
   "installCost": 3,
   "memoryCost": 1,
-  "recurringCreditsMax": 2,
-  "recurringSpendFor": [
-    "use_program"
-  ],
-  "wave": "data-and-destiny"
+  "wave": "data-and-destiny",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "recurringCreditsMax",
+        "value": 2
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "recurringSpendFor",
+        "value": [
+          "use_program"
+        ]
+      }
+    }
+  ]
 }

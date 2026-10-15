@@ -7,9 +7,23 @@
   "unsupported": [],
   "faction": "shaper",
   "installCost": 2,
-  "recurringCreditsMax": 1,
-  "recurringSpendFor": [
-    "install_program"
-  ],
-  "wave": "all-that-remains"
+  "wave": "all-that-remains",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "recurringCreditsMax",
+        "value": 1
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "recurringSpendFor",
+        "value": [
+          "install_program"
+        ]
+      }
+    }
+  ]
 }

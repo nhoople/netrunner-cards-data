@@ -11,18 +11,34 @@
     "seedy"
   ],
   "installCost": 2,
-  "onInstall": {
-    "op": "do",
-    "action": {
-      "kind": "search_stack_host_virus_or_weapon",
-      "max": 2
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "install",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "search_stack_host_virus_or_weapon",
+          "max": 2
+        }
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "turn_begin",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "may_add_hosted_card_to_grip"
+        }
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "trashWhenNoHostedCards",
+        "value": true
+      }
     }
-  },
-  "onTurnBegin": {
-    "op": "do",
-    "action": {
-      "kind": "may_add_hosted_card_to_grip"
-    }
-  },
-  "trashWhenNoHostedCards": true
+  ]
 }

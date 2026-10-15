@@ -10,13 +10,19 @@
     "connection"
   ],
   "installCost": 2,
-  "unique": true,
-  "paidAbilities": [
+  "wave": "terminal-directive",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "paid",
       "id": "dean-lister-boost",
       "label": "[trash]: Choose an icebreaker; +1 strength per grip card until end of run",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "trashSelf": true
       },
@@ -25,7 +31,7 @@
         "encounter_paw",
         "approach_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "boost_icebreaker"
@@ -34,6 +40,5 @@
       "usableByRunnerOnSelfIce": true,
       "requireDuringRun": true
     }
-  ],
-  "wave": "terminal-directive"
+  ]
 }

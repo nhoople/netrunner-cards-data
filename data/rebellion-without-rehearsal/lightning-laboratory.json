@@ -11,17 +11,35 @@
   ],
   "advancementRequirement": 4,
   "agendaPoints": 2,
-  "onScore": {
-    "op": "do",
-    "action": {
-      "kind": "add_agenda_counter",
-      "amount": 1
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "score",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "add_agenda_counter",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "onRunBeginMaySpendAgendaCounterRezUpToIceProtectingAttacked",
+        "value": {
+          "maxIce": 2
+        }
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "onCorpTurnEndDerezUpToIceProtectingLightningServer",
+        "value": {
+          "maxIce": 2
+        }
+      }
     }
-  },
-  "onRunBeginMaySpendAgendaCounterRezUpToIceProtectingAttacked": {
-    "maxIce": 2
-  },
-  "onCorpTurnEndDerezUpToIceProtectingLightningServer": {
-    "maxIce": 2
-  }
+  ]
 }

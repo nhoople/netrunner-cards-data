@@ -12,13 +12,18 @@
   "installCost": 3,
   "rezCost": 3,
   "trashCost": 4,
-  "unique": true,
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "paid",
       "id": "bass-ch1r180g4-clicks",
       "label": "[click], [trash]: Gain [click][click]",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1,
         "trashSelf": true
@@ -26,7 +31,7 @@
       "windows": [
         "corp_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "gain_clicks",

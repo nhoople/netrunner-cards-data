@@ -11,15 +11,29 @@
     "run"
   ],
   "playCost": 1,
-  "blankIdentitiesWhileResolving": true,
-  "runEvent": {
-    "servers": "any",
-    "onRunEnd": {
-      "op": "do",
-      "action": {
-        "kind": "may_shuffle_title_from_heap_into_stack",
-        "title": "Direct Access"
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "blankIdentitiesWhileResolving",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "runEvent",
+        "value": {
+          "servers": "any",
+          "onRunEnd": {
+            "op": "do",
+            "action": {
+              "kind": "may_shuffle_title_from_heap_into_stack",
+              "title": "Direct Access"
+            }
+          }
+        }
       }
     }
-  }
+  ]
 }

@@ -10,12 +10,24 @@
     "connection"
   ],
   "installCost": 3,
-  "unique": true,
-  "onFirstSuccessfulHqRunThisTurn": {
-    "op": "do",
-    "action": {
-      "kind": "trash_top_of_rd"
+  "wave": "fear-the-masses",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "first_successful_hq_run_this_turn",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "trash_top_of_rd"
+        }
+      }
     }
-  },
-  "wave": "fear-the-masses"
+  ]
 }

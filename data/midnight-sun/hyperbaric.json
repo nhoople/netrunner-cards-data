@@ -13,17 +13,22 @@
   "installCost": 3,
   "strength": 0,
   "memoryCost": 1,
-  "breaker": {
-    "breaksSubtype": "code gate",
-    "strength": 0,
-    "breakCredits": 1
-  },
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "breaker",
+        "value": {
+          "breaksSubtype": "code gate",
+          "strength": 0,
+          "breakCredits": 1
+        }
+      }
+    },
+    {
+      "class": "paid",
       "id": "hyperbaric-place-power",
       "label": "2¢: Place 1 power counter on Hyperbaric",
-      "clickCost": 0,
-      "creditCost": 2,
       "cost": {
         "credits": 2
       },
@@ -31,15 +36,27 @@
         "runner_action_paw",
         "encounter_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "add_power_counter",
           "amount": 1
         }
       }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "powerCountersOnInstall",
+        "value": 1
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "strengthPerPowerCounter",
+        "value": true
+      }
     }
-  ],
-  "powerCountersOnInstall": 1,
-  "strengthPerPowerCounter": true
+  ]
 }

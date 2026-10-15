@@ -9,20 +9,26 @@
   "installCost": 1,
   "rezCost": 1,
   "trashCost": 3,
-  "unique": true,
-  "paidAbilities": [
+  "wave": "crimson-dust",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "paid",
       "id": "mca-place-power",
       "label": "[click]: Place 1 power counter; Runner loses [click] at start of their next turn",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1
       },
       "windows": [
         "corp_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "seq",
         "effects": [
           {
@@ -42,13 +48,12 @@
           }
         ]
       },
-      "oncePerTurn": true
+      "flag": "once_per_turn"
     },
     {
+      "class": "paid",
       "id": "mca-gain-clicks",
       "label": "[click], [trash], 3 hosted power counters: Gain [click][click][click][click]",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "powerCounters": 3,
         "clicks": 1,
@@ -57,7 +62,7 @@
       "windows": [
         "corp_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "gain_clicks",
@@ -66,6 +71,5 @@
         }
       }
     }
-  ],
-  "wave": "crimson-dust"
+  ]
 }

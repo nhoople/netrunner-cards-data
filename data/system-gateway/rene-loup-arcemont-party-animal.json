@@ -5,14 +5,28 @@
   "nrdbCode": "30001",
   "type": "identity",
   "side": "runner",
-  "link": 0,
   "unsupported": [],
   "subtypes": [
     "g-mod"
   ],
-  "onAccessTrashGain": {
-    "credits": 1,
-    "draw": 1,
-    "oncePerTurn": true
-  }
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "link",
+        "value": 0
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "onAccessTrashGain",
+        "value": {
+          "credits": 1,
+          "draw": 1,
+          "oncePerTurn": true
+        }
+      }
+    }
+  ]
 }

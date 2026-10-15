@@ -9,5 +9,13 @@
   "faction": "criminal",
   "installCost": 3,
   "memoryCost": 1,
-  "mayExposeApproachedUnrezzedIceOncePerRunThenMayJackOut": true
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "mayExposeApproachedUnrezzedIceOncePerRunThenMayJackOut",
+        "value": true
+      }
+    }
+  ]
 }

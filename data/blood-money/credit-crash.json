@@ -10,9 +10,17 @@
     "run"
   ],
   "playCost": 1,
-  "runEvent": {
-    "servers": "any",
-    "trashFirstNonAgendaAccessCorpMayPayRezOrPlayCostToPrevent": true
-  },
-  "wave": "blood-money"
+  "wave": "blood-money",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "runEvent",
+        "value": {
+          "servers": "any",
+          "trashFirstNonAgendaAccessCorpMayPayRezOrPlayCostToPrevent": true
+        }
+      }
+    }
+  ]
 }

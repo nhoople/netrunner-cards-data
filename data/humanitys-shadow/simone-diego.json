@@ -13,9 +13,29 @@
   "installCost": 4,
   "rezCost": 4,
   "trashCost": 3,
-  "unique": true,
-  "recurringCreditsMax": 2,
-  "recurringSpendFor": [
-    "advance_cards_this_server"
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "recurringCreditsMax",
+        "value": 2
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "recurringSpendFor",
+        "value": [
+          "advance_cards_this_server"
+        ]
+      }
+    }
   ]
 }

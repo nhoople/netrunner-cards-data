@@ -10,24 +10,35 @@
     "condition"
   ],
   "playCost": 1,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "host_on_rezzed_bioroid_ice_as_condition"
-    }
-  },
-  "hostGainsSubroutinesBeforePrinted": [
+  "wave": "intervention",
+  "abilities": [
     {
-      "id": "wetwork-core",
-      "text": "Do 1 core damage.",
-      "effect": {
+      "class": "play",
+      "instructions": {
         "op": "do",
         "action": {
-          "kind": "core_damage",
-          "amount": 1
+          "kind": "host_on_rezzed_bioroid_ice_as_condition"
         }
       }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "hostGainsSubroutinesBeforePrinted",
+        "value": [
+          {
+            "id": "wetwork-core",
+            "text": "Do 1 core damage.",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "core_damage",
+                "amount": 1
+              }
+            }
+          }
+        ]
+      }
     }
-  ],
-  "wave": "intervention"
+  ]
 }

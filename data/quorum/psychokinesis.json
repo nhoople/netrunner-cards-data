@@ -10,12 +10,23 @@
     "terminal"
   ],
   "playCost": 1,
-  "endsActionPhase": true,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "look_top5_may_install_remote"
+  "wave": "quorum",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "endsActionPhase",
+        "value": true
+      }
+    },
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "look_top5_may_install_remote"
+        }
+      }
     }
-  },
-  "wave": "quorum"
+  ]
 }

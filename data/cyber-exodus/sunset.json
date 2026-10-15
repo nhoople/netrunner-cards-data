@@ -8,10 +8,15 @@
   "unsupported": [],
   "faction": "jinteki",
   "playCost": 0,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "choose_server_rearrange_ice"
+  "abilities": [
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "choose_server_rearrange_ice"
+        }
+      }
     }
-  }
+  ]
 }

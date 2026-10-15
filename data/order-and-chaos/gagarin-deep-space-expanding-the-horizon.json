@@ -9,6 +9,14 @@
   "subtypes": [
     "corp"
   ],
-  "additionalCreditsToAccessRemoteRoot": 1,
-  "wave": "order-and-chaos"
+  "wave": "order-and-chaos",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "additionalCreditsToAccessRemoteRoot",
+        "value": 1
+      }
+    }
+  ]
 }

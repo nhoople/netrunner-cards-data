@@ -6,10 +6,20 @@
   "type": "event",
   "side": "runner",
   "playCost": 1,
-  "subtypes": ["run"],
+  "subtypes": [
+    "run"
+  ],
   "unsupported": [],
-  "runEvent": {
-    "servers": "any",
-    "iceRezCostIncrease": 3
-  }
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "runEvent",
+        "value": {
+          "servers": "any",
+          "iceRezCostIncrease": 3
+        }
+      }
+    }
+  ]
 }

@@ -11,20 +11,26 @@
     "ritzy"
   ],
   "installCost": 2,
-  "unique": true,
-  "paidAbilities": [
+  "wave": "the-liberated-mind",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "paid",
       "id": "temple-place-power",
       "label": "[click]: Place 1 power counter on this resource",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1
       },
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "add_power_counter",
@@ -34,17 +40,16 @@
       "usableByRunnerOnSelfIce": true
     },
     {
+      "class": "paid",
       "id": "temple-spend-power",
       "label": "Hosted power counter: Gain [click]",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "powerCounters": 1
       },
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "gain_clicks",
@@ -52,9 +57,8 @@
           "amount": 1
         }
       },
-      "oncePerTurn": true,
+      "flag": "once_per_turn",
       "usableByRunnerOnSelfIce": true
     }
-  ],
-  "wave": "the-liberated-mind"
+  ]
 }

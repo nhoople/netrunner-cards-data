@@ -8,8 +8,22 @@
   "unsupported": [],
   "installCost": 1,
   "memoryCost": 1,
-  "powerCountersOnInstall": 2,
-  "maySpendPowerCountersForBonusRdAccess": {
-    "max": 1
-  }
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "powerCountersOnInstall",
+        "value": 2
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "maySpendPowerCountersForBonusRdAccess",
+        "value": {
+          "max": 1
+        }
+      }
+    }
+  ]
 }

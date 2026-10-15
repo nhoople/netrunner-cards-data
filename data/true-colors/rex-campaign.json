@@ -12,19 +12,41 @@
   "installCost": 1,
   "rezCost": 1,
   "trashCost": 3,
-  "powerCountersOnRez": 3,
-  "trashWhenPowerCountersEmpty": true,
-  "onTurnBegin": {
-    "op": "do",
-    "action": {
-      "kind": "turn_begin"
+  "wave": "true-colors",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "powerCountersOnRez",
+        "value": 3
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "trashWhenPowerCountersEmpty",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "turn_begin",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "turn_begin"
+        }
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "power_counters_empty",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "rex_campaign_when_empty"
+        }
+      }
     }
-  },
-  "onPowerCountersEmpty": {
-    "op": "do",
-    "action": {
-      "kind": "rex_campaign_when_empty"
-    }
-  },
-  "wave": "true-colors"
+  ]
 }

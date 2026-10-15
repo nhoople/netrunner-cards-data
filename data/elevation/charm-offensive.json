@@ -10,13 +10,21 @@
     "run"
   ],
   "playCost": 0,
-  "runEvent": {
-    "servers": "archives",
-    "onRunEnd": {
-      "op": "do",
-      "action": {
-        "kind": "trash_rezzed_accessed"
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "runEvent",
+        "value": {
+          "servers": "archives",
+          "onRunEnd": {
+            "op": "do",
+            "action": {
+              "kind": "trash_rezzed_accessed"
+            }
+          }
+        }
       }
     }
-  }
+  ]
 }

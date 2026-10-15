@@ -11,11 +11,31 @@
     "virtual"
   ],
   "installCost": 0,
-  "hostedCreditsOnAnyIceRez": 1,
-  "hostedCreditsSpendFor": [
-    "install"
-  ],
-  "hostedCreditsSpendForInstallTypes": [
-    "program"
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "hostedCreditsOnAnyIceRez",
+        "value": 1
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "hostedCreditsSpendFor",
+        "value": [
+          "install"
+        ]
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "hostedCreditsSpendForInstallTypes",
+        "value": [
+          "program"
+        ]
+      }
+    }
   ]
 }

@@ -10,34 +10,42 @@
     "run"
   ],
   "playCost": 1,
-  "runEvent": {
-    "servers": "any",
-    "addPowerCounterOnSubroutineResolve": 1,
-    "onRunEnd": {
-      "op": "seq",
-      "effects": [
-        {
-          "op": "do",
-          "action": {
-            "kind": "draw",
-            "side": "runner",
-            "amount": 0,
-            "tally": {
-              "count": "source_power_counters",
-              "per": 1,
-              "side": "source"
-            }
-          }
-        },
-        {
-          "op": "do",
-          "action": {
-            "kind": "gain_credits",
-            "side": "runner",
-            "amount": 3
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "runEvent",
+        "value": {
+          "servers": "any",
+          "addPowerCounterOnSubroutineResolve": 1,
+          "onRunEnd": {
+            "op": "seq",
+            "effects": [
+              {
+                "op": "do",
+                "action": {
+                  "kind": "draw",
+                  "side": "runner",
+                  "amount": 0,
+                  "tally": {
+                    "count": "source_power_counters",
+                    "per": 1,
+                    "side": "source"
+                  }
+                }
+              },
+              {
+                "op": "do",
+                "action": {
+                  "kind": "gain_credits",
+                  "side": "runner",
+                  "amount": 3
+                }
+              }
+            ]
           }
         }
-      ]
+      }
     }
-  }
+  ]
 }

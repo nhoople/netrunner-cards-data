@@ -11,20 +11,29 @@
     "connection"
   ],
   "installCost": 2,
-  "unique": true,
-  "onFirstEncounterEachRun": {
-    "op": "do",
-    "action": {
-      "kind": "add_power_counter",
-      "amount": 1
-    }
-  },
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "first_encounter_each_run",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "add_power_counter",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "class": "paid",
       "id": "baklan-derez",
       "label": "[trash], X power: Derez encountering ice if strength ≤ X; take 1 tag",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "trashSelf": true,
         "powerCountersEqualEncounterStrength": true
@@ -32,7 +41,7 @@
       "windows": [
         "encounter_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "seq",
         "effects": [
           {

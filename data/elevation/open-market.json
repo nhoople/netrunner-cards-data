@@ -11,20 +11,50 @@
     "location"
   ],
   "installCost": 2,
-  "hostedCreditsOnInstall": 6,
-  "trashWhenHostedCreditsEmpty": true,
-  "hostedCreditsSpendFor": [
-    "install"
-  ],
-  "hostedCreditsSpendForInstallSubtypes": [
-    "connection",
-    "job"
-  ],
-  "onTurnBegin": {
-    "op": "do",
-    "action": {
-      "kind": "take_hosted_credits",
-      "amount": 1
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "hostedCreditsOnInstall",
+        "value": 6
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "trashWhenHostedCreditsEmpty",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "hostedCreditsSpendFor",
+        "value": [
+          "install"
+        ]
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "hostedCreditsSpendForInstallSubtypes",
+        "value": [
+          "connection",
+          "job"
+        ]
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "turn_begin",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "take_hosted_credits",
+          "amount": 1
+        }
+      }
     }
-  }
+  ]
 }

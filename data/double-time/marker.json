@@ -12,17 +12,18 @@
   "installCost": 0,
   "rezCost": 0,
   "strength": 3,
-  "subroutines": [
+  "wave": "double-time",
+  "abilities": [
     {
+      "class": "subroutine",
       "id": "marker-etr-next",
       "text": "Next ice encountered gains ETR after its subroutines.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "add_etr_to_next_ice"
         }
       }
     }
-  ],
-  "wave": "double-time"
+  ]
 }

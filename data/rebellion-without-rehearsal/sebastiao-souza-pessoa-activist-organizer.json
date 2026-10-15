@@ -10,17 +10,35 @@
   "subtypes": [
     "g-mod"
   ],
-  "link": 0,
-  "onTakeTagsWhenUntagged": {
-    "op": "do",
-    "action": {
-      "kind": "may_install_from_grip",
-      "types": [
-        "resource"
-      ],
-      "subtype": "connection",
-      "discount": 2
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "link",
+        "value": 0
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "take_tags_when_untagged",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "may_install_from_grip",
+          "types": [
+            "resource"
+          ],
+          "subtype": "connection",
+          "discount": 2
+        }
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "connectionBasicTrashAdditionalCostTrashHq",
+        "value": true
+      }
     }
-  },
-  "connectionBasicTrashAdditionalCostTrashHq": true
+  ]
 }

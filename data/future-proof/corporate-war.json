@@ -12,27 +12,33 @@
   ],
   "advancementRequirement": 4,
   "agendaPoints": 2,
-  "onScore": {
-    "op": "if",
-    "cond": {
-      "op": "credits_gte",
-      "side": "corp",
-      "amount": 7
-    },
-    "then": {
-      "op": "do",
-      "action": {
-        "kind": "gain_credits",
-        "side": "corp",
-        "amount": 7
-      }
-    },
-    "else": {
-      "op": "do",
-      "action": {
-        "kind": "lose_all_credits",
-        "side": "corp"
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "score",
+      "instructions": {
+        "op": "if",
+        "cond": {
+          "op": "credits_gte",
+          "side": "corp",
+          "amount": 7
+        },
+        "then": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "corp",
+            "amount": 7
+          }
+        },
+        "else": {
+          "op": "do",
+          "action": {
+            "kind": "lose_all_credits",
+            "side": "corp"
+          }
+        }
       }
     }
-  }
+  ]
 }

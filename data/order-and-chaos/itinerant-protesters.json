@@ -10,8 +10,28 @@
     "current"
   ],
   "playCost": 2,
-  "lingerAsCurrent": true,
-  "currentTrashOnAgendaScored": true,
-  "corpHandSizeBonusPerBadPublicity": -1,
-  "wave": "order-and-chaos"
+  "wave": "order-and-chaos",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "lingerAsCurrent",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "currentTrashOnAgendaScored",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "corpHandSizeBonusPerBadPublicity",
+        "value": -1
+      }
+    }
+  ]
 }

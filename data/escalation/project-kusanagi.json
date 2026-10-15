@@ -11,20 +11,24 @@
   ],
   "advancementRequirement": 2,
   "agendaPoints": 0,
-  "onScore": {
-    "op": "do",
-    "action": {
-      "kind": "add_agenda_counters_from_overadvance",
-      "past": 2,
-      "per": 1
-    }
-  },
-  "paidAbilities": [
+  "wave": "escalation",
+  "abilities": [
     {
+      "class": "conditional",
+      "trigger": "score",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "add_agenda_counters_from_overadvance",
+          "past": 2,
+          "per": 1
+        }
+      }
+    },
+    {
+      "class": "paid",
       "id": "kusanagi-net-sub",
       "label": "Hosted agenda counter: choose ice to gain '[subroutine] Do 1 net damage' this run",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "agendaCounters": 1
       },
@@ -33,13 +37,12 @@
         "encounter_paw",
         "approach_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "kusanagi_grant_net_subroutine_this_run"
         }
       }
     }
-  ],
-  "wave": "escalation"
+  ]
 }

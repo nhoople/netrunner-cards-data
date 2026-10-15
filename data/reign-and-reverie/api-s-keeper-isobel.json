@@ -13,12 +13,24 @@
   "installCost": 2,
   "rezCost": 2,
   "trashCost": 4,
-  "unique": true,
-  "onTurnBegin": {
-    "op": "do",
-    "action": {
-      "kind": "may_remove_advancement_from_installed_gain_credits",
-      "credits": 3
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "turn_begin",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "may_remove_advancement_from_installed_gain_credits",
+          "credits": 3
+        }
+      }
     }
-  }
+  ]
 }

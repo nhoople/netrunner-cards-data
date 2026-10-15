@@ -12,7 +12,21 @@
   "installCost": 3,
   "rezCost": 3,
   "trashCost": 3,
-  "limitOnePerServer": true,
-  "runnerLosesAllCreditsOnClickLossDuringRunOnThisServer": true,
-  "wave": "the-spaces-between"
+  "wave": "the-spaces-between",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "limitOnePerServer",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "runnerLosesAllCreditsOnClickLossDuringRunOnThisServer",
+        "value": true
+      }
+    }
+  ]
 }

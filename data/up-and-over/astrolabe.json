@@ -10,16 +10,40 @@
     "console"
   ],
   "installCost": 1,
-  "unique": true,
-  "maxConsole": 1,
-  "muBonus": 1,
-  "onCorpRemoteServerCreated": {
-    "op": "do",
-    "action": {
-      "kind": "draw",
-      "side": "runner",
-      "amount": 1
+  "wave": "up-and-over",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "maxConsole",
+        "value": 1
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "muBonus",
+        "value": 1
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "corp_remote_server_created",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "draw",
+          "side": "runner",
+          "amount": 1
+        }
+      }
     }
-  },
-  "wave": "up-and-over"
+  ]
 }

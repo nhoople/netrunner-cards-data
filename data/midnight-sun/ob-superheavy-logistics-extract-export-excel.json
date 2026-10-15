@@ -9,11 +9,17 @@
   "subtypes": [
     "corp"
   ],
-  "onRezzedCardTrashed": {
-    "op": "do",
-    "action": {
-      "kind": "search_rd_install_rez_by_printed_rez_cost",
-      "delta": -1
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "rezzed_card_trashed",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "search_rd_install_rez_by_printed_rez_cost",
+          "delta": -1
+        }
+      }
     }
-  }
+  ]
 }

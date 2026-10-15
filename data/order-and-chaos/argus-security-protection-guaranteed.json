@@ -9,33 +9,39 @@
   "subtypes": [
     "corp"
   ],
-  "onAgendaStolen": {
-    "op": "choose",
-    "chooser": "runner",
-    "options": [
-      {
-        "id": "tag",
-        "label": "Take 1 tag",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "give_tags",
-            "amount": 1
+  "wave": "order-and-chaos",
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "agenda_stolen",
+      "instructions": {
+        "op": "choose",
+        "chooser": "runner",
+        "options": [
+          {
+            "id": "tag",
+            "label": "Take 1 tag",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "give_tags",
+                "amount": 1
+              }
+            }
+          },
+          {
+            "id": "meat",
+            "label": "Suffer 2 meat damage",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "meat_damage",
+                "amount": 2
+              }
+            }
           }
-        }
-      },
-      {
-        "id": "meat",
-        "label": "Suffer 2 meat damage",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "meat_damage",
-            "amount": 2
-          }
-        }
+        ]
       }
-    ]
-  },
-  "wave": "order-and-chaos"
+    }
+  ]
 }

@@ -14,48 +14,52 @@
   "installCost": 1,
   "strength": 3,
   "memoryCost": 2,
-  "onSuccessfulRun": {
-    "op": "choose",
-    "chooser": "runner",
-    "options": [
-      {
-        "id": "accept",
-        "label": "Place 1 virus counter on Yusuf",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "add_virus_counter",
-            "amount": 1
-          }
-        }
-      },
-      {
-        "id": "decline",
-        "label": "Decline",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "gain_credits",
-            "side": "runner",
-            "amount": 0
-          }
-        }
-      }
-    ]
-  },
-  "paidAbilities": [
+  "wave": "sovereign-sight",
+  "abilities": [
     {
+      "class": "conditional",
+      "trigger": "successful_run",
+      "instructions": {
+        "op": "choose",
+        "chooser": "runner",
+        "options": [
+          {
+            "id": "accept",
+            "label": "Place 1 virus counter on Yusuf",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "add_virus_counter",
+                "amount": 1
+              }
+            }
+          },
+          {
+            "id": "decline",
+            "label": "Decline",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "gain_credits",
+                "side": "runner",
+                "amount": 0
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "class": "paid",
       "id": "yusuf-break",
       "label": "Any virus counter: Break 1 barrier subroutine",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "virusCounters": 1
       },
       "windows": [
         "encounter_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "break_encounter_subroutine",
@@ -65,17 +69,16 @@
       "usableByRunnerOnSelfIce": true
     },
     {
+      "class": "paid",
       "id": "yusuf-pump",
       "label": "Any virus counter: +1 strength",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "virusCounters": 1
       },
       "windows": [
         "encounter_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "pump_strength",
@@ -83,14 +86,19 @@
         }
       },
       "usableByRunnerOnSelfIce": true
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "breaker",
+        "value": {
+          "breaksSubtype": "barrier",
+          "strength": 3,
+          "breakCredits": 0,
+          "breakMaxSubs": 1,
+          "breakViaPaidAbilityOnly": true
+        }
+      }
     }
-  ],
-  "breaker": {
-    "breaksSubtype": "barrier",
-    "strength": 3,
-    "breakCredits": 0,
-    "breakMaxSubs": 1,
-    "breakViaPaidAbilityOnly": true
-  },
-  "wave": "sovereign-sight"
+  ]
 }

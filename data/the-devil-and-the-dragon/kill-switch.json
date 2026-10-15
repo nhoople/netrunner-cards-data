@@ -10,22 +10,46 @@
     "current"
   ],
   "playCost": 1,
-  "lingerAsCurrent": true,
-  "currentTrashOnAgendaStolen": true,
-  "mustRevealAgendasAccessedFromRd": true,
-  "onAgendaAccessedOrScored": {
-    "op": "do",
-    "action": {
-      "kind": "trace",
-      "strength": 3,
-      "onSuccess": {
+  "wave": "the-devil-and-the-dragon",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "lingerAsCurrent",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "currentTrashOnAgendaStolen",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "mustRevealAgendasAccessedFromRd",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "agenda_accessed_or_scored",
+      "instructions": {
         "op": "do",
         "action": {
-          "kind": "core_damage",
-          "amount": 1
+          "kind": "trace",
+          "strength": 3,
+          "onSuccess": {
+            "op": "do",
+            "action": {
+              "kind": "core_damage",
+              "amount": 1
+            }
+          }
         }
       }
     }
-  },
-  "wave": "the-devil-and-the-dragon"
+  ]
 }

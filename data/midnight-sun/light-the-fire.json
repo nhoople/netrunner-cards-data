@@ -10,12 +10,11 @@
     "sabotage"
   ],
   "installCost": 1,
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "paid",
       "id": "ltf-run",
       "label": "[click], trash, suffer 1 core damage: run a remote; blank root; on success trash root",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1,
         "trashSelf": true,
@@ -24,7 +23,7 @@
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "gain_credits",

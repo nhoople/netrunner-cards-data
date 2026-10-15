@@ -14,22 +14,34 @@
   "installCost": 6,
   "strength": 2,
   "memoryCost": 1,
-  "unique": true,
-  "breaker": {
-    "breaksSubtype": "*",
-    "strength": 2,
-    "breakCredits": 1,
-    "breakMaxSubs": 1,
-    "pumpCredits": 1,
-    "pumpStrength": 1,
-    "breakRequiresIceExactSubroutineCount": 1
-  },
-  "paidAbilities": [
+  "wave": "salsette-island",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "breaker",
+        "value": {
+          "breaksSubtype": "*",
+          "strength": 2,
+          "breakCredits": 1,
+          "breakMaxSubs": 1,
+          "pumpCredits": 1,
+          "pumpStrength": 1,
+          "breakRequiresIceExactSubroutineCount": 1
+        }
+      }
+    },
+    {
+      "class": "paid",
       "id": "vamadeva-swap",
       "label": "2¢: Swap this program with a deva program from your grip",
-      "clickCost": 0,
-      "creditCost": 2,
       "cost": {
         "credits": 2
       },
@@ -37,7 +49,7 @@
         "runner_action_paw",
         "encounter_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "swap_with_grip_subtype",
@@ -46,6 +58,5 @@
       },
       "usableByRunnerOnSelfIce": true
     }
-  ],
-  "wave": "salsette-island"
+  ]
 }

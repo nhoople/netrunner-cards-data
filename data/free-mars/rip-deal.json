@@ -10,10 +10,30 @@
     "run"
   ],
   "playCost": 3,
-  "ripDealHeapInsteadOfHqAccess": true,
-  "rfgSelfOnRunEnd": true,
-  "runEvent": {
-    "servers": "hq"
-  },
-  "wave": "free-mars"
+  "wave": "free-mars",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "ripDealHeapInsteadOfHqAccess",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "rfgSelfOnRunEnd",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "runEvent",
+        "value": {
+          "servers": "hq"
+        }
+      }
+    }
+  ]
 }

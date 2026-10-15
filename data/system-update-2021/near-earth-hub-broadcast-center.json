@@ -9,5 +9,13 @@
   "subtypes": [
     "division"
   ],
-  "drawOnFirstRemoteCreated": 1
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "drawOnFirstRemoteCreated",
+        "value": 1
+      }
+    }
+  ]
 }

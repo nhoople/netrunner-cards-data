@@ -13,13 +13,19 @@
   "installCost": 0,
   "rezCost": 0,
   "trashCost": 1,
-  "unique": true,
-  "paidAbilities": [
+  "wave": "the-underway",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "paid",
       "id": "marcus-batty-psi",
       "label": "[trash]: Psi game; if bids differ, resolve 1 sub on rezzed ice protecting this server",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "trashSelf": true
       },
@@ -28,7 +34,7 @@
         "encounter_paw",
         "approach_server_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "play_psi_game",
@@ -44,6 +50,5 @@
       "requireDuringRun": true,
       "requireThisServer": true
     }
-  ],
-  "wave": "the-underway"
+  ]
 }

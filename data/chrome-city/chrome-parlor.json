@@ -10,6 +10,14 @@
     "location"
   ],
   "installCost": 1,
-  "preventCyberneticInstallDamage": true,
-  "wave": "chrome-city"
+  "wave": "chrome-city",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "preventCyberneticInstallDamage",
+        "value": true
+      }
+    }
+  ]
 }

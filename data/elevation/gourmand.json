@@ -8,5 +8,13 @@
   "unsupported": [],
   "installCost": 0,
   "memoryCost": 1,
-  "accessTrashSelfNonAgendaThenDraw": true
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "accessTrashSelfNonAgendaThenDraw",
+        "value": true
+      }
+    }
+  ]
 }

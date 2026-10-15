@@ -14,5 +14,13 @@
   "installCost": 2,
   "rezCost": 2,
   "trashCost": 4,
-  "wageWorkersTrackActions": true
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "wageWorkersTrackActions",
+        "value": true
+      }
+    }
+  ]
 }

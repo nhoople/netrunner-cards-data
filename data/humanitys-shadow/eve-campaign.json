@@ -13,18 +13,28 @@
   "installCost": 5,
   "rezCost": 5,
   "trashCost": 5,
-  "onRez": {
-    "op": "do",
-    "action": {
-      "kind": "place_hosted_credits",
-      "amount": 16
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "rez",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "place_hosted_credits",
+          "amount": 16
+        }
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "turn_begin",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "take_hosted_credits",
+          "amount": 2
+        }
+      }
     }
-  },
-  "onTurnBegin": {
-    "op": "do",
-    "action": {
-      "kind": "take_hosted_credits",
-      "amount": 2
-    }
-  }
+  ]
 }

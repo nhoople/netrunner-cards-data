@@ -13,13 +13,27 @@
   "installCost": 9,
   "rezCost": 9,
   "strength": 5,
-  "canAdvance": true,
-  "rezCostReductionPerAdvancement": 3,
-  "subroutines": [
+  "wave": "order-and-chaos",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "canAdvance",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "rezCostReductionPerAdvancement",
+        "value": 3
+      }
+    },
+    {
+      "class": "subroutine",
       "id": "nebula-trash",
       "text": "Trash 1 program.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "trash_program",
@@ -27,6 +41,5 @@
         }
       }
     }
-  ],
-  "wave": "order-and-chaos"
+  ]
 }

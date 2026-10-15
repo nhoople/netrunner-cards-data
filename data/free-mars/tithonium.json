@@ -13,13 +13,27 @@
   "installCost": 9,
   "rezCost": 9,
   "strength": 5,
-  "rezCostCreditDiscountOnForfeitAgenda": 9,
-  "cannotHostCards": true,
-  "subroutines": [
+  "wave": "free-mars",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "rezCostCreditDiscountOnForfeitAgenda",
+        "value": 9
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "cannotHostCards",
+        "value": true
+      }
+    },
+    {
+      "class": "subroutine",
       "id": "tithonium-trash-program-1",
       "text": "Trash 1 program.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "trash_program",
@@ -28,9 +42,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "tithonium-trash-program-2",
       "text": "Trash 1 program.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "trash_program",
@@ -39,9 +54,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "tithonium-trash-resource-etr",
       "text": "Trash 1 resource and end the run.",
-      "effect": {
+      "instructions": {
         "op": "seq",
         "effects": [
           {
@@ -60,6 +76,5 @@
         ]
       }
     }
-  ],
-  "wave": "free-mars"
+  ]
 }

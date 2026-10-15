@@ -13,12 +13,19 @@
   "installCost": 6,
   "rezCost": 6,
   "strength": 5,
-  "threatCannotSpendCreditsDuringSubs": 3,
-  "subroutines": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "threatCannotSpendCreditsDuringSubs",
+        "value": 3
+      }
+    },
+    {
+      "class": "subroutine",
       "id": "attini-1",
       "text": "Do 1 net damage unless the Runner pays 2[credit].",
-      "effect": {
+      "instructions": {
         "op": "if",
         "cond": {
           "op": "threat",
@@ -56,9 +63,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "attini-2",
       "text": "Do 1 net damage unless the Runner pays 2[credit].",
-      "effect": {
+      "instructions": {
         "op": "if",
         "cond": {
           "op": "threat",
@@ -96,9 +104,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "attini-3",
       "text": "Do 1 net damage unless the Runner pays 2[credit].",
-      "effect": {
+      "instructions": {
         "op": "if",
         "cond": {
           "op": "threat",

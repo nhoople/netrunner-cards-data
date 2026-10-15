@@ -7,15 +7,20 @@
   "unsupported": [],
   "faction": "weyland-consortium",
   "playCost": 1,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "place_advancements",
-      "amount": 3,
-      "pick": "choose",
-      "faceupOnly": true,
-      "cannotScoreTargetThisTurn": true
+  "wave": "kala-ghoda",
+  "abilities": [
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "place_advancements",
+          "amount": 3,
+          "pick": "choose",
+          "faceupOnly": true,
+          "cannotScoreTargetThisTurn": true
+        }
+      }
     }
-  },
-  "wave": "kala-ghoda"
+  ]
 }

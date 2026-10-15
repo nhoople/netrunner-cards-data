@@ -12,8 +12,28 @@
   "installCost": 2,
   "rezCost": 2,
   "trashCost": 3,
-  "maxHostedCards": 2,
-  "hostAssetsOrAgendas": true,
-  "trashCostIncreasePerHostedCard": 3,
-  "wave": "fear-the-masses"
+  "wave": "fear-the-masses",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "maxHostedCards",
+        "value": 2
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "hostAssetsOrAgendas",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "trashCostIncreasePerHostedCard",
+        "value": 3
+      }
+    }
+  ]
 }

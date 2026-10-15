@@ -7,7 +7,21 @@
   "unsupported": [],
   "faction": "neutral-runner",
   "installCost": 0,
-  "countsAsTagged": true,
-  "preventAllMeatDamage": true,
-  "wave": "old-hollywood"
+  "wave": "old-hollywood",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "countsAsTagged",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "preventAllMeatDamage",
+        "value": true
+      }
+    }
+  ]
 }

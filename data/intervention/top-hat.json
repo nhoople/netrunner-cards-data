@@ -7,6 +7,14 @@
   "unsupported": [],
   "faction": "shaper",
   "installCost": 0,
-  "mayInsteadOfBreachRdAccessOneOfTopN": 5,
-  "wave": "intervention"
+  "wave": "intervention",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "mayInsteadOfBreachRdAccessOneOfTopN",
+        "value": 5
+      }
+    }
+  ]
 }

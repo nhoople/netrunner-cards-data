@@ -9,6 +9,20 @@
   "subtypes": [
     "clone"
   ],
-  "link": 0,
-  "gainCreditOnFirstRunEvent": 1
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "link",
+        "value": 0
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "gainCreditOnFirstRunEvent",
+        "value": 1
+      }
+    }
+  ]
 }

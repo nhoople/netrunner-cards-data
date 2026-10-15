@@ -9,33 +9,42 @@
   "installCost": 2,
   "rezCost": 2,
   "trashCost": 4,
-  "onTurnBegin": {
-    "op": "do",
-    "action": {
-      "kind": "place_hosted_credits",
-      "amount": 2
-    }
-  },
-  "longTermInvestmentGainAbilityAtHostedCredits": 8,
-  "paidAbilities": [
+  "wave": "terminal-directive",
+  "abilities": [
     {
+      "class": "conditional",
+      "trigger": "turn_begin",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "place_hosted_credits",
+          "amount": 2
+        }
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "longTermInvestmentGainAbilityAtHostedCredits",
+        "value": 8
+      }
+    },
+    {
+      "class": "paid",
       "id": "lti-take",
       "label": "[click]: Take any number of credits from Long-Term Investment",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1
       },
       "windows": [
         "corp_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "take_any_hosted_credits"
         }
       }
     }
-  ],
-  "wave": "terminal-directive"
+  ]
 }

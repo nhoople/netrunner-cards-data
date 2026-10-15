@@ -11,6 +11,14 @@
   ],
   "advancementRequirement": 4,
   "agendaPoints": 2,
-  "handSizeBonus": 2,
-  "wave": "business-first"
+  "wave": "business-first",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "handSizeBonus",
+        "value": 2
+      }
+    }
+  ]
 }

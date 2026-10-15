@@ -12,18 +12,30 @@
   ],
   "installCost": 3,
   "memoryCost": 1,
-  "onSuccessfulRun": {
-    "op": "if",
-    "cond": {
-      "op": "attacking_hq"
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "successful_run",
+      "instructions": {
+        "op": "if",
+        "cond": {
+          "op": "attacking_hq"
+        },
+        "then": {
+          "op": "do",
+          "action": {
+            "kind": "add_virus_counter",
+            "amount": 1
+          }
+        }
+      }
     },
-    "then": {
-      "op": "do",
-      "action": {
-        "kind": "add_virus_counter",
-        "amount": 1
+    {
+      "class": "static",
+      "declaration": {
+        "field": "chooseBonusAccessLessThanVirusOnHqBreach",
+        "value": true
       }
     }
-  },
-  "chooseBonusAccessLessThanVirusOnHqBreach": true
+  ]
 }

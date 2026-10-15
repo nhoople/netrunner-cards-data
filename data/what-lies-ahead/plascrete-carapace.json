@@ -10,31 +10,42 @@
     "gear"
   ],
   "installCost": 3,
-  "powerCountersOnInstall": 4,
-  "trashWhenPowerEmpty": true,
-  "paidAbilities": [
+  "faction": "neutral-runner",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "powerCountersOnInstall",
+        "value": 4
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "trashWhenPowerEmpty",
+        "value": true
+      }
+    },
+    {
+      "class": "paid",
       "id": "plascrete-prevent-meat",
       "label": "Interrupt: hosted power counter — prevent 1 meat damage",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "powerCounters": 1
       },
       "windows": [
         "damage_interrupt_paw"
       ],
-      "requirePendingDamageTypes": [
-        "meat"
-      ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "prevent_pending_damage",
           "amount": 1
         }
-      }
+      },
+      "requirePendingDamageTypes": [
+        "meat"
+      ]
     }
-  ],
-  "faction": "neutral-runner"
+  ]
 }

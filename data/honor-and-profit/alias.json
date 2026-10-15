@@ -13,13 +13,21 @@
   "installCost": 3,
   "strength": 1,
   "memoryCost": 1,
-  "breaker": {
-    "breaksSubtype": "sentry",
-    "strength": 1,
-    "breakCredits": 1,
-    "breakMaxSubs": 1,
-    "pumpCredits": 2,
-    "pumpStrength": 3
-  },
-  "wave": "honor-and-profit"
+  "wave": "honor-and-profit",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "breaker",
+        "value": {
+          "breaksSubtype": "sentry",
+          "strength": 1,
+          "breakCredits": 1,
+          "breakMaxSubs": 1,
+          "pumpCredits": 2,
+          "pumpStrength": 3
+        }
+      }
+    }
+  ]
 }

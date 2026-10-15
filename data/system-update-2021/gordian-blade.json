@@ -11,26 +11,33 @@
     "icebreaker",
     "decoder"
   ],
-  "breaker": {
-    "breaksSubtype": "code gate",
-    "strength": 2,
-    "breakCredits": 1,
-    "pumpCredits": 1,
-    "pumpStrength": 1
-  },
-  "paidAbilities": [
+  "unsupported": [],
+  "memoryCost": 1,
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "breaker",
+        "value": {
+          "breaksSubtype": "code gate",
+          "strength": 2,
+          "breakCredits": 1,
+          "pumpCredits": 1,
+          "pumpStrength": 1
+        }
+      }
+    },
+    {
+      "class": "paid",
       "id": "gordian-pump",
       "label": "Pump Gordian Blade +1 strength for the remainder of the run",
-      "clickCost": 0,
-      "creditCost": 1,
       "cost": {
         "credits": 1
       },
       "windows": [
         "encounter_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "pump_strength",
@@ -39,7 +46,5 @@
         }
       }
     }
-  ],
-  "unsupported": [],
-  "memoryCost": 1
+  ]
 }

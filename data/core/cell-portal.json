@@ -14,11 +14,12 @@
   "installCost": 5,
   "rezCost": 5,
   "strength": 7,
-  "subroutines": [
+  "abilities": [
     {
+      "class": "subroutine",
       "id": "cell-portal-move",
       "text": "The Runner moves to the outermost position of the attacked server. They may jack out. Derez this ice.",
-      "effect": {
+      "instructions": {
         "op": "seq",
         "effects": [
           {

@@ -12,12 +12,20 @@
   "installCost": 4,
   "rezCost": 4,
   "strength": 3,
-  "playersCannotTrashThisIce": true,
-  "subroutines": [
+  "wave": "up-and-over",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "playersCannotTrashThisIce",
+        "value": true
+      }
+    },
+    {
+      "class": "subroutine",
       "id": "architect-rd",
       "text": "Look at top 5 of R&D; may install 1 ignoring cost",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "look_top_n_rd_may_install_and_rez_ignore_costs",
@@ -26,15 +34,15 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "architect-hq-arch",
       "text": "May install 1 card from Archives or HQ",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "install_from_hq_or_archives"
         }
       }
     }
-  ],
-  "wave": "up-and-over"
+  ]
 }

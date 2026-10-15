@@ -12,12 +12,11 @@
   ],
   "advancementRequirement": 4,
   "agendaPoints": 2,
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "paid",
       "id": "sab-expend",
       "label": "[click], 1¢, reveal and trash from HQ: place 2 advancements on 1 advanceable card",
-      "clickCost": 1,
-      "creditCost": 1,
       "cost": {
         "clicks": 1,
         "credits": 1,
@@ -26,14 +25,14 @@
       "windows": [
         "corp_action_paw"
       ],
-      "usableFromHq": true,
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "place_advancements",
           "amount": 2
         }
-      }
+      },
+      "usableFromHq": true
     }
   ]
 }

@@ -9,11 +9,23 @@
   "subtypes": [
     "cyborg"
   ],
-  "link": 0,
-  "onRunnerDiscardOverMaxHand": {
-    "op": "do",
-    "action": {
-      "kind": "may_install_program_hardware_from_last_runner_discarded"
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "link",
+        "value": 0
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "runner_discard_over_max_hand",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "may_install_program_hardware_from_last_runner_discarded"
+        }
+      }
     }
-  }
+  ]
 }

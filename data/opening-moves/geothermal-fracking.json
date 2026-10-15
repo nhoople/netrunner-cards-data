@@ -13,19 +13,22 @@
   ],
   "advancementRequirement": 4,
   "agendaPoints": 2,
-  "onScore": {
-    "op": "do",
-    "action": {
-      "kind": "add_agenda_counter",
-      "amount": 2
-    }
-  },
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "conditional",
+      "trigger": "score",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "add_agenda_counter",
+          "amount": 2
+        }
+      }
+    },
+    {
+      "class": "paid",
       "id": "geothermal-cash",
       "label": "[click], hosted agenda counter: Gain 7[credit] and take 1 bad publicity",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1,
         "agendaCounters": 1
@@ -33,7 +36,7 @@
       "windows": [
         "corp_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "seq",
         "effects": [
           {

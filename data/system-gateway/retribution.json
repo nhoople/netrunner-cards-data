@@ -9,13 +9,24 @@
   "subtypes": [
     "gray ops"
   ],
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "trash_program_or_hardware",
-      "pick": "choose"
-    }
-  },
   "unsupported": [],
-  "playRequiresTagged": true
+  "abilities": [
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "trash_program_or_hardware",
+          "pick": "choose"
+        }
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "playRequiresTagged",
+        "value": true
+      }
+    }
+  ]
 }

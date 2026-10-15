@@ -9,17 +9,23 @@
   "rezCost": 0,
   "trashCost": 1,
   "unsupported": [],
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "paid",
       "id": "etr",
       "label": "Pay 2¢ and trash 2 from HQ: end the run",
-      "clickCost": 0,
-      "creditCost": 2,
-      "cost": { "credits": 2, "trashFromHq": 2 },
-      "windows": ["approach_server_paw"],
-      "effect": {
+      "cost": {
+        "credits": 2,
+        "trashFromHq": 2
+      },
+      "windows": [
+        "approach_server_paw"
+      ],
+      "instructions": {
         "op": "do",
-        "action": { "kind": "end_the_run" }
+        "action": {
+          "kind": "end_the_run"
+        }
       }
     }
   ]

@@ -13,19 +13,31 @@
   "installCost": 5,
   "strength": 1,
   "memoryCost": 2,
-  "breaker": {
-    "breaksSubtype": "sentry",
-    "strength": 1,
-    "breakCredits": 2,
-    "breakMaxSubs": 1,
-    "pumpCredits": 1,
-    "pumpStrength": 1
-  },
-  "onPassRezzedIce": {
-    "op": "do",
-    "action": {
-      "kind": "may_trash_stack_top_then_trash_rd_per_resolved"
+  "wave": "earths-scion",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "breaker",
+        "value": {
+          "breaksSubtype": "sentry",
+          "strength": 1,
+          "breakCredits": 2,
+          "breakMaxSubs": 1,
+          "pumpCredits": 1,
+          "pumpStrength": 1
+        }
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "pass_rezzed_ice",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "may_trash_stack_top_then_trash_rd_per_resolved"
+        }
+      }
     }
-  },
-  "wave": "earths-scion"
+  ]
 }

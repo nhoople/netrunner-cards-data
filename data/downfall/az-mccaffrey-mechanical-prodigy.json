@@ -10,6 +10,20 @@
   "subtypes": [
     "cyborg"
   ],
-  "link": 1,
-  "firstJobConnectionOrHardwareInstallDiscount": 1
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "link",
+        "value": 1
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "firstJobConnectionOrHardwareInstallDiscount",
+        "value": 1
+      }
+    }
+  ]
 }

@@ -11,19 +11,23 @@
   ],
   "installCost": 3,
   "memoryCost": 1,
-  "onTurnBegin": {
-    "op": "do",
-    "action": {
-      "kind": "add_virus_counter",
-      "amount": 1
-    }
-  },
-  "paidAbilities": [
+  "wave": "the-source",
+  "abilities": [
     {
+      "class": "conditional",
+      "trigger": "turn_begin",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "add_virus_counter",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "class": "paid",
       "id": "incubator-move",
       "label": "[click], [trash]: Move all virus counters to another installed virus program",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1,
         "trashSelf": true
@@ -31,13 +35,12 @@
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "move_virus_counters"
         }
       }
     }
-  ],
-  "wave": "the-source"
+  ]
 }

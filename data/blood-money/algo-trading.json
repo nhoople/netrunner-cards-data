@@ -10,38 +10,42 @@
     "job"
   ],
   "installCost": 0,
-  "onTurnBegin": {
-    "op": "seq",
-    "effects": [
-      {
-        "op": "do",
-        "action": {
-          "kind": "may_move_up_to_credits_from_pool_to_self",
-          "amount": 3
-        }
-      },
-      {
-        "op": "if",
-        "cond": {
-          "op": "hosted_credits_gte",
-          "amount": 6
-        },
-        "then": {
-          "op": "do",
-          "action": {
-            "kind": "place_hosted_credits",
-            "amount": 2
-          }
-        }
-      }
-    ]
-  },
-  "paidAbilities": [
+  "wave": "blood-money",
+  "abilities": [
     {
+      "class": "conditional",
+      "trigger": "turn_begin",
+      "instructions": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "may_move_up_to_credits_from_pool_to_self",
+              "amount": 3
+            }
+          },
+          {
+            "op": "if",
+            "cond": {
+              "op": "hosted_credits_gte",
+              "amount": 6
+            },
+            "then": {
+              "op": "do",
+              "action": {
+                "kind": "place_hosted_credits",
+                "amount": 2
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "class": "paid",
       "id": "algo-take",
       "label": "[click],[trash]: Take all credits from Algo Trading",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1,
         "trashSelf": true
@@ -49,7 +53,7 @@
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "take_hosted_credits",
@@ -58,6 +62,5 @@
       },
       "usableByRunnerOnSelfIce": true
     }
-  ],
-  "wave": "blood-money"
+  ]
 }

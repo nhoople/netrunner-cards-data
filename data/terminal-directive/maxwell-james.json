@@ -10,15 +10,33 @@
     "connection"
   ],
   "installCost": 1,
-  "unique": true,
-  "link": 1,
-  "maxwellJamesRequireAfterSuccessfulHqRunPaidWindow": true,
-  "paidAbilities": [
+  "wave": "terminal-directive",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "link",
+        "value": 1
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "maxwellJamesRequireAfterSuccessfulHqRunPaidWindow",
+        "value": true
+      }
+    },
+    {
+      "class": "paid",
       "id": "maxwell-james-derez",
       "label": "[trash]: Derez a piece of ice protecting a remote server",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "trashSelf": true
       },
@@ -26,7 +44,7 @@
         "runner_action_paw",
         "corp_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "derez_remote_ice"
@@ -34,6 +52,5 @@
       },
       "usableByRunnerOnSelfIce": true
     }
-  ],
-  "wave": "terminal-directive"
+  ]
 }

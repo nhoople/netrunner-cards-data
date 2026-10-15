@@ -12,12 +12,19 @@
   "installCost": 3,
   "rezCost": 3,
   "strength": 0,
-  "strengthBonusIfSoleIceProtectingServer": 4,
-  "subroutines": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "strengthBonusIfSoleIceProtectingServer",
+        "value": 4
+      }
+    },
+    {
+      "class": "subroutine",
       "id": "scatter-field-install",
       "text": "You may install 1 card from HQ.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "may_install_from_hq_paying_costs"
@@ -25,9 +32,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "scatter-field-etr",
       "text": "End the run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "end_the_run"

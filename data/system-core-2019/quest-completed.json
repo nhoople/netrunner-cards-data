@@ -8,11 +8,22 @@
   "unsupported": [],
   "faction": "anarch",
   "playCost": 0,
-  "playRequiresSuccessfulAllCentralsThisTurn": true,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "access_one_root_other_server"
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "playRequiresSuccessfulAllCentralsThisTurn",
+        "value": true
+      }
+    },
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "access_one_root_other_server"
+        }
+      }
     }
-  }
+  ]
 }

@@ -13,23 +13,32 @@
   "installCost": 2,
   "rezCost": 2,
   "strength": 0,
-  "onTurnBegin": {
-    "op": "do",
-    "action": {
-      "kind": "may_swap_ice_with_other_installed"
-    }
-  },
-  "onPass": {
-    "op": "do",
-    "action": {
-      "kind": "may_swap_ice_with_other_installed"
-    }
-  },
-  "subroutines": [
+  "abilities": [
     {
+      "class": "conditional",
+      "trigger": "turn_begin",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "may_swap_ice_with_other_installed"
+        }
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "pass",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "may_swap_ice_with_other_installed"
+        }
+      }
+    },
+    {
+      "class": "subroutine",
       "id": "thimblerig-etr",
       "text": "End the run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "end_the_run"

@@ -13,7 +13,20 @@
   "installCost": 2,
   "rezCost": 2,
   "strength": 0,
-  "powerCounterOnHarmonicIceRez": true,
-  "etrSubroutinesPerPowerCounter": true,
-  "subroutines": []
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "powerCounterOnHarmonicIceRez",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "etrSubroutinesPerPowerCounter",
+        "value": true
+      }
+    }
+  ]
 }

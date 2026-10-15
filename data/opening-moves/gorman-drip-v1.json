@@ -12,19 +12,22 @@
   ],
   "installCost": 1,
   "memoryCost": 1,
-  "onCorpBasicClickForCreditOrDraw": {
-    "op": "do",
-    "action": {
-      "kind": "add_virus_counter",
-      "amount": 1
-    }
-  },
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "conditional",
+      "trigger": "corp_basic_click_for_credit_or_draw",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "add_virus_counter",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "class": "paid",
       "id": "gorman-cash",
-      "label": "[click], [trash]: Gain 1\u00a2 per virus counter",
-      "clickCost": 1,
-      "creditCost": 0,
+      "label": "[click], [trash]: Gain 1¢ per virus counter",
       "cost": {
         "clicks": 1,
         "trashSelf": true
@@ -32,7 +35,7 @@
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "gain_credits",

@@ -12,17 +12,41 @@
     "link"
   ],
   "installCost": 2,
-  "link": 1,
-  "recurringCreditsMax": 1,
-  "recurringSpendFor": [
-    "trace"
-  ],
-  "onAnyIceRez": {
-    "op": "do",
-    "action": {
-      "kind": "gain_credits",
-      "side": "runner",
-      "amount": 1
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "link",
+        "value": 1
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "recurringCreditsMax",
+        "value": 1
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "recurringSpendFor",
+        "value": [
+          "trace"
+        ]
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "any_ice_rez",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "runner",
+          "amount": 1
+        }
+      }
     }
-  }
+  ]
 }

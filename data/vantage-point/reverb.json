@@ -13,12 +13,19 @@
   "installCost": 4,
   "rezCost": 4,
   "strength": 2,
-  "rezCostDiscountPerOtherUnrezzedIce": 1,
-  "subroutines": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "rezCostDiscountPerOtherUnrezzedIce",
+        "value": 1
+      }
+    },
+    {
+      "class": "subroutine",
       "id": "reverb-etr-1",
       "text": "End the run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "end_the_run"
@@ -26,9 +33,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "reverb-etr-2",
       "text": "End the run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "end_the_run"

@@ -11,11 +11,17 @@
   ],
   "advancementRequirement": 4,
   "agendaPoints": 2,
-  "onScore": {
-    "op": "do",
-    "action": {
-      "kind": "may_core_if_rezzed_next_ice"
+  "wave": "daedalus-complex",
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "score",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "may_core_if_rezzed_next_ice"
+        }
+      }
     }
-  },
-  "wave": "daedalus-complex"
+  ]
 }

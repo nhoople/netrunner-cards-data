@@ -11,20 +11,26 @@
     "seedy"
   ],
   "installCost": 2,
-  "unique": true,
-  "paidAbilities": [
+  "wave": "first-contact",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "paid",
       "id": "duggars-draw",
       "label": "[click]×4: Draw 10 cards",
-      "clickCost": 4,
-      "creditCost": 0,
       "cost": {
         "clicks": 4
       },
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "draw",
@@ -33,6 +39,5 @@
         }
       }
     }
-  ],
-  "wave": "first-contact"
+  ]
 }

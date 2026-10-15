@@ -8,8 +8,16 @@
   "unsupported": [],
   "installCost": 4,
   "memoryCost": 1,
-  "giveStrengthToInstalledIcebreakers": {
-    "amount": 2,
-    "excludeSubtype": "ai"
-  }
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "giveStrengthToInstalledIcebreakers",
+        "value": {
+          "amount": 2,
+          "excludeSubtype": "ai"
+        }
+      }
+    }
+  ]
 }

@@ -10,21 +10,39 @@
     "current"
   ],
   "playCost": 3,
-  "lingerAsCurrent": true,
-  "currentTrashOnAgendaStolen": true,
-  "onFirstSuccessfulRunThisTurn": {
-    "op": "do",
-    "action": {
-      "kind": "trace",
-      "strength": 2,
-      "onSuccess": {
+  "wave": "first-contact",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "lingerAsCurrent",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "currentTrashOnAgendaStolen",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "first_successful_run_this_turn",
+      "instructions": {
         "op": "do",
         "action": {
-          "kind": "give_tags",
-          "amount": 1
+          "kind": "trace",
+          "strength": 2,
+          "onSuccess": {
+            "op": "do",
+            "action": {
+              "kind": "give_tags",
+              "amount": 1
+            }
+          }
         }
       }
     }
-  },
-  "wave": "first-contact"
+  ]
 }

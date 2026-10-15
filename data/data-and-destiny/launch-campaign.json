@@ -12,20 +12,36 @@
   "installCost": 1,
   "rezCost": 1,
   "trashCost": 2,
-  "onRez": {
-    "op": "do",
-    "action": {
-      "kind": "place_hosted_credits",
-      "amount": 6
+  "wave": "data-and-destiny",
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "rez",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "place_hosted_credits",
+          "amount": 6
+        }
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "turn_begin",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "take_hosted_credits",
+          "amount": 2
+        }
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "trashWhenHostedCreditsEmpty",
+        "value": true
+      }
     }
-  },
-  "onTurnBegin": {
-    "op": "do",
-    "action": {
-      "kind": "take_hosted_credits",
-      "amount": 2
-    }
-  },
-  "trashWhenHostedCreditsEmpty": true,
-  "wave": "data-and-destiny"
+  ]
 }

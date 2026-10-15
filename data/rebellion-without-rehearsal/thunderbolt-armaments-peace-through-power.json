@@ -9,8 +9,16 @@
   "subtypes": [
     "division"
   ],
-  "onRezApOrDestroyerIceDuringRun": {
-    "strengthBonus": 1,
-    "gainEtrUnlessTrashInstalledSub": true
-  }
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "onRezApOrDestroyerIceDuringRun",
+        "value": {
+          "strengthBonus": 1,
+          "gainEtrUnlessTrashInstalledSub": true
+        }
+      }
+    }
+  ]
 }

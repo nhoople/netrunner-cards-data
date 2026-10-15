@@ -13,11 +13,13 @@
   "installCost": 8,
   "rezCost": 8,
   "strength": 6,
-  "subroutines": [
+  "wave": "escalation",
+  "abilities": [
     {
+      "class": "subroutine",
       "id": "dna-tracker-1",
       "text": "Do 1 net damage. The Runner loses 2¢.",
-      "effect": {
+      "instructions": {
         "op": "seq",
         "effects": [
           {
@@ -39,9 +41,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "dna-tracker-2",
       "text": "Do 1 net damage. The Runner loses 2¢.",
-      "effect": {
+      "instructions": {
         "op": "seq",
         "effects": [
           {
@@ -63,9 +66,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "dna-tracker-3",
       "text": "Do 1 net damage. The Runner loses 2¢.",
-      "effect": {
+      "instructions": {
         "op": "seq",
         "effects": [
           {
@@ -86,6 +90,5 @@
         ]
       }
     }
-  ],
-  "wave": "escalation"
+  ]
 }

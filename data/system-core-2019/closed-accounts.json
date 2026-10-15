@@ -11,12 +11,23 @@
     "gray ops"
   ],
   "playCost": 1,
-  "playRequiresTagged": true,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "lose_all_credits",
-      "side": "runner"
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "playRequiresTagged",
+        "value": true
+      }
+    },
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "lose_all_credits",
+          "side": "runner"
+        }
+      }
     }
-  }
+  ]
 }

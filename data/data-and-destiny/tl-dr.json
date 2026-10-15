@@ -12,17 +12,18 @@
   "installCost": 1,
   "rezCost": 1,
   "strength": 4,
-  "subroutines": [
+  "wave": "data-and-destiny",
+  "abilities": [
     {
+      "class": "subroutine",
       "id": "tl-dr-duplicate",
       "text": "Next ice encounter this run gains a second copy of each subroutine.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "arm_duplicate_subs_on_next_ice_encounter"
         }
       }
     }
-  ],
-  "wave": "data-and-destiny"
+  ]
 }

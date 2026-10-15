@@ -10,17 +10,19 @@
     "virtual"
   ],
   "installCost": 1,
-  "paidAbilities": [
+  "wave": "crimson-dust",
+  "abilities": [
     {
+      "class": "paid",
       "id": "dummy-box-prevent",
       "label": "[interrupt] → Trash 1 card from grip: Prevent Corp trashing 1 installed card of the same type",
-      "clickCost": 0,
-      "creditCost": 0,
-      "cost": {},
+      "cost": {
+        "credits": 0
+      },
       "windows": [
         "trash_interrupt_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "trash_grip_same_type_prevent"
@@ -28,6 +30,5 @@
       },
       "usableByRunnerOnSelfIce": true
     }
-  ],
-  "wave": "crimson-dust"
+  ]
 }

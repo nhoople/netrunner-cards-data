@@ -7,13 +7,31 @@
   "unsupported": [],
   "faction": "criminal",
   "installCost": 0,
-  "installCostX": true,
-  "onInstall": {
-    "op": "do",
-    "action": {
-      "kind": "choose_x_and_load_power"
+  "wave": "blood-and-water",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "installCostX",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "install",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "choose_x_and_load_power"
+        }
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "onTurnEndIfGripEmptyDrawPerPowerThenTrash",
+        "value": true
+      }
     }
-  },
-  "onTurnEndIfGripEmptyDrawPerPowerThenTrash": true,
-  "wave": "blood-and-water"
+  ]
 }

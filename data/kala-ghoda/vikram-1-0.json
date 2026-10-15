@@ -15,12 +15,20 @@
   "installCost": 6,
   "rezCost": 6,
   "strength": 5,
-  "bioroidBreakMaxSubs": 1,
-  "subroutines": [
+  "wave": "kala-ghoda",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "bioroidBreakMaxSubs",
+        "value": 1
+      }
+    },
+    {
+      "class": "subroutine",
       "id": "vikram-no-programs",
       "text": "The Runner cannot use programs for the remainder of this run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "kg_cannot_use_programs_this_run"
@@ -28,9 +36,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "vikram-trace-core-1",
       "text": "Trace[4]. If successful, do 1 core damage.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "trace",
@@ -46,9 +55,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "vikram-trace-core-2",
       "text": "Trace[4]. If successful, do 1 core damage.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "trace",
@@ -63,6 +73,5 @@
         }
       }
     }
-  ],
-  "wave": "kala-ghoda"
+  ]
 }

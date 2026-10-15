@@ -13,19 +13,18 @@
   "installCost": 0,
   "rezCost": 0,
   "trashCost": 3,
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "paid",
       "id": "roughneck-repair-squad-main",
       "label": "[click][click][click]: Gain 6¢. You may remove 1 bad publicity.",
-      "clickCost": 3,
-      "creditCost": 0,
       "cost": {
         "clicks": 3
       },
       "windows": [
         "corp_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "seq",
         "effects": [
           {

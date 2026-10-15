@@ -12,26 +12,25 @@
   "installCost": 3,
   "rezCost": 3,
   "trashCost": 3,
-  "paidAbilities": [
+  "wave": "blood-and-water",
+  "abilities": [
     {
+      "class": "paid",
       "id": "whampoa-reclaim",
       "label": "Once per turn → Trash 1 card from HQ: Add 1 card from Archives to the bottom of R&D",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "trashFromHq": 1
       },
       "windows": [
         "corp_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "whampoa_trash_hq_archives_to_rd_bottom"
         }
       },
-      "oncePerTurn": true
+      "flag": "once_per_turn"
     }
-  ],
-  "wave": "blood-and-water"
+  ]
 }

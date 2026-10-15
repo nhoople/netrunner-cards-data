@@ -10,47 +10,52 @@
     "run"
   ],
   "playCost": 1,
-  "onPlay": {
-    "op": "seq",
-    "effects": [
-      {
-        "op": "do",
-        "action": {
-          "kind": "identify_mark"
-        }
-      },
-      {
-        "op": "do",
-        "action": {
-          "kind": "gain_credits",
-          "side": "runner",
-          "amount": 4
-        }
-      },
-      {
-        "op": "choose",
-        "chooser": "runner",
-        "options": [
+  "abilities": [
+    {
+      "class": "play",
+      "instructions": {
+        "op": "seq",
+        "effects": [
           {
-            "id": "run-mark",
-            "label": "Make a run on the mark",
-            "effect": {
-              "op": "do",
-              "action": {
-                "kind": "start_run_on_mark"
-              }
+            "op": "do",
+            "action": {
+              "kind": "identify_mark"
             }
           },
           {
-            "id": "decline",
-            "label": "Decline",
-            "effect": {
-              "op": "seq",
-              "effects": []
+            "op": "do",
+            "action": {
+              "kind": "gain_credits",
+              "side": "runner",
+              "amount": 4
             }
+          },
+          {
+            "op": "choose",
+            "chooser": "runner",
+            "options": [
+              {
+                "id": "run-mark",
+                "label": "Make a run on the mark",
+                "effect": {
+                  "op": "do",
+                  "action": {
+                    "kind": "start_run_on_mark"
+                  }
+                }
+              },
+              {
+                "id": "decline",
+                "label": "Decline",
+                "effect": {
+                  "op": "seq",
+                  "effects": []
+                }
+              }
+            ]
           }
         ]
       }
-    ]
-  }
+    }
+  ]
 }

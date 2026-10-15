@@ -9,36 +9,48 @@
   "subtypes": [
     "natural"
   ],
-  "link": 0,
-  "onFirstSuccessfulCentralRunThisTurn": {
-    "op": "choose",
-    "chooser": "runner",
-    "options": [
-      {
-        "id": "accept",
-        "label": "Force the Corp to draw 1 card",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "draw",
-            "side": "corp",
-            "amount": 1
-          }
-        }
-      },
-      {
-        "id": "decline",
-        "label": "Decline",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "gain_credits",
-            "side": "runner",
-            "amount": 0
-          }
-        }
+  "wave": "the-universe-of-tomorrow",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "link",
+        "value": 0
       }
-    ]
-  },
-  "wave": "the-universe-of-tomorrow"
+    },
+    {
+      "class": "conditional",
+      "trigger": "first_successful_central_run_this_turn",
+      "instructions": {
+        "op": "choose",
+        "chooser": "runner",
+        "options": [
+          {
+            "id": "accept",
+            "label": "Force the Corp to draw 1 card",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "draw",
+                "side": "corp",
+                "amount": 1
+              }
+            }
+          },
+          {
+            "id": "decline",
+            "label": "Decline",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "gain_credits",
+                "side": "runner",
+                "amount": 0
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
 }

@@ -10,8 +10,28 @@
     "current"
   ],
   "playCost": 2,
-  "lingerAsCurrent": true,
-  "currentTrashOnAgendaStolen": true,
-  "runnerSpendsFirstForTracesDuringRun": true,
-  "wave": "data-and-destiny"
+  "wave": "data-and-destiny",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "lingerAsCurrent",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "currentTrashOnAgendaStolen",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "runnerSpendsFirstForTracesDuringRun",
+        "value": true
+      }
+    }
+  ]
 }

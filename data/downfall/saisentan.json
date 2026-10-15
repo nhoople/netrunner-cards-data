@@ -15,18 +15,29 @@
   "installCost": 5,
   "rezCost": 5,
   "strength": 2,
-  "onEncounter": {
-    "op": "do",
-    "action": {
-      "kind": "choose_card_type_for_encounter"
-    }
-  },
-  "amplifyNetDamageOnTrashChosenEncounterType": true,
-  "subroutines": [
+  "abilities": [
     {
+      "class": "conditional",
+      "trigger": "encounter",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "choose_card_type_for_encounter"
+        }
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "amplifyNetDamageOnTrashChosenEncounterType",
+        "value": true
+      }
+    },
+    {
+      "class": "subroutine",
       "id": "saisentan-net-1",
       "text": "Do 1 net damage.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "net_damage",
@@ -35,9 +46,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "saisentan-net-2",
       "text": "Do 1 net damage.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "net_damage",
@@ -46,9 +58,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "saisentan-net-3",
       "text": "Do 1 net damage.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "net_damage",

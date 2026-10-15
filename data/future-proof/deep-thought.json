@@ -12,53 +12,63 @@
   ],
   "installCost": 1,
   "memoryCost": 1,
-  "onSuccessfulRun": {
-    "op": "if",
-    "cond": {
-      "op": "attacking_rd"
-    },
-    "then": {
-      "op": "do",
-      "action": {
-        "kind": "add_virus_counter",
-        "amount": 1
-      }
-    }
-  },
-  "onTurnBegin": {
-    "op": "if",
-    "cond": {
-      "op": "virus_counters_gte",
-      "amount": 3
-    },
-    "then": {
-      "op": "choose",
-      "chooser": "runner",
-      "options": [
-        {
-          "id": "look",
-          "label": "Look at the top card of R&D",
-          "effect": {
-            "op": "do",
-            "action": {
-              "kind": "look_top_n_rd_peek",
-              "n": 1
-            }
-          }
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "successful_run",
+      "instructions": {
+        "op": "if",
+        "cond": {
+          "op": "attacking_rd"
         },
-        {
-          "id": "decline",
-          "label": "Decline",
-          "effect": {
-            "op": "do",
-            "action": {
-              "kind": "gain_credits",
-              "side": "runner",
-              "amount": 0
-            }
+        "then": {
+          "op": "do",
+          "action": {
+            "kind": "add_virus_counter",
+            "amount": 1
           }
         }
-      ]
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "turn_begin",
+      "instructions": {
+        "op": "if",
+        "cond": {
+          "op": "virus_counters_gte",
+          "amount": 3
+        },
+        "then": {
+          "op": "choose",
+          "chooser": "runner",
+          "options": [
+            {
+              "id": "look",
+              "label": "Look at the top card of R&D",
+              "effect": {
+                "op": "do",
+                "action": {
+                  "kind": "look_top_n_rd_peek",
+                  "n": 1
+                }
+              }
+            },
+            {
+              "id": "decline",
+              "label": "Decline",
+              "effect": {
+                "op": "do",
+                "action": {
+                  "kind": "gain_credits",
+                  "side": "runner",
+                  "amount": 0
+                }
+              }
+            }
+          ]
+        }
+      }
     }
-  }
+  ]
 }

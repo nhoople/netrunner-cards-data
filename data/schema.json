@@ -247,6 +247,61 @@
       "type": "string",
       "minLength": 1
     },
+    "abilities": {
+      "type": "array",
+      "description": "Printed abilities classified under Comprehensive Rules 9.3. Load materializes each record onto the hook the engine evaluates.",
+      "items": {
+        "type": "object",
+        "required": ["class"],
+        "additionalProperties": true,
+        "properties": {
+          "class": {
+            "type": "string",
+            "enum": ["static", "paid", "conditional", "play", "subroutine"]
+          },
+          "id": { "type": "string" },
+          "text": { "type": "string" },
+          "label": { "type": "string" },
+          "trigger": { "type": "string" },
+          "cost": { "type": "object" },
+          "condition": { "type": "object" },
+          "instructions": { "type": "object" },
+          "declaration": {
+            "type": "object",
+            "required": ["field"],
+            "properties": {
+              "field": { "type": "string" },
+              "value": {}
+            }
+          },
+          "restrictions": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["appliesTo", "effect"],
+              "properties": {
+                "appliesTo": {
+                  "type": "string",
+                  "enum": [
+                    "play",
+                    "rez",
+                    "score",
+                    "steal",
+                    "steal_from_protecting_server",
+                    "trash"
+                  ]
+                },
+                "effect": { "type": "object" }
+              }
+            }
+          },
+          "windows": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        }
+      }
+    },
     "title": {
       "type": "string",
       "minLength": 1

@@ -7,14 +7,25 @@
   "unsupported": [],
   "faction": "anarch",
   "playCost": 2,
-  "playAdditionalClicks": 3,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "gain_credits",
-      "side": "runner",
-      "amount": 10
+  "wave": "order-and-chaos",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "playAdditionalClicks",
+        "value": 3
+      }
+    },
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "runner",
+          "amount": 10
+        }
+      }
     }
-  },
-  "wave": "order-and-chaos"
+  ]
 }

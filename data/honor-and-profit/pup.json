@@ -13,11 +13,13 @@
   "installCost": 1,
   "rezCost": 1,
   "strength": 0,
-  "subroutines": [
+  "wave": "honor-and-profit",
+  "abilities": [
     {
+      "class": "subroutine",
       "id": "pup-1",
       "text": "Do 1 net unless Runner pays 1[credit].",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "unless",
@@ -40,9 +42,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "pup-2",
       "text": "Do 1 net unless Runner pays 1[credit].",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "unless",
@@ -64,6 +67,5 @@
         }
       }
     }
-  ],
-  "wave": "honor-and-profit"
+  ]
 }

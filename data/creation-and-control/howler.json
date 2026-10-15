@@ -13,11 +13,12 @@
   "installCost": 1,
   "rezCost": 1,
   "strength": 0,
-  "subroutines": [
+  "abilities": [
     {
+      "class": "subroutine",
       "id": "howler-install",
       "text": "You may install and rez 1 bioroid ice from HQ or Archives directly inward, ignoring all costs.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "install_rez_bioroid_inward"

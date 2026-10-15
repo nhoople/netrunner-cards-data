@@ -13,21 +13,32 @@
   ],
   "installCost": 0,
   "memoryCost": 1,
-  "installOnIce": true,
-  "hostStrengthModifier": -2,
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "installOnIce",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "hostStrengthModifier",
+        "value": -2
+      }
+    },
+    {
+      "class": "paid",
       "id": "bishop-host",
       "label": "[click]: Host on ice not hosting a Caïssa program",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1
       },
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "caissa_bishop_host"

@@ -12,12 +12,24 @@
   "installCost": 1,
   "rezCost": 1,
   "trashCost": 3,
-  "unique": true,
-  "onRez": {
-    "op": "do",
-    "action": {
-      "kind": "tdatd_malia_choose_resource"
+  "wave": "the-devil-and-the-dragon",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "rez",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "tdatd_malia_choose_resource"
+        }
+      }
     }
-  },
-  "wave": "the-devil-and-the-dragon"
+  ]
 }

@@ -7,11 +7,16 @@
   "unsupported": [],
   "faction": "shaper",
   "playCost": 3,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "swap_2_unrezzed_ice"
+  "wave": "crimson-dust",
+  "abilities": [
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "swap_2_unrezzed_ice"
+        }
+      }
     }
-  },
-  "wave": "crimson-dust"
+  ]
 }

@@ -11,34 +11,52 @@
     "black ops"
   ],
   "playCost": 3,
-  "lingerAsCurrent": true,
-  "currentTrashOnAgendaStolen": true,
-  "onRunnerTurnBegin": {
-    "op": "do",
-    "action": {
-      "kind": "trace",
-      "strength": 1,
-      "onSuccess": {
-        "op": "if",
-        "cond": {
-          "op": "runner_tagged"
-        },
-        "then": {
-          "op": "do",
-          "action": {
-            "kind": "meat_damage",
-            "amount": 1
-          }
-        },
-        "else": {
-          "op": "do",
-          "action": {
-            "kind": "give_tags",
-            "amount": 1
+  "wave": "escalation",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "lingerAsCurrent",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "currentTrashOnAgendaStolen",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "runner_turn_begin",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "trace",
+          "strength": 1,
+          "onSuccess": {
+            "op": "if",
+            "cond": {
+              "op": "runner_tagged"
+            },
+            "then": {
+              "op": "do",
+              "action": {
+                "kind": "meat_damage",
+                "amount": 1
+              }
+            },
+            "else": {
+              "op": "do",
+              "action": {
+                "kind": "give_tags",
+                "amount": 1
+              }
+            }
           }
         }
       }
     }
-  },
-  "wave": "escalation"
+  ]
 }

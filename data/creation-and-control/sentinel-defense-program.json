@@ -12,11 +12,17 @@
   ],
   "advancementRequirement": 4,
   "agendaPoints": 2,
-  "onSufferCoreDamage": {
-    "op": "do",
-    "action": {
-      "kind": "net_damage",
-      "amount": 1
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "suffer_core_damage",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "net_damage",
+          "amount": 1
+        }
+      }
     }
-  }
+  ]
 }

@@ -10,10 +10,24 @@
     "run"
   ],
   "playCost": 0,
-  "briberyPlayCostX": true,
-  "runEvent": {
-    "servers": "any",
-    "briberyFirstIceAdditionalRezEqualsX": true
-  },
-  "wave": "the-source"
+  "wave": "the-source",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "briberyPlayCostX",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "runEvent",
+        "value": {
+          "servers": "any",
+          "briberyFirstIceAdditionalRezEqualsX": true
+        }
+      }
+    }
+  ]
 }

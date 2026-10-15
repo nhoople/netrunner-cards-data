@@ -10,26 +10,31 @@
     "connection"
   ],
   "installCost": 3,
-  "iceRezCostIncrease": 1,
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "iceRezCostIncrease",
+        "value": 1
+      }
+    },
+    {
+      "class": "paid",
       "id": "fransofia-ward-bypass",
       "label": "Trash Fransofia Ward: bypass encountered ice (Corp ≥15¢)",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "trashSelf": true
       },
       "windows": [
         "encounter_paw"
       ],
-      "requiresCorpCreditsGte": 15,
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "bypass_current_ice"
         }
-      }
+      },
+      "requiresCorpCreditsGte": 15
     }
   ]
 }

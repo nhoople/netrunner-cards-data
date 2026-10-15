@@ -10,12 +10,11 @@
     "chip"
   ],
   "installCost": 1,
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "paid",
       "id": "simulchip-install",
       "label": "[trash]: Install 1 program from heap, paying 3¢ less",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "trashSelf": true,
         "trashInstalledProgramUnlessOwnInstalledTrashedThisTurn": true
@@ -23,7 +22,7 @@
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "install_from_heap",

@@ -12,19 +12,32 @@
   "installCost": 9,
   "rezCost": 9,
   "strength": 6,
-  "canAdvance": true,
-  "rezCostReductionPerAdvancement": 3,
-  "subroutines": [
+  "wave": "order-and-chaos",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "canAdvance",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "rezCostReductionPerAdvancement",
+        "value": 3
+      }
+    },
+    {
+      "class": "subroutine",
       "id": "asteroid-etr",
       "text": "End the run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "end_the_run"
         }
       }
     }
-  ],
-  "wave": "order-and-chaos"
+  ]
 }

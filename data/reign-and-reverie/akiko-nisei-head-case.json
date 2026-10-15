@@ -10,19 +10,31 @@
   "subtypes": [
     "clone"
   ],
-  "link": 1,
-  "onBreachRd": {
-    "op": "do",
-    "action": {
-      "kind": "play_psi_game",
-      "maxBid": 2,
-      "ifBidsMatch": {
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "link",
+        "value": 1
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "breach_rd",
+      "instructions": {
         "op": "do",
         "action": {
-          "kind": "bonus_access",
-          "amount": 1
+          "kind": "play_psi_game",
+          "maxBid": 2,
+          "ifBidsMatch": {
+            "op": "do",
+            "action": {
+              "kind": "bonus_access",
+              "amount": 1
+            }
+          }
         }
       }
     }
-  }
+  ]
 }

@@ -14,12 +14,20 @@
   "installCost": 7,
   "rezCost": 7,
   "strength": 6,
-  "bioroidBreakMaxSubs": 2,
-  "subroutines": [
+  "wave": "twenty-three-seconds",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "bioroidBreakMaxSubs",
+        "value": 2
+      }
+    },
+    {
+      "class": "subroutine",
       "id": "sherlock-2-0-trace-1",
       "text": "Trace[4]. If successful, add 1 installed program to the bottom of the Runner's stack.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "trace",
@@ -34,9 +42,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "sherlock-2-0-trace-2",
       "text": "Trace[4]. If successful, add 1 installed program to the bottom of the Runner's stack.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "trace",
@@ -51,9 +60,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "sherlock-2-0-tag",
       "text": "Give the Runner 1 tag.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "give_tags",
@@ -61,6 +71,5 @@
         }
       }
     }
-  ],
-  "wave": "twenty-three-seconds"
+  ]
 }

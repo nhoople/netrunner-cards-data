@@ -11,8 +11,28 @@
   ],
   "advancementRequirement": 5,
   "agendaPoints": 3,
-  "unique": true,
-  "deckLimitOne": true,
-  "whileScoredStealAdditionalCreditsPerAdvancement": 2,
-  "wave": "the-source"
+  "wave": "the-source",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "deckLimitOne",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "whileScoredStealAdditionalCreditsPerAdvancement",
+        "value": 2
+      }
+    }
+  ]
 }

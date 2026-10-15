@@ -12,7 +12,21 @@
   "installCost": 1,
   "rezCost": 1,
   "trashCost": 5,
-  "limitOnePerServer": true,
-  "onDrawIceMayRevealAndInstallProtectingThisServerPayingLess": 4,
-  "wave": "down-the-white-nile"
+  "wave": "down-the-white-nile",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "limitOnePerServer",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "onDrawIceMayRevealAndInstallProtectingThisServerPayingLess",
+        "value": 4
+      }
+    }
+  ]
 }

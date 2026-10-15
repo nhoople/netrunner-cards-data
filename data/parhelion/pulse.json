@@ -13,25 +13,30 @@
   "installCost": 3,
   "rezCost": 3,
   "strength": 1,
-  "onRez": {
-    "op": "if",
-    "cond": {
-      "op": "source_protects_attacked_server"
-    },
-    "then": {
-      "op": "do",
-      "action": {
-        "kind": "lose_clicks",
-        "side": "runner",
-        "amount": 1
-      }
-    }
-  },
-  "subroutines": [
+  "abilities": [
     {
+      "class": "conditional",
+      "trigger": "rez",
+      "instructions": {
+        "op": "if",
+        "cond": {
+          "op": "source_protects_attacked_server"
+        },
+        "then": {
+          "op": "do",
+          "action": {
+            "kind": "lose_clicks",
+            "side": "runner",
+            "amount": 1
+          }
+        }
+      }
+    },
+    {
+      "class": "subroutine",
       "id": "pulse-lose",
       "text": "The Runner loses 1¢ for each rezzed piece of harmonic ice.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "lose_credits",
@@ -47,9 +52,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "pulse-etr",
       "text": "End the run unless the Runner spends [click].",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "unless",

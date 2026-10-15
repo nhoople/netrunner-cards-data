@@ -12,24 +12,33 @@
     "condition"
   ],
   "playCost": 1,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "host_on_ice_as_condition"
-    }
-  },
-  "onHostEncounter": {
-    "op": "do",
-    "action": {
-      "kind": "trace",
-      "strength": 3,
-      "onSuccess": {
+  "abilities": [
+    {
+      "class": "play",
+      "instructions": {
         "op": "do",
         "action": {
-          "kind": "give_tags",
-          "amount": 1
+          "kind": "host_on_ice_as_condition"
+        }
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "host_encounter",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "trace",
+          "strength": 3,
+          "onSuccess": {
+            "op": "do",
+            "action": {
+              "kind": "give_tags",
+              "amount": 1
+            }
+          }
         }
       }
     }
-  }
+  ]
 }

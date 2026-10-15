@@ -11,66 +11,76 @@
   ],
   "advancementRequirement": 4,
   "agendaPoints": 2,
-  "onScore": {
-    "op": "seq",
-    "effects": [
-      {
-        "op": "do",
-        "action": {
-          "kind": "gain_credits",
-          "side": "corp",
-          "amount": 3
-        }
-      },
-      {
-        "op": "do",
-        "action": {
-          "kind": "place_advancements",
-          "amount": 1
-        }
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "score",
+      "instructions": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "gain_credits",
+              "side": "corp",
+              "amount": 3
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "place_advancements",
+              "amount": 1
+            }
+          }
+        ]
       }
-    ]
-  },
-  "onInstallFromNonHq": {
-    "op": "choose",
-    "chooser": "corp",
-    "options": [
-      {
-        "id": "reveal",
-        "label": "Reveal: gain 2¢ and place 1 advancement",
-        "effect": {
-          "op": "seq",
-          "effects": [
-            {
+    },
+    {
+      "class": "conditional",
+      "trigger": "install_from_non_hq",
+      "instructions": {
+        "op": "choose",
+        "chooser": "corp",
+        "options": [
+          {
+            "id": "reveal",
+            "label": "Reveal: gain 2¢ and place 1 advancement",
+            "effect": {
+              "op": "seq",
+              "effects": [
+                {
+                  "op": "do",
+                  "action": {
+                    "kind": "gain_credits",
+                    "side": "corp",
+                    "amount": 2
+                  }
+                },
+                {
+                  "op": "do",
+                  "action": {
+                    "kind": "place_advancements",
+                    "amount": 1
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "id": "decline",
+            "label": "Decline",
+            "effect": {
               "op": "do",
               "action": {
                 "kind": "gain_credits",
                 "side": "corp",
-                "amount": 2
-              }
-            },
-            {
-              "op": "do",
-              "action": {
-                "kind": "place_advancements",
-                "amount": 1
+                "amount": 0
               }
             }
-          ]
-        }
-      },
-      {
-        "id": "decline",
-        "label": "Decline",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "gain_credits",
-            "side": "corp",
-            "amount": 0
           }
-        }
+        ]
       }
-    ]
-  }
+    }
+  ]
 }

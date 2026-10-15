@@ -14,12 +14,19 @@
   "installCost": 4,
   "rezCost": 4,
   "strength": 6,
-  "strengthBonusPerIcebreaker": -1,
-  "subroutines": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "strengthBonusPerIcebreaker",
+        "value": -1
+      }
+    },
+    {
+      "class": "subroutine",
       "id": "hagen-trash",
       "text": "Trash 1 installed program that is not a decoder, fracter, or killer.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "trash_program",
@@ -33,9 +40,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "hagen-etr",
       "text": "End the run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "end_the_run"

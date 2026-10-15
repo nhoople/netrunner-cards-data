@@ -13,7 +13,21 @@
   "installCost": 0,
   "rezCost": 0,
   "trashCost": 5,
-  "unique": true,
-  "handSizeBonus": 4,
-  "wave": "the-universe-of-tomorrow"
+  "wave": "the-universe-of-tomorrow",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "handSizeBonus",
+        "value": 4
+      }
+    }
+  ]
 }

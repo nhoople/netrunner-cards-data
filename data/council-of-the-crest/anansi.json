@@ -13,18 +13,24 @@
   "installCost": 8,
   "rezCost": 8,
   "strength": 5,
-  "onEncounterEndIfNotFullyBroken": {
-    "op": "do",
-    "action": {
-      "kind": "net_damage",
-      "amount": 3
-    }
-  },
-  "subroutines": [
+  "wave": "council-of-the-crest",
+  "abilities": [
     {
+      "class": "conditional",
+      "trigger": "encounter_end_if_not_fully_broken",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "net_damage",
+          "amount": 3
+        }
+      }
+    },
+    {
+      "class": "subroutine",
       "id": "anansi-arrange",
       "text": "Look at the top 5 cards of R&D and arrange them in any order.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "cotc_anansi_arrange_rd",
@@ -33,9 +39,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "anansi-draw",
       "text": "You may draw 1 card. The Runner may pay 2 credits to draw 1 card.",
-      "effect": {
+      "instructions": {
         "op": "seq",
         "effects": [
           {
@@ -115,9 +122,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "anansi-net",
       "text": "Do 1 net damage.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "net_damage",
@@ -125,6 +133,5 @@
         }
       }
     }
-  ],
-  "wave": "council-of-the-crest"
+  ]
 }

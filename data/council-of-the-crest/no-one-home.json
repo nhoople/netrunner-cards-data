@@ -10,52 +10,50 @@
     "virtual"
   ],
   "installCost": 0,
-  "paidAbilities": [
+  "wave": "council-of-the-crest",
+  "abilities": [
     {
+      "class": "paid",
       "id": "no-one-home-tags",
       "label": "[interrupt] → [trash]: first tags this turn — Corp Trace[0]; if unsuccessful, prevent all tags",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "trashSelf": true
       },
       "windows": [
         "tag_interrupt_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "cotc_no_one_home",
           "mode": "tags"
         }
       },
-      "oncePerTurn": true,
+      "flag": "once_per_turn",
       "usableByRunnerOnSelfIce": true
     },
     {
+      "class": "paid",
       "id": "no-one-home-net",
       "label": "[interrupt] → [trash]: first net damage this turn — Corp Trace[0]; if unsuccessful, prevent all net damage",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "trashSelf": true
       },
       "windows": [
         "damage_interrupt_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "cotc_no_one_home",
           "mode": "net"
         }
       },
-      "oncePerTurn": true,
+      "flag": "once_per_turn",
       "usableByRunnerOnSelfIce": true,
       "requirePendingDamageTypes": [
         "net"
       ]
     }
-  ],
-  "wave": "council-of-the-crest"
+  ]
 }

@@ -10,8 +10,28 @@
     "current"
   ],
   "playCost": 1,
-  "lingerAsCurrent": true,
-  "currentTrashOnAgendaScored": true,
-  "corpLosesCreditsOnFirstRunnerInstallEachTurn": 1,
-  "wave": "council-of-the-crest"
+  "wave": "council-of-the-crest",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "lingerAsCurrent",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "currentTrashOnAgendaScored",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "corpLosesCreditsOnFirstRunnerInstallEachTurn",
+        "value": 1
+      }
+    }
+  ]
 }

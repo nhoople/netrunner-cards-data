@@ -11,32 +11,30 @@
     "seedy"
   ],
   "installCost": 2,
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "paid",
       "id": "arruaceiras-weaken",
       "label": "Take 1 tag: encountered ice gets –2 strength",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "tags": 1
       },
       "windows": [
         "encounter_paw"
       ],
-      "oncePerTurn": true,
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "weaken_ice",
           "amount": 2
         }
-      }
+      },
+      "flag": "once_per_turn"
     },
     {
+      "class": "paid",
       "id": "arruaceiras-trash-ice",
       "label": "[trash], 2¢: Trash encountered ice if strength ≤ 0",
-      "clickCost": 0,
-      "creditCost": 2,
       "cost": {
         "credits": 2,
         "trashSelf": true
@@ -44,7 +42,7 @@
       "windows": [
         "encounter_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "trash_encounter_ice_if_strength_lte",

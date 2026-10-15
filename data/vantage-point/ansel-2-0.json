@@ -14,11 +14,12 @@
   "installCost": 8,
   "rezCost": 8,
   "strength": 5,
-  "subroutines": [
+  "abilities": [
     {
+      "class": "subroutine",
       "id": "ansel2-trash",
       "text": "Trash 1 installed Runner card.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "trash_installed_runner",
@@ -27,9 +28,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "ansel2-rfg-heap",
       "text": "Remove 1 card in the heap from the game.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "rfg_heap_card"
@@ -37,9 +39,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "ansel2-install",
       "text": "You may install 1 card from HQ or Archives.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "install_from_hq_or_archives"
@@ -47,9 +50,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "ansel2-etr",
       "text": "End the run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "end_the_run"

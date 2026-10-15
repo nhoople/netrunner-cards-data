@@ -11,12 +11,18 @@
   ],
   "advancementRequirement": 3,
   "agendaPoints": 1,
-  "onScore": {
-    "op": "do",
-    "action": {
-      "kind": "remove_bad_publicity_up_to",
-      "max": 2
+  "wave": "true-colors",
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "score",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "remove_bad_publicity_up_to",
+          "max": 2
+        }
+      }
     }
-  },
-  "wave": "true-colors"
+  ]
 }

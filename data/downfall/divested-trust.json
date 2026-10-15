@@ -9,11 +9,17 @@
   "faction": "weyland-consortium",
   "advancementRequirement": 3,
   "agendaPoints": 1,
-  "onOtherAgendaStolen": {
-    "op": "do",
-    "action": {
-      "kind": "may_forfeit_return_stolen",
-      "gainCredits": 5
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "other_agenda_stolen",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "may_forfeit_return_stolen",
+          "gainCredits": 5
+        }
+      }
     }
-  }
+  ]
 }

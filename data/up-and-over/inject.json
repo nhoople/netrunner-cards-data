@@ -7,11 +7,16 @@
   "unsupported": [],
   "faction": "anarch",
   "playCost": 1,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "reveal_top_four"
+  "wave": "up-and-over",
+  "abilities": [
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "reveal_top_four"
+        }
+      }
     }
-  },
-  "wave": "up-and-over"
+  ]
 }

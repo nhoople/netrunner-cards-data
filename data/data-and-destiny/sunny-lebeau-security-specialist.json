@@ -9,6 +9,14 @@
   "subtypes": [
     "natural"
   ],
-  "link": 2,
-  "wave": "data-and-destiny"
+  "wave": "data-and-destiny",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "link",
+        "value": 2
+      }
+    }
+  ]
 }

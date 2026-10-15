@@ -10,17 +10,27 @@
     "double"
   ],
   "playCost": 0,
-  "playAdditionalCost": {
-    "op": "do",
-    "action": {
-      "kind": "spend_click_additional_cost"
+  "wave": "up-and-over",
+  "abilities": [
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "trash_hq_gain_credits"
+        }
+      },
+      "restrictions": [
+        {
+          "appliesTo": "play",
+          "effect": {
+            "op": "do",
+            "action": {
+              "kind": "spend_click_additional_cost"
+            }
+          }
+        }
+      ]
     }
-  },
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "trash_hq_gain_credits"
-    }
-  },
-  "wave": "up-and-over"
+  ]
 }

@@ -7,11 +7,16 @@
   "side": "runner",
   "playCost": 0,
   "unsupported": [],
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "search_stack_icebreaker",
-      "mayInstallIfSuccessfulRunThisTurn": true
+  "abilities": [
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "search_stack_icebreaker",
+          "mayInstallIfSuccessfulRunThisTurn": true
+        }
+      }
     }
-  }
+  ]
 }

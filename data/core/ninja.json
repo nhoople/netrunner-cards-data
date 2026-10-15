@@ -14,27 +14,32 @@
   "installCost": 4,
   "strength": 0,
   "memoryCost": 1,
-  "breaker": {
-    "breaksSubtype": "sentry",
-    "strength": 0,
-    "breakCredits": 1,
-    "breakMaxSubs": 1,
-    "pumpCredits": 3,
-    "pumpStrength": 5
-  },
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "breaker",
+        "value": {
+          "breaksSubtype": "sentry",
+          "strength": 0,
+          "breakCredits": 1,
+          "breakMaxSubs": 1,
+          "pumpCredits": 3,
+          "pumpStrength": 5
+        }
+      }
+    },
+    {
+      "class": "paid",
       "id": "ninja-pump",
       "label": "Pump Ninja +5 strength",
-      "clickCost": 0,
-      "creditCost": 3,
       "cost": {
         "credits": 3
       },
       "windows": [
         "encounter_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "pump_strength",

@@ -12,19 +12,24 @@
   "installCost": 8,
   "rezCost": 8,
   "strength": 5,
-  "onEncounter": {
-    "op": "do",
-    "action": {
-      "kind": "pay_credits_or_etr",
-      "side": "runner",
-      "amount": 3
-    }
-  },
-  "subroutines": [
+  "abilities": [
     {
+      "class": "conditional",
+      "trigger": "encounter",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "pay_credits_or_etr",
+          "side": "runner",
+          "amount": 3
+        }
+      }
+    },
+    {
+      "class": "subroutine",
       "id": "tb-etr",
       "text": "End the run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "end_the_run"

@@ -12,11 +12,13 @@
   "installCost": 2,
   "rezCost": 2,
   "strength": 4,
-  "subroutines": [
+  "wave": "kala-ghoda",
+  "abilities": [
     {
+      "class": "subroutine",
       "id": "interrupt-0-break-cost-1",
       "text": "For the remainder of this run, icebreaker break abilities cost +1¢.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "arm_icebreaker_break_additional_cost_this_run",
@@ -25,9 +27,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "interrupt-0-break-cost-2",
       "text": "For the remainder of this run, icebreaker break abilities cost +1¢.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "arm_icebreaker_break_additional_cost_this_run",
@@ -35,6 +38,5 @@
         }
       }
     }
-  ],
-  "wave": "kala-ghoda"
+  ]
 }

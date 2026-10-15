@@ -13,13 +13,36 @@
   ],
   "playCost": 4,
   "trashCost": 2,
-  "playRequiresSuccessfulRunLastTurn": true,
-  "playRequiresRunnerAgendaPointsGte": 3,
-  "endsActionPhase": true,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "name_net_damage_loop"
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "playRequiresSuccessfulRunLastTurn",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "playRequiresRunnerAgendaPointsGte",
+        "value": 3
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "endsActionPhase",
+        "value": true
+      }
+    },
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "name_net_damage_loop"
+        }
+      }
     }
-  }
+  ]
 }

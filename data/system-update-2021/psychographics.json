@@ -7,11 +7,22 @@
   "side": "corp",
   "unsupported": [],
   "playCost": 0,
-  "playCostXMaxRunnerTags": true,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "place_advancements_x_from_tags"
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "playCostXMaxRunnerTags",
+        "value": true
+      }
+    },
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "place_advancements_x_from_tags"
+        }
+      }
     }
-  }
+  ]
 }

@@ -15,6 +15,7 @@ PAD Tap→pad-tap, Kasi String→kasi-string, False Flag→false-flag).
 from __future__ import annotations
 
 import json
+from ability_record import classify_card
 import sys
 from pathlib import Path
 
@@ -469,7 +470,7 @@ def main():
             continue
         mapped["wave"] = WAVE
         path = OUT / f"{cid}.json"
-        path.write_text(json.dumps(mapped, indent=2, ensure_ascii=False) + "\n")
+        path.write_text(json.dumps(classify_card(mapped), indent=2, ensure_ascii=False) + "\n")
         written.append(cid)
 
     pool_ids = [slugify(c["title"]) for c in pack]

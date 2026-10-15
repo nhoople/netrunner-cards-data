@@ -13,41 +13,48 @@
   "installCost": 7,
   "rezCost": 7,
   "strength": 4,
-  "gainsSubroutinesBeforePrintedPerFaceupArchives": {
-    "subtype": "transaction",
-    "type": "operation",
-    "per": 2,
-    "subroutine": {
-      "id": "blockchain-tx",
-      "text": "Gain 1[credit] and the Runner loses 1[credit].",
-      "effect": {
-        "op": "seq",
-        "effects": [
-          {
-            "op": "do",
-            "action": {
-              "kind": "gain_credits",
-              "side": "corp",
-              "amount": 1
-            }
-          },
-          {
-            "op": "do",
-            "action": {
-              "kind": "lose_credits",
-              "side": "runner",
-              "amount": 1
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "gainsSubroutinesBeforePrintedPerFaceupArchives",
+        "value": {
+          "subtype": "transaction",
+          "type": "operation",
+          "per": 2,
+          "subroutine": {
+            "id": "blockchain-tx",
+            "text": "Gain 1[credit] and the Runner loses 1[credit].",
+            "effect": {
+              "op": "seq",
+              "effects": [
+                {
+                  "op": "do",
+                  "action": {
+                    "kind": "gain_credits",
+                    "side": "corp",
+                    "amount": 1
+                  }
+                },
+                {
+                  "op": "do",
+                  "action": {
+                    "kind": "lose_credits",
+                    "side": "runner",
+                    "amount": 1
+                  }
+                }
+              ]
             }
           }
-        ]
+        }
       }
-    }
-  },
-  "subroutines": [
+    },
     {
+      "class": "subroutine",
       "id": "blockchain-credit",
       "text": "Gain 1[credit] and the Runner loses 1[credit].",
-      "effect": {
+      "instructions": {
         "op": "seq",
         "effects": [
           {
@@ -70,9 +77,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "blockchain-etr",
       "text": "End the run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "end_the_run"

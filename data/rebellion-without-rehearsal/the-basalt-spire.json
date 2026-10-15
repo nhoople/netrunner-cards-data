@@ -8,56 +8,62 @@
   "unsupported": [],
   "advancementRequirement": 5,
   "agendaPoints": 3,
-  "onSteal": {
-    "op": "choose",
-    "chooser": "corp",
-    "options": [
-      {
-        "id": "archives-hq",
-        "label": "Add 1 card from Archives to HQ",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "archives_to_hq",
-            "amount": 1
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "steal",
+      "instructions": {
+        "op": "choose",
+        "chooser": "corp",
+        "options": [
+          {
+            "id": "archives-hq",
+            "label": "Add 1 card from Archives to HQ",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "archives_to_hq",
+                "amount": 1
+              }
+            }
+          },
+          {
+            "id": "decline",
+            "label": "Decline",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "gain_credits",
+                "side": "corp",
+                "amount": 0
+              }
+            }
           }
-        }
-      },
-      {
-        "id": "decline",
-        "label": "Decline",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "gain_credits",
-            "side": "corp",
-            "amount": 0
-          }
+        ]
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "score",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "add_agenda_counter",
+          "amount": 2
         }
       }
-    ]
-  },
-  "onScore": {
-    "op": "do",
-    "action": {
-      "kind": "add_agenda_counter",
-      "amount": 2
-    }
-  },
-  "paidAbilities": [
+    },
     {
+      "class": "paid",
       "id": "basalt-archives",
       "label": "Hosted agenda counter, trash top of R&D: Archives → HQ",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "agendaCounters": 1
       },
       "windows": [
         "corp_action_paw"
       ],
-      "oncePerTurn": true,
-      "effect": {
+      "instructions": {
         "op": "seq",
         "effects": [
           {
@@ -74,7 +80,8 @@
             }
           }
         ]
-      }
+      },
+      "flag": "once_per_turn"
     }
   ]
 }

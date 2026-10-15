@@ -11,34 +11,40 @@
   ],
   "advancementRequirement": 2,
   "agendaPoints": 1,
-  "onScore": {
-    "op": "choose",
-    "chooser": "corp",
-    "options": [
-      {
-        "id": "draw",
-        "label": "Draw 1",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "draw",
-            "side": "corp",
-            "amount": 1
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "score",
+      "instructions": {
+        "op": "choose",
+        "chooser": "corp",
+        "options": [
+          {
+            "id": "draw",
+            "label": "Draw 1",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "draw",
+                "side": "corp",
+                "amount": 1
+              }
+            }
+          },
+          {
+            "id": "decline",
+            "label": "Decline",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "gain_credits",
+                "side": "corp",
+                "amount": 0
+              }
+            }
           }
-        }
-      },
-      {
-        "id": "decline",
-        "label": "Decline",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "gain_credits",
-            "side": "corp",
-            "amount": 0
-          }
-        }
+        ]
       }
-    ]
-  }
+    }
+  ]
 }

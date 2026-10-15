@@ -8,11 +8,17 @@
   "faction": "weyland-consortium",
   "advancementRequirement": 2,
   "agendaPoints": 0,
-  "onScore": {
-    "op": "do",
-    "action": {
-      "kind": "trash_loop"
+  "wave": "blood-and-water",
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "score",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "trash_loop"
+        }
+      }
     }
-  },
-  "wave": "blood-and-water"
+  ]
 }

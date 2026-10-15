@@ -11,19 +11,23 @@
   ],
   "installCost": 3,
   "memoryCost": 1,
-  "onSuccessfulRun": {
-    "op": "do",
-    "action": {
-      "kind": "add_virus_counter",
-      "amount": 1
-    }
-  },
-  "paidAbilities": [
+  "wave": "fear-and-loathing",
+  "abilities": [
     {
+      "class": "conditional",
+      "trigger": "successful_run",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "add_virus_counter",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "class": "paid",
       "id": "hemorrhage-trash-hq",
       "label": "[click], 2 virus counters: Corp trashes 1 card from HQ",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1,
         "virusCounters": 2
@@ -31,13 +35,12 @@
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "corp_trash_from_hq"
         }
       }
     }
-  ],
-  "wave": "fear-and-loathing"
+  ]
 }

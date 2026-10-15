@@ -14,28 +14,33 @@
   "installCost": 1,
   "strength": 1,
   "memoryCost": 1,
-  "breaker": {
-    "breaksSubtype": "*",
-    "strength": 1,
-    "breakCredits": 3,
-    "breakMaxSubs": 1,
-    "pumpCredits": 1,
-    "pumpStrength": 1,
-    "breakRequiresIceStrengthLte": 0
-  },
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "breaker",
+        "value": {
+          "breaksSubtype": "*",
+          "strength": 1,
+          "breakCredits": 3,
+          "breakMaxSubs": 1,
+          "pumpCredits": 1,
+          "pumpStrength": 1,
+          "breakRequiresIceStrengthLte": 0
+        }
+      }
+    },
+    {
+      "class": "paid",
       "id": "wyrm-weaken",
       "label": "1¢: Encountered ice gets −1 strength for this encounter",
-      "clickCost": 0,
-      "creditCost": 1,
       "cost": {
         "credits": 1
       },
       "windows": [
         "encounter_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "weaken_ice",
@@ -44,17 +49,16 @@
       }
     },
     {
+      "class": "paid",
       "id": "wyrm-pump",
       "label": "Pump Wyrm +1 strength",
-      "clickCost": 0,
-      "creditCost": 1,
       "cost": {
         "credits": 1
       },
       "windows": [
         "encounter_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "pump_strength",

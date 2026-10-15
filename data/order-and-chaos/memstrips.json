@@ -10,7 +10,21 @@
     "chip"
   ],
   "installCost": 3,
-  "muBonus": 3,
-  "muBonusOnlyForVirusPrograms": true,
-  "wave": "order-and-chaos"
+  "wave": "order-and-chaos",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "muBonus",
+        "value": 3
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "muBonusOnlyForVirusPrograms",
+        "value": true
+      }
+    }
+  ]
 }

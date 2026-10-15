@@ -11,8 +11,28 @@
     "transaction"
   ],
   "playCost": 2,
-  "lingerAsCurrent": true,
-  "currentTrashOnAgendaStolen": true,
-  "mayGainCreditWhenRunnerInstallsOrTrashesInstalled": true,
-  "wave": "council-of-the-crest"
+  "wave": "council-of-the-crest",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "lingerAsCurrent",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "currentTrashOnAgendaStolen",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "mayGainCreditWhenRunnerInstallsOrTrashesInstalled",
+        "value": true
+      }
+    }
+  ]
 }

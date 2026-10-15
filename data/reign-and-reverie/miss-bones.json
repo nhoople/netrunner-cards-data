@@ -11,9 +11,29 @@
     "connection"
   ],
   "installCost": 2,
-  "unique": true,
-  "hostedCreditsOnInstall": 12,
-  "hostedCreditsSpendFor": [
-    "trash"
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "hostedCreditsOnInstall",
+        "value": 12
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "hostedCreditsSpendFor",
+        "value": [
+          "trash"
+        ]
+      }
+    }
   ]
 }

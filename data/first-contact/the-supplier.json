@@ -10,33 +10,48 @@
     "connection"
   ],
   "installCost": 3,
-  "unique": true,
-  "supplierHost": true,
-  "paidAbilities": [
+  "wave": "first-contact",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "supplierHost",
+        "value": true
+      }
+    },
+    {
+      "class": "paid",
       "id": "supplier-host",
       "label": "[click]: Host a resource or hardware from grip",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1
       },
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "supplier_host_from_grip"
         }
       }
+    },
+    {
+      "class": "conditional",
+      "trigger": "turn_begin",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "supplier_turn_begin_install"
+        }
+      }
     }
-  ],
-  "onTurnBegin": {
-    "op": "do",
-    "action": {
-      "kind": "supplier_turn_begin_install"
-    }
-  },
-  "wave": "first-contact"
+  ]
 }

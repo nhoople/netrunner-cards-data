@@ -12,21 +12,43 @@
   "installCost": 1,
   "rezCost": 1,
   "trashCost": 3,
-  "powerCountersOnRez": 3,
-  "trashWhenPowerEmpty": true,
-  "onPowerCountersEmpty": {
-    "op": "do",
-    "action": {
-      "kind": "meat_damage",
-      "amount": 4
+  "wave": "sovereign-sight",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "powerCountersOnRez",
+        "value": 3
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "trashWhenPowerEmpty",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "power_counters_empty",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "meat_damage",
+          "amount": 4
+        }
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "turn_begin",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "remove_power_counter",
+          "amount": 1
+        }
+      }
     }
-  },
-  "onTurnBegin": {
-    "op": "do",
-    "action": {
-      "kind": "remove_power_counter",
-      "amount": 1
-    }
-  },
-  "wave": "sovereign-sight"
+  ]
 }

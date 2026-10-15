@@ -7,5 +7,13 @@
   "side": "runner",
   "installCost": 2,
   "unsupported": [],
-  "bonusAccessOnFirstHqBreachThisTurn": 1
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "bonusAccessOnFirstHqBreachThisTurn",
+        "value": 1
+      }
+    }
+  ]
 }

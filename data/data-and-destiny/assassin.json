@@ -15,11 +15,13 @@
   "installCost": 7,
   "rezCost": 7,
   "strength": 5,
-  "subroutines": [
+  "wave": "data-and-destiny",
+  "abilities": [
     {
+      "class": "subroutine",
       "id": "assassin-net",
       "text": "Trace[5]. If successful, do 3 net damage.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "trace",
@@ -35,9 +37,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "assassin-trash",
       "text": "Trace[4]. If successful, trash 1 program.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "trace",
@@ -52,6 +55,5 @@
         }
       }
     }
-  ],
-  "wave": "data-and-destiny"
+  ]
 }

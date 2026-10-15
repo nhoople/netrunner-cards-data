@@ -13,14 +13,22 @@
   "installCost": 4,
   "strength": 2,
   "memoryCost": 1,
-  "breaker": {
-    "breaksSubtype": "*",
-    "strength": 2,
-    "breakCredits": 1,
-    "breakMaxSubs": 1,
-    "pumpCredits": 1,
-    "pumpStrength": 1,
-    "breakPreventsCardAccessForRun": true
-  },
-  "wave": "order-and-chaos"
+  "wave": "order-and-chaos",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "breaker",
+        "value": {
+          "breaksSubtype": "*",
+          "strength": 2,
+          "breakCredits": 1,
+          "breakMaxSubs": 1,
+          "pumpCredits": 1,
+          "pumpStrength": 1,
+          "breakPreventsCardAccessForRun": true
+        }
+      }
+    }
+  ]
 }

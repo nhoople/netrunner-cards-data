@@ -16,13 +16,18 @@
   "installCost": 5,
   "rezCost": 5,
   "strength": 5,
-  "bioroidBreakMaxSubs": 2,
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "bioroidBreakMaxSubs",
+        "value": 2
+      }
+    },
+    {
+      "class": "paid",
       "id": "viktor-2-0-core",
       "label": "Hosted power counter: Do 1 core damage",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "powerCounters": 1
       },
@@ -32,20 +37,19 @@
         "encounter_paw",
         "approach_server_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "core_damage",
           "amount": 1
         }
       }
-    }
-  ],
-  "subroutines": [
+    },
     {
+      "class": "subroutine",
       "id": "viktor-2-0-trace",
       "text": "Trace[2]. If successful, place 1 power counter on this ice.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "trace",
@@ -61,9 +65,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "viktor-2-0-etr",
       "text": "End the run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "end_the_run"

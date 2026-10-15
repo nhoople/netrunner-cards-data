@@ -10,19 +10,18 @@
     "location"
   ],
   "installCost": 0,
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "paid",
       "id": "stoneship-draw",
       "label": "Trash Stoneship Chart Room: draw 2",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "trashSelf": true
       },
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "draw",
@@ -32,17 +31,16 @@
       }
     },
     {
+      "class": "paid",
       "id": "stoneship-charge",
       "label": "Trash Stoneship Chart Room: charge 1 installed card",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "trashSelf": true
       },
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "charge",

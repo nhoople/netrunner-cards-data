@@ -7,11 +7,16 @@
   "unsupported": [],
   "faction": "haas-bioroid",
   "playCost": 1,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "name_and_rfg_heap_copies"
+  "wave": "escalation",
+  "abilities": [
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "name_and_rfg_heap_copies"
+        }
+      }
     }
-  },
-  "wave": "escalation"
+  ]
 }

@@ -14,32 +14,19 @@
   "installCost": 6,
   "rezCost": 6,
   "strength": 4,
-  "paidAbilities": [
+  "wave": "up-and-over",
+  "abilities": [
     {
+      "class": "paid",
       "id": "mamba-counter",
       "label": "Hosted power counter: 1 net damage (during run)",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "powerCounters": 1
       },
       "windows": [
         "encounter_paw"
       ],
-      "effect": {
-        "op": "do",
-        "action": {
-          "kind": "net_damage",
-          "amount": 1
-        }
-      }
-    }
-  ],
-  "subroutines": [
-    {
-      "id": "mamba-net",
-      "text": "Do 1 net damage",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "net_damage",
@@ -48,9 +35,22 @@
       }
     },
     {
+      "class": "subroutine",
+      "id": "mamba-net",
+      "text": "Do 1 net damage",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "net_damage",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "class": "subroutine",
       "id": "mamba-psi",
       "text": "Psi; if bids differ place 1 power counter on Mamba",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "play_psi_game",
@@ -73,6 +73,5 @@
         }
       }
     }
-  ],
-  "wave": "up-and-over"
+  ]
 }

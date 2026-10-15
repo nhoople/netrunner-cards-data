@@ -13,12 +13,19 @@
   "installCost": 0,
   "rezCost": 0,
   "strength": 1,
-  "trashSelfWhenFullyBrokenByRunner": true,
-  "subroutines": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "trashSelfWhenFullyBrokenByRunner",
+        "value": true
+      }
+    },
+    {
+      "class": "subroutine",
       "id": "paper-etr",
       "text": "End the run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "end_the_run"

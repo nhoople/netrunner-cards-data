@@ -16,12 +16,19 @@
   "installCost": 8,
   "rezCost": 8,
   "strength": 5,
-  "bioroidBreakMaxSubs": 2,
-  "subroutines": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "bioroidBreakMaxSubs",
+        "value": 2
+      }
+    },
+    {
+      "class": "subroutine",
       "id": "ichi-2-0-trash-1",
       "text": "Trash 1 installed program.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "trash_own_program"
@@ -29,9 +36,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "ichi-2-0-trash-2",
       "text": "Trash 1 installed program.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "trash_own_program"
@@ -39,9 +47,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "ichi-2-0-trace",
       "text": "Trace[3]. If successful, do 1 core damage and give the Runner 1 tag.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "trace",

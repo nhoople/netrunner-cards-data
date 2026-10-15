@@ -13,27 +13,39 @@
   "installCost": 3,
   "strength": 2,
   "memoryCost": 1,
-  "mayInstallSelfFromHeapOnEncounterCodeGate": true,
-  "breaker": {
-    "breaksSubtype": "code gate",
-    "strength": 2,
-    "breakCredits": 3,
-    "breakMaxSubs": 2,
-    "breakViaPaidAbilityOnly": true
-  },
-  "paidAbilities": [
+  "wave": "escalation",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "mayInstallSelfFromHeapOnEncounterCodeGate",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "breaker",
+        "value": {
+          "breaksSubtype": "code gate",
+          "strength": 2,
+          "breakCredits": 3,
+          "breakMaxSubs": 2,
+          "breakViaPaidAbilityOnly": true
+        }
+      }
+    },
+    {
+      "class": "paid",
       "id": "black-orchestra-x",
       "label": "3¢: +2 strength. Then, if this can interface, break up to 2 code gate subroutines",
-      "clickCost": 0,
-      "creditCost": 3,
       "cost": {
         "credits": 3
       },
       "windows": [
         "encounter_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "spend_pump_and_break"
@@ -41,6 +53,5 @@
       },
       "usableByRunnerOnSelfIce": true
     }
-  ],
-  "wave": "escalation"
+  ]
 }

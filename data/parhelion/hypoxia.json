@@ -10,31 +10,42 @@
     "black ops"
   ],
   "playCost": 1,
-  "playRequiresTagged": true,
-  "onPlay": {
-    "op": "seq",
-    "effects": [
-      {
-        "op": "do",
-        "action": {
-          "kind": "core_damage",
-          "amount": 1
-        }
-      },
-      {
-        "op": "do",
-        "action": {
-          "kind": "allotted_clicks_next_turn",
-          "side": "runner",
-          "delta": -1
-        }
-      },
-      {
-        "op": "do",
-        "action": {
-          "kind": "rfg_self"
-        }
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "playRequiresTagged",
+        "value": true
       }
-    ]
-  }
+    },
+    {
+      "class": "play",
+      "instructions": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "core_damage",
+              "amount": 1
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "allotted_clicks_next_turn",
+              "side": "runner",
+              "delta": -1
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "rfg_self"
+            }
+          }
+        ]
+      }
+    }
+  ]
 }

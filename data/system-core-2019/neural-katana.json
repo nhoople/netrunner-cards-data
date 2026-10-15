@@ -14,11 +14,12 @@
   "installCost": 4,
   "rezCost": 4,
   "strength": 3,
-  "subroutines": [
+  "abilities": [
     {
+      "class": "subroutine",
       "id": "neural-katana-net",
       "text": "Do 3 net damage.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "net_damage",

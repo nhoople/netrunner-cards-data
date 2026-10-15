@@ -13,12 +13,20 @@
   "installCost": 5,
   "rezCost": 5,
   "strength": 4,
-  "bioroidBreakMaxSubs": 2,
-  "subroutines": [
+  "wave": "terminal-directive",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "bioroidBreakMaxSubs",
+        "value": 2
+      }
+    },
+    {
+      "class": "subroutine",
       "id": "eli-2-0-draw",
       "text": "You may draw 1 card.",
-      "effect": {
+      "instructions": {
         "op": "choose",
         "chooser": "corp",
         "options": [
@@ -50,9 +58,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "eli-2-0-etr-1",
       "text": "End the run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "end_the_run"
@@ -60,15 +69,15 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "eli-2-0-etr-2",
       "text": "End the run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "end_the_run"
         }
       }
     }
-  ],
-  "wave": "terminal-directive"
+  ]
 }

@@ -10,12 +10,24 @@
     "connection"
   ],
   "installCost": 2,
-  "unique": true,
-  "onTurnBegin": {
-    "op": "do",
-    "action": {
-      "kind": "blank_installed_abilities"
+  "wave": "data-and-destiny",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "turn_begin",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "blank_installed_abilities"
+        }
+      }
     }
-  },
-  "wave": "data-and-destiny"
+  ]
 }

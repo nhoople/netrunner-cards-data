@@ -10,26 +10,48 @@
   "subtypes": [
     "g-mod"
   ],
-  "link": 0,
-  "onTurnBegin": {
-    "op": "do",
-    "action": {
-      "kind": "identify_mark"
-    }
-  },
-  "onSuccessfulRunOncePerTurn": true,
-  "onSuccessfulRun": {
-    "op": "if",
-    "cond": {
-      "op": "attacking_mark"
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "link",
+        "value": 0
+      }
     },
-    "then": {
-      "op": "do",
-      "action": {
-        "kind": "gain_clicks",
-        "side": "runner",
-        "amount": 1
+    {
+      "class": "conditional",
+      "trigger": "turn_begin",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "identify_mark"
+        }
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "onSuccessfulRunOncePerTurn",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "successful_run",
+      "instructions": {
+        "op": "if",
+        "cond": {
+          "op": "attacking_mark"
+        },
+        "then": {
+          "op": "do",
+          "action": {
+            "kind": "gain_clicks",
+            "side": "runner",
+            "amount": 1
+          }
+        }
       }
     }
-  }
+  ]
 }

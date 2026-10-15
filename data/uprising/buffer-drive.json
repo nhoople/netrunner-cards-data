@@ -7,24 +7,35 @@
   "side": "runner",
   "unsupported": [],
   "installCost": 3,
-  "unique": true,
-  "onFirstGripOrStackTrashBatchEachTurn": {
-    "op": "do",
-    "action": {
-      "kind": "may_add_one_of_card_ids_to_stack_bottom"
-    }
-  },
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "first_grip_or_stack_trash_batch_each_turn",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "may_add_one_of_card_ids_to_stack_bottom"
+        }
+      }
+    },
+    {
+      "class": "paid",
       "id": "buffer-drive-heap-top",
       "label": "Remove Buffer Drive from the game: Add 1 card from your heap to the top of your stack",
-      "clickCost": 0,
-      "creditCost": 0,
-      "cost": {},
+      "cost": {
+        "credits": 0
+      },
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "seq",
         "effects": [
           {

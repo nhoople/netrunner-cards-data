@@ -13,11 +13,12 @@
   "installCost": 0,
   "rezCost": 0,
   "strength": 2,
-  "subroutines": [
+  "abilities": [
     {
+      "class": "subroutine",
       "id": "ireress-lose",
       "text": "The Runner loses 1[credit] for each bad publicity the Corp has.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "runner_lose_credits_equal_corp_bad_publicity"

@@ -9,20 +9,26 @@
   "installCost": 1,
   "rezCost": 1,
   "trashCost": 4,
-  "onRunDeclaredOnThisServerIfTagged": {
-    "op": "do",
-    "action": {
-      "kind": "trace",
-      "strength": 3,
-      "onSuccess": {
+  "wave": "intervention",
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "run_declared_on_this_server_if_tagged",
+      "instructions": {
         "op": "do",
         "action": {
-          "kind": "meat_damage",
-          "amount": 1,
-          "cannotPrevent": true
+          "kind": "trace",
+          "strength": 3,
+          "onSuccess": {
+            "op": "do",
+            "action": {
+              "kind": "meat_damage",
+              "amount": 1,
+              "cannotPrevent": true
+            }
+          }
         }
       }
     }
-  },
-  "wave": "intervention"
+  ]
 }

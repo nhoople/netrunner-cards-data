@@ -7,12 +7,23 @@
   "unsupported": [],
   "faction": "nbn",
   "playCost": 0,
-  "playRequiresSuccessfulRunLastTurn": true,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "win_standard_procedure"
+  "wave": "whispers-in-nalubaale",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "playRequiresSuccessfulRunLastTurn",
+        "value": true
+      }
+    },
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "win_standard_procedure"
+        }
+      }
     }
-  },
-  "wave": "whispers-in-nalubaale"
+  ]
 }

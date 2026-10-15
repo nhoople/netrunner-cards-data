@@ -9,27 +9,38 @@
   "subtypes": [
     "division"
   ],
-  "paidAbilities": [
+  "wave": "data-and-destiny",
+  "abilities": [
     {
+      "class": "paid",
       "id": "sync-flip",
       "label": "[click]: Flip this identity",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1
       },
       "windows": [
         "corp_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "flip_identity"
         }
       }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "basicRemoveTagAdditionalCostCreditsWhileUnflipped",
+        "value": 1
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "basicTrashResourceCreditReductionWhileFlipped",
+        "value": 2
+      }
     }
-  ],
-  "basicRemoveTagAdditionalCostCreditsWhileUnflipped": 1,
-  "basicTrashResourceCreditReductionWhileFlipped": 2,
-  "wave": "data-and-destiny"
+  ]
 }

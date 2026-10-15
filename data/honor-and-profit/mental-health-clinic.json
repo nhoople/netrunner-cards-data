@@ -12,14 +12,26 @@
   "installCost": 0,
   "rezCost": 0,
   "trashCost": 3,
-  "onTurnBegin": {
-    "op": "do",
-    "action": {
-      "kind": "gain_credits",
-      "side": "corp",
-      "amount": 1
+  "wave": "honor-and-profit",
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "turn_begin",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "corp",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "runnerHandSizeBonus",
+        "value": 1
+      }
     }
-  },
-  "runnerHandSizeBonus": 1,
-  "wave": "honor-and-profit"
+  ]
 }

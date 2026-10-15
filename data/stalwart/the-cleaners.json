@@ -12,5 +12,13 @@
   ],
   "advancementRequirement": 5,
   "agendaPoints": 3,
-  "whileScoredMeatDamageIncrease": 1
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "whileScoredMeatDamageIncrease",
+        "value": 1
+      }
+    }
+  ]
 }

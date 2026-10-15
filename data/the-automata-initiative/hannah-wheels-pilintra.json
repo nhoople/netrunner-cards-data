@@ -10,20 +10,18 @@
     "connection"
   ],
   "installCost": 2,
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "paid",
       "id": "wheels-run",
       "label": "[click]: Gain [click]. Run a remote; if unsuccessful, take 1 tag",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1
       },
       "windows": [
         "runner_action_paw"
       ],
-      "oncePerTurn": true,
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "gain_clicks",
@@ -31,6 +29,7 @@
           "amount": 1
         }
       },
+      "flag": "once_per_turn",
       "startsRun": {
         "servers": "remote",
         "onRunEnd": {
@@ -49,10 +48,9 @@
       }
     },
     {
+      "class": "paid",
       "id": "wheels-remove-tag",
       "label": "[click], [trash]: Gain [click][click]. Remove 1 tag",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1,
         "trashSelf": true
@@ -60,7 +58,7 @@
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "seq",
         "effects": [
           {

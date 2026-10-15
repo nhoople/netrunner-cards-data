@@ -7,13 +7,19 @@
   "unsupported": [],
   "faction": "criminal",
   "installCost": 0,
-  "powerCountersOnInstall": 4,
-  "paidAbilities": [
+  "wave": "breaker-bay",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "powerCountersOnInstall",
+        "value": 4
+      }
+    },
+    {
+      "class": "paid",
       "id": "dorm-computer-run",
       "label": "[click], hosted power counter: Run any server; prevent all tags this run",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1,
         "powerCounters": 1
@@ -21,13 +27,12 @@
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "dorm_computer_run_prevent_all_tags"
         }
       }
     }
-  ],
-  "wave": "breaker-bay"
+  ]
 }

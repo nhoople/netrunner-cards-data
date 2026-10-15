@@ -9,6 +9,14 @@
   "installCost": 1,
   "rezCost": 1,
   "trashCost": 3,
-  "onRezOrPlayOutOfFactionGainCredits": 1,
-  "wave": "salsette-island"
+  "wave": "salsette-island",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "onRezOrPlayOutOfFactionGainCredits",
+        "value": 1
+      }
+    }
+  ]
 }

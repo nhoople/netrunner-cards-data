@@ -11,17 +11,25 @@
     "job"
   ],
   "playCost": 6,
-  "runEvent": {
-    "servers": "any",
-    "requiresUnrezzedIce": true,
-    "onSuccessfulRun": {
-      "op": "do",
-      "action": {
-        "kind": "gain_credits",
-        "side": "runner",
-        "amount": 12
+  "wave": "kala-ghoda",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "runEvent",
+        "value": {
+          "servers": "any",
+          "requiresUnrezzedIce": true,
+          "onSuccessfulRun": {
+            "op": "do",
+            "action": {
+              "kind": "gain_credits",
+              "side": "runner",
+              "amount": 12
+            }
+          }
+        }
       }
     }
-  },
-  "wave": "kala-ghoda"
+  ]
 }

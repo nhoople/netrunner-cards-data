@@ -14,28 +14,39 @@
   "installCost": 1,
   "strength": 1,
   "memoryCost": 1,
-  "breaker": {
-    "breaksSubtype": "barrier",
-    "strength": 1,
-    "breakCredits": 1,
-    "pumpCredits": 2,
-    "pumpStrength": 3,
-    "breakMaxSubs": 2
-  },
-  "corpGainsCreditsOnEncounterEndIfBroke": 2,
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "breaker",
+        "value": {
+          "breaksSubtype": "barrier",
+          "strength": 1,
+          "breakCredits": 1,
+          "pumpCredits": 2,
+          "pumpStrength": 3,
+          "breakMaxSubs": 2
+        }
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "corpGainsCreditsOnEncounterEndIfBroke",
+        "value": 2
+      }
+    },
+    {
+      "class": "paid",
       "id": "tycoon-pump",
       "label": "Pump Tycoon +3 strength",
-      "clickCost": 0,
-      "creditCost": 2,
       "cost": {
         "credits": 2
       },
       "windows": [
         "encounter_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "pump_strength",

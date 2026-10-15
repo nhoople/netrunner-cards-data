@@ -10,9 +10,35 @@
     "console"
   ],
   "installCost": 4,
-  "unique": true,
-  "maxConsole": 1,
-  "muBonus": 1,
-  "onFirstEventEachTurnMayPlayAnother": true,
-  "wave": "breaker-bay"
+  "wave": "breaker-bay",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "maxConsole",
+        "value": 1
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "muBonus",
+        "value": 1
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "onFirstEventEachTurnMayPlayAnother",
+        "value": true
+      }
+    }
+  ]
 }

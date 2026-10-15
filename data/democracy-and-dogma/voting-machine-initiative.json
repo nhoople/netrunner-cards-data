@@ -11,18 +11,28 @@
   ],
   "advancementRequirement": 5,
   "agendaPoints": 3,
-  "onScore": {
-    "op": "do",
-    "action": {
-      "kind": "add_agenda_counter",
-      "amount": 3
+  "wave": "democracy-and-dogma",
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "score",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "add_agenda_counter",
+          "amount": 3
+        }
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "runner_turn_begin",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "voting_machine_may_spend_lose_click"
+        }
+      }
     }
-  },
-  "onRunnerTurnBegin": {
-    "op": "do",
-    "action": {
-      "kind": "voting_machine_may_spend_lose_click"
-    }
-  },
-  "wave": "democracy-and-dogma"
+  ]
 }

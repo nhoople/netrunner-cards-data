@@ -11,20 +11,26 @@
     "ritzy"
   ],
   "installCost": 1,
-  "unique": true,
-  "paidAbilities": [
+  "wave": "kala-ghoda",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "paid",
       "id": "chatterjee-power",
       "label": "[click]: Place 1 power counter on Chatterjee University",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1
       },
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "add_power_counter",
@@ -34,17 +40,16 @@
       "usableByRunnerOnSelfIce": true
     },
     {
+      "class": "paid",
       "id": "chatterjee-install",
       "label": "[click]: Install a program from grip, lowering cost by power counters; remove 1 power counter",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1
       },
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "chatterjee_install_program_discount"
@@ -52,6 +57,5 @@
       },
       "usableByRunnerOnSelfIce": true
     }
-  ],
-  "wave": "kala-ghoda"
+  ]
 }

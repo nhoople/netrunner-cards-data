@@ -14,19 +14,37 @@
   "rezCost": 3,
   "trashCost": 2,
   "strength": 2,
-  "mustRevealWhenAccessedFromRd": true,
-  "skipOnAccessFromArchives": true,
-  "onAccess": {
-    "op": "do",
-    "action": {
-      "kind": "force_encounter_accessed_ice"
-    }
-  },
-  "subroutines": [
+  "wave": "martial-law",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "mustRevealWhenAccessedFromRd",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "skipOnAccessFromArchives",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "access",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "force_encounter_accessed_ice"
+        }
+      }
+    },
+    {
+      "class": "subroutine",
       "id": "sapper-trash-program",
       "text": "Trash 1 installed program.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "trash_program",
@@ -34,6 +52,5 @@
         }
       }
     }
-  ],
-  "wave": "martial-law"
+  ]
 }

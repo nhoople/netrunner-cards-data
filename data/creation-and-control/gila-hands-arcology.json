@@ -12,19 +12,18 @@
   ],
   "advancementRequirement": 3,
   "agendaPoints": 1,
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "paid",
       "id": "gila-gain",
       "label": "[click], [click]: Gain 3¢",
-      "clickCost": 2,
-      "creditCost": 0,
       "cost": {
         "clicks": 2
       },
       "windows": [
         "corp_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "gain_credits",

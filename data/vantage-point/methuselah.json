@@ -11,14 +11,38 @@
     "stealth"
   ],
   "installCost": 4,
-  "unique": true,
-  "muBonus": 1,
-  "spendHostedCreditsDuringRuns": true,
-  "onRunBegin": {
-    "op": "do",
-    "action": {
-      "kind": "may_trash_hardware_from_grip_place_hosted_credits",
-      "amount": 2
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "muBonus",
+        "value": 1
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "spendHostedCreditsDuringRuns",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "run_begin",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "may_trash_hardware_from_grip_place_hosted_credits",
+          "amount": 2
+        }
+      }
     }
-  }
+  ]
 }

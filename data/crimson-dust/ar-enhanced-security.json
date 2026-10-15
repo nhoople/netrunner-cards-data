@@ -11,12 +11,18 @@
   ],
   "advancementRequirement": 3,
   "agendaPoints": 1,
-  "onFirstCorpCardTrashEachTurn": {
-    "op": "do",
-    "action": {
-      "kind": "give_tags",
-      "amount": 1
+  "wave": "crimson-dust",
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "first_corp_card_trash_each_turn",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "give_tags",
+          "amount": 1
+        }
+      }
     }
-  },
-  "wave": "crimson-dust"
+  ]
 }

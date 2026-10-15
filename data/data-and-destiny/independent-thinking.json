@@ -7,11 +7,16 @@
   "unsupported": [],
   "faction": "adam",
   "playCost": 1,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "trash_draw"
+  "wave": "data-and-destiny",
+  "abilities": [
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "trash_draw"
+        }
+      }
     }
-  },
-  "wave": "data-and-destiny"
+  ]
 }

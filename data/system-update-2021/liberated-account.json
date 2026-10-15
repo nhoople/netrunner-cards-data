@@ -7,21 +7,32 @@
   "side": "runner",
   "unsupported": [],
   "installCost": 6,
-  "hostedCreditsOnInstall": 16,
-  "trashWhenHostedCreditsEmpty": true,
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "hostedCreditsOnInstall",
+        "value": 16
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "trashWhenHostedCreditsEmpty",
+        "value": true
+      }
+    },
+    {
+      "class": "paid",
       "id": "lib-account",
       "label": "Take 4¢",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1
       },
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "take_hosted_credits",

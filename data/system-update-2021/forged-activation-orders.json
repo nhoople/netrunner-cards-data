@@ -10,10 +10,15 @@
     "sabotage"
   ],
   "playCost": 1,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "forged_activation_orders"
+  "abilities": [
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "forged_activation_orders"
+        }
+      }
     }
-  }
+  ]
 }

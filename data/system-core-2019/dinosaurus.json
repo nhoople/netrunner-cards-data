@@ -11,10 +11,48 @@
     "console"
   ],
   "installCost": 5,
-  "unique": true,
-  "muBonus": 1,
-  "maxHostedCards": 1,
-  "hostIcebreakerStrengthBonus": 2,
-  "hostNonAiIcebreaker": true,
-  "hostedIcebreakerMemoryDoesNotCount": true
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "muBonus",
+        "value": 1
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "maxHostedCards",
+        "value": 1
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "hostIcebreakerStrengthBonus",
+        "value": 2
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "hostNonAiIcebreaker",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "hostedIcebreakerMemoryDoesNotCount",
+        "value": true
+      }
+    }
+  ]
 }

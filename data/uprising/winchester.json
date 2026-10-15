@@ -14,11 +14,12 @@
   "installCost": 4,
   "rezCost": 4,
   "strength": 4,
-  "subroutines": [
+  "abilities": [
     {
+      "class": "subroutine",
       "id": "winchester-program",
       "text": "Trace[4]. If successful, trash 1 installed program.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "trace",
@@ -34,9 +35,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "winchester-hardware",
       "text": "Trace[3]. If successful, trash 1 installed piece of hardware.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "trace",
@@ -50,24 +52,30 @@
           }
         }
       }
-    }
-  ],
-  "gainsSubroutinesWhileProtectingHq": [
+    },
     {
-      "id": "winchester-etr",
-      "text": "Trace[3]. If successful, end the run.",
-      "effect": {
-        "op": "do",
-        "action": {
-          "kind": "trace",
-          "strength": 3,
-          "onSuccess": {
-            "op": "do",
-            "action": {
-              "kind": "end_the_run"
+      "class": "static",
+      "declaration": {
+        "field": "gainsSubroutinesWhileProtectingHq",
+        "value": [
+          {
+            "id": "winchester-etr",
+            "text": "Trace[3]. If successful, end the run.",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "trace",
+                "strength": 3,
+                "onSuccess": {
+                  "op": "do",
+                  "action": {
+                    "kind": "end_the_run"
+                  }
+                }
+              }
             }
           }
-        }
+        ]
       }
     }
   ]

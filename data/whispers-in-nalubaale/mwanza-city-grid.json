@@ -12,10 +12,42 @@
   "installCost": 0,
   "rezCost": 0,
   "trashCost": 5,
-  "hqOrRdRootOnly": true,
-  "bonusAccessOnHqBreach": 3,
-  "bonusAccessOnRdBreach": 3,
-  "gainCreditsPerCardAccessedDuringBreach": 2,
-  "limitOnePerServer": true,
-  "wave": "whispers-in-nalubaale"
+  "wave": "whispers-in-nalubaale",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "hqOrRdRootOnly",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "bonusAccessOnHqBreach",
+        "value": 3
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "bonusAccessOnRdBreach",
+        "value": 3
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "gainCreditsPerCardAccessedDuringBreach",
+        "value": 2
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "limitOnePerServer",
+        "value": true
+      }
+    }
+  ]
 }

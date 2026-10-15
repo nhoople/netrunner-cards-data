@@ -12,35 +12,47 @@
   ],
   "advancementRequirement": 4,
   "agendaPoints": 2,
-  "mustRevealWhenAccessedFromRd": true,
-  "onAccess": {
-    "op": "choose",
-    "chooser": "corp",
-    "options": [
-      {
-        "id": "gain",
-        "label": "Gain 5¢",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "gain_credits",
-            "side": "corp",
-            "amount": 5
-          }
-        }
-      },
-      {
-        "id": "decline",
-        "label": "Decline",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "gain_credits",
-            "side": "corp",
-            "amount": 0
-          }
-        }
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "mustRevealWhenAccessedFromRd",
+        "value": true
       }
-    ]
-  }
+    },
+    {
+      "class": "conditional",
+      "trigger": "access",
+      "instructions": {
+        "op": "choose",
+        "chooser": "corp",
+        "options": [
+          {
+            "id": "gain",
+            "label": "Gain 5¢",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "gain_credits",
+                "side": "corp",
+                "amount": 5
+              }
+            }
+          },
+          {
+            "id": "decline",
+            "label": "Decline",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "gain_credits",
+                "side": "corp",
+                "amount": 0
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
 }

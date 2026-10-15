@@ -8,19 +8,19 @@
   "faction": "shaper",
   "installCost": 0,
   "memoryCost": 1,
-  "paidAbilities": [
+  "wave": "martial-law",
+  "abilities": [
     {
+      "class": "paid",
       "id": "misdirection-remove-tags",
       "label": "[click], [click], X¢: Remove X tags",
-      "clickCost": 2,
-      "creditCost": 0,
       "cost": {
         "clicks": 2
       },
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "spend_x_remove_tags"
@@ -28,6 +28,5 @@
       },
       "usableByRunnerOnSelfIce": true
     }
-  ],
-  "wave": "martial-law"
+  ]
 }

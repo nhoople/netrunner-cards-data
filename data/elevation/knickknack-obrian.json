@@ -10,10 +10,16 @@
     "connection"
   ],
   "installCost": 2,
-  "onFirstRunBeginThisTurn": {
-    "op": "do",
-    "action": {
-      "kind": "may_trash_other_installed_gain_printed_install_and_draw"
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "first_run_begin_this_turn",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "may_trash_other_installed_gain_printed_install_and_draw"
+        }
+      }
     }
-  }
+  ]
 }

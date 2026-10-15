@@ -9,19 +9,19 @@
   "installCost": 4,
   "rezCost": 4,
   "trashCost": 1,
-  "paidAbilities": [
+  "wave": "sovereign-sight",
+  "abilities": [
     {
+      "class": "paid",
       "id": "echo-chamber-score",
       "label": "[click][click][click]: Add Echo Chamber to your score area as an agenda worth 1 agenda point",
-      "clickCost": 3,
-      "creditCost": 0,
       "cost": {
         "clicks": 3
       },
       "windows": [
         "corp_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "score_self_as_agenda",
@@ -29,6 +29,5 @@
         }
       }
     }
-  ],
-  "wave": "sovereign-sight"
+  ]
 }

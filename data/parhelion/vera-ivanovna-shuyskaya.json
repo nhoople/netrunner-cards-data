@@ -12,10 +12,16 @@
   "installCost": 3,
   "rezCost": 3,
   "trashCost": 3,
-  "onAgendaScoredOrStolen": {
-    "op": "do",
-    "action": {
-      "kind": "may_trash_one_from_grip"
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "agenda_scored_or_stolen",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "may_trash_one_from_grip"
+        }
+      }
     }
-  }
+  ]
 }

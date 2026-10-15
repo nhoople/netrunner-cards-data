@@ -11,20 +11,25 @@
     "location"
   ],
   "installCost": 1,
-  "personalWorkshop": true,
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "personalWorkshop",
+        "value": true
+      }
+    },
+    {
+      "class": "paid",
       "id": "personal-workshop-host",
       "label": "[click]: Host a program or hardware from grip; place power counters equal to its install cost",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1
       },
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "host_grip_program_or_hardware_with_power_equal_install_cost"
@@ -32,28 +37,31 @@
       }
     },
     {
+      "class": "paid",
       "id": "personal-workshop-remove",
       "label": "1¢: Remove 1 power counter from a hosted card (install ignoring costs at 0)",
-      "clickCost": 0,
-      "creditCost": 1,
       "cost": {
         "credits": 1
       },
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "remove_power_from_hosted_card_install_at_zero_ignore_costs"
+        }
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "turn_begin",
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "remove_power_from_hosted_card_install_at_zero_ignore_costs"
         }
       }
     }
-  ],
-  "onTurnBegin": {
-    "op": "do",
-    "action": {
-      "kind": "remove_power_from_hosted_card_install_at_zero_ignore_costs"
-    }
-  }
+  ]
 }

@@ -13,21 +13,32 @@
   ],
   "installCost": 0,
   "memoryCost": 0,
-  "installOnIce": true,
-  "caissaAdvanceOnSuccessfulRun": true,
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "installOnIce",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "caissaAdvanceOnSuccessfulRun",
+        "value": true
+      }
+    },
+    {
+      "class": "paid",
       "id": "pawn-host",
       "label": "[click]: Host on outermost ice protecting a central server",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1
       },
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "caissa_pawn_host_outermost_central"

@@ -12,13 +12,26 @@
   "installCost": 1,
   "rezCost": 1,
   "strength": 1,
-  "canAdvance": true,
-  "strengthPerAdvancement": 1,
-  "subroutines": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "canAdvance",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "strengthPerAdvancement",
+        "value": 1
+      }
+    },
+    {
+      "class": "subroutine",
       "id": "iw-etr",
       "text": "End the run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "end_the_run"

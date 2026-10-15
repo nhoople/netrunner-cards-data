@@ -10,8 +10,28 @@
     "console"
   ],
   "installCost": 6,
-  "unique": true,
-  "muBonus": 2,
-  "mawFirstAccessNotArchivesNoStealOrTrashForceCorpTrashHq": true,
-  "wave": "daedalus-complex"
+  "wave": "daedalus-complex",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "muBonus",
+        "value": 2
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "mawFirstAccessNotArchivesNoStealOrTrashForceCorpTrashHq",
+        "value": true
+      }
+    }
+  ]
 }

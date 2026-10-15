@@ -14,58 +14,76 @@
   "installCost": 1,
   "rezCost": 1,
   "trashCost": 2,
-  "unique": true,
-  "onApproachServerOncePerRun": true,
-  "onApproachServer": {
-    "op": "do",
-    "action": {
-      "kind": "play_psi_game",
-      "maxBid": 2,
-      "ifBidsDiffer": {
-        "op": "choose",
-        "chooser": "corp",
-        "options": [
-          {
-            "id": "trash-move",
-            "label": "Trash Letheia Nisei → outermost + may jack out",
-            "effect": {
-              "op": "seq",
-              "effects": [
-                {
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "onApproachServerOncePerRun",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "approach_server",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "play_psi_game",
+          "maxBid": 2,
+          "ifBidsDiffer": {
+            "op": "choose",
+            "chooser": "corp",
+            "options": [
+              {
+                "id": "trash-move",
+                "label": "Trash Letheia Nisei → outermost + may jack out",
+                "effect": {
+                  "op": "seq",
+                  "effects": [
+                    {
+                      "op": "do",
+                      "action": {
+                        "kind": "trash_self"
+                      }
+                    },
+                    {
+                      "op": "do",
+                      "action": {
+                        "kind": "move_runner_to_outermost_attacked"
+                      }
+                    },
+                    {
+                      "op": "do",
+                      "action": {
+                        "kind": "offer_jack_out"
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "decline",
+                "label": "Decline",
+                "effect": {
                   "op": "do",
                   "action": {
-                    "kind": "trash_self"
-                  }
-                },
-                {
-                  "op": "do",
-                  "action": {
-                    "kind": "move_runner_to_outermost_attacked"
-                  }
-                },
-                {
-                  "op": "do",
-                  "action": {
-                    "kind": "offer_jack_out"
+                    "kind": "gain_credits",
+                    "side": "corp",
+                    "amount": 0
                   }
                 }
-              ]
-            }
-          },
-          {
-            "id": "decline",
-            "label": "Decline",
-            "effect": {
-              "op": "do",
-              "action": {
-                "kind": "gain_credits",
-                "side": "corp",
-                "amount": 0
               }
-            }
+            ]
           }
-        ]
+        }
       }
     }
-  }
+  ]
 }

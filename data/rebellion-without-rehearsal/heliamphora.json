@@ -11,26 +11,38 @@
   ],
   "installCost": 1,
   "memoryCost": 1,
-  "onWouldAccessArchivesHostInstead": {
-    "oncePerArchivesBreach": true
-  },
-  "onVirusPurge": {
-    "op": "seq",
-    "effects": [
-      {
-        "op": "do",
-        "action": {
-          "kind": "trash_hq",
-          "pick": "random",
-          "amount": 2
-        }
-      },
-      {
-        "op": "do",
-        "action": {
-          "kind": "trash_self"
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "onWouldAccessArchivesHostInstead",
+        "value": {
+          "oncePerArchivesBreach": true
         }
       }
-    ]
-  }
+    },
+    {
+      "class": "conditional",
+      "trigger": "virus_purge",
+      "instructions": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "trash_hq",
+              "pick": "random",
+              "amount": 2
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "trash_self"
+            }
+          }
+        ]
+      }
+    }
+  ]
 }

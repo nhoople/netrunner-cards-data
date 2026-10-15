@@ -10,5 +10,13 @@
   "installCost": 2,
   "rezCost": 2,
   "trashCost": 2,
-  "iceProtectingThisServerStrengthBonus": 1
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "iceProtectingThisServerStrengthBonus",
+        "value": 1
+      }
+    }
+  ]
 }

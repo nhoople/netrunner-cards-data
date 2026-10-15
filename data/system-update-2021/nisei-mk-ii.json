@@ -11,19 +11,22 @@
   ],
   "advancementRequirement": 4,
   "agendaPoints": 2,
-  "onScore": {
-    "op": "do",
-    "action": {
-      "kind": "add_agenda_counter",
-      "amount": 1
-    }
-  },
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "conditional",
+      "trigger": "score",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "add_agenda_counter",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "class": "paid",
       "id": "nisei-etr",
       "label": "Hosted agenda counter: End the run",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "agendaCounters": 1
       },
@@ -32,7 +35,7 @@
         "encounter_paw",
         "approach_server_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "end_the_run"

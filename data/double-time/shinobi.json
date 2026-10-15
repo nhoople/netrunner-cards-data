@@ -15,18 +15,24 @@
   "installCost": 7,
   "rezCost": 7,
   "strength": 5,
-  "onRez": {
-    "op": "do",
-    "action": {
-      "kind": "give_bad_publicity",
-      "amount": 1
-    }
-  },
-  "subroutines": [
+  "wave": "double-time",
+  "abilities": [
     {
+      "class": "conditional",
+      "trigger": "rez",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "give_bad_publicity",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "class": "subroutine",
       "id": "shinobi-trace-1",
       "text": "Trace 1 — If successful, do 1 net damage.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "trace",
@@ -42,9 +48,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "shinobi-trace-2",
       "text": "Trace 2 — If successful, do 2 net damage.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "trace",
@@ -60,9 +67,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "shinobi-trace-3",
       "text": "Trace 3 — If successful, do 3 net damage.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "trace",
@@ -77,6 +85,5 @@
         }
       }
     }
-  ],
-  "wave": "double-time"
+  ]
 }

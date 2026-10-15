@@ -10,31 +10,36 @@
     "gray ops"
   ],
   "playCost": 0,
-  "onPlay": {
-    "op": "choose",
-    "chooser": "runner",
-    "options": [
-      {
-        "id": "remove-bp",
-        "label": "Corp removes 2 bad publicity",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "remove_bad_publicity",
-            "amount": 2
+  "abilities": [
+    {
+      "class": "play",
+      "instructions": {
+        "op": "choose",
+        "chooser": "runner",
+        "options": [
+          {
+            "id": "remove-bp",
+            "label": "Corp removes 2 bad publicity",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "remove_bad_publicity",
+                "amount": 2
+              }
+            }
+          },
+          {
+            "id": "shuffle-installed",
+            "label": "Shuffle 1 installed Runner card into the stack",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "shuffle_installed_runner_into_stack"
+              }
+            }
           }
-        }
-      },
-      {
-        "id": "shuffle-installed",
-        "label": "Shuffle 1 installed Runner card into the stack",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "shuffle_installed_runner_into_stack"
-          }
-        }
+        ]
       }
-    ]
-  }
+    }
+  ]
 }

@@ -10,7 +10,21 @@
     "connection"
   ],
   "installCost": 2,
-  "unique": true,
-  "additionalIceRezCostEqualToSubroutineCountWhenCorpCreditsGte": 10,
-  "wave": "twenty-three-seconds"
+  "wave": "twenty-three-seconds",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "additionalIceRezCostEqualToSubroutineCountWhenCorpCreditsGte",
+        "value": 10
+      }
+    }
+  ]
 }

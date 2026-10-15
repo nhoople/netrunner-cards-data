@@ -9,34 +9,40 @@
   "subtypes": [
     "corp"
   ],
-  "onAgendaScored": {
-    "op": "choose",
-    "chooser": "corp",
-    "options": [
-      {
-        "id": "accept",
-        "label": "Place 1 agenda counter on the scored agenda",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "add_agenda_counter",
-            "amount": 1
+  "wave": "order-and-chaos",
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "agenda_scored",
+      "instructions": {
+        "op": "choose",
+        "chooser": "corp",
+        "options": [
+          {
+            "id": "accept",
+            "label": "Place 1 agenda counter on the scored agenda",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "add_agenda_counter",
+                "amount": 1
+              }
+            }
+          },
+          {
+            "id": "decline",
+            "label": "Decline",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "gain_credits",
+                "side": "corp",
+                "amount": 0
+              }
+            }
           }
-        }
-      },
-      {
-        "id": "decline",
-        "label": "Decline",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "gain_credits",
-            "side": "corp",
-            "amount": 0
-          }
-        }
+        ]
       }
-    ]
-  },
-  "wave": "order-and-chaos"
+    }
+  ]
 }

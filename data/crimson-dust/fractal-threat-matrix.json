@@ -12,6 +12,14 @@
   "installCost": 4,
   "rezCost": 4,
   "trashCost": 3,
-  "trashTopOfStackWhenAllSubsBrokenOnProtectingIce": 2,
-  "wave": "crimson-dust"
+  "wave": "crimson-dust",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "trashTopOfStackWhenAllSubsBrokenOnProtectingIce",
+        "value": 2
+      }
+    }
+  ]
 }

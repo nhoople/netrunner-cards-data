@@ -7,14 +7,26 @@
   "unsupported": [],
   "faction": "neutral-runner",
   "installCost": 0,
-  "handSizeBonus": 5,
-  "onTurnBegin": {
-    "op": "do",
-    "action": {
-      "kind": "lose_clicks",
-      "side": "runner",
-      "amount": 1
+  "wave": "breaker-bay",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "handSizeBonus",
+        "value": 5
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "turn_begin",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "lose_clicks",
+          "side": "runner",
+          "amount": 1
+        }
+      }
     }
-  },
-  "wave": "breaker-bay"
+  ]
 }

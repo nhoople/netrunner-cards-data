@@ -14,38 +14,47 @@
   "installCost": 3,
   "strength": 2,
   "memoryCost": 1,
-  "breaker": {
-    "breaksSubtype": "sentry",
-    "strength": 2,
-    "breakCredits": 1,
-    "breakMaxSubs": 1
-  },
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "breaker",
+        "value": {
+          "breaksSubtype": "sentry",
+          "strength": 2,
+          "breakCredits": 1,
+          "breakMaxSubs": 1
+        }
+      }
+    },
+    {
+      "class": "paid",
       "id": "hantu-pump",
       "label": "Hosted virus counter: +2 strength",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "virusCounters": 1
       },
       "windows": [
         "encounter_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "pump_strength",
           "amount": 2
         }
       }
+    },
+    {
+      "class": "conditional",
+      "trigger": "install",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "add_virus_counter",
+          "amount": 2
+        }
+      }
     }
-  ],
-  "onInstall": {
-    "op": "do",
-    "action": {
-      "kind": "add_virus_counter",
-      "amount": 2
-    }
-  }
+  ]
 }

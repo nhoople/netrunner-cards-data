@@ -11,15 +11,45 @@
     "connection"
   ],
   "installCost": 3,
-  "unique": true,
-  "deckLimit": 1,
-  "onInstall": {
-    "op": "do",
-    "action": {
-      "kind": "host_gmod_identity_from_outside_game",
-      "requireFactionMismatchWithRunnerIdentity": true
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "deckLimit",
+        "value": 1
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "install",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "host_gmod_identity_from_outside_game",
+          "requireFactionMismatchWithRunnerIdentity": true
+        }
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "gainsTextOfHostedIdentity",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "returnHostedIdentityToOutsideGameOnUninstall",
+        "value": true
+      }
     }
-  },
-  "gainsTextOfHostedIdentity": true,
-  "returnHostedIdentityToOutsideGameOnUninstall": true
+  ]
 }

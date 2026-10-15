@@ -10,26 +10,36 @@
     "connection"
   ],
   "installCost": 2,
-  "unique": true,
-  "onGrayOrBlackOpsTrashedAfterResolve": {
-    "op": "do",
-    "action": {
-      "kind": "tallie_perrault_on_ops_trashed"
-    }
-  },
-  "paidAbilities": [
+  "wave": "fear-and-loathing",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "gray_or_black_ops_trashed_after_resolve",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "tallie_perrault_on_ops_trashed"
+        }
+      }
+    },
+    {
+      "class": "paid",
       "id": "tallie-draw",
       "label": "[trash]: Draw 1 if you have at least 1 tag",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "trashSelf": true
       },
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "if",
         "cond": {
           "op": "tags_gte",
@@ -45,6 +55,5 @@
         }
       }
     }
-  ],
-  "wave": "fear-and-loathing"
+  ]
 }

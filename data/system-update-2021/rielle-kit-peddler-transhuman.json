@@ -9,6 +9,20 @@
   "subtypes": [
     "cyborg"
   ],
-  "link": 0,
-  "firstEncounterGainsCodeGate": true
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "link",
+        "value": 0
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "firstEncounterGainsCodeGate",
+        "value": true
+      }
+    }
+  ]
 }

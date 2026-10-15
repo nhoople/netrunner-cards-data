@@ -8,25 +8,38 @@
   "unsupported": [],
   "installCost": 0,
   "memoryCost": 2,
-  "maxHostedCards": 4,
-  "onInstall": {
-    "op": "do",
-    "action": {
-      "kind": "may_host_one_from_grip_facedown_then_draw"
-    }
-  },
-  "onTurnBegin": {
-    "op": "do",
-    "action": {
-      "kind": "may_host_one_from_grip_facedown_then_draw"
-    }
-  },
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "maxHostedCards",
+        "value": 4
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "install",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "may_host_one_from_grip_facedown_then_draw"
+        }
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "turn_begin",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "may_host_one_from_grip_facedown_then_draw"
+        }
+      }
+    },
+    {
+      "class": "paid",
       "id": "read-write-share-shuffle",
       "label": "[trash]: Shuffle all hosted cards into your stack",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "trashSelf": true
       },
@@ -34,7 +47,7 @@
         "runner_action_paw",
         "corp_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "shuffle_hosted_cards_into_stack"

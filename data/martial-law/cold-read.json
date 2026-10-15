@@ -11,15 +11,23 @@
     "stealth"
   ],
   "playCost": 0,
-  "runEvent": {
-    "servers": "any",
-    "placeEventCredits": 4,
-    "onRunEnd": {
-      "op": "do",
-      "action": {
-        "kind": "trash_one_program_used_this_run_cannot_prevent"
+  "wave": "martial-law",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "runEvent",
+        "value": {
+          "servers": "any",
+          "placeEventCredits": 4,
+          "onRunEnd": {
+            "op": "do",
+            "action": {
+              "kind": "trash_one_program_used_this_run_cannot_prevent"
+            }
+          }
+        }
       }
     }
-  },
-  "wave": "martial-law"
+  ]
 }

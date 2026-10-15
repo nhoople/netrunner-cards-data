@@ -10,38 +10,49 @@
     "priority"
   ],
   "playCost": 0,
-  "playRequiresFirstClick": true,
-  "onPlay": {
-    "op": "seq",
-    "effects": [
-      {
-        "op": "do",
-        "action": {
-          "kind": "draw",
-          "side": "runner",
-          "amount": 0,
-          "tally": {
-            "count": "installed_resource_subtype",
-            "per": 1,
-            "side": "runner",
-            "subtype": "clan"
-          }
-        }
-      },
-      {
-        "op": "do",
-        "action": {
-          "kind": "gain_credits",
-          "side": "corp",
-          "amount": 0,
-          "tally": {
-            "count": "runner_tags",
-            "per": 1,
-            "side": "corp"
-          }
-        }
+  "wave": "free-mars",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "playRequiresFirstClick",
+        "value": true
       }
-    ]
-  },
-  "wave": "free-mars"
+    },
+    {
+      "class": "play",
+      "instructions": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "draw",
+              "side": "runner",
+              "amount": 0,
+              "tally": {
+                "count": "installed_resource_subtype",
+                "per": 1,
+                "side": "runner",
+                "subtype": "clan"
+              }
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "gain_credits",
+              "side": "corp",
+              "amount": 0,
+              "tally": {
+                "count": "runner_tags",
+                "per": 1,
+                "side": "corp"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
 }

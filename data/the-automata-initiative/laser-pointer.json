@@ -11,66 +11,63 @@
   ],
   "installCost": 2,
   "memoryCost": 1,
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "paid",
       "id": "laser-bypass-ap",
       "label": "Trash Laser Pointer: bypass encountered ap ice",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "trashSelf": true
       },
       "windows": [
         "encounter_paw"
       ],
-      "requireEncounterSubtype": "ap",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "bypass_current_ice",
           "requireSubtype": "ap"
         }
-      }
+      },
+      "requireEncounterSubtype": "ap"
     },
     {
+      "class": "paid",
       "id": "laser-bypass-destroyer",
       "label": "Trash Laser Pointer: bypass encountered destroyer ice",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "trashSelf": true
       },
       "windows": [
         "encounter_paw"
       ],
-      "requireEncounterSubtype": "destroyer",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "bypass_current_ice",
           "requireSubtype": "destroyer"
         }
-      }
+      },
+      "requireEncounterSubtype": "destroyer"
     },
     {
+      "class": "paid",
       "id": "laser-bypass-observer",
       "label": "Trash Laser Pointer: bypass encountered observer ice",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "trashSelf": true
       },
       "windows": [
         "encounter_paw"
       ],
-      "requireEncounterSubtype": "observer",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "bypass_current_ice",
           "requireSubtype": "observer"
         }
-      }
+      },
+      "requireEncounterSubtype": "observer"
     }
   ]
 }

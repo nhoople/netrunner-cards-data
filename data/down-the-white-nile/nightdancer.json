@@ -12,11 +12,13 @@
   "installCost": 6,
   "rezCost": 6,
   "strength": 4,
-  "subroutines": [
+  "wave": "down-the-white-nile",
+  "abilities": [
     {
+      "class": "subroutine",
       "id": "nightdancer-1",
       "text": "The Runner loses [click], if able. You have an additional [click] to spend during your next turn.",
-      "effect": {
+      "instructions": {
         "op": "seq",
         "effects": [
           {
@@ -37,9 +39,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "nightdancer-2",
       "text": "The Runner loses [click], if able. You have an additional [click] to spend during your next turn.",
-      "effect": {
+      "instructions": {
         "op": "seq",
         "effects": [
           {
@@ -59,6 +62,5 @@
         ]
       }
     }
-  ],
-  "wave": "down-the-white-nile"
+  ]
 }

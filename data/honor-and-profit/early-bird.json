@@ -11,26 +11,37 @@
     "run"
   ],
   "playCost": 1,
-  "playRequiresFirstClick": true,
-  "onPlay": {
-    "op": "seq",
-    "effects": [
-      {
-        "op": "do",
-        "action": {
-          "kind": "gain_clicks",
-          "side": "runner",
-          "amount": 1
-        }
-      },
-      {
-        "op": "do",
-        "action": {
-          "kind": "may_start_run",
-          "servers": "any"
-        }
+  "wave": "honor-and-profit",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "playRequiresFirstClick",
+        "value": true
       }
-    ]
-  },
-  "wave": "honor-and-profit"
+    },
+    {
+      "class": "play",
+      "instructions": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "gain_clicks",
+              "side": "runner",
+              "amount": 1
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "may_start_run",
+              "servers": "any"
+            }
+          }
+        ]
+      }
+    }
+  ]
 }

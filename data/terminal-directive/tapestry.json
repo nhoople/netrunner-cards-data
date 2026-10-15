@@ -12,11 +12,13 @@
   "installCost": 5,
   "rezCost": 5,
   "strength": 6,
-  "subroutines": [
+  "wave": "terminal-directive",
+  "abilities": [
     {
+      "class": "subroutine",
       "id": "tapestry-lose-click",
       "text": "The Runner loses [click], if able.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "lose_clicks",
@@ -26,9 +28,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "tapestry-corp-draw",
       "text": "The Corp may draw 1 card.",
-      "effect": {
+      "instructions": {
         "op": "choose",
         "chooser": "corp",
         "options": [
@@ -60,9 +63,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "tapestry-hq-to-rd",
       "text": "The Corp may add 1 card from HQ to the top of R&D.",
-      "effect": {
+      "instructions": {
         "op": "choose",
         "chooser": "corp",
         "options": [
@@ -92,6 +96,5 @@
         ]
       }
     }
-  ],
-  "wave": "terminal-directive"
+  ]
 }

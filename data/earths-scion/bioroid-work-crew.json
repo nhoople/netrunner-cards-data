@@ -12,13 +12,19 @@
   "installCost": 2,
   "rezCost": 2,
   "trashCost": 4,
-  "bioroidWorkCrewRequireAfterOperationPaidWindow": true,
-  "paidAbilities": [
+  "wave": "earths-scion",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "bioroidWorkCrewRequireAfterOperationPaidWindow",
+        "value": true
+      }
+    },
+    {
+      "class": "paid",
       "id": "bioroid-work-crew-install",
       "label": "[trash]: Install 1 card from HQ (after playing an operation)",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "trashSelf": true
       },
@@ -28,13 +34,12 @@
         "encounter_paw",
         "approach_server_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "may_install_from_hq_paying_costs"
         }
       }
     }
-  ],
-  "wave": "earths-scion"
+  ]
 }

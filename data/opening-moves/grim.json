@@ -15,18 +15,23 @@
   "installCost": 5,
   "rezCost": 5,
   "strength": 5,
-  "onRez": {
-    "op": "do",
-    "action": {
-      "kind": "give_bad_publicity",
-      "amount": 1
-    }
-  },
-  "subroutines": [
+  "abilities": [
     {
+      "class": "conditional",
+      "trigger": "rez",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "give_bad_publicity",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "class": "subroutine",
       "id": "grim-trash-prog",
       "text": "Trash 1 installed program.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "trash_program",

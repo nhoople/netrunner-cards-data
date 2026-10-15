@@ -10,6 +10,20 @@
   "subtypes": [
     "natural"
   ],
-  "link": 1,
-  "startingHandSize": 9
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "link",
+        "value": 1
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "startingHandSize",
+        "value": 9
+      }
+    }
+  ]
 }

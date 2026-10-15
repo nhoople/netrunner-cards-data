@@ -10,11 +10,22 @@
     "double"
   ],
   "playCost": 0,
-  "playAdditionalClick": true,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "realloc_two_rezzed_ice"
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "playAdditionalClick",
+        "value": true
+      }
+    },
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "realloc_two_rezzed_ice"
+        }
+      }
     }
-  }
+  ]
 }

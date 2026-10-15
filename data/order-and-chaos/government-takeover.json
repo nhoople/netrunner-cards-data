@@ -11,20 +11,26 @@
   ],
   "advancementRequirement": 9,
   "agendaPoints": 6,
-  "unique": true,
-  "paidAbilities": [
+  "wave": "order-and-chaos",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "paid",
       "id": "gov-takeover-credits",
       "label": "[click]: Gain 3[credit]",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1
       },
       "windows": [
         "corp_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "gain_credits",
@@ -33,6 +39,5 @@
         }
       }
     }
-  ],
-  "wave": "order-and-chaos"
+  ]
 }

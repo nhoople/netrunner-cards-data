@@ -14,11 +14,13 @@
   "installCost": 0,
   "rezCost": 0,
   "strength": 4,
-  "subroutines": [
+  "wave": "martial-law",
+  "abilities": [
     {
+      "class": "subroutine",
       "id": "mind-game-psi",
       "text": "Psi game. If bids differ, choose another server; Runner moves to outermost of that server; additional cost to jack out; Runner may jack out.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "play_psi_game",
@@ -32,6 +34,5 @@
         }
       }
     }
-  ],
-  "wave": "martial-law"
+  ]
 }

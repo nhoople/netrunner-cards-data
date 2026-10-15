@@ -13,34 +13,49 @@
   "installCost": 3,
   "strength": 2,
   "memoryCost": 2,
-  "deckLimit": 6,
-  "breaker": {
-    "breaksSubtype": "*",
-    "strength": 2,
-    "breakCredits": 0,
-    "breakViaPaidAbilityOnly": true,
-    "pumpCredits": 1,
-    "pumpStrength": 1
-  },
-  "onTurnBegin": {
-    "op": "do",
-    "action": {
-      "kind": "turn_hosted_cards_faceup"
-    }
-  },
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "deckLimit",
+        "value": 6
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "breaker",
+        "value": {
+          "breaksSubtype": "*",
+          "strength": 2,
+          "breakCredits": 0,
+          "breakViaPaidAbilityOnly": true,
+          "pumpCredits": 1,
+          "pumpStrength": 1
+        }
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "turn_begin",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "turn_hosted_cards_faceup"
+        }
+      }
+    },
+    {
+      "class": "paid",
       "id": "matryoshka-host",
       "label": "[click]: Host a copy of Matryoshka from grip faceup",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1
       },
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "host_copy_from_grip",
@@ -49,15 +64,16 @@
       }
     },
     {
+      "class": "paid",
       "id": "matryoshka-break",
       "label": "X¢, turn 1 hosted Matryoshka facedown: Break X subroutines",
-      "clickCost": 0,
-      "creditCost": 0,
-      "cost": {},
+      "cost": {
+        "credits": 0
+      },
       "windows": [
         "encounter_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "matryoshka_break"
@@ -65,17 +81,16 @@
       }
     },
     {
+      "class": "paid",
       "id": "matryoshka-pump",
       "label": "Pump Matryoshka +1 strength",
-      "clickCost": 0,
-      "creditCost": 1,
       "cost": {
         "credits": 1
       },
       "windows": [
         "encounter_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "pump_strength",

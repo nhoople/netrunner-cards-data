@@ -7,32 +7,43 @@
   "unsupported": [],
   "faction": "criminal",
   "playCost": 0,
-  "deckLimit": 6,
-  "onPlay": {
-    "op": "seq",
-    "effects": [
-      {
-        "op": "do",
-        "action": {
-          "kind": "draw",
-          "side": "runner",
-          "amount": 1
-        }
-      },
-      {
-        "op": "do",
-        "action": {
-          "kind": "gain_credits",
-          "side": "runner",
-          "amount": 0,
-          "tally": {
-            "count": "copies_in_runner_heap",
-            "per": 1,
-            "side": "runner"
-          }
-        }
+  "wave": "salsette-island",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "deckLimit",
+        "value": 6
       }
-    ]
-  },
-  "wave": "salsette-island"
+    },
+    {
+      "class": "play",
+      "instructions": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "draw",
+              "side": "runner",
+              "amount": 1
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "gain_credits",
+              "side": "runner",
+              "amount": 0,
+              "tally": {
+                "count": "copies_in_runner_heap",
+                "per": 1,
+                "side": "runner"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
 }

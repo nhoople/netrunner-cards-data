@@ -10,5 +10,13 @@
   "subtypes": [
     "megacorp"
   ],
-  "handSizeBonus": 1
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "handSizeBonus",
+        "value": 1
+      }
+    }
+  ]
 }

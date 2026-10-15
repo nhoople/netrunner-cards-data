@@ -9,12 +9,24 @@
   "subtypes": [
     "division"
   ],
-  "maxRemoteServers": 2,
-  "onFirstRemoteInstallThisTurn": {
-    "op": "do",
-    "action": {
-      "kind": "may_install_from_hq_on_other_remote_ignore_costs",
-      "cannotScoreInstalledCardThisTurn": true
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "maxRemoteServers",
+        "value": 2
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "first_remote_install_this_turn",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "may_install_from_hq_on_other_remote_ignore_costs",
+          "cannotScoreInstalledCardThisTurn": true
+        }
+      }
     }
-  }
+  ]
 }

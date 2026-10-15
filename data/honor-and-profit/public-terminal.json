@@ -7,12 +7,32 @@
   "unsupported": [],
   "faction": "criminal",
   "installCost": 1,
-  "recurringCreditsMax": 1,
-  "recurringSpendFor": [
-    "play_event"
-  ],
-  "recurringSpendForPlayEventSubtypes": [
-    "run"
-  ],
-  "wave": "honor-and-profit"
+  "wave": "honor-and-profit",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "recurringCreditsMax",
+        "value": 1
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "recurringSpendFor",
+        "value": [
+          "play_event"
+        ]
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "recurringSpendForPlayEventSubtypes",
+        "value": [
+          "run"
+        ]
+      }
+    }
+  ]
 }

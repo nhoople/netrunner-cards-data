@@ -11,6 +11,20 @@
     "link"
   ],
   "installCost": 3,
-  "link": 1,
-  "handSizeBonus": 1
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "link",
+        "value": 1
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "handSizeBonus",
+        "value": 1
+      }
+    }
+  ]
 }

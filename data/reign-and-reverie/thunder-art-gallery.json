@@ -12,39 +12,51 @@
     "ritzy"
   ],
   "installCost": 3,
-  "unique": true,
-  "onFirstAvoidOrRemoveTagThisTurn": {
-    "op": "choose",
-    "chooser": "runner",
-    "options": [
-      {
-        "id": "install",
-        "label": "Install a card from grip, lowering its install cost by 1",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "install_from_grip_discount",
-            "types": [
-              "program",
-              "hardware",
-              "resource"
-            ],
-            "discount": 1
-          }
-        }
-      },
-      {
-        "id": "decline",
-        "label": "Decline",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "gain_credits",
-            "side": "runner",
-            "amount": 0
-          }
-        }
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
       }
-    ]
-  }
+    },
+    {
+      "class": "conditional",
+      "trigger": "first_avoid_or_remove_tag_this_turn",
+      "instructions": {
+        "op": "choose",
+        "chooser": "runner",
+        "options": [
+          {
+            "id": "install",
+            "label": "Install a card from grip, lowering its install cost by 1",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "install_from_grip_discount",
+                "types": [
+                  "program",
+                  "hardware",
+                  "resource"
+                ],
+                "discount": 1
+              }
+            }
+          },
+          {
+            "id": "decline",
+            "label": "Decline",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "gain_credits",
+                "side": "runner",
+                "amount": 0
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
 }

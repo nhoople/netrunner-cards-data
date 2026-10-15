@@ -10,14 +10,22 @@
     "run"
   ],
   "playCost": 1,
-  "runEvent": {
-    "servers": "any",
-    "skipBreach": true,
-    "onSuccessfulRun": {
-      "op": "do",
-      "action": {
-        "kind": "access_one_root_other_server"
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "runEvent",
+        "value": {
+          "servers": "any",
+          "skipBreach": true,
+          "onSuccessfulRun": {
+            "op": "do",
+            "action": {
+              "kind": "access_one_root_other_server"
+            }
+          }
+        }
       }
     }
-  }
+  ]
 }

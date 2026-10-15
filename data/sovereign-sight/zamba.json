@@ -10,8 +10,28 @@
     "console"
   ],
   "installCost": 4,
-  "unique": true,
-  "muBonus": 2,
-  "mayGainCreditsOnCorpCardExposed": 1,
-  "wave": "sovereign-sight"
+  "wave": "sovereign-sight",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "muBonus",
+        "value": 2
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "mayGainCreditsOnCorpCardExposed",
+        "value": 1
+      }
+    }
+  ]
 }

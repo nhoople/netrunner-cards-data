@@ -9,33 +9,48 @@
   "subtypes": [
     "location"
   ],
-  "unique": true,
-  "onInstall": {
-    "op": "do",
-    "action": {
-      "kind": "place_x_counters"
-    }
-  },
-  "trashWhenPowerEmpty": true,
-  "paidAbilities": [
+  "wave": "up-and-over",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "install",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "place_x_counters"
+        }
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "trashWhenPowerEmpty",
+        "value": true
+      }
+    },
+    {
+      "class": "paid",
       "id": "angel-reveal",
       "label": "Hosted power counter: reveal top of stack; may bottom",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "powerCounters": 1
       },
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "reveal_top_may_bottom"
         }
       }
     }
-  ],
-  "wave": "up-and-over"
+  ]
 }

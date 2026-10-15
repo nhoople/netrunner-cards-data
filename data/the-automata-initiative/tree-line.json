@@ -13,14 +13,25 @@
   "installCost": 4,
   "rezCost": 4,
   "strength": 4,
-  "canAdvance": true,
-  "strengthPerAdvancement": 1,
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "canAdvance",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "strengthPerAdvancement",
+        "value": 1
+      }
+    },
+    {
+      "class": "paid",
       "id": "tree-line-expend",
       "label": "[click], 1¢, reveal and trash from HQ: place 3 advancements on 1 installed ice",
-      "clickCost": 1,
-      "creditCost": 1,
       "cost": {
         "clicks": 1,
         "credits": 1,
@@ -29,22 +40,21 @@
       "windows": [
         "corp_action_paw"
       ],
-      "usableFromHq": true,
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "place_advancements",
           "amount": 3,
           "anyInstalledIce": true
         }
-      }
-    }
-  ],
-  "subroutines": [
+      },
+      "usableFromHq": true
+    },
     {
+      "class": "subroutine",
       "id": "tl-gain-etr",
       "text": "Gain 1[credit]. End the run.",
-      "effect": {
+      "instructions": {
         "op": "seq",
         "effects": [
           {

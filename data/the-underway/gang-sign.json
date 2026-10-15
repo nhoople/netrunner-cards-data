@@ -10,11 +10,17 @@
     "virtual"
   ],
   "installCost": 1,
-  "onAgendaScored": {
-    "op": "do",
-    "action": {
-      "kind": "breach_hq_no_root"
+  "wave": "the-underway",
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "agenda_scored",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "breach_hq_no_root"
+        }
+      }
     }
-  },
-  "wave": "the-underway"
+  ]
 }

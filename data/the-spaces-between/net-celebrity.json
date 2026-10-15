@@ -10,11 +10,37 @@
     "current"
   ],
   "playCost": 1,
-  "lingerAsCurrent": true,
-  "currentTrashOnAgendaScored": true,
-  "recurringCreditsMax": 1,
-  "recurringSpendFor": [
-    "run"
-  ],
-  "wave": "the-spaces-between"
+  "wave": "the-spaces-between",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "lingerAsCurrent",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "currentTrashOnAgendaScored",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "recurringCreditsMax",
+        "value": 1
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "recurringSpendFor",
+        "value": [
+          "run"
+        ]
+      }
+    }
+  ]
 }

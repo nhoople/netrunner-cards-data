@@ -11,31 +11,37 @@
   "subtypes": [
     "code gate"
   ],
-  "onEncounter": {
-    "op": "do",
-    "action": {
-      "kind": "unless",
-      "payer": "runner",
-      "cost": {
+  "unsupported": [],
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "encounter",
+      "instructions": {
         "op": "do",
         "action": {
-          "kind": "give_tags",
-          "amount": 1
-        }
-      },
-      "instruction": {
-        "op": "do",
-        "action": {
-          "kind": "end_the_run"
+          "kind": "unless",
+          "payer": "runner",
+          "cost": {
+            "op": "do",
+            "action": {
+              "kind": "give_tags",
+              "amount": 1
+            }
+          },
+          "instruction": {
+            "op": "do",
+            "action": {
+              "kind": "end_the_run"
+            }
+          }
         }
       }
-    }
-  },
-  "subroutines": [
+    },
     {
+      "class": "subroutine",
       "id": "funhouse-tag",
       "text": "Tag unless pay 4¢.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "unless",
@@ -58,6 +64,5 @@
         }
       }
     }
-  ],
-  "unsupported": []
+  ]
 }

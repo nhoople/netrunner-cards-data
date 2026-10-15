@@ -12,11 +12,17 @@
   "installCost": 2,
   "rezCost": 2,
   "trashCost": 4,
-  "onSuccessfulRun": {
-    "op": "do",
-    "action": {
-      "kind": "net_damage",
-      "amount": 1
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "successful_run",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "net_damage",
+          "amount": 1
+        }
+      }
     }
-  }
+  ]
 }

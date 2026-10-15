@@ -9,6 +9,14 @@
   "subtypes": [
     "division"
   ],
-  "trashCostIncreasePerFacedownArchivesCard": 1,
-  "wave": "the-source"
+  "wave": "the-source",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "trashCostIncreasePerFacedownArchivesCard",
+        "value": 1
+      }
+    }
+  ]
 }

@@ -7,12 +7,18 @@
   "side": "runner",
   "unsupported": [],
   "installCost": 2,
-  "onTurnBegin": {
-    "op": "do",
-    "action": {
-      "kind": "may_start_run",
-      "servers": "hq",
-      "bypassFirstEncounterForClicks": 2
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "turn_begin",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "may_start_run",
+          "servers": "hq",
+          "bypassFirstEncounterForClicks": 2
+        }
+      }
     }
-  }
+  ]
 }

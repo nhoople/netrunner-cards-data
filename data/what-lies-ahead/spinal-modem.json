@@ -11,17 +11,47 @@
     "console"
   ],
   "installCost": 4,
-  "unique": true,
-  "muBonus": 1,
-  "recurringCreditsMax": 2,
-  "recurringSpendFor": [
-    "use_program"
-  ],
-  "onSuccessfulTraceDuringRun": {
-    "op": "do",
-    "action": {
-      "kind": "core_damage",
-      "amount": 1
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "muBonus",
+        "value": 1
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "recurringCreditsMax",
+        "value": 2
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "recurringSpendFor",
+        "value": [
+          "use_program"
+        ]
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "successful_trace_during_run",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "core_damage",
+          "amount": 1
+        }
+      }
     }
-  }
+  ]
 }

@@ -11,14 +11,32 @@
   ],
   "installCost": 3,
   "memoryCost": 2,
-  "unique": true,
-  "onInstall": {
-    "op": "do",
-    "action": {
-      "kind": "add_virus_counter",
-      "amount": 1
+  "wave": "order-and-chaos",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "install",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "add_virus_counter",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "hivemindSharesVirusCounters",
+        "value": true
+      }
     }
-  },
-  "hivemindSharesVirusCounters": true,
-  "wave": "order-and-chaos"
+  ]
 }

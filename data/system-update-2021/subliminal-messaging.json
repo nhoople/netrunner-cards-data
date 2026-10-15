@@ -10,26 +10,37 @@
     "gray ops"
   ],
   "playCost": 0,
-  "onPlay": {
-    "op": "seq",
-    "effects": [
-      {
-        "op": "do",
-        "action": {
-          "kind": "gain_credits",
-          "side": "corp",
-          "amount": 1
-        }
-      },
-      {
-        "op": "do",
-        "action": {
-          "kind": "gain_clicks",
-          "side": "corp",
-          "amount": 1
-        }
+  "abilities": [
+    {
+      "class": "play",
+      "instructions": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "gain_credits",
+              "side": "corp",
+              "amount": 1
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "gain_clicks",
+              "side": "corp",
+              "amount": 1
+            }
+          }
+        ]
       }
-    ]
-  },
-  "subliminalMessaging": true
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "subliminalMessaging",
+        "value": true
+      }
+    }
+  ]
 }

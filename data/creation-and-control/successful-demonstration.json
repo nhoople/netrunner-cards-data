@@ -11,13 +11,24 @@
     "transaction"
   ],
   "playCost": 2,
-  "playRequiresUnsuccessfulRunLastTurn": true,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "gain_credits",
-      "side": "corp",
-      "amount": 7
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "playRequiresUnsuccessfulRunLastTurn",
+        "value": true
+      }
+    },
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "corp",
+          "amount": 7
+        }
+      }
     }
-  }
+  ]
 }

@@ -12,12 +12,19 @@
   "installCost": 5,
   "rezCost": 5,
   "strength": 4,
-  "strengthCannotBeLowered": true,
-  "subroutines": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "strengthCannotBeLowered",
+        "value": true
+      }
+    },
+    {
+      "class": "subroutine",
       "id": "lotus-etr",
       "text": "End the run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "end_the_run"

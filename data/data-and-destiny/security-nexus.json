@@ -10,29 +10,48 @@
     "console"
   ],
   "installCost": 8,
-  "unique": true,
-  "muBonus": 1,
-  "link": 1,
-  "paidAbilities": [
+  "wave": "data-and-destiny",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "muBonus",
+        "value": 1
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "link",
+        "value": 1
+      }
+    },
+    {
+      "class": "paid",
       "id": "security-nexus-trace",
       "label": "Once per turn → On encounter: Corp traces[5]; success tag+ETR, fail bypass",
-      "clickCost": 0,
-      "creditCost": 0,
-      "cost": {},
+      "cost": {
+        "credits": 0
+      },
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "trace_bypass_or_tag_etr"
         }
       },
-      "oncePerTurn": true,
+      "flag": "once_per_turn",
       "usableByRunnerOnSelfIce": true,
       "requireDuringRun": true
     }
-  ],
-  "wave": "data-and-destiny"
+  ]
 }

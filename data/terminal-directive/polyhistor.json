@@ -10,10 +10,42 @@
     "console"
   ],
   "installCost": 4,
-  "unique": true,
-  "maxConsole": 1,
-  "muBonus": 1,
-  "link": 1,
-  "polyhistorPassAllHqIceMayDrawForceCorpDraw": true,
-  "wave": "terminal-directive"
+  "wave": "terminal-directive",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "maxConsole",
+        "value": 1
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "muBonus",
+        "value": 1
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "link",
+        "value": 1
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "polyhistorPassAllHqIceMayDrawForceCorpDraw",
+        "value": true
+      }
+    }
+  ]
 }

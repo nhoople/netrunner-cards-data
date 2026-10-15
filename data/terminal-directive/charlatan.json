@@ -10,19 +10,19 @@
     "virtual"
   ],
   "installCost": 5,
-  "paidAbilities": [
+  "wave": "terminal-directive",
+  "abilities": [
     {
+      "class": "paid",
       "id": "charlatan-run",
       "label": "[click][click]: Run any server; first approach rezzed ice may pay strength to bypass",
-      "clickCost": 2,
-      "creditCost": 0,
       "cost": {
         "clicks": 2
       },
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "charlatan_run_any_server"
@@ -30,6 +30,5 @@
       },
       "usableByRunnerOnSelfIce": true
     }
-  ],
-  "wave": "terminal-directive"
+  ]
 }

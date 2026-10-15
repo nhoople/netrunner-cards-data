@@ -11,15 +11,23 @@
     "sabotage"
   ],
   "playCost": 1,
-  "runEvent": {
-    "servers": "hq",
-    "skipBreach": true,
-    "onSuccessfulRun": {
-      "op": "do",
-      "action": {
-        "kind": "win_embezzle"
+  "wave": "whispers-in-nalubaale",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "runEvent",
+        "value": {
+          "servers": "hq",
+          "skipBreach": true,
+          "onSuccessfulRun": {
+            "op": "do",
+            "action": {
+              "kind": "win_embezzle"
+            }
+          }
+        }
       }
     }
-  },
-  "wave": "whispers-in-nalubaale"
+  ]
 }

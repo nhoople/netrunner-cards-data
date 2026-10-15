@@ -10,12 +10,17 @@
     "run"
   ],
   "playCost": 1,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "choose_breaker_run",
-      "strengthBonus": 2
+  "wave": "twenty-three-seconds",
+  "abilities": [
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "choose_breaker_run",
+          "strengthBonus": 2
+        }
+      }
     }
-  },
-  "wave": "twenty-three-seconds"
+  ]
 }

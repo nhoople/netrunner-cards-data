@@ -13,6 +13,20 @@
   "installCost": 2,
   "rezCost": 2,
   "trashCost": 3,
-  "unique": true,
-  "loseClickOnProtectingIceEncounterEndIfBroke": true
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "loseClickOnProtectingIceEncounterEndIfBroke",
+        "value": true
+      }
+    }
+  ]
 }

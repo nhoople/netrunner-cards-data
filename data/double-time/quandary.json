@@ -12,17 +12,18 @@
   "installCost": 1,
   "rezCost": 1,
   "strength": 0,
-  "subroutines": [
+  "wave": "double-time",
+  "abilities": [
     {
+      "class": "subroutine",
       "id": "quandary-etr",
       "text": "End the run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "end_the_run"
         }
       }
     }
-  ],
-  "wave": "double-time"
+  ]
 }

@@ -10,6 +10,20 @@
     "virtual"
   ],
   "installCost": 3,
-  "powerOnFirstInstalledCardCreditSpendThisTurn": true,
-  "removePowerForBonusAccessOnHqRdBreach": 2
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "powerOnFirstInstalledCardCreditSpendThisTurn",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "removePowerForBonusAccessOnHqRdBreach",
+        "value": 2
+      }
+    }
+  ]
 }

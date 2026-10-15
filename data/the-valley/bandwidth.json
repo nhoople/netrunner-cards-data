@@ -12,17 +12,18 @@
   "installCost": 0,
   "rezCost": 0,
   "strength": 5,
-  "subroutines": [
+  "wave": "the-valley",
+  "abilities": [
     {
+      "class": "subroutine",
       "id": "bandwidth-tag",
       "text": "Give the Runner 1 tag. If this run is successful, the Runner removes 1 tag.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "give_tag_remove_if_successful"
         }
       }
     }
-  ],
-  "wave": "the-valley"
+  ]
 }

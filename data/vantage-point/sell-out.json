@@ -7,32 +7,48 @@
   "side": "runner",
   "unsupported": [],
   "playCost": 1,
-  "playRequiresInstalledResource": true,
-  "playAdditionalCost": {
-    "op": "do",
-    "action": {
-      "kind": "trash_own_resource"
-    }
-  },
-  "onPlay": {
-    "op": "seq",
-    "effects": [
-      {
-        "op": "do",
-        "action": {
-          "kind": "gain_credits",
-          "side": "runner",
-          "amount": 4
-        }
-      },
-      {
-        "op": "do",
-        "action": {
-          "kind": "draw",
-          "side": "runner",
-          "amount": 2
-        }
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "playRequiresInstalledResource",
+        "value": true
       }
-    ]
-  }
+    },
+    {
+      "class": "play",
+      "instructions": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "gain_credits",
+              "side": "runner",
+              "amount": 4
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "draw",
+              "side": "runner",
+              "amount": 2
+            }
+          }
+        ]
+      },
+      "restrictions": [
+        {
+          "appliesTo": "play",
+          "effect": {
+            "op": "do",
+            "action": {
+              "kind": "trash_own_resource"
+            }
+          }
+        }
+      ]
+    }
+  ]
 }

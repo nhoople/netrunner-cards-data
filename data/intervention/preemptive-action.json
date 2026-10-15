@@ -10,14 +10,31 @@
     "terminal"
   ],
   "playCost": 0,
-  "endsActionPhase": true,
-  "rfgInsteadOfTrashing": true,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "shuffle_archives_to_rd",
-      "amount": 3
+  "wave": "intervention",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "endsActionPhase",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "rfgInsteadOfTrashing",
+        "value": true
+      }
+    },
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "shuffle_archives_to_rd",
+          "amount": 3
+        }
+      }
     }
-  },
-  "wave": "intervention"
+  ]
 }

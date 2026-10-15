@@ -11,7 +11,21 @@
   ],
   "advancementRequirement": 3,
   "agendaPoints": 1,
-  "mustRevealWhenAccessedFromRd": true,
-  "addToCorpScoreOnAccessIfRunnerTagged": true,
-  "wave": "data-and-destiny"
+  "wave": "data-and-destiny",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "mustRevealWhenAccessedFromRd",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "addToCorpScoreOnAccessIfRunnerTagged",
+        "value": true
+      }
+    }
+  ]
 }

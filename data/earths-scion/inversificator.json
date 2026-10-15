@@ -13,14 +13,28 @@
   "installCost": 6,
   "strength": 2,
   "memoryCost": 1,
-  "breaker": {
-    "breaksSubtype": "code gate",
-    "strength": 2,
-    "breakCredits": 1,
-    "breakMaxSubs": 1,
-    "pumpCredits": 1,
-    "pumpStrength": 1
-  },
-  "inversificatorSwapIceAfterFullyBrokeOncePerTurn": true,
-  "wave": "earths-scion"
+  "wave": "earths-scion",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "breaker",
+        "value": {
+          "breaksSubtype": "code gate",
+          "strength": 2,
+          "breakCredits": 1,
+          "breakMaxSubs": 1,
+          "pumpCredits": 1,
+          "pumpStrength": 1
+        }
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "inversificatorSwapIceAfterFullyBrokeOncePerTurn",
+        "value": true
+      }
+    }
+  ]
 }

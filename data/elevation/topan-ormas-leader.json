@@ -9,21 +9,25 @@
   "subtypes": [
     "natural"
   ],
-  "link": 0,
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "link",
+        "value": 0
+      }
+    },
+    {
+      "class": "paid",
       "id": "topan-install",
       "label": "Once per turn → [click]: Install 1 card from grip (−2¢); suffer 1 meat damage",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1
       },
-      "oncePerTurn": true,
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "install_from_grip_discount",
@@ -41,7 +45,8 @@
             }
           }
         }
-      }
+      },
+      "flag": "once_per_turn"
     }
   ]
 }

@@ -10,6 +10,14 @@
     "connection"
   ],
   "installCost": 3,
-  "patronChooseServerDrawInsteadOfBreach": 2,
-  "wave": "salsette-island"
+  "wave": "salsette-island",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "patronChooseServerDrawInsteadOfBreach",
+        "value": 2
+      }
+    }
+  ]
 }

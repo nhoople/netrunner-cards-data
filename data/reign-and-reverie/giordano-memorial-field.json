@@ -13,31 +13,43 @@
   "installCost": 3,
   "rezCost": 3,
   "trashCost": 3,
-  "unique": true,
-  "onSuccessfulRun": {
-    "op": "do",
-    "action": {
-      "kind": "unless",
-      "payer": "runner",
-      "cost": {
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "successful_run",
+      "instructions": {
         "op": "do",
         "action": {
-          "kind": "lose_credits",
-          "side": "runner",
-          "amount": 0,
-          "tally": {
-            "count": "runner_score",
-            "per": 2,
-            "side": "runner"
+          "kind": "unless",
+          "payer": "runner",
+          "cost": {
+            "op": "do",
+            "action": {
+              "kind": "lose_credits",
+              "side": "runner",
+              "amount": 0,
+              "tally": {
+                "count": "runner_score",
+                "per": 2,
+                "side": "runner"
+              }
+            }
+          },
+          "instruction": {
+            "op": "do",
+            "action": {
+              "kind": "end_the_run"
+            }
           }
-        }
-      },
-      "instruction": {
-        "op": "do",
-        "action": {
-          "kind": "end_the_run"
         }
       }
     }
-  }
+  ]
 }

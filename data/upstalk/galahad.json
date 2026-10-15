@@ -13,24 +13,29 @@
   "installCost": 2,
   "rezCost": 2,
   "strength": 1,
-  "onEncounter": {
-    "op": "do",
-    "action": {
-      "kind": "grail_reveal_gain_subroutines",
-      "maxReveal": 2
-    }
-  },
-  "subroutines": [
+  "wave": "upstalk",
+  "abilities": [
     {
+      "class": "conditional",
+      "trigger": "encounter",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "grail_reveal_gain_subroutines",
+          "maxReveal": 2
+        }
+      }
+    },
+    {
+      "class": "subroutine",
       "id": "galahad-etr",
       "text": "End the run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "end_the_run"
         }
       }
     }
-  ],
-  "wave": "upstalk"
+  ]
 }

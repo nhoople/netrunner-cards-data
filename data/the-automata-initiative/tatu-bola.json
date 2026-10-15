@@ -12,40 +12,45 @@
   "installCost": 2,
   "rezCost": 2,
   "strength": 1,
-  "onPass": {
-    "op": "choose",
-    "chooser": "corp",
-    "options": [
-      {
-        "id": "swap",
-        "label": "Swap with ice from HQ; gain 4¢",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "swap_ice_with_hq",
-            "gainCredits": 4
-          }
-        }
-      },
-      {
-        "id": "decline",
-        "label": "Decline",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "gain_credits",
-            "side": "corp",
-            "amount": 0
-          }
-        }
-      }
-    ]
-  },
-  "subroutines": [
+  "abilities": [
     {
+      "class": "conditional",
+      "trigger": "pass",
+      "instructions": {
+        "op": "choose",
+        "chooser": "corp",
+        "options": [
+          {
+            "id": "swap",
+            "label": "Swap with ice from HQ; gain 4¢",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "swap_ice_with_hq",
+                "gainCredits": 4
+              }
+            }
+          },
+          {
+            "id": "decline",
+            "label": "Decline",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "gain_credits",
+                "side": "corp",
+                "amount": 0
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "class": "subroutine",
       "id": "tatu-bola-etr",
       "text": "End the run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "end_the_run"

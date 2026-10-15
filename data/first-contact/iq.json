@@ -12,19 +12,32 @@
   "installCost": 0,
   "rezCost": 0,
   "strength": 0,
-  "strengthPerCorpCardInHq": 1,
-  "rezCostIncreasePerCorpCardInHq": 1,
-  "subroutines": [
+  "wave": "first-contact",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "strengthPerCorpCardInHq",
+        "value": 1
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "rezCostIncreasePerCorpCardInHq",
+        "value": 1
+      }
+    },
+    {
+      "class": "subroutine",
       "id": "iq-etr",
       "text": "End the run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "end_the_run"
         }
       }
     }
-  ],
-  "wave": "first-contact"
+  ]
 }

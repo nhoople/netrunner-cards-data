@@ -13,14 +13,25 @@
     "virtual"
   ],
   "installCost": 2,
-  "unique": true,
-  "link": 1,
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "link",
+        "value": 1
+      }
+    },
+    {
+      "class": "paid",
       "id": "the-helpful-ai-boost",
       "label": "[trash]: Choose an icebreaker. That icebreaker has +2 strength until end of turn",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "trashSelf": true
       },
@@ -28,7 +39,7 @@
         "runner_action_paw",
         "encounter_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "choose_icebreaker_gain_strength_this_turn",

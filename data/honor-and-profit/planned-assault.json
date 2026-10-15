@@ -10,12 +10,23 @@
     "double"
   ],
   "playCost": 2,
-  "playAdditionalClick": true,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "play_run_event_from_stack"
+  "wave": "honor-and-profit",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "playAdditionalClick",
+        "value": true
+      }
+    },
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "play_run_event_from_stack"
+        }
+      }
     }
-  },
-  "wave": "honor-and-profit"
+  ]
 }

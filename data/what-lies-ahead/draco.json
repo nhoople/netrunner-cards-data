@@ -14,15 +14,28 @@
   "installCost": 1,
   "rezCost": 1,
   "strength": 0,
-  "rezSpendCreditsForPowerCounters": {
-    "max": 99
-  },
-  "strengthPerPowerCounter": true,
-  "subroutines": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "rezSpendCreditsForPowerCounters",
+        "value": {
+          "max": 99
+        }
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "strengthPerPowerCounter",
+        "value": true
+      }
+    },
+    {
+      "class": "subroutine",
       "id": "draco-trace",
       "text": "Trace[2]. If successful, give the Runner 1 tag and end the run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "trace",

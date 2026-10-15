@@ -12,10 +12,16 @@
   ],
   "advancementRequirement": 5,
   "agendaPoints": 3,
-  "onScore": {
-    "op": "do",
-    "action": {
-      "kind": "rez_ice_ignoring_costs"
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "score",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "rez_ice_ignoring_costs"
+        }
+      }
     }
-  }
+  ]
 }

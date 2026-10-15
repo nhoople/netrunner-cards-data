@@ -11,15 +11,33 @@
     "source"
   ],
   "installCost": 7,
-  "unique": true,
-  "deckLimitOne": true,
-  "onGripArchivesSuccessInstallSelfIgnoringCosts": true,
-  "paidAbilities": [
+  "wave": "first-contact",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "deckLimitOne",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "onGripArchivesSuccessInstallSelfIgnoringCosts",
+        "value": true
+      }
+    },
+    {
+      "class": "paid",
       "id": "hades-breach",
       "label": "[trash]: Breach Archives (no root access)",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "trashSelf": true
       },
@@ -27,13 +45,12 @@
         "runner_action_paw",
         "encounter_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "breach_archives"
         }
       }
     }
-  ],
-  "wave": "first-contact"
+  ]
 }

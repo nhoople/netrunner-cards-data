@@ -7,18 +7,23 @@
   "unsupported": [],
   "faction": "nbn",
   "playCost": 1,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "gain_credits",
-      "side": "runner",
-      "amount": 0,
-      "tally": {
-        "count": "runner_grip",
-        "per": 1,
-        "side": "runner"
+  "wave": "true-colors",
+  "abilities": [
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "runner",
+          "amount": 0,
+          "tally": {
+            "count": "runner_grip",
+            "per": 1,
+            "side": "runner"
+          }
+        }
       }
     }
-  },
-  "wave": "true-colors"
+  ]
 }

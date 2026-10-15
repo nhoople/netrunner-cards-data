@@ -7,11 +7,16 @@
   "unsupported": [],
   "faction": "neutral-runner",
   "playCost": 0,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "rigged_results_secret_spend_guess"
+  "wave": "fear-the-masses",
+  "abilities": [
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "rigged_results_secret_spend_guess"
+        }
+      }
     }
-  },
-  "wave": "fear-the-masses"
+  ]
 }

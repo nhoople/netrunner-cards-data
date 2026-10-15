@@ -8,6 +8,14 @@
   "faction": "apex",
   "installCost": 2,
   "memoryCost": 1,
-  "drawOnFirstTrashInstalledEachTurn": true,
-  "wave": "martial-law"
+  "wave": "martial-law",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "drawOnFirstTrashInstalledEachTurn",
+        "value": true
+      }
+    }
+  ]
 }

@@ -12,27 +12,38 @@
   ],
   "playCost": 5,
   "trashCost": 1,
-  "endsActionPhase": true,
-  "onPlay": {
-    "op": "seq",
-    "effects": [
-      {
-        "op": "do",
-        "action": {
-          "kind": "gain_credits",
-          "side": "corp",
-          "amount": 8
-        }
-      },
-      {
-        "op": "do",
-        "action": {
-          "kind": "draw",
-          "side": "corp",
-          "amount": 4
-        }
+  "wave": "quorum",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "endsActionPhase",
+        "value": true
       }
-    ]
-  },
-  "wave": "quorum"
+    },
+    {
+      "class": "play",
+      "instructions": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "gain_credits",
+              "side": "corp",
+              "amount": 8
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "draw",
+              "side": "corp",
+              "amount": 4
+            }
+          }
+        ]
+      }
+    }
+  ]
 }

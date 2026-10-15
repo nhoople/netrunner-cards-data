@@ -13,11 +13,13 @@
   "installCost": 2,
   "rezCost": 2,
   "strength": 2,
-  "subroutines": [
+  "wave": "sovereign-sight",
+  "abilities": [
     {
+      "class": "subroutine",
       "id": "najja-etr-1",
       "text": "End the run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "end_the_run"
@@ -25,15 +27,15 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "najja-etr-2",
       "text": "End the run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "end_the_run"
         }
       }
     }
-  ],
-  "wave": "sovereign-sight"
+  ]
 }

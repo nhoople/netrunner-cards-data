@@ -13,24 +13,29 @@
   "installCost": 5,
   "rezCost": 5,
   "strength": 5,
-  "onRez": {
-    "op": "if",
-    "cond": {
-      "op": "protecting_central"
-    },
-    "then": {
-      "op": "do",
-      "action": {
-        "kind": "give_bad_publicity",
-        "amount": 1
-      }
-    }
-  },
-  "subroutines": [
+  "abilities": [
     {
+      "class": "conditional",
+      "trigger": "rez",
+      "instructions": {
+        "op": "if",
+        "cond": {
+          "op": "protecting_central"
+        },
+        "then": {
+          "op": "do",
+          "action": {
+            "kind": "give_bad_publicity",
+            "amount": 1
+          }
+        }
+      }
+    },
+    {
+      "class": "subroutine",
       "id": "grubber-etr-1",
       "text": "End the run unless the Runner pays 3[credit].",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "unless",
@@ -53,9 +58,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "grubber-etr-2",
       "text": "End the run unless the Runner pays 3[credit].",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "unless",

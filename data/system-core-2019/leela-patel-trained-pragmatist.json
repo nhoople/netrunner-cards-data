@@ -10,13 +10,25 @@
   "subtypes": [
     "natural"
   ],
-  "link": 0,
-  "onAgendaScoredOrStolen": {
-    "op": "do",
-    "action": {
-      "kind": "return_installed_corp_to_hq",
-      "pick": "choose",
-      "unrezzedOnly": true
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "link",
+        "value": 0
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "agenda_scored_or_stolen",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "return_installed_corp_to_hq",
+          "pick": "choose",
+          "unrezzedOnly": true
+        }
+      }
     }
-  }
+  ]
 }

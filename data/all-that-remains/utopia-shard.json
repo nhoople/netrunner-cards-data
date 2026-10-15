@@ -11,15 +11,33 @@
     "source"
   ],
   "installCost": 7,
-  "unique": true,
-  "deckLimitOne": true,
-  "onGripHqSuccessInstallSelfIgnoringCosts": true,
-  "paidAbilities": [
+  "wave": "all-that-remains",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "deckLimitOne",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "onGripHqSuccessInstallSelfIgnoringCosts",
+        "value": true
+      }
+    },
+    {
+      "class": "paid",
       "id": "utopia-discard",
       "label": "[trash]: Corp discards 2 cards from HQ at random",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "trashSelf": true
       },
@@ -27,7 +45,7 @@
         "runner_action_paw",
         "encounter_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "corp_discard_random_from_hq",
@@ -35,6 +53,5 @@
         }
       }
     }
-  ],
-  "wave": "all-that-remains"
+  ]
 }

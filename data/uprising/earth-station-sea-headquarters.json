@@ -9,37 +9,54 @@
   "subtypes": [
     "division"
   ],
-  "maxRemoteServers": 1,
-  "additionalRunInitiateCredits": {
-    "hqUnflipped": 1,
-    "remoteFlipped": 6
-  },
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "maxRemoteServers",
+        "value": 1
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "additionalRunInitiateCredits",
+        "value": {
+          "hqUnflipped": 1,
+          "remoteFlipped": 6
+        }
+      }
+    },
+    {
+      "class": "paid",
       "id": "earth-station-flip",
       "label": "[click]: Flip this identity",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1
       },
       "windows": [
         "corp_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "flip_identity"
         }
       }
-    }
-  ],
-  "identityFlippedHooks": {
-    "onSuccessfulHqRun": {
-      "op": "do",
-      "action": {
-        "kind": "flip_identity"
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "identityFlippedHooks",
+        "value": {
+          "onSuccessfulHqRun": {
+            "op": "do",
+            "action": {
+              "kind": "flip_identity"
+            }
+          }
+        }
       }
     }
-  }
+  ]
 }

@@ -11,20 +11,25 @@
     "connection"
   ],
   "installCost": 3,
-  "unique": true,
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "paid",
       "id": "mr-li-draw",
       "label": "[click]: Draw 2 cards; put 1 of those on bottom of stack",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1
       },
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "draw_n_then_bottom_one_of_drawn",

@@ -10,20 +10,26 @@
     "location"
   ],
   "installCost": 2,
-  "unique": true,
-  "paidAbilities": [
+  "wave": "breaker-bay",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "paid",
       "id": "tyson-search-hardware",
       "label": "[click][click]: Search stack for a piece of hardware, reveal it, add to grip; shuffle",
-      "clickCost": 2,
-      "creditCost": 0,
       "cost": {
         "clicks": 2
       },
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "search_stack_type_add_to_grip",
@@ -31,6 +37,5 @@
         }
       }
     }
-  ],
-  "wave": "breaker-bay"
+  ]
 }

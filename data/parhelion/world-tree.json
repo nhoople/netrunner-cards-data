@@ -11,12 +11,24 @@
   ],
   "installCost": 6,
   "memoryCost": 2,
-  "onSuccessfulRunOncePerTurn": true,
-  "onSuccessfulRun": {
-    "op": "do",
-    "action": {
-      "kind": "may_trash_other_installed_search_stack_same_type_install",
-      "discount": 3
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "onSuccessfulRunOncePerTurn",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "successful_run",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "may_trash_other_installed_search_stack_same_type_install",
+          "discount": 3
+        }
+      }
     }
-  }
+  ]
 }

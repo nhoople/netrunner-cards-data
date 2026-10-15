@@ -10,12 +10,12 @@
     "weapon"
   ],
   "installCost": 1,
-  "paidAbilities": [
+  "wave": "business-first",
+  "abilities": [
     {
+      "class": "paid",
       "id": "emp-device-limit-rez",
       "label": "[trash]: Corp cannot rez more than 1 ice for the remainder of this run",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "trashSelf": true
       },
@@ -24,7 +24,7 @@
         "encounter_paw",
         "approach_server_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "emp_device_limit_ice_rez_this_run"
@@ -33,6 +33,5 @@
       "usableByRunnerOnSelfIce": true,
       "requireDuringRun": true
     }
-  ],
-  "wave": "business-first"
+  ]
 }

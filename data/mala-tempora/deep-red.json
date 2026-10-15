@@ -11,8 +11,34 @@
     "console"
   ],
   "installCost": 2,
-  "unique": true,
-  "muBonus": 3,
-  "muBonusOnlyForCaissaPrograms": true,
-  "triggerCaissaClickAbilityOnCaissaInstall": true
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "muBonus",
+        "value": 3
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "muBonusOnlyForCaissaPrograms",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "triggerCaissaClickAbilityOnCaissaInstall",
+        "value": true
+      }
+    }
+  ]
 }

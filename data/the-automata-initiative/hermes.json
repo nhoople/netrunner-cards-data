@@ -10,13 +10,25 @@
     "console"
   ],
   "installCost": 2,
-  "muBonus": 1,
-  "onAgendaScoredOrStolen": {
-    "op": "do",
-    "action": {
-      "kind": "draw",
-      "side": "corp",
-      "amount": 1
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "muBonus",
+        "value": 1
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "agenda_scored_or_stolen",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "draw",
+          "side": "corp",
+          "amount": 1
+        }
+      }
     }
-  }
+  ]
 }

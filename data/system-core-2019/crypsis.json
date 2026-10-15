@@ -15,26 +15,31 @@
   "installCost": 5,
   "strength": 0,
   "memoryCost": 1,
-  "breaker": {
-    "breaksSubtype": "*",
-    "strength": 0,
-    "breakCredits": 1,
-    "pumpCredits": 1,
-    "pumpStrength": 1
-  },
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "breaker",
+        "value": {
+          "breaksSubtype": "*",
+          "strength": 0,
+          "breakCredits": 1,
+          "pumpCredits": 1,
+          "pumpStrength": 1
+        }
+      }
+    },
+    {
+      "class": "paid",
       "id": "crypsis-virus",
       "label": "Place 1 virus counter",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1
       },
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "add_virus_counter",
@@ -43,24 +48,29 @@
       }
     },
     {
+      "class": "paid",
       "id": "crypsis-pump",
       "label": "Pump Crypsis +1 strength",
-      "clickCost": 0,
-      "creditCost": 1,
       "cost": {
         "credits": 1
       },
       "windows": [
         "encounter_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "pump_strength",
           "amount": 1
         }
       }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "removeVirusOrTrashOnEncounterEndIfBroke",
+        "value": true
+      }
     }
-  ],
-  "removeVirusOrTrashOnEncounterEndIfBroke": true
+  ]
 }

@@ -11,19 +11,18 @@
     "chip"
   ],
   "installCost": 1,
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "paid",
       "id": "clone-chip-install",
       "label": "[trash]: Install a program from your heap",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "trashSelf": true
       },
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "may_install_from_heap",

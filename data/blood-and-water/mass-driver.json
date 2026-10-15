@@ -13,14 +13,28 @@
   "installCost": 8,
   "strength": 1,
   "memoryCost": 2,
-  "fullyBreakNextEncounterFirstNSubsDoNotResolve": 3,
-  "breaker": {
-    "breaksSubtype": "code gate",
-    "strength": 1,
-    "breakCredits": 2,
-    "breakMaxSubs": 1,
-    "pumpCredits": 1,
-    "pumpStrength": 1
-  },
-  "wave": "blood-and-water"
+  "wave": "blood-and-water",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "fullyBreakNextEncounterFirstNSubsDoNotResolve",
+        "value": 3
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "breaker",
+        "value": {
+          "breaksSubtype": "code gate",
+          "strength": 1,
+          "breakCredits": 2,
+          "breakMaxSubs": 1,
+          "pumpCredits": 1,
+          "pumpStrength": 1
+        }
+      }
+    }
+  ]
 }

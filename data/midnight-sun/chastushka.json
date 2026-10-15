@@ -11,16 +11,24 @@
     "sabotage"
   ],
   "playCost": 3,
-  "runEvent": {
-    "servers": "hq",
-    "skipBreach": true,
-    "onSuccessfulRun": {
-      "op": "do",
-      "action": {
-        "kind": "sabotage",
-        "amount": 4,
-        "interactive": true
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "runEvent",
+        "value": {
+          "servers": "hq",
+          "skipBreach": true,
+          "onSuccessfulRun": {
+            "op": "do",
+            "action": {
+              "kind": "sabotage",
+              "amount": 4,
+              "interactive": true
+            }
+          }
+        }
       }
     }
-  }
+  ]
 }

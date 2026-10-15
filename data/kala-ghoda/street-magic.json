@@ -10,6 +10,14 @@
     "virtual"
   ],
   "installCost": 0,
-  "runnerChoosesUnbrokenSubroutineOrder": true,
-  "wave": "kala-ghoda"
+  "wave": "kala-ghoda",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "runnerChoosesUnbrokenSubroutineOrder",
+        "value": true
+      }
+    }
+  ]
 }

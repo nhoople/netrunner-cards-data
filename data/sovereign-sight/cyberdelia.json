@@ -10,7 +10,21 @@
     "chip"
   ],
   "installCost": 3,
-  "muBonus": 1,
-  "gainCreditsOnFirstFullyBreakEachTurn": 1,
-  "wave": "sovereign-sight"
+  "wave": "sovereign-sight",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "muBonus",
+        "value": 1
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "gainCreditsOnFirstFullyBreakEachTurn",
+        "value": 1
+      }
+    }
+  ]
 }

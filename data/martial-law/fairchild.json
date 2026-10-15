@@ -14,13 +14,27 @@
   "installCost": 9,
   "rezCost": 9,
   "strength": 8,
-  "unique": true,
-  "bioroidBreakMaxSubs": 4,
-  "subroutines": [
+  "wave": "martial-law",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "bioroidBreakMaxSubs",
+        "value": 4
+      }
+    },
+    {
+      "class": "subroutine",
       "id": "fairchild-etr-pay-1",
       "text": "End the run unless the Runner pays 4¢.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "unless",
@@ -43,9 +57,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "fairchild-etr-pay-2",
       "text": "End the run unless the Runner pays 4¢.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "unless",
@@ -68,9 +83,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "fairchild-etr-trash",
       "text": "End the run unless the Runner trashes 1 of their installed cards.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "unless",
@@ -92,9 +108,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "fairchild-etr-core",
       "text": "End the run unless the Runner suffers 1 core damage.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "unless",
@@ -115,6 +132,5 @@
         }
       }
     }
-  ],
-  "wave": "martial-law"
+  ]
 }

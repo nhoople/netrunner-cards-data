@@ -12,31 +12,34 @@
   "installCost": 2,
   "rezCost": 2,
   "trashCost": 3,
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "paid",
       "id": "vaporframe-click-install",
       "label": "[click]: Install 1 card from HQ, ignoring all costs",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1
       },
       "windows": [
         "corp_action_paw"
       ],
-      "oncePerTurn": true,
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "may_install_from_hq_ignore_costs"
         }
+      },
+      "flag": "once_per_turn"
+    },
+    {
+      "class": "conditional",
+      "trigger": "trash",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "may_install_from_hq_ignore_costs_exclude_source_server"
+        }
       }
     }
-  ],
-  "onTrash": {
-    "op": "do",
-    "action": {
-      "kind": "may_install_from_hq_ignore_costs_exclude_source_server"
-    }
-  }
+  ]
 }

@@ -12,25 +12,41 @@
     "ritzy"
   ],
   "installCost": 4,
-  "unique": true,
-  "onDiscardPhaseEnd": {
-    "op": "if",
-    "cond": {
-      "op": "self_installed_this_turn"
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
     },
-    "then": {
-      "op": "do",
-      "action": {
-        "kind": "draw",
-        "side": "runner",
-        "amount": 4
+    {
+      "class": "conditional",
+      "trigger": "discard_phase_end",
+      "instructions": {
+        "op": "if",
+        "cond": {
+          "op": "self_installed_this_turn"
+        },
+        "then": {
+          "op": "do",
+          "action": {
+            "kind": "draw",
+            "side": "runner",
+            "amount": 4
+          }
+        }
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "would_draw_once_per_turn",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "class_act_look_top_draw_amount_plus_one_bottom_one"
+        }
       }
     }
-  },
-  "onWouldDrawOncePerTurn": {
-    "op": "do",
-    "action": {
-      "kind": "class_act_look_top_draw_amount_plus_one_bottom_one"
-    }
-  }
+  ]
 }

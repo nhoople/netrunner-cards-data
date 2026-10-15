@@ -10,13 +10,30 @@
     "triple"
   ],
   "playCost": 0,
-  "playAdditionalClicks": 2,
-  "playAdditionalCostForfeitAgenda": true,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "advance_equal_forfeit_advancement_requirement"
+  "wave": "blood-and-water",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "playAdditionalClicks",
+        "value": 2
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "playAdditionalCostForfeitAgenda",
+        "value": true
+      }
+    },
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "advance_equal_forfeit_advancement_requirement"
+        }
+      }
     }
-  },
-  "wave": "blood-and-water"
+  ]
 }

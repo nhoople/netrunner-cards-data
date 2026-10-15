@@ -14,39 +14,12 @@
   "installCost": 5,
   "rezCost": 5,
   "strength": 6,
-  "rezAdditionalCost": {
-    "op": "choose",
-    "chooser": "corp",
-    "options": [
-      {
-        "id": "bad-pub",
-        "label": "Take 1 bad publicity",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "give_bad_publicity",
-            "amount": 1
-          }
-        }
-      },
-      {
-        "id": "remove-tag",
-        "label": "Remove 1 tag",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "remove_tags",
-            "amount": 1
-          }
-        }
-      }
-    ]
-  },
-  "subroutines": [
+  "abilities": [
     {
+      "class": "subroutine",
       "id": "piranhas-draw",
       "text": "You may draw 1 card.",
-      "effect": {
+      "instructions": {
         "op": "choose",
         "chooser": "corp",
         "options": [
@@ -75,12 +48,46 @@
             }
           }
         ]
-      }
+      },
+      "restrictions": [
+        {
+          "appliesTo": "rez",
+          "effect": {
+            "op": "choose",
+            "chooser": "corp",
+            "options": [
+              {
+                "id": "bad-pub",
+                "label": "Take 1 bad publicity",
+                "effect": {
+                  "op": "do",
+                  "action": {
+                    "kind": "give_bad_publicity",
+                    "amount": 1
+                  }
+                }
+              },
+              {
+                "id": "remove-tag",
+                "label": "Remove 1 tag",
+                "effect": {
+                  "op": "do",
+                  "action": {
+                    "kind": "remove_tags",
+                    "amount": 1
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ]
     },
     {
+      "class": "subroutine",
       "id": "piranhas-net",
       "text": "Do 1 net damage.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "net_damage",
@@ -89,9 +96,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "piranhas-etr",
       "text": "End the run if there are more cards in HQ than in the grip.",
-      "effect": {
+      "instructions": {
         "op": "if",
         "cond": {
           "op": "hq_count_gt_grip"

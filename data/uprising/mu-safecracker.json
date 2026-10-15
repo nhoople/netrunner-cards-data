@@ -7,14 +7,40 @@
   "side": "runner",
   "unsupported": [],
   "installCost": 2,
-  "unique": true,
-  "paidAbilitiesUseStealthCreditsOnly": true,
-  "onSuccessfulHqRunMayPayForBonusAccess": {
-    "credits": 1,
-    "bonusAccess": 1
-  },
-  "onSuccessfulRdRunMayPayForBonusAccess": {
-    "credits": 2,
-    "bonusAccess": 1
-  }
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "paidAbilitiesUseStealthCreditsOnly",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "onSuccessfulHqRunMayPayForBonusAccess",
+        "value": {
+          "credits": 1,
+          "bonusAccess": 1
+        }
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "onSuccessfulRdRunMayPayForBonusAccess",
+        "value": {
+          "credits": 2,
+          "bonusAccess": 1
+        }
+      }
+    }
+  ]
 }

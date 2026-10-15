@@ -10,6 +10,14 @@
     "connection"
   ],
   "installCost": 0,
-  "aeneasInformantRevealGainOnAccessWithoutTrash": true,
-  "wave": "earths-scion"
+  "wave": "earths-scion",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "aeneasInformantRevealGainOnAccessWithoutTrash",
+        "value": true
+      }
+    }
+  ]
 }

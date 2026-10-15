@@ -10,8 +10,28 @@
     "connection"
   ],
   "installCost": 1,
-  "unique": true,
-  "link": 1,
-  "archivistOnCorpScoresInitiativeOrSecurityTrace": 1,
-  "wave": "daedalus-complex"
+  "wave": "daedalus-complex",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "link",
+        "value": 1
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "archivistOnCorpScoresInitiativeOrSecurityTrace",
+        "value": 1
+      }
+    }
+  ]
 }

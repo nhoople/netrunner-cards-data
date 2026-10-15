@@ -11,7 +11,27 @@
     "virtual"
   ],
   "installCost": 2,
-  "unique": true,
-  "link": 1,
-  "nonAiIcebreakerInstallStrengthBonusThisTurn": 2
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "link",
+        "value": 1
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "nonAiIcebreakerInstallStrengthBonusThisTurn",
+        "value": 2
+      }
+    }
+  ]
 }

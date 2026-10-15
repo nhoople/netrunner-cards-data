@@ -16,6 +16,7 @@ Usage: python3 scripts/generate-midnight-sun.py
 from __future__ import annotations
 
 import json
+from ability_record import classify_card
 import re
 import unicodedata
 from pathlib import Path
@@ -1413,7 +1414,7 @@ def main():
         mapped = map_card(c)
         cid = mapped["id"]
         path = OUT / f"{cid}.json"
-        path.write_text(json.dumps(mapped, indent=2, ensure_ascii=False) + "\n")
+        path.write_text(json.dumps(classify_card(mapped), indent=2, ensure_ascii=False) + "\n")
         written.append(cid)
 
     assert len(written) == 65, len(written)

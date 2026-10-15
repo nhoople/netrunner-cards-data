@@ -10,24 +10,29 @@
     "transaction"
   ],
   "playCost": 3,
-  "onPlay": {
-    "op": "seq",
-    "effects": [
-      {
-        "op": "do",
-        "action": {
-          "kind": "gain_credits",
-          "side": "corp",
-          "amount": 5
-        }
-      },
-      {
-        "op": "do",
-        "action": {
-          "kind": "may_install_from_hq_paying_costs",
-          "thenMayRemoveTagToAdvance": true
-        }
+  "abilities": [
+    {
+      "class": "play",
+      "instructions": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "gain_credits",
+              "side": "corp",
+              "amount": 5
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "may_install_from_hq_paying_costs",
+              "thenMayRemoveTagToAdvance": true
+            }
+          }
+        ]
       }
-    ]
-  }
+    }
+  ]
 }

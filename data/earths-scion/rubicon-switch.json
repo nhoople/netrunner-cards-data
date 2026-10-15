@@ -7,28 +7,33 @@
   "unsupported": [],
   "faction": "criminal",
   "installCost": 3,
-  "unique": true,
-  "paidAbilities": [
+  "wave": "earths-scion",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "paid",
       "id": "rubicon-switch-derez",
       "label": "Once per turn → [click], X¢: Derez 1 ice with printed rez cost X rezzed this turn",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1
       },
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "derez_rezzed_this_turn"
         }
       },
-      "oncePerTurn": true,
+      "flag": "once_per_turn",
       "usableByRunnerOnSelfIce": true
     }
-  ],
-  "wave": "earths-scion"
+  ]
 }

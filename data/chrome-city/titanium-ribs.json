@@ -10,14 +10,32 @@
     "cybernetic"
   ],
   "installCost": 1,
-  "unique": true,
-  "runnerChoosesDamageTrashFromGrip": true,
-  "onInstall": {
-    "op": "do",
-    "action": {
-      "kind": "meat_damage",
-      "amount": 2
+  "wave": "chrome-city",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "runnerChoosesDamageTrashFromGrip",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "install",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "meat_damage",
+          "amount": 2
+        }
+      }
     }
-  },
-  "wave": "chrome-city"
+  ]
 }

@@ -12,28 +12,39 @@
   ],
   "installCost": 0,
   "memoryCost": 1,
-  "installOnIce": true,
-  "trashOnVirusPurge": true,
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "installOnIce",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "trashOnVirusPurge",
+        "value": true
+      }
+    },
+    {
+      "class": "paid",
       "id": "physarum-bypass",
       "label": "Pay 1¢ per sub: bypass host ice (if not barrier)",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "creditsPerEncounterSubroutine": 1
       },
       "windows": [
         "encounter_paw"
       ],
-      "requireEncounterHost": true,
-      "forbidEncounterSubtype": "barrier",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "bypass_current_ice"
         }
-      }
+      },
+      "requireEncounterHost": true,
+      "forbidEncounterSubtype": "barrier"
     }
   ]
 }

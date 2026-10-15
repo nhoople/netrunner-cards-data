@@ -11,12 +11,18 @@
   ],
   "advancementRequirement": 3,
   "agendaPoints": 1,
-  "onTurnBeginIfRunnerTagged": {
-    "op": "do",
-    "action": {
-      "kind": "meat_damage",
-      "amount": 1
+  "wave": "twenty-three-seconds",
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "turn_begin_if_runner_tagged",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "meat_damage",
+          "amount": 1
+        }
+      }
     }
-  },
-  "wave": "twenty-three-seconds"
+  ]
 }

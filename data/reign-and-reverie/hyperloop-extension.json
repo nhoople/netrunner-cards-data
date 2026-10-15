@@ -12,12 +12,18 @@
   ],
   "advancementRequirement": 3,
   "agendaPoints": 1,
-  "onAgendaScoredOrStolen": {
-    "op": "do",
-    "action": {
-      "kind": "gain_credits",
-      "side": "corp",
-      "amount": 3
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "agenda_scored_or_stolen",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "corp",
+          "amount": 3
+        }
+      }
     }
-  }
+  ]
 }

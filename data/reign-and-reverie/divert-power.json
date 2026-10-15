@@ -8,11 +8,16 @@
   "unsupported": [],
   "faction": "haas-bioroid",
   "playCost": 2,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "derez_any_number_then_may_rez_discount_per",
-      "creditsPerDerezzed": 3
+  "abilities": [
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "derez_any_number_then_may_rez_discount_per",
+          "creditsPerDerezzed": 3
+        }
+      }
     }
-  }
+  ]
 }

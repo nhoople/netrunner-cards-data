@@ -9,5 +9,13 @@
   "subtypes": [
     "megacorp"
   ],
-  "netDamageOnAgendaScoredOrStolen": 1
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "netDamageOnAgendaScoredOrStolen",
+        "value": 1
+      }
+    }
+  ]
 }

@@ -10,15 +10,23 @@
     "run"
   ],
   "playCost": 2,
-  "runEvent": {
-    "servers": "rd",
-    "onSuccessfulRun": {
-      "op": "do",
-      "action": {
-        "kind": "draw",
-        "side": "runner",
-        "amount": 5
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "runEvent",
+        "value": {
+          "servers": "rd",
+          "onSuccessfulRun": {
+            "op": "do",
+            "action": {
+              "kind": "draw",
+              "side": "runner",
+              "amount": 5
+            }
+          }
+        }
       }
     }
-  }
+  ]
 }

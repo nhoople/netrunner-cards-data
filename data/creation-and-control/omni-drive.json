@@ -11,9 +11,29 @@
     "gear"
   ],
   "installCost": 3,
-  "hostsAnyProgramMemoryCostLte": 1,
-  "recurringCreditsMax": 1,
-  "recurringSpendFor": [
-    "use_program"
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "hostsAnyProgramMemoryCostLte",
+        "value": 1
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "recurringCreditsMax",
+        "value": 1
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "recurringSpendFor",
+        "value": [
+          "use_program"
+        ]
+      }
+    }
   ]
 }

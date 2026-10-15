@@ -10,36 +10,48 @@
   "subtypes": [
     "expansion"
   ],
-  "handSizeBonus": 2,
-  "onScore": {
-    "op": "choose",
-    "chooser": "corp",
-    "options": [
-      {
-        "id": "draw",
-        "label": "Draw 2",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "draw",
-            "side": "corp",
-            "amount": 2
-          }
-        }
-      },
-      {
-        "id": "decline",
-        "label": "Decline",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "gain_credits",
-            "side": "corp",
-            "amount": 0
-          }
-        }
+  "unsupported": [],
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "handSizeBonus",
+        "value": 2
       }
-    ]
-  },
-  "unsupported": []
+    },
+    {
+      "class": "conditional",
+      "trigger": "score",
+      "instructions": {
+        "op": "choose",
+        "chooser": "corp",
+        "options": [
+          {
+            "id": "draw",
+            "label": "Draw 2",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "draw",
+                "side": "corp",
+                "amount": 2
+              }
+            }
+          },
+          {
+            "id": "decline",
+            "label": "Decline",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "gain_credits",
+                "side": "corp",
+                "amount": 0
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
 }

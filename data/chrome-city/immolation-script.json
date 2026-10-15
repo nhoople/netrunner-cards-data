@@ -10,9 +10,17 @@
     "run"
   ],
   "playCost": 0,
-  "runEvent": {
-    "servers": "archives",
-    "immolationScriptAccessReplace": true
-  },
-  "wave": "chrome-city"
+  "wave": "chrome-city",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "runEvent",
+        "value": {
+          "servers": "archives",
+          "immolationScriptAccessReplace": true
+        }
+      }
+    }
+  ]
 }

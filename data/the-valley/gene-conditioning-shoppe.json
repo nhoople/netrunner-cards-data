@@ -10,6 +10,14 @@
     "location"
   ],
   "installCost": 2,
-  "geneticsAlsoTriggerSecondTime": true,
-  "wave": "the-valley"
+  "wave": "the-valley",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "geneticsAlsoTriggerSecondTime",
+        "value": true
+      }
+    }
+  ]
 }

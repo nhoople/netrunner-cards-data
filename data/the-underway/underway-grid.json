@@ -12,7 +12,21 @@
   "installCost": 0,
   "rezCost": 0,
   "trashCost": 3,
-  "iceCannotBeBypassedThisServer": true,
-  "cardsCannotBeExposedThisServer": true,
-  "wave": "the-underway"
+  "wave": "the-underway",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "iceCannotBeBypassedThisServer",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "cardsCannotBeExposedThisServer",
+        "value": true
+      }
+    }
+  ]
 }

@@ -7,20 +7,26 @@
   "unsupported": [],
   "faction": "shaper",
   "installCost": 0,
-  "maxHostedCards": 3,
-  "paidAbilities": [
+  "wave": "the-universe-of-tomorrow",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "maxHostedCards",
+        "value": 3
+      }
+    },
+    {
+      "class": "paid",
       "id": "bookmark-host",
       "label": "[click]: Host up to 3 cards from grip facedown",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1
       },
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "host_up_to_3_from_grip_facedown"
@@ -28,17 +34,16 @@
       }
     },
     {
+      "class": "paid",
       "id": "bookmark-to-grip-click",
       "label": "[click]: Add all hosted cards to grip",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1
       },
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "add_all_hosted_to_grip"
@@ -46,23 +51,21 @@
       }
     },
     {
+      "class": "paid",
       "id": "bookmark-to-grip-trash",
       "label": "[trash]: Add all hosted cards to grip",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "trashSelf": true
       },
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "add_all_hosted_to_grip"
         }
       }
     }
-  ],
-  "wave": "the-universe-of-tomorrow"
+  ]
 }

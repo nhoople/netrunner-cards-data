@@ -9,24 +9,36 @@
   "subtypes": [
     "corp"
   ],
-  "mayInstallAgendasFaceup": true,
-  "onAccessFaceupInstalledAgenda": {
-    "op": "seq",
-    "effects": [
-      {
-        "op": "do",
-        "action": {
-          "kind": "meat_damage",
-          "amount": 2
-        }
-      },
-      {
-        "op": "do",
-        "action": {
-          "kind": "give_tags",
-          "amount": 1
-        }
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "mayInstallAgendasFaceup",
+        "value": true
       }
-    ]
-  }
+    },
+    {
+      "class": "conditional",
+      "trigger": "access_faceup_installed_agenda",
+      "instructions": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "meat_damage",
+              "amount": 2
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "give_tags",
+              "amount": 1
+            }
+          }
+        ]
+      }
+    }
+  ]
 }

@@ -13,53 +13,58 @@
   "installCost": 2,
   "rezCost": 2,
   "strength": 2,
-  "onEncounter": {
-    "op": "choose",
-    "chooser": "corp",
-    "options": [
-      {
-        "id": "pay-adv",
-        "label": "Pay 1\u00a2: place 1 advancement on advanceable card",
-        "effect": {
-          "op": "seq",
-          "effects": [
-            {
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "encounter",
+      "instructions": {
+        "op": "choose",
+        "chooser": "corp",
+        "options": [
+          {
+            "id": "pay-adv",
+            "label": "Pay 1¢: place 1 advancement on advanceable card",
+            "effect": {
+              "op": "seq",
+              "effects": [
+                {
+                  "op": "do",
+                  "action": {
+                    "kind": "lose_credits",
+                    "side": "corp",
+                    "amount": 1
+                  }
+                },
+                {
+                  "op": "do",
+                  "action": {
+                    "kind": "place_advancements",
+                    "amount": 1
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "id": "decline",
+            "label": "Decline",
+            "effect": {
               "op": "do",
               "action": {
-                "kind": "lose_credits",
+                "kind": "gain_credits",
                 "side": "corp",
-                "amount": 1
-              }
-            },
-            {
-              "op": "do",
-              "action": {
-                "kind": "place_advancements",
-                "amount": 1
+                "amount": 0
               }
             }
-          ]
-        }
-      },
-      {
-        "id": "decline",
-        "label": "Decline",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "gain_credits",
-            "side": "corp",
-            "amount": 0
           }
-        }
+        ]
       }
-    ]
-  },
-  "subroutines": [
+    },
     {
+      "class": "subroutine",
       "id": "vasilisa-tag",
       "text": "Give the Runner 1 tag.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "give_tags",

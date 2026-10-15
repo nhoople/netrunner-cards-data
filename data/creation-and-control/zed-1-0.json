@@ -15,30 +15,32 @@
   "installCost": 2,
   "rezCost": 2,
   "strength": 1,
-  "subroutines": [
+  "abilities": [
     {
+      "class": "subroutine",
       "id": "zed-1-0-core-1",
       "text": "If the Runner has lost [click] to break a subroutine during this run, do 1 core damage.",
-      "requireLostClickToBreakThisRun": true,
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "core_damage",
           "amount": 1
         }
-      }
+      },
+      "requireLostClickToBreakThisRun": true
     },
     {
+      "class": "subroutine",
       "id": "zed-1-0-core-2",
       "text": "If the Runner has lost [click] to break a subroutine during this run, do 1 core damage.",
-      "requireLostClickToBreakThisRun": true,
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "core_damage",
           "amount": 1
         }
-      }
+      },
+      "requireLostClickToBreakThisRun": true
     }
   ]
 }

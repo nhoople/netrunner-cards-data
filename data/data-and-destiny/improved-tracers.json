@@ -11,10 +11,24 @@
   ],
   "advancementRequirement": 3,
   "agendaPoints": 1,
-  "iceStrengthBonusForSubtype": {
-    "subtype": "tracer",
-    "bonus": 1
-  },
-  "subroutineTraceBaseStrengthBonus": 1,
-  "wave": "data-and-destiny"
+  "wave": "data-and-destiny",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "iceStrengthBonusForSubtype",
+        "value": {
+          "subtype": "tracer",
+          "bonus": 1
+        }
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "subroutineTraceBaseStrengthBonus",
+        "value": 1
+      }
+    }
+  ]
 }

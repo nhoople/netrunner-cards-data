@@ -12,19 +12,25 @@
   "installCost": 0,
   "rezCost": 0,
   "trashCost": 4,
-  "onTurnBegin": {
-    "op": "do",
-    "action": {
-      "kind": "may_trash_installed",
-      "excludeSelf": true,
-      "then": {
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "turn_begin",
+      "instructions": {
         "op": "do",
         "action": {
-          "kind": "gain_credits",
-          "side": "corp",
-          "amount": 3
+          "kind": "may_trash_installed",
+          "excludeSelf": true,
+          "then": {
+            "op": "do",
+            "action": {
+              "kind": "gain_credits",
+              "side": "corp",
+              "amount": 3
+            }
+          }
         }
       }
     }
-  }
+  ]
 }

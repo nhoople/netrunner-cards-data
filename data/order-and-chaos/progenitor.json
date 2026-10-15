@@ -11,11 +11,49 @@
   ],
   "installCost": 0,
   "memoryCost": 0,
-  "daemonHost": true,
-  "daemonHostMaxMu": 99,
-  "maxHostedCards": 1,
-  "daemonHostVirusProgramsOnly": true,
-  "hostedIcebreakerMemoryDoesNotCount": true,
-  "preventOneVirusPurgeOnHostedProgram": true,
-  "wave": "order-and-chaos"
+  "wave": "order-and-chaos",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "daemonHost",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "daemonHostMaxMu",
+        "value": 99
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "maxHostedCards",
+        "value": 1
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "daemonHostVirusProgramsOnly",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "hostedIcebreakerMemoryDoesNotCount",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "preventOneVirusPurgeOnHostedProgram",
+        "value": true
+      }
+    }
+  ]
 }

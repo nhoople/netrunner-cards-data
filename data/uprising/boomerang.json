@@ -7,22 +7,32 @@
   "side": "runner",
   "unsupported": [],
   "installCost": 2,
-  "unique": true,
-  "chooseIceOnInstall": true,
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "chooseIceOnInstall",
+        "value": true
+      }
+    },
+    {
+      "class": "paid",
       "id": "boomerang-break",
       "label": "[trash]: Break up to 2 subroutines; if this run is successful, may shuffle Boomerang from heap into stack",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "trashSelf": true
       },
       "windows": [
         "encounter_paw"
       ],
-      "requireEncounterChosenIce": true,
-      "effect": {
+      "instructions": {
         "op": "seq",
         "effects": [
           {
@@ -40,7 +50,8 @@
             }
           }
         ]
-      }
+      },
+      "requireEncounterChosenIce": true
     }
   ]
 }

@@ -13,14 +13,25 @@
   "installCost": 1,
   "rezCost": 1,
   "trashCost": 2,
-  "unique": true,
-  "powerCounterOnAnyCorpInstall": 1,
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "powerCounterOnAnyCorpInstall",
+        "value": 1
+      }
+    },
+    {
+      "class": "paid",
       "id": "alix-cash",
-      "label": "[click], [trash]: Gain 2\u00a2 per power counter",
-      "clickCost": 1,
-      "creditCost": 0,
+      "label": "[click], [trash]: Gain 2¢ per power counter",
       "cost": {
         "clicks": 1,
         "trashSelf": true
@@ -28,7 +39,7 @@
       "windows": [
         "corp_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "gain_credits",

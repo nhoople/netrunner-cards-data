@@ -12,7 +12,21 @@
   "installCost": 2,
   "rezCost": 2,
   "trashCost": 5,
-  "unique": true,
-  "bryanStinsonPlayArchivesTransactionWhileRunnerLt6c": true,
-  "wave": "quorum"
+  "wave": "quorum",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "bryanStinsonPlayArchivesTransactionWhileRunnerLt6c",
+        "value": true
+      }
+    }
+  ]
 }

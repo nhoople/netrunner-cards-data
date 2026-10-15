@@ -11,18 +11,25 @@
   "subtypes": [
     "barrier"
   ],
-  "strengthBonusProtectingRemote": 2,
-  "subroutines": [
+  "unsupported": [],
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "strengthBonusProtectingRemote",
+        "value": 2
+      }
+    },
+    {
+      "class": "subroutine",
       "id": "palisade-etr",
       "text": "End the run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "end_the_run"
         }
       }
     }
-  ],
-  "unsupported": []
+  ]
 }

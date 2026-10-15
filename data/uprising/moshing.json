@@ -7,33 +7,49 @@
   "side": "runner",
   "unsupported": [],
   "playCost": 0,
-  "playRequiresOtherGripCardsGte": 3,
-  "playAdditionalCost": {
-    "op": "do",
-    "action": {
-      "kind": "trash_n_from_grip",
-      "amount": 3
-    }
-  },
-  "onPlay": {
-    "op": "seq",
-    "effects": [
-      {
-        "op": "do",
-        "action": {
-          "kind": "gain_credits",
-          "side": "runner",
-          "amount": 3
-        }
-      },
-      {
-        "op": "do",
-        "action": {
-          "kind": "draw",
-          "side": "runner",
-          "amount": 3
-        }
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "playRequiresOtherGripCardsGte",
+        "value": 3
       }
-    ]
-  }
+    },
+    {
+      "class": "play",
+      "instructions": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "gain_credits",
+              "side": "runner",
+              "amount": 3
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "draw",
+              "side": "runner",
+              "amount": 3
+            }
+          }
+        ]
+      },
+      "restrictions": [
+        {
+          "appliesTo": "play",
+          "effect": {
+            "op": "do",
+            "action": {
+              "kind": "trash_n_from_grip",
+              "amount": 3
+            }
+          }
+        }
+      ]
+    }
+  ]
 }

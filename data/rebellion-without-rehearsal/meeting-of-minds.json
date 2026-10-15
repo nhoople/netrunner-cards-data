@@ -7,32 +7,37 @@
   "side": "runner",
   "unsupported": [],
   "playCost": 4,
-  "onPlay": {
-    "op": "choose",
-    "chooser": "runner",
-    "options": [
-      {
-        "id": "connection",
-        "label": "Choose connection",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "meeting_of_minds_resolve",
-            "subtype": "connection"
+  "abilities": [
+    {
+      "class": "play",
+      "instructions": {
+        "op": "choose",
+        "chooser": "runner",
+        "options": [
+          {
+            "id": "connection",
+            "label": "Choose connection",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "meeting_of_minds_resolve",
+                "subtype": "connection"
+              }
+            }
+          },
+          {
+            "id": "virtual",
+            "label": "Choose virtual",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "meeting_of_minds_resolve",
+                "subtype": "virtual"
+              }
+            }
           }
-        }
-      },
-      {
-        "id": "virtual",
-        "label": "Choose virtual",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "meeting_of_minds_resolve",
-            "subtype": "virtual"
-          }
-        }
+        ]
       }
-    ]
-  }
+    }
+  ]
 }

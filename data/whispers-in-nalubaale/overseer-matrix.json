@@ -9,10 +9,24 @@
   "installCost": 1,
   "rezCost": 1,
   "trashCost": 2,
-  "persistent": true,
-  "mayPayCreditsToTagWhenRunnerTrashesFromThisServerOrRoot": {
-    "credits": 1,
-    "tags": 1
-  },
-  "wave": "whispers-in-nalubaale"
+  "wave": "whispers-in-nalubaale",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "persistent",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "mayPayCreditsToTagWhenRunnerTrashesFromThisServerOrRoot",
+        "value": {
+          "credits": 1,
+          "tags": 1
+        }
+      }
+    }
+  ]
 }

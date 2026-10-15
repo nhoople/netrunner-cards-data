@@ -13,11 +13,12 @@
   "installCost": 4,
   "rezCost": 4,
   "strength": 2,
-  "subroutines": [
+  "abilities": [
     {
+      "class": "subroutine",
       "id": "datapike-pay",
       "text": "The Runner must pay 2¢, if able. If they cannot, end the run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "pay_credits_or_etr",
@@ -27,9 +28,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "datapike-etr",
       "text": "End the run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "end_the_run"

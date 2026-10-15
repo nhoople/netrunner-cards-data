@@ -13,17 +13,41 @@
   "installCost": 2,
   "rezCost": 2,
   "trashCost": 5,
-  "unique": true,
-  "zeroInfluenceIfNonAllianceFactionCardsGte": {
-    "faction": "nbn",
-    "threshold": 6
-  },
-  "rezAdditionalCostForfeitAgenda": true,
-  "onTurnBegin": {
-    "op": "do",
-    "action": {
-      "kind": "name_type_trash_from_grip"
+  "wave": "fear-the-masses",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "zeroInfluenceIfNonAllianceFactionCardsGte",
+        "value": {
+          "faction": "nbn",
+          "threshold": 6
+        }
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "rezAdditionalCostForfeitAgenda",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "turn_begin",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "name_type_trash_from_grip"
+        }
+      }
     }
-  },
-  "wave": "fear-the-masses"
+  ]
 }

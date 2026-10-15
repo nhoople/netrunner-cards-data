@@ -12,15 +12,32 @@
   ],
   "installCost": 2,
   "memoryCost": 1,
-  "daemonHost": true,
-  "daemonHostMaxMu": 3,
-  "daemonHostExcludeIcebreaker": true,
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "daemonHost",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "daemonHostMaxMu",
+        "value": 3
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "daemonHostExcludeIcebreaker",
+        "value": true
+      }
+    },
+    {
+      "class": "paid",
       "id": "djinn-search-virus",
       "label": "[click], 1¢: Search your stack for a virus program, reveal it, and add it to your grip. Shuffle your stack.",
-      "clickCost": 1,
-      "creditCost": 1,
       "cost": {
         "clicks": 1,
         "credits": 1
@@ -28,7 +45,7 @@
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "search_stack_subtype_add_to_grip",

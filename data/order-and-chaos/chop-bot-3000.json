@@ -7,34 +7,46 @@
   "unsupported": [],
   "faction": "anarch",
   "installCost": 1,
-  "unique": true,
-  "onTurnBegin": {
-    "op": "choose",
-    "chooser": "runner",
-    "options": [
-      {
-        "id": "accept",
-        "label": "Trash another installed card",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "chop_bot_trash_installed_then_draw_or_remove_tag"
-          }
-        }
-      },
-      {
-        "id": "decline",
-        "label": "Decline",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "gain_credits",
-            "side": "runner",
-            "amount": 0
-          }
-        }
+  "wave": "order-and-chaos",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
       }
-    ]
-  },
-  "wave": "order-and-chaos"
+    },
+    {
+      "class": "conditional",
+      "trigger": "turn_begin",
+      "instructions": {
+        "op": "choose",
+        "chooser": "runner",
+        "options": [
+          {
+            "id": "accept",
+            "label": "Trash another installed card",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "chop_bot_trash_installed_then_draw_or_remove_tag"
+              }
+            }
+          },
+          {
+            "id": "decline",
+            "label": "Decline",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "gain_credits",
+                "side": "runner",
+                "amount": 0
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
 }

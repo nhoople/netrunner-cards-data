@@ -11,15 +11,23 @@
   "subtypes": [
     "barrier"
   ],
-  "strengthBonusAtAdvancements": {
-    "threshold": 3,
-    "bonus": 5
-  },
-  "subroutines": [
+  "unsupported": [],
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "strengthBonusAtAdvancements",
+        "value": {
+          "threshold": 3,
+          "bonus": 5
+        }
+      }
+    },
+    {
+      "class": "subroutine",
       "id": "pharos-tag",
       "text": "Give the Runner 1 tag.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "give_tags",
@@ -28,9 +36,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "pharos-etr1",
       "text": "End the run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "end_the_run"
@@ -38,15 +47,15 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "pharos-etr2",
       "text": "End the run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "end_the_run"
         }
       }
     }
-  ],
-  "unsupported": []
+  ]
 }

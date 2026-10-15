@@ -8,6 +8,20 @@
   "unsupported": [],
   "installCost": 1,
   "memoryCost": 1,
-  "powerCountersOnInstall": 3,
-  "accessTrashPayingPrintedCostFromStealth": true
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "powerCountersOnInstall",
+        "value": 3
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "accessTrashPayingPrintedCostFromStealth",
+        "value": true
+      }
+    }
+  ]
 }

@@ -12,11 +12,13 @@
   "installCost": 4,
   "rezCost": 4,
   "strength": 3,
-  "subroutines": [
+  "wave": "station-one",
+  "abilities": [
     {
+      "class": "subroutine",
       "id": "watchtower-search",
       "text": "Search R&D for a card and add it to HQ. Shuffle R&D.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "search_rd_to_hq",
@@ -24,6 +26,5 @@
         }
       }
     }
-  ],
-  "wave": "station-one"
+  ]
 }

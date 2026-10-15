@@ -12,13 +12,18 @@
   "installCost": 1,
   "rezCost": 1,
   "trashCost": 2,
-  "powerCounterOnAnyCardRez": 1,
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "powerCounterOnAnyCardRez",
+        "value": 1
+      }
+    },
+    {
+      "class": "paid",
       "id": "wp-gain-3",
       "label": "[click], hosted power: Gain 3¢",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1,
         "powerCounters": 1
@@ -26,7 +31,7 @@
       "windows": [
         "corp_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "gain_credits",
@@ -36,10 +41,9 @@
       }
     },
     {
+      "class": "paid",
       "id": "wp-gain-6",
       "label": "[click], 5 hosted power: Gain 6¢; resource to stack top",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1,
         "powerCounters": 5
@@ -47,7 +51,7 @@
       "windows": [
         "corp_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "seq",
         "effects": [
           {

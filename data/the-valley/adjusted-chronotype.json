@@ -10,14 +10,26 @@
     "genetics"
   ],
   "installCost": 3,
-  "unique": true,
-  "onFirstClickLossEachTurnExceptPaidAbility": {
-    "op": "do",
-    "action": {
-      "kind": "gain_clicks",
-      "side": "runner",
-      "amount": 1
+  "wave": "the-valley",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "first_click_loss_each_turn_except_paid_ability",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "gain_clicks",
+          "side": "runner",
+          "amount": 1
+        }
+      }
     }
-  },
-  "wave": "the-valley"
+  ]
 }

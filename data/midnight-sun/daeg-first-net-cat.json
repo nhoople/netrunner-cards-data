@@ -11,33 +11,39 @@
     "virtual"
   ],
   "installCost": 1,
-  "onAgendaScoredOrStolen": {
-    "op": "choose",
-    "chooser": "runner",
-    "options": [
-      {
-        "id": "charge",
-        "label": "Charge 1 installed card",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "charge",
-            "pick": "choose"
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "agenda_scored_or_stolen",
+      "instructions": {
+        "op": "choose",
+        "chooser": "runner",
+        "options": [
+          {
+            "id": "charge",
+            "label": "Charge 1 installed card",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "charge",
+                "pick": "choose"
+              }
+            }
+          },
+          {
+            "id": "decline",
+            "label": "Decline",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "gain_credits",
+                "side": "runner",
+                "amount": 0
+              }
+            }
           }
-        }
-      },
-      {
-        "id": "decline",
-        "label": "Decline",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "gain_credits",
-            "side": "runner",
-            "amount": 0
-          }
-        }
+        ]
       }
-    ]
-  }
+    }
+  ]
 }

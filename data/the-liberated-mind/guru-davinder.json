@@ -10,7 +10,21 @@
     "connection"
   ],
   "installCost": 1,
-  "unique": true,
-  "autoPreventNetOrMeatDamagePayOrTrash": 4,
-  "wave": "the-liberated-mind"
+  "wave": "the-liberated-mind",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "autoPreventNetOrMeatDamagePayOrTrash",
+        "value": 4
+      }
+    }
+  ]
 }

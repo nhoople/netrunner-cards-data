@@ -10,7 +10,21 @@
     "location"
   ],
   "installCost": 1,
-  "unique": true,
-  "basicTrashResourceAdditionalCostCredits": 2,
-  "wave": "the-universe-of-tomorrow"
+  "wave": "the-universe-of-tomorrow",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "basicTrashResourceAdditionalCostCredits",
+        "value": 2
+      }
+    }
+  ]
 }

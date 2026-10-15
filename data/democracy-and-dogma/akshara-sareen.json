@@ -10,8 +10,28 @@
     "connection"
   ],
   "installCost": 0,
-  "unique": true,
-  "allottedClicksBonus": 1,
-  "corpAllottedClicksBonusWhileInstalled": 1,
-  "wave": "democracy-and-dogma"
+  "wave": "democracy-and-dogma",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "allottedClicksBonus",
+        "value": 1
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "corpAllottedClicksBonusWhileInstalled",
+        "value": 1
+      }
+    }
+  ]
 }

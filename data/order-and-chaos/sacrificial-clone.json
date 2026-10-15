@@ -7,25 +7,24 @@
   "unsupported": [],
   "faction": "anarch",
   "installCost": 3,
-  "paidAbilities": [
+  "wave": "order-and-chaos",
+  "abilities": [
     {
+      "class": "paid",
       "id": "sac-clone-prevent",
       "label": "[interrupt] → [trash]: Prevent all damage",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "trashSelf": true
       },
       "windows": [
         "damage_interrupt_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "prevent_all_damage"
         }
       }
     }
-  ],
-  "wave": "order-and-chaos"
+  ]
 }

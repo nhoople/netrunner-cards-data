@@ -11,6 +11,14 @@
   ],
   "advancementRequirement": 3,
   "agendaPoints": 2,
-  "agendaPointsModifierInRunnerScoreArea": 1,
-  "wave": "fear-the-masses"
+  "wave": "fear-the-masses",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "agendaPointsModifierInRunnerScoreArea",
+        "value": 1
+      }
+    }
+  ]
 }

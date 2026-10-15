@@ -12,11 +12,13 @@
   "installCost": 3,
   "rezCost": 3,
   "strength": 5,
-  "subroutines": [
+  "wave": "honor-and-profit",
+  "abilities": [
     {
+      "class": "subroutine",
       "id": "inazuma-lock",
       "text": "Next encounter this run Runner cannot break subroutines on encountered ice.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "inazuma_lock_breaking_next_encounter"
@@ -24,15 +26,15 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "inazuma-etr",
       "text": "End the run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "end_the_run"
         }
       }
     }
-  ],
-  "wave": "honor-and-profit"
+  ]
 }

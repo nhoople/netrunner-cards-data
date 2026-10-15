@@ -13,34 +13,40 @@
   "installCost": 2,
   "rezCost": 2,
   "trashCost": 2,
-  "onTurnBegin": {
-    "op": "choose",
-    "chooser": "corp",
-    "options": [
-      {
-        "id": "draw",
-        "label": "Draw 1 card",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "draw",
-            "side": "corp",
-            "amount": 1
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "turn_begin",
+      "instructions": {
+        "op": "choose",
+        "chooser": "corp",
+        "options": [
+          {
+            "id": "draw",
+            "label": "Draw 1 card",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "draw",
+                "side": "corp",
+                "amount": 1
+              }
+            }
+          },
+          {
+            "id": "decline",
+            "label": "Decline",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "gain_credits",
+                "side": "corp",
+                "amount": 0
+              }
+            }
           }
-        }
-      },
-      {
-        "id": "decline",
-        "label": "Decline",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "gain_credits",
-            "side": "corp",
-            "amount": 0
-          }
-        }
+        ]
       }
-    ]
-  }
+    }
+  ]
 }

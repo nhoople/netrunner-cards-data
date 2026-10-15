@@ -11,35 +11,47 @@
   ],
   "advancementRequirement": 3,
   "agendaPoints": 1,
-  "mustRevealWhenAccessedFromRd": true,
-  "onAccess": {
-    "op": "choose",
-    "chooser": "corp",
-    "options": [
-      {
-        "id": "accept",
-        "label": "Place up to 2 advancements on an advanceable installed card",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "place_up_to_n_advancements_on_advanceable_installed",
-            "max": 2
-          }
-        }
-      },
-      {
-        "id": "decline",
-        "label": "Decline",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "gain_credits",
-            "side": "corp",
-            "amount": 0
-          }
-        }
+  "wave": "old-hollywood",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "mustRevealWhenAccessedFromRd",
+        "value": true
       }
-    ]
-  },
-  "wave": "old-hollywood"
+    },
+    {
+      "class": "conditional",
+      "trigger": "access",
+      "instructions": {
+        "op": "choose",
+        "chooser": "corp",
+        "options": [
+          {
+            "id": "accept",
+            "label": "Place up to 2 advancements on an advanceable installed card",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "place_up_to_n_advancements_on_advanceable_installed",
+                "max": 2
+              }
+            }
+          },
+          {
+            "id": "decline",
+            "label": "Decline",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "gain_credits",
+                "side": "corp",
+                "amount": 0
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
 }

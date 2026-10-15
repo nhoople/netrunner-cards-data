@@ -11,6 +11,20 @@
     "cyborg",
     "g-mod"
   ],
-  "link": 1,
-  "firstIceRezCostIncrease": 1
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "link",
+        "value": 1
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "firstIceRezCostIncrease",
+        "value": 1
+      }
+    }
+  ]
 }

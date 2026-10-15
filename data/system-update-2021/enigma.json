@@ -11,11 +11,13 @@
   "subtypes": [
     "code gate"
   ],
-  "subroutines": [
+  "unsupported": [],
+  "abilities": [
     {
+      "class": "subroutine",
       "id": "enigma-click",
       "text": "The Runner loses [click], if able.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "lose_clicks",
@@ -25,15 +27,15 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "enigma-etr",
       "text": "End the run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "end_the_run"
         }
       }
     }
-  ],
-  "unsupported": []
+  ]
 }

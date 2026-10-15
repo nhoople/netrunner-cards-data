@@ -11,7 +11,21 @@
   ],
   "advancementRequirement": 4,
   "agendaPoints": 2,
-  "stealAdditionalCredits": 4,
-  "advancementRequirementIncreasePerCorpBadPublicity": 1,
-  "wave": "double-time"
+  "wave": "double-time",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "stealAdditionalCredits",
+        "value": 4
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "advancementRequirementIncreasePerCorpBadPublicity",
+        "value": 1
+      }
+    }
+  ]
 }

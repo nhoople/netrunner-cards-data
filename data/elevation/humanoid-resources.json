@@ -9,12 +9,11 @@
   "installCost": 1,
   "rezCost": 1,
   "trashCost": 1,
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "paid",
       "id": "humanoid-resources-main",
       "label": "[click][click][click], [trash]: Gain 4¢ and draw 3. Install up to 2 from HQ. May play 1 operation from HQ.",
-      "clickCost": 3,
-      "creditCost": 0,
       "cost": {
         "clicks": 3,
         "trashSelf": true
@@ -22,7 +21,7 @@
       "windows": [
         "corp_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "seq",
         "effects": [
           {

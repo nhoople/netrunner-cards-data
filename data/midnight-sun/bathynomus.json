@@ -13,12 +13,19 @@
   "installCost": 3,
   "rezCost": 3,
   "strength": 1,
-  "strengthBonusProtectingArchives": 3,
-  "subroutines": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "strengthBonusProtectingArchives",
+        "value": 3
+      }
+    },
+    {
+      "class": "subroutine",
       "id": "bath-net",
       "text": "Do 3 net damage.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "net_damage",

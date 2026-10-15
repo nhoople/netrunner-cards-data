@@ -7,18 +7,23 @@
   "unsupported": [],
   "faction": "haas-bioroid",
   "playCost": 1,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "gain_credits",
-      "side": "corp",
-      "amount": 0,
-      "tally": {
-        "count": "rezzed_ice",
-        "per": 1,
-        "side": "corp"
+  "wave": "up-and-over",
+  "abilities": [
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "corp",
+          "amount": 0,
+          "tally": {
+            "count": "rezzed_ice",
+            "per": 1,
+            "side": "corp"
+          }
+        }
       }
     }
-  },
-  "wave": "up-and-over"
+  ]
 }

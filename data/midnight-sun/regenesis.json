@@ -11,10 +11,16 @@
   ],
   "advancementRequirement": 3,
   "agendaPoints": 1,
-  "onScore": {
-    "op": "do",
-    "action": {
-      "kind": "score_facedown_agenda_from_archives_if_clean"
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "score",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "score_facedown_agenda_from_archives_if_clean"
+        }
+      }
     }
-  }
+  ]
 }

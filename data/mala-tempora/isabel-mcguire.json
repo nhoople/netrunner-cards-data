@@ -13,20 +13,25 @@
   "installCost": 0,
   "rezCost": 0,
   "trashCost": 3,
-  "unique": true,
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "paid",
       "id": "isabel-to-hq",
       "label": "[click]: Add 1 of your installed cards to HQ",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1
       },
       "windows": [
         "corp_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "return_installed_corp_to_hq",

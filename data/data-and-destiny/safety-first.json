@@ -11,8 +11,28 @@
     "virtual"
   ],
   "installCost": 0,
-  "unique": true,
-  "handSizeBonus": -2,
-  "drawAtTurnEndIfGripBelowMaxHandSize": 1,
-  "wave": "data-and-destiny"
+  "wave": "data-and-destiny",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "handSizeBonus",
+        "value": -2
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "drawAtTurnEndIfGripBelowMaxHandSize",
+        "value": 1
+      }
+    }
+  ]
 }

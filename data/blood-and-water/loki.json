@@ -12,18 +12,30 @@
   "installCost": 6,
   "rezCost": 6,
   "strength": 3,
-  "unique": true,
-  "onEncounter": {
-    "op": "do",
-    "action": {
-      "kind": "choose_rezzed_ice_gain_subs_subtypes_for_run"
-    }
-  },
-  "subroutines": [
+  "wave": "blood-and-water",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "encounter",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "choose_rezzed_ice_gain_subs_subtypes_for_run"
+        }
+      }
+    },
+    {
+      "class": "subroutine",
       "id": "loki-etr-unless-shuffle-grip",
       "text": "End the run unless the Runner shuffles all cards from the grip into the stack.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "unless",
@@ -43,6 +55,5 @@
         }
       }
     }
-  ],
-  "wave": "blood-and-water"
+  ]
 }

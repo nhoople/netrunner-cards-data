@@ -12,6 +12,14 @@
   "installCost": 0,
   "rezCost": 0,
   "trashCost": 4,
-  "traceBaseStrengthBonusDuringRunOnThisServer": 2,
-  "wave": "data-and-destiny"
+  "wave": "data-and-destiny",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "traceBaseStrengthBonusDuringRunOnThisServer",
+        "value": 2
+      }
+    }
+  ]
 }

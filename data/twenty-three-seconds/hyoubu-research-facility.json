@@ -12,7 +12,21 @@
   "installCost": 0,
   "rezCost": 0,
   "trashCost": 4,
-  "unique": true,
-  "firstRevealSecretlySpentCreditsGainThatManyEachTurn": true,
-  "wave": "twenty-three-seconds"
+  "wave": "twenty-three-seconds",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "firstRevealSecretlySpentCreditsGainThatManyEachTurn",
+        "value": true
+      }
+    }
+  ]
 }

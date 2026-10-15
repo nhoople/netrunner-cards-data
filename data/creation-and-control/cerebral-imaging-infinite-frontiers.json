@@ -10,5 +10,13 @@
   "subtypes": [
     "division"
   ],
-  "handSizeEqualsCredits": true
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "handSizeEqualsCredits",
+        "value": true
+      }
+    }
+  ]
 }

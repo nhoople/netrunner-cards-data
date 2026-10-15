@@ -11,21 +11,31 @@
   ],
   "advancementRequirement": 4,
   "agendaPoints": 3,
-  "onScore": {
-    "op": "do",
-    "action": {
-      "kind": "gain_credits",
-      "side": "runner",
-      "amount": 4
+  "wave": "fear-the-masses",
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "score",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "runner",
+          "amount": 4
+        }
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "steal",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "runner",
+          "amount": 4
+        }
+      }
     }
-  },
-  "onSteal": {
-    "op": "do",
-    "action": {
-      "kind": "gain_credits",
-      "side": "runner",
-      "amount": 4
-    }
-  },
-  "wave": "fear-the-masses"
+  ]
 }

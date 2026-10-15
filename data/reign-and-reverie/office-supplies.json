@@ -8,35 +8,46 @@
   "unsupported": [],
   "faction": "sunny-lebeau",
   "playCost": 4,
-  "playCostReducedByLink": true,
-  "onPlay": {
-    "op": "choose",
-    "chooser": "runner",
-    "options": [
-      {
-        "id": "gain4",
-        "label": "Gain 4¢",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "gain_credits",
-            "side": "runner",
-            "amount": 4
-          }
-        }
-      },
-      {
-        "id": "draw4",
-        "label": "Draw 4 cards",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "draw",
-            "side": "runner",
-            "amount": 4
-          }
-        }
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "playCostReducedByLink",
+        "value": true
       }
-    ]
-  }
+    },
+    {
+      "class": "play",
+      "instructions": {
+        "op": "choose",
+        "chooser": "runner",
+        "options": [
+          {
+            "id": "gain4",
+            "label": "Gain 4¢",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "gain_credits",
+                "side": "runner",
+                "amount": 4
+              }
+            }
+          },
+          {
+            "id": "draw4",
+            "label": "Draw 4 cards",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "draw",
+                "side": "runner",
+                "amount": 4
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
 }

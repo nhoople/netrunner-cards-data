@@ -10,23 +10,41 @@
     "connection"
   ],
   "installCost": 0,
-  "unique": true,
-  "onTurnBegin": {
-    "op": "if",
-    "cond": {
-      "op": "credits_lte",
-      "side": "runner",
-      "amount": 5
+  "wave": "earths-scion",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
     },
-    "then": {
-      "op": "do",
-      "action": {
-        "kind": "gain_credits",
-        "side": "runner",
-        "amount": 1
+    {
+      "class": "conditional",
+      "trigger": "turn_begin",
+      "instructions": {
+        "op": "if",
+        "cond": {
+          "op": "credits_lte",
+          "side": "runner",
+          "amount": 5
+        },
+        "then": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "runner",
+            "amount": 1
+          }
+        }
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "trashSelfAndMeatDamageWhenCreditsZero",
+        "value": 3
       }
     }
-  },
-  "trashSelfAndMeatDamageWhenCreditsZero": 3,
-  "wave": "earths-scion"
+  ]
 }

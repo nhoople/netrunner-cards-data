@@ -11,12 +11,17 @@
     "transaction"
   ],
   "playCost": 10,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "gain_credits",
-      "side": "corp",
-      "amount": 15
+  "abilities": [
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "corp",
+          "amount": 15
+        }
+      }
     }
-  }
+  ]
 }

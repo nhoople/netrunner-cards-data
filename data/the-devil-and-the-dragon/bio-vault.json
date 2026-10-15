@@ -12,14 +12,26 @@
   "installCost": 0,
   "rezCost": 0,
   "trashCost": 2,
-  "remoteOnly": true,
-  "canAdvance": true,
-  "paidAbilities": [
+  "wave": "the-devil-and-the-dragon",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "remoteOnly",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "canAdvance",
+        "value": true
+      }
+    },
+    {
+      "class": "paid",
       "id": "bio-vault-etr",
       "label": "[trash], 2 hosted advancement counters: End the run",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "advancementTokens": 2,
         "trashSelf": true
@@ -30,13 +42,12 @@
         "approach_server_paw",
         "other_priority_window"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "end_the_run"
         }
       }
     }
-  ],
-  "wave": "the-devil-and-the-dragon"
+  ]
 }

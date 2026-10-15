@@ -9,59 +9,70 @@
   "subtypes": [
     "division"
   ],
-  "chooseIdentityFaceBeforeFirstTurn": true,
-  "identityFaceOptions": [
+  "wave": "the-valley",
+  "abilities": [
     {
-      "id": "brewery",
-      "label": "Brewery",
-      "onFlip": {
-        "op": "do",
-        "action": {
-          "kind": "net_damage",
-          "amount": 2
-        }
+      "class": "static",
+      "declaration": {
+        "field": "chooseIdentityFaceBeforeFirstTurn",
+        "value": true
       }
     },
     {
-      "id": "agriculture",
-      "label": "Agriculture Division",
-      "onFlip": {
-        "op": "do",
-        "action": {
-          "kind": "jinteki_biotech_shuffle_archives_into_rd"
-        }
+      "class": "static",
+      "declaration": {
+        "field": "identityFaceOptions",
+        "value": [
+          {
+            "id": "brewery",
+            "label": "Brewery",
+            "onFlip": {
+              "op": "do",
+              "action": {
+                "kind": "net_damage",
+                "amount": 2
+              }
+            }
+          },
+          {
+            "id": "agriculture",
+            "label": "Agriculture Division",
+            "onFlip": {
+              "op": "do",
+              "action": {
+                "kind": "jinteki_biotech_shuffle_archives_into_rd"
+              }
+            }
+          },
+          {
+            "id": "warehouse",
+            "label": "Warehouse",
+            "onFlip": {
+              "op": "do",
+              "action": {
+                "kind": "jinteki_biotech_place_4_advancement"
+              }
+            }
+          }
+        ]
       }
     },
     {
-      "id": "warehouse",
-      "label": "Warehouse",
-      "onFlip": {
-        "op": "do",
-        "action": {
-          "kind": "jinteki_biotech_place_4_advancement"
-        }
-      }
-    }
-  ],
-  "paidAbilities": [
-    {
+      "class": "paid",
       "id": "jinteki-biotech-flip",
       "label": "[click][click][click]: Flip this identity",
-      "clickCost": 3,
-      "creditCost": 0,
       "cost": {
         "clicks": 3
       },
       "windows": [
         "corp_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "jinteki_biotech_flip"
         }
       }
     }
-  ],
-  "wave": "the-valley"
+  ]
 }

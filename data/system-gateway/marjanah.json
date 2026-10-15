@@ -10,27 +10,35 @@
     "icebreaker",
     "fracter"
   ],
-  "breaker": {
-    "breaksSubtype": "barrier",
-    "strength": 1,
-    "breakCredits": 2,
-    "pumpCredits": 1,
-    "pumpStrength": 1,
-    "breakCreditsDiscountIfSuccessfulRunThisTurn": 1
-  },
-  "paidAbilities": [
+  "unsupported": [],
+  "installCost": 0,
+  "memoryCost": 1,
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "breaker",
+        "value": {
+          "breaksSubtype": "barrier",
+          "strength": 1,
+          "breakCredits": 2,
+          "pumpCredits": 1,
+          "pumpStrength": 1,
+          "breakCreditsDiscountIfSuccessfulRunThisTurn": 1
+        }
+      }
+    },
+    {
+      "class": "paid",
       "id": "marjanah-pump",
       "label": "Pump Marjanah +1 strength",
-      "clickCost": 0,
-      "creditCost": 1,
       "cost": {
         "credits": 1
       },
       "windows": [
         "encounter_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "pump_strength",
@@ -38,8 +46,5 @@
         }
       }
     }
-  ],
-  "unsupported": [],
-  "installCost": 0,
-  "memoryCost": 1
+  ]
 }

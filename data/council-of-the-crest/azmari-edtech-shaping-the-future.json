@@ -9,34 +9,46 @@
   "subtypes": [
     "division"
   ],
-  "onCorpTurnEnd": {
-    "op": "choose",
-    "chooser": "corp",
-    "options": [
-      {
-        "id": "accept",
-        "label": "Name a card type",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "cotc_azmari_name_card_type"
+  "wave": "council-of-the-crest",
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "corp_turn_end",
+      "instructions": {
+        "op": "choose",
+        "chooser": "corp",
+        "options": [
+          {
+            "id": "accept",
+            "label": "Name a card type",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "cotc_azmari_name_card_type"
+              }
+            }
+          },
+          {
+            "id": "decline",
+            "label": "Decline",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "gain_credits",
+                "side": "corp",
+                "amount": 0
+              }
+            }
           }
-        }
-      },
-      {
-        "id": "decline",
-        "label": "Decline",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "gain_credits",
-            "side": "corp",
-            "amount": 0
-          }
-        }
+        ]
       }
-    ]
-  },
-  "gainCreditsOnFirstRunnerPlayOrInstallNamedType": 2,
-  "wave": "council-of-the-crest"
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "gainCreditsOnFirstRunnerPlayOrInstallNamedType",
+        "value": 2
+      }
+    }
+  ]
 }

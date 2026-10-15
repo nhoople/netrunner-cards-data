@@ -12,12 +12,11 @@
   "installCost": 3,
   "rezCost": 3,
   "trashCost": 3,
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "paid",
       "id": "moon-pool-resolve",
       "label": "[click], trash: Remove Moon Pool from the game",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1,
         "trashSelf": true
@@ -25,7 +24,7 @@
       "windows": [
         "corp_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "moon_pool_resolve",

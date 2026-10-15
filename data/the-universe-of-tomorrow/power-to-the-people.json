@@ -10,13 +10,24 @@
     "priority"
   ],
   "playCost": 0,
-  "playRequiresFirstClick": true,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "arm_gain_credits_on_first_agenda_access",
-      "amount": 7
+  "wave": "the-universe-of-tomorrow",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "playRequiresFirstClick",
+        "value": true
+      }
+    },
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "arm_gain_credits_on_first_agenda_access",
+          "amount": 7
+        }
+      }
     }
-  },
-  "wave": "the-universe-of-tomorrow"
+  ]
 }

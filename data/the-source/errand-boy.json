@@ -12,11 +12,13 @@
   "installCost": 4,
   "rezCost": 4,
   "strength": 1,
-  "subroutines": [
+  "wave": "the-source",
+  "abilities": [
     {
+      "class": "subroutine",
       "id": "errand-boy-1",
       "text": "The Corp gains 1[credit] or draws 1 card.",
-      "effect": {
+      "instructions": {
         "op": "choose",
         "chooser": "corp",
         "options": [
@@ -48,9 +50,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "errand-boy-2",
       "text": "The Corp gains 1[credit] or draws 1 card.",
-      "effect": {
+      "instructions": {
         "op": "choose",
         "chooser": "corp",
         "options": [
@@ -82,9 +85,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "errand-boy-3",
       "text": "The Corp gains 1[credit] or draws 1 card.",
-      "effect": {
+      "instructions": {
         "op": "choose",
         "chooser": "corp",
         "options": [
@@ -115,6 +119,5 @@
         ]
       }
     }
-  ],
-  "wave": "the-source"
+  ]
 }

@@ -11,45 +11,51 @@
   ],
   "advancementRequirement": 4,
   "agendaPoints": 2,
-  "onScore": {
-    "op": "seq",
-    "effects": [
-      {
-        "op": "do",
-        "action": {
-          "kind": "draw",
-          "side": "corp",
-          "amount": 3
-        }
-      },
-      {
-        "op": "choose",
-        "chooser": "corp",
-        "options": [
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "score",
+      "instructions": {
+        "op": "seq",
+        "effects": [
           {
-            "id": "skip-discard",
-            "label": "Skip discard step this turn",
-            "effect": {
-              "op": "do",
-              "action": {
-                "kind": "skip_discard_this_turn"
-              }
+            "op": "do",
+            "action": {
+              "kind": "draw",
+              "side": "corp",
+              "amount": 3
             }
           },
           {
-            "id": "decline",
-            "label": "Decline",
-            "effect": {
-              "op": "do",
-              "action": {
-                "kind": "gain_credits",
-                "side": "corp",
-                "amount": 0
+            "op": "choose",
+            "chooser": "corp",
+            "options": [
+              {
+                "id": "skip-discard",
+                "label": "Skip discard step this turn",
+                "effect": {
+                  "op": "do",
+                  "action": {
+                    "kind": "skip_discard_this_turn"
+                  }
+                }
+              },
+              {
+                "id": "decline",
+                "label": "Decline",
+                "effect": {
+                  "op": "do",
+                  "action": {
+                    "kind": "gain_credits",
+                    "side": "corp",
+                    "amount": 0
+                  }
+                }
               }
-            }
+            ]
           }
         ]
       }
-    ]
-  }
+    }
+  ]
 }

@@ -9,31 +9,34 @@
   "faction": "neutral-corp",
   "advancementRequirement": 5,
   "agendaPoints": 3,
-  "onScore": {
-    "op": "seq",
-    "effects": [
-      {
-        "op": "do",
-        "action": {
-          "kind": "add_agenda_counter",
-          "amount": 1
-        }
-      },
-      {
-        "op": "do",
-        "action": {
-          "kind": "shuffle_hq_to_rd",
-          "amount": 99
-        }
-      }
-    ]
-  },
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "conditional",
+      "trigger": "score",
+      "instructions": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "add_agenda_counter",
+              "amount": 1
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "shuffle_hq_to_rd",
+              "amount": 99
+            }
+          }
+        ]
+      }
+    },
+    {
+      "class": "paid",
       "id": "executive-retreat-draw",
       "label": "[click], hosted agenda counter: Draw 5 cards",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1,
         "agendaCounters": 1
@@ -41,7 +44,7 @@
       "windows": [
         "corp_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "draw",

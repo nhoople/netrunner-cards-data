@@ -12,21 +12,39 @@
   "installCost": 0,
   "rezCost": 0,
   "trashCost": 0,
-  "mustRevealWhenAccessedFromRd": true,
-  "skipOnAccessFromArchives": true,
-  "onAccess": {
-    "op": "do",
-    "action": {
-      "kind": "trace",
-      "strength": 3,
-      "onSuccess": {
+  "wave": "down-the-white-nile",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "mustRevealWhenAccessedFromRd",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "skipOnAccessFromArchives",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "access",
+      "instructions": {
         "op": "do",
         "action": {
-          "kind": "give_tags",
-          "amount": 2
+          "kind": "trace",
+          "strength": 3,
+          "onSuccess": {
+            "op": "do",
+            "action": {
+              "kind": "give_tags",
+              "amount": 2
+            }
+          }
         }
       }
     }
-  },
-  "wave": "down-the-white-nile"
+  ]
 }

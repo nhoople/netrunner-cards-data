@@ -10,21 +10,31 @@
     "connection"
   ],
   "installCost": 1,
-  "onTurnBegin": {
-    "op": "do",
-    "action": {
-      "kind": "lose_credits",
-      "side": "runner",
-      "amount": 1
+  "wave": "old-hollywood",
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "turn_begin",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "lose_credits",
+          "side": "runner",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "corp_turn_begin",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "draw",
+          "side": "runner",
+          "amount": 1
+        }
+      }
     }
-  },
-  "onCorpTurnBegin": {
-    "op": "do",
-    "action": {
-      "kind": "draw",
-      "side": "runner",
-      "amount": 1
-    }
-  },
-  "wave": "old-hollywood"
+  ]
 }

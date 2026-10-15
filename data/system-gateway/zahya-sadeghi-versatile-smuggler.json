@@ -5,10 +5,24 @@
   "nrdbCode": "30010",
   "type": "identity",
   "side": "runner",
-  "link": 0,
   "unsupported": [],
   "subtypes": [
     "cyborg"
   ],
-  "creditsPerAccessOnCentralRunEnd": true
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "link",
+        "value": 0
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "creditsPerAccessOnCentralRunEnd",
+        "value": true
+      }
+    }
+  ]
 }

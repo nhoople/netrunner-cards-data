@@ -9,6 +9,14 @@
   "subtypes": [
     "division"
   ],
-  "agendaPointsToWinModifierBoth": -1,
-  "wave": "honor-and-profit"
+  "wave": "honor-and-profit",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "agendaPointsToWinModifierBoth",
+        "value": -1
+      }
+    }
+  ]
 }

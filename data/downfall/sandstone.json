@@ -13,19 +13,30 @@
   "installCost": 3,
   "rezCost": 3,
   "strength": 6,
-  "onEncounter": {
-    "op": "do",
-    "action": {
-      "kind": "add_virus_counter",
-      "amount": 1
-    }
-  },
-  "strengthPerVirusCounter": -1,
-  "subroutines": [
+  "abilities": [
     {
+      "class": "conditional",
+      "trigger": "encounter",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "add_virus_counter",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "strengthPerVirusCounter",
+        "value": -1
+      }
+    },
+    {
+      "class": "subroutine",
       "id": "sandstone-etr",
       "text": "End the run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "end_the_run"

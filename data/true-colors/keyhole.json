@@ -8,19 +8,19 @@
   "faction": "anarch",
   "installCost": 4,
   "memoryCost": 2,
-  "paidAbilities": [
+  "wave": "true-colors",
+  "abilities": [
     {
+      "class": "paid",
       "id": "keyhole-run",
       "label": "[click]: Run R&D; on success may look at top 3 and trash 1 program",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1
       },
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "gain_credits",
@@ -38,6 +38,5 @@
         }
       }
     }
-  ],
-  "wave": "true-colors"
+  ]
 }

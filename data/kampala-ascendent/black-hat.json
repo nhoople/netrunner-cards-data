@@ -7,26 +7,31 @@
   "unsupported": [],
   "faction": "sunny-lebeau",
   "playCost": 2,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "trace",
-      "strength": 4,
-      "onSuccess": {
+  "wave": "kampala-ascendent",
+  "abilities": [
+    {
+      "class": "play",
+      "instructions": {
         "op": "do",
         "action": {
-          "kind": "gain_credits",
-          "side": "runner",
-          "amount": 0
-        }
-      },
-      "onFailure": {
-        "op": "do",
-        "action": {
-          "kind": "ka_black_hat_bonus_access"
+          "kind": "trace",
+          "strength": 4,
+          "onSuccess": {
+            "op": "do",
+            "action": {
+              "kind": "gain_credits",
+              "side": "runner",
+              "amount": 0
+            }
+          },
+          "onFailure": {
+            "op": "do",
+            "action": {
+              "kind": "ka_black_hat_bonus_access"
+            }
+          }
         }
       }
     }
-  },
-  "wave": "kampala-ascendent"
+  ]
 }

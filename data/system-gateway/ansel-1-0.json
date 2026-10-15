@@ -8,31 +8,45 @@
   "installCost": 6,
   "rezCost": 6,
   "strength": 4,
-  "subtypes": ["sentry", "bioroid", "destroyer"],
+  "subtypes": [
+    "sentry",
+    "bioroid",
+    "destroyer"
+  ],
   "unsupported": [],
-  "subroutines": [
+  "abilities": [
     {
+      "class": "subroutine",
       "id": "ansel-trash",
       "text": "Trash 1 installed Runner card.",
-      "effect": {
+      "instructions": {
         "op": "do",
-        "action": { "kind": "trash_installed_runner", "pick": "choose" }
+        "action": {
+          "kind": "trash_installed_runner",
+          "pick": "choose"
+        }
       }
     },
     {
+      "class": "subroutine",
       "id": "ansel-install",
       "text": "You may install 1 card from HQ or Archives.",
-      "effect": {
+      "instructions": {
         "op": "do",
-        "action": { "kind": "install_from_hq_or_archives" }
+        "action": {
+          "kind": "install_from_hq_or_archives"
+        }
       }
     },
     {
+      "class": "subroutine",
       "id": "ansel-lock",
       "text": "Runner cannot steal/trash Corp cards this run.",
-      "effect": {
+      "instructions": {
         "op": "do",
-        "action": { "kind": "forbid_steal_trash_this_run" }
+        "action": {
+          "kind": "forbid_steal_trash_this_run"
+        }
       }
     }
   ]

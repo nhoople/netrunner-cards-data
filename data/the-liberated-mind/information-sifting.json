@@ -10,15 +10,23 @@
     "run"
   ],
   "playCost": 1,
-  "runEvent": {
-    "servers": "hq",
-    "skipBreach": true,
-    "onSuccessfulRun": {
-      "op": "do",
-      "action": {
-        "kind": "information_sifting_corp_split_hq"
+  "wave": "the-liberated-mind",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "runEvent",
+        "value": {
+          "servers": "hq",
+          "skipBreach": true,
+          "onSuccessfulRun": {
+            "op": "do",
+            "action": {
+              "kind": "information_sifting_corp_split_hq"
+            }
+          }
+        }
       }
     }
-  },
-  "wave": "the-liberated-mind"
+  ]
 }

@@ -9,56 +9,72 @@
   "installCost": 2,
   "rezCost": 2,
   "trashCost": 2,
-  "unique": true,
-  "removePowerCounterOnAnySuccessfulRun": true,
-  "onTurnBegin": {
-    "op": "choose",
-    "chooser": "corp",
-    "options": [
-      {
-        "id": "accept",
-        "label": "Pay 1¢ to place 1 power counter",
-        "effect": {
-          "op": "seq",
-          "effects": [
-            {
+  "wave": "magnum-opus",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "removePowerCounterOnAnySuccessfulRun",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "turn_begin",
+      "instructions": {
+        "op": "choose",
+        "chooser": "corp",
+        "options": [
+          {
+            "id": "accept",
+            "label": "Pay 1¢ to place 1 power counter",
+            "effect": {
+              "op": "seq",
+              "effects": [
+                {
+                  "op": "do",
+                  "action": {
+                    "kind": "lose_credits",
+                    "side": "corp",
+                    "amount": 1
+                  }
+                },
+                {
+                  "op": "do",
+                  "action": {
+                    "kind": "add_power_counter",
+                    "amount": 1
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "id": "decline",
+            "label": "Decline",
+            "effect": {
               "op": "do",
               "action": {
-                "kind": "lose_credits",
+                "kind": "gain_credits",
                 "side": "corp",
-                "amount": 1
-              }
-            },
-            {
-              "op": "do",
-              "action": {
-                "kind": "add_power_counter",
-                "amount": 1
+                "amount": 0
               }
             }
-          ]
-        }
-      },
-      {
-        "id": "decline",
-        "label": "Decline",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "gain_credits",
-            "side": "corp",
-            "amount": 0
           }
-        }
+        ]
       }
-    ]
-  },
-  "paidAbilities": [
+    },
     {
+      "class": "paid",
       "id": "embolus-etr",
       "label": "Hosted power counter: End the run (run on this server)",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "powerCounters": 1
       },
@@ -67,7 +83,7 @@
         "encounter_paw",
         "approach_server_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "end_the_run"
@@ -75,6 +91,5 @@
       },
       "requireDuringRun": true
     }
-  ],
-  "wave": "magnum-opus"
+  ]
 }

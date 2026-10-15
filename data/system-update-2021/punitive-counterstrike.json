@@ -10,17 +10,22 @@
     "black ops"
   ],
   "playCost": 3,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "trace",
-      "strength": 5,
-      "onSuccess": {
+  "abilities": [
+    {
+      "class": "play",
+      "instructions": {
         "op": "do",
         "action": {
-          "kind": "meat_damage_stolen_last_turn"
+          "kind": "trace",
+          "strength": 5,
+          "onSuccess": {
+            "op": "do",
+            "action": {
+              "kind": "meat_damage_stolen_last_turn"
+            }
+          }
         }
       }
     }
-  }
+  ]
 }

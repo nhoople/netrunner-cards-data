@@ -12,36 +12,54 @@
   ],
   "installCost": 2,
   "memoryCost": 1,
-  "installOnIce": true,
-  "trashHostAtVirus": 5,
-  "onTurnBegin": {
-    "op": "choose",
-    "chooser": "runner",
-    "options": [
-      {
-        "id": "accept",
-        "label": "Place 1 virus counter on Trypano",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "add_virus_counter",
-            "amount": 1
-          }
-        }
-      },
-      {
-        "id": "decline",
-        "label": "Decline",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "gain_credits",
-            "side": "runner",
-            "amount": 0
-          }
-        }
+  "wave": "whispers-in-nalubaale",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "installOnIce",
+        "value": true
       }
-    ]
-  },
-  "wave": "whispers-in-nalubaale"
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "trashHostAtVirus",
+        "value": 5
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "turn_begin",
+      "instructions": {
+        "op": "choose",
+        "chooser": "runner",
+        "options": [
+          {
+            "id": "accept",
+            "label": "Place 1 virus counter on Trypano",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "add_virus_counter",
+                "amount": 1
+              }
+            }
+          },
+          {
+            "id": "decline",
+            "label": "Decline",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "gain_credits",
+                "side": "runner",
+                "amount": 0
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
 }

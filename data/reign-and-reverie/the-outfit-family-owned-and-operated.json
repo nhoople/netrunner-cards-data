@@ -10,5 +10,13 @@
   "subtypes": [
     "subsidiary"
   ],
-  "gainCreditsOnEachBadPublicityTake": 3
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "gainCreditsOnEachBadPublicityTake",
+        "value": 3
+      }
+    }
+  ]
 }

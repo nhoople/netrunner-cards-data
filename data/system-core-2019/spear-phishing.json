@@ -11,8 +11,16 @@
     "run"
   ],
   "playCost": 2,
-  "runEvent": {
-    "servers": "any",
-    "bypassInnermostEncounter": true
-  }
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "runEvent",
+        "value": {
+          "servers": "any",
+          "bypassInnermostEncounter": true
+        }
+      }
+    }
+  ]
 }

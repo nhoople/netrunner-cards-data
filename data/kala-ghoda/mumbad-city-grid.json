@@ -12,6 +12,14 @@
   "installCost": 3,
   "rezCost": 3,
   "trashCost": 3,
-  "onPassIceProtectingThisServerMaySwap": true,
-  "wave": "kala-ghoda"
+  "wave": "kala-ghoda",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "onPassIceProtectingThisServerMaySwap",
+        "value": true
+      }
+    }
+  ]
 }

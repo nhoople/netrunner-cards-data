@@ -13,27 +13,39 @@
   "installCost": 3,
   "rezCost": 3,
   "trashCost": 6,
-  "onTurnBegin": {
-    "op": "seq",
-    "effects": [
-      {
-        "op": "do",
-        "action": {
-          "kind": "gain_credits",
-          "side": "corp",
-          "amount": 1
-        }
-      },
-      {
-        "op": "do",
-        "action": {
-          "kind": "draw",
-          "side": "corp",
-          "amount": 1
-        }
+  "wave": "terminal-directive",
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "turn_begin",
+      "instructions": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "gain_credits",
+              "side": "corp",
+              "amount": 1
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "draw",
+              "side": "corp",
+              "amount": 1
+            }
+          }
+        ]
       }
-    ]
-  },
-  "onTrashWhileRezzedTakeBadPublicity": 1,
-  "wave": "terminal-directive"
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "onTrashWhileRezzedTakeBadPublicity",
+        "value": 1
+      }
+    }
+  ]
 }

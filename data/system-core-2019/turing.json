@@ -13,13 +13,26 @@
   "installCost": 4,
   "rezCost": 4,
   "strength": 2,
-  "strengthBonusProtectingRemote": 3,
-  "cannotBreakWithAi": true,
-  "subroutines": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "strengthBonusProtectingRemote",
+        "value": 3
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "cannotBreakWithAi",
+        "value": true
+      }
+    },
+    {
+      "class": "subroutine",
       "id": "turing-etr-unless-clicks",
       "text": "End the run unless the Runner spends [click][click][click].",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "unless",

@@ -10,13 +10,24 @@
     "terminal"
   ],
   "playCost": 2,
-  "endsActionPhase": true,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "install_up_to_n_from_archives_paying",
-      "max": 2
+  "wave": "martial-law",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "endsActionPhase",
+        "value": true
+      }
+    },
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "install_up_to_n_from_archives_paying",
+          "max": 2
+        }
+      }
     }
-  },
-  "wave": "martial-law"
+  ]
 }

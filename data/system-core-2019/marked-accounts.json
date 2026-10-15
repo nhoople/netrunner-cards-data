@@ -13,26 +13,29 @@
   "installCost": 0,
   "rezCost": 0,
   "trashCost": 5,
-  "onTurnBegin": {
-    "op": "do",
-    "action": {
-      "kind": "take_hosted_credits",
-      "amount": 1
-    }
-  },
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "conditional",
+      "trigger": "turn_begin",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "take_hosted_credits",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "class": "paid",
       "id": "marked-accounts-load",
       "label": "[click]: Place 3¢ on Marked Accounts",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1
       },
       "windows": [
         "corp_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "place_hosted_credits",

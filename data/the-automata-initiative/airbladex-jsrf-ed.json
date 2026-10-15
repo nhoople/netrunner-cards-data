@@ -10,50 +10,60 @@
     "vehicle"
   ],
   "installCost": 1,
-  "powerCountersOnInstall": 3,
-  "trashWhenPowerEmpty": true,
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "powerCountersOnInstall",
+        "value": 3
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "trashWhenPowerEmpty",
+        "value": true
+      }
+    },
+    {
+      "class": "paid",
       "id": "airblade-prevent-damage",
       "label": "Interrupt: hosted power counter — prevent 1 net damage (run only)",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "powerCounters": 1
       },
       "windows": [
         "damage_interrupt_paw"
       ],
-      "requireDuringRun": true,
-      "requirePendingDamageTypes": [
-        "net"
-      ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "prevent_pending_damage",
           "amount": 1
         }
-      }
+      },
+      "requireDuringRun": true,
+      "requirePendingDamageTypes": [
+        "net"
+      ]
     },
     {
+      "class": "paid",
       "id": "airblade-prevent-encounter",
       "label": "Interrupt: hosted power counter — prevent when encountered on ice",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "powerCounters": 1
       },
       "windows": [
         "when_encountered_interrupt_paw"
       ],
-      "requireDuringRun": true,
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "prevent_current_ice_on_encounter"
         }
-      }
+      },
+      "requireDuringRun": true
     }
   ]
 }

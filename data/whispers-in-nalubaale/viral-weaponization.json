@@ -12,11 +12,17 @@
   ],
   "advancementRequirement": 4,
   "agendaPoints": 2,
-  "onScoreTurnEnd": {
-    "op": "do",
-    "action": {
-      "kind": "win_viral_weaponization"
+  "wave": "whispers-in-nalubaale",
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "score_turn_end",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "win_viral_weaponization"
+        }
+      }
     }
-  },
-  "wave": "whispers-in-nalubaale"
+  ]
 }

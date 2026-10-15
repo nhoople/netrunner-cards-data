@@ -10,20 +10,36 @@
     "gray ops"
   ],
   "playCost": 2,
-  "playRequiresTagged": true,
-  "playAdditionalCost": {
-    "op": "do",
-    "action": {
-      "kind": "remove_tags",
-      "amount": 1
-    }
-  },
   "agendaPoints": 1,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "score_self_as_agenda",
-      "agendaPoints": 1
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "playRequiresTagged",
+        "value": true
+      }
+    },
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "score_self_as_agenda",
+          "agendaPoints": 1
+        }
+      },
+      "restrictions": [
+        {
+          "appliesTo": "play",
+          "effect": {
+            "op": "do",
+            "action": {
+              "kind": "remove_tags",
+              "amount": 1
+            }
+          }
+        }
+      ]
     }
-  }
+  ]
 }

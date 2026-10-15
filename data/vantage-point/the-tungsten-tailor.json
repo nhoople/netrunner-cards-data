@@ -7,8 +7,34 @@
   "side": "runner",
   "unsupported": [],
   "installCost": 3,
-  "unique": true,
-  "muBonus": 1,
-  "allIceStrengthPenalty": 1,
-  "gainCreditOnBreakIceStrengthLteOncePerTurn": 0
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "muBonus",
+        "value": 1
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "allIceStrengthPenalty",
+        "value": 1
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "gainCreditOnBreakIceStrengthLteOncePerTurn",
+        "value": 0
+      }
+    }
+  ]
 }

@@ -10,33 +10,41 @@
     "run"
   ],
   "playCost": 0,
-  "runEvent": {
-    "servers": "rd",
-    "onSuccessfulRun": {
-      "op": "seq",
-      "effects": [
-        {
-          "op": "do",
-          "action": {
-            "kind": "may_install_from_grip",
-            "discount": 1
-          }
-        },
-        {
-          "op": "do",
-          "action": {
-            "kind": "may_install_from_grip",
-            "discount": 1
-          }
-        },
-        {
-          "op": "do",
-          "action": {
-            "kind": "may_install_from_grip",
-            "discount": 1
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "runEvent",
+        "value": {
+          "servers": "rd",
+          "onSuccessfulRun": {
+            "op": "seq",
+            "effects": [
+              {
+                "op": "do",
+                "action": {
+                  "kind": "may_install_from_grip",
+                  "discount": 1
+                }
+              },
+              {
+                "op": "do",
+                "action": {
+                  "kind": "may_install_from_grip",
+                  "discount": 1
+                }
+              },
+              {
+                "op": "do",
+                "action": {
+                  "kind": "may_install_from_grip",
+                  "discount": 1
+                }
+              }
+            ]
           }
         }
-      ]
+      }
     }
-  }
+  ]
 }

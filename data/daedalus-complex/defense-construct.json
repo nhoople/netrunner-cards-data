@@ -9,13 +9,19 @@
   "installCost": 2,
   "rezCost": 2,
   "trashCost": 0,
-  "canAdvance": true,
-  "paidAbilities": [
+  "wave": "daedalus-complex",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "canAdvance",
+        "value": true
+      }
+    },
+    {
+      "class": "paid",
       "id": "defense-construct-archives",
       "label": "[trash]: Add 1 facedown card from Archives to HQ per advancement (Archives run)",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "trashSelf": true
       },
@@ -25,7 +31,7 @@
         "encounter_paw",
         "approach_server_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "add_facedown_archives_to_hq_per_advancement"
@@ -34,6 +40,5 @@
       "requireDuringRun": true,
       "onlyDuringArchivesRun": true
     }
-  ],
-  "wave": "daedalus-complex"
+  ]
 }

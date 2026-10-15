@@ -10,14 +10,22 @@
     "run"
   ],
   "playCost": 2,
-  "runEvent": {
-    "servers": "any",
-    "onSuccessfulRun": {
-      "op": "do",
-      "action": {
-        "kind": "add_from_heap_to_grip",
-        "pick": "choose"
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "runEvent",
+        "value": {
+          "servers": "any",
+          "onSuccessfulRun": {
+            "op": "do",
+            "action": {
+              "kind": "add_from_heap_to_grip",
+              "pick": "choose"
+            }
+          }
+        }
       }
     }
-  }
+  ]
 }

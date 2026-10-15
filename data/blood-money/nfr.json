@@ -13,19 +13,37 @@
   "installCost": 3,
   "strength": 1,
   "memoryCost": 1,
-  "strengthPerPowerCounter": true,
-  "onFullyBreak": {
-    "op": "do",
-    "action": {
-      "kind": "add_power_counter",
-      "amount": 1
+  "wave": "blood-money",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "strengthPerPowerCounter",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "fully_break",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "add_power_counter",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "breaker",
+        "value": {
+          "breaksSubtype": "barrier",
+          "strength": 1,
+          "breakCredits": 1,
+          "breakMaxSubs": 1
+        }
+      }
     }
-  },
-  "breaker": {
-    "breaksSubtype": "barrier",
-    "strength": 1,
-    "breakCredits": 1,
-    "breakMaxSubs": 1
-  },
-  "wave": "blood-money"
+  ]
 }

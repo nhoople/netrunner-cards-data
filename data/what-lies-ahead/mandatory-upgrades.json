@@ -12,5 +12,13 @@
   ],
   "advancementRequirement": 6,
   "agendaPoints": 2,
-  "allottedClicksBonus": 1
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "allottedClicksBonus",
+        "value": 1
+      }
+    }
+  ]
 }

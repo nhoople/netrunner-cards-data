@@ -11,21 +11,37 @@
   ],
   "installCost": 1,
   "memoryCost": 1,
-  "installOnIce": true,
-  "onHostRezzed": {
-    "op": "do",
-    "action": {
-      "kind": "gain_credits",
-      "side": "runner",
-      "amount": 3
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "installOnIce",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "host_rezzed",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "runner",
+          "amount": 3
+        }
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "host_derezzed",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "runner",
+          "amount": 3
+        }
+      }
     }
-  },
-  "onHostDerezzed": {
-    "op": "do",
-    "action": {
-      "kind": "gain_credits",
-      "side": "runner",
-      "amount": 3
-    }
-  }
+  ]
 }

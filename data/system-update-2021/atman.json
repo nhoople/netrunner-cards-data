@@ -13,12 +13,38 @@
   "installCost": 3,
   "strength": 0,
   "memoryCost": 1,
-  "breaker": {
-    "breaksSubtype": "*",
-    "strength": 0,
-    "breakCredits": 1
-  },
-  "installSpendCreditsForPowerCounters": true,
-  "strengthPerPowerCounter": true,
-  "interfaceRequiresEqualStrength": true
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "breaker",
+        "value": {
+          "breaksSubtype": "*",
+          "strength": 0,
+          "breakCredits": 1
+        }
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "installSpendCreditsForPowerCounters",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "strengthPerPowerCounter",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "interfaceRequiresEqualStrength",
+        "value": true
+      }
+    }
+  ]
 }

@@ -8,12 +8,11 @@
   "unsupported": [],
   "faction": "shaper",
   "installCost": 0,
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "paid",
       "id": "all-nighter-clicks",
       "label": "[click], [trash]: Gain [click][click]",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1,
         "trashSelf": true
@@ -21,7 +20,7 @@
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "gain_clicks",

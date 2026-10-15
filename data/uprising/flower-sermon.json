@@ -8,26 +8,29 @@
   "unsupported": [],
   "advancementRequirement": 4,
   "agendaPoints": 2,
-  "onScore": {
-    "op": "do",
-    "action": {
-      "kind": "add_agenda_counter",
-      "amount": 5
-    }
-  },
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "conditional",
+      "trigger": "score",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "add_agenda_counter",
+          "amount": 5
+        }
+      }
+    },
+    {
+      "class": "paid",
       "id": "flower-sermon-look",
       "label": "Hosted agenda counter: Look at top of R&D; may advance; may bottom",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "agendaCounters": 1
       },
       "windows": [
         "corp_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "look_top_rd_may_advance_may_bottom"

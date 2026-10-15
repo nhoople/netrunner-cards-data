@@ -11,15 +11,20 @@
     "mod"
   ],
   "playCost": 0,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "install_from_grip_discount",
-      "types": [
-        "program",
-        "hardware"
-      ],
-      "discount": 3
+  "abilities": [
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "install_from_grip_discount",
+          "types": [
+            "program",
+            "hardware"
+          ],
+          "discount": 3
+        }
+      }
     }
-  }
+  ]
 }

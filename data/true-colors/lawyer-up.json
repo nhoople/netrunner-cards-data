@@ -10,12 +10,23 @@
     "double"
   ],
   "playCost": 2,
-  "playAdditionalClick": true,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "lawyer_up"
+  "wave": "true-colors",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "playAdditionalClick",
+        "value": true
+      }
+    },
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "lawyer_up"
+        }
+      }
     }
-  },
-  "wave": "true-colors"
+  ]
 }

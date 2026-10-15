@@ -11,20 +11,30 @@
   ],
   "advancementRequirement": 2,
   "agendaPoints": 1,
-  "onScore": {
-    "op": "do",
-    "action": {
-      "kind": "gain_credits",
-      "side": "corp",
-      "amount": 2
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "score",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "corp",
+          "amount": 2
+        }
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "forfeit",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "corp",
+          "amount": 4
+        }
+      }
     }
-  },
-  "onForfeit": {
-    "op": "do",
-    "action": {
-      "kind": "gain_credits",
-      "side": "corp",
-      "amount": 4
-    }
-  }
+  ]
 }

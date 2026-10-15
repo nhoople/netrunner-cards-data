@@ -11,10 +11,42 @@
     "chip"
   ],
   "installCost": 1,
-  "deckLimit": 6,
-  "daemonHost": true,
-  "maxHostedCards": 1,
-  "daemonHostMaxMuFromInstalledCopiesOfSelf": true,
-  "hostedProgramMemoryDoesNotCount": true,
-  "wave": "business-first"
+  "wave": "business-first",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "deckLimit",
+        "value": 6
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "daemonHost",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "maxHostedCards",
+        "value": 1
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "daemonHostMaxMuFromInstalledCopiesOfSelf",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "hostedProgramMemoryDoesNotCount",
+        "value": true
+      }
+    }
+  ]
 }

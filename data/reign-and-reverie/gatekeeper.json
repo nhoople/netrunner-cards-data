@@ -13,12 +13,19 @@
   "installCost": 3,
   "rezCost": 3,
   "strength": 0,
-  "strengthBonusIfRezzedThisTurn": 6,
-  "subroutines": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "strengthBonusIfRezzedThisTurn",
+        "value": 6
+      }
+    },
+    {
+      "class": "subroutine",
       "id": "gatekeeper-draw-shuffle",
       "text": "Draw up to 3 cards. Reveal up to 3 agendas in HQ and/or Archives, then shuffle those agendas into R&D.",
-      "effect": {
+      "instructions": {
         "op": "seq",
         "effects": [
           {
@@ -40,9 +47,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "gatekeeper-etr",
       "text": "End the run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "end_the_run"

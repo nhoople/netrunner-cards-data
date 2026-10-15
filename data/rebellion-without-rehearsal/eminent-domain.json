@@ -12,12 +12,11 @@
   ],
   "advancementRequirement": 3,
   "agendaPoints": 1,
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "paid",
       "id": "eminent-expend",
       "label": "[click], 1¢, reveal and trash from HQ: Install and rez from HQ paying 5¢ less",
-      "clickCost": 1,
-      "creditCost": 1,
       "cost": {
         "clicks": 1,
         "credits": 1,
@@ -26,20 +25,24 @@
       "windows": [
         "corp_action_paw"
       ],
-      "usableFromHq": true,
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "may_install_and_rez_from_hq",
           "totalDiscount": 5
         }
+      },
+      "usableFromHq": true
+    },
+    {
+      "class": "conditional",
+      "trigger": "score",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "may_search_rd_install_rez_ignore_costs"
+        }
       }
     }
-  ],
-  "onScore": {
-    "op": "do",
-    "action": {
-      "kind": "may_search_rd_install_rez_ignore_costs"
-    }
-  }
+  ]
 }

@@ -9,6 +9,14 @@
   "subtypes": [
     "division"
   ],
-  "revealGripWhileRunnerTagged": true,
-  "wave": "fear-the-masses"
+  "wave": "fear-the-masses",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "revealGripWhileRunnerTagged",
+        "value": true
+      }
+    }
+  ]
 }

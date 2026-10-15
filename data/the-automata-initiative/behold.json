@@ -12,48 +12,66 @@
   "installCost": 0,
   "rezCost": 0,
   "trashCost": 0,
-  "mustRevealWhenAccessedFromRd": true,
-  "skipOnAccessFromArchives": true,
-  "onAccess": {
-    "op": "choose",
-    "chooser": "corp",
-    "options": [
-      {
-        "id": "pay",
-        "label": "Pay 4¢: give the Runner 2 tags",
-        "effect": {
-          "op": "seq",
-          "effects": [
-            {
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "mustRevealWhenAccessedFromRd",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "skipOnAccessFromArchives",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "access",
+      "instructions": {
+        "op": "choose",
+        "chooser": "corp",
+        "options": [
+          {
+            "id": "pay",
+            "label": "Pay 4¢: give the Runner 2 tags",
+            "effect": {
+              "op": "seq",
+              "effects": [
+                {
+                  "op": "do",
+                  "action": {
+                    "kind": "lose_credits",
+                    "side": "corp",
+                    "amount": 4
+                  }
+                },
+                {
+                  "op": "do",
+                  "action": {
+                    "kind": "give_tags",
+                    "amount": 2
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "id": "decline",
+            "label": "Decline",
+            "effect": {
               "op": "do",
               "action": {
-                "kind": "lose_credits",
+                "kind": "gain_credits",
                 "side": "corp",
-                "amount": 4
-              }
-            },
-            {
-              "op": "do",
-              "action": {
-                "kind": "give_tags",
-                "amount": 2
+                "amount": 0
               }
             }
-          ]
-        }
-      },
-      {
-        "id": "decline",
-        "label": "Decline",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "gain_credits",
-            "side": "corp",
-            "amount": 0
           }
-        }
+        ]
       }
-    ]
-  }
+    }
+  ]
 }

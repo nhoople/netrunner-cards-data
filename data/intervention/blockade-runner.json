@@ -10,19 +10,19 @@
     "connection"
   ],
   "installCost": 1,
-  "paidAbilities": [
+  "wave": "intervention",
+  "abilities": [
     {
+      "class": "paid",
       "id": "blockade-runner-draw",
       "label": "[click],[click]: Draw 3 cards. Shuffle 1 card from your grip into your stack",
-      "clickCost": 2,
-      "creditCost": 0,
       "cost": {
         "clicks": 2
       },
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "seq",
         "effects": [
           {
@@ -43,6 +43,5 @@
       },
       "usableByRunnerOnSelfIce": true
     }
-  ],
-  "wave": "intervention"
+  ]
 }

@@ -11,21 +11,32 @@
     "connection"
   ],
   "installCost": 2,
-  "unique": true,
-  "paidAbilitiesOncePerTurn": true,
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "paidAbilitiesOncePerTurn",
+        "value": true
+      }
+    },
+    {
+      "class": "paid",
       "id": "kati-jones-load",
       "label": "[click]: Place 3¢ on Kati Jones",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1
       },
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "place_hosted_credits",
@@ -34,17 +45,16 @@
       }
     },
     {
+      "class": "paid",
       "id": "kati-jones-take",
       "label": "[click]: Take all credits from Kati Jones",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1
       },
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "take_hosted_credits",

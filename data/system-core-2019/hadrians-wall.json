@@ -13,13 +13,26 @@
   "installCost": 10,
   "rezCost": 10,
   "strength": 7,
-  "canAdvance": true,
-  "strengthPerAdvancement": 1,
-  "subroutines": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "canAdvance",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "strengthPerAdvancement",
+        "value": 1
+      }
+    },
+    {
+      "class": "subroutine",
       "id": "hadrians-wall-etr-1",
       "text": "End the run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "end_the_run"
@@ -27,9 +40,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "hadrians-wall-etr-2",
       "text": "End the run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "end_the_run"

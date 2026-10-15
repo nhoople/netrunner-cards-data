@@ -12,11 +12,12 @@
   "installCost": 4,
   "rezCost": 4,
   "strength": 4,
-  "subroutines": [
+  "abilities": [
     {
+      "class": "subroutine",
       "id": "sleipnir-draw",
       "text": "You may draw 1 card.",
-      "effect": {
+      "instructions": {
         "op": "choose",
         "chooser": "corp",
         "options": [
@@ -48,9 +49,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "sleipnir-shuffle",
       "text": "You may shuffle 1 card from HQ or Archives into R&D.",
-      "effect": {
+      "instructions": {
         "op": "choose",
         "chooser": "corp",
         "options": [
@@ -92,9 +94,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "sleipnir-etr",
       "text": "End the run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "end_the_run"

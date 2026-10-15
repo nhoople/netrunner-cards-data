@@ -7,6 +7,7 @@ Spin cycle after Stalwart (floor v1.96.0 → v1.97.0).
 from __future__ import annotations
 
 import json
+from ability_record import classify_card
 import re
 import unicodedata
 from pathlib import Path
@@ -371,7 +372,7 @@ def main():
             skipped.append(cid)
             continue
         path = OUT / f"{cid}.json"
-        path.write_text(json.dumps(mapped, indent=2, ensure_ascii=False) + "\n")
+        path.write_text(json.dumps(classify_card(mapped), indent=2, ensure_ascii=False) + "\n")
         written.append(cid)
 
     pool_ids = [slugify(c["title"]) for c in pack]

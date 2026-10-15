@@ -11,42 +11,45 @@
     "connection"
   ],
   "installCost": 4,
-  "unique": true,
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "paid",
       "id": "the-artist-gain",
       "label": "[click]: Gain 2¢",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1
       },
       "windows": [
         "runner_action_paw"
       ],
-      "oncePerTurn": true,
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "gain_credits",
           "side": "runner",
           "amount": 2
         }
-      }
+      },
+      "flag": "once_per_turn"
     },
     {
+      "class": "paid",
       "id": "the-artist-install",
       "label": "[click]: Install program or hardware, paying 1¢ less",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1
       },
       "windows": [
         "runner_action_paw"
       ],
-      "oncePerTurn": true,
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "install_from_grip_discount",
@@ -56,7 +59,8 @@
           ],
           "discount": 1
         }
-      }
+      },
+      "flag": "once_per_turn"
     }
   ]
 }

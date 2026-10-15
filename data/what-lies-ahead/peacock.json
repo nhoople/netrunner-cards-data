@@ -14,27 +14,32 @@
   "installCost": 3,
   "strength": 2,
   "memoryCost": 1,
-  "breaker": {
-    "breaksSubtype": "code gate",
-    "strength": 2,
-    "breakCredits": 2,
-    "breakMaxSubs": 1,
-    "pumpCredits": 2,
-    "pumpStrength": 3
-  },
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "breaker",
+        "value": {
+          "breaksSubtype": "code gate",
+          "strength": 2,
+          "breakCredits": 2,
+          "breakMaxSubs": 1,
+          "pumpCredits": 2,
+          "pumpStrength": 3
+        }
+      }
+    },
+    {
+      "class": "paid",
       "id": "peacock-pump",
       "label": "Pump Peacock +3 strength",
-      "clickCost": 0,
-      "creditCost": 2,
       "cost": {
         "credits": 2
       },
       "windows": [
         "encounter_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "pump_strength",

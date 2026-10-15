@@ -8,19 +8,25 @@
   "faction": "haas-bioroid",
   "advancementRequirement": 4,
   "agendaPoints": 2,
-  "onScore": {
-    "op": "do",
-    "action": {
-      "kind": "gain_credits",
-      "side": "corp",
-      "amount": 0,
-      "tally": {
-        "count": "rezzed_ice_subtype",
-        "per": 2,
-        "side": "corp",
-        "subtype": "bioroid"
+  "wave": "crimson-dust",
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "score",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "corp",
+          "amount": 0,
+          "tally": {
+            "count": "rezzed_ice_subtype",
+            "per": 2,
+            "side": "corp",
+            "subtype": "bioroid"
+          }
+        }
       }
     }
-  },
-  "wave": "crimson-dust"
+  ]
 }

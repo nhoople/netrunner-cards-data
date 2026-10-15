@@ -10,9 +10,29 @@
   "subtypes": [
     "natural"
   ],
-  "link": 0,
-  "recurringCreditsMax": 3,
-  "recurringSpendFor": [
-    "trash"
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "link",
+        "value": 0
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "recurringCreditsMax",
+        "value": 3
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "recurringSpendFor",
+        "value": [
+          "trash"
+        ]
+      }
+    }
   ]
 }

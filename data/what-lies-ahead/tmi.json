@@ -13,32 +13,37 @@
   "installCost": 3,
   "rezCost": 3,
   "strength": 5,
-  "onRez": {
-    "op": "do",
-    "action": {
-      "kind": "trace",
-      "strength": 2,
-      "onSuccess": {
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "rez",
+      "instructions": {
         "op": "do",
         "action": {
-          "kind": "gain_credits",
-          "side": "corp",
-          "amount": 0
-        }
-      },
-      "onFailure": {
-        "op": "do",
-        "action": {
-          "kind": "derez_source"
+          "kind": "trace",
+          "strength": 2,
+          "onSuccess": {
+            "op": "do",
+            "action": {
+              "kind": "gain_credits",
+              "side": "corp",
+              "amount": 0
+            }
+          },
+          "onFailure": {
+            "op": "do",
+            "action": {
+              "kind": "derez_source"
+            }
+          }
         }
       }
-    }
-  },
-  "subroutines": [
+    },
     {
+      "class": "subroutine",
       "id": "tmi-etr",
       "text": "End the run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "end_the_run"

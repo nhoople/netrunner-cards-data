@@ -12,12 +12,24 @@
   "installCost": 3,
   "rezCost": 3,
   "trashCost": 2,
-  "unique": true,
-  "onFirstNetDamageThisRunOnServer": {
-    "op": "do",
-    "action": {
-      "kind": "tori_hanzo_pay_instead_net"
+  "wave": "honor-and-profit",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "first_net_damage_this_run_on_server",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "tori_hanzo_pay_instead_net"
+        }
+      }
     }
-  },
-  "wave": "honor-and-profit"
+  ]
 }

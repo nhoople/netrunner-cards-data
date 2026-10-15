@@ -12,13 +12,25 @@
   ],
   "installCost": 0,
   "memoryCost": 1,
-  "installOnIce": true,
-  "onPassHost": {
-    "op": "do",
-    "action": {
-      "kind": "gain_credits",
-      "side": "runner",
-      "amount": 2
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "installOnIce",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "pass_host",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "runner",
+          "amount": 2
+        }
+      }
     }
-  }
+  ]
 }

@@ -12,26 +12,41 @@
   "installCost": 5,
   "rezCost": 5,
   "strength": 5,
-  "etrSubroutinesPerPowerCounter": true,
-  "onRez": {
-    "op": "do",
-    "action": {
-      "kind": "add_power_counter",
-      "amount": 4
-    }
-  },
-  "onTurnBegin": {
-    "op": "do",
-    "action": {
-      "kind": "remove_power_counter",
-      "amount": 1
-    }
-  },
-  "subroutines": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "etrSubroutinesPerPowerCounter",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "rez",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "add_power_counter",
+          "amount": 4
+        }
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "turn_begin",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "remove_power_counter",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "class": "subroutine",
       "id": "env-trash",
       "text": "Trash this ice.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "trash_self"

@@ -11,12 +11,18 @@
   ],
   "advancementRequirement": 4,
   "agendaPoints": 2,
-  "onScore": {
-    "op": "do",
-    "action": {
-      "kind": "lose_credits",
-      "side": "runner",
-      "amount": 7
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "score",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "lose_credits",
+          "side": "runner",
+          "amount": 7
+        }
+      }
     }
-  }
+  ]
 }

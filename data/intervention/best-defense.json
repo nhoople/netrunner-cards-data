@@ -10,11 +10,16 @@
     "gray ops"
   ],
   "playCost": 2,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "trash_installed_with_install_cost_lte_tags"
+  "wave": "intervention",
+  "abilities": [
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "trash_installed_with_install_cost_lte_tags"
+        }
+      }
     }
-  },
-  "wave": "intervention"
+  ]
 }

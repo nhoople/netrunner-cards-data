@@ -8,12 +8,23 @@
   "unsupported": [],
   "faction": "shaper",
   "playCost": 1,
-  "playRequiresSuccessfulAllCentralsThisTurn": true,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "add_to_runner_score_as_agenda",
-      "agendaPoints": 1
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "playRequiresSuccessfulAllCentralsThisTurn",
+        "value": true
+      }
+    },
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "add_to_runner_score_as_agenda",
+          "agendaPoints": 1
+        }
+      }
     }
-  }
+  ]
 }

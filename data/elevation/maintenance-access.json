@@ -11,9 +11,23 @@
     "double"
   ],
   "playCost": 0,
-  "playAdditionalClick": true,
-  "runEvent": {
-    "servers": "archives",
-    "redirectApproachArchivesToHq": true
-  }
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "playAdditionalClick",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "runEvent",
+        "value": {
+          "servers": "archives",
+          "redirectApproachArchivesToHq": true
+        }
+      }
+    }
+  ]
 }

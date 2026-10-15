@@ -12,11 +12,17 @@
   "installCost": 0,
   "rezCost": 0,
   "trashCost": 0,
-  "onAccessNotFromRd": {
-    "op": "do",
-    "action": {
-      "kind": "shi_kyu_spend_for_net_damage"
+  "wave": "honor-and-profit",
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "access_not_from_rd",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "shi_kyu_spend_for_net_damage"
+        }
+      }
     }
-  },
-  "wave": "honor-and-profit"
+  ]
 }

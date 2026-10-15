@@ -12,18 +12,25 @@
   "installCost": 2,
   "rezCost": 2,
   "strength": 0,
-  "gainCreditWheneverRunnerBreaksSubroutine": true,
-  "subroutines": [
+  "wave": "democracy-and-dogma",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "gainCreditWheneverRunnerBreaksSubroutine",
+        "value": true
+      }
+    },
+    {
+      "class": "subroutine",
       "id": "bailiff-etr",
       "text": "End the run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "end_the_run"
         }
       }
     }
-  ],
-  "wave": "democracy-and-dogma"
+  ]
 }

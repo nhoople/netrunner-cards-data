@@ -11,38 +11,52 @@
     "priority"
   ],
   "playCost": 0,
-  "playRequiresFirstClick": true,
-  "remainderOfTurnOnInstallPrintedCostGte": {
-    "min": 1,
-    "effect": {
-      "op": "choose",
-      "chooser": "runner",
-      "options": [
-        {
-          "id": "draw",
-          "label": "Draw 1 card",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "playRequiresFirstClick",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "remainderOfTurnOnInstallPrintedCostGte",
+        "value": {
+          "min": 1,
           "effect": {
-            "op": "do",
-            "action": {
-              "kind": "draw",
-              "side": "runner",
-              "amount": 1
-            }
-          }
-        },
-        {
-          "id": "gain",
-          "label": "Gain 1¢",
-          "effect": {
-            "op": "do",
-            "action": {
-              "kind": "gain_credits",
-              "side": "runner",
-              "amount": 1
-            }
+            "op": "choose",
+            "chooser": "runner",
+            "options": [
+              {
+                "id": "draw",
+                "label": "Draw 1 card",
+                "effect": {
+                  "op": "do",
+                  "action": {
+                    "kind": "draw",
+                    "side": "runner",
+                    "amount": 1
+                  }
+                }
+              },
+              {
+                "id": "gain",
+                "label": "Gain 1¢",
+                "effect": {
+                  "op": "do",
+                  "action": {
+                    "kind": "gain_credits",
+                    "side": "runner",
+                    "amount": 1
+                  }
+                }
+              }
+            ]
           }
         }
-      ]
+      }
     }
-  }
+  ]
 }

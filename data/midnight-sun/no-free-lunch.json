@@ -7,19 +7,18 @@
   "side": "runner",
   "unsupported": [],
   "installCost": 0,
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "paid",
       "id": "nfl-credits",
       "label": "Trash No Free Lunch: gain 3¢",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "trashSelf": true
       },
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "gain_credits",
@@ -29,17 +28,16 @@
       }
     },
     {
+      "class": "paid",
       "id": "nfl-tag",
       "label": "Trash No Free Lunch: remove 1 tag",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "trashSelf": true
       },
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "remove_tags",

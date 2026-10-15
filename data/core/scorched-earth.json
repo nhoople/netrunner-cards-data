@@ -11,12 +11,23 @@
     "black ops"
   ],
   "playCost": 3,
-  "playRequiresTagged": true,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "meat_damage",
-      "amount": 4
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "playRequiresTagged",
+        "value": true
+      }
+    },
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "meat_damage",
+          "amount": 4
+        }
+      }
     }
-  }
+  ]
 }

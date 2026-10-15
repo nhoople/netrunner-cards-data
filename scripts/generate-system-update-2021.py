@@ -12,6 +12,7 @@ Usage: python3 scripts/generate-system-update-2021.py
 from __future__ import annotations
 
 import json
+from ability_record import classify_card
 import re
 import unicodedata
 from pathlib import Path
@@ -1152,7 +1153,7 @@ def main():
             continue
         # Drop null playCost for psychographics-style if needed
         path = OUT / f"{cid}.json"
-        path.write_text(json.dumps(mapped, indent=2, ensure_ascii=False) + "\n")
+        path.write_text(json.dumps(classify_card(mapped), indent=2, ensure_ascii=False) + "\n")
         written.append(cid)
 
     print(f"Wrote {len(written)} cards to {OUT}")

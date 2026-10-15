@@ -11,6 +11,14 @@
   ],
   "advancementRequirement": 4,
   "agendaPoints": 2,
-  "advancementRequirementReductionPerSameTitleAnywhere": 1,
-  "wave": "honor-and-profit"
+  "wave": "honor-and-profit",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "advancementRequirementReductionPerSameTitleAnywhere",
+        "value": 1
+      }
+    }
+  ]
 }

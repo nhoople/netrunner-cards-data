@@ -13,11 +13,13 @@
   "installCost": 4,
   "rezCost": 4,
   "strength": 2,
-  "subroutines": [
+  "wave": "quorum",
+  "abilities": [
     {
+      "class": "subroutine",
       "id": "veritas-gain",
       "text": "The Corp gains 2¢.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "gain_credits",
@@ -27,9 +29,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "veritas-lose",
       "text": "The Runner loses 2¢.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "lose_credits",
@@ -39,9 +42,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "veritas-trace",
       "text": "Trace[2]. If successful, give the Runner 1 tag.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "trace",
@@ -56,6 +60,5 @@
         }
       }
     }
-  ],
-  "wave": "quorum"
+  ]
 }

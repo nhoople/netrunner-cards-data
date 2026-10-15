@@ -12,25 +12,36 @@
     "liability"
   ],
   "playCost": 1,
-  "playRequiresRunnerAccessedCardLastTurn": true,
-  "onPlay": {
-    "op": "seq",
-    "effects": [
-      {
-        "op": "do",
-        "action": {
-          "kind": "trash_installed_resource_with_subtype",
-          "subtype": "connection",
-          "pick": "choose"
-        }
-      },
-      {
-        "op": "do",
-        "action": {
-          "kind": "give_bad_publicity",
-          "amount": 1
-        }
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "playRequiresRunnerAccessedCardLastTurn",
+        "value": true
       }
-    ]
-  }
+    },
+    {
+      "class": "play",
+      "instructions": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "trash_installed_resource_with_subtype",
+              "subtype": "connection",
+              "pick": "choose"
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "give_bad_publicity",
+              "amount": 1
+            }
+          }
+        ]
+      }
+    }
+  ]
 }

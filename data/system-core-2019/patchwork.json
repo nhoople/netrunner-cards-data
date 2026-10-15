@@ -11,7 +11,27 @@
     "console"
   ],
   "installCost": 4,
-  "unique": true,
-  "muBonus": 1,
-  "playOrInstallDiscountByTrashingGripOncePerTurn": 2
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "muBonus",
+        "value": 1
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "playOrInstallDiscountByTrashingGripOncePerTurn",
+        "value": 2
+      }
+    }
+  ]
 }

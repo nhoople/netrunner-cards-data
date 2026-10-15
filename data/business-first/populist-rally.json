@@ -7,14 +7,25 @@
   "unsupported": [],
   "faction": "neutral-runner",
   "playCost": 2,
-  "playRequiresInstalledSubtype": "seedy",
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "allotted_clicks_next_turn",
-      "side": "corp",
-      "delta": -1
+  "wave": "business-first",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "playRequiresInstalledSubtype",
+        "value": "seedy"
+      }
+    },
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "allotted_clicks_next_turn",
+          "side": "corp",
+          "delta": -1
+        }
+      }
     }
-  },
-  "wave": "business-first"
+  ]
 }

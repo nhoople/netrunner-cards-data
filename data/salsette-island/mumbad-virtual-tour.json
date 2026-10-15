@@ -12,7 +12,21 @@
   "installCost": 0,
   "rezCost": 0,
   "trashCost": 5,
-  "zeroInfluenceIfAssetsInDeckGte": 7,
-  "mustTrashWhenAccessedWhileInstalled": true,
-  "wave": "salsette-island"
+  "wave": "salsette-island",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "zeroInfluenceIfAssetsInDeckGte",
+        "value": 7
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "mustTrashWhenAccessedWhileInstalled",
+        "value": true
+      }
+    }
+  ]
 }

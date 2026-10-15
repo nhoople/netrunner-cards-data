@@ -12,34 +12,46 @@
   "installCost": 2,
   "rezCost": 2,
   "trashCost": 2,
-  "unique": true,
-  "onPassRezzedIceProtectingThisServer": {
-    "op": "choose",
-    "chooser": "corp",
-    "options": [
-      {
-        "id": "accept",
-        "label": "Reveal and trash a copy from HQ; Runner encounters again",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "twins_trash_hq_copy_reencounter"
-          }
-        }
-      },
-      {
-        "id": "decline",
-        "label": "Decline",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "gain_credits",
-            "side": "corp",
-            "amount": 0
-          }
-        }
+  "wave": "order-and-chaos",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
       }
-    ]
-  },
-  "wave": "order-and-chaos"
+    },
+    {
+      "class": "conditional",
+      "trigger": "pass_rezzed_ice_protecting_this_server",
+      "instructions": {
+        "op": "choose",
+        "chooser": "corp",
+        "options": [
+          {
+            "id": "accept",
+            "label": "Reveal and trash a copy from HQ; Runner encounters again",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "twins_trash_hq_copy_reencounter"
+              }
+            }
+          },
+          {
+            "id": "decline",
+            "label": "Decline",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "gain_credits",
+                "side": "corp",
+                "amount": 0
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
 }

@@ -11,26 +11,44 @@
     "ritzy"
   ],
   "installCost": 4,
-  "powerCountersOnInstall": 3,
-  "onTurnBegin": {
-    "op": "seq",
-    "effects": [
-      {
-        "op": "do",
-        "action": {
-          "kind": "remove_power_counter",
-          "amount": 1
-        }
-      },
-      {
-        "op": "do",
-        "action": {
-          "kind": "draw",
-          "side": "runner",
-          "amount": 2
-        }
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "powerCountersOnInstall",
+        "value": 3
       }
-    ]
-  },
-  "trashWhenPowerEmpty": true
+    },
+    {
+      "class": "conditional",
+      "trigger": "turn_begin",
+      "instructions": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "remove_power_counter",
+              "amount": 1
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "draw",
+              "side": "runner",
+              "amount": 2
+            }
+          }
+        ]
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "trashWhenPowerEmpty",
+        "value": true
+      }
+    }
+  ]
 }

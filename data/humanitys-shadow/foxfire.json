@@ -8,18 +8,23 @@
   "unsupported": [],
   "faction": "neutral-corp",
   "playCost": 0,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "trace",
-      "strength": 7,
-      "onSuccess": {
+  "abilities": [
+    {
+      "class": "play",
+      "instructions": {
         "op": "do",
         "action": {
-          "kind": "trash_virtual_resource_or_link_card",
-          "pick": "choose"
+          "kind": "trace",
+          "strength": 7,
+          "onSuccess": {
+            "op": "do",
+            "action": {
+              "kind": "trash_virtual_resource_or_link_card",
+              "pick": "choose"
+            }
+          }
         }
       }
     }
-  }
+  ]
 }

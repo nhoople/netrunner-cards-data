@@ -11,13 +11,24 @@
     "gray ops"
   ],
   "playCost": 4,
-  "playAdditionalClick": true,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "remove_bad_publicity_up_to",
-      "max": 2
+  "wave": "double-time",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "playAdditionalClick",
+        "value": true
+      }
+    },
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "remove_bad_publicity_up_to",
+          "max": 2
+        }
+      }
     }
-  },
-  "wave": "double-time"
+  ]
 }

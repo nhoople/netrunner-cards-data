@@ -12,11 +12,13 @@
     "sentry",
     "destroyer"
   ],
-  "subroutines": [
+  "unsupported": [],
+  "abilities": [
     {
+      "class": "subroutine",
       "id": "ballista",
       "text": "Trash 1 program or end the run.",
-      "effect": {
+      "instructions": {
         "op": "choose",
         "chooser": "corp",
         "options": [
@@ -44,6 +46,5 @@
         ]
       }
     }
-  ],
-  "unsupported": []
+  ]
 }

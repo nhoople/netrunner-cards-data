@@ -14,17 +14,18 @@
   "installCost": 3,
   "rezCost": 3,
   "strength": 5,
-  "subroutines": [
+  "wave": "all-that-remains",
+  "abilities": [
     {
+      "class": "subroutine",
       "id": "gemini-trace",
       "text": "Trace[2]. If successful, do 1 net damage. If strength ≥5, do 1 net damage.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "trace_subroutine"
         }
       }
     }
-  ],
-  "wave": "all-that-remains"
+  ]
 }

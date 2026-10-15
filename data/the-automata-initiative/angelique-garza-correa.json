@@ -14,56 +14,64 @@
   "installCost": 0,
   "rezCost": 0,
   "trashCost": 2,
-  "onAccessRequiresRezzed": true,
-  "onAccess": {
-    "op": "choose",
-    "chooser": "corp",
-    "options": [
-      {
-        "id": "pay",
-        "label": "Pay 2¢: do 2 meat damage",
-        "effect": {
-          "op": "seq",
-          "effects": [
-            {
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "onAccessRequiresRezzed",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "access",
+      "instructions": {
+        "op": "choose",
+        "chooser": "corp",
+        "options": [
+          {
+            "id": "pay",
+            "label": "Pay 2¢: do 2 meat damage",
+            "effect": {
+              "op": "seq",
+              "effects": [
+                {
+                  "op": "do",
+                  "action": {
+                    "kind": "lose_credits",
+                    "side": "corp",
+                    "amount": 2
+                  }
+                },
+                {
+                  "op": "do",
+                  "action": {
+                    "kind": "meat_damage",
+                    "amount": 2
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "id": "decline",
+            "label": "Decline",
+            "effect": {
               "op": "do",
               "action": {
-                "kind": "lose_credits",
+                "kind": "gain_credits",
                 "side": "corp",
-                "amount": 2
-              }
-            },
-            {
-              "op": "do",
-              "action": {
-                "kind": "meat_damage",
-                "amount": 2
+                "amount": 0
               }
             }
-          ]
-        }
-      },
-      {
-        "id": "decline",
-        "label": "Decline",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "gain_credits",
-            "side": "corp",
-            "amount": 0
           }
-        }
+        ]
       }
-    ]
-  },
-  "paidAbilities": [
+    },
     {
+      "class": "paid",
       "id": "angelique-expend",
       "label": "Threat 3 → [click], 1¢, trash from HQ: do 1 meat damage",
-      "clickCost": 1,
-      "creditCost": 1,
-      "requiresThreat": 3,
       "cost": {
         "clicks": 1,
         "credits": 1,
@@ -72,14 +80,17 @@
       "windows": [
         "corp_action_paw"
       ],
-      "usableFromHq": true,
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "meat_damage",
           "amount": 1
         }
-      }
+      },
+      "flag": {
+        "threat": 3
+      },
+      "usableFromHq": true
     }
   ]
 }

@@ -8,12 +8,24 @@
   "faction": "criminal",
   "installCost": 0,
   "memoryCost": 1,
-  "playRequiresSuccessfulHqRunThisTurn": true,
-  "onCorpDrawCard": {
-    "op": "do",
-    "action": {
-      "kind": "may_pay_reveal_top"
+  "wave": "honor-and-profit",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "playRequiresSuccessfulHqRunThisTurn",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "corp_draw_card",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "may_pay_reveal_top"
+        }
+      }
     }
-  },
-  "wave": "honor-and-profit"
+  ]
 }

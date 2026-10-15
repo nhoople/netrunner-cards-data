@@ -10,6 +10,14 @@
     "connection"
   ],
   "installCost": 1,
-  "gainCreditOnTrashAbilityUse": true,
-  "wave": "business-first"
+  "wave": "business-first",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "gainCreditOnTrashAbilityUse",
+        "value": true
+      }
+    }
+  ]
 }

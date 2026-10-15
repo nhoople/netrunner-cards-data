@@ -11,34 +11,43 @@
   ],
   "advancementRequirement": 3,
   "agendaPoints": 1,
-  "onScore": {
-    "op": "do",
-    "action": {
-      "kind": "add_agenda_counter",
-      "amount": 3
-    }
-  },
-  "paidAbilitiesOncePerTurn": true,
-  "paidAbilities": [
+  "wave": "order-and-chaos",
+  "abilities": [
     {
+      "class": "conditional",
+      "trigger": "score",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "add_agenda_counter",
+          "amount": 3
+        }
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "paidAbilitiesOncePerTurn",
+        "value": true
+      }
+    },
+    {
+      "class": "paid",
       "id": "firmware-advance",
       "label": "Hosted agenda counter: Place 1 advancement on advanceable ice",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "agendaCounters": 1
       },
       "windows": [
         "corp_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "firmware_place_advancement_on_advanceable_ice"
         }
       },
-      "oncePerTurn": true
+      "flag": "once_per_turn"
     }
-  ],
-  "wave": "order-and-chaos"
+  ]
 }

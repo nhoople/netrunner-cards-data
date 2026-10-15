@@ -13,14 +13,26 @@
   "installCost": 3,
   "rezCost": 3,
   "trashCost": 4,
-  "remoteOnly": true,
-  "onTurnBegin": {
-    "op": "do",
-    "action": {
-      "kind": "place_advancements",
-      "amount": 1,
-      "sameServerRootAsSource": true,
-      "pick": "choose"
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "remoteOnly",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "turn_begin",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "place_advancements",
+          "amount": 1,
+          "sameServerRootAsSource": true,
+          "pick": "choose"
+        }
+      }
     }
-  }
+  ]
 }

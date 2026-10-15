@@ -10,11 +10,23 @@
   "subtypes": [
     "g-mod"
   ],
-  "link": 0,
-  "onSuccessfulRun": {
-    "op": "do",
-    "action": {
-      "kind": "ryo_phoenix_on_successful_run"
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "link",
+        "value": 0
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "successful_run",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "ryo_phoenix_on_successful_run"
+        }
+      }
     }
-  }
+  ]
 }

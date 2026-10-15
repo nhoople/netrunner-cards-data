@@ -7,13 +7,19 @@
   "unsupported": [],
   "faction": "criminal",
   "installCost": 0,
-  "mayGainCreditOnFirstCorpCardAbilityCreditGainEachTurn": true,
-  "paidAbilities": [
+  "wave": "kampala-ascendent",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "mayGainCreditOnFirstCorpCardAbilityCreditGainEachTurn",
+        "value": true
+      }
+    },
+    {
+      "class": "paid",
       "id": "pad-tap-corp-trash",
       "label": "[click], 3¢: Trash PAD Tap (Corp only)",
-      "clickCost": 1,
-      "creditCost": 3,
       "cost": {
         "clicks": 1,
         "credits": 3
@@ -21,7 +27,7 @@
       "windows": [
         "corp_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "trash_self"
@@ -29,6 +35,5 @@
       },
       "usableByAnyPlayer": true
     }
-  ],
-  "wave": "kampala-ascendent"
+  ]
 }

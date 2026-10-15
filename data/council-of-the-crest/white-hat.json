@@ -7,12 +7,23 @@
   "unsupported": [],
   "faction": "sunny-lebeau",
   "playCost": 0,
-  "playRequiresSuccessfulCentralRunThisTurn": true,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "cotc_white_hat"
+  "wave": "council-of-the-crest",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "playRequiresSuccessfulCentralRunThisTurn",
+        "value": true
+      }
+    },
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "cotc_white_hat"
+        }
+      }
     }
-  },
-  "wave": "council-of-the-crest"
+  ]
 }

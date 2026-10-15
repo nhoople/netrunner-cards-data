@@ -11,15 +11,33 @@
     "transaction"
   ],
   "playCost": 0,
-  "lingerAsCurrent": true,
-  "currentTrashOnAgendaStolen": true,
-  "onSuccessfulRun": {
-    "op": "do",
-    "action": {
-      "kind": "gain_credits",
-      "side": "corp",
-      "amount": 1
+  "wave": "the-spaces-between",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "lingerAsCurrent",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "currentTrashOnAgendaStolen",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "successful_run",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "corp",
+          "amount": 1
+        }
+      }
     }
-  },
-  "wave": "the-spaces-between"
+  ]
 }

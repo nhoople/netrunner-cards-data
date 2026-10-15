@@ -10,6 +10,14 @@
     "virtual"
   ],
   "installCost": 2,
-  "iceNotInnermostInstallCostIncrease": 1,
-  "wave": "daedalus-complex"
+  "wave": "daedalus-complex",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "iceNotInnermostInstallCostIncrease",
+        "value": 1
+      }
+    }
+  ]
 }

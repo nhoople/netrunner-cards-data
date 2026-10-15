@@ -12,18 +12,30 @@
   "installCost": 1,
   "rezCost": 1,
   "trashCost": 4,
-  "canAdvance": true,
-  "onTurnBegin": {
-    "op": "do",
-    "action": {
-      "kind": "gain_credits",
-      "side": "corp",
-      "amount": 0,
-      "tally": {
-        "count": "source_advancement_tokens",
-        "per": 1,
-        "side": "source"
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "canAdvance",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "turn_begin",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "corp",
+          "amount": 0,
+          "tally": {
+            "count": "source_advancement_tokens",
+            "per": 1,
+            "side": "source"
+          }
+        }
       }
     }
-  }
+  ]
 }

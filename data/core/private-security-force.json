@@ -12,26 +12,25 @@
   ],
   "advancementRequirement": 4,
   "agendaPoints": 2,
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "paid",
       "id": "private-security-force-meat",
       "label": "[click]: Do 1 meat damage (Runner tagged)",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1
       },
       "windows": [
         "corp_action_paw"
       ],
-      "requireRunnerTagged": true,
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "meat_damage",
           "amount": 1
         }
-      }
+      },
+      "requireRunnerTagged": true
     }
   ]
 }

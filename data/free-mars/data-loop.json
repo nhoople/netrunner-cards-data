@@ -12,18 +12,24 @@
   "installCost": 7,
   "rezCost": 7,
   "strength": 4,
-  "onEncounter": {
-    "op": "do",
-    "action": {
-      "kind": "choose_n_grip_to_stack_top",
-      "count": 2
-    }
-  },
-  "subroutines": [
+  "wave": "free-mars",
+  "abilities": [
     {
+      "class": "conditional",
+      "trigger": "encounter",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "choose_n_grip_to_stack_top",
+          "count": 2
+        }
+      }
+    },
+    {
+      "class": "subroutine",
       "id": "data-loop-etr-if-tagged",
       "text": "End the run if the Runner is tagged.",
-      "effect": {
+      "instructions": {
         "op": "if",
         "cond": {
           "op": "runner_tagged"
@@ -37,15 +43,15 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "data-loop-etr",
       "text": "End the run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "end_the_run"
         }
       }
     }
-  ],
-  "wave": "free-mars"
+  ]
 }

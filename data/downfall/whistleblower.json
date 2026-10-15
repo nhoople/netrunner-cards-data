@@ -11,11 +11,23 @@
     "connection"
   ],
   "installCost": 2,
-  "unique": true,
-  "onSuccessfulRun": {
-    "op": "do",
-    "action": {
-      "kind": "may_trash_name_agenda_steal_ignore_costs"
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "successful_run",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "may_trash_name_agenda_steal_ignore_costs"
+        }
+      }
     }
-  }
+  ]
 }

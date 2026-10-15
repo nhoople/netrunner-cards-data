@@ -11,11 +11,22 @@
     "condition"
   ],
   "playCost": 1,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "rez_and_host"
+  "abilities": [
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "rez_and_host"
+        }
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "trashHostIfAllSubsBrokenThisEncounter",
+        "value": true
+      }
     }
-  },
-  "trashHostIfAllSubsBrokenThisEncounter": true
+  ]
 }

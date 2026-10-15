@@ -12,8 +12,34 @@
   ],
   "installCost": 0,
   "memoryCost": 0,
-  "unique": true,
-  "hostsAnyProgramMemoryCostLte": 99,
-  "maxHostedCards": 99,
-  "gainCreditsWhenRunnerHostsProgramOnSelf": 1
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "hostsAnyProgramMemoryCostLte",
+        "value": 99
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "maxHostedCards",
+        "value": 99
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "gainCreditsWhenRunnerHostsProgramOnSelf",
+        "value": 1
+      }
+    }
+  ]
 }

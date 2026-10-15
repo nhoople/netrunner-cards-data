@@ -12,19 +12,25 @@
     "code gate",
     "advertisement"
   ],
-  "onEncounter": {
-    "op": "do",
-    "action": {
-      "kind": "gain_credits",
-      "side": "corp",
-      "amount": 1
-    }
-  },
-  "subroutines": [
+  "unsupported": [],
+  "abilities": [
     {
+      "class": "conditional",
+      "trigger": "encounter",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "corp",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "class": "subroutine",
       "id": "puw-etr",
       "text": "End the run unless the Runner pays 1¢.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "unless",
@@ -46,6 +52,5 @@
         }
       }
     }
-  ],
-  "unsupported": []
+  ]
 }

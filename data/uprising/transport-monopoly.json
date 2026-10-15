@@ -11,19 +11,22 @@
   ],
   "advancementRequirement": 4,
   "agendaPoints": 2,
-  "onScore": {
-    "op": "do",
-    "action": {
-      "kind": "add_agenda_counter",
-      "amount": 2
-    }
-  },
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "conditional",
+      "trigger": "score",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "add_agenda_counter",
+          "amount": 2
+        }
+      }
+    },
+    {
+      "class": "paid",
       "id": "transport-monopoly-block",
       "label": "Hosted agenda counter: this run cannot be declared successful",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "agendaCounters": 1
       },
@@ -32,14 +35,14 @@
         "encounter_paw",
         "approach_server_paw"
       ],
-      "oncePerTurn": true,
-      "requireDuringRun": true,
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "prevent_declare_run_successful"
         }
-      }
+      },
+      "flag": "once_per_turn",
+      "requireDuringRun": true
     }
   ]
 }

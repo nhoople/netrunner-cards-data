@@ -11,53 +11,65 @@
   ],
   "installCost": 1,
   "memoryCost": 1,
-  "installOnIce": true,
-  "onPassHost": {
-    "op": "choose",
-    "chooser": "runner",
-    "options": [
-      {
-        "id": "gain-click",
-        "label": "Gain [click]",
-        "effect": {
-          "op": "seq",
-          "effects": [
-            {
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "installOnIce",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "pass_host",
+      "instructions": {
+        "op": "choose",
+        "chooser": "runner",
+        "options": [
+          {
+            "id": "gain-click",
+            "label": "Gain [click]",
+            "effect": {
+              "op": "seq",
+              "effects": [
+                {
+                  "op": "do",
+                  "action": {
+                    "kind": "gain_clicks",
+                    "side": "runner",
+                    "amount": 1
+                  }
+                },
+                {
+                  "op": "if",
+                  "cond": {
+                    "op": "clicks_gained_this_run_gte",
+                    "amount": 2
+                  },
+                  "then": {
+                    "op": "do",
+                    "action": {
+                      "kind": "return_source_to_grip"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "id": "decline",
+            "label": "Decline",
+            "effect": {
               "op": "do",
               "action": {
-                "kind": "gain_clicks",
+                "kind": "gain_credits",
                 "side": "runner",
-                "amount": 1
-              }
-            },
-            {
-              "op": "if",
-              "cond": {
-                "op": "clicks_gained_this_run_gte",
-                "amount": 2
-              },
-              "then": {
-                "op": "do",
-                "action": {
-                  "kind": "return_source_to_grip"
-                }
+                "amount": 0
               }
             }
-          ]
-        }
-      },
-      {
-        "id": "decline",
-        "label": "Decline",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "gain_credits",
-            "side": "runner",
-            "amount": 0
           }
-        }
+        ]
       }
-    ]
-  }
+    }
+  ]
 }

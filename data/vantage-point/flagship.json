@@ -12,11 +12,37 @@
   "installCost": 3,
   "rezCost": 3,
   "trashCost": 4,
-  "unique": true,
-  "installServers": [
-    "hq",
-    "rd"
-  ],
-  "runsCannotBeSuccessful": true,
-  "maxAccessOtherThanSelf": 1
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "installServers",
+        "value": [
+          "hq",
+          "rd"
+        ]
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "runsCannotBeSuccessful",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "maxAccessOtherThanSelf",
+        "value": 1
+      }
+    }
+  ]
 }

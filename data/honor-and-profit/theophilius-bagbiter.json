@@ -10,14 +10,32 @@
     "connection"
   ],
   "installCost": 3,
-  "unique": true,
-  "onInstall": {
-    "op": "do",
-    "action": {
-      "kind": "lose_all_credits",
-      "side": "runner"
+  "wave": "honor-and-profit",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "install",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "lose_all_credits",
+          "side": "runner"
+        }
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "handSizeEqualsCredits",
+        "value": true
+      }
     }
-  },
-  "handSizeEqualsCredits": true,
-  "wave": "honor-and-profit"
+  ]
 }

@@ -12,5 +12,13 @@
   "installCost": 2,
   "rezCost": 2,
   "trashCost": 2,
-  "creditsOnTrashFromThisServer": 2
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "creditsOnTrashFromThisServer",
+        "value": 2
+      }
+    }
+  ]
 }

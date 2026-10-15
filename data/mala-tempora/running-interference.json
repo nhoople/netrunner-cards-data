@@ -12,9 +12,23 @@
     "run"
   ],
   "playCost": 4,
-  "playAdditionalClick": true,
-  "runEvent": {
-    "servers": "any",
-    "iceRezAdditionalCostEqualsPrintedRezCost": true
-  }
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "playAdditionalClick",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "runEvent",
+        "value": {
+          "servers": "any",
+          "iceRezAdditionalCostEqualsPrintedRezCost": true
+        }
+      }
+    }
+  ]
 }

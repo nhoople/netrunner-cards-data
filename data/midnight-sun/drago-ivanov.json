@@ -12,13 +12,18 @@
   "installCost": 0,
   "rezCost": 0,
   "trashCost": 1,
-  "canAdvance": true,
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "canAdvance",
+        "value": true
+      }
+    },
+    {
+      "class": "paid",
       "id": "drago-tag",
       "label": "Remove 2 advancements: give Runner 1 tag",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1,
         "advancementTokens": 2
@@ -26,7 +31,7 @@
       "windows": [
         "corp_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "give_tags",

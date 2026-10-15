@@ -11,46 +11,57 @@
     "double"
   ],
   "playCost": 0,
-  "playAdditionalClick": true,
-  "onPlay": {
-    "op": "seq",
-    "effects": [
-      {
-        "op": "choose",
-        "chooser": "corp",
-        "options": [
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "playAdditionalClick",
+        "value": true
+      }
+    },
+    {
+      "class": "play",
+      "instructions": {
+        "op": "seq",
+        "effects": [
           {
-            "id": "arrange",
-            "label": "Look at top 4 of R&D and arrange",
-            "effect": {
-              "op": "do",
-              "action": {
-                "kind": "look_top_n_rd_arrange",
-                "n": 4
+            "op": "choose",
+            "chooser": "corp",
+            "options": [
+              {
+                "id": "arrange",
+                "label": "Look at top 4 of R&D and arrange",
+                "effect": {
+                  "op": "do",
+                  "action": {
+                    "kind": "look_top_n_rd_arrange",
+                    "n": 4
+                  }
+                }
+              },
+              {
+                "id": "decline",
+                "label": "Decline to look",
+                "effect": {
+                  "op": "do",
+                  "action": {
+                    "kind": "gain_credits",
+                    "side": "corp",
+                    "amount": 0
+                  }
+                }
               }
-            }
+            ]
           },
           {
-            "id": "decline",
-            "label": "Decline to look",
-            "effect": {
-              "op": "do",
-              "action": {
-                "kind": "gain_credits",
-                "side": "corp",
-                "amount": 0
-              }
+            "op": "do",
+            "action": {
+              "kind": "reveal_top_n_rd",
+              "n": 4
             }
           }
         ]
-      },
-      {
-        "op": "do",
-        "action": {
-          "kind": "reveal_top_n_rd",
-          "n": 4
-        }
       }
-    ]
-  }
+    }
+  ]
 }

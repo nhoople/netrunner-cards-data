@@ -10,6 +10,20 @@
   "installCost": 2,
   "rezCost": 2,
   "trashCost": 2,
-  "gainCreditsOnFirstRunnerClickSpendThisTurn": 2,
-  "refundCreditsIfRunBeginsOnThisServerDuringClickAction": 2
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "gainCreditsOnFirstRunnerClickSpendThisTurn",
+        "value": 2
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "refundCreditsIfRunBeginsOnThisServerDuringClickAction",
+        "value": 2
+      }
+    }
+  ]
 }

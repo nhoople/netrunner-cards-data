@@ -14,17 +14,18 @@
   "installCost": 5,
   "rezCost": 5,
   "strength": 4,
-  "subroutines": [
+  "wave": "all-that-remains",
+  "abilities": [
     {
+      "class": "subroutine",
       "id": "sagittarius-trace",
       "text": "Trace[2]. If successful, trash 1 program. If strength ≥5, trash 1 program.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "sagittarius_trace_subroutine"
         }
       }
     }
-  ],
-  "wave": "all-that-remains"
+  ]
 }

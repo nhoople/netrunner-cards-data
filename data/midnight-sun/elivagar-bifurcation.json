@@ -11,11 +11,17 @@
   ],
   "advancementRequirement": 2,
   "agendaPoints": 1,
-  "onScore": {
-    "op": "do",
-    "action": {
-      "kind": "may_derez_installed",
-      "excludeSelf": true
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "score",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "may_derez_installed",
+          "excludeSelf": true
+        }
+      }
     }
-  }
+  ]
 }

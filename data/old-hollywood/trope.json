@@ -8,19 +8,23 @@
   "faction": "anarch",
   "installCost": 1,
   "memoryCost": 1,
-  "onTurnBegin": {
-    "op": "do",
-    "action": {
-      "kind": "add_power_counter",
-      "amount": 1
-    }
-  },
-  "paidAbilities": [
+  "wave": "old-hollywood",
+  "abilities": [
     {
+      "class": "conditional",
+      "trigger": "turn_begin",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "add_power_counter",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "class": "paid",
       "id": "trope-shuffle",
       "label": "[click], remove Trope from the game: Shuffle 1 heap card into stack per power counter",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1,
         "rfgSelf": true
@@ -28,13 +32,12 @@
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "shuffle_n_heap_cards_into_stack_per_power_counter"
         }
       }
     }
-  ],
-  "wave": "old-hollywood"
+  ]
 }

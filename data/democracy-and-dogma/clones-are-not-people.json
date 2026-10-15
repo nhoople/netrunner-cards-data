@@ -10,14 +10,32 @@
     "current"
   ],
   "playCost": 3,
-  "lingerAsCurrent": true,
-  "currentTrashOnAgendaStolen": true,
-  "onAgendaScored": {
-    "op": "do",
-    "action": {
-      "kind": "add_to_corp_score_as_agenda",
-      "agendaPoints": 1
+  "wave": "democracy-and-dogma",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "lingerAsCurrent",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "currentTrashOnAgendaStolen",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "agenda_scored",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "add_to_corp_score_as_agenda",
+          "agendaPoints": 1
+        }
+      }
     }
-  },
-  "wave": "democracy-and-dogma"
+  ]
 }

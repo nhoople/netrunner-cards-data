@@ -7,12 +7,17 @@
   "side": "corp",
   "playCost": 1,
   "unsupported": [],
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "place_advancements",
-      "amount": 2,
-      "preferNotInstalledThisTurn": true
+  "abilities": [
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "place_advancements",
+          "amount": 2,
+          "preferNotInstalledThisTurn": true
+        }
+      }
     }
-  }
+  ]
 }

@@ -9,13 +9,19 @@
   "subtypes": [
     "division"
   ],
-  "onPsiCreditsRevealed": {
-    "op": "do",
-    "action": {
-      "kind": "gain_credits",
-      "side": "corp",
-      "amount": 1
+  "wave": "honor-and-profit",
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "psi_credits_revealed",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "corp",
+          "amount": 1
+        }
+      }
     }
-  },
-  "wave": "honor-and-profit"
+  ]
 }

@@ -12,11 +12,31 @@
   "installCost": 2,
   "rezCost": 2,
   "trashCost": 5,
-  "unique": true,
-  "zeroInfluenceIfNonAllianceFactionCardsGte": {
-    "faction": "haas-bioroid",
-    "threshold": 6
-  },
-  "gainClickFirstTimeSpendClicksGteOnSameActionEachTurn": 3,
-  "wave": "salsette-island"
+  "wave": "salsette-island",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "zeroInfluenceIfNonAllianceFactionCardsGte",
+        "value": {
+          "faction": "haas-bioroid",
+          "threshold": 6
+        }
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "gainClickFirstTimeSpendClicksGteOnSameActionEachTurn",
+        "value": 3
+      }
+    }
+  ]
 }

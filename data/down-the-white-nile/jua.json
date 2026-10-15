@@ -12,23 +12,28 @@
   "installCost": 2,
   "rezCost": 2,
   "strength": 3,
-  "onEncounter": {
-    "op": "do",
-    "action": {
-      "kind": "dtwn_jua_forbid_install_remainder_of_turn"
-    }
-  },
-  "subroutines": [
+  "wave": "down-the-white-nile",
+  "abilities": [
     {
+      "class": "conditional",
+      "trigger": "encounter",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "dtwn_jua_forbid_install_remainder_of_turn"
+        }
+      }
+    },
+    {
+      "class": "subroutine",
       "id": "jua-bounce",
       "text": "Choose 2 installed Runner cards, if able. The Runner must add 1 of the chosen cards to the top of the stack.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "dtwn_jua_choose_two_bounce_one"
         }
       }
     }
-  ],
-  "wave": "down-the-white-nile"
+  ]
 }

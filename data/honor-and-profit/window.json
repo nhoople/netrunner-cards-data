@@ -7,19 +7,19 @@
   "unsupported": [],
   "faction": "criminal",
   "installCost": 2,
-  "paidAbilities": [
+  "wave": "honor-and-profit",
+  "abilities": [
     {
+      "class": "paid",
       "id": "window-draw",
       "label": "[click]: Draw 1 from bottom of stack",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1
       },
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "draw_from_stack_bottom",
@@ -28,6 +28,5 @@
         }
       }
     }
-  ],
-  "wave": "honor-and-profit"
+  ]
 }

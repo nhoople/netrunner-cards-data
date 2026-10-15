@@ -8,11 +8,17 @@
   "faction": "weyland-consortium",
   "advancementRequirement": 4,
   "agendaPoints": 2,
-  "onScore": {
-    "op": "do",
-    "action": {
-      "kind": "helium3_place_up_to_2_power"
+  "wave": "the-source",
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "score",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "helium3_place_up_to_2_power"
+        }
+      }
     }
-  },
-  "wave": "the-source"
+  ]
 }

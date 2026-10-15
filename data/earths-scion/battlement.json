@@ -12,11 +12,13 @@
   "installCost": 3,
   "rezCost": 3,
   "strength": 2,
-  "subroutines": [
+  "wave": "earths-scion",
+  "abilities": [
     {
+      "class": "subroutine",
       "id": "battlement-etr-1",
       "text": "End the run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "end_the_run"
@@ -24,15 +26,15 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "battlement-etr-2",
       "text": "End the run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "end_the_run"
         }
       }
     }
-  ],
-  "wave": "earths-scion"
+  ]
 }

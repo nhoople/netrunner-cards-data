@@ -10,14 +10,38 @@
     "console"
   ],
   "installCost": 2,
-  "unique": true,
-  "maxConsole": 1,
-  "muBonus": 1,
-  "onTurnBegin": {
-    "op": "do",
-    "action": {
-      "kind": "draw_if_hq_full"
+  "wave": "order-and-chaos",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "maxConsole",
+        "value": 1
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "muBonus",
+        "value": 1
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "turn_begin",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "draw_if_hq_full"
+        }
+      }
     }
-  },
-  "wave": "order-and-chaos"
+  ]
 }

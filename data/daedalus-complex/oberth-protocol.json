@@ -9,8 +9,28 @@
   "installCost": 2,
   "rezCost": 2,
   "trashCost": 2,
-  "unique": true,
-  "rezAdditionalCostForfeitAgenda": true,
-  "oberthFirstAdvanceThisServerAdditionalAdvancement": 1,
-  "wave": "daedalus-complex"
+  "wave": "daedalus-complex",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "rezAdditionalCostForfeitAgenda",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "oberthFirstAdvanceThisServerAdditionalAdvancement",
+        "value": 1
+      }
+    }
+  ]
 }

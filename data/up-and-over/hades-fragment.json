@@ -11,13 +11,31 @@
   ],
   "advancementRequirement": 5,
   "agendaPoints": 3,
-  "unique": true,
-  "deckLimitOne": true,
-  "onTurnBegin": {
-    "op": "do",
-    "action": {
-      "kind": "may_add_archives_card_to_rd_bottom_only"
+  "wave": "up-and-over",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "deckLimitOne",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "turn_begin",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "may_add_archives_card_to_rd_bottom_only"
+        }
+      }
     }
-  },
-  "wave": "up-and-over"
+  ]
 }

@@ -7,13 +7,24 @@
   "side": "corp",
   "unsupported": [],
   "playCost": 10,
-  "playRequiresScoredAgendaNotInstalledThisTurn": true,
   "agendaPoints": 2,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "score_self_as_agenda",
-      "agendaPoints": 2
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "playRequiresScoredAgendaNotInstalledThisTurn",
+        "value": true
+      }
+    },
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "score_self_as_agenda",
+          "agendaPoints": 2
+        }
+      }
     }
-  }
+  ]
 }

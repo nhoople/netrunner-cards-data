@@ -13,11 +13,17 @@
   "installCost": 2,
   "rezCost": 2,
   "trashCost": 2,
-  "onCorpActionPhaseEnd": {
-    "op": "do",
-    "action": {
-      "kind": "may_install_ice_from_hq_discount_then_move_source",
-      "discount": 1
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "corp_action_phase_end",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "may_install_ice_from_hq_discount_then_move_source",
+          "discount": 1
+        }
+      }
     }
-  }
+  ]
 }

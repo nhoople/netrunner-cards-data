@@ -13,56 +13,60 @@
   "installCost": 3,
   "strength": 10,
   "memoryCost": 1,
-  "breaker": {
-    "breaksSubtype": "ap",
-    "strength": 10,
-    "breakCredits": 0,
-    "breakMaxSubs": 99,
-    "breakViaPaidAbilityOnly": true
-  },
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "breaker",
+        "value": {
+          "breaksSubtype": "ap",
+          "strength": 10,
+          "breakCredits": 0,
+          "breakMaxSubs": 99,
+          "breakViaPaidAbilityOnly": true
+        }
+      }
+    },
+    {
+      "class": "paid",
       "id": "deus-x-break",
       "label": "Trash Deus X: break any number of AP subroutines",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "trashSelf": true
       },
       "windows": [
         "encounter_paw"
       ],
-      "requireEncounterSubtype": "ap",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "break_encounter_subroutine",
           "maxSubs": 99,
           "requireSubtype": "ap"
         }
-      }
+      },
+      "requireEncounterSubtype": "ap"
     },
     {
+      "class": "paid",
       "id": "deus-x-prevent-net",
       "label": "Interrupt: trash Deus X — prevent any amount of net damage",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "trashSelf": true
       },
       "windows": [
         "damage_interrupt_paw"
       ],
-      "requirePendingDamageTypes": [
-        "net"
-      ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "prevent_pending_damage",
           "amount": 99
         }
-      }
+      },
+      "requirePendingDamageTypes": [
+        "net"
+      ]
     }
   ]
 }

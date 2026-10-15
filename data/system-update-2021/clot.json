@@ -11,6 +11,20 @@
   ],
   "installCost": 2,
   "memoryCost": 1,
-  "forbidScoreAgendaInstalledThisTurn": true,
-  "trashOnVirusPurge": true
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "forbidScoreAgendaInstalledThisTurn",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "trashOnVirusPurge",
+        "value": true
+      }
+    }
+  ]
 }

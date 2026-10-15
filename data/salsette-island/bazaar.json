@@ -11,6 +11,14 @@
     "ritzy"
   ],
   "installCost": 1,
-  "onInstallHardwareFromGripMayInstallAnotherCopy": true,
-  "wave": "salsette-island"
+  "wave": "salsette-island",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "onInstallHardwareFromGripMayInstallAnotherCopy",
+        "value": true
+      }
+    }
+  ]
 }

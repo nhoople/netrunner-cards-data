@@ -11,7 +11,21 @@
   ],
   "advancementRequirement": 4,
   "agendaPoints": 2,
-  "firstTraceEachTurnRunnerLinkTreatedAs0": true,
-  "gainCreditsWhenRunnerSpendsForLinkPer2Spent": true,
-  "wave": "quorum"
+  "wave": "quorum",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "firstTraceEachTurnRunnerLinkTreatedAs0",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "gainCreditsWhenRunnerSpendsForLinkPer2Spent",
+        "value": true
+      }
+    }
+  ]
 }

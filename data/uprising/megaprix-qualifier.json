@@ -8,18 +8,30 @@
   "unsupported": [],
   "advancementRequirement": 3,
   "agendaPoints": 1,
-  "onScore": {
-    "op": "if",
-    "cond": {
-      "op": "another_copy_of_source_title_in_either_score_area"
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "score",
+      "instructions": {
+        "op": "if",
+        "cond": {
+          "op": "another_copy_of_source_title_in_either_score_area"
+        },
+        "then": {
+          "op": "do",
+          "action": {
+            "kind": "add_agenda_counter",
+            "amount": 1
+          }
+        }
+      }
     },
-    "then": {
-      "op": "do",
-      "action": {
-        "kind": "add_agenda_counter",
-        "amount": 1
+    {
+      "class": "static",
+      "declaration": {
+        "field": "agendaPointsPerAgendaCounter",
+        "value": 1
       }
     }
-  },
-  "agendaPointsPerAgendaCounter": 1
+  ]
 }

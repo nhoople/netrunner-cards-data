@@ -12,26 +12,43 @@
   "installCost": 3,
   "rezCost": 3,
   "strength": 3,
-  "canAdvance": true,
-  "onRez": {
-    "op": "do",
-    "action": {
-      "kind": "place_advancement_on_self",
-      "amount": 1
-    }
-  },
-  "gainsSubroutinesPerAdvancement": {
-    "subroutine": {
-      "id": "masvingo-etr",
-      "text": "End the run.",
-      "effect": {
+  "wave": "whispers-in-nalubaale",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "canAdvance",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "rez",
+      "instructions": {
         "op": "do",
         "action": {
-          "kind": "end_the_run"
+          "kind": "place_advancement_on_self",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "gainsSubroutinesPerAdvancement",
+        "value": {
+          "subroutine": {
+            "id": "masvingo-etr",
+            "text": "End the run.",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "end_the_run"
+              }
+            }
+          }
         }
       }
     }
-  },
-  "subroutines": [],
-  "wave": "whispers-in-nalubaale"
+  ]
 }

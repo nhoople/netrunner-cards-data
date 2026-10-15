@@ -10,58 +10,70 @@
     "weapon"
   ],
   "installCost": 1,
-  "onRunnerTurnEnd": {
-    "op": "if",
-    "cond": {
-      "op": "successful_all_centrals_this_turn"
-    },
-    "then": {
-      "op": "choose",
-      "chooser": "runner",
-      "options": [
-        {
-          "id": "score",
-          "label": "Add to score area as 0-point assassination agenda",
-          "effect": {
-            "op": "seq",
-            "effects": [
-              {
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "runner_turn_end",
+      "instructions": {
+        "op": "if",
+        "cond": {
+          "op": "successful_all_centrals_this_turn"
+        },
+        "then": {
+          "op": "choose",
+          "chooser": "runner",
+          "options": [
+            {
+              "id": "score",
+              "label": "Add to score area as 0-point assassination agenda",
+              "effect": {
+                "op": "seq",
+                "effects": [
+                  {
+                    "op": "do",
+                    "action": {
+                      "kind": "add_to_runner_score_as_agenda",
+                      "agendaPoints": 0,
+                      "addSubtypes": [
+                        "assassination"
+                      ]
+                    }
+                  },
+                  {
+                    "op": "do",
+                    "action": {
+                      "kind": "check_assassination_win",
+                      "amount": 3
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "decline",
+              "label": "Decline",
+              "effect": {
                 "op": "do",
                 "action": {
-                  "kind": "add_to_runner_score_as_agenda",
-                  "agendaPoints": 0,
-                  "addSubtypes": [
-                    "assassination"
-                  ]
-                }
-              },
-              {
-                "op": "do",
-                "action": {
-                  "kind": "check_assassination_win",
-                  "amount": 3
+                  "kind": "gain_credits",
+                  "side": "runner",
+                  "amount": 0
                 }
               }
-            ]
-          }
-        },
-        {
-          "id": "decline",
-          "label": "Decline",
-          "effect": {
-            "op": "do",
-            "action": {
-              "kind": "gain_credits",
-              "side": "runner",
-              "amount": 0
             }
-          }
+          ]
         }
-      ]
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "onBypassMayInstallFromHeap",
+        "value": {
+          "requiresThreat": 3,
+          "clickCost": 1
+        }
+      }
     }
-  },
-  "onBypassMayInstallFromHeap": {
-    "requiresThreat": 3,
-    "clickCost": 1
-  }
+  ]
 }

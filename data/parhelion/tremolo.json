@@ -13,31 +13,36 @@
   "installCost": 3,
   "strength": 2,
   "memoryCost": 1,
-  "breaker": {
-    "breaksSubtype": "barrier",
-    "strength": 2,
-    "breakCredits": 3,
-    "breakMaxSubs": 2,
-    "pumpCredits": 2,
-    "pumpStrength": 2,
-    "breakCreditsDiscountPerInstalledSubtype": {
-      "subtype": "cybernetic",
-      "amount": 1
-    }
-  },
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "breaker",
+        "value": {
+          "breaksSubtype": "barrier",
+          "strength": 2,
+          "breakCredits": 3,
+          "breakMaxSubs": 2,
+          "pumpCredits": 2,
+          "pumpStrength": 2,
+          "breakCreditsDiscountPerInstalledSubtype": {
+            "subtype": "cybernetic",
+            "amount": 1
+          }
+        }
+      }
+    },
+    {
+      "class": "paid",
       "id": "tremolo-pump",
       "label": "Pump Tremolo +2 strength",
-      "clickCost": 0,
-      "creditCost": 2,
       "cost": {
         "credits": 2
       },
       "windows": [
         "encounter_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "pump_strength",

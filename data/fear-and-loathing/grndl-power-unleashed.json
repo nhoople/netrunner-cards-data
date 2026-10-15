@@ -10,25 +10,31 @@
     "division",
     "liability"
   ],
-  "onGameStart": {
-    "op": "seq",
-    "effects": [
-      {
-        "op": "do",
-        "action": {
-          "kind": "gain_credits",
-          "side": "corp",
-          "amount": 10
-        }
-      },
-      {
-        "op": "do",
-        "action": {
-          "kind": "give_bad_publicity",
-          "amount": 1
-        }
+  "wave": "fear-and-loathing",
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "game_start",
+      "instructions": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "gain_credits",
+              "side": "corp",
+              "amount": 10
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "give_bad_publicity",
+              "amount": 1
+            }
+          }
+        ]
       }
-    ]
-  },
-  "wave": "fear-and-loathing"
+    }
+  ]
 }

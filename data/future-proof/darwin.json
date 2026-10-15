@@ -15,19 +15,37 @@
   "installCost": 3,
   "memoryCost": 1,
   "strength": 0,
-  "strengthPerVirusCounter": 1,
-  "breaker": {
-    "breaksSubtype": "*",
-    "strength": 0,
-    "breakCredits": 2,
-    "breakMaxSubs": 1
-  },
-  "onTurnBegin": {
-    "op": "do",
-    "action": {
-      "kind": "may_pay_credits_add_virus_counter",
-      "credits": 1,
-      "amount": 1
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "strengthPerVirusCounter",
+        "value": 1
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "breaker",
+        "value": {
+          "breaksSubtype": "*",
+          "strength": 0,
+          "breakCredits": 2,
+          "breakMaxSubs": 1
+        }
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "turn_begin",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "may_pay_credits_add_virus_counter",
+          "credits": 1,
+          "amount": 1
+        }
+      }
     }
-  }
+  ]
 }

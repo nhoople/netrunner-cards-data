@@ -12,13 +12,19 @@
   ],
   "advancementRequirement": 6,
   "agendaPoints": 2,
-  "onCorpTurnEnd": {
-    "op": "do",
-    "action": {
-      "kind": "place_advancements",
-      "amount": 2,
-      "onlyRemoteRoot": true,
-      "pick": "choose"
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "corp_turn_end",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "place_advancements",
+          "amount": 2,
+          "onlyRemoteRoot": true,
+          "pick": "choose"
+        }
+      }
     }
-  }
+  ]
 }

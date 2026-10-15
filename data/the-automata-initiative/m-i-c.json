@@ -12,19 +12,18 @@
   "installCost": 6,
   "rezCost": 6,
   "strength": 4,
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "paid",
       "id": "mic-trash-etr",
       "label": "[trash]: End the run unless the Runner spends [click]",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "trashSelf": true
       },
       "windows": [
         "approach_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "unless",
@@ -45,13 +44,12 @@
           }
         }
       }
-    }
-  ],
-  "subroutines": [
+    },
     {
+      "class": "subroutine",
       "id": "mic-lose-1",
       "text": "The Runner loses [click].",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "lose_clicks",
@@ -61,9 +59,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "mic-lose-2",
       "text": "The Runner loses [click].",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "lose_clicks",
@@ -73,9 +72,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "mic-etr",
       "text": "End the run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "end_the_run"

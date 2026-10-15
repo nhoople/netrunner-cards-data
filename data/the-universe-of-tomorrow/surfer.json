@@ -8,19 +8,19 @@
   "faction": "anarch",
   "installCost": 2,
   "memoryCost": 1,
-  "paidAbilities": [
+  "wave": "the-universe-of-tomorrow",
+  "abilities": [
     {
+      "class": "paid",
       "id": "surfer-swap",
       "label": "2¢: Swap encountered barrier with ice directly before or after it",
-      "clickCost": 0,
-      "creditCost": 2,
       "cost": {
         "credits": 2
       },
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "swap_encounter_barrier_adjacent"
@@ -30,6 +30,5 @@
       "requireEncounterSubtype": "barrier",
       "requireDuringRun": true
     }
-  ],
-  "wave": "the-universe-of-tomorrow"
+  ]
 }

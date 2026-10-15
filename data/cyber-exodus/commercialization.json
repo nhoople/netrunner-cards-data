@@ -11,10 +11,15 @@
     "transaction"
   ],
   "playCost": 0,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "choose_ice_gain_credits_per_advancement"
+  "abilities": [
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "choose_ice_gain_credits_per_advancement"
+        }
+      }
     }
-  }
+  ]
 }

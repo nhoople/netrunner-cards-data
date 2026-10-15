@@ -5,8 +5,24 @@
   "nrdbCode": "30019",
   "type": "identity",
   "side": "runner",
-  "link": 0,
   "unsupported": [],
-  "maySwapIceOnAgendaScoredOrStolen": true,
-  "subtypes": ["natural"]
+  "subtypes": [
+    "natural"
+  ],
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "link",
+        "value": 0
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "maySwapIceOnAgendaScoredOrStolen",
+        "value": true
+      }
+    }
+  ]
 }

@@ -10,11 +10,22 @@
     "double"
   ],
   "playCost": 3,
-  "playAdditionalClick": true,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "place_advancements_per_iced_rooted_remote"
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "playAdditionalClick",
+        "value": true
+      }
+    },
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "place_advancements_per_iced_rooted_remote"
+        }
+      }
     }
-  }
+  ]
 }

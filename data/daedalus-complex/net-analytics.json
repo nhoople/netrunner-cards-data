@@ -9,6 +9,14 @@
   "installCost": 0,
   "rezCost": 0,
   "trashCost": 3,
-  "netAnalyticsMayDrawWhenRunnerAvoidsOrRemovesTags": true,
-  "wave": "daedalus-complex"
+  "wave": "daedalus-complex",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "netAnalyticsMayDrawWhenRunnerAvoidsOrRemovesTags",
+        "value": true
+      }
+    }
+  ]
 }

@@ -10,12 +10,24 @@
     "priority"
   ],
   "playCost": 1,
-  "playRequiresFirstClick": true,
-  "onRunnerTurnEnd": {
-    "op": "do",
-    "action": {
-      "kind": "three_steps_ahead_payout"
+  "wave": "the-spaces-between",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "playRequiresFirstClick",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "runner_turn_end",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "three_steps_ahead_payout"
+        }
+      }
     }
-  },
-  "wave": "the-spaces-between"
+  ]
 }

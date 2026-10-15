@@ -10,11 +10,22 @@
     "sabotage"
   ],
   "playCost": 0,
-  "playRequiresSuccessfulRunThisTurn": true,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "trash_passed_unrezzed_ice"
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "playRequiresSuccessfulRunThisTurn",
+        "value": true
+      }
+    },
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "trash_passed_unrezzed_ice"
+        }
+      }
     }
-  }
+  ]
 }

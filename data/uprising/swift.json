@@ -11,7 +11,27 @@
     "vehicle"
   ],
   "installCost": 2,
-  "unique": true,
-  "muBonus": 1,
-  "gainClickOnFirstRunEventThisTurn": true
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "muBonus",
+        "value": 1
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "gainClickOnFirstRunEventThisTurn",
+        "value": true
+      }
+    }
+  ]
 }

@@ -7,29 +7,40 @@
   "side": "corp",
   "unsupported": [],
   "playCost": 1,
-  "playRequiresNoSuccessfulHqRunLastTurn": true,
-  "onPlay": {
-    "op": "seq",
-    "effects": [
-      {
-        "op": "do",
-        "action": {
-          "kind": "search_rd_type_to_hq",
-          "cardType": "agenda"
-        }
-      },
-      {
-        "op": "do",
-        "action": {
-          "kind": "may_install_from_hq_in_remote_root_paying_costs"
-        }
-      },
-      {
-        "op": "do",
-        "action": {
-          "kind": "forbid_scoring_agendas_this_turn"
-        }
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "playRequiresNoSuccessfulHqRunLastTurn",
+        "value": true
       }
-    ]
-  }
+    },
+    {
+      "class": "play",
+      "instructions": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "search_rd_type_to_hq",
+              "cardType": "agenda"
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "may_install_from_hq_in_remote_root_paying_costs"
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "forbid_scoring_agendas_this_turn"
+            }
+          }
+        ]
+      }
+    }
+  ]
 }

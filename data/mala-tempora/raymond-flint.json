@@ -11,26 +11,35 @@
     "connection"
   ],
   "installCost": 2,
-  "unique": true,
-  "onEachCorpBadPublicityTake": {
-    "op": "do",
-    "action": {
-      "kind": "breach_hq_no_root"
-    }
-  },
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "each_corp_bad_publicity_take",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "breach_hq_no_root"
+        }
+      }
+    },
+    {
+      "class": "paid",
       "id": "raymond-expose",
       "label": "[trash]: Expose 1 card",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "trashSelf": true
       },
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "expose",

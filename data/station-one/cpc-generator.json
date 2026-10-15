@@ -12,6 +12,14 @@
   "installCost": 0,
   "rezCost": 0,
   "trashCost": 2,
-  "corpGainsOnFirstRunnerBasicGainCreditEachTurn": 1,
-  "wave": "station-one"
+  "wave": "station-one",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "corpGainsOnFirstRunnerBasicGainCreditEachTurn",
+        "value": 1
+      }
+    }
+  ]
 }

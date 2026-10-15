@@ -11,26 +11,40 @@
   ],
   "advancementRequirement": 4,
   "agendaPoints": 2,
-  "onScore": {
-    "op": "do",
-    "action": {
-      "kind": "place_hosted_credits",
-      "amount": 10
+  "wave": "business-first",
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "score",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "place_hosted_credits",
+          "amount": 10
+        }
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "turn_begin",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "take_hosted_credits",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "runner_turn_begin",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "take_hosted_credits",
+          "amount": 1
+        }
+      }
     }
-  },
-  "onTurnBegin": {
-    "op": "do",
-    "action": {
-      "kind": "take_hosted_credits",
-      "amount": 1
-    }
-  },
-  "onRunnerTurnBegin": {
-    "op": "do",
-    "action": {
-      "kind": "take_hosted_credits",
-      "amount": 1
-    }
-  },
-  "wave": "business-first"
+  ]
 }

@@ -11,21 +11,32 @@
     "job"
   ],
   "installCost": 1,
-  "hostedCreditsOnInstall": 12,
-  "trashWhenHostedCreditsEmpty": true,
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "hostedCreditsOnInstall",
+        "value": 12
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "trashWhenHostedCreditsEmpty",
+        "value": true
+      }
+    },
+    {
+      "class": "paid",
       "id": "armitage-codebusting-take",
       "label": "Take 2¢",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1
       },
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "take_hosted_credits",

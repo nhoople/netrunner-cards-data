@@ -10,12 +10,20 @@
     "run"
   ],
   "playCost": 2,
-  "runEvent": {
-    "servers": "any",
-    "icebreakerStrengthBonusIfInstalledProgramsLte": {
-      "programsMax": 3,
-      "bonus": 2
+  "wave": "free-mars",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "runEvent",
+        "value": {
+          "servers": "any",
+          "icebreakerStrengthBonusIfInstalledProgramsLte": {
+            "programsMax": 3,
+            "bonus": 2
+          }
+        }
+      }
     }
-  },
-  "wave": "free-mars"
+  ]
 }

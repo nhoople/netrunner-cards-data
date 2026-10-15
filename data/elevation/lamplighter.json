@@ -13,23 +13,28 @@
   "installCost": 2,
   "rezCost": 2,
   "strength": 3,
-  "onAgendaScoredOrStolen": {
-    "op": "if",
-    "cond": {
-      "op": "last_agenda_scored_or_stolen_from_source_server_root"
-    },
-    "then": {
-      "op": "do",
-      "action": {
-        "kind": "trash_self"
-      }
-    }
-  },
-  "subroutines": [
+  "abilities": [
     {
+      "class": "conditional",
+      "trigger": "agenda_scored_or_stolen",
+      "instructions": {
+        "op": "if",
+        "cond": {
+          "op": "last_agenda_scored_or_stolen_from_source_server_root"
+        },
+        "then": {
+          "op": "do",
+          "action": {
+            "kind": "trash_self"
+          }
+        }
+      }
+    },
+    {
+      "class": "subroutine",
       "id": "lamplighter-tag",
       "text": "Give the Runner 1 tag unless they pay 3[credit].",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "unless",
@@ -53,9 +58,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "lamplighter-etr",
       "text": "End the run if the Runner is tagged.",
-      "effect": {
+      "instructions": {
         "op": "if",
         "cond": {
           "op": "runner_tagged"

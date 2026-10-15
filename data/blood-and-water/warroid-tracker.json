@@ -12,19 +12,25 @@
   "installCost": 2,
   "rezCost": 2,
   "trashCost": 4,
-  "onRunnerTrashFromThisServerRootOrProtecting": {
-    "op": "do",
-    "action": {
-      "kind": "trace",
-      "strength": 4,
-      "onSuccess": {
+  "wave": "blood-and-water",
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "runner_trash_from_this_server_root_or_protecting",
+      "instructions": {
         "op": "do",
         "action": {
-          "kind": "warroid_runner_trashes_installed",
-          "amount": 2
+          "kind": "trace",
+          "strength": 4,
+          "onSuccess": {
+            "op": "do",
+            "action": {
+              "kind": "warroid_runner_trashes_installed",
+              "amount": 2
+            }
+          }
         }
       }
     }
-  },
-  "wave": "blood-and-water"
+  ]
 }

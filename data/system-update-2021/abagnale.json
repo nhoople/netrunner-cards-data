@@ -13,26 +13,31 @@
   "installCost": 4,
   "strength": 2,
   "memoryCost": 1,
-  "breaker": {
-    "breaksSubtype": "code gate",
-    "strength": 2,
-    "breakCredits": 1,
-    "pumpCredits": 2,
-    "pumpStrength": 2
-  },
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "breaker",
+        "value": {
+          "breaksSubtype": "code gate",
+          "strength": 2,
+          "breakCredits": 1,
+          "pumpCredits": 2,
+          "pumpStrength": 2
+        }
+      }
+    },
+    {
+      "class": "paid",
       "id": "abagnale-pump",
       "label": "Pump Abagnale +2 strength",
-      "clickCost": 0,
-      "creditCost": 2,
       "cost": {
         "credits": 2
       },
       "windows": [
         "encounter_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "pump_strength",
@@ -41,17 +46,16 @@
       }
     },
     {
+      "class": "paid",
       "id": "abagnale-bypass",
       "label": "Trash Abagnale: bypass encountered code gate",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "trashSelf": true
       },
       "windows": [
         "encounter_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "bypass_current_ice",

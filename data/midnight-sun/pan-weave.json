@@ -10,27 +10,37 @@
     "cybernetic"
   ],
   "installCost": 2,
-  "onInstall": {
-    "op": "do",
-    "action": {
-      "kind": "meat_damage",
-      "amount": 1
-    }
-  },
-  "onFirstSuccessfulHqRunThisTurn": {
-    "op": "do",
-    "action": {
-      "kind": "lose_credits",
-      "side": "corp",
-      "amount": 1,
-      "then": {
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "install",
+      "instructions": {
         "op": "do",
         "action": {
-          "kind": "gain_credits",
-          "side": "runner",
+          "kind": "meat_damage",
           "amount": 1
         }
       }
+    },
+    {
+      "class": "conditional",
+      "trigger": "first_successful_hq_run_this_turn",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "lose_credits",
+          "side": "corp",
+          "amount": 1,
+          "then": {
+            "op": "do",
+            "action": {
+              "kind": "gain_credits",
+              "side": "runner",
+              "amount": 1
+            }
+          }
+        }
+      }
     }
-  }
+  ]
 }

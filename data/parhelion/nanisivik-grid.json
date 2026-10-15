@@ -12,10 +12,16 @@
   "installCost": 2,
   "rezCost": 2,
   "trashCost": 3,
-  "onApproachServer": {
-    "op": "do",
-    "action": {
-      "kind": "may_flip_archives_ice_resolve_subroutine"
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "approach_server",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "may_flip_archives_ice_resolve_subroutine"
+        }
+      }
     }
-  }
+  ]
 }

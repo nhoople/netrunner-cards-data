@@ -10,34 +10,40 @@
   "subtypes": [
     "subsidiary"
   ],
-  "onAgendaScoredOrStolen": {
-    "op": "choose",
-    "chooser": "corp",
-    "options": [
-      {
-        "id": "gain2",
-        "label": "Gain 2¢",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "gain_credits",
-            "side": "corp",
-            "amount": 2
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "agenda_scored_or_stolen",
+      "instructions": {
+        "op": "choose",
+        "chooser": "corp",
+        "options": [
+          {
+            "id": "gain2",
+            "label": "Gain 2¢",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "gain_credits",
+                "side": "corp",
+                "amount": 2
+              }
+            }
+          },
+          {
+            "id": "draw2",
+            "label": "Draw 2 cards",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "draw",
+                "side": "corp",
+                "amount": 2
+              }
+            }
           }
-        }
-      },
-      {
-        "id": "draw2",
-        "label": "Draw 2 cards",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "draw",
-            "side": "corp",
-            "amount": 2
-          }
-        }
+        ]
       }
-    ]
-  }
+    }
+  ]
 }

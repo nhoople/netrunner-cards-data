@@ -14,41 +14,50 @@
   "installCost": 3,
   "strength": 1,
   "memoryCost": 1,
-  "breaker": {
-    "breaksSubtype": "sentry",
-    "strength": 1,
-    "breakCredits": 1,
-    "breakMaxSubs": 1,
-    "pumpCredits": 1,
-    "pumpStrength": 1
-  },
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "breaker",
+        "value": {
+          "breaksSubtype": "sentry",
+          "strength": 1,
+          "breakCredits": 1,
+          "breakMaxSubs": 1,
+          "pumpCredits": 1,
+          "pumpStrength": 1
+        }
+      }
+    },
+    {
+      "class": "paid",
       "id": "bukhgalter-pump",
       "label": "Pump Bukhgalter +1 strength",
-      "clickCost": 0,
-      "creditCost": 1,
       "cost": {
         "credits": 1
       },
       "windows": [
         "encounter_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "pump_strength",
           "amount": 1
         }
       }
+    },
+    {
+      "class": "conditional",
+      "trigger": "fully_break_once_per_turn",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "runner",
+          "amount": 2
+        }
+      }
     }
-  ],
-  "onFullyBreakOncePerTurn": {
-    "op": "do",
-    "action": {
-      "kind": "gain_credits",
-      "side": "runner",
-      "amount": 2
-    }
-  }
+  ]
 }

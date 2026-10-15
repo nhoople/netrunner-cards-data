@@ -13,12 +13,11 @@
   "installCost": 1,
   "rezCost": 1,
   "trashCost": 3,
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "paid",
       "id": "b1001-etr",
       "label": "Remove 1 tag: End the run (other server only)",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "removeTags": 1
       },
@@ -27,13 +26,13 @@
         "approach_paw",
         "encounter_paw"
       ],
-      "requireOtherServer": true,
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "end_the_run"
         }
-      }
+      },
+      "requireOtherServer": true
     }
   ]
 }

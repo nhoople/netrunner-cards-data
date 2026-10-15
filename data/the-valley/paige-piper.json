@@ -10,34 +10,46 @@
     "connection"
   ],
   "installCost": 0,
-  "unique": true,
-  "onFirstInstallEachTurn": {
-    "op": "choose",
-    "chooser": "runner",
-    "options": [
-      {
-        "id": "accept",
-        "label": "Search stack for copies → heap",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "search_stack_copies_to_heap"
-          }
-        }
-      },
-      {
-        "id": "decline",
-        "label": "Decline",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "gain_credits",
-            "side": "runner",
-            "amount": 0
-          }
-        }
+  "wave": "the-valley",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
       }
-    ]
-  },
-  "wave": "the-valley"
+    },
+    {
+      "class": "conditional",
+      "trigger": "first_install_each_turn",
+      "instructions": {
+        "op": "choose",
+        "chooser": "runner",
+        "options": [
+          {
+            "id": "accept",
+            "label": "Search stack for copies → heap",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "search_stack_copies_to_heap"
+              }
+            }
+          },
+          {
+            "id": "decline",
+            "label": "Decline",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "gain_credits",
+                "side": "runner",
+                "amount": 0
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
 }

@@ -11,19 +11,23 @@
   ],
   "advancementRequirement": 5,
   "agendaPoints": 3,
-  "onScore": {
-    "op": "do",
-    "action": {
-      "kind": "add_agenda_counter",
-      "amount": 2
-    }
-  },
-  "paidAbilities": [
+  "wave": "terminal-directive",
+  "abilities": [
     {
+      "class": "conditional",
+      "trigger": "score",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "add_agenda_counter",
+          "amount": 2
+        }
+      }
+    },
+    {
+      "class": "paid",
       "id": "elective-upgrade-clicks",
       "label": "[click], hosted agenda counter: Gain [click][click]",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "agendaCounters": 1,
         "clicks": 1
@@ -31,7 +35,7 @@
       "windows": [
         "corp_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "gain_clicks",
@@ -39,8 +43,7 @@
           "amount": 2
         }
       },
-      "oncePerTurn": true
+      "flag": "once_per_turn"
     }
-  ],
-  "wave": "terminal-directive"
+  ]
 }

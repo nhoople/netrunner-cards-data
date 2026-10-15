@@ -13,35 +13,53 @@
   "installCost": 1,
   "rezCost": 1,
   "trashCost": 3,
-  "unique": true,
-  "zeroInfluenceIfCardsInDeckGte": 50,
-  "onTurnBegin": {
-    "op": "choose",
-    "chooser": "corp",
-    "options": [
-      {
-        "id": "accept",
-        "label": "Shuffle 1 card from Archives into R&D",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "shuffle_one_archives_into_rd"
-          }
-        }
-      },
-      {
-        "id": "decline",
-        "label": "Decline",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "gain_credits",
-            "side": "corp",
-            "amount": 0
-          }
-        }
+  "wave": "kala-ghoda",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
       }
-    ]
-  },
-  "wave": "kala-ghoda"
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "zeroInfluenceIfCardsInDeckGte",
+        "value": 50
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "turn_begin",
+      "instructions": {
+        "op": "choose",
+        "chooser": "corp",
+        "options": [
+          {
+            "id": "accept",
+            "label": "Shuffle 1 card from Archives into R&D",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "shuffle_one_archives_into_rd"
+              }
+            }
+          },
+          {
+            "id": "decline",
+            "label": "Decline",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "gain_credits",
+                "side": "corp",
+                "amount": 0
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
 }

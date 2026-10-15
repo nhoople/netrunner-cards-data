@@ -6,14 +6,28 @@
   "type": "event",
   "side": "runner",
   "playCost": 0,
-  "subtypes": ["run"],
+  "subtypes": [
+    "run"
+  ],
   "unsupported": [],
-  "runEvent": {
-    "servers": "hq_rd",
-    "bonusAccess": 1,
-    "onSuccessfulRun": {
-      "op": "do",
-      "action": { "kind": "draw", "side": "runner", "amount": 1 }
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "runEvent",
+        "value": {
+          "servers": "hq_rd",
+          "bonusAccess": 1,
+          "onSuccessfulRun": {
+            "op": "do",
+            "action": {
+              "kind": "draw",
+              "side": "runner",
+              "amount": 1
+            }
+          }
+        }
+      }
     }
-  }
+  ]
 }

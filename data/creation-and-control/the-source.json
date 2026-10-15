@@ -11,13 +11,37 @@
     "connection"
   ],
   "installCost": 2,
-  "unique": true,
-  "agendaAdvancementRequirementBonus": 1,
-  "stealAdditionalCreditsWhileRezzed": 3,
-  "onAgendaScoredOrStolen": {
-    "op": "do",
-    "action": {
-      "kind": "trash_self"
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "agendaAdvancementRequirementBonus",
+        "value": 1
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "stealAdditionalCreditsWhileRezzed",
+        "value": 3
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "agenda_scored_or_stolen",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "trash_self"
+        }
+      }
     }
-  }
+  ]
 }

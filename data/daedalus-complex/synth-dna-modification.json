@@ -9,6 +9,14 @@
   "installCost": 2,
   "rezCost": 2,
   "trashCost": 2,
-  "synthDnaFirstApSubBrokenEachTurnNetDamage": 1,
-  "wave": "daedalus-complex"
+  "wave": "daedalus-complex",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "synthDnaFirstApSubBrokenEachTurnNetDamage",
+        "value": 1
+      }
+    }
+  ]
 }

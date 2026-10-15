@@ -7,13 +7,18 @@
   "unsupported": [],
   "faction": "haas-bioroid",
   "playCost": 0,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "allotted_clicks_next_turn",
-      "side": "runner",
-      "delta": -1
+  "wave": "station-one",
+  "abilities": [
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "allotted_clicks_next_turn",
+          "side": "runner",
+          "delta": -1
+        }
+      }
     }
-  },
-  "wave": "station-one"
+  ]
 }

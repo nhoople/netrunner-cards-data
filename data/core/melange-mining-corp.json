@@ -10,19 +10,18 @@
   "installCost": 1,
   "rezCost": 1,
   "trashCost": 1,
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "paid",
       "id": "melange-mining-corp-gain",
       "label": "[click][click][click]: Gain 7¢",
-      "clickCost": 3,
-      "creditCost": 0,
       "cost": {
         "clicks": 3
       },
       "windows": [
         "corp_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "gain_credits",

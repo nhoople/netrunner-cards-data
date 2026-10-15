@@ -10,55 +10,64 @@
     "chip"
   ],
   "installCost": 1,
-  "unique": true,
-  "onFirstRunBeginThisTurn": {
-    "op": "choose",
-    "chooser": "runner",
-    "options": [
-      {
-        "id": "look",
-        "label": "Look at the top 2 cards of your stack",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "look_top_n_stack_peek",
-            "amount": 2
-          }
-        }
-      },
-      {
-        "id": "decline",
-        "label": "Decline",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "gain_credits",
-            "side": "runner",
-            "amount": 0
-          }
-        }
-      }
-    ]
-  },
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "first_run_begin_this_turn",
+      "instructions": {
+        "op": "choose",
+        "chooser": "runner",
+        "options": [
+          {
+            "id": "look",
+            "label": "Look at the top 2 cards of your stack",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "look_top_n_stack_peek",
+                "amount": 2
+              }
+            }
+          },
+          {
+            "id": "decline",
+            "label": "Decline",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "gain_credits",
+                "side": "runner",
+                "amount": 0
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "class": "paid",
       "id": "prognostic-q-loop-reveal-install",
       "label": "1¢: Reveal top of stack; may install if program or hardware",
-      "clickCost": 0,
-      "creditCost": 1,
       "cost": {
         "credits": 1
       },
       "windows": [
         "runner_action_paw"
       ],
-      "oncePerTurn": true,
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "reveal_top_stack_may_install_program_or_hardware"
         }
-      }
+      },
+      "flag": "once_per_turn"
     }
   ]
 }

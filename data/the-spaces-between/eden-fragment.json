@@ -11,8 +11,28 @@
   ],
   "advancementRequirement": 5,
   "agendaPoints": 3,
-  "unique": true,
-  "ignoreInstallCostFirstIceEachTurn": true,
-  "deckLimitOne": true,
-  "wave": "the-spaces-between"
+  "wave": "the-spaces-between",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "ignoreInstallCostFirstIceEachTurn",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "deckLimitOne",
+        "value": true
+      }
+    }
+  ]
 }

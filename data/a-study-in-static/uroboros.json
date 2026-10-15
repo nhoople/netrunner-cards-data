@@ -14,11 +14,12 @@
   "installCost": 6,
   "rezCost": 6,
   "strength": 4,
-  "subroutines": [
+  "abilities": [
     {
+      "class": "subroutine",
       "id": "uroboros-trace-no-run",
       "text": "Trace[4]. If successful, the Runner cannot make another run this turn.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "trace",
@@ -33,9 +34,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "uroboros-trace-etr",
       "text": "Trace[4]. If successful, end the run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "trace",

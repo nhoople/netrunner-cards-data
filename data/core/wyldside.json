@@ -12,26 +12,38 @@
     "seedy"
   ],
   "installCost": 3,
-  "unique": true,
-  "onTurnBegin": {
-    "op": "seq",
-    "effects": [
-      {
-        "op": "do",
-        "action": {
-          "kind": "draw",
-          "side": "runner",
-          "amount": 2
-        }
-      },
-      {
-        "op": "do",
-        "action": {
-          "kind": "lose_clicks",
-          "side": "runner",
-          "amount": 1
-        }
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
       }
-    ]
-  }
+    },
+    {
+      "class": "conditional",
+      "trigger": "turn_begin",
+      "instructions": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "draw",
+              "side": "runner",
+              "amount": 2
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "lose_clicks",
+              "side": "runner",
+              "amount": 1
+            }
+          }
+        ]
+      }
+    }
+  ]
 }

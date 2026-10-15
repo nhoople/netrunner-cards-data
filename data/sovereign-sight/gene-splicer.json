@@ -12,25 +12,35 @@
   "installCost": 2,
   "rezCost": 2,
   "trashCost": 1,
-  "canAdvance": true,
-  "onAccess": {
-    "op": "do",
-    "action": {
-      "kind": "net_damage",
-      "amount": 0,
-      "tally": {
-        "count": "source_advancement_tokens",
-        "per": 1,
-        "side": "source"
-      }
-    }
-  },
-  "paidAbilities": [
+  "wave": "sovereign-sight",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "canAdvance",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "access",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "net_damage",
+          "amount": 0,
+          "tally": {
+            "count": "source_advancement_tokens",
+            "per": 1,
+            "side": "source"
+          }
+        }
+      }
+    },
+    {
+      "class": "paid",
       "id": "gene-splicer-score",
       "label": "[click], 3 hosted advancement tokens: Add Gene Splicer to your score area as an agenda worth 1 agenda point",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "advancementTokens": 3,
         "clicks": 1
@@ -38,7 +48,7 @@
       "windows": [
         "corp_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "score_self_as_agenda",
@@ -46,6 +56,5 @@
         }
       }
     }
-  ],
-  "wave": "sovereign-sight"
+  ]
 }
