@@ -13,33 +13,45 @@
   "installCost": 0,
   "rezCost": 0,
   "trashCost": 2,
-  "mustRevealWhenAccessedFromRd": true,
-  "onAccess": {
-    "op": "choose",
-    "chooser": "runner",
-    "options": [
-      {
-        "id": "take-tag",
-        "label": "Take 1 tag",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "give_tags",
-            "amount": 1
-          }
-        }
-      },
-      {
-        "id": "allow-remove-bp",
-        "label": "Allow Corp to remove 1 bad publicity",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "remove_bad_publicity",
-            "amount": 1
-          }
-        }
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "mustRevealWhenAccessedFromRd",
+        "value": true
       }
-    ]
-  }
+    },
+    {
+      "class": "conditional",
+      "trigger": "access",
+      "instructions": {
+        "op": "choose",
+        "chooser": "runner",
+        "options": [
+          {
+            "id": "take-tag",
+            "label": "Take 1 tag",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "give_tags",
+                "amount": 1
+              }
+            }
+          },
+          {
+            "id": "allow-remove-bp",
+            "label": "Allow Corp to remove 1 bad publicity",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "remove_bad_publicity",
+                "amount": 1
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
 }

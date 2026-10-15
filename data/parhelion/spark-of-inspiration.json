@@ -10,11 +10,16 @@
     "mod"
   ],
   "playCost": 3,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "spark_of_inspiration_resolve",
-      "discount": 10
+  "abilities": [
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "spark_of_inspiration_resolve",
+          "discount": 10
+        }
+      }
     }
-  }
+  ]
 }

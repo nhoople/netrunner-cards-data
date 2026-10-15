@@ -12,10 +12,36 @@
   "installCost": 2,
   "rezCost": 2,
   "trashCost": 2,
-  "recurringCreditsMax": 2,
-  "recurringSpendFor": [
-    "rez_host_server"
-  ],
-  "persistent": true,
-  "serverRootAssetTrashCostBonus": 2
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "recurringCreditsMax",
+        "value": 2
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "recurringSpendFor",
+        "value": [
+          "rez_host_server"
+        ]
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "persistent",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "serverRootAssetTrashCostBonus",
+        "value": 2
+      }
+    }
+  ]
 }

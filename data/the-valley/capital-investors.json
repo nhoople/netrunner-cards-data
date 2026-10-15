@@ -9,19 +9,19 @@
   "installCost": 2,
   "rezCost": 2,
   "trashCost": 2,
-  "paidAbilities": [
+  "wave": "the-valley",
+  "abilities": [
     {
+      "class": "paid",
       "id": "capital-investors-gain",
       "label": "[click]: Gain 2¢",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1
       },
       "windows": [
         "corp_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "gain_credits",
@@ -30,6 +30,5 @@
         }
       }
     }
-  ],
-  "wave": "the-valley"
+  ]
 }

@@ -13,31 +13,36 @@
   "installCost": 4,
   "rezCost": 4,
   "strength": 2,
-  "onRez": {
-    "op": "if",
-    "cond": {
-      "op": "source_protects_attacked_server"
-    },
-    "then": {
-      "op": "do",
-      "action": {
-        "kind": "may_give_runner_credits_then",
-        "amount": 2,
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "rez",
+      "instructions": {
+        "op": "if",
+        "cond": {
+          "op": "source_protects_attacked_server"
+        },
         "then": {
           "op": "do",
           "action": {
-            "kind": "limit_printed_breaks_on_source_for_run",
-            "max": 1
+            "kind": "may_give_runner_credits_then",
+            "amount": 2,
+            "then": {
+              "op": "do",
+              "action": {
+                "kind": "limit_printed_breaks_on_source_for_run",
+                "max": 1
+              }
+            }
           }
         }
       }
-    }
-  },
-  "subroutines": [
+    },
     {
+      "class": "subroutine",
       "id": "unsmiling-net",
       "text": "Do 2 net damage.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "net_damage",
@@ -46,9 +51,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "unsmiling-tag",
       "text": "Give the Runner 1 tag.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "give_tags",

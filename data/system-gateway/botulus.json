@@ -6,30 +6,58 @@
   "type": "program",
   "side": "runner",
   "installCost": 2,
-  "subtypes": ["virus", "trojan"],
-  "installOnIce": true,
+  "subtypes": [
+    "virus",
+    "trojan"
+  ],
   "unsupported": [],
-  "onInstall": {
-    "op": "do",
-    "action": { "kind": "add_virus_counter", "amount": 1 }
-  },
-  "onTurnBegin": {
-    "op": "do",
-    "action": { "kind": "add_virus_counter", "amount": 1 }
-  },
-  "paidAbilities": [
+  "memoryCost": 1,
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "installOnIce",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "install",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "add_virus_counter",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "turn_begin",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "add_virus_counter",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "class": "paid",
       "id": "break-host",
       "label": "Spend 1 virus counter: break 1 subroutine on host",
-      "clickCost": 0,
-      "creditCost": 0,
-      "cost": { "virusCounters": 1 },
-      "windows": ["encounter_paw"],
-      "effect": {
+      "cost": {
+        "virusCounters": 1
+      },
+      "windows": [
+        "encounter_paw"
+      ],
+      "instructions": {
         "op": "do",
-        "action": { "kind": "break_host_subroutine" }
+        "action": {
+          "kind": "break_host_subroutine"
+        }
       }
     }
-  ],
-  "memoryCost": 1
+  ]
 }

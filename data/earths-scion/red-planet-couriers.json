@@ -10,12 +10,23 @@
     "triple"
   ],
   "playCost": 5,
-  "playAdditionalClicks": 2,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "move_all_advancements"
+  "wave": "earths-scion",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "playAdditionalClicks",
+        "value": 2
+      }
+    },
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "move_all_advancements"
+        }
+      }
     }
-  },
-  "wave": "earths-scion"
+  ]
 }

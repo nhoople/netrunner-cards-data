@@ -12,14 +12,26 @@
   "installCost": 2,
   "rezCost": 2,
   "trashCost": 5,
-  "onFirstAdvancementOnServerThisTurn": {
-    "op": "do",
-    "action": {
-      "kind": "gain_credits",
-      "side": "corp",
-      "amount": 1
+  "wave": "honor-and-profit",
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "first_advancement_on_server_this_turn",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "corp",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "oncePerTurn",
+        "value": true
+      }
     }
-  },
-  "oncePerTurn": true,
-  "wave": "honor-and-profit"
+  ]
 }

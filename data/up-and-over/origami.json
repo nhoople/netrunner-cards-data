@@ -8,6 +8,14 @@
   "faction": "anarch",
   "installCost": 0,
   "memoryCost": 1,
-  "handSizeBonusPerInstalledCopyWithSameDefId": 1,
-  "wave": "up-and-over"
+  "wave": "up-and-over",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "handSizeBonusPerInstalledCopyWithSameDefId",
+        "value": 1
+      }
+    }
+  ]
 }

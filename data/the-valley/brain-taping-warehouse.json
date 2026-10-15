@@ -12,6 +12,14 @@
   "installCost": 1,
   "rezCost": 1,
   "trashCost": 4,
-  "bioroidIceRezCostReductionPerRunnerClickRemaining": 1,
-  "wave": "the-valley"
+  "wave": "the-valley",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "bioroidIceRezCostReductionPerRunnerClickRemaining",
+        "value": 1
+      }
+    }
+  ]
 }

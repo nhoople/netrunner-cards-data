@@ -11,29 +11,40 @@
   ],
   "playCost": 1,
   "trashCost": 3,
-  "playAdditionalClick": true,
-  "onPlay": {
-    "op": "seq",
-    "effects": [
-      {
-        "op": "do",
-        "action": {
-          "kind": "search_rd_operation_or_agenda_to_hq"
-        }
-      },
-      {
-        "op": "if",
-        "cond": {
-          "op": "threat",
-          "level": 3
-        },
-        "then": {
-          "op": "do",
-          "action": {
-            "kind": "may_play_or_install_from_hq"
-          }
-        }
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "playAdditionalClick",
+        "value": true
       }
-    ]
-  }
+    },
+    {
+      "class": "play",
+      "instructions": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "search_rd_operation_or_agenda_to_hq"
+            }
+          },
+          {
+            "op": "if",
+            "cond": {
+              "op": "threat",
+              "level": 3
+            },
+            "then": {
+              "op": "do",
+              "action": {
+                "kind": "may_play_or_install_from_hq"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
 }

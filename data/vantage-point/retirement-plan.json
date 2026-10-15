@@ -10,16 +10,27 @@
     "double"
   ],
   "playCost": 1,
-  "playAdditionalClick": true,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "install_from_archives",
-      "types": [
-        "agenda",
-        "asset",
-        "ice"
-      ]
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "playAdditionalClick",
+        "value": true
+      }
+    },
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "install_from_archives",
+          "types": [
+            "agenda",
+            "asset",
+            "ice"
+          ]
+        }
+      }
     }
-  }
+  ]
 }

@@ -10,11 +10,49 @@
     "mod"
   ],
   "installCost": 2,
-  "unique": true,
-  "maxHostedCards": 1,
-  "hostsAnyProgramMemoryCostLte": 99,
-  "hostedCreditsOnInstall": 9,
-  "spendHostedCreditsToUseHostedProgram": true,
-  "trashHostedProgramAtEndOfTurnIfHostedCreditsUsed": true,
-  "wave": "kampala-ascendent"
+  "wave": "kampala-ascendent",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "maxHostedCards",
+        "value": 1
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "hostsAnyProgramMemoryCostLte",
+        "value": 99
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "hostedCreditsOnInstall",
+        "value": 9
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "spendHostedCreditsToUseHostedProgram",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "trashHostedProgramAtEndOfTurnIfHostedCreditsUsed",
+        "value": true
+      }
+    }
+  ]
 }

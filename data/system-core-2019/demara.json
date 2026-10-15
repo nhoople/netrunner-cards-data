@@ -14,27 +14,32 @@
   "installCost": 4,
   "strength": 1,
   "memoryCost": 1,
-  "breaker": {
-    "breaksSubtype": "barrier",
-    "strength": 1,
-    "breakCredits": 2,
-    "breakMaxSubs": 2,
-    "pumpCredits": 2,
-    "pumpStrength": 3
-  },
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "breaker",
+        "value": {
+          "breaksSubtype": "barrier",
+          "strength": 1,
+          "breakCredits": 2,
+          "breakMaxSubs": 2,
+          "pumpCredits": 2,
+          "pumpStrength": 3
+        }
+      }
+    },
+    {
+      "class": "paid",
       "id": "demara-pump",
       "label": "Pump Demara +3 strength",
-      "clickCost": 0,
-      "creditCost": 2,
       "cost": {
         "credits": 2
       },
       "windows": [
         "encounter_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "pump_strength",
@@ -43,24 +48,23 @@
       }
     },
     {
+      "class": "paid",
       "id": "demara-bypass",
       "label": "Trash Demara: bypass encountered barrier",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "trashSelf": true
       },
       "windows": [
         "encounter_paw"
       ],
-      "requireEncounterSubtype": "barrier",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "bypass_current_ice",
           "requireSubtype": "barrier"
         }
-      }
+      },
+      "requireEncounterSubtype": "barrier"
     }
   ]
 }

@@ -10,24 +10,30 @@
   "subtypes": [
     "research"
   ],
-  "onScore": {
-    "op": "seq",
-    "effects": [
-      {
-        "op": "do",
-        "action": {
-          "kind": "gain_clicks",
-          "side": "corp",
-          "amount": 3
-        }
-      },
-      {
-        "op": "do",
-        "action": {
-          "kind": "forbid_scoring_agendas_this_turn"
-        }
+  "unsupported": [],
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "score",
+      "instructions": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "gain_clicks",
+              "side": "corp",
+              "amount": 3
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "forbid_scoring_agendas_this_turn"
+            }
+          }
+        ]
       }
-    ]
-  },
-  "unsupported": []
+    }
+  ]
 }

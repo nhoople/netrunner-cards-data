@@ -7,13 +7,24 @@
   "side": "runner",
   "unsupported": [],
   "playCost": 2,
-  "playRequiresSuccessfulAllCentralsThisTurn": true,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "deep_dive_resolve",
-      "setAside": 8,
-      "initialAccess": 1
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "playRequiresSuccessfulAllCentralsThisTurn",
+        "value": true
+      }
+    },
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "deep_dive_resolve",
+          "setAside": 8,
+          "initialAccess": 1
+        }
+      }
     }
-  }
+  ]
 }

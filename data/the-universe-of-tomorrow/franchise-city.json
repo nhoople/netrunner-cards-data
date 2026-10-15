@@ -12,9 +12,23 @@
   "installCost": 3,
   "rezCost": 3,
   "trashCost": 2,
-  "mustRevealAgendasAccessedFromRd": true,
-  "addSelfToCorpScoreOnAgendaAccess": {
-    "agendaPoints": 1
-  },
-  "wave": "the-universe-of-tomorrow"
+  "wave": "the-universe-of-tomorrow",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "mustRevealAgendasAccessedFromRd",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "addSelfToCorpScoreOnAgendaAccess",
+        "value": {
+          "agendaPoints": 1
+        }
+      }
+    }
+  ]
 }

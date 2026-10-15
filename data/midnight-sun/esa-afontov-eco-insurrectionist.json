@@ -9,44 +9,56 @@
   "subtypes": [
     "cyborg"
   ],
-  "link": 0,
-  "onFirstCoreDamageThisTurn": {
-    "op": "choose",
-    "chooser": "runner",
-    "options": [
-      {
-        "id": "draw-sabotage",
-        "label": "Draw 1 and sabotage 2",
-        "effect": {
-          "op": "seq",
-          "effects": [
-            {
-              "op": "do",
-              "action": {
-                "kind": "draw",
-                "side": "runner",
-                "amount": 1
-              }
-            },
-            {
-              "op": "do",
-              "action": {
-                "kind": "sabotage",
-                "amount": 2,
-                "interactive": true
-              }
-            }
-          ]
-        }
-      },
-      {
-        "id": "decline",
-        "label": "Decline",
-        "effect": {
-          "op": "seq",
-          "effects": []
-        }
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "link",
+        "value": 0
       }
-    ]
-  }
+    },
+    {
+      "class": "conditional",
+      "trigger": "first_core_damage_this_turn",
+      "instructions": {
+        "op": "choose",
+        "chooser": "runner",
+        "options": [
+          {
+            "id": "draw-sabotage",
+            "label": "Draw 1 and sabotage 2",
+            "effect": {
+              "op": "seq",
+              "effects": [
+                {
+                  "op": "do",
+                  "action": {
+                    "kind": "draw",
+                    "side": "runner",
+                    "amount": 1
+                  }
+                },
+                {
+                  "op": "do",
+                  "action": {
+                    "kind": "sabotage",
+                    "amount": 2,
+                    "interactive": true
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "id": "decline",
+            "label": "Decline",
+            "effect": {
+              "op": "seq",
+              "effects": []
+            }
+          }
+        ]
+      }
+    }
+  ]
 }

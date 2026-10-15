@@ -13,18 +13,30 @@
   "installCost": 3,
   "rezCost": 3,
   "strength": 3,
-  "unique": true,
-  "onEncounter": {
-    "op": "do",
-    "action": {
-      "kind": "play_psi_game",
-      "maxBid": 2,
-      "ifBidsDiffer": {
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "encounter",
+      "instructions": {
         "op": "do",
         "action": {
-          "kind": "may_choose_other_rezzed_ice_encounter_then_resume_source"
+          "kind": "play_psi_game",
+          "maxBid": 2,
+          "ifBidsDiffer": {
+            "op": "do",
+            "action": {
+              "kind": "may_choose_other_rezzed_ice_encounter_then_resume_source"
+            }
+          }
         }
       }
     }
-  }
+  ]
 }

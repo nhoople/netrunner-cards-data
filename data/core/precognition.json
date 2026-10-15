@@ -8,11 +8,16 @@
   "unsupported": [],
   "faction": "jinteki",
   "playCost": 0,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "look_top_n_rd_arrange",
-      "n": 5
+  "abilities": [
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "look_top_n_rd_arrange",
+          "n": 5
+        }
+      }
     }
-  }
+  ]
 }

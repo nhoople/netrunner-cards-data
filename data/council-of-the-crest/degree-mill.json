@@ -11,12 +11,22 @@
   ],
   "advancementRequirement": 5,
   "agendaPoints": 3,
-  "stealAdditionalCost": {
-    "op": "do",
-    "action": {
-      "kind": "shuffle_n_installed_runner_into_stack",
-      "amount": 2
+  "wave": "council-of-the-crest",
+  "abilities": [
+    {
+      "class": "static",
+      "restrictions": [
+        {
+          "appliesTo": "steal",
+          "effect": {
+            "op": "do",
+            "action": {
+              "kind": "shuffle_n_installed_runner_into_stack",
+              "amount": 2
+            }
+          }
+        }
+      ]
     }
-  },
-  "wave": "council-of-the-crest"
+  ]
 }

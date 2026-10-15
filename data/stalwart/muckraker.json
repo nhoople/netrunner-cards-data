@@ -15,18 +15,23 @@
   "installCost": 5,
   "rezCost": 5,
   "strength": 3,
-  "onRez": {
-    "op": "do",
-    "action": {
-      "kind": "give_bad_publicity",
-      "amount": 1
-    }
-  },
-  "subroutines": [
+  "abilities": [
     {
+      "class": "conditional",
+      "trigger": "rez",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "give_bad_publicity",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "class": "subroutine",
       "id": "muck-1",
       "text": "Trace[1]. If successful, give the Runner 1 tag.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "trace",
@@ -42,9 +47,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "muck-2",
       "text": "Trace[2]. If successful, give the Runner 1 tag.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "trace",
@@ -60,9 +66,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "muck-3",
       "text": "Trace[3]. If successful, give the Runner 1 tag.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "trace",
@@ -78,9 +85,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "muck-etr",
       "text": "End the run if the Runner is tagged.",
-      "effect": {
+      "instructions": {
         "op": "if",
         "cond": {
           "op": "runner_tagged"

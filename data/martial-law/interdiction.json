@@ -10,8 +10,28 @@
     "current"
   ],
   "playCost": 1,
-  "lingerAsCurrent": true,
-  "currentTrashOnAgendaScored": true,
-  "cannotRezNonIceDuringRunnerTurn": true,
-  "wave": "martial-law"
+  "wave": "martial-law",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "lingerAsCurrent",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "currentTrashOnAgendaScored",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "cannotRezNonIceDuringRunnerTurn",
+        "value": true
+      }
+    }
+  ]
 }

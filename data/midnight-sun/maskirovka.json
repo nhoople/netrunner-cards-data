@@ -12,11 +12,12 @@
   "installCost": 3,
   "rezCost": 3,
   "strength": 3,
-  "subroutines": [
+  "abilities": [
     {
+      "class": "subroutine",
       "id": "mask-gain",
       "text": "Gain 2¢.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "gain_credits",
@@ -26,9 +27,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "mask-etr",
       "text": "End the run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "end_the_run"

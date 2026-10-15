@@ -12,30 +12,35 @@
   "installCost": 3,
   "rezCost": 3,
   "strength": 3,
-  "onRez": {
-    "op": "if",
-    "cond": {
-      "op": "source_protects_attacked_server"
-    },
-    "then": {
-      "op": "do",
-      "action": {
-        "kind": "may_give_runner_credits_then",
-        "amount": 2,
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "rez",
+      "instructions": {
+        "op": "if",
+        "cond": {
+          "op": "source_protects_attacked_server"
+        },
         "then": {
           "op": "do",
           "action": {
-            "kind": "blank_installed_resource_until_corp_turn_end"
+            "kind": "may_give_runner_credits_then",
+            "amount": 2,
+            "then": {
+              "op": "do",
+              "action": {
+                "kind": "blank_installed_resource_until_corp_turn_end"
+              }
+            }
           }
         }
       }
-    }
-  },
-  "subroutines": [
+    },
     {
+      "class": "subroutine",
       "id": "klevetnik-etr",
       "text": "End the run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "end_the_run"

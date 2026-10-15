@@ -12,10 +12,30 @@
   "installCost": 3,
   "rezCost": 3,
   "trashCost": 2,
-  "unique": true,
-  "recurringCreditsMaxEqualsRemoteServers": true,
-  "recurringSpendFor": [
-    "rez_ice_protecting_this_server"
-  ],
-  "wave": "daedalus-complex"
+  "wave": "daedalus-complex",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "recurringCreditsMaxEqualsRemoteServers",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "recurringSpendFor",
+        "value": [
+          "rez_ice_protecting_this_server"
+        ]
+      }
+    }
+  ]
 }

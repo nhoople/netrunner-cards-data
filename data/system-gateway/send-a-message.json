@@ -7,7 +7,17 @@
   "side": "corp",
   "advancementRequirement": 5,
   "agendaPoints": 3,
-  "subtypes": ["security"],
+  "subtypes": [
+    "security"
+  ],
   "unsupported": [],
-  "mayRezIceIgnoringCostsOnScoreOrSteal": true
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "mayRezIceIgnoringCostsOnScoreOrSteal",
+        "value": true
+      }
+    }
+  ]
 }

@@ -8,40 +8,51 @@
   "unsupported": [],
   "installCost": 4,
   "memoryCost": 1,
-  "powerCountersOnInstall": 2,
-  "rfgWhenPowerEmpty": true,
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "powerCountersOnInstall",
+        "value": 2
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "rfgWhenPowerEmpty",
+        "value": true
+      }
+    },
+    {
+      "class": "paid",
       "id": "malandragem-bypass",
       "label": "Hosted power: bypass ice if strength ≤ 3 (once per turn)",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "powerCounters": 1
       },
       "windows": [
         "encounter_paw"
       ],
-      "oncePerTurn": true,
-      "requireEncounterStrengthLte": 3,
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "bypass_current_ice"
         }
-      }
+      },
+      "flag": "once_per_turn",
+      "requireEncounterStrengthLte": 3
     },
     {
+      "class": "paid",
       "id": "malandragem-threat-bypass",
       "label": "Threat 4 → RFG: bypass encountered ice",
-      "clickCost": 0,
-      "creditCost": 0,
-      "cost": {},
+      "cost": {
+        "credits": 0
+      },
       "windows": [
         "encounter_paw"
       ],
-      "requiresThreat": 4,
-      "effect": {
+      "instructions": {
         "op": "seq",
         "effects": [
           {
@@ -57,6 +68,9 @@
             }
           }
         ]
+      },
+      "flag": {
+        "threat": 4
       }
     }
   ]

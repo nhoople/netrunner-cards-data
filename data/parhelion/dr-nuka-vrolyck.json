@@ -10,14 +10,25 @@
     "connection"
   ],
   "installCost": 1,
-  "powerCountersOnInstall": 2,
-  "trashWhenPowerEmpty": true,
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "powerCountersOnInstall",
+        "value": 2
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "trashWhenPowerEmpty",
+        "value": true
+      }
+    },
+    {
+      "class": "paid",
       "id": "nuka-draw",
       "label": "[click], hosted power counter: Draw 3 cards",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1,
         "powerCounters": 1
@@ -25,7 +36,7 @@
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "draw",

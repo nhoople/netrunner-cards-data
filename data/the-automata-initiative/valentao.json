@@ -13,51 +13,58 @@
   "installCost": 5,
   "rezCost": 5,
   "strength": 6,
-  "rezAdditionalCost": {
-    "op": "choose",
-    "chooser": "corp",
-    "options": [
-      {
-        "id": "bad-pub",
-        "label": "Take 1 bad publicity",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "give_bad_publicity",
-            "amount": 1
-          }
-        }
-      },
-      {
-        "id": "remove-tag",
-        "label": "Remove 1 tag",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "remove_tags",
-            "amount": 1
-          }
-        }
-      }
-    ]
-  },
-  "subroutines": [
+  "abilities": [
     {
+      "class": "subroutine",
       "id": "valentao-gain",
       "text": "Gain 2[credit].",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "gain_credits",
           "side": "corp",
           "amount": 2
         }
-      }
+      },
+      "restrictions": [
+        {
+          "appliesTo": "rez",
+          "effect": {
+            "op": "choose",
+            "chooser": "corp",
+            "options": [
+              {
+                "id": "bad-pub",
+                "label": "Take 1 bad publicity",
+                "effect": {
+                  "op": "do",
+                  "action": {
+                    "kind": "give_bad_publicity",
+                    "amount": 1
+                  }
+                }
+              },
+              {
+                "id": "remove-tag",
+                "label": "Remove 1 tag",
+                "effect": {
+                  "op": "do",
+                  "action": {
+                    "kind": "remove_tags",
+                    "amount": 1
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ]
     },
     {
+      "class": "subroutine",
       "id": "valentao-lose",
       "text": "The Runner loses 2[credit].",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "lose_credits",
@@ -67,9 +74,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "valentao-etr",
       "text": "End the run if you have more credits than the Runner.",
-      "effect": {
+      "instructions": {
         "op": "if",
         "cond": {
           "op": "credits_gt_other_side",

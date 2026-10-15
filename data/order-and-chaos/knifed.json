@@ -11,9 +11,17 @@
     "sabotage"
   ],
   "playCost": 1,
-  "runEvent": {
-    "servers": "any",
-    "trashFirstFullyBrokenSubtype": "barrier"
-  },
-  "wave": "order-and-chaos"
+  "wave": "order-and-chaos",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "runEvent",
+        "value": {
+          "servers": "any",
+          "trashFirstFullyBrokenSubtype": "barrier"
+        }
+      }
+    }
+  ]
 }

@@ -12,18 +12,25 @@
   "installCost": 4,
   "rezCost": 4,
   "strength": 2,
-  "strengthBonusPerIceProtectingThisServer": 1,
-  "subroutines": [
+  "wave": "station-one",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "strengthBonusPerIceProtectingThisServer",
+        "value": 1
+      }
+    },
+    {
+      "class": "subroutine",
       "id": "seidr-etr",
       "text": "End the run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "end_the_run"
         }
       }
     }
-  ],
-  "wave": "station-one"
+  ]
 }

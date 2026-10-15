@@ -13,12 +13,19 @@
   "installCost": 4,
   "rezCost": 4,
   "strength": 2,
-  "maxInstalledRunnerTrashesPerEncounter": 1,
-  "subroutines": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "maxInstalledRunnerTrashesPerEncounter",
+        "value": 1
+      }
+    },
+    {
+      "class": "subroutine",
       "id": "soro-resource",
       "text": "Trash 1 installed resource.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "trash_resource",
@@ -27,9 +34,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "soro-hardware",
       "text": "Trash 1 installed piece of hardware.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "trash_hardware",
@@ -38,9 +46,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "soro-program",
       "text": "Trash 1 installed program.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "trash_program",

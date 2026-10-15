@@ -11,6 +11,14 @@
   ],
   "advancementRequirement": 5,
   "agendaPoints": 3,
-  "onSuccessfulRunMayPlaceAdvancementOnCanBeAdvanced": true,
-  "wave": "the-liberated-mind"
+  "wave": "the-liberated-mind",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "onSuccessfulRunMayPlaceAdvancementOnCanBeAdvanced",
+        "value": true
+      }
+    }
+  ]
 }

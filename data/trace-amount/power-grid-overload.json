@@ -8,19 +8,30 @@
   "unsupported": [],
   "faction": "weyland-consortium",
   "playCost": 1,
-  "playRequiresSuccessfulRunLastTurn": true,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "trace",
-      "strength": 2,
-      "onSuccess": {
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "playRequiresSuccessfulRunLastTurn",
+        "value": true
+      }
+    },
+    {
+      "class": "play",
+      "instructions": {
         "op": "do",
         "action": {
-          "kind": "trash_hardware_install_cost_lte_last_trace_excess",
-          "pick": "choose"
+          "kind": "trace",
+          "strength": 2,
+          "onSuccess": {
+            "op": "do",
+            "action": {
+              "kind": "trash_hardware_install_cost_lte_last_trace_excess",
+              "pick": "choose"
+            }
+          }
         }
       }
     }
-  }
+  ]
 }

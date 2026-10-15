@@ -7,44 +7,55 @@
   "unsupported": [],
   "faction": "anarch",
   "playCost": 0,
-  "rfgInsteadOfTrashing": true,
-  "onPlay": {
-    "op": "seq",
-    "effects": [
-      {
-        "op": "do",
-        "action": {
-          "kind": "trash_top_of_stack"
-        }
-      },
-      {
-        "op": "do",
-        "action": {
-          "kind": "trash_top_of_stack"
-        }
-      },
-      {
-        "op": "do",
-        "action": {
-          "kind": "trash_top_of_stack"
-        }
-      },
-      {
-        "op": "do",
-        "action": {
-          "kind": "shuffle_n_heap_cards_into_stack",
-          "amount": 3
-        }
-      },
-      {
-        "op": "do",
-        "action": {
-          "kind": "draw",
-          "side": "runner",
-          "amount": 1
-        }
+  "wave": "magnum-opus",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "rfgInsteadOfTrashing",
+        "value": true
       }
-    ]
-  },
-  "wave": "magnum-opus"
+    },
+    {
+      "class": "play",
+      "instructions": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "trash_top_of_stack"
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "trash_top_of_stack"
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "trash_top_of_stack"
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "shuffle_n_heap_cards_into_stack",
+              "amount": 3
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "draw",
+              "side": "runner",
+              "amount": 1
+            }
+          }
+        ]
+      }
+    }
+  ]
 }

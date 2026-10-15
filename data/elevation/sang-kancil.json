@@ -13,34 +13,45 @@
   "installCost": 3,
   "strength": 2,
   "memoryCost": 1,
-  "breaker": {
-    "breaksSubtype": "code gate",
-    "strength": 2,
-    "breakCredits": 1,
-    "breakMaxSubs": 1,
-    "pumpCredits": 3,
-    "pumpStrength": 2
-  },
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "breaker",
+        "value": {
+          "breaksSubtype": "code gate",
+          "strength": 2,
+          "breakCredits": 1,
+          "breakMaxSubs": 1,
+          "pumpCredits": 3,
+          "pumpStrength": 2
+        }
+      }
+    },
+    {
+      "class": "paid",
       "id": "sang-kancil-pump",
       "label": "Pump Sang Kancil +2 strength",
-      "clickCost": 0,
-      "creditCost": 3,
       "cost": {
         "credits": 3
       },
       "windows": [
         "encounter_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "pump_strength",
           "amount": 2
         }
       }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "paidAbilityCreditDiscountIfRunEventActive",
+        "value": 2
+      }
     }
-  ],
-  "paidAbilityCreditDiscountIfRunEventActive": 2
+  ]
 }

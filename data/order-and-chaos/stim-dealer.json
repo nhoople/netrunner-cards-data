@@ -10,11 +10,17 @@
     "connection"
   ],
   "installCost": 4,
-  "onTurnBegin": {
-    "op": "do",
-    "action": {
-      "kind": "stim_dealer_turn_begin"
+  "wave": "order-and-chaos",
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "turn_begin",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "stim_dealer_turn_begin"
+        }
+      }
     }
-  },
-  "wave": "order-and-chaos"
+  ]
 }

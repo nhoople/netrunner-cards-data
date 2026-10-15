@@ -9,54 +9,35 @@
   "subtypes": [
     "transaction"
   ],
-  "onPlay": {
-    "op": "if",
-    "cond": {
-      "op": "runner_tagged"
-    },
-    "then": {
-      "op": "choose",
-      "chooser": "corp",
-      "options": [
-        {
-          "id": "gain3",
-          "label": "Gain 3¢",
-          "effect": {
-            "op": "do",
-            "action": {
-              "kind": "gain_credits",
-              "side": "corp",
-              "amount": 3
-            }
-          }
+  "unsupported": [],
+  "abilities": [
+    {
+      "class": "play",
+      "instructions": {
+        "op": "if",
+        "cond": {
+          "op": "runner_tagged"
         },
-        {
-          "id": "draw3",
-          "label": "Draw 3",
-          "effect": {
-            "op": "do",
-            "action": {
-              "kind": "draw",
-              "side": "corp",
-              "amount": 3
-            }
-          }
-        },
-        {
-          "id": "both",
-          "label": "Resolve both",
-          "effect": {
-            "op": "seq",
-            "effects": [
-              {
+        "then": {
+          "op": "choose",
+          "chooser": "corp",
+          "options": [
+            {
+              "id": "gain3",
+              "label": "Gain 3¢",
+              "effect": {
                 "op": "do",
                 "action": {
                   "kind": "gain_credits",
                   "side": "corp",
                   "amount": 3
                 }
-              },
-              {
+              }
+            },
+            {
+              "id": "draw3",
+              "label": "Draw 3",
+              "effect": {
                 "op": "do",
                 "action": {
                   "kind": "draw",
@@ -64,41 +45,65 @@
                   "amount": 3
                 }
               }
-            ]
-          }
-        }
-      ]
-    },
-    "else": {
-      "op": "choose",
-      "chooser": "corp",
-      "options": [
-        {
-          "id": "gain3",
-          "label": "Gain 3¢",
-          "effect": {
-            "op": "do",
-            "action": {
-              "kind": "gain_credits",
-              "side": "corp",
-              "amount": 3
+            },
+            {
+              "id": "both",
+              "label": "Resolve both",
+              "effect": {
+                "op": "seq",
+                "effects": [
+                  {
+                    "op": "do",
+                    "action": {
+                      "kind": "gain_credits",
+                      "side": "corp",
+                      "amount": 3
+                    }
+                  },
+                  {
+                    "op": "do",
+                    "action": {
+                      "kind": "draw",
+                      "side": "corp",
+                      "amount": 3
+                    }
+                  }
+                ]
+              }
             }
-          }
+          ]
         },
-        {
-          "id": "draw3",
-          "label": "Draw 3",
-          "effect": {
-            "op": "do",
-            "action": {
-              "kind": "draw",
-              "side": "corp",
-              "amount": 3
+        "else": {
+          "op": "choose",
+          "chooser": "corp",
+          "options": [
+            {
+              "id": "gain3",
+              "label": "Gain 3¢",
+              "effect": {
+                "op": "do",
+                "action": {
+                  "kind": "gain_credits",
+                  "side": "corp",
+                  "amount": 3
+                }
+              }
+            },
+            {
+              "id": "draw3",
+              "label": "Draw 3",
+              "effect": {
+                "op": "do",
+                "action": {
+                  "kind": "draw",
+                  "side": "corp",
+                  "amount": 3
+                }
+              }
             }
-          }
+          ]
         }
-      ]
+      }
     }
-  },
-  "unsupported": []
+  ]
 }

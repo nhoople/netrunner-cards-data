@@ -9,11 +9,17 @@
   "installCost": 1,
   "rezCost": 1,
   "trashCost": 3,
-  "afterMandatoryDraw": {
-    "op": "do",
-    "action": {
-      "kind": "reveal_top_rd_to_hq_then_hq_to_rd_top"
+  "wave": "free-mars",
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "after_mandatory_draw",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "reveal_top_rd_to_hq_then_hq_to_rd_top"
+        }
+      }
     }
-  },
-  "wave": "free-mars"
+  ]
 }

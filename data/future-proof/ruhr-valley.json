@@ -13,5 +13,13 @@
   "installCost": 6,
   "rezCost": 6,
   "trashCost": 4,
-  "additionalRunInitiateClicks": 1
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "additionalRunInitiateClicks",
+        "value": 1
+      }
+    }
+  ]
 }

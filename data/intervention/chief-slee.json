@@ -12,14 +12,26 @@
   "installCost": 2,
   "rezCost": 2,
   "trashCost": 3,
-  "unique": true,
-  "placePowerPerUnbrokenSubOnAnyEncounterEnd": true,
-  "paidAbilities": [
+  "wave": "intervention",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "placePowerPerUnbrokenSubOnAnyEncounterEnd",
+        "value": true
+      }
+    },
+    {
+      "class": "paid",
       "id": "chief-slee-meat",
       "label": "[click], 5 hosted power counters: Do 5 meat damage",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1,
         "powerCounters": 5
@@ -27,7 +39,7 @@
       "windows": [
         "corp_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "meat_damage",
@@ -35,6 +47,5 @@
         }
       }
     }
-  ],
-  "wave": "intervention"
+  ]
 }

@@ -12,32 +12,35 @@
   ],
   "installCost": 1,
   "memoryCost": 1,
-  "onSuccessfulRun": {
-    "op": "if",
-    "cond": {
-      "op": "attacking_central"
-    },
-    "then": {
-      "op": "do",
-      "action": {
-        "kind": "add_virus_counter",
-        "amount": 1
-      }
-    }
-  },
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "conditional",
+      "trigger": "successful_run",
+      "instructions": {
+        "op": "if",
+        "cond": {
+          "op": "attacking_central"
+        },
+        "then": {
+          "op": "do",
+          "action": {
+            "kind": "add_virus_counter",
+            "amount": 1
+          }
+        }
+      }
+    },
+    {
+      "class": "paid",
       "id": "datasucker-weaken",
       "label": "Spend virus: ice −1 strength",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "virusCounters": 1
       },
       "windows": [
         "encounter_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "weaken_ice",

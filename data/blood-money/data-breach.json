@@ -10,21 +10,29 @@
     "run"
   ],
   "playCost": 0,
-  "runEvent": {
-    "servers": "rd",
-    "onRunEnd": {
-      "op": "if",
-      "cond": {
-        "op": "run_successful"
-      },
-      "then": {
-        "op": "do",
-        "action": {
-          "kind": "may_start_run",
-          "servers": "rd"
+  "wave": "blood-money",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "runEvent",
+        "value": {
+          "servers": "rd",
+          "onRunEnd": {
+            "op": "if",
+            "cond": {
+              "op": "run_successful"
+            },
+            "then": {
+              "op": "do",
+              "action": {
+                "kind": "may_start_run",
+                "servers": "rd"
+              }
+            }
+          }
         }
       }
     }
-  },
-  "wave": "blood-money"
+  ]
 }

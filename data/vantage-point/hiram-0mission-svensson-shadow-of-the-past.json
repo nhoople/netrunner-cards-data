@@ -9,12 +9,24 @@
   "subtypes": [
     "natural"
   ],
-  "link": 0,
-  "onHardwareInstallOrTrash": {
-    "op": "do",
-    "action": {
-      "kind": "look_top_n_rd_peek",
-      "n": 1
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "link",
+        "value": 0
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "hardware_install_or_trash",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "look_top_n_rd_peek",
+          "n": 1
+        }
+      }
     }
-  }
+  ]
 }

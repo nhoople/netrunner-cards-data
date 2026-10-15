@@ -8,40 +8,38 @@
   "unsupported": [],
   "faction": "criminal",
   "installCost": 1,
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "paid",
       "id": "flip-switch-jack-out",
       "label": "[trash]: Jack out",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "trashSelf": true
       },
-      "requireDuringRun": true,
       "windows": [
         "approach_paw",
         "encounter_paw",
         "approach_server_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "end_the_run"
         }
-      }
+      },
+      "requireDuringRun": true
     },
     {
+      "class": "paid",
       "id": "flip-switch-remove-tag",
       "label": "[trash]: Remove 1 tag",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "trashSelf": true
       },
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "remove_tags",
@@ -50,17 +48,16 @@
       }
     },
     {
+      "class": "paid",
       "id": "flip-switch-trace",
       "label": "[interrupt] → [trash]: Reduce base trace strength to 0",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "trashSelf": true
       },
       "windows": [
         "trace_interrupt_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "set_trace_base_strength",

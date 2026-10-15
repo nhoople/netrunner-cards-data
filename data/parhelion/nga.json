@@ -8,49 +8,73 @@
   "unsupported": [],
   "installCost": 2,
   "memoryCost": 1,
-  "powerCountersOnInstall": 3,
-  "trashWhenPowerEmpty": true,
-  "onSuccessfulRunOncePerTurn": true,
-  "onSuccessfulRun": {
-    "op": "choose",
-    "chooser": "runner",
-    "options": [
-      {
-        "id": "sabotage",
-        "label": "Remove 1 power counter to sabotage 1",
-        "effect": {
-          "op": "seq",
-          "effects": [
-            {
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "powerCountersOnInstall",
+        "value": 3
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "trashWhenPowerEmpty",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "onSuccessfulRunOncePerTurn",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "successful_run",
+      "instructions": {
+        "op": "choose",
+        "chooser": "runner",
+        "options": [
+          {
+            "id": "sabotage",
+            "label": "Remove 1 power counter to sabotage 1",
+            "effect": {
+              "op": "seq",
+              "effects": [
+                {
+                  "op": "do",
+                  "action": {
+                    "kind": "remove_power_counter",
+                    "amount": 1
+                  }
+                },
+                {
+                  "op": "do",
+                  "action": {
+                    "kind": "sabotage",
+                    "amount": 1,
+                    "interactive": true
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "id": "decline",
+            "label": "Decline",
+            "effect": {
               "op": "do",
               "action": {
-                "kind": "remove_power_counter",
-                "amount": 1
-              }
-            },
-            {
-              "op": "do",
-              "action": {
-                "kind": "sabotage",
-                "amount": 1,
-                "interactive": true
+                "kind": "gain_credits",
+                "side": "runner",
+                "amount": 0
               }
             }
-          ]
-        }
-      },
-      {
-        "id": "decline",
-        "label": "Decline",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "gain_credits",
-            "side": "runner",
-            "amount": 0
           }
-        }
+        ]
       }
-    ]
-  }
+    }
+  ]
 }

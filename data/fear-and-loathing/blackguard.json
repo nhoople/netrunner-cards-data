@@ -10,9 +10,35 @@
     "console"
   ],
   "installCost": 11,
-  "unique": true,
-  "muBonus": 2,
-  "maxConsole": 1,
-  "blackguardForceRezOnExpose": true,
-  "wave": "fear-and-loathing"
+  "wave": "fear-and-loathing",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "muBonus",
+        "value": 2
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "maxConsole",
+        "value": 1
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "blackguardForceRezOnExpose",
+        "value": true
+      }
+    }
+  ]
 }

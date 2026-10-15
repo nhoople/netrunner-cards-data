@@ -10,13 +10,30 @@
     "double"
   ],
   "playCost": 0,
-  "playCostX": true,
-  "playAdditionalClick": true,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "derez_ice_rez_cost_lte_x"
+  "wave": "terminal-directive",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "playCostX",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "playAdditionalClick",
+        "value": true
+      }
+    },
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "derez_ice_rez_cost_lte_x"
+        }
+      }
     }
-  },
-  "wave": "terminal-directive"
+  ]
 }

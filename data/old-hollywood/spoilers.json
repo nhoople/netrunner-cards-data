@@ -10,11 +10,17 @@
     "virtual"
   ],
   "installCost": 1,
-  "onAgendaScored": {
-    "op": "do",
-    "action": {
-      "kind": "trash_top_of_rd"
+  "wave": "old-hollywood",
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "agenda_scored",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "trash_top_of_rd"
+        }
+      }
     }
-  },
-  "wave": "old-hollywood"
+  ]
 }

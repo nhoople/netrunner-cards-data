@@ -9,6 +9,14 @@
   "subtypes": [
     "division"
   ],
-  "corpChoosesFirstNetDamageCardEachTurn": true,
-  "wave": "the-universe-of-tomorrow"
+  "wave": "the-universe-of-tomorrow",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "corpChoosesFirstNetDamageCardEachTurn",
+        "value": true
+      }
+    }
+  ]
 }

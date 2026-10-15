@@ -11,19 +11,19 @@
   ],
   "advancementRequirement": 4,
   "agendaPoints": 2,
-  "paidAbilities": [
+  "wave": "blood-and-water",
+  "abilities": [
     {
+      "class": "paid",
       "id": "escalate-vitriol-gain",
-      "label": "Once per turn \u2192 [click]: Gain 1\u00a2 for each tag the Runner has",
-      "clickCost": 1,
-      "creditCost": 0,
+      "label": "Once per turn → [click]: Gain 1¢ for each tag the Runner has",
       "cost": {
         "clicks": 1
       },
       "windows": [
         "corp_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "gain_credits",
@@ -36,8 +36,7 @@
           }
         }
       },
-      "oncePerTurn": true
+      "flag": "once_per_turn"
     }
-  ],
-  "wave": "blood-and-water"
+  ]
 }

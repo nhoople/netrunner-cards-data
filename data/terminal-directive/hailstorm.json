@@ -12,11 +12,13 @@
   "installCost": 6,
   "rezCost": 6,
   "strength": 5,
-  "subroutines": [
+  "wave": "terminal-directive",
+  "abilities": [
     {
+      "class": "subroutine",
       "id": "hailstorm-rfg",
       "text": "Remove a card in the heap from the game.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "rfg_heap_card"
@@ -24,15 +26,15 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "hailstorm-etr",
       "text": "End the run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "end_the_run"
         }
       }
     }
-  ],
-  "wave": "terminal-directive"
+  ]
 }

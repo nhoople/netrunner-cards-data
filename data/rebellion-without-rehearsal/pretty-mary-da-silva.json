@@ -11,8 +11,16 @@
     "seedy"
   ],
   "installCost": 1,
-  "onBreachRdIfAccessGteMayBonusAccess": {
-    "min": 2,
-    "amount": 1
-  }
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "onBreachRdIfAccessGteMayBonusAccess",
+        "value": {
+          "min": 2,
+          "amount": 1
+        }
+      }
+    }
+  ]
 }

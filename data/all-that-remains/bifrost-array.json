@@ -11,11 +11,17 @@
   ],
   "advancementRequirement": 3,
   "agendaPoints": 1,
-  "onScore": {
-    "op": "do",
-    "action": {
-      "kind": "bifrost_may_trigger_scored_agenda_on_score"
+  "wave": "all-that-remains",
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "score",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "bifrost_may_trigger_scored_agenda_on_score"
+        }
+      }
     }
-  },
-  "wave": "all-that-remains"
+  ]
 }

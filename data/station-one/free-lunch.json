@@ -12,12 +12,12 @@
   "installCost": 3,
   "rezCost": 3,
   "strength": 4,
-  "paidAbilities": [
+  "wave": "station-one",
+  "abilities": [
     {
+      "class": "paid",
       "id": "free-lunch-lose",
       "label": "Hosted power counter: The Runner loses 1¢",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "powerCounters": 1
       },
@@ -27,7 +27,7 @@
         "encounter_paw",
         "approach_server_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "lose_credits",
@@ -35,13 +35,12 @@
           "amount": 1
         }
       }
-    }
-  ],
-  "subroutines": [
+    },
     {
+      "class": "subroutine",
       "id": "free-lunch-power-1",
       "text": "Place 1 power counter on Free Lunch.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "add_power_counter",
@@ -50,9 +49,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "free-lunch-power-2",
       "text": "Place 1 power counter on Free Lunch.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "add_power_counter",
@@ -60,6 +60,5 @@
         }
       }
     }
-  ],
-  "wave": "station-one"
+  ]
 }

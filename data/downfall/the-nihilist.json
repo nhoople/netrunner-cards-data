@@ -12,18 +12,34 @@
     "seedy"
   ],
   "installCost": 4,
-  "unique": true,
-  "onFirstVirusInstallThisTurn": {
-    "op": "do",
-    "action": {
-      "kind": "add_virus_counter",
-      "amount": 2
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "first_virus_install_this_turn",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "add_virus_counter",
+          "amount": 2
+        }
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "turn_begin",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "nihilist_may_remove_2_virus_draw_unless_corp_trash_top_rd"
+        }
+      }
     }
-  },
-  "onTurnBegin": {
-    "op": "do",
-    "action": {
-      "kind": "nihilist_may_remove_2_virus_draw_unless_corp_trash_top_rd"
-    }
-  }
+  ]
 }

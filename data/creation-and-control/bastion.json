@@ -13,11 +13,12 @@
   "installCost": 4,
   "rezCost": 4,
   "strength": 4,
-  "subroutines": [
+  "abilities": [
     {
+      "class": "subroutine",
       "id": "bastion-etr",
       "text": "End the run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "end_the_run"

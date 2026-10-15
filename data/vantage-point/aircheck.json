@@ -11,22 +11,30 @@
     "stealth"
   ],
   "playCost": 1,
-  "runEvent": {
-    "servers": "hq_rd",
-    "placeEventCredits": 4,
-    "blockCreditPoolSpendAndLose": true,
-    "onRunEnd": {
-      "op": "if",
-      "cond": {
-        "op": "run_successful"
-      },
-      "then": {
-        "op": "do",
-        "action": {
-          "kind": "may_start_run",
-          "servers": "remote"
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "runEvent",
+        "value": {
+          "servers": "hq_rd",
+          "placeEventCredits": 4,
+          "blockCreditPoolSpendAndLose": true,
+          "onRunEnd": {
+            "op": "if",
+            "cond": {
+              "op": "run_successful"
+            },
+            "then": {
+              "op": "do",
+              "action": {
+                "kind": "may_start_run",
+                "servers": "remote"
+              }
+            }
+          }
         }
       }
     }
-  }
+  ]
 }

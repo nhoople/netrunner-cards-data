@@ -13,23 +13,29 @@
   "installCost": 0,
   "rezCost": 0,
   "trashCost": 3,
-  "zeroInfluenceIfNonAllianceFactionCardsGte": {
-    "faction": "weyland-consortium",
-    "threshold": 6
-  },
-  "paidAbilities": [
+  "wave": "salsette-island",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "zeroInfluenceIfNonAllianceFactionCardsGte",
+        "value": {
+          "faction": "weyland-consortium",
+          "threshold": 6
+        }
+      }
+    },
+    {
+      "class": "paid",
       "id": "executive-search-firm-search",
       "label": "[click]: Search R&D for an executive, sysop, or character, reveal it, and add it to HQ. Shuffle R&D",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1
       },
       "windows": [
         "corp_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "search_rd_for_any_subtype_to_hq",
@@ -41,6 +47,5 @@
         }
       }
     }
-  ],
-  "wave": "salsette-island"
+  ]
 }

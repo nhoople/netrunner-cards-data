@@ -8,6 +8,14 @@
   "faction": "shaper",
   "installCost": 2,
   "memoryCost": 2,
-  "drawWhenCorpRezzesIce": 1,
-  "wave": "the-source"
+  "wave": "the-source",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "drawWhenCorpRezzesIce",
+        "value": 1
+      }
+    }
+  ]
 }

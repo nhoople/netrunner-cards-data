@@ -13,19 +13,31 @@
   "installCost": 7,
   "rezCost": 7,
   "strength": 6,
-  "unique": true,
-  "onEncounter": {
-    "op": "do",
-    "action": {
-      "kind": "give_tags",
-      "amount": 1
-    }
-  },
-  "subroutines": [
+  "wave": "martial-law",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "encounter",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "give_tags",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "class": "subroutine",
       "id": "thoth-net-per-tag",
       "text": "Trace[4]. If successful, do 1 net damage for each tag the Runner has.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "trace",
@@ -46,9 +58,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "thoth-lose-credits-per-tag",
       "text": "Trace[4]. If successful, the Runner loses 1¢ for each tag they have.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "trace",
@@ -69,6 +82,5 @@
         }
       }
     }
-  ],
-  "wave": "martial-law"
+  ]
 }

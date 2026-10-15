@@ -11,16 +11,30 @@
     "sabotage"
   ],
   "playCost": 1,
-  "deckLimit": 6,
-  "runEvent": {
-    "servers": "hq",
-    "skipBreach": true,
-    "onSuccessfulRun": {
-      "op": "do",
-      "action": {
-        "kind": "reveal_copies_trash_rd"
+  "wave": "fear-the-masses",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "deckLimit",
+        "value": 6
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "runEvent",
+        "value": {
+          "servers": "hq",
+          "skipBreach": true,
+          "onSuccessfulRun": {
+            "op": "do",
+            "action": {
+              "kind": "reveal_copies_trash_rd"
+            }
+          }
+        }
       }
     }
-  },
-  "wave": "fear-the-masses"
+  ]
 }

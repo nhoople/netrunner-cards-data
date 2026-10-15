@@ -8,11 +8,22 @@
   "unsupported": [],
   "faction": "nbn",
   "playCost": 3,
-  "playRequiresSuccessfulRunLastTurn": true,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "reveal_may_advance"
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "playRequiresSuccessfulRunLastTurn",
+        "value": true
+      }
+    },
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "reveal_may_advance"
+        }
+      }
     }
-  }
+  ]
 }

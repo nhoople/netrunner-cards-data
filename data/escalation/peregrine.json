@@ -13,27 +13,33 @@
   "installCost": 5,
   "strength": 2,
   "memoryCost": 1,
-  "breaker": {
-    "breaksSubtype": "code gate",
-    "strength": 2,
-    "breakCredits": 1,
-    "breakMaxSubs": 1,
-    "pumpCredits": 3,
-    "pumpStrength": 3
-  },
-  "paidAbilities": [
+  "wave": "escalation",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "breaker",
+        "value": {
+          "breaksSubtype": "code gate",
+          "strength": 2,
+          "breakCredits": 1,
+          "breakMaxSubs": 1,
+          "pumpCredits": 3,
+          "pumpStrength": 3
+        }
+      }
+    },
+    {
+      "class": "paid",
       "id": "peregrine-derez",
       "label": "2¢, add this program to your grip: Derez fully broken code gate",
-      "clickCost": 0,
-      "creditCost": 2,
       "cost": {
         "credits": 2
       },
       "windows": [
         "encounter_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "seq",
         "effects": [
           {
@@ -53,6 +59,5 @@
       "usableByRunnerOnSelfIce": true,
       "requireFullyBrokenThisEncounter": true
     }
-  ],
-  "wave": "escalation"
+  ]
 }

@@ -10,7 +10,21 @@
     "location"
   ],
   "installCost": 0,
-  "hostsConnectionResources": true,
-  "drawOnHostConnectionInstall": 1,
-  "wave": "breaker-bay"
+  "wave": "breaker-bay",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "hostsConnectionResources",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "drawOnHostConnectionInstall",
+        "value": 1
+      }
+    }
+  ]
 }

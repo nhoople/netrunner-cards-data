@@ -10,7 +10,21 @@
     "connection"
   ],
   "installCost": 3,
-  "unique": true,
-  "corpPlayCostIncreaseForRunnerEventsOps": 1,
-  "wave": "honor-and-profit"
+  "wave": "honor-and-profit",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "corpPlayCostIncreaseForRunnerEventsOps",
+        "value": 1
+      }
+    }
+  ]
 }

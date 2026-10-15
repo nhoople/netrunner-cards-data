@@ -12,11 +12,13 @@
   "installCost": 1,
   "rezCost": 1,
   "strength": 3,
-  "subroutines": [
+  "wave": "business-first",
+  "abilities": [
     {
+      "class": "subroutine",
       "id": "harvester-draw-discard-1",
       "text": "The Runner draws 3 cards and then discards down to their maximum hand size.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "draw_then_discard_down_to_hand_size",
@@ -25,9 +27,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "harvester-draw-discard-2",
       "text": "The Runner draws 3 cards and then discards down to their maximum hand size.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "draw_then_discard_down_to_hand_size",
@@ -35,6 +38,5 @@
         }
       }
     }
-  ],
-  "wave": "business-first"
+  ]
 }

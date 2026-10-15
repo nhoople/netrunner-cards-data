@@ -10,12 +10,23 @@
     "terminal"
   ],
   "playCost": 4,
-  "endsActionPhase": true,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "host_on_connection"
+  "wave": "station-one",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "endsActionPhase",
+        "value": true
+      }
+    },
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "host_on_connection"
+        }
+      }
     }
-  },
-  "wave": "station-one"
+  ]
 }

@@ -9,20 +9,26 @@
   "subtypes": [
     "g-mod"
   ],
-  "link": 1,
-  "paidAbilities": [
+  "wave": "down-the-white-nile",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "link",
+        "value": 1
+      }
+    },
+    {
+      "class": "paid",
       "id": "kabonesa-search",
       "label": "[click]: Search stack for a non-virus program and install it, lowering install cost by 1¢; RFG it if still installed at turn end",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1
       },
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "dtwn_kabonesa_search_install"
@@ -30,6 +36,5 @@
       },
       "usableByRunnerOnSelfIce": true
     }
-  ],
-  "wave": "down-the-white-nile"
+  ]
 }

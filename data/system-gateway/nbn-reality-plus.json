@@ -9,34 +9,40 @@
   "subtypes": [
     "megacorp"
   ],
-  "onFirstTagThisTurn": {
-    "op": "choose",
-    "chooser": "corp",
-    "options": [
-      {
-        "id": "gain2",
-        "label": "Gain 2¢",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "gain_credits",
-            "side": "corp",
-            "amount": 2
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "first_tag_this_turn",
+      "instructions": {
+        "op": "choose",
+        "chooser": "corp",
+        "options": [
+          {
+            "id": "gain2",
+            "label": "Gain 2¢",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "gain_credits",
+                "side": "corp",
+                "amount": 2
+              }
+            }
+          },
+          {
+            "id": "draw2",
+            "label": "Draw 2",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "draw",
+                "side": "corp",
+                "amount": 2
+              }
+            }
           }
-        }
-      },
-      {
-        "id": "draw2",
-        "label": "Draw 2",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "draw",
-            "side": "corp",
-            "amount": 2
-          }
-        }
+        ]
       }
-    ]
-  }
+    }
+  ]
 }

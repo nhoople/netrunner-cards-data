@@ -10,6 +10,20 @@
   "subtypes": [
     "g-mod"
   ],
-  "link": 0,
-  "steveCambridge": true
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "link",
+        "value": 0
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "steveCambridge",
+        "value": true
+      }
+    }
+  ]
 }

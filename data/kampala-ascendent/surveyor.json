@@ -13,12 +13,20 @@
   "installCost": 5,
   "rezCost": 5,
   "strength": 0,
-  "strengthBonusPerIceProtectingThisServer": 2,
-  "subroutines": [
+  "wave": "kampala-ascendent",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "strengthBonusPerIceProtectingThisServer",
+        "value": 2
+      }
+    },
+    {
+      "class": "subroutine",
       "id": "surveyor-tags",
       "text": "Trace[X]. If successful, give the Runner 2 tags.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "trace_strength_equal_source_strength",
@@ -33,9 +41,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "surveyor-etr",
       "text": "Trace[X]. If successful, end the run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "trace_strength_equal_source_strength",
@@ -48,6 +57,5 @@
         }
       }
     }
-  ],
-  "wave": "kampala-ascendent"
+  ]
 }

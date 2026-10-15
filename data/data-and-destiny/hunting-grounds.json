@@ -11,37 +11,38 @@
     "virtual"
   ],
   "installCost": 2,
-  "paidAbilities": [
+  "wave": "data-and-destiny",
+  "abilities": [
     {
+      "class": "paid",
       "id": "hunting-grounds-prevent",
       "label": "[interrupt], once per turn → 0¢: Prevent a when-encountered ability",
-      "clickCost": 0,
-      "creditCost": 0,
-      "cost": {},
+      "cost": {
+        "credits": 0
+      },
       "windows": [
         "when_encountered_interrupt_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "prevent_pending_when_encountered"
         }
       },
-      "oncePerTurn": true,
+      "flag": "once_per_turn",
       "usableByRunnerOnSelfIce": true
     },
     {
+      "class": "paid",
       "id": "hunting-grounds-install",
       "label": "[trash]: Install the top 3 cards of your stack facedown",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "trashSelf": true
       },
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "install_top_n_of_stack_facedown",
@@ -50,6 +51,5 @@
       },
       "usableByRunnerOnSelfIce": true
     }
-  ],
-  "wave": "data-and-destiny"
+  ]
 }

@@ -10,27 +10,38 @@
     "connection"
   ],
   "installCost": 1,
-  "hostAgendaCapacity": 1,
-  "mayHostAccessedAgenda": true,
-  "paidAbilities": [
+  "wave": "old-hollywood",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "hostAgendaCapacity",
+        "value": 1
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "mayHostAccessedAgenda",
+        "value": true
+      }
+    },
+    {
+      "class": "paid",
       "id": "film-critic-score",
       "label": "[click],[click]: Add a hosted agenda to your score area",
-      "clickCost": 2,
-      "creditCost": 0,
       "cost": {
         "clicks": 2
       },
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "add_hosted_agenda_to_runner_score"
         }
       }
     }
-  ],
-  "wave": "old-hollywood"
+  ]
 }

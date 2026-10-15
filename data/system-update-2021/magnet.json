@@ -12,23 +12,34 @@
   "installCost": 3,
   "rezCost": 3,
   "strength": 3,
-  "subroutines": [
+  "abilities": [
     {
+      "class": "subroutine",
       "id": "magnet-etr",
       "text": "End the run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "end_the_run"
         }
       }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "hostedProgramsLoseAbilities",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "rez",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "host_ice_program_on_self"
+        }
+      }
     }
-  ],
-  "hostedProgramsLoseAbilities": true,
-  "onRez": {
-    "op": "do",
-    "action": {
-      "kind": "host_ice_program_on_self"
-    }
-  }
+  ]
 }

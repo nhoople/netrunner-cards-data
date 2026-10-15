@@ -12,7 +12,21 @@
   "installCost": 1,
   "rezCost": 1,
   "trashCost": 5,
-  "unique": true,
-  "additionalClickNextTurnOnSuccessfulRunEndIfRunnerLt6cOrNoClicks": true,
-  "wave": "martial-law"
+  "wave": "martial-law",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "additionalClickNextTurnOnSuccessfulRunEndIfRunnerLt6cOrNoClicks",
+        "value": true
+      }
+    }
+  ]
 }

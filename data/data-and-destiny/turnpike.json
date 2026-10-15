@@ -13,19 +13,25 @@
   "installCost": 2,
   "rezCost": 2,
   "strength": 3,
-  "onEncounter": {
-    "op": "do",
-    "action": {
-      "kind": "lose_credits",
-      "side": "runner",
-      "amount": 1
-    }
-  },
-  "subroutines": [
+  "wave": "data-and-destiny",
+  "abilities": [
     {
+      "class": "conditional",
+      "trigger": "encounter",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "lose_credits",
+          "side": "runner",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "class": "subroutine",
       "id": "turnpike-trace",
       "text": "Trace[5]. If successful, give the Runner 1 tag.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "trace",
@@ -40,6 +46,5 @@
         }
       }
     }
-  ],
-  "wave": "data-and-destiny"
+  ]
 }

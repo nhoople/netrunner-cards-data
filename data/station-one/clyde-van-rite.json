@@ -12,12 +12,24 @@
   "installCost": 2,
   "rezCost": 2,
   "trashCost": 3,
-  "unique": true,
-  "onTurnBegin": {
-    "op": "do",
-    "action": {
-      "kind": "pay_or_trash_top_stack"
+  "wave": "station-one",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "turn_begin",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "pay_or_trash_top_stack"
+        }
+      }
     }
-  },
-  "wave": "station-one"
+  ]
 }

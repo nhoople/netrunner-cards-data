@@ -12,51 +12,57 @@
   "installCost": 2,
   "rezCost": 2,
   "strength": 4,
-  "onEncounter": {
-    "op": "choose",
-    "chooser": "runner",
-    "options": [
-      {
-        "id": "accept",
-        "label": "Take 1 tag to bypass",
-        "effect": {
-          "op": "seq",
-          "effects": [
-            {
+  "wave": "earths-scion",
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "encounter",
+      "instructions": {
+        "op": "choose",
+        "chooser": "runner",
+        "options": [
+          {
+            "id": "accept",
+            "label": "Take 1 tag to bypass",
+            "effect": {
+              "op": "seq",
+              "effects": [
+                {
+                  "op": "do",
+                  "action": {
+                    "kind": "give_tags",
+                    "amount": 1
+                  }
+                },
+                {
+                  "op": "do",
+                  "action": {
+                    "kind": "bypass_current_ice"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "id": "decline",
+            "label": "Decline",
+            "effect": {
               "op": "do",
               "action": {
-                "kind": "give_tags",
-                "amount": 1
-              }
-            },
-            {
-              "op": "do",
-              "action": {
-                "kind": "bypass_current_ice"
+                "kind": "gain_credits",
+                "side": "runner",
+                "amount": 0
               }
             }
-          ]
-        }
-      },
-      {
-        "id": "decline",
-        "label": "Decline",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "gain_credits",
-            "side": "runner",
-            "amount": 0
           }
-        }
+        ]
       }
-    ]
-  },
-  "subroutines": [
+    },
     {
+      "class": "subroutine",
       "id": "authenticator-gain",
       "text": "The Corp gains 2 credits.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "gain_credits",
@@ -66,15 +72,15 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "authenticator-etr",
       "text": "End the run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "end_the_run"
         }
       }
     }
-  ],
-  "wave": "earths-scion"
+  ]
 }

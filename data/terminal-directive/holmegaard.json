@@ -14,11 +14,13 @@
   "installCost": 7,
   "rezCost": 7,
   "strength": 5,
-  "subroutines": [
+  "wave": "terminal-directive",
+  "abilities": [
     {
+      "class": "subroutine",
       "id": "holmegaard-trace",
       "text": "Trace[4]. If successful, the Runner cannot access cards or breach the attacked server for the remainder of this run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "trace",
@@ -33,15 +35,15 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "holmegaard-trash-breaker",
       "text": "Trash 1 installed icebreaker.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "trash_installed_icebreaker"
         }
       }
     }
-  ],
-  "wave": "terminal-directive"
+  ]
 }

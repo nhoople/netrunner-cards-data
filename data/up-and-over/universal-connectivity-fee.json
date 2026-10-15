@@ -12,17 +12,18 @@
   "installCost": 2,
   "rezCost": 2,
   "strength": 2,
-  "subroutines": [
+  "wave": "up-and-over",
+  "abilities": [
     {
+      "class": "subroutine",
       "id": "ucf",
       "text": "Untagged lose 1¢; tagged lose all ¢ and trash this ice",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "universal_connectivity_fee_sub"
         }
       }
     }
-  ],
-  "wave": "up-and-over"
+  ]
 }

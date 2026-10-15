@@ -9,15 +9,21 @@
   "subtypes": [
     "division"
   ],
-  "onFirstBadPublicityTakeEachTurn": {
-    "op": "do",
-    "action": {
-      "kind": "may_search_rd_non_agenda_any_subtype_to_hq",
-      "subtypes": [
-        "black ops",
-        "gray ops",
-        "liability"
-      ]
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "first_bad_publicity_take_each_turn",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "may_search_rd_non_agenda_any_subtype_to_hq",
+          "subtypes": [
+            "black ops",
+            "gray ops",
+            "liability"
+          ]
+        }
+      }
     }
-  }
+  ]
 }

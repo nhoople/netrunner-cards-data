@@ -11,26 +11,33 @@
   ],
   "advancementRequirement": 5,
   "agendaPoints": 3,
-  "onScore": {
-    "op": "do",
-    "action": {
-      "kind": "add_agenda_counter",
-      "amount": 1
-    }
-  },
-  "onSteal": {
-    "op": "do",
-    "action": {
-      "kind": "add_agenda_counter",
-      "amount": 1
-    }
-  },
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "conditional",
+      "trigger": "score",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "add_agenda_counter",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "steal",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "add_agenda_counter",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "class": "paid",
       "id": "next-big-thing-draw",
       "label": "[click], hosted agenda counter: Draw 4. Shuffle any number from HQ into R&D.",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1,
         "agendaCounters": 1
@@ -38,8 +45,7 @@
       "windows": [
         "corp_action_paw"
       ],
-      "usableFromRunnerScoreArea": true,
-      "effect": {
+      "instructions": {
         "op": "seq",
         "effects": [
           {
@@ -57,7 +63,8 @@
             }
           }
         ]
-      }
+      },
+      "usableFromRunnerScoreArea": true
     }
   ]
 }

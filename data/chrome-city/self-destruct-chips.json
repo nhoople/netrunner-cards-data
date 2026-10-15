@@ -11,6 +11,14 @@
   ],
   "advancementRequirement": 3,
   "agendaPoints": 1,
-  "runnerHandSizeBonus": -1,
-  "wave": "chrome-city"
+  "wave": "chrome-city",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "runnerHandSizeBonus",
+        "value": -1
+      }
+    }
+  ]
 }

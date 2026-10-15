@@ -11,32 +11,35 @@
   ],
   "advancementRequirement": 4,
   "agendaPoints": 2,
-  "onScore": {
-    "op": "do",
-    "action": {
-      "kind": "add_agenda_counter",
-      "amount": 1
-    }
-  },
-  "paidAbilities": [
+  "wave": "magnum-opus",
+  "abilities": [
     {
+      "class": "conditional",
+      "trigger": "score",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "add_agenda_counter",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "class": "paid",
       "id": "timely-install-ice",
       "label": "Hosted agenda counter: Install 1 ice from HQ or Archives in any position protecting a server, ignoring all costs",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "agendaCounters": 1
       },
       "windows": [
         "corp_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "install_ice_hq_or_archives_any_position_ignore_costs"
         }
       }
     }
-  ],
-  "wave": "magnum-opus"
+  ]
 }

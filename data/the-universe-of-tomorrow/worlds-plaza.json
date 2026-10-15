@@ -12,22 +12,40 @@
   "installCost": 2,
   "rezCost": 2,
   "trashCost": 5,
-  "unique": true,
-  "maxHostedCards": 3,
-  "hostAssetsOnly": true,
-  "paidAbilities": [
+  "wave": "the-universe-of-tomorrow",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "maxHostedCards",
+        "value": 3
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "hostAssetsOnly",
+        "value": true
+      }
+    },
+    {
+      "class": "paid",
       "id": "worlds-plaza-install",
       "label": "[click]: Install an asset from HQ on Worlds Plaza and rez it (−2¢)",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1
       },
       "windows": [
         "corp_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "install_asset_from_hq_rez_discount",
@@ -35,6 +53,5 @@
         }
       }
     }
-  ],
-  "wave": "the-universe-of-tomorrow"
+  ]
 }

@@ -12,11 +12,12 @@
   "installCost": 3,
   "rezCost": 3,
   "strength": 3,
-  "subroutines": [
+  "abilities": [
     {
+      "class": "subroutine",
       "id": "drafter-archives",
       "text": "You may add 1 card from Archives to HQ.",
-      "effect": {
+      "instructions": {
         "op": "choose",
         "chooser": "corp",
         "options": [
@@ -47,9 +48,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "drafter-install",
       "text": "You may install 1 card from Archives or HQ, ignoring all costs.",
-      "effect": {
+      "instructions": {
         "op": "choose",
         "chooser": "corp",
         "options": [

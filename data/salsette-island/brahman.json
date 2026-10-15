@@ -13,14 +13,28 @@
   "installCost": 4,
   "strength": 3,
   "memoryCost": 2,
-  "breaker": {
-    "breaksSubtype": "*",
-    "strength": 3,
-    "breakCredits": 1,
-    "breakMaxSubs": 2,
-    "pumpCredits": 2,
-    "pumpStrength": 1
-  },
-  "addInstalledNonVirusProgramToStackTopOnEncounterEndIfBroke": true,
-  "wave": "salsette-island"
+  "wave": "salsette-island",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "breaker",
+        "value": {
+          "breaksSubtype": "*",
+          "strength": 3,
+          "breakCredits": 1,
+          "breakMaxSubs": 2,
+          "pumpCredits": 2,
+          "pumpStrength": 1
+        }
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "addInstalledNonVirusProgramToStackTopOnEncounterEndIfBroke",
+        "value": true
+      }
+    }
+  ]
 }

@@ -10,19 +10,19 @@
     "virtual"
   ],
   "installCost": 1,
-  "paidAbilities": [
+  "wave": "daedalus-complex",
+  "abilities": [
     {
+      "class": "paid",
       "id": "bio-modeled-prevent",
       "label": "[interrupt] → [trash]: Prevent all but 1 net damage",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "trashSelf": true
       },
       "windows": [
         "damage_interrupt_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "prevent_all_but_n_pending_damage",
@@ -34,6 +34,5 @@
         "net"
       ]
     }
-  ],
-  "wave": "daedalus-complex"
+  ]
 }

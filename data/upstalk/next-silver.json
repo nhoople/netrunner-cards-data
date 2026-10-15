@@ -13,7 +13,14 @@
   "installCost": 3,
   "rezCost": 3,
   "strength": 1,
-  "dynamicEtrSubroutineCountFromRezzedIceSubtype": "next",
-  "subroutines": [],
-  "wave": "upstalk"
+  "wave": "upstalk",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "dynamicEtrSubroutineCountFromRezzedIceSubtype",
+        "value": "next"
+      }
+    }
+  ]
 }

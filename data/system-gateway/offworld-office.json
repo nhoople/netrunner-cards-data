@@ -10,13 +10,19 @@
   "subtypes": [
     "expansion"
   ],
-  "onScore": {
-    "op": "do",
-    "action": {
-      "kind": "gain_credits",
-      "side": "corp",
-      "amount": 7
+  "unsupported": [],
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "score",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "corp",
+          "amount": 7
+        }
+      }
     }
-  },
-  "unsupported": []
+  ]
 }

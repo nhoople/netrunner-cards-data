@@ -10,18 +10,40 @@
     "mod"
   ],
   "installCost": 2,
-  "onInstall": {
-    "op": "do",
-    "action": {
-      "kind": "gamedragon_may_host_on_icebreaker"
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "install",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "gamedragon_may_host_on_icebreaker"
+        }
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "turn_begin",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "gamedragon_may_host_on_icebreaker"
+        }
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "hostIcebreakerStrengthBonus",
+        "value": 1
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "extendsHostBreakerPumpToRun",
+        "value": true
+      }
     }
-  },
-  "onTurnBegin": {
-    "op": "do",
-    "action": {
-      "kind": "gamedragon_may_host_on_icebreaker"
-    }
-  },
-  "hostIcebreakerStrengthBonus": 1,
-  "extendsHostBreakerPumpToRun": true
+  ]
 }

@@ -10,24 +10,54 @@
     "virtual"
   ],
   "installCost": 5,
-  "unique": true,
-  "deckLimit": 1,
-  "corpCannotWinExceptFlatline": true,
-  "onTurnBegin": {
-    "op": "do",
-    "action": {
-      "kind": "add_power_counter",
-      "amount": 1
-    }
-  },
-  "onPowerCountersGte": {
-    "amount": 3,
-    "effect": {
-      "op": "do",
-      "action": {
-        "kind": "rfg_self"
+  "wave": "fear-the-masses",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "deckLimit",
+        "value": 1
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "corpCannotWinExceptFlatline",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "turn_begin",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "add_power_counter",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "onPowerCountersGte",
+        "value": {
+          "amount": 3,
+          "effect": {
+            "op": "do",
+            "action": {
+              "kind": "rfg_self"
+            }
+          }
+        }
       }
     }
-  },
-  "wave": "fear-the-masses"
+  ]
 }

@@ -10,31 +10,39 @@
     "run"
   ],
   "playCost": 2,
-  "runEvent": {
-    "servers": "any",
-    "requiresProtectingIce": true,
-    "onRunEnd": {
-      "op": "seq",
-      "effects": [
-        {
-          "op": "if",
-          "cond": {
-            "op": "run_successful"
-          },
-          "then": {
-            "op": "do",
-            "action": {
-              "kind": "bp_unless_derez_protecting_attacked"
-            }
-          }
-        },
-        {
-          "op": "do",
-          "action": {
-            "kind": "rfg_self"
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "runEvent",
+        "value": {
+          "servers": "any",
+          "requiresProtectingIce": true,
+          "onRunEnd": {
+            "op": "seq",
+            "effects": [
+              {
+                "op": "if",
+                "cond": {
+                  "op": "run_successful"
+                },
+                "then": {
+                  "op": "do",
+                  "action": {
+                    "kind": "bp_unless_derez_protecting_attacked"
+                  }
+                }
+              },
+              {
+                "op": "do",
+                "action": {
+                  "kind": "rfg_self"
+                }
+              }
+            ]
           }
         }
-      ]
+      }
     }
-  }
+  ]
 }

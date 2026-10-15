@@ -8,8 +8,22 @@
   "unsupported": [],
   "installCost": 1,
   "memoryCost": 2,
-  "recurringCreditsMax": 2,
-  "recurringSpendFor": [
-    "trash"
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "recurringCreditsMax",
+        "value": 2
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "recurringSpendFor",
+        "value": [
+          "trash"
+        ]
+      }
+    }
   ]
 }

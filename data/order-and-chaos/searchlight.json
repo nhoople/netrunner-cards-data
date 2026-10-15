@@ -14,12 +14,20 @@
   "installCost": 1,
   "rezCost": 1,
   "strength": 3,
-  "canAdvance": true,
-  "subroutines": [
+  "wave": "order-and-chaos",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "canAdvance",
+        "value": true
+      }
+    },
+    {
+      "class": "subroutine",
       "id": "searchlight-trace-1",
       "text": "Trace[X]. If successful, give the Runner 1 tag. X = advancements.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "trace_strength_equal_source_advancements",
@@ -34,9 +42,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "searchlight-trace-2",
       "text": "Trace[X]. If successful, give the Runner 1 tag. X = advancements.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "trace_strength_equal_source_advancements",
@@ -50,6 +59,5 @@
         }
       }
     }
-  ],
-  "wave": "order-and-chaos"
+  ]
 }

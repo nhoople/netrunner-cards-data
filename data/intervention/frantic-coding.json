@@ -7,13 +7,18 @@
   "unsupported": [],
   "faction": "anarch",
   "playCost": 3,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "look_top_install",
-      "n": 10,
-      "discount": 5
+  "wave": "intervention",
+  "abilities": [
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "look_top_install",
+          "n": 10,
+          "discount": 5
+        }
+      }
     }
-  },
-  "wave": "intervention"
+  ]
 }

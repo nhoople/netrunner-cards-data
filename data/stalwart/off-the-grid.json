@@ -10,7 +10,27 @@
   "installCost": 6,
   "rezCost": 6,
   "trashCost": 0,
-  "remoteOnly": true,
-  "blocksRunnerRunsOnHostServer": true,
-  "trashSelfOnCorpSuccessfulHqRun": true
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "remoteOnly",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "blocksRunnerRunsOnHostServer",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "trashSelfOnCorpSuccessfulHqRun",
+        "value": true
+      }
+    }
+  ]
 }

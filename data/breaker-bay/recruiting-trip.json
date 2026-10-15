@@ -7,13 +7,24 @@
   "unsupported": [],
   "faction": "jinteki",
   "playCost": 0,
-  "playCostX": true,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "search_rd_up_to_x_subtype_to_hq",
-      "subtype": "sysop"
+  "wave": "breaker-bay",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "playCostX",
+        "value": true
+      }
+    },
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "search_rd_up_to_x_subtype_to_hq",
+          "subtype": "sysop"
+        }
+      }
     }
-  },
-  "wave": "breaker-bay"
+  ]
 }

@@ -13,47 +13,52 @@
   "installCost": 4,
   "rezCost": 4,
   "strength": 3,
-  "onEncounter": {
-    "op": "if",
-    "cond": {
-      "op": "threat",
-      "level": 4
-    },
-    "then": {
-      "op": "choose",
-      "chooser": "runner",
-      "options": [
-        {
-          "id": "spend-click",
-          "label": "Spend [click]",
-          "effect": {
-            "op": "do",
-            "action": {
-              "kind": "lose_clicks",
-              "side": "runner",
-              "amount": 1
-            }
-          }
-        },
-        {
-          "id": "take-tag",
-          "label": "Take 1 tag",
-          "effect": {
-            "op": "do",
-            "action": {
-              "kind": "give_tags",
-              "amount": 1
-            }
-          }
-        }
-      ]
-    }
-  },
-  "subroutines": [
+  "abilities": [
     {
+      "class": "conditional",
+      "trigger": "encounter",
+      "instructions": {
+        "op": "if",
+        "cond": {
+          "op": "threat",
+          "level": 4
+        },
+        "then": {
+          "op": "choose",
+          "chooser": "runner",
+          "options": [
+            {
+              "id": "spend-click",
+              "label": "Spend [click]",
+              "effect": {
+                "op": "do",
+                "action": {
+                  "kind": "lose_clicks",
+                  "side": "runner",
+                  "amount": 1
+                }
+              }
+            },
+            {
+              "id": "take-tag",
+              "label": "Take 1 tag",
+              "effect": {
+                "op": "do",
+                "action": {
+                  "kind": "give_tags",
+                  "amount": 1
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "class": "subroutine",
       "id": "jag-tag",
       "text": "Give the Runner 1 tag.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "give_tags",
@@ -62,9 +67,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "jag-core",
       "text": "If the Runner is tagged, do 1 core damage.",
-      "effect": {
+      "instructions": {
         "op": "if",
         "cond": {
           "op": "runner_tagged"

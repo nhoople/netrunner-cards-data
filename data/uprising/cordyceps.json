@@ -11,65 +11,81 @@
   ],
   "installCost": 3,
   "memoryCost": 1,
-  "onInstall": {
-    "op": "do",
-    "action": {
-      "kind": "add_virus_counter",
-      "amount": 2
-    }
-  },
-  "onSuccessfulRunOncePerTurn": true,
-  "onSuccessfulRun": {
-    "op": "if",
-    "cond": {
-      "op": "attacking_central"
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "install",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "add_virus_counter",
+          "amount": 2
+        }
+      }
     },
-    "then": {
-      "op": "if",
-      "cond": {
-        "op": "virus_counters_gte",
-        "amount": 1
-      },
-      "then": {
-        "op": "choose",
-        "chooser": "runner",
-        "options": [
-          {
-            "id": "swap",
-            "label": "Remove 1 virus counter: swap ice protecting this server",
-            "effect": {
-              "op": "seq",
-              "effects": [
-                {
+    {
+      "class": "static",
+      "declaration": {
+        "field": "onSuccessfulRunOncePerTurn",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "successful_run",
+      "instructions": {
+        "op": "if",
+        "cond": {
+          "op": "attacking_central"
+        },
+        "then": {
+          "op": "if",
+          "cond": {
+            "op": "virus_counters_gte",
+            "amount": 1
+          },
+          "then": {
+            "op": "choose",
+            "chooser": "runner",
+            "options": [
+              {
+                "id": "swap",
+                "label": "Remove 1 virus counter: swap ice protecting this server",
+                "effect": {
+                  "op": "seq",
+                  "effects": [
+                    {
+                      "op": "do",
+                      "action": {
+                        "kind": "remove_virus_counters",
+                        "amount": 1
+                      }
+                    },
+                    {
+                      "op": "do",
+                      "action": {
+                        "kind": "may_swap_protecting_attacked_ice_with_other_installed"
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "decline",
+                "label": "Decline",
+                "effect": {
                   "op": "do",
                   "action": {
-                    "kind": "remove_virus_counters",
-                    "amount": 1
-                  }
-                },
-                {
-                  "op": "do",
-                  "action": {
-                    "kind": "may_swap_protecting_attacked_ice_with_other_installed"
+                    "kind": "gain_credits",
+                    "side": "runner",
+                    "amount": 0
                   }
                 }
-              ]
-            }
-          },
-          {
-            "id": "decline",
-            "label": "Decline",
-            "effect": {
-              "op": "do",
-              "action": {
-                "kind": "gain_credits",
-                "side": "runner",
-                "amount": 0
               }
-            }
+            ]
           }
-        ]
+        }
       }
     }
-  }
+  ]
 }

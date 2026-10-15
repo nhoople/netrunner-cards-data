@@ -11,8 +11,28 @@
   ],
   "installCost": 1,
   "memoryCost": 1,
-  "chooseServerOnInstall": true,
-  "additionalCreditCostToInstallInChosenServer": 1,
-  "trashOnVirusPurge": true,
-  "wave": "business-first"
+  "wave": "business-first",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "chooseServerOnInstall",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "additionalCreditCostToInstallInChosenServer",
+        "value": 1
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "trashOnVirusPurge",
+        "value": true
+      }
+    }
+  ]
 }

@@ -12,19 +12,32 @@
   "installCost": 9,
   "rezCost": 9,
   "strength": 7,
-  "canAdvance": true,
-  "rezCostReductionPerAdvancement": 3,
-  "subroutines": [
+  "wave": "order-and-chaos",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "canAdvance",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "rezCostReductionPerAdvancement",
+        "value": 3
+      }
+    },
+    {
+      "class": "subroutine",
       "id": "wormhole-resolve",
       "text": "Resolve a subroutine on another piece of rezzed ice.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "may_resolve_subroutine_on_rezzed_ice"
         }
       }
     }
-  ],
-  "wave": "order-and-chaos"
+  ]
 }

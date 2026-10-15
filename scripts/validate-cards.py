@@ -34,6 +34,65 @@ def load_unsupported_allowlist() -> dict[str, str]:
     return {str(k): str(v) for k, v in cards.items()}
 
 
+CLASSES = {"static", "paid", "conditional", "play", "subroutine"}
+RESTRICTION_TARGETS = {
+    "play",
+    "rez",
+    "score",
+    "steal",
+    "steal_from_protecting_server",
+    "trash",
+}
+
+
+def check_abilities(path: Path, raw: dict) -> int:
+    """CR 9.3 shape. A card with no abilities array is still on the old hooks."""
+    abilities = raw.get("abilities")
+    if abilities is None:
+        return 0
+    errors = 0
+    if not isinstance(abilities, list):
+        print(f"{path}: abilities is not an array")
+        return 1
+    for index, ability in enumerate(abilities):
+        where = f"{path} abilities[{index}]"
+        if not isinstance(ability, dict):
+            print(f"{where}: not an object")
+            errors += 1
+            continue
+        kind = ability.get("class")
+        if kind not in CLASSES:
+            print(f"{where}: class {kind!r} is not a CR 9.3 ability")
+            errors += 1
+            continue
+        if kind == "static" and ability.get("instructions") is not None:
+            print(f"{where}: a static ability cannot contain instructions")
+            errors += 1
+        if kind == "static" and not ability.get("declaration") and not ability.get("restrictions"):
+            print(f"{where}: a static ability needs a declaration or a restriction")
+            errors += 1
+        if kind == "paid" and not isinstance(ability.get("cost"), dict):
+            print(f"{where}: a paid ability needs a cost")
+            errors += 1
+        if kind == "paid" and not ability.get("instructions"):
+            print(f"{where}: a paid ability needs instructions")
+            errors += 1
+        if kind == "conditional" and not ability.get("trigger"):
+            print(f"{where}: a conditional ability needs a trigger")
+            errors += 1
+        if kind == "conditional" and not ability.get("instructions"):
+            print(f"{where}: a conditional ability needs an instruction")
+            errors += 1
+        if kind in {"play", "subroutine"} and not ability.get("instructions"):
+            print(f"{where}: a {kind} ability needs instructions")
+            errors += 1
+        for restriction in ability.get("restrictions") or []:
+            if not isinstance(restriction, dict) or restriction.get("appliesTo") not in RESTRICTION_TARGETS:
+                print(f"{where}: restriction appliesTo is unknown")
+                errors += 1
+    return errors
+
+
 def wave_dirs() -> list[Path]:
     return sorted(
         p for p in DATA.iterdir() if p.is_dir() and not p.name.startswith(".")
@@ -69,6 +128,7 @@ def main() -> int:
             if wave and wave != wave_dir.name:
                 print(f"{path}: wave {wave!r} != directory {wave_dir.name!r}")
                 errors += 1
+            errors += check_abilities(path, raw)
 
     corpus = POOL.get("corpusOrder") or []
     waves = POOL.get("waves") or {}

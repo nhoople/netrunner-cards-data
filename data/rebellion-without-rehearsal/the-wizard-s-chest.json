@@ -7,27 +7,26 @@
   "side": "runner",
   "unsupported": [],
   "installCost": 0,
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "paid",
       "id": "wizard-chest-set-aside",
       "label": "[trash]: Set aside until 2 of a type; may install 1 ignoring costs",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "trashSelf": true
       },
       "windows": [
         "runner_action_paw"
       ],
-      "requiresSuccessfulAllCentralsThisTurn": true,
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "wizard_chest_resolve",
           "untilCount": 2,
           "ignoreAllCosts": true
         }
-      }
+      },
+      "requiresSuccessfulAllCentralsThisTurn": true
     }
   ]
 }

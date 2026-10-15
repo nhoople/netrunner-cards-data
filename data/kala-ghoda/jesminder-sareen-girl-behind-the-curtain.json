@@ -9,7 +9,21 @@
   "subtypes": [
     "natural"
   ],
-  "link": 0,
-  "preventFirstTagThisTurn": true,
-  "wave": "kala-ghoda"
+  "wave": "kala-ghoda",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "link",
+        "value": 0
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "preventFirstTagThisTurn",
+        "value": true
+      }
+    }
+  ]
 }

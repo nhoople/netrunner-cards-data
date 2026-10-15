@@ -12,11 +12,12 @@
   "installCost": 5,
   "rezCost": 5,
   "strength": 5,
-  "subroutines": [
+  "abilities": [
     {
+      "class": "subroutine",
       "id": "knowledge-seeker-1",
       "text": "Place 1 virus counter on this ice.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "add_virus_counter",
@@ -25,9 +26,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "knowledge-seeker-2",
       "text": "Look at the top 4 cards of R&D and arrange them in any order.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "look_top_n_rd_arrange",
@@ -36,38 +38,43 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "knowledge-seeker-3",
       "text": "End the run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "end_the_run"
         }
       }
-    }
-  ],
-  "onEncounterEnd": {
-    "op": "if",
-    "cond": {
-      "op": "virus_counters_gte",
-      "amount": 3
     },
-    "then": {
-      "op": "seq",
-      "effects": [
-        {
-          "op": "do",
-          "action": {
-            "kind": "purge_virus_counters"
-          }
+    {
+      "class": "conditional",
+      "trigger": "encounter_end",
+      "instructions": {
+        "op": "if",
+        "cond": {
+          "op": "virus_counters_gte",
+          "amount": 3
         },
-        {
-          "op": "do",
-          "action": {
-            "kind": "derez_source"
-          }
+        "then": {
+          "op": "seq",
+          "effects": [
+            {
+              "op": "do",
+              "action": {
+                "kind": "purge_virus_counters"
+              }
+            },
+            {
+              "op": "do",
+              "action": {
+                "kind": "derez_source"
+              }
+            }
+          ]
         }
-      ]
+      }
     }
-  }
+  ]
 }

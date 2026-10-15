@@ -10,36 +10,47 @@
     "icebreaker",
     "killer"
   ],
-  "breaker": {
-    "breaksSubtype": "sentry",
-    "strength": 2,
-    "breakCredits": 1,
-    "pumpCredits": 2,
-    "pumpStrength": 3
-  },
-  "paidAbilities": [
+  "unsupported": [],
+  "installCost": 5,
+  "memoryCost": 1,
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "breaker",
+        "value": {
+          "breaksSubtype": "sentry",
+          "strength": 2,
+          "breakCredits": 1,
+          "pumpCredits": 2,
+          "pumpStrength": 3
+        }
+      }
+    },
+    {
+      "class": "paid",
       "id": "carmen-pump",
       "label": "Pump Carmen +3 strength",
-      "clickCost": 0,
-      "creditCost": 2,
       "cost": {
         "credits": 2
       },
       "windows": [
         "encounter_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "pump_strength",
           "amount": 3
         }
       }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "installCostDiscountIfSuccessfulRunThisTurn",
+        "value": 2
+      }
     }
-  ],
-  "unsupported": [],
-  "installCost": 5,
-  "installCostDiscountIfSuccessfulRunThisTurn": 2,
-  "memoryCost": 1
+  ]
 }

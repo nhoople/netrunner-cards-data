@@ -12,14 +12,26 @@
   "installCost": 3,
   "rezCost": 3,
   "trashCost": 3,
-  "onTurnBegin": {
-    "op": "do",
-    "action": {
-      "kind": "place_advancements",
-      "amount": 1,
-      "onlyIceProtectingSourceServer": true,
-      "pick": "choose"
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "turn_begin",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "place_advancements",
+          "amount": 1,
+          "onlyIceProtectingSourceServer": true,
+          "pick": "choose"
+        }
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "approachServerEtrUnlessCreditsPerAdvancedIce",
+        "value": 2
+      }
     }
-  },
-  "approachServerEtrUnlessCreditsPerAdvancedIce": 2
+  ]
 }

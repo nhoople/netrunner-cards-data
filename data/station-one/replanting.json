@@ -10,23 +10,34 @@
     "double"
   ],
   "playCost": 1,
-  "playAdditionalClick": true,
-  "onPlay": {
-    "op": "seq",
-    "effects": [
-      {
-        "op": "do",
-        "action": {
-          "kind": "add_installed_to_hq"
-        }
-      },
-      {
-        "op": "do",
-        "action": {
-          "kind": "install_2_from_hq_ignore_costs"
-        }
+  "wave": "station-one",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "playAdditionalClick",
+        "value": true
       }
-    ]
-  },
-  "wave": "station-one"
+    },
+    {
+      "class": "play",
+      "instructions": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "add_installed_to_hq"
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "install_2_from_hq_ignore_costs"
+            }
+          }
+        ]
+      }
+    }
+  ]
 }

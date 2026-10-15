@@ -12,14 +12,32 @@
   "installCost": 3,
   "rezCost": 3,
   "trashCost": 5,
-  "unique": true,
-  "runnerAllottedClicksBonus": -1,
-  "onTrashWhileAccessed": {
-    "op": "do",
-    "action": {
-      "kind": "add_to_runner_score_as_agenda",
-      "agendaPoints": 2
+  "wave": "data-and-destiny",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "runnerAllottedClicksBonus",
+        "value": -1
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "trash_while_accessed",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "add_to_runner_score_as_agenda",
+          "agendaPoints": 2
+        }
+      }
     }
-  },
-  "wave": "data-and-destiny"
+  ]
 }

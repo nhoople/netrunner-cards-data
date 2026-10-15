@@ -8,21 +8,33 @@
   "faction": "nbn",
   "advancementRequirement": 2,
   "agendaPoints": 1,
-  "unique": true,
-  "deckLimit": 1,
-  "paidAbilities": [
+  "wave": "data-and-destiny",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "deckLimit",
+        "value": 1
+      }
+    },
+    {
+      "class": "paid",
       "id": "15-minutes-shuffle",
       "label": "[click]: Shuffle 15 Minutes into R&D",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1
       },
       "windows": [
         "corp_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "shuffle_source_into_rd"
@@ -30,6 +42,5 @@
       },
       "usableFromRunnerScoreArea": true
     }
-  ],
-  "wave": "data-and-destiny"
+  ]
 }

@@ -9,23 +9,34 @@
   "installCost": 2,
   "rezCost": 2,
   "trashCost": 4,
-  "hostedCreditsOnAnyIceRez": 2,
-  "hostedCreditsSpendFor": [
-    "install"
-  ],
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "hostedCreditsOnAnyIceRez",
+        "value": 2
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "hostedCreditsSpendFor",
+        "value": [
+          "install"
+        ]
+      }
+    },
+    {
+      "class": "paid",
       "id": "cybersand-take-all",
       "label": "[trash]: Take all hosted credits",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "trashSelf": true
       },
       "windows": [
         "corp_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "take_hosted_credits",

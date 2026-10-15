@@ -10,22 +10,30 @@
     "run"
   ],
   "playCost": 3,
-  "runEvent": {
-    "servers": "any",
-    "requiresProtectingIce": true,
-    "onRunEnd": {
-      "op": "do",
-      "action": {
-        "kind": "gain_credits",
-        "side": "runner",
-        "amount": 0,
-        "tally": {
-          "count": "passed_ice",
-          "per": 1,
-          "side": "runner",
-          "base": 6
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "runEvent",
+        "value": {
+          "servers": "any",
+          "requiresProtectingIce": true,
+          "onRunEnd": {
+            "op": "do",
+            "action": {
+              "kind": "gain_credits",
+              "side": "runner",
+              "amount": 0,
+              "tally": {
+                "count": "passed_ice",
+                "per": 1,
+                "side": "runner",
+                "base": 6
+              }
+            }
+          }
         }
       }
     }
-  }
+  ]
 }

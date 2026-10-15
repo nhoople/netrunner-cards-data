@@ -9,29 +9,40 @@
   "subtypes": [
     "job"
   ],
-  "hostedCreditsOnInstall": 9,
-  "trashWhenHostedCreditsEmpty": true,
-  "paidAbilities": [
+  "unsupported": [],
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "hostedCreditsOnInstall",
+        "value": 9
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "trashWhenHostedCreditsEmpty",
+        "value": true
+      }
+    },
+    {
+      "class": "paid",
       "id": "telework-take",
       "label": "Take 3¢",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1
       },
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "take_hosted_credits",
           "amount": 3
         }
       },
-      "oncePerTurn": true
+      "flag": "once_per_turn"
     }
-  ],
-  "unsupported": []
+  ]
 }

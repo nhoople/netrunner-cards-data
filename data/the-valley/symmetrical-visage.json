@@ -10,14 +10,26 @@
     "genetics"
   ],
   "installCost": 2,
-  "unique": true,
-  "onFirstBasicClickDrawEachTurn": {
-    "op": "do",
-    "action": {
-      "kind": "gain_credits",
-      "side": "runner",
-      "amount": 1
+  "wave": "the-valley",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "first_basic_click_draw_each_turn",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "runner",
+          "amount": 1
+        }
+      }
     }
-  },
-  "wave": "the-valley"
+  ]
 }

@@ -13,13 +13,31 @@
   "installCost": 6,
   "rezCost": 6,
   "trashCost": 6,
-  "badPublicityCountersOnRez": 6,
-  "winWhenBadPublicityCountersEmpty": true,
-  "onTurnBegin": {
-    "op": "do",
-    "action": {
-      "kind": "take_hosted_bad_publicity",
-      "amount": 1
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "badPublicityCountersOnRez",
+        "value": 6
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "winWhenBadPublicityCountersEmpty",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "turn_begin",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "take_hosted_bad_publicity",
+          "amount": 1
+        }
+      }
     }
-  }
+  ]
 }

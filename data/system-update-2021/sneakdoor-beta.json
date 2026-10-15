@@ -8,19 +8,18 @@
   "unsupported": [],
   "installCost": 4,
   "memoryCost": 2,
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "paid",
       "id": "sneakdoor-run",
       "label": "Run Archives (success → HQ)",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1
       },
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "gain_credits",

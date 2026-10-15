@@ -10,18 +10,28 @@
     "black ops"
   ],
   "playCost": 3,
-  "playAdditionalCost": {
-    "op": "do",
-    "action": {
-      "kind": "remove_tags",
-      "amount": 1
+  "abilities": [
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "meat_damage",
+          "amount": 4
+        }
+      },
+      "restrictions": [
+        {
+          "appliesTo": "play",
+          "effect": {
+            "op": "do",
+            "action": {
+              "kind": "remove_tags",
+              "amount": 1
+            }
+          }
+        }
+      ]
     }
-  },
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "meat_damage",
-      "amount": 4
-    }
-  }
+  ]
 }

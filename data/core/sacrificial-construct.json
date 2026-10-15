@@ -11,19 +11,18 @@
     "remote"
   ],
   "installCost": 0,
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "paid",
       "id": "sacrificial-prevent-trash",
       "label": "[interrupt] → [trash]: Prevent a player from trashing 1 installed program or piece of hardware",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "trashSelf": true
       },
       "windows": [
         "trash_interrupt_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "prevent_pending_installed_trash",

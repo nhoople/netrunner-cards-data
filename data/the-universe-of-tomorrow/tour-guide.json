@@ -12,7 +12,14 @@
   "installCost": 2,
   "rezCost": 2,
   "strength": 0,
-  "etrSubroutinesPerRezzedAsset": true,
-  "subroutines": [],
-  "wave": "the-universe-of-tomorrow"
+  "wave": "the-universe-of-tomorrow",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "etrSubroutinesPerRezzedAsset",
+        "value": true
+      }
+    }
+  ]
 }

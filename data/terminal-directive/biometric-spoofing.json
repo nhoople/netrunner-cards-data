@@ -7,19 +7,19 @@
   "unsupported": [],
   "faction": "neutral-runner",
   "installCost": 2,
-  "paidAbilities": [
+  "wave": "terminal-directive",
+  "abilities": [
     {
+      "class": "paid",
       "id": "biometric-spoofing-prevent",
       "label": "[interrupt] → [trash]: Prevent 2 damage",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "trashSelf": true
       },
       "windows": [
         "damage_interrupt_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "prevent_pending_damage",
@@ -28,6 +28,5 @@
       },
       "usableByRunnerOnSelfIce": true
     }
-  ],
-  "wave": "terminal-directive"
+  ]
 }

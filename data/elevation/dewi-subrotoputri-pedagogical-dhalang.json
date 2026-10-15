@@ -9,98 +9,110 @@
   "subtypes": [
     "natural"
   ],
-  "link": 0,
-  "onSuccessfulRun": {
-    "op": "choose",
-    "chooser": "runner",
-    "options": [
-      {
-        "id": "unflipped",
-        "label": "MU full: flip and gain 1[credit]",
-        "effect": {
-          "op": "if",
-          "cond": {
-            "op": "and",
-            "conds": [
-              {
-                "op": "identity_unflipped"
-              },
-              {
-                "op": "runner_mu_full"
-              }
-            ]
-          },
-          "then": {
-            "op": "seq",
-            "effects": [
-              {
-                "op": "do",
-                "action": {
-                  "kind": "flip_identity"
-                }
-              },
-              {
-                "op": "do",
-                "action": {
-                  "kind": "gain_credits",
-                  "side": "runner",
-                  "amount": 1
-                }
-              }
-            ]
-          }
-        }
-      },
-      {
-        "id": "flipped",
-        "label": "Unused MU: flip and draw 1",
-        "effect": {
-          "op": "if",
-          "cond": {
-            "op": "and",
-            "conds": [
-              {
-                "op": "identity_flipped"
-              },
-              {
-                "op": "runner_unused_mu_gte",
-                "amount": 1
-              }
-            ]
-          },
-          "then": {
-            "op": "seq",
-            "effects": [
-              {
-                "op": "do",
-                "action": {
-                  "kind": "flip_identity"
-                }
-              },
-              {
-                "op": "do",
-                "action": {
-                  "kind": "draw",
-                  "side": "runner",
-                  "amount": 1
-                }
-              }
-            ]
-          }
-        }
-      },
-      {
-        "id": "decline",
-        "label": "Decline",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "gain_credits",
-            "side": "runner",
-            "amount": 0
-          }
-        }
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "link",
+        "value": 0
       }
-    ]
-  }
+    },
+    {
+      "class": "conditional",
+      "trigger": "successful_run",
+      "instructions": {
+        "op": "choose",
+        "chooser": "runner",
+        "options": [
+          {
+            "id": "unflipped",
+            "label": "MU full: flip and gain 1[credit]",
+            "effect": {
+              "op": "if",
+              "cond": {
+                "op": "and",
+                "conds": [
+                  {
+                    "op": "identity_unflipped"
+                  },
+                  {
+                    "op": "runner_mu_full"
+                  }
+                ]
+              },
+              "then": {
+                "op": "seq",
+                "effects": [
+                  {
+                    "op": "do",
+                    "action": {
+                      "kind": "flip_identity"
+                    }
+                  },
+                  {
+                    "op": "do",
+                    "action": {
+                      "kind": "gain_credits",
+                      "side": "runner",
+                      "amount": 1
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "id": "flipped",
+            "label": "Unused MU: flip and draw 1",
+            "effect": {
+              "op": "if",
+              "cond": {
+                "op": "and",
+                "conds": [
+                  {
+                    "op": "identity_flipped"
+                  },
+                  {
+                    "op": "runner_unused_mu_gte",
+                    "amount": 1
+                  }
+                ]
+              },
+              "then": {
+                "op": "seq",
+                "effects": [
+                  {
+                    "op": "do",
+                    "action": {
+                      "kind": "flip_identity"
+                    }
+                  },
+                  {
+                    "op": "do",
+                    "action": {
+                      "kind": "draw",
+                      "side": "runner",
+                      "amount": 1
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "id": "decline",
+            "label": "Decline",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "gain_credits",
+                "side": "runner",
+                "amount": 0
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
 }

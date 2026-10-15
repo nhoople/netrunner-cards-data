@@ -10,20 +10,26 @@
     "consumer-grade"
   ],
   "installCost": 1,
-  "deckLimit": 6,
-  "paidAbilities": [
+  "wave": "kala-ghoda",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "deckLimit",
+        "value": 6
+      }
+    },
+    {
+      "class": "paid",
       "id": "ramujan-prevent",
       "label": "[interrupt] → [trash]: Prevent up to X net or core damage; trash that many from stack",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "trashSelf": true
       },
       "windows": [
         "damage_interrupt_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "ramujan_prevent_damage_trash_stack"
@@ -35,6 +41,5 @@
         "core"
       ]
     }
-  ],
-  "wave": "kala-ghoda"
+  ]
 }

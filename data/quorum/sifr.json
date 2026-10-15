@@ -10,8 +10,28 @@
     "console"
   ],
   "installCost": 5,
-  "unique": true,
-  "muBonus": 2,
-  "sifrMayZeroEncounterIceStrengthOncePerTurn": true,
-  "wave": "quorum"
+  "wave": "quorum",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "muBonus",
+        "value": 2
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "sifrMayZeroEncounterIceStrengthOncePerTurn",
+        "value": true
+      }
+    }
+  ]
 }

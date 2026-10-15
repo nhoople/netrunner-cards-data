@@ -10,6 +10,14 @@
     "chip"
   ],
   "installCost": 4,
-  "muBonus": 2,
-  "wave": "fear-and-loathing"
+  "wave": "fear-and-loathing",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "muBonus",
+        "value": 2
+      }
+    }
+  ]
 }

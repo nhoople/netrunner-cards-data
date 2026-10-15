@@ -13,20 +13,32 @@
   "installCost": 2,
   "rezCost": 2,
   "trashCost": 3,
-  "unique": true,
-  "onSuccessfulRun": {
-    "op": "do",
-    "action": {
-      "kind": "trace",
-      "strength": 4,
-      "onSuccess": {
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "successful_run",
+      "instructions": {
         "op": "do",
         "action": {
-          "kind": "restrict_run_access",
-          "mode": "only_source",
-          "cardIdsFromSource": true
+          "kind": "trace",
+          "strength": 4,
+          "onSuccess": {
+            "op": "do",
+            "action": {
+              "kind": "restrict_run_access",
+              "mode": "only_source",
+              "cardIdsFromSource": true
+            }
+          }
         }
       }
     }
-  }
+  ]
 }

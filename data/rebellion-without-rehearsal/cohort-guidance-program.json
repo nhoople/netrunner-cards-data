@@ -12,70 +12,76 @@
   "installCost": 1,
   "rezCost": 1,
   "trashCost": 2,
-  "onTurnBegin": {
-    "op": "choose",
-    "chooser": "corp",
-    "options": [
-      {
-        "id": "trash-hq",
-        "label": "Trash 1 from HQ: gain 2¢ and draw 1",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "may_trash_hq_then",
-            "then": {
-              "op": "seq",
-              "effects": [
-                {
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "turn_begin",
+      "instructions": {
+        "op": "choose",
+        "chooser": "corp",
+        "options": [
+          {
+            "id": "trash-hq",
+            "label": "Trash 1 from HQ: gain 2¢ and draw 1",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "may_trash_hq_then",
+                "then": {
+                  "op": "seq",
+                  "effects": [
+                    {
+                      "op": "do",
+                      "action": {
+                        "kind": "gain_credits",
+                        "side": "corp",
+                        "amount": 2
+                      }
+                    },
+                    {
+                      "op": "do",
+                      "action": {
+                        "kind": "draw",
+                        "side": "corp",
+                        "amount": 1
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "id": "faceup-archives",
+            "label": "Turn 1 Archives card faceup: place 1 advancement",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "may_turn_facedown_archives_faceup_then",
+                "then": {
                   "op": "do",
                   "action": {
-                    "kind": "gain_credits",
-                    "side": "corp",
-                    "amount": 2
-                  }
-                },
-                {
-                  "op": "do",
-                  "action": {
-                    "kind": "draw",
-                    "side": "corp",
+                    "kind": "place_advancements",
                     "amount": 1
                   }
                 }
-              ]
+              }
             }
-          }
-        }
-      },
-      {
-        "id": "faceup-archives",
-        "label": "Turn 1 Archives card faceup: place 1 advancement",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "may_turn_facedown_archives_faceup_then",
-            "then": {
+          },
+          {
+            "id": "decline",
+            "label": "Decline",
+            "effect": {
               "op": "do",
               "action": {
-                "kind": "place_advancements",
-                "amount": 1
+                "kind": "gain_credits",
+                "side": "corp",
+                "amount": 0
               }
             }
           }
-        }
-      },
-      {
-        "id": "decline",
-        "label": "Decline",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "gain_credits",
-            "side": "corp",
-            "amount": 0
-          }
-        }
+        ]
       }
-    ]
-  }
+    }
+  ]
 }

@@ -12,6 +12,14 @@
   ],
   "advancementRequirement": 3,
   "agendaPoints": 1,
-  "firstSuccessfulHqRunEachTurnPsiCorpChoosesAccess": true,
-  "wave": "the-liberated-mind"
+  "wave": "the-liberated-mind",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "firstSuccessfulHqRunEachTurnPsiCorpChoosesAccess",
+        "value": true
+      }
+    }
+  ]
 }

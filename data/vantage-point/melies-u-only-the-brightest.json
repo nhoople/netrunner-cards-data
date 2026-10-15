@@ -9,39 +9,61 @@
   "subtypes": [
     "division"
   ],
-  "onDiscardPhaseEnd": {
-    "op": "do",
-    "action": {
-      "kind": "melies_secretly_set_face"
-    }
-  },
-  "flipIdentityOnSuccessfulCentralRun": true,
-  "onRunnerActionPhaseEnd": {
-    "op": "if",
-    "cond": {
-      "op": "identity_unflipped"
-    },
-    "then": {
-      "op": "do",
-      "action": {
-        "kind": "gain_credits",
-        "side": "corp",
-        "amount": 1
-      }
-    }
-  },
-  "identityFlippedHooks": {
-    "onFlipToBackIfRunMatchesFace": {
-      "op": "do",
-      "action": {
-        "kind": "look_top_rd_may_trash_if_do_archives_to_hq"
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "discard_phase_end",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "melies_secretly_set_face"
+        }
       }
     },
-    "onRunnerDiscardPhaseEnd": {
-      "op": "do",
-      "action": {
-        "kind": "flip_identity"
+    {
+      "class": "static",
+      "declaration": {
+        "field": "flipIdentityOnSuccessfulCentralRun",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "runner_action_phase_end",
+      "instructions": {
+        "op": "if",
+        "cond": {
+          "op": "identity_unflipped"
+        },
+        "then": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "corp",
+            "amount": 1
+          }
+        }
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "identityFlippedHooks",
+        "value": {
+          "onFlipToBackIfRunMatchesFace": {
+            "op": "do",
+            "action": {
+              "kind": "look_top_rd_may_trash_if_do_archives_to_hq"
+            }
+          },
+          "onRunnerDiscardPhaseEnd": {
+            "op": "do",
+            "action": {
+              "kind": "flip_identity"
+            }
+          }
+        }
       }
     }
-  }
+  ]
 }

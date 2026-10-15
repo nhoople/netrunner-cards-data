@@ -10,35 +10,47 @@
     "console"
   ],
   "installCost": 4,
-  "muBonus": 2,
-  "onFirstProgramInstallEachTurn": {
-    "op": "choose",
-    "chooser": "runner",
-    "options": [
-      {
-        "id": "draw",
-        "label": "Draw 1 card",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "draw",
-            "side": "runner",
-            "amount": 1
-          }
-        }
-      },
-      {
-        "id": "decline",
-        "label": "Decline",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "gain_credits",
-            "side": "runner",
-            "amount": 0
-          }
-        }
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "muBonus",
+        "value": 2
       }
-    ]
-  }
+    },
+    {
+      "class": "conditional",
+      "trigger": "first_program_install_each_turn",
+      "instructions": {
+        "op": "choose",
+        "chooser": "runner",
+        "options": [
+          {
+            "id": "draw",
+            "label": "Draw 1 card",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "draw",
+                "side": "runner",
+                "amount": 1
+              }
+            }
+          },
+          {
+            "id": "decline",
+            "label": "Decline",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "gain_credits",
+                "side": "runner",
+                "amount": 0
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
 }

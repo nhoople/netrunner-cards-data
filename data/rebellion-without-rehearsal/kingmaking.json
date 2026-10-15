@@ -11,24 +11,30 @@
   ],
   "advancementRequirement": 4,
   "agendaPoints": 2,
-  "onScore": {
-    "op": "seq",
-    "effects": [
-      {
-        "op": "do",
-        "action": {
-          "kind": "draw_up_to",
-          "side": "corp",
-          "amount": 3
-        }
-      },
-      {
-        "op": "do",
-        "action": {
-          "kind": "may_add_hq_agenda_ap_lte_to_score",
-          "maxAgendaPoints": 1
-        }
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "score",
+      "instructions": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "draw_up_to",
+              "side": "corp",
+              "amount": 3
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "may_add_hq_agenda_ap_lte_to_score",
+              "maxAgendaPoints": 1
+            }
+          }
+        ]
       }
-    ]
-  }
+    }
+  ]
 }

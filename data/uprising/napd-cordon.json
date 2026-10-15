@@ -11,10 +11,30 @@
   ],
   "playCost": 0,
   "trashCost": 2,
-  "playRequiresNoActiveLockdown": true,
-  "lingerUntilCorpNextTurnBegins": true,
-  "stealAdditionalCreditsFormula": {
-    "base": 4,
-    "perAdvancement": 2
-  }
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "playRequiresNoActiveLockdown",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "lingerUntilCorpNextTurnBegins",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "stealAdditionalCreditsFormula",
+        "value": {
+          "base": 4,
+          "perAdvancement": 2
+        }
+      }
+    }
+  ]
 }

@@ -9,11 +9,17 @@
   "subtypes": [
     "division"
   ],
-  "onFirstIceRezEachTurn": {
-    "op": "do",
-    "action": {
-      "kind": "foundry_search_copy_to_hq"
+  "wave": "the-spaces-between",
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "first_ice_rez_each_turn",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "foundry_search_copy_to_hq"
+        }
+      }
     }
-  },
-  "wave": "the-spaces-between"
+  ]
 }

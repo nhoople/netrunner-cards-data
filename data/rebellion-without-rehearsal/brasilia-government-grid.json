@@ -12,7 +12,15 @@
   "installCost": 0,
   "rezCost": 0,
   "trashCost": 3,
-  "oncePerTurnOnRezIceProtectingThisServerDuringRun": {
-    "mayDerezOtherIceForStrengthBonus": 3
-  }
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "oncePerTurnOnRezIceProtectingThisServerDuringRun",
+        "value": {
+          "mayDerezOtherIceForStrengthBonus": 3
+        }
+      }
+    }
+  ]
 }

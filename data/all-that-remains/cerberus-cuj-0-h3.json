@@ -13,50 +13,61 @@
   "installCost": 3,
   "strength": 0,
   "memoryCost": 1,
-  "breaker": {
-    "breaksSubtype": "sentry",
-    "strength": 0,
-    "breakCredits": 0,
-    "breakMaxSubs": 1,
-    "pumpCredits": 1,
-    "pumpStrength": 1,
-    "breakViaPaidAbilityOnly": true
-  },
-  "powerCountersOnInstall": 4,
-  "paidAbilities": [
+  "wave": "all-that-remains",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "breaker",
+        "value": {
+          "breaksSubtype": "sentry",
+          "strength": 0,
+          "breakCredits": 0,
+          "breakMaxSubs": 1,
+          "pumpCredits": 1,
+          "pumpStrength": 1,
+          "breakViaPaidAbilityOnly": true
+        }
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "powerCountersOnInstall",
+        "value": 4
+      }
+    },
+    {
+      "class": "paid",
       "id": "cerberus-cuj-0-h3-break",
       "label": "Hosted power counter: Break up to 2 sentry subroutines",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "powerCounters": 1
       },
       "windows": [
         "encounter_paw"
       ],
-      "requireEncounterSubtype": "sentry",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "break_encounter_subroutine",
           "maxSubs": 2,
           "requireSubtype": "sentry"
         }
-      }
+      },
+      "requireEncounterSubtype": "sentry"
     },
     {
+      "class": "paid",
       "id": "cerberus-cuj-0-h3-pump",
       "label": "1¢: +1 strength",
-      "clickCost": 0,
-      "creditCost": 1,
       "cost": {
         "credits": 1
       },
       "windows": [
         "encounter_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "pump_strength",
@@ -64,6 +75,5 @@
         }
       }
     }
-  ],
-  "wave": "all-that-remains"
+  ]
 }

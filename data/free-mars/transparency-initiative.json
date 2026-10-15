@@ -7,20 +7,35 @@
   "unsupported": [],
   "faction": "weyland-consortium",
   "playCost": 0,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "host_on_agenda"
+  "wave": "free-mars",
+  "abilities": [
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "host_on_agenda"
+        }
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "advance",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "corp",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "hostAgendaGainsPublic",
+        "value": true
+      }
     }
-  },
-  "onAdvance": {
-    "op": "do",
-    "action": {
-      "kind": "gain_credits",
-      "side": "corp",
-      "amount": 1
-    }
-  },
-  "hostAgendaGainsPublic": true,
-  "wave": "free-mars"
+  ]
 }

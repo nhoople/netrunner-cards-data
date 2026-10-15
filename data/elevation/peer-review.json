@@ -10,10 +10,15 @@
     "transaction"
   ],
   "playCost": 4,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "peer_review"
+  "abilities": [
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "peer_review"
+        }
+      }
     }
-  }
+  ]
 }

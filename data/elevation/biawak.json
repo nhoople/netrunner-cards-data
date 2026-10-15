@@ -13,12 +13,19 @@
   "installCost": 14,
   "rezCost": 14,
   "strength": 6,
-  "rezCostCreditDiscountOnForfeitAgenda": 10,
-  "subroutines": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "rezCostCreditDiscountOnForfeitAgenda",
+        "value": 10
+      }
+    },
+    {
+      "class": "subroutine",
       "id": "biawak-trash-program",
       "text": "Trash 1 installed program or end the run.",
-      "effect": {
+      "instructions": {
         "op": "choose",
         "chooser": "corp",
         "options": [
@@ -47,9 +54,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "biawak-trash-resource",
       "text": "Trash 1 installed resource or end the run.",
-      "effect": {
+      "instructions": {
         "op": "choose",
         "chooser": "corp",
         "options": [
@@ -78,9 +86,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "biawak-etr",
       "text": "End the run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "end_the_run"

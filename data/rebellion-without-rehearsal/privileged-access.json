@@ -10,48 +10,62 @@
     "run"
   ],
   "playCost": 0,
-  "playRequiresUntagged": true,
-  "runEvent": {
-    "servers": "archives",
-    "skipBreach": true,
-    "onSuccessfulRun": {
-      "op": "seq",
-      "effects": [
-        {
-          "op": "do",
-          "action": {
-            "kind": "give_tags",
-            "amount": 1
-          }
-        },
-        {
-          "op": "do",
-          "action": {
-            "kind": "may_install_from_heap",
-            "types": [
-              "resource"
-            ],
-            "discount": 2
-          }
-        },
-        {
-          "op": "if",
-          "cond": {
-            "op": "threat",
-            "level": 3
-          },
-          "then": {
-            "op": "do",
-            "action": {
-              "kind": "may_install_from_heap",
-              "types": [
-                "program"
-              ],
-              "discount": 0
-            }
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "playRequiresUntagged",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "runEvent",
+        "value": {
+          "servers": "archives",
+          "skipBreach": true,
+          "onSuccessfulRun": {
+            "op": "seq",
+            "effects": [
+              {
+                "op": "do",
+                "action": {
+                  "kind": "give_tags",
+                  "amount": 1
+                }
+              },
+              {
+                "op": "do",
+                "action": {
+                  "kind": "may_install_from_heap",
+                  "types": [
+                    "resource"
+                  ],
+                  "discount": 2
+                }
+              },
+              {
+                "op": "if",
+                "cond": {
+                  "op": "threat",
+                  "level": 3
+                },
+                "then": {
+                  "op": "do",
+                  "action": {
+                    "kind": "may_install_from_heap",
+                    "types": [
+                      "program"
+                    ],
+                    "discount": 0
+                  }
+                }
+              }
+            ]
           }
         }
-      ]
+      }
     }
-  }
+  ]
 }

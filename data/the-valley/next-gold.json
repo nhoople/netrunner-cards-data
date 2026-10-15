@@ -15,11 +15,13 @@
   "installCost": 8,
   "rezCost": 8,
   "strength": 4,
-  "subroutines": [
+  "wave": "the-valley",
+  "abilities": [
     {
+      "class": "subroutine",
       "id": "next-gold-net",
       "text": "Do X net damage.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "next_gold_net_damage"
@@ -27,15 +29,15 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "next-gold-trash",
       "text": "Trash X programs.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "trash_programs"
         }
       }
     }
-  ],
-  "wave": "the-valley"
+  ]
 }

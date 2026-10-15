@@ -11,33 +11,39 @@
   ],
   "advancementRequirement": 4,
   "agendaPoints": 2,
-  "onAgendaScored": {
-    "op": "choose",
-    "chooser": "corp",
-    "options": [
-      {
-        "id": "accept",
-        "label": "Search R&D for ice, install protecting a remote (paying install), rez ignoring rez cost, shuffle R&D",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "win_remote_enforcement"
+  "wave": "whispers-in-nalubaale",
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "agenda_scored",
+      "instructions": {
+        "op": "choose",
+        "chooser": "corp",
+        "options": [
+          {
+            "id": "accept",
+            "label": "Search R&D for ice, install protecting a remote (paying install), rez ignoring rez cost, shuffle R&D",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "win_remote_enforcement"
+              }
+            }
+          },
+          {
+            "id": "decline",
+            "label": "Decline",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "gain_credits",
+                "side": "corp",
+                "amount": 0
+              }
+            }
           }
-        }
-      },
-      {
-        "id": "decline",
-        "label": "Decline",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "gain_credits",
-            "side": "corp",
-            "amount": 0
-          }
-        }
+        ]
       }
-    ]
-  },
-  "wave": "whispers-in-nalubaale"
+    }
+  ]
 }

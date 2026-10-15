@@ -9,33 +9,39 @@
   "installCost": 2,
   "rezCost": 2,
   "trashCost": 2,
-  "onPassRezzedIceProtectingThisServer": {
-    "op": "choose",
-    "chooser": "corp",
-    "options": [
-      {
-        "id": "accept",
-        "label": "Trash Code Replicator: Runner approaches that ice again (may jack out)",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "cotc_code_replicator"
+  "wave": "council-of-the-crest",
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "pass_rezzed_ice_protecting_this_server",
+      "instructions": {
+        "op": "choose",
+        "chooser": "corp",
+        "options": [
+          {
+            "id": "accept",
+            "label": "Trash Code Replicator: Runner approaches that ice again (may jack out)",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "cotc_code_replicator"
+              }
+            }
+          },
+          {
+            "id": "decline",
+            "label": "Decline",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "gain_credits",
+                "side": "corp",
+                "amount": 0
+              }
+            }
           }
-        }
-      },
-      {
-        "id": "decline",
-        "label": "Decline",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "gain_credits",
-            "side": "corp",
-            "amount": 0
-          }
-        }
+        ]
       }
-    ]
-  },
-  "wave": "council-of-the-crest"
+    }
+  ]
 }

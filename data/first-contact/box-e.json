@@ -10,9 +10,35 @@
     "console"
   ],
   "installCost": 4,
-  "unique": true,
-  "muBonus": 2,
-  "handSizeBonus": 2,
-  "maxConsole": 1,
-  "wave": "first-contact"
+  "wave": "first-contact",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "muBonus",
+        "value": 2
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "handSizeBonus",
+        "value": 2
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "maxConsole",
+        "value": 1
+      }
+    }
+  ]
 }

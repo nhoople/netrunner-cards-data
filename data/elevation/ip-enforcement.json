@@ -10,16 +10,26 @@
     "gray ops"
   ],
   "trashCost": 5,
-  "playAdditionalCost": {
-    "op": "do",
-    "action": {
-      "kind": "ip_enforcement_remove_tags"
+  "abilities": [
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "install_from_runner_score"
+        }
+      },
+      "restrictions": [
+        {
+          "appliesTo": "play",
+          "effect": {
+            "op": "do",
+            "action": {
+              "kind": "ip_enforcement_remove_tags"
+            }
+          }
+        }
+      ]
     }
-  },
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "install_from_runner_score"
-    }
-  }
+  ]
 }

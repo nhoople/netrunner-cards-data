@@ -12,14 +12,32 @@
   "installCost": 1,
   "rezCost": 1,
   "trashCost": 4,
-  "unique": true,
-  "onTurnBegin": {
-    "op": "do",
-    "action": {
-      "kind": "bf_place_advancement_on_self",
-      "amount": 1
+  "wave": "martial-law",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "turn_begin",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "bf_place_advancement_on_self",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "mayMoveAnyAdvancementsFromSelfToRezzedIce",
+        "value": true
+      }
     }
-  },
-  "mayMoveAnyAdvancementsFromSelfToRezzedIce": true,
-  "wave": "martial-law"
+  ]
 }

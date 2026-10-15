@@ -13,40 +13,49 @@
   "installCost": 2,
   "strength": 2,
   "memoryCost": 2,
-  "breaker": {
-    "breaksSubtype": "*",
-    "strength": 2,
-    "breakCredits": 2,
-    "breakMaxSubs": 2,
-    "pumpCredits": 2,
-    "pumpStrength": 2,
-    "breakRequiresAttackingMark": true
-  },
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "breaker",
+        "value": {
+          "breaksSubtype": "*",
+          "strength": 2,
+          "breakCredits": 2,
+          "breakMaxSubs": 2,
+          "pumpCredits": 2,
+          "pumpStrength": 2,
+          "breakRequiresAttackingMark": true
+        }
+      }
+    },
+    {
+      "class": "paid",
       "id": "tunnel-vision-pump",
       "label": "Pump Tunnel Vision +2 strength",
-      "clickCost": 0,
-      "creditCost": 2,
       "cost": {
         "credits": 2
       },
       "windows": [
         "encounter_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "pump_strength",
           "amount": 2
         }
       }
+    },
+    {
+      "class": "conditional",
+      "trigger": "turn_begin",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "identify_mark"
+        }
+      }
     }
-  ],
-  "onTurnBegin": {
-    "op": "do",
-    "action": {
-      "kind": "identify_mark"
-    }
-  }
+  ]
 }

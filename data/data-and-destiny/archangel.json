@@ -14,54 +14,72 @@
   "installCost": 4,
   "rezCost": 4,
   "strength": 6,
-  "mustRevealWhenAccessedFromRd": true,
-  "skipOnAccessFromArchives": true,
-  "onAccess": {
-    "op": "choose",
-    "chooser": "corp",
-    "options": [
-      {
-        "id": "accept",
-        "label": "Pay 3¢: Runner encounters Archangel",
-        "effect": {
-          "op": "seq",
-          "effects": [
-            {
+  "wave": "data-and-destiny",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "mustRevealWhenAccessedFromRd",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "skipOnAccessFromArchives",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "access",
+      "instructions": {
+        "op": "choose",
+        "chooser": "corp",
+        "options": [
+          {
+            "id": "accept",
+            "label": "Pay 3¢: Runner encounters Archangel",
+            "effect": {
+              "op": "seq",
+              "effects": [
+                {
+                  "op": "do",
+                  "action": {
+                    "kind": "lose_credits",
+                    "side": "corp",
+                    "amount": 3
+                  }
+                },
+                {
+                  "op": "do",
+                  "action": {
+                    "kind": "force_encounter_accessed_ice"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "id": "decline",
+            "label": "Decline",
+            "effect": {
               "op": "do",
               "action": {
-                "kind": "lose_credits",
+                "kind": "gain_credits",
                 "side": "corp",
-                "amount": 3
-              }
-            },
-            {
-              "op": "do",
-              "action": {
-                "kind": "force_encounter_accessed_ice"
+                "amount": 0
               }
             }
-          ]
-        }
-      },
-      {
-        "id": "decline",
-        "label": "Decline",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "gain_credits",
-            "side": "corp",
-            "amount": 0
           }
-        }
+        ]
       }
-    ]
-  },
-  "subroutines": [
+    },
     {
+      "class": "subroutine",
       "id": "archangel-trace",
       "text": "Trace[6]. If successful, add 1 installed Runner card to the grip.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "trace",
@@ -75,6 +93,5 @@
         }
       }
     }
-  ],
-  "wave": "data-and-destiny"
+  ]
 }

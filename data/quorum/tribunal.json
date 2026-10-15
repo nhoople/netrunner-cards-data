@@ -12,11 +12,13 @@
   "installCost": 7,
   "rezCost": 7,
   "strength": 3,
-  "subroutines": [
+  "wave": "quorum",
+  "abilities": [
     {
+      "class": "subroutine",
       "id": "tribunal-trash-1",
       "text": "The Runner trashes 1 of their installed cards.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "trash_installed_runner",
@@ -25,9 +27,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "tribunal-trash-2",
       "text": "The Runner trashes 1 of their installed cards.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "trash_installed_runner",
@@ -36,9 +39,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "tribunal-trash-3",
       "text": "The Runner trashes 1 of their installed cards.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "trash_installed_runner",
@@ -46,6 +50,5 @@
         }
       }
     }
-  ],
-  "wave": "quorum"
+  ]
 }

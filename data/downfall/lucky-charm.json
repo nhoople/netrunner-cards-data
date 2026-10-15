@@ -11,26 +11,31 @@
     "chip"
   ],
   "installCost": 1,
-  "unique": true,
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "paid",
       "id": "lucky-charm-prevent-etr",
       "label": "[interrupt] → Remove from the game: Prevent a Corp card ability from ending the run",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "rfgSelf": true
       },
       "windows": [
         "end_the_run_interrupt_paw"
       ],
-      "requiresSuccessfulHqRunThisTurn": true,
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "prevent_pending_end_the_run_from_corp_card_ability"
         }
-      }
+      },
+      "requiresSuccessfulHqRunThisTurn": true
     }
   ]
 }

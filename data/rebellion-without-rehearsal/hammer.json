@@ -14,19 +14,30 @@
   "installCost": 6,
   "rezCost": 6,
   "strength": 4,
-  "maxPrintedSubsBreakExceptSubtype": "killer",
-  "onEncounter": {
-    "op": "do",
-    "action": {
-      "kind": "limit_printed_breaks_on_source_for_run",
-      "max": 1
-    }
-  },
-  "subroutines": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "maxPrintedSubsBreakExceptSubtype",
+        "value": "killer"
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "encounter",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "limit_printed_breaks_on_source_for_run",
+          "max": 1
+        }
+      }
+    },
+    {
+      "class": "subroutine",
       "id": "hammer-tag",
       "text": "Give the Runner 1 tag.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "give_tags",
@@ -35,9 +46,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "hammer-trash-rh",
       "text": "Trash 1 installed resource or piece of hardware.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "trash_resource_or_hardware",
@@ -46,9 +58,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "hammer-trash-prog",
       "text": "Trash 1 installed program that is not a decoder, fracter, or killer.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "trash_program",

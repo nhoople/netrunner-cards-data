@@ -7,17 +7,29 @@
   "installCost": 2,
   "rezCost": 2,
   "trashCost": 4,
-  "recurringCreditsMax": 0,
-  "onTurnBegin": {
-    "op": "do",
-    "action": {
-      "kind": "gain_credits",
-      "side": "corp",
-      "amount": 1
-    }
-  },
   "unsupported": [],
   "subtypes": [
     "advertisement"
+  ],
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "recurringCreditsMax",
+        "value": 0
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "turn_begin",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "corp",
+          "amount": 1
+        }
+      }
+    }
   ]
 }

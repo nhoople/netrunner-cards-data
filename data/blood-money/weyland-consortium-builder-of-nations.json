@@ -9,6 +9,14 @@
   "subtypes": [
     "megacorp"
   ],
-  "firstAdvancedIceEncounterEndMeatDamageEachTurn": true,
-  "wave": "blood-money"
+  "wave": "blood-money",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "firstAdvancedIceEncounterEndMeatDamageEachTurn",
+        "value": true
+      }
+    }
+  ]
 }

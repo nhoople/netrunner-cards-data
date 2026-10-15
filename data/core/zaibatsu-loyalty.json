@@ -10,20 +10,25 @@
   "installCost": 0,
   "rezCost": 0,
   "trashCost": 4,
-  "mayRezWhenCardWouldBeExposed": true,
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "mayRezWhenCardWouldBeExposed",
+        "value": true
+      }
+    },
+    {
+      "class": "paid",
       "id": "zaibatsu-prevent-expose-credit",
       "label": "[interrupt] → 1¢: Prevent 1 card from being exposed",
-      "clickCost": 0,
-      "creditCost": 1,
       "cost": {
         "credits": 1
       },
       "windows": [
         "expose_interrupt_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "prevent_pending_expose",
@@ -32,17 +37,16 @@
       }
     },
     {
+      "class": "paid",
       "id": "zaibatsu-prevent-expose-trash",
       "label": "[interrupt] → [trash]: Prevent 1 card from being exposed",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "trashSelf": true
       },
       "windows": [
         "expose_interrupt_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "prevent_pending_expose",

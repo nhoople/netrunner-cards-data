@@ -10,20 +10,26 @@
     "consumer-grade"
   ],
   "installCost": 0,
-  "deckLimit": 6,
-  "paidAbilities": [
+  "wave": "democracy-and-dogma",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "deckLimit",
+        "value": 6
+      }
+    },
+    {
+      "class": "paid",
       "id": "spy-camera-arrange",
       "label": "[click]: Look at the top X cards of your stack and arrange them (X = installed Spy Camera copies)",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1
       },
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "look_top_x_stack_arrange"
@@ -32,17 +38,16 @@
       "usableByRunnerOnSelfIce": true
     },
     {
+      "class": "paid",
       "id": "spy-camera-rd",
       "label": "[trash]: Look at the top card of R&D",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "trashSelf": true
       },
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "look_top_1_rd"
@@ -50,6 +55,5 @@
       },
       "usableByRunnerOnSelfIce": true
     }
-  ],
-  "wave": "democracy-and-dogma"
+  ]
 }

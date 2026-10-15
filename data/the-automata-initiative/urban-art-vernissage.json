@@ -11,14 +11,26 @@
     "ritzy"
   ],
   "installCost": 2,
-  "hostedCreditsSpendFor": [
-    "install"
-  ],
-  "onTurnBegin": {
-    "op": "do",
-    "action": {
-      "kind": "may_return_non_virus_trojan_to_grip_place_hosted",
-      "hostedAmount": 2
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "hostedCreditsSpendFor",
+        "value": [
+          "install"
+        ]
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "turn_begin",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "may_return_non_virus_trojan_to_grip_place_hosted",
+          "hostedAmount": 2
+        }
+      }
     }
-  }
+  ]
 }

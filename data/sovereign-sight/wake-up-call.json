@@ -11,14 +11,37 @@
     "gray ops"
   ],
   "playCost": 1,
-  "playRequiresRunnerTrashedCorpCardLastTurn": true,
-  "playRequiresRunnerHasInstalledHardwareOrNonVirtualResource": true,
-  "rfgInsteadOfTrashing": true,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "ss_wake_up_call"
+  "wave": "sovereign-sight",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "playRequiresRunnerTrashedCorpCardLastTurn",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "playRequiresRunnerHasInstalledHardwareOrNonVirtualResource",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "rfgInsteadOfTrashing",
+        "value": true
+      }
+    },
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "ss_wake_up_call"
+        }
+      }
     }
-  },
-  "wave": "sovereign-sight"
+  ]
 }

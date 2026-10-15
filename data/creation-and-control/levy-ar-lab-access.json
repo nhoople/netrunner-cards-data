@@ -8,29 +8,34 @@
   "unsupported": [],
   "faction": "shaper",
   "playCost": 5,
-  "onPlay": {
-    "op": "seq",
-    "effects": [
-      {
-        "op": "do",
-        "action": {
-          "kind": "shuffle_grip_and_heap_into_stack"
-        }
-      },
-      {
-        "op": "do",
-        "action": {
-          "kind": "draw",
-          "side": "runner",
-          "amount": 5
-        }
-      },
-      {
-        "op": "do",
-        "action": {
-          "kind": "rfg_self"
-        }
+  "abilities": [
+    {
+      "class": "play",
+      "instructions": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "shuffle_grip_and_heap_into_stack"
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "draw",
+              "side": "runner",
+              "amount": 5
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "rfg_self"
+            }
+          }
+        ]
       }
-    ]
-  }
+    }
+  ]
 }

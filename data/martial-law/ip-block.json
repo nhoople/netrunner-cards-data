@@ -13,19 +13,25 @@
   "installCost": 2,
   "rezCost": 2,
   "strength": 4,
-  "onEncounter": {
-    "op": "do",
-    "action": {
-      "kind": "give_tags_if_runner_has_installed_subtype",
-      "amount": 1,
-      "subtype": "ai"
-    }
-  },
-  "subroutines": [
+  "wave": "martial-law",
+  "abilities": [
     {
+      "class": "conditional",
+      "trigger": "encounter",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "give_tags_if_runner_has_installed_subtype",
+          "amount": 1,
+          "subtype": "ai"
+        }
+      }
+    },
+    {
+      "class": "subroutine",
       "id": "ip-block-trace",
       "text": "Trace[3]. If successful, give the Runner 1 tag.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "trace",
@@ -41,9 +47,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "ip-block-etr-tagged",
       "text": "End the run if the Runner is tagged.",
-      "effect": {
+      "instructions": {
         "op": "if",
         "cond": {
           "op": "runner_tagged"
@@ -56,6 +63,5 @@
         }
       }
     }
-  ],
-  "wave": "martial-law"
+  ]
 }

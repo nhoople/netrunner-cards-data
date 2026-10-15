@@ -14,11 +14,13 @@
   "installCost": 4,
   "rezCost": 4,
   "strength": 3,
-  "subroutines": [
+  "wave": "the-liberated-mind",
+  "abilities": [
     {
+      "class": "subroutine",
       "id": "chetana-gain",
       "text": "Each player gains 2¢.",
-      "effect": {
+      "instructions": {
         "op": "seq",
         "effects": [
           {
@@ -41,9 +43,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "chetana-psi",
       "text": "Psi game. If bids differ, do 1 net damage for each card in the Runner's grip.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "play_psi_game",
@@ -63,6 +66,5 @@
         }
       }
     }
-  ],
-  "wave": "the-liberated-mind"
+  ]
 }

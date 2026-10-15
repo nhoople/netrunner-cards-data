@@ -9,6 +9,14 @@
   "subtypes": [
     "megacorp"
   ],
-  "trashTopOfStackOnRunnerNetDamage": true,
-  "wave": "escalation"
+  "wave": "escalation",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "trashTopOfStackOnRunnerNetDamage",
+        "value": true
+      }
+    }
+  ]
 }

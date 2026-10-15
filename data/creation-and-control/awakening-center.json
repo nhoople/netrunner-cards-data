@@ -10,5 +10,13 @@
   "installCost": 2,
   "rezCost": 2,
   "trashCost": 3,
-  "hostsBioroidIceIgnoreInstallCost": true
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "hostsBioroidIceIgnoreInstallCost",
+        "value": true
+      }
+    }
+  ]
 }

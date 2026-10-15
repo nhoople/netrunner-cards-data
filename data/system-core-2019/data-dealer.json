@@ -12,12 +12,11 @@
     "seedy"
   ],
   "installCost": 0,
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "paid",
       "id": "data-dealer-forfeit",
       "label": "Forfeit 1 agenda: Gain 9¢",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1,
         "forfeitAgenda": true
@@ -25,7 +24,7 @@
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "gain_credits",

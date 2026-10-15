@@ -13,21 +13,33 @@
   "installCost": 10,
   "rezCost": 10,
   "strength": 8,
-  "badPublicityOnRez": 1,
-  "onEncounter": {
-    "op": "do",
-    "action": {
-      "kind": "gain_credits_if_runner_has_installed_subtype",
-      "side": "corp",
-      "amount": 2,
-      "subtype": "ai"
-    }
-  },
-  "subroutines": [
+  "wave": "intervention",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "badPublicityOnRez",
+        "value": 1
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "encounter",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits_if_runner_has_installed_subtype",
+          "side": "corp",
+          "amount": 2,
+          "subtype": "ai"
+        }
+      }
+    },
+    {
+      "class": "subroutine",
       "id": "bulwark-trash-program",
       "text": "The Runner trashes 1 installed program.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "trash_program",
@@ -36,9 +48,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "bulwark-gain-etr-1",
       "text": "Gain 2¢. End the run.",
-      "effect": {
+      "instructions": {
         "op": "seq",
         "effects": [
           {
@@ -59,9 +72,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "bulwark-gain-etr-2",
       "text": "Gain 2¢. End the run.",
-      "effect": {
+      "instructions": {
         "op": "seq",
         "effects": [
           {
@@ -81,6 +95,5 @@
         ]
       }
     }
-  ],
-  "wave": "intervention"
+  ]
 }

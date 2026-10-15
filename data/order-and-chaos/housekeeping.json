@@ -11,8 +11,28 @@
     "gray ops"
   ],
   "playCost": 2,
-  "lingerAsCurrent": true,
-  "currentTrashOnAgendaStolen": true,
-  "firstRunnerInstallTrashFromGripEachTurn": true,
-  "wave": "order-and-chaos"
+  "wave": "order-and-chaos",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "lingerAsCurrent",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "currentTrashOnAgendaStolen",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "firstRunnerInstallTrashFromGripEachTurn",
+        "value": true
+      }
+    }
+  ]
 }

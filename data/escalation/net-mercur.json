@@ -11,8 +11,28 @@
     "virtual"
   ],
   "installCost": 3,
-  "unique": true,
-  "firstStealthSpendEachRunPlaceCreditOrDraw": true,
-  "spendHostedCreditsForAnything": true,
-  "wave": "escalation"
+  "wave": "escalation",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "firstStealthSpendEachRunPlaceCreditOrDraw",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "spendHostedCreditsForAnything",
+        "value": true
+      }
+    }
+  ]
 }

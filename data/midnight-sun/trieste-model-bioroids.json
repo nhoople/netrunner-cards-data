@@ -12,10 +12,16 @@
   "installCost": 2,
   "rezCost": 2,
   "trashCost": 3,
-  "onRez": {
-    "op": "do",
-    "action": {
-      "kind": "choose_rezzed_bioroid_forbid_runner_break"
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "rez",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "choose_rezzed_bioroid_forbid_runner_break"
+        }
+      }
     }
-  }
+  ]
 }

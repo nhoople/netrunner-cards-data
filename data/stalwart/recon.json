@@ -11,8 +11,16 @@
     "run"
   ],
   "playCost": 1,
-  "runEvent": {
-    "servers": "any",
-    "mayJackOutOnFirstIceEncounter": true
-  }
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "runEvent",
+        "value": {
+          "servers": "any",
+          "mayJackOutOnFirstIceEncounter": true
+        }
+      }
+    }
+  ]
 }

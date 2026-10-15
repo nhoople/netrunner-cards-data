@@ -10,9 +10,23 @@
     "run"
   ],
   "playCost": 3,
-  "playCostDiscountPerIceProtectingServer": "hq",
-  "runEvent": {
-    "servers": "hq",
-    "bonusAccess": 2
-  }
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "playCostDiscountPerIceProtectingServer",
+        "value": "hq"
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "runEvent",
+        "value": {
+          "servers": "hq",
+          "bonusAccess": 2
+        }
+      }
+    }
+  ]
 }

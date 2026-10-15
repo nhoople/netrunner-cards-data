@@ -11,20 +11,26 @@
   ],
   "installCost": 2,
   "memoryCost": 0,
-  "mayPlaceVirusCounterWhenCorpCardTrashed": true,
-  "paidAbilities": [
+  "wave": "the-devil-and-the-dragon",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "mayPlaceVirusCounterWhenCorpCardTrashed",
+        "value": true
+      }
+    },
+    {
+      "class": "paid",
       "id": "consume-cash",
-      "label": "[click]: Gain 2\u00a2 for each hosted virus counter, then remove all virus counters",
-      "clickCost": 1,
-      "creditCost": 0,
+      "label": "[click]: Gain 2¢ for each hosted virus counter, then remove all virus counters",
       "cost": {
         "clicks": 1
       },
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "seq",
         "effects": [
           {
@@ -51,6 +57,5 @@
       },
       "usableByRunnerOnSelfIce": true
     }
-  ],
-  "wave": "the-devil-and-the-dragon"
+  ]
 }

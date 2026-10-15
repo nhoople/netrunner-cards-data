@@ -12,42 +12,58 @@
   ],
   "advancementRequirement": 4,
   "agendaPoints": 2,
-  "badPublicityOnScore": 1,
-  "onSteal": {
-    "op": "do",
-    "action": {
-      "kind": "give_bad_publicity",
-      "amount": 1
-    }
-  },
-  "onCorpActionPhaseEnd": {
-    "op": "if",
-    "cond": {
-      "op": "self_scored_this_turn"
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "badPublicityOnScore",
+        "value": 1
+      }
     },
-    "then": {
-      "op": "seq",
-      "effects": [
-        {
-          "op": "do",
-          "action": {
-            "kind": "remove_tags",
-            "amount": 0,
-            "tally": {
-              "count": "runner_tags",
-              "per": 1,
-              "side": "runner"
-            }
-          }
-        },
-        {
-          "op": "do",
-          "action": {
-            "kind": "give_tags",
-            "amount": 3
-          }
+    {
+      "class": "conditional",
+      "trigger": "steal",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "give_bad_publicity",
+          "amount": 1
         }
-      ]
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "corp_action_phase_end",
+      "instructions": {
+        "op": "if",
+        "cond": {
+          "op": "self_scored_this_turn"
+        },
+        "then": {
+          "op": "seq",
+          "effects": [
+            {
+              "op": "do",
+              "action": {
+                "kind": "remove_tags",
+                "amount": 0,
+                "tally": {
+                  "count": "runner_tags",
+                  "per": 1,
+                  "side": "runner"
+                }
+              }
+            },
+            {
+              "op": "do",
+              "action": {
+                "kind": "give_tags",
+                "amount": 3
+              }
+            }
+          ]
+        }
+      }
     }
-  }
+  ]
 }

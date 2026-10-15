@@ -13,58 +13,67 @@
   "installCost": 0,
   "rezCost": 0,
   "trashCost": 3,
-  "unique": true,
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "paid",
       "id": "calvin-b4l3y-draw",
       "label": "[click]: Draw 2 cards",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1
       },
       "windows": [
         "corp_action_paw"
       ],
-      "oncePerTurn": true,
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "draw",
           "side": "corp",
           "amount": 2
         }
+      },
+      "flag": "once_per_turn"
+    },
+    {
+      "class": "conditional",
+      "trigger": "trash",
+      "instructions": {
+        "op": "choose",
+        "chooser": "corp",
+        "options": [
+          {
+            "id": "draw",
+            "label": "Draw 2 cards",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "draw",
+                "side": "corp",
+                "amount": 2
+              }
+            }
+          },
+          {
+            "id": "decline",
+            "label": "Decline",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "gain_credits",
+                "side": "corp",
+                "amount": 0
+              }
+            }
+          }
+        ]
       }
     }
-  ],
-  "onTrash": {
-    "op": "choose",
-    "chooser": "corp",
-    "options": [
-      {
-        "id": "draw",
-        "label": "Draw 2 cards",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "draw",
-            "side": "corp",
-            "amount": 2
-          }
-        }
-      },
-      {
-        "id": "decline",
-        "label": "Decline",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "gain_credits",
-            "side": "corp",
-            "amount": 0
-          }
-        }
-      }
-    ]
-  }
+  ]
 }

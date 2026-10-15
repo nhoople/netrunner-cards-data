@@ -7,22 +7,27 @@
   "side": "runner",
   "unsupported": [],
   "playCost": 2,
-  "onPlay": {
-    "op": "seq",
-    "effects": [
-      {
-        "op": "do",
-        "action": {
-          "kind": "shuffle_up_to_n_distinct_heap_titles_into_stack",
-          "max": 5
-        }
-      },
-      {
-        "op": "do",
-        "action": {
-          "kind": "rfg_self"
-        }
+  "abilities": [
+    {
+      "class": "play",
+      "instructions": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "shuffle_up_to_n_distinct_heap_titles_into_stack",
+              "max": 5
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "rfg_self"
+            }
+          }
+        ]
       }
-    ]
-  }
+    }
+  ]
 }

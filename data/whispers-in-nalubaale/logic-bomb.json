@@ -10,19 +10,19 @@
     "virtual"
   ],
   "installCost": 0,
-  "paidAbilities": [
+  "wave": "whispers-in-nalubaale",
+  "abilities": [
     {
+      "class": "paid",
       "id": "logic-bomb-bypass",
       "label": "[trash]: Bypass the ice you are encountering; lose remaining clicks",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "trashSelf": true
       },
       "windows": [
         "encounter_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "seq",
         "effects": [
           {
@@ -41,6 +41,5 @@
       },
       "usableByRunnerOnSelfIce": true
     }
-  ],
-  "wave": "whispers-in-nalubaale"
+  ]
 }

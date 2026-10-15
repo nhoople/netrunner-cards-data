@@ -14,19 +14,37 @@
   "installCost": 2,
   "strength": 4,
   "memoryCost": 1,
-  "onInstall": {
-    "op": "do",
-    "action": {
-      "kind": "choose_server_runner"
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "install",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "choose_server_runner"
+        }
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "interfaceRequiresChosenServer",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "breaker",
+        "value": {
+          "breaksSubtype": "code gate",
+          "strength": 0,
+          "breakCredits": 1,
+          "breakMaxSubs": 1,
+          "pumpCredits": 1,
+          "pumpStrength": 1
+        }
+      }
     }
-  },
-  "interfaceRequiresChosenServer": true,
-  "breaker": {
-    "breaksSubtype": "code gate",
-    "strength": 0,
-    "breakCredits": 1,
-    "breakMaxSubs": 1,
-    "pumpCredits": 1,
-    "pumpStrength": 1
-  }
+  ]
 }

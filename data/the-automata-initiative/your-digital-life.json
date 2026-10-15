@@ -10,17 +10,22 @@
     "transaction"
   ],
   "playCost": 2,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "gain_credits",
-      "side": "corp",
-      "amount": 0,
-      "tally": {
-        "count": "hq_cards",
-        "per": 1,
-        "side": "corp"
+  "abilities": [
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "corp",
+          "amount": 0,
+          "tally": {
+            "count": "hq_cards",
+            "per": 1,
+            "side": "corp"
+          }
+        }
       }
     }
-  }
+  ]
 }

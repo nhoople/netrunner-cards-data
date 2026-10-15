@@ -13,8 +13,22 @@
   "installCost": 2,
   "rezCost": 2,
   "trashCost": 3,
-  "installServers": [
-    "hq"
-  ],
-  "handSizeBonus": 2
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "installServers",
+        "value": [
+          "hq"
+        ]
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "handSizeBonus",
+        "value": 2
+      }
+    }
+  ]
 }

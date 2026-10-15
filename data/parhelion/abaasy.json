@@ -13,38 +13,47 @@
   "installCost": 2,
   "strength": 1,
   "memoryCost": 1,
-  "breaker": {
-    "breaksSubtype": "code gate",
-    "strength": 1,
-    "breakCredits": 1,
-    "pumpCredits": 2,
-    "pumpStrength": 2
-  },
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "breaker",
+        "value": {
+          "breaksSubtype": "code gate",
+          "strength": 1,
+          "breakCredits": 1,
+          "pumpCredits": 2,
+          "pumpStrength": 2
+        }
+      }
+    },
+    {
+      "class": "paid",
       "id": "abaasy-pump",
       "label": "Pump Abaasy +2 strength",
-      "clickCost": 0,
-      "creditCost": 2,
       "cost": {
         "credits": 2
       },
       "windows": [
         "encounter_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "pump_strength",
           "amount": 2
         }
       }
+    },
+    {
+      "class": "conditional",
+      "trigger": "fully_break_once_per_turn",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "may_trash_from_grip_to_draw"
+        }
+      }
     }
-  ],
-  "onFullyBreakOncePerTurn": {
-    "op": "do",
-    "action": {
-      "kind": "may_trash_from_grip_to_draw"
-    }
-  }
+  ]
 }

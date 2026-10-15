@@ -7,19 +7,29 @@
   "side": "runner",
   "unsupported": [],
   "playCost": 1,
-  "playAdditionalCost": {
-    "op": "do",
-    "action": {
-      "kind": "core_damage",
-      "amount": 1
+  "abilities": [
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "gain_clicks",
+          "side": "runner",
+          "amount": 3
+        }
+      },
+      "restrictions": [
+        {
+          "appliesTo": "play",
+          "effect": {
+            "op": "do",
+            "action": {
+              "kind": "core_damage",
+              "amount": 1
+            }
+          }
+        }
+      ]
     }
-  },
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "gain_clicks",
-      "side": "runner",
-      "amount": 3
-    }
-  }
+  ]
 }

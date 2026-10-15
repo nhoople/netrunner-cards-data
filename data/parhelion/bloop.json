@@ -15,12 +15,19 @@
   "installCost": 3,
   "rezCost": 3,
   "strength": 5,
-  "rezAdditionalCostDerezSubtype": "harmonic",
-  "subroutines": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "rezAdditionalCostDerezSubtype",
+        "value": "harmonic"
+      }
+    },
+    {
+      "class": "subroutine",
       "id": "bloop-core",
       "text": "Do 1 core damage.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "core_damage",
@@ -29,9 +36,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "bloop-trash-1",
       "text": "Trash 1 installed program.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "trash_program",
@@ -40,9 +48,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "bloop-trash-2",
       "text": "Trash 1 installed program.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "trash_program",

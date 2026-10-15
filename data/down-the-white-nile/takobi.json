@@ -8,49 +8,59 @@
   "faction": "shaper",
   "installCost": 2,
   "memoryCost": 1,
-  "unique": true,
-  "onFullyBreak": {
-    "op": "choose",
-    "chooser": "runner",
-    "options": [
-      {
-        "id": "accept",
-        "label": "Place 1 power counter on Takobi",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "add_power_counter",
-            "amount": 1
-          }
-        }
-      },
-      {
-        "id": "decline",
-        "label": "Decline",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "gain_credits",
-            "side": "runner",
-            "amount": 0
-          }
-        }
-      }
-    ]
-  },
-  "paidAbilities": [
+  "wave": "down-the-white-nile",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "fully_break",
+      "instructions": {
+        "op": "choose",
+        "chooser": "runner",
+        "options": [
+          {
+            "id": "accept",
+            "label": "Place 1 power counter on Takobi",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "add_power_counter",
+                "amount": 1
+              }
+            }
+          },
+          {
+            "id": "decline",
+            "label": "Decline",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "gain_credits",
+                "side": "runner",
+                "amount": 0
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "class": "paid",
       "id": "takobi-pump",
       "label": "2 hosted power counters: Choose 1 installed non-AI icebreaker. That icebreaker gets +3 strength for the remainder of the current encounter",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "powerCounters": 2
       },
       "windows": [
         "encounter_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "dtwn_takobi_pump_breaker",
@@ -59,6 +69,5 @@
       },
       "usableByRunnerOnSelfIce": true
     }
-  ],
-  "wave": "down-the-white-nile"
+  ]
 }

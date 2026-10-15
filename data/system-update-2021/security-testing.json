@@ -10,5 +10,13 @@
     "job"
   ],
   "installCost": 0,
-  "securityTesting": true
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "securityTesting",
+        "value": true
+      }
+    }
+  ]
 }

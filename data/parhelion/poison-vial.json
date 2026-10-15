@@ -10,28 +10,39 @@
     "weapon"
   ],
   "installCost": 2,
-  "powerCountersOnInstall": 3,
-  "trashWhenPowerEmpty": true,
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "powerCountersOnInstall",
+        "value": 3
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "trashWhenPowerEmpty",
+        "value": true
+      }
+    },
+    {
+      "class": "paid",
       "id": "poison-vial-break",
       "label": "Hosted power counter: Break up to 2 subroutines",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "powerCounters": 1
       },
       "windows": [
         "encounter_paw"
       ],
-      "requireBrokenSubThisEncounter": true,
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "break_encounter_subroutine",
           "maxSubs": 2
         }
-      }
+      },
+      "requireBrokenSubThisEncounter": true
     }
   ]
 }

@@ -10,14 +10,26 @@
     "location"
   ],
   "installCost": 2,
-  "unique": true,
-  "onFirstRunnerCreditPoolEmptyThisTurn": {
-    "op": "do",
-    "action": {
-      "kind": "gain_credits",
-      "side": "runner",
-      "amount": 1
+  "wave": "first-contact",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "first_runner_credit_pool_empty_this_turn",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "runner",
+          "amount": 1
+        }
+      }
     }
-  },
-  "wave": "first-contact"
+  ]
 }

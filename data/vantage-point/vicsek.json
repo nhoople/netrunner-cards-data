@@ -14,11 +14,12 @@
   "installCost": 2,
   "rezCost": 2,
   "strength": 3,
-  "subroutines": [
+  "abilities": [
     {
+      "class": "subroutine",
       "id": "vicsek-x",
       "text": "Do X net damage and give the Runner X tags. X is equal to the number of tags the Runner has.",
-      "effect": {
+      "instructions": {
         "op": "seq",
         "effects": [
           {
@@ -49,9 +50,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "vicsek-trash",
       "text": "Give the Runner 1 tag. Trash this ice.",
-      "effect": {
+      "instructions": {
         "op": "seq",
         "effects": [
           {

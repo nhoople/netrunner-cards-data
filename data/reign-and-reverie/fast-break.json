@@ -8,10 +8,15 @@
   "unsupported": [],
   "faction": "haas-bioroid",
   "playCost": 4,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "fast_break_equal_to_runner_scored_agendas"
+  "abilities": [
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "fast_break_equal_to_runner_scored_agendas"
+        }
+      }
     }
-  }
+  ]
 }

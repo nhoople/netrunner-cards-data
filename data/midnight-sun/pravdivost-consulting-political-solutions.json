@@ -9,33 +9,39 @@
   "subtypes": [
     "division"
   ],
-  "onFirstSuccessfulRunThisTurn": {
-    "op": "choose",
-    "chooser": "corp",
-    "options": [
-      {
-        "id": "place-adv",
-        "label": "Place 1 advancement on an advanceable card",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "place_advancements",
-            "amount": 1
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "first_successful_run_this_turn",
+      "instructions": {
+        "op": "choose",
+        "chooser": "corp",
+        "options": [
+          {
+            "id": "place-adv",
+            "label": "Place 1 advancement on an advanceable card",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "place_advancements",
+                "amount": 1
+              }
+            }
+          },
+          {
+            "id": "decline",
+            "label": "Decline",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "gain_credits",
+                "side": "corp",
+                "amount": 0
+              }
+            }
           }
-        }
-      },
-      {
-        "id": "decline",
-        "label": "Decline",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "gain_credits",
-            "side": "corp",
-            "amount": 0
-          }
-        }
+        ]
       }
-    ]
-  }
+    }
+  ]
 }

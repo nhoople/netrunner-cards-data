@@ -7,13 +7,30 @@
   "unsupported": [],
   "faction": "neutral-runner",
   "playCost": 0,
-  "deckLimit": 1,
-  "rfgInsteadOfTrashing": true,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "rebirth_switch_identity_same_faction"
+  "wave": "the-liberated-mind",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "deckLimit",
+        "value": 1
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "rfgInsteadOfTrashing",
+        "value": true
+      }
+    },
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "rebirth_switch_identity_same_faction"
+        }
+      }
     }
-  },
-  "wave": "the-liberated-mind"
+  ]
 }

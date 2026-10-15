@@ -10,12 +10,24 @@
     "connection"
   ],
   "installCost": 2,
-  "unique": true,
-  "onTurnBegin": {
-    "op": "do",
-    "action": {
-      "kind": "beth_kilrain_corp_credit_tiers"
+  "wave": "blood-money",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "turn_begin",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "beth_kilrain_corp_credit_tiers"
+        }
+      }
     }
-  },
-  "wave": "blood-money"
+  ]
 }

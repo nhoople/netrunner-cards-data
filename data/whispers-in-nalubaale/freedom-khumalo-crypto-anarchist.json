@@ -9,7 +9,21 @@
   "subtypes": [
     "cyborg"
   ],
-  "link": 0,
-  "accessTrashNonAgendaWithVirusEqualPrintedCost": true,
-  "wave": "whispers-in-nalubaale"
+  "wave": "whispers-in-nalubaale",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "link",
+        "value": 0
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "accessTrashNonAgendaWithVirusEqualPrintedCost",
+        "value": true
+      }
+    }
+  ]
 }

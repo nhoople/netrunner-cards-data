@@ -12,12 +12,24 @@
   "installCost": 2,
   "rezCost": 2,
   "trashCost": 5,
-  "unique": true,
-  "onWouldTakeBadPublicity": {
-    "op": "do",
-    "action": {
-      "kind": "trace_prevent_bad_publicity"
+  "wave": "double-time",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "would_take_bad_publicity",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "trace_prevent_bad_publicity"
+        }
+      }
     }
-  },
-  "wave": "double-time"
+  ]
 }

@@ -13,12 +13,24 @@
   "installCost": 2,
   "rezCost": 2,
   "trashCost": 5,
-  "unique": true,
-  "onAgendaScoredFromThisServer": {
-    "op": "do",
-    "action": {
-      "kind": "may_install_from_hq_ignore_costs_then_place_advancements",
-      "amount": 1
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "agenda_scored_from_this_server",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "may_install_from_hq_ignore_costs_then_place_advancements",
+          "amount": 1
+        }
+      }
     }
-  }
+  ]
 }

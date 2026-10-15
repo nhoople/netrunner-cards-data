@@ -12,19 +12,32 @@
   "installCost": 5,
   "rezCost": 5,
   "strength": 5,
-  "canAdvance": true,
-  "strengthPerAdvancement": 1,
-  "subroutines": [
+  "wave": "order-and-chaos",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "canAdvance",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "strengthPerAdvancement",
+        "value": 1
+      }
+    },
+    {
+      "class": "subroutine",
       "id": "firewall-etr",
       "text": "End the run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "end_the_run"
         }
       }
     }
-  ],
-  "wave": "order-and-chaos"
+  ]
 }

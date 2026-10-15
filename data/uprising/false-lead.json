@@ -11,19 +11,18 @@
   ],
   "advancementRequirement": 3,
   "agendaPoints": 1,
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "paid",
       "id": "false-lead-forfeit",
       "label": "Forfeit: if Runner has 2+ [click], they lose [click][click]",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "trashSelf": true
       },
       "windows": [
         "corp_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "if",
         "cond": {
           "op": "clicks_gte",

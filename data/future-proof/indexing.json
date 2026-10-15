@@ -11,13 +11,21 @@
     "run"
   ],
   "playCost": 0,
-  "runEvent": {
-    "servers": "rd",
-    "onSuccessfulRun": {
-      "op": "do",
-      "action": {
-        "kind": "indexing_may_instead_of_breach"
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "runEvent",
+        "value": {
+          "servers": "rd",
+          "onSuccessfulRun": {
+            "op": "do",
+            "action": {
+              "kind": "indexing_may_instead_of_breach"
+            }
+          }
+        }
       }
     }
-  }
+  ]
 }

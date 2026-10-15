@@ -13,13 +13,26 @@
   "installCost": 6,
   "rezCost": 6,
   "strength": 4,
-  "canAdvance": true,
-  "strengthPerAdvancement": 1,
-  "subroutines": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "canAdvance",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "strengthPerAdvancement",
+        "value": 1
+      }
+    },
+    {
+      "class": "subroutine",
       "id": "colossus-tag",
       "text": "Give the Runner 1 tag. If 3+ advancements, instead give 2 tags.",
-      "effect": {
+      "instructions": {
         "op": "if",
         "cond": {
           "op": "advancements_gte",
@@ -42,9 +55,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "colossus-trash",
       "text": "Trash 1 installed program. If 3+ advancements, also trash 1 installed resource.",
-      "effect": {
+      "instructions": {
         "op": "if",
         "cond": {
           "op": "advancements_gte",

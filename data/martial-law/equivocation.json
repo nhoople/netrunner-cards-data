@@ -8,12 +8,24 @@
   "faction": "shaper",
   "installCost": 2,
   "memoryCost": 1,
-  "unique": true,
-  "onSuccessfulRunOnRd": {
-    "op": "do",
-    "action": {
-      "kind": "may_reveal_force_draw"
+  "wave": "martial-law",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "successful_run_on_rd",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "may_reveal_force_draw"
+        }
+      }
     }
-  },
-  "wave": "martial-law"
+  ]
 }

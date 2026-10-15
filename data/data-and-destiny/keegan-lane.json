@@ -12,13 +12,19 @@
   "installCost": 0,
   "rezCost": 0,
   "trashCost": 3,
-  "unique": true,
-  "paidAbilities": [
+  "wave": "data-and-destiny",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "paid",
       "id": "keegan-trash-program",
       "label": "[trash], remove 1 tag: Trash 1 program (run on this server)",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "removeTags": 1,
         "trashSelf": true
@@ -26,7 +32,7 @@
       "windows": [
         "corp_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "trash_program",
@@ -36,6 +42,5 @@
       "requireDuringRun": true,
       "requireThisServer": true
     }
-  ],
-  "wave": "data-and-destiny"
+  ]
 }

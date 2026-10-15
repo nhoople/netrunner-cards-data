@@ -7,19 +7,34 @@
   "unsupported": [],
   "faction": "neutral-corp",
   "playCost": 2,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "host_on_rezzed_ice_as_condition"
+  "wave": "free-mars",
+  "abilities": [
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "host_on_rezzed_ice_as_condition"
+        }
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "hostStrengthPerPowerCounter",
+        "value": 1
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "pass_host",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "add_power_counter",
+          "amount": 1
+        }
+      }
     }
-  },
-  "hostStrengthPerPowerCounter": 1,
-  "onPassHost": {
-    "op": "do",
-    "action": {
-      "kind": "add_power_counter",
-      "amount": 1
-    }
-  },
-  "wave": "free-mars"
+  ]
 }

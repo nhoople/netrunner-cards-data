@@ -12,18 +12,30 @@
   "installCost": 0,
   "rezCost": 0,
   "trashCost": 0,
-  "canAdvance": true,
-  "onAccess": {
-    "op": "if",
-    "cond": {
-      "op": "source_installed"
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "canAdvance",
+        "value": true
+      }
     },
-    "then": {
-      "op": "do",
-      "action": {
-        "kind": "may_pay_credits_for_core_damage_per_advancement",
-        "amount": 3
+    {
+      "class": "conditional",
+      "trigger": "access",
+      "instructions": {
+        "op": "if",
+        "cond": {
+          "op": "source_installed"
+        },
+        "then": {
+          "op": "do",
+          "action": {
+            "kind": "may_pay_credits_for_core_damage_per_advancement",
+            "amount": 3
+          }
+        }
       }
     }
-  }
+  ]
 }

@@ -7,26 +7,31 @@
   "unsupported": [],
   "faction": "shaper",
   "installCost": 2,
-  "unique": true,
-  "paidAbilities": [
+  "wave": "true-colors",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "paid",
       "id": "capstone-trash-grip",
       "label": "[click]: Trash grip copies; draw for installed dupes",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1
       },
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "trash_grip_draw_for_installed_dupes"
         }
       }
     }
-  ],
-  "wave": "true-colors"
+  ]
 }

@@ -11,19 +11,19 @@
     "ritzy"
   ],
   "installCost": 4,
-  "paidAbilities": [
+  "wave": "terminal-directive",
+  "abilities": [
     {
+      "class": "paid",
       "id": "levy-reveal",
       "label": "[click]: Reveal top 4 of stack; may add 1 program to grip; rest to bottom",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1
       },
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "levy_advanced_research_lab_reveal"
@@ -31,6 +31,5 @@
       },
       "usableByRunnerOnSelfIce": true
     }
-  ],
-  "wave": "terminal-directive"
+  ]
 }

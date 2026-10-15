@@ -10,19 +10,18 @@
     "connection"
   ],
   "installCost": 2,
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "paid",
       "id": "beatriz-run",
       "label": "[click][click]: Run HQ; success → breach R&D +1 access",
-      "clickCost": 2,
-      "creditCost": 0,
       "cost": {
         "clicks": 2
       },
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "gain_credits",

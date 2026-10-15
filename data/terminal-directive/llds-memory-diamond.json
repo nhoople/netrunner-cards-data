@@ -10,8 +10,28 @@
     "mod"
   ],
   "installCost": 4,
-  "muBonus": 1,
-  "link": 1,
-  "handSizeBonus": 1,
-  "wave": "terminal-directive"
+  "wave": "terminal-directive",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "muBonus",
+        "value": 1
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "link",
+        "value": 1
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "handSizeBonus",
+        "value": 1
+      }
+    }
+  ]
 }

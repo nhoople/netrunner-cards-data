@@ -12,12 +12,18 @@
   "installCost": 4,
   "rezCost": 4,
   "trashCost": 4,
-  "onTurnBegin": {
-    "op": "do",
-    "action": {
-      "kind": "gain_credits",
-      "side": "corp",
-      "amount": 2
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "turn_begin",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "corp",
+          "amount": 2
+        }
+      }
     }
-  }
+  ]
 }

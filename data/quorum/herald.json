@@ -13,19 +13,37 @@
   "rezCost": 2,
   "trashCost": 1,
   "strength": 1,
-  "mustRevealWhenAccessedFromRd": true,
-  "skipOnAccessFromArchives": true,
-  "onAccess": {
-    "op": "do",
-    "action": {
-      "kind": "force_encounter_accessed_ice"
-    }
-  },
-  "subroutines": [
+  "wave": "quorum",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "mustRevealWhenAccessedFromRd",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "skipOnAccessFromArchives",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "access",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "force_encounter_accessed_ice"
+        }
+      }
+    },
+    {
+      "class": "subroutine",
       "id": "herald-gain",
       "text": "Gain 2¢.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "gain_credits",
@@ -35,9 +53,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "herald-advance",
       "text": "You may pay up to 2¢ to place that many advancement counters on 1 installed card you can advance.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "pay_up_to_place_advancements",
@@ -45,6 +64,5 @@
         }
       }
     }
-  ],
-  "wave": "quorum"
+  ]
 }

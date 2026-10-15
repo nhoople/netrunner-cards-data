@@ -12,15 +12,29 @@
     "sabotage"
   ],
   "playCost": 1,
-  "playAdditionalClick": true,
-  "runEvent": {
-    "servers": "hq",
-    "onSuccessfulRun": {
-      "op": "do",
-      "action": {
-        "kind": "ka_diversion_of_funds_may_instead_of_breach"
+  "wave": "kampala-ascendent",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "playAdditionalClick",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "runEvent",
+        "value": {
+          "servers": "hq",
+          "onSuccessfulRun": {
+            "op": "do",
+            "action": {
+              "kind": "ka_diversion_of_funds_may_instead_of_breach"
+            }
+          }
+        }
       }
     }
-  },
-  "wave": "kampala-ascendent"
+  ]
 }

@@ -12,19 +12,22 @@
   ],
   "advancementRequirement": 3,
   "agendaPoints": 2,
-  "onScore": {
-    "op": "do",
-    "action": {
-      "kind": "add_agenda_counters_from_overadvance",
-      "past": 3
-    }
-  },
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "conditional",
+      "trigger": "score",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "add_agenda_counters_from_overadvance",
+          "past": 3
+        }
+      }
+    },
+    {
+      "class": "paid",
       "id": "yagi-swap",
       "label": "Hosted agenda counter: Swap 1 HQ card with 1 card in the root of or protecting the attacked server; Runner may jack out",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "agendaCounters": 1
       },
@@ -33,8 +36,7 @@
         "encounter_paw",
         "approach_server_paw"
       ],
-      "requireDuringRun": true,
-      "effect": {
+      "instructions": {
         "op": "seq",
         "effects": [
           {
@@ -50,7 +52,8 @@
             }
           }
         ]
-      }
+      },
+      "requireDuringRun": true
     }
   ]
 }

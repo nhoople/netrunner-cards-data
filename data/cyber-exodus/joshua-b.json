@@ -11,11 +11,23 @@
     "connection"
   ],
   "installCost": 1,
-  "unique": true,
-  "onTurnBegin": {
-    "op": "do",
-    "action": {
-      "kind": "may_gain_click_then_tag_at_turn_end"
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "turn_begin",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "may_gain_click_then_tag_at_turn_end"
+        }
+      }
     }
-  }
+  ]
 }

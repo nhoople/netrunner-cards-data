@@ -10,53 +10,61 @@
     "connection"
   ],
   "installCost": 0,
-  "onInstall": {
-    "op": "do",
-    "action": {
-      "kind": "corp_must_derez_a_card"
-    }
-  },
-  "onUninstall": {
-    "op": "choose",
-    "chooser": "corp",
-    "options": [
-      {
-        "id": "accept",
-        "label": "Rez a card, ignoring the rez cost",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "corp_may_rez_ignoring_cost"
-          }
-        }
-      },
-      {
-        "id": "decline",
-        "label": "Decline",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "gain_credits",
-            "side": "corp",
-            "amount": 0
-          }
+  "wave": "the-underway",
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "install",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "corp_must_derez_a_card"
         }
       }
-    ]
-  },
-  "paidAbilities": [
+    },
     {
+      "class": "conditional",
+      "trigger": "uninstall",
+      "instructions": {
+        "op": "choose",
+        "chooser": "corp",
+        "options": [
+          {
+            "id": "accept",
+            "label": "Rez a card, ignoring the rez cost",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "corp_may_rez_ignoring_cost"
+              }
+            }
+          },
+          {
+            "id": "decline",
+            "label": "Decline",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "gain_credits",
+                "side": "corp",
+                "amount": 0
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "class": "paid",
       "id": "muertos-draw",
       "label": "[trash]: Draw 1 card",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "trashSelf": true
       },
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "draw",
@@ -65,6 +73,5 @@
         }
       }
     }
-  ],
-  "wave": "the-underway"
+  ]
 }

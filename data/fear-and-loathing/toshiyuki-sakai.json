@@ -12,14 +12,38 @@
   "installCost": 0,
   "rezCost": 0,
   "trashCost": 2,
-  "unique": true,
-  "canAdvance": true,
-  "onAccess": {
-    "op": "do",
-    "action": {
-      "kind": "swap_with_hq"
+  "wave": "fear-and-loathing",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "canAdvance",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "access",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "swap_with_hq"
+        }
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "onAccessRequiresInstalled",
+        "value": true
+      }
     }
-  },
-  "onAccessRequiresInstalled": true,
-  "wave": "fear-and-loathing"
+  ]
 }

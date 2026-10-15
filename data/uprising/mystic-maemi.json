@@ -11,56 +11,82 @@
     "virtual"
   ],
   "installCost": 1,
-  "unique": true,
-  "onTurnBegin": {
-    "op": "do",
-    "action": {
-      "kind": "place_hosted_credits",
-      "amount": 1
-    }
-  },
-  "onStealAgenda": {
-    "op": "do",
-    "action": {
-      "kind": "place_hosted_credits",
-      "amount": 1
-    }
-  },
-  "hostedCreditsSpendFor": [
-    "play_event"
-  ],
-  "onRunnerTurnEnd": {
-    "op": "if",
-    "cond": {
-      "op": "hosted_credits_gte",
-      "amount": 3
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
     },
-    "then": {
-      "op": "choose",
-      "chooser": "runner",
-      "options": [
-        {
-          "id": "trash-grip",
-          "label": "Trash 1 card from grip at random",
-          "effect": {
-            "op": "do",
-            "action": {
-              "kind": "trash_random_from_grip",
-              "amount": 1
-            }
-          }
-        },
-        {
-          "id": "trash-self",
-          "label": "Trash Mystic Maemi",
-          "effect": {
-            "op": "do",
-            "action": {
-              "kind": "trash_self"
-            }
-          }
+    {
+      "class": "conditional",
+      "trigger": "turn_begin",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "place_hosted_credits",
+          "amount": 1
         }
-      ]
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "steal_agenda",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "place_hosted_credits",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "hostedCreditsSpendFor",
+        "value": [
+          "play_event"
+        ]
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "runner_turn_end",
+      "instructions": {
+        "op": "if",
+        "cond": {
+          "op": "hosted_credits_gte",
+          "amount": 3
+        },
+        "then": {
+          "op": "choose",
+          "chooser": "runner",
+          "options": [
+            {
+              "id": "trash-grip",
+              "label": "Trash 1 card from grip at random",
+              "effect": {
+                "op": "do",
+                "action": {
+                  "kind": "trash_random_from_grip",
+                  "amount": 1
+                }
+              }
+            },
+            {
+              "id": "trash-self",
+              "label": "Trash Mystic Maemi",
+              "effect": {
+                "op": "do",
+                "action": {
+                  "kind": "trash_self"
+                }
+              }
+            }
+          ]
+        }
+      }
     }
-  }
+  ]
 }

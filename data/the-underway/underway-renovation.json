@@ -12,11 +12,25 @@
   ],
   "advancementRequirement": 3,
   "agendaPoints": 1,
-  "installFaceup": true,
-  "trashTopOfStackOnAdvance": {
-    "default": 1,
-    "atOrAbove": 4,
-    "bonus": 2
-  },
-  "wave": "the-underway"
+  "wave": "the-underway",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "installFaceup",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "trashTopOfStackOnAdvance",
+        "value": {
+          "default": 1,
+          "atOrAbove": 4,
+          "bonus": 2
+        }
+      }
+    }
+  ]
 }

@@ -10,26 +10,34 @@
     "run"
   ],
   "playCost": 2,
-  "runEvent": {
-    "servers": "hq_rd",
-    "onSuccessfulRun": {
-      "op": "if",
-      "cond": {
-        "op": "subroutine_resolved_this_run"
-      },
-      "then": {
-        "op": "do",
-        "action": {
-          "kind": "give_bad_publicity",
-          "amount": 1
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "runEvent",
+        "value": {
+          "servers": "hq_rd",
+          "onSuccessfulRun": {
+            "op": "if",
+            "cond": {
+              "op": "subroutine_resolved_this_run"
+            },
+            "then": {
+              "op": "do",
+              "action": {
+                "kind": "give_bad_publicity",
+                "amount": 1
+              }
+            }
+          },
+          "onRunEnd": {
+            "op": "do",
+            "action": {
+              "kind": "rfg_self"
+            }
+          }
         }
       }
-    },
-    "onRunEnd": {
-      "op": "do",
-      "action": {
-        "kind": "rfg_self"
-      }
     }
-  }
+  ]
 }

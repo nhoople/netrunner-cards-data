@@ -9,33 +9,39 @@
   "subtypes": [
     "division"
   ],
-  "onFirstCorpCardInstallEachTurn": {
-    "op": "choose",
-    "chooser": "corp",
-    "options": [
-      {
-        "id": "accept",
-        "label": "Install 1 non-agenda from HQ in/protecting the same server",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "ss_asa_install_non_agenda_same_server"
+  "wave": "sovereign-sight",
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "first_corp_card_install_each_turn",
+      "instructions": {
+        "op": "choose",
+        "chooser": "corp",
+        "options": [
+          {
+            "id": "accept",
+            "label": "Install 1 non-agenda from HQ in/protecting the same server",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "ss_asa_install_non_agenda_same_server"
+              }
+            }
+          },
+          {
+            "id": "decline",
+            "label": "Decline",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "gain_credits",
+                "side": "corp",
+                "amount": 0
+              }
+            }
           }
-        }
-      },
-      {
-        "id": "decline",
-        "label": "Decline",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "gain_credits",
-            "side": "corp",
-            "amount": 0
-          }
-        }
+        ]
       }
-    ]
-  },
-  "wave": "sovereign-sight"
+    }
+  ]
 }

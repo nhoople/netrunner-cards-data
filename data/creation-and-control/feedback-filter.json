@@ -11,50 +11,48 @@
     "gear"
   ],
   "installCost": 2,
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "paid",
       "id": "ff-net",
       "label": "[interrupt] → 3¢: Prevent 1 net damage",
-      "clickCost": 0,
-      "creditCost": 3,
       "cost": {
         "credits": 3
       },
       "windows": [
         "damage_interrupt_paw"
       ],
-      "requirePendingDamageTypes": [
-        "net"
-      ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "prevent_pending_damage",
           "amount": 1
         }
-      }
+      },
+      "requirePendingDamageTypes": [
+        "net"
+      ]
     },
     {
+      "class": "paid",
       "id": "ff-core",
       "label": "[interrupt] → [trash]: Prevent up to 2 core damage",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "trashSelf": true
       },
       "windows": [
         "damage_interrupt_paw"
       ],
-      "requirePendingDamageTypes": [
-        "core"
-      ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "prevent_pending_damage",
           "amount": 2
         }
-      }
+      },
+      "requirePendingDamageTypes": [
+        "core"
+      ]
     }
   ]
 }

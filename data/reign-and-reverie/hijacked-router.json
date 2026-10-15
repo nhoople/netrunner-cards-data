@@ -8,53 +8,71 @@
   "unsupported": [],
   "faction": "anarch",
   "installCost": 2,
-  "unique": true,
-  "corpLosesCreditsOnCreateServer": 1,
-  "onSuccessfulRun": {
-    "op": "if",
-    "cond": {
-      "op": "attacking_archives"
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
     },
-    "then": {
-      "op": "choose",
-      "chooser": "runner",
-      "options": [
-        {
-          "id": "trash-lose-3",
-          "label": "Trash Hijacked Router: Corp loses 3¢",
-          "effect": {
-            "op": "seq",
-            "effects": [
-              {
+    {
+      "class": "static",
+      "declaration": {
+        "field": "corpLosesCreditsOnCreateServer",
+        "value": 1
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "successful_run",
+      "instructions": {
+        "op": "if",
+        "cond": {
+          "op": "attacking_archives"
+        },
+        "then": {
+          "op": "choose",
+          "chooser": "runner",
+          "options": [
+            {
+              "id": "trash-lose-3",
+              "label": "Trash Hijacked Router: Corp loses 3¢",
+              "effect": {
+                "op": "seq",
+                "effects": [
+                  {
+                    "op": "do",
+                    "action": {
+                      "kind": "trash_self"
+                    }
+                  },
+                  {
+                    "op": "do",
+                    "action": {
+                      "kind": "lose_credits",
+                      "side": "corp",
+                      "amount": 3
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "decline",
+              "label": "Decline",
+              "effect": {
                 "op": "do",
                 "action": {
-                  "kind": "trash_self"
-                }
-              },
-              {
-                "op": "do",
-                "action": {
-                  "kind": "lose_credits",
-                  "side": "corp",
-                  "amount": 3
+                  "kind": "gain_credits",
+                  "side": "runner",
+                  "amount": 0
                 }
               }
-            ]
-          }
-        },
-        {
-          "id": "decline",
-          "label": "Decline",
-          "effect": {
-            "op": "do",
-            "action": {
-              "kind": "gain_credits",
-              "side": "runner",
-              "amount": 0
             }
-          }
+          ]
         }
-      ]
+      }
     }
-  }
+  ]
 }

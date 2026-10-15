@@ -9,6 +9,14 @@
   "installCost": 2,
   "rezCost": 2,
   "trashCost": 3,
-  "eventPlayExtraCostIfCopyInHeap": 2,
-  "wave": "breaker-bay"
+  "wave": "breaker-bay",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "eventPlayExtraCostIfCopyInHeap",
+        "value": 2
+      }
+    }
+  ]
 }

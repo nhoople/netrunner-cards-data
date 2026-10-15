@@ -13,11 +13,12 @@
   "installCost": 5,
   "rezCost": 5,
   "strength": 4,
-  "subroutines": [
+  "abilities": [
     {
+      "class": "subroutine",
       "id": "hourglass-lose-click-1",
       "text": "The Runner loses [click], if able.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "lose_clicks",
@@ -27,9 +28,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "hourglass-lose-click-2",
       "text": "The Runner loses [click], if able.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "lose_clicks",
@@ -39,9 +41,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "hourglass-lose-click-3",
       "text": "The Runner loses [click], if able.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "lose_clicks",

@@ -10,8 +10,28 @@
     "current"
   ],
   "playCost": 1,
-  "lingerAsCurrent": true,
-  "currentTrashOnAgendaScored": true,
-  "rezNonIceAdditionalCostRandomTrashHq": true,
-  "wave": "breaker-bay"
+  "wave": "breaker-bay",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "lingerAsCurrent",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "currentTrashOnAgendaScored",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "rezNonIceAdditionalCostRandomTrashHq",
+        "value": true
+      }
+    }
+  ]
 }

@@ -11,6 +11,20 @@
   ],
   "installCost": 1,
   "memoryCost": 1,
-  "installOnIce": true,
-  "hostGainsAllIceSubtypes": true
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "installOnIce",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "hostGainsAllIceSubtypes",
+        "value": true
+      }
+    }
+  ]
 }

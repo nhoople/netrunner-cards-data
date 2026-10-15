@@ -12,7 +12,21 @@
   "installCost": 4,
   "rezCost": 4,
   "trashCost": 4,
-  "unique": true,
-  "meatDamageWhenSecretSpendAmountsDiffer": 1,
-  "wave": "intervention"
+  "wave": "intervention",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "meatDamageWhenSecretSpendAmountsDiffer",
+        "value": 1
+      }
+    }
+  ]
 }

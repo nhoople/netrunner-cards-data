@@ -10,36 +10,60 @@
     "console"
   ],
   "installCost": 2,
-  "unique": true,
-  "maxConsole": 1,
-  "muBonus": 1,
-  "onStealAgenda": {
-    "op": "choose",
-    "chooser": "runner",
-    "options": [
-      {
-        "id": "accept",
-        "label": "Swap stolen agenda with one in Corp score area",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "swap_stolen_with_corp_scored"
-          }
-        }
-      },
-      {
-        "id": "decline",
-        "label": "Decline",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "gain_credits",
-            "side": "runner",
-            "amount": 0
-          }
-        }
+  "wave": "chrome-city",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
       }
-    ]
-  },
-  "wave": "chrome-city"
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "maxConsole",
+        "value": 1
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "muBonus",
+        "value": 1
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "steal_agenda",
+      "instructions": {
+        "op": "choose",
+        "chooser": "runner",
+        "options": [
+          {
+            "id": "accept",
+            "label": "Swap stolen agenda with one in Corp score area",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "swap_stolen_with_corp_scored"
+              }
+            }
+          },
+          {
+            "id": "decline",
+            "label": "Decline",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "gain_credits",
+                "side": "runner",
+                "amount": 0
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
 }

@@ -9,13 +9,18 @@
   "subtypes": [
     "transaction"
   ],
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "gain_credits",
-      "side": "corp",
-      "amount": 15
+  "unsupported": [],
+  "abilities": [
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "corp",
+          "amount": 15
+        }
+      }
     }
-  },
-  "unsupported": []
+  ]
 }

@@ -10,8 +10,28 @@
     "current"
   ],
   "playCost": 2,
-  "lingerAsCurrent": true,
-  "currentTrashOnAgendaStolen": true,
-  "blankRunnerIdentityPrintedAbilities": true,
-  "wave": "the-spaces-between"
+  "wave": "the-spaces-between",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "lingerAsCurrent",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "currentTrashOnAgendaStolen",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "blankRunnerIdentityPrintedAbilities",
+        "value": true
+      }
+    }
+  ]
 }

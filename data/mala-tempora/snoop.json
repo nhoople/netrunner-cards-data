@@ -14,37 +14,39 @@
   "installCost": 6,
   "rezCost": 6,
   "strength": 6,
-  "onEncounter": {
-    "op": "do",
-    "action": {
-      "kind": "reveal_grip"
-    }
-  },
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "conditional",
+      "trigger": "encounter",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "reveal_grip"
+        }
+      }
+    },
+    {
+      "class": "paid",
       "id": "snoop-counter-reveal",
       "label": "Hosted power counter: Reveal grip; trash 1 card",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "powerCounters": 1
       },
       "windows": [
         "encounter_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "reveal_grip_may_trash_one"
         }
       }
-    }
-  ],
-  "subroutines": [
+    },
     {
+      "class": "subroutine",
       "id": "snoop-trace",
       "text": "Trace[3]. If successful, place 1 power counter on Snoop.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "trace",

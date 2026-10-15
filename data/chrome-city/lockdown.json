@@ -12,17 +12,18 @@
   "installCost": 0,
   "rezCost": 0,
   "strength": 5,
-  "subroutines": [
+  "wave": "chrome-city",
+  "abilities": [
     {
+      "class": "subroutine",
       "id": "lockdown-no-draw",
       "text": "The Runner cannot draw cards for the remainder of this turn.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "runner_cannot_draw_remainder_of_turn"
         }
       }
     }
-  ],
-  "wave": "chrome-city"
+  ]
 }

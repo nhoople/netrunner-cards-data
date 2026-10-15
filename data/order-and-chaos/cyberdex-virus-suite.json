@@ -12,41 +12,51 @@
   "installCost": 3,
   "rezCost": 3,
   "trashCost": 1,
-  "mustRevealWhenAccessedFromRd": true,
-  "onAccess": {
-    "op": "choose",
-    "chooser": "corp",
-    "options": [
-      {
-        "id": "accept",
-        "label": "Purge virus counters",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "purge_virus_counters"
-          }
-        }
-      },
-      {
-        "id": "decline",
-        "label": "Decline",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "gain_credits",
-            "side": "corp",
-            "amount": 0
-          }
-        }
-      }
-    ]
-  },
-  "paidAbilities": [
+  "wave": "order-and-chaos",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "mustRevealWhenAccessedFromRd",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "access",
+      "instructions": {
+        "op": "choose",
+        "chooser": "corp",
+        "options": [
+          {
+            "id": "accept",
+            "label": "Purge virus counters",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "purge_virus_counters"
+              }
+            }
+          },
+          {
+            "id": "decline",
+            "label": "Decline",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "gain_credits",
+                "side": "corp",
+                "amount": 0
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "class": "paid",
       "id": "cvs-purge",
       "label": "[trash]: Purge virus counters",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "trashSelf": true
       },
@@ -55,13 +65,12 @@
         "approach_paw",
         "encounter_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "purge_virus_counters"
         }
       }
     }
-  ],
-  "wave": "order-and-chaos"
+  ]
 }

@@ -10,14 +10,32 @@
     "cybernetic"
   ],
   "installCost": 2,
-  "unique": true,
-  "corpCardTrashCostReduction": 1,
-  "onInstall": {
-    "op": "do",
-    "action": {
-      "kind": "core_damage",
-      "amount": 1
+  "wave": "chrome-city",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "corpCardTrashCostReduction",
+        "value": 1
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "install",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "core_damage",
+          "amount": 1
+        }
+      }
     }
-  },
-  "wave": "chrome-city"
+  ]
 }

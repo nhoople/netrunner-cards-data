@@ -7,18 +7,30 @@
   "nrdbCode": "01094",
   "advancementRequirement": 2,
   "agendaPoints": 1,
-  "onScore": {
-    "op": "do",
-    "action": {
-      "kind": "gain_credits",
-      "side": "corp",
-      "amount": 7
-    }
-  },
   "unsupported": [],
   "subtypes": [
     "expansion",
     "liability"
   ],
-  "badPublicityOnScore": 1
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "score",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "corp",
+          "amount": 7
+        }
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "badPublicityOnScore",
+        "value": 1
+      }
+    }
+  ]
 }

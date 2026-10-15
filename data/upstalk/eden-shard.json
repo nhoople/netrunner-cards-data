@@ -11,7 +11,21 @@
     "source"
   ],
   "installCost": 7,
-  "unique": true,
-  "onGripRdSuccessInstallSelfIgnoringCosts": true,
-  "wave": "upstalk"
+  "wave": "upstalk",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "onGripRdSuccessInstallSelfIgnoringCosts",
+        "value": true
+      }
+    }
+  ]
 }

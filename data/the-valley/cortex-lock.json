@@ -13,17 +13,18 @@
   "installCost": 2,
   "rezCost": 2,
   "strength": 4,
-  "subroutines": [
+  "wave": "the-valley",
+  "abilities": [
     {
+      "class": "subroutine",
       "id": "cortex-lock-net",
       "text": "Do 1 net damage for each unused MU the Runner has.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "net_damage_equal_unused_mu"
         }
       }
     }
-  ],
-  "wave": "the-valley"
+  ]
 }

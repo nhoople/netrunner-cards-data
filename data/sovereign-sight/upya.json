@@ -8,41 +8,45 @@
   "faction": "shaper",
   "installCost": 0,
   "memoryCost": 1,
-  "onSuccessfulRunOnRd": {
-    "op": "choose",
-    "chooser": "runner",
-    "options": [
-      {
-        "id": "accept",
-        "label": "Place 1 power counter on Upya",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "add_power_counter",
-            "amount": 1
-          }
-        }
-      },
-      {
-        "id": "decline",
-        "label": "Decline",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "gain_credits",
-            "side": "runner",
-            "amount": 0
-          }
-        }
-      }
-    ]
-  },
-  "paidAbilities": [
+  "wave": "sovereign-sight",
+  "abilities": [
     {
+      "class": "conditional",
+      "trigger": "successful_run_on_rd",
+      "instructions": {
+        "op": "choose",
+        "chooser": "runner",
+        "options": [
+          {
+            "id": "accept",
+            "label": "Place 1 power counter on Upya",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "add_power_counter",
+                "amount": 1
+              }
+            }
+          },
+          {
+            "id": "decline",
+            "label": "Decline",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "gain_credits",
+                "side": "runner",
+                "amount": 0
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "class": "paid",
       "id": "upya-clicks",
       "label": "[click], 3 hosted power counters: Gain [click][click]",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "powerCounters": 3,
         "clicks": 1
@@ -50,7 +54,7 @@
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "gain_clicks",
@@ -58,9 +62,8 @@
           "amount": 2
         }
       },
-      "oncePerTurn": true,
+      "flag": "once_per_turn",
       "usableByRunnerOnSelfIce": true
     }
-  ],
-  "wave": "sovereign-sight"
+  ]
 }

@@ -12,13 +12,19 @@
   "installCost": 2,
   "rezCost": 2,
   "trashCost": 3,
-  "unique": true,
-  "paidAbilities": [
+  "wave": "chrome-city",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "paid",
       "id": "ryon-knight-core",
       "label": "[trash]: Do 1 core damage (run against this server; Runner has no unspent clicks)",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "trashSelf": true
       },
@@ -27,7 +33,7 @@
         "encounter_paw",
         "approach_server_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "core_damage",
@@ -38,6 +44,5 @@
       "requireThisServer": true,
       "requireRunnerClicksEq": 0
     }
-  ],
-  "wave": "chrome-city"
+  ]
 }

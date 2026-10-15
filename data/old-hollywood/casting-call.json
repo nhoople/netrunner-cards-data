@@ -10,11 +10,16 @@
     "condition"
   ],
   "playCost": 0,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "install_agenda_faceup"
+  "wave": "old-hollywood",
+  "abilities": [
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "install_agenda_faceup"
+        }
+      }
     }
-  },
-  "wave": "old-hollywood"
+  ]
 }

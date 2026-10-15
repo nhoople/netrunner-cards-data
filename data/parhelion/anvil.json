@@ -12,24 +12,29 @@
   "installCost": 4,
   "rezCost": 4,
   "strength": 3,
-  "onEncounter": {
-    "op": "do",
-    "action": {
-      "kind": "may_trash_installed",
-      "excludeSelf": true,
-      "then": {
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "encounter",
+      "instructions": {
         "op": "do",
         "action": {
-          "kind": "forbid_runner_break_on_source"
+          "kind": "may_trash_installed",
+          "excludeSelf": true,
+          "then": {
+            "op": "do",
+            "action": {
+              "kind": "forbid_runner_break_on_source"
+            }
+          }
         }
       }
-    }
-  },
-  "subroutines": [
+    },
     {
+      "class": "subroutine",
       "id": "anvil-gain-lose",
       "text": "Gain 1[credit]. The Runner loses 1[credit].",
-      "effect": {
+      "instructions": {
         "op": "seq",
         "effects": [
           {
@@ -52,9 +57,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "anvil-trash-runner",
       "text": "The Runner trashes 1 of their installed cards.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "trash_installed_runner",

@@ -13,62 +13,68 @@
   "installCost": 1,
   "rezCost": 1,
   "trashCost": 2,
-  "onTurnBegin": {
-    "op": "seq",
-    "effects": [
-      {
-        "op": "do",
-        "action": {
-          "kind": "may_install_from_hq_paying_costs",
-          "cannotScoreInstalledCardThisTurn": true
-        }
-      },
-      {
-        "op": "if",
-        "cond": {
-          "op": "host_server_unprotected_by_ice"
-        },
-        "then": {
-          "op": "choose",
-          "chooser": "corp",
-          "options": [
-            {
-              "id": "derez-pair",
-              "label": "Derez this asset to derez another installed card",
-              "effect": {
-                "op": "seq",
-                "effects": [
-                  {
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "turn_begin",
+      "instructions": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "may_install_from_hq_paying_costs",
+              "cannotScoreInstalledCardThisTurn": true
+            }
+          },
+          {
+            "op": "if",
+            "cond": {
+              "op": "host_server_unprotected_by_ice"
+            },
+            "then": {
+              "op": "choose",
+              "chooser": "corp",
+              "options": [
+                {
+                  "id": "derez-pair",
+                  "label": "Derez this asset to derez another installed card",
+                  "effect": {
+                    "op": "seq",
+                    "effects": [
+                      {
+                        "op": "do",
+                        "action": {
+                          "kind": "derez_source"
+                        }
+                      },
+                      {
+                        "op": "do",
+                        "action": {
+                          "kind": "may_derez_installed",
+                          "excludeSelf": true
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "id": "decline-derez",
+                  "label": "Decline",
+                  "effect": {
                     "op": "do",
                     "action": {
-                      "kind": "derez_source"
-                    }
-                  },
-                  {
-                    "op": "do",
-                    "action": {
-                      "kind": "may_derez_installed",
-                      "excludeSelf": true
+                      "kind": "gain_credits",
+                      "side": "corp",
+                      "amount": 0
                     }
                   }
-                ]
-              }
-            },
-            {
-              "id": "decline-derez",
-              "label": "Decline",
-              "effect": {
-                "op": "do",
-                "action": {
-                  "kind": "gain_credits",
-                  "side": "corp",
-                  "amount": 0
                 }
-              }
+              ]
             }
-          ]
-        }
+          }
+        ]
       }
-    ]
-  }
+    }
+  ]
 }

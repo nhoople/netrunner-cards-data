@@ -10,25 +10,36 @@
     "double"
   ],
   "playCost": 2,
-  "playAdditionalClick": true,
-  "onPlay": {
-    "op": "seq",
-    "effects": [
-      {
-        "op": "do",
-        "action": {
-          "kind": "place_advancements",
-          "amount": 2,
-          "pick": "choose"
-        }
-      },
-      {
-        "op": "do",
-        "action": {
-          "kind": "choose_type_shuffle_grip",
-          "maxCards": 2
-        }
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "playAdditionalClick",
+        "value": true
       }
-    ]
-  }
+    },
+    {
+      "class": "play",
+      "instructions": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "place_advancements",
+              "amount": 2,
+              "pick": "choose"
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "choose_type_shuffle_grip",
+              "maxCards": 2
+            }
+          }
+        ]
+      }
+    }
+  ]
 }

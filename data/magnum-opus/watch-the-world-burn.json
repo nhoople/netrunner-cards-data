@@ -12,12 +12,32 @@
     "terminal"
   ],
   "playCost": 3,
-  "endsActionPhase": true,
-  "deckLimit": 1,
-  "runEvent": {
-    "servers": "remote",
-    "rfgFirstNonAgendaAccess": true,
-    "lastingRfgCopiesOnAccess": true
-  },
-  "wave": "magnum-opus"
+  "wave": "magnum-opus",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "endsActionPhase",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "deckLimit",
+        "value": 1
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "runEvent",
+        "value": {
+          "servers": "remote",
+          "rfgFirstNonAgendaAccess": true,
+          "lastingRfgCopiesOnAccess": true
+        }
+      }
+    }
+  ]
 }

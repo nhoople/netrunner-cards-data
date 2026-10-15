@@ -11,29 +11,35 @@
     "research"
   ],
   "unsupported": [],
-  "onScore": {
-    "op": "seq",
-    "effects": [
-      {
-        "op": "if",
-        "cond": {
-          "op": "hq_nonempty"
-        },
-        "then": {
-          "op": "do",
-          "action": {
-            "kind": "trash_hq",
-            "pick": "first"
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "score",
+      "instructions": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "if",
+            "cond": {
+              "op": "hq_nonempty"
+            },
+            "then": {
+              "op": "do",
+              "action": {
+                "kind": "trash_hq",
+                "pick": "first"
+              }
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "shuffle_archives_to_rd",
+              "amount": 3
+            }
           }
-        }
-      },
-      {
-        "op": "do",
-        "action": {
-          "kind": "shuffle_archives_to_rd",
-          "amount": 3
-        }
+        ]
       }
-    ]
-  }
+    }
+  ]
 }

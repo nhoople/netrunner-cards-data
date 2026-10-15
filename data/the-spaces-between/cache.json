@@ -11,19 +11,23 @@
   ],
   "installCost": 1,
   "memoryCost": 1,
-  "onInstall": {
-    "op": "do",
-    "action": {
-      "kind": "add_virus_counter",
-      "amount": 3
-    }
-  },
-  "paidAbilities": [
+  "wave": "the-spaces-between",
+  "abilities": [
     {
+      "class": "conditional",
+      "trigger": "install",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "add_virus_counter",
+          "amount": 3
+        }
+      }
+    },
+    {
+      "class": "paid",
       "id": "cache-cash",
       "label": "Hosted virus counter: Gain 1[credit]",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "virusCounters": 1
       },
@@ -31,7 +35,7 @@
         "runner_action_paw",
         "encounter_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "gain_credits",
@@ -40,6 +44,5 @@
         }
       }
     }
-  ],
-  "wave": "the-spaces-between"
+  ]
 }

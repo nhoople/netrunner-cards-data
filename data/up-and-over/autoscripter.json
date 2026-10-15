@@ -7,15 +7,33 @@
   "unsupported": [],
   "faction": "criminal",
   "installCost": 3,
-  "unique": true,
-  "onFirstProgramInstallEachTurn": {
-    "op": "do",
-    "action": {
-      "kind": "gain_clicks",
-      "side": "runner",
-      "amount": 1
+  "wave": "up-and-over",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "first_program_install_each_turn",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "gain_clicks",
+          "side": "runner",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "trashSelfOnUnsuccessfulRunThisTurn",
+        "value": true
+      }
     }
-  },
-  "trashSelfOnUnsuccessfulRunThisTurn": true,
-  "wave": "up-and-over"
+  ]
 }

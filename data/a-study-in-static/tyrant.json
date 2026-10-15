@@ -13,19 +13,38 @@
   "installCost": 7,
   "rezCost": 7,
   "strength": 4,
-  "canAdvance": true,
-  "canAdvanceOnlyWhenRezzed": true,
-  "gainsSubroutinesPerAdvancement": {
-    "subroutine": {
-      "id": "tyrant-etr",
-      "text": "End the run.",
-      "effect": {
-        "op": "do",
-        "action": {
-          "kind": "end_the_run"
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "canAdvance",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "canAdvanceOnlyWhenRezzed",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "gainsSubroutinesPerAdvancement",
+        "value": {
+          "subroutine": {
+            "id": "tyrant-etr",
+            "text": "End the run.",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "end_the_run"
+              }
+            }
+          }
         }
       }
     }
-  },
-  "subroutines": []
+  ]
 }

@@ -12,18 +12,36 @@
   ],
   "advancementRequirement": 3,
   "agendaPoints": 2,
-  "unique": true,
-  "deckLimit": 1,
-  "onScore": {
-    "op": "do",
-    "action": {
-      "kind": "net_damage",
-      "amount": 0,
-      "tally": {
-        "count": "runner_score",
-        "per": 1,
-        "side": "runner"
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "deckLimit",
+        "value": 1
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "score",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "net_damage",
+          "amount": 0,
+          "tally": {
+            "count": "runner_score",
+            "per": 1,
+            "side": "runner"
+          }
+        }
       }
     }
-  }
+  ]
 }

@@ -12,5 +12,13 @@
   "installCost": 5,
   "rezCost": 5,
   "trashCost": 4,
-  "meatDamageOnInstalledCorpTrashOncePerTurn": 2
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "meatDamageOnInstalledCorpTrashOncePerTurn",
+        "value": 2
+      }
+    }
+  ]
 }

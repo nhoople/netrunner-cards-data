@@ -15,11 +15,12 @@
   "installCost": 15,
   "rezCost": 15,
   "strength": 8,
-  "subroutines": [
+  "abilities": [
     {
+      "class": "subroutine",
       "id": "janus-1-0-core-1",
       "text": "Do 1 core damage.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "core_damage",
@@ -28,9 +29,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "janus-1-0-core-2",
       "text": "Do 1 core damage.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "core_damage",
@@ -39,9 +41,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "janus-1-0-core-3",
       "text": "Do 1 core damage.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "core_damage",
@@ -50,9 +53,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "janus-1-0-core-4",
       "text": "Do 1 core damage.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "core_damage",

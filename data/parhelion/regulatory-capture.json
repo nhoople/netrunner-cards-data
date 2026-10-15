@@ -11,8 +11,16 @@
   ],
   "advancementRequirement": 6,
   "agendaPoints": 2,
-  "advancementRequirementReductionPerBadPublicity": {
-    "per": 1,
-    "max": 4
-  }
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "advancementRequirementReductionPerBadPublicity",
+        "value": {
+          "per": 1,
+          "max": 4
+        }
+      }
+    }
+  ]
 }

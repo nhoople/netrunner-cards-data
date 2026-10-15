@@ -13,19 +13,37 @@
   "installCost": 2,
   "rezCost": 2,
   "trashCost": 2,
-  "rezOnlyDuringCorpTurn": true,
-  "firstRunCannotTargetRemote": true,
-  "onFirstArchivesRunBeginThisTurn": {
-    "op": "if",
-    "cond": {
-      "op": "host_server_unprotected_by_ice"
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "rezOnlyDuringCorpTurn",
+        "value": true
+      }
     },
-    "then": {
-      "op": "do",
-      "action": {
-        "kind": "net_damage",
-        "amount": 2
+    {
+      "class": "static",
+      "declaration": {
+        "field": "firstRunCannotTargetRemote",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "first_archives_run_begin_this_turn",
+      "instructions": {
+        "op": "if",
+        "cond": {
+          "op": "host_server_unprotected_by_ice"
+        },
+        "then": {
+          "op": "do",
+          "action": {
+            "kind": "net_damage",
+            "amount": 2
+          }
+        }
       }
     }
-  }
+  ]
 }

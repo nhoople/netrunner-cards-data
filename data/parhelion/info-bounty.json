@@ -10,11 +10,23 @@
     "job"
   ],
   "installCost": 2,
-  "onTurnBegin": {
-    "op": "do",
-    "action": {
-      "kind": "identify_mark"
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "turn_begin",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "identify_mark"
+        }
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "gainCreditsOnFirstMarkRunEndIfBreached",
+        "value": 2
+      }
     }
-  },
-  "gainCreditsOnFirstMarkRunEndIfBreached": 2
+  ]
 }

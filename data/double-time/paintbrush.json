@@ -8,25 +8,24 @@
   "faction": "shaper",
   "installCost": 3,
   "memoryCost": 2,
-  "paidAbilities": [
+  "wave": "double-time",
+  "abilities": [
     {
+      "class": "paid",
       "id": "paintbrush-paint",
       "label": "[click]: Choose rezzed ice; gain subtype until end of next run",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1
       },
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "choose_ice_gain_subtype"
         }
       }
     }
-  ],
-  "wave": "double-time"
+  ]
 }

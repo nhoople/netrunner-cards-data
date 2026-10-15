@@ -10,8 +10,28 @@
     "console"
   ],
   "installCost": 2,
-  "unique": true,
-  "muEqualsAgendaPoints": true,
-  "handSizeEqualsAgendaPoints": true,
-  "wave": "data-and-destiny"
+  "wave": "data-and-destiny",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "muEqualsAgendaPoints",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "handSizeEqualsAgendaPoints",
+        "value": true
+      }
+    }
+  ]
 }

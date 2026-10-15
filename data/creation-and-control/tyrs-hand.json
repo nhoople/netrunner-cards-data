@@ -13,20 +13,25 @@
   "installCost": 1,
   "rezCost": 1,
   "trashCost": 1,
-  "preventSubroutineBreakOnBioroidByTrash": true,
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "preventSubroutineBreakOnBioroidByTrash",
+        "value": true
+      }
+    },
+    {
+      "class": "paid",
       "id": "tyrs-hand-prevent",
       "label": "[trash]: Prevent 1 subroutine from being broken on bioroid ice protecting this server",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "trashSelf": true
       },
       "windows": [
         "break_interrupt_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "prevent_pending_subroutine_break"

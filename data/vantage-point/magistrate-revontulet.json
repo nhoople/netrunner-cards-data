@@ -12,14 +12,32 @@
   "installCost": 2,
   "rezCost": 2,
   "trashCost": 3,
-  "unique": true,
-  "stealAdditionalCreditsWhileRezzed": 3,
-  "onAgendaScored": {
-    "op": "do",
-    "action": {
-      "kind": "lose_credits",
-      "side": "runner",
-      "amount": 3
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "stealAdditionalCreditsWhileRezzed",
+        "value": 3
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "agenda_scored",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "lose_credits",
+          "side": "runner",
+          "amount": 3
+        }
+      }
     }
-  }
+  ]
 }

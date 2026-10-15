@@ -12,34 +12,46 @@
   "installCost": 2,
   "rezCost": 2,
   "trashCost": 4,
-  "unique": true,
-  "onAgendaScoredOrStolen": {
-    "op": "choose",
-    "chooser": "corp",
-    "options": [
-      {
-        "id": "accept",
-        "label": "Trace[X] (X = advancement requirement of the agenda)",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "tdatd_amani_trace"
-          }
-        }
-      },
-      {
-        "id": "decline",
-        "label": "Decline",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "gain_credits",
-            "side": "corp",
-            "amount": 0
-          }
-        }
+  "wave": "the-devil-and-the-dragon",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
       }
-    ]
-  },
-  "wave": "the-devil-and-the-dragon"
+    },
+    {
+      "class": "conditional",
+      "trigger": "agenda_scored_or_stolen",
+      "instructions": {
+        "op": "choose",
+        "chooser": "corp",
+        "options": [
+          {
+            "id": "accept",
+            "label": "Trace[X] (X = advancement requirement of the agenda)",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "tdatd_amani_trace"
+              }
+            }
+          },
+          {
+            "id": "decline",
+            "label": "Decline",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "gain_credits",
+                "side": "corp",
+                "amount": 0
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
 }

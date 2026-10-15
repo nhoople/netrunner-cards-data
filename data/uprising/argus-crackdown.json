@@ -12,19 +12,37 @@
   ],
   "playCost": 0,
   "trashCost": 4,
-  "playRequiresNoActiveLockdown": true,
-  "lingerUntilCorpNextTurnBegins": true,
-  "onSuccessfulRun": {
-    "op": "if",
-    "cond": {
-      "op": "attacked_server_protected_by_ice"
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "playRequiresNoActiveLockdown",
+        "value": true
+      }
     },
-    "then": {
-      "op": "do",
-      "action": {
-        "kind": "meat_damage",
-        "amount": 2
+    {
+      "class": "static",
+      "declaration": {
+        "field": "lingerUntilCorpNextTurnBegins",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "successful_run",
+      "instructions": {
+        "op": "if",
+        "cond": {
+          "op": "attacked_server_protected_by_ice"
+        },
+        "then": {
+          "op": "do",
+          "action": {
+            "kind": "meat_damage",
+            "amount": 2
+          }
+        }
       }
     }
-  }
+  ]
 }

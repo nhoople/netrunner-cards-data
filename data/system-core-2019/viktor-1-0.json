@@ -15,11 +15,12 @@
   "installCost": 3,
   "rezCost": 3,
   "strength": 3,
-  "subroutines": [
+  "abilities": [
     {
+      "class": "subroutine",
       "id": "viktor-1-0-core",
       "text": "Do 1 core damage.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "core_damage",
@@ -28,9 +29,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "viktor-1-0-etr",
       "text": "End the run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "end_the_run"

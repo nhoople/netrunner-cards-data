@@ -12,11 +12,13 @@
   "installCost": 1,
   "rezCost": 1,
   "strength": 4,
-  "subroutines": [
+  "wave": "the-underway",
+  "abilities": [
     {
+      "class": "subroutine",
       "id": "pachinko-etr-1",
       "text": "End the run if the Runner is tagged.",
-      "effect": {
+      "instructions": {
         "op": "if",
         "cond": {
           "op": "runner_tagged"
@@ -30,9 +32,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "pachinko-etr-2",
       "text": "End the run if the Runner is tagged.",
-      "effect": {
+      "instructions": {
         "op": "if",
         "cond": {
           "op": "runner_tagged"
@@ -45,6 +48,5 @@
         }
       }
     }
-  ],
-  "wave": "the-underway"
+  ]
 }

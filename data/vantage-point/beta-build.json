@@ -10,19 +10,30 @@
     "run"
   ],
   "playCost": 3,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "search_stack_non_virus_program_install_ignore_costs_track"
-    }
-  },
-  "runEvent": {
-    "servers": "any",
-    "onRunEnd": {
-      "op": "do",
-      "action": {
-        "kind": "return_tracked_install_to_stack_top_if_installed"
+  "abilities": [
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "search_stack_non_virus_program_install_ignore_costs_track"
+        }
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "runEvent",
+        "value": {
+          "servers": "any",
+          "onRunEnd": {
+            "op": "do",
+            "action": {
+              "kind": "return_tracked_install_to_stack_top_if_installed"
+            }
+          }
+        }
       }
     }
-  }
+  ]
 }

@@ -12,19 +12,32 @@
   "installCost": 4,
   "rezCost": 4,
   "strength": 4,
-  "unique": true,
-  "hostGainsAllIceSubtypes": true,
-  "subroutines": [
+  "wave": "upstalk",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "hostGainsAllIceSubtypes",
+        "value": true
+      }
+    },
+    {
+      "class": "subroutine",
       "id": "mother-goddess-etr",
       "text": "End the run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "end_the_run"
         }
       }
     }
-  ],
-  "wave": "upstalk"
+  ]
 }

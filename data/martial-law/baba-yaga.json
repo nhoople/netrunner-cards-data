@@ -13,8 +13,28 @@
   "installCost": 5,
   "strength": 0,
   "memoryCost": 1,
-  "maxHostedCards": 99,
-  "hostNonAiIcebreaker": true,
-  "gainsPaidAbilitiesOfHostedIcebreakers": true,
-  "wave": "martial-law"
+  "wave": "martial-law",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "maxHostedCards",
+        "value": 99
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "hostNonAiIcebreaker",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "gainsPaidAbilitiesOfHostedIcebreakers",
+        "value": true
+      }
+    }
+  ]
 }

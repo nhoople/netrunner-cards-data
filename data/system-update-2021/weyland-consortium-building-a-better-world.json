@@ -9,5 +9,13 @@
   "subtypes": [
     "megacorp"
   ],
-  "gainCreditOnTransactionPlayed": 1
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "gainCreditOnTransactionPlayed",
+        "value": 1
+      }
+    }
+  ]
 }

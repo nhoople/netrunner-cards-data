@@ -11,35 +11,47 @@
     "seedy"
   ],
   "installCost": 4,
-  "unique": true,
-  "onTurnBegin": {
-    "op": "choose",
-    "chooser": "runner",
-    "options": [
-      {
-        "id": "accept",
-        "label": "Remove 1 card in the heap from the game to gain 2¢",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "rfg_heap_gain_credits",
-            "credits": 2
-          }
-        }
-      },
-      {
-        "id": "decline",
-        "label": "Decline",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "gain_credits",
-            "side": "runner",
-            "amount": 0
-          }
-        }
+  "wave": "free-mars",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
       }
-    ]
-  },
-  "wave": "free-mars"
+    },
+    {
+      "class": "conditional",
+      "trigger": "turn_begin",
+      "instructions": {
+        "op": "choose",
+        "chooser": "runner",
+        "options": [
+          {
+            "id": "accept",
+            "label": "Remove 1 card in the heap from the game to gain 2¢",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "rfg_heap_gain_credits",
+                "credits": 2
+              }
+            }
+          },
+          {
+            "id": "decline",
+            "label": "Decline",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "gain_credits",
+                "side": "runner",
+                "amount": 0
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
 }

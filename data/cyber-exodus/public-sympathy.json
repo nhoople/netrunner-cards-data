@@ -8,5 +8,13 @@
   "unsupported": [],
   "faction": "neutral-runner",
   "installCost": 2,
-  "handSizeBonus": 2
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "handSizeBonus",
+        "value": 2
+      }
+    }
+  ]
 }

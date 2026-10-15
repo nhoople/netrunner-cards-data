@@ -11,19 +11,18 @@
     "connection"
   ],
   "installCost": 1,
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "paid",
       "id": "decoy-prevent-tag",
       "label": "[interrupt] → [trash]: Prevent 1 tag",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "trashSelf": true
       },
       "windows": [
         "tag_interrupt_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "prevent_pending_tags",

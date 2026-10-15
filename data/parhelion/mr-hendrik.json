@@ -13,18 +13,24 @@
   "installCost": 0,
   "rezCost": 0,
   "trashCost": 2,
-  "onAccess": {
-    "op": "if",
-    "cond": {
-      "op": "source_installed"
-    },
-    "then": {
-      "op": "do",
-      "action": {
-        "kind": "may_pay_credits_for_core_damage",
-        "amount": 2,
-        "damage": 1
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "access",
+      "instructions": {
+        "op": "if",
+        "cond": {
+          "op": "source_installed"
+        },
+        "then": {
+          "op": "do",
+          "action": {
+            "kind": "may_pay_credits_for_core_damage",
+            "amount": 2,
+            "damage": 1
+          }
+        }
       }
     }
-  }
+  ]
 }

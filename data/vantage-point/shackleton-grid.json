@@ -12,33 +12,39 @@
   "installCost": 1,
   "rezCost": 1,
   "trashCost": 3,
-  "onSpendCreditsOutsidePoolDuringRunOncePerTurn": {
-    "op": "choose",
-    "chooser": "corp",
-    "options": [
-      {
-        "id": "meat-4",
-        "label": "Do 4 meat damage",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "meat_damage",
-            "amount": 4
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "spend_credits_outside_pool_during_run_once_per_turn",
+      "instructions": {
+        "op": "choose",
+        "chooser": "corp",
+        "options": [
+          {
+            "id": "meat-4",
+            "label": "Do 4 meat damage",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "meat_damage",
+                "amount": 4
+              }
+            }
+          },
+          {
+            "id": "decline",
+            "label": "Decline",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "gain_credits",
+                "side": "corp",
+                "amount": 0
+              }
+            }
           }
-        }
-      },
-      {
-        "id": "decline",
-        "label": "Decline",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "gain_credits",
-            "side": "corp",
-            "amount": 0
-          }
-        }
+        ]
       }
-    ]
-  }
+    }
+  ]
 }

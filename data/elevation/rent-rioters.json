@@ -11,12 +11,11 @@
     "seedy"
   ],
   "installCost": 2,
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "paid",
       "id": "rent-rioters-gain",
       "label": "[click][click][click], [trash]: Gain 9¢",
-      "clickCost": 3,
-      "creditCost": 0,
       "cost": {
         "clicks": 3,
         "trashSelf": true
@@ -24,7 +23,7 @@
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "gain_credits",

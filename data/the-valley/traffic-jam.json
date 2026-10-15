@@ -10,8 +10,28 @@
     "current"
   ],
   "playCost": 2,
-  "lingerAsCurrent": true,
-  "currentTrashOnAgendaScored": true,
-  "agendaAdvancementRequirementBonusPerCopyInCorpScore": 1,
-  "wave": "the-valley"
+  "wave": "the-valley",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "lingerAsCurrent",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "currentTrashOnAgendaScored",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "agendaAdvancementRequirementBonusPerCopyInCorpScore",
+        "value": 1
+      }
+    }
+  ]
 }

@@ -9,14 +9,25 @@
   "installCost": 1,
   "rezCost": 1,
   "trashCost": 3,
-  "powerCountersOnRez": 1,
-  "powerCounterOnAgendaScoredOrStolenFromThisServer": 1,
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "powerCountersOnRez",
+        "value": 1
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "powerCounterOnAgendaScoredOrStolenFromThisServer",
+        "value": 1
+      }
+    },
+    {
+      "class": "paid",
       "id": "perfect-recall-reveal",
       "label": "Hosted power: Reveal HQ card — Runner cannot steal/trash copies this run",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "powerCounters": 1
       },
@@ -25,13 +36,13 @@
         "encounter_paw",
         "approach_server_paw"
       ],
-      "requiresActiveRun": true,
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "reveal_hq_forbid_steal_trash_copies_this_run"
         }
-      }
+      },
+      "requiresActiveRun": true
     }
   ]
 }

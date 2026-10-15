@@ -7,13 +7,19 @@
   "unsupported": [],
   "faction": "anarch",
   "installCost": 0,
-  "installRequiresCorpBadPublicityGte": 1,
-  "paidAbilities": [
+  "wave": "order-and-chaos",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "installRequiresCorpBadPublicityGte",
+        "value": 1
+      }
+    },
+    {
+      "class": "paid",
       "id": "ij-bp",
       "label": "[click]×4, [trash]: Give the Corp 1 bad publicity",
-      "clickCost": 4,
-      "creditCost": 0,
       "cost": {
         "clicks": 4,
         "trashSelf": true
@@ -21,7 +27,7 @@
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "give_bad_publicity",
@@ -29,6 +35,5 @@
         }
       }
     }
-  ],
-  "wave": "order-and-chaos"
+  ]
 }

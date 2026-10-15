@@ -11,14 +11,22 @@
     "sabotage"
   ],
   "playCost": 3,
-  "runEvent": {
-    "servers": "hq",
-    "onSuccessfulRun": {
-      "op": "do",
-      "action": {
-        "kind": "cbi_raid_instead_of_breach"
+  "wave": "business-first",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "runEvent",
+        "value": {
+          "servers": "hq",
+          "onSuccessfulRun": {
+            "op": "do",
+            "action": {
+              "kind": "cbi_raid_instead_of_breach"
+            }
+          }
+        }
       }
     }
-  },
-  "wave": "business-first"
+  ]
 }

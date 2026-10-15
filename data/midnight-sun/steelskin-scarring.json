@@ -7,42 +7,51 @@
   "side": "runner",
   "unsupported": [],
   "playCost": 1,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "draw",
-      "side": "runner",
-      "amount": 3
-    }
-  },
-  "onTrashFromGripOrStack": {
-    "op": "choose",
-    "chooser": "runner",
-    "options": [
-      {
-        "id": "draw",
-        "label": "Draw 2",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "draw",
-            "side": "runner",
-            "amount": 2
-          }
-        }
-      },
-      {
-        "id": "decline",
-        "label": "Decline",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "gain_credits",
-            "side": "runner",
-            "amount": 0
-          }
+  "abilities": [
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "draw",
+          "side": "runner",
+          "amount": 3
         }
       }
-    ]
-  }
+    },
+    {
+      "class": "conditional",
+      "trigger": "trash_from_grip_or_stack",
+      "instructions": {
+        "op": "choose",
+        "chooser": "runner",
+        "options": [
+          {
+            "id": "draw",
+            "label": "Draw 2",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "draw",
+                "side": "runner",
+                "amount": 2
+              }
+            }
+          },
+          {
+            "id": "decline",
+            "label": "Decline",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "gain_credits",
+                "side": "runner",
+                "amount": 0
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
 }

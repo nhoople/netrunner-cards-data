@@ -11,60 +11,65 @@
     "transaction"
   ],
   "playCost": 1,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "choose_exactly_n",
-      "n": 2,
-      "options": [
-        {
-          "id": "draw",
-          "label": "Draw 2 cards",
-          "effect": {
-            "op": "do",
-            "action": {
-              "kind": "draw",
-              "side": "corp",
-              "amount": 2
+  "abilities": [
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "choose_exactly_n",
+          "n": 2,
+          "options": [
+            {
+              "id": "draw",
+              "label": "Draw 2 cards",
+              "effect": {
+                "op": "do",
+                "action": {
+                  "kind": "draw",
+                  "side": "corp",
+                  "amount": 2
+                }
+              }
+            },
+            {
+              "id": "credits",
+              "label": "Gain 2¢",
+              "effect": {
+                "op": "do",
+                "action": {
+                  "kind": "gain_credits",
+                  "side": "corp",
+                  "amount": 2
+                }
+              }
+            },
+            {
+              "id": "install",
+              "label": "Install 1 non-agenda card from HQ",
+              "effect": {
+                "op": "do",
+                "action": {
+                  "kind": "may_install_from_hq_paying_costs",
+                  "excludeAgenda": true
+                }
+              }
+            },
+            {
+              "id": "click",
+              "label": "Gain [click]",
+              "effect": {
+                "op": "do",
+                "action": {
+                  "kind": "gain_clicks",
+                  "side": "corp",
+                  "amount": 1
+                }
+              }
             }
-          }
-        },
-        {
-          "id": "credits",
-          "label": "Gain 2¢",
-          "effect": {
-            "op": "do",
-            "action": {
-              "kind": "gain_credits",
-              "side": "corp",
-              "amount": 2
-            }
-          }
-        },
-        {
-          "id": "install",
-          "label": "Install 1 non-agenda card from HQ",
-          "effect": {
-            "op": "do",
-            "action": {
-              "kind": "may_install_from_hq_paying_costs",
-              "excludeAgenda": true
-            }
-          }
-        },
-        {
-          "id": "click",
-          "label": "Gain [click]",
-          "effect": {
-            "op": "do",
-            "action": {
-              "kind": "gain_clicks",
-              "side": "corp",
-              "amount": 1
-            }
-          }
+          ]
         }
-      ]
+      }
     }
-  }
+  ]
 }

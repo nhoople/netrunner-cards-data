@@ -11,10 +11,16 @@
   ],
   "advancementRequirement": 3,
   "agendaPoints": 1,
-  "onScore": {
-    "op": "do",
-    "action": {
-      "kind": "install_and_rez_asset_or_upgrade_free"
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "score",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "install_and_rez_asset_or_upgrade_free"
+        }
+      }
     }
-  }
+  ]
 }

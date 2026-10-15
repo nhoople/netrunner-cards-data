@@ -11,11 +11,17 @@
   ],
   "advancementRequirement": 3,
   "agendaPoints": 1,
-  "onScore": {
-    "op": "do",
-    "action": {
-      "kind": "search_rd_any_card_to_hq"
+  "wave": "the-universe-of-tomorrow",
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "score",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "search_rd_any_card_to_hq"
+        }
+      }
     }
-  },
-  "wave": "the-universe-of-tomorrow"
+  ]
 }

@@ -14,31 +14,36 @@
   "installCost": 4,
   "strength": 5,
   "memoryCost": 1,
-  "breaker": {
-    "breaksSubtype": "barrier",
-    "strength": 5,
-    "breakCredits": 0,
-    "breakViaPaidAbilityOnly": true
-  },
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "breaker",
+        "value": {
+          "breaksSubtype": "barrier",
+          "strength": 5,
+          "breakCredits": 0,
+          "breakViaPaidAbilityOnly": true
+        }
+      }
+    },
+    {
+      "class": "paid",
       "id": "banner-suppress-etr",
       "label": "2¢: barrier subs cannot ETR this encounter",
-      "clickCost": 0,
-      "creditCost": 2,
       "cost": {
         "credits": 2
       },
       "windows": [
         "encounter_paw"
       ],
-      "requireEncounterSubtype": "barrier",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "forbid_end_the_run_this_encounter"
         }
-      }
+      },
+      "requireEncounterSubtype": "barrier"
     }
   ]
 }

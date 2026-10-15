@@ -12,27 +12,32 @@
   "installCost": 1,
   "rezCost": 1,
   "strength": 1,
-  "onPass": {
-    "op": "if",
-    "cond": {
-      "op": "not",
-      "cond": {
-        "op": "clicks_remaining",
-        "side": "runner"
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "pass",
+      "instructions": {
+        "op": "if",
+        "cond": {
+          "op": "not",
+          "cond": {
+            "op": "clicks_remaining",
+            "side": "runner"
+          }
+        },
+        "then": {
+          "op": "do",
+          "action": {
+            "kind": "forbid_steal_trash_this_run"
+          }
+        }
       }
     },
-    "then": {
-      "op": "do",
-      "action": {
-        "kind": "forbid_steal_trash_this_run"
-      }
-    }
-  },
-  "subroutines": [
     {
+      "class": "subroutine",
       "id": "vertigo-lose-click",
       "text": "The Runner loses [click].",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "lose_clicks",

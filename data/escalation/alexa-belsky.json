@@ -12,26 +12,31 @@
   "installCost": 1,
   "rezCost": 1,
   "trashCost": 5,
-  "unique": true,
-  "paidAbilities": [
+  "wave": "escalation",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "paid",
       "id": "alexa-shuffle",
       "label": "[trash]: Shuffle HQ into R&D; Runner may pay 2¢ each to trash instead of shuffling",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "trashSelf": true
       },
       "windows": [
         "corp_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "shuffle_hq"
         }
       }
     }
-  ],
-  "wave": "escalation"
+  ]
 }

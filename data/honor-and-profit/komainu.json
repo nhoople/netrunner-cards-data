@@ -13,11 +13,17 @@
   "installCost": 5,
   "rezCost": 5,
   "strength": 1,
-  "onEncounter": {
-    "op": "do",
-    "action": {
-      "kind": "add_net_subs_for_rezzed_ice"
+  "wave": "honor-and-profit",
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "encounter",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "add_net_subs_for_rezzed_ice"
+        }
+      }
     }
-  },
-  "wave": "honor-and-profit"
+  ]
 }

@@ -10,40 +10,46 @@
   "subtypes": [
     "security"
   ],
-  "onScore": {
-    "op": "if",
-    "cond": {
-      "op": "has_installed_resource"
-    },
-    "then": {
-      "op": "choose",
-      "chooser": "corp",
-      "options": [
-        {
-          "id": "trash",
-          "label": "Trash a resource",
-          "effect": {
-            "op": "do",
-            "action": {
-              "kind": "trash_resource",
-              "pick": "choose"
-            }
-          }
+  "unsupported": [],
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "score",
+      "instructions": {
+        "op": "if",
+        "cond": {
+          "op": "has_installed_resource"
         },
-        {
-          "id": "decline",
-          "label": "Decline",
-          "effect": {
-            "op": "do",
-            "action": {
-              "kind": "gain_credits",
-              "side": "corp",
-              "amount": 0
+        "then": {
+          "op": "choose",
+          "chooser": "corp",
+          "options": [
+            {
+              "id": "trash",
+              "label": "Trash a resource",
+              "effect": {
+                "op": "do",
+                "action": {
+                  "kind": "trash_resource",
+                  "pick": "choose"
+                }
+              }
+            },
+            {
+              "id": "decline",
+              "label": "Decline",
+              "effect": {
+                "op": "do",
+                "action": {
+                  "kind": "gain_credits",
+                  "side": "corp",
+                  "amount": 0
+                }
+              }
             }
-          }
+          ]
         }
-      ]
+      }
     }
-  },
-  "unsupported": []
+  ]
 }

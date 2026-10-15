@@ -12,19 +12,18 @@
   ],
   "advancementRequirement": 5,
   "agendaPoints": 3,
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "paid",
       "id": "restructured-datapool-trace",
       "label": "[click]: Trace[2]. If successful, give the Runner 1 tag",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1
       },
       "windows": [
         "corp_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "trace",

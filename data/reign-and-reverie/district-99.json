@@ -12,42 +12,51 @@
     "seedy"
   ],
   "installCost": 3,
-  "unique": true,
-  "onFirstProgramOrHardwareTrashEachTurn": {
-    "op": "choose",
-    "chooser": "runner",
-    "options": [
-      {
-        "id": "place-power",
-        "label": "Place 1 power counter on District 99",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "add_power_counter",
-            "amount": 1
-          }
-        }
-      },
-      {
-        "id": "decline",
-        "label": "Decline",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "gain_credits",
-            "side": "runner",
-            "amount": 0
-          }
-        }
-      }
-    ]
-  },
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "first_program_or_hardware_trash_each_turn",
+      "instructions": {
+        "op": "choose",
+        "chooser": "runner",
+        "options": [
+          {
+            "id": "place-power",
+            "label": "Place 1 power counter on District 99",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "add_power_counter",
+                "amount": 1
+              }
+            }
+          },
+          {
+            "id": "decline",
+            "label": "Decline",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "gain_credits",
+                "side": "runner",
+                "amount": 0
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "class": "paid",
       "id": "district-99-heap",
       "label": "[click], 3 hosted power counters: Add a card that matches the faction of your identity from your heap to your grip",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1,
         "powerCounters": 3
@@ -55,7 +64,7 @@
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "add_from_heap_to_grip",

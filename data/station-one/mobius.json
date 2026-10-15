@@ -10,14 +10,22 @@
     "run"
   ],
   "playCost": 0,
-  "runEvent": {
-    "servers": "rd",
-    "onRunEnd": {
-      "op": "do",
-      "action": {
-        "kind": "mobius_on_run_end"
+  "wave": "station-one",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "runEvent",
+        "value": {
+          "servers": "rd",
+          "onRunEnd": {
+            "op": "do",
+            "action": {
+              "kind": "mobius_on_run_end"
+            }
+          }
+        }
       }
     }
-  },
-  "wave": "station-one"
+  ]
 }

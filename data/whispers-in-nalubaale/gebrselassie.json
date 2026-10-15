@@ -10,28 +10,39 @@
     "mod"
   ],
   "installCost": 1,
-  "unique": true,
-  "paidAbilities": [
+  "wave": "whispers-in-nalubaale",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "paid",
       "id": "gebrselassie-host",
       "label": "[click]: Host Gebrselassie on an installed non-AI icebreaker",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1
       },
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "win_gebrselassie_host"
         }
       },
       "usableByRunnerOnSelfIce": true
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "hostIcebreakerStrengthIncreasesLastRemainderOfTurn",
+        "value": true
+      }
     }
-  ],
-  "hostIcebreakerStrengthIncreasesLastRemainderOfTurn": true,
-  "wave": "whispers-in-nalubaale"
+  ]
 }

@@ -12,11 +12,13 @@
   "installCost": 0,
   "rezCost": 0,
   "strength": 1,
-  "subroutines": [
+  "wave": "down-the-white-nile",
+  "abilities": [
     {
+      "class": "subroutine",
       "id": "aimor-trash",
       "text": "Trash the top 3 cards of the stack. Trash Aimor.",
-      "effect": {
+      "instructions": {
         "op": "seq",
         "effects": [
           {
@@ -46,6 +48,5 @@
         ]
       }
     }
-  ],
-  "wave": "down-the-white-nile"
+  ]
 }

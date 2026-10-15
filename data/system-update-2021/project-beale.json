@@ -11,13 +11,25 @@
   ],
   "advancementRequirement": 3,
   "agendaPoints": 2,
-  "onScore": {
-    "op": "do",
-    "action": {
-      "kind": "add_agenda_counters_from_overadvance",
-      "past": 3,
-      "per": 2
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "score",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "add_agenda_counters_from_overadvance",
+          "past": 3,
+          "per": 2
+        }
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "agendaPointsPerAgendaCounter",
+        "value": 1
+      }
     }
-  },
-  "agendaPointsPerAgendaCounter": 1
+  ]
 }

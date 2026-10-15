@@ -11,32 +11,43 @@
     "location"
   ],
   "installCost": 2,
-  "recurringCreditsMax": 2,
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "recurringCreditsMax",
+        "value": 2
+      }
+    },
+    {
+      "class": "paid",
       "id": "crash-space-prevent-meat",
       "label": "[interrupt] → [trash]: Prevent up to 3 meat damage",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "trashSelf": true
       },
       "windows": [
         "damage_interrupt_paw"
       ],
-      "requirePendingDamageTypes": [
-        "meat"
-      ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "prevent_pending_damage",
           "amount": 3
         }
+      },
+      "requirePendingDamageTypes": [
+        "meat"
+      ]
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "recurringSpendFor",
+        "value": [
+          "basic_remove_tag"
+        ]
       }
     }
-  ],
-  "recurringSpendFor": [
-    "basic_remove_tag"
   ]
 }

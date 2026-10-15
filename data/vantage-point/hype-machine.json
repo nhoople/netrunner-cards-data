@@ -12,20 +12,25 @@
   "installCost": 6,
   "rezCost": 6,
   "trashCost": 2,
-  "rezCostDiscountIfAgendaScoredOrStolenThisTurn": 6,
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "rezCostDiscountIfAgendaScoredOrStolenThisTurn",
+        "value": 6
+      }
+    },
+    {
+      "class": "paid",
       "id": "hype-machine-advance",
       "label": "[trash]: Place 1 advancement on a card you can advance in this server's root",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "trashSelf": true
       },
       "windows": [
         "corp_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "place_advancements",

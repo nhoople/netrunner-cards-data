@@ -11,35 +11,52 @@
   ],
   "playCost": 5,
   "trashCost": 3,
-  "playRequiresThreat": 4,
-  "playRequiresSuccessfulRunLastTurn": true,
-  "onPlay": {
-    "op": "choose",
-    "chooser": "runner",
-    "options": [
-      {
-        "id": "pay8",
-        "label": "Pay 8¢",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "lose_credits",
-            "side": "runner",
-            "amount": 8
-          }
-        }
-      },
-      {
-        "id": "meat",
-        "label": "Suffer 4 meat damage",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "meat_damage",
-            "amount": 4
-          }
-        }
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "playRequiresThreat",
+        "value": 4
       }
-    ]
-  }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "playRequiresSuccessfulRunLastTurn",
+        "value": true
+      }
+    },
+    {
+      "class": "play",
+      "instructions": {
+        "op": "choose",
+        "chooser": "runner",
+        "options": [
+          {
+            "id": "pay8",
+            "label": "Pay 8¢",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "lose_credits",
+                "side": "runner",
+                "amount": 8
+              }
+            }
+          },
+          {
+            "id": "meat",
+            "label": "Suffer 4 meat damage",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "meat_damage",
+                "amount": 4
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
 }

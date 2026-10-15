@@ -10,32 +10,43 @@
     "gray ops"
   ],
   "playCost": 0,
-  "playRequiresTagged": true,
-  "onPlay": {
-    "op": "choose",
-    "chooser": "corp",
-    "options": [
-      {
-        "id": "tag",
-        "label": "Give the Runner 1 tag",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "give_tags",
-            "amount": 1
-          }
-        }
-      },
-      {
-        "id": "remove",
-        "label": "Remove tags (Runner loses 5[credit] each; you gain that much)",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "bigger_picture_remove_tags"
-          }
-        }
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "playRequiresTagged",
+        "value": true
       }
-    ]
-  }
+    },
+    {
+      "class": "play",
+      "instructions": {
+        "op": "choose",
+        "chooser": "corp",
+        "options": [
+          {
+            "id": "tag",
+            "label": "Give the Runner 1 tag",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "give_tags",
+                "amount": 1
+              }
+            }
+          },
+          {
+            "id": "remove",
+            "label": "Remove tags (Runner loses 5[credit] each; you gain that much)",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "bigger_picture_remove_tags"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
 }

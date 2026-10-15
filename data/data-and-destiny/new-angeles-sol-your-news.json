@@ -9,33 +9,39 @@
   "subtypes": [
     "division"
   ],
-  "onAgendaScoredOrStolen": {
-    "op": "choose",
-    "chooser": "corp",
-    "options": [
-      {
-        "id": "accept",
-        "label": "Play 1 current from HQ or Archives",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "play_current_from_hq_or_archives"
+  "wave": "data-and-destiny",
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "agenda_scored_or_stolen",
+      "instructions": {
+        "op": "choose",
+        "chooser": "corp",
+        "options": [
+          {
+            "id": "accept",
+            "label": "Play 1 current from HQ or Archives",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "play_current_from_hq_or_archives"
+              }
+            }
+          },
+          {
+            "id": "decline",
+            "label": "Decline",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "gain_credits",
+                "side": "corp",
+                "amount": 0
+              }
+            }
           }
-        }
-      },
-      {
-        "id": "decline",
-        "label": "Decline",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "gain_credits",
-            "side": "corp",
-            "amount": 0
-          }
-        }
+        ]
       }
-    ]
-  },
-  "wave": "data-and-destiny"
+    }
+  ]
 }

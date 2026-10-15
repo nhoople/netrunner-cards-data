@@ -13,11 +13,13 @@
   "installCost": 2,
   "rezCost": 2,
   "strength": 3,
-  "subroutines": [
+  "wave": "station-one",
+  "abilities": [
     {
+      "class": "subroutine",
       "id": "bloom-other-server",
       "text": "You may install 1 piece of ice from HQ protecting another server, ignoring all costs.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "may_install_ice_from_hq_other_server_ignore_costs"
@@ -25,15 +27,15 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "bloom-inward",
       "text": "You may install 1 piece of ice from HQ directly inward from this ice, ignoring all costs.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "may_install_ice_from_hq_inward_of_source_ignore_costs"
         }
       }
     }
-  ],
-  "wave": "station-one"
+  ]
 }

@@ -10,8 +10,28 @@
     "current"
   ],
   "playCost": 1,
-  "lingerAsCurrent": true,
-  "currentTrashOnAgendaStolen": true,
-  "resourceInstallCostIncrease": 2,
-  "wave": "escalation"
+  "wave": "escalation",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "lingerAsCurrent",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "currentTrashOnAgendaStolen",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "resourceInstallCostIncrease",
+        "value": 2
+      }
+    }
+  ]
 }

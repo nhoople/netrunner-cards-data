@@ -12,10 +12,24 @@
   ],
   "advancementRequirement": 4,
   "agendaPoints": 2,
-  "installFaceup": true,
-  "creditsOnAdvance": {
-    "default": 2,
-    "atOrAbove": 5,
-    "bonus": 3
-  }
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "installFaceup",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "creditsOnAdvance",
+        "value": {
+          "default": 2,
+          "atOrAbove": 5,
+          "bonus": 3
+        }
+      }
+    }
+  ]
 }

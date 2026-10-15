@@ -10,12 +10,18 @@
   "subtypes": [
     "megacorp"
   ],
-  "onFirstCorpCardInstallEachTurn": {
-    "op": "do",
-    "action": {
-      "kind": "gain_credits",
-      "side": "corp",
-      "amount": 1
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "first_corp_card_install_each_turn",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "corp",
+          "amount": 1
+        }
+      }
     }
-  }
+  ]
 }

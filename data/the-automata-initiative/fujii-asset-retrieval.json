@@ -12,18 +12,28 @@
   ],
   "advancementRequirement": 5,
   "agendaPoints": 3,
-  "onScore": {
-    "op": "do",
-    "action": {
-      "kind": "net_damage",
-      "amount": 2
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "score",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "net_damage",
+          "amount": 2
+        }
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "steal",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "net_damage",
+          "amount": 2
+        }
+      }
     }
-  },
-  "onSteal": {
-    "op": "do",
-    "action": {
-      "kind": "net_damage",
-      "amount": 2
-    }
-  }
+  ]
 }

@@ -9,5 +9,13 @@
   "subtypes": [
     "megacorp"
   ],
-  "rezBioroidDiscountOnFirstPass": 4
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "rezBioroidDiscountOnFirstPass",
+        "value": 4
+      }
+    }
+  ]
 }

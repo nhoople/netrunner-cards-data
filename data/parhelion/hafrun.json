@@ -13,29 +13,34 @@
   "installCost": 2,
   "rezCost": 2,
   "strength": 3,
-  "onRez": {
-    "op": "if",
-    "cond": {
-      "op": "source_protects_attacked_server"
-    },
-    "then": {
-      "op": "do",
-      "action": {
-        "kind": "may_trash_hq_then",
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "rez",
+      "instructions": {
+        "op": "if",
+        "cond": {
+          "op": "source_protects_attacked_server"
+        },
         "then": {
           "op": "do",
           "action": {
-            "kind": "forbid_installed_runner_break_for_run"
+            "kind": "may_trash_hq_then",
+            "then": {
+              "op": "do",
+              "action": {
+                "kind": "forbid_installed_runner_break_for_run"
+              }
+            }
           }
         }
       }
-    }
-  },
-  "subroutines": [
+    },
     {
+      "class": "subroutine",
       "id": "hafrun-etr",
       "text": "End the run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "end_the_run"

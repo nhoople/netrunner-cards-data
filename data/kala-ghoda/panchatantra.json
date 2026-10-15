@@ -8,33 +8,39 @@
   "faction": "shaper",
   "installCost": 2,
   "memoryCost": 1,
-  "onEncounterAnyIceOncePerTurn": {
-    "op": "choose",
-    "chooser": "runner",
-    "options": [
-      {
-        "id": "accept",
-        "label": "Choose a subtype for encountered ice this run",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "choose_subtype_for_encounter"
+  "wave": "kala-ghoda",
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "encounter_any_ice_once_per_turn",
+      "instructions": {
+        "op": "choose",
+        "chooser": "runner",
+        "options": [
+          {
+            "id": "accept",
+            "label": "Choose a subtype for encountered ice this run",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "choose_subtype_for_encounter"
+              }
+            }
+          },
+          {
+            "id": "decline",
+            "label": "Decline",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "gain_credits",
+                "side": "runner",
+                "amount": 0
+              }
+            }
           }
-        }
-      },
-      {
-        "id": "decline",
-        "label": "Decline",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "gain_credits",
-            "side": "runner",
-            "amount": 0
-          }
-        }
+        ]
       }
-    ]
-  },
-  "wave": "kala-ghoda"
+    }
+  ]
 }

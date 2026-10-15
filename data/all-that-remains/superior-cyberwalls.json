@@ -11,23 +11,35 @@
   ],
   "advancementRequirement": 3,
   "agendaPoints": 1,
-  "whileScoredIceSubtypeStrengthBonus": {
-    "subtype": "barrier",
-    "bonus": 1
-  },
-  "onScore": {
-    "op": "do",
-    "action": {
-      "kind": "gain_credits",
-      "side": "corp",
-      "amount": 0,
-      "tally": {
-        "count": "rezzed_ice_subtype",
-        "per": 1,
-        "side": "corp",
-        "subtype": "barrier"
+  "wave": "all-that-remains",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "whileScoredIceSubtypeStrengthBonus",
+        "value": {
+          "subtype": "barrier",
+          "bonus": 1
+        }
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "score",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "corp",
+          "amount": 0,
+          "tally": {
+            "count": "rezzed_ice_subtype",
+            "per": 1,
+            "side": "corp",
+            "subtype": "barrier"
+          }
+        }
       }
     }
-  },
-  "wave": "all-that-remains"
+  ]
 }

@@ -9,12 +9,24 @@
   "faction": "adam",
   "installCost": 0,
   "memoryCost": 1,
-  "unique": true,
-  "onTurnBegin": {
-    "op": "do",
-    "action": {
-      "kind": "may_pay_credits_gain_click_trash_at_turn_end_if_no_successful_run",
-      "credits": 2
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "turn_begin",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "may_pay_credits_gain_click_trash_at_turn_end_if_no_successful_run",
+          "credits": 2
+        }
+      }
     }
-  }
+  ]
 }

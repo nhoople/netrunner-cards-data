@@ -10,10 +10,30 @@
     "run"
   ],
   "playCost": 1,
-  "deckLimit": 6,
-  "runEvent": {
-    "servers": "any"
-  },
-  "heapOnTurnBeginMayRfgSelfToMakeRun": true,
-  "wave": "the-liberated-mind"
+  "wave": "the-liberated-mind",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "deckLimit",
+        "value": 6
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "runEvent",
+        "value": {
+          "servers": "any"
+        }
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "heapOnTurnBeginMayRfgSelfToMakeRun",
+        "value": true
+      }
+    }
+  ]
 }

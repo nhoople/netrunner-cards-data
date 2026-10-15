@@ -10,14 +10,22 @@
     "run"
   ],
   "playCost": 0,
-  "runEvent": {
-    "servers": "rd",
-    "onSuccessfulRun": {
-      "op": "do",
-      "action": {
-        "kind": "code_siphon_may_instead_of_breach"
+  "wave": "the-source",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "runEvent",
+        "value": {
+          "servers": "rd",
+          "onSuccessfulRun": {
+            "op": "do",
+            "action": {
+              "kind": "code_siphon_may_instead_of_breach"
+            }
+          }
+        }
       }
     }
-  },
-  "wave": "the-source"
+  ]
 }

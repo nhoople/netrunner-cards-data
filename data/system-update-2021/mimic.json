@@ -13,10 +13,17 @@
   "installCost": 3,
   "strength": 3,
   "memoryCost": 1,
-  "breaker": {
-    "breaksSubtype": "sentry",
-    "strength": 3,
-    "breakCredits": 1
-  },
-  "paidAbilities": []
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "breaker",
+        "value": {
+          "breaksSubtype": "sentry",
+          "strength": 3,
+          "breakCredits": 1
+        }
+      }
+    }
+  ]
 }

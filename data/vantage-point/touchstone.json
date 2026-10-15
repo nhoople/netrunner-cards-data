@@ -10,7 +10,27 @@
     "stealth"
   ],
   "installCost": 2,
-  "unique": true,
-  "hostedCreditsOnFirstEventPlayOncePerTurn": 1,
-  "spendHostedCreditsDuringRuns": true
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "hostedCreditsOnFirstEventPlayOncePerTurn",
+        "value": 1
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "spendHostedCreditsDuringRuns",
+        "value": true
+      }
+    }
+  ]
 }

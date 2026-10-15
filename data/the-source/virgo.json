@@ -13,17 +13,18 @@
   "installCost": 4,
   "rezCost": 4,
   "strength": 5,
-  "subroutines": [
+  "wave": "the-source",
+  "abilities": [
     {
+      "class": "subroutine",
       "id": "virgo-trace",
       "text": "Trace[2]. If successful, give the Runner 1 tag. If strength ≥5, give the Runner 1 tag.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "virgo_trace_subroutine"
         }
       }
     }
-  ],
-  "wave": "the-source"
+  ]
 }

@@ -9,19 +9,19 @@
   "subtypes": [
     "console"
   ],
-  "paidAbilities": [
+  "unsupported": [],
+  "abilities": [
     {
+      "class": "paid",
       "id": "pennyshaver-take",
       "label": "Place 1¢ then take all",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1
       },
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "seq",
         "effects": [
           {
@@ -40,15 +40,24 @@
           }
         ]
       }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "muBonus",
+        "value": 1
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "successful_run",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "place_hosted_credits",
+          "amount": 1
+        }
+      }
     }
-  ],
-  "unsupported": [],
-  "muBonus": 1,
-  "onSuccessfulRun": {
-    "op": "do",
-    "action": {
-      "kind": "place_hosted_credits",
-      "amount": 1
-    }
-  }
+  ]
 }

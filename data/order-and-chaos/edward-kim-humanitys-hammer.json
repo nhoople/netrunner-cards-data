@@ -9,7 +9,21 @@
   "subtypes": [
     "natural"
   ],
-  "firstAccessedOperationTrashFreeEachTurn": true,
   "wave": "order-and-chaos",
-  "link": 1
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "firstAccessedOperationTrashFreeEachTurn",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "link",
+        "value": 1
+      }
+    }
+  ]
 }

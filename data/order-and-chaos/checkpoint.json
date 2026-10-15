@@ -14,12 +14,20 @@
   "installCost": 4,
   "rezCost": 4,
   "strength": 7,
-  "badPublicityOnRez": 1,
-  "subroutines": [
+  "wave": "order-and-chaos",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "badPublicityOnRez",
+        "value": 1
+      }
+    },
+    {
+      "class": "subroutine",
       "id": "checkpoint-trace",
       "text": "Trace[5]. If successful, do 3 meat damage when this run becomes successful.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "trace",
@@ -34,6 +42,5 @@
         }
       }
     }
-  ],
-  "wave": "order-and-chaos"
+  ]
 }

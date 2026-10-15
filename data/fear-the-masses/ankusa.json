@@ -13,19 +13,31 @@
   "installCost": 6,
   "strength": 0,
   "memoryCost": 1,
-  "breaker": {
-    "breaksSubtype": "barrier",
-    "strength": 0,
-    "breakCredits": 2,
-    "breakMaxSubs": 1,
-    "pumpCredits": 1,
-    "pumpStrength": 1
-  },
-  "onFullyBreak": {
-    "op": "do",
-    "action": {
-      "kind": "add_fully_broken_barrier_to_hq"
+  "wave": "fear-the-masses",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "breaker",
+        "value": {
+          "breaksSubtype": "barrier",
+          "strength": 0,
+          "breakCredits": 2,
+          "breakMaxSubs": 1,
+          "pumpCredits": 1,
+          "pumpStrength": 1
+        }
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "fully_break",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "add_fully_broken_barrier_to_hq"
+        }
+      }
     }
-  },
-  "wave": "fear-the-masses"
+  ]
 }

@@ -14,13 +14,27 @@
   "installCost": 3,
   "strength": 0,
   "memoryCost": 1,
-  "paidAbilitiesUseStealthCreditsOnly": true,
-  "breaker": {
-    "breaksSubtype": "sentry",
-    "strength": 0,
-    "breakCredits": 1,
-    "breakMaxSubs": 1,
-    "pumpCredits": 1,
-    "pumpStrength": 5
-  }
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "paidAbilitiesUseStealthCreditsOnly",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "breaker",
+        "value": {
+          "breaksSubtype": "sentry",
+          "strength": 0,
+          "breakCredits": 1,
+          "breakMaxSubs": 1,
+          "pumpCredits": 1,
+          "pumpStrength": 5
+        }
+      }
+    }
+  ]
 }

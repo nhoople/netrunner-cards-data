@@ -11,13 +11,25 @@
   ],
   "advancementRequirement": 3,
   "agendaPoints": 1,
-  "mustRevealWhenAccessedFromRd": true,
-  "onAccess": {
-    "op": "do",
-    "action": {
-      "kind": "give_tags",
-      "amount": 1
+  "wave": "true-colors",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "mustRevealWhenAccessedFromRd",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "access",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "give_tags",
+          "amount": 1
+        }
+      }
     }
-  },
-  "wave": "true-colors"
+  ]
 }

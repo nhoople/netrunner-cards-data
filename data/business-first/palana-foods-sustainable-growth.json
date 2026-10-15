@@ -9,6 +9,14 @@
   "subtypes": [
     "division"
   ],
-  "gainCreditOnFirstRunnerDrawEachTurn": true,
-  "wave": "business-first"
+  "wave": "business-first",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "gainCreditOnFirstRunnerDrawEachTurn",
+        "value": true
+      }
+    }
+  ]
 }

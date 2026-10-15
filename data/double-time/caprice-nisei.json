@@ -13,12 +13,24 @@
   "installCost": 2,
   "rezCost": 2,
   "trashCost": 1,
-  "unique": true,
-  "onPassAllIceProtectingServer": {
-    "op": "do",
-    "action": {
-      "kind": "caprice_nisei_secret_spend"
+  "wave": "double-time",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "pass_all_ice_protecting_server",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "caprice_nisei_secret_spend"
+        }
+      }
     }
-  },
-  "wave": "double-time"
+  ]
 }

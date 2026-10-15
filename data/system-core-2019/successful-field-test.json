@@ -12,10 +12,16 @@
   ],
   "advancementRequirement": 4,
   "agendaPoints": 2,
-  "onScore": {
-    "op": "do",
-    "action": {
-      "kind": "install_any_number_from_hq_ignore_costs"
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "score",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "install_any_number_from_hq_ignore_costs"
+        }
+      }
     }
-  }
+  ]
 }

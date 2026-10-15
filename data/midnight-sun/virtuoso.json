@@ -10,31 +10,47 @@
     "console"
   ],
   "installCost": 4,
-  "muBonus": 1,
-  "onTurnBegin": {
-    "op": "do",
-    "action": {
-      "kind": "identify_mark"
-    }
-  },
-  "onFirstSuccessfulMarkRunThisTurn": {
-    "op": "if",
-    "cond": {
-      "op": "attacking_hq"
-    },
-    "then": {
-      "op": "do",
-      "action": {
-        "kind": "bonus_access",
-        "amount": 1
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "muBonus",
+        "value": 1
       }
     },
-    "else": {
-      "op": "do",
-      "action": {
-        "kind": "breach_server_when_run_ends",
-        "server": "hq"
+    {
+      "class": "conditional",
+      "trigger": "turn_begin",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "identify_mark"
+        }
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "first_successful_mark_run_this_turn",
+      "instructions": {
+        "op": "if",
+        "cond": {
+          "op": "attacking_hq"
+        },
+        "then": {
+          "op": "do",
+          "action": {
+            "kind": "bonus_access",
+            "amount": 1
+          }
+        },
+        "else": {
+          "op": "do",
+          "action": {
+            "kind": "breach_server_when_run_ends",
+            "server": "hq"
+          }
+        }
       }
     }
-  }
+  ]
 }

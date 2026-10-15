@@ -10,6 +10,14 @@
     "chip"
   ],
   "installCost": 1,
-  "nonAiIcebreakerInstallStrengthBonusThisTurn": 1,
-  "wave": "true-colors"
+  "wave": "true-colors",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "nonAiIcebreakerInstallStrengthBonusThisTurn",
+        "value": 1
+      }
+    }
+  ]
 }

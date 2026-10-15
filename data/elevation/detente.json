@@ -10,41 +10,50 @@
     "console"
   ],
   "installCost": 3,
-  "muBonus": 1,
-  "onFirstSuccessfulHqRunThisTurn": {
-    "op": "choose",
-    "chooser": "runner",
-    "options": [
-      {
-        "id": "host",
-        "label": "Host 1 card from HQ at random faceup",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "host_random_hq"
-          }
-        }
-      },
-      {
-        "id": "decline",
-        "label": "Decline",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "gain_credits",
-            "side": "runner",
-            "amount": 0
-          }
-        }
-      }
-    ]
-  },
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "muBonus",
+        "value": 1
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "first_successful_hq_run_this_turn",
+      "instructions": {
+        "op": "choose",
+        "chooser": "runner",
+        "options": [
+          {
+            "id": "host",
+            "label": "Host 1 card from HQ at random faceup",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "host_random_hq"
+              }
+            }
+          },
+          {
+            "id": "decline",
+            "label": "Decline",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "gain_credits",
+                "side": "runner",
+                "amount": 0
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "class": "paid",
       "id": "detente-return-access",
       "label": "[click], add 2 hosted cards to HQ: The Runner may access 1 card in HQ at random",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1
       },
@@ -52,13 +61,13 @@
         "runner_action_paw",
         "corp_action_paw"
       ],
-      "usableByAnyPlayer": true,
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "return_two_hosted_may_access"
         }
-      }
+      },
+      "usableByAnyPlayer": true
     }
   ]
 }

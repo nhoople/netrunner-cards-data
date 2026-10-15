@@ -1,6 +1,6 @@
 {
   "id": "tomorrows-headline",
-  "title": "Tomorrow\u02bcs Headline",
+  "title": "Tomorrowʼs Headline",
   "wave": "system-gateway",
   "nrdbCode": "30052",
   "type": "agenda",
@@ -10,19 +10,29 @@
   "subtypes": [
     "ambush"
   ],
-  "onScore": {
-    "op": "do",
-    "action": {
-      "kind": "give_tags",
-      "amount": 1
+  "unsupported": [],
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "score",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "give_tags",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "steal",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "give_tags",
+          "amount": 1
+        }
+      }
     }
-  },
-  "onSteal": {
-    "op": "do",
-    "action": {
-      "kind": "give_tags",
-      "amount": 1
-    }
-  },
-  "unsupported": []
+  ]
 }

@@ -11,12 +11,24 @@
   ],
   "installCost": 2,
   "memoryCost": 1,
-  "onInstall": {
-    "op": "do",
-    "action": {
-      "kind": "add_virus_counter",
-      "amount": 2
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "install",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "add_virus_counter",
+          "amount": 2
+        }
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "accessTrashWithVirus",
+        "value": true
+      }
     }
-  },
-  "accessTrashWithVirus": true
+  ]
 }

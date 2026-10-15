@@ -13,40 +13,50 @@
   ],
   "advancementRequirement": 2,
   "agendaPoints": 1,
-  "onScore": {
-    "op": "choose",
-    "chooser": "corp",
-    "options": [
-      {
-        "id": "decline",
-        "label": "Decline",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "gain_credits",
-            "side": "corp",
-            "amount": 0
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "score",
+      "instructions": {
+        "op": "choose",
+        "chooser": "corp",
+        "options": [
+          {
+            "id": "decline",
+            "label": "Decline",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "gain_credits",
+                "side": "corp",
+                "amount": 0
+              }
+            }
+          },
+          {
+            "id": "remove-bp",
+            "label": "Remove 1 bad publicity",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "remove_bad_publicity",
+                "amount": 1
+              }
+            }
           }
-        }
-      },
-      {
-        "id": "remove-bp",
-        "label": "Remove 1 bad publicity",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "remove_bad_publicity",
-            "amount": 1
-          }
+        ]
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "steal",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "give_bad_publicity",
+          "amount": 1
         }
       }
-    ]
-  },
-  "onSteal": {
-    "op": "do",
-    "action": {
-      "kind": "give_bad_publicity",
-      "amount": 1
     }
-  }
+  ]
 }

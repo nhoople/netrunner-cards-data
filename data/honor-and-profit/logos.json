@@ -10,15 +10,39 @@
     "console"
   ],
   "installCost": 4,
-  "unique": true,
-  "muBonus": 1,
-  "handSizeBonus": 1,
-  "onAgendaScored": {
-    "op": "do",
-    "action": {
-      "kind": "search_stack_take_to_grip",
-      "max": 1
+  "wave": "honor-and-profit",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "muBonus",
+        "value": 1
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "handSizeBonus",
+        "value": 1
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "agenda_scored",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "search_stack_take_to_grip",
+          "max": 1
+        }
+      }
     }
-  },
-  "wave": "honor-and-profit"
+  ]
 }

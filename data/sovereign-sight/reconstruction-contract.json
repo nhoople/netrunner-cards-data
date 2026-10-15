@@ -9,26 +9,31 @@
   "installCost": 1,
   "rezCost": 1,
   "trashCost": 4,
-  "placeAdvancementOnSufferMeatDamage": true,
-  "paidAbilities": [
+  "wave": "sovereign-sight",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "placeAdvancementOnSufferMeatDamage",
+        "value": true
+      }
+    },
+    {
+      "class": "paid",
       "id": "reconstruction-move",
       "label": "[trash]: Move any number of advancement tokens from Reconstruction Contract to a card that can be advanced",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "trashSelf": true
       },
       "windows": [
         "corp_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "move_any_advancements_from_self_to_advanceable"
         }
       }
     }
-  ],
-  "wave": "sovereign-sight"
+  ]
 }

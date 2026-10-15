@@ -11,40 +11,62 @@
     "connection"
   ],
   "installCost": 0,
-  "unique": true,
-  "onInstall": {
-    "op": "seq",
-    "effects": [
-      {
-        "op": "do",
-        "action": {
-          "kind": "give_tags",
-          "amount": 1
-        }
-      },
-      {
-        "op": "do",
-        "action": {
-          "kind": "jarogniew_load_power_equal_tags_plus_3"
-        }
-      }
-    ]
-  },
-  "trashWhenPowerEmpty": true,
-  "corpCannotTrashWhileOtherResourceInstalled": true,
-  "paidAbilities": [
+  "wave": "blood-and-water",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "install",
+      "instructions": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "give_tags",
+              "amount": 1
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "jarogniew_load_power_equal_tags_plus_3"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "trashWhenPowerEmpty",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "corpCannotTrashWhileOtherResourceInstalled",
+        "value": true
+      }
+    },
+    {
+      "class": "paid",
       "id": "jarogniew-prevent-meat",
       "label": "[interrupt] → Hosted power counter: Prevent 1 meat damage",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "powerCounters": 1
       },
       "windows": [
         "damage_interrupt_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "prevent_pending_damage",
@@ -55,6 +77,5 @@
         "meat"
       ]
     }
-  ],
-  "wave": "blood-and-water"
+  ]
 }

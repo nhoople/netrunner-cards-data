@@ -14,11 +14,12 @@
   "installCost": 1,
   "rezCost": 1,
   "strength": 3,
-  "subroutines": [
+  "abilities": [
     {
+      "class": "subroutine",
       "id": "snowflake-psi",
       "text": "You and the Runner secretly spend 0¢, 1¢, or 2¢. Reveal spent credits. End the run if you and the Runner spent a different number of credits.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "play_psi_game",

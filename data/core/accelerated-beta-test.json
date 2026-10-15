@@ -12,11 +12,17 @@
   ],
   "advancementRequirement": 3,
   "agendaPoints": 2,
-  "onScore": {
-    "op": "do",
-    "action": {
-      "kind": "accelerated_beta_test",
-      "n": 3
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "score",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "accelerated_beta_test",
+          "n": 3
+        }
+      }
     }
-  }
+  ]
 }

@@ -8,12 +8,17 @@
   "unsupported": [],
   "faction": "nbn",
   "playCost": 0,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "draw",
-      "side": "corp",
-      "amount": 3
+  "abilities": [
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "draw",
+          "side": "corp",
+          "amount": 3
+        }
+      }
     }
-  }
+  ]
 }

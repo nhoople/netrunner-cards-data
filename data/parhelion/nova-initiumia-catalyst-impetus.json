@@ -10,5 +10,13 @@
     "digital",
     "natural"
   ],
-  "link": 0
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "link",
+        "value": 0
+      }
+    }
+  ]
 }

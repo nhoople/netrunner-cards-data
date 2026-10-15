@@ -13,21 +13,28 @@
   "installCost": 2,
   "rezCost": 2,
   "strength": 4,
-  "morphOddAdvancementSubtypeSwap": {
-    "gain": "barrier",
-    "lose": "code gate"
-  },
-  "subroutines": [
+  "wave": "first-contact",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "morphOddAdvancementSubtypeSwap",
+        "value": {
+          "gain": "barrier",
+          "lose": "code gate"
+        }
+      }
+    },
+    {
+      "class": "subroutine",
       "id": "wendigo-ban",
       "text": "Choose a program; Runner cannot use it this run",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "wendigo_ban_program"
         }
       }
     }
-  ],
-  "wave": "first-contact"
+  ]
 }

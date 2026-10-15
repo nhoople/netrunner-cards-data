@@ -9,6 +9,20 @@
   "subtypes": [
     "division"
   ],
-  "powerOnScoreIfAgendaNotInstalledOrAdvancedThisTurn": true,
-  "agendaPointsToWinReductionPerPowerCounter": 1
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "powerOnScoreIfAgendaNotInstalledOrAdvancedThisTurn",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "agendaPointsToWinReductionPerPowerCounter",
+        "value": 1
+      }
+    }
+  ]
 }

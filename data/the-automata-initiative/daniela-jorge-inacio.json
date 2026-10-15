@@ -12,19 +12,38 @@
   "installCost": 2,
   "rezCost": 2,
   "trashCost": 2,
-  "persistent": true,
-  "trashAdditionalCost": {
-    "op": "do",
-    "action": {
-      "kind": "add_random_grip_to_stack_bottom",
-      "count": 2
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "persistent",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "restrictions": [
+        {
+          "appliesTo": "trash",
+          "effect": {
+            "op": "do",
+            "action": {
+              "kind": "add_random_grip_to_stack_bottom",
+              "count": 2
+            }
+          }
+        },
+        {
+          "appliesTo": "steal_from_protecting_server",
+          "effect": {
+            "op": "do",
+            "action": {
+              "kind": "add_random_grip_to_stack_bottom",
+              "count": 2
+            }
+          }
+        }
+      ]
     }
-  },
-  "stealAdditionalCostFromProtectingServer": {
-    "op": "do",
-    "action": {
-      "kind": "add_random_grip_to_stack_bottom",
-      "count": 2
-    }
-  }
+  ]
 }

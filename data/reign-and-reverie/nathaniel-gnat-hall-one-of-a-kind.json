@@ -10,23 +10,35 @@
   "subtypes": [
     "natural"
   ],
-  "link": 0,
-  "onTurnBegin": {
-    "op": "if",
-    "cond": {
-      "op": "not",
-      "cond": {
-        "op": "grip_count_gte",
-        "amount": 3
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "link",
+        "value": 0
       }
     },
-    "then": {
-      "op": "do",
-      "action": {
-        "kind": "gain_credits",
-        "side": "runner",
-        "amount": 1
+    {
+      "class": "conditional",
+      "trigger": "turn_begin",
+      "instructions": {
+        "op": "if",
+        "cond": {
+          "op": "not",
+          "cond": {
+            "op": "grip_count_gte",
+            "amount": 3
+          }
+        },
+        "then": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "runner",
+            "amount": 1
+          }
+        }
       }
     }
-  }
+  ]
 }

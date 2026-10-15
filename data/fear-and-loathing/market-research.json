@@ -11,7 +11,21 @@
   ],
   "advancementRequirement": 4,
   "agendaPoints": 2,
-  "onScoreIfRunnerTaggedPlaceAgendaCounter": true,
-  "agendaPointsPerAgendaCounter": 1,
-  "wave": "fear-and-loathing"
+  "wave": "fear-and-loathing",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "onScoreIfRunnerTaggedPlaceAgendaCounter",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "agendaPointsPerAgendaCounter",
+        "value": 1
+      }
+    }
+  ]
 }

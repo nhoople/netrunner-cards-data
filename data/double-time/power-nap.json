@@ -10,20 +10,31 @@
     "double"
   ],
   "playCost": 0,
-  "playAdditionalClick": true,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "gain_credits",
-      "side": "runner",
-      "amount": 0,
-      "tally": {
-        "count": "runner_heap_subtype",
-        "per": 1,
-        "side": "runner",
-        "subtype": "double"
+  "wave": "double-time",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "playAdditionalClick",
+        "value": true
+      }
+    },
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "runner",
+          "amount": 0,
+          "tally": {
+            "count": "runner_heap_subtype",
+            "per": 1,
+            "side": "runner",
+            "subtype": "double"
+          }
+        }
       }
     }
-  },
-  "wave": "double-time"
+  ]
 }

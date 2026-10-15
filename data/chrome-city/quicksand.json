@@ -12,25 +12,36 @@
   "installCost": 3,
   "rezCost": 3,
   "strength": 0,
-  "strengthPerPowerCounter": true,
-  "onEncounter": {
-    "op": "do",
-    "action": {
-      "kind": "add_power_counter",
-      "amount": 1
-    }
-  },
-  "subroutines": [
+  "wave": "chrome-city",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "strengthPerPowerCounter",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "encounter",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "add_power_counter",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "class": "subroutine",
       "id": "quicksand-etr",
       "text": "End the run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "end_the_run"
         }
       }
     }
-  ],
-  "wave": "chrome-city"
+  ]
 }

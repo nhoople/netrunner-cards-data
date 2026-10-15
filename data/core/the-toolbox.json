@@ -11,11 +11,43 @@
     "console"
   ],
   "installCost": 9,
-  "unique": true,
-  "muBonus": 2,
-  "link": 2,
-  "recurringCreditsMax": 2,
-  "recurringSpendFor": [
-    "use_program"
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "muBonus",
+        "value": 2
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "link",
+        "value": 2
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "recurringCreditsMax",
+        "value": 2
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "recurringSpendFor",
+        "value": [
+          "use_program"
+        ]
+      }
+    }
   ]
 }

@@ -10,15 +10,26 @@
     "alliance"
   ],
   "playCost": 0,
-  "zeroInfluenceIfNonAllianceFactionCardsGte": {
-    "faction": "haas-bioroid",
-    "threshold": 6
-  },
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "trash_rezzed_gain_trash_cost"
+  "wave": "business-first",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "zeroInfluenceIfNonAllianceFactionCardsGte",
+        "value": {
+          "faction": "haas-bioroid",
+          "threshold": 6
+        }
+      }
+    },
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "trash_rezzed_gain_trash_cost"
+        }
+      }
     }
-  },
-  "wave": "business-first"
+  ]
 }

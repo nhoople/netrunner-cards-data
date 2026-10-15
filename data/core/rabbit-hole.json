@@ -11,11 +11,23 @@
     "link"
   ],
   "installCost": 2,
-  "link": 1,
-  "onInstall": {
-    "op": "do",
-    "action": {
-      "kind": "search_stack_same_title_may_install_paying"
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "link",
+        "value": 1
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "install",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "search_stack_same_title_may_install_paying"
+        }
+      }
     }
-  }
+  ]
 }

@@ -19,7 +19,7 @@ Files under [`data/`](data/) are the API. Clone the repo or fetch a **tagged** r
 | [`data/schema.json`](data/schema.json) | JSON Schema for card definitions |
 | [`data/pool.json`](data/pool.json) | Declared corpus. `corpusOrder` is the release order; every wave there is `supported` |
 
-Every directory under `data/` that `corpusOrder` names is supported. The order is FFG Core through Kitara, Reign and Reverie, Magnum Opus (`mor` absorbed), System Core 2019, Downfall, Uprising, then Gateway through Vantage Point. Floor **`v1.145.0`**.
+Every directory under `data/` that `corpusOrder` names is supported. The order is FFG Core through Kitara, Reign and Reverie, Magnum Opus (`mor` absorbed), System Core 2019, Downfall, Uprising, then Gateway through Vantage Point. Floor **`v1.146.0`**.
 
 **Not in this repository:**
 
@@ -41,7 +41,7 @@ Match this dataset and [netrunner-engine](https://github.com/nhoople/netrunner-e
 
 | Pairing | cards-data | engine |
 |---------|------------|--------|
-| **Current** | [`v1.145.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.145.0) | [`v1.145.0`](https://github.com/nhoople/netrunner-engine/releases/tag/v1.145.0) (counted effects use a shared tally; kinds are named for the procedure; printed corpus unchanged from v1.143.0) |
+| **Current** | [`v1.146.0`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.146.0) | [`v1.146.0`](https://github.com/nhoople/netrunner-engine/releases/tag/v1.146.0) (each printed ability is a Comprehensive Rules 9.3 record; printed corpus unchanged from v1.143.0) |
 
 Prior set-complete / maintenance tags: [cards Releases](https://github.com/nhoople/netrunner-cards-data/releases) · [engine Releases](https://github.com/nhoople/netrunner-engine/releases).
 
@@ -61,14 +61,14 @@ npm run demo:library  # createGame → queryLegality → applyIntent → getPubl
 Example raw URL base (match the **current** pairing tag):
 
 ```text
-https://raw.githubusercontent.com/nhoople/netrunner-cards-data/v1.145.0/data
+https://raw.githubusercontent.com/nhoople/netrunner-cards-data/v1.146.0/data
 ```
 
 JavaScript — load the pool and one card from a tagged release:
 
 ```js
 const base =
-  "https://raw.githubusercontent.com/nhoople/netrunner-cards-data/v1.145.0/data";
+  "https://raw.githubusercontent.com/nhoople/netrunner-cards-data/v1.146.0/data";
 const pool = await fetch(`${base}/pool.json`).then((r) => r.json());
 const marjanah = await fetch(`${base}/system-gateway/marjanah.json`).then((r) =>
   r.json(),
@@ -80,7 +80,7 @@ console.log(pool.corpusOrder, marjanah.title);
 
 **Authoritative list:** [`data/pool.json`](data/pool.json) — **68/68** waves `supported` (`corpusOrder`, each wave’s `status`, and its card counts). The summary above is the boundary. Pack directories and card counts live in the pool.
 
-**Floor `v1.145.0`:** Magnum Opus complete (**8/8**; `mor` absorbed). Fixtures wave removed (Plascrete under WLA). FFG Core-forward through Kitara, RaR, SC19→VP all `supported`. Eternal + RAM unique-title Magnum Opus gaps closed. Core Sets / Standard / Startup already full. Printed corpus unchanged from `v1.143.0`. Counted effects use a shared tally, and effect kinds are named for the procedure. Paired with engine `v1.145.0`.
+**Floor `v1.146.0`:** Magnum Opus complete (**8/8**; `mor` absorbed). Fixtures wave removed (Plascrete under WLA). FFG Core-forward through Kitara, RaR, SC19→VP all `supported`. Eternal + RAM unique-title Magnum Opus gaps closed. Core Sets / Standard / Startup already full. Printed corpus unchanged from `v1.143.0`. Each printed ability is a Comprehensive Rules 9.3 record. Paired with engine `v1.146.0`.
 
 **Next:** Idle / absorb-only until next NSG pack after VP or CR bump. Skip `napd`/draft/championship; defer `tdc`. GitHub Releases only at set-complete or explicit manual — not per-slice.
 

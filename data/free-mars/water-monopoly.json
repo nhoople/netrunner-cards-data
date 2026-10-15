@@ -11,6 +11,14 @@
   ],
   "advancementRequirement": 3,
   "agendaPoints": 1,
-  "nonVirtualResourceInstallCostIncrease": 1,
-  "wave": "free-mars"
+  "wave": "free-mars",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "nonVirtualResourceInstallCostIncrease",
+        "value": 1
+      }
+    }
+  ]
 }

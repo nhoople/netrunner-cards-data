@@ -7,27 +7,37 @@
   "unsupported": [],
   "faction": "criminal",
   "installCost": 2,
-  "onTurnBegin": {
-    "op": "do",
-    "action": {
-      "kind": "place_hosted_credits",
-      "amount": 1
-    }
-  },
-  "trashSelfWhenRunnerTagged": true,
-  "paidAbilities": [
+  "wave": "all-that-remains",
+  "abilities": [
     {
+      "class": "conditional",
+      "trigger": "turn_begin",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "place_hosted_credits",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "trashSelfWhenRunnerTagged",
+        "value": true
+      }
+    },
+    {
+      "class": "paid",
       "id": "zona-take",
       "label": "[click]: Take all credits from Zona Sul Shipping",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1
       },
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "take_hosted_credits",
@@ -35,6 +45,5 @@
         }
       }
     }
-  ],
-  "wave": "all-that-remains"
+  ]
 }

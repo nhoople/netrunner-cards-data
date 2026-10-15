@@ -7,31 +7,41 @@
   "unsupported": [],
   "faction": "jinteki",
   "playCost": 0,
-  "playAdditionalCost": {
-    "op": "do",
-    "action": {
-      "kind": "trash_top_of_rd"
-    }
-  },
-  "onPlay": {
-    "op": "seq",
-    "effects": [
-      {
-        "op": "do",
-        "action": {
-          "kind": "draw",
-          "side": "corp",
-          "amount": 3
-        }
+  "wave": "intervention",
+  "abilities": [
+    {
+      "class": "play",
+      "instructions": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "draw",
+              "side": "corp",
+              "amount": 3
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "add_n_hq_to_top_rd",
+              "amount": 3
+            }
+          }
+        ]
       },
-      {
-        "op": "do",
-        "action": {
-          "kind": "add_n_hq_to_top_rd",
-          "amount": 3
+      "restrictions": [
+        {
+          "appliesTo": "play",
+          "effect": {
+            "op": "do",
+            "action": {
+              "kind": "trash_top_of_rd"
+            }
+          }
         }
-      }
-    ]
-  },
-  "wave": "intervention"
+      ]
+    }
+  ]
 }

@@ -14,15 +14,22 @@
   "installCost": 2,
   "rezCost": 2,
   "strength": 0,
-  "strengthBonusPerRezzedIceWithSubtype": {
-    "subtype": "next",
-    "bonus": 1
-  },
-  "subroutines": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "strengthBonusPerRezzedIceWithSubtype",
+        "value": {
+          "subtype": "next",
+          "bonus": 1
+        }
+      }
+    },
+    {
+      "class": "subroutine",
       "id": "next-bronze-etr",
       "text": "End the run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "end_the_run"

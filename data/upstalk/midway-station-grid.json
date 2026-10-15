@@ -13,6 +13,14 @@
   "installCost": 4,
   "rezCost": 4,
   "trashCost": 4,
-  "runnerIcebreakerAbilityAdditionalCostOnThisServer": 1,
-  "wave": "upstalk"
+  "wave": "upstalk",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "runnerIcebreakerAbilityAdditionalCostOnThisServer",
+        "value": 1
+      }
+    }
+  ]
 }

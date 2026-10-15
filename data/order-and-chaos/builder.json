@@ -12,31 +12,30 @@
   "installCost": 2,
   "rezCost": 2,
   "strength": 4,
-  "paidAbilities": [
+  "wave": "order-and-chaos",
+  "abilities": [
     {
+      "class": "paid",
       "id": "builder-move",
       "label": "[click]: Move this ice to the outermost position of any server",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1
       },
       "windows": [
         "corp_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "move_to_outermost"
         }
       }
-    }
-  ],
-  "subroutines": [
+    },
     {
+      "class": "subroutine",
       "id": "builder-adv-1",
       "text": "Place 1 advancement on ice protecting this server that can be advanced.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "place_advancement_on_advanceable_ice_protecting_this_server"
@@ -44,15 +43,15 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "builder-adv-2",
       "text": "Place 1 advancement on ice protecting this server that can be advanced.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "place_advancement_on_advanceable_ice_protecting_this_server"
         }
       }
     }
-  ],
-  "wave": "order-and-chaos"
+  ]
 }

@@ -6,13 +6,18 @@
   "wave": "system-update-2021",
   "nrdbCode": "01034",
   "playCost": 0,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "draw",
-      "side": "runner",
-      "amount": 3
+  "unsupported": [],
+  "abilities": [
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "draw",
+          "side": "runner",
+          "amount": 3
+        }
+      }
     }
-  },
-  "unsupported": []
+  ]
 }

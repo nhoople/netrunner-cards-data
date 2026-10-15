@@ -13,35 +13,44 @@
   "installCost": 0,
   "rezCost": 0,
   "trashCost": 3,
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "paid",
       "id": "cold-site-power",
       "label": "[click]: Place 1 power counter",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1
       },
       "windows": [
         "corp_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "add_power_counter",
           "amount": 1
         }
       }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "additionalRunInitiatePerPowerCounter",
+        "value": {
+          "clicks": 1,
+          "credits": 1
+        }
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "turn_begin",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "remove_all_power_counters"
+        }
+      }
     }
-  ],
-  "additionalRunInitiatePerPowerCounter": {
-    "clicks": 1,
-    "credits": 1
-  },
-  "onTurnBegin": {
-    "op": "do",
-    "action": {
-      "kind": "remove_all_power_counters"
-    }
-  }
+  ]
 }

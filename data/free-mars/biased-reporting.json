@@ -7,11 +7,16 @@
   "unsupported": [],
   "faction": "nbn",
   "playCost": 2,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "choose_type"
+  "wave": "free-mars",
+  "abilities": [
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "choose_type"
+        }
+      }
     }
-  },
-  "wave": "free-mars"
+  ]
 }

@@ -7,6 +7,14 @@
   "unsupported": [],
   "faction": "criminal",
   "installCost": 3,
-  "mayExposeApproachedIceThenMayTrashSelfToJackOut": true,
-  "wave": "twenty-three-seconds"
+  "wave": "twenty-three-seconds",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "mayExposeApproachedIceThenMayTrashSelfToJackOut",
+        "value": true
+      }
+    }
+  ]
 }

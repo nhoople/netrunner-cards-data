@@ -9,33 +9,39 @@
   "subtypes": [
     "division"
   ],
-  "onCorpTurnEnd": {
-    "op": "choose",
-    "chooser": "corp",
-    "options": [
-      {
-        "id": "accept",
-        "label": "Place advancement tokens on ice with no advancements",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "tdatd_sso_advance_ice"
+  "wave": "the-devil-and-the-dragon",
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "corp_turn_end",
+      "instructions": {
+        "op": "choose",
+        "chooser": "corp",
+        "options": [
+          {
+            "id": "accept",
+            "label": "Place advancement tokens on ice with no advancements",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "tdatd_sso_advance_ice"
+              }
+            }
+          },
+          {
+            "id": "decline",
+            "label": "Decline",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "gain_credits",
+                "side": "corp",
+                "amount": 0
+              }
+            }
           }
-        }
-      },
-      {
-        "id": "decline",
-        "label": "Decline",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "gain_credits",
-            "side": "corp",
-            "amount": 0
-          }
-        }
+        ]
       }
-    ]
-  },
-  "wave": "the-devil-and-the-dragon"
+    }
+  ]
 }

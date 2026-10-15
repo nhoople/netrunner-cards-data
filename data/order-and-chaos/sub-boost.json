@@ -10,12 +10,23 @@
     "condition"
   ],
   "playCost": 0,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "host_on_ice_as_condition"
+  "wave": "order-and-chaos",
+  "abilities": [
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "host_on_ice_as_condition"
+        }
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "hostGainsBarrierAndEtrSubroutine",
+        "value": true
+      }
     }
-  },
-  "hostGainsBarrierAndEtrSubroutine": true,
-  "wave": "order-and-chaos"
+  ]
 }

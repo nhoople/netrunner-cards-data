@@ -8,10 +8,16 @@
   "unsupported": [],
   "faction": "shaper",
   "installCost": 0,
-  "onSuccessfulRun": {
-    "op": "do",
-    "action": {
-      "kind": "record_reconstructor_archives_instead_of_breach"
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "successful_run",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "record_reconstructor_archives_instead_of_breach"
+        }
+      }
     }
-  }
+  ]
 }

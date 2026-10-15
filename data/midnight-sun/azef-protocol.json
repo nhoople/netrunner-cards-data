@@ -11,18 +11,29 @@
   ],
   "advancementRequirement": 3,
   "agendaPoints": 2,
-  "scoreAdditionalCost": {
-    "op": "do",
-    "action": {
-      "kind": "must_trash_installed",
-      "excludeSelf": true
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "score",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "meat_damage",
+          "amount": 2
+        }
+      },
+      "restrictions": [
+        {
+          "appliesTo": "score",
+          "effect": {
+            "op": "do",
+            "action": {
+              "kind": "must_trash_installed",
+              "excludeSelf": true
+            }
+          }
+        }
+      ]
     }
-  },
-  "onScore": {
-    "op": "do",
-    "action": {
-      "kind": "meat_damage",
-      "amount": 2
-    }
-  }
+  ]
 }

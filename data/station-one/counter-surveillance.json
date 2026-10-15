@@ -10,12 +10,12 @@
     "clan"
   ],
   "installCost": 1,
-  "paidAbilities": [
+  "wave": "station-one",
+  "abilities": [
     {
+      "class": "paid",
       "id": "counter-surveillance-run",
       "label": "[click], [trash]: Run any server; on success pay X=tags to access ≤X instead of breach",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1,
         "trashSelf": true
@@ -23,7 +23,7 @@
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "counter_surveillance_run"
@@ -31,6 +31,5 @@
       },
       "usableByRunnerOnSelfIce": true
     }
-  ],
-  "wave": "station-one"
+  ]
 }

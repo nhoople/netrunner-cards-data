@@ -6,51 +6,73 @@
   "type": "program",
   "side": "runner",
   "installCost": 4,
-  "subtypes": ["virus"],
+  "subtypes": [
+    "virus"
+  ],
   "unsupported": [],
-  "onSuccessfulRun": {
-    "op": "if",
-    "cond": { "op": "attacking_rd" },
-    "then": {
-      "op": "choose",
-      "chooser": "runner",
-      "options": [
-        {
-          "id": "virus",
-          "label": "Place 1 virus counter",
-          "effect": {
-            "op": "do",
-            "action": { "kind": "add_virus_counter", "amount": 1 }
-          }
-        },
-        {
-          "id": "decline",
-          "label": "Decline",
-          "effect": {
-            "op": "do",
-            "action": { "kind": "gain_credits", "side": "runner", "amount": 0 }
-          }
-        }
-      ]
-    }
-  },
-  "paidAbilities": [
+  "memoryCost": 1,
+  "abilities": [
     {
+      "class": "conditional",
+      "trigger": "successful_run",
+      "instructions": {
+        "op": "if",
+        "cond": {
+          "op": "attacking_rd"
+        },
+        "then": {
+          "op": "choose",
+          "chooser": "runner",
+          "options": [
+            {
+              "id": "virus",
+              "label": "Place 1 virus counter",
+              "effect": {
+                "op": "do",
+                "action": {
+                  "kind": "add_virus_counter",
+                  "amount": 1
+                }
+              }
+            },
+            {
+              "id": "decline",
+              "label": "Decline",
+              "effect": {
+                "op": "do",
+                "action": {
+                  "kind": "gain_credits",
+                  "side": "runner",
+                  "amount": 0
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "class": "paid",
       "id": "run-rd",
       "label": "Run R&D; access +X (virus counters)",
-      "clickCost": 1,
-      "creditCost": 0,
-      "cost": { "clicks": 1 },
-      "windows": ["runner_action_paw"],
-      "effect": {
+      "cost": {
+        "clicks": 1
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "instructions": {
         "op": "do",
-        "action": { "kind": "gain_credits", "side": "runner", "amount": 0 }
+        "action": {
+          "kind": "gain_credits",
+          "side": "runner",
+          "amount": 0
+        }
       },
       "startsRun": {
         "servers": "rd",
         "bonusAccessFromVirus": true
       }
     }
-  ],
-  "memoryCost": 1
+  ]
 }

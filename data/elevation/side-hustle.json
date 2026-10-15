@@ -10,29 +10,51 @@
     "job"
   ],
   "installCost": 2,
-  "onInstall": {
-    "op": "do",
-    "action": {
-      "kind": "place_hosted_credits",
-      "amount": 1
-    }
-  },
-  "onRunBegin": {
-    "op": "do",
-    "action": {
-      "kind": "place_hosted_credits",
-      "amount": 1
-    }
-  },
-  "onHostedCreditsGte": {
-    "amount": 6,
-    "effect": {
-      "op": "do",
-      "action": {
-        "kind": "take_hosted_credits",
-        "amount": 999
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "install",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "place_hosted_credits",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "run_begin",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "place_hosted_credits",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "onHostedCreditsGte",
+        "value": {
+          "amount": 6,
+          "effect": {
+            "op": "do",
+            "action": {
+              "kind": "take_hosted_credits",
+              "amount": 999
+            }
+          }
+        }
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "drawOnHostedEmpty",
+        "value": 1
       }
     }
-  },
-  "drawOnHostedEmpty": 1
+  ]
 }

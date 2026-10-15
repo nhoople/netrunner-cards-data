@@ -13,11 +13,13 @@
   "installCost": 5,
   "rezCost": 5,
   "strength": 5,
-  "subroutines": [
+  "wave": "the-liberated-mind",
+  "abilities": [
     {
+      "class": "subroutine",
       "id": "waiver-trace",
       "text": "Trace[5]. If successful, reveal grip; trash each card with play/install cost ≤ excess.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "trace",
@@ -31,6 +33,5 @@
         }
       }
     }
-  ],
-  "wave": "the-liberated-mind"
+  ]
 }

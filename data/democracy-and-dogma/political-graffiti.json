@@ -10,16 +10,36 @@
     "run"
   ],
   "playCost": 0,
-  "hostAgendaPointsModifier": -1,
-  "trashOnVirusPurge": true,
-  "runEvent": {
-    "servers": "archives",
-    "onSuccessfulRun": {
-      "op": "do",
-      "action": {
-        "kind": "host_on_scored_agenda"
+  "wave": "democracy-and-dogma",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "hostAgendaPointsModifier",
+        "value": -1
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "trashOnVirusPurge",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "runEvent",
+        "value": {
+          "servers": "archives",
+          "onSuccessfulRun": {
+            "op": "do",
+            "action": {
+              "kind": "host_on_scored_agenda"
+            }
+          }
+        }
       }
     }
-  },
-  "wave": "democracy-and-dogma"
+  ]
 }

@@ -13,17 +13,23 @@
   "installCost": 2,
   "rezCost": 2,
   "strength": 0,
-  "onEncounterEndIfPrintedSubroutineBroken": {
-    "op": "do",
-    "action": {
-      "kind": "miraju_move_archives_may_jack_out_derez"
-    }
-  },
-  "subroutines": [
+  "wave": "blood-and-water",
+  "abilities": [
     {
+      "class": "conditional",
+      "trigger": "encounter_end_if_printed_subroutine_broken",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "miraju_move_archives_may_jack_out_derez"
+        }
+      }
+    },
+    {
+      "class": "subroutine",
       "id": "miraju-draw-shuffle",
       "text": "You may draw 1 card. Then, shuffle 1 card from HQ into R&D.",
-      "effect": {
+      "instructions": {
         "op": "seq",
         "effects": [
           {
@@ -66,6 +72,5 @@
         ]
       }
     }
-  ],
-  "wave": "blood-and-water"
+  ]
 }

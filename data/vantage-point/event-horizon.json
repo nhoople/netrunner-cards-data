@@ -13,34 +13,32 @@
   "installCost": 4,
   "rezCost": 4,
   "strength": 0,
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "paid",
       "id": "event-horizon-trash-etr",
       "label": "[trash]: End the run (run against this server)",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "trashSelf": true
       },
-      "requireDuringRun": true,
       "windows": [
         "approach_paw",
         "encounter_paw",
         "approach_server_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "end_the_run"
         }
-      }
-    }
-  ],
-  "subroutines": [
+      },
+      "requireDuringRun": true
+    },
     {
+      "class": "subroutine",
       "id": "event-horizon-trash-prog",
       "text": "Trash 1 installed program unless the Runner pays 3[credit].",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "unless",
@@ -64,9 +62,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "event-horizon-etr",
       "text": "End the run unless the Runner pays 3[credit].",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "unless",

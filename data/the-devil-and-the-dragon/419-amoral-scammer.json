@@ -9,7 +9,21 @@
   "subtypes": [
     "natural"
   ],
-  "link": 1,
-  "mayExposeFirstCorpInstallEachTurnUnlessCorpPays": 1,
-  "wave": "the-devil-and-the-dragon"
+  "wave": "the-devil-and-the-dragon",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "link",
+        "value": 1
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "mayExposeFirstCorpInstallEachTurnUnlessCorpPays",
+        "value": 1
+      }
+    }
+  ]
 }

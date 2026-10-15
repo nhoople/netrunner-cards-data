@@ -11,33 +11,39 @@
   ],
   "advancementRequirement": 5,
   "agendaPoints": 3,
-  "onAgendaScored": {
-    "op": "choose",
-    "chooser": "corp",
-    "options": [
-      {
-        "id": "core",
-        "label": "Do 1 core damage",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "core_damage",
-            "amount": 1
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "agenda_scored",
+      "instructions": {
+        "op": "choose",
+        "chooser": "corp",
+        "options": [
+          {
+            "id": "core",
+            "label": "Do 1 core damage",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "core_damage",
+                "amount": 1
+              }
+            }
+          },
+          {
+            "id": "decline",
+            "label": "Decline",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "gain_credits",
+                "side": "corp",
+                "amount": 0
+              }
+            }
           }
-        }
-      },
-      {
-        "id": "decline",
-        "label": "Decline",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "gain_credits",
-            "side": "corp",
-            "amount": 0
-          }
-        }
+        ]
       }
-    ]
-  }
+    }
+  ]
 }

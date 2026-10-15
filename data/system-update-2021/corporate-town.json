@@ -9,34 +9,46 @@
   "installCost": 1,
   "rezCost": 1,
   "trashCost": 5,
-  "rezAdditionalCostForfeitAgenda": true,
-  "onTurnBegin": {
-    "op": "choose",
-    "chooser": "corp",
-    "options": [
-      {
-        "id": "trash",
-        "label": "Trash a resource",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "trash_resource",
-            "pick": "choose"
-          }
-        }
-      },
-      {
-        "id": "decline",
-        "label": "Decline",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "gain_credits",
-            "side": "corp",
-            "amount": 0
-          }
-        }
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "rezAdditionalCostForfeitAgenda",
+        "value": true
       }
-    ]
-  }
+    },
+    {
+      "class": "conditional",
+      "trigger": "turn_begin",
+      "instructions": {
+        "op": "choose",
+        "chooser": "corp",
+        "options": [
+          {
+            "id": "trash",
+            "label": "Trash a resource",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "trash_resource",
+                "pick": "choose"
+              }
+            }
+          },
+          {
+            "id": "decline",
+            "label": "Decline",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "gain_credits",
+                "side": "corp",
+                "amount": 0
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
 }

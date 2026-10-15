@@ -12,10 +12,42 @@
   "installCost": 2,
   "rezCost": 2,
   "trashCost": 2,
-  "unique": true,
-  "programInstallCostIncrease": 1,
-  "hardwareInstallCostIncrease": 1,
-  "virtualResourceInstallCostIncrease": 1,
-  "mayGainCreditWhenRunnerInstallsProgramHardwareOrVirtual": true,
-  "wave": "council-of-the-crest"
+  "wave": "council-of-the-crest",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "programInstallCostIncrease",
+        "value": 1
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "hardwareInstallCostIncrease",
+        "value": 1
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "virtualResourceInstallCostIncrease",
+        "value": 1
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "mayGainCreditWhenRunnerInstallsProgramHardwareOrVirtual",
+        "value": true
+      }
+    }
+  ]
 }

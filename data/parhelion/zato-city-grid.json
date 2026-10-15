@@ -12,6 +12,20 @@
   "installCost": 3,
   "rezCost": 3,
   "trashCost": 3,
-  "remoteOnly": true,
-  "iceGainsTrashToResolveChosenSubOnEncounter": true
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "remoteOnly",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "iceGainsTrashToResolveChosenSubOnEncounter",
+        "value": true
+      }
+    }
+  ]
 }

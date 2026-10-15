@@ -12,16 +12,27 @@
   "installCost": 0,
   "rezCost": 0,
   "trashCost": 3,
-  "rezAdditionalCost": {
-    "op": "do",
-    "action": {
-      "kind": "pay_rez_additional_cost"
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "turn_begin",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "may_play_transaction_from_archives"
+        }
+      },
+      "restrictions": [
+        {
+          "appliesTo": "rez",
+          "effect": {
+            "op": "do",
+            "action": {
+              "kind": "pay_rez_additional_cost"
+            }
+          }
+        }
+      ]
     }
-  },
-  "onTurnBegin": {
-    "op": "do",
-    "action": {
-      "kind": "may_play_transaction_from_archives"
-    }
-  }
+  ]
 }

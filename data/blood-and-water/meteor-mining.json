@@ -8,11 +8,17 @@
   "faction": "weyland-consortium",
   "advancementRequirement": 5,
   "agendaPoints": 2,
-  "onScore": {
-    "op": "do",
-    "action": {
-      "kind": "may_gain_7_or_7_meat_if_tagged"
+  "wave": "blood-and-water",
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "score",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "may_gain_7_or_7_meat_if_tagged"
+        }
+      }
     }
-  },
-  "wave": "blood-and-water"
+  ]
 }

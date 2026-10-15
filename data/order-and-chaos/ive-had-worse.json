@@ -7,21 +7,30 @@
   "unsupported": [],
   "faction": "anarch",
   "playCost": 1,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "draw",
-      "side": "runner",
-      "amount": 3
+  "wave": "order-and-chaos",
+  "abilities": [
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "draw",
+          "side": "runner",
+          "amount": 3
+        }
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "trash_from_grip_or_stack",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "draw",
+          "side": "runner",
+          "amount": 3
+        }
+      }
     }
-  },
-  "onTrashFromGripOrStack": {
-    "op": "do",
-    "action": {
-      "kind": "draw",
-      "side": "runner",
-      "amount": 3
-    }
-  },
-  "wave": "order-and-chaos"
+  ]
 }

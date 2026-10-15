@@ -11,20 +11,26 @@
   ],
   "advancementRequirement": 4,
   "agendaPoints": 2,
-  "maxHostedCards": 1,
-  "paidAbilities": [
+  "wave": "order-and-chaos",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "maxHostedCards",
+        "value": 1
+      }
+    },
+    {
+      "class": "paid",
       "id": "glenn-host",
       "label": "[click]: Host a card from HQ facedown on Glenn Station",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1
       },
       "windows": [
         "corp_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "glenn_host_from_hq"
@@ -32,23 +38,21 @@
       }
     },
     {
+      "class": "paid",
       "id": "glenn-retrieve",
       "label": "[click]: Add a card on Glenn Station to HQ",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1
       },
       "windows": [
         "corp_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "glenn_retrieve_to_hq"
         }
       }
     }
-  ],
-  "wave": "order-and-chaos"
+  ]
 }

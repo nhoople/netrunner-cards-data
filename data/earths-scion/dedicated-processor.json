@@ -10,17 +10,29 @@
     "mod"
   ],
   "installCost": 2,
-  "onInstall": {
-    "op": "do",
-    "action": {
-      "kind": "gamedragon_may_host_on_icebreaker",
-      "allowAi": false,
-      "requireHost": true
+  "wave": "earths-scion",
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "install",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "gamedragon_may_host_on_icebreaker",
+          "allowAi": false,
+          "requireHost": true
+        }
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "hostGainsPumpAbility",
+        "value": {
+          "credits": 2,
+          "strength": 4
+        }
+      }
     }
-  },
-  "hostGainsPumpAbility": {
-    "credits": 2,
-    "strength": 4
-  },
-  "wave": "earths-scion"
+  ]
 }

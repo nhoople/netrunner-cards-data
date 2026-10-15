@@ -13,71 +13,74 @@
   "installCost": 2,
   "strength": 2,
   "memoryCost": 1,
-  "breaker": {
-    "breaksSubtype": "code gate",
-    "strength": 2,
-    "breakCredits": 2,
-    "breakMaxSubs": 2,
-    "pumpCredits": 1,
-    "pumpStrength": 1,
-    "breakViaPaidAbilityOnly": true
-  },
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "breaker",
+        "value": {
+          "breaksSubtype": "code gate",
+          "strength": 2,
+          "breakCredits": 2,
+          "breakMaxSubs": 2,
+          "pumpCredits": 1,
+          "pumpStrength": 1,
+          "breakViaPaidAbilityOnly": true
+        }
+      }
+    },
+    {
+      "class": "paid",
       "id": "euler-break-install",
       "label": "0¢: Break 1 code gate subroutine (installed this turn)",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "credits": 0
       },
       "windows": [
         "encounter_paw"
       ],
-      "requireInstalledThisTurn": true,
-      "requireEncounterSubtype": "code gate",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "break_encounter_subroutine",
           "maxSubs": 1,
           "requireSubtype": "code gate"
         }
-      }
+      },
+      "requireInstalledThisTurn": true,
+      "requireEncounterSubtype": "code gate"
     },
     {
+      "class": "paid",
       "id": "euler-break",
       "label": "2¢: Break up to 2 code gate subroutines",
-      "clickCost": 0,
-      "creditCost": 2,
       "cost": {
         "credits": 2
       },
       "windows": [
         "encounter_paw"
       ],
-      "requireEncounterSubtype": "code gate",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "break_encounter_subroutine",
           "maxSubs": 2,
           "requireSubtype": "code gate"
         }
-      }
+      },
+      "requireEncounterSubtype": "code gate"
     },
     {
+      "class": "paid",
       "id": "euler-pump",
       "label": "1¢: +1 strength",
-      "clickCost": 0,
-      "creditCost": 1,
       "cost": {
         "credits": 1
       },
       "windows": [
         "encounter_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "pump_strength",

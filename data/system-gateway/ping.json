@@ -11,24 +11,29 @@
   "subtypes": [
     "barrier"
   ],
-  "onRez": {
-    "op": "do",
-    "action": {
-      "kind": "give_tags",
-      "amount": 1
-    }
-  },
-  "subroutines": [
+  "unsupported": [],
+  "abilities": [
     {
+      "class": "conditional",
+      "trigger": "rez",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "give_tags",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "class": "subroutine",
       "id": "ping-etr",
       "text": "End the run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "end_the_run"
         }
       }
     }
-  ],
-  "unsupported": []
+  ]
 }

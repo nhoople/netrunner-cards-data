@@ -12,7 +12,21 @@
   "installCost": 5,
   "rezCost": 5,
   "trashCost": 4,
-  "persistent": true,
-  "cannotStealUnlessCopyInRunnerScore": true,
-  "wave": "old-hollywood"
+  "wave": "old-hollywood",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "persistent",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "cannotStealUnlessCopyInRunnerScore",
+        "value": true
+      }
+    }
+  ]
 }

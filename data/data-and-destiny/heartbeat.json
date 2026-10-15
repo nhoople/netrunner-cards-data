@@ -10,19 +10,33 @@
     "console"
   ],
   "installCost": 2,
-  "unique": true,
-  "muBonus": 1,
-  "paidAbilities": [
+  "wave": "data-and-destiny",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "muBonus",
+        "value": 1
+      }
+    },
+    {
+      "class": "paid",
       "id": "heartbeat-prevent",
       "label": "[interrupt] → Trash 1 installed card: Prevent 1 damage",
-      "clickCost": 0,
-      "creditCost": 0,
-      "cost": {},
+      "cost": {
+        "credits": 0
+      },
       "windows": [
         "damage_interrupt_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "trash_installed_prevent_damage",
@@ -31,6 +45,5 @@
       },
       "usableByRunnerOnSelfIce": true
     }
-  ],
-  "wave": "data-and-destiny"
+  ]
 }

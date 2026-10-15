@@ -10,12 +10,24 @@
     "cybernetic"
   ],
   "installCost": 1,
-  "onInstall": {
-    "op": "do",
-    "action": {
-      "kind": "core_damage",
-      "amount": 2
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "install",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "core_damage",
+          "amount": 2
+        }
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "allottedClicksBonus",
+        "value": 1
+      }
     }
-  },
-  "allottedClicksBonus": 1
+  ]
 }

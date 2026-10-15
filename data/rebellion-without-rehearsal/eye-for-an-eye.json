@@ -10,19 +10,39 @@
     "run"
   ],
   "playCost": 1,
-  "playRequiresUntagged": true,
-  "accessTrashFromGrip": {
-    "gripCards": 1
-  },
-  "runEvent": {
-    "servers": "hq",
-    "bonusAccess": 1,
-    "onSuccessfulRun": {
-      "op": "do",
-      "action": {
-        "kind": "give_tags",
-        "amount": 1
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "playRequiresUntagged",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "accessTrashFromGrip",
+        "value": {
+          "gripCards": 1
+        }
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "runEvent",
+        "value": {
+          "servers": "hq",
+          "bonusAccess": 1,
+          "onSuccessfulRun": {
+            "op": "do",
+            "action": {
+              "kind": "give_tags",
+              "amount": 1
+            }
+          }
+        }
       }
     }
-  }
+  ]
 }

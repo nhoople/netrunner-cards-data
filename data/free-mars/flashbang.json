@@ -13,19 +13,19 @@
   "installCost": 5,
   "strength": 0,
   "memoryCost": 1,
-  "paidAbilities": [
+  "wave": "free-mars",
+  "abilities": [
     {
+      "class": "paid",
       "id": "flashbang-derez",
       "label": "6¢: Derez the sentry you are encountering",
-      "clickCost": 0,
-      "creditCost": 6,
       "cost": {
         "credits": 6
       },
       "windows": [
         "encounter_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "derez_encountered_ice"
@@ -33,16 +33,21 @@
       },
       "usableByRunnerOnSelfIce": true,
       "requireEncounterSubtype": "sentry"
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "breaker",
+        "value": {
+          "breaksSubtype": "sentry",
+          "strength": 0,
+          "breakCredits": 0,
+          "breakMaxSubs": 1,
+          "pumpCredits": 1,
+          "pumpStrength": 1,
+          "breakViaPaidAbilityOnly": true
+        }
+      }
     }
-  ],
-  "breaker": {
-    "breaksSubtype": "sentry",
-    "strength": 0,
-    "breakCredits": 0,
-    "breakMaxSubs": 1,
-    "pumpCredits": 1,
-    "pumpStrength": 1,
-    "breakViaPaidAbilityOnly": true
-  },
-  "wave": "free-mars"
+  ]
 }

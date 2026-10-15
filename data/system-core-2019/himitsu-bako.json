@@ -13,12 +13,11 @@
   "installCost": 2,
   "rezCost": 2,
   "strength": 2,
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "paid",
       "id": "himitsu-bako-hq",
       "label": "1¢: Add Himitsu-Bako to HQ",
-      "clickCost": 0,
-      "creditCost": 1,
       "cost": {
         "credits": 1
       },
@@ -26,19 +25,18 @@
         "corp_action_paw",
         "encounter_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "return_source_to_hq"
         }
       }
-    }
-  ],
-  "subroutines": [
+    },
     {
+      "class": "subroutine",
       "id": "himitsu-bako-etr",
       "text": "End the run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "end_the_run"

@@ -10,9 +10,35 @@
     "current"
   ],
   "playCost": 3,
-  "lingerAsCurrent": true,
-  "currentTrashOnAgendaScored": true,
-  "corpAdditionalBadPublicity": 1,
-  "corpAdditionalBadPublicityCannotBeRemoved": true,
-  "wave": "business-first"
+  "wave": "business-first",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "lingerAsCurrent",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "currentTrashOnAgendaScored",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "corpAdditionalBadPublicity",
+        "value": 1
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "corpAdditionalBadPublicityCannotBeRemoved",
+        "value": true
+      }
+    }
+  ]
 }

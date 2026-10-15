@@ -8,11 +8,16 @@
   "unsupported": [],
   "faction": "criminal",
   "playCost": 2,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "expose_up_to",
-      "max": 2
+  "abilities": [
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "expose_up_to",
+          "max": 2
+        }
+      }
     }
-  }
+  ]
 }

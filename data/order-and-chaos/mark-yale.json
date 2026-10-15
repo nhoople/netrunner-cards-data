@@ -12,21 +12,33 @@
   "installCost": 1,
   "rezCost": 1,
   "trashCost": 3,
-  "unique": true,
-  "gainCreditsOnSpendAgendaCounter": 1,
-  "paidAbilities": [
+  "wave": "order-and-chaos",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "gainCreditsOnSpendAgendaCounter",
+        "value": 1
+      }
+    },
+    {
+      "class": "paid",
       "id": "mark-yale-trash",
       "label": "[trash]: Gain 2[credit]",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "trashSelf": true
       },
       "windows": [
         "corp_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "gain_credits",
@@ -36,21 +48,21 @@
       }
     },
     {
+      "class": "paid",
       "id": "mark-yale-agenda",
       "label": "Any agenda counter: Gain 2[credit]",
-      "clickCost": 0,
-      "creditCost": 0,
-      "cost": {},
+      "cost": {
+        "credits": 0
+      },
       "windows": [
         "corp_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "mark_yale_spend_any_agenda_counter_gain_2"
         }
       }
     }
-  ],
-  "wave": "order-and-chaos"
+  ]
 }

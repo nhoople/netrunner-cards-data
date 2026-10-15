@@ -11,11 +11,13 @@
   "subtypes": [
     "code gate"
   ],
-  "subroutines": [
+  "unsupported": [],
+  "abilities": [
     {
+      "class": "subroutine",
       "id": "ws-lose",
-      "text": "Runner loses 3\u00a2.",
-      "effect": {
+      "text": "Runner loses 3¢.",
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "lose_credits",
@@ -25,9 +27,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "ws-etr",
-      "text": "If Runner has 6\u00a2 or less, ETR.",
-      "effect": {
+      "text": "If Runner has 6¢ or less, ETR.",
+      "instructions": {
         "op": "if",
         "cond": {
           "op": "credits_lte",
@@ -42,6 +45,5 @@
         }
       }
     }
-  ],
-  "unsupported": []
+  ]
 }

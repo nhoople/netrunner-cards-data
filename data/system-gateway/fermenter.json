@@ -9,26 +9,35 @@
   "subtypes": [
     "virus"
   ],
-  "onInstall": {
-    "op": "do",
-    "action": {
-      "kind": "add_virus_counter",
-      "amount": 1
-    }
-  },
-  "onTurnBegin": {
-    "op": "do",
-    "action": {
-      "kind": "add_virus_counter",
-      "amount": 1
-    }
-  },
-  "paidAbilities": [
+  "unsupported": [],
+  "memoryCost": 1,
+  "abilities": [
     {
+      "class": "conditional",
+      "trigger": "install",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "add_virus_counter",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "turn_begin",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "add_virus_counter",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "class": "paid",
       "id": "fermenter-cash",
-      "label": "Trash: gain 2\u00a2 per virus",
-      "clickCost": 1,
-      "creditCost": 0,
+      "label": "Trash: gain 2¢ per virus",
       "cost": {
         "clicks": 1,
         "trashSelf": true
@@ -36,7 +45,7 @@
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "gain_credits",
@@ -50,7 +59,5 @@
         }
       }
     }
-  ],
-  "unsupported": [],
-  "memoryCost": 1
+  ]
 }

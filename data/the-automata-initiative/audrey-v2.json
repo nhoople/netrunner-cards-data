@@ -14,32 +14,41 @@
   "installCost": 3,
   "strength": 0,
   "memoryCost": 2,
-  "breaker": {
-    "breaksSubtype": "*",
-    "strength": 0,
-    "breakCredits": 0,
-    "breakViaPaidAbilityOnly": true
-  },
-  "onAccessTrash": {
-    "op": "do",
-    "action": {
-      "kind": "add_virus_counter",
-      "amount": 1
-    }
-  },
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "breaker",
+        "value": {
+          "breaksSubtype": "*",
+          "strength": 0,
+          "breakCredits": 0,
+          "breakViaPaidAbilityOnly": true
+        }
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "access_trash",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "add_virus_counter",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "class": "paid",
       "id": "audrey-break",
       "label": "Hosted virus counter: Break up to 2 subroutines",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "virusCounters": 1
       },
       "windows": [
         "encounter_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "break_encounter_subroutine",
@@ -48,17 +57,16 @@
       }
     },
     {
+      "class": "paid",
       "id": "audrey-pump",
       "label": "Trash 1 card from grip: +3 strength",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "trashFromGrip": 1
       },
       "windows": [
         "encounter_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "pump_strength",

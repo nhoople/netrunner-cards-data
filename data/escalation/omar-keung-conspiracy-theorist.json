@@ -9,20 +9,26 @@
   "subtypes": [
     "natural"
   ],
-  "link": 0,
-  "paidAbilities": [
+  "wave": "escalation",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "link",
+        "value": 0
+      }
+    },
+    {
+      "class": "paid",
       "id": "omar-archives",
       "label": "[click]: Run Archives. If that run would be successful, change attacked server to HQ or R&D",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1
       },
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "gain_credits",
@@ -30,13 +36,12 @@
           "amount": 0
         }
       },
-      "oncePerTurn": true,
+      "flag": "once_per_turn",
       "usableByRunnerOnSelfIce": true,
       "startsRun": {
         "servers": "archives",
         "redirectSuccessChooseHqOrRd": true
       }
     }
-  ],
-  "wave": "escalation"
+  ]
 }

@@ -12,21 +12,39 @@
   ],
   "installCost": 2,
   "memoryCost": 1,
-  "recurringCreditsMaxEqualsVirusCounters": true,
-  "recurringSpendFor": [
-    "run_hq"
-  ],
-  "onSuccessfulRun": {
-    "op": "if",
-    "cond": {
-      "op": "attacking_hq"
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "recurringCreditsMaxEqualsVirusCounters",
+        "value": true
+      }
     },
-    "then": {
-      "op": "do",
-      "action": {
-        "kind": "add_virus_counter",
-        "amount": 1
+    {
+      "class": "static",
+      "declaration": {
+        "field": "recurringSpendFor",
+        "value": [
+          "run_hq"
+        ]
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "successful_run",
+      "instructions": {
+        "op": "if",
+        "cond": {
+          "op": "attacking_hq"
+        },
+        "then": {
+          "op": "do",
+          "action": {
+            "kind": "add_virus_counter",
+            "amount": 1
+          }
+        }
       }
     }
-  }
+  ]
 }

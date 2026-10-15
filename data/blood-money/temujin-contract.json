@@ -10,27 +10,55 @@
     "job"
   ],
   "installCost": 4,
-  "unique": true,
-  "onInstall": {
-    "op": "do",
-    "action": {
-      "kind": "choose_server_runner"
-    }
-  },
-  "hostedCreditsOnInstall": 20,
-  "trashWhenHostedCreditsEmpty": true,
-  "onSuccessfulRun": {
-    "op": "if",
-    "cond": {
-      "op": "attacking_chosen_server"
+  "wave": "blood-money",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
     },
-    "then": {
-      "op": "do",
-      "action": {
-        "kind": "take_hosted_credits",
-        "amount": 4
+    {
+      "class": "conditional",
+      "trigger": "install",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "choose_server_runner"
+        }
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "hostedCreditsOnInstall",
+        "value": 20
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "trashWhenHostedCreditsEmpty",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "successful_run",
+      "instructions": {
+        "op": "if",
+        "cond": {
+          "op": "attacking_chosen_server"
+        },
+        "then": {
+          "op": "do",
+          "action": {
+            "kind": "take_hosted_credits",
+            "amount": 4
+          }
+        }
       }
     }
-  },
-  "wave": "blood-money"
+  ]
 }

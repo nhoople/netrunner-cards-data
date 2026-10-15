@@ -8,25 +8,30 @@
   "unsupported": [],
   "faction": "nbn",
   "playCost": 2,
-  "onPlay": {
-    "op": "seq",
-    "effects": [
-      {
-        "op": "do",
-        "action": {
-          "kind": "draw",
-          "side": "corp",
-          "amount": 2
-        }
-      },
-      {
-        "op": "do",
-        "action": {
-          "kind": "may_reveal_shuffle_agendas_into_rd",
-          "max": 2,
-          "creditsEach": 2
-        }
+  "abilities": [
+    {
+      "class": "play",
+      "instructions": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "draw",
+              "side": "corp",
+              "amount": 2
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "may_reveal_shuffle_agendas_into_rd",
+              "max": 2,
+              "creditsEach": 2
+            }
+          }
+        ]
       }
-    ]
-  }
+    }
+  ]
 }

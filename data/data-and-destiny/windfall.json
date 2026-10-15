@@ -7,11 +7,16 @@
   "unsupported": [],
   "faction": "neutral-runner",
   "playCost": 0,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "shuffle_trash_top_gain_install_cost"
+  "wave": "data-and-destiny",
+  "abilities": [
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "shuffle_trash_top_gain_install_cost"
+        }
+      }
     }
-  },
-  "wave": "data-and-destiny"
+  ]
 }

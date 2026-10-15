@@ -10,5 +10,13 @@
   "subtypes": [
     "subsidiary"
   ],
-  "additionalTagsDuringOutermostIceEncounter": 1
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "additionalTagsDuringOutermostIceEncounter",
+        "value": 1
+      }
+    }
+  ]
 }

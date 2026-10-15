@@ -14,11 +14,18 @@
   "installCost": 8,
   "strength": 5,
   "memoryCost": 2,
-  "breaker": {
-    "breaksSubtype": "barrier",
-    "strength": 5,
-    "breakCredits": 1,
-    "breakMaxSubs": 99
-  },
-  "paidAbilities": []
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "breaker",
+        "value": {
+          "breaksSubtype": "barrier",
+          "strength": 5,
+          "breakCredits": 1,
+          "breakMaxSubs": 99
+        }
+      }
+    }
+  ]
 }

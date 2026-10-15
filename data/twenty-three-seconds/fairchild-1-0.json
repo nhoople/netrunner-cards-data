@@ -13,12 +13,20 @@
   "installCost": 1,
   "rezCost": 1,
   "strength": 2,
-  "bioroidBreakMaxSubs": 1,
-  "subroutines": [
+  "wave": "twenty-three-seconds",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "bioroidBreakMaxSubs",
+        "value": 1
+      }
+    },
+    {
+      "class": "subroutine",
       "id": "fairchild-1-0-pay-or-trash-1",
       "text": "The Runner must pay 1¢ or trash 1 of their installed cards.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "pay_credits_or_trash_installed",
@@ -28,9 +36,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "fairchild-1-0-pay-or-trash-2",
       "text": "The Runner must pay 1¢ or trash 1 of their installed cards.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "pay_credits_or_trash_installed",
@@ -39,6 +48,5 @@
         }
       }
     }
-  ],
-  "wave": "twenty-three-seconds"
+  ]
 }

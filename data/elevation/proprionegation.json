@@ -11,33 +11,36 @@
   ],
   "advancementRequirement": 4,
   "agendaPoints": 2,
-  "onScore": {
-    "op": "do",
-    "action": {
-      "kind": "add_agenda_counter",
-      "amount": 1
-    }
-  },
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "conditional",
+      "trigger": "score",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "add_agenda_counter",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "class": "paid",
       "id": "proprionegation-archives",
       "label": "Hosted agenda counter: Move Runner to outermost Archives (during a run)",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "agendaCounters": 1
       },
       "windows": [
         "corp_action_paw"
       ],
-      "requireDuringRun": true,
-      "usableFromRunnerScoreArea": true,
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "move_runner_to_archives_outermost"
         }
-      }
+      },
+      "requireDuringRun": true,
+      "usableFromRunnerScoreArea": true
     }
   ]
 }

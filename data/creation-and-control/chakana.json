@@ -12,15 +12,27 @@
   ],
   "installCost": 2,
   "memoryCost": 1,
-  "onSuccessfulRunOnRd": {
-    "op": "do",
-    "action": {
-      "kind": "add_virus_counter",
-      "amount": 1
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "successful_run_on_rd",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "add_virus_counter",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "agendaAdvancementRequirementBonusIfVirusCountersGte",
+        "value": {
+          "threshold": 3,
+          "bonus": 1
+        }
+      }
     }
-  },
-  "agendaAdvancementRequirementBonusIfVirusCountersGte": {
-    "threshold": 3,
-    "bonus": 1
-  }
+  ]
 }

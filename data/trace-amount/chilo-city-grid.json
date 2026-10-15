@@ -13,11 +13,17 @@
   "installCost": 3,
   "rezCost": 3,
   "trashCost": 6,
-  "onSuccessfulTraceDuringRun": {
-    "op": "do",
-    "action": {
-      "kind": "give_tags",
-      "amount": 1
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "successful_trace_during_run",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "give_tags",
+          "amount": 1
+        }
+      }
     }
-  }
+  ]
 }

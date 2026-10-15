@@ -11,44 +11,68 @@
     "console"
   ],
   "installCost": 4,
-  "unique": true,
-  "muBonus": 2,
-  "handSizeBonus": 1,
-  "onRunnerTurnEnd": {
-    "op": "if",
-    "cond": {
-      "op": "credits_eq_other_side",
-      "side": "runner"
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
     },
-    "then": {
-      "op": "choose",
-      "chooser": "runner",
-      "options": [
-        {
-          "id": "gain",
-          "label": "Gain 2¢",
-          "effect": {
-            "op": "do",
-            "action": {
-              "kind": "gain_credits",
-              "side": "runner",
-              "amount": 2
-            }
-          }
+    {
+      "class": "static",
+      "declaration": {
+        "field": "muBonus",
+        "value": 2
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "handSizeBonus",
+        "value": 1
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "runner_turn_end",
+      "instructions": {
+        "op": "if",
+        "cond": {
+          "op": "credits_eq_other_side",
+          "side": "runner"
         },
-        {
-          "id": "decline",
-          "label": "Decline",
-          "effect": {
-            "op": "do",
-            "action": {
-              "kind": "gain_credits",
-              "side": "runner",
-              "amount": 0
+        "then": {
+          "op": "choose",
+          "chooser": "runner",
+          "options": [
+            {
+              "id": "gain",
+              "label": "Gain 2¢",
+              "effect": {
+                "op": "do",
+                "action": {
+                  "kind": "gain_credits",
+                  "side": "runner",
+                  "amount": 2
+                }
+              }
+            },
+            {
+              "id": "decline",
+              "label": "Decline",
+              "effect": {
+                "op": "do",
+                "action": {
+                  "kind": "gain_credits",
+                  "side": "runner",
+                  "amount": 0
+                }
+              }
             }
-          }
+          ]
         }
-      ]
+      }
     }
-  }
+  ]
 }

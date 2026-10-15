@@ -10,19 +10,19 @@
     "location"
   ],
   "installCost": 0,
-  "paidAbilities": [
+  "wave": "kala-ghoda",
+  "abilities": [
     {
+      "class": "paid",
       "id": "artist-colony-search",
       "label": "Forfeit 1 agenda: Search stack for a program, resource, or hardware and install it",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "forfeitAgenda": true
       },
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "search_stack_install"
@@ -30,6 +30,5 @@
       },
       "usableByRunnerOnSelfIce": true
     }
-  ],
-  "wave": "kala-ghoda"
+  ]
 }

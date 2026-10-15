@@ -12,14 +12,38 @@
   ],
   "advancementRequirement": 5,
   "agendaPoints": 2,
-  "mustRevealWhenAccessedFromRd": true,
-  "skipOnAccessFromArchives": true,
-  "stealAdditionalCredits": 2,
-  "onAccess": {
-    "op": "do",
-    "action": {
-      "kind": "net_damage",
-      "amount": 2
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "mustRevealWhenAccessedFromRd",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "skipOnAccessFromArchives",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "stealAdditionalCredits",
+        "value": 2
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "access",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "net_damage",
+          "amount": 2
+        }
+      }
     }
-  }
+  ]
 }

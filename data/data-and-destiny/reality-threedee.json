@@ -12,12 +12,24 @@
   "installCost": 0,
   "rezCost": 0,
   "trashCost": 6,
-  "badPublicityOnRez": 1,
-  "onTurnBegin": {
-    "op": "do",
-    "action": {
-      "kind": "reality_threedee_gain_credits"
+  "wave": "data-and-destiny",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "badPublicityOnRez",
+        "value": 1
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "turn_begin",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "reality_threedee_gain_credits"
+        }
+      }
     }
-  },
-  "wave": "data-and-destiny"
+  ]
 }

@@ -11,12 +11,23 @@
     "sabotage"
   ],
   "playCost": 2,
-  "playRequiresFirstClick": true,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "ss_activate_by_any_means"
+  "wave": "sovereign-sight",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "playRequiresFirstClick",
+        "value": true
+      }
+    },
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "ss_activate_by_any_means"
+        }
+      }
     }
-  },
-  "wave": "sovereign-sight"
+  ]
 }

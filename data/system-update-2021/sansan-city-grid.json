@@ -12,5 +12,13 @@
   "installCost": 6,
   "rezCost": 6,
   "trashCost": 5,
-  "advancementRequirementReduction": 1
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "advancementRequirementReduction",
+        "value": 1
+      }
+    }
+  ]
 }

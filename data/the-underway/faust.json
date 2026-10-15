@@ -13,26 +13,32 @@
   "installCost": 3,
   "strength": 2,
   "memoryCost": 1,
-  "breaker": {
-    "breaksSubtype": "*",
-    "strength": 2,
-    "breakCredits": 0,
-    "breakMaxSubs": 1,
-    "breakViaPaidAbilityOnly": true
-  },
-  "paidAbilities": [
+  "wave": "the-underway",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "breaker",
+        "value": {
+          "breaksSubtype": "*",
+          "strength": 2,
+          "breakCredits": 0,
+          "breakMaxSubs": 1,
+          "breakViaPaidAbilityOnly": true
+        }
+      }
+    },
+    {
+      "class": "paid",
       "id": "faust-break",
       "label": "Trash a card from your grip: Break 1 subroutine",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "trashFromGrip": 1
       },
       "windows": [
         "encounter_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "break_encounter_subroutine",
@@ -41,17 +47,16 @@
       }
     },
     {
+      "class": "paid",
       "id": "faust-pump",
       "label": "Trash a card from your grip: +2 strength",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "trashFromGrip": 1
       },
       "windows": [
         "encounter_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "pump_strength",
@@ -59,6 +64,5 @@
         }
       }
     }
-  ],
-  "wave": "the-underway"
+  ]
 }

@@ -7,13 +7,19 @@
   "unsupported": [],
   "faction": "anarch",
   "installCost": 1,
-  "unique": true,
-  "paidAbilities": [
+  "wave": "kampala-ascendent",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "paid",
       "id": "zer0",
       "label": "Once per turn → [click], suffer 1 net damage: Gain 1¢ and draw 2 cards",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1,
         "netDamage": 1
@@ -21,7 +27,7 @@
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "seq",
         "effects": [
           {
@@ -42,9 +48,8 @@
           }
         ]
       },
-      "oncePerTurn": true,
+      "flag": "once_per_turn",
       "usableByRunnerOnSelfIce": true
     }
-  ],
-  "wave": "kampala-ascendent"
+  ]
 }

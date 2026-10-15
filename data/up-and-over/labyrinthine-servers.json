@@ -11,32 +11,35 @@
   ],
   "advancementRequirement": 5,
   "agendaPoints": 3,
-  "onScore": {
-    "op": "do",
-    "action": {
-      "kind": "add_power_counter",
-      "amount": 2
-    }
-  },
-  "paidAbilities": [
+  "wave": "up-and-over",
+  "abilities": [
     {
+      "class": "conditional",
+      "trigger": "score",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "add_power_counter",
+          "amount": 2
+        }
+      }
+    },
+    {
+      "class": "paid",
       "id": "labyrinthine-jack",
       "label": "Hosted power counter: prevent jack-out for run",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "powerCounters": 1
       },
       "windows": [
         "end_the_run_interrupt_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "labyrinthine_prevent_jack_out"
         }
       }
     }
-  ],
-  "wave": "up-and-over"
+  ]
 }

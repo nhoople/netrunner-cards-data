@@ -9,34 +9,46 @@
   "subtypes": [
     "g-mod"
   ],
-  "onFirstInstallEachTurn": {
-    "op": "choose",
-    "chooser": "runner",
-    "options": [
-      {
-        "id": "accept",
-        "label": "Install another card of the same type from grip",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "hayley_install_same_type_from_grip"
-          }
-        }
-      },
-      {
-        "id": "decline",
-        "label": "Decline",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "gain_credits",
-            "side": "runner",
-            "amount": 0
-          }
-        }
-      }
-    ]
-  },
   "wave": "breaker-bay",
-  "link": 0
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "first_install_each_turn",
+      "instructions": {
+        "op": "choose",
+        "chooser": "runner",
+        "options": [
+          {
+            "id": "accept",
+            "label": "Install another card of the same type from grip",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "hayley_install_same_type_from_grip"
+              }
+            }
+          },
+          {
+            "id": "decline",
+            "label": "Decline",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "gain_credits",
+                "side": "runner",
+                "amount": 0
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "link",
+        "value": 0
+      }
+    }
+  ]
 }

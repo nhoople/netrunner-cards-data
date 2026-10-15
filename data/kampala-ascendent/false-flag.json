@@ -12,19 +12,29 @@
   "installCost": 2,
   "rezCost": 2,
   "trashCost": 2,
-  "canAdvance": true,
-  "onAccess": {
-    "op": "do",
-    "action": {
-      "kind": "give_tags_per_two_advancements"
-    }
-  },
-  "paidAbilities": [
+  "wave": "kampala-ascendent",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "canAdvance",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "access",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "give_tags_per_two_advancements"
+        }
+      }
+    },
+    {
+      "class": "paid",
       "id": "false-flag-score",
       "label": "[click], 7 hosted advancement tokens: add False Flag to score area as 3AP agenda",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1,
         "advancementTokens": 7
@@ -32,7 +42,7 @@
       "windows": [
         "corp_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "score_self_as_agenda",
@@ -40,6 +50,5 @@
         }
       }
     }
-  ],
-  "wave": "kampala-ascendent"
+  ]
 }

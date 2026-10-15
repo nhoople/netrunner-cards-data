@@ -10,13 +10,19 @@
     "virtual"
   ],
   "installCost": 0,
-  "unique": true,
-  "paidAbilities": [
+  "wave": "terminal-directive",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "paid",
       "id": "shadow-net-play",
       "label": "[click], forfeit an agenda: Play an event from your heap, ignoring all costs",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "forfeitAgenda": true,
         "clicks": 1
@@ -24,7 +30,7 @@
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "play_event_from_heap"
@@ -32,6 +38,5 @@
       },
       "usableByRunnerOnSelfIce": true
     }
-  ],
-  "wave": "terminal-directive"
+  ]
 }

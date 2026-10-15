@@ -14,25 +14,30 @@
   "installCost": 4,
   "rezCost": 4,
   "strength": 2,
-  "onPass": {
-    "op": "if",
-    "cond": {
-      "op": "grip_count_gte",
-      "amount": 4
-    },
-    "then": {
-      "op": "do",
-      "action": {
-        "kind": "give_tags",
-        "amount": 1
-      }
-    }
-  },
-  "subroutines": [
+  "abilities": [
     {
+      "class": "conditional",
+      "trigger": "pass",
+      "instructions": {
+        "op": "if",
+        "cond": {
+          "op": "grip_count_gte",
+          "amount": 4
+        },
+        "then": {
+          "op": "do",
+          "action": {
+            "kind": "give_tags",
+            "amount": 1
+          }
+        }
+      }
+    },
+    {
+      "class": "subroutine",
       "id": "phone-net-1",
       "text": "Do 1 net damage.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "net_damage",
@@ -41,9 +46,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "phone-net-2",
       "text": "Do 1 net damage.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "net_damage",

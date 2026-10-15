@@ -10,13 +10,24 @@
     "priority"
   ],
   "playCost": 0,
-  "playRequiresFirstClick": true,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "look_top_n_stack_trash_any_arrange_rest",
-      "n": 6
+  "wave": "salsette-island",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "playRequiresFirstClick",
+        "value": true
+      }
+    },
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "look_top_n_stack_trash_any_arrange_rest",
+          "n": 6
+        }
+      }
     }
-  },
-  "wave": "salsette-island"
+  ]
 }

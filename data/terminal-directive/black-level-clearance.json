@@ -12,11 +12,17 @@
   "installCost": 4,
   "rezCost": 4,
   "trashCost": 1,
-  "onSuccessfulRunThisServer": {
-    "op": "do",
-    "action": {
-      "kind": "core_or_jack_out"
+  "wave": "terminal-directive",
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "successful_run_this_server",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "core_or_jack_out"
+        }
+      }
     }
-  },
-  "wave": "terminal-directive"
+  ]
 }

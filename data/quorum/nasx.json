@@ -9,22 +9,38 @@
   "installCost": 2,
   "rezCost": 2,
   "trashCost": 4,
-  "unique": true,
-  "onTurnBegin": {
-    "op": "do",
-    "action": {
-      "kind": "gain_credits",
-      "side": "corp",
-      "amount": 1
-    }
-  },
-  "nasxMaySpendUpTo2OnAbilityCreditGainToPlacePower": true,
-  "paidAbilities": [
+  "wave": "quorum",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "turn_begin",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "corp",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "nasxMaySpendUpTo2OnAbilityCreditGainToPlacePower",
+        "value": true
+      }
+    },
+    {
+      "class": "paid",
       "id": "nasx-cash-out",
-      "label": "[click], [trash]: Gain 2\u00a2 for each power counter on NASX",
-      "clickCost": 1,
-      "creditCost": 0,
+      "label": "[click], [trash]: Gain 2¢ for each power counter on NASX",
       "cost": {
         "clicks": 1,
         "trashSelf": true
@@ -32,7 +48,7 @@
       "windows": [
         "corp_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "gain_credits",
@@ -46,6 +62,5 @@
         }
       }
     }
-  ],
-  "wave": "quorum"
+  ]
 }

@@ -7,12 +7,23 @@
   "unsupported": [],
   "faction": "nbn",
   "playCost": 0,
-  "playAdditionalCostForfeitAgenda": true,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "resolve_when_scored_on_scored_agenda"
+  "wave": "data-and-destiny",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "playAdditionalCostForfeitAgenda",
+        "value": true
+      }
+    },
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "resolve_when_scored_on_scored_agenda"
+        }
+      }
     }
-  },
-  "wave": "data-and-destiny"
+  ]
 }

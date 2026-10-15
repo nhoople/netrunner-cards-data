@@ -12,20 +12,38 @@
   "installCost": 0,
   "rezCost": 0,
   "trashCost": 0,
-  "mustRevealWhenAccessedFromRd": true,
-  "skipOnAccessFromArchives": true,
-  "onAccess": {
-    "op": "do",
-    "action": {
-      "kind": "trace",
-      "strength": 3,
-      "onSuccess": {
+  "wave": "the-devil-and-the-dragon",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "mustRevealWhenAccessedFromRd",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "skipOnAccessFromArchives",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "access",
+      "instructions": {
         "op": "do",
         "action": {
-          "kind": "tdatd_tempus_resolve"
+          "kind": "trace",
+          "strength": 3,
+          "onSuccess": {
+            "op": "do",
+            "action": {
+              "kind": "tdatd_tempus_resolve"
+            }
+          }
         }
       }
     }
-  },
-  "wave": "the-devil-and-the-dragon"
+  ]
 }

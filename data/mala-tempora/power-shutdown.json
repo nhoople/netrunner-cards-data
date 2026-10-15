@@ -11,11 +11,22 @@
     "gray ops"
   ],
   "playCost": 1,
-  "playRequiresRunnerMadeRunLastTurn": true,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "power_shutdown"
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "playRequiresRunnerMadeRunLastTurn",
+        "value": true
+      }
+    },
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "power_shutdown"
+        }
+      }
     }
-  }
+  ]
 }

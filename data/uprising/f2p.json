@@ -12,34 +12,32 @@
   "installCost": 4,
   "rezCost": 4,
   "strength": 5,
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "paid",
       "id": "f2p-break",
       "label": "2¢: Break 1 subroutine (Runner; untagged)",
-      "clickCost": 0,
-      "creditCost": 2,
       "cost": {
         "credits": 2
       },
       "windows": [
         "encounter_paw"
       ],
-      "usableByAnyPlayer": true,
-      "requiresUntagged": true,
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "break_encounter_subroutine",
           "maxSubs": 1
         }
-      }
-    }
-  ],
-  "subroutines": [
+      },
+      "usableByAnyPlayer": true,
+      "requiresUntagged": true
+    },
     {
+      "class": "subroutine",
       "id": "f2p-bounce",
       "text": "Add 1 installed Runner card to the grip.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "add_installed_runner_to_grip"
@@ -47,9 +45,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "f2p-tag",
       "text": "Give the Runner 1 tag.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "give_tags",

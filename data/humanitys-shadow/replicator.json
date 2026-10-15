@@ -8,10 +8,16 @@
   "unsupported": [],
   "faction": "shaper",
   "installCost": 2,
-  "onHardwareInstall": {
-    "op": "do",
-    "action": {
-      "kind": "may_search_stack_copy_of_last_installed_hardware_add_to_grip"
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "hardware_install",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "may_search_stack_copy_of_last_installed_hardware_add_to_grip"
+        }
+      }
     }
-  }
+  ]
 }

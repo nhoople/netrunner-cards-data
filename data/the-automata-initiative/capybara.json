@@ -7,32 +7,38 @@
   "side": "runner",
   "unsupported": [],
   "installCost": 2,
-  "onBypass": {
-    "op": "choose",
-    "chooser": "runner",
-    "options": [
-      {
-        "id": "rfg-derez",
-        "label": "Remove from the game: derez that ice",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "rfg_self_then_derez_bypassed_ice"
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "bypass",
+      "instructions": {
+        "op": "choose",
+        "chooser": "runner",
+        "options": [
+          {
+            "id": "rfg-derez",
+            "label": "Remove from the game: derez that ice",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "rfg_self_then_derez_bypassed_ice"
+              }
+            }
+          },
+          {
+            "id": "decline",
+            "label": "Decline",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "gain_credits",
+                "side": "runner",
+                "amount": 0
+              }
+            }
           }
-        }
-      },
-      {
-        "id": "decline",
-        "label": "Decline",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "gain_credits",
-            "side": "runner",
-            "amount": 0
-          }
-        }
+        ]
       }
-    ]
-  }
+    }
+  ]
 }

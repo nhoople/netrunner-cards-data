@@ -10,20 +10,26 @@
     "connection"
   ],
   "installCost": 2,
-  "paidAbilitiesOncePerTurn": true,
-  "paidAbilities": [
+  "wave": "honor-and-profit",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "paidAbilitiesOncePerTurn",
+        "value": true
+      }
+    },
+    {
+      "class": "paid",
       "id": "tri-maf-gain",
       "label": "[click]: Gain 2[credit]",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1
       },
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "gain_credits",
@@ -31,14 +37,17 @@
           "amount": 2
         }
       }
+    },
+    {
+      "class": "conditional",
+      "trigger": "trash",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "give_tags",
+          "amount": 1
+        }
+      }
     }
-  ],
-  "onTrash": {
-    "op": "do",
-    "action": {
-      "kind": "give_tags",
-      "amount": 1
-    }
-  },
-  "wave": "honor-and-profit"
+  ]
 }

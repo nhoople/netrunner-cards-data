@@ -10,6 +10,20 @@
     "connection"
   ],
   "installCost": 2,
-  "bonusAccessOnHqRdBreachWhileTagged": 1,
-  "threatBasicTrashAdditionalCostTrashHq": 3
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "bonusAccessOnHqRdBreachWhileTagged",
+        "value": 1
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "threatBasicTrashAdditionalCostTrashHq",
+        "value": 3
+      }
+    }
+  ]
 }

@@ -13,24 +13,29 @@
   "installCost": 3,
   "rezCost": 3,
   "strength": 1,
-  "onEncounter": {
-    "op": "if",
-    "cond": {
-      "op": "attacking_hq"
-    },
-    "then": {
-      "op": "do",
-      "action": {
-        "kind": "limit_printed_breaks_on_source_for_run",
-        "max": 1
-      }
-    }
-  },
-  "subroutines": [
+  "abilities": [
     {
+      "class": "conditional",
+      "trigger": "encounter",
+      "instructions": {
+        "op": "if",
+        "cond": {
+          "op": "attacking_hq"
+        },
+        "then": {
+          "op": "do",
+          "action": {
+            "kind": "limit_printed_breaks_on_source_for_run",
+            "max": 1
+          }
+        }
+      }
+    },
+    {
+      "class": "subroutine",
       "id": "afshar-lose",
       "text": "The Runner loses 2[credit].",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "lose_credits",
@@ -40,9 +45,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "afshar-etr",
       "text": "End the run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "end_the_run"

@@ -10,41 +10,57 @@
     "cybernetic"
   ],
   "installCost": 0,
-  "onInstall": {
-    "op": "do",
-    "action": {
-      "kind": "meat_damage",
-      "amount": 1
-    }
-  },
-  "onFirstEmptyGripEachTurn": {
-    "op": "seq",
-    "effects": [
-      {
+  "wave": "crimson-dust",
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "install",
+      "instructions": {
         "op": "do",
         "action": {
-          "kind": "draw",
-          "side": "runner",
-          "amount": 1
-        }
-      },
-      {
-        "op": "do",
-        "action": {
-          "kind": "add_power_counter",
+          "kind": "meat_damage",
           "amount": 1
         }
       }
-    ]
-  },
-  "onPowerCountersGte": {
-    "amount": 3,
-    "effect": {
-      "op": "do",
-      "action": {
-        "kind": "trash_self"
+    },
+    {
+      "class": "conditional",
+      "trigger": "first_empty_grip_each_turn",
+      "instructions": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "draw",
+              "side": "runner",
+              "amount": 1
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "add_power_counter",
+              "amount": 1
+            }
+          }
+        ]
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "onPowerCountersGte",
+        "value": {
+          "amount": 3,
+          "effect": {
+            "op": "do",
+            "action": {
+              "kind": "trash_self"
+            }
+          }
+        }
       }
     }
-  },
-  "wave": "crimson-dust"
+  ]
 }

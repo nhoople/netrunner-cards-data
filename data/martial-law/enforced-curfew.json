@@ -10,8 +10,28 @@
     "current"
   ],
   "playCost": 0,
-  "lingerAsCurrent": true,
-  "currentTrashOnAgendaStolen": true,
-  "runnerHandSizeBonus": -1,
-  "wave": "martial-law"
+  "wave": "martial-law",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "lingerAsCurrent",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "currentTrashOnAgendaStolen",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "runnerHandSizeBonus",
+        "value": -1
+      }
+    }
+  ]
 }

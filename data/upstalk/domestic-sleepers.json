@@ -8,20 +8,26 @@
   "faction": "haas-bioroid",
   "advancementRequirement": 2,
   "agendaPoints": 0,
-  "agendaPointsPerAgendaCounter": 1,
-  "paidAbilities": [
+  "wave": "upstalk",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "agendaPointsPerAgendaCounter",
+        "value": 1
+      }
+    },
+    {
+      "class": "paid",
       "id": "domestic-sleepers-counter",
       "label": "[click][click][click]: Place 1 agenda counter on Domestic Sleepers",
-      "clickCost": 3,
-      "creditCost": 0,
       "cost": {
         "clicks": 3
       },
       "windows": [
         "corp_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "add_agenda_counter",
@@ -29,6 +35,5 @@
         }
       }
     }
-  ],
-  "wave": "upstalk"
+  ]
 }

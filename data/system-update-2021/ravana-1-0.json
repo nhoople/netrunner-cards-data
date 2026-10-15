@@ -13,11 +13,12 @@
   "installCost": 3,
   "rezCost": 3,
   "strength": 5,
-  "subroutines": [
+  "abilities": [
     {
+      "class": "subroutine",
       "id": "ravana-1",
       "text": "Resolve 1 subroutine on another rezzed bioroid ice.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "resolve_bioroid_subroutine"
@@ -25,9 +26,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "ravana-2",
       "text": "Resolve 1 subroutine on another rezzed bioroid ice.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "resolve_bioroid_subroutine"

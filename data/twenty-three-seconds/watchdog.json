@@ -9,6 +9,14 @@
   "installCost": 0,
   "rezCost": 0,
   "trashCost": 4,
-  "firstIceRezCostReductionPerRunnerTag": true,
-  "wave": "twenty-three-seconds"
+  "wave": "twenty-three-seconds",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "firstIceRezCostReductionPerRunnerTag",
+        "value": true
+      }
+    }
+  ]
 }

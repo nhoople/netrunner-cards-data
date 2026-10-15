@@ -10,13 +10,18 @@
   "installCost": 2,
   "rezCost": 2,
   "trashCost": 1,
-  "canAdvance": true,
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "canAdvance",
+        "value": true
+      }
+    },
+    {
+      "class": "paid",
       "id": "haai-clicks",
       "label": "[click], hosted advancement counter: Gain [click][click]",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1,
         "advancementTokens": 1
@@ -24,15 +29,15 @@
       "windows": [
         "corp_action_paw"
       ],
-      "oncePerTurn": true,
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "gain_clicks",
           "side": "corp",
           "amount": 2
         }
-      }
+      },
+      "flag": "once_per_turn"
     }
   ]
 }

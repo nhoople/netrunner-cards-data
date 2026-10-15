@@ -8,5 +8,13 @@
   "unsupported": [],
   "installCost": 1,
   "memoryCost": 2,
-  "maySwapOutermostIceOnPassAfterFullyBreakOncePerTurn": true
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "maySwapOutermostIceOnPassAfterFullyBreakOncePerTurn",
+        "value": true
+      }
+    }
+  ]
 }

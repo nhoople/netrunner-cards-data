@@ -11,15 +11,20 @@
     "job"
   ],
   "playCost": 0,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "trash_up_to_grip_cards_gain_credits_each",
-      "remaining": 5,
-      "per": 2,
-      "types": [
-        "program"
-      ]
+  "abilities": [
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "trash_up_to_grip_cards_gain_credits_each",
+          "remaining": 5,
+          "per": 2,
+          "types": [
+            "program"
+          ]
+        }
+      }
     }
-  }
+  ]
 }

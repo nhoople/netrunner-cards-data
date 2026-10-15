@@ -10,19 +10,19 @@
     "virtual"
   ],
   "installCost": 1,
-  "paidAbilities": [
+  "wave": "down-the-white-nile",
+  "abilities": [
     {
+      "class": "paid",
       "id": "kongamato-break",
       "label": "[trash]: Break the first subroutine on the encountered piece of ice",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "trashSelf": true
       },
       "windows": [
         "encounter_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "break_first_subroutine"
@@ -30,6 +30,5 @@
       },
       "usableByRunnerOnSelfIce": true
     }
-  ],
-  "wave": "down-the-white-nile"
+  ]
 }

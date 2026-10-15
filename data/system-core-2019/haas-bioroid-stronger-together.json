@@ -10,8 +10,16 @@
   "subtypes": [
     "megacorp"
   ],
-  "iceStrengthBonusForSubtype": {
-    "subtype": "bioroid",
-    "bonus": 1
-  }
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "iceStrengthBonusForSubtype",
+        "value": {
+          "subtype": "bioroid",
+          "bonus": 1
+        }
+      }
+    }
+  ]
 }

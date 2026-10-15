@@ -13,7 +13,21 @@
   "installCost": 1,
   "rezCost": 1,
   "trashCost": 5,
-  "unique": true,
-  "runnerCannotDrawMoreThanPerTurn": 2,
-  "wave": "the-universe-of-tomorrow"
+  "wave": "the-universe-of-tomorrow",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "runnerCannotDrawMoreThanPerTurn",
+        "value": 2
+      }
+    }
+  ]
 }

@@ -10,31 +10,34 @@
     "virtual"
   ],
   "installCost": 2,
-  "onTurnBegin": {
-    "op": "do",
-    "action": {
-      "kind": "identify_mark"
-    }
-  },
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "conditional",
+      "trigger": "turn_begin",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "identify_mark"
+        }
+      }
+    },
+    {
+      "class": "paid",
       "id": "backstitching-bypass",
       "label": "Trash Backstitching: bypass encountered ice (mark run)",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "trashSelf": true
       },
       "windows": [
         "encounter_paw"
       ],
-      "requireAttackingMark": true,
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "bypass_current_ice"
         }
-      }
+      },
+      "requireAttackingMark": true
     }
   ]
 }

@@ -12,11 +12,13 @@
   "installCost": 3,
   "rezCost": 3,
   "strength": 3,
-  "subroutines": [
+  "wave": "terminal-directive",
+  "abilities": [
     {
+      "class": "subroutine",
       "id": "weir-lose-click",
       "text": "The Runner loses [click].",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "lose_clicks",
@@ -26,15 +28,15 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "weir-trash-grip",
       "text": "The Runner trashes 1 card from their grip.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "trash_one_from_grip"
         }
       }
     }
-  ],
-  "wave": "terminal-directive"
+  ]
 }

@@ -7,13 +7,19 @@
   "unsupported": [],
   "faction": "neutral-runner",
   "installCost": 0,
-  "hostedCreditsOnProgramOrHardwareInstall": 1,
-  "paidAbilities": [
+  "wave": "data-and-destiny",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "hostedCreditsOnProgramOrHardwareInstall",
+        "value": 1
+      }
+    },
+    {
+      "class": "paid",
       "id": "technical-writer-take",
       "label": "[click],[trash]: Take all credits from Technical Writer",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1,
         "trashSelf": true
@@ -21,7 +27,7 @@
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "take_hosted_credits",
@@ -30,6 +36,5 @@
       },
       "usableByRunnerOnSelfIce": true
     }
-  ],
-  "wave": "data-and-destiny"
+  ]
 }

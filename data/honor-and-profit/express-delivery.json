@@ -7,12 +7,17 @@
   "unsupported": [],
   "faction": "criminal",
   "playCost": 1,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "look_top_n_stack_add_one_to_grip_shuffle",
-      "n": 4
+  "wave": "honor-and-profit",
+  "abilities": [
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "look_top_n_stack_add_one_to_grip_shuffle",
+          "n": 4
+        }
+      }
     }
-  },
-  "wave": "honor-and-profit"
+  ]
 }

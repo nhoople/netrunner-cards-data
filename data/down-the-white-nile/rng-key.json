@@ -8,34 +8,46 @@
   "faction": "neutral-runner",
   "installCost": 0,
   "memoryCost": 1,
-  "unique": true,
-  "onFirstSuccessfulHqOrRdRunThisTurn": {
-    "op": "choose",
-    "chooser": "runner",
-    "options": [
-      {
-        "id": "accept",
-        "label": "Name a number (reveal next access this run)",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "dtwn_rng_key"
-          }
-        }
-      },
-      {
-        "id": "decline",
-        "label": "Decline",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "gain_credits",
-            "side": "runner",
-            "amount": 0
-          }
-        }
+  "wave": "down-the-white-nile",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
       }
-    ]
-  },
-  "wave": "down-the-white-nile"
+    },
+    {
+      "class": "conditional",
+      "trigger": "first_successful_hq_or_rd_run_this_turn",
+      "instructions": {
+        "op": "choose",
+        "chooser": "runner",
+        "options": [
+          {
+            "id": "accept",
+            "label": "Name a number (reveal next access this run)",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "dtwn_rng_key"
+              }
+            }
+          },
+          {
+            "id": "decline",
+            "label": "Decline",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "gain_credits",
+                "side": "runner",
+                "amount": 0
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
 }

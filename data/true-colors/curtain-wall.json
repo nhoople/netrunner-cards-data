@@ -12,12 +12,20 @@
   "installCost": 14,
   "rezCost": 14,
   "strength": 6,
-  "strengthBonusIfOutermostOnServer": 4,
-  "subroutines": [
+  "wave": "true-colors",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "strengthBonusIfOutermostOnServer",
+        "value": 4
+      }
+    },
+    {
+      "class": "subroutine",
       "id": "cw-etr-1",
       "text": "End the run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "end_the_run"
@@ -25,9 +33,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "cw-etr-2",
       "text": "End the run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "end_the_run"
@@ -35,15 +44,15 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "cw-etr-3",
       "text": "End the run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "end_the_run"
         }
       }
     }
-  ],
-  "wave": "true-colors"
+  ]
 }

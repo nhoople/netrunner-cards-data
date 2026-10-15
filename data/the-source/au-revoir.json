@@ -8,6 +8,14 @@
   "faction": "criminal",
   "installCost": 1,
   "memoryCost": 1,
-  "gainCreditsOnJackOut": 1,
-  "wave": "the-source"
+  "wave": "the-source",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "gainCreditsOnJackOut",
+        "value": 1
+      }
+    }
+  ]
 }

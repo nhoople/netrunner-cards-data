@@ -13,17 +13,18 @@
   "installCost": 5,
   "rezCost": 5,
   "strength": 5,
-  "subroutines": [
+  "wave": "upstalk",
+  "abilities": [
     {
+      "class": "subroutine",
       "id": "taurus-trace",
       "text": "Trace[2]. If successful, trash 1 hardware; if strength ≥5 trash another.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "taurus_trace_subroutine"
         }
       }
     }
-  ],
-  "wave": "upstalk"
+  ]
 }

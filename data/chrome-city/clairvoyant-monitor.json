@@ -13,11 +13,13 @@
   "installCost": 4,
   "rezCost": 4,
   "strength": 3,
-  "subroutines": [
+  "wave": "chrome-city",
+  "abilities": [
     {
+      "class": "subroutine",
       "id": "clairvoyant-monitor-psi",
       "text": "Psi game. If bids differ, place 1 advancement token on an installed card and end the run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "play_psi_game",
@@ -39,6 +41,5 @@
         }
       }
     }
-  ],
-  "wave": "chrome-city"
+  ]
 }

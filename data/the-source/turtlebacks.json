@@ -12,6 +12,14 @@
   "installCost": 2,
   "rezCost": 2,
   "trashCost": 4,
-  "gainCreditsOnCreateServer": 1,
-  "wave": "the-source"
+  "wave": "the-source",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "gainCreditsOnCreateServer",
+        "value": 1
+      }
+    }
+  ]
 }

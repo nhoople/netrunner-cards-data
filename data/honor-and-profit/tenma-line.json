@@ -12,25 +12,24 @@
   "installCost": 2,
   "rezCost": 2,
   "trashCost": 4,
-  "paidAbilities": [
+  "wave": "honor-and-profit",
+  "abilities": [
     {
+      "class": "paid",
       "id": "tenma-swap",
       "label": "[click]: Swap 2 pieces of installed ice",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1
       },
       "windows": [
         "corp_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "may_swap_two_installed_ice"
         }
       }
     }
-  ],
-  "wave": "honor-and-profit"
+  ]
 }

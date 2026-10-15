@@ -12,39 +12,44 @@
   "installCost": 3,
   "rezCost": 3,
   "strength": 4,
-  "onFirstRunBeginThisTurn": {
-    "op": "choose",
-    "chooser": "corp",
-    "options": [
-      {
-        "id": "move",
-        "label": "Move Tributary to outermost of attacked server",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "move_source_ice_to_outermost_attacked"
-          }
-        }
-      },
-      {
-        "id": "decline",
-        "label": "Decline",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "gain_credits",
-            "side": "corp",
-            "amount": 0
-          }
-        }
-      }
-    ]
-  },
-  "subroutines": [
+  "abilities": [
     {
+      "class": "conditional",
+      "trigger": "first_run_begin_this_turn",
+      "instructions": {
+        "op": "choose",
+        "chooser": "corp",
+        "options": [
+          {
+            "id": "move",
+            "label": "Move Tributary to outermost of attacked server",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "move_source_ice_to_outermost_attacked"
+              }
+            }
+          },
+          {
+            "id": "decline",
+            "label": "Decline",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "gain_credits",
+                "side": "corp",
+                "amount": 0
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "class": "subroutine",
       "id": "tributary-draw-install",
       "text": "You may draw 1. You may install ice from HQ on another server, ignoring costs.",
-      "effect": {
+      "instructions": {
         "op": "seq",
         "effects": [
           {
@@ -87,9 +92,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "tributary-fortify",
       "text": "Each ice gets +2 strength for the remainder of this run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "fortify_all_ice",

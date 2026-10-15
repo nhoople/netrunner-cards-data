@@ -10,14 +10,22 @@
     "run"
   ],
   "playCost": 0,
-  "runEvent": {
-    "servers": "any",
-    "onRunEnd": {
-      "op": "do",
-      "action": {
-        "kind": "mad_dash_on_run_end"
+  "wave": "daedalus-complex",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "runEvent",
+        "value": {
+          "servers": "any",
+          "onRunEnd": {
+            "op": "do",
+            "action": {
+              "kind": "mad_dash_on_run_end"
+            }
+          }
+        }
       }
     }
-  },
-  "wave": "daedalus-complex"
+  ]
 }

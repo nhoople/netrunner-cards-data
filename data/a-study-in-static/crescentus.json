@@ -9,25 +9,24 @@
   "faction": "criminal",
   "installCost": 1,
   "memoryCost": 1,
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "paid",
       "id": "crescentus-derez",
       "label": "[trash]: Derez ice fully broken this encounter",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "trashSelf": true
       },
       "windows": [
         "encounter_paw"
       ],
-      "requireFullyBrokenThisEncounter": true,
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "derez_encounter_ice"
         }
-      }
+      },
+      "requireFullyBrokenThisEncounter": true
     }
   ]
 }

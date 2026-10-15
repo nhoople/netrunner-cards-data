@@ -10,34 +10,45 @@
     "double"
   ],
   "playCost": 1,
-  "playAdditionalClick": true,
-  "onPlay": {
-    "op": "choose",
-    "chooser": "runner",
-    "options": [
-      {
-        "id": "draw",
-        "label": "Draw 4 cards",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "draw",
-            "side": "runner",
-            "amount": 4
-          }
-        }
-      },
-      {
-        "id": "tags",
-        "label": "Remove up to 2 tags",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "remove_tags",
-            "amount": 2
-          }
-        }
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "playAdditionalClick",
+        "value": true
       }
-    ]
-  }
+    },
+    {
+      "class": "play",
+      "instructions": {
+        "op": "choose",
+        "chooser": "runner",
+        "options": [
+          {
+            "id": "draw",
+            "label": "Draw 4 cards",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "draw",
+                "side": "runner",
+                "amount": 4
+              }
+            }
+          },
+          {
+            "id": "tags",
+            "label": "Remove up to 2 tags",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "remove_tags",
+                "amount": 2
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
 }

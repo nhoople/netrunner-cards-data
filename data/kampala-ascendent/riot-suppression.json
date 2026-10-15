@@ -11,36 +11,53 @@
     "gray ops"
   ],
   "playCost": 2,
-  "playRequiresRunnerTrashedCorpCardLastTurn": true,
-  "rfgInsteadOfTrashing": true,
-  "onPlay": {
-    "op": "choose",
-    "chooser": "runner",
-    "options": [
-      {
-        "id": "suffer-core",
-        "label": "Suffer 1 core damage",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "core_damage",
-            "amount": 1
-          }
-        }
-      },
-      {
-        "id": "lose-clicks",
-        "label": "Get −3 allotted [click] for your next turn",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "allotted_clicks_next_turn",
-            "side": "runner",
-            "delta": -3
-          }
-        }
+  "wave": "kampala-ascendent",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "playRequiresRunnerTrashedCorpCardLastTurn",
+        "value": true
       }
-    ]
-  },
-  "wave": "kampala-ascendent"
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "rfgInsteadOfTrashing",
+        "value": true
+      }
+    },
+    {
+      "class": "play",
+      "instructions": {
+        "op": "choose",
+        "chooser": "runner",
+        "options": [
+          {
+            "id": "suffer-core",
+            "label": "Suffer 1 core damage",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "core_damage",
+                "amount": 1
+              }
+            }
+          },
+          {
+            "id": "lose-clicks",
+            "label": "Get −3 allotted [click] for your next turn",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "allotted_clicks_next_turn",
+                "side": "runner",
+                "delta": -3
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
 }

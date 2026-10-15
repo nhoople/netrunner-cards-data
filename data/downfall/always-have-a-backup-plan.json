@@ -11,19 +11,27 @@
     "run"
   ],
   "playCost": 2,
-  "runEvent": {
-    "servers": "any",
-    "onRunEnd": {
-      "op": "if",
-      "cond": {
-        "op": "run_unsuccessful"
-      },
-      "then": {
-        "op": "do",
-        "action": {
-          "kind": "backup_plan_may_rerun_ignore_additional_costs_bypass_last_ice"
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "runEvent",
+        "value": {
+          "servers": "any",
+          "onRunEnd": {
+            "op": "if",
+            "cond": {
+              "op": "run_unsuccessful"
+            },
+            "then": {
+              "op": "do",
+              "action": {
+                "kind": "backup_plan_may_rerun_ignore_additional_costs_bypass_last_ice"
+              }
+            }
+          }
         }
       }
     }
-  }
+  ]
 }

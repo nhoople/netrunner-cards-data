@@ -12,11 +12,17 @@
   "installCost": 3,
   "rezCost": 3,
   "trashCost": 3,
-  "onFullyBreakProtectingIce": {
-    "op": "do",
-    "action": {
-      "kind": "valley_grid_hand_size_penalty_until_next_corp_turn"
+  "wave": "the-valley",
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "fully_break_protecting_ice",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "valley_grid_hand_size_penalty_until_next_corp_turn"
+        }
+      }
     }
-  },
-  "wave": "the-valley"
+  ]
 }

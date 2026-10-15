@@ -11,13 +11,31 @@
   ],
   "advancementRequirement": 5,
   "agendaPoints": 3,
-  "installFaceup": true,
-  "onAccessRequiresInstalled": true,
-  "onAccess": {
-    "op": "do",
-    "action": {
-      "kind": "tdatd_city_works_meat"
+  "wave": "the-devil-and-the-dragon",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "installFaceup",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "onAccessRequiresInstalled",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "access",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "tdatd_city_works_meat"
+        }
+      }
     }
-  },
-  "wave": "the-devil-and-the-dragon"
+  ]
 }

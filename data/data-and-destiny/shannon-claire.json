@@ -12,20 +12,26 @@
   "installCost": 0,
   "rezCost": 0,
   "trashCost": 3,
-  "unique": true,
-  "paidAbilities": [
+  "wave": "data-and-destiny",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "paid",
       "id": "shannon-draw-bottom",
       "label": "[click]: Draw 1 card from the bottom of R&D",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1
       },
       "windows": [
         "corp_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "draw_from_bottom_of_rd",
@@ -34,23 +40,21 @@
       }
     },
     {
+      "class": "paid",
       "id": "shannon-search",
       "label": "[trash]: Search R&D or Archives for an agenda; add to bottom of R&D",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "trashSelf": true
       },
       "windows": [
         "corp_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "search_rd_or_archives_agenda_to_bottom_rd"
         }
       }
     }
-  ],
-  "wave": "data-and-destiny"
+  ]
 }

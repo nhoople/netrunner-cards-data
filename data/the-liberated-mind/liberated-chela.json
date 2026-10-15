@@ -10,12 +10,12 @@
     "connection"
   ],
   "installCost": 0,
-  "paidAbilities": [
+  "wave": "the-liberated-mind",
+  "abilities": [
     {
+      "class": "paid",
       "id": "liberated-chela-forfeit",
       "label": "[click]×5, forfeit an agenda: Corp may forfeit to RFG this; if not, score as 2 AP agenda",
-      "clickCost": 5,
-      "creditCost": 0,
       "cost": {
         "clicks": 5,
         "forfeitAgenda": true
@@ -23,7 +23,7 @@
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "liberated_chela_corp_may_forfeit_or_score"
@@ -31,6 +31,5 @@
       },
       "usableByRunnerOnSelfIce": true
     }
-  ],
-  "wave": "the-liberated-mind"
+  ]
 }

@@ -5,16 +5,21 @@
   "side": "corp",
   "wave": "system-gateway",
   "playCost": 5,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "gain_credits",
-      "side": "corp",
-      "amount": 9
-    }
-  },
   "unsupported": [],
   "subtypes": [
     "transaction"
+  ],
+  "abilities": [
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "corp",
+          "amount": 9
+        }
+      }
+    }
   ]
 }

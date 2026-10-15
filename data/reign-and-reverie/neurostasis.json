@@ -13,12 +13,24 @@
   "installCost": 0,
   "rezCost": 0,
   "trashCost": 1,
-  "canAdvance": true,
-  "onAccess": {
-    "op": "do",
-    "action": {
-      "kind": "may_pay_credits_for_shuffle_installed_runner_per_advancement",
-      "amount": 3
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "canAdvance",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "access",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "may_pay_credits_for_shuffle_installed_runner_per_advancement",
+          "amount": 3
+        }
+      }
     }
-  }
+  ]
 }

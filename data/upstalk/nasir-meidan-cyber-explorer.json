@@ -9,12 +9,24 @@
   "subtypes": [
     "cyborg"
   ],
-  "onEncounterRezzedAfterApproach": {
-    "op": "do",
-    "action": {
-      "kind": "nasir_lose_all_credits"
-    }
-  },
   "wave": "upstalk",
-  "link": 1
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "encounter_rezzed_after_approach",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "nasir_lose_all_credits"
+        }
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "link",
+        "value": 1
+      }
+    }
+  ]
 }

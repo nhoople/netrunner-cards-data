@@ -13,11 +13,13 @@
   "installCost": 3,
   "rezCost": 3,
   "strength": 7,
-  "subroutines": [
+  "wave": "quorum",
+  "abilities": [
     {
+      "class": "subroutine",
       "id": "macrophage-purge",
       "text": "Trace[4]. If successful, purge virus counters.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "trace",
@@ -32,9 +34,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "macrophage-trash-virus",
       "text": "Trace[3]. If successful, trash 1 virus.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "trace",
@@ -50,9 +53,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "macrophage-rfg-heap-virus",
       "text": "Trace[2]. If successful, remove a virus in the heap from the game.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "trace",
@@ -67,9 +71,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "macrophage-etr",
       "text": "Trace[1]. If successful, end the run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "trace",
@@ -83,6 +88,5 @@
         }
       }
     }
-  ],
-  "wave": "quorum"
+  ]
 }

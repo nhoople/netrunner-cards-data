@@ -8,12 +8,11 @@
   "unsupported": [],
   "faction": "criminal",
   "installCost": 1,
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "paid",
       "id": "lemuria-expose",
       "label": "[click], 1¢: Expose 1 card. Use this ability only if you made a successful run on HQ this turn.",
-      "clickCost": 1,
-      "creditCost": 1,
       "cost": {
         "clicks": 1,
         "credits": 1
@@ -21,14 +20,14 @@
       "windows": [
         "runner_action_paw"
       ],
-      "requiresSuccessfulHqRunThisTurn": true,
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "expose",
           "pick": "choose"
         }
-      }
+      },
+      "requiresSuccessfulHqRunThisTurn": true
     }
   ]
 }

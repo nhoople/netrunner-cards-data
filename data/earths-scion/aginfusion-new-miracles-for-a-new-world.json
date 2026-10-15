@@ -9,25 +9,26 @@
   "subtypes": [
     "division"
   ],
-  "paidAbilities": [
+  "wave": "earths-scion",
+  "abilities": [
     {
+      "class": "paid",
       "id": "aginfusion-redirect",
       "label": "Once per turn → Trash approached unrezzed ice: move Runner to outermost of another server",
-      "clickCost": 0,
-      "creditCost": 0,
-      "cost": {},
+      "cost": {
+        "credits": 0
+      },
       "windows": [
         "approach_paw",
         "corp_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "aginfusion_trash_approached_unrezzed_redirect"
         }
       },
-      "oncePerTurn": true
+      "flag": "once_per_turn"
     }
-  ],
-  "wave": "earths-scion"
+  ]
 }

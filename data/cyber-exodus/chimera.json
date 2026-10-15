@@ -13,18 +13,29 @@
   "installCost": 2,
   "rezCost": 2,
   "strength": 0,
-  "onRez": {
-    "op": "do",
-    "action": {
-      "kind": "choose_one_subtype_until_derez"
-    }
-  },
-  "derezAtAnyTurnEnd": true,
-  "subroutines": [
+  "abilities": [
     {
+      "class": "conditional",
+      "trigger": "rez",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "choose_one_subtype_until_derez"
+        }
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "derezAtAnyTurnEnd",
+        "value": true
+      }
+    },
+    {
+      "class": "subroutine",
       "id": "chimera-etr",
       "text": "End the run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "end_the_run"

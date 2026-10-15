@@ -10,19 +10,30 @@
     "run"
   ],
   "playCost": 1,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "may_install_from_grip",
-      "types": [
-        "program",
-        "hardware"
-      ]
+  "abilities": [
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "may_install_from_grip",
+          "types": [
+            "program",
+            "hardware"
+          ]
+        }
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "runEvent",
+        "value": {
+          "servers": "any",
+          "derezProtectingIceOnRunBegin": true,
+          "mayRezEventDerezzedIceOnRunEndIgnoreCosts": true
+        }
+      }
     }
-  },
-  "runEvent": {
-    "servers": "any",
-    "derezProtectingIceOnRunBegin": true,
-    "mayRezEventDerezzedIceOnRunEndIgnoreCosts": true
-  }
+  ]
 }

@@ -11,6 +11,14 @@
   ],
   "advancementRequirement": 5,
   "agendaPoints": 3,
-  "agendaPointsModifierInRunnerScoreArea": -1,
-  "wave": "data-and-destiny"
+  "wave": "data-and-destiny",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "agendaPointsModifierInRunnerScoreArea",
+        "value": -1
+      }
+    }
+  ]
 }

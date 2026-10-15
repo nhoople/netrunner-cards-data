@@ -14,33 +14,44 @@
   "installCost": 4,
   "strength": 0,
   "memoryCost": 2,
-  "breaker": {
-    "breaksSubtype": "code gate",
-    "strength": 0,
-    "breakCredits": 2,
-    "breakMaxSubs": 1,
-    "breakViaPaidAbilityOnly": true
-  },
-  "strengthBonusPerUnusedMu": 1,
-  "paidAbilities": [
+  "wave": "the-source",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "breaker",
+        "value": {
+          "breaksSubtype": "code gate",
+          "strength": 0,
+          "breakCredits": 2,
+          "breakMaxSubs": 1,
+          "breakViaPaidAbilityOnly": true
+        }
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "strengthBonusPerUnusedMu",
+        "value": 1
+      }
+    },
+    {
+      "class": "paid",
       "id": "sage-break",
       "label": "2¢: Break 1 code gate or 1 barrier subroutine",
-      "clickCost": 0,
-      "creditCost": 2,
       "cost": {
         "credits": 2
       },
       "windows": [
         "encounter_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "break_code_gate_or_barrier"
         }
       }
     }
-  ],
-  "wave": "the-source"
+  ]
 }

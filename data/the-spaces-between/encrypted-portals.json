@@ -11,15 +11,27 @@
   ],
   "advancementRequirement": 3,
   "agendaPoints": 1,
-  "whileScoredIceSubtypeStrengthBonus": {
-    "subtype": "code gate",
-    "bonus": 1
-  },
-  "onScore": {
-    "op": "do",
-    "action": {
-      "kind": "encrypted_portals_on_score"
+  "wave": "the-spaces-between",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "whileScoredIceSubtypeStrengthBonus",
+        "value": {
+          "subtype": "code gate",
+          "bonus": 1
+        }
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "score",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "encrypted_portals_on_score"
+        }
+      }
     }
-  },
-  "wave": "the-spaces-between"
+  ]
 }

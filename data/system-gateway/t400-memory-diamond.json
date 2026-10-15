@@ -9,7 +9,21 @@
   "subtypes": [
     "chip"
   ],
-  "handSizeBonus": 1,
   "unsupported": [],
-  "muBonus": 1
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "handSizeBonus",
+        "value": 1
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "muBonus",
+        "value": 1
+      }
+    }
+  ]
 }

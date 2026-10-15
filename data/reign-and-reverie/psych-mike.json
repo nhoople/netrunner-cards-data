@@ -11,33 +11,45 @@
     "connection"
   ],
   "installCost": 1,
-  "unique": true,
-  "onFirstSuccessfulRunOnRdEndsThisTurn": {
-    "op": "choose",
-    "chooser": "runner",
-    "options": [
-      {
-        "id": "gain",
-        "label": "Gain 1¢ for each time you accessed a card in R&D during that run",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "gain_credits_equal_to_rd_accesses_this_run"
-          }
-        }
-      },
-      {
-        "id": "decline",
-        "label": "Decline",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "gain_credits",
-            "side": "runner",
-            "amount": 0
-          }
-        }
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
       }
-    ]
-  }
+    },
+    {
+      "class": "conditional",
+      "trigger": "first_successful_run_on_rd_ends_this_turn",
+      "instructions": {
+        "op": "choose",
+        "chooser": "runner",
+        "options": [
+          {
+            "id": "gain",
+            "label": "Gain 1¢ for each time you accessed a card in R&D during that run",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "gain_credits_equal_to_rd_accesses_this_run"
+              }
+            }
+          },
+          {
+            "id": "decline",
+            "label": "Decline",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "gain_credits",
+                "side": "runner",
+                "amount": 0
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
 }

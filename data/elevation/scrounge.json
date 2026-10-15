@@ -10,29 +10,40 @@
     "double"
   ],
   "playCost": 1,
-  "playAdditionalClick": true,
-  "onPlay": {
-    "op": "seq",
-    "effects": [
-      {
-        "op": "do",
-        "action": {
-          "kind": "install_from_heap",
-          "types": [
-            "program"
-          ],
-          "discount": 0
-        }
-      },
-      {
-        "op": "do",
-        "action": {
-          "kind": "may_add_from_heap_to_stack_bottom",
-          "types": [
-            "program"
-          ]
-        }
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "playAdditionalClick",
+        "value": true
       }
-    ]
-  }
+    },
+    {
+      "class": "play",
+      "instructions": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "install_from_heap",
+              "types": [
+                "program"
+              ],
+              "discount": 0
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "may_add_from_heap_to_stack_bottom",
+              "types": [
+                "program"
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
 }

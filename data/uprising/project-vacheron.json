@@ -11,13 +11,31 @@
   ],
   "advancementRequirement": 5,
   "agendaPoints": 3,
-  "vacheronStealReplacement": true,
-  "worthZeroAgendaPointsWhileHasAgendaCounters": true,
-  "onTurnBegin": {
-    "op": "do",
-    "action": {
-      "kind": "remove_agenda_counters",
-      "amount": 1
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "vacheronStealReplacement",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "worthZeroAgendaPointsWhileHasAgendaCounters",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "turn_begin",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "remove_agenda_counters",
+          "amount": 1
+        }
+      }
     }
-  }
+  ]
 }

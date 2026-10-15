@@ -14,18 +14,24 @@
   "installCost": 4,
   "rezCost": 4,
   "strength": 2,
-  "onRez": {
-    "op": "do",
-    "action": {
-      "kind": "give_bad_publicity",
-      "amount": 1
-    }
-  },
-  "subroutines": [
+  "wave": "true-colors",
+  "abilities": [
     {
+      "class": "conditional",
+      "trigger": "rez",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "give_bad_publicity",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "class": "subroutine",
       "id": "fenris-core",
       "text": "Do 1 core damage.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "core_damage",
@@ -34,15 +40,15 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "fenris-etr",
       "text": "End the run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "end_the_run"
         }
       }
     }
-  ],
-  "wave": "true-colors"
+  ]
 }

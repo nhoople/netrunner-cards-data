@@ -12,25 +12,36 @@
     "liability"
   ],
   "playCost": 1,
-  "playRequiresRunnerInstalledResourceLastTurn": true,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "trace",
-      "strength": 2,
-      "onSuccess": {
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "playRequiresRunnerInstalledResourceLastTurn",
+        "value": true
+      }
+    },
+    {
+      "class": "play",
+      "instructions": {
         "op": "do",
         "action": {
-          "kind": "add_installed_resource_to_stack_top"
-        }
-      },
-      "onFailure": {
-        "op": "do",
-        "action": {
-          "kind": "give_bad_publicity",
-          "amount": 1
+          "kind": "trace",
+          "strength": 2,
+          "onSuccess": {
+            "op": "do",
+            "action": {
+              "kind": "add_installed_resource_to_stack_top"
+            }
+          },
+          "onFailure": {
+            "op": "do",
+            "action": {
+              "kind": "give_bad_publicity",
+              "amount": 1
+            }
+          }
         }
       }
     }
-  }
+  ]
 }

@@ -13,22 +13,35 @@
   "installCost": 5,
   "rezCost": 5,
   "strength": 4,
-  "canAdvance": true,
-  "morphOddAdvancementSubtypeSwap": {
-    "gain": "sentry",
-    "lose": "barrier"
-  },
-  "subroutines": [
+  "wave": "up-and-over",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "canAdvance",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "morphOddAdvancementSubtypeSwap",
+        "value": {
+          "gain": "sentry",
+          "lose": "barrier"
+        }
+      }
+    },
+    {
+      "class": "subroutine",
       "id": "changeling-etr",
       "text": "End the run",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "end_the_run"
         }
       }
     }
-  ],
-  "wave": "up-and-over"
+  ]
 }

@@ -14,33 +14,43 @@
   "installCost": 0,
   "rezCost": 0,
   "trashCost": 2,
-  "onSuccessfulRun": {
-    "op": "do",
-    "action": {
-      "kind": "play_psi_game",
-      "maxBid": 2,
-      "ifBidsDiffer": {
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "successful_run",
+      "instructions": {
         "op": "do",
         "action": {
-          "kind": "restrict_run_access",
-          "mode": "only_source",
-          "cardIdsFromSource": true
+          "kind": "play_psi_game",
+          "maxBid": 2,
+          "ifBidsDiffer": {
+            "op": "do",
+            "action": {
+              "kind": "restrict_run_access",
+              "mode": "only_source",
+              "cardIdsFromSource": true
+            }
+          },
+          "ifBidsMatch": {
+            "op": "do",
+            "action": {
+              "kind": "restrict_run_access",
+              "mode": "forbid_source",
+              "cardIdsFromSource": true
+            }
+          }
         }
-      },
-      "ifBidsMatch": {
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "corp_turn_end",
+      "instructions": {
         "op": "do",
         "action": {
-          "kind": "restrict_run_access",
-          "mode": "forbid_source",
-          "cardIdsFromSource": true
+          "kind": "may_move_source_upgrade_to_another_server_root"
         }
       }
     }
-  },
-  "onCorpTurnEnd": {
-    "op": "do",
-    "action": {
-      "kind": "may_move_source_upgrade_to_another_server_root"
-    }
-  }
+  ]
 }

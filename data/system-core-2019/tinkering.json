@@ -11,15 +11,20 @@
     "mod"
   ],
   "playCost": 0,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "grant_chosen_ice_subtypes_until_end_of_turn",
-      "subtypes": [
-        "sentry",
-        "code gate",
-        "barrier"
-      ]
+  "abilities": [
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "grant_chosen_ice_subtypes_until_end_of_turn",
+          "subtypes": [
+            "sentry",
+            "code gate",
+            "barrier"
+          ]
+        }
+      }
     }
-  }
+  ]
 }

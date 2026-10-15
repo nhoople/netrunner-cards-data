@@ -13,25 +13,31 @@
   "installCost": 5,
   "strength": 1,
   "memoryCost": 1,
-  "breaker": {
-    "breaksSubtype": "sentry",
-    "strength": 1,
-    "breakCredits": 1,
-    "breakMaxSubs": 1
-  },
-  "paidAbilities": [
+  "wave": "quorum",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "breaker",
+        "value": {
+          "breaksSubtype": "sentry",
+          "strength": 1,
+          "breakCredits": 1,
+          "breakMaxSubs": 1
+        }
+      }
+    },
+    {
+      "class": "paid",
       "id": "fawkes-pump",
       "label": "X¢ (≥1 stealth): +X strength for the remainder of this run",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "minCreditsFromStealth": 1
       },
       "windows": [
         "encounter_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "spend_x_pump"
@@ -39,6 +45,5 @@
       },
       "usableByRunnerOnSelfIce": true
     }
-  ],
-  "wave": "quorum"
+  ]
 }

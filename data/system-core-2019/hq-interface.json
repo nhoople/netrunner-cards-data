@@ -8,5 +8,13 @@
   "unsupported": [],
   "faction": "criminal",
   "installCost": 4,
-  "bonusAccessOnHqBreach": 1
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "bonusAccessOnHqBreach",
+        "value": 1
+      }
+    }
+  ]
 }

@@ -12,13 +12,33 @@
   "installCost": 6,
   "rezCost": 6,
   "trashCost": 4,
-  "unique": true,
-  "recurringCreditsMax": 3,
-  "recurringSpendFor": [
-    "advance_ice",
-    "install_hardware",
-    "install_program",
-    "rez_ice"
-  ],
-  "wave": "upstalk"
+  "wave": "upstalk",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "recurringCreditsMax",
+        "value": 3
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "recurringSpendFor",
+        "value": [
+          "advance_ice",
+          "install_hardware",
+          "install_program",
+          "rez_ice"
+        ]
+      }
+    }
+  ]
 }

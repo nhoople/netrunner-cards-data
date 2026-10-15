@@ -10,25 +10,37 @@
   "subtypes": [
     "g-mod"
   ],
-  "link": 0,
-  "onFirstSuccessfulCentralRunThisTurn": {
-    "op": "seq",
-    "effects": [
-      {
-        "op": "do",
-        "action": {
-          "kind": "draw",
-          "side": "runner",
-          "amount": 2
-        }
-      },
-      {
-        "op": "do",
-        "action": {
-          "kind": "give_tags",
-          "amount": 1
-        }
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "link",
+        "value": 0
       }
-    ]
-  }
+    },
+    {
+      "class": "conditional",
+      "trigger": "first_successful_central_run_this_turn",
+      "instructions": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "draw",
+              "side": "runner",
+              "amount": 2
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "give_tags",
+              "amount": 1
+            }
+          }
+        ]
+      }
+    }
+  ]
 }

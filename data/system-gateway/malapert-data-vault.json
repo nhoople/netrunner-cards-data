@@ -9,5 +9,13 @@
   "rezCost": 1,
   "trashCost": 4,
   "unsupported": [],
-  "searchRdNonAgendaOnScoreFromServer": true
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "searchRdNonAgendaOnScoreFromServer",
+        "value": true
+      }
+    }
+  ]
 }

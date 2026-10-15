@@ -15,42 +15,65 @@
   "installCost": 8,
   "rezCost": 8,
   "strength": 5,
-  "onRez": {
-    "op": "do",
-    "action": {
-      "kind": "give_bad_publicity",
-      "amount": 1
-    }
-  },
-  "canAdvance": true,
-  "canAdvanceOnlyWhenRezzed": true,
-  "gainsSubroutinesPerAdvancement": {
-    "subroutine": {
-      "id": "swarm-trash-prog",
-      "text": "Trash 1 installed program unless the Runner pays 3[credit].",
-      "effect": {
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "rez",
+      "instructions": {
         "op": "do",
         "action": {
-          "kind": "unless",
-          "payer": "runner",
-          "cost": {
-            "op": "do",
-            "action": {
-              "kind": "lose_credits",
-              "side": "runner",
-              "amount": 3
-            }
-          },
-          "instruction": {
-            "op": "do",
-            "action": {
-              "kind": "trash_program",
-              "pick": "choose"
+          "kind": "give_bad_publicity",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "canAdvance",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "canAdvanceOnlyWhenRezzed",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "gainsSubroutinesPerAdvancement",
+        "value": {
+          "subroutine": {
+            "id": "swarm-trash-prog",
+            "text": "Trash 1 installed program unless the Runner pays 3[credit].",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "unless",
+                "payer": "runner",
+                "cost": {
+                  "op": "do",
+                  "action": {
+                    "kind": "lose_credits",
+                    "side": "runner",
+                    "amount": 3
+                  }
+                },
+                "instruction": {
+                  "op": "do",
+                  "action": {
+                    "kind": "trash_program",
+                    "pick": "choose"
+                  }
+                }
+              }
             }
           }
         }
       }
     }
-  },
-  "subroutines": []
+  ]
 }

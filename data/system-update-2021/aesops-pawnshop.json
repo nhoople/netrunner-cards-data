@@ -5,40 +5,58 @@
   "side": "runner",
   "wave": "system-update-2021",
   "installCost": 1,
-  "recurringCreditsMax": 0,
   "unsupported": [],
-  "aesopPawnshop": true,
-  "onTurnBegin": {
-    "op": "choose",
-    "chooser": "runner",
-    "options": [
-      {
-        "id": "trash",
-        "label": "Trash an installed card you own → gain 3¢",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "aesop_trash_for_credits",
-            "amount": 3
-          }
-        }
-      },
-      {
-        "id": "decline",
-        "label": "Decline",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "gain_credits",
-            "side": "runner",
-            "amount": 0
-          }
-        }
-      }
-    ]
-  },
   "subtypes": [
     "connection",
     "location"
+  ],
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "recurringCreditsMax",
+        "value": 0
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "aesopPawnshop",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "turn_begin",
+      "instructions": {
+        "op": "choose",
+        "chooser": "runner",
+        "options": [
+          {
+            "id": "trash",
+            "label": "Trash an installed card you own → gain 3¢",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "aesop_trash_for_credits",
+                "amount": 3
+              }
+            }
+          },
+          {
+            "id": "decline",
+            "label": "Decline",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "gain_credits",
+                "side": "runner",
+                "amount": 0
+              }
+            }
+          }
+        ]
+      }
+    }
   ]
 }

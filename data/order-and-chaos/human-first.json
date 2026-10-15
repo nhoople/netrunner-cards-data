@@ -10,12 +10,24 @@
     "connection"
   ],
   "installCost": 1,
-  "unique": true,
-  "onAgendaScoredOrStolen": {
-    "op": "do",
-    "action": {
-      "kind": "gain_credits_equal_to_agenda_points_of_trigger"
+  "wave": "order-and-chaos",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "agenda_scored_or_stolen",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits_equal_to_agenda_points_of_trigger"
+        }
+      }
     }
-  },
-  "wave": "order-and-chaos"
+  ]
 }

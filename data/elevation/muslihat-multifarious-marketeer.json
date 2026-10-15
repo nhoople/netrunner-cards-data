@@ -9,11 +9,23 @@
   "subtypes": [
     "natural"
   ],
-  "link": 0,
-  "onTurnBegin": {
-    "op": "do",
-    "action": {
-      "kind": "look_top_stack_may_reveal_breaker_or_run_event"
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "link",
+        "value": 0
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "turn_begin",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "look_top_stack_may_reveal_breaker_or_run_event"
+        }
+      }
     }
-  }
+  ]
 }

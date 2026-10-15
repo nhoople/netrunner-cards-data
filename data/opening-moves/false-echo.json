@@ -9,32 +9,38 @@
   "faction": "shaper",
   "installCost": 1,
   "memoryCost": 1,
-  "onPassUnrezzedIce": {
-    "op": "choose",
-    "chooser": "runner",
-    "options": [
-      {
-        "id": "trash",
-        "label": "Trash False Echo",
-        "effect": {
-          "op": "do",
-          "action": {
-                        "kind": "trash_then_corp_rez_or_hq"
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "pass_unrezzed_ice",
+      "instructions": {
+        "op": "choose",
+        "chooser": "runner",
+        "options": [
+          {
+            "id": "trash",
+            "label": "Trash False Echo",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "trash_then_corp_rez_or_hq"
+              }
+            }
+          },
+          {
+            "id": "decline",
+            "label": "Decline",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "gain_credits",
+                "side": "runner",
+                "amount": 0
+              }
+            }
           }
-        }
-      },
-      {
-        "id": "decline",
-        "label": "Decline",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "gain_credits",
-            "side": "runner",
-            "amount": 0
-          }
-        }
+        ]
       }
-    ]
-  }
+    }
+  ]
 }

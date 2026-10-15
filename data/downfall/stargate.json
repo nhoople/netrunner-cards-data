@@ -9,20 +9,18 @@
   "faction": "anarch",
   "installCost": 4,
   "memoryCost": 2,
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "paid",
       "id": "stargate-run-rd",
       "label": "[click]: Run R&D (once per turn)",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1
       },
       "windows": [
         "runner_action_paw"
       ],
-      "oncePerTurn": true,
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "gain_credits",
@@ -30,6 +28,7 @@
           "amount": 0
         }
       },
+      "flag": "once_per_turn",
       "startsRun": {
         "servers": "rd",
         "onSuccessfulRun": {

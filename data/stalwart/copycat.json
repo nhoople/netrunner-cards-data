@@ -9,32 +9,38 @@
   "faction": "criminal",
   "installCost": 1,
   "memoryCost": 1,
-  "onPassRezzedIce": {
-    "op": "choose",
-    "chooser": "runner",
-    "options": [
-      {
-        "id": "decline",
-        "label": "Decline",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "gain_credits",
-            "side": "runner",
-            "amount": 0
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "pass_rezzed_ice",
+      "instructions": {
+        "op": "choose",
+        "chooser": "runner",
+        "options": [
+          {
+            "id": "decline",
+            "label": "Decline",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "gain_credits",
+                "side": "runner",
+                "amount": 0
+              }
+            }
+          },
+          {
+            "id": "jump",
+            "label": "Trash Copycat and continue from another rezzed copy",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "copycat_jump_to_rezzed_copy"
+              }
+            }
           }
-        }
-      },
-      {
-        "id": "jump",
-        "label": "Trash Copycat and continue from another rezzed copy",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "copycat_jump_to_rezzed_copy"
-          }
-        }
+        ]
       }
-    ]
-  }
+    }
+  ]
 }

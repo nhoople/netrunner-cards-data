@@ -10,8 +10,28 @@
     "console"
   ],
   "installCost": 2,
-  "unique": true,
-  "maxConsole": 1,
-  "memoryLimitEqualsGripSize": true,
-  "wave": "all-that-remains"
+  "wave": "all-that-remains",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "maxConsole",
+        "value": 1
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "memoryLimitEqualsGripSize",
+        "value": true
+      }
+    }
+  ]
 }

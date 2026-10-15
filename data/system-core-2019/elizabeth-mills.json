@@ -14,20 +14,29 @@
   "installCost": 2,
   "rezCost": 2,
   "trashCost": 1,
-  "unique": true,
-  "onRez": {
-    "op": "do",
-    "action": {
-      "kind": "remove_bad_publicity",
-      "amount": 1
-    }
-  },
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "rez",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "remove_bad_publicity",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "class": "paid",
       "id": "elizabeth-mills-trash-location",
       "label": "Trash: Trash 1 location resource. Take 1 bad publicity.",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1,
         "trashSelf": true
@@ -35,7 +44,7 @@
       "windows": [
         "corp_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "seq",
         "effects": [
           {

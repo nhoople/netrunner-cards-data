@@ -11,49 +11,69 @@
   ],
   "advancementRequirement": 5,
   "agendaPoints": 3,
-  "onScore": {
-    "op": "do",
-    "action": {
-      "kind": "place_hosted_credits",
-      "amount": 9
-    }
-  },
-  "onSteal": {
-    "op": "do",
-    "action": {
-      "kind": "place_hosted_credits",
-      "amount": 9
-    }
-  },
-  "onTurnBeginFromRunnerScoreOnCorpTurn": true,
-  "onTurnBegin": {
-    "op": "choose",
-    "chooser": "corp",
-    "options": [
-      {
-        "id": "accept",
-        "label": "Take 3¢ from SSL Endorsement",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "take_hosted_credits",
-            "amount": 3
-          }
-        }
-      },
-      {
-        "id": "decline",
-        "label": "Decline",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "gain_credits",
-            "side": "corp",
-            "amount": 0
-          }
+  "wave": "down-the-white-nile",
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "score",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "place_hosted_credits",
+          "amount": 9
         }
       }
-    ]
-  },
-  "wave": "down-the-white-nile"
+    },
+    {
+      "class": "conditional",
+      "trigger": "steal",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "place_hosted_credits",
+          "amount": 9
+        }
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "onTurnBeginFromRunnerScoreOnCorpTurn",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "turn_begin",
+      "instructions": {
+        "op": "choose",
+        "chooser": "corp",
+        "options": [
+          {
+            "id": "accept",
+            "label": "Take 3¢ from SSL Endorsement",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "take_hosted_credits",
+                "amount": 3
+              }
+            }
+          },
+          {
+            "id": "decline",
+            "label": "Decline",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "gain_credits",
+                "side": "corp",
+                "amount": 0
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
 }

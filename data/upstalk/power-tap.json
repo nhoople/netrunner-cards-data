@@ -7,6 +7,14 @@
   "unsupported": [],
   "faction": "criminal",
   "installCost": 2,
-  "gainCreditsOnTraceInitiated": 1,
-  "wave": "upstalk"
+  "wave": "upstalk",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "gainCreditsOnTraceInitiated",
+        "value": 1
+      }
+    }
+  ]
 }

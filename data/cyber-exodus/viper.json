@@ -14,11 +14,12 @@
   "installCost": 3,
   "rezCost": 3,
   "strength": 4,
-  "subroutines": [
+  "abilities": [
     {
+      "class": "subroutine",
       "id": "viper-trace-click",
       "text": "Trace[3]. If successful, the Runner loses [click], if able.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "trace",
@@ -35,9 +36,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "viper-trace-etr",
       "text": "Trace[3]. If successful, end the run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "trace",

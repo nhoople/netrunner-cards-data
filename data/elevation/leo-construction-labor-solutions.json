@@ -9,20 +9,20 @@
   "subtypes": [
     "division"
   ],
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "paid",
       "id": "leo-etr",
       "label": "Once per turn → Trash 1 rezzed bioroid in/protecting attacked server: End the run",
-      "clickCost": 0,
-      "creditCost": 0,
-      "cost": {},
-      "oncePerTurn": true,
+      "cost": {
+        "credits": 0
+      },
       "windows": [
         "approach_paw",
         "encounter_paw",
         "approach_server_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "trash_installed",
@@ -38,7 +38,8 @@
             }
           }
         }
-      }
+      },
+      "flag": "once_per_turn"
     }
   ]
 }

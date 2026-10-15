@@ -10,6 +10,20 @@
   "subtypes": [
     "g-mod"
   ],
-  "link": 0,
-  "muBonus": 1
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "link",
+        "value": 0
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "muBonus",
+        "value": 1
+      }
+    }
+  ]
 }

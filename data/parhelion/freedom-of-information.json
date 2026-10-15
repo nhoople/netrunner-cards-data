@@ -11,5 +11,13 @@
   ],
   "advancementRequirement": 4,
   "agendaPoints": 2,
-  "advancementRequirementReductionPerTag": 1
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "advancementRequirementReductionPerTag",
+        "value": 1
+      }
+    }
+  ]
 }

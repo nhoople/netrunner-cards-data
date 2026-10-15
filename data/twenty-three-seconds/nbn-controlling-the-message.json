@@ -9,42 +9,48 @@
   "subtypes": [
     "megacorp"
   ],
-  "onFirstCorpCardTrashEachTurn": {
-    "op": "choose",
-    "chooser": "corp",
-    "options": [
-      {
-        "id": "accept",
-        "label": "Trace[4]: give the Runner 1 tag (cannot be avoided)",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "trace",
-            "strength": 4,
-            "onSuccess": {
+  "wave": "twenty-three-seconds",
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "first_corp_card_trash_each_turn",
+      "instructions": {
+        "op": "choose",
+        "chooser": "corp",
+        "options": [
+          {
+            "id": "accept",
+            "label": "Trace[4]: give the Runner 1 tag (cannot be avoided)",
+            "effect": {
               "op": "do",
               "action": {
-                "kind": "give_tags",
-                "amount": 1,
-                "cannotBeAvoided": true
+                "kind": "trace",
+                "strength": 4,
+                "onSuccess": {
+                  "op": "do",
+                  "action": {
+                    "kind": "give_tags",
+                    "amount": 1,
+                    "cannotBeAvoided": true
+                  }
+                }
+              }
+            }
+          },
+          {
+            "id": "decline",
+            "label": "Decline",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "gain_credits",
+                "side": "corp",
+                "amount": 0
               }
             }
           }
-        }
-      },
-      {
-        "id": "decline",
-        "label": "Decline",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "gain_credits",
-            "side": "corp",
-            "amount": 0
-          }
-        }
+        ]
       }
-    ]
-  },
-  "wave": "twenty-three-seconds"
+    }
+  ]
 }

@@ -14,12 +14,20 @@
   "installCost": 6,
   "rezCost": 6,
   "strength": 5,
-  "bioroidBreakMaxSubs": 3,
-  "subroutines": [
+  "wave": "escalation",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "bioroidBreakMaxSubs",
+        "value": 3
+      }
+    },
+    {
+      "class": "subroutine",
       "id": "fairchild-3-0-pay-or-trash-1",
       "text": "The Runner must pay 3¢ or trash 1 of their installed cards.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "pay_credits_or_trash_installed",
@@ -29,9 +37,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "fairchild-3-0-pay-or-trash-2",
       "text": "The Runner must pay 3¢ or trash 1 of their installed cards.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "pay_credits_or_trash_installed",
@@ -41,9 +50,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "fairchild-3-0-core-or-etr",
       "text": "Do 1 core damage or end the run.",
-      "effect": {
+      "instructions": {
         "op": "choose",
         "chooser": "corp",
         "options": [
@@ -71,6 +81,5 @@
         ]
       }
     }
-  ],
-  "wave": "escalation"
+  ]
 }

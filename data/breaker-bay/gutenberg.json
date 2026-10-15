@@ -13,12 +13,20 @@
   "installCost": 2,
   "rezCost": 2,
   "strength": 3,
-  "strengthBonusProtectingRd": 3,
-  "subroutines": [
+  "wave": "breaker-bay",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "strengthBonusProtectingRd",
+        "value": 3
+      }
+    },
+    {
+      "class": "subroutine",
       "id": "gutenberg-trace",
       "text": "Trace[7]. If successful, give the Runner 1 tag.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "trace",
@@ -33,6 +41,5 @@
         }
       }
     }
-  ],
-  "wave": "breaker-bay"
+  ]
 }

@@ -15,32 +15,35 @@
   "installCost": 4,
   "rezCost": 4,
   "strength": 4,
-  "onEncounter": {
-    "op": "do",
-    "action": {
-      "kind": "unless",
-      "payer": "runner",
-      "cost": {
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "encounter",
+      "instructions": {
         "op": "do",
         "action": {
-          "kind": "give_tags",
-          "amount": 1
-        }
-      },
-      "instruction": {
-        "op": "do",
-        "action": {
-          "kind": "end_the_run"
+          "kind": "unless",
+          "payer": "runner",
+          "cost": {
+            "op": "do",
+            "action": {
+              "kind": "give_tags",
+              "amount": 1
+            }
+          },
+          "instruction": {
+            "op": "do",
+            "action": {
+              "kind": "end_the_run"
+            }
+          }
         }
       }
-    }
-  },
-  "paidAbilities": [
+    },
     {
+      "class": "paid",
       "id": "data-raven-tag",
       "label": "Hosted power: Give the Runner 1 tag",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "powerCounters": 1
       },
@@ -50,20 +53,19 @@
         "encounter_paw",
         "approach_server_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "give_tags",
           "amount": 1
         }
       }
-    }
-  ],
-  "subroutines": [
+    },
     {
+      "class": "subroutine",
       "id": "data-raven-trace",
       "text": "Trace[3]. If successful, place 1 power counter on this ice.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "trace",

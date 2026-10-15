@@ -7,11 +7,16 @@
   "unsupported": [],
   "faction": "neutral-runner",
   "playCost": 2,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "resolve_two"
+  "wave": "twenty-three-seconds",
+  "abilities": [
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "resolve_two"
+        }
+      }
     }
-  },
-  "wave": "twenty-three-seconds"
+  ]
 }

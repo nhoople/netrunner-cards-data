@@ -11,13 +11,31 @@
     "console"
   ],
   "installCost": 3,
-  "unique": true,
-  "muBonus": 1,
-  "onSuccessfulRunEndOncePerTurn": {
-    "op": "do",
-    "action": {
-      "kind": "may_start_run",
-      "servers": "any"
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "muBonus",
+        "value": 1
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "successful_run_end_once_per_turn",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "may_start_run",
+          "servers": "any"
+        }
+      }
     }
-  }
+  ]
 }

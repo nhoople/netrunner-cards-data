@@ -15,15 +15,23 @@
   "installCost": 10,
   "rezCost": 10,
   "strength": 6,
-  "rezCostDiscountPerRezzedSubtype": {
-    "subtype": "next",
-    "amount": 1
-  },
-  "subroutines": [
+  "wave": "kampala-ascendent",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "rezCostDiscountPerRezzedSubtype",
+        "value": {
+          "subtype": "next",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "class": "subroutine",
       "id": "next-diamond-core-1",
       "text": "Do 1 core damage.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "core_damage",
@@ -32,9 +40,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "next-diamond-core-2",
       "text": "Do 1 core damage.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "core_damage",
@@ -43,9 +52,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "next-diamond-trash",
       "text": "Trash 1 installed Runner card.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "trash_installed_runner",
@@ -53,6 +63,5 @@
         }
       }
     }
-  ],
-  "wave": "kampala-ascendent"
+  ]
 }

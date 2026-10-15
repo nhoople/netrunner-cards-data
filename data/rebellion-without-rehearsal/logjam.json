@@ -12,20 +12,37 @@
   "installCost": 6,
   "rezCost": 6,
   "strength": 0,
-  "canAdvance": true,
-  "strengthPerAdvancement": 1,
-  "onRez": {
-    "op": "do",
-    "action": {
-      "kind": "place_advancements_on_self_per_faceup_archive_types",
-      "base": 1
-    }
-  },
-  "subroutines": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "canAdvance",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "strengthPerAdvancement",
+        "value": 1
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "rez",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "place_advancements_on_self_per_faceup_archive_types",
+          "base": 1
+        }
+      }
+    },
+    {
+      "class": "subroutine",
       "id": "logjam-gain-etr",
       "text": "Gain 2[credit]. End the run.",
-      "effect": {
+      "instructions": {
         "op": "seq",
         "effects": [
           {
@@ -46,9 +63,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "logjam-etr-2",
       "text": "End the run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "end_the_run"
@@ -56,9 +74,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "logjam-etr-3",
       "text": "End the run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "end_the_run"

@@ -12,11 +12,13 @@
     "code gate",
     "ap"
   ],
-  "subroutines": [
+  "unsupported": [],
+  "abilities": [
     {
+      "class": "subroutine",
       "id": "diviner-net-etr",
       "text": "Do 1 net damage. If grip count odd, end the run.",
-      "effect": {
+      "instructions": {
         "op": "seq",
         "effects": [
           {
@@ -41,6 +43,5 @@
         ]
       }
     }
-  ],
-  "unsupported": []
+  ]
 }

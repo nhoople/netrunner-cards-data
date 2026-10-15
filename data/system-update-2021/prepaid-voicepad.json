@@ -10,8 +10,22 @@
     "gear"
   ],
   "installCost": 2,
-  "recurringCreditsMax": 1,
-  "recurringSpendFor": [
-    "play_event"
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "recurringCreditsMax",
+        "value": 1
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "recurringSpendFor",
+        "value": [
+          "play_event"
+        ]
+      }
+    }
   ]
 }

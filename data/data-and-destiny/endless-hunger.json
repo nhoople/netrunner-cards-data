@@ -12,25 +12,33 @@
   "installCost": 0,
   "strength": 11,
   "memoryCost": 4,
-  "breaker": {
-    "breaksSubtype": "end-the-run",
-    "strength": 11,
-    "breakCredits": 0,
-    "breakMaxSubs": 1,
-    "breakCostTrashInstalled": 1,
-    "breakViaPaidAbilityOnly": true
-  },
-  "paidAbilities": [
+  "wave": "data-and-destiny",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "breaker",
+        "value": {
+          "breaksSubtype": "end-the-run",
+          "strength": 11,
+          "breakCredits": 0,
+          "breakMaxSubs": 1,
+          "breakCostTrashInstalled": 1,
+          "breakViaPaidAbilityOnly": true
+        }
+      }
+    },
+    {
+      "class": "paid",
       "id": "endless-hunger-break",
       "label": "Trash 1 installed card: Break 1 End the run subroutine",
-      "clickCost": 0,
-      "creditCost": 0,
-      "cost": {},
+      "cost": {
+        "credits": 0
+      },
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "break_etr_subroutine_trash_installed"
@@ -39,6 +47,5 @@
       "usableByRunnerOnSelfIce": true,
       "requireDuringRun": true
     }
-  ],
-  "wave": "data-and-destiny"
+  ]
 }

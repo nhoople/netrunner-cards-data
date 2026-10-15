@@ -12,12 +12,24 @@
   "installCost": 0,
   "rezCost": 0,
   "trashCost": 1,
-  "canAdvance": true,
-  "onAccessWhileInstalled": {
-    "op": "do",
-    "action": {
-      "kind": "reveal_score_from_hq"
+  "wave": "honor-and-profit",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "canAdvance",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "access_while_installed",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "reveal_score_from_hq"
+        }
+      }
     }
-  },
-  "wave": "honor-and-profit"
+  ]
 }

@@ -11,11 +11,17 @@
   ],
   "advancementRequirement": 3,
   "agendaPoints": 1,
-  "onScore": {
-    "op": "do",
-    "action": {
-      "kind": "rfg_runner_heap"
+  "wave": "first-contact",
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "score",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "rfg_runner_heap"
+        }
+      }
     }
-  },
-  "wave": "first-contact"
+  ]
 }

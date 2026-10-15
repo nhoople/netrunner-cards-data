@@ -8,22 +8,34 @@
   "unsupported": [],
   "faction": "anarch",
   "installCost": 2,
-  "unique": true,
-  "onTurnBegin": {
-    "op": "seq",
-    "effects": [
-      {
-        "op": "do",
-        "action": {
-          "kind": "rfg_self"
-        }
-      },
-      {
-        "op": "do",
-        "action": {
-          "kind": "climactic_choose_server_corp_may_trash_ice_else_bonus_access"
-        }
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
       }
-    ]
-  }
+    },
+    {
+      "class": "conditional",
+      "trigger": "turn_begin",
+      "instructions": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "rfg_self"
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "climactic_choose_server_corp_may_trash_ice_else_bonus_access"
+            }
+          }
+        ]
+      }
+    }
+  ]
 }

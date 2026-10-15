@@ -5,9 +5,17 @@
   "nrdbCode": "30076",
   "type": "identity",
   "side": "runner",
-  "link": 0,
   "unsupported": [],
   "subtypes": [
     "natural"
+  ],
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "link",
+        "value": 0
+      }
+    }
   ]
 }

@@ -12,5 +12,13 @@
   "installCost": 3,
   "rezCost": 3,
   "trashCost": 5,
-  "runsCannotBeSuccessful": true
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "runsCannotBeSuccessful",
+        "value": true
+      }
+    }
+  ]
 }

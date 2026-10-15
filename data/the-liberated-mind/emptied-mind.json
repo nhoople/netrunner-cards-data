@@ -7,24 +7,36 @@
   "unsupported": [],
   "faction": "anarch",
   "installCost": 0,
-  "unique": true,
-  "onTurnBegin": {
-    "op": "if",
-    "cond": {
-      "op": "not",
-      "cond": {
-        "op": "grip_count_gte",
-        "amount": 1
+  "wave": "the-liberated-mind",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
       }
     },
-    "then": {
-      "op": "do",
-      "action": {
-        "kind": "gain_clicks",
-        "side": "runner",
-        "amount": 1
+    {
+      "class": "conditional",
+      "trigger": "turn_begin",
+      "instructions": {
+        "op": "if",
+        "cond": {
+          "op": "not",
+          "cond": {
+            "op": "grip_count_gte",
+            "amount": 1
+          }
+        },
+        "then": {
+          "op": "do",
+          "action": {
+            "kind": "gain_clicks",
+            "side": "runner",
+            "amount": 1
+          }
+        }
       }
     }
-  },
-  "wave": "the-liberated-mind"
+  ]
 }

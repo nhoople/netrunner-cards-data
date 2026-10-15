@@ -11,28 +11,31 @@
   "subtypes": [
     "character"
   ],
-  "onRez": {
-    "op": "do",
-    "action": {
-      "kind": "draw",
-      "side": "corp",
-      "amount": 2
-    }
-  },
   "unsupported": [],
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "conditional",
+      "trigger": "rez",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "draw",
+          "side": "corp",
+          "amount": 2
+        }
+      }
+    },
+    {
+      "class": "paid",
       "id": "spin-doctor-rfg",
       "label": "Trash: shuffle up to 2 Archives into R&D",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "trashSelf": true
       },
       "windows": [
         "corp_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "shuffle_archives_to_rd",

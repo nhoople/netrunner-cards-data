@@ -11,26 +11,30 @@
     "seedy"
   ],
   "installCost": 0,
-  "onInstall": {
-    "op": "do",
-    "action": {
-      "kind": "host_top_n_of_stack_facedown",
-      "amount": 3
-    }
-  },
-  "paidAbilities": [
+  "wave": "the-underway",
+  "abilities": [
     {
+      "class": "conditional",
+      "trigger": "install",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "host_top_n_of_stack_facedown",
+          "amount": 3
+        }
+      }
+    },
+    {
+      "class": "paid",
       "id": "street-peddler-install",
       "label": "[trash]: Install 1 hosted card, lowering install cost by 1",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "trashSelf": true
       },
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "install_hosted",
@@ -38,6 +42,5 @@
         }
       }
     }
-  ],
-  "wave": "the-underway"
+  ]
 }

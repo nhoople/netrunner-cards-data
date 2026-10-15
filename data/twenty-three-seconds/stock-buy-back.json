@@ -11,19 +11,30 @@
     "transaction"
   ],
   "playCost": 1,
-  "endsActionPhase": true,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "gain_credits",
-      "side": "corp",
-      "amount": 0,
-      "tally": {
-        "count": "runner_score",
-        "per": 3,
-        "side": "corp"
+  "wave": "twenty-three-seconds",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "endsActionPhase",
+        "value": true
+      }
+    },
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "corp",
+          "amount": 0,
+          "tally": {
+            "count": "runner_score",
+            "per": 3,
+            "side": "corp"
+          }
+        }
       }
     }
-  },
-  "wave": "twenty-three-seconds"
+  ]
 }

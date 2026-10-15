@@ -11,13 +11,19 @@
   ],
   "installCost": 2,
   "memoryCost": 1,
-  "placeVirusCounterWhenInstalledCorpCardTrashed": true,
-  "paidAbilities": [
+  "wave": "order-and-chaos",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "placeVirusCounterWhenInstalledCorpCardTrashed",
+        "value": true
+      }
+    },
+    {
+      "class": "paid",
       "id": "gravedigger-mill",
       "label": "[click], hosted virus counter: Corp trashes top of R&D",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1,
         "virusCounters": 1
@@ -25,13 +31,12 @@
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "trash_top_of_rd"
         }
       }
     }
-  ],
-  "wave": "order-and-chaos"
+  ]
 }

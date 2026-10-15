@@ -11,12 +11,11 @@
     "clone"
   ],
   "installCost": 2,
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "paid",
       "id": "eru-run-archives",
       "label": "[click], take 1 tag: Run Archives; success → breach R&D (Threat 3: +1 access)",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1,
         "tags": 1
@@ -24,8 +23,7 @@
       "windows": [
         "runner_action_paw"
       ],
-      "oncePerTurn": true,
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "gain_credits",
@@ -33,6 +31,7 @@
           "amount": 0
         }
       },
+      "flag": "once_per_turn",
       "startsRun": {
         "servers": "archives",
         "redirectSuccessTo": "rd",

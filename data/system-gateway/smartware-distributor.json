@@ -9,19 +9,19 @@
   "subtypes": [
     "connection"
   ],
-  "paidAbilities": [
+  "unsupported": [],
+  "abilities": [
     {
+      "class": "paid",
       "id": "smartware-load",
-      "label": "Place 3\u00a2",
-      "clickCost": 1,
-      "creditCost": 0,
+      "label": "Place 3¢",
       "cost": {
         "clicks": 1
       },
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "place_hosted_credits",
@@ -30,17 +30,16 @@
       }
     },
     {
+      "class": "paid",
       "id": "smartware-take",
-      "label": "Take 1\u00a2",
-      "clickCost": 1,
-      "creditCost": 0,
+      "label": "Take 1¢",
       "cost": {
         "clicks": 1
       },
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "take_hosted_credits",
@@ -48,6 +47,5 @@
         }
       }
     }
-  ],
-  "unsupported": []
+  ]
 }

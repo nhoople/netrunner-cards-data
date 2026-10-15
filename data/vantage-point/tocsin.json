@@ -13,12 +13,11 @@
   "installCost": 8,
   "rezCost": 8,
   "strength": 5,
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "paid",
       "id": "tocsin-search",
       "label": "[click], 1[credit], trash: Search R&D for barrier + sentry",
-      "clickCost": 1,
-      "creditCost": 1,
       "cost": {
         "clicks": 1,
         "credits": 1,
@@ -27,8 +26,7 @@
       "windows": [
         "corp_action_paw"
       ],
-      "usableFromHq": true,
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "search_rd_up_to_one_each_subtype_to_hq",
@@ -37,14 +35,14 @@
             "sentry"
           ]
         }
-      }
-    }
-  ],
-  "subroutines": [
+      },
+      "usableFromHq": true
+    },
     {
+      "class": "subroutine",
       "id": "tocsin-lose",
       "text": "The Runner loses 2[credit].",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "lose_credits",
@@ -54,9 +52,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "tocsin-etr-1",
       "text": "End the run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "end_the_run"
@@ -64,9 +63,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "tocsin-etr-2",
       "text": "End the run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "end_the_run"

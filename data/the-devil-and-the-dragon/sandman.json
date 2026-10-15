@@ -12,11 +12,13 @@
   "installCost": 5,
   "rezCost": 5,
   "strength": 3,
-  "subroutines": [
+  "wave": "the-devil-and-the-dragon",
+  "abilities": [
     {
+      "class": "subroutine",
       "id": "sandman-bounce-1",
       "text": "Add an installed Runner card to the grip.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "add_installed_runner_to_grip"
@@ -24,15 +26,15 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "sandman-bounce-2",
       "text": "Add an installed Runner card to the grip.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "add_installed_runner_to_grip"
         }
       }
     }
-  ],
-  "wave": "the-devil-and-the-dragon"
+  ]
 }

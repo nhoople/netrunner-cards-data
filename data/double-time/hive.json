@@ -12,12 +12,20 @@
   "installCost": 5,
   "rezCost": 5,
   "strength": 3,
-  "dynamicEtrSubroutineCountFromCorpAgendaPoints": true,
-  "subroutines": [
+  "wave": "double-time",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "dynamicEtrSubroutineCountFromCorpAgendaPoints",
+        "value": true
+      }
+    },
+    {
+      "class": "subroutine",
       "id": "hive-etr-1",
       "text": "End the run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "end_the_run"
@@ -25,9 +33,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "hive-etr-2",
       "text": "End the run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "end_the_run"
@@ -35,9 +44,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "hive-etr-3",
       "text": "End the run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "end_the_run"
@@ -45,15 +55,15 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "hive-etr-4",
       "text": "End the run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "end_the_run"
         }
       }
     }
-  ],
-  "wave": "double-time"
+  ]
 }

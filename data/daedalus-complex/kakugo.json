@@ -13,24 +13,29 @@
   "installCost": 4,
   "rezCost": 4,
   "strength": 1,
-  "onPass": {
-    "op": "do",
-    "action": {
-      "kind": "net_damage",
-      "amount": 1
-    }
-  },
-  "subroutines": [
+  "wave": "daedalus-complex",
+  "abilities": [
     {
+      "class": "conditional",
+      "trigger": "pass",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "net_damage",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "class": "subroutine",
       "id": "kakugo-etr",
       "text": "End the run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "end_the_run"
         }
       }
     }
-  ],
-  "wave": "daedalus-complex"
+  ]
 }

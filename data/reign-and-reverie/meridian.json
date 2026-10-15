@@ -13,11 +13,12 @@
   "installCost": 3,
   "rezCost": 3,
   "strength": 4,
-  "subroutines": [
+  "abilities": [
     {
+      "class": "subroutine",
       "id": "meridian-gain-etr-unless-score",
       "text": "Gain 4[credit] and end the run unless the Runner adds this ice to their score area as an agenda worth -1 agenda point.",
-      "effect": {
+      "instructions": {
         "op": "choose",
         "chooser": "runner",
         "options": [

@@ -11,13 +11,21 @@
     "run"
   ],
   "playCost": 3,
-  "runEvent": {
-    "servers": "hq",
-    "onSuccessfulRun": {
-      "op": "do",
-      "action": {
-        "kind": "escher_may_instead_of_breach"
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "runEvent",
+        "value": {
+          "servers": "hq",
+          "onSuccessfulRun": {
+            "op": "do",
+            "action": {
+              "kind": "escher_may_instead_of_breach"
+            }
+          }
+        }
       }
     }
-  }
+  ]
 }

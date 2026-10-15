@@ -6,25 +6,30 @@
   "type": "operation",
   "side": "corp",
   "playCost": 0,
-  "onPlay": {
-    "op": "seq",
-    "effects": [
-      {
-        "op": "do",
-        "action": {
-          "kind": "draw",
-          "side": "corp",
-          "amount": 3
-        }
-      },
-      {
-        "op": "do",
-        "action": {
-          "kind": "shuffle_hq_to_rd",
-          "amount": 2
-        }
+  "unsupported": [],
+  "abilities": [
+    {
+      "class": "play",
+      "instructions": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "draw",
+              "side": "corp",
+              "amount": 3
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "shuffle_hq_to_rd",
+              "amount": 2
+            }
+          }
+        ]
       }
-    ]
-  },
-  "unsupported": []
+    }
+  ]
 }

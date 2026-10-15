@@ -12,26 +12,31 @@
   "installCost": 3,
   "rezCost": 3,
   "trashCost": 2,
-  "remoteOnly": true,
-  "paidAbilities": [
+  "wave": "sovereign-sight",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "remoteOnly",
+        "value": true
+      }
+    },
+    {
+      "class": "paid",
       "id": "calibration-adv",
       "label": "[trash]: Place 1 advancement counter on a card installed in the root of this server",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "trashSelf": true
       },
       "windows": [
         "corp_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "place_advancement_on_root_of_this_server"
         }
       }
     }
-  ],
-  "wave": "sovereign-sight"
+  ]
 }

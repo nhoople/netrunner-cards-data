@@ -10,12 +10,23 @@
     "double"
   ],
   "playCost": 1,
-  "playAdditionalClick": true,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "draw_until_grip_equals_max_hand_size"
+  "wave": "breaker-bay",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "playAdditionalClick",
+        "value": true
+      }
+    },
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "draw_until_grip_equals_max_hand_size"
+        }
+      }
     }
-  },
-  "wave": "breaker-bay"
+  ]
 }

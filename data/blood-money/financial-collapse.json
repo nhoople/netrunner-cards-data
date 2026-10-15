@@ -7,12 +7,23 @@
   "unsupported": [],
   "faction": "neutral-corp",
   "playCost": 0,
-  "playRequiresRunnerCreditsGte": 6,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "lose_2_per_resource_or_trash"
+  "wave": "blood-money",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "playRequiresRunnerCreditsGte",
+        "value": 6
+      }
+    },
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "lose_2_per_resource_or_trash"
+        }
+      }
     }
-  },
-  "wave": "blood-money"
+  ]
 }

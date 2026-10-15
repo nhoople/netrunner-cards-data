@@ -11,19 +11,29 @@
     "chip"
   ],
   "installCost": 1,
-  "onInstall": {
-    "op": "do",
-    "action": {
-      "kind": "core_damage",
-      "amount": 1
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "install",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "core_damage",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "first_successful_central_run_this_turn",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "draw",
+          "side": "runner",
+          "amount": 1
+        }
+      }
     }
-  },
-  "onFirstSuccessfulCentralRunThisTurn": {
-    "op": "do",
-    "action": {
-      "kind": "draw",
-      "side": "runner",
-      "amount": 1
-    }
-  }
+  ]
 }

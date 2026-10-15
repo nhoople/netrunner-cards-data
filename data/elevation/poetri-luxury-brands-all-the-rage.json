@@ -9,19 +9,29 @@
   "subtypes": [
     "division"
   ],
-  "onAgendaScored": {
-    "op": "do",
-    "action": {
-      "kind": "look_top_n_rd_may_install_one",
-      "n": 3,
-      "excludeAgenda": true
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "agenda_scored",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "look_top_n_rd_may_install_one",
+          "n": 3,
+          "excludeAgenda": true
+        }
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "agenda_stolen",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "may_install_from_hq_paying_costs",
+          "excludeAgenda": true
+        }
+      }
     }
-  },
-  "onAgendaStolen": {
-    "op": "do",
-    "action": {
-      "kind": "may_install_from_hq_paying_costs",
-      "excludeAgenda": true
-    }
-  }
+  ]
 }

@@ -11,29 +11,50 @@
     "vehicle"
   ],
   "installCost": 8,
-  "muBonus": 2,
-  "powerCountersOnInstall": 3,
-  "onSuccessfulRunOncePerTurn": true,
-  "onSuccessfulRun": {
-    "op": "do",
-    "action": {
-      "kind": "add_power_counter",
-      "amount": 1
-    }
-  },
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "muBonus",
+        "value": 2
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "powerCountersOnInstall",
+        "value": 3
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "onSuccessfulRunOncePerTurn",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "successful_run",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "add_power_counter",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "class": "paid",
       "id": "endurance-power-break",
       "label": "Spend 2 power counters: break up to 2 subroutines",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "powerCounters": 2
       },
       "windows": [
         "encounter_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "seq",
         "effects": [
           {

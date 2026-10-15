@@ -9,12 +9,24 @@
   "subtypes": [
     "natural"
   ],
-  "onTurnBegin": {
-    "op": "do",
-    "action": {
-      "kind": "iain_gain_if_corp_ahead_on_agenda"
-    }
-  },
   "wave": "honor-and-profit",
-  "link": 1
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "turn_begin",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "iain_gain_if_corp_ahead_on_agenda"
+        }
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "link",
+        "value": 1
+      }
+    }
+  ]
 }

@@ -10,24 +10,30 @@
   "subtypes": [
     "division"
   ],
-  "onGameStart": {
-    "op": "seq",
-    "effects": [
-      {
-        "op": "do",
-        "action": {
-          "kind": "next_design_may_install_ice",
-          "remaining": 3,
-          "usedServerIds": []
-        }
-      },
-      {
-        "op": "do",
-        "action": {
-          "kind": "draw_until_hq_has",
-          "amount": 5
-        }
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "game_start",
+      "instructions": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "next_design_may_install_ice",
+              "remaining": 3,
+              "usedServerIds": []
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "draw_until_hq_has",
+              "amount": 5
+            }
+          }
+        ]
       }
-    ]
-  }
+    }
+  ]
 }

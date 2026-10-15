@@ -13,14 +13,28 @@
   "installCost": 3,
   "strength": 1,
   "memoryCost": 1,
-  "breaker": {
-    "breaksSubtype": "sentry",
-    "strength": 1,
-    "breakCredits": 1,
-    "breakMaxSubs": 2,
-    "pumpCredits": 2,
-    "pumpStrength": 2
-  },
-  "breakOnAtMostOneIcePerRun": true,
-  "wave": "kala-ghoda"
+  "wave": "kala-ghoda",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "breaker",
+        "value": {
+          "breaksSubtype": "sentry",
+          "strength": 1,
+          "breakCredits": 1,
+          "breakMaxSubs": 2,
+          "pumpCredits": 2,
+          "pumpStrength": 2
+        }
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "breakOnAtMostOneIcePerRun",
+        "value": true
+      }
+    }
+  ]
 }

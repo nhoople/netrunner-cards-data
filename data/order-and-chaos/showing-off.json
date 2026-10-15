@@ -10,9 +10,17 @@
     "run"
   ],
   "playCost": 2,
-  "runEvent": {
-    "servers": "rd",
-    "accessFromBottomOfRd": true
-  },
-  "wave": "order-and-chaos"
+  "wave": "order-and-chaos",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "runEvent",
+        "value": {
+          "servers": "rd",
+          "accessFromBottomOfRd": true
+        }
+      }
+    }
+  ]
 }

@@ -10,13 +10,24 @@
     "double"
   ],
   "playCost": 1,
-  "playAdditionalClick": true,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "install_ice_from_hq_outermost_remote_ignore_costs_place_advancements",
-      "advancements": 3
+  "wave": "crimson-dust",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "playAdditionalClick",
+        "value": true
+      }
+    },
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "install_ice_from_hq_outermost_remote_ignore_costs_place_advancements",
+          "advancements": 3
+        }
+      }
     }
-  },
-  "wave": "crimson-dust"
+  ]
 }

@@ -13,26 +13,25 @@
   "installCost": 0,
   "rezCost": 0,
   "trashCost": 3,
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "paid",
       "id": "security-subcontract-gain",
       "label": "[click], trash a rezzed piece of ice: Gain 4¢",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1
       },
       "windows": [
         "corp_action_paw"
       ],
-      "requiresRezzedIce": true,
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "trash_rezzed_ice_gain_credits",
           "amount": 4
         }
-      }
+      },
+      "requiresRezzedIce": true
     }
   ]
 }

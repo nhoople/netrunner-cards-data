@@ -12,21 +12,27 @@
   ],
   "advancementRequirement": 4,
   "agendaPoints": 2,
-  "onScore": {
-    "op": "do",
-    "action": {
-      "kind": "trace",
-      "strength": 6,
-      "onSuccess": {
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "score",
+      "instructions": {
         "op": "do",
         "action": {
-          "kind": "trash_installed_resources_with_any_subtype",
-          "subtypes": [
-            "connection",
-            "job"
-          ]
+          "kind": "trace",
+          "strength": 6,
+          "onSuccess": {
+            "op": "do",
+            "action": {
+              "kind": "trash_installed_resources_with_any_subtype",
+              "subtypes": [
+                "connection",
+                "job"
+              ]
+            }
+          }
         }
       }
     }
-  }
+  ]
 }

@@ -8,10 +8,15 @@
   "unsupported": [],
   "faction": "anarch",
   "playCost": 2,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "deja_vu_from_heap"
+  "abilities": [
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "deja_vu_from_heap"
+        }
+      }
     }
-  }
+  ]
 }

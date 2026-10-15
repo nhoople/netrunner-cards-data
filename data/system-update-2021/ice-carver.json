@@ -10,5 +10,13 @@
     "virtual"
   ],
   "installCost": 3,
-  "runnerEncounterIceStrengthModifier": -1
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "runnerEncounterIceStrengthModifier",
+        "value": -1
+      }
+    }
+  ]
 }

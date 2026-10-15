@@ -12,17 +12,23 @@
     "ambush"
   ],
   "unsupported": [],
-  "onAccess": {
-    "op": "do",
-    "action": {
-      "kind": "net_damage",
-      "amount": 0,
-      "tally": {
-        "count": "source_advancement_tokens",
-        "per": 1,
-        "side": "source",
-        "base": 2
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "access",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "net_damage",
+          "amount": 0,
+          "tally": {
+            "count": "source_advancement_tokens",
+            "per": 1,
+            "side": "source",
+            "base": 2
+          }
+        }
       }
     }
-  }
+  ]
 }

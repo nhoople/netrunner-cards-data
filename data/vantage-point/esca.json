@@ -12,31 +12,43 @@
   "installCost": 0,
   "rezCost": 0,
   "trashCost": 3,
-  "mustRevealWhenAccessedFromRd": true,
-  "onAccess": {
-    "op": "seq",
-    "effects": [
-      {
-        "op": "do",
-        "action": {
-          "kind": "lose_credits",
-          "side": "runner",
-          "amount": 1
-        }
-      },
-      {
-        "op": "if",
-        "cond": {
-          "op": "runner_tagged"
-        },
-        "then": {
-          "op": "do",
-          "action": {
-            "kind": "net_damage",
-            "amount": 1
-          }
-        }
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "mustRevealWhenAccessedFromRd",
+        "value": true
       }
-    ]
-  }
+    },
+    {
+      "class": "conditional",
+      "trigger": "access",
+      "instructions": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "lose_credits",
+              "side": "runner",
+              "amount": 1
+            }
+          },
+          {
+            "op": "if",
+            "cond": {
+              "op": "runner_tagged"
+            },
+            "then": {
+              "op": "do",
+              "action": {
+                "kind": "net_damage",
+                "amount": 1
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
 }

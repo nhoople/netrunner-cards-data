@@ -8,12 +8,17 @@
   "unsupported": [],
   "faction": "shaper",
   "playCost": 3,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "draw",
-      "side": "runner",
-      "amount": 5
+  "abilities": [
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "draw",
+          "side": "runner",
+          "amount": 5
+        }
+      }
     }
-  }
+  ]
 }

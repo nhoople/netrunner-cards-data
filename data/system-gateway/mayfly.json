@@ -10,36 +10,47 @@
     "icebreaker",
     "ai"
   ],
-  "breaker": {
-    "breaksSubtype": "*",
-    "strength": 1,
-    "breakCredits": 1,
-    "pumpCredits": 1,
-    "pumpStrength": 1
-  },
-  "paidAbilities": [
+  "unsupported": [],
+  "installCost": 1,
+  "memoryCost": 2,
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "breaker",
+        "value": {
+          "breaksSubtype": "*",
+          "strength": 1,
+          "breakCredits": 1,
+          "pumpCredits": 1,
+          "pumpStrength": 1
+        }
+      }
+    },
+    {
+      "class": "paid",
       "id": "mayfly-pump",
       "label": "Pump Mayfly +1 strength",
-      "clickCost": 0,
-      "creditCost": 1,
       "cost": {
         "credits": 1
       },
       "windows": [
         "encounter_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "pump_strength",
           "amount": 1
         }
       }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "trashAfterBreakingThisRun",
+        "value": true
+      }
     }
-  ],
-  "unsupported": [],
-  "installCost": 1,
-  "trashAfterBreakingThisRun": true,
-  "memoryCost": 2
+  ]
 }

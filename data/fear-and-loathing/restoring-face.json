@@ -7,11 +7,16 @@
   "unsupported": [],
   "faction": "jinteki",
   "playCost": 0,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "trash_exec_sysop_clone_remove_bp"
+  "wave": "fear-and-loathing",
+  "abilities": [
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "trash_exec_sysop_clone_remove_bp"
+        }
+      }
     }
-  },
-  "wave": "fear-and-loathing"
+  ]
 }

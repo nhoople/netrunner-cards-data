@@ -10,20 +10,26 @@
     "vehicle"
   ],
   "installCost": 3,
-  "link": 1,
-  "paidAbilities": [
+  "wave": "salsette-island",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "link",
+        "value": 1
+      }
+    },
+    {
+      "class": "paid",
       "id": "sports-hopper-draw",
       "label": "[trash]: Draw 3 cards",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "trashSelf": true
       },
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "draw",
@@ -33,6 +39,5 @@
       },
       "usableByRunnerOnSelfIce": true
     }
-  ],
-  "wave": "salsette-island"
+  ]
 }

@@ -10,13 +10,30 @@
     "current"
   ],
   "playCost": 2,
-  "lingerAsCurrent": true,
-  "currentTrashOnAgendaStolen": true,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "gain_text_of_runner_scored_agenda"
+  "wave": "data-and-destiny",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "lingerAsCurrent",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "currentTrashOnAgendaStolen",
+        "value": true
+      }
+    },
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "gain_text_of_runner_scored_agenda"
+        }
+      }
     }
-  },
-  "wave": "data-and-destiny"
+  ]
 }

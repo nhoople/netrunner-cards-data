@@ -13,13 +13,18 @@
   "installCost": 3,
   "rezCost": 3,
   "trashCost": 1,
-  "unique": true,
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "paid",
       "id": "levy-u-search",
-      "label": "[click], 1\u00a2: Search R&D for ice \u2192 HQ",
-      "clickCost": 1,
-      "creditCost": 1,
+      "label": "[click], 1¢: Search R&D for ice → HQ",
       "cost": {
         "clicks": 1,
         "credits": 1
@@ -27,7 +32,7 @@
       "windows": [
         "corp_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "search_rd_type_to_hq",

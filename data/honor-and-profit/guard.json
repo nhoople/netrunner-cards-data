@@ -12,18 +12,25 @@
   "installCost": 4,
   "rezCost": 4,
   "strength": 2,
-  "cannotBeBypassed": true,
-  "subroutines": [
+  "wave": "honor-and-profit",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "cannotBeBypassed",
+        "value": true
+      }
+    },
+    {
+      "class": "subroutine",
       "id": "guard-etr",
       "text": "End the run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "end_the_run"
         }
       }
     }
-  ],
-  "wave": "honor-and-profit"
+  ]
 }

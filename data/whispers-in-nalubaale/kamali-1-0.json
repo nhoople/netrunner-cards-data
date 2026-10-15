@@ -15,19 +15,19 @@
   "installCost": 6,
   "rezCost": 6,
   "strength": 3,
-  "paidAbilities": [
+  "wave": "whispers-in-nalubaale",
+  "abilities": [
     {
+      "class": "paid",
       "id": "kamali-break",
       "label": "Lose [click]: Break 1 subroutine on Kamali 1.0",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1
       },
       "windows": [
         "encounter_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "break_subroutine_on_self",
@@ -35,13 +35,12 @@
         }
       },
       "usableByRunnerOnSelfIce": true
-    }
-  ],
-  "subroutines": [
+    },
     {
+      "class": "subroutine",
       "id": "kamali-resource",
       "text": "Do 1 core damage unless the Runner trashes 1 installed resource.",
-      "effect": {
+      "instructions": {
         "op": "choose",
         "chooser": "runner",
         "options": [
@@ -71,9 +70,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "kamali-hardware",
       "text": "Do 1 core damage unless the Runner trashes 1 installed piece of hardware.",
-      "effect": {
+      "instructions": {
         "op": "choose",
         "chooser": "runner",
         "options": [
@@ -103,9 +103,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "kamali-program",
       "text": "Do 1 core damage unless the Runner trashes 1 installed program.",
-      "effect": {
+      "instructions": {
         "op": "choose",
         "chooser": "runner",
         "options": [
@@ -134,6 +135,5 @@
         ]
       }
     }
-  ],
-  "wave": "whispers-in-nalubaale"
+  ]
 }

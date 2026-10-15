@@ -10,8 +10,28 @@
     "connection"
   ],
   "installCost": 8,
-  "unique": true,
-  "allottedClicksBonus": 1,
-  "trashSelfWhenRunnerTagged": true,
-  "wave": "first-contact"
+  "wave": "first-contact",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "allottedClicksBonus",
+        "value": 1
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "trashSelfWhenRunnerTagged",
+        "value": true
+      }
+    }
+  ]
 }

@@ -9,24 +9,34 @@
   "faction": "nbn",
   "advancementRequirement": 2,
   "agendaPoints": 1,
-  "onScore": {
-    "op": "do",
-    "action": {
-      "kind": "give_tags",
-      "amount": 2
-    }
-  },
-  "onDiscardPhaseEnd": {
-    "op": "if",
-    "cond": {
-      "op": "self_scored_this_turn"
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "score",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "give_tags",
+          "amount": 2
+        }
+      }
     },
-    "then": {
-      "op": "do",
-      "action": {
-        "kind": "remove_tags",
-        "amount": 2
+    {
+      "class": "conditional",
+      "trigger": "discard_phase_end",
+      "instructions": {
+        "op": "if",
+        "cond": {
+          "op": "self_scored_this_turn"
+        },
+        "then": {
+          "op": "do",
+          "action": {
+            "kind": "remove_tags",
+            "amount": 2
+          }
+        }
       }
     }
-  }
+  ]
 }

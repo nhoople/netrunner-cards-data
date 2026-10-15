@@ -10,19 +10,18 @@
     "connection"
   ],
   "installCost": 5,
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "paid",
       "id": "pro-contacts",
       "label": "Gain 1¢ and draw 1",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1
       },
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "seq",
         "effects": [
           {

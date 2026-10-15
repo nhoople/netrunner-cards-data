@@ -13,27 +13,45 @@
   ],
   "installCost": 2,
   "memoryCost": 1,
-  "installOnIce": true,
-  "hostStrengthPerVirusCounter": -1,
-  "onHostEncounter": {
-    "op": "if",
-    "cond": {
-      "op": "encounter_ice_strength_lte",
-      "amount": 0
-    },
-    "then": {
-      "op": "do",
-      "action": {
-        "kind": "trash_encounter_ice_if_strength_lte",
-        "maxStrength": 0
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "installOnIce",
+        "value": true
       }
     },
-    "else": {
-      "op": "do",
-      "action": {
-        "kind": "add_virus_counter",
-        "amount": 1
+    {
+      "class": "static",
+      "declaration": {
+        "field": "hostStrengthPerVirusCounter",
+        "value": -1
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "host_encounter",
+      "instructions": {
+        "op": "if",
+        "cond": {
+          "op": "encounter_ice_strength_lte",
+          "amount": 0
+        },
+        "then": {
+          "op": "do",
+          "action": {
+            "kind": "trash_encounter_ice_if_strength_lte",
+            "maxStrength": 0
+          }
+        },
+        "else": {
+          "op": "do",
+          "action": {
+            "kind": "add_virus_counter",
+            "amount": 1
+          }
+        }
       }
     }
-  }
+  ]
 }

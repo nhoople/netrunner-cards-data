@@ -14,60 +14,64 @@
   "installCost": 4,
   "strength": 0,
   "memoryCost": 1,
-  "onTurnBegin": {
-    "op": "choose",
-    "chooser": "runner",
-    "options": [
-      {
-        "id": "accept",
-        "label": "Take 1 tag to place 2 virus counters",
-        "effect": {
-          "op": "seq",
-          "effects": [
-            {
+  "wave": "free-mars",
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "turn_begin",
+      "instructions": {
+        "op": "choose",
+        "chooser": "runner",
+        "options": [
+          {
+            "id": "accept",
+            "label": "Take 1 tag to place 2 virus counters",
+            "effect": {
+              "op": "seq",
+              "effects": [
+                {
+                  "op": "do",
+                  "action": {
+                    "kind": "give_tags",
+                    "amount": 1
+                  }
+                },
+                {
+                  "op": "do",
+                  "action": {
+                    "kind": "add_virus_counter",
+                    "amount": 2
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "id": "decline",
+            "label": "Decline",
+            "effect": {
               "op": "do",
               "action": {
-                "kind": "give_tags",
-                "amount": 1
-              }
-            },
-            {
-              "op": "do",
-              "action": {
-                "kind": "add_virus_counter",
-                "amount": 2
+                "kind": "gain_credits",
+                "side": "runner",
+                "amount": 0
               }
             }
-          ]
-        }
-      },
-      {
-        "id": "decline",
-        "label": "Decline",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "gain_credits",
-            "side": "runner",
-            "amount": 0
           }
-        }
+        ]
       }
-    ]
-  },
-  "paidAbilities": [
+    },
     {
+      "class": "paid",
       "id": "god-of-war-break",
       "label": "Hosted virus counter: Break 1 subroutine",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "virusCounters": 1
       },
       "windows": [
         "encounter_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "break_encounter_subroutine",
@@ -75,16 +79,21 @@
         }
       },
       "usableByRunnerOnSelfIce": true
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "breaker",
+        "value": {
+          "breaksSubtype": "*",
+          "strength": 0,
+          "breakCredits": 0,
+          "breakMaxSubs": 1,
+          "pumpCredits": 2,
+          "pumpStrength": 1,
+          "breakViaPaidAbilityOnly": true
+        }
+      }
     }
-  ],
-  "breaker": {
-    "breaksSubtype": "*",
-    "strength": 0,
-    "breakCredits": 0,
-    "breakMaxSubs": 1,
-    "pumpCredits": 2,
-    "pumpStrength": 1,
-    "breakViaPaidAbilityOnly": true
-  },
-  "wave": "free-mars"
+  ]
 }

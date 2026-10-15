@@ -9,11 +9,23 @@
   "subtypes": [
     "corp"
   ],
-  "onAfterOperationOrExpendable": {
-    "op": "do",
-    "action": {
-      "kind": "look_top_rd_may_trash"
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "after_operation_or_expendable",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "look_top_rd_may_trash"
+        }
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "creditsOnFirstRdTrashThisTurn",
+        "value": 2
+      }
     }
-  },
-  "creditsOnFirstRdTrashThisTurn": 2
+  ]
 }

@@ -11,7 +11,21 @@
   ],
   "installCost": 2,
   "memoryCost": 1,
-  "daemonHost": true,
-  "daemonHostMaxMu": 2,
-  "wave": "upstalk"
+  "wave": "upstalk",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "daemonHost",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "daemonHostMaxMu",
+        "value": 2
+      }
+    }
+  ]
 }

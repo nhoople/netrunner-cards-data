@@ -12,37 +12,43 @@
   ],
   "advancementRequirement": 4,
   "agendaPoints": 2,
-  "onScore": {
-    "op": "seq",
-    "effects": [
-      {
-        "op": "do",
-        "action": {
-          "kind": "give_tags",
-          "amount": 1
-        }
-      },
-      {
-        "op": "do",
-        "action": {
-          "kind": "play_psi_game",
-          "maxBid": 2,
-          "ifBidsDiffer": {
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "score",
+      "instructions": {
+        "op": "seq",
+        "effects": [
+          {
             "op": "do",
             "action": {
-              "kind": "core_damage",
+              "kind": "give_tags",
               "amount": 1
             }
           },
-          "ifBidsMatch": {
+          {
             "op": "do",
             "action": {
-              "kind": "net_damage",
-              "amount": 1
+              "kind": "play_psi_game",
+              "maxBid": 2,
+              "ifBidsDiffer": {
+                "op": "do",
+                "action": {
+                  "kind": "core_damage",
+                  "amount": 1
+                }
+              },
+              "ifBidsMatch": {
+                "op": "do",
+                "action": {
+                  "kind": "net_damage",
+                  "amount": 1
+                }
+              }
             }
           }
-        }
+        ]
       }
-    ]
-  }
+    }
+  ]
 }

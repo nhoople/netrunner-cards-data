@@ -10,41 +10,51 @@
     "location"
   ],
   "installCost": 2,
-  "unique": true,
-  "onDiscardPhaseEnd": {
-    "op": "if",
-    "cond": {
-      "op": "runner_tagged"
+  "wave": "intervention",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
     },
-    "then": {
-      "op": "do",
-      "action": {
-        "kind": "trace",
-        "strength": 1,
-        "onSuccess": {
-          "op": "do",
-          "action": {
-            "kind": "gain_credits",
-            "side": "corp",
-            "amount": 0
-          }
+    {
+      "class": "conditional",
+      "trigger": "discard_phase_end",
+      "instructions": {
+        "op": "if",
+        "cond": {
+          "op": "runner_tagged"
         },
-        "onFailure": {
+        "then": {
           "op": "do",
           "action": {
-            "kind": "remove_tags",
-            "amount": 1
+            "kind": "trace",
+            "strength": 1,
+            "onSuccess": {
+              "op": "do",
+              "action": {
+                "kind": "gain_credits",
+                "side": "corp",
+                "amount": 0
+              }
+            },
+            "onFailure": {
+              "op": "do",
+              "action": {
+                "kind": "remove_tags",
+                "amount": 1
+              }
+            }
           }
         }
       }
-    }
-  },
-  "paidAbilities": [
+    },
     {
+      "class": "paid",
       "id": "citadel-prevent-meat",
       "label": "[interrupt] → [trash], trash all cards from your grip: Prevent all meat damage",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "trashSelf": true,
         "trashEntireGrip": true
@@ -52,7 +62,7 @@
       "windows": [
         "damage_interrupt_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "prevent_pending_damage",
@@ -63,6 +73,5 @@
         "meat"
       ]
     }
-  ],
-  "wave": "intervention"
+  ]
 }

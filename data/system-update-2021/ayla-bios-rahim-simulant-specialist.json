@@ -1,6 +1,6 @@
 {
   "id": "ayla-bios-rahim-simulant-specialist",
-  "title": "Ayla \u201cBios\u201d Rahim: Simulant Specialist",
+  "title": "Ayla “Bios” Rahim: Simulant Specialist",
   "wave": "system-update-2021",
   "nrdbCode": "31025",
   "type": "identity",
@@ -9,21 +9,32 @@
   "subtypes": [
     "natural"
   ],
-  "link": 0,
-  "aylaSetAside": true,
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "link",
+        "value": 0
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "aylaSetAside",
+        "value": true
+      }
+    },
+    {
+      "class": "paid",
       "id": "ayla-set-aside",
       "label": "Add 1 card from set-aside to grip",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1
       },
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "ayla_set_aside_to_grip"

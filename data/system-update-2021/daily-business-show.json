@@ -12,5 +12,13 @@
   "installCost": 2,
   "rezCost": 2,
   "trashCost": 4,
-  "interruptFirstDrawBottomOne": true
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "interruptFirstDrawBottomOne",
+        "value": true
+      }
+    }
+  ]
 }

@@ -12,6 +12,14 @@
   "installCost": 9,
   "rezCost": 9,
   "strength": 4,
-  "dynamicEtrSubroutineCountFromCorpHandSize": true,
-  "wave": "up-and-over"
+  "wave": "up-and-over",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "dynamicEtrSubroutineCountFromCorpHandSize",
+        "value": true
+      }
+    }
+  ]
 }

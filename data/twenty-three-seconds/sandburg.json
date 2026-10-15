@@ -9,11 +9,25 @@
   "installCost": 0,
   "rezCost": 0,
   "trashCost": 4,
-  "unique": true,
-  "iceStrengthBonusPerFiveCorpCreditsWhenCorpCreditsGte": {
-    "threshold": 10,
-    "perCredits": 5,
-    "bonus": 1
-  },
-  "wave": "twenty-three-seconds"
+  "wave": "twenty-three-seconds",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "iceStrengthBonusPerFiveCorpCreditsWhenCorpCreditsGte",
+        "value": {
+          "threshold": 10,
+          "perCredits": 5,
+          "bonus": 1
+        }
+      }
+    }
+  ]
 }

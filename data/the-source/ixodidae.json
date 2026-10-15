@@ -11,7 +11,21 @@
   ],
   "installCost": 1,
   "memoryCost": 1,
-  "trashOnVirusPurge": true,
-  "gainCreditsWhenCorpLosesCredits": 1,
-  "wave": "the-source"
+  "wave": "the-source",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "trashOnVirusPurge",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "gainCreditsWhenCorpLosesCredits",
+        "value": 1
+      }
+    }
+  ]
 }

@@ -10,19 +10,18 @@
     "chip"
   ],
   "installCost": 0,
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "paid",
       "id": "gachapon-resolve",
       "label": "[trash]: Set aside top 6 faceup; may install program/virtual −2¢; shuffle 3; RFG rest",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "trashSelf": true
       },
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "gachapon_resolve"

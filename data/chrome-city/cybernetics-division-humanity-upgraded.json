@@ -9,7 +9,21 @@
   "subtypes": [
     "division"
   ],
-  "handSizeBonus": -1,
-  "runnerHandSizeBonus": -1,
-  "wave": "chrome-city"
+  "wave": "chrome-city",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "handSizeBonus",
+        "value": -1
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "runnerHandSizeBonus",
+        "value": -1
+      }
+    }
+  ]
 }

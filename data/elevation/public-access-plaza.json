@@ -9,16 +9,28 @@
   "installCost": 1,
   "rezCost": 1,
   "trashCost": 2,
-  "onTurnBegin": {
-    "op": "do",
-    "action": {
-      "kind": "gain_credits",
-      "side": "corp",
-      "amount": 1
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "turn_begin",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "corp",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "threatGiveTagsOnRezzedTrash",
+        "value": {
+          "level": 2,
+          "tags": 1
+        }
+      }
     }
-  },
-  "threatGiveTagsOnRezzedTrash": {
-    "level": 2,
-    "tags": 1
-  }
+  ]
 }

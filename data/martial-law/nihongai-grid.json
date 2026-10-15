@@ -12,12 +12,24 @@
   "installCost": 1,
   "rezCost": 1,
   "trashCost": 5,
-  "unique": true,
-  "onSuccessfulRunOnThisServer": {
-    "op": "do",
-    "action": {
-      "kind": "nihongai_may_look_top5_swap_hq"
+  "wave": "martial-law",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "successful_run_on_this_server",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "nihongai_may_look_top5_swap_hq"
+        }
+      }
     }
-  },
-  "wave": "martial-law"
+  ]
 }

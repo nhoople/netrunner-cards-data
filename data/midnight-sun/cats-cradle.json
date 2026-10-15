@@ -13,30 +13,41 @@
   "installCost": 2,
   "strength": 1,
   "memoryCost": 1,
-  "iceRezCostIncreaseBySubtype": {
-    "subtype": "code gate",
-    "amount": 1
-  },
-  "breaker": {
-    "breaksSubtype": "code gate",
-    "strength": 1,
-    "breakCredits": 1,
-    "pumpCredits": 1,
-    "pumpStrength": 1
-  },
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "iceRezCostIncreaseBySubtype",
+        "value": {
+          "subtype": "code gate",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "breaker",
+        "value": {
+          "breaksSubtype": "code gate",
+          "strength": 1,
+          "breakCredits": 1,
+          "pumpCredits": 1,
+          "pumpStrength": 1
+        }
+      }
+    },
+    {
+      "class": "paid",
       "id": "cats-cradle-pump",
       "label": "Pump Cat's Cradle +1 strength",
-      "clickCost": 0,
-      "creditCost": 1,
       "cost": {
         "credits": 1
       },
       "windows": [
         "encounter_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "pump_strength",

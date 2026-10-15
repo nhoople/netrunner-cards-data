@@ -13,12 +13,30 @@
   "installCost": 0,
   "rezCost": 0,
   "trashCost": 3,
-  "unique": true,
-  "onApproachIceOncePerRun": true,
-  "onApproachIce": {
-    "op": "do",
-    "action": {
-      "kind": "may_swap_approached_ice_with_hq"
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "onApproachIceOncePerRun",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "approach_ice",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "may_swap_approached_ice_with_hq"
+        }
+      }
     }
-  }
+  ]
 }

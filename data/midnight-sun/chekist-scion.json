@@ -12,18 +12,30 @@
   "installCost": 0,
   "rezCost": 0,
   "trashCost": 0,
-  "canAdvance": true,
-  "onAccess": {
-    "op": "do",
-    "action": {
-      "kind": "give_tags",
-      "amount": 0,
-      "tally": {
-        "count": "source_advancement_tokens",
-        "per": 1,
-        "side": "source",
-        "base": 1
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "canAdvance",
+        "value": true
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "access",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "give_tags",
+          "amount": 0,
+          "tally": {
+            "count": "source_advancement_tokens",
+            "per": 1,
+            "side": "source",
+            "base": 1
+          }
+        }
       }
     }
-  }
+  ]
 }

@@ -15,49 +15,54 @@
   "installCost": 3,
   "rezCost": 3,
   "strength": 3,
-  "onRez": {
-    "op": "if",
-    "cond": {
-      "op": "source_protects_attacked_server"
-    },
-    "then": {
-      "op": "choose",
-      "chooser": "corp",
-      "options": [
-        {
-          "id": "trash-trojan",
-          "label": "Trash 1 installed trojan program",
-          "effect": {
-            "op": "do",
-            "action": {
-              "kind": "trash_program",
-              "pick": "choose",
-              "includeSubtypes": [
-                "trojan"
-              ]
-            }
-          }
-        },
-        {
-          "id": "decline",
-          "label": "Decline",
-          "effect": {
-            "op": "do",
-            "action": {
-              "kind": "gain_credits",
-              "side": "corp",
-              "amount": 0
-            }
-          }
-        }
-      ]
-    }
-  },
-  "subroutines": [
+  "abilities": [
     {
+      "class": "conditional",
+      "trigger": "rez",
+      "instructions": {
+        "op": "if",
+        "cond": {
+          "op": "source_protects_attacked_server"
+        },
+        "then": {
+          "op": "choose",
+          "chooser": "corp",
+          "options": [
+            {
+              "id": "trash-trojan",
+              "label": "Trash 1 installed trojan program",
+              "effect": {
+                "op": "do",
+                "action": {
+                  "kind": "trash_program",
+                  "pick": "choose",
+                  "includeSubtypes": [
+                    "trojan"
+                  ]
+                }
+              }
+            },
+            {
+              "id": "decline",
+              "label": "Decline",
+              "effect": {
+                "op": "do",
+                "action": {
+                  "kind": "gain_credits",
+                  "side": "corp",
+                  "amount": 0
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "class": "subroutine",
       "id": "bumi-trash",
       "text": "Trash 1 installed program.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "trash_program",
@@ -66,9 +71,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "bumi-core",
       "text": "Do 1 core damage.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "core_damage",

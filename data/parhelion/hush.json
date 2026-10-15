@@ -11,21 +11,32 @@
   ],
   "installCost": 1,
   "memoryCost": 1,
-  "installOnIce": true,
-  "blanksHostAbilities": true,
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "installOnIce",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "blanksHostAbilities",
+        "value": true
+      }
+    },
+    {
+      "class": "paid",
       "id": "hush-rehost",
       "label": "[click]: Host on another installed ice",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1
       },
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "rehost_on_other_ice"

@@ -13,31 +13,42 @@
   "installCost": 1,
   "strength": 0,
   "memoryCost": 1,
-  "breaker": {
-    "breaksSubtype": "barrier",
-    "strength": 0,
-    "breakCredits": 1
-  },
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "breaker",
+        "value": {
+          "breaksSubtype": "barrier",
+          "strength": 0,
+          "breakCredits": 1
+        }
+      }
+    },
+    {
+      "class": "paid",
       "id": "propeller-power-pump",
       "label": "Spend 1 power counter: +2 strength",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "powerCounters": 1
       },
       "windows": [
         "encounter_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "pump_strength",
           "amount": 2
         }
       }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "powerCountersOnInstall",
+        "value": 4
+      }
     }
-  ],
-  "powerCountersOnInstall": 4
+  ]
 }

@@ -10,21 +10,38 @@
     "terminal"
   ],
   "playCost": 3,
-  "endsActionPhase": true,
-  "playRequiresRunnerMadeRunLastTurn": true,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "trace",
-      "strength": 4,
-      "onSuccess": {
+  "wave": "twenty-three-seconds",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "endsActionPhase",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "playRequiresRunnerMadeRunLastTurn",
+        "value": true
+      }
+    },
+    {
+      "class": "play",
+      "instructions": {
         "op": "do",
         "action": {
-          "kind": "give_tags",
-          "amount": 4
+          "kind": "trace",
+          "strength": 4,
+          "onSuccess": {
+            "op": "do",
+            "action": {
+              "kind": "give_tags",
+              "amount": 4
+            }
+          }
         }
       }
     }
-  },
-  "wave": "twenty-three-seconds"
+  ]
 }

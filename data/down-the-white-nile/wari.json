@@ -8,34 +8,46 @@
   "faction": "criminal",
   "installCost": 1,
   "memoryCost": 1,
-  "unique": true,
-  "onFirstSuccessfulHqRunThisTurn": {
-    "op": "choose",
-    "chooser": "runner",
-    "options": [
-      {
-        "id": "accept",
-        "label": "Trash Wari: name subtype, expose ice, bounce if named",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "dtwn_wari"
-          }
-        }
-      },
-      {
-        "id": "decline",
-        "label": "Decline",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "gain_credits",
-            "side": "runner",
-            "amount": 0
-          }
-        }
+  "wave": "down-the-white-nile",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
       }
-    ]
-  },
-  "wave": "down-the-white-nile"
+    },
+    {
+      "class": "conditional",
+      "trigger": "first_successful_hq_run_this_turn",
+      "instructions": {
+        "op": "choose",
+        "chooser": "runner",
+        "options": [
+          {
+            "id": "accept",
+            "label": "Trash Wari: name subtype, expose ice, bounce if named",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "dtwn_wari"
+              }
+            }
+          },
+          {
+            "id": "decline",
+            "label": "Decline",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "gain_credits",
+                "side": "runner",
+                "amount": 0
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
 }

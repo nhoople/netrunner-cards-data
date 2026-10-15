@@ -12,11 +12,13 @@
   "installCost": 6,
   "rezCost": 6,
   "strength": 5,
-  "subroutines": [
+  "wave": "honor-and-profit",
+  "abilities": [
     {
+      "class": "subroutine",
       "id": "shiro-arrange",
       "text": "Look at top 3 of R&D and arrange them.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "look_top_n_rd_arrange",
@@ -25,9 +27,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "shiro-pay",
       "text": "You may pay 1[credit]. If you do, do 1 net damage.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "corp_may_pay_net",
@@ -36,6 +39,5 @@
         }
       }
     }
-  ],
-  "wave": "honor-and-profit"
+  ]
 }

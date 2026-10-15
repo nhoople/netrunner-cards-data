@@ -12,19 +12,31 @@
   ],
   "installCost": 1,
   "memoryCost": 1,
-  "trashOnVirusPurge": true,
-  "onSuccessfulRun": {
-    "op": "if",
-    "cond": {
-      "op": "attacking_hq"
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "trashOnVirusPurge",
+        "value": true
+      }
     },
-    "then": {
-      "op": "do",
-      "action": {
-        "kind": "lose_credits",
-        "side": "corp",
-        "amount": 1
+    {
+      "class": "conditional",
+      "trigger": "successful_run",
+      "instructions": {
+        "op": "if",
+        "cond": {
+          "op": "attacking_hq"
+        },
+        "then": {
+          "op": "do",
+          "action": {
+            "kind": "lose_credits",
+            "side": "corp",
+            "amount": 1
+          }
+        }
       }
     }
-  }
+  ]
 }

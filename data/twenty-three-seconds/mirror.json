@@ -10,9 +10,35 @@
     "console"
   ],
   "installCost": 3,
-  "unique": true,
-  "muBonus": 2,
-  "maxConsole": 1,
-  "onSuccessfulRdRunMayReplaceSpentRecurringCredit": true,
-  "wave": "twenty-three-seconds"
+  "wave": "twenty-three-seconds",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "muBonus",
+        "value": 2
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "maxConsole",
+        "value": 1
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "onSuccessfulRdRunMayReplaceSpentRecurringCredit",
+        "value": true
+      }
+    }
+  ]
 }

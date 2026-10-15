@@ -10,42 +10,50 @@
     "run"
   ],
   "playCost": 2,
-  "runEvent": {
-    "servers": "any",
-    "onFirstEncounterThisRun": {
-      "op": "choose",
-      "chooser": "runner",
-      "options": [
-        {
-          "id": "accept",
-          "label": "Search stack or heap for a program and install it, ignoring all costs",
-          "effect": {
+  "wave": "whispers-in-nalubaale",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "runEvent",
+        "value": {
+          "servers": "any",
+          "onFirstEncounterThisRun": {
+            "op": "choose",
+            "chooser": "runner",
+            "options": [
+              {
+                "id": "accept",
+                "label": "Search stack or heap for a program and install it, ignoring all costs",
+                "effect": {
+                  "op": "do",
+                  "action": {
+                    "kind": "win_compile_install_program"
+                  }
+                }
+              },
+              {
+                "id": "decline",
+                "label": "Decline",
+                "effect": {
+                  "op": "do",
+                  "action": {
+                    "kind": "gain_credits",
+                    "side": "runner",
+                    "amount": 0
+                  }
+                }
+              }
+            ]
+          },
+          "onRunEnd": {
             "op": "do",
             "action": {
-              "kind": "win_compile_install_program"
-            }
-          }
-        },
-        {
-          "id": "decline",
-          "label": "Decline",
-          "effect": {
-            "op": "do",
-            "action": {
-              "kind": "gain_credits",
-              "side": "runner",
-              "amount": 0
+              "kind": "win_compile_bottom_of_stack"
             }
           }
         }
-      ]
-    },
-    "onRunEnd": {
-      "op": "do",
-      "action": {
-        "kind": "win_compile_bottom_of_stack"
       }
     }
-  },
-  "wave": "whispers-in-nalubaale"
+  ]
 }

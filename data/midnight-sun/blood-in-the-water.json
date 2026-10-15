@@ -10,5 +10,13 @@
     "research"
   ],
   "agendaPoints": 2,
-  "advancementRequirementEqualsRunnerGrip": true
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "advancementRequirementEqualsRunnerGrip",
+        "value": true
+      }
+    }
+  ]
 }

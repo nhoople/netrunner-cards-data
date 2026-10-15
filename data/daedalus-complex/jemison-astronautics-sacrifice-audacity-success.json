@@ -9,6 +9,14 @@
   "subtypes": [
     "corp"
   ],
-  "jemisonOnForfeitPlaceAdvancementsEqualAgendaPointsPlus1": true,
-  "wave": "daedalus-complex"
+  "wave": "daedalus-complex",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "jemisonOnForfeitPlaceAdvancementsEqualAgendaPointsPlus1",
+        "value": true
+      }
+    }
+  ]
 }

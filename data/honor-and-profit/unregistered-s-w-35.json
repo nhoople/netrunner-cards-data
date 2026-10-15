@@ -10,26 +10,31 @@
     "weapon"
   ],
   "installCost": 1,
-  "playRequiresSuccessfulHqRunThisTurn": true,
-  "paidAbilities": [
+  "wave": "honor-and-profit",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "playRequiresSuccessfulHqRunThisTurn",
+        "value": true
+      }
+    },
+    {
+      "class": "paid",
       "id": "unregistered-trash",
       "label": "[click][click]: Trash 1 rezzed ice, gain 2[credit] per strength",
-      "clickCost": 2,
-      "creditCost": 0,
       "cost": {
         "clicks": 2
       },
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "unregistered_trash_rezzed_ice_gain_per_strength"
         }
       }
     }
-  ],
-  "wave": "honor-and-profit"
+  ]
 }

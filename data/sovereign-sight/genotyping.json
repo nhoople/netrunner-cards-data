@@ -7,30 +7,41 @@
   "unsupported": [],
   "faction": "jinteki",
   "playCost": 1,
-  "rfgInsteadOfTrashing": true,
-  "onPlay": {
-    "op": "seq",
-    "effects": [
-      {
-        "op": "do",
-        "action": {
-          "kind": "trash_top_of_rd"
-        }
-      },
-      {
-        "op": "do",
-        "action": {
-          "kind": "trash_top_of_rd"
-        }
-      },
-      {
-        "op": "do",
-        "action": {
-          "kind": "shuffle_archives_to_rd",
-          "amount": 4
-        }
+  "wave": "sovereign-sight",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "rfgInsteadOfTrashing",
+        "value": true
       }
-    ]
-  },
-  "wave": "sovereign-sight"
+    },
+    {
+      "class": "play",
+      "instructions": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "trash_top_of_rd"
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "trash_top_of_rd"
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "shuffle_archives_to_rd",
+              "amount": 4
+            }
+          }
+        ]
+      }
+    }
+  ]
 }

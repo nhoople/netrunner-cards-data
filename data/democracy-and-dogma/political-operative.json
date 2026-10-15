@@ -10,20 +10,26 @@
     "connection"
   ],
   "installCost": 1,
-  "installRequiresSuccessfulHqRunThisTurn": true,
-  "paidAbilities": [
+  "wave": "democracy-and-dogma",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "installRequiresSuccessfulHqRunThisTurn",
+        "value": true
+      }
+    },
+    {
+      "class": "paid",
       "id": "political-operative-trash",
       "label": "[trash], X¢: Trash 1 rezzed card with trash cost equal to X",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "trashSelf": true
       },
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "trash_rezzed_paying_trash_cost"
@@ -31,6 +37,5 @@
       },
       "usableByRunnerOnSelfIce": true
     }
-  ],
-  "wave": "democracy-and-dogma"
+  ]
 }

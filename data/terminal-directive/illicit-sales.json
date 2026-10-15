@@ -12,52 +12,58 @@
   ],
   "advancementRequirement": 3,
   "agendaPoints": 1,
-  "onScore": {
-    "op": "seq",
-    "effects": [
-      {
-        "op": "choose",
-        "chooser": "corp",
-        "options": [
+  "wave": "terminal-directive",
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "score",
+      "instructions": {
+        "op": "seq",
+        "effects": [
           {
-            "id": "accept",
-            "label": "Take 1 bad publicity",
-            "effect": {
-              "op": "do",
-              "action": {
-                "kind": "give_bad_publicity",
-                "amount": 1
+            "op": "choose",
+            "chooser": "corp",
+            "options": [
+              {
+                "id": "accept",
+                "label": "Take 1 bad publicity",
+                "effect": {
+                  "op": "do",
+                  "action": {
+                    "kind": "give_bad_publicity",
+                    "amount": 1
+                  }
+                }
+              },
+              {
+                "id": "decline",
+                "label": "Decline",
+                "effect": {
+                  "op": "do",
+                  "action": {
+                    "kind": "gain_credits",
+                    "side": "corp",
+                    "amount": 0
+                  }
+                }
               }
-            }
+            ]
           },
           {
-            "id": "decline",
-            "label": "Decline",
-            "effect": {
-              "op": "do",
-              "action": {
-                "kind": "gain_credits",
-                "side": "corp",
-                "amount": 0
+            "op": "do",
+            "action": {
+              "kind": "gain_credits",
+              "side": "corp",
+              "amount": 0,
+              "tally": {
+                "count": "bad_publicity",
+                "per": 3,
+                "side": "corp"
               }
             }
           }
         ]
-      },
-      {
-        "op": "do",
-        "action": {
-          "kind": "gain_credits",
-          "side": "corp",
-          "amount": 0,
-          "tally": {
-            "count": "bad_publicity",
-            "per": 3,
-            "side": "corp"
-          }
-        }
       }
-    ]
-  },
-  "wave": "terminal-directive"
+    }
+  ]
 }

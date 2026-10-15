@@ -7,17 +7,27 @@
   "unsupported": [],
   "faction": "shaper",
   "playCost": 1,
-  "playAdditionalCost": {
-    "op": "do",
-    "action": {
-      "kind": "trash_hardware_additional_cost"
+  "wave": "up-and-over",
+  "abilities": [
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "trade_in_resolve"
+        }
+      },
+      "restrictions": [
+        {
+          "appliesTo": "play",
+          "effect": {
+            "op": "do",
+            "action": {
+              "kind": "trash_hardware_additional_cost"
+            }
+          }
+        }
+      ]
     }
-  },
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "trade_in_resolve"
-    }
-  },
-  "wave": "up-and-over"
+  ]
 }

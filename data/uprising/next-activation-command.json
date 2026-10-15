@@ -11,8 +11,34 @@
   ],
   "playCost": 0,
   "trashCost": 4,
-  "playRequiresNoActiveLockdown": true,
-  "lingerUntilCorpNextTurnBegins": true,
-  "allIceStrengthBonus": 2,
-  "cannotBreakExceptIcebreaker": true
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "playRequiresNoActiveLockdown",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "lingerUntilCorpNextTurnBegins",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "allIceStrengthBonus",
+        "value": 2
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "cannotBreakExceptIcebreaker",
+        "value": true
+      }
+    }
+  ]
 }

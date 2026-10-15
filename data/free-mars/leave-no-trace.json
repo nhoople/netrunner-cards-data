@@ -10,14 +10,22 @@
     "run"
   ],
   "playCost": 2,
-  "runEvent": {
-    "servers": "any",
-    "onRunEnd": {
-      "op": "do",
-      "action": {
-        "kind": "derez_all_ice_rezzed_this_run"
+  "wave": "free-mars",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "runEvent",
+        "value": {
+          "servers": "any",
+          "onRunEnd": {
+            "op": "do",
+            "action": {
+              "kind": "derez_all_ice_rezzed_this_run"
+            }
+          }
+        }
       }
     }
-  },
-  "wave": "free-mars"
+  ]
 }

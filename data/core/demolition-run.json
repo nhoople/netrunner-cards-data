@@ -12,8 +12,16 @@
     "sabotage"
   ],
   "playCost": 2,
-  "runEvent": {
-    "servers": "hq_rd",
-    "accessTrashFree": true
-  }
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "runEvent",
+        "value": {
+          "servers": "hq_rd",
+          "accessTrashFree": true
+        }
+      }
+    }
+  ]
 }

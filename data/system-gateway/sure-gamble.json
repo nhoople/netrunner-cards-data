@@ -6,13 +6,18 @@
   "wave": "system-gateway",
   "nrdbCode": "30030",
   "playCost": 5,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "gain_credits",
-      "side": "runner",
-      "amount": 9
+  "unsupported": [],
+  "abilities": [
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "runner",
+          "amount": 9
+        }
+      }
     }
-  },
-  "unsupported": []
+  ]
 }

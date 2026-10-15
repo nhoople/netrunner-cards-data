@@ -13,5 +13,13 @@
   "installCost": 4,
   "rezCost": 4,
   "trashCost": 2,
-  "mayImmediatelyRezIceOnInstallProtectingThisServerDiscount": 3
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "mayImmediatelyRezIceOnInstallProtectingThisServerDiscount",
+        "value": 3
+      }
+    }
+  ]
 }

@@ -11,20 +11,36 @@
   "subtypes": [
     "advertisement"
   ],
-  "onRez": {
-    "op": "do",
-    "action": {
-      "kind": "place_hosted_credits",
-      "amount": 9
-    }
-  },
-  "onTurnBegin": {
-    "op": "do",
-    "action": {
-      "kind": "take_hosted_credits",
-      "amount": 3
-    }
-  },
   "unsupported": [],
-  "drawOnHostedEmpty": 1
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "rez",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "place_hosted_credits",
+          "amount": 9
+        }
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "turn_begin",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "take_hosted_credits",
+          "amount": 3
+        }
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "drawOnHostedEmpty",
+        "value": 1
+      }
+    }
+  ]
 }

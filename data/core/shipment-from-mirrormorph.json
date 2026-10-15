@@ -8,11 +8,16 @@
   "unsupported": [],
   "faction": "haas-bioroid",
   "playCost": 1,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "install_up_to_from_hq_paying_costs",
-      "max": 3
+  "abilities": [
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "install_up_to_from_hq_paying_costs",
+          "max": 3
+        }
+      }
     }
-  }
+  ]
 }

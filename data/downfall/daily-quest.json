@@ -10,27 +10,43 @@
   "installCost": 1,
   "rezCost": 1,
   "trashCost": 3,
-  "rezOnlyDuringCorpTurn": true,
-  "onSuccessfulRun": {
-    "op": "do",
-    "action": {
-      "kind": "gain_credits",
-      "side": "runner",
-      "amount": 2
-    }
-  },
-  "onTurnBegin": {
-    "op": "if",
-    "cond": {
-      "op": "no_successful_run_on_host_server_last_turn"
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "rezOnlyDuringCorpTurn",
+        "value": true
+      }
     },
-    "then": {
-      "op": "do",
-      "action": {
-        "kind": "gain_credits",
-        "side": "corp",
-        "amount": 3
+    {
+      "class": "conditional",
+      "trigger": "successful_run",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "runner",
+          "amount": 2
+        }
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "turn_begin",
+      "instructions": {
+        "op": "if",
+        "cond": {
+          "op": "no_successful_run_on_host_server_last_turn"
+        },
+        "then": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "corp",
+            "amount": 3
+          }
+        }
       }
     }
-  }
+  ]
 }

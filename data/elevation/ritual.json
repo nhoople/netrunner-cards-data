@@ -7,17 +7,22 @@
   "side": "runner",
   "unsupported": [],
   "playCost": 0,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "draw",
-      "side": "runner",
-      "amount": 0,
-      "tally": {
-        "count": "clicks_remaining",
-        "per": 1,
-        "side": "runner"
+  "abilities": [
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "draw",
+          "side": "runner",
+          "amount": 0,
+          "tally": {
+            "count": "clicks_remaining",
+            "per": 1,
+            "side": "runner"
+          }
+        }
       }
     }
-  }
+  ]
 }

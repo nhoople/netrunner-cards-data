@@ -10,9 +10,17 @@
     "run"
   ],
   "playCost": 0,
-  "runEvent": {
-    "servers": "any",
-    "onPassIceMayTrashEqualStrengthToTrashIce": true
-  },
-  "wave": "data-and-destiny"
+  "wave": "data-and-destiny",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "runEvent",
+        "value": {
+          "servers": "any",
+          "onPassIceMayTrashEqualStrengthToTrashIce": true
+        }
+      }
+    }
+  ]
 }

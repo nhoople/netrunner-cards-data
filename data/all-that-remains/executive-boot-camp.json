@@ -9,19 +9,23 @@
   "installCost": 0,
   "rezCost": 0,
   "trashCost": 3,
-  "onTurnBegin": {
-    "op": "do",
-    "action": {
-      "kind": "may_rez_card_with_discount",
-      "discount": 1
-    }
-  },
-  "paidAbilities": [
+  "wave": "all-that-remains",
+  "abilities": [
     {
+      "class": "conditional",
+      "trigger": "turn_begin",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "may_rez_card_with_discount",
+          "discount": 1
+        }
+      }
+    },
+    {
+      "class": "paid",
       "id": "ebc-search",
-      "label": "1\u00a2,[trash]: Search R&D for an asset, reveal it, add to HQ",
-      "clickCost": 0,
-      "creditCost": 1,
+      "label": "1¢,[trash]: Search R&D for an asset, reveal it, add to HQ",
       "cost": {
         "credits": 1,
         "trashSelf": true
@@ -29,7 +33,7 @@
       "windows": [
         "corp_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "search_rd_type_to_hq",
@@ -38,6 +42,5 @@
         }
       }
     }
-  ],
-  "wave": "all-that-remains"
+  ]
 }

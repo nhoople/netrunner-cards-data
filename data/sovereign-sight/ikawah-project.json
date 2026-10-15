@@ -11,7 +11,21 @@
   ],
   "advancementRequirement": 5,
   "agendaPoints": 3,
-  "stealAdditionalClicks": 1,
-  "stealAdditionalCredits": 2,
-  "wave": "sovereign-sight"
+  "wave": "sovereign-sight",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "stealAdditionalClicks",
+        "value": 1
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "stealAdditionalCredits",
+        "value": 2
+      }
+    }
+  ]
 }

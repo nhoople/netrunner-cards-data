@@ -11,28 +11,42 @@
     "virtual"
   ],
   "installCost": 0,
-  "unique": true,
-  "firstEncounterGainsSubroutine": {
-    "text": "Do 1 net damage. The Runner draws 1 card.",
-    "effect": {
-      "op": "seq",
-      "effects": [
-        {
-          "op": "do",
-          "action": {
-            "kind": "net_damage",
-            "amount": 1
-          }
-        },
-        {
-          "op": "do",
-          "action": {
-            "kind": "draw",
-            "side": "runner",
-            "amount": 1
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "firstEncounterGainsSubroutine",
+        "value": {
+          "text": "Do 1 net damage. The Runner draws 1 card.",
+          "effect": {
+            "op": "seq",
+            "effects": [
+              {
+                "op": "do",
+                "action": {
+                  "kind": "net_damage",
+                  "amount": 1
+                }
+              },
+              {
+                "op": "do",
+                "action": {
+                  "kind": "draw",
+                  "side": "runner",
+                  "amount": 1
+                }
+              }
+            ]
           }
         }
-      ]
+      }
     }
-  }
+  ]
 }

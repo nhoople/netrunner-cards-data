@@ -7,11 +7,16 @@
   "side": "corp",
   "unsupported": [],
   "playCost": 0,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "archives_to_hq",
-      "amount": 1
+  "abilities": [
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "archives_to_hq",
+          "amount": 1
+        }
+      }
     }
-  }
+  ]
 }

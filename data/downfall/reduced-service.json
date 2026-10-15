@@ -10,24 +10,48 @@
   "installCost": 0,
   "rezCost": 0,
   "trashCost": 2,
-  "unique": true,
-  "rezSpendCreditsForPowerCounters": {
-    "max": 4
-  },
-  "additionalRunInitiatePerPowerCounter": {
-    "credits": 2
-  },
-  "onSuccessfulRun": {
-    "op": "if",
-    "cond": {
-      "op": "attacking_central"
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
     },
-    "then": {
-      "op": "do",
-      "action": {
-        "kind": "remove_power_counter",
-        "amount": 1
+    {
+      "class": "static",
+      "declaration": {
+        "field": "rezSpendCreditsForPowerCounters",
+        "value": {
+          "max": 4
+        }
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "additionalRunInitiatePerPowerCounter",
+        "value": {
+          "credits": 2
+        }
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "successful_run",
+      "instructions": {
+        "op": "if",
+        "cond": {
+          "op": "attacking_central"
+        },
+        "then": {
+          "op": "do",
+          "action": {
+            "kind": "remove_power_counter",
+            "amount": 1
+          }
+        }
       }
     }
-  }
+  ]
 }

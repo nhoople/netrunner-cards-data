@@ -15,13 +15,26 @@
   "installCost": 10,
   "rezCost": 10,
   "strength": 7,
-  "unique": true,
-  "bioroidBreakGivesCorpAllottedClickNextTurn": true,
-  "subroutines": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "bioroidBreakGivesCorpAllottedClickNextTurn",
+        "value": true
+      }
+    },
+    {
+      "class": "subroutine",
       "id": "tyr-core",
       "text": "Do 2 core damage.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "core_damage",
@@ -30,9 +43,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "tyr-trash",
       "text": "Trash 1 installed Runner card. Gain 3¢.",
-      "effect": {
+      "instructions": {
         "op": "seq",
         "effects": [
           {
@@ -54,9 +68,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "tyr-etr",
       "text": "End the run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "end_the_run"

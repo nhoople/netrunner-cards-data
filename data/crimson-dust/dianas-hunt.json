@@ -10,10 +10,18 @@
     "run"
   ],
   "playCost": 4,
-  "runEvent": {
-    "servers": "any",
-    "onEncounterMayInstallProgramFromGripIgnoringCosts": true,
-    "trashProgramsInstalledThisWayOnRunEnd": true
-  },
-  "wave": "crimson-dust"
+  "wave": "crimson-dust",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "runEvent",
+        "value": {
+          "servers": "any",
+          "onEncounterMayInstallProgramFromGripIgnoringCosts": true,
+          "trashProgramsInstalledThisWayOnRunEnd": true
+        }
+      }
+    }
+  ]
 }

@@ -10,44 +10,50 @@
   "subtypes": [
     "division"
   ],
-  "mirrormorphOnThirdDistinctAction": {
-    "op": "choose",
-    "chooser": "corp",
-    "options": [
-      {
-        "id": "gain-1",
-        "label": "Gain 1¢",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "gain_credits",
-            "side": "corp",
-            "amount": 1
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "mirrormorph_on_third_distinct_action",
+      "instructions": {
+        "op": "choose",
+        "chooser": "corp",
+        "options": [
+          {
+            "id": "gain-1",
+            "label": "Gain 1¢",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "gain_credits",
+                "side": "corp",
+                "amount": 1
+              }
+            }
+          },
+          {
+            "id": "extra-action",
+            "label": "Take another different action, paying [click] less",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "mirrormorph_take_different_action_click_discount"
+              }
+            }
+          },
+          {
+            "id": "decline",
+            "label": "Decline",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "gain_credits",
+                "side": "corp",
+                "amount": 0
+              }
+            }
           }
-        }
-      },
-      {
-        "id": "extra-action",
-        "label": "Take another different action, paying [click] less",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "mirrormorph_take_different_action_click_discount"
-          }
-        }
-      },
-      {
-        "id": "decline",
-        "label": "Decline",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "gain_credits",
-            "side": "corp",
-            "amount": 0
-          }
-        }
+        ]
       }
-    ]
-  }
+    }
+  ]
 }

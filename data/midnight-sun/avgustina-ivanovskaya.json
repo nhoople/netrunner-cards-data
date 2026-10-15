@@ -10,12 +10,18 @@
     "connection"
   ],
   "installCost": 1,
-  "onFirstVirusInstallThisTurn": {
-    "op": "do",
-    "action": {
-      "kind": "sabotage",
-      "amount": 1,
-      "interactive": true
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "first_virus_install_this_turn",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "sabotage",
+          "amount": 1,
+          "interactive": true
+        }
+      }
     }
-  }
+  ]
 }

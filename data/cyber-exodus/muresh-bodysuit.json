@@ -11,27 +11,28 @@
     "gear"
   ],
   "installCost": 1,
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "paid",
       "id": "muresh-bodysuit-prevent",
       "label": "[interrupt] → Prevent 1 meat damage (first each turn)",
-      "clickCost": 0,
-      "creditCost": 0,
-      "cost": {},
+      "cost": {
+        "credits": 0
+      },
       "windows": [
         "damage_interrupt_paw"
       ],
-      "requirePendingDamageTypes": [
-        "meat"
-      ],
-      "oncePerTurn": true,
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "prevent_pending_damage",
           "amount": 1
         }
-      }
+      },
+      "flag": "once_per_turn",
+      "requirePendingDamageTypes": [
+        "meat"
+      ]
     }
   ]
 }

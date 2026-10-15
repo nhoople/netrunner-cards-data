@@ -12,11 +12,13 @@
   "installCost": 2,
   "rezCost": 2,
   "strength": 5,
-  "subroutines": [
+  "wave": "the-liberated-mind",
+  "abilities": [
     {
+      "class": "subroutine",
       "id": "red-tape-fortify",
       "text": "All ice has +3 strength for the remainder of this run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "fortify_all_ice",
@@ -24,6 +26,5 @@
         }
       }
     }
-  ],
-  "wave": "the-liberated-mind"
+  ]
 }

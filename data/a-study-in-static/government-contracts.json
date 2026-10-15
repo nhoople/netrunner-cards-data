@@ -9,19 +9,18 @@
   "faction": "weyland-consortium",
   "advancementRequirement": 5,
   "agendaPoints": 3,
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "paid",
       "id": "government-contracts-credits",
       "label": "[click], [click]: Gain 4¢",
-      "clickCost": 2,
-      "creditCost": 0,
       "cost": {
         "clicks": 2
       },
       "windows": [
         "corp_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "gain_credits",

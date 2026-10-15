@@ -10,13 +10,25 @@
   "subtypes": [
     "cyborg"
   ],
-  "link": 0,
-  "onFirstSuccessfulHqRunThisTurn": {
-    "op": "do",
-    "action": {
-      "kind": "gain_credits",
-      "side": "runner",
-      "amount": 2
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "link",
+        "value": 0
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "first_successful_hq_run_this_turn",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "runner",
+          "amount": 2
+        }
+      }
     }
-  }
+  ]
 }

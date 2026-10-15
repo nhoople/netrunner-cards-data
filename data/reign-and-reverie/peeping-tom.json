@@ -13,11 +13,16 @@
   "installCost": 4,
   "rezCost": 4,
   "strength": 4,
-  "onEncounter": {
-    "op": "do",
-    "action": {
-      "kind": "choose_type_reveal_gain_etr_unless_tag_for_run"
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "encounter",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "choose_type_reveal_gain_etr_unless_tag_for_run"
+        }
+      }
     }
-  },
-  "subroutines": []
+  ]
 }

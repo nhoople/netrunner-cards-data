@@ -7,6 +7,20 @@
   "side": "runner",
   "installCost": 2,
   "unsupported": [],
-  "muBonus": 1,
-  "firstProgramInstallDiscount": 1
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "muBonus",
+        "value": 1
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "firstProgramInstallDiscount",
+        "value": 1
+      }
+    }
+  ]
 }

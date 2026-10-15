@@ -10,11 +10,31 @@
     "virtual"
   ],
   "installCost": 1,
-  "unique": true,
-  "placePowerOnFirstSuccessfulRemoteRunEndIfBreachedNoSteal": true,
-  "scoreWhenPowerGte": {
-    "threshold": 4,
-    "agendaPoints": 1
-  },
-  "wave": "kampala-ascendent"
+  "wave": "kampala-ascendent",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "placePowerOnFirstSuccessfulRemoteRunEndIfBreachedNoSteal",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "scoreWhenPowerGte",
+        "value": {
+          "threshold": 4,
+          "agendaPoints": 1
+        }
+      }
+    }
+  ]
 }

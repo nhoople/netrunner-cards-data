@@ -14,12 +14,19 @@
   "installCost": 3,
   "rezCost": 3,
   "strength": 2,
-  "cannotBreakWithAi": true,
-  "subroutines": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "cannotBreakWithAi",
+        "value": true
+      }
+    },
+    {
+      "class": "subroutine",
       "id": "sword-ai",
       "text": "Trash 1 installed AI program.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "trash_program",
@@ -29,9 +36,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "sword-net",
       "text": "Do 1 net damage.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "net_damage",

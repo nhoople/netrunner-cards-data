@@ -11,12 +11,18 @@
   ],
   "advancementRequirement": 4,
   "agendaPoints": 2,
-  "onScore": {
-    "op": "do",
-    "action": {
-      "kind": "meat_damage",
-      "amount": 2
+  "wave": "martial-law",
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "score",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "meat_damage",
+          "amount": 2
+        }
+      }
     }
-  },
-  "wave": "martial-law"
+  ]
 }

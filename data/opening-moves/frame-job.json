@@ -11,18 +11,34 @@
     "double"
   ],
   "playCost": 1,
-  "playAdditionalClick": true,
-  "playAdditionalCost": {
-    "op": "do",
-    "action": {
-      "kind": "choose_forfeit_runner_scored_agenda"
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "playAdditionalClick",
+        "value": true
+      }
+    },
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "give_bad_publicity",
+          "amount": 1
+        }
+      },
+      "restrictions": [
+        {
+          "appliesTo": "play",
+          "effect": {
+            "op": "do",
+            "action": {
+              "kind": "choose_forfeit_runner_scored_agenda"
+            }
+          }
+        }
+      ]
     }
-  },
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "give_bad_publicity",
-      "amount": 1
-    }
-  }
+  ]
 }

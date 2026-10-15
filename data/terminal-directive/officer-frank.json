@@ -10,13 +10,19 @@
     "connection"
   ],
   "installCost": 0,
-  "unique": true,
-  "paidAbilities": [
+  "wave": "terminal-directive",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "paid",
       "id": "officer-frank-trash-hq",
       "label": "[trash], 1¢: Corp trashes 2 cards from HQ at random",
-      "clickCost": 0,
-      "creditCost": 1,
       "cost": {
         "credits": 1,
         "trashSelf": true
@@ -24,7 +30,7 @@
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "corp_discard_random_from_hq",
@@ -34,6 +40,5 @@
       "usableByRunnerOnSelfIce": true,
       "requireSufferedMeatDamageThisTurn": true
     }
-  ],
-  "wave": "terminal-directive"
+  ]
 }

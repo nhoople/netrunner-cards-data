@@ -13,25 +13,30 @@
   "installCost": 4,
   "rezCost": 4,
   "strength": 2,
-  "onRez": {
-    "op": "do",
-    "action": {
-      "kind": "may_trash_installed",
-      "excludeSelf": true,
-      "then": {
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "rez",
+      "instructions": {
         "op": "do",
         "action": {
-          "kind": "fortify_ice",
-          "amount": 5
+          "kind": "may_trash_installed",
+          "excludeSelf": true,
+          "then": {
+            "op": "do",
+            "action": {
+              "kind": "fortify_ice",
+              "amount": 5
+            }
+          }
         }
       }
-    }
-  },
-  "subroutines": [
+    },
     {
+      "class": "subroutine",
       "id": "stavka-trash1",
       "text": "Trash 1 installed program.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "trash_program",
@@ -40,9 +45,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "stavka-trash2",
       "text": "Trash 1 installed program.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "trash_program",

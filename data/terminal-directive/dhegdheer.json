@@ -11,9 +11,35 @@
   ],
   "installCost": 2,
   "memoryCost": 0,
-  "daemonHost": true,
-  "daemonHostMaxMu": 99,
-  "maxHostedCards": 1,
-  "daemonHostInstallCreditDiscount": 1,
-  "wave": "terminal-directive"
+  "wave": "terminal-directive",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "daemonHost",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "daemonHostMaxMu",
+        "value": 99
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "maxHostedCards",
+        "value": 1
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "daemonHostInstallCreditDiscount",
+        "value": 1
+      }
+    }
+  ]
 }

@@ -10,53 +10,63 @@
     "virtual"
   ],
   "installCost": 3,
-  "onFirstRunnerStoleOrTrashedCorpCardThisTurn": {
-    "op": "do",
-    "action": {
-      "kind": "add_power_counter",
-      "amount": 1
-    }
-  },
-  "onRunnerActionPhaseEnd": {
-    "op": "choose",
-    "chooser": "runner",
-    "options": [
-      {
-        "id": "sabotage",
-        "label": "Remove 2 power counters to sabotage 3",
-        "effect": {
-          "op": "seq",
-          "effects": [
-            {
-              "op": "do",
-              "action": {
-                "kind": "remove_power_counter",
-                "amount": 2
-              }
-            },
-            {
-              "op": "do",
-              "action": {
-                "kind": "sabotage",
-                "amount": 3,
-                "interactive": true
-              }
-            }
-          ]
-        }
-      },
-      {
-        "id": "decline",
-        "label": "Decline",
-        "effect": {
-          "op": "do",
-          "action": {
-            "kind": "gain_credits",
-            "side": "runner",
-            "amount": 0
-          }
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "first_runner_stole_or_trashed_corp_card_this_turn",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "add_power_counter",
+          "amount": 1
         }
       }
-    ]
-  }
+    },
+    {
+      "class": "conditional",
+      "trigger": "runner_action_phase_end",
+      "instructions": {
+        "op": "choose",
+        "chooser": "runner",
+        "options": [
+          {
+            "id": "sabotage",
+            "label": "Remove 2 power counters to sabotage 3",
+            "effect": {
+              "op": "seq",
+              "effects": [
+                {
+                  "op": "do",
+                  "action": {
+                    "kind": "remove_power_counter",
+                    "amount": 2
+                  }
+                },
+                {
+                  "op": "do",
+                  "action": {
+                    "kind": "sabotage",
+                    "amount": 3,
+                    "interactive": true
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "id": "decline",
+            "label": "Decline",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "gain_credits",
+                "side": "runner",
+                "amount": 0
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
 }

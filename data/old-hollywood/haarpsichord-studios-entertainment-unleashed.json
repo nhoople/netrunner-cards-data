@@ -9,6 +9,14 @@
   "subtypes": [
     "division"
   ],
-  "cannotStealMoreThanOneAgendaPerTurn": true,
-  "wave": "old-hollywood"
+  "wave": "old-hollywood",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "cannotStealMoreThanOneAgendaPerTurn",
+        "value": true
+      }
+    }
+  ]
 }

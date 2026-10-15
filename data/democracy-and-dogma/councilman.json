@@ -10,6 +10,14 @@
     "connection"
   ],
   "installCost": 0,
-  "onCorpRezAssetOrUpgradeMayPayRezCostTrashSelfDerez": true,
-  "wave": "democracy-and-dogma"
+  "wave": "democracy-and-dogma",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "onCorpRezAssetOrUpgradeMayPayRezCostTrashSelfDerez",
+        "value": true
+      }
+    }
+  ]
 }

@@ -13,12 +13,20 @@
   "installCost": 2,
   "rezCost": 2,
   "strength": 4,
-  "gainsEtrSubroutineWhileCurrentActive": true,
-  "subroutines": [
+  "wave": "data-and-destiny",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "gainsEtrSubroutineWhileCurrentActive",
+        "value": true
+      }
+    },
+    {
+      "class": "subroutine",
       "id": "news-hound-trace",
       "text": "Trace[3]. If successful, give the Runner 1 tag.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "trace",
@@ -33,6 +41,5 @@
         }
       }
     }
-  ],
-  "wave": "data-and-destiny"
+  ]
 }

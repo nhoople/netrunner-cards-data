@@ -12,13 +12,18 @@
   "installCost": 0,
   "rezCost": 0,
   "trashCost": 2,
-  "canAdvance": true,
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "canAdvance",
+        "value": true
+      }
+    },
+    {
+      "class": "paid",
       "id": "ronin-damage",
       "label": "Trash Ronin: 3 net damage (needs 4 advancements)",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1,
         "trashSelf": true
@@ -26,7 +31,7 @@
       "windows": [
         "corp_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "net_damage",

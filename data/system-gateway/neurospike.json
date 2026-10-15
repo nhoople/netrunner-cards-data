@@ -10,10 +10,15 @@
     "gray ops"
   ],
   "unsupported": [],
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "net_damage_agenda_points_this_turn"
+  "abilities": [
+    {
+      "class": "play",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "net_damage_agenda_points_this_turn"
+        }
+      }
     }
-  }
+  ]
 }

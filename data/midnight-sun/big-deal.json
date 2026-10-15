@@ -11,19 +11,30 @@
   ],
   "playCost": 17,
   "trashCost": 3,
-  "endsActionPhase": true,
-  "onPlay": {
-    "op": "do",
-    "action": {
-      "kind": "place_advancements",
-      "amount": 4,
-      "thenMayScore": true,
-      "then": {
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "endsActionPhase",
+        "value": true
+      }
+    },
+    {
+      "class": "play",
+      "instructions": {
         "op": "do",
         "action": {
-          "kind": "rfg_self"
+          "kind": "place_advancements",
+          "amount": 4,
+          "thenMayScore": true,
+          "then": {
+            "op": "do",
+            "action": {
+              "kind": "rfg_self"
+            }
+          }
         }
       }
     }
-  }
+  ]
 }

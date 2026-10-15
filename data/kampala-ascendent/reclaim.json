@@ -7,12 +7,12 @@
   "unsupported": [],
   "faction": "shaper",
   "installCost": 0,
-  "paidAbilities": [
+  "wave": "kampala-ascendent",
+  "abilities": [
     {
+      "class": "paid",
       "id": "reclaim",
       "label": "[click], [trash], trash a card from grip: Install program/hardware/virtual from heap paying cost",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1,
         "trashSelf": true,
@@ -21,7 +21,7 @@
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "ka_reclaim_install_from_heap"
@@ -29,6 +29,5 @@
       },
       "usableByRunnerOnSelfIce": true
     }
-  ],
-  "wave": "kampala-ascendent"
+  ]
 }

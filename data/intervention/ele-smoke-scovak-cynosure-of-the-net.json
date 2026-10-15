@@ -10,10 +10,30 @@
     "g-mod",
     "stealth"
   ],
-  "link": 0,
-  "recurringCreditsMax": 1,
-  "recurringSpendFor": [
-    "use_program"
-  ],
-  "wave": "intervention"
+  "wave": "intervention",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "link",
+        "value": 0
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "recurringCreditsMax",
+        "value": 1
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "recurringSpendFor",
+        "value": [
+          "use_program"
+        ]
+      }
+    }
+  ]
 }

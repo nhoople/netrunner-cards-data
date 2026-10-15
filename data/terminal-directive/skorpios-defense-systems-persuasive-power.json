@@ -9,6 +9,14 @@
   "subtypes": [
     "subsidiary"
   ],
-  "skorpiosRfgOneTrashedRunnerCardOncePerTurn": true,
-  "wave": "terminal-directive"
+  "wave": "terminal-directive",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "skorpiosRfgOneTrashedRunnerCardOncePerTurn",
+        "value": true
+      }
+    }
+  ]
 }

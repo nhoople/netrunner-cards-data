@@ -12,11 +12,17 @@
   "installCost": 0,
   "rezCost": 0,
   "trashCost": 3,
-  "onTurnBegin": {
-    "op": "do",
-    "action": {
-      "kind": "gain_if_rezzed_asset_in_root"
+  "wave": "the-universe-of-tomorrow",
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "turn_begin",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "gain_if_rezzed_asset_in_root"
+        }
+      }
     }
-  },
-  "wave": "the-universe-of-tomorrow"
+  ]
 }

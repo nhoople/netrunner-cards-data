@@ -12,11 +12,13 @@
   "installCost": 6,
   "rezCost": 6,
   "strength": 0,
-  "subroutines": [
+  "wave": "the-devil-and-the-dragon",
+  "abilities": [
     {
+      "class": "subroutine",
       "id": "endless-eula-1",
       "text": "End the run unless the Runner pays 1¢.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "unless",
@@ -39,9 +41,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "endless-eula-2",
       "text": "End the run unless the Runner pays 1¢.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "unless",
@@ -64,9 +67,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "endless-eula-3",
       "text": "End the run unless the Runner pays 1¢.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "unless",
@@ -89,9 +93,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "endless-eula-4",
       "text": "End the run unless the Runner pays 1¢.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "unless",
@@ -114,9 +119,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "endless-eula-5",
       "text": "End the run unless the Runner pays 1¢.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "unless",
@@ -139,9 +145,10 @@
       }
     },
     {
+      "class": "subroutine",
       "id": "endless-eula-6",
       "text": "End the run unless the Runner pays 1¢.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "unless",
@@ -163,6 +170,5 @@
         }
       }
     }
-  ],
-  "wave": "the-devil-and-the-dragon"
+  ]
 }

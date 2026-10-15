@@ -13,19 +13,36 @@
   "installCost": 5,
   "strength": 2,
   "memoryCost": 2,
-  "strengthBonusPerCoreDamageThisGame": 1,
-  "breaker": {
-    "breaksSubtype": "barrier",
-    "strength": 2,
-    "breakCredits": 1,
-    "breakMaxSubs": 99
-  },
-  "paidAbilities": [],
-  "onInstall": {
-    "op": "do",
-    "action": {
-      "kind": "core_damage",
-      "amount": 1
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "strengthBonusPerCoreDamageThisGame",
+        "value": 1
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "breaker",
+        "value": {
+          "breaksSubtype": "barrier",
+          "strength": 2,
+          "breakCredits": 1,
+          "breakMaxSubs": 99
+        }
+      }
+    },
+    {
+      "class": "conditional",
+      "trigger": "install",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "core_damage",
+          "amount": 1
+        }
+      }
     }
-  }
+  ]
 }

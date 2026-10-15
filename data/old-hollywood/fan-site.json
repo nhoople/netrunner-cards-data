@@ -10,12 +10,18 @@
     "virtual"
   ],
   "installCost": 0,
-  "onAgendaScored": {
-    "op": "do",
-    "action": {
-      "kind": "add_to_runner_score_as_agenda",
-      "agendaPoints": 0
+  "wave": "old-hollywood",
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "agenda_scored",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "add_to_runner_score_as_agenda",
+          "agendaPoints": 0
+        }
+      }
     }
-  },
-  "wave": "old-hollywood"
+  ]
 }

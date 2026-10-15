@@ -12,26 +12,31 @@
     "sabotage"
   ],
   "installCost": 0,
-  "installRequiresSuccessfulCentralRunThisTurn": true,
-  "paidAbilities": [
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "installRequiresSuccessfulCentralRunThisTurn",
+        "value": true
+      }
+    },
+    {
+      "class": "paid",
       "id": "dlr-trash-rd",
       "label": "[click]: The Corp trashes the top card of R&D",
-      "clickCost": 1,
-      "creditCost": 0,
       "cost": {
         "clicks": 1
       },
       "windows": [
         "runner_action_paw"
       ],
-      "requireRunnerTagged": true,
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "trash_top_of_rd"
         }
-      }
+      },
+      "requireRunnerTagged": true
     }
   ]
 }

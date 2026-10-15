@@ -10,21 +10,33 @@
     "job"
   ],
   "installCost": 0,
-  "hostedCreditsOnInstall": 18,
-  "trashWhenHostedCreditsEmpty": true,
-  "paidAbilities": [
+  "wave": "the-devil-and-the-dragon",
+  "abilities": [
     {
+      "class": "static",
+      "declaration": {
+        "field": "hostedCreditsOnInstall",
+        "value": 18
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "trashWhenHostedCreditsEmpty",
+        "value": true
+      }
+    },
+    {
+      "class": "paid",
       "id": "rogue-trading-take",
       "label": "[click], [click]: Take 6¢ from Rogue Trading and take 1 tag",
-      "clickCost": 2,
-      "creditCost": 0,
       "cost": {
         "clicks": 2
       },
       "windows": [
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "seq",
         "effects": [
           {
@@ -45,6 +57,5 @@
       },
       "usableByRunnerOnSelfIce": true
     }
-  ],
-  "wave": "the-devil-and-the-dragon"
+  ]
 }

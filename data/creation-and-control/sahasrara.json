@@ -9,8 +9,22 @@
   "faction": "shaper",
   "installCost": 2,
   "memoryCost": 1,
-  "recurringCreditsMax": 2,
-  "recurringSpendFor": [
-    "install_program"
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "recurringCreditsMax",
+        "value": 2
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "recurringSpendFor",
+        "value": [
+          "install_program"
+        ]
+      }
+    }
   ]
 }

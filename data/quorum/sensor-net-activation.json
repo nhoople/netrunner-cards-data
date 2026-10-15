@@ -11,19 +11,23 @@
   ],
   "advancementRequirement": 3,
   "agendaPoints": 1,
-  "onScore": {
-    "op": "do",
-    "action": {
-      "kind": "add_agenda_counter",
-      "amount": 1
-    }
-  },
-  "paidAbilities": [
+  "wave": "quorum",
+  "abilities": [
     {
+      "class": "conditional",
+      "trigger": "score",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "add_agenda_counter",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "class": "paid",
       "id": "sensor-net-rez",
       "label": "Hosted agenda counter: Rez a bioroid, ignoring all costs; derez at turn end",
-      "clickCost": 0,
-      "creditCost": 0,
       "cost": {
         "agendaCounters": 1
       },
@@ -31,13 +35,12 @@
         "corp_action_paw",
         "runner_action_paw"
       ],
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "sensor_net_rez_bioroid_ignoring_costs_derez_turn_end"
         }
       }
     }
-  ],
-  "wave": "quorum"
+  ]
 }

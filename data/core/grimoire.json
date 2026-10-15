@@ -11,7 +11,27 @@
     "console"
   ],
   "installCost": 3,
-  "unique": true,
-  "muBonus": 2,
-  "placeVirusCounterOnInstalledVirusProgram": true
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "muBonus",
+        "value": 2
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "placeVirusCounterOnInstalledVirusProgram",
+        "value": true
+      }
+    }
+  ]
 }

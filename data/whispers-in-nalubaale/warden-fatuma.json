@@ -12,7 +12,21 @@
   "installCost": 1,
   "rezCost": 1,
   "trashCost": 5,
-  "unique": true,
-  "bioroidIceGainsLoseClickSubroutineBeforeOthers": true,
-  "wave": "whispers-in-nalubaale"
+  "wave": "whispers-in-nalubaale",
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "bioroidIceGainsLoseClickSubroutineBeforeOthers",
+        "value": true
+      }
+    }
+  ]
 }

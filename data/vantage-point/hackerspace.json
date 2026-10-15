@@ -10,9 +10,29 @@
     "location"
   ],
   "installCost": 2,
-  "unique": true,
-  "hostsUniqueCompanionOrConnectionResources": {
-    "creditDiscount": 1
-  },
-  "handSizeBonusIfHostingCompanionAndConnection": 2
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "hostsUniqueCompanionOrConnectionResources",
+        "value": {
+          "creditDiscount": 1
+        }
+      }
+    },
+    {
+      "class": "static",
+      "declaration": {
+        "field": "handSizeBonusIfHostingCompanionAndConnection",
+        "value": 2
+      }
+    }
+  ]
 }

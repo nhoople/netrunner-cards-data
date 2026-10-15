@@ -15,11 +15,12 @@
   "installCost": 9,
   "rezCost": 9,
   "strength": 6,
-  "subroutines": [
+  "abilities": [
     {
+      "class": "subroutine",
       "id": "flare-trace",
       "text": "Trace[6]. If successful, trash 1 piece of hardware, do 2 meat damage (cannot be prevented), and end the run.",
-      "effect": {
+      "instructions": {
         "op": "do",
         "action": {
           "kind": "trace",

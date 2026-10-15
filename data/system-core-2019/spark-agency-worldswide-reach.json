@@ -10,5 +10,13 @@
   "subtypes": [
     "division"
   ],
-  "loseCreditsOnFirstAdvertisementRezThisTurn": 1
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "loseCreditsOnFirstAdvertisementRezThisTurn",
+        "value": 1
+      }
+    }
+  ]
 }

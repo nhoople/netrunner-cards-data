@@ -14,11 +14,18 @@
   "installCost": 5,
   "strength": 3,
   "memoryCost": 1,
-  "breaker": {
-    "breaksSubtype": "code gate",
-    "strength": 3,
-    "breakCredits": 0,
-    "breakMaxSubs": 1
-  },
-  "paidAbilities": []
+  "abilities": [
+    {
+      "class": "static",
+      "declaration": {
+        "field": "breaker",
+        "value": {
+          "breaksSubtype": "code gate",
+          "strength": 3,
+          "breakCredits": 0,
+          "breakMaxSubs": 1
+        }
+      }
+    }
+  ]
 }

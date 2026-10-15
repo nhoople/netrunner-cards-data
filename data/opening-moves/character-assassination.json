@@ -12,12 +12,18 @@
   ],
   "advancementRequirement": 4,
   "agendaPoints": 2,
-  "onScore": {
-    "op": "do",
-    "action": {
-      "kind": "trash_resource",
-      "pick": "choose",
-      "cannotPrevent": true
+  "abilities": [
+    {
+      "class": "conditional",
+      "trigger": "score",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "trash_resource",
+          "pick": "choose",
+          "cannotPrevent": true
+        }
+      }
     }
-  }
+  ]
 }
