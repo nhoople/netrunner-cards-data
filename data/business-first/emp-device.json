@@ -14,6 +14,7 @@
   "abilities": [
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "emp-device-limit-rez",
       "label": "[trash]: Corp cannot rez more than 1 ice for the remainder of this run",
       "cost": {

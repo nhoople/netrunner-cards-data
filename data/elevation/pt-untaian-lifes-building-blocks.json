@@ -5,6 +5,7 @@
   "nrdbCode": "35047",
   "type": "identity",
   "side": "corp",
+  "faction": "jinteki",
   "unsupported": [],
   "subtypes": [
     "division"
@@ -12,6 +13,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "discard_phase_end",
       "instructions": {
         "op": "if",

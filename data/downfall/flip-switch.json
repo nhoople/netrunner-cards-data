@@ -11,6 +11,7 @@
   "abilities": [
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "flip-switch-jack-out",
       "label": "[trash]: Jack out",
       "cost": {
@@ -31,6 +32,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "flip-switch-remove-tag",
       "label": "[trash]: Remove 1 tag",
       "cost": {
@@ -49,6 +51,9 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
+      "flagRule": "9.3.6d",
+      "flag": "interrupt",
       "id": "flip-switch-trace",
       "label": "[interrupt] → [trash]: Reduce base trace strength to 0",
       "cost": {

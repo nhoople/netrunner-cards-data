@@ -5,11 +5,13 @@
   "nrdbCode": "30002",
   "type": "event",
   "side": "runner",
+  "faction": "anarch",
   "playCost": 2,
   "unsupported": [],
   "abilities": [
     {
       "class": "play",
+      "rule": "9.3.7d",
       "instructions": {
         "op": "choose",
         "chooser": "corp",

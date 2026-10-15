@@ -12,6 +12,7 @@
   "abilities": [
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "analog-dreamers-run",
       "label": "[click]: Run R&D. If successful, instead of breaching, may shuffle an unrezzed non-ice card with no advancements into R&D",
       "cost": {

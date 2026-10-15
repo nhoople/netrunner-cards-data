@@ -17,6 +17,7 @@
   "abilities": [
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "yagura-look",
       "text": "Look at the top card of R&D. You may add that card to the bottom of R&D.",
       "instructions": {
@@ -28,6 +29,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "yagura-net",
       "text": "Do 1 net damage.",
       "instructions": {

@@ -15,6 +15,7 @@
   "abilities": [
     {
       "class": "play",
+      "rule": "9.3.7d",
       "instructions": {
         "op": "do",
         "action": {
@@ -24,6 +25,7 @@
     },
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "host_encounter",
       "instructions": {
         "op": "do",

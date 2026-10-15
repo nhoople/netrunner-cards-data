@@ -14,6 +14,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "install",
       "instructions": {
         "op": "do",
@@ -25,6 +26,7 @@
     },
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "trash",
       "instructions": {
         "op": "seq",

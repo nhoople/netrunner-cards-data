@@ -5,6 +5,7 @@
   "nrdbCode": "33043",
   "type": "ice",
   "side": "corp",
+  "faction": "jinteki",
   "unsupported": [],
   "subtypes": [
     "sentry",
@@ -16,6 +17,7 @@
   "abilities": [
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "anemone-net",
       "text": "Do 1 net damage.",
       "instructions": {
@@ -28,6 +30,7 @@
     },
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "rez",
       "instructions": {
         "op": "if",

@@ -5,6 +5,7 @@
   "nrdbCode": "30050",
   "type": "upgrade",
   "side": "corp",
+  "faction": "jinteki",
   "installCost": 0,
   "rezCost": 0,
   "trashCost": 1,
@@ -12,6 +13,7 @@
   "abilities": [
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "etr",
       "label": "Pay 2¢ and trash 2 from HQ: end the run",
       "cost": {

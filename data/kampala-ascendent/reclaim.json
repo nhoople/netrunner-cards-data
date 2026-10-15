@@ -11,6 +11,7 @@
   "abilities": [
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "reclaim",
       "label": "[click], [trash], trash a card from grip: Install program/hardware/virtual from heap paying cost",
       "cost": {

@@ -5,6 +5,7 @@
   "nrdbCode": "36060",
   "type": "ice",
   "side": "corp",
+  "faction": "weyland-consortium",
   "unsupported": [],
   "subtypes": [
     "code gate",
@@ -16,6 +17,7 @@
   "abilities": [
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "tocsin-search",
       "label": "[click], 1[credit], trash: Search R&D for barrier + sentry",
       "cost": {
@@ -40,6 +42,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "tocsin-lose",
       "text": "The Runner loses 2[credit].",
       "instructions": {
@@ -53,6 +56,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "tocsin-etr-1",
       "text": "End the run.",
       "instructions": {
@@ -64,6 +68,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "tocsin-etr-2",
       "text": "End the run.",
       "instructions": {

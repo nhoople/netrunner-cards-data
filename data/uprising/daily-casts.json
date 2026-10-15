@@ -5,11 +5,13 @@
   "nrdbCode": "26094",
   "type": "resource",
   "side": "runner",
+  "faction": "neutral-runner",
   "unsupported": [],
   "installCost": 3,
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "hostedCreditsOnInstall",
         "value": 8
@@ -17,6 +19,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "trashWhenHostedCreditsEmpty",
         "value": true
@@ -24,6 +27,7 @@
     },
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "turn_begin",
       "instructions": {
         "op": "do",

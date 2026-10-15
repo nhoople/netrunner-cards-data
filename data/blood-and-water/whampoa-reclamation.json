@@ -16,6 +16,9 @@
   "abilities": [
     {
       "class": "paid",
+      "rule": "9.3.7b",
+      "flagRule": "9.3.6g",
+      "flag": "once_per_turn",
       "id": "whampoa-reclaim",
       "label": "Once per turn → Trash 1 card from HQ: Add 1 card from Archives to the bottom of R&D",
       "cost": {
@@ -29,8 +32,7 @@
         "action": {
           "kind": "trash_whampoa_hq_archives_to_rd_bottom"
         }
-      },
-      "flag": "once_per_turn"
+      }
     }
   ]
 }

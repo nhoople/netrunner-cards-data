@@ -5,6 +5,7 @@
   "nrdbCode": "35042",
   "type": "ice",
   "side": "corp",
+  "faction": "haas-bioroid",
   "unsupported": [],
   "subtypes": [
     "code gate"
@@ -15,6 +16,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "strengthBonusIfSoleIceProtectingServer",
         "value": 4
@@ -22,6 +24,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "scatter-field-install",
       "text": "You may install 1 card from HQ.",
       "instructions": {
@@ -33,6 +36,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "scatter-field-etr",
       "text": "End the run.",
       "instructions": {

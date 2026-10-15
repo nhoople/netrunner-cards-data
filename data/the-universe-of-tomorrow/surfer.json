@@ -12,6 +12,7 @@
   "abilities": [
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "surfer-swap",
       "label": "2¢: Swap encountered barrier with ice directly before or after it",
       "cost": {

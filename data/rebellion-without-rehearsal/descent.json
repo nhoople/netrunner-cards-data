@@ -5,6 +5,7 @@
   "nrdbCode": "34125",
   "type": "ice",
   "side": "corp",
+  "faction": "weyland-consortium",
   "unsupported": [],
   "subtypes": [
     "code gate",
@@ -16,6 +17,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "turn_begin",
       "instructions": {
         "op": "choose",
@@ -48,6 +50,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "descent-expend",
       "label": "[click], 1¢, reveal and trash from HQ: Draw 1; shuffle up to 2 agendas into R&D",
       "cost": {
@@ -82,6 +85,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "descent-etr",
       "text": "End the run.",
       "instructions": {

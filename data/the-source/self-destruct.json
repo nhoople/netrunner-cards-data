@@ -13,6 +13,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "remoteOnly",
         "value": true
@@ -20,6 +21,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "self-destruct-fire",
       "label": "[trash]: Trash all cards in/protecting this server; Trace[X] for 3 net damage",
       "cost": {

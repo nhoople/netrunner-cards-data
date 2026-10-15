@@ -16,6 +16,7 @@
   "abilities": [
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "border-control-trash-etr",
       "label": "[trash]: End the run (run on this server)",
       "cost": {
@@ -36,6 +37,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "border-gain-per-ice",
       "text": "Gain 1 credit for each piece of ice protecting this server.",
       "instructions": {
@@ -54,6 +56,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "border-etr",
       "text": "End the run.",
       "instructions": {

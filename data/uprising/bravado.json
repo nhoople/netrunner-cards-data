@@ -5,6 +5,7 @@
   "nrdbCode": "26074",
   "type": "event",
   "side": "runner",
+  "faction": "criminal",
   "unsupported": [],
   "subtypes": [
     "run"
@@ -13,24 +14,31 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "runEvent",
         "value": {
           "servers": "any",
-          "requiresProtectingIce": true,
-          "onRunEnd": {
-            "op": "do",
-            "action": {
-              "kind": "gain_credits",
-              "side": "runner",
-              "amount": 0,
-              "tally": {
-                "count": "passed_ice",
-                "per": 1,
-                "side": "runner",
-                "base": 6
-              }
-            }
+          "requiresProtectingIce": true
+        }
+      }
+    },
+    {
+      "class": "conditional",
+      "rule": "9.3.7c",
+      "trigger": "run_end",
+      "host": "runEvent",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "runner",
+          "amount": 0,
+          "tally": {
+            "count": "passed_ice",
+            "per": 1,
+            "side": "runner",
+            "base": 6
           }
         }
       }

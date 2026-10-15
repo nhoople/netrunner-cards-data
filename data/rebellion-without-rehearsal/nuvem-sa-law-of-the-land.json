@@ -5,6 +5,7 @@
   "nrdbCode": "34121",
   "type": "identity",
   "side": "corp",
+  "faction": "weyland-consortium",
   "unsupported": [],
   "subtypes": [
     "corp"
@@ -12,6 +13,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "after_operation_or_expendable",
       "instructions": {
         "op": "do",
@@ -22,6 +24,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "creditsOnFirstRdTrashThisTurn",
         "value": 2

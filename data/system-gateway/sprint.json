@@ -5,11 +5,13 @@
   "nrdbCode": "30041",
   "type": "operation",
   "side": "corp",
+  "faction": "haas-bioroid",
   "playCost": 0,
   "unsupported": [],
   "abilities": [
     {
       "class": "play",
+      "rule": "9.3.7d",
       "instructions": {
         "op": "seq",
         "effects": [

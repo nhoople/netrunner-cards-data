@@ -5,6 +5,7 @@
   "nrdbCode": "36014",
   "type": "hardware",
   "side": "runner",
+  "faction": "criminal",
   "unsupported": [],
   "subtypes": [
     "console"
@@ -13,6 +14,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "unique",
         "value": true
@@ -20,6 +22,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "muBonus",
         "value": 1
@@ -27,6 +30,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "mayTakeTagForBonusAccessOnHqRdBreach",
         "value": 1
@@ -34,6 +38,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "rotary-corp-trash",
       "label": "[click], 2[credit]: Trash Rotary (Corp; Runner tagged)",
       "cost": {

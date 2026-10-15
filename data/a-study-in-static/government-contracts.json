@@ -12,6 +12,7 @@
   "abilities": [
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "government-contracts-credits",
       "label": "[click], [click]: Gain 4¢",
       "cost": {

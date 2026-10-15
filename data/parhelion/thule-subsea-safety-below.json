@@ -5,6 +5,7 @@
   "nrdbCode": "33095",
   "type": "identity",
   "side": "corp",
+  "faction": "haas-bioroid",
   "unsupported": [],
   "subtypes": [
     "division"
@@ -12,6 +13,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "agenda_stolen",
       "instructions": {
         "op": "choose",

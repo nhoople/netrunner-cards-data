@@ -5,6 +5,7 @@
   "nrdbCode": "33018",
   "type": "program",
   "side": "runner",
+  "faction": "criminal",
   "unsupported": [],
   "subtypes": [
     "icebreaker",
@@ -17,6 +18,9 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
+      "flagRule": "9.3.6c",
+      "flag": "interface",
       "declaration": {
         "field": "breaker",
         "value": {
@@ -31,6 +35,9 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
+      "flagRule": "9.3.6c",
+      "flag": "interface",
       "id": "revolver-pump",
       "label": "Pump Revolver +3 strength",
       "cost": {
@@ -49,6 +56,9 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
+      "flagRule": "9.3.6c",
+      "flag": "interface",
       "id": "revolver-power-break",
       "label": "Spend 1 power counter: break 1 sentry subroutine",
       "cost": {
@@ -67,6 +77,9 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
+      "flagRule": "9.3.6c",
+      "flag": "interface",
       "id": "revolver-trash-break",
       "label": "Trash Revolver: break 1 sentry subroutine",
       "cost": {
@@ -85,6 +98,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "powerCountersOnInstall",
         "value": 6

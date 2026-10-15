@@ -17,6 +17,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "strengthPerPowerCounter",
         "value": true
@@ -24,6 +25,7 @@
     },
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "fully_break",
       "instructions": {
         "op": "do",
@@ -35,6 +37,9 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
+      "flagRule": "9.3.6c",
+      "flag": "interface",
       "declaration": {
         "field": "breaker",
         "value": {

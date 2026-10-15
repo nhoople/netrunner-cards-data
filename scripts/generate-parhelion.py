@@ -106,6 +106,8 @@ def base(c, **extra):
         "side": "runner" if c["side_code"] == "runner" else "corp",
         "unsupported": [],
     }
+    if c.get("faction_code"):
+        card["faction"] = c["faction_code"]
     if subtypes:
         card["subtypes"] = subtypes
     if c.get("cost") is not None:

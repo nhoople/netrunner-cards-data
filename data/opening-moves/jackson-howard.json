@@ -16,6 +16,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "unique",
         "value": true
@@ -23,6 +24,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "jackson-draw",
       "label": "[click]: Draw 2 cards",
       "cost": {
@@ -42,6 +44,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "jackson-rfg",
       "label": "Remove Jackson Howard from the game: Shuffle up to 3 from Archives into R&D",
       "cost": {

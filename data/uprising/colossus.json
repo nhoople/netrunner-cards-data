@@ -5,6 +5,7 @@
   "nrdbCode": "26124",
   "type": "ice",
   "side": "corp",
+  "faction": "weyland-consortium",
   "unsupported": [],
   "subtypes": [
     "sentry",
@@ -16,6 +17,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "canAdvance",
         "value": true
@@ -23,6 +25,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "strengthPerAdvancement",
         "value": 1
@@ -30,6 +33,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "colossus-tag",
       "text": "Give the Runner 1 tag. If 3+ advancements, instead give 2 tags.",
       "instructions": {
@@ -56,6 +60,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "colossus-trash",
       "text": "Trash 1 installed program. If 3+ advancements, also trash 1 installed resource.",
       "instructions": {

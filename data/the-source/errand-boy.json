@@ -16,6 +16,7 @@
   "abilities": [
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "errand-boy-1",
       "text": "The Corp gains 1[credit] or draws 1 card.",
       "instructions": {
@@ -51,6 +52,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "errand-boy-2",
       "text": "The Corp gains 1[credit] or draws 1 card.",
       "instructions": {
@@ -86,6 +88,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "errand-boy-3",
       "text": "The Corp gains 1[credit] or draws 1 card.",
       "instructions": {

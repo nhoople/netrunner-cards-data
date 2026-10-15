@@ -13,13 +13,9 @@
   "abilities": [
     {
       "class": "static",
-      "declaration": {
-        "field": "persistent",
-        "value": true
-      }
-    },
-    {
-      "class": "static",
+      "rule": "9.3.7a",
+      "flagRule": "9.3.6e",
+      "flag": "persistent",
       "declaration": {
         "field": "stealAdditionalCreditsFromProtectingServer",
         "value": 5

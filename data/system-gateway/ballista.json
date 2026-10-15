@@ -5,6 +5,7 @@
   "nrdbCode": "30062",
   "type": "ice",
   "side": "corp",
+  "faction": "weyland-consortium",
   "installCost": 5,
   "rezCost": 5,
   "strength": 4,
@@ -16,6 +17,7 @@
   "abilities": [
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "ballista",
       "text": "Trash 1 program or end the run.",
       "instructions": {

@@ -5,6 +5,7 @@
   "nrdbCode": "30073",
   "type": "ice",
   "side": "corp",
+  "faction": "neutral-corp",
   "installCost": 1,
   "rezCost": 1,
   "strength": 1,
@@ -16,6 +17,7 @@
   "abilities": [
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "tithe-net",
       "text": "Do 1 net damage.",
       "instructions": {
@@ -28,6 +30,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "tithe-gain",
       "text": "Gain 1¢.",
       "instructions": {

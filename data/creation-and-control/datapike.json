@@ -16,6 +16,7 @@
   "abilities": [
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "datapike-pay",
       "text": "The Runner must pay 2¢, if able. If they cannot, end the run.",
       "instructions": {
@@ -29,6 +30,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "datapike-etr",
       "text": "End the run.",
       "instructions": {

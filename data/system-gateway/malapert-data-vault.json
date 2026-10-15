@@ -5,6 +5,7 @@
   "nrdbCode": "30066",
   "type": "upgrade",
   "side": "corp",
+  "faction": "weyland-consortium",
   "installCost": 0,
   "rezCost": 1,
   "trashCost": 4,
@@ -12,6 +13,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "searchRdNonAgendaOnScoreFromServer",
         "value": true

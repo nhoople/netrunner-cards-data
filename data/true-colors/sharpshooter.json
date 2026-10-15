@@ -16,6 +16,9 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
+      "flagRule": "9.3.6c",
+      "flag": "interface",
       "declaration": {
         "field": "breaker",
         "value": {
@@ -30,6 +33,15 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
+      "flagRule": [
+        "9.3.6c",
+        "9.3.6g"
+      ],
+      "flag": [
+        "interface",
+        "once_per_turn"
+      ],
       "id": "sharpshooter-trash-break",
       "label": "[trash]: Break any number of destroyer subroutines",
       "cost": {
@@ -43,8 +55,7 @@
         "action": {
           "kind": "break_all_destroyer_subroutines_on_encounter"
         }
-      },
-      "flag": "once_per_turn"
+      }
     }
   ]
 }

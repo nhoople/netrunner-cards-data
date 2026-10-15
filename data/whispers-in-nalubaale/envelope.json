@@ -17,6 +17,7 @@
   "abilities": [
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "envelope-net",
       "text": "Do 1 net damage.",
       "instructions": {
@@ -29,6 +30,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "envelope-etr",
       "text": "End the run.",
       "instructions": {

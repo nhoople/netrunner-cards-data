@@ -5,6 +5,7 @@
   "nrdbCode": "36018",
   "type": "event",
   "side": "runner",
+  "faction": "shaper",
   "unsupported": [],
   "subtypes": [
     "run",
@@ -14,24 +15,31 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "runEvent",
         "value": {
           "servers": "hq_rd",
           "placeEventCredits": 4,
-          "blockCreditPoolSpendAndLose": true,
-          "onRunEnd": {
-            "op": "if",
-            "cond": {
-              "op": "run_successful"
-            },
-            "then": {
-              "op": "do",
-              "action": {
-                "kind": "may_start_run",
-                "servers": "remote"
-              }
-            }
+          "blockCreditPoolSpendAndLose": true
+        }
+      }
+    },
+    {
+      "class": "conditional",
+      "rule": "9.3.7c",
+      "trigger": "run_end",
+      "host": "runEvent",
+      "instructions": {
+        "op": "if",
+        "cond": {
+          "op": "run_successful"
+        },
+        "then": {
+          "op": "do",
+          "action": {
+            "kind": "may_start_run",
+            "servers": "remote"
           }
         }
       }

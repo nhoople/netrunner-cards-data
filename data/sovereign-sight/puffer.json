@@ -17,6 +17,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "strengthPerPowerCounter",
         "value": true
@@ -24,6 +25,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "memoryCostPerPowerCounter",
         "value": 1
@@ -31,6 +33,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "puffer-power",
       "label": "[click]: Place 1 power counter on this program or remove 1 hosted power counter",
       "cost": {
@@ -49,6 +52,9 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
+      "flagRule": "9.3.6c",
+      "flag": "interface",
       "declaration": {
         "field": "breaker",
         "value": {

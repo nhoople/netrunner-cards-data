@@ -14,17 +14,24 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "runEvent",
         "value": {
-          "servers": "any",
-          "onSuccessfulRun": {
-            "op": "do",
-            "action": {
-              "kind": "may_breach_instead_exploratory_romp",
-              "amount": 3
-            }
-          }
+          "servers": "any"
+        }
+      }
+    },
+    {
+      "class": "conditional",
+      "rule": "9.3.7c",
+      "trigger": "successful_run",
+      "host": "runEvent",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "may_breach_instead_exploratory_romp",
+          "amount": 3
         }
       }
     }

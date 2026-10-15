@@ -14,6 +14,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "deckLimit",
         "value": 6
@@ -21,6 +22,9 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
+      "flagRule": "9.3.6d",
+      "flag": "interrupt",
       "id": "ramujan-prevent",
       "label": "[interrupt] → [trash]: Prevent up to X net or core damage; trash that many from stack",
       "cost": {

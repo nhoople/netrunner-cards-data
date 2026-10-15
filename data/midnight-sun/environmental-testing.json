@@ -5,11 +5,13 @@
   "nrdbCode": "33029",
   "type": "resource",
   "side": "runner",
+  "faction": "shaper",
   "unsupported": [],
   "installCost": 3,
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "program_or_hardware_install",
       "instructions": {
         "op": "do",
@@ -21,6 +23,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "onPowerCountersGte",
         "value": {

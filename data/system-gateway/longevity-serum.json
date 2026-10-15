@@ -5,6 +5,7 @@
   "nrdbCode": "30044",
   "type": "agenda",
   "side": "corp",
+  "faction": "jinteki",
   "advancementRequirement": 3,
   "agendaPoints": 2,
   "subtypes": [
@@ -14,6 +15,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "score",
       "instructions": {
         "op": "seq",

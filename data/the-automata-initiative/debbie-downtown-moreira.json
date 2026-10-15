@@ -5,6 +5,7 @@
   "nrdbCode": "34019",
   "type": "resource",
   "side": "runner",
+  "faction": "criminal",
   "unsupported": [],
   "subtypes": [
     "connection"
@@ -13,6 +14,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "hostedCreditsOnRunEventPlay",
         "value": 1
@@ -20,6 +22,7 @@
     },
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "install",
       "instructions": {
         "op": "if",
@@ -38,6 +41,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "debbie-run",
       "label": "[click]: Run any server; spend hosted credits during that run",
       "cost": {

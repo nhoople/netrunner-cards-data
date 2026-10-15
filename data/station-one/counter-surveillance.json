@@ -14,6 +14,7 @@
   "abilities": [
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "counter-surveillance-run",
       "label": "[click], [trash]: Run any server; on success pay X=tags to access ≤X instead of breach",
       "cost": {

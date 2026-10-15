@@ -19,6 +19,7 @@
   "abilities": [
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "next-gold-net",
       "text": "Do X net damage.",
       "instructions": {
@@ -30,6 +31,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "next-gold-trash",
       "text": "Trash X programs.",
       "instructions": {

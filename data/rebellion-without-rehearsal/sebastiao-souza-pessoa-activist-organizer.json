@@ -13,6 +13,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "link",
         "value": 0
@@ -20,6 +21,7 @@
     },
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "take_tags_when_untagged",
       "instructions": {
         "op": "do",
@@ -35,6 +37,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "connectionBasicTrashAdditionalCostTrashHq",
         "value": true

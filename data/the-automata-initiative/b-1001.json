@@ -5,6 +5,7 @@
   "nrdbCode": "34065",
   "type": "asset",
   "side": "corp",
+  "faction": "neutral-corp",
   "unsupported": [],
   "subtypes": [
     "bioroid",
@@ -16,6 +17,7 @@
   "abilities": [
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "b1001-etr",
       "label": "Remove 1 tag: End the run (other server only)",
       "cost": {

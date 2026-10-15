@@ -18,6 +18,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "bioroidBreakMaxSubs",
         "value": 2
@@ -25,6 +26,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "nerine-2-0-core-1",
       "text": "Do 1 core damage. You may draw 1 card.",
       "instructions": {
@@ -72,6 +74,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "nerine-2-0-core-2",
       "text": "Do 1 core damage. You may draw 1 card.",
       "instructions": {

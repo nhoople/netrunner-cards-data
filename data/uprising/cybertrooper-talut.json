@@ -5,6 +5,7 @@
   "nrdbCode": "26091",
   "type": "resource",
   "side": "runner",
+  "faction": "shaper",
   "unsupported": [],
   "subtypes": [
     "connection",
@@ -14,6 +15,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "unique",
         "value": true
@@ -21,6 +23,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "link",
         "value": 1
@@ -28,6 +31,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "nonAiIcebreakerInstallStrengthBonusThisTurn",
         "value": 2

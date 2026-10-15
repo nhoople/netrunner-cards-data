@@ -17,6 +17,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "encounter_end_if_not_fully_broken",
       "instructions": {
         "op": "do",
@@ -28,6 +29,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "anansi-arrange",
       "text": "Look at the top 5 cards of R&D and arrange them in any order.",
       "instructions": {
@@ -40,6 +42,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "anansi-draw",
       "text": "You may draw 1 card. The Runner may pay 2 credits to draw 1 card.",
       "instructions": {
@@ -123,6 +126,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "anansi-net",
       "text": "Do 1 net damage.",
       "instructions": {

@@ -18,6 +18,7 @@
   "abilities": [
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "chetana-gain",
       "text": "Each player gains 2¢.",
       "instructions": {
@@ -44,6 +45,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "chetana-psi",
       "text": "Psi game. If bids differ, do 1 net damage for each card in the Runner's grip.",
       "instructions": {

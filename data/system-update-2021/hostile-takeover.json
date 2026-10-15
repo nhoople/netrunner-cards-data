@@ -3,6 +3,7 @@
   "title": "Hostile Takeover",
   "type": "agenda",
   "side": "corp",
+  "faction": "weyland-consortium",
   "wave": "system-update-2021",
   "nrdbCode": "01094",
   "advancementRequirement": 2,
@@ -15,6 +16,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "score",
       "instructions": {
         "op": "do",
@@ -27,6 +29,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "badPublicityOnScore",
         "value": 1

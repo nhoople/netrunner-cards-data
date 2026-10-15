@@ -16,6 +16,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "installOnIce",
         "value": true
@@ -23,6 +24,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "hostStrengthPerVirusCounter",
         "value": -1
@@ -30,6 +32,7 @@
     },
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "host_encounter",
       "instructions": {
         "op": "if",

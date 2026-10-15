@@ -14,6 +14,7 @@
   "abilities": [
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "rosetta-2-0-search",
       "label": "[click], remove an installed program from the game: Search stack for non-virus program, install lowering by RFG cost",
       "cost": {

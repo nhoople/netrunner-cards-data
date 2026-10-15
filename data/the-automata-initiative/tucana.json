@@ -5,6 +5,7 @@
   "nrdbCode": "34064",
   "type": "upgrade",
   "side": "corp",
+  "faction": "weyland-consortium",
   "unsupported": [],
   "installCost": 2,
   "rezCost": 2,
@@ -12,20 +13,17 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "remoteOnly",
         "value": true
       }
     },
     {
-      "class": "static",
-      "declaration": {
-        "field": "persistent",
-        "value": true
-      }
-    },
-    {
       "class": "conditional",
+      "rule": "9.3.7c",
+      "flagRule": "9.3.6e",
+      "flag": "persistent",
       "trigger": "agenda_scored_or_stolen",
       "instructions": {
         "op": "if",

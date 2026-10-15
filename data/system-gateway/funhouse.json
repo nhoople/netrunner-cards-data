@@ -5,6 +5,7 @@
   "nrdbCode": "30054",
   "type": "ice",
   "side": "corp",
+  "faction": "nbn",
   "installCost": 5,
   "rezCost": 5,
   "strength": 4,
@@ -15,6 +16,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "encounter",
       "instructions": {
         "op": "do",
@@ -39,6 +41,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "funhouse-tag",
       "text": "Tag unless pay 4¢.",
       "instructions": {

@@ -5,6 +5,7 @@
   "nrdbCode": "30042",
   "type": "upgrade",
   "side": "corp",
+  "faction": "haas-bioroid",
   "installCost": 0,
   "rezCost": 2,
   "trashCost": 3,
@@ -12,6 +13,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "approachServerTax",
         "value": {

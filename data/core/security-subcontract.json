@@ -16,6 +16,7 @@
   "abilities": [
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "security-subcontract-gain",
       "label": "[click], trash a rezzed piece of ice: Gain 4¢",
       "cost": {

@@ -16,6 +16,7 @@
   "abilities": [
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "spiderweb-etr-1",
       "text": "End the run.",
       "instructions": {
@@ -27,6 +28,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "spiderweb-etr-2",
       "text": "End the run.",
       "instructions": {
@@ -38,6 +40,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "spiderweb-etr-3",
       "text": "End the run.",
       "instructions": {

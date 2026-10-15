@@ -5,6 +5,7 @@
   "nrdbCode": "30061",
   "type": "asset",
   "side": "corp",
+  "faction": "weyland-consortium",
   "installCost": 0,
   "rezCost": 0,
   "trashCost": 3,
@@ -15,6 +16,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "turn_begin",
       "instructions": {
         "op": "choose",

@@ -5,12 +5,14 @@
   "nrdbCode": "31023",
   "type": "program",
   "side": "runner",
+  "faction": "criminal",
   "unsupported": [],
   "installCost": 4,
   "memoryCost": 2,
   "abilities": [
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "sneakdoor-run",
       "label": "Run Archives (success → HQ)",
       "cost": {

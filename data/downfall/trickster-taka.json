@@ -16,6 +16,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "unique",
         "value": true
@@ -23,6 +24,7 @@
     },
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "turn_begin",
       "instructions": {
         "op": "do",
@@ -34,6 +36,7 @@
     },
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "steal_agenda",
       "instructions": {
         "op": "do",
@@ -45,6 +48,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "spendHostedCreditsToUseProgramsDuringRuns",
         "value": true
@@ -52,6 +56,7 @@
     },
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "runner_turn_end",
       "instructions": {
         "op": "if",

@@ -16,6 +16,7 @@
   "abilities": [
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "harvester-draw-discard-1",
       "text": "The Runner draws 3 cards and then discards down to their maximum hand size.",
       "instructions": {
@@ -28,6 +29,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "harvester-draw-discard-2",
       "text": "The Runner draws 3 cards and then discards down to their maximum hand size.",
       "instructions": {

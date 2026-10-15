@@ -5,6 +5,7 @@
   "nrdbCode": "34109",
   "type": "ice",
   "side": "corp",
+  "faction": "jinteki",
   "unsupported": [],
   "subtypes": [
     "barrier",
@@ -16,6 +17,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "threatStrengthBonus",
         "value": {
@@ -26,6 +28,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "boto-net",
       "text": "Do 2 net damage.",
       "instructions": {
@@ -38,6 +41,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "boto-trash-etr",
       "text": "You may trash 1 card from HQ to end the run.",
       "instructions": {
@@ -55,6 +59,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "boto-etr",
       "text": "End the run.",
       "instructions": {

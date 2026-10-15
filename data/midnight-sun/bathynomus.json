@@ -5,6 +5,7 @@
   "nrdbCode": "33044",
   "type": "ice",
   "side": "corp",
+  "faction": "jinteki",
   "unsupported": [],
   "subtypes": [
     "sentry",
@@ -16,6 +17,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "strengthBonusProtectingArchives",
         "value": 3
@@ -23,6 +25,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "bath-net",
       "text": "Do 3 net damage.",
       "instructions": {

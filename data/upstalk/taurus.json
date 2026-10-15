@@ -17,6 +17,7 @@
   "abilities": [
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "taurus-trace",
       "text": "Trace[2]. If successful, trash 1 hardware; if strength ≥5 trash another.",
       "instructions": {

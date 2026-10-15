@@ -17,3 +17,5 @@ jobs:
         run: pip install -r requirements.txt
       - name: Validate cards
         run: python3 scripts/validate-cards.py
+      - name: Check catalog diff helpers
+        run: python3 scripts/test_nsg_catalog.py

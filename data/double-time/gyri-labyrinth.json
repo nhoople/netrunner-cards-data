@@ -16,6 +16,7 @@
   "abilities": [
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "gyri-hand",
       "text": "Runner max hand size -2 until Corp next turn.",
       "instructions": {

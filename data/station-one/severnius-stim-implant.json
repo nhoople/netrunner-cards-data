@@ -14,6 +14,7 @@
   "abilities": [
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "severnius-run",
       "label": "[click]: Trash 2 or more cards from grip. Run HQ or R&D; +1 access per 2 trashed",
       "cost": {

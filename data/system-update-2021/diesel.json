@@ -3,6 +3,7 @@
   "title": "Diesel",
   "type": "event",
   "side": "runner",
+  "faction": "shaper",
   "wave": "system-update-2021",
   "nrdbCode": "01034",
   "playCost": 0,
@@ -10,6 +11,7 @@
   "abilities": [
     {
       "class": "play",
+      "rule": "9.3.7d",
       "instructions": {
         "op": "do",
         "action": {

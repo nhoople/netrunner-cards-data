@@ -18,6 +18,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "unique",
         "value": true
@@ -25,6 +26,9 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
+      "flagRule": "9.3.6c",
+      "flag": "interface",
       "declaration": {
         "field": "breaker",
         "value": {
@@ -40,6 +44,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "vamadeva-swap",
       "label": "2¢: Swap this program with a deva program from your grip",
       "cost": {

@@ -5,6 +5,7 @@
   "nrdbCode": "35064",
   "type": "ice",
   "side": "corp",
+  "faction": "nbn",
   "unsupported": [],
   "subtypes": [
     "code gate"
@@ -15,6 +16,7 @@
   "abilities": [
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "n-pot-break",
       "label": "3¢: Break 1 subroutine on N-Pot",
       "cost": {
@@ -32,6 +34,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "n-pot-etr",
       "text": "End the run.",
       "instructions": {
@@ -43,6 +46,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "n-pot-threat-2",
       "text": "If threat ≥ 2, end the run.",
       "instructions": {
@@ -61,6 +65,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "n-pot-threat-4",
       "text": "If threat ≥ 4, end the run.",
       "instructions": {

@@ -17,6 +17,7 @@
   "abilities": [
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "veritas-gain",
       "text": "The Corp gains 2¢.",
       "instructions": {
@@ -30,6 +31,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "veritas-lose",
       "text": "The Runner loses 2¢.",
       "instructions": {
@@ -43,6 +45,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "veritas-trace",
       "text": "Trace[2]. If successful, give the Runner 1 tag.",
       "instructions": {

@@ -5,6 +5,7 @@
   "nrdbCode": "34044",
   "type": "ice",
   "side": "corp",
+  "faction": "jinteki",
   "unsupported": [],
   "subtypes": [
     "barrier"
@@ -15,6 +16,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "pass",
       "instructions": {
         "op": "choose",
@@ -48,6 +50,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "tatu-bola-etr",
       "text": "End the run.",
       "instructions": {

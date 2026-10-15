@@ -13,6 +13,7 @@
   "abilities": [
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "it-department-place",
       "label": "[click]: Place 1 power counter on IT Department",
       "cost": {
@@ -31,6 +32,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "it-department-boost",
       "label": "Hosted power counter: Choose rezzed ice; +1 strength per power (incl. spent) until end of turn",
       "cost": {

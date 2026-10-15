@@ -17,6 +17,7 @@
   "abilities": [
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "tsurugi-etr-unless-pay",
       "text": "End the run unless the Corp pays 1¢.",
       "instructions": {
@@ -43,6 +44,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "tsurugi-net-1",
       "text": "Do 1 net damage.",
       "instructions": {
@@ -55,6 +57,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "tsurugi-net-2",
       "text": "Do 1 net damage.",
       "instructions": {
@@ -67,6 +70,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "tsurugi-net-3",
       "text": "Do 1 net damage.",
       "instructions": {

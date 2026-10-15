@@ -16,6 +16,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "unique",
         "value": true
@@ -23,6 +24,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "runnerHandSizeBonus",
         "value": -2
@@ -30,6 +32,7 @@
     },
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "trash_while_accessed",
       "instructions": {
         "op": "do",

@@ -16,6 +16,7 @@
   "abilities": [
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "weir-lose-click",
       "text": "The Runner loses [click].",
       "instructions": {
@@ -29,6 +30,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "weir-trash-grip",
       "text": "The Runner trashes 1 card from their grip.",
       "instructions": {

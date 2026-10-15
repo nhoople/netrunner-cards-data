@@ -5,6 +5,7 @@
   "nrdbCode": "33039",
   "type": "agenda",
   "side": "corp",
+  "faction": "jinteki",
   "unsupported": [],
   "subtypes": [
     "research"
@@ -13,6 +14,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "advancementRequirementEqualsRunnerGrip",
         "value": true

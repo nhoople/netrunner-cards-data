@@ -15,6 +15,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "suffer_core_damage",
       "instructions": {
         "op": "do",

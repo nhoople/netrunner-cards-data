@@ -5,6 +5,7 @@
   "nrdbCode": "36046",
   "type": "identity",
   "side": "corp",
+  "faction": "nbn",
   "unsupported": [],
   "subtypes": [
     "division"
@@ -12,6 +13,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "first_bad_publicity_take_each_turn",
       "instructions": {
         "op": "do",

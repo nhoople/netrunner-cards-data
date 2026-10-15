@@ -5,12 +5,14 @@
   "nrdbCode": "26096",
   "type": "agenda",
   "side": "corp",
+  "faction": "haas-bioroid",
   "unsupported": [],
   "advancementRequirement": 3,
   "agendaPoints": 1,
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "score",
       "instructions": {
         "op": "if",
@@ -28,6 +30,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "agendaPointsPerAgendaCounter",
         "value": 1

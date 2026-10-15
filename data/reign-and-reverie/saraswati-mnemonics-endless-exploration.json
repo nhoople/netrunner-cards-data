@@ -13,6 +13,7 @@
   "abilities": [
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "saraswati-install-advance",
       "label": "[click], 1[credit]: Install 1 card from HQ in the root of a remote server, then place 1 advancement counter on it (cannot score or rez until your next turn begins)",
       "cost": {

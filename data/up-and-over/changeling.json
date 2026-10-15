@@ -17,6 +17,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "canAdvance",
         "value": true
@@ -24,6 +25,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "morphOddAdvancementSubtypeSwap",
         "value": {
@@ -34,6 +36,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "changeling-etr",
       "text": "End the run",
       "instructions": {

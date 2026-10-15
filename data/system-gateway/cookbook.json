@@ -5,6 +5,7 @@
   "nrdbCode": "30009",
   "type": "resource",
   "side": "runner",
+  "faction": "anarch",
   "installCost": 1,
   "subtypes": [
     "virtual"

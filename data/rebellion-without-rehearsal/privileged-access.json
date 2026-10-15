@@ -5,6 +5,7 @@
   "nrdbCode": "34068",
   "type": "event",
   "side": "runner",
+  "faction": "anarch",
   "unsupported": [],
   "subtypes": [
     "run"
@@ -13,6 +14,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "playRequiresUntagged",
         "value": true
@@ -20,51 +22,58 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "runEvent",
         "value": {
           "servers": "archives",
-          "skipBreach": true,
-          "onSuccessfulRun": {
-            "op": "seq",
-            "effects": [
-              {
-                "op": "do",
-                "action": {
-                  "kind": "give_tags",
-                  "amount": 1
-                }
-              },
-              {
-                "op": "do",
-                "action": {
-                  "kind": "may_install_from_heap",
-                  "types": [
-                    "resource"
-                  ],
-                  "discount": 2
-                }
-              },
-              {
-                "op": "if",
-                "cond": {
-                  "op": "threat",
-                  "level": 3
-                },
-                "then": {
-                  "op": "do",
-                  "action": {
-                    "kind": "may_install_from_heap",
-                    "types": [
-                      "program"
-                    ],
-                    "discount": 0
-                  }
-                }
-              }
-            ]
-          }
+          "skipBreach": true
         }
+      }
+    },
+    {
+      "class": "conditional",
+      "rule": "9.3.7c",
+      "trigger": "successful_run",
+      "host": "runEvent",
+      "instructions": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "give_tags",
+              "amount": 1
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "may_install_from_heap",
+              "types": [
+                "resource"
+              ],
+              "discount": 2
+            }
+          },
+          {
+            "op": "if",
+            "cond": {
+              "op": "threat",
+              "level": 3
+            },
+            "then": {
+              "op": "do",
+              "action": {
+                "kind": "may_install_from_heap",
+                "types": [
+                  "program"
+                ],
+                "discount": 0
+              }
+            }
+          }
+        ]
       }
     }
   ]

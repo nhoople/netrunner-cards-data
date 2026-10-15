@@ -5,6 +5,7 @@
   "nrdbCode": "36008",
   "type": "resource",
   "side": "runner",
+  "faction": "anarch",
   "unsupported": [],
   "subtypes": [
     "companion",
@@ -14,6 +15,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "unique",
         "value": true
@@ -21,6 +23,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "firstEncounterGainsSubroutine",
         "value": {

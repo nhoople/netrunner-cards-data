@@ -5,6 +5,7 @@
   "nrdbCode": "34106",
   "type": "agenda",
   "side": "corp",
+  "faction": "jinteki",
   "unsupported": [],
   "subtypes": [
     "security"
@@ -14,6 +15,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "first_pass_rezzed_code_gate_or_sentry_this_turn",
       "instructions": {
         "op": "choose",

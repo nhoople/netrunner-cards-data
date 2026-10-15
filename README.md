@@ -92,7 +92,15 @@ Tag dataset releases as `vMAJOR.MINOR.PATCH` (e.g. `v1.35.0`). Bump when card JS
 
 **Pipeline:** pinned [Null-Signal-Games/netrunner-cards-json](https://github.com/Null-Signal-Games/netrunner-cards-json) (NSG source of truth; NRDB is downstream) → author Effect IR into this repo → [nhoople/netrunner-engine](https://github.com/nhoople/netrunner-engine) pins our tags.
 
-Pack metadata for generate/extract scripts comes from that NSG repo (`pack/{code}.json`). The NetrunnerDB public API is **not** the preferred ingest. NRDB codes may still appear as identifiers (pack codes, card ids); that does not make NRDB the catalog source. Watch new packs by diffing NSG against [`data/pool.json`](data/pool.json).
+Pack metadata for generate/extract scripts comes from that NSG repo (`pack/{code}.json`). The NetrunnerDB public API is **not** the preferred ingest. NRDB codes may still appear as identifiers (pack codes, card ids); that does not make NRDB the catalog source.
+
+When you are about to take a new pack, or when you hear about an errata, run:
+
+```bash
+python3 scripts/nsg_catalog.py check
+```
+
+That compares the pinned commit with current `main`. It reports a pack code that is not in the corpus, and any change to `faction_code`, cost, strength, or printed text in a corpus pack. The corpus is every pack code named in `pool.json` or fetched by a `generate-*.py` script. `napd`, `tdc`, and `sm` stay outside it. The command does not edit card files. Copy an accepted fact onto the existing card. When the printed text changed, re-read that card's ability record. Then set `ref` in the pin to the reviewed commit, clear `tmp/nsg-catalog/`, and re-fetch.
 
 | Path | Use |
 | --- | --- |

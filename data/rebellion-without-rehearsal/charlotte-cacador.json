@@ -5,6 +5,7 @@
   "nrdbCode": "34107",
   "type": "asset",
   "side": "corp",
+  "faction": "jinteki",
   "unsupported": [],
   "subtypes": [
     "clone"
@@ -15,6 +16,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "canAdvance",
         "value": true
@@ -22,6 +24,7 @@
     },
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "turn_begin",
       "instructions": {
         "op": "choose",
@@ -76,6 +79,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "charlotte-gain",
       "label": "[trash], hosted advancement: Gain 3¢",
       "cost": {

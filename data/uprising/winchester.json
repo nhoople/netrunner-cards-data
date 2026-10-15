@@ -5,6 +5,7 @@
   "nrdbCode": "26125",
   "type": "ice",
   "side": "corp",
+  "faction": "weyland-consortium",
   "unsupported": [],
   "subtypes": [
     "sentry",
@@ -17,6 +18,7 @@
   "abilities": [
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "winchester-program",
       "text": "Trace[4]. If successful, trash 1 installed program.",
       "instructions": {
@@ -36,6 +38,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "winchester-hardware",
       "text": "Trace[3]. If successful, trash 1 installed piece of hardware.",
       "instructions": {
@@ -55,6 +58,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "gainsSubroutinesWhileProtectingHq",
         "value": [

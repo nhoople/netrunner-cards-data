@@ -15,6 +15,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "score",
       "instructions": {
         "op": "do",
@@ -26,6 +27,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "timely-install-ice",
       "label": "Hosted agenda counter: Install 1 ice from HQ or Archives in any position protecting a server, ignoring all costs",
       "cost": {

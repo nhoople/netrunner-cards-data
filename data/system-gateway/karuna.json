@@ -5,6 +5,7 @@
   "nrdbCode": "30047",
   "type": "ice",
   "side": "corp",
+  "faction": "jinteki",
   "installCost": 4,
   "rezCost": 4,
   "strength": 3,
@@ -16,6 +17,7 @@
   "abilities": [
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "karuna-1",
       "text": "Do 2 net damage. Runner may jack out.",
       "instructions": {
@@ -39,6 +41,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "karuna-2",
       "text": "Do 2 net damage.",
       "instructions": {

@@ -13,6 +13,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "run_declared_on_this_server_if_tagged",
       "instructions": {
         "op": "do",

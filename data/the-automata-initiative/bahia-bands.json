@@ -5,6 +5,7 @@
   "nrdbCode": "34030",
   "type": "event",
   "side": "runner",
+  "faction": "neutral-runner",
   "unsupported": [],
   "subtypes": [
     "run"
@@ -13,78 +14,85 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "runEvent",
         "value": {
-          "servers": "any",
-          "onSuccessfulRun": {
-            "op": "do",
-            "action": {
-              "kind": "choose_exactly_n",
-              "n": 2,
-              "options": [
-                {
-                  "id": "draw2",
-                  "label": "Draw 2",
-                  "effect": {
-                    "op": "do",
-                    "action": {
-                      "kind": "draw",
-                      "side": "runner",
-                      "amount": 2
-                    }
-                  }
-                },
-                {
-                  "id": "install-discount",
-                  "label": "Install from grip (−1¢)",
-                  "effect": {
-                    "op": "do",
-                    "action": {
-                      "kind": "may_install_from_grip",
-                      "discount": 1
-                    }
-                  }
-                },
-                {
-                  "id": "untag",
-                  "label": "Remove 1 tag",
-                  "effect": {
-                    "op": "do",
-                    "action": {
-                      "kind": "remove_tags",
-                      "amount": 1
-                    }
-                  }
-                },
-                {
-                  "id": "bank-trash-credits",
-                  "label": "Place 4¢; spend for trash costs this run",
-                  "effect": {
-                    "op": "seq",
-                    "effects": [
-                      {
-                        "op": "do",
-                        "action": {
-                          "kind": "place_hosted_credits",
-                          "amount": 4
-                        }
-                      },
-                      {
-                        "op": "do",
-                        "action": {
-                          "kind": "spend_enable_hosted_credits_for",
-                          "purposes": [
-                            "trash"
-                          ]
-                        }
-                      }
-                    ]
-                  }
+          "servers": "any"
+        }
+      }
+    },
+    {
+      "class": "conditional",
+      "rule": "9.3.7c",
+      "trigger": "successful_run",
+      "host": "runEvent",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "choose_exactly_n",
+          "n": 2,
+          "options": [
+            {
+              "id": "draw2",
+              "label": "Draw 2",
+              "effect": {
+                "op": "do",
+                "action": {
+                  "kind": "draw",
+                  "side": "runner",
+                  "amount": 2
                 }
-              ]
+              }
+            },
+            {
+              "id": "install-discount",
+              "label": "Install from grip (−1¢)",
+              "effect": {
+                "op": "do",
+                "action": {
+                  "kind": "may_install_from_grip",
+                  "discount": 1
+                }
+              }
+            },
+            {
+              "id": "untag",
+              "label": "Remove 1 tag",
+              "effect": {
+                "op": "do",
+                "action": {
+                  "kind": "remove_tags",
+                  "amount": 1
+                }
+              }
+            },
+            {
+              "id": "bank-trash-credits",
+              "label": "Place 4¢; spend for trash costs this run",
+              "effect": {
+                "op": "seq",
+                "effects": [
+                  {
+                    "op": "do",
+                    "action": {
+                      "kind": "place_hosted_credits",
+                      "amount": 4
+                    }
+                  },
+                  {
+                    "op": "do",
+                    "action": {
+                      "kind": "spend_enable_hosted_credits_for",
+                      "purposes": [
+                        "trash"
+                      ]
+                    }
+                  }
+                ]
+              }
             }
-          }
+          ]
         }
       }
     }

@@ -16,6 +16,7 @@
   "abilities": [
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "red-tape-fortify",
       "text": "All ice has +3 strength for the remainder of this run.",
       "instructions": {

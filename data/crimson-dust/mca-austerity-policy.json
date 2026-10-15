@@ -13,6 +13,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "unique",
         "value": true
@@ -20,6 +21,9 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
+      "flagRule": "9.3.6g",
+      "flag": "once_per_turn",
       "id": "mca-place-power",
       "label": "[click]: Place 1 power counter; Runner loses [click] at start of their next turn",
       "cost": {
@@ -47,11 +51,11 @@
             }
           }
         ]
-      },
-      "flag": "once_per_turn"
+      }
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "mca-gain-clicks",
       "label": "[click], [trash], 3 hosted power counters: Gain [click][click][click][click]",
       "cost": {

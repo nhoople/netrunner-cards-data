@@ -5,6 +5,7 @@
   "nrdbCode": "33114",
   "type": "asset",
   "side": "corp",
+  "faction": "nbn",
   "unsupported": [],
   "installCost": 0,
   "rezCost": 0,
@@ -12,6 +13,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "turn_begin",
       "instructions": {
         "op": "choose",

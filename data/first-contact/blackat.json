@@ -17,6 +17,9 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
+      "flagRule": "9.3.6c",
+      "flag": "interface",
       "declaration": {
         "field": "breaker",
         "value": {
@@ -32,6 +35,9 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
+      "flagRule": "9.3.6c",
+      "flag": "interface",
       "id": "blackat-break",
       "label": "1¢: Break 1 barrier subroutine (up to 3 if stealth paid)",
       "cost": {
@@ -50,6 +56,9 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
+      "flagRule": "9.3.6c",
+      "flag": "interface",
       "id": "blackat-pump",
       "label": "2¢: +1 strength (+2 if stealth paid)",
       "cost": {

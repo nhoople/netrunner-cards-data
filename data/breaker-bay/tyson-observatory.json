@@ -14,6 +14,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "unique",
         "value": true
@@ -21,6 +22,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "tyson-search-hardware",
       "label": "[click][click]: Search stack for a piece of hardware, reveal it, add to grip; shuffle",
       "cost": {

@@ -3,6 +3,7 @@
   "title": "Enigma",
   "type": "ice",
   "side": "corp",
+  "faction": "neutral-corp",
   "wave": "system-update-2021",
   "nrdbCode": "01111",
   "installCost": 3,
@@ -15,6 +16,7 @@
   "abilities": [
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "enigma-click",
       "text": "The Runner loses [click], if able.",
       "instructions": {
@@ -28,6 +30,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "enigma-etr",
       "text": "End the run.",
       "instructions": {

@@ -5,12 +5,14 @@
   "nrdbCode": "34123",
   "type": "agenda",
   "side": "corp",
+  "faction": "weyland-consortium",
   "unsupported": [],
   "advancementRequirement": 5,
   "agendaPoints": 3,
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "steal",
       "instructions": {
         "op": "choose",
@@ -44,6 +46,7 @@
     },
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "score",
       "instructions": {
         "op": "do",
@@ -55,6 +58,9 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
+      "flagRule": "9.3.6g",
+      "flag": "once_per_turn",
       "id": "basalt-archives",
       "label": "Hosted agenda counter, trash top of R&D: Archives → HQ",
       "cost": {
@@ -80,8 +86,7 @@
             }
           }
         ]
-      },
-      "flag": "once_per_turn"
+      }
     }
   ]
 }

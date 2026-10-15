@@ -18,6 +18,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "encounter",
       "instructions": {
         "op": "do",
@@ -42,6 +43,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "data-raven-tag",
       "label": "Hosted power: Give the Runner 1 tag",
       "cost": {
@@ -63,6 +65,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "data-raven-trace",
       "text": "Trace[3]. If successful, place 1 power counter on this ice.",
       "instructions": {

@@ -16,6 +16,7 @@
   "abilities": [
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "nightdancer-1",
       "text": "The Runner loses [click], if able. You have an additional [click] to spend during your next turn.",
       "instructions": {
@@ -40,6 +41,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "nightdancer-2",
       "text": "The Runner loses [click], if able. You have an additional [click] to spend during your next turn.",
       "instructions": {

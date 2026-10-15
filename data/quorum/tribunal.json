@@ -16,6 +16,7 @@
   "abilities": [
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "tribunal-trash-1",
       "text": "The Runner trashes 1 of their installed cards.",
       "instructions": {
@@ -28,6 +29,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "tribunal-trash-2",
       "text": "The Runner trashes 1 of their installed cards.",
       "instructions": {
@@ -40,6 +42,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "tribunal-trash-3",
       "text": "The Runner trashes 1 of their installed cards.",
       "instructions": {

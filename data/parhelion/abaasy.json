@@ -5,6 +5,7 @@
   "nrdbCode": "33070",
   "type": "program",
   "side": "runner",
+  "faction": "anarch",
   "unsupported": [],
   "subtypes": [
     "icebreaker",
@@ -16,6 +17,9 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
+      "flagRule": "9.3.6c",
+      "flag": "interface",
       "declaration": {
         "field": "breaker",
         "value": {
@@ -29,6 +33,9 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
+      "flagRule": "9.3.6c",
+      "flag": "interface",
       "id": "abaasy-pump",
       "label": "Pump Abaasy +2 strength",
       "cost": {
@@ -47,6 +54,7 @@
     },
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "fully_break_once_per_turn",
       "instructions": {
         "op": "do",

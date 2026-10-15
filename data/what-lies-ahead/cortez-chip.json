@@ -14,6 +14,7 @@
   "abilities": [
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "cortez-chip-rez",
       "label": "[trash]: Choose a piece of ice. +2¢ additional cost to rez that ice until end of turn",
       "cost": {

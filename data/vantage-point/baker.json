@@ -5,12 +5,16 @@
   "nrdbCode": "36015",
   "type": "program",
   "side": "runner",
+  "faction": "criminal",
   "unsupported": [],
   "installCost": 3,
   "memoryCost": 1,
   "abilities": [
     {
       "class": "paid",
+      "rule": "9.3.7b",
+      "flagRule": "9.3.6g",
+      "flag": "once_per_turn",
       "id": "baker-run",
       "label": "[click]: Run Archives (may redirect approach with stealth)",
       "cost": {
@@ -27,7 +31,6 @@
           "amount": 0
         }
       },
-      "flag": "once_per_turn",
       "startsRun": {
         "servers": "archives",
         "mayRedirectApproachArchivesToHqOrRdPayingStealthCredits": 1

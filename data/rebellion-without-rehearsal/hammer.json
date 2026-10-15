@@ -5,6 +5,7 @@
   "nrdbCode": "34126",
   "type": "ice",
   "side": "corp",
+  "faction": "weyland-consortium",
   "unsupported": [],
   "subtypes": [
     "sentry",
@@ -17,6 +18,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "maxPrintedSubsBreakExceptSubtype",
         "value": "killer"
@@ -24,6 +26,7 @@
     },
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "encounter",
       "instructions": {
         "op": "do",
@@ -35,6 +38,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "hammer-tag",
       "text": "Give the Runner 1 tag.",
       "instructions": {
@@ -47,6 +51,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "hammer-trash-rh",
       "text": "Trash 1 installed resource or piece of hardware.",
       "instructions": {
@@ -59,6 +64,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "hammer-trash-prog",
       "text": "Trash 1 installed program that is not a decoder, fracter, or killer.",
       "instructions": {

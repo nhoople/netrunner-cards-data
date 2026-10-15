@@ -5,6 +5,7 @@
   "nrdbCode": "30028",
   "type": "event",
   "side": "runner",
+  "faction": "neutral-runner",
   "playCost": 0,
   "subtypes": [
     "run"
@@ -13,19 +14,26 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "runEvent",
         "value": {
           "servers": "hq_rd",
-          "bonusAccess": 1,
-          "onSuccessfulRun": {
-            "op": "do",
-            "action": {
-              "kind": "draw",
-              "side": "runner",
-              "amount": 1
-            }
-          }
+          "bonusAccess": 1
+        }
+      }
+    },
+    {
+      "class": "conditional",
+      "rule": "9.3.7c",
+      "trigger": "successful_run",
+      "host": "runEvent",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "draw",
+          "side": "runner",
+          "amount": 1
         }
       }
     }

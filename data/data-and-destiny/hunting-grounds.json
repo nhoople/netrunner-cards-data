@@ -15,6 +15,15 @@
   "abilities": [
     {
       "class": "paid",
+      "rule": "9.3.7b",
+      "flagRule": [
+        "9.3.6d",
+        "9.3.6g"
+      ],
+      "flag": [
+        "interrupt",
+        "once_per_turn"
+      ],
       "id": "hunting-grounds-prevent",
       "label": "[interrupt], once per turn → 0¢: Prevent a when-encountered ability",
       "cost": {
@@ -29,11 +38,11 @@
           "kind": "prevent_pending_when_encountered"
         }
       },
-      "flag": "once_per_turn",
       "usableByRunnerOnSelfIce": true
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "hunting-grounds-install",
       "label": "[trash]: Install the top 3 cards of your stack facedown",
       "cost": {

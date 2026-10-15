@@ -12,6 +12,7 @@
   "abilities": [
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "crescentus-derez",
       "label": "[trash]: Derez ice fully broken this encounter",
       "cost": {

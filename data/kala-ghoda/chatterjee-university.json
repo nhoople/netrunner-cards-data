@@ -15,6 +15,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "unique",
         "value": true
@@ -22,6 +23,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "chatterjee-power",
       "label": "[click]: Place 1 power counter on Chatterjee University",
       "cost": {
@@ -41,6 +43,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "chatterjee-install",
       "label": "[click]: Install a program from grip, lowering cost by power counters; remove 1 power counter",
       "cost": {

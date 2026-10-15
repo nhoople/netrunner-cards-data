@@ -5,6 +5,7 @@
   "nrdbCode": "33099",
   "type": "ice",
   "side": "corp",
+  "faction": "haas-bioroid",
   "unsupported": [],
   "subtypes": [
     "code gate",
@@ -16,6 +17,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "rez",
       "instructions": {
         "op": "if",
@@ -34,6 +36,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "pulse-lose",
       "text": "The Runner loses 1¢ for each rezzed piece of harmonic ice.",
       "instructions": {
@@ -53,6 +56,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "pulse-etr",
       "text": "End the run unless the Runner spends [click].",
       "instructions": {

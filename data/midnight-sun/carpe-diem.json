@@ -5,6 +5,7 @@
   "nrdbCode": "33012",
   "type": "event",
   "side": "runner",
+  "faction": "criminal",
   "unsupported": [],
   "subtypes": [
     "run"
@@ -13,6 +14,7 @@
   "abilities": [
     {
       "class": "play",
+      "rule": "9.3.7d",
       "instructions": {
         "op": "seq",
         "effects": [

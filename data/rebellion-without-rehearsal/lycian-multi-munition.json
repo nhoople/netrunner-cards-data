@@ -5,6 +5,7 @@
   "nrdbCode": "34100",
   "type": "ice",
   "side": "corp",
+  "faction": "haas-bioroid",
   "unsupported": [],
   "subtypes": [
     "mythic",
@@ -16,6 +17,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "rez",
       "instructions": {
         "op": "do",
@@ -26,6 +28,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "derezAtAnyTurnEnd",
         "value": true
@@ -33,6 +36,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "lycian-cg",
       "text": "If code gate: Runner loses [click] and 1¢.",
       "instructions": {
@@ -66,6 +70,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "lycian-sentry",
       "text": "If sentry: Trash 1 installed program.",
       "instructions": {
@@ -85,6 +90,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "lycian-barrier",
       "text": "If barrier: Gain 1¢ and end the run.",
       "instructions": {

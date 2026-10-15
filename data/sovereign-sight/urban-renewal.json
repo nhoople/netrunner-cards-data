@@ -16,6 +16,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "powerCountersOnRez",
         "value": 3
@@ -23,6 +24,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "trashWhenPowerEmpty",
         "value": true
@@ -30,6 +32,7 @@
     },
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "power_counters_empty",
       "instructions": {
         "op": "do",
@@ -41,6 +44,7 @@
     },
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "turn_begin",
       "instructions": {
         "op": "do",

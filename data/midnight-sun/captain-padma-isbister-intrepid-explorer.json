@@ -5,6 +5,7 @@
   "nrdbCode": "33021",
   "type": "identity",
   "side": "runner",
+  "faction": "shaper",
   "unsupported": [],
   "subtypes": [
     "cyborg"
@@ -12,6 +13,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "link",
         "value": 0
@@ -19,6 +21,7 @@
     },
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "first_rd_run_begin_this_turn",
       "instructions": {
         "op": "choose",

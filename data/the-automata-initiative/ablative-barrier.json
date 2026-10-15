@@ -5,6 +5,7 @@
   "nrdbCode": "34034",
   "type": "ice",
   "side": "corp",
+  "faction": "haas-bioroid",
   "unsupported": [],
   "subtypes": [
     "barrier"
@@ -15,6 +16,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "rez",
       "instructions": {
         "op": "if",
@@ -62,6 +64,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "ablative-etr",
       "text": "End the run.",
       "instructions": {

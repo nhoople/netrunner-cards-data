@@ -16,6 +16,7 @@
   "abilities": [
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "lockdown-no-draw",
       "text": "The Runner cannot draw cards for the remainder of this turn.",
       "instructions": {

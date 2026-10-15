@@ -5,6 +5,7 @@
   "nrdbCode": "33111",
   "type": "upgrade",
   "side": "corp",
+  "faction": "jinteki",
   "unsupported": [],
   "subtypes": [
     "region"
@@ -15,6 +16,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "approach_server",
       "instructions": {
         "op": "do",

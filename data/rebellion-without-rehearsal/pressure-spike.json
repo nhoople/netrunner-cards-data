@@ -5,6 +5,7 @@
   "nrdbCode": "34092",
   "type": "program",
   "side": "runner",
+  "faction": "shaper",
   "unsupported": [],
   "subtypes": [
     "icebreaker",
@@ -16,6 +17,9 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
+      "flagRule": "9.3.6c",
+      "flag": "interface",
       "declaration": {
         "field": "breaker",
         "value": {
@@ -30,6 +34,9 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
+      "flagRule": "9.3.6c",
+      "flag": "interface",
       "id": "pressure-spike-pump",
       "label": "Pump Pressure Spike +3 strength",
       "cost": {
@@ -48,6 +55,17 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
+      "flagRule": [
+        "9.3.6c",
+        "9.3.6f"
+      ],
+      "flag": [
+        "interface",
+        {
+          "threat": 4
+        }
+      ],
       "id": "pressure-spike-threat-pump",
       "label": "Threat 4 → 2¢: +9 strength (once per run)",
       "cost": {
@@ -62,9 +80,6 @@
           "kind": "pump_strength",
           "amount": 9
         }
-      },
-      "flag": {
-        "threat": 4
       },
       "oncePerRun": true
     }

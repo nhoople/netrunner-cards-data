@@ -16,6 +16,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "playAdditionalClick",
         "value": true
@@ -23,16 +24,23 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "runEvent",
         "value": {
-          "servers": "hq",
-          "onSuccessfulRun": {
-            "op": "do",
-            "action": {
-              "kind": "may_breach_instead_diversion_funds_ka"
-            }
-          }
+          "servers": "hq"
+        }
+      }
+    },
+    {
+      "class": "conditional",
+      "rule": "9.3.7c",
+      "trigger": "successful_run",
+      "host": "runEvent",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "may_breach_instead_diversion_funds_ka"
         }
       }
     }

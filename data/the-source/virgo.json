@@ -17,6 +17,7 @@
   "abilities": [
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "virgo-trace",
       "text": "Trace[2]. If successful, give the Runner 1 tag. If strength ≥5, give the Runner 1 tag.",
       "instructions": {

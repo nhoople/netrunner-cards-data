@@ -5,6 +5,7 @@
   "nrdbCode": "33014",
   "type": "hardware",
   "side": "runner",
+  "faction": "criminal",
   "unsupported": [],
   "subtypes": [
     "cybernetic"
@@ -13,6 +14,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "install",
       "instructions": {
         "op": "do",
@@ -24,6 +26,7 @@
     },
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "first_successful_hq_run_this_turn",
       "instructions": {
         "op": "do",

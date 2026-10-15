@@ -3,6 +3,7 @@
   "title": "Rototurret",
   "type": "ice",
   "side": "corp",
+  "faction": "haas-bioroid",
   "wave": "system-update-2021",
   "nrdbCode": "31046",
   "installCost": 4,
@@ -16,6 +17,7 @@
   "abilities": [
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "roto-trash",
       "text": "Trash a program.",
       "instructions": {
@@ -28,6 +30,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "roto-etr",
       "text": "End the run.",
       "instructions": {

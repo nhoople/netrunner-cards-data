@@ -5,6 +5,7 @@
   "nrdbCode": "36059",
   "type": "ice",
   "side": "corp",
+  "faction": "weyland-consortium",
   "unsupported": [],
   "subtypes": [
     "sentry"
@@ -15,6 +16,7 @@
   "abilities": [
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "flywheel-1",
       "text": "Gain 1[credit]. You may draw 1 card.",
       "instructions": {
@@ -63,6 +65,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "flywheel-2",
       "text": "Gain 1[credit]. You may draw 1 card.",
       "instructions": {

@@ -16,6 +16,7 @@
   "abilities": [
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "roughneck-repair-squad-main",
       "label": "[click][click][click]: Gain 6¢. You may remove 1 bad publicity.",
       "cost": {

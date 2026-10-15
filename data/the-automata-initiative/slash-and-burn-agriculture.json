@@ -5,6 +5,7 @@
   "nrdbCode": "34057",
   "type": "agenda",
   "side": "corp",
+  "faction": "weyland-consortium",
   "unsupported": [],
   "subtypes": [
     "expansion",
@@ -15,6 +16,7 @@
   "abilities": [
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "sab-expend",
       "label": "[click], 1¢, reveal and trash from HQ: place 2 advancements on 1 advanceable card",
       "cost": {

@@ -13,6 +13,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "turn_begin",
       "instructions": {
         "op": "do",
@@ -24,6 +25,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "ebc-search",
       "label": "1¢,[trash]: Search R&D for an asset, reveal it, add to HQ",
       "cost": {

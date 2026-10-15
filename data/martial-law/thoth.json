@@ -17,6 +17,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "unique",
         "value": true
@@ -24,6 +25,7 @@
     },
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "encounter",
       "instructions": {
         "op": "do",
@@ -35,6 +37,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "thoth-net-per-tag",
       "text": "Trace[4]. If successful, do 1 net damage for each tag the Runner has.",
       "instructions": {
@@ -59,6 +62,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "thoth-lose-credits-per-tag",
       "text": "Trace[4]. If successful, the Runner loses 1¢ for each tag they have.",
       "instructions": {

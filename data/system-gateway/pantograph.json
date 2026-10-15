@@ -5,6 +5,7 @@
   "nrdbCode": "30023",
   "type": "hardware",
   "side": "runner",
+  "faction": "shaper",
   "installCost": 2,
   "subtypes": [
     "console"
@@ -13,6 +14,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "muBonus",
         "value": 1
@@ -20,6 +22,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "creditsOnScoreOrSteal",
         "value": 1
@@ -27,6 +30,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "mayInstallOnScoreOrSteal",
         "value": true

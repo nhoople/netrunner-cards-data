@@ -16,6 +16,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "unique",
         "value": true
@@ -23,6 +24,7 @@
     },
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "unsuccessful_run_on_this_server",
       "instructions": {
         "op": "do",
@@ -34,6 +36,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "georgia-move",
       "label": "2¢: Move Georgia Emelyov to another server",
       "cost": {

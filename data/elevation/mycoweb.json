@@ -5,6 +5,7 @@
   "nrdbCode": "35053",
   "type": "ice",
   "side": "corp",
+  "faction": "jinteki",
   "unsupported": [],
   "subtypes": [
     "code gate"
@@ -15,6 +16,7 @@
   "abilities": [
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "mycoweb-archives-install",
       "text": "You may install 1 piece of ice from Archives, ignoring all costs.",
       "instructions": {
@@ -26,6 +28,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "mycoweb-rez-discount",
       "text": "You may rez 1 installed piece of ice, paying 2[credit] less.",
       "instructions": {
@@ -38,6 +41,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "mycoweb-sentry-sub",
       "text": "Resolve 1 subroutine on a rezzed sentry.",
       "instructions": {
@@ -51,6 +55,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "mycoweb-code-gate-sub",
       "text": "Resolve 1 subroutine on another rezzed code gate.",
       "instructions": {

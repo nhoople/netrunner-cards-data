@@ -12,6 +12,7 @@
   "abilities": [
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "paintbrush-paint",
       "label": "[click]: Choose rezzed ice; gain subtype until end of next run",
       "cost": {

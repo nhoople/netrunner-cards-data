@@ -16,6 +16,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "dynamicEtrSubroutineCountFromCorpAgendaPoints",
         "value": true
@@ -23,6 +24,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "hive-etr-1",
       "text": "End the run.",
       "instructions": {
@@ -34,6 +36,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "hive-etr-2",
       "text": "End the run.",
       "instructions": {
@@ -45,6 +48,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "hive-etr-3",
       "text": "End the run.",
       "instructions": {
@@ -56,6 +60,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "hive-etr-4",
       "text": "End the run.",
       "instructions": {

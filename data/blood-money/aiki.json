@@ -18,6 +18,7 @@
   "abilities": [
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "aiki-psi",
       "text": "You and the Runner secretly spend 0¢, 1¢, or 2¢. Reveal spent credits. If you and the Runner spent a different number of credits, the Runner draws 2 cards.",
       "instructions": {
@@ -38,6 +39,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "aiki-net-1",
       "text": "Do 1 net damage.",
       "instructions": {
@@ -50,6 +52,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "aiki-net-2",
       "text": "Do 1 net damage.",
       "instructions": {

@@ -14,6 +14,15 @@
   "abilities": [
     {
       "class": "paid",
+      "rule": "9.3.7b",
+      "flagRule": [
+        "9.3.6d",
+        "9.3.6g"
+      ],
+      "flag": [
+        "interrupt",
+        "once_per_turn"
+      ],
       "id": "no-one-home-tags",
       "label": "[interrupt] → [trash]: first tags this turn — Corp Trace[0]; if unsuccessful, prevent all tags",
       "cost": {
@@ -29,11 +38,19 @@
           "mode": "tags"
         }
       },
-      "flag": "once_per_turn",
       "usableByRunnerOnSelfIce": true
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
+      "flagRule": [
+        "9.3.6d",
+        "9.3.6g"
+      ],
+      "flag": [
+        "interrupt",
+        "once_per_turn"
+      ],
       "id": "no-one-home-net",
       "label": "[interrupt] → [trash]: first net damage this turn — Corp Trace[0]; if unsuccessful, prevent all net damage",
       "cost": {
@@ -49,7 +66,6 @@
           "mode": "net"
         }
       },
-      "flag": "once_per_turn",
       "usableByRunnerOnSelfIce": true,
       "requirePendingDamageTypes": [
         "net"

@@ -5,6 +5,7 @@
   "nrdbCode": "26089",
   "type": "program",
   "side": "runner",
+  "faction": "shaper",
   "unsupported": [],
   "subtypes": [
     "icebreaker",
@@ -17,6 +18,9 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
+      "flagRule": "9.3.6c",
+      "flag": "interface",
       "declaration": {
         "field": "breaker",
         "value": {
@@ -32,6 +36,9 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
+      "flagRule": "9.3.6c",
+      "flag": "interface",
       "id": "penrose-break-barrier",
       "label": "1¢: Break 1 barrier subroutine (installed this turn)",
       "cost": {
@@ -53,6 +60,9 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
+      "flagRule": "9.3.6c",
+      "flag": "interface",
       "id": "penrose-break-cg",
       "label": "1¢: Break 1 code gate subroutine",
       "cost": {
@@ -73,6 +83,9 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
+      "flagRule": "9.3.6c",
+      "flag": "interface",
       "id": "penrose-pump",
       "label": "1¢: +3 strength (stealth credits only)",
       "cost": {

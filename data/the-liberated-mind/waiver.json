@@ -17,6 +17,7 @@
   "abilities": [
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "waiver-trace",
       "text": "Trace[5]. If successful, reveal grip; trash each card with play/install cost ≤ excess.",
       "instructions": {

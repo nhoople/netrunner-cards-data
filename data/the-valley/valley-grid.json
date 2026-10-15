@@ -16,6 +16,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "fully_break_protecting_ice",
       "instructions": {
         "op": "do",

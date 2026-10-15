@@ -15,6 +15,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "score",
       "instructions": {
         "op": "do",
@@ -26,6 +27,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "paidAbilitiesOncePerTurn",
         "value": true
@@ -33,6 +35,9 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
+      "flagRule": "9.3.6g",
+      "flag": "once_per_turn",
       "id": "firmware-advance",
       "label": "Hosted agenda counter: Place 1 advancement on advanceable ice",
       "cost": {
@@ -46,8 +51,7 @@
         "action": {
           "kind": "firmware_place_advancement_on_advanceable_ice"
         }
-      },
-      "flag": "once_per_turn"
+      }
     }
   ]
 }

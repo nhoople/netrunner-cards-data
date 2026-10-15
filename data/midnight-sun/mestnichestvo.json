@@ -5,6 +5,7 @@
   "nrdbCode": "33053",
   "type": "ice",
   "side": "corp",
+  "faction": "nbn",
   "unsupported": [],
   "subtypes": [
     "code gate"
@@ -15,6 +16,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "canAdvance",
         "value": true
@@ -22,6 +24,7 @@
     },
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "encounter",
       "instructions": {
         "op": "choose",
@@ -63,6 +66,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "mest-lose",
       "text": "The Runner loses 3¢.",
       "instructions": {
@@ -76,6 +80,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "mest-etr",
       "text": "End the run.",
       "instructions": {

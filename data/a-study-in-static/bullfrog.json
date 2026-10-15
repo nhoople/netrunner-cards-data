@@ -18,6 +18,7 @@
   "abilities": [
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "bullfrog-psi",
       "text": "You and the Runner secretly spend 0¢, 1¢ or 2¢. Reveal spent credits. If you and the Runner spent a different number of credits and this ice is installed, move this ice to the outermost position protecting another server. (The run continues from this new position.)",
       "instructions": {

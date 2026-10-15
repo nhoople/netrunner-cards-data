@@ -11,6 +11,7 @@
   "abilities": [
     {
       "class": "play",
+      "rule": "9.3.7d",
       "instructions": {
         "op": "do",
         "action": {
@@ -20,6 +21,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "hostStrengthPerPowerCounter",
         "value": 1
@@ -27,6 +29,7 @@
     },
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "pass_host",
       "instructions": {
         "op": "do",

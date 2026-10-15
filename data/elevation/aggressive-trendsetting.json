@@ -5,6 +5,7 @@
   "nrdbCode": "35037",
   "type": "agenda",
   "side": "corp",
+  "faction": "haas-bioroid",
   "unsupported": [],
   "subtypes": [
     "initiative"
@@ -14,6 +15,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "first_corp_card_trash_each_turn",
       "instructions": {
         "op": "choose",

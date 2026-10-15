@@ -5,6 +5,7 @@
   "nrdbCode": "30057",
   "type": "operation",
   "side": "corp",
+  "faction": "nbn",
   "playCost": 4,
   "subtypes": [
     "gray ops"
@@ -13,6 +14,7 @@
   "abilities": [
     {
       "class": "play",
+      "rule": "9.3.7d",
       "instructions": {
         "op": "choose",
         "chooser": "runner",
@@ -45,6 +47,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "playRequiresSuccessfulRunLastTurn",
         "value": true

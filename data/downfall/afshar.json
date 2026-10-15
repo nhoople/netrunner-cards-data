@@ -16,6 +16,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "encounter",
       "instructions": {
         "op": "if",
@@ -33,6 +34,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "afshar-lose",
       "text": "The Runner loses 2[credit].",
       "instructions": {
@@ -46,6 +48,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "afshar-etr",
       "text": "End the run.",
       "instructions": {

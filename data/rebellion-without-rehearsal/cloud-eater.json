@@ -5,6 +5,7 @@
   "nrdbCode": "34110",
   "type": "ice",
   "side": "corp",
+  "faction": "jinteki",
   "unsupported": [],
   "subtypes": [
     "sentry",
@@ -18,6 +19,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "encounter_end_if_rezzed_this_turn",
       "instructions": {
         "op": "choose",
@@ -61,6 +63,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "cloud-trash",
       "text": "Trash 1 installed Runner card.",
       "instructions": {
@@ -73,6 +76,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "cloud-tags",
       "text": "Give the Runner 2 tags.",
       "instructions": {
@@ -85,6 +89,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "cloud-net",
       "text": "Do 3 net damage.",
       "instructions": {

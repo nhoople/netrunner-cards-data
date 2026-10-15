@@ -5,12 +5,14 @@
   "nrdbCode": "26106",
   "type": "agenda",
   "side": "corp",
+  "faction": "jinteki",
   "unsupported": [],
   "advancementRequirement": 4,
   "agendaPoints": 2,
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "score",
       "instructions": {
         "op": "do",
@@ -22,6 +24,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "flower-sermon-look",
       "label": "Hosted agenda counter: Look at top of R&D; may advance; may bottom",
       "cost": {

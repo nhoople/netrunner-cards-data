@@ -5,6 +5,7 @@
   "nrdbCode": "30036",
   "type": "agenda",
   "side": "corp",
+  "faction": "haas-bioroid",
   "advancementRequirement": 3,
   "agendaPoints": 2,
   "subtypes": [
@@ -14,6 +15,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "score",
       "instructions": {
         "op": "seq",

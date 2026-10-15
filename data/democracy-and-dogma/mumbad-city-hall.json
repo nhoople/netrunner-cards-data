@@ -17,6 +17,7 @@
   "abilities": [
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "mumbad-city-hall-alliance",
       "label": "[click]: Search R&D for an alliance card, reveal it, and play or install it (paying all costs). Shuffle R&D",
       "cost": {

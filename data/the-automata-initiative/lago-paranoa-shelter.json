@@ -5,6 +5,7 @@
   "nrdbCode": "34009",
   "type": "resource",
   "side": "runner",
+  "faction": "anarch",
   "unsupported": [],
   "subtypes": [
     "connection",
@@ -14,6 +15,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "first_corp_root_install_each_turn",
       "instructions": {
         "op": "choose",

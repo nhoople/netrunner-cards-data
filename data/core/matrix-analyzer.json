@@ -18,6 +18,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "encounter",
       "instructions": {
         "op": "choose",
@@ -64,6 +65,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "matrix-analyzer-trace",
       "text": "Trace[2]. If successful, give the Runner 1 tag.",
       "instructions": {

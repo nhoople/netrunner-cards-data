@@ -5,6 +5,7 @@
   "nrdbCode": "33054",
   "type": "ice",
   "side": "corp",
+  "faction": "nbn",
   "unsupported": [],
   "subtypes": [
     "sentry",
@@ -16,6 +17,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "encounter",
       "instructions": {
         "op": "choose",
@@ -62,6 +64,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "vasilisa-tag",
       "text": "Give the Runner 1 tag.",
       "instructions": {

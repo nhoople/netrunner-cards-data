@@ -5,6 +5,7 @@
   "nrdbCode": "36029",
   "type": "ice",
   "side": "corp",
+  "faction": "haas-bioroid",
   "unsupported": [],
   "subtypes": [
     "barrier",
@@ -16,6 +17,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "rezCostDiscountPerOtherUnrezzedIce",
         "value": 1
@@ -23,6 +25,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "reverb-etr-1",
       "text": "End the run.",
       "instructions": {
@@ -34,6 +37,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "reverb-etr-2",
       "text": "End the run.",
       "instructions": {

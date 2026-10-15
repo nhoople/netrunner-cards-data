@@ -14,6 +14,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "unique",
         "value": true
@@ -21,6 +22,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "muBonus",
         "value": 1
@@ -28,6 +30,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "recurringCreditsMax",
         "value": 2
@@ -35,6 +38,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "recurringSpendFor",
         "value": [
@@ -44,6 +48,7 @@
     },
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "successful_trace_during_run",
       "instructions": {
         "op": "do",

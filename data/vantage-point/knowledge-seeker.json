@@ -5,6 +5,7 @@
   "nrdbCode": "36040",
   "type": "ice",
   "side": "corp",
+  "faction": "jinteki",
   "unsupported": [],
   "subtypes": [
     "code gate"
@@ -15,6 +16,7 @@
   "abilities": [
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "knowledge-seeker-1",
       "text": "Place 1 virus counter on this ice.",
       "instructions": {
@@ -27,6 +29,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "knowledge-seeker-2",
       "text": "Look at the top 4 cards of R&D and arrange them in any order.",
       "instructions": {
@@ -39,6 +42,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "knowledge-seeker-3",
       "text": "End the run.",
       "instructions": {
@@ -50,6 +54,7 @@
     },
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "encounter_end",
       "instructions": {
         "op": "if",

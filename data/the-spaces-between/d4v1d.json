@@ -12,6 +12,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "powerCountersOnInstall",
         "value": 3
@@ -19,6 +20,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "d4v1d-break",
       "label": "Hosted power counter: Break 1 subroutine on ice strength 5+",
       "cost": {

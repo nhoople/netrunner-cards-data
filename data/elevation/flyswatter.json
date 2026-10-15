@@ -5,6 +5,7 @@
   "nrdbCode": "35079",
   "type": "ice",
   "side": "corp",
+  "faction": "neutral-corp",
   "unsupported": [],
   "subtypes": [
     "code gate"
@@ -15,6 +16,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "rez",
       "instructions": {
         "op": "if",
@@ -31,6 +33,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "flyswatter-etr",
       "text": "End the run.",
       "instructions": {

@@ -5,6 +5,7 @@
   "nrdbCode": "30045",
   "type": "asset",
   "side": "corp",
+  "faction": "jinteki",
   "installCost": 0,
   "rezCost": 0,
   "trashCost": 2,
@@ -15,6 +16,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "access",
       "instructions": {
         "op": "do",

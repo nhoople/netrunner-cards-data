@@ -5,6 +5,7 @@
   "nrdbCode": "35027",
   "type": "hardware",
   "side": "runner",
+  "faction": "shaper",
   "unsupported": [],
   "subtypes": [
     "mod"
@@ -13,6 +14,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "install",
       "instructions": {
         "op": "do",
@@ -23,6 +25,7 @@
     },
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "turn_begin",
       "instructions": {
         "op": "do",
@@ -33,6 +36,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "hostIcebreakerStrengthBonus",
         "value": 1
@@ -40,6 +44,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "extendsHostBreakerPumpToRun",
         "value": true

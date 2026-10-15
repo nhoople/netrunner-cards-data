@@ -14,6 +14,9 @@
   "abilities": [
     {
       "class": "paid",
+      "rule": "9.3.7b",
+      "flagRule": "9.3.6d",
+      "flag": "interrupt",
       "id": "dummy-box-prevent",
       "label": "[interrupt] → Trash 1 card from grip: Prevent Corp trashing 1 installed card of the same type",
       "cost": {

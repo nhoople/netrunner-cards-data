@@ -16,6 +16,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "first_advancement_on_server_this_turn",
       "instructions": {
         "op": "do",
@@ -28,6 +29,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "oncePerTurn",
         "value": true

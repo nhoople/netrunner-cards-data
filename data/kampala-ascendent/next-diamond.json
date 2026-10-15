@@ -19,6 +19,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "rezCostDiscountPerRezzedSubtype",
         "value": {
@@ -29,6 +30,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "next-diamond-core-1",
       "text": "Do 1 core damage.",
       "instructions": {
@@ -41,6 +43,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "next-diamond-core-2",
       "text": "Do 1 core damage.",
       "instructions": {
@@ -53,6 +56,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "next-diamond-trash",
       "text": "Trash 1 installed Runner card.",
       "instructions": {

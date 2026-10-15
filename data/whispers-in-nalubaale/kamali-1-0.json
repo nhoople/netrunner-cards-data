@@ -19,6 +19,7 @@
   "abilities": [
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "kamali-break",
       "label": "Lose [click]: Break 1 subroutine on Kamali 1.0",
       "cost": {
@@ -38,6 +39,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "kamali-resource",
       "text": "Do 1 core damage unless the Runner trashes 1 installed resource.",
       "instructions": {
@@ -71,6 +73,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "kamali-hardware",
       "text": "Do 1 core damage unless the Runner trashes 1 installed piece of hardware.",
       "instructions": {
@@ -104,6 +107,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "kamali-program",
       "text": "Do 1 core damage unless the Runner trashes 1 installed program.",
       "instructions": {

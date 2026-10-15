@@ -16,6 +16,7 @@
   "abilities": [
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "whirlpool-no-jack-trash",
       "text": "The Runner cannot jack out for the remainder of this run. Trash Whirlpool.",
       "instructions": {

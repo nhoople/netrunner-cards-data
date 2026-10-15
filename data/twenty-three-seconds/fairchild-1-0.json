@@ -17,6 +17,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "bioroidBreakMaxSubs",
         "value": 1
@@ -24,6 +25,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "fairchild-1-0-pay-or-trash-1",
       "text": "The Runner must pay 1¢ or trash 1 of their installed cards.",
       "instructions": {
@@ -37,6 +39,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "fairchild-1-0-pay-or-trash-2",
       "text": "The Runner must pay 1¢ or trash 1 of their installed cards.",
       "instructions": {

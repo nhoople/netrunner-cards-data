@@ -13,6 +13,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "link",
         "value": 0
@@ -20,6 +21,9 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
+      "flagRule": "9.3.6g",
+      "flag": "once_per_turn",
       "id": "omar-archives",
       "label": "[click]: Run Archives. If that run would be successful, change attacked server to HQ or R&D",
       "cost": {
@@ -36,7 +40,6 @@
           "amount": 0
         }
       },
-      "flag": "once_per_turn",
       "usableByRunnerOnSelfIce": true,
       "startsRun": {
         "servers": "archives",

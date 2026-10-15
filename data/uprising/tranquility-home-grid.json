@@ -5,6 +5,7 @@
   "nrdbCode": "26105",
   "type": "upgrade",
   "side": "corp",
+  "faction": "haas-bioroid",
   "unsupported": [],
   "subtypes": [
     "region"
@@ -15,6 +16,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "remoteOnly",
         "value": true
@@ -22,6 +24,7 @@
     },
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "first_install_in_this_server_root_this_turn",
       "instructions": {
         "op": "choose",

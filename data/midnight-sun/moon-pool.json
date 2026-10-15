@@ -5,6 +5,7 @@
   "nrdbCode": "33042",
   "type": "asset",
   "side": "corp",
+  "faction": "jinteki",
   "unsupported": [],
   "subtypes": [
     "facility"
@@ -15,6 +16,7 @@
   "abilities": [
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "moon-pool-resolve",
       "label": "[click], trash: Remove Moon Pool from the game",
       "cost": {

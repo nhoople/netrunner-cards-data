@@ -16,6 +16,7 @@
   "abilities": [
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "ucf",
       "text": "Untagged lose 1¢; tagged lose all ¢ and trash this ice",
       "instructions": {

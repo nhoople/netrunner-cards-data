@@ -12,6 +12,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "pass_rezzed_ice",
       "instructions": {
         "op": "choose",

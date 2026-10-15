@@ -16,6 +16,7 @@
   "abilities": [
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "inazuma-lock",
       "text": "Next encounter this run Runner cannot break subroutines on encountered ice.",
       "instructions": {
@@ -27,6 +28,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "inazuma-etr",
       "text": "End the run.",
       "instructions": {

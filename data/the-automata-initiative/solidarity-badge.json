@@ -5,6 +5,7 @@
   "nrdbCode": "34003",
   "type": "hardware",
   "side": "runner",
+  "faction": "anarch",
   "unsupported": [],
   "subtypes": [
     "chip"
@@ -13,6 +14,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "first_corp_card_trash_each_turn",
       "instructions": {
         "op": "do",
@@ -24,6 +26,7 @@
     },
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "turn_begin",
       "instructions": {
         "op": "if",

@@ -17,6 +17,7 @@
   "abilities": [
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "viper-trace-click",
       "text": "Trace[3]. If successful, the Runner loses [click], if able.",
       "instructions": {
@@ -37,6 +38,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "viper-trace-etr",
       "text": "Trace[3]. If successful, end the run.",
       "instructions": {

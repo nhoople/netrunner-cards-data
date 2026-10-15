@@ -5,6 +5,7 @@
   "nrdbCode": "34122",
   "type": "agenda",
   "side": "corp",
+  "faction": "weyland-consortium",
   "unsupported": [],
   "subtypes": [
     "expansion",
@@ -15,6 +16,7 @@
   "abilities": [
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "eminent-expend",
       "label": "[click], 1¢, reveal and trash from HQ: Install and rez from HQ paying 5¢ less",
       "cost": {
@@ -36,6 +38,7 @@
     },
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "score",
       "instructions": {
         "op": "do",

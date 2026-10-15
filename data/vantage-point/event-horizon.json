@@ -5,6 +5,7 @@
   "nrdbCode": "36058",
   "type": "ice",
   "side": "corp",
+  "faction": "weyland-consortium",
   "unsupported": [],
   "subtypes": [
     "sentry",
@@ -16,6 +17,7 @@
   "abilities": [
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "event-horizon-trash-etr",
       "label": "[trash]: End the run (run against this server)",
       "cost": {
@@ -36,6 +38,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "event-horizon-trash-prog",
       "text": "Trash 1 installed program unless the Runner pays 3[credit].",
       "instructions": {
@@ -63,6 +66,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "event-horizon-etr",
       "text": "End the run unless the Runner pays 3[credit].",
       "instructions": {

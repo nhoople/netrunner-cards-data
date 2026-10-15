@@ -16,6 +16,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "bioroidWorkCrewRequireAfterOperationPaidWindow",
         "value": true
@@ -23,6 +24,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "bioroid-work-crew-install",
       "label": "[trash]: Install 1 card from HQ (after playing an operation)",
       "cost": {

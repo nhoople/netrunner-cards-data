@@ -14,21 +14,28 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "runEvent",
         "value": {
-          "servers": "any",
-          "onRunEnd": {
-            "op": "if",
-            "cond": {
-              "op": "run_unsuccessful"
-            },
-            "then": {
-              "op": "do",
-              "action": {
-                "kind": "backup_plan_may_rerun_ignore_additional_costs_bypass_last_ice"
-              }
-            }
+          "servers": "any"
+        }
+      }
+    },
+    {
+      "class": "conditional",
+      "rule": "9.3.7c",
+      "trigger": "run_end",
+      "host": "runEvent",
+      "instructions": {
+        "op": "if",
+        "cond": {
+          "op": "run_unsuccessful"
+        },
+        "then": {
+          "op": "do",
+          "action": {
+            "kind": "backup_plan_may_rerun_ignore_additional_costs_bypass_last_ice"
           }
         }
       }

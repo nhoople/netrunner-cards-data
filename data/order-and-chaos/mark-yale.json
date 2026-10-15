@@ -16,6 +16,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "unique",
         "value": true
@@ -23,6 +24,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "gainCreditsOnSpendAgendaCounter",
         "value": 1
@@ -30,6 +32,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "mark-yale-trash",
       "label": "[trash]: Gain 2[credit]",
       "cost": {
@@ -49,6 +52,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "mark-yale-agenda",
       "label": "Any agenda counter: Gain 2[credit]",
       "cost": {

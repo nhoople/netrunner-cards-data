@@ -5,6 +5,7 @@
   "nrdbCode": "34101",
   "type": "ice",
   "side": "corp",
+  "faction": "haas-bioroid",
   "unsupported": [],
   "subtypes": [
     "sentry",
@@ -16,6 +17,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "maxInstalledRunnerTrashesPerEncounter",
         "value": 1
@@ -23,6 +25,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "soro-resource",
       "text": "Trash 1 installed resource.",
       "instructions": {
@@ -35,6 +38,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "soro-hardware",
       "text": "Trash 1 installed piece of hardware.",
       "instructions": {
@@ -47,6 +51,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "soro-program",
       "text": "Trash 1 installed program.",
       "instructions": {

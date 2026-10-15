@@ -5,6 +5,7 @@
   "nrdbCode": "26120",
   "type": "identity",
   "side": "corp",
+  "faction": "weyland-consortium",
   "unsupported": [],
   "subtypes": [
     "division"
@@ -12,6 +13,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "maxRemoteServers",
         "value": 1
@@ -19,6 +21,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "additionalRunInitiateCredits",
         "value": {
@@ -29,6 +32,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "earth-station-flip",
       "label": "[click]: Flip this identity",
       "cost": {
@@ -46,15 +50,21 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "identityFlippedHooks",
-        "value": {
-          "onSuccessfulHqRun": {
-            "op": "do",
-            "action": {
-              "kind": "flip_identity"
-            }
-          }
+        "value": {}
+      }
+    },
+    {
+      "class": "conditional",
+      "rule": "9.3.7c",
+      "trigger": "successful_hq_run",
+      "host": "identityFlippedHooks",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "flip_identity"
         }
       }
     }

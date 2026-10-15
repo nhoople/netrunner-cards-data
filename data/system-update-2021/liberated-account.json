@@ -5,11 +5,13 @@
   "nrdbCode": "31010",
   "type": "resource",
   "side": "runner",
+  "faction": "anarch",
   "unsupported": [],
   "installCost": 6,
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "hostedCreditsOnInstall",
         "value": 16
@@ -17,6 +19,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "trashWhenHostedCreditsEmpty",
         "value": true
@@ -24,6 +27,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "lib-account",
       "label": "Take 4¢",
       "cost": {

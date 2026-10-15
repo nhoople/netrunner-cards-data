@@ -5,6 +5,7 @@
   "nrdbCode": "31067",
   "type": "ice",
   "side": "corp",
+  "faction": "nbn",
   "unsupported": [],
   "subtypes": [
     "barrier"
@@ -15,6 +16,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "strengthBonusIfNoInstalledSubtype",
         "value": {
@@ -25,6 +27,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "wrap-etr",
       "text": "End the run.",
       "instructions": {

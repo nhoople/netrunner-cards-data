@@ -15,6 +15,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "daemonHost",
         "value": true
@@ -22,6 +23,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "daemonHostMaxMu",
         "value": 99
@@ -29,6 +31,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "maxHostedCards",
         "value": 1
@@ -36,6 +39,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "daemonHostVirusProgramsOnly",
         "value": true
@@ -43,6 +47,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "hostedIcebreakerMemoryDoesNotCount",
         "value": true
@@ -50,6 +55,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "preventOneVirusPurgeOnHostedProgram",
         "value": true

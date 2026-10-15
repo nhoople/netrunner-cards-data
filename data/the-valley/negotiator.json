@@ -17,6 +17,7 @@
   "abilities": [
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "negotiator-break",
       "label": "2¢: Break 1 subroutine on this ice (Runner only)",
       "cost": {
@@ -36,6 +37,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "negotiator-gain",
       "text": "Gain 2¢.",
       "instructions": {
@@ -49,6 +51,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "negotiator-trash",
       "text": "Trash 1 installed program.",
       "instructions": {

@@ -16,6 +16,7 @@
   "abilities": [
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "pachinko-etr-1",
       "text": "End the run if the Runner is tagged.",
       "instructions": {
@@ -33,6 +34,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "pachinko-etr-2",
       "text": "End the run if the Runner is tagged.",
       "instructions": {

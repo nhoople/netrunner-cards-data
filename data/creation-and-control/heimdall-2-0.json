@@ -18,6 +18,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "bioroidBreakMaxSubs",
         "value": 2
@@ -25,6 +26,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "heimdall-2-0-core",
       "text": "Do 1 core damage.",
       "instructions": {
@@ -37,6 +39,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "heimdall-2-0-core-etr",
       "text": "Do 1 core damage and end the run.",
       "instructions": {
@@ -60,6 +63,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "heimdall-2-0-etr",
       "text": "End the run.",
       "instructions": {

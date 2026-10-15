@@ -5,6 +5,7 @@
   "nrdbCode": "34090",
   "type": "program",
   "side": "runner",
+  "faction": "shaper",
   "unsupported": [],
   "subtypes": [
     "icebreaker",
@@ -17,6 +18,9 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
+      "flagRule": "9.3.6c",
+      "flag": "interface",
       "declaration": {
         "field": "breaker",
         "value": {
@@ -32,6 +36,7 @@
     },
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "install",
       "instructions": {
         "op": "do",
@@ -43,6 +48,7 @@
     },
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "fully_break",
       "instructions": {
         "op": "do",
@@ -54,6 +60,9 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
+      "flagRule": "9.3.6c",
+      "flag": "interface",
       "id": "lobisomem-break-cg",
       "label": "1¢: Break 1 code gate subroutine",
       "cost": {
@@ -73,6 +82,9 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
+      "flagRule": "9.3.6c",
+      "flag": "interface",
       "id": "lobisomem-break-barrier",
       "label": "X¢, hosted power: Break X barrier subroutines",
       "cost": {
@@ -93,6 +105,9 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
+      "flagRule": "9.3.6c",
+      "flag": "interface",
       "id": "lobisomem-pump",
       "label": "1¢: +2 strength",
       "cost": {

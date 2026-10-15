@@ -5,11 +5,13 @@
   "nrdbCode": "33020",
   "type": "resource",
   "side": "runner",
+  "faction": "criminal",
   "unsupported": [],
   "installCost": 0,
   "abilities": [
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "nfl-credits",
       "label": "Trash No Free Lunch: gain 3¢",
       "cost": {
@@ -29,6 +31,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "nfl-tag",
       "label": "Trash No Free Lunch: remove 1 tag",
       "cost": {

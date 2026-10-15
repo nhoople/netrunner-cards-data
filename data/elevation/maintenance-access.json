@@ -5,6 +5,7 @@
   "nrdbCode": "35016",
   "type": "event",
   "side": "runner",
+  "faction": "criminal",
   "unsupported": [],
   "subtypes": [
     "run",
@@ -14,6 +15,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "playAdditionalClick",
         "value": true
@@ -21,6 +23,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "runEvent",
         "value": {

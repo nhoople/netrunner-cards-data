@@ -5,12 +5,16 @@
   "nrdbCode": "35007",
   "type": "program",
   "side": "runner",
+  "faction": "anarch",
   "unsupported": [],
   "installCost": 0,
   "memoryCost": 1,
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
+      "flagRule": "9.3.6b",
+      "flag": "access",
       "declaration": {
         "field": "accessTrashSelfNonAgendaThenDraw",
         "value": true

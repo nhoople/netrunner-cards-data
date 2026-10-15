@@ -5,6 +5,7 @@
   "nrdbCode": "30043",
   "type": "identity",
   "side": "corp",
+  "faction": "jinteki",
   "unsupported": [],
   "subtypes": [
     "megacorp"

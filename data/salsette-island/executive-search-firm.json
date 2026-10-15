@@ -17,6 +17,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "zeroInfluenceIfNonAllianceFactionCardsGte",
         "value": {
@@ -27,6 +28,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "executive-search-firm-search",
       "label": "[click]: Search R&D for an executive, sysop, or character, reveal it, and add it to HQ. Shuffle R&D",
       "cost": {

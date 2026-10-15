@@ -5,6 +5,7 @@
   "nrdbCode": "34082",
   "type": "program",
   "side": "runner",
+  "faction": "criminal",
   "unsupported": [],
   "subtypes": [
     "virus",
@@ -15,6 +16,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "installOnIce",
         "value": true
@@ -22,6 +24,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "trashOnVirusPurge",
         "value": true
@@ -29,6 +32,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "physarum-bypass",
       "label": "Pay 1¢ per sub: bypass host ice (if not barrier)",
       "cost": {

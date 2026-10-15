@@ -16,6 +16,7 @@
   "abilities": [
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "free-lunch-lose",
       "label": "Hosted power counter: The Runner loses 1¢",
       "cost": {
@@ -38,6 +39,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "free-lunch-power-1",
       "text": "Place 1 power counter on Free Lunch.",
       "instructions": {
@@ -50,6 +52,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "free-lunch-power-2",
       "text": "Place 1 power counter on Free Lunch.",
       "instructions": {

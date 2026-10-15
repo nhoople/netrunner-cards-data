@@ -5,11 +5,13 @@
   "nrdbCode": "30013",
   "type": "hardware",
   "side": "runner",
+  "faction": "criminal",
   "installCost": 2,
   "unsupported": [],
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "bonusAccessOnFirstHqBreachThisTurn",
         "value": 1

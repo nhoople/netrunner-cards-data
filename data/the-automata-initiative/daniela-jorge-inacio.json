@@ -5,6 +5,7 @@
   "nrdbCode": "34047",
   "type": "upgrade",
   "side": "corp",
+  "faction": "jinteki",
   "unsupported": [],
   "subtypes": [
     "sysop"
@@ -15,13 +16,9 @@
   "abilities": [
     {
       "class": "static",
-      "declaration": {
-        "field": "persistent",
-        "value": true
-      }
-    },
-    {
-      "class": "static",
+      "rule": "9.3.7a",
+      "flagRule": "9.3.6e",
+      "flag": "persistent",
       "restrictions": [
         {
           "appliesTo": "trash",

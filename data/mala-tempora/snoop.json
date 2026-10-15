@@ -17,6 +17,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "encounter",
       "instructions": {
         "op": "do",
@@ -27,6 +28,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "snoop-counter-reveal",
       "label": "Hosted power counter: Reveal grip; trash 1 card",
       "cost": {
@@ -44,6 +46,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "snoop-trace",
       "text": "Trace[3]. If successful, place 1 power counter on Snoop.",
       "instructions": {

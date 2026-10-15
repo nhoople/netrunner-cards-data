@@ -5,6 +5,7 @@
   "nrdbCode": "33119",
   "type": "operation",
   "side": "corp",
+  "faction": "nbn",
   "unsupported": [],
   "subtypes": [
     "gray ops"
@@ -13,6 +14,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "playRequiresMinTags",
         "value": 2
@@ -20,6 +22,7 @@
     },
     {
       "class": "play",
+      "rule": "9.3.7d",
       "instructions": {
         "op": "do",
         "action": {

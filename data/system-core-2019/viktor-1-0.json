@@ -18,6 +18,7 @@
   "abilities": [
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "viktor-1-0-core",
       "text": "Do 1 core damage.",
       "instructions": {
@@ -30,6 +31,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "viktor-1-0-etr",
       "text": "End the run.",
       "instructions": {

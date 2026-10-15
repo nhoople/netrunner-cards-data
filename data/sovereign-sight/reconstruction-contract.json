@@ -13,6 +13,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "placeAdvancementOnSufferMeatDamage",
         "value": true
@@ -20,6 +21,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "reconstruction-move",
       "label": "[trash]: Move any number of advancement tokens from Reconstruction Contract to a card that can be advanced",
       "cost": {

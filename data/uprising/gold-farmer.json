@@ -5,6 +5,7 @@
   "nrdbCode": "26116",
   "type": "ice",
   "side": "corp",
+  "faction": "nbn",
   "unsupported": [],
   "subtypes": [
     "barrier"
@@ -15,6 +16,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "runnerLoseCreditsOnBreakPrintedSubroutine",
         "value": 1
@@ -22,6 +24,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "gold-farmer-1",
       "text": "End the run unless the Runner pays 3[credit].",
       "instructions": {
@@ -48,6 +51,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "gold-farmer-2",
       "text": "End the run unless the Runner pays 3[credit].",
       "instructions": {

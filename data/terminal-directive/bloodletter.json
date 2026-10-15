@@ -17,6 +17,7 @@
   "abilities": [
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "bloodletter-trash",
       "text": "The Runner must trash either 1 installed program or the top 2 cards of the stack.",
       "instructions": {

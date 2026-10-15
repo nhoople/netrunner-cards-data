@@ -16,6 +16,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "score",
       "instructions": {
         "op": "do",
@@ -27,6 +28,9 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
+      "flagRule": "9.3.6g",
+      "flag": "once_per_turn",
       "id": "broad-daylight-meat",
       "label": "[click], hosted agenda counter: Do 2 meat damage",
       "cost": {
@@ -42,8 +46,7 @@
           "kind": "meat_damage",
           "amount": 2
         }
-      },
-      "flag": "once_per_turn"
+      }
     }
   ]
 }

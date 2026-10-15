@@ -5,6 +5,7 @@
   "nrdbCode": "36035",
   "type": "upgrade",
   "side": "corp",
+  "faction": "haas-bioroid",
   "unsupported": [],
   "installCost": 1,
   "rezCost": 1,
@@ -12,6 +13,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "powerCountersOnRez",
         "value": 1
@@ -19,6 +21,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "powerCounterOnAgendaScoredOrStolenFromThisServer",
         "value": 1
@@ -26,6 +29,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "perfect-recall-reveal",
       "label": "Hosted power: Reveal HQ card — Runner cannot steal/trash copies this run",
       "cost": {

@@ -16,6 +16,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "encounter",
       "instructions": {
         "op": "choose",
@@ -60,6 +61,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "authenticator-gain",
       "text": "The Corp gains 2 credits.",
       "instructions": {
@@ -73,6 +75,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "authenticator-etr",
       "text": "End the run.",
       "instructions": {

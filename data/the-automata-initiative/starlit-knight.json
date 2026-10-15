@@ -5,6 +5,7 @@
   "nrdbCode": "34053",
   "type": "ice",
   "side": "corp",
+  "faction": "nbn",
   "unsupported": [],
   "subtypes": [
     "sentry",
@@ -16,6 +17,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "encounter",
       "instructions": {
         "op": "if",
@@ -33,6 +35,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "starlit-tag-1",
       "text": "Give the Runner 1 tag.",
       "instructions": {
@@ -45,6 +48,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "starlit-tag-2",
       "text": "Give the Runner 1 tag.",
       "instructions": {

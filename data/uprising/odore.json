@@ -5,6 +5,7 @@
   "nrdbCode": "26071",
   "type": "program",
   "side": "runner",
+  "faction": "anarch",
   "unsupported": [],
   "subtypes": [
     "icebreaker",
@@ -16,6 +17,9 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
+      "flagRule": "9.3.6c",
+      "flag": "interface",
       "declaration": {
         "field": "breaker",
         "value": {
@@ -31,6 +35,9 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
+      "flagRule": "9.3.6c",
+      "flag": "interface",
       "id": "odore-break-any",
       "label": "2¢: Break any number of sentry subroutines",
       "cost": {
@@ -51,6 +58,9 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
+      "flagRule": "9.3.6c",
+      "flag": "interface",
       "id": "odore-break-virtual",
       "label": "0¢: Break 1 sentry (3+ virtual resources)",
       "cost": {
@@ -72,6 +82,9 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
+      "flagRule": "9.3.6c",
+      "flag": "interface",
       "id": "odore-pump",
       "label": "3¢: +3 strength",
       "cost": {

@@ -5,6 +5,7 @@
   "nrdbCode": "35028",
   "type": "hardware",
   "side": "runner",
+  "faction": "shaper",
   "unsupported": [],
   "subtypes": [
     "console"
@@ -13,6 +14,7 @@
   "abilities": [
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "madani-host",
       "label": "[click]: Host any number of programs from your grip faceup (not installed)",
       "cost": {
@@ -30,6 +32,9 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
+      "flagRule": "9.3.6g",
+      "flag": "once_per_turn",
       "id": "madani-install",
       "label": "0[credit]: Install 1 hosted program (paying its install cost)",
       "cost": {
@@ -43,8 +48,7 @@
         "action": {
           "kind": "may_install_one_hosted_program"
         }
-      },
-      "flag": "once_per_turn"
+      }
     }
   ]
 }

@@ -5,6 +5,7 @@
   "nrdbCode": "34035",
   "type": "ice",
   "side": "corp",
+  "faction": "haas-bioroid",
   "unsupported": [],
   "subtypes": [
     "sentry",
@@ -16,6 +17,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "encounter",
       "instructions": {
         "op": "if",
@@ -56,6 +58,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "jag-tag",
       "text": "Give the Runner 1 tag.",
       "instructions": {
@@ -68,6 +71,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "jag-core",
       "text": "If the Runner is tagged, do 1 core damage.",
       "instructions": {

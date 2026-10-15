@@ -15,6 +15,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "unique",
         "value": true
@@ -22,6 +23,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "deckLimitOne",
         "value": true
@@ -29,6 +31,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "onGripHqSuccessInstallSelfIgnoringCosts",
         "value": true
@@ -36,6 +39,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "utopia-discard",
       "label": "[trash]: Corp discards 2 cards from HQ at random",
       "cost": {

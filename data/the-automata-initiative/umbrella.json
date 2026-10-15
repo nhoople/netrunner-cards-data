@@ -5,6 +5,7 @@
   "nrdbCode": "34027",
   "type": "program",
   "side": "runner",
+  "faction": "shaper",
   "unsupported": [],
   "subtypes": [
     "icebreaker",
@@ -17,6 +18,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "interfaceRequiresTrojanHost",
         "value": true
@@ -24,6 +26,9 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
+      "flagRule": "9.3.6c",
+      "flag": "interface",
       "declaration": {
         "field": "breaker",
         "value": {
@@ -36,6 +41,9 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
+      "flagRule": "9.3.6c",
+      "flag": "interface",
       "id": "umbrella-break",
       "label": "2¢: Break up to 3 code gate subs; if any, each player may draw 1",
       "cost": {

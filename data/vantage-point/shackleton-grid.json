@@ -5,6 +5,7 @@
   "nrdbCode": "36065",
   "type": "upgrade",
   "side": "corp",
+  "faction": "weyland-consortium",
   "unsupported": [],
   "subtypes": [
     "region"
@@ -15,6 +16,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "spend_credits_outside_pool_during_run_once_per_turn",
       "instructions": {
         "op": "choose",

@@ -5,6 +5,7 @@
   "nrdbCode": "34054",
   "type": "ice",
   "side": "corp",
+  "faction": "nbn",
   "unsupported": [],
   "subtypes": [
     "code gate",
@@ -16,6 +17,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "pass",
       "instructions": {
         "op": "if",
@@ -33,6 +35,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "vsa-lose",
       "text": "The Runner loses 1[credit].",
       "instructions": {

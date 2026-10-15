@@ -11,6 +11,7 @@
   "abilities": [
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "window-draw",
       "label": "[click]: Draw 1 from bottom of stack",
       "cost": {

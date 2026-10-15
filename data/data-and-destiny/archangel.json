@@ -18,6 +18,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "mustRevealWhenAccessedFromRd",
         "value": true
@@ -25,6 +26,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "skipOnAccessFromArchives",
         "value": true
@@ -32,6 +34,7 @@
     },
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "access",
       "instructions": {
         "op": "choose",
@@ -77,6 +80,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "archangel-trace",
       "text": "Trace[6]. If successful, add 1 installed Runner card to the grip.",
       "instructions": {

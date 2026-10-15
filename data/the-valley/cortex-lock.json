@@ -17,6 +17,7 @@
   "abilities": [
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "cortex-lock-net",
       "text": "Do 1 net damage for each unused MU the Runner has.",
       "instructions": {

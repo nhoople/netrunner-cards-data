@@ -5,6 +5,7 @@
   "nrdbCode": "35075",
   "type": "ice",
   "side": "corp",
+  "faction": "weyland-consortium",
   "unsupported": [],
   "subtypes": [
     "barrier"
@@ -15,6 +16,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "cannotBeTrashedByRunnerWhileRezzed",
         "value": true
@@ -22,6 +24,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "kessleroid-etr-1",
       "text": "End the run.",
       "instructions": {
@@ -33,6 +36,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "kessleroid-etr-2",
       "text": "End the run.",
       "instructions": {

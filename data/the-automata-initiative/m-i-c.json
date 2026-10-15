@@ -5,6 +5,7 @@
   "nrdbCode": "34036",
   "type": "ice",
   "side": "corp",
+  "faction": "haas-bioroid",
   "unsupported": [],
   "subtypes": [
     "code gate"
@@ -15,6 +16,7 @@
   "abilities": [
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "mic-trash-etr",
       "label": "[trash]: End the run unless the Runner spends [click]",
       "cost": {
@@ -47,6 +49,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "mic-lose-1",
       "text": "The Runner loses [click].",
       "instructions": {
@@ -60,6 +63,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "mic-lose-2",
       "text": "The Runner loses [click].",
       "instructions": {
@@ -73,6 +77,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "mic-etr",
       "text": "End the run.",
       "instructions": {

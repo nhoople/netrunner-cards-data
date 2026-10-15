@@ -17,6 +17,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "badPublicityOnRez",
         "value": 1
@@ -24,6 +25,7 @@
     },
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "encounter",
       "instructions": {
         "op": "do",
@@ -37,6 +39,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "bulwark-trash-program",
       "text": "The Runner trashes 1 installed program.",
       "instructions": {
@@ -49,6 +52,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "bulwark-gain-etr-1",
       "text": "Gain 2¢. End the run.",
       "instructions": {
@@ -73,6 +77,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "bulwark-gain-etr-2",
       "text": "Gain 2¢. End the run.",
       "instructions": {

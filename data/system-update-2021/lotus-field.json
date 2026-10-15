@@ -5,6 +5,7 @@
   "nrdbCode": "31055",
   "type": "ice",
   "side": "corp",
+  "faction": "jinteki",
   "unsupported": [],
   "subtypes": [
     "code gate"
@@ -15,6 +16,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "strengthCannotBeLowered",
         "value": true
@@ -22,6 +24,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "lotus-etr",
       "text": "End the run.",
       "instructions": {

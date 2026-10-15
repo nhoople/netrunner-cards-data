@@ -17,6 +17,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "mustRevealWhenAccessedFromRd",
         "value": true
@@ -24,6 +25,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "skipOnAccessFromArchives",
         "value": true
@@ -31,6 +33,7 @@
     },
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "access",
       "instructions": {
         "op": "do",
@@ -41,6 +44,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "herald-gain",
       "text": "Gain 2¢.",
       "instructions": {
@@ -54,6 +58,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "herald-advance",
       "text": "You may pay up to 2¢ to place that many advancement counters on 1 installed card you can advance.",
       "instructions": {

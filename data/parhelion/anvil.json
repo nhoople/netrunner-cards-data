@@ -5,6 +5,7 @@
   "nrdbCode": "33124",
   "type": "ice",
   "side": "corp",
+  "faction": "weyland-consortium",
   "unsupported": [],
   "subtypes": [
     "code gate"
@@ -15,6 +16,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "encounter",
       "instructions": {
         "op": "do",
@@ -32,6 +34,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "anvil-gain-lose",
       "text": "Gain 1[credit]. The Runner loses 1[credit].",
       "instructions": {
@@ -58,6 +61,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "anvil-trash-runner",
       "text": "The Runner trashes 1 of their installed cards.",
       "instructions": {

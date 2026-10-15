@@ -16,6 +16,7 @@
   "abilities": [
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "watchtower-search",
       "text": "Search R&D for a card and add it to HQ. Shuffle R&D.",
       "instructions": {

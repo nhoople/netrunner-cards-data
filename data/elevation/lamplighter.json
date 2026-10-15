@@ -5,6 +5,7 @@
   "nrdbCode": "35080",
   "type": "ice",
   "side": "corp",
+  "faction": "neutral-corp",
   "unsupported": [],
   "subtypes": [
     "sentry",
@@ -16,6 +17,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "agenda_scored_or_stolen",
       "instructions": {
         "op": "if",
@@ -32,6 +34,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "lamplighter-tag",
       "text": "Give the Runner 1 tag unless they pay 3[credit].",
       "instructions": {
@@ -59,6 +62,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "lamplighter-etr",
       "text": "End the run if the Runner is tagged.",
       "instructions": {

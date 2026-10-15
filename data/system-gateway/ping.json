@@ -5,6 +5,7 @@
   "nrdbCode": "30055",
   "type": "ice",
   "side": "corp",
+  "faction": "nbn",
   "installCost": 2,
   "rezCost": 2,
   "strength": 1,
@@ -15,6 +16,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "rez",
       "instructions": {
         "op": "do",
@@ -26,6 +28,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "ping-etr",
       "text": "End the run.",
       "instructions": {

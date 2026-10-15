@@ -5,6 +5,7 @@
   "nrdbCode": "30007",
   "type": "program",
   "side": "runner",
+  "faction": "anarch",
   "installCost": 1,
   "subtypes": [
     "virus"
@@ -14,6 +15,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "install",
       "instructions": {
         "op": "do",
@@ -25,6 +27,7 @@
     },
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "turn_begin",
       "instructions": {
         "op": "do",
@@ -36,6 +39,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "fermenter-cash",
       "label": "Trash: gain 2¢ per virus",
       "cost": {

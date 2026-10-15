@@ -15,6 +15,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "unique",
         "value": true
@@ -22,6 +23,9 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
+      "flagRule": "9.3.6d",
+      "flag": "interrupt",
       "id": "nach-prevent-tag",
       "label": "[interrupt] → 2¢: Prevent 1 tag",
       "cost": {
@@ -40,6 +44,7 @@
     },
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "steal_agenda",
       "instructions": {
         "op": "do",

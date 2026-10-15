@@ -13,6 +13,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "netDamageWheneverRunnerTrashesCorpCard",
         "value": 1
@@ -20,6 +21,7 @@
     },
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "trash",
       "instructions": {
         "op": "do",

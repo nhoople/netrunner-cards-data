@@ -5,11 +5,13 @@
   "nrdbCode": "34070",
   "type": "hardware",
   "side": "runner",
+  "faction": "anarch",
   "unsupported": [],
   "installCost": 0,
   "abilities": [
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "wizard-chest-set-aside",
       "label": "[trash]: Set aside until 2 of a type; may install 1 ignoring costs",
       "cost": {

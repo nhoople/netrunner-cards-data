@@ -5,6 +5,7 @@
   "nrdbCode": "31049",
   "type": "upgrade",
   "side": "corp",
+  "faction": "haas-bioroid",
   "unsupported": [],
   "installCost": 0,
   "rezCost": 0,
@@ -12,6 +13,7 @@
   "abilities": [
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "ct-fortify",
       "label": "Trash: spend X¢, ice +X strength this turn",
       "cost": {

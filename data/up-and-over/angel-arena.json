@@ -13,6 +13,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "unique",
         "value": true
@@ -20,6 +21,7 @@
     },
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "install",
       "instructions": {
         "op": "do",
@@ -30,6 +32,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "trashWhenPowerEmpty",
         "value": true
@@ -37,6 +40,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "angel-reveal",
       "label": "Hosted power counter: reveal top of stack; may bottom",
       "cost": {

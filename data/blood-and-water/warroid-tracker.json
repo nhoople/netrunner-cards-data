@@ -16,6 +16,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "runner_trash_from_this_server_root_or_protecting",
       "instructions": {
         "op": "do",

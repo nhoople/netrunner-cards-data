@@ -5,6 +5,7 @@
   "nrdbCode": "33009",
   "type": "resource",
   "side": "runner",
+  "faction": "anarch",
   "unsupported": [],
   "subtypes": [
     "sabotage"
@@ -13,6 +14,7 @@
   "abilities": [
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "ltf-run",
       "label": "[click], trash, suffer 1 core damage: run a remote; blank root; on success trash root",
       "cost": {
@@ -33,12 +35,19 @@
       },
       "startsRun": {
         "servers": "remote",
-        "blankAttackedServerRoot": true,
-        "onSuccessfulRun": {
-          "op": "do",
-          "action": {
-            "kind": "trash_attacked_server_root"
-          }
+        "blankAttackedServerRoot": true
+      }
+    },
+    {
+      "class": "conditional",
+      "rule": "9.3.7c",
+      "trigger": "successful_run",
+      "host": "startsRun",
+      "hostAbility": "ltf-run",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "trash_attacked_server_root"
         }
       }
     }

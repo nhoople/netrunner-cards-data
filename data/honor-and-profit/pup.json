@@ -17,6 +17,7 @@
   "abilities": [
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "pup-1",
       "text": "Do 1 net unless Runner pays 1[credit].",
       "instructions": {
@@ -43,6 +44,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "pup-2",
       "text": "Do 1 net unless Runner pays 1[credit].",
       "instructions": {

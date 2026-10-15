@@ -5,6 +5,7 @@
   "nrdbCode": "31041",
   "type": "agenda",
   "side": "corp",
+  "faction": "haas-bioroid",
   "unsupported": [],
   "subtypes": [
     "research"
@@ -14,6 +15,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "score",
       "instructions": {
         "op": "do",
@@ -25,6 +27,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "vitruvius-archives",
       "label": "Hosted agenda counter: Archives → HQ",
       "cost": {

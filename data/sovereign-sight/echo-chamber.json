@@ -13,6 +13,7 @@
   "abilities": [
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "echo-chamber-score",
       "label": "[click][click][click]: Add Echo Chamber to your score area as an agenda worth 1 agenda point",
       "cost": {

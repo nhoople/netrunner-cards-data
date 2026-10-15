@@ -16,6 +16,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "unique",
         "value": true
@@ -23,6 +24,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "placePowerCounterOnInstallCardInRemoteRoot",
         "value": true
@@ -30,6 +32,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "estelle-moon-cash",
       "label": "[trash]: For each power counter, gain 2¢ and draw 1 card",
       "cost": {

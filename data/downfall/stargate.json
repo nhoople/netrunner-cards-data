@@ -12,6 +12,9 @@
   "abilities": [
     {
       "class": "paid",
+      "rule": "9.3.7b",
+      "flagRule": "9.3.6g",
+      "flag": "once_per_turn",
       "id": "stargate-run-rd",
       "label": "[click]: Run R&D (once per turn)",
       "cost": {
@@ -28,27 +31,33 @@
           "amount": 0
         }
       },
-      "flag": "once_per_turn",
       "startsRun": {
-        "servers": "rd",
-        "onSuccessfulRun": {
-          "op": "seq",
-          "effects": [
-            {
-              "op": "do",
-              "action": {
-                "kind": "set_run_skip_breach"
-              }
-            },
-            {
-              "op": "do",
-              "action": {
-                "kind": "reveal_top_n_rd_trash_one",
-                "n": 3
-              }
+        "servers": "rd"
+      }
+    },
+    {
+      "class": "conditional",
+      "rule": "9.3.7c",
+      "trigger": "successful_run",
+      "host": "startsRun",
+      "hostAbility": "stargate-run-rd",
+      "instructions": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "set_run_skip_breach"
             }
-          ]
-        }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "reveal_top_n_rd_trash_one",
+              "n": 3
+            }
+          }
+        ]
       }
     }
   ]

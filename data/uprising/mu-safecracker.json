@@ -5,11 +5,13 @@
   "nrdbCode": "26076",
   "type": "hardware",
   "side": "runner",
+  "faction": "criminal",
   "unsupported": [],
   "installCost": 2,
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "unique",
         "value": true
@@ -17,6 +19,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "paidAbilitiesUseStealthCreditsOnly",
         "value": true
@@ -24,6 +27,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "onSuccessfulHqRunMayPayForBonusAccess",
         "value": {
@@ -34,6 +38,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "onSuccessfulRdRunMayPayForBonusAccess",
         "value": {

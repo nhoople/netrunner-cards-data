@@ -15,6 +15,7 @@
   "abilities": [
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "levy-reveal",
       "label": "[click]: Reveal top 4 of stack; may add 1 program to grip; rest to bottom",
       "cost": {

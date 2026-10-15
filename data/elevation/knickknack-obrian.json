@@ -5,6 +5,7 @@
   "nrdbCode": "35033",
   "type": "resource",
   "side": "runner",
+  "faction": "shaper",
   "unsupported": [],
   "subtypes": [
     "connection"
@@ -13,6 +14,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "first_run_begin_this_turn",
       "instructions": {
         "op": "do",

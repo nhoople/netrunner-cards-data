@@ -16,6 +16,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "strengthBonusIfOutermostOnServer",
         "value": 4
@@ -23,6 +24,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "cw-etr-1",
       "text": "End the run.",
       "instructions": {
@@ -34,6 +36,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "cw-etr-2",
       "text": "End the run.",
       "instructions": {
@@ -45,6 +48,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "cw-etr-3",
       "text": "End the run.",
       "instructions": {

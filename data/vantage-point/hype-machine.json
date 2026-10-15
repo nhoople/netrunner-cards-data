@@ -5,6 +5,7 @@
   "nrdbCode": "36055",
   "type": "upgrade",
   "side": "corp",
+  "faction": "nbn",
   "unsupported": [],
   "subtypes": [
     "advertisement"
@@ -15,6 +16,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "rezCostDiscountIfAgendaScoredOrStolenThisTurn",
         "value": 6
@@ -22,6 +24,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "hype-machine-advance",
       "label": "[trash]: Place 1 advancement on a card you can advance in this server's root",
       "cost": {

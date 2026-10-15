@@ -5,6 +5,7 @@
   "nrdbCode": "35010",
   "type": "resource",
   "side": "runner",
+  "faction": "anarch",
   "unsupported": [],
   "subtypes": [
     "virtual"
@@ -13,6 +14,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "first_runner_stole_or_trashed_corp_card_this_turn",
       "instructions": {
         "op": "do",
@@ -24,6 +26,7 @@
     },
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "runner_action_phase_end",
       "instructions": {
         "op": "choose",

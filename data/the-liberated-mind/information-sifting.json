@@ -14,17 +14,24 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "runEvent",
         "value": {
           "servers": "hq",
-          "skipBreach": true,
-          "onSuccessfulRun": {
-            "op": "do",
-            "action": {
-              "kind": "information_sifting_corp_split_hq"
-            }
-          }
+          "skipBreach": true
+        }
+      }
+    },
+    {
+      "class": "conditional",
+      "rule": "9.3.7c",
+      "trigger": "successful_run",
+      "host": "runEvent",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "information_sifting_corp_split_hq"
         }
       }
     }

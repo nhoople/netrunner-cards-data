@@ -14,6 +14,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "placePowerCounterOnSufferAnyDamage",
         "value": true
@@ -21,6 +22,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "clan-vengeance-trash-hq",
       "label": "[trash]: Trash 1 card from HQ at random per power counter",
       "cost": {

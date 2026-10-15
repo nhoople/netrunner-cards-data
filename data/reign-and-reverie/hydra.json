@@ -17,6 +17,7 @@
   "abilities": [
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "hydra-net",
       "text": "Do 3 net damage if the Runner is tagged; otherwise, give the Runner 1 tag.",
       "instructions": {
@@ -42,6 +43,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "hydra-credits",
       "text": "Gain 5[credit] if the Runner is tagged; otherwise, give the Runner 1 tag.",
       "instructions": {
@@ -68,6 +70,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "hydra-etr",
       "text": "End the run if the Runner is tagged; otherwise, give the Runner 1 tag.",
       "instructions": {

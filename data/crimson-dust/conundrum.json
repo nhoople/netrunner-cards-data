@@ -16,6 +16,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "strengthBonusIfInstalledSubtype",
         "value": {
@@ -26,6 +27,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "conundrum-trash-program",
       "text": "The Runner trashes an installed program.",
       "instructions": {
@@ -38,6 +40,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "conundrum-lose-click",
       "text": "The Runner loses [click], if able.",
       "instructions": {
@@ -51,6 +54,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "conundrum-etr",
       "text": "End the run.",
       "instructions": {

@@ -16,6 +16,7 @@
   "abilities": [
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "shiro-arrange",
       "text": "Look at top 3 of R&D and arrange them.",
       "instructions": {
@@ -28,6 +29,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "shiro-pay",
       "text": "You may pay 1[credit]. If you do, do 1 net damage.",
       "instructions": {

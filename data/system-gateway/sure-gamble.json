@@ -3,6 +3,7 @@
   "title": "Sure Gamble",
   "type": "event",
   "side": "runner",
+  "faction": "neutral-runner",
   "wave": "system-gateway",
   "nrdbCode": "30030",
   "playCost": 5,
@@ -10,6 +11,7 @@
   "abilities": [
     {
       "class": "play",
+      "rule": "9.3.7d",
       "instructions": {
         "op": "do",
         "action": {

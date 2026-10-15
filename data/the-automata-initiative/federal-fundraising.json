@@ -5,6 +5,7 @@
   "nrdbCode": "34052",
   "type": "asset",
   "side": "corp",
+  "faction": "nbn",
   "unsupported": [],
   "subtypes": [
     "political",
@@ -16,6 +17,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "turn_begin",
       "instructions": {
         "op": "choose",

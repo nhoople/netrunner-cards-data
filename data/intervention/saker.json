@@ -17,6 +17,9 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
+      "flagRule": "9.3.6c",
+      "flag": "interface",
       "declaration": {
         "field": "breaker",
         "value": {
@@ -31,6 +34,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "saker-derez",
       "label": "2¢, add this program to your grip: Derez fully broken barrier",
       "cost": {

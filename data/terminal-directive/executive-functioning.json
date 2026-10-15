@@ -18,6 +18,7 @@
   "abilities": [
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "executive-functioning-trace",
       "text": "Trace[4]. If successful, do 1 core damage.",
       "instructions": {

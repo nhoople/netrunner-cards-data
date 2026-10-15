@@ -5,6 +5,7 @@
   "nrdbCode": "34086",
   "type": "event",
   "side": "runner",
+  "faction": "shaper",
   "unsupported": [],
   "subtypes": [
     "run"
@@ -13,6 +14,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "powerCountersOnPlay",
         "value": 3
@@ -20,6 +22,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "runEvent",
         "value": {
@@ -29,6 +32,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "spree-host",
       "label": "Hosted power: host installed trojan on attacked ice",
       "cost": {

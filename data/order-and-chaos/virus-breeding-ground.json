@@ -14,6 +14,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "turn_begin",
       "instructions": {
         "op": "do",
@@ -25,6 +26,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "vbg-move",
       "label": "[click]: Move 1 virus counter to another card with a virus counter",
       "cost": {

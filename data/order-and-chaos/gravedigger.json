@@ -15,6 +15,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "placeVirusCounterWhenInstalledCorpCardTrashed",
         "value": true
@@ -22,6 +23,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "gravedigger-mill",
       "label": "[click], hosted virus counter: Corp trashes top of R&D",
       "cost": {

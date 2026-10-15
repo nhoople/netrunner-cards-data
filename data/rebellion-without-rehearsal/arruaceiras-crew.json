@@ -5,6 +5,7 @@
   "nrdbCode": "34073",
   "type": "resource",
   "side": "runner",
+  "faction": "anarch",
   "unsupported": [],
   "subtypes": [
     "connection",
@@ -14,6 +15,9 @@
   "abilities": [
     {
       "class": "paid",
+      "rule": "9.3.7b",
+      "flagRule": "9.3.6g",
+      "flag": "once_per_turn",
       "id": "arruaceiras-weaken",
       "label": "Take 1 tag: encountered ice gets –2 strength",
       "cost": {
@@ -28,11 +32,11 @@
           "kind": "weaken_ice",
           "amount": 2
         }
-      },
-      "flag": "once_per_turn"
+      }
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "arruaceiras-trash-ice",
       "label": "[trash], 2¢: Trash encountered ice if strength ≤ 0",
       "cost": {

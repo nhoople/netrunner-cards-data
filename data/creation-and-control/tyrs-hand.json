@@ -16,6 +16,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "preventSubroutineBreakOnBioroidByTrash",
         "value": true
@@ -23,6 +24,9 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
+      "flagRule": "9.3.6d",
+      "flag": "interrupt",
       "id": "tyrs-hand-prevent",
       "label": "[trash]: Prevent 1 subroutine from being broken on bioroid ice protecting this server",
       "cost": {

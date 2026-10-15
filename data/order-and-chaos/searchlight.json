@@ -18,6 +18,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "canAdvance",
         "value": true
@@ -25,6 +26,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "searchlight-trace-1",
       "text": "Trace[X]. If successful, give the Runner 1 tag. X = advancements.",
       "instructions": {
@@ -43,6 +45,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "searchlight-trace-2",
       "text": "Trace[X]. If successful, give the Runner 1 tag. X = advancements.",
       "instructions": {

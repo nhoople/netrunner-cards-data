@@ -12,6 +12,7 @@
   "abilities": [
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "misdirection-remove-tags",
       "label": "[click], [click], X¢: Remove X tags",
       "cost": {

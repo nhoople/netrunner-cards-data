@@ -5,6 +5,7 @@
   "nrdbCode": "30018",
   "type": "resource",
   "side": "runner",
+  "faction": "criminal",
   "installCost": 5,
   "subtypes": [
     "job"
@@ -13,6 +14,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "hostedCreditsOnInstall",
         "value": 12
@@ -20,6 +22,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "trashWhenHostedCreditsEmpty",
         "value": true
@@ -27,6 +30,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "run-central",
       "label": "Run a central not run this turn; if successful take 3¢",
       "cost": {
@@ -45,13 +49,20 @@
       },
       "startsRun": {
         "servers": "central",
-        "requireNotRunThisTurn": true,
-        "onSuccessfulRun": {
-          "op": "do",
-          "action": {
-            "kind": "take_hosted_credits",
-            "amount": 3
-          }
+        "requireNotRunThisTurn": true
+      }
+    },
+    {
+      "class": "conditional",
+      "rule": "9.3.7c",
+      "trigger": "successful_run",
+      "host": "startsRun",
+      "hostAbility": "run-central",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "take_hosted_credits",
+          "amount": 3
         }
       }
     }

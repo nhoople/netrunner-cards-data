@@ -5,6 +5,7 @@
   "nrdbCode": "36039",
   "type": "ice",
   "side": "corp",
+  "faction": "jinteki",
   "unsupported": [],
   "subtypes": [
     "code gate"
@@ -15,6 +16,7 @@
   "abilities": [
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "ezam-swap",
       "label": "[click]: Swap this ice with another installed ice",
       "cost": {
@@ -32,6 +34,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "ezam-look",
       "text": "Look at the top card of R&D. You may add that card to the bottom of R&D.",
       "instructions": {
@@ -43,6 +46,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "ezam-fortify",
       "text": "Each piece of ice gets +1 strength for the remainder of this run.",
       "instructions": {

@@ -19,6 +19,7 @@
   "abilities": [
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "assassin-net",
       "text": "Trace[5]. If successful, do 3 net damage.",
       "instructions": {
@@ -38,6 +39,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "assassin-trash",
       "text": "Trace[4]. If successful, trash 1 program.",
       "instructions": {

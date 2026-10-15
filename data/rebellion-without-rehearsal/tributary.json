@@ -5,6 +5,7 @@
   "nrdbCode": "34111",
   "type": "ice",
   "side": "corp",
+  "faction": "jinteki",
   "unsupported": [],
   "subtypes": [
     "code gate"
@@ -15,6 +16,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "first_run_begin_this_turn",
       "instructions": {
         "op": "choose",
@@ -47,6 +49,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "tributary-draw-install",
       "text": "You may draw 1. You may install ice from HQ on another server, ignoring costs.",
       "instructions": {
@@ -93,6 +96,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "tributary-fortify",
       "text": "Each ice gets +2 strength for the remainder of this run.",
       "instructions": {

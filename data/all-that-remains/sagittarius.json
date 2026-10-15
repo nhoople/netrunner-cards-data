@@ -18,6 +18,7 @@
   "abilities": [
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "sagittarius-trace",
       "text": "Trace[2]. If successful, trash 1 program. If strength ≥5, trash 1 program.",
       "instructions": {
