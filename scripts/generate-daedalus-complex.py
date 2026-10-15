@@ -290,7 +290,7 @@ def map_card(c: dict) -> dict | None:
                     "id": "sync-bre-access",
                     "text": "Trace[2]. If successful, whenever the Runner breaches a server for the remainder of this run, they access 1 fewer card.",
                     "effect": trace_sub(
-                        2, do("reduce_breach_access_remainder_of_run", amount=1)
+                        2, do("breach_reduce_access_remainder_of_run", amount=1)
                     ),
                 },
             ],

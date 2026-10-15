@@ -27,7 +27,7 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "moon_pool_resolve",
+          "kind": "resolve_moon_pool",
           "trashHqMax": 2,
           "revealArchivesMax": 2
         }

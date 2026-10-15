@@ -24,7 +24,7 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "ka_reclaim_install_from_heap"
+          "kind": "install_reclaim_from_heap"
         }
       },
       "usableByRunnerOnSelfIce": true

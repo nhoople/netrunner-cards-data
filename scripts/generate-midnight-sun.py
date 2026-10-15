@@ -435,7 +435,7 @@ def map_card(c: dict) -> dict:
             onPlay={
                 "op": "do",
                 "action": {
-                    "kind": "deep_dive_resolve",
+                    "kind": "resolve_deep_dive",
                     "setAside": 8,
                     "initialAccess": 1,
                 },
@@ -832,7 +832,7 @@ def map_card(c: dict) -> dict:
             subtypes=["security"],
             scoreAdditionalCost={
                 "op": "do",
-                "action": {"kind": "must_trash_installed", "excludeSelf": True},
+                "action": {"kind": "trash_must_installed", "excludeSelf": True},
             },
             onScore=meat(2),
             unsupported=[],
@@ -883,7 +883,7 @@ def map_card(c: dict) -> dict:
                     "effect": {
                         "op": "do",
                         "action": {
-                            "kind": "moon_pool_resolve",
+                            "kind": "resolve_moon_pool",
                             "trashHqMax": 2,
                             "revealArchivesMax": 2,
                         },

@@ -33,7 +33,7 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "corp_may_pay_net",
+          "kind": "may_corp_pay_net",
           "creditCost": 1,
           "damage": 1
         }

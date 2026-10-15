@@ -245,9 +245,9 @@ def map_card(c: dict) -> dict | None:
         return base(
             c,
             subtypes=["connection"],
-            onInstall=do("corp_must_derez_a_card"),
+            onInstall=do("corp_derez_a_card"),
             onUninstall=may(
-                do("corp_may_rez_ignoring_cost"),
+                do("may_corp_rez_ignoring_cost"),
                 label="Rez a card, ignoring the rez cost",
                 decline_side="corp",
             ),

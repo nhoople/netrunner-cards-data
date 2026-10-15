@@ -22,7 +22,7 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "virgo_trace_subroutine"
+          "kind": "trace_virgo_subroutine"
         }
       }
     }

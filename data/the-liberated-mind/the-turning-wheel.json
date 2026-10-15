@@ -41,7 +41,7 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "turning_wheel_choose_central_bonus_access"
+          "kind": "choose_turning_wheel_central_bonus_access"
         }
       },
       "usableByRunnerOnSelfIce": true

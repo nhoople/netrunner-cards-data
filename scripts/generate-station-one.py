@@ -117,7 +117,7 @@ def map_card(c: dict) -> dict | None:
                 paid(
                     "severnius-run",
                     "[click]: Trash 2 or more cards from grip. Run HQ or R&D; +1 access per 2 trashed",
-                    do("severnius_trash_grip_run_hq_or_rd"),
+                    do("trash_severnius_grip_run_hq_or_rd"),
                     clicks=1,
                     usable_by_runner=True,
                 ),
@@ -188,7 +188,7 @@ def map_card(c: dict) -> dict | None:
                 paid(
                     "customized-secretary-install",
                     "[click]: Install a hosted program, paying all install costs",
-                    do("customized_secretary_install_hosted_program"),
+                    do("install_customized_secretary_hosted_program"),
                     clicks=1,
                     usable_by_runner=True,
                 ),

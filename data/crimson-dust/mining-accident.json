@@ -29,7 +29,7 @@
               "cost": {
                 "op": "do",
                 "action": {
-                  "kind": "cd_corp_pay_credits",
+                  "kind": "corp_pay_credits_to_prevent",
                   "amount": 5
                 }
               },

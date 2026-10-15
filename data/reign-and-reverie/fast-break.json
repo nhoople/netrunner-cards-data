@@ -14,7 +14,7 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "fast_break_equal_to_runner_scored_agendas"
+          "kind": "runner_break_fast_equal_to_scored_agendas"
         }
       }
     }

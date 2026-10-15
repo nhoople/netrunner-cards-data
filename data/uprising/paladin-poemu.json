@@ -71,7 +71,7 @@
         "then": {
           "op": "do",
           "action": {
-            "kind": "must_trash_own_installed"
+            "kind": "trash_must_own_installed"
           }
         }
       }

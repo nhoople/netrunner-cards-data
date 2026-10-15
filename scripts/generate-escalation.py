@@ -337,7 +337,7 @@ def map_card(c: dict) -> dict | None:
             playRequiresRunnerTrashedCorpCardLastTurn=True,
             onPlay=trace_sub(
                 2,
-                do("hellion_beta_trash_two_installed_non_program"),
+                do("trash_hellion_beta_two_installed_non_program"),
                 do("give_bad_publicity", amount=1),
             ),
         )
@@ -355,7 +355,7 @@ def map_card(c: dict) -> dict | None:
                 paid(
                     "kusanagi-net-sub",
                     "Hosted agenda counter: choose ice to gain '[subroutine] Do 1 net damage' this run",
-                    do("kusanagi_grant_net_subroutine_this_run"),
+                    do("grant_kusanagi_net_subroutine_this_run"),
                     cost={"agendaCounters": 1},
                     windows=["corp_action_paw", "encounter_paw", "approach_paw"],
                 ),

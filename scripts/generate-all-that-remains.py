@@ -76,7 +76,7 @@ def map_card(c: dict) -> dict | None:
         return base(
             c,
             subtypes=["initiative"],
-            onScore=do("bifrost_may_trigger_scored_agenda_on_score"),
+            onScore=do("may_score_bifrost_trigger_scored_agenda_on"),
         )
 
     if cid == "sagittarius":
@@ -87,7 +87,7 @@ def map_card(c: dict) -> dict | None:
                 {
                     "id": "sagittarius-trace",
                     "text": "Trace[2]. If successful, trash 1 program. If strength ≥5, trash 1 program.",
-                    "effect": do("sagittarius_trace_subroutine"),
+                    "effect": do("trace_sagittarius_subroutine"),
                 }
             ],
         )
@@ -177,7 +177,7 @@ def map_card(c: dict) -> dict | None:
         return base(
             c,
             subtypes=["code gate", "grail", "ap"],
-            onEncounter=do("grail_reveal_gain_subroutines", maxReveal=2),
+            onEncounter=do("reveal_grail_gain_subroutines", maxReveal=2),
             subroutines=[
                 {
                     "id": "merlin-net",

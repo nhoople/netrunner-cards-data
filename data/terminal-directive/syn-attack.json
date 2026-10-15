@@ -24,7 +24,7 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "syn_attack_corp_discard_2_or_draw_4"
+          "kind": "corp_draw_syn_attack_discard_2_or_4"
         }
       }
     }

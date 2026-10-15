@@ -71,7 +71,7 @@ def map_card(c: dict) -> dict | None:
         return base(
             c,
             playAdditionalCost=do("trash_rezzed_ice_additional_cost"),
-            onPlay=do("mutate_operation_resolve"),
+            onPlay=do("resolve_mutate_operation"),
         )
 
     if cid == "primary-transmission-dish":
@@ -106,7 +106,7 @@ def map_card(c: dict) -> dict | None:
                 {
                     "id": "taurus-trace",
                     "text": "Trace[2]. If successful, trash 1 hardware; if strength ≥5 trash another.",
-                    "effect": do("taurus_trace_subroutine"),
+                    "effect": do("trace_taurus_subroutine"),
                 }
             ],
         )
@@ -123,7 +123,7 @@ def map_card(c: dict) -> dict | None:
     if cid == "galahad":
         return base(
             c,
-            onEncounter=do("grail_reveal_gain_subroutines", maxReveal=2),
+            onEncounter=do("reveal_grail_gain_subroutines", maxReveal=2),
             subroutines=[
                 {"id": "galahad-etr", "text": "End the run.", "effect": etr()}
             ],
@@ -164,7 +164,7 @@ def map_card(c: dict) -> dict | None:
     if cid == "nasir-meidan-cyber-explorer":
         return base(
             c,
-            onEncounterRezzedAfterApproach=do("nasir_lose_all_credits"),
+            onEncounterRezzedAfterApproach=do("lose_nasir_all_credits"),
         )
 
     if cid == "social-engineering":

@@ -14,7 +14,7 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "fully_operational_resolve"
+          "kind": "resolve_fully_operational"
         }
       }
     }

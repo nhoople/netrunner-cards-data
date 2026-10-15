@@ -190,7 +190,7 @@ def map_card(c: dict) -> dict | None:
                 paid(
                     "puffer-power",
                     "[click]: Place 1 power counter on this program or remove 1 hosted power counter",
-                    do("ss_puffer_add_or_remove_power"),
+                    do("add_or_remove_power"),
                     clicks=1,
                     windows=["runner_action_paw"],
                     usable_by_runner=True,
@@ -271,7 +271,7 @@ def map_card(c: dict) -> dict | None:
             c,
             subtypes=["division"],
             onFirstCorpCardInstallEachTurn=may(
-                do("ss_asa_install_non_agenda_same_server"),
+                do("install_asa_non_agenda_same_server"),
                 label="Install 1 non-agenda from HQ in/protecting the same server",
                 decline_side="corp",
             ),

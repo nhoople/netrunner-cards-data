@@ -245,7 +245,7 @@ def map_card(c: dict) -> dict | None:
     if cid == "record-reconstructor":
         return base(
             c,
-            onSuccessfulRun=do("record_reconstructor_archives_instead_of_breach"),
+            onSuccessfulRun=do("breach_instead_record_reconstructor_archives"),
         )
 
     if cid == "wotan":
@@ -373,7 +373,7 @@ def map_card(c: dict) -> dict | None:
         )
 
     if cid == "profiteering":
-        return base(c, onScore=do("profiteering_on_score"))
+        return base(c, onScore=do("score_profiteering_on"))
 
     if cid == "restructure":
         return base(c, onPlay=gain("corp", 15))

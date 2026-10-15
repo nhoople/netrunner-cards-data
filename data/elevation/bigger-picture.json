@@ -41,7 +41,7 @@
             "effect": {
               "op": "do",
               "action": {
-                "kind": "bigger_picture_remove_tags"
+                "kind": "remove_bigger_picture_tags"
               }
             }
           }

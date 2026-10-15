@@ -38,7 +38,7 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "sensor_net_rez_bioroid_ignoring_costs_derez_turn_end"
+          "kind": "rez_sensor_net_bioroid_ignoring_costs_derez_turn_end"
         }
       }
     }

@@ -14,7 +14,7 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "mutate_operation_resolve"
+          "kind": "resolve_mutate_operation"
         }
       },
       "restrictions": [

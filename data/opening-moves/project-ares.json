@@ -20,7 +20,7 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "project_ares_on_score",
+          "kind": "score_project_ares_on",
           "past": 4
         }
       }

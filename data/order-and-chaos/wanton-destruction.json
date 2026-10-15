@@ -22,7 +22,7 @@
           "onSuccessfulRun": {
             "op": "do",
             "action": {
-              "kind": "wanton_destruction_instead_of_breach"
+              "kind": "breach_instead_wanton_destruction"
             }
           }
         }

@@ -32,7 +32,7 @@
           {
             "op": "do",
             "action": {
-              "kind": "dtwn_distract_trash_hq_shuffle_archives"
+              "kind": "trash_distract_hq_shuffle_archives"
             }
           }
         ]

@@ -117,7 +117,7 @@ def map_card(c: dict) -> dict | None:
             subtypes=["chip"],
             mayPlaceVirusCounterWhenCorpCardTrashed=True,
             onTurnBegin=may(
-                do("cotc_friday_chip_move_virus"),
+                do("move_friday_chip_virus"),
                 label="Move 1 hosted virus counter to a virus program",
             ),
         )
@@ -138,7 +138,7 @@ def map_card(c: dict) -> dict | None:
                 paid(
                     "crypt-search",
                     "[click], [trash], 3 hosted virus counters: Search stack for a virus program and install it (paying its install cost), then shuffle",
-                    do("cotc_crypt_search_install"),
+                    do("search_crypt_install"),
                     clicks=1,
                     trash_self=True,
                     cost={"virusCounters": 3},
@@ -193,7 +193,7 @@ def map_card(c: dict) -> dict | None:
                 "onRunEnd": {
                     "op": "if",
                     "cond": {"op": "run_successful"},
-                    "then": do("cotc_marathon_resolve"),
+                    "then": do("resolve_marathon"),
                 },
             },
         )
@@ -226,7 +226,7 @@ def map_card(c: dict) -> dict | None:
             c,
             subtypes=["bioroid"],
             onTurnBegin=may(
-                do("cotc_kuwinda_trace"),
+                do("trace_kuwinda"),
                 label="Trace[X] (X = hosted power counters)",
                 decline_side="corp",
             ),
@@ -240,7 +240,7 @@ def map_card(c: dict) -> dict | None:
                 {
                     "id": "next-sapphire-draw",
                     "text": "Draw up to X cards.",
-                    "effect": do("cotc_next_sapphire_draw"),
+                    "effect": do("draw_next_sapphire"),
                 },
                 {
                     "id": "next-sapphire-archives",
@@ -343,7 +343,7 @@ def map_card(c: dict) -> dict | None:
             onTurnBegin=seq(
                 draw("runner", 1),
                 may(
-                    do("cotc_personalized_portal_gain"),
+                    do("gain_personalized_portal"),
                     label="Gain 1¢ for every 2 cards in the grip",
                     decline_side="corp",
                 ),
@@ -388,7 +388,7 @@ def map_card(c: dict) -> dict | None:
             onPlay=do(
                 "trace",
                 strength=4,
-                onSuccess=do("cotc_trojan_horse_trash"),
+                onSuccess=do("trash_trojan_horse"),
             ),
         )
 

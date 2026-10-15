@@ -28,7 +28,7 @@
           {
             "op": "do",
             "action": {
-              "kind": "win_bypass_encountered_ice"
+              "kind": "bypass_current_encounter"
             }
           },
           {

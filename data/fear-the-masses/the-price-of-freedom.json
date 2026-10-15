@@ -14,7 +14,7 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "next_corp_turn_cannot_advance_cards"
+          "kind": "corp_cannot_advance_cards_next_turn"
         }
       },
       "restrictions": [

@@ -144,7 +144,7 @@ def map_card(c: dict) -> dict | None:
         return base(
             c,
             subtypes=["sentry", "grail", "destroyer"],
-            onEncounter=do("grail_reveal_gain_subroutines", maxReveal=2),
+            onEncounter=do("reveal_grail_gain_subroutines", maxReveal=2),
             subroutines=[
                 {
                     "id": "lancelot-trash",
@@ -174,7 +174,7 @@ def map_card(c: dict) -> dict | None:
                 "creditCost": 2,
                 "cost": {"credits": 2},
                 "windows": ["encounter_paw"],
-                "effect": do("blackat_pump_strength"),
+                "effect": do("pump_blackat_strength"),
             },
         ]
         card["breaker"]["breakViaPaidAbilityOnly"] = True
@@ -224,7 +224,7 @@ def map_card(c: dict) -> dict | None:
                     "effect": do("supplier_host_from_grip"),
                 }
             ],
-            onTurnBegin=do("supplier_turn_begin_install"),
+            onTurnBegin=do("install_supplier_turn_begin"),
         )
 
     if cid == "refractor":

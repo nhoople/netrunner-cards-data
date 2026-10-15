@@ -25,7 +25,7 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "aginfusion_trash_approached_unrezzed_redirect"
+          "kind": "trash_aginfusion_approached_unrezzed_redirect"
         }
       },
       "flag": "once_per_turn"

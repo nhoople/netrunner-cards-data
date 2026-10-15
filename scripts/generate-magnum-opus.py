@@ -119,7 +119,7 @@ def map_card(c: dict) -> dict | None:
             drawOnHostedEmpty=1,
             onTurnBegin=do("take_hosted_credits", amount=1),
             onRunnerTurnEnd=do(
-                "mo_crowdfunding_may_install_from_heap_ignore_costs",
+                "may_install_crowdfunding_from_heap_ignore_costs",
                 minSuccessfulRuns=3,
             ),
         )

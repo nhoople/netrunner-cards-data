@@ -34,7 +34,7 @@
             "effect": {
               "op": "do",
               "action": {
-                "kind": "tdatd_amani_trace"
+                "kind": "trace_amani"
               }
             }
           },

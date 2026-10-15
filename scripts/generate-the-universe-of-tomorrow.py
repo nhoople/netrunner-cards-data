@@ -116,7 +116,7 @@ def map_card(c: dict) -> dict | None:
             c,
             subtypes=["priority"],
             playRequiresFirstClick=True,
-            onPlay=do("arm_gain_credits_on_first_agenda_access", amount=7),
+            onPlay=do("gain_arm_credits_on_first_agenda_access", amount=7),
         )
 
     if cid == "surfer":
@@ -144,7 +144,7 @@ def map_card(c: dict) -> dict | None:
                 paid(
                     "ddos-trash",
                     "[trash]: Corp cannot rez outermost ice during a run this turn",
-                    do("arm_cannot_rez_outermost_ice_this_turn"),
+                    do("cannot_arm_rez_outermost_ice_this_turn"),
                     trash_self=True,
                     windows=["runner_action_paw"],
                 )

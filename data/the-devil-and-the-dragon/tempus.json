@@ -39,7 +39,7 @@
           "onSuccess": {
             "op": "do",
             "action": {
-              "kind": "tdatd_tempus_resolve"
+              "kind": "resolve_tempus"
             }
           }
         }

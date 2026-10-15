@@ -270,7 +270,7 @@ def map_card(c: dict) -> dict | None:
             c,
             subtypes=["liability"],
             badPublicityOnRez=1,
-            onTurnBegin=do("reality_threedee_gain_credits"),
+            onTurnBegin=do("gain_reality_threedee_credits"),
         )
 
     # --- Ice ---

@@ -20,7 +20,7 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "lycian_choose_subtypes"
+          "kind": "choose_lycian_subtypes"
         }
       }
     },

@@ -25,7 +25,7 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "severnius_trash_grip_run_hq_or_rd"
+          "kind": "trash_severnius_grip_run_hq_or_rd"
         }
       },
       "usableByRunnerOnSelfIce": true

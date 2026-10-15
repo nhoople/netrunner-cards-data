@@ -20,7 +20,7 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "dtwn_jua_forbid_install_remainder_of_turn"
+          "kind": "forbid_install_remainder_of_turn"
         }
       }
     },
@@ -31,7 +31,7 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "dtwn_jua_choose_two_bounce_one"
+          "kind": "choose_jua_two_bounce_one"
         }
       }
     }

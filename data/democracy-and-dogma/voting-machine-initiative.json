@@ -30,7 +30,7 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "voting_machine_may_spend_lose_click"
+          "kind": "may_spend_voting_machine_lose_click"
         }
       }
     }

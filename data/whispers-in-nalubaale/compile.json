@@ -28,7 +28,7 @@
                 "effect": {
                   "op": "do",
                   "action": {
-                    "kind": "win_compile_install_program"
+                    "kind": "install_compile_program"
                   }
                 }
               },

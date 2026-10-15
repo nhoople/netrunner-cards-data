@@ -14,7 +14,7 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "trade_in_resolve"
+          "kind": "resolve_trade_in"
         }
       },
       "restrictions": [

@@ -167,7 +167,7 @@ def map_card(c: dict) -> dict | None:
             playAdditionalCost=do(
                 "trash_own_resource_with_subtype", subtype="connection"
             ),
-            onPlay=do("next_corp_turn_cannot_advance_cards"),
+            onPlay=do("corp_cannot_advance_cards_next_turn"),
             rfgInsteadOfTrashing=True,
         )
 
@@ -190,7 +190,7 @@ def map_card(c: dict) -> dict | None:
     if cid == "rigged-results":
         return base(
             c,
-            onPlay=do("rigged_results_secret_spend_guess"),
+            onPlay=do("spend_rigged_results_secret_guess"),
         )
 
     if cid == "lateral-growth":

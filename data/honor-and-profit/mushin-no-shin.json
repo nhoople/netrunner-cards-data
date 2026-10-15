@@ -24,7 +24,7 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "mushin_install_from_hq_root"
+          "kind": "install_mushin_from_hq_root"
         }
       }
     }

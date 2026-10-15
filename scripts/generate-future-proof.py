@@ -212,7 +212,7 @@ def map_card(c: dict) -> dict | None:
                 "servers": "rd",
                 "onSuccessfulRun": {
                     "op": "do",
-                    "action": {"kind": "indexing_may_instead_of_breach"},
+                    "action": {"kind": "may_breach_instead_indexing"},
                 },
             },
             unsupported=[],

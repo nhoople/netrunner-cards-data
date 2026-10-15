@@ -112,7 +112,7 @@ def map_card(c: dict) -> dict | None:
     if cid == "shi-kyu":
         return base(
             c,
-            onAccessNotFromRd=do("shi_kyu_spend_for_net_damage"),
+            onAccessNotFromRd=do("spend_shi_kyu_for_net_damage"),
         )
 
     if cid == "tenma-line":
@@ -148,7 +148,7 @@ def map_card(c: dict) -> dict | None:
         return base(
             c,
             playAdditionalClick=True,
-            onPlay=do("mushin_install_from_hq_root"),
+            onPlay=do("install_mushin_from_hq_root"),
         )
 
     if cid == "inazuma":
@@ -204,7 +204,7 @@ def map_card(c: dict) -> dict | None:
                 {
                     "id": "shiro-pay",
                     "text": "You may pay 1[credit]. If you do, do 1 net damage.",
-                    "effect": do("corp_may_pay_net", creditCost=1, damage=1),
+                    "effect": do("may_corp_pay_net", creditCost=1, damage=1),
                 },
             ],
         )
@@ -216,7 +216,7 @@ def map_card(c: dict) -> dict | None:
                 {
                     "id": "susanoo-redirect",
                     "text": "If server is not Archives, move to outermost Archives instead of passing.",
-                    "effect": do("susanoo_redirect_to_archives"),
+                    "effect": do("redirect_susanoo_to_archives"),
                 }
             ],
         )
@@ -231,7 +231,7 @@ def map_card(c: dict) -> dict | None:
     if cid == "tori-hanzo":
         return base(
             c,
-            onFirstNetDamageThisRunOnServer=do("tori_hanzo_pay_instead_net"),
+            onFirstNetDamageThisRunOnServer=do("pay_tori_hanzo_instead_net"),
         )
 
     if cid == "plan-b":
@@ -271,7 +271,7 @@ def map_card(c: dict) -> dict | None:
     if cid == "iain-stirling-retired-spook":
         return base(
             c,
-            onTurnBegin=do("iain_gain_if_corp_ahead_on_agenda"),
+            onTurnBegin=do("corp_gain_iain_if_ahead_on_agenda"),
         )
 
     if cid == "silhouette-stealth-operative":
@@ -366,7 +366,7 @@ def map_card(c: dict) -> dict | None:
                     "creditCost": 0,
                     "cost": {"clicks": 2},
                     "windows": ["runner_action_paw"],
-                    "effect": do("unregistered_trash_rezzed_ice_gain_per_strength"),
+                    "effect": do("trash_unregistered_rezzed_ice_gain_per_strength"),
                 }
             ],
         )
@@ -425,7 +425,7 @@ def map_card(c: dict) -> dict | None:
         )
 
     if cid == "push-your-luck":
-        return base(c, onPlay=do("push_your_luck_secret_spend_guess"))
+        return base(c, onPlay=do("spend_push_your_luck_secret_guess"))
 
     if cid == "theophilius-bagbiter":
         return base(

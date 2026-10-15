@@ -30,7 +30,7 @@
           "onSuccess": {
             "op": "do",
             "action": {
-              "kind": "hellion_beta_trash_two_installed_non_program"
+              "kind": "trash_hellion_beta_two_installed_non_program"
             }
           },
           "onFailure": {

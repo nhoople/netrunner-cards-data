@@ -16,7 +16,7 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "spark_of_inspiration_resolve",
+          "kind": "resolve_spark_of_inspiration",
           "discount": 10
         }
       }

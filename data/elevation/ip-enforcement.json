@@ -25,7 +25,7 @@
           "effect": {
             "op": "do",
             "action": {
-              "kind": "ip_enforcement_remove_tags"
+              "kind": "remove_enforcement_tags"
             }
           }
         }

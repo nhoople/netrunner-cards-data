@@ -58,7 +58,7 @@ def map_card(c: dict) -> dict | None:
                     "effect": do("gain_credits", side="runner", amount=0),
                     "startsRun": {
                         "servers": "rd",
-                        "onSuccessfulRun": do("keyhole_may_instead_of_breach"),
+                        "onSuccessfulRun": do("may_breach_instead_keyhole"),
                     },
                 }
             ],

@@ -32,7 +32,7 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "another_day_force_corp_trace0_gain_ap_credits"
+          "kind": "force_trace_then_gain_credits"
         }
       }
     }

@@ -160,7 +160,7 @@ def map_card(c: dict) -> dict | None:
                     "startsRun": {
                         "servers": "hq",
                         "onSuccessfulRun": do(
-                            "expert_schedule_analyzer_may_instead_of_breach"
+                            "may_breach_instead_expert_schedule_analyzer"
                         ),
                     },
                 }
@@ -264,7 +264,7 @@ def map_card(c: dict) -> dict | None:
         return base(c, onPlay=do("accelerated_diagnostics"))
 
     if cid == "unorthodox-predictions":
-        return base(c, onScore=do("unorthodox_predictions_on_score"))
+        return base(c, onScore=do("score_unorthodox_predictions_on"))
 
     if cid == "city-surveillance":
         return base(

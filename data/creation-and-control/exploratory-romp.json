@@ -21,7 +21,7 @@
           "onSuccessfulRun": {
             "op": "do",
             "action": {
-              "kind": "exploratory_romp_may_instead_of_breach",
+              "kind": "may_breach_instead_exploratory_romp",
               "amount": 3
             }
           }

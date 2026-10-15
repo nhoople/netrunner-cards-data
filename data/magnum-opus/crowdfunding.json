@@ -44,7 +44,7 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "mo_crowdfunding_may_install_from_heap_ignore_costs",
+          "kind": "may_install_crowdfunding_from_heap_ignore_costs",
           "minSuccessfulRuns": 3
         }
       }

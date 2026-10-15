@@ -32,7 +32,7 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "hunter_seeker_trash_installed"
+          "kind": "trash_hunter_seeker_installed"
         }
       }
     }

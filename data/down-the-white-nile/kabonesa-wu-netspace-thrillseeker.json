@@ -31,7 +31,7 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "dtwn_kabonesa_search_install"
+          "kind": "search_kabonesa_install"
         }
       },
       "usableByRunnerOnSelfIce": true

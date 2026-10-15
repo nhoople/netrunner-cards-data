@@ -17,7 +17,7 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "foundry_search_copy_to_hq"
+          "kind": "search_foundry_copy_to_hq"
         }
       }
     }

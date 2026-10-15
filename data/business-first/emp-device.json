@@ -27,7 +27,7 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "emp_device_limit_ice_rez_this_run"
+          "kind": "rez_emp_device_limit_ice_this_run"
         }
       },
       "usableByRunnerOnSelfIce": true,

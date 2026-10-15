@@ -125,7 +125,7 @@ def map_card(c: dict) -> dict | None:
                 paid(
                     "ramujan-prevent",
                     "[interrupt] → [trash]: Prevent up to X net or core damage; trash that many from stack",
-                    do("ramujan_prevent_damage_trash_stack"),
+                    do("prevent_ramujan_damage_trash_stack"),
                     trash_self=True,
                     windows=["damage_interrupt_paw"],
                     require_pending_damage_types=["net", "core"],
@@ -225,7 +225,7 @@ def map_card(c: dict) -> dict | None:
                 paid(
                     "chatterjee-install",
                     "[click]: Install a program from grip, lowering cost by power counters; remove 1 power counter",
-                    do("chatterjee_install_program_discount"),
+                    do("install_chatterjee_program_discount"),
                     clicks=1,
                     windows=["runner_action_paw"],
                     usable_by_runner=True,
@@ -268,7 +268,7 @@ def map_card(c: dict) -> dict | None:
                 {
                     "id": "vikram-no-programs",
                     "text": "The Runner cannot use programs for the remainder of this run.",
-                    "effect": do("kg_cannot_use_programs_this_run"),
+                    "effect": do("cannot_use_programs_this_run_kg"),
                 },
                 {
                     "id": "vikram-trace-core-1",
@@ -333,7 +333,7 @@ def map_card(c: dict) -> dict | None:
                     "id": "interrupt-0-break-cost-1",
                     "text": "For the remainder of this run, icebreaker break abilities cost +1¢.",
                     "effect": do(
-                        "arm_icebreaker_break_additional_cost_this_run",
+                        "break_arm_icebreaker_additional_cost_this_run",
                         amount=1,
                     ),
                 },
@@ -341,7 +341,7 @@ def map_card(c: dict) -> dict | None:
                     "id": "interrupt-0-break-cost-2",
                     "text": "For the remainder of this run, icebreaker break abilities cost +1¢.",
                     "effect": do(
-                        "arm_icebreaker_break_additional_cost_this_run",
+                        "break_arm_icebreaker_additional_cost_this_run",
                         amount=1,
                     ),
                 },

@@ -24,7 +24,7 @@
             "effect": {
               "op": "do",
               "action": {
-                "kind": "hayley_install_same_type_from_grip"
+                "kind": "install_hayley_same_type_from_grip"
               }
             }
           },

@@ -42,7 +42,7 @@
           {
             "op": "do",
             "action": {
-              "kind": "yagi_swap_hq_with_attacked_root_or_ice"
+              "kind": "swap_yagi_hq_with_attacked_root_or_ice"
             }
           },
           {

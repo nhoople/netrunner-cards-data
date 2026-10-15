@@ -34,7 +34,7 @@
             "effect": {
               "op": "do",
               "action": {
-                "kind": "twins_trash_hq_copy_reencounter"
+                "kind": "trash_twins_hq_copy_reencounter"
               }
             }
           },

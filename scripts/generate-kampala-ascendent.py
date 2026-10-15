@@ -209,7 +209,7 @@ def map_card(c: dict) -> dict | None:
             playAdditionalClick=True,
             runEvent={
                 "servers": "hq",
-                "onSuccessfulRun": do("ka_diversion_of_funds_may_instead_of_breach"),
+                "onSuccessfulRun": do("may_breach_instead_diversion_funds_ka"),
             },
         )
 
@@ -237,7 +237,7 @@ def map_card(c: dict) -> dict | None:
                 paid(
                     "reclaim",
                     "[click], [trash], trash a card from grip: Install program/hardware/virtual from heap paying cost",
-                    do("ka_reclaim_install_from_heap"),
+                    do("install_reclaim_from_heap"),
                     clicks=1,
                     cost={"clicks": 1, "trashSelf": True, "trashFromGrip": 1},
                     windows=["runner_action_paw"],
@@ -350,7 +350,7 @@ def map_card(c: dict) -> dict | None:
             subtypes=["division"],
             onApproachServerOncePerTurn=True,
             onApproachServer=may(
-                do("ka_mti_install_ice_innermost_from_hq"),
+                do("install_mti_ice_innermost_from_hq"),
                 label="Install 1 ice from HQ innermost protecting this server, ignoring all costs",
                 decline_side="corp",
             ),

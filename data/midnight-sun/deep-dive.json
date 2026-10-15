@@ -20,7 +20,7 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "deep_dive_resolve",
+          "kind": "resolve_deep_dive",
           "setAside": 8,
           "initialAccess": 1
         }

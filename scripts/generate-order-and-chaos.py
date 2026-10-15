@@ -218,7 +218,7 @@ def map_card(c: dict) -> dict | None:
         return base(
             c,
             onTurnBegin=may(
-                do("constellation_move_advancement_between_ice"),
+                do("move_constellation_advancement_between_ice"),
                 label="Move an advancement token between ice",
             ),
         )
@@ -459,7 +459,7 @@ def map_card(c: dict) -> dict | None:
             c,
             unique=True,
             onPassRezzedIceProtectingThisServer=may(
-                do("twins_trash_hq_copy_reencounter"),
+                do("trash_twins_hq_copy_reencounter"),
                 label="Reveal and trash a copy from HQ; Runner encounters again",
             ),
         )
@@ -546,7 +546,7 @@ def map_card(c: dict) -> dict | None:
             c,
             runEvent={
                 "servers": "hq",
-                "onSuccessfulRun": do("wanton_destruction_instead_of_breach"),
+                "onSuccessfulRun": do("breach_instead_wanton_destruction"),
             },
         )
 
@@ -655,7 +655,7 @@ def map_card(c: dict) -> dict | None:
             c,
             unique=True,
             onTurnBegin=may(
-                do("chop_bot_trash_installed_then_draw_or_remove_tag"),
+                do("trash_chop_bot_installed_then_draw_or_remove_tag"),
                 label="Trash another installed card",
                 decline_side="runner",
             ),
@@ -684,7 +684,7 @@ def map_card(c: dict) -> dict | None:
             c,
             subtypes=["vehicle"],
             onTurnBegin=may(
-                do("qianju_lose_click_prevent_tag_until_next_turn"),
+                do("lose_qianju_click_prevent_tag_until_next_turn"),
                 label="Lose [click]: prevent 1 tag until your next turn",
                 decline_side="runner",
             ),

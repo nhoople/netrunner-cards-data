@@ -31,7 +31,7 @@
           {
             "op": "do",
             "action": {
-              "kind": "climactic_choose_server_corp_may_trash_ice_else_bonus_access"
+              "kind": "may_corp_choose_climactic_server_trash_ice_else_bonus_access"
             }
           }
         ]

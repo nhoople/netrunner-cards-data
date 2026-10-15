@@ -19,7 +19,7 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "bifrost_may_trigger_scored_agenda_on_score"
+          "kind": "may_score_bifrost_trigger_scored_agenda_on"
         }
       }
     }

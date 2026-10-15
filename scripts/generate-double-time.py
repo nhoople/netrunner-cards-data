@@ -45,7 +45,7 @@ def map_card(c: dict) -> dict | None:
             playAdditionalClick=True,
             runEvent={
                 "servers": "remote",
-                "onSuccessfulRun": do("singularity_instead_of_breach_trash_root"),
+                "onSuccessfulRun": do("breach_instead_singularity_trash_root"),
             },
         )
 
@@ -170,13 +170,13 @@ def map_card(c: dict) -> dict | None:
         return base(
             c,
             playAdditionalClick=True,
-            onPlay=do("corporate_shuffle_hq_to_rd_draw", draw=5),
+            onPlay=do("shuffle_corporate_hq_to_rd_draw", draw=5),
         )
 
     if cid == "caprice-nisei":
         return base(
             c,
-            onPassAllIceProtectingServer=do("caprice_nisei_secret_spend"),
+            onPassAllIceProtectingServer=do("spend_caprice_nisei_secret"),
         )
 
     if cid == "shinobi":

@@ -63,7 +63,7 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "dtwn_takobi_pump_breaker",
+          "kind": "pump_takobi_breaker",
           "amount": 3
         }
       },

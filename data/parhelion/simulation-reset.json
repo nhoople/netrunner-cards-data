@@ -13,7 +13,7 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "simulation_reset_resolve",
+          "kind": "resolve_simulation_reset",
           "trashHqMax": 5
         }
       }

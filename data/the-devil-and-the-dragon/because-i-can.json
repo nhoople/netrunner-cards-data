@@ -29,7 +29,7 @@
                 "effect": {
                   "op": "do",
                   "action": {
-                    "kind": "tdatd_because_i_can_shuffle_root"
+                    "kind": "shuffle_because_i_can_root"
                   }
                 }
               },

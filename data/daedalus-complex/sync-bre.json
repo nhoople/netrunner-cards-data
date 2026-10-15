@@ -46,7 +46,7 @@
           "onSuccess": {
             "op": "do",
             "action": {
-              "kind": "reduce_breach_access_remainder_of_run",
+              "kind": "breach_reduce_access_remainder_of_run",
               "amount": 1
             }
           }

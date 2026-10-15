@@ -35,7 +35,7 @@
                 "effect": {
                   "op": "do",
                   "action": {
-                    "kind": "cotc_personalized_portal_gain"
+                    "kind": "gain_personalized_portal"
                   }
                 }
               },

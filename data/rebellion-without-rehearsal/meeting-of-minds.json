@@ -20,7 +20,7 @@
             "effect": {
               "op": "do",
               "action": {
-                "kind": "meeting_of_minds_resolve",
+                "kind": "resolve_meeting_of_minds",
                 "subtype": "connection"
               }
             }
@@ -31,7 +31,7 @@
             "effect": {
               "op": "do",
               "action": {
-                "kind": "meeting_of_minds_resolve",
+                "kind": "resolve_meeting_of_minds",
                 "subtype": "virtual"
               }
             }

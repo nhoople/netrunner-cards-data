@@ -28,7 +28,7 @@
           "effect": {
             "op": "do",
             "action": {
-              "kind": "must_trash_installed",
+              "kind": "trash_must_installed",
               "excludeSelf": true
             }
           }

@@ -62,7 +62,7 @@ def map_card(c: dict) -> dict | None:
     if cid == "the-foundry-refining-the-process":
         return base(
             c,
-            onFirstIceRezEachTurn=do("foundry_search_copy_to_hq"),
+            onFirstIceRezEachTurn=do("search_foundry_copy_to_hq"),
         )
 
     if cid == "enhanced-login-protocol":
@@ -83,7 +83,7 @@ def map_card(c: dict) -> dict | None:
         return base(
             c,
             whileScoredIceSubtypeStrengthBonus={"subtype": "code gate", "bonus": 1},
-            onScore=do("encrypted_portals_on_score"),
+            onScore=do("score_encrypted_portals_on"),
         )
 
     if cid == "cerebral-static":
@@ -158,7 +158,7 @@ def map_card(c: dict) -> dict | None:
     if cid == "will-o-the-wisp":
         return base(
             c,
-            onSuccessfulRunOnThisServer=do("will_o_wisp_trash_breaker_used"),
+            onSuccessfulRunOnThisServer=do("trash_will_o_wisp_breaker_used"),
         )
 
     if cid == "d4v1d":
@@ -228,7 +228,7 @@ def map_card(c: dict) -> dict | None:
                     "creditCost": 0,
                     "cost": {},
                     "windows": ["trash_interrupt_paw"],
-                    "effect": do("llds_prevent_trash_hardware"),
+                    "effect": do("prevent_llds_trash_hardware"),
                 }
             ],
         )

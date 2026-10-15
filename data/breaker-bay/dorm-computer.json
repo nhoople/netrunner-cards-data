@@ -30,7 +30,7 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "dorm_computer_run_prevent_all_tags"
+          "kind": "prevent_dorm_computer_run_all_tags"
         }
       }
     }

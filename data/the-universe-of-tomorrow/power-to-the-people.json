@@ -24,7 +24,7 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "arm_gain_credits_on_first_agenda_access",
+          "kind": "gain_arm_credits_on_first_agenda_access",
           "amount": 7
         }
       }

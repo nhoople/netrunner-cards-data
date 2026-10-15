@@ -44,7 +44,7 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "class_act_look_top_draw_amount_plus_one_bottom_one"
+          "kind": "look_class_act_top_draw_amount_plus_one_bottom_one"
         }
       }
     }

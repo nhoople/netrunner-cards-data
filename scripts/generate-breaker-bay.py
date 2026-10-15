@@ -135,7 +135,7 @@ def map_card(c: dict) -> dict | None:
                 paid(
                     "dorm-computer-run",
                     "[click], hosted power counter: Run any server; prevent all tags this run",
-                    do("dorm_computer_run_prevent_all_tags"),
+                    do("prevent_dorm_computer_run_all_tags"),
                     clicks=1,
                     power_counters=1,
                     windows=["runner_action_paw"],
@@ -148,7 +148,7 @@ def map_card(c: dict) -> dict | None:
             c,
             subtypes=["g-mod"],
             onFirstInstallEachTurn=may(
-                do("hayley_install_same_type_from_grip"),
+                do("install_hayley_same_type_from_grip"),
                 label="Install another card of the same type from grip",
                 decline_side="runner",
             ),

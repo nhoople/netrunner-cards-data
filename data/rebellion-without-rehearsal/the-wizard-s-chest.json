@@ -21,7 +21,7 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "wizard_chest_resolve",
+          "kind": "resolve_wizard_chest",
           "untilCount": 2,
           "ignoreAllCosts": true
         }

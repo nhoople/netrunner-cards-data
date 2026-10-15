@@ -28,7 +28,7 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "caprice_nisei_secret_spend"
+          "kind": "spend_caprice_nisei_secret"
         }
       }
     }

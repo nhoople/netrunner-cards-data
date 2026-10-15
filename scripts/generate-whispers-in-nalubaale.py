@@ -216,7 +216,7 @@ def map_card(c: dict) -> dict | None:
             runEvent={
                 "servers": "any",
                 "onFirstEncounterThisRun": may(
-                    do("win_compile_install_program"),
+                    do("install_compile_program"),
                     label="Search stack or heap for a program and install it, ignoring all costs",
                 ),
                 "onRunEnd": do("win_compile_bottom_of_stack"),
@@ -232,7 +232,7 @@ def map_card(c: dict) -> dict | None:
                     "logic-bomb-bypass",
                     "[trash]: Bypass the ice you are encountering; lose remaining clicks",
                     seq(
-                        do("win_bypass_encountered_ice"),
+                        do("bypass_current_encounter"),
                         do("lose_remaining_clicks"),
                     ),
                     trash_self=True,

@@ -20,7 +20,7 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "shi_kyu_spend_for_net_damage"
+          "kind": "spend_shi_kyu_for_net_damage"
         }
       }
     }

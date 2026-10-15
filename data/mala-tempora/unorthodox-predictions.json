@@ -19,7 +19,7 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "unorthodox_predictions_on_score"
+          "kind": "score_unorthodox_predictions_on"
         }
       }
     }
