@@ -5,11 +5,13 @@
   "nrdbCode": "33022",
   "type": "event",
   "side": "runner",
+  "faction": "shaper",
   "unsupported": [],
   "playCost": 2,
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "playRequiresSuccessfulAllCentralsThisTurn",
         "value": true
@@ -17,6 +19,7 @@
     },
     {
       "class": "play",
+      "rule": "9.3.7d",
       "instructions": {
         "op": "do",
         "action": {

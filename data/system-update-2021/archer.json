@@ -5,6 +5,7 @@
   "nrdbCode": "31075",
   "type": "ice",
   "side": "corp",
+  "faction": "weyland-consortium",
   "unsupported": [],
   "subtypes": [
     "sentry",
@@ -16,6 +17,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "rezAdditionalCostForfeitAgenda",
         "value": true
@@ -23,6 +25,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "archer-gain",
       "text": "Gain 2¢.",
       "instructions": {
@@ -36,6 +39,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "archer-trash1",
       "text": "Trash 1 program.",
       "instructions": {
@@ -48,6 +52,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "archer-trash2",
       "text": "Trash 1 program.",
       "instructions": {
@@ -60,6 +65,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "archer-etr",
       "text": "End the run.",
       "instructions": {

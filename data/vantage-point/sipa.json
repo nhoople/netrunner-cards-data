@@ -5,12 +5,14 @@
   "nrdbCode": "36023",
   "type": "program",
   "side": "runner",
+  "faction": "shaper",
   "unsupported": [],
   "installCost": 1,
   "memoryCost": 2,
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "maySwapOutermostIceOnPassAfterFullyBreakOncePerTurn",
         "value": true

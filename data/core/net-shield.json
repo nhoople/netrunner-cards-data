@@ -12,6 +12,15 @@
   "abilities": [
     {
       "class": "paid",
+      "rule": "9.3.7b",
+      "flagRule": [
+        "9.3.6d",
+        "9.3.6g"
+      ],
+      "flag": [
+        "interrupt",
+        "once_per_turn"
+      ],
       "id": "net-shield-prevent",
       "label": "[interrupt] → 1¢: Prevent 1 net damage (first each turn)",
       "cost": {
@@ -27,7 +36,6 @@
           "amount": 1
         }
       },
-      "flag": "once_per_turn",
       "requirePendingDamageTypes": [
         "net"
       ]

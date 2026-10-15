@@ -5,11 +5,13 @@
   "nrdbCode": "26117",
   "type": "operation",
   "side": "corp",
+  "faction": "nbn",
   "unsupported": [],
   "playCost": 1,
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "playRequiresNoSuccessfulHqRunLastTurn",
         "value": true
@@ -17,6 +19,7 @@
     },
     {
       "class": "play",
+      "rule": "9.3.7d",
       "instructions": {
         "op": "seq",
         "effects": [

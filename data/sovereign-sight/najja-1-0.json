@@ -17,6 +17,7 @@
   "abilities": [
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "najja-etr-1",
       "text": "End the run.",
       "instructions": {
@@ -28,6 +29,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "najja-etr-2",
       "text": "End the run.",
       "instructions": {

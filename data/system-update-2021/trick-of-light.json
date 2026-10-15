@@ -5,11 +5,13 @@
   "nrdbCode": "31058",
   "type": "operation",
   "side": "corp",
+  "faction": "jinteki",
   "unsupported": [],
   "playCost": 1,
   "abilities": [
     {
       "class": "play",
+      "rule": "9.3.7d",
       "instructions": {
         "op": "do",
         "action": {

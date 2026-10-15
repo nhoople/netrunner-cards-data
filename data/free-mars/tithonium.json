@@ -17,6 +17,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "rezCostCreditDiscountOnForfeitAgenda",
         "value": 9
@@ -24,6 +25,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "cannotHostCards",
         "value": true
@@ -31,6 +33,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "tithonium-trash-program-1",
       "text": "Trash 1 program.",
       "instructions": {
@@ -43,6 +46,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "tithonium-trash-program-2",
       "text": "Trash 1 program.",
       "instructions": {
@@ -55,6 +59,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "tithonium-trash-resource-etr",
       "text": "Trash 1 resource and end the run.",
       "instructions": {

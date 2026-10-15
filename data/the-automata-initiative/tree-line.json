@@ -5,6 +5,7 @@
   "nrdbCode": "34059",
   "type": "ice",
   "side": "corp",
+  "faction": "weyland-consortium",
   "unsupported": [],
   "subtypes": [
     "barrier",
@@ -16,6 +17,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "canAdvance",
         "value": true
@@ -23,6 +25,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "strengthPerAdvancement",
         "value": 1
@@ -30,6 +33,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "tree-line-expend",
       "label": "[click], 1¢, reveal and trash from HQ: place 3 advancements on 1 installed ice",
       "cost": {
@@ -52,6 +56,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "tl-gain-etr",
       "text": "Gain 1[credit]. End the run.",
       "instructions": {

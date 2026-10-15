@@ -5,6 +5,7 @@
   "nrdbCode": "36045",
   "type": "upgrade",
   "side": "corp",
+  "faction": "jinteki",
   "unsupported": [],
   "subtypes": [
     "facility"
@@ -15,6 +16,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "unique",
         "value": true
@@ -22,6 +24,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "installServers",
         "value": [
@@ -33,6 +36,7 @@
     },
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "first_agenda_scored_or_stolen_this_turn",
       "instructions": {
         "op": "do",
@@ -44,6 +48,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "red-room-etr",
       "label": "Hosted power counter: End the run (other server)",
       "cost": {

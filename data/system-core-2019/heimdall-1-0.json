@@ -18,6 +18,7 @@
   "abilities": [
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "heimdall-1-0-core",
       "text": "Do 1 core damage.",
       "instructions": {
@@ -30,6 +31,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "heimdall-1-0-etr-1",
       "text": "End the run.",
       "instructions": {
@@ -41,6 +43,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "heimdall-1-0-etr-2",
       "text": "End the run.",
       "instructions": {

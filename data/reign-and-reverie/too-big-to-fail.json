@@ -16,6 +16,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "playRequiresCreditsLt",
         "value": 10
@@ -23,6 +24,7 @@
     },
     {
       "class": "play",
+      "rule": "9.3.7d",
       "instructions": {
         "op": "seq",
         "effects": [

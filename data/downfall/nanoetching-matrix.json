@@ -16,6 +16,9 @@
   "abilities": [
     {
       "class": "paid",
+      "rule": "9.3.7b",
+      "flagRule": "9.3.6g",
+      "flag": "once_per_turn",
       "id": "nanoetching-matrix-gain",
       "label": "[click]: Gain 2¢",
       "cost": {
@@ -31,11 +34,11 @@
           "side": "corp",
           "amount": 2
         }
-      },
-      "flag": "once_per_turn"
+      }
     },
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "trash",
       "instructions": {
         "op": "choose",

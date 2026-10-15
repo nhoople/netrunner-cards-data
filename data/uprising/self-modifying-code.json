@@ -5,12 +5,14 @@
   "nrdbCode": "26090",
   "type": "program",
   "side": "runner",
+  "faction": "shaper",
   "unsupported": [],
   "installCost": 0,
   "memoryCost": 2,
   "abilities": [
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "smc-search",
       "label": "2¢, [trash]: Search stack for a program and install it",
       "cost": {

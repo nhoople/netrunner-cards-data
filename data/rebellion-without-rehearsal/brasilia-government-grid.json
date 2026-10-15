@@ -5,6 +5,7 @@
   "nrdbCode": "34104",
   "type": "upgrade",
   "side": "corp",
+  "faction": "haas-bioroid",
   "unsupported": [],
   "subtypes": [
     "region"
@@ -15,6 +16,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "oncePerTurnOnRezIceProtectingThisServerDuringRun",
         "value": {

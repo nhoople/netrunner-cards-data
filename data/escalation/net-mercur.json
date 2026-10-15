@@ -15,6 +15,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "unique",
         "value": true
@@ -22,6 +23,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "firstStealthSpendEachRunPlaceCreditOrDraw",
         "value": true
@@ -29,6 +31,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "spendHostedCreditsForAnything",
         "value": true

@@ -5,6 +5,7 @@
   "nrdbCode": "33127",
   "type": "upgrade",
   "side": "corp",
+  "faction": "weyland-consortium",
   "unsupported": [],
   "subtypes": [
     "region"
@@ -15,6 +16,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "remoteOnly",
         "value": true
@@ -22,6 +24,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "iceGainsTrashToResolveChosenSubOnEncounter",
         "value": true

@@ -5,11 +5,13 @@
   "nrdbCode": "31068",
   "type": "operation",
   "side": "corp",
+  "faction": "nbn",
   "unsupported": [],
   "playCost": 0,
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "playCostXMaxRunnerTags",
         "value": true
@@ -17,6 +19,7 @@
     },
     {
       "class": "play",
+      "rule": "9.3.7d",
       "instructions": {
         "op": "do",
         "action": {

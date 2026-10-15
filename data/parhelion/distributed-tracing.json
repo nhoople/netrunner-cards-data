@@ -5,6 +5,7 @@
   "nrdbCode": "33100",
   "type": "operation",
   "side": "corp",
+  "faction": "haas-bioroid",
   "unsupported": [],
   "subtypes": [
     "double",
@@ -14,6 +15,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "playAdditionalClick",
         "value": true
@@ -21,6 +23,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "playRequiresAgendaStolenLastTurn",
         "value": true
@@ -28,6 +31,7 @@
     },
     {
       "class": "play",
+      "rule": "9.3.7d",
       "instructions": {
         "op": "do",
         "action": {

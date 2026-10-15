@@ -5,6 +5,7 @@
   "nrdbCode": "33078",
   "type": "hardware",
   "side": "runner",
+  "faction": "criminal",
   "unsupported": [],
   "subtypes": [
     "cybernetic"
@@ -13,6 +14,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "install",
       "instructions": {
         "op": "do",
@@ -24,6 +26,7 @@
     },
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "successful_run",
       "instructions": {
         "op": "if",
@@ -41,6 +44,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "maySpendPowerCountersForBonusRdAccess",
         "value": {

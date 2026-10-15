@@ -5,6 +5,7 @@
   "nrdbCode": "34129",
   "type": "upgrade",
   "side": "corp",
+  "faction": "weyland-consortium",
   "unsupported": [],
   "subtypes": [
     "bioroid",
@@ -16,6 +17,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "advancedIceProtectingThisServerStrengthBonus",
         "value": 2
@@ -23,6 +25,7 @@
     },
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "moved_to_server_root",
       "instructions": {
         "op": "choose",
@@ -57,6 +60,7 @@
     },
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "corp_turn_end",
       "instructions": {
         "op": "do",

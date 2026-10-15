@@ -5,6 +5,7 @@
   "nrdbCode": "35081",
   "type": "operation",
   "side": "corp",
+  "faction": "neutral-corp",
   "unsupported": [],
   "subtypes": [
     "transaction"
@@ -13,6 +14,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "playRequiresNoCorpActionFinished",
         "value": true
@@ -20,6 +22,7 @@
     },
     {
       "class": "play",
+      "rule": "9.3.7d",
       "instructions": {
         "op": "seq",
         "effects": [
@@ -50,6 +53,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "petty-cash-archives",
       "label": "[click]: Play this operation from Archives. After it resolves, remove it from the game.",
       "cost": {

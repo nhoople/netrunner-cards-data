@@ -5,6 +5,7 @@
   "nrdbCode": "26098",
   "type": "asset",
   "side": "corp",
+  "faction": "haas-bioroid",
   "unsupported": [],
   "subtypes": [
     "bioroid"
@@ -15,6 +16,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "unique",
         "value": true
@@ -22,6 +24,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "bass-ch1r180g4-clicks",
       "label": "[click], [trash]: Gain [click][click]",
       "cost": {

@@ -5,11 +5,13 @@
   "nrdbCode": "30022",
   "type": "hardware",
   "side": "runner",
+  "faction": "shaper",
   "installCost": 2,
   "unsupported": [],
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "muBonus",
         "value": 1
@@ -17,6 +19,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "firstProgramInstallDiscount",
         "value": 1

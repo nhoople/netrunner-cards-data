@@ -16,6 +16,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "unique",
         "value": true
@@ -23,6 +24,7 @@
     },
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "first_trash_matching_runner_identity_faction_each_turn",
       "instructions": {
         "op": "do",
@@ -34,6 +36,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "storgotic-net",
       "label": "[click], hosted power counter: Do 1 net damage",
       "cost": {

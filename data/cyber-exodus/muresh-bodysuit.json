@@ -14,6 +14,15 @@
   "abilities": [
     {
       "class": "paid",
+      "rule": "9.3.7b",
+      "flagRule": [
+        "9.3.6d",
+        "9.3.6g"
+      ],
+      "flag": [
+        "interrupt",
+        "once_per_turn"
+      ],
       "id": "muresh-bodysuit-prevent",
       "label": "[interrupt] → Prevent 1 meat damage (first each turn)",
       "cost": {
@@ -29,7 +38,6 @@
           "amount": 1
         }
       },
-      "flag": "once_per_turn",
       "requirePendingDamageTypes": [
         "meat"
       ]

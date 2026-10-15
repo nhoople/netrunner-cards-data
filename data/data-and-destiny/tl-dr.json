@@ -16,6 +16,7 @@
   "abilities": [
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "tl-dr-duplicate",
       "text": "Next ice encounter this run gains a second copy of each subroutine.",
       "instructions": {

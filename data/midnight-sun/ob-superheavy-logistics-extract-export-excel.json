@@ -5,6 +5,7 @@
   "nrdbCode": "33057",
   "type": "identity",
   "side": "corp",
+  "faction": "weyland-consortium",
   "unsupported": [],
   "subtypes": [
     "corp"
@@ -12,6 +13,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "rezzed_card_trashed",
       "instructions": {
         "op": "do",

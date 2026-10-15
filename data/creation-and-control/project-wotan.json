@@ -15,6 +15,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "score",
       "instructions": {
         "op": "do",
@@ -26,6 +27,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "wotan-etr",
       "label": "Hosted agenda counter: approached rezzed bioroid gains ETR subroutine this run",
       "cost": {

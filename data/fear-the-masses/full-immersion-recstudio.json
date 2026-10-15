@@ -16,6 +16,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "maxHostedCards",
         "value": 2
@@ -23,6 +24,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "hostAssetsOrAgendas",
         "value": true
@@ -30,6 +32,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "trashCostIncreasePerHostedCard",
         "value": 3

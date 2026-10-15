@@ -5,6 +5,7 @@
   "nrdbCode": "34004",
   "type": "program",
   "side": "runner",
+  "faction": "anarch",
   "unsupported": [],
   "subtypes": [
     "icebreaker",
@@ -17,6 +18,9 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
+      "flagRule": "9.3.6c",
+      "flag": "interface",
       "declaration": {
         "field": "breaker",
         "value": {
@@ -29,6 +33,7 @@
     },
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "access_trash",
       "instructions": {
         "op": "do",
@@ -40,6 +45,9 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
+      "flagRule": "9.3.6c",
+      "flag": "interface",
       "id": "audrey-break",
       "label": "Hosted virus counter: Break up to 2 subroutines",
       "cost": {
@@ -58,6 +66,9 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
+      "flagRule": "9.3.6c",
+      "flag": "interface",
       "id": "audrey-pump",
       "label": "Trash 1 card from grip: +3 strength",
       "cost": {

@@ -35,6 +35,21 @@ def load_unsupported_allowlist() -> dict[str, str]:
 
 
 CLASSES = {"static", "paid", "conditional", "play", "subroutine"}
+CLASS_RULE = {
+    "static": "9.3.7a",
+    "paid": "9.3.7b",
+    "conditional": "9.3.7c",
+    "play": "9.3.7d",
+    "subroutine": "9.3.7e",
+}
+FLAG_WORDS = {"access", "interface", "interrupt", "persistent", "once_per_turn"}
+FLAG_RULE = {
+    "access": "9.3.6b",
+    "interface": "9.3.6c",
+    "interrupt": "9.3.6d",
+    "persistent": "9.3.6e",
+    "once_per_turn": "9.3.6g",
+}
 RESTRICTION_TARGETS = {
     "play",
     "rez",
@@ -86,11 +101,80 @@ def check_abilities(path: Path, raw: dict) -> int:
         if kind in {"play", "subroutine"} and not ability.get("instructions"):
             print(f"{where}: a {kind} ability needs instructions")
             errors += 1
+        if ability.get("rule") != CLASS_RULE[kind]:
+            print(f"{where}: rule must be {CLASS_RULE[kind]} (CR 9.3.7)")
+            errors += 1
+        flag_err = _check_flag(ability, where)
+        if flag_err:
+            print(flag_err)
+            errors += 1
+        if ability.get("host") is not None and kind != "conditional":
+            print(f"{where}: host belongs on a conditional ability")
+            errors += 1
+        host_ability = ability.get("hostAbility")
+        if host_ability is not None:
+            if kind != "conditional" or not ability.get("host"):
+                print(f"{where}: hostAbility needs a hosted conditional ability")
+                errors += 1
+            elif not any(
+                isinstance(other, dict) and other.get("id") == host_ability
+                for other in abilities
+                if isinstance(abilities, list)
+            ):
+                print(f"{where}: hostAbility {host_ability!r} is not an ability on this card")
+                errors += 1
         for restriction in ability.get("restrictions") or []:
             if not isinstance(restriction, dict) or restriction.get("appliesTo") not in RESTRICTION_TARGETS:
                 print(f"{where}: restriction appliesTo is unknown")
                 errors += 1
     return errors
+
+
+def _flag_list(flag: object) -> list[object] | None:
+    if flag is None:
+        return []
+    if isinstance(flag, list):
+        return flag
+    if isinstance(flag, (str, dict)):
+        return [flag]
+    return None
+
+
+def _check_flag(ability: dict, where: str) -> str | None:
+    items = _flag_list(ability.get("flag"))
+    if items is None:
+        return f"{where}: flag is unknown"
+    seen: set[str] = set()
+    threats = 0
+    expected: list[str] = []
+    for item in items:
+        if isinstance(item, str):
+            if item not in FLAG_WORDS or item in seen:
+                return f"{where}: flag is unknown"
+            seen.add(item)
+            expected.append(FLAG_RULE[item])
+            continue
+        if (
+            isinstance(item, dict)
+            and set(item) == {"threat"}
+            and isinstance(item.get("threat"), (int, float))
+            and item["threat"] >= 0
+        ):
+            threats += 1
+            if threats > 1:
+                return f"{where}: flag is unknown"
+            expected.append("9.3.6f")
+            continue
+        return f"{where}: flag is unknown"
+    actual = ability.get("flagRule")
+    if not expected:
+        if actual is not None:
+            return f"{where}: flagRule does not match flag"
+        return None
+    got = actual if isinstance(actual, list) else [actual]
+    if got != expected:
+        return f"{where}: flagRule must be {expected}"
+    return None
 
 
 def wave_dirs() -> list[Path]:

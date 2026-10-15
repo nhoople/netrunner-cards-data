@@ -5,6 +5,7 @@
   "nrdbCode": "35056",
   "type": "upgrade",
   "side": "corp",
+  "faction": "jinteki",
   "unsupported": [],
   "subtypes": [
     "clone"
@@ -15,6 +16,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "approach_ice",
       "instructions": {
         "op": "choose",

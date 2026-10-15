@@ -5,6 +5,7 @@
   "nrdbCode": "34050",
   "type": "asset",
   "side": "corp",
+  "faction": "nbn",
   "unsupported": [],
   "subtypes": [
     "seedy"
@@ -15,6 +16,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "turn_begin",
       "instructions": {
         "op": "choose",

@@ -12,6 +12,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "other_agenda_stolen",
       "instructions": {
         "op": "do",

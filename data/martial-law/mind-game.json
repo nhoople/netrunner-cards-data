@@ -18,6 +18,7 @@
   "abilities": [
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "mind-game-psi",
       "text": "Psi game. If bids differ, choose another server; Runner moves to outermost of that server; additional cost to jack out; Runner may jack out.",
       "instructions": {

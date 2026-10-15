@@ -15,6 +15,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "installRequiresSuccessfulCentralRunThisTurn",
         "value": true
@@ -22,6 +23,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "dlr-trash-rd",
       "label": "[click]: The Corp trashes the top card of R&D",
       "cost": {

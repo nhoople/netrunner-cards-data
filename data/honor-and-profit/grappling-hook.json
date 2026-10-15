@@ -12,6 +12,7 @@
   "abilities": [
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "grappling-break",
       "label": "[trash]: Break all but 1 subroutine on a piece of ice",
       "cost": {

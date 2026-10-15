@@ -5,6 +5,7 @@
   "nrdbCode": "34128",
   "type": "operation",
   "side": "corp",
+  "faction": "weyland-consortium",
   "unsupported": [],
   "subtypes": [
     "gray ops"
@@ -13,6 +14,7 @@
   "abilities": [
     {
       "class": "play",
+      "rule": "9.3.7d",
       "instructions": {
         "op": "choose",
         "chooser": "corp",

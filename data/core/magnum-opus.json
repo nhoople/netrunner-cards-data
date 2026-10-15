@@ -12,6 +12,7 @@
   "abilities": [
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "magnum-opus-gain",
       "label": "[click]: Gain 2¢",
       "cost": {

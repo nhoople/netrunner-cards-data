@@ -5,6 +5,7 @@
   "nrdbCode": "34007",
   "type": "resource",
   "side": "runner",
+  "faction": "anarch",
   "unsupported": [],
   "subtypes": [
     "connection",
@@ -14,6 +15,9 @@
   "abilities": [
     {
       "class": "paid",
+      "rule": "9.3.7b",
+      "flagRule": "9.3.6g",
+      "flag": "once_per_turn",
       "id": "eru-run-archives",
       "label": "[click], take 1 tag: Run Archives; success → breach R&D (Threat 3: +1 access)",
       "cost": {
@@ -31,22 +35,28 @@
           "amount": 0
         }
       },
-      "flag": "once_per_turn",
       "startsRun": {
         "servers": "archives",
-        "redirectSuccessTo": "rd",
-        "onSuccessfulRun": {
-          "op": "if",
-          "cond": {
-            "op": "threat",
-            "level": 3
-          },
-          "then": {
-            "op": "do",
-            "action": {
-              "kind": "bonus_access",
-              "amount": 1
-            }
+        "redirectSuccessTo": "rd"
+      }
+    },
+    {
+      "class": "conditional",
+      "rule": "9.3.7c",
+      "trigger": "successful_run",
+      "host": "startsRun",
+      "hostAbility": "eru-run-archives",
+      "instructions": {
+        "op": "if",
+        "cond": {
+          "op": "threat",
+          "level": 3
+        },
+        "then": {
+          "op": "do",
+          "action": {
+            "kind": "bonus_access",
+            "amount": 1
           }
         }
       }

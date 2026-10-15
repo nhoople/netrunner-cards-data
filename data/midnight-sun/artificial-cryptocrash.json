@@ -5,6 +5,7 @@
   "nrdbCode": "33049",
   "type": "agenda",
   "side": "corp",
+  "faction": "nbn",
   "unsupported": [],
   "subtypes": [
     "initiative"
@@ -14,6 +15,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "score",
       "instructions": {
         "op": "do",

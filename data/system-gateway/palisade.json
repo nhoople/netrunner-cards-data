@@ -5,6 +5,7 @@
   "nrdbCode": "30072",
   "type": "ice",
   "side": "corp",
+  "faction": "neutral-corp",
   "installCost": 3,
   "rezCost": 3,
   "strength": 2,
@@ -15,6 +16,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "strengthBonusProtectingRemote",
         "value": 2
@@ -22,6 +24,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "palisade-etr",
       "text": "End the run.",
       "instructions": {

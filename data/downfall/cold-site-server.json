@@ -16,6 +16,7 @@
   "abilities": [
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "cold-site-power",
       "label": "[click]: Place 1 power counter",
       "cost": {
@@ -34,6 +35,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "additionalRunInitiatePerPowerCounter",
         "value": {
@@ -44,6 +46,7 @@
     },
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "turn_begin",
       "instructions": {
         "op": "do",

@@ -14,6 +14,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "successful_run",
       "instructions": {
         "op": "if",
@@ -53,6 +54,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "crypt-search",
       "label": "[click], [trash], 3 hosted virus counters: Search stack for a virus program and install it (paying its install cost), then shuffle",
       "cost": {

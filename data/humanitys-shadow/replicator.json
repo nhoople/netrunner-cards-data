@@ -11,6 +11,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "hardware_install",
       "instructions": {
         "op": "do",

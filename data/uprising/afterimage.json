@@ -5,6 +5,7 @@
   "nrdbCode": "26079",
   "type": "program",
   "side": "runner",
+  "faction": "criminal",
   "unsupported": [],
   "subtypes": [
     "icebreaker",
@@ -16,6 +17,9 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
+      "flagRule": "9.3.6c",
+      "flag": "interface",
       "declaration": {
         "field": "breaker",
         "value": {
@@ -31,6 +35,9 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
+      "flagRule": "9.3.6g",
+      "flag": "once_per_turn",
       "id": "afterimage-bypass",
       "label": "2¢: Bypass encountered sentry (stealth; once per turn)",
       "cost": {
@@ -47,11 +54,13 @@
           "requireSubtype": "sentry"
         }
       },
-      "flag": "once_per_turn",
       "requireEncounterSubtype": "sentry"
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
+      "flagRule": "9.3.6c",
+      "flag": "interface",
       "id": "afterimage-break",
       "label": "1¢: Break up to 2 sentry subroutines",
       "cost": {
@@ -72,6 +81,9 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
+      "flagRule": "9.3.6c",
+      "flag": "interface",
       "id": "afterimage-pump",
       "label": "1¢: +2 strength (stealth credits only)",
       "cost": {

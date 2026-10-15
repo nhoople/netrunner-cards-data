@@ -17,6 +17,7 @@
   "abilities": [
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "hudson-break",
       "label": "Lose [click]: Break 1 subroutine on Hudson 1.0",
       "cost": {
@@ -36,6 +37,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "hudson-cap-1",
       "text": "The Runner cannot access more than 1 card during this run.",
       "instructions": {
@@ -48,6 +50,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "hudson-cap-2",
       "text": "The Runner cannot access more than 1 card during this run.",
       "instructions": {

@@ -5,6 +5,7 @@
   "nrdbCode": "26102",
   "type": "ice",
   "side": "corp",
+  "faction": "haas-bioroid",
   "unsupported": [],
   "subtypes": [
     "sentry",
@@ -18,6 +19,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "unique",
         "value": true
@@ -25,6 +27,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "bioroidBreakGivesCorpAllottedClickNextTurn",
         "value": true
@@ -32,6 +35,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "tyr-core",
       "text": "Do 2 core damage.",
       "instructions": {
@@ -44,6 +48,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "tyr-trash",
       "text": "Trash 1 installed Runner card. Gain 3¢.",
       "instructions": {
@@ -69,6 +74,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "tyr-etr",
       "text": "End the run.",
       "instructions": {

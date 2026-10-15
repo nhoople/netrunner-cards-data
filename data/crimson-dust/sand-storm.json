@@ -17,6 +17,7 @@
   "abilities": [
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "sand-storm-move-trash",
       "text": "If this ice is installed, move it to the outermost position protecting another server. (The run continues from this new position.) Trash this ice.",
       "instructions": {

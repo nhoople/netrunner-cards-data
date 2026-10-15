@@ -16,6 +16,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "unique",
         "value": true
@@ -23,6 +24,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "alexa-shuffle",
       "label": "[trash]: Shuffle HQ into R&D; Runner may pay 2¢ each to trash instead of shuffling",
       "cost": {

@@ -5,6 +5,7 @@
   "nrdbCode": "26080",
   "type": "program",
   "side": "runner",
+  "faction": "criminal",
   "unsupported": [],
   "subtypes": [
     "icebreaker",
@@ -16,6 +17,9 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
+      "flagRule": "9.3.6c",
+      "flag": "interface",
       "declaration": {
         "field": "breaker",
         "value": {
@@ -30,6 +34,9 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
+      "flagRule": "9.3.6c",
+      "flag": "interface",
       "id": "makler-pump",
       "label": "Pump Makler +2 strength",
       "cost": {
@@ -48,6 +55,7 @@
     },
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "fully_break_once_per_turn",
       "instructions": {
         "op": "do",

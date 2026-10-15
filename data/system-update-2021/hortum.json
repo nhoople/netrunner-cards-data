@@ -5,6 +5,7 @@
   "nrdbCode": "31076",
   "type": "ice",
   "side": "corp",
+  "faction": "weyland-consortium",
   "unsupported": [],
   "subtypes": [
     "code gate"
@@ -15,6 +16,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "canAdvance",
         "value": true
@@ -22,6 +24,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "cannotBreakWithAiAtAdvancements",
         "value": 3
@@ -29,6 +32,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "hortum-gain",
       "text": "Gain 1¢ (4¢ if 3+ advancements).",
       "instructions": {
@@ -57,6 +61,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "hortum-etr",
       "text": "End the run. If 3+ advancements, search R&D for up to 2 cards then ETR.",
       "instructions": {

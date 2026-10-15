@@ -17,6 +17,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "strengthBonusPerIceProtectingThisServer",
         "value": 2
@@ -24,6 +25,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "surveyor-tags",
       "text": "Trace[X]. If successful, give the Runner 2 tags.",
       "instructions": {
@@ -42,6 +44,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "surveyor-etr",
       "text": "Trace[X]. If successful, end the run.",
       "instructions": {

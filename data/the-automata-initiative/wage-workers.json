@@ -5,6 +5,7 @@
   "nrdbCode": "34033",
   "type": "asset",
   "side": "corp",
+  "faction": "haas-bioroid",
   "unsupported": [],
   "subtypes": [
     "bioroid",
@@ -17,6 +18,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "wageWorkersTrackActions",
         "value": true

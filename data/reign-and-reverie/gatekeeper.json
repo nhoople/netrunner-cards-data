@@ -16,6 +16,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "strengthBonusIfRezzedThisTurn",
         "value": 6
@@ -23,6 +24,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "gatekeeper-draw-shuffle",
       "text": "Draw up to 3 cards. Reveal up to 3 agendas in HQ and/or Archives, then shuffle those agendas into R&D.",
       "instructions": {
@@ -48,6 +50,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "gatekeeper-etr",
       "text": "End the run.",
       "instructions": {

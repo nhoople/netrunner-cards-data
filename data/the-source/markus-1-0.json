@@ -17,6 +17,7 @@
   "abilities": [
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "markus-break",
       "label": "Lose [click]: Break 1 subroutine on Markus 1.0",
       "cost": {
@@ -36,6 +37,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "markus-trash",
       "text": "The Runner trashes 1 of their installed cards.",
       "instructions": {
@@ -47,6 +49,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "markus-etr",
       "text": "End the run.",
       "instructions": {

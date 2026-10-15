@@ -5,11 +5,13 @@
   "nrdbCode": "30020",
   "type": "event",
   "side": "runner",
+  "faction": "shaper",
   "playCost": 1,
   "unsupported": [],
   "abilities": [
     {
       "class": "play",
+      "rule": "9.3.7d",
       "instructions": {
         "op": "seq",
         "effects": [

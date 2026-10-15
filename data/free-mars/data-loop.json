@@ -16,6 +16,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "encounter",
       "instructions": {
         "op": "do",
@@ -27,6 +28,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "data-loop-etr-if-tagged",
       "text": "End the run if the Runner is tagged.",
       "instructions": {
@@ -44,6 +46,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "data-loop-etr",
       "text": "End the run.",
       "instructions": {

@@ -5,6 +5,7 @@
   "nrdbCode": "33068",
   "type": "event",
   "side": "runner",
+  "faction": "anarch",
   "unsupported": [],
   "subtypes": [
     "run"
@@ -13,38 +14,45 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "runEvent",
         "value": {
           "servers": "any",
-          "addPowerCounterOnSubroutineResolve": 1,
-          "onRunEnd": {
-            "op": "seq",
-            "effects": [
-              {
-                "op": "do",
-                "action": {
-                  "kind": "draw",
-                  "side": "runner",
-                  "amount": 0,
-                  "tally": {
-                    "count": "source_power_counters",
-                    "per": 1,
-                    "side": "source"
-                  }
-                }
-              },
-              {
-                "op": "do",
-                "action": {
-                  "kind": "gain_credits",
-                  "side": "runner",
-                  "amount": 3
-                }
-              }
-            ]
-          }
+          "addPowerCounterOnSubroutineResolve": 1
         }
+      }
+    },
+    {
+      "class": "conditional",
+      "rule": "9.3.7c",
+      "trigger": "run_end",
+      "host": "runEvent",
+      "instructions": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "draw",
+              "side": "runner",
+              "amount": 0,
+              "tally": {
+                "count": "source_power_counters",
+                "per": 1,
+                "side": "source"
+              }
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "gain_credits",
+              "side": "runner",
+              "amount": 3
+            }
+          }
+        ]
       }
     }
   ]

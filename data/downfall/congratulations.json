@@ -17,6 +17,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "pass",
       "instructions": {
         "op": "do",
@@ -29,6 +30,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "congratulations-credits",
       "text": "Gain 2[credit]. The Runner gains 1[credit].",
       "instructions": {

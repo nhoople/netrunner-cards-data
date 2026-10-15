@@ -5,6 +5,7 @@
   "nrdbCode": "33117",
   "type": "ice",
   "side": "corp",
+  "faction": "nbn",
   "unsupported": [],
   "subtypes": [
     "sentry",
@@ -16,6 +17,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "rez",
       "instructions": {
         "op": "if",
@@ -40,6 +42,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "unsmiling-net",
       "text": "Do 2 net damage.",
       "instructions": {
@@ -52,6 +55,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "unsmiling-tag",
       "text": "Give the Runner 1 tag.",
       "instructions": {

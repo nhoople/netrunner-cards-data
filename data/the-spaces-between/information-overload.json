@@ -17,6 +17,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "encounter",
       "instructions": {
         "op": "do",
@@ -27,6 +28,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "information-overload-dynamic",
       "text": "The Runner trashes 1 installed card for each tag they have.",
       "instructions": {

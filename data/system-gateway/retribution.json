@@ -5,6 +5,7 @@
   "nrdbCode": "30065",
   "type": "operation",
   "side": "corp",
+  "faction": "weyland-consortium",
   "playCost": 1,
   "subtypes": [
     "gray ops"
@@ -13,6 +14,7 @@
   "abilities": [
     {
       "class": "play",
+      "rule": "9.3.7d",
       "instructions": {
         "op": "do",
         "action": {
@@ -23,6 +25,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "playRequiresTagged",
         "value": true

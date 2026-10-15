@@ -5,6 +5,7 @@
   "nrdbCode": "33056",
   "type": "upgrade",
   "side": "corp",
+  "faction": "nbn",
   "unsupported": [],
   "subtypes": [
     "region"
@@ -15,6 +16,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "canAdvance",
         "value": true
@@ -22,6 +24,9 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
+      "flagRule": "9.3.6g",
+      "flag": "once_per_turn",
       "id": "vlad-place",
       "label": "Remove 2 advancements: place 2 on another root card",
       "cost": {
@@ -39,8 +44,7 @@
           "sameServerRootAsSource": true,
           "excludeSelf": true
         }
-      },
-      "flag": "once_per_turn"
+      }
     }
   ]
 }

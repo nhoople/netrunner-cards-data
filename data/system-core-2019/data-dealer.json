@@ -15,6 +15,7 @@
   "abilities": [
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "data-dealer-forfeit",
       "label": "Forfeit 1 agenda: Gain 9¢",
       "cost": {

@@ -5,6 +5,7 @@
   "nrdbCode": "35060",
   "type": "agenda",
   "side": "corp",
+  "faction": "nbn",
   "unsupported": [],
   "subtypes": [
     "initiative"
@@ -14,6 +15,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "score",
       "instructions": {
         "op": "do",
@@ -25,6 +27,7 @@
     },
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "steal",
       "instructions": {
         "op": "do",
@@ -36,6 +39,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "next-big-thing-draw",
       "label": "[click], hosted agenda counter: Draw 4. Shuffle any number from HQ into R&D.",
       "cost": {

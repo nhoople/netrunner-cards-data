@@ -5,11 +5,13 @@
   "nrdbCode": "34094",
   "type": "event",
   "side": "runner",
+  "faction": "neutral-runner",
   "unsupported": [],
   "playCost": 5,
   "abilities": [
     {
       "class": "play",
+      "rule": "9.3.7d",
       "instructions": {
         "op": "seq",
         "effects": [

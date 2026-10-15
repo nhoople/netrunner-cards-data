@@ -5,6 +5,7 @@
   "nrdbCode": "31036",
   "type": "resource",
   "side": "runner",
+  "faction": "shaper",
   "unsupported": [],
   "subtypes": [
     "connection"
@@ -13,6 +14,7 @@
   "abilities": [
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "pro-contacts",
       "label": "Gain 1¢ and draw 1",
       "cost": {

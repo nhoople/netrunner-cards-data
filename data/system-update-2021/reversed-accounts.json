@@ -5,6 +5,7 @@
   "nrdbCode": "31064",
   "type": "asset",
   "side": "corp",
+  "faction": "nbn",
   "unsupported": [],
   "subtypes": [
     "hostile"
@@ -15,6 +16,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "canAdvance",
         "value": true
@@ -22,6 +24,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "reversed",
       "label": "Trash: Runner loses 4¢ per advancement",
       "cost": {

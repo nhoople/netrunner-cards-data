@@ -5,6 +5,7 @@
   "nrdbCode": "33128",
   "type": "identity",
   "side": "corp",
+  "faction": "neutral-corp",
   "unsupported": [],
   "subtypes": [
     "corp"

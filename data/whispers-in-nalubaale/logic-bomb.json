@@ -14,6 +14,7 @@
   "abilities": [
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "logic-bomb-bypass",
       "label": "[trash]: Bypass the ice you are encountering; lose remaining clicks",
       "cost": {

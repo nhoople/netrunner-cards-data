@@ -16,6 +16,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "unique",
         "value": true
@@ -23,6 +24,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "powerCounterOnAnyCorpInstall",
         "value": 1
@@ -30,6 +32,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "alix-cash",
       "label": "[click], [trash]: Gain 2¢ per power counter",
       "cost": {

@@ -12,6 +12,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "successful_run",
       "instructions": {
         "op": "choose",
@@ -45,6 +46,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "bankroll-take",
       "label": "Trash Bankroll: take all hosted credits",
       "cost": {

@@ -5,6 +5,7 @@
   "nrdbCode": "35058",
   "type": "identity",
   "side": "corp",
+  "faction": "nbn",
   "unsupported": [],
   "subtypes": [
     "division"
@@ -12,6 +13,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "remove_tags",
       "instructions": {
         "op": "do",
@@ -22,6 +24,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "synapse-untag",
       "label": "[click], remove 1 tag: Gain 2¢",
       "cost": {

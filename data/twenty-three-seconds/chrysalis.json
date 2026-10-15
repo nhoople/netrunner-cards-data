@@ -18,6 +18,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "mustRevealWhenAccessedFromRd",
         "value": true
@@ -25,6 +26,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "skipOnAccessFromArchives",
         "value": true
@@ -32,6 +34,7 @@
     },
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "access",
       "instructions": {
         "op": "do",
@@ -42,6 +45,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "chrysalis-net",
       "text": "Do 2 net damage.",
       "instructions": {

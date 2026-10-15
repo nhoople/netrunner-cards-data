@@ -12,6 +12,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "unique",
         "value": true
@@ -19,6 +20,7 @@
     },
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "fully_break",
       "instructions": {
         "op": "choose",
@@ -52,6 +54,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "takobi-pump",
       "label": "2 hosted power counters: Choose 1 installed non-AI icebreaker. That icebreaker gets +3 strength for the remainder of the current encounter",
       "cost": {

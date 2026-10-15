@@ -5,6 +5,7 @@
   "nrdbCode": "36047",
   "type": "agenda",
   "side": "corp",
+  "faction": "nbn",
   "unsupported": [],
   "subtypes": [
     "initiative",
@@ -15,6 +16,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "badPublicityOnScore",
         "value": 1
@@ -22,6 +24,7 @@
     },
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "steal",
       "instructions": {
         "op": "do",
@@ -33,6 +36,7 @@
     },
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "corp_action_phase_end",
       "instructions": {
         "op": "if",

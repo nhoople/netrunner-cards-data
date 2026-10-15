@@ -14,6 +14,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "personalWorkshop",
         "value": true
@@ -21,6 +22,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "personal-workshop-host",
       "label": "[click]: Host a program or hardware from grip; place power counters equal to its install cost",
       "cost": {
@@ -38,6 +40,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "personal-workshop-remove",
       "label": "1¢: Remove 1 power counter from a hosted card (install ignoring costs at 0)",
       "cost": {
@@ -55,6 +58,7 @@
     },
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "turn_begin",
       "instructions": {
         "op": "do",

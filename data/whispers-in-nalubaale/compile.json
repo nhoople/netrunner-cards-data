@@ -14,44 +14,57 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "runEvent",
         "value": {
-          "servers": "any",
-          "onFirstEncounterThisRun": {
-            "op": "choose",
-            "chooser": "runner",
-            "options": [
-              {
-                "id": "accept",
-                "label": "Search stack or heap for a program and install it, ignoring all costs",
-                "effect": {
-                  "op": "do",
-                  "action": {
-                    "kind": "install_compile_program"
-                  }
-                }
-              },
-              {
-                "id": "decline",
-                "label": "Decline",
-                "effect": {
-                  "op": "do",
-                  "action": {
-                    "kind": "gain_credits",
-                    "side": "runner",
-                    "amount": 0
-                  }
-                }
+          "servers": "any"
+        }
+      }
+    },
+    {
+      "class": "conditional",
+      "rule": "9.3.7c",
+      "trigger": "first_encounter_this_run",
+      "host": "runEvent",
+      "instructions": {
+        "op": "choose",
+        "chooser": "runner",
+        "options": [
+          {
+            "id": "accept",
+            "label": "Search stack or heap for a program and install it, ignoring all costs",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "install_compile_program"
               }
-            ]
+            }
           },
-          "onRunEnd": {
-            "op": "do",
-            "action": {
-              "kind": "win_compile_bottom_of_stack"
+          {
+            "id": "decline",
+            "label": "Decline",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "gain_credits",
+                "side": "runner",
+                "amount": 0
+              }
             }
           }
+        ]
+      }
+    },
+    {
+      "class": "conditional",
+      "rule": "9.3.7c",
+      "trigger": "run_end",
+      "host": "runEvent",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "win_compile_bottom_of_stack"
         }
       }
     }

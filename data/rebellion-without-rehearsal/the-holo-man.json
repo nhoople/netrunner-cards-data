@@ -5,6 +5,7 @@
   "nrdbCode": "34120",
   "type": "upgrade",
   "side": "corp",
+  "faction": "nbn",
   "unsupported": [],
   "subtypes": [
     "academic",
@@ -17,6 +18,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "turn_begin",
       "instructions": {
         "op": "do",
@@ -27,6 +29,9 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
+      "flagRule": "9.3.6g",
+      "flag": "once_per_turn",
       "id": "holo-advance",
       "label": "[click], 4¢: Place 2 (or 3) advancements on this server",
       "cost": {
@@ -44,8 +49,7 @@
           "sameServerRootOrIceAsSource": true,
           "bonusAmountIfNoCorpInstallFromHqThisTurn": 1
         }
-      },
-      "flag": "once_per_turn"
+      }
     }
   ]
 }

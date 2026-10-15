@@ -5,6 +5,7 @@
   "nrdbCode": "33079",
   "type": "hardware",
   "side": "runner",
+  "faction": "criminal",
   "unsupported": [],
   "subtypes": [
     "cybernetic",
@@ -14,6 +15,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "install",
       "instructions": {
         "op": "do",
@@ -25,6 +27,7 @@
     },
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "first_successful_central_run_this_turn",
       "instructions": {
         "op": "do",

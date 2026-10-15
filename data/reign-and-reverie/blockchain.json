@@ -16,6 +16,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "gainsSubroutinesBeforePrintedPerFaceupArchives",
         "value": {
@@ -52,6 +53,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "blockchain-credit",
       "text": "Gain 1[credit] and the Runner loses 1[credit].",
       "instructions": {
@@ -78,6 +80,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "blockchain-etr",
       "text": "End the run.",
       "instructions": {

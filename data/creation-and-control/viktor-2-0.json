@@ -19,6 +19,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "bioroidBreakMaxSubs",
         "value": 2
@@ -26,6 +27,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "viktor-2-0-core",
       "label": "Hosted power counter: Do 1 core damage",
       "cost": {
@@ -47,6 +49,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "viktor-2-0-trace",
       "text": "Trace[2]. If successful, place 1 power counter on this ice.",
       "instructions": {
@@ -66,6 +69,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "viktor-2-0-etr",
       "text": "End the run.",
       "instructions": {

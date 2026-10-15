@@ -5,6 +5,7 @@
   "nrdbCode": "33103",
   "type": "upgrade",
   "side": "corp",
+  "faction": "haas-bioroid",
   "unsupported": [],
   "subtypes": [
     "ambush",
@@ -16,6 +17,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "access",
       "instructions": {
         "op": "if",

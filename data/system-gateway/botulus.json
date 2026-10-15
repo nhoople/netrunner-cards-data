@@ -5,6 +5,7 @@
   "nrdbCode": "30004",
   "type": "program",
   "side": "runner",
+  "faction": "anarch",
   "installCost": 2,
   "subtypes": [
     "virus",
@@ -15,6 +16,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "installOnIce",
         "value": true
@@ -22,6 +24,7 @@
     },
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "install",
       "instructions": {
         "op": "do",
@@ -33,6 +36,7 @@
     },
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "turn_begin",
       "instructions": {
         "op": "do",
@@ -44,6 +48,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "break-host",
       "label": "Spend 1 virus counter: break 1 subroutine on host",
       "cost": {

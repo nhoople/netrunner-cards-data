@@ -16,6 +16,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "unique",
         "value": true
@@ -23,6 +24,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "hostGainsAllIceSubtypes",
         "value": true
@@ -30,6 +32,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "mother-goddess-etr",
       "text": "End the run.",
       "instructions": {

@@ -5,6 +5,7 @@
   "nrdbCode": "34060",
   "type": "ice",
   "side": "corp",
+  "faction": "weyland-consortium",
   "unsupported": [],
   "subtypes": [
     "code gate",
@@ -16,6 +17,7 @@
   "abilities": [
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "valentao-gain",
       "text": "Gain 2[credit].",
       "instructions": {
@@ -62,6 +64,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "valentao-lose",
       "text": "The Runner loses 2[credit].",
       "instructions": {
@@ -75,6 +78,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "valentao-etr",
       "text": "End the run if you have more credits than the Runner.",
       "instructions": {

@@ -15,6 +15,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "successful_run",
       "instructions": {
         "op": "if",
@@ -32,6 +33,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "datasucker-weaken",
       "label": "Spend virus: ice −1 strength",
       "cost": {

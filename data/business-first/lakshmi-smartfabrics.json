@@ -13,6 +13,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "placePowerCounterOnAnyCardRez",
         "value": true
@@ -20,6 +21,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "lakshmi-reveal",
       "label": "X hosted power counters: Reveal an agenda worth X from HQ; Runner cannot steal copies this turn",
       "cost": {

@@ -5,6 +5,7 @@
   "nrdbCode": "35045",
   "type": "upgrade",
   "side": "corp",
+  "faction": "haas-bioroid",
   "unsupported": [],
   "subtypes": [
     "bioroid",
@@ -16,6 +17,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "corp_action_phase_end",
       "instructions": {
         "op": "do",

@@ -13,6 +13,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "game_start",
       "instructions": {
         "op": "seq",

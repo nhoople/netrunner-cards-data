@@ -5,6 +5,7 @@
   "nrdbCode": "30063",
   "type": "ice",
   "side": "corp",
+  "faction": "weyland-consortium",
   "installCost": 7,
   "rezCost": 7,
   "strength": 5,
@@ -15,6 +16,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "strengthBonusAtAdvancements",
         "value": {
@@ -25,6 +27,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "pharos-tag",
       "text": "Give the Runner 1 tag.",
       "instructions": {
@@ -37,6 +40,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "pharos-etr1",
       "text": "End the run.",
       "instructions": {
@@ -48,6 +52,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "pharos-etr2",
       "text": "End the run.",
       "instructions": {

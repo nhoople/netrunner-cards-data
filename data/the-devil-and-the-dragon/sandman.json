@@ -16,6 +16,7 @@
   "abilities": [
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "sandman-bounce-1",
       "text": "Add an installed Runner card to the grip.",
       "instructions": {
@@ -27,6 +28,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "sandman-bounce-2",
       "text": "Add an installed Runner card to the grip.",
       "instructions": {

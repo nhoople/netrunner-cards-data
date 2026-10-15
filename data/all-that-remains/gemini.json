@@ -18,6 +18,7 @@
   "abilities": [
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "gemini-trace",
       "text": "Trace[2]. If successful, do 1 net damage. If strength ≥5, do 1 net damage.",
       "instructions": {

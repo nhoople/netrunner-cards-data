@@ -13,6 +13,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "first_reveal_each_turn",
       "instructions": {
         "op": "do",
@@ -25,6 +26,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "hyoubu-reveal",
       "label": "[click]: Reveal 1 card from the grip at random or the top card of the stack",
       "cost": {

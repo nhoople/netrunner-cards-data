@@ -5,6 +5,7 @@
   "nrdbCode": "26123",
   "type": "ice",
   "side": "corp",
+  "faction": "weyland-consortium",
   "unsupported": [],
   "subtypes": [
     "barrier"
@@ -15,6 +16,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "canAdvance",
         "value": true
@@ -22,6 +24,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "strengthBonusAtAdvancements",
         "value": {
@@ -32,6 +35,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "maxPrintedSubsBreakablePerEncounterAtAdvancements",
         "value": {
@@ -42,6 +46,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "akhet-adv",
       "text": "Gain 1[credit]. Place 1 advancement counter on an installed card.",
       "instructions": {
@@ -68,6 +73,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "akhet-etr",
       "text": "End the run.",
       "instructions": {

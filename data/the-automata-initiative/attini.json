@@ -5,6 +5,7 @@
   "nrdbCode": "34042",
   "type": "ice",
   "side": "corp",
+  "faction": "jinteki",
   "unsupported": [],
   "subtypes": [
     "code gate",
@@ -16,6 +17,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "threatCannotSpendCreditsDuringSubs",
         "value": 3
@@ -23,6 +25,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "attini-1",
       "text": "Do 1 net damage unless the Runner pays 2[credit].",
       "instructions": {
@@ -64,6 +67,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "attini-2",
       "text": "Do 1 net damage unless the Runner pays 2[credit].",
       "instructions": {
@@ -105,6 +109,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "attini-3",
       "text": "Do 1 net damage unless the Runner pays 2[credit].",
       "instructions": {

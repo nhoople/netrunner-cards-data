@@ -18,6 +18,9 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
+      "flagRule": "9.3.6c",
+      "flag": "interface",
       "declaration": {
         "field": "breaker",
         "value": {
@@ -33,6 +36,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "ika-host",
       "label": "2¢: Host this program on a piece of ice",
       "cost": {
@@ -50,6 +54,9 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
+      "flagRule": "9.3.6c",
+      "flag": "interface",
       "id": "ika-break",
       "label": "1¢: Break up to 2 subroutines on host sentry",
       "cost": {
@@ -69,6 +76,9 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
+      "flagRule": "9.3.6c",
+      "flag": "interface",
       "id": "ika-pump",
       "label": "2¢: +3 strength",
       "cost": {

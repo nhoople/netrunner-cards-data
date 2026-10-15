@@ -5,6 +5,7 @@
   "nrdbCode": "31043",
   "type": "ice",
   "side": "corp",
+  "faction": "haas-bioroid",
   "unsupported": [],
   "subtypes": [
     "barrier",
@@ -16,6 +17,7 @@
   "abilities": [
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "eli-etr1",
       "text": "End the run.",
       "instructions": {
@@ -27,6 +29,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "eli-etr2",
       "text": "End the run.",
       "instructions": {

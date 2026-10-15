@@ -5,6 +5,7 @@
   "nrdbCode": "33088",
   "type": "program",
   "side": "runner",
+  "faction": "shaper",
   "unsupported": [],
   "subtypes": [
     "icebreaker",
@@ -16,6 +17,9 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
+      "flagRule": "9.3.6c",
+      "flag": "interface",
       "declaration": {
         "field": "breaker",
         "value": {
@@ -30,6 +34,9 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
+      "flagRule": "9.3.6c",
+      "flag": "interface",
       "id": "nanuq-pump",
       "label": "Pump Nanuq +1 strength",
       "cost": {
@@ -48,6 +55,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "rfgOnUninstall",
         "value": true
@@ -55,6 +63,7 @@
     },
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "agenda_scored_or_stolen",
       "instructions": {
         "op": "do",

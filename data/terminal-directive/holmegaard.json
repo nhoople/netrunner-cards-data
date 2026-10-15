@@ -18,6 +18,7 @@
   "abilities": [
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "holmegaard-trace",
       "text": "Trace[4]. If successful, the Runner cannot access cards or breach the attacked server for the remainder of this run.",
       "instructions": {
@@ -36,6 +37,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "holmegaard-trash-breaker",
       "text": "Trash 1 installed icebreaker.",
       "instructions": {

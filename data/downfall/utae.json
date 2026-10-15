@@ -17,6 +17,9 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
+      "flagRule": "9.3.6c",
+      "flag": "interface",
       "declaration": {
         "field": "breaker",
         "value": {
@@ -32,6 +35,9 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
+      "flagRule": "9.3.6c",
+      "flag": "interface",
       "id": "utae-break-x",
       "label": "X¢: Break X code gate subroutines (once per run)",
       "cost": {
@@ -54,6 +60,9 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
+      "flagRule": "9.3.6c",
+      "flag": "interface",
       "id": "utae-break-virtual",
       "label": "1¢: Break 1 code gate subroutine (3+ virtual resources)",
       "cost": {
@@ -75,6 +84,9 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
+      "flagRule": "9.3.6c",
+      "flag": "interface",
       "id": "utae-pump",
       "label": "1¢: +1 strength",
       "cost": {

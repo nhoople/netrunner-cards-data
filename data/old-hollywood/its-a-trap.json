@@ -16,6 +16,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "expose_while_installed",
       "instructions": {
         "op": "do",
@@ -27,6 +28,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "its-a-trap-trash",
       "text": "The Runner trashes 1 of their installed cards. Trash this ice.",
       "instructions": {

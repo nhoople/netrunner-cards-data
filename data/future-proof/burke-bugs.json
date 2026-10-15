@@ -17,6 +17,7 @@
   "abilities": [
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "burke-bugs-trace",
       "text": "Trace[0]. If successful, the Runner trashes 1 program.",
       "instructions": {

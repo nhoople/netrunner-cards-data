@@ -5,6 +5,7 @@
   "nrdbCode": "31066",
   "type": "ice",
   "side": "corp",
+  "faction": "nbn",
   "unsupported": [],
   "subtypes": [
     "code gate"
@@ -15,6 +16,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "encounter",
       "instructions": {
         "op": "do",
@@ -27,6 +29,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "tb-etr",
       "text": "End the run.",
       "instructions": {

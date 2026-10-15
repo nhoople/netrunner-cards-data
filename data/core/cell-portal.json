@@ -17,6 +17,7 @@
   "abilities": [
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "cell-portal-move",
       "text": "The Runner moves to the outermost position of the attacked server. They may jack out. Derez this ice.",
       "instructions": {

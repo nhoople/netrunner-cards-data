@@ -12,6 +12,22 @@
   ],
   "additionalProperties": false,
   "$defs": {
+    "abilityFlag": {
+      "oneOf": [
+        {
+          "type": "string",
+          "enum": ["access", "interface", "interrupt", "persistent", "once_per_turn"]
+        },
+        {
+          "type": "object",
+          "required": ["threat"],
+          "additionalProperties": false,
+          "properties": {
+            "threat": { "type": "number", "minimum": 0 }
+          }
+        }
+      ]
+    },
     "startsRunSpec": {
       "type": "object",
       "required": [
@@ -258,6 +274,37 @@
           "class": {
             "type": "string",
             "enum": ["static", "paid", "conditional", "play", "subroutine"]
+          },
+          "rule": {
+            "type": "string",
+            "description": "CR 9.3.7 number for class."
+          },
+          "flagRule": {
+            "description": "CR 9.3.6 number for flag, in the same order.",
+            "oneOf": [
+              { "type": "string" },
+              { "type": "array", "items": { "type": "string" } }
+            ]
+          },
+          "host": {
+            "type": "string",
+            "description": "Object this conditional instruction is written back onto."
+          },
+          "hostAbility": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Paid ability whose host object receives this instruction. A run started by that ability keeps the follow-up on startsRun."
+          },
+          "flag": {
+            "description": "CR 9.3.6 ability flag. A list when the ability prints more than one.",
+            "oneOf": [
+              { "$ref": "#/$defs/abilityFlag" },
+              {
+                "type": "array",
+                "minItems": 1,
+                "items": { "$ref": "#/$defs/abilityFlag" }
+              }
+            ]
           },
           "id": { "type": "string" },
           "text": { "type": "string" },

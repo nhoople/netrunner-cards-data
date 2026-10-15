@@ -14,21 +14,28 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "runEvent",
         "value": {
-          "servers": "remote",
-          "onRunEnd": {
-            "op": "if",
-            "cond": {
-              "op": "run_successful"
-            },
-            "then": {
-              "op": "do",
-              "action": {
-                "kind": "resolve_marathon"
-              }
-            }
+          "servers": "remote"
+        }
+      }
+    },
+    {
+      "class": "conditional",
+      "rule": "9.3.7c",
+      "trigger": "run_end",
+      "host": "runEvent",
+      "instructions": {
+        "op": "if",
+        "cond": {
+          "op": "run_successful"
+        },
+        "then": {
+          "op": "do",
+          "action": {
+            "kind": "resolve_marathon"
           }
         }
       }

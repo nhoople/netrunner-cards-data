@@ -18,6 +18,7 @@
   "abilities": [
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "mamba-counter",
       "label": "Hosted power counter: 1 net damage (during run)",
       "cost": {
@@ -36,6 +37,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "mamba-net",
       "text": "Do 1 net damage",
       "instructions": {
@@ -48,6 +50,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "mamba-psi",
       "text": "Psi; if bids differ place 1 power counter on Mamba",
       "instructions": {

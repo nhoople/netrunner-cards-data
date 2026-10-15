@@ -16,6 +16,7 @@
   "abilities": [
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "aimor-trash",
       "text": "Trash the top 3 cards of the stack. Trash Aimor.",
       "instructions": {

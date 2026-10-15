@@ -17,6 +17,7 @@
   "abilities": [
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "special-offer-gain",
       "text": "The Corp gains 5[credit]. Trash Special Offer.",
       "instructions": {

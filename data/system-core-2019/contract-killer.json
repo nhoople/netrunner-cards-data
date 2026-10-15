@@ -16,6 +16,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "canAdvance",
         "value": true
@@ -23,6 +24,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "contract-killer-fire",
       "label": "Trash Contract Killer: trash a connection or do 2 meat damage (needs 2 advancements)",
       "cost": {

@@ -19,6 +19,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "bioroidBreakMaxSubs",
         "value": 2
@@ -26,6 +27,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "ichi-2-0-trash-1",
       "text": "Trash 1 installed program.",
       "instructions": {
@@ -37,6 +39,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "ichi-2-0-trash-2",
       "text": "Trash 1 installed program.",
       "instructions": {
@@ -48,6 +51,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "ichi-2-0-trace",
       "text": "Trace[3]. If successful, do 1 core damage and give the Runner 1 tag.",
       "instructions": {

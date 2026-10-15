@@ -5,6 +5,7 @@
   "nrdbCode": "26100",
   "type": "asset",
   "side": "corp",
+  "faction": "haas-bioroid",
   "unsupported": [],
   "subtypes": [
     "industrial"
@@ -15,6 +16,9 @@
   "abilities": [
     {
       "class": "paid",
+      "rule": "9.3.7b",
+      "flagRule": "9.3.6g",
+      "flag": "once_per_turn",
       "id": "vaporframe-click-install",
       "label": "[click]: Install 1 card from HQ, ignoring all costs",
       "cost": {
@@ -28,11 +32,11 @@
         "action": {
           "kind": "may_install_from_hq_ignore_costs"
         }
-      },
-      "flag": "once_per_turn"
+      }
     },
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "trash",
       "instructions": {
         "op": "do",

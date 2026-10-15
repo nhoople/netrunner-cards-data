@@ -5,6 +5,7 @@
   "nrdbCode": "30026",
   "type": "program",
   "side": "runner",
+  "faction": "shaper",
   "strength": 1,
   "subtypes": [
     "icebreaker",
@@ -16,6 +17,9 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
+      "flagRule": "9.3.6c",
+      "flag": "interface",
       "declaration": {
         "field": "breaker",
         "value": {
@@ -30,6 +34,9 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
+      "flagRule": "9.3.6c",
+      "flag": "interface",
       "id": "unity-pump",
       "label": "Pump Unity +1 strength",
       "cost": {

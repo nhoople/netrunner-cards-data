@@ -5,6 +5,7 @@
   "nrdbCode": "34115",
   "type": "asset",
   "side": "corp",
+  "faction": "nbn",
   "unsupported": [],
   "subtypes": [
     "academic",
@@ -16,6 +17,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "turn_begin",
       "instructions": {
         "op": "do",
@@ -27,6 +29,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "janaina-take",
       "label": "[click], add to HQ: Take all hosted credits; may install",
       "cost": {

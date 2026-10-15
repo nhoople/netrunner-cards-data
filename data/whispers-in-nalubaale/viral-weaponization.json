@@ -16,6 +16,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "score_turn_end",
       "instructions": {
         "op": "do",

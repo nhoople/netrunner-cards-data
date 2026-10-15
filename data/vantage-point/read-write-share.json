@@ -5,12 +5,14 @@
   "nrdbCode": "36022",
   "type": "program",
   "side": "runner",
+  "faction": "shaper",
   "unsupported": [],
   "installCost": 0,
   "memoryCost": 2,
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "maxHostedCards",
         "value": 4
@@ -18,6 +20,7 @@
     },
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "install",
       "instructions": {
         "op": "do",
@@ -28,6 +31,7 @@
     },
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "turn_begin",
       "instructions": {
         "op": "do",
@@ -38,6 +42,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "read-write-share-shuffle",
       "label": "[trash]: Shuffle all hosted cards into your stack",
       "cost": {

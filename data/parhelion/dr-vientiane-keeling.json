@@ -5,6 +5,7 @@
   "nrdbCode": "33106",
   "type": "asset",
   "side": "corp",
+  "faction": "jinteki",
   "unsupported": [],
   "subtypes": [
     "academic"
@@ -15,6 +16,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "runnerHandSizePenaltyPerPowerCounter",
         "value": 1
@@ -22,6 +24,7 @@
     },
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "rez",
       "instructions": {
         "op": "do",
@@ -33,6 +36,7 @@
     },
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "turn_begin",
       "instructions": {
         "op": "do",

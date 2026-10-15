@@ -12,6 +12,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "unique",
         "value": true
@@ -19,6 +20,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "deckLimit",
         "value": 1
@@ -26,6 +28,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "15-minutes-shuffle",
       "label": "[click]: Shuffle 15 Minutes into R&D",
       "cost": {

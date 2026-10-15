@@ -17,6 +17,7 @@
   "abilities": [
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "wall-of-thorns-net",
       "text": "Do 2 net damage.",
       "instructions": {
@@ -29,6 +30,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "wall-of-thorns-etr",
       "text": "End the run.",
       "instructions": {

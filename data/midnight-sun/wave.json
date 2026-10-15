@@ -5,6 +5,7 @@
   "nrdbCode": "33037",
   "type": "ice",
   "side": "corp",
+  "faction": "haas-bioroid",
   "unsupported": [],
   "subtypes": [
     "code gate",
@@ -16,6 +17,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "rez",
       "instructions": {
         "op": "if",
@@ -55,6 +57,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "wave-harmonic",
       "text": "Gain 1¢ for each rezzed piece of harmonic ice.",
       "instructions": {

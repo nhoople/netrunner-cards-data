@@ -19,6 +19,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "bioroidBreakMaxSubs",
         "value": 1
@@ -26,6 +27,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "vikram-no-programs",
       "text": "The Runner cannot use programs for the remainder of this run.",
       "instructions": {
@@ -37,6 +39,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "vikram-trace-core-1",
       "text": "Trace[4]. If successful, do 1 core damage.",
       "instructions": {
@@ -56,6 +59,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "vikram-trace-core-2",
       "text": "Trace[4]. If successful, do 1 core damage.",
       "instructions": {

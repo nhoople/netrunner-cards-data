@@ -15,6 +15,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "onScoreIfRunnerTaggedPlaceAgendaCounter",
         "value": true
@@ -22,6 +23,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "agendaPointsPerAgendaCounter",
         "value": 1

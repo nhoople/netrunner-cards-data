@@ -15,6 +15,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "install",
       "instructions": {
         "op": "do",
@@ -26,6 +27,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "street-peddler-install",
       "label": "[trash]: Install 1 hosted card, lowering install cost by 1",
       "cost": {

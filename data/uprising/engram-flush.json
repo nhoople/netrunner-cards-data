@@ -5,6 +5,7 @@
   "nrdbCode": "26108",
   "type": "ice",
   "side": "corp",
+  "faction": "jinteki",
   "unsupported": [],
   "subtypes": [
     "code gate",
@@ -16,6 +17,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "encounter",
       "instructions": {
         "op": "do",
@@ -26,6 +28,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "engram-reveal-1",
       "text": "Reveal the grip.",
       "instructions": {
@@ -37,6 +40,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "engram-reveal-2",
       "text": "Reveal the grip.",
       "instructions": {

@@ -3,6 +3,7 @@
   "title": "Pop-up Window",
   "type": "ice",
   "side": "corp",
+  "faction": "nbn",
   "wave": "system-update-2021",
   "nrdbCode": "31065",
   "installCost": 0,
@@ -16,6 +17,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "encounter",
       "instructions": {
         "op": "do",
@@ -28,6 +30,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "puw-etr",
       "text": "End the run unless the Runner pays 1¢.",
       "instructions": {

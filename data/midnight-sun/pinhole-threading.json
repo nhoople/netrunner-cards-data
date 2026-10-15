@@ -5,6 +5,7 @@
   "nrdbCode": "33013",
   "type": "event",
   "side": "runner",
+  "faction": "criminal",
   "unsupported": [],
   "subtypes": [
     "run"
@@ -13,17 +14,24 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "runEvent",
         "value": {
           "servers": "any",
-          "skipBreach": true,
-          "onSuccessfulRun": {
-            "op": "do",
-            "action": {
-              "kind": "access_one_root_other_server"
-            }
-          }
+          "skipBreach": true
+        }
+      }
+    },
+    {
+      "class": "conditional",
+      "rule": "9.3.7c",
+      "trigger": "successful_run",
+      "host": "runEvent",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "access_one_root_other_server"
         }
       }
     }

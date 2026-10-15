@@ -14,6 +14,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "lingerAsCurrent",
         "value": true
@@ -21,6 +22,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "currentTrashOnAgendaScored",
         "value": true
@@ -28,6 +30,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "blankCorpIdentityPrintedAbilities",
         "value": true

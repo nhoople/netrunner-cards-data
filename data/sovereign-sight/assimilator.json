@@ -14,6 +14,7 @@
   "abilities": [
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "assimilator-faceup",
       "label": "[click][click]: Turn one of your facedown installed cards faceup. If that card is an event, trash it.",
       "cost": {

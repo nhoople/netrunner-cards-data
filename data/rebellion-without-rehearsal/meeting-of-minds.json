@@ -5,11 +5,13 @@
   "nrdbCode": "34076",
   "type": "event",
   "side": "runner",
+  "faction": "criminal",
   "unsupported": [],
   "playCost": 4,
   "abilities": [
     {
       "class": "play",
+      "rule": "9.3.7d",
       "instructions": {
         "op": "choose",
         "chooser": "runner",

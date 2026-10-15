@@ -16,6 +16,7 @@
   "abilities": [
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "hailstorm-rfg",
       "text": "Remove a card in the heap from the game.",
       "instructions": {
@@ -27,6 +28,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "hailstorm-etr",
       "text": "End the run.",
       "instructions": {

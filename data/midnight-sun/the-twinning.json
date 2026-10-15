@@ -5,6 +5,7 @@
   "nrdbCode": "33010",
   "type": "resource",
   "side": "runner",
+  "faction": "anarch",
   "unsupported": [],
   "subtypes": [
     "virtual"
@@ -13,6 +14,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "powerOnFirstInstalledCardCreditSpendThisTurn",
         "value": true
@@ -20,6 +22,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "removePowerForBonusAccessOnHqRdBreach",
         "value": 2

@@ -16,6 +16,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "unique",
         "value": true
@@ -23,6 +24,9 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
+      "flagRule": "9.3.6g",
+      "flag": "once_per_turn",
       "id": "calvin-b4l3y-draw",
       "label": "[click]: Draw 2 cards",
       "cost": {
@@ -38,11 +42,11 @@
           "side": "corp",
           "amount": 2
         }
-      },
-      "flag": "once_per_turn"
+      }
     },
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "trash",
       "instructions": {
         "op": "choose",

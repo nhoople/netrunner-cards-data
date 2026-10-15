@@ -17,6 +17,7 @@
   "abilities": [
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "flashbang-derez",
       "label": "6¢: Derez the sentry you are encountering",
       "cost": {
@@ -36,6 +37,9 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
+      "flagRule": "9.3.6c",
+      "flag": "interface",
       "declaration": {
         "field": "breaker",
         "value": {

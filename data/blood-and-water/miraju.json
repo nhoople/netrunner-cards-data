@@ -17,6 +17,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "encounter_end_if_printed_subroutine_broken",
       "instructions": {
         "op": "do",
@@ -27,6 +28,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "miraju-draw-shuffle",
       "text": "You may draw 1 card. Then, shuffle 1 card from HQ into R&D.",
       "instructions": {

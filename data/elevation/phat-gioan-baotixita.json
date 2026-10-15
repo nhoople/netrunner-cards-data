@@ -5,6 +5,7 @@
   "nrdbCode": "35051",
   "type": "asset",
   "side": "corp",
+  "faction": "jinteki",
   "unsupported": [],
   "subtypes": [
     "executive"
@@ -15,6 +16,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "discard_phase_end",
       "instructions": {
         "op": "do",
@@ -26,6 +28,7 @@
     },
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "first_agenda_scored_or_stolen_this_turn",
       "instructions": {
         "op": "do",

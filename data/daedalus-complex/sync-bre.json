@@ -17,6 +17,7 @@
   "abilities": [
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "sync-bre-tag",
       "text": "Trace[4]. If successful, give the Runner 1 tag.",
       "instructions": {
@@ -36,6 +37,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "sync-bre-access",
       "text": "Trace[2]. If successful, whenever the Runner breaches a server for the remainder of this run, they access 1 fewer card.",
       "instructions": {

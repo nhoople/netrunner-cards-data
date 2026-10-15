@@ -5,6 +5,7 @@
   "nrdbCode": "35066",
   "type": "operation",
   "side": "corp",
+  "faction": "nbn",
   "unsupported": [],
   "subtypes": [
     "gray ops"
@@ -13,6 +14,7 @@
   "abilities": [
     {
       "class": "play",
+      "rule": "9.3.7d",
       "instructions": {
         "op": "do",
         "action": {

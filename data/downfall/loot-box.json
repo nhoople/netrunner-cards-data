@@ -16,6 +16,7 @@
   "abilities": [
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "loot-box-pay",
       "text": "End the run unless the Runner pays 2[credit].",
       "instructions": {
@@ -42,6 +43,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "loot-box-reveal",
       "text": "Reveal the top 3 cards of the stack. Add 1 of those cards to the grip and gain X[credit], where X is equal to that card's play or install cost. The Runner shuffles the remaining cards into the stack.",
       "instructions": {

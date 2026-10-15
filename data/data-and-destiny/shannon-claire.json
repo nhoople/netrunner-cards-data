@@ -16,6 +16,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "unique",
         "value": true
@@ -23,6 +24,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "shannon-draw-bottom",
       "label": "[click]: Draw 1 card from the bottom of R&D",
       "cost": {
@@ -41,6 +43,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "shannon-search",
       "label": "[trash]: Search R&D or Archives for an agenda; add to bottom of R&D",
       "cost": {

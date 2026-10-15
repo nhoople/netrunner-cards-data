@@ -5,6 +5,7 @@
   "nrdbCode": "30077",
   "type": "identity",
   "side": "corp",
+  "faction": "neutral-corp",
   "unsupported": [],
   "subtypes": [
     "megacorp"

@@ -5,6 +5,7 @@
   "nrdbCode": "34043",
   "type": "ice",
   "side": "corp",
+  "faction": "jinteki",
   "unsupported": [],
   "subtypes": [
     "sentry",
@@ -17,6 +18,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "pass",
       "instructions": {
         "op": "if",
@@ -35,6 +37,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "phone-net-1",
       "text": "Do 1 net damage.",
       "instructions": {
@@ -47,6 +50,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "phone-net-2",
       "text": "Do 1 net damage.",
       "instructions": {

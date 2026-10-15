@@ -16,6 +16,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "unique",
         "value": true
@@ -23,13 +24,9 @@
     },
     {
       "class": "static",
-      "declaration": {
-        "field": "persistent",
-        "value": true
-      }
-    },
-    {
-      "class": "static",
+      "rule": "9.3.7a",
+      "flagRule": "9.3.6e",
+      "flag": "persistent",
       "restrictions": [
         {
           "appliesTo": "steal_from_protecting_server",

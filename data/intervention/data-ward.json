@@ -16,6 +16,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "encounter",
       "instructions": {
         "op": "choose",
@@ -49,6 +50,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "data-ward-etr-1",
       "text": "End the run if the Runner is tagged.",
       "instructions": {
@@ -66,6 +68,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "data-ward-etr-2",
       "text": "End the run if the Runner is tagged.",
       "instructions": {
@@ -83,6 +86,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "data-ward-etr-3",
       "text": "End the run if the Runner is tagged.",
       "instructions": {
@@ -100,6 +104,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "data-ward-etr-4",
       "text": "End the run if the Runner is tagged.",
       "instructions": {

@@ -5,6 +5,7 @@
   "nrdbCode": "30074",
   "type": "ice",
   "side": "corp",
+  "faction": "neutral-corp",
   "installCost": 2,
   "rezCost": 2,
   "strength": 0,
@@ -15,6 +16,7 @@
   "abilities": [
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "ws-lose",
       "text": "Runner loses 3¢.",
       "instructions": {
@@ -28,6 +30,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "ws-etr",
       "text": "If Runner has 6¢ or less, ETR.",
       "instructions": {

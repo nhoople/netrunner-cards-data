@@ -15,17 +15,24 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "runEvent",
         "value": {
           "servers": "archives",
-          "skipBreach": true,
-          "onSuccessfulRun": {
-            "op": "do",
-            "action": {
-              "kind": "tdatd_glut_cipher"
-            }
-          }
+          "skipBreach": true
+        }
+      }
+    },
+    {
+      "class": "conditional",
+      "rule": "9.3.7c",
+      "trigger": "successful_run",
+      "host": "runEvent",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "tdatd_glut_cipher"
         }
       }
     }

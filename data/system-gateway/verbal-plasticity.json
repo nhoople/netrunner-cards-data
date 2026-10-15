@@ -5,6 +5,7 @@
   "nrdbCode": "30034",
   "type": "resource",
   "side": "runner",
+  "faction": "neutral-runner",
   "installCost": 3,
   "subtypes": [
     "genetics"

@@ -5,6 +5,7 @@
   "nrdbCode": "35069",
   "type": "identity",
   "side": "corp",
+  "faction": "weyland-consortium",
   "unsupported": [],
   "subtypes": [
     "unsubstantiated"
@@ -12,6 +13,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "credits_gained_from_agenda_or_operation_ability",
       "instructions": {
         "op": "choose",

@@ -13,6 +13,7 @@
   "abilities": [
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "sync-flip",
       "label": "[click]: Flip this identity",
       "cost": {
@@ -30,6 +31,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "basicRemoveTagAdditionalCostCreditsWhileUnflipped",
         "value": 1
@@ -37,6 +39,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "basicTrashResourceCreditReductionWhileFlipped",
         "value": 2

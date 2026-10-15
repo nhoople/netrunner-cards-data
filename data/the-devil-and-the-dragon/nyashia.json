@@ -12,6 +12,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "powerCountersOnInstall",
         "value": 3
@@ -19,6 +20,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "maySpendPowerCountersForBonusRdAccess",
         "value": {

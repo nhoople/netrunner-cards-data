@@ -5,6 +5,7 @@
   "nrdbCode": "31063",
   "type": "asset",
   "side": "corp",
+  "faction": "nbn",
   "unsupported": [],
   "subtypes": [
     "cast"
@@ -15,6 +16,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "interruptFirstDrawBottomOne",
         "value": true

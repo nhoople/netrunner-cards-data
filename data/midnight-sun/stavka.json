@@ -5,6 +5,7 @@
   "nrdbCode": "33062",
   "type": "ice",
   "side": "corp",
+  "faction": "weyland-consortium",
   "unsupported": [],
   "subtypes": [
     "sentry",
@@ -16,6 +17,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "rez",
       "instructions": {
         "op": "do",
@@ -34,6 +36,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "stavka-trash1",
       "text": "Trash 1 installed program.",
       "instructions": {
@@ -46,6 +49,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "stavka-trash2",
       "text": "Trash 1 installed program.",
       "instructions": {

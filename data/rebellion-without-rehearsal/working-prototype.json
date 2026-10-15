@@ -5,6 +5,7 @@
   "nrdbCode": "34099",
   "type": "asset",
   "side": "corp",
+  "faction": "haas-bioroid",
   "unsupported": [],
   "subtypes": [
     "hostile"
@@ -15,6 +16,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "powerCounterOnAnyCardRez",
         "value": 1
@@ -22,6 +24,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "wp-gain-3",
       "label": "[click], hosted power: Gain 3¢",
       "cost": {
@@ -42,6 +45,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "wp-gain-6",
       "label": "[click], 5 hosted power: Gain 6¢; resource to stack top",
       "cost": {

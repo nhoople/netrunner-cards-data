@@ -15,6 +15,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "daemonHost",
         "value": true
@@ -22,6 +23,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "daemonHostMaxMu",
         "value": 3
@@ -29,6 +31,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "daemonHostExcludeIcebreaker",
         "value": true
@@ -36,6 +39,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "djinn-search-virus",
       "label": "[click], 1¢: Search your stack for a virus program, reveal it, and add it to your grip. Shuffle your stack.",
       "cost": {

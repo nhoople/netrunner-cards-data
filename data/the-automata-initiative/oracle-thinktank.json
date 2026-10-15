@@ -5,6 +5,7 @@
   "nrdbCode": "34049",
   "type": "agenda",
   "side": "corp",
+  "faction": "nbn",
   "unsupported": [],
   "subtypes": [
     "research"
@@ -14,6 +15,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "steal",
       "instructions": {
         "op": "do",
@@ -25,6 +27,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "oracle-shuffle",
       "label": "[click], remove 1 tag: Shuffle this into R&D",
       "cost": {

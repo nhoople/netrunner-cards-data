@@ -5,6 +5,7 @@
   "nrdbCode": "31052",
   "type": "agenda",
   "side": "corp",
+  "faction": "jinteki",
   "unsupported": [],
   "subtypes": [
     "initiative"
@@ -14,6 +15,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "score",
       "instructions": {
         "op": "do",
@@ -25,6 +27,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "nisei-etr",
       "label": "Hosted agenda counter: End the run",
       "cost": {

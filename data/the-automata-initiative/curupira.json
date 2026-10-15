@@ -5,6 +5,7 @@
   "nrdbCode": "34015",
   "type": "program",
   "side": "runner",
+  "faction": "criminal",
   "unsupported": [],
   "subtypes": [
     "icebreaker",
@@ -16,6 +17,9 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
+      "flagRule": "9.3.6c",
+      "flag": "interface",
       "declaration": {
         "field": "breaker",
         "value": {
@@ -31,6 +35,7 @@
     },
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "fully_break",
       "instructions": {
         "op": "do",
@@ -42,6 +47,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "curupira-bypass",
       "label": "Spend 3 power: bypass encountered barrier",
       "cost": {
@@ -61,6 +67,9 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
+      "flagRule": "9.3.6c",
+      "flag": "interface",
       "id": "curupira-break",
       "label": "1¢: Break 1 barrier subroutine",
       "cost": {
@@ -80,6 +89,9 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
+      "flagRule": "9.3.6c",
+      "flag": "interface",
       "id": "curupira-pump",
       "label": "1¢: +1 strength",
       "cost": {

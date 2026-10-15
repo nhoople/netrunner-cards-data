@@ -17,6 +17,7 @@
   "abilities": [
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "dna-tracker-1",
       "text": "Do 1 net damage. The Runner loses 2¢.",
       "instructions": {
@@ -42,6 +43,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "dna-tracker-2",
       "text": "Do 1 net damage. The Runner loses 2¢.",
       "instructions": {
@@ -67,6 +69,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "dna-tracker-3",
       "text": "Do 1 net damage. The Runner loses 2¢.",
       "instructions": {

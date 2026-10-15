@@ -5,6 +5,7 @@
   "nrdbCode": "34127",
   "type": "ice",
   "side": "corp",
+  "faction": "weyland-consortium",
   "unsupported": [],
   "subtypes": [
     "barrier"
@@ -15,6 +16,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "canAdvance",
         "value": true
@@ -22,6 +24,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "strengthPerAdvancement",
         "value": 1
@@ -29,6 +32,7 @@
     },
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "rez",
       "instructions": {
         "op": "do",
@@ -40,6 +44,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "logjam-gain-etr",
       "text": "Gain 2[credit]. End the run.",
       "instructions": {
@@ -64,6 +69,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "logjam-etr-2",
       "text": "End the run.",
       "instructions": {
@@ -75,6 +81,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "logjam-etr-3",
       "text": "End the run.",
       "instructions": {

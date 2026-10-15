@@ -5,6 +5,7 @@
   "nrdbCode": "36002",
   "type": "event",
   "side": "runner",
+  "faction": "anarch",
   "unsupported": [],
   "subtypes": [
     "run"
@@ -13,29 +14,42 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "runEvent",
         "value": {
-          "servers": "hq_rd",
-          "onSuccessfulRun": {
-            "op": "if",
-            "cond": {
-              "op": "subroutine_resolved_this_run"
-            },
-            "then": {
-              "op": "do",
-              "action": {
-                "kind": "give_bad_publicity",
-                "amount": 1
-              }
-            }
-          },
-          "onRunEnd": {
-            "op": "do",
-            "action": {
-              "kind": "rfg_self"
-            }
+          "servers": "hq_rd"
+        }
+      }
+    },
+    {
+      "class": "conditional",
+      "rule": "9.3.7c",
+      "trigger": "successful_run",
+      "host": "runEvent",
+      "instructions": {
+        "op": "if",
+        "cond": {
+          "op": "subroutine_resolved_this_run"
+        },
+        "then": {
+          "op": "do",
+          "action": {
+            "kind": "give_bad_publicity",
+            "amount": 1
           }
+        }
+      }
+    },
+    {
+      "class": "conditional",
+      "rule": "9.3.7c",
+      "trigger": "run_end",
+      "host": "runEvent",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "rfg_self"
         }
       }
     }

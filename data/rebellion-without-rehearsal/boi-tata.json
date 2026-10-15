@@ -5,6 +5,7 @@
   "nrdbCode": "34071",
   "type": "program",
   "side": "runner",
+  "faction": "anarch",
   "unsupported": [],
   "subtypes": [
     "icebreaker",
@@ -16,6 +17,9 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
+      "flagRule": "9.3.6c",
+      "flag": "interface",
       "declaration": {
         "field": "breaker",
         "value": {
@@ -30,6 +34,9 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
+      "flagRule": "9.3.6c",
+      "flag": "interface",
       "id": "boi-tata-pump",
       "label": "Pump Boi-tatá +3 strength",
       "cost": {
@@ -48,6 +55,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "paidAbilityCreditDiscountIfOwnInstalledTrashedThisTurn",
         "value": 1

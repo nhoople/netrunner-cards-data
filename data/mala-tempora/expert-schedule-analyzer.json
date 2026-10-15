@@ -12,6 +12,7 @@
   "abilities": [
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "expert-run-hq",
       "label": "[click]: Run HQ; on success may reveal all cards in HQ instead of breaching",
       "cost": {
@@ -29,12 +30,19 @@
         }
       },
       "startsRun": {
-        "servers": "hq",
-        "onSuccessfulRun": {
-          "op": "do",
-          "action": {
-            "kind": "may_breach_instead_expert_schedule_analyzer"
-          }
+        "servers": "hq"
+      }
+    },
+    {
+      "class": "conditional",
+      "rule": "9.3.7c",
+      "trigger": "successful_run",
+      "host": "startsRun",
+      "hostAbility": "expert-run-hq",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "may_breach_instead_expert_schedule_analyzer"
         }
       }
     }

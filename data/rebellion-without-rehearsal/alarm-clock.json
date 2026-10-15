@@ -5,11 +5,13 @@
   "nrdbCode": "34078",
   "type": "hardware",
   "side": "runner",
+  "faction": "criminal",
   "unsupported": [],
   "installCost": 2,
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "turn_begin",
       "instructions": {
         "op": "do",

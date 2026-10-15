@@ -18,6 +18,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "encounter",
       "instructions": {
         "op": "do",
@@ -28,6 +29,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "amplifyNetDamageOnTrashChosenEncounterType",
         "value": true
@@ -35,6 +37,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "saisentan-net-1",
       "text": "Do 1 net damage.",
       "instructions": {
@@ -47,6 +50,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "saisentan-net-2",
       "text": "Do 1 net damage.",
       "instructions": {
@@ -59,6 +63,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "saisentan-net-3",
       "text": "Do 1 net damage.",
       "instructions": {

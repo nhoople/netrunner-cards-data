@@ -5,6 +5,7 @@
   "nrdbCode": "30038",
   "type": "ice",
   "side": "corp",
+  "faction": "haas-bioroid",
   "installCost": 6,
   "rezCost": 6,
   "strength": 4,
@@ -17,6 +18,7 @@
   "abilities": [
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "ansel-trash",
       "text": "Trash 1 installed Runner card.",
       "instructions": {
@@ -29,6 +31,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "ansel-install",
       "text": "You may install 1 card from HQ or Archives.",
       "instructions": {
@@ -40,6 +43,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "ansel-lock",
       "text": "Runner cannot steal/trash Corp cards this run.",
       "instructions": {

@@ -18,6 +18,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "rez",
       "instructions": {
         "op": "do",
@@ -29,6 +30,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "grim-trash-prog",
       "text": "Trash 1 installed program.",
       "instructions": {

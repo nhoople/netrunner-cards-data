@@ -5,6 +5,7 @@
   "nrdbCode": "35022",
   "type": "resource",
   "side": "runner",
+  "faction": "criminal",
   "unsupported": [],
   "subtypes": [
     "job",
@@ -14,6 +15,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "hostedCreditsOnInstall",
         "value": 6
@@ -21,6 +23,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "trashWhenHostedCreditsEmpty",
         "value": true
@@ -28,6 +31,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "hostedCreditsSpendFor",
         "value": [
@@ -37,6 +41,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "hostedCreditsSpendForInstallSubtypes",
         "value": [
@@ -47,6 +52,7 @@
     },
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "turn_begin",
       "instructions": {
         "op": "do",

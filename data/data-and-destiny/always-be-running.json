@@ -15,6 +15,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "unique",
         "value": true
@@ -22,6 +23,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "firstClickMustBeRunOrRunEvent",
         "value": true
@@ -29,6 +31,9 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
+      "flagRule": "9.3.6g",
+      "flag": "once_per_turn",
       "id": "abr-break",
       "label": "Once per turn → Lose [click][click]: Break 1 subroutine",
       "cost": {
@@ -43,7 +48,6 @@
           "kind": "break_any_subroutine"
         }
       },
-      "flag": "once_per_turn",
       "usableByRunnerOnSelfIce": true,
       "requireDuringRun": true
     }

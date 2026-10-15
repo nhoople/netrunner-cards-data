@@ -15,6 +15,7 @@
   "abilities": [
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "restructured-datapool-trace",
       "label": "[click]: Trace[2]. If successful, give the Runner 1 tag",
       "cost": {

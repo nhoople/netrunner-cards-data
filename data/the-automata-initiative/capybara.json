@@ -5,11 +5,13 @@
   "nrdbCode": "34013",
   "type": "hardware",
   "side": "runner",
+  "faction": "criminal",
   "unsupported": [],
   "installCost": 2,
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "bypass",
       "instructions": {
         "op": "choose",

@@ -14,6 +14,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "hostAgendaPointsModifier",
         "value": -1
@@ -21,6 +22,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "trashOnVirusPurge",
         "value": true
@@ -28,16 +30,23 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "runEvent",
         "value": {
-          "servers": "archives",
-          "onSuccessfulRun": {
-            "op": "do",
-            "action": {
-              "kind": "host_on_scored_agenda"
-            }
-          }
+          "servers": "archives"
+        }
+      }
+    },
+    {
+      "class": "conditional",
+      "rule": "9.3.7c",
+      "trigger": "successful_run",
+      "host": "runEvent",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "host_on_scored_agenda"
         }
       }
     }

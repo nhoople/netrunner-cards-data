@@ -12,6 +12,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "score",
       "instructions": {
         "op": "seq",
@@ -35,6 +36,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "executive-retreat-draw",
       "label": "[click], hosted agenda counter: Draw 5 cards",
       "cost": {

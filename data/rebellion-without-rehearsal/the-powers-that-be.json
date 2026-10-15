@@ -5,6 +5,7 @@
   "nrdbCode": "34130",
   "type": "asset",
   "side": "corp",
+  "faction": "neutral-corp",
   "unsupported": [],
   "subtypes": [
     "ritzy"
@@ -15,6 +16,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "agenda_scored",
       "instructions": {
         "op": "choose",

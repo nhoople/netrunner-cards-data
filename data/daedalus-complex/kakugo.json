@@ -17,6 +17,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "pass",
       "instructions": {
         "op": "do",
@@ -28,6 +29,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "kakugo-etr",
       "text": "End the run.",
       "instructions": {

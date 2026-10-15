@@ -5,6 +5,7 @@
   "nrdbCode": "26068",
   "type": "hardware",
   "side": "runner",
+  "faction": "anarch",
   "unsupported": [],
   "subtypes": [
     "chip"
@@ -13,6 +14,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "unique",
         "value": true
@@ -20,6 +22,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "devil-charm-weaken",
       "label": "Remove Devil Charm from the game: encountered ice gets −6 strength this run",
       "cost": {

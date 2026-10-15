@@ -5,6 +5,7 @@
   "nrdbCode": "34074",
   "type": "resource",
   "side": "runner",
+  "faction": "anarch",
   "unsupported": [],
   "subtypes": [
     "connection"
@@ -13,6 +14,7 @@
   "abilities": [
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "fof-untag",
       "label": "[click], [trash]: Gain 5¢ and remove 1 tag",
       "cost": {
@@ -45,6 +47,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "fof-tag",
       "label": "[click], [trash]: Gain 9¢ and take 1 tag (if untagged)",
       "cost": {

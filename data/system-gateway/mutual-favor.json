@@ -5,11 +5,13 @@
   "nrdbCode": "30011",
   "type": "event",
   "side": "runner",
+  "faction": "criminal",
   "playCost": 0,
   "unsupported": [],
   "abilities": [
     {
       "class": "play",
+      "rule": "9.3.7d",
       "instructions": {
         "op": "do",
         "action": {

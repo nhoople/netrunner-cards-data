@@ -5,6 +5,7 @@
   "nrdbCode": "36032",
   "type": "operation",
   "side": "corp",
+  "faction": "haas-bioroid",
   "unsupported": [],
   "subtypes": [
     "transaction"
@@ -13,6 +14,7 @@
   "abilities": [
     {
       "class": "play",
+      "rule": "9.3.7d",
       "instructions": {
         "op": "choose",
         "chooser": "corp",

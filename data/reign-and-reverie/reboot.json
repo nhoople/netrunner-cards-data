@@ -14,30 +14,37 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "runEvent",
         "value": {
           "servers": "archives",
-          "skipBreach": true,
-          "onSuccessfulRun": {
-            "op": "seq",
-            "effects": [
-              {
-                "op": "do",
-                "action": {
-                  "kind": "install_up_to_from_heap_facedown",
-                  "max": 5
-                }
-              },
-              {
-                "op": "do",
-                "action": {
-                  "kind": "rfg_self"
-                }
-              }
-            ]
-          }
+          "skipBreach": true
         }
+      }
+    },
+    {
+      "class": "conditional",
+      "rule": "9.3.7c",
+      "trigger": "successful_run",
+      "host": "runEvent",
+      "instructions": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "install_up_to_from_heap_facedown",
+              "max": 5
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "rfg_self"
+            }
+          }
+        ]
       }
     }
   ]

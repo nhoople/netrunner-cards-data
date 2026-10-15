@@ -5,6 +5,7 @@
   "nrdbCode": "30051",
   "type": "identity",
   "side": "corp",
+  "faction": "nbn",
   "unsupported": [],
   "subtypes": [
     "megacorp"
@@ -12,6 +13,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "first_tag_this_turn",
       "instructions": {
         "op": "choose",

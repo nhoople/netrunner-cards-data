@@ -14,6 +14,7 @@
   "abilities": [
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "charlatan-run",
       "label": "[click][click]: Run any server; first approach rezzed ice may pay strength to bypass",
       "cost": {

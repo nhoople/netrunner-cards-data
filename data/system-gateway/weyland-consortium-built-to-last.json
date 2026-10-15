@@ -5,6 +5,7 @@
   "nrdbCode": "30059",
   "type": "identity",
   "side": "corp",
+  "faction": "weyland-consortium",
   "unsupported": [],
   "subtypes": [
     "megacorp"

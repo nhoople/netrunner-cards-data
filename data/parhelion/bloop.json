@@ -5,6 +5,7 @@
   "nrdbCode": "33098",
   "type": "ice",
   "side": "corp",
+  "faction": "haas-bioroid",
   "unsupported": [],
   "subtypes": [
     "sentry",
@@ -18,6 +19,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "rezAdditionalCostDerezSubtype",
         "value": "harmonic"
@@ -25,6 +27,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "bloop-core",
       "text": "Do 1 core damage.",
       "instructions": {
@@ -37,6 +40,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "bloop-trash-1",
       "text": "Trash 1 installed program.",
       "instructions": {
@@ -49,6 +53,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "bloop-trash-2",
       "text": "Trash 1 installed program.",
       "instructions": {

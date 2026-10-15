@@ -5,6 +5,7 @@
   "nrdbCode": "36019",
   "type": "event",
   "side": "runner",
+  "faction": "shaper",
   "unsupported": [],
   "subtypes": [
     "run"
@@ -13,6 +14,7 @@
   "abilities": [
     {
       "class": "play",
+      "rule": "9.3.7d",
       "instructions": {
         "op": "do",
         "action": {
@@ -22,16 +24,23 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "runEvent",
         "value": {
-          "servers": "any",
-          "onRunEnd": {
-            "op": "do",
-            "action": {
-              "kind": "return_tracked_install_to_stack_top_if_installed"
-            }
-          }
+          "servers": "any"
+        }
+      }
+    },
+    {
+      "class": "conditional",
+      "rule": "9.3.7c",
+      "trigger": "run_end",
+      "host": "runEvent",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "return_tracked_install_to_stack_top_if_installed"
         }
       }
     }

@@ -5,6 +5,7 @@
   "nrdbCode": "34028",
   "type": "resource",
   "side": "runner",
+  "faction": "shaper",
   "unsupported": [],
   "subtypes": [
     "connection"
@@ -13,6 +14,7 @@
   "abilities": [
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "beatriz-run",
       "label": "[click][click]: Run HQ; success → breach R&D +1 access",
       "cost": {

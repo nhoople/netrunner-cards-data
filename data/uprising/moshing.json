@@ -5,11 +5,13 @@
   "nrdbCode": "26067",
   "type": "event",
   "side": "runner",
+  "faction": "anarch",
   "unsupported": [],
   "playCost": 0,
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "playRequiresOtherGripCardsGte",
         "value": 3
@@ -17,6 +19,7 @@
     },
     {
       "class": "play",
+      "rule": "9.3.7d",
       "instructions": {
         "op": "seq",
         "effects": [

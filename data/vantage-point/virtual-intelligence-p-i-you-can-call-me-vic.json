@@ -5,6 +5,7 @@
   "nrdbCode": "36009",
   "type": "identity",
   "side": "runner",
+  "faction": "criminal",
   "unsupported": [],
   "subtypes": [
     "digital"
@@ -12,6 +13,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "link",
         "value": 0
@@ -19,6 +21,9 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
+      "flagRule": "9.3.6g",
+      "flag": "once_per_turn",
       "id": "vic-draw-untag",
       "label": "Once per turn → [click], 1[credit]: Draw 1 and remove 1 tag",
       "cost": {
@@ -47,8 +52,7 @@
             }
           }
         ]
-      },
-      "flag": "once_per_turn"
+      }
     }
   ]
 }

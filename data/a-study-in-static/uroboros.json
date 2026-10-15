@@ -17,6 +17,7 @@
   "abilities": [
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "uroboros-trace-no-run",
       "text": "Trace[4]. If successful, the Runner cannot make another run this turn.",
       "instructions": {
@@ -35,6 +36,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "uroboros-trace-etr",
       "text": "Trace[4]. If successful, end the run.",
       "instructions": {

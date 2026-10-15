@@ -5,6 +5,7 @@
   "nrdbCode": "33002",
   "type": "event",
   "side": "runner",
+  "faction": "anarch",
   "unsupported": [],
   "subtypes": [
     "run",
@@ -14,19 +15,26 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "runEvent",
         "value": {
           "servers": "hq",
-          "skipBreach": true,
-          "onSuccessfulRun": {
-            "op": "do",
-            "action": {
-              "kind": "sabotage",
-              "amount": 4,
-              "interactive": true
-            }
-          }
+          "skipBreach": true
+        }
+      }
+    },
+    {
+      "class": "conditional",
+      "rule": "9.3.7c",
+      "trigger": "successful_run",
+      "host": "runEvent",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "sabotage",
+          "amount": 4,
+          "interactive": true
         }
       }
     }

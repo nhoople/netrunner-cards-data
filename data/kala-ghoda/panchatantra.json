@@ -12,6 +12,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "encounter_any_ice_once_per_turn",
       "instructions": {
         "op": "choose",

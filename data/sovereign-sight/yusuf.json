@@ -18,6 +18,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "successful_run",
       "instructions": {
         "op": "choose",
@@ -51,6 +52,9 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
+      "flagRule": "9.3.6c",
+      "flag": "interface",
       "id": "yusuf-break",
       "label": "Any virus counter: Break 1 barrier subroutine",
       "cost": {
@@ -70,6 +74,9 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
+      "flagRule": "9.3.6c",
+      "flag": "interface",
       "id": "yusuf-pump",
       "label": "Any virus counter: +1 strength",
       "cost": {
@@ -89,6 +96,9 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
+      "flagRule": "9.3.6c",
+      "flag": "interface",
       "declaration": {
         "field": "breaker",
         "value": {

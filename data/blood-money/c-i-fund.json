@@ -13,6 +13,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "turn_begin",
       "instructions": {
         "op": "seq",
@@ -43,6 +44,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "ci-fund-take",
       "label": "2¢,[trash]: Take all credits from C.I. Fund",
       "cost": {

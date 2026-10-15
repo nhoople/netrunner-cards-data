@@ -3,6 +3,7 @@
   "title": "Gordian Blade",
   "type": "program",
   "side": "runner",
+  "faction": "shaper",
   "wave": "system-update-2021",
   "nrdbCode": "01043",
   "installCost": 4,
@@ -16,6 +17,9 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
+      "flagRule": "9.3.6c",
+      "flag": "interface",
       "declaration": {
         "field": "breaker",
         "value": {
@@ -29,6 +33,9 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
+      "flagRule": "9.3.6c",
+      "flag": "interface",
       "id": "gordian-pump",
       "label": "Pump Gordian Blade +1 strength for the remainder of the run",
       "cost": {

@@ -14,28 +14,35 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "runEvent",
         "value": {
-          "servers": "rd",
-          "onSuccessfulRun": {
-            "op": "seq",
-            "effects": [
-              {
-                "op": "do",
-                "action": {
-                  "kind": "set_run_skip_breach"
-                }
-              },
-              {
-                "op": "do",
-                "action": {
-                  "kind": "choose_install_cost_set_aside_access_shuffle"
-                }
-              }
-            ]
-          }
+          "servers": "rd"
         }
+      }
+    },
+    {
+      "class": "conditional",
+      "rule": "9.3.7c",
+      "trigger": "successful_run",
+      "host": "runEvent",
+      "instructions": {
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "set_run_skip_breach"
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "choose_install_cost_set_aside_access_shuffle"
+            }
+          }
+        ]
       }
     }
   ]

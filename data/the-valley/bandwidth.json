@@ -16,6 +16,7 @@
   "abilities": [
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "bandwidth-tag",
       "text": "Give the Runner 1 tag. If this run is successful, the Runner removes 1 tag.",
       "instructions": {

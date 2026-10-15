@@ -19,6 +19,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "bioroidBreakMaxSubs",
         "value": 2
@@ -26,6 +27,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "zed-2-0-trash-hw-1",
       "text": "Trash 1 installed piece of hardware.",
       "instructions": {
@@ -38,6 +40,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "zed-2-0-trash-hw-2",
       "text": "Trash 1 installed piece of hardware.",
       "instructions": {
@@ -50,6 +53,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "zed-2-0-core",
       "text": "If the Runner has lost [click] to break a subroutine during this run, do 2 core damage.",
       "instructions": {

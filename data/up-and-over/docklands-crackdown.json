@@ -13,6 +13,7 @@
   "abilities": [
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "docklands-place",
       "label": "[click][click]: Place 1 power counter",
       "cost": {
@@ -31,6 +32,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "runnerFirstInstallCostIncreasePerPowerCounterOnThis",
         "value": 1

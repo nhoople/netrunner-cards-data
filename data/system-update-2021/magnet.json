@@ -5,6 +5,7 @@
   "nrdbCode": "31044",
   "type": "ice",
   "side": "corp",
+  "faction": "haas-bioroid",
   "unsupported": [],
   "subtypes": [
     "code gate"
@@ -15,6 +16,7 @@
   "abilities": [
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "magnet-etr",
       "text": "End the run.",
       "instructions": {
@@ -26,6 +28,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "hostedProgramsLoseAbilities",
         "value": true
@@ -33,6 +36,7 @@
     },
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "rez",
       "instructions": {
         "op": "do",

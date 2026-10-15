@@ -17,6 +17,9 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
+      "flagRule": "9.3.6c",
+      "flag": "interface",
       "declaration": {
         "field": "breaker",
         "value": {
@@ -30,6 +33,9 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
+      "flagRule": "9.3.6c",
+      "flag": "interface",
       "id": "blackstone-break",
       "label": "1¢: Break 1 barrier subroutine",
       "cost": {
@@ -50,6 +56,9 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
+      "flagRule": "9.3.6c",
+      "flag": "interface",
       "id": "blackstone-pump",
       "label": "3¢ (≥1 stealth): +4 strength for the remainder of this run",
       "cost": {

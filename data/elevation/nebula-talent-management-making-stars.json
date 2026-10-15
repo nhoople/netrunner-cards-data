@@ -5,6 +5,7 @@
   "nrdbCode": "35057",
   "type": "identity",
   "side": "corp",
+  "faction": "nbn",
   "unsupported": [],
   "subtypes": [
     "division"
@@ -12,6 +13,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "corp_action_phase_end",
       "instructions": {
         "op": "if",
@@ -47,23 +49,35 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "identityFlippedHooks",
-        "value": {
-          "onFirstOperationPlayThisTurn": {
-            "op": "do",
-            "action": {
-              "kind": "gain_clicks",
-              "side": "corp",
-              "amount": 1
-            }
-          },
-          "onSuccessfulHqOrRdRun": {
-            "op": "do",
-            "action": {
-              "kind": "flip_identity"
-            }
-          }
+        "value": {}
+      }
+    },
+    {
+      "class": "conditional",
+      "rule": "9.3.7c",
+      "trigger": "first_operation_play_this_turn",
+      "host": "identityFlippedHooks",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "gain_clicks",
+          "side": "corp",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "class": "conditional",
+      "rule": "9.3.7c",
+      "trigger": "successful_hq_or_rd_run",
+      "host": "identityFlippedHooks",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "flip_identity"
         }
       }
     }

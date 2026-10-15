@@ -11,6 +11,7 @@
   "abilities": [
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "sot-play",
       "label": "[click], [click], [trash]: Play an event from heap",
       "cost": {

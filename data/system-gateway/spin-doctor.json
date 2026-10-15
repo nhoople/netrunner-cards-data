@@ -5,6 +5,7 @@
   "nrdbCode": "30053",
   "type": "asset",
   "side": "corp",
+  "faction": "nbn",
   "installCost": 0,
   "rezCost": 0,
   "trashCost": 2,
@@ -15,6 +16,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "rez",
       "instructions": {
         "op": "do",
@@ -27,6 +29,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "spin-doctor-rfg",
       "label": "Trash: shuffle up to 2 Archives into R&D",
       "cost": {

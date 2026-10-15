@@ -5,6 +5,7 @@
   "nrdbCode": "35076",
   "type": "ice",
   "side": "corp",
+  "faction": "weyland-consortium",
   "unsupported": [],
   "subtypes": [
     "code gate",
@@ -16,6 +17,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "canAdvance",
         "value": true
@@ -23,6 +25,7 @@
     },
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "encounter",
       "instructions": {
         "op": "if",
@@ -63,6 +66,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "syailendra-adv",
       "text": "You may place 1 advancement on an advanceable card.",
       "instructions": {
@@ -97,6 +101,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "syailendra-lose",
       "text": "The Runner loses 2[credit].",
       "instructions": {
@@ -110,6 +115,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "syailendra-net",
       "text": "Do 1 net damage.",
       "instructions": {

@@ -14,6 +14,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "unique",
         "value": true
@@ -21,6 +22,7 @@
     },
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "gray_or_black_ops_trashed_after_resolve",
       "instructions": {
         "op": "do",
@@ -31,6 +33,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "tallie-draw",
       "label": "[trash]: Draw 1 if you have at least 1 tag",
       "cost": {

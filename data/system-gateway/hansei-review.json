@@ -5,6 +5,7 @@
   "nrdbCode": "30048",
   "type": "operation",
   "side": "corp",
+  "faction": "jinteki",
   "playCost": 5,
   "subtypes": [
     "transaction"
@@ -13,6 +14,7 @@
   "abilities": [
     {
       "class": "play",
+      "rule": "9.3.7d",
       "instructions": {
         "op": "seq",
         "effects": [

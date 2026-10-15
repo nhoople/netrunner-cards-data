@@ -15,6 +15,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "unique",
         "value": true
@@ -22,6 +23,7 @@
     },
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "first_program_or_hardware_trash_each_turn",
       "instructions": {
         "op": "choose",
@@ -55,6 +57,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "district-99-heap",
       "label": "[click], 3 hosted power counters: Add a card that matches the faction of your identity from your heap to your grip",
       "cost": {

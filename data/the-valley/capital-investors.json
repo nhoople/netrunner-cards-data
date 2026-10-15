@@ -13,6 +13,7 @@
   "abilities": [
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "capital-investors-gain",
       "label": "[click]: Gain 2¢",
       "cost": {

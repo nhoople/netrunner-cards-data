@@ -16,6 +16,7 @@
   "abilities": [
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "tenma-swap",
       "label": "[click]: Swap 2 pieces of installed ice",
       "cost": {

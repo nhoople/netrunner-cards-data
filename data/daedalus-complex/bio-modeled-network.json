@@ -14,6 +14,9 @@
   "abilities": [
     {
       "class": "paid",
+      "rule": "9.3.7b",
+      "flagRule": "9.3.6d",
+      "flag": "interrupt",
       "id": "bio-modeled-prevent",
       "label": "[interrupt] → [trash]: Prevent all but 1 net damage",
       "cost": {

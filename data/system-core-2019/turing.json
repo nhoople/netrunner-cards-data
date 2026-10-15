@@ -16,6 +16,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "strengthBonusProtectingRemote",
         "value": 3
@@ -23,6 +24,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "cannotBreakWithAi",
         "value": true
@@ -30,6 +32,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "turing-etr-unless-clicks",
       "text": "End the run unless the Runner spends [click][click][click].",
       "instructions": {

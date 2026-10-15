@@ -17,6 +17,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "strengthBonusPerIcebreaker",
         "value": -1
@@ -24,6 +25,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "hagen-trash",
       "text": "Trash 1 installed program that is not a decoder, fracter, or killer.",
       "instructions": {
@@ -41,6 +43,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "hagen-etr",
       "text": "End the run.",
       "instructions": {

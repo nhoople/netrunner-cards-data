@@ -12,6 +12,7 @@
   "abilities": [
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "keyhole-run",
       "label": "[click]: Run R&D; on success may look at top 3 and trash 1 program",
       "cost": {
@@ -29,12 +30,19 @@
         }
       },
       "startsRun": {
-        "servers": "rd",
-        "onSuccessfulRun": {
-          "op": "do",
-          "action": {
-            "kind": "may_breach_instead_keyhole"
-          }
+        "servers": "rd"
+      }
+    },
+    {
+      "class": "conditional",
+      "rule": "9.3.7c",
+      "trigger": "successful_run",
+      "host": "startsRun",
+      "hostAbility": "keyhole-run",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "may_breach_instead_keyhole"
         }
       }
     }

@@ -5,6 +5,7 @@
   "nrdbCode": "36036",
   "type": "identity",
   "side": "corp",
+  "faction": "jinteki",
   "unsupported": [],
   "subtypes": [
     "division"
@@ -12,6 +13,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "discard_phase_end",
       "instructions": {
         "op": "do",
@@ -22,6 +24,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "flipIdentityOnSuccessfulCentralRun",
         "value": true
@@ -29,6 +32,7 @@
     },
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "runner_action_phase_end",
       "instructions": {
         "op": "if",
@@ -47,21 +51,33 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "identityFlippedHooks",
-        "value": {
-          "onFlipToBackIfRunMatchesFace": {
-            "op": "do",
-            "action": {
-              "kind": "look_top_rd_may_trash_if_do_archives_to_hq"
-            }
-          },
-          "onRunnerDiscardPhaseEnd": {
-            "op": "do",
-            "action": {
-              "kind": "flip_identity"
-            }
-          }
+        "value": {}
+      }
+    },
+    {
+      "class": "conditional",
+      "rule": "9.3.7c",
+      "trigger": "flip_to_back_if_run_matches_face",
+      "host": "identityFlippedHooks",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "look_top_rd_may_trash_if_do_archives_to_hq"
+        }
+      }
+    },
+    {
+      "class": "conditional",
+      "rule": "9.3.7c",
+      "trigger": "runner_discard_phase_end",
+      "host": "identityFlippedHooks",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "flip_identity"
         }
       }
     }

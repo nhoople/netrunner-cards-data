@@ -14,40 +14,47 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "runEvent",
         "value": {
           "servers": "remote",
-          "skipBreach": true,
-          "onSuccessfulRun": {
-            "op": "choose",
-            "chooser": "runner",
-            "options": [
-              {
-                "id": "accept",
-                "label": "Force Corp to shuffle all cards in the root into R&D",
-                "effect": {
-                  "op": "do",
-                  "action": {
-                    "kind": "shuffle_because_i_can_root"
-                  }
-                }
-              },
-              {
-                "id": "decline",
-                "label": "Decline",
-                "effect": {
-                  "op": "do",
-                  "action": {
-                    "kind": "gain_credits",
-                    "side": "runner",
-                    "amount": 0
-                  }
-                }
-              }
-            ]
-          }
+          "skipBreach": true
         }
+      }
+    },
+    {
+      "class": "conditional",
+      "rule": "9.3.7c",
+      "trigger": "successful_run",
+      "host": "runEvent",
+      "instructions": {
+        "op": "choose",
+        "chooser": "runner",
+        "options": [
+          {
+            "id": "accept",
+            "label": "Force Corp to shuffle all cards in the root into R&D",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "shuffle_because_i_can_root"
+              }
+            }
+          },
+          {
+            "id": "decline",
+            "label": "Decline",
+            "effect": {
+              "op": "do",
+              "action": {
+                "kind": "gain_credits",
+                "side": "runner",
+                "amount": 0
+              }
+            }
+          }
+        ]
       }
     }
   ]

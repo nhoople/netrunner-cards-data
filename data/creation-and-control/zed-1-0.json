@@ -18,6 +18,7 @@
   "abilities": [
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "zed-1-0-core-1",
       "text": "If the Runner has lost [click] to break a subroutine during this run, do 1 core damage.",
       "instructions": {
@@ -31,6 +32,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "zed-1-0-core-2",
       "text": "If the Runner has lost [click] to break a subroutine during this run, do 1 core damage.",
       "instructions": {

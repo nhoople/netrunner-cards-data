@@ -5,6 +5,7 @@
   "nrdbCode": "26095",
   "type": "resource",
   "side": "runner",
+  "faction": "neutral-runner",
   "unsupported": [],
   "subtypes": [
     "virtual"
@@ -13,6 +14,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "unique",
         "value": true
@@ -20,6 +22,7 @@
     },
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "first_successful_run_this_turn",
       "instructions": {
         "op": "seq",

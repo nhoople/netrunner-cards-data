@@ -17,6 +17,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "encounter",
       "instructions": {
         "op": "do",
@@ -29,6 +30,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "ip-block-trace",
       "text": "Trace[3]. If successful, give the Runner 1 tag.",
       "instructions": {
@@ -48,6 +50,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "ip-block-etr-tagged",
       "text": "End the run if the Runner is tagged.",
       "instructions": {

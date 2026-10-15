@@ -17,6 +17,7 @@
   "abilities": [
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "macrophage-purge",
       "text": "Trace[4]. If successful, purge virus counters.",
       "instructions": {
@@ -35,6 +36,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "macrophage-trash-virus",
       "text": "Trace[3]. If successful, trash 1 virus.",
       "instructions": {
@@ -54,6 +56,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "macrophage-rfg-heap-virus",
       "text": "Trace[2]. If successful, remove a virus in the heap from the game.",
       "instructions": {
@@ -72,6 +75,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "macrophage-etr",
       "text": "Trace[1]. If successful, end the run.",
       "instructions": {

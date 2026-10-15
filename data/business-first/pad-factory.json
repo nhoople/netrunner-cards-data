@@ -17,6 +17,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "zeroInfluenceIfCardCopiesGte",
         "value": {
@@ -27,6 +28,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "pad-factory-advance",
       "label": "[click]: Place 1 advancement token on a card; cannot score it until your next turn begins",
       "cost": {

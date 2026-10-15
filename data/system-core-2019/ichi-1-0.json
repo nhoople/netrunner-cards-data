@@ -19,6 +19,7 @@
   "abilities": [
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "ichi-1-0-trash-1",
       "text": "Trash 1 installed program.",
       "instructions": {
@@ -31,6 +32,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "ichi-1-0-trash-2",
       "text": "Trash 1 installed program.",
       "instructions": {
@@ -43,6 +45,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "ichi-1-0-trace",
       "text": "Trace[1]. If successful, do 1 core damage and give the Runner 1 tag.",
       "instructions": {

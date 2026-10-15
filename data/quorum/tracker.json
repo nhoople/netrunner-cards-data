@@ -12,6 +12,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "runner_turn_begin",
       "instructions": {
         "op": "choose",
@@ -44,6 +45,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "tracker-run",
       "label": "[click], 2¢: Run the chosen server; prevent first subroutine that would resolve",
       "cost": {

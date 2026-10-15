@@ -17,6 +17,7 @@
   "abilities": [
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "kitsune-breach",
       "text": "Choose 1 card in HQ; breach HQ with forced access",
       "instructions": {

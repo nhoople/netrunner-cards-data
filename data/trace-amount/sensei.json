@@ -16,6 +16,7 @@
   "abilities": [
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "sensei-etr-other",
       "text": "For the remainder of this run, while the Runner is encountering another piece of ice, it gains \"[subroutine] End the run.\" after its other subroutines.",
       "instructions": {

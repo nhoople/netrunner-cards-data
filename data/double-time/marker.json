@@ -16,6 +16,7 @@
   "abilities": [
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "marker-etr-next",
       "text": "Next ice encountered gains ETR after its subroutines.",
       "instructions": {

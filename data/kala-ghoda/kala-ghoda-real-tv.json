@@ -16,6 +16,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "turn_begin",
       "instructions": {
         "op": "choose",
@@ -48,6 +49,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "kala-ghoda-trash-top",
       "label": "[trash]: The Runner trashes the top card of the stack",
       "cost": {

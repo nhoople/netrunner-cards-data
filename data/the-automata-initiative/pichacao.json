@@ -5,6 +5,7 @@
   "nrdbCode": "34025",
   "type": "program",
   "side": "runner",
+  "faction": "shaper",
   "unsupported": [],
   "subtypes": [
     "trojan"
@@ -14,6 +15,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "installOnIce",
         "value": true
@@ -21,6 +23,7 @@
     },
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "pass_host",
       "instructions": {
         "op": "choose",

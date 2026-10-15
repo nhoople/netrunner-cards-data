@@ -13,6 +13,9 @@
   "abilities": [
     {
       "class": "paid",
+      "rule": "9.3.7b",
+      "flagRule": "9.3.6g",
+      "flag": "once_per_turn",
       "id": "aginfusion-redirect",
       "label": "Once per turn → Trash approached unrezzed ice: move Runner to outermost of another server",
       "cost": {
@@ -27,8 +30,7 @@
         "action": {
           "kind": "trash_aginfusion_approached_unrezzed_redirect"
         }
-      },
-      "flag": "once_per_turn"
+      }
     }
   ]
 }

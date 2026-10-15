@@ -5,6 +5,7 @@
   "nrdbCode": "31070",
   "type": "identity",
   "side": "corp",
+  "faction": "weyland-consortium",
   "unsupported": [],
   "subtypes": [
     "megacorp"
@@ -12,6 +13,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "gainCreditOnTransactionPlayed",
         "value": 1

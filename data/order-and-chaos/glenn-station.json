@@ -15,6 +15,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "maxHostedCards",
         "value": 1
@@ -22,6 +23,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "glenn-host",
       "label": "[click]: Host a card from HQ facedown on Glenn Station",
       "cost": {
@@ -39,6 +41,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "glenn-retrieve",
       "label": "[click]: Add a card on Glenn Station to HQ",
       "cost": {

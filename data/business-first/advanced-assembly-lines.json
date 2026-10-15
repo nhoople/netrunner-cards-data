@@ -16,6 +16,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "rez",
       "instructions": {
         "op": "do",
@@ -28,6 +29,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "aal-install",
       "label": "[trash]: Install a non-agenda card from HQ (paying install cost)",
       "cost": {

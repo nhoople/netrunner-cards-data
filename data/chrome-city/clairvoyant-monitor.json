@@ -17,6 +17,7 @@
   "abilities": [
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "clairvoyant-monitor-psi",
       "text": "Psi game. If bids differ, place 1 advancement token on an installed card and end the run.",
       "instructions": {

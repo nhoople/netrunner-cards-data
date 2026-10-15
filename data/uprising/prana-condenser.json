@@ -5,6 +5,7 @@
   "nrdbCode": "26107",
   "type": "asset",
   "side": "corp",
+  "faction": "jinteki",
   "unsupported": [],
   "installCost": 1,
   "rezCost": 1,
@@ -12,6 +13,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "unique",
         "value": true
@@ -19,6 +21,9 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
+      "flagRule": "9.3.6d",
+      "flag": "interrupt",
       "id": "prana-prevent-net",
       "label": "Interrupt: prevent 1 net damage → +1 power + 3¢",
       "cost": {
@@ -61,6 +66,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "prana-discharge",
       "label": "[click][click], [trash]: Do 1 net damage for each hosted power counter",
       "cost": {

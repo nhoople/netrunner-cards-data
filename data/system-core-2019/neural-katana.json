@@ -17,6 +17,7 @@
   "abilities": [
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "neural-katana-net",
       "text": "Do 3 net damage.",
       "instructions": {

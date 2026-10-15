@@ -11,6 +11,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "corp_turn_begin_if_runner_untagged",
       "instructions": {
         "op": "do",
@@ -22,6 +23,7 @@
     },
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "turn_begin_if_corp_no_bad_publicity",
       "instructions": {
         "op": "do",

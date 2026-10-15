@@ -5,6 +5,7 @@
   "nrdbCode": "34046",
   "type": "upgrade",
   "side": "corp",
+  "faction": "jinteki",
   "unsupported": [],
   "subtypes": [
     "psi",
@@ -17,6 +18,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "successful_run",
       "instructions": {
         "op": "do",
@@ -44,6 +46,7 @@
     },
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "corp_turn_end",
       "instructions": {
         "op": "do",

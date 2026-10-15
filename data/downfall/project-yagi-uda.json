@@ -15,6 +15,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "score",
       "instructions": {
         "op": "do",
@@ -26,6 +27,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "yagi-swap",
       "label": "Hosted agenda counter: Swap 1 HQ card with 1 card in the root of or protecting the attacked server; Runner may jack out",
       "cost": {

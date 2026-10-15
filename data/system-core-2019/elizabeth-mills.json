@@ -17,6 +17,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "unique",
         "value": true
@@ -24,6 +25,7 @@
     },
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "rez",
       "instructions": {
         "op": "do",
@@ -35,6 +37,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "elizabeth-mills-trash-location",
       "label": "Trash: Trash 1 location resource. Take 1 bad publicity.",
       "cost": {

@@ -13,6 +13,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "first_corp_card_install_each_turn",
       "instructions": {
         "op": "do",

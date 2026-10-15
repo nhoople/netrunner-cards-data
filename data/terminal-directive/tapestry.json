@@ -16,6 +16,7 @@
   "abilities": [
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "tapestry-lose-click",
       "text": "The Runner loses [click], if able.",
       "instructions": {
@@ -29,6 +30,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "tapestry-corp-draw",
       "text": "The Corp may draw 1 card.",
       "instructions": {
@@ -64,6 +66,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "tapestry-hq-to-rd",
       "text": "The Corp may add 1 card from HQ to the top of R&D.",
       "instructions": {

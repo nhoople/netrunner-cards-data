@@ -17,6 +17,7 @@
   "abilities": [
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "snowflake-psi",
       "text": "You and the Runner secretly spend 0¢, 1¢, or 2¢. Reveal spent credits. End the run if you and the Runner spent a different number of credits.",
       "instructions": {

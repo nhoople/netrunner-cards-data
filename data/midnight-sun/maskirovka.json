@@ -5,6 +5,7 @@
   "nrdbCode": "33061",
   "type": "ice",
   "side": "corp",
+  "faction": "weyland-consortium",
   "unsupported": [],
   "subtypes": [
     "barrier"
@@ -15,6 +16,7 @@
   "abilities": [
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "mask-gain",
       "text": "Gain 2¢.",
       "instructions": {
@@ -28,6 +30,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "mask-etr",
       "text": "End the run.",
       "instructions": {

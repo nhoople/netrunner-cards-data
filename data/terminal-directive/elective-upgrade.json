@@ -15,6 +15,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "score",
       "instructions": {
         "op": "do",
@@ -26,6 +27,9 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
+      "flagRule": "9.3.6g",
+      "flag": "once_per_turn",
       "id": "elective-upgrade-clicks",
       "label": "[click], hosted agenda counter: Gain [click][click]",
       "cost": {
@@ -42,8 +46,7 @@
           "side": "corp",
           "amount": 2
         }
-      },
-      "flag": "once_per_turn"
+      }
     }
   ]
 }

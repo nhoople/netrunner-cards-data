@@ -16,6 +16,7 @@
   "abilities": [
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "minelayer-install",
       "text": "You may install 1 ice from HQ protecting this server, ignoring the install cost.",
       "instructions": {

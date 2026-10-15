@@ -13,6 +13,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "first_ice_rez_each_turn",
       "instructions": {
         "op": "do",
@@ -25,6 +26,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "link",
         "value": 0

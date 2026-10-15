@@ -16,6 +16,7 @@
   "abilities": [
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "howler-install",
       "text": "You may install and rez 1 bioroid ice from HQ or Archives directly inward, ignoring all costs.",
       "instructions": {

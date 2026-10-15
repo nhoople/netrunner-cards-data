@@ -15,6 +15,7 @@
   "abilities": [
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "gila-gain",
       "label": "[click], [click]: Gain 3¢",
       "cost": {

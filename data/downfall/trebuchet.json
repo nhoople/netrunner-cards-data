@@ -19,6 +19,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "rez",
       "instructions": {
         "op": "do",
@@ -30,6 +31,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "trebuchet-trash",
       "text": "Trash 1 installed Runner card.",
       "instructions": {
@@ -42,6 +44,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "trebuchet-trace",
       "text": "Trace[6]. If successful, the Runner cannot steal or trash Corp cards for the remainder of this run.",
       "instructions": {

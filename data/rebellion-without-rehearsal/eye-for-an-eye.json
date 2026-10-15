@@ -5,6 +5,7 @@
   "nrdbCode": "34067",
   "type": "event",
   "side": "runner",
+  "faction": "anarch",
   "unsupported": [],
   "subtypes": [
     "run"
@@ -13,6 +14,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "playRequiresUntagged",
         "value": true
@@ -20,6 +22,9 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
+      "flagRule": "9.3.6b",
+      "flag": "access",
       "declaration": {
         "field": "accessTrashFromGrip",
         "value": {
@@ -29,18 +34,25 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "runEvent",
         "value": {
           "servers": "hq",
-          "bonusAccess": 1,
-          "onSuccessfulRun": {
-            "op": "do",
-            "action": {
-              "kind": "give_tags",
-              "amount": 1
-            }
-          }
+          "bonusAccess": 1
+        }
+      }
+    },
+    {
+      "class": "conditional",
+      "rule": "9.3.7c",
+      "trigger": "successful_run",
+      "host": "runEvent",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "give_tags",
+          "amount": 1
         }
       }
     }

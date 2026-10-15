@@ -5,6 +5,7 @@
   "nrdbCode": "30035",
   "type": "identity",
   "side": "corp",
+  "faction": "haas-bioroid",
   "unsupported": [],
   "subtypes": [
     "megacorp"
@@ -12,6 +13,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "handSizeBonus",
         "value": 1
@@ -19,6 +21,7 @@
     },
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "agenda_scored",
       "instructions": {
         "op": "choose",

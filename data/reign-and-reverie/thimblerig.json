@@ -16,6 +16,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "turn_begin",
       "instructions": {
         "op": "do",
@@ -26,6 +27,7 @@
     },
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "pass",
       "instructions": {
         "op": "do",
@@ -36,6 +38,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "thimblerig-etr",
       "text": "End the run.",
       "instructions": {

@@ -14,6 +14,7 @@
   "abilities": [
     {
       "class": "play",
+      "rule": "9.3.7d",
       "instructions": {
         "op": "do",
         "action": {
@@ -23,6 +24,9 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
+      "flagRule": "9.3.6d",
+      "flag": "interrupt",
       "id": "on-the-lam-prevent",
       "label": "[interrupt] → [trash]: Prevent up to 3 tags or up to 3 damage",
       "cost": {

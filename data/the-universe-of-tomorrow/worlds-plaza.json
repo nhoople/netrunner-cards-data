@@ -16,6 +16,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "unique",
         "value": true
@@ -23,6 +24,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "maxHostedCards",
         "value": 3
@@ -30,6 +32,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "hostAssetsOnly",
         "value": true
@@ -37,6 +40,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "worlds-plaza-install",
       "label": "[click]: Install an asset from HQ on Worlds Plaza and rez it (−2¢)",
       "cost": {

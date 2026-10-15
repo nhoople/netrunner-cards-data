@@ -5,6 +5,7 @@
   "nrdbCode": "26119",
   "type": "upgrade",
   "side": "corp",
+  "faction": "nbn",
   "unsupported": [],
   "subtypes": [
     "ambush"
@@ -15,6 +16,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "mustRevealWhenAccessedFromRd",
         "value": true
@@ -22,6 +24,7 @@
     },
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "access",
       "instructions": {
         "op": "choose",

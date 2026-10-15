@@ -5,6 +5,7 @@
   "nrdbCode": "26101",
   "type": "ice",
   "side": "corp",
+  "faction": "haas-bioroid",
   "unsupported": [],
   "subtypes": [
     "sentry"
@@ -15,6 +16,7 @@
   "abilities": [
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "drafter-archives",
       "text": "You may add 1 card from Archives to HQ.",
       "instructions": {
@@ -49,6 +51,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "drafter-install",
       "text": "You may install 1 card from Archives or HQ, ignoring all costs.",
       "instructions": {

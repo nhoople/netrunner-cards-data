@@ -13,6 +13,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "unique",
         "value": true
@@ -20,6 +21,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "removePowerCounterOnAnySuccessfulRun",
         "value": true
@@ -27,6 +29,7 @@
     },
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "turn_begin",
       "instructions": {
         "op": "choose",
@@ -73,6 +76,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "embolus-etr",
       "label": "Hosted power counter: End the run (run on this server)",
       "cost": {

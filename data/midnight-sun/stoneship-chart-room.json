@@ -5,6 +5,7 @@
   "nrdbCode": "33030",
   "type": "resource",
   "side": "runner",
+  "faction": "shaper",
   "unsupported": [],
   "subtypes": [
     "location"
@@ -13,6 +14,7 @@
   "abilities": [
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "stoneship-draw",
       "label": "Trash Stoneship Chart Room: draw 2",
       "cost": {
@@ -32,6 +34,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "stoneship-charge",
       "label": "Trash Stoneship Chart Room: charge 1 installed card",
       "cost": {

@@ -5,6 +5,7 @@
   "nrdbCode": "30039",
   "type": "ice",
   "side": "corp",
+  "faction": "haas-bioroid",
   "installCost": 6,
   "rezCost": 6,
   "strength": 6,
@@ -16,6 +17,7 @@
   "abilities": [
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "bran-install",
       "text": "May install ice inward ignoring costs.",
       "instructions": {
@@ -27,6 +29,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "bran-etr1",
       "text": "End the run.",
       "instructions": {
@@ -38,6 +41,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "bran-etr2",
       "text": "End the run.",
       "instructions": {

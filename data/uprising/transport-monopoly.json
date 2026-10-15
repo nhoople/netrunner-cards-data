@@ -5,6 +5,7 @@
   "nrdbCode": "26121",
   "type": "agenda",
   "side": "corp",
+  "faction": "weyland-consortium",
   "unsupported": [],
   "subtypes": [
     "initiative"
@@ -14,6 +15,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "score",
       "instructions": {
         "op": "do",
@@ -25,6 +27,9 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
+      "flagRule": "9.3.6g",
+      "flag": "once_per_turn",
       "id": "transport-monopoly-block",
       "label": "Hosted agenda counter: this run cannot be declared successful",
       "cost": {
@@ -41,7 +46,6 @@
           "kind": "prevent_declare_run_successful"
         }
       },
-      "flag": "once_per_turn",
       "requireDuringRun": true
     }
   ]

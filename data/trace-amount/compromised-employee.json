@@ -15,6 +15,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "link",
         "value": 1
@@ -22,6 +23,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "recurringCreditsMax",
         "value": 1
@@ -29,6 +31,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "recurringSpendFor",
         "value": [
@@ -38,6 +41,7 @@
     },
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "any_ice_rez",
       "instructions": {
         "op": "do",

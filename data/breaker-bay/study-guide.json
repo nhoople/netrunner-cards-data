@@ -17,6 +17,9 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
+      "flagRule": "9.3.6c",
+      "flag": "interface",
       "declaration": {
         "field": "breaker",
         "value": {
@@ -29,6 +32,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "strengthPerPowerCounter",
         "value": true
@@ -36,6 +40,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "study-guide-power",
       "label": "2¢: Place 1 power counter on this program",
       "cost": {

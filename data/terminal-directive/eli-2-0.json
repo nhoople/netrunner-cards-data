@@ -17,6 +17,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "bioroidBreakMaxSubs",
         "value": 2
@@ -24,6 +25,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "eli-2-0-draw",
       "text": "You may draw 1 card.",
       "instructions": {
@@ -59,6 +61,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "eli-2-0-etr-1",
       "text": "End the run.",
       "instructions": {
@@ -70,6 +73,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "eli-2-0-etr-2",
       "text": "End the run.",
       "instructions": {

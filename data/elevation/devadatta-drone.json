@@ -5,12 +5,14 @@
   "nrdbCode": "35031",
   "type": "program",
   "side": "runner",
+  "faction": "shaper",
   "unsupported": [],
   "installCost": 1,
   "memoryCost": 1,
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "powerCountersOnInstall",
         "value": 2
@@ -18,6 +20,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "maySpendPowerCountersForBonusRdAccess",
         "value": {

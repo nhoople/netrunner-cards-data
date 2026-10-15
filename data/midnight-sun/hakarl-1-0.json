@@ -5,6 +5,7 @@
   "nrdbCode": "33036",
   "type": "ice",
   "side": "corp",
+  "faction": "haas-bioroid",
   "unsupported": [],
   "subtypes": [
     "barrier",
@@ -17,6 +18,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "rez",
       "instructions": {
         "op": "if",
@@ -40,6 +42,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "hakarl-core",
       "text": "Do 1 core damage.",
       "instructions": {
@@ -52,6 +55,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "hakarl-etr",
       "text": "End the run.",
       "instructions": {
@@ -63,6 +67,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "hakarl-click-break",
       "label": "Lose [click]: Break 1 subroutine on Hákarl 1.0",
       "cost": {

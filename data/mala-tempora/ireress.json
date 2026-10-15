@@ -16,6 +16,7 @@
   "abilities": [
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "ireress-lose",
       "text": "The Runner loses 1[credit] for each bad publicity the Corp has.",
       "instructions": {

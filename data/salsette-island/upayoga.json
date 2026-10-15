@@ -17,6 +17,7 @@
   "abilities": [
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "upayoga-psi",
       "text": "Psi game. If bids differ, the Runner loses 2¢.",
       "instructions": {
@@ -37,6 +38,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "upayoga-resolve-psi",
       "text": "Resolve a subroutine on a piece of rezzed psi ice.",
       "instructions": {

@@ -16,6 +16,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "playersCannotTrashThisIce",
         "value": true
@@ -23,6 +24,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "architect-rd",
       "text": "Look at top 5 of R&D; may install 1 ignoring cost",
       "instructions": {
@@ -35,6 +37,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "architect-hq-arch",
       "text": "May install 1 card from Archives or HQ",
       "instructions": {

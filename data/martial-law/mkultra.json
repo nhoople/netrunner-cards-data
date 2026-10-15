@@ -17,6 +17,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "mayInstallSelfFromHeapOnEncounterSentry",
         "value": true
@@ -24,6 +25,9 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
+      "flagRule": "9.3.6c",
+      "flag": "interface",
       "declaration": {
         "field": "breaker",
         "value": {
@@ -37,6 +41,9 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
+      "flagRule": "9.3.6c",
+      "flag": "interface",
       "id": "mkultra-pump-break",
       "label": "3¢: +2 strength. Then, if this can interface with the sentry, break up to 2 subroutines",
       "cost": {

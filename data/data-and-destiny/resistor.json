@@ -17,6 +17,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "strengthBonusPerRunnerTag",
         "value": 1
@@ -24,6 +25,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "resistor-trace",
       "text": "Trace[4]. If successful, end the run.",
       "instructions": {

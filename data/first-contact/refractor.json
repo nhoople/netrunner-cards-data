@@ -17,6 +17,9 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
+      "flagRule": "9.3.6c",
+      "flag": "interface",
       "declaration": {
         "field": "breaker",
         "value": {
@@ -32,6 +35,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "paidAbilitiesUseStealthCreditsOnly",
         "value": true
@@ -39,6 +43,9 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
+      "flagRule": "9.3.6c",
+      "flag": "interface",
       "id": "refractor-break",
       "label": "1¢ (stealth): Break 1 code gate subroutine",
       "cost": {
@@ -60,6 +67,9 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
+      "flagRule": "9.3.6c",
+      "flag": "interface",
       "id": "refractor-pump",
       "label": "1¢ (stealth): +3 strength",
       "cost": {

@@ -16,6 +16,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "access_while_uninstalled",
       "instructions": {
         "op": "do",

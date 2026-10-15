@@ -15,6 +15,9 @@
   "abilities": [
     {
       "class": "paid",
+      "rule": "9.3.7b",
+      "flagRule": "9.3.6g",
+      "flag": "once_per_turn",
       "id": "escalate-vitriol-gain",
       "label": "Once per turn → [click]: Gain 1¢ for each tag the Runner has",
       "cost": {
@@ -35,8 +38,7 @@
             "side": "corp"
           }
         }
-      },
-      "flag": "once_per_turn"
+      }
     }
   ]
 }

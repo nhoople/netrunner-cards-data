@@ -5,6 +5,7 @@
   "nrdbCode": "31062",
   "type": "agenda",
   "side": "corp",
+  "faction": "nbn",
   "unsupported": [],
   "subtypes": [
     "research"
@@ -14,6 +15,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "score",
       "instructions": {
         "op": "do",
@@ -26,6 +28,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "agendaPointsPerAgendaCounter",
         "value": 1

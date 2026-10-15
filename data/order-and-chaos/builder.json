@@ -16,6 +16,7 @@
   "abilities": [
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "builder-move",
       "label": "[click]: Move this ice to the outermost position of any server",
       "cost": {
@@ -33,6 +34,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "builder-adv-1",
       "text": "Place 1 advancement on ice protecting this server that can be advanced.",
       "instructions": {
@@ -44,6 +46,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "builder-adv-2",
       "text": "Place 1 advancement on ice protecting this server that can be advanced.",
       "instructions": {

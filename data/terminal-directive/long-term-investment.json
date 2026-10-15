@@ -13,6 +13,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "turn_begin",
       "instructions": {
         "op": "do",
@@ -24,6 +25,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "longTermInvestmentGainAbilityAtHostedCredits",
         "value": 8
@@ -31,6 +33,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "lti-take",
       "label": "[click]: Take any number of credits from Long-Term Investment",
       "cost": {

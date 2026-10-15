@@ -14,6 +14,7 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "playRequiresSuccessfulHqRunThisTurn",
         "value": true
@@ -21,6 +22,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "unregistered-trash",
       "label": "[click][click]: Trash 1 rezzed ice, gain 2[credit] per strength",
       "cost": {

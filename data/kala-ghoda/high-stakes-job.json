@@ -15,19 +15,26 @@
   "abilities": [
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "runEvent",
         "value": {
           "servers": "any",
-          "requiresUnrezzedIce": true,
-          "onSuccessfulRun": {
-            "op": "do",
-            "action": {
-              "kind": "gain_credits",
-              "side": "runner",
-              "amount": 12
-            }
-          }
+          "requiresUnrezzedIce": true
+        }
+      }
+    },
+    {
+      "class": "conditional",
+      "rule": "9.3.7c",
+      "trigger": "successful_run",
+      "host": "runEvent",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "gain_credits",
+          "side": "runner",
+          "amount": 12
         }
       }
     }

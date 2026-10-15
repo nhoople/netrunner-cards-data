@@ -11,6 +11,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "virus_purge",
       "instructions": {
         "op": "choose",

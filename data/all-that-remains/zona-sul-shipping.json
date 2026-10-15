@@ -11,6 +11,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "turn_begin",
       "instructions": {
         "op": "do",
@@ -22,6 +23,7 @@
     },
     {
       "class": "static",
+      "rule": "9.3.7a",
       "declaration": {
         "field": "trashSelfWhenRunnerTagged",
         "value": true
@@ -29,6 +31,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "zona-take",
       "label": "[click]: Take all credits from Zona Sul Shipping",
       "cost": {

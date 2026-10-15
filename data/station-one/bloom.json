@@ -17,6 +17,7 @@
   "abilities": [
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "bloom-other-server",
       "text": "You may install 1 piece of ice from HQ protecting another server, ignoring all costs.",
       "instructions": {
@@ -28,6 +29,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "bloom-inward",
       "text": "You may install 1 piece of ice from HQ directly inward from this ice, ignoring all costs.",
       "instructions": {

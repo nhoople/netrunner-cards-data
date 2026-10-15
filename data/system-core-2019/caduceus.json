@@ -17,6 +17,7 @@
   "abilities": [
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "caduceus-trace-gain",
       "text": "Trace[3]. If successful, the Corp gains 3[credit].",
       "instructions": {
@@ -37,6 +38,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "caduceus-trace-etr",
       "text": "Trace[2]. If successful, end the run.",
       "instructions": {

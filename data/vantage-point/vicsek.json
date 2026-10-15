@@ -5,6 +5,7 @@
   "nrdbCode": "36042",
   "type": "ice",
   "side": "corp",
+  "faction": "jinteki",
   "unsupported": [],
   "subtypes": [
     "trap",
@@ -17,6 +18,7 @@
   "abilities": [
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "vicsek-x",
       "text": "Do X net damage and give the Runner X tags. X is equal to the number of tags the Runner has.",
       "instructions": {
@@ -51,6 +53,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "vicsek-trash",
       "text": "Give the Runner 1 tag. Trash this ice.",
       "instructions": {

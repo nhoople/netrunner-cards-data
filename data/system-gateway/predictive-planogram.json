@@ -5,6 +5,7 @@
   "nrdbCode": "30056",
   "type": "operation",
   "side": "corp",
+  "faction": "nbn",
   "playCost": 0,
   "subtypes": [
     "transaction"
@@ -13,6 +14,7 @@
   "abilities": [
     {
       "class": "play",
+      "rule": "9.3.7d",
       "instructions": {
         "op": "if",
         "cond": {

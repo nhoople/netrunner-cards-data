@@ -16,6 +16,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "rez",
       "instructions": {
         "op": "do",
@@ -27,6 +28,7 @@
     },
     {
       "class": "paid",
+      "rule": "9.3.7b",
       "id": "private-contracts-take",
       "label": "[click]: Take 2¢ from Private Contracts",
       "cost": {

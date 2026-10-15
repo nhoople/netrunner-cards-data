@@ -5,6 +5,7 @@
   "nrdbCode": "36016",
   "type": "resource",
   "side": "runner",
+  "faction": "criminal",
   "unsupported": [],
   "subtypes": [
     "connection"
@@ -13,6 +14,7 @@
   "abilities": [
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "runner_action_phase_end",
       "instructions": {
         "op": "if",

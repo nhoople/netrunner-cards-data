@@ -5,11 +5,13 @@
   "nrdbCode": "33004",
   "type": "event",
   "side": "runner",
+  "faction": "anarch",
   "unsupported": [],
   "playCost": 1,
   "abilities": [
     {
       "class": "play",
+      "rule": "9.3.7d",
       "instructions": {
         "op": "do",
         "action": {
@@ -21,6 +23,7 @@
     },
     {
       "class": "conditional",
+      "rule": "9.3.7c",
       "trigger": "trash_from_grip_or_stack",
       "instructions": {
         "op": "choose",

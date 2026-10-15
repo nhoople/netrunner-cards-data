@@ -16,6 +16,7 @@
   "abilities": [
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "interrupt-0-break-cost-1",
       "text": "For the remainder of this run, icebreaker break abilities cost +1¢.",
       "instructions": {
@@ -28,6 +29,7 @@
     },
     {
       "class": "subroutine",
+      "rule": "9.3.7e",
       "id": "interrupt-0-break-cost-2",
       "text": "For the remainder of this run, icebreaker break abilities cost +1¢.",
       "instructions": {
