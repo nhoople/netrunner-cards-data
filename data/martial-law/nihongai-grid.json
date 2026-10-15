@@ -27,7 +27,7 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "nihongai_may_look_top5_swap_hq"
+          "kind": "may_look_nihongai_top5_swap_hq"
         }
       }
     }

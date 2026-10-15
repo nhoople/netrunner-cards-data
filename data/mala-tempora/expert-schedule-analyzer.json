@@ -33,7 +33,7 @@
         "onSuccessfulRun": {
           "op": "do",
           "action": {
-            "kind": "expert_schedule_analyzer_may_instead_of_breach"
+            "kind": "may_breach_instead_expert_schedule_analyzer"
           }
         }
       }

@@ -73,7 +73,7 @@
                       {
                         "op": "do",
                         "action": {
-                          "kind": "enable_hosted_credits_spend_for",
+                          "kind": "spend_enable_hosted_credits_for",
                           "purposes": [
                             "trash"
                           ]

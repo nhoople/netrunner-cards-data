@@ -29,7 +29,7 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "encrypted_portals_on_score"
+          "kind": "score_encrypted_portals_on"
         }
       }
     }

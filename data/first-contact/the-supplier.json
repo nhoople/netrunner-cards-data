@@ -49,7 +49,7 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "supplier_turn_begin_install"
+          "kind": "install_supplier_turn_begin"
         }
       }
     }

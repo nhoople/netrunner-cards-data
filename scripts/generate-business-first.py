@@ -117,7 +117,7 @@ def map_card(c: dict) -> dict | None:
                 paid(
                     "emp-device-limit-rez",
                     "[trash]: Corp cannot rez more than 1 ice for the remainder of this run",
-                    do("emp_device_limit_ice_rez_this_run"),
+                    do("rez_emp_device_limit_ice_this_run"),
                     trash_self=True,
                     windows=[
                         "approach_paw",
@@ -146,7 +146,7 @@ def map_card(c: dict) -> dict | None:
             subtypes=["run"],
             runEvent={
                 "servers": "hq",
-                "onSuccessfulRun": do("cbi_raid_instead_of_breach"),
+                "onSuccessfulRun": do("breach_instead_cbi_raid"),
             },
         )
 
@@ -209,7 +209,7 @@ def map_card(c: dict) -> dict | None:
                 paid(
                     "lakshmi-reveal",
                     "X hosted power counters: Reveal an agenda worth X from HQ; Runner cannot steal copies this turn",
-                    do("lakshmi_reveal_agenda_cannot_steal_copies"),
+                    do("cannot_steal_copies_of_revealed_agenda"),
                     windows=["corp_action_paw"],
                 )
             ],
@@ -300,7 +300,7 @@ def map_card(c: dict) -> dict | None:
                 paid(
                     "mcc-move-adv",
                     "2¢: Move 1 advancement token from Mumbad Construction Co. to a faceup card",
-                    do("mumbad_construction_move_advancement_to_faceup"),
+                    do("move_mumbad_construction_advancement_to_faceup"),
                     credits=2,
                     windows=["corp_action_paw"],
                 )

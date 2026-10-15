@@ -29,7 +29,7 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "susanoo_redirect_to_archives"
+          "kind": "redirect_susanoo_to_archives"
         }
       }
     }

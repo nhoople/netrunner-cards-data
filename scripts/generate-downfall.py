@@ -733,7 +733,7 @@ def map_card(c: dict) -> dict:
             c,
             onPlay={
                 "op": "do",
-                "action": {"kind": "fully_operational_resolve"},
+                "action": {"kind": "resolve_fully_operational"},
             },
             unsupported=[],
         )
@@ -1015,7 +1015,7 @@ def map_card(c: dict) -> dict:
             playRequiresInstalledProgramOrHardware=True,
             onPlay={
                 "op": "do",
-                "action": {"kind": "rejig_bounce_install"},
+                "action": {"kind": "install_rejig_bounce"},
             },
             unsupported=[],
         )
@@ -1055,7 +1055,7 @@ def map_card(c: dict) -> dict:
                             {
                                 "op": "do",
                                 "action": {
-                                    "kind": "yagi_swap_hq_with_attacked_root_or_ice",
+                                    "kind": "swap_yagi_hq_with_attacked_root_or_ice",
                                 },
                             },
                             {
@@ -1528,7 +1528,7 @@ def map_card(c: dict) -> dict:
                     {
                         "op": "do",
                         "action": {
-                            "kind": "climactic_choose_server_corp_may_trash_ice_else_bonus_access",
+                            "kind": "may_corp_choose_climactic_server_trash_ice_else_bonus_access",
                         },
                     },
                 ],
@@ -1648,7 +1648,7 @@ def map_card(c: dict) -> dict:
                     "effect": {
                         "op": "do",
                         "action": {
-                            "kind": "hyoubu_reveal_grip_random_or_stack_top",
+                            "kind": "reveal_hyoubu_grip_random_or_stack_top",
                         },
                     },
                 }
@@ -1667,7 +1667,7 @@ def map_card(c: dict) -> dict:
             onWouldDrawOncePerTurn={
                 "op": "do",
                 "action": {
-                    "kind": "class_act_look_top_draw_amount_plus_one_bottom_one",
+                    "kind": "look_class_act_top_draw_amount_plus_one_bottom_one",
                 },
             },
             unsupported=[],

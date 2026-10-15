@@ -48,7 +48,7 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "mkultra_spend_pump_and_break"
+          "kind": "spend_mkultra_pump_and_break"
         }
       },
       "usableByRunnerOnSelfIce": true

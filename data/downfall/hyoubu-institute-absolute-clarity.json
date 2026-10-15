@@ -36,7 +36,7 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "hyoubu_reveal_grip_random_or_stack_top"
+          "kind": "reveal_hyoubu_grip_random_or_stack_top"
         }
       }
     }

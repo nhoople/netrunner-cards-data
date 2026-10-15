@@ -22,7 +22,7 @@
           "onSuccessfulRun": {
             "op": "do",
             "action": {
-              "kind": "cbi_raid_instead_of_breach"
+              "kind": "breach_instead_cbi_raid"
             }
           }
         }

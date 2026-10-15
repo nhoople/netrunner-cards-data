@@ -24,7 +24,7 @@
             "effect": {
               "op": "do",
               "action": {
-                "kind": "ss_asa_install_non_agenda_same_server"
+                "kind": "install_asa_non_agenda_same_server"
               }
             }
           },

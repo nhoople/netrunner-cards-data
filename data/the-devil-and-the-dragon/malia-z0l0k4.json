@@ -27,7 +27,7 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "tdatd_malia_choose_resource"
+          "kind": "choose_malia_resource"
         }
       }
     }

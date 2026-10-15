@@ -127,7 +127,7 @@ def map_card(c: dict) -> dict | None:
             subtypes=["natural"],
             link=c.get("base_link", 0),
             onEncounterAnyIceOncePerTurn=may(
-                do("null_trash_grip_lower_encountered_ice_strength", amount=2),
+                do("trash_null_grip_lower_encountered_ice_strength", amount=2),
                 label="Trash 1 from grip: encountered ice gets −2 strength this run",
             ),
         )
@@ -197,7 +197,7 @@ def map_card(c: dict) -> dict | None:
             subtypes=["current"],
             lingerAsCurrent=True,
             currentTrashOnAgendaScored=True,
-            onStealAgenda=do("another_day_force_corp_trace0_gain_ap_credits"),
+            onStealAgenda=do("force_trace_then_gain_credits"),
         )
 
     if cid == "deuces-wild":

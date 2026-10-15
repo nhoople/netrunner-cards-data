@@ -40,7 +40,7 @@
             "onFlip": {
               "op": "do",
               "action": {
-                "kind": "jinteki_biotech_shuffle_archives_into_rd"
+                "kind": "shuffle_jinteki_biotech_archives_into_rd"
               }
             }
           },

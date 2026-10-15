@@ -32,7 +32,7 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "unregistered_trash_rezzed_ice_gain_per_strength"
+          "kind": "trash_unregistered_rezzed_ice_gain_per_strength"
         }
       }
     }

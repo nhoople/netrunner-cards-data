@@ -45,7 +45,7 @@
           {
             "op": "do",
             "action": {
-              "kind": "register_may_shuffle_title_from_heap_on_successful_run_end",
+              "kind": "may_shuffle_register_title_from_heap_on_successful_run_end",
               "title": "Boomerang"
             }
           }

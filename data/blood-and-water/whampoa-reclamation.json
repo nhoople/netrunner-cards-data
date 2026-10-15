@@ -27,7 +27,7 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "whampoa_trash_hq_archives_to_rd_bottom"
+          "kind": "trash_whampoa_hq_archives_to_rd_bottom"
         }
       },
       "flag": "once_per_turn"

@@ -22,7 +22,7 @@
           "onSuccessfulRun": {
             "op": "do",
             "action": {
-              "kind": "account_siphon_may_instead_of_breach"
+              "kind": "may_breach_instead_account_siphon"
             }
           }
         }

@@ -18,7 +18,7 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "corp_must_derez_a_card"
+          "kind": "corp_derez_a_card"
         }
       }
     },
@@ -35,7 +35,7 @@
             "effect": {
               "op": "do",
               "action": {
-                "kind": "corp_may_rez_ignoring_cost"
+                "kind": "may_corp_rez_ignoring_cost"
               }
             }
           },

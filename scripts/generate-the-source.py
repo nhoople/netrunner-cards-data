@@ -157,7 +157,7 @@ def map_card(c: dict) -> dict | None:
         return base(
             c,
             subtypes=["sentry"],
-            onEncounter=do("troll_encounter_trace"),
+            onEncounter=do("trace_troll_encounter"),
         )
 
     if cid == "virgo":
@@ -168,7 +168,7 @@ def map_card(c: dict) -> dict | None:
                 {
                     "id": "virgo-trace",
                     "text": "Trace[2]. If successful, give the Runner 1 tag. If strength ≥5, give the Runner 1 tag.",
-                    "effect": do("virgo_trace_subroutine"),
+                    "effect": do("trace_virgo_subroutine"),
                 }
             ],
         )
@@ -243,7 +243,7 @@ def map_card(c: dict) -> dict | None:
             subtypes=["run"],
             runEvent={
                 "servers": "rd",
-                "onSuccessfulRun": do("code_siphon_may_instead_of_breach"),
+                "onSuccessfulRun": do("may_breach_instead_code_siphon"),
             },
         )
 

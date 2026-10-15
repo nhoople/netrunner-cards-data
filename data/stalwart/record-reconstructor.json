@@ -15,7 +15,7 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "record_reconstructor_archives_instead_of_breach"
+          "kind": "breach_instead_record_reconstructor_archives"
         }
       }
     }

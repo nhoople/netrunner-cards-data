@@ -158,7 +158,7 @@ def map_card(c: dict) -> dict | None:
             onPlay=seq(
                 nested_unless(
                     "corp",
-                    do("cd_corp_pay_credits", amount=5),
+                    do("corp_pay_credits_to_prevent", amount=5),
                     do("give_bad_publicity", amount=1),
                 ),
                 do("rfg_self"),

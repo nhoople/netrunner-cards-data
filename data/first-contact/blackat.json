@@ -61,7 +61,7 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "blackat_pump_strength"
+          "kind": "pump_blackat_strength"
         }
       }
     }

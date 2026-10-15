@@ -157,7 +157,7 @@ def map_card(c: dict) -> dict | None:
             c,
             subtypes=["double"],
             playAdditionalClick=True,
-            onPlay=do("syn_attack_corp_discard_2_or_draw_4"),
+            onPlay=do("corp_draw_syn_attack_discard_2_or_4"),
         )
 
     if cid == "polyhistor":
@@ -380,7 +380,7 @@ def map_card(c: dict) -> dict | None:
                 paid(
                     "levy-reveal",
                     "[click]: Reveal top 4 of stack; may add 1 program to grip; rest to bottom",
-                    do("levy_advanced_research_lab_reveal"),
+                    do("reveal_levy_advanced_research_lab"),
                     clicks=1,
                     usable_by_runner=True,
                 ),
@@ -734,7 +734,7 @@ def map_card(c: dict) -> dict | None:
             subtypes=["gray ops", "double"],
             playAdditionalClick=True,
             playOnlyIfRunnerStoleAgendaLastTurn=True,
-            onPlay=do("hunter_seeker_trash_installed"),
+            onPlay=do("trash_hunter_seeker_installed"),
         )
 
     if cid == "k-p-lynn":

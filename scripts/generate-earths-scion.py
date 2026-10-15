@@ -190,7 +190,7 @@ def map_card(c: dict) -> dict | None:
                 paid(
                     "rosetta-2-0-search",
                     "[click], remove an installed program from the game: Search stack for non-virus program, install lowering by RFG cost",
-                    do("rosetta_rfg_program_search_install_non_virus"),
+                    do("search_rosetta_rfg_program_install_non_virus"),
                     clicks=1,
                     usable_by_runner=True,
                 ),
@@ -291,7 +291,7 @@ def map_card(c: dict) -> dict | None:
                 paid(
                     "aginfusion-redirect",
                     "Once per turn → Trash approached unrezzed ice: move Runner to outermost of another server",
-                    do("aginfusion_trash_approached_unrezzed_redirect"),
+                    do("trash_aginfusion_approached_unrezzed_redirect"),
                     once_per_turn=True,
                     windows=[
                         "approach_paw",

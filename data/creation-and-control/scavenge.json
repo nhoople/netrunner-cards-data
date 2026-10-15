@@ -14,7 +14,7 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "scavenge_install_program"
+          "kind": "install_scavenge_program"
         }
       },
       "restrictions": [

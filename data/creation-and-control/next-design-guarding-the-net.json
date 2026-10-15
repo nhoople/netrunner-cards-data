@@ -20,7 +20,7 @@
           {
             "op": "do",
             "action": {
-              "kind": "next_design_may_install_ice",
+              "kind": "may_install_next_design_ice",
               "remaining": 3,
               "usedServerIds": []
             }

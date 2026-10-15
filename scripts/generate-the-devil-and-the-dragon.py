@@ -168,7 +168,7 @@ def map_card(c: dict) -> dict | None:
                 "servers": "remote",
                 "skipBreach": True,
                 "onSuccessfulRun": may(
-                    do("tdatd_because_i_can_shuffle_root"),
+                    do("shuffle_because_i_can_root"),
                     label="Force Corp to shuffle all cards in the root into R&D",
                 ),
             },
@@ -215,7 +215,7 @@ def map_card(c: dict) -> dict | None:
             c,
             subtypes=["bioroid"],
             unique=True,
-            onRez=do("tdatd_malia_choose_resource"),
+            onRez=do("choose_malia_resource"),
         )
 
     if cid == "kill-switch":
@@ -241,7 +241,7 @@ def map_card(c: dict) -> dict | None:
             onAccess=do(
                 "trace",
                 strength=3,
-                onSuccess=do("tdatd_tempus_resolve"),
+                onSuccess=do("resolve_tempus"),
             ),
         )
 
@@ -277,7 +277,7 @@ def map_card(c: dict) -> dict | None:
                     "id": "sadaka-look",
                     "text": "Look at the top 3 cards of R&D and either arrange them in any order or shuffle R&D. You may draw 1 card.",
                     "effect": seq(
-                        do("tdatd_sadaka_look_top_3"),
+                        do("look_sadaka_top_3"),
                         may(draw("corp", 1), label="Draw 1 card", decline_side="corp"),
                     ),
                 },
@@ -286,7 +286,7 @@ def map_card(c: dict) -> dict | None:
                     "text": "You may trash 1 card in HQ. If you do, trash 1 resource. Trash Sadaka.",
                     "effect": seq(
                         may(
-                            do("tdatd_sadaka_trash_hq_then_resource"),
+                            do("trash_sadaka_hq_then_resource"),
                             label="Trash 1 card in HQ; if you do, trash 1 resource",
                             decline_side="corp",
                         ),
@@ -338,7 +338,7 @@ def map_card(c: dict) -> dict | None:
             subtypes=["character"],
             unique=True,
             onAgendaScoredOrStolen=may(
-                do("tdatd_amani_trace"),
+                do("trace_amani"),
                 label="Trace[X] (X = advancement requirement of the agenda)",
                 decline_side="corp",
             ),
@@ -349,7 +349,7 @@ def map_card(c: dict) -> dict | None:
             c,
             subtypes=["division"],
             onCorpTurnEnd=may(
-                do("tdatd_sso_advance_ice"),
+                do("advance_sso_ice"),
                 label="Place advancement tokens on ice with no advancements",
                 decline_side="corp",
             ),

@@ -19,7 +19,7 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "profiteering_on_score"
+          "kind": "score_profiteering_on"
         }
       }
     }

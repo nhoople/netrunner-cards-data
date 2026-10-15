@@ -56,7 +56,7 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "tracker_run_chosen_prevent_first_sub"
+          "kind": "prevent_tracker_run_chosen_first_sub"
         }
       },
       "usableByRunnerOnSelfIce": true

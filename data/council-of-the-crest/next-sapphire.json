@@ -22,7 +22,7 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "cotc_next_sapphire_draw"
+          "kind": "draw_next_sapphire"
         }
       }
     },

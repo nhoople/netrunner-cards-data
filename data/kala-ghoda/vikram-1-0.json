@@ -31,7 +31,7 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "kg_cannot_use_programs_this_run"
+          "kind": "cannot_use_programs_this_run_kg"
         }
       }
     },

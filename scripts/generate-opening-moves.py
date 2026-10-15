@@ -262,7 +262,7 @@ def map_card(c: dict) -> dict | None:
     if cid == "project-ares":
         return base(
             c,
-            onScore=do("project_ares_on_score", past=4),
+            onScore=do("score_project_ares_on", past=4),
             unsupported=[],
         )
 

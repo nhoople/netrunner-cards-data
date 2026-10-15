@@ -21,7 +21,7 @@
           "onSuccessfulRun": {
             "op": "do",
             "action": {
-              "kind": "burner_resolve",
+              "kind": "resolve_burner",
               "reveal": 3,
               "move": 2
             }

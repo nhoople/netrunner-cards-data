@@ -34,7 +34,7 @@
             "effect": {
               "op": "do",
               "action": {
-                "kind": "cotc_kuwinda_trace"
+                "kind": "trace_kuwinda"
               }
             }
           },

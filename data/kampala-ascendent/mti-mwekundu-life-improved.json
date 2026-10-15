@@ -31,7 +31,7 @@
             "effect": {
               "op": "do",
               "action": {
-                "kind": "ka_mti_install_ice_innermost_from_hq"
+                "kind": "install_mti_ice_innermost_from_hq"
               }
             }
           },

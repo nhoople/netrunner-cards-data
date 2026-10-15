@@ -157,7 +157,7 @@ def map_card(c: dict) -> dict | None:
                 paid(
                     "kabonesa-search",
                     "[click]: Search stack for a non-virus program and install it, lowering install cost by 1¢; RFG it if still installed at turn end",
-                    do("dtwn_kabonesa_search_install"),
+                    do("search_kabonesa_install"),
                     clicks=1,
                     windows=["runner_action_paw"],
                     usable_by_runner=True,
@@ -176,7 +176,7 @@ def map_card(c: dict) -> dict | None:
                 paid(
                     "takobi-pump",
                     "2 hosted power counters: Choose 1 installed non-AI icebreaker. That icebreaker gets +3 strength for the remainder of the current encounter",
-                    do("dtwn_takobi_pump_breaker", amount=3),
+                    do("pump_takobi_breaker", amount=3),
                     cost={"powerCounters": 2},
                     windows=["encounter_paw"],
                     usable_by_runner=True,
@@ -287,12 +287,12 @@ def map_card(c: dict) -> dict | None:
         return base(
             c,
             subtypes=["sentry"],
-            onEncounter=do("dtwn_jua_forbid_install_remainder_of_turn"),
+            onEncounter=do("forbid_install_remainder_of_turn"),
             subroutines=[
                 {
                     "id": "jua-bounce",
                     "text": "Choose 2 installed Runner cards, if able. The Runner must add 1 of the chosen cards to the top of the stack.",
-                    "effect": do("dtwn_jua_choose_two_bounce_one"),
+                    "effect": do("choose_jua_two_bounce_one"),
                 },
             ],
         )
@@ -376,7 +376,7 @@ def map_card(c: dict) -> dict | None:
             rfgInsteadOfTrashing=True,
             onPlay=seq(
                 gain("runner", 2),
-                do("dtwn_distract_trash_hq_shuffle_archives"),
+                do("trash_distract_hq_shuffle_archives"),
             ),
         )
 

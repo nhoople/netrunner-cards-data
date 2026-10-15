@@ -22,7 +22,7 @@
           "onSuccessfulRun": {
             "op": "do",
             "action": {
-              "kind": "vamp_may_instead_of_breach"
+              "kind": "may_breach_instead_vamp"
             }
           }
         }

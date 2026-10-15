@@ -42,7 +42,7 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "ss_puffer_add_or_remove_power"
+          "kind": "add_or_remove_power"
         }
       },
       "usableByRunnerOnSelfIce": true

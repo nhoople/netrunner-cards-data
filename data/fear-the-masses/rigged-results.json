@@ -14,7 +14,7 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "rigged_results_secret_spend_guess"
+          "kind": "spend_rigged_results_secret_guess"
         }
       }
     }

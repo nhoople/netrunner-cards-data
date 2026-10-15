@@ -1519,7 +1519,7 @@ def map_card(c: dict) -> dict:
                 "cond": {"op": "hosted_credits_gte", "amount": 3},
                 "then": {
                     "op": "do",
-                    "action": {"kind": "must_trash_own_installed"},
+                    "action": {"kind": "trash_must_own_installed"},
                 },
             },
             unsupported=[],
@@ -2097,7 +2097,7 @@ def map_card(c: dict) -> dict:
                     "windows": ["runner_action_paw"],
                     "effect": {
                         "op": "do",
-                        "action": {"kind": "gachapon_resolve"},
+                        "action": {"kind": "resolve_gachapon"},
                     },
                 }
             ],

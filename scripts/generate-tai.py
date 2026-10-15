@@ -1589,7 +1589,7 @@ def map_card(c: dict) -> dict:
                                     {
                                         "op": "do",
                                         "action": {
-                                            "kind": "enable_hosted_credits_spend_for",
+                                            "kind": "spend_enable_hosted_credits_for",
                                             "purposes": ["trash"],
                                         },
                                     },
@@ -1807,7 +1807,7 @@ def map_card(c: dict) -> dict:
             onPlay={
                 "op": "do",
                 "action": {
-                    "kind": "corp_may_reveal_agenda_from_hq",
+                    "kind": "may_corp_reveal_agenda_from_hq",
                     "then": seq(
                         {
                             "op": "do",

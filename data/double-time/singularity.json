@@ -29,7 +29,7 @@
           "onSuccessfulRun": {
             "op": "do",
             "action": {
-              "kind": "singularity_instead_of_breach_trash_root"
+              "kind": "breach_instead_singularity_trash_root"
             }
           }
         }

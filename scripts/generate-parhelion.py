@@ -461,7 +461,7 @@ def map_card(c: dict) -> dict:
             onPlay={
                 "op": "do",
                 "action": {
-                    "kind": "simulation_reset_resolve",
+                    "kind": "resolve_simulation_reset",
                     "trashHqMax": 5,
                 },
             },
@@ -680,7 +680,7 @@ def map_card(c: dict) -> dict:
                     "windows": ["encounter_paw"],
                     "effect": {
                         "op": "do",
-                        "action": {"kind": "matryoshka_break"},
+                        "action": {"kind": "break_matryoshka"},
                     },
                 },
                 {
@@ -1196,7 +1196,7 @@ def map_card(c: dict) -> dict:
             onPlay={
                 "op": "do",
                 "action": {
-                    "kind": "spark_of_inspiration_resolve",
+                    "kind": "resolve_spark_of_inspiration",
                     "discount": 10,
                 },
             },

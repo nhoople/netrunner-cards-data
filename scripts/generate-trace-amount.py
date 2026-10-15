@@ -172,7 +172,7 @@ def map_card(c: dict) -> dict | None:
                 "servers": "hq",
                 "onSuccessfulRun": {
                     "op": "do",
-                    "action": {"kind": "vamp_may_instead_of_breach"},
+                    "action": {"kind": "may_breach_instead_vamp"},
                 },
             },
             unsupported=[],

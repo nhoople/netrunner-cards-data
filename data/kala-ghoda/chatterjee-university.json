@@ -52,7 +52,7 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "chatterjee_install_program_discount"
+          "kind": "install_chatterjee_program_discount"
         }
       },
       "usableByRunnerOnSelfIce": true

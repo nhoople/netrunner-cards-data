@@ -31,7 +31,7 @@
             "effect": {
               "op": "do",
               "action": {
-                "kind": "null_trash_grip_lower_encountered_ice_strength",
+                "kind": "trash_null_grip_lower_encountered_ice_strength",
                 "amount": 2
               }
             }

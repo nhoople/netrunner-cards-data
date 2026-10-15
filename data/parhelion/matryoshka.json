@@ -76,7 +76,7 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "matryoshka_break"
+          "kind": "break_matryoshka"
         }
       }
     },

@@ -829,7 +829,7 @@ def map_card(c: dict) -> dict:
                         "then": {
                             "op": "do",
                             "action": {
-                                "kind": "bp_unless_derez_protecting_attacked"
+                                "kind": "derez_unless_protecting_attacked"
                             },
                         },
                     },

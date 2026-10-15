@@ -27,7 +27,7 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "reality_threedee_gain_credits"
+          "kind": "gain_reality_threedee_credits"
         }
       }
     }

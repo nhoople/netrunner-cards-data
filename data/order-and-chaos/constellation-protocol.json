@@ -24,7 +24,7 @@
             "effect": {
               "op": "do",
               "action": {
-                "kind": "constellation_move_advancement_between_ice"
+                "kind": "move_constellation_advancement_between_ice"
               }
             }
           },

@@ -26,7 +26,7 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "levy_advanced_research_lab_reveal"
+          "kind": "reveal_levy_advanced_research_lab"
         }
       },
       "usableByRunnerOnSelfIce": true

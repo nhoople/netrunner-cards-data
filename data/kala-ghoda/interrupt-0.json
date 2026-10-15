@@ -21,7 +21,7 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "arm_icebreaker_break_additional_cost_this_run",
+          "kind": "break_arm_icebreaker_additional_cost_this_run",
           "amount": 1
         }
       }
@@ -33,7 +33,7 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "arm_icebreaker_break_additional_cost_this_run",
+          "kind": "break_arm_icebreaker_additional_cost_this_run",
           "amount": 1
         }
       }

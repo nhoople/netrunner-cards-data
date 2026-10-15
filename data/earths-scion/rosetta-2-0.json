@@ -25,7 +25,7 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "rosetta_rfg_program_search_install_non_virus"
+          "kind": "search_rosetta_rfg_program_install_non_virus"
         }
       },
       "usableByRunnerOnSelfIce": true

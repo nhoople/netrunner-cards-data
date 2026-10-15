@@ -1846,7 +1846,7 @@ def map_card(c: dict) -> dict:
                         "label": "Remove tags (Runner loses 5[credit] each; you gain that much)",
                         "effect": {
                             "op": "do",
-                            "action": {"kind": "bigger_picture_remove_tags"},
+                            "action": {"kind": "remove_bigger_picture_tags"},
                         },
                     },
                 ],
@@ -1909,7 +1909,7 @@ def map_card(c: dict) -> dict:
             c,
             playAdditionalCost={
                 "op": "do",
-                "action": {"kind": "ip_enforcement_remove_tags"},
+                "action": {"kind": "remove_enforcement_tags"},
             },
             onPlay={
                 "op": "do",
@@ -2171,7 +2171,7 @@ def map_card(c: dict) -> dict:
                         ),
                         "effect": {
                             "op": "do",
-                            "action": {"kind": "au_co_remove_2_look_rd"},
+                            "action": {"kind": "remove_co_2_look_rd"},
                         },
                     },
                     decline("corp"),

@@ -26,7 +26,7 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "liberated_chela_corp_may_forfeit_or_score"
+          "kind": "may_corp_forfeit_liberated_chela_or_score"
         }
       },
       "usableByRunnerOnSelfIce": true

@@ -31,7 +31,7 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "lakshmi_reveal_agenda_cannot_steal_copies"
+          "kind": "cannot_steal_copies_of_revealed_agenda"
         }
       }
     }

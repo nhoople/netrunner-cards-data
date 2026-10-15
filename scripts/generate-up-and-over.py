@@ -82,7 +82,7 @@ def map_card(c: dict) -> dict | None:
                     "creditCost": 0,
                     "cost": {"powerCounters": 1},
                     "windows": ["end_the_run_interrupt_paw"],
-                    "effect": do("labyrinthine_prevent_jack_out"),
+                    "effect": do("prevent_labyrinthine_jack_out"),
                 }
             ],
         )
@@ -239,7 +239,7 @@ def map_card(c: dict) -> dict | None:
         return base(
             c,
             playAdditionalCost=do("trash_hardware_additional_cost"),
-            onPlay=do("trade_in_resolve"),
+            onPlay=do("resolve_trade_in"),
         )
 
     if cid == "astrolabe":

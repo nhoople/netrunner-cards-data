@@ -17,7 +17,7 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "iain_gain_if_corp_ahead_on_agenda"
+          "kind": "corp_gain_iain_if_ahead_on_agenda"
         }
       }
     },

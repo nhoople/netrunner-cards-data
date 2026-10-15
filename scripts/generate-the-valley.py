@@ -225,7 +225,7 @@ def map_card(c: dict) -> dict | None:
                 {
                     "id": "agriculture",
                     "label": "Agriculture Division",
-                    "onFlip": do("jinteki_biotech_shuffle_archives_into_rd"),
+                    "onFlip": do("shuffle_jinteki_biotech_archives_into_rd"),
                 },
                 {
                     "id": "warehouse",

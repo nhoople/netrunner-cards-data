@@ -24,7 +24,7 @@
             "effect": {
               "op": "do",
               "action": {
-                "kind": "tdatd_sso_advance_ice"
+                "kind": "advance_sso_ice"
               }
             }
           },

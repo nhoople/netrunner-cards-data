@@ -29,7 +29,7 @@
             "effect": {
               "op": "do",
               "action": {
-                "kind": "chop_bot_trash_installed_then_draw_or_remove_tag"
+                "kind": "trash_chop_bot_installed_then_draw_or_remove_tag"
               }
             }
           },

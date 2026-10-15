@@ -30,7 +30,7 @@
           "onSuccessfulRun": {
             "op": "do",
             "action": {
-              "kind": "ka_diversion_of_funds_may_instead_of_breach"
+              "kind": "may_breach_instead_diversion_funds_ka"
             }
           }
         }

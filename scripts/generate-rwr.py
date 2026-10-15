@@ -1827,7 +1827,7 @@ def map_card(c: dict) -> dict:
                         "effect": {
                             "op": "do",
                             "action": {
-                                "kind": "meeting_of_minds_resolve",
+                                "kind": "resolve_meeting_of_minds",
                                 "subtype": "connection",
                             },
                         },
@@ -1838,7 +1838,7 @@ def map_card(c: dict) -> dict:
                         "effect": {
                             "op": "do",
                             "action": {
-                                "kind": "meeting_of_minds_resolve",
+                                "kind": "resolve_meeting_of_minds",
                                 "subtype": "virtual",
                             },
                         },
@@ -2112,7 +2112,7 @@ def map_card(c: dict) -> dict:
             c,
             onRez={
                 "op": "do",
-                "action": {"kind": "lycian_choose_subtypes"},
+                "action": {"kind": "choose_lycian_subtypes"},
             },
             derezAtAnyTurnEnd=True,
             subroutines=[
@@ -2189,7 +2189,7 @@ def map_card(c: dict) -> dict:
                 "onSuccessfulRun": {
                     "op": "do",
                     "action": {
-                        "kind": "burner_resolve",
+                        "kind": "resolve_burner",
                         "reveal": 3,
                         "move": 2,
                     },
@@ -2348,7 +2348,7 @@ def map_card(c: dict) -> dict:
                     "effect": {
                         "op": "do",
                         "action": {
-                            "kind": "wizard_chest_resolve",
+                            "kind": "resolve_wizard_chest",
                             "untilCount": 2,
                             "ignoreAllCosts": True,
                         },

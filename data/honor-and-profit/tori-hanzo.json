@@ -27,7 +27,7 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "tori_hanzo_pay_instead_net"
+          "kind": "pay_tori_hanzo_instead_net"
         }
       }
     }

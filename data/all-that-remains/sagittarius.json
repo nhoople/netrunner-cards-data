@@ -23,7 +23,7 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "sagittarius_trace_subroutine"
+          "kind": "trace_sagittarius_subroutine"
         }
       }
     }

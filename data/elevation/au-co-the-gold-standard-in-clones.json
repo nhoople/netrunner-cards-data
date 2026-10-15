@@ -30,7 +30,7 @@
             "effect": {
               "op": "do",
               "action": {
-                "kind": "au_co_remove_2_look_rd"
+                "kind": "remove_co_2_look_rd"
               }
             }
           },

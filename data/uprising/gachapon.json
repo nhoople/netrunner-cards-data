@@ -24,7 +24,7 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "gachapon_resolve"
+          "kind": "resolve_gachapon"
         }
       }
     }

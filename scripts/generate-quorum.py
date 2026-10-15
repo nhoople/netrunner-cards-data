@@ -173,7 +173,7 @@ def map_card(c: dict) -> dict | None:
                 paid(
                     "tracker-run",
                     "[click], 2¢: Run the chosen server; prevent first subroutine that would resolve",
-                    do("tracker_run_chosen_prevent_first_sub"),
+                    do("prevent_tracker_run_chosen_first_sub"),
                     clicks=1,
                     credits=2,
                     windows=["runner_action_paw"],
@@ -254,7 +254,7 @@ def map_card(c: dict) -> dict | None:
                 paid(
                     "sensor-net-rez",
                     "Hosted agenda counter: Rez a bioroid, ignoring all costs; derez at turn end",
-                    do("sensor_net_rez_bioroid_ignoring_costs_derez_turn_end"),
+                    do("rez_sensor_net_bioroid_ignoring_costs_derez_turn_end"),
                     cost={"agendaCounters": 1},
                     windows=["corp_action_paw", "runner_action_paw"],
                 ),

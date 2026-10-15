@@ -32,7 +32,7 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "ramujan_prevent_damage_trash_stack"
+          "kind": "prevent_ramujan_damage_trash_stack"
         }
       },
       "usableByRunnerOnSelfIce": true,

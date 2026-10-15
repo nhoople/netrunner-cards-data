@@ -17,7 +17,7 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "nasir_lose_all_credits"
+          "kind": "lose_nasir_all_credits"
         }
       }
     },

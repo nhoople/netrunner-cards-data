@@ -40,7 +40,7 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "kusanagi_grant_net_subroutine_this_run"
+          "kind": "grant_kusanagi_net_subroutine_this_run"
         }
       }
     }

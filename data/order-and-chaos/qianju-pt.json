@@ -25,7 +25,7 @@
             "effect": {
               "op": "do",
               "action": {
-                "kind": "qianju_lose_click_prevent_tag_until_next_turn"
+                "kind": "lose_qianju_click_prevent_tag_until_next_turn"
               }
             }
           },

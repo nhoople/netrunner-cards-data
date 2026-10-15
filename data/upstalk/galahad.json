@@ -21,7 +21,7 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "grail_reveal_gain_subroutines",
+          "kind": "reveal_grail_gain_subroutines",
           "maxReveal": 2
         }
       }

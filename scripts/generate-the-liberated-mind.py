@@ -165,7 +165,7 @@ def map_card(c: dict) -> dict | None:
                 paid(
                     "liberated-chela-forfeit",
                     "[click]×5, forfeit an agenda: Corp may forfeit to RFG this; if not, score as 2 AP agenda",
-                    do("liberated_chela_corp_may_forfeit_or_score"),
+                    do("may_corp_forfeit_liberated_chela_or_score"),
                     clicks=5,
                     forfeit_agenda=True,
                     windows=["runner_action_paw"],
@@ -223,7 +223,7 @@ def map_card(c: dict) -> dict | None:
                 paid(
                     "turning-wheel-bonus-access",
                     "2 hosted power counters: Choose HQ or R&D; +1 access when breaching that server this run",
-                    do("turning_wheel_choose_central_bonus_access"),
+                    do("choose_turning_wheel_central_bonus_access"),
                     power_counters=2,
                     windows=["runner_action_paw", "approach_paw", "encounter_paw"],
                     usable_by_runner=True,

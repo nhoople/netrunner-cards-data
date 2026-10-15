@@ -147,7 +147,7 @@ def map_card(c: dict) -> dict | None:
         return base(
             c,
             onGameStart=seq(
-                do("next_design_may_install_ice", remaining=3, usedServerIds=[]),
+                do("may_install_next_design_ice", remaining=3, usedServerIds=[]),
                 do("draw_until_hq_has", amount=5),
             ),
             unsupported=[],
@@ -601,7 +601,7 @@ def map_card(c: dict) -> dict | None:
             c,
             runEvent={
                 "servers": "hq",
-                "onSuccessfulRun": do("escher_may_instead_of_breach"),
+                "onSuccessfulRun": do("may_breach_instead_escher"),
             },
             unsupported=[],
         )
@@ -612,7 +612,7 @@ def map_card(c: dict) -> dict | None:
             runEvent={
                 "servers": "any",
                 "onSuccessfulRun": do(
-                    "exploratory_romp_may_instead_of_breach", amount=3
+                    "may_breach_instead_exploratory_romp", amount=3
                 ),
             },
             unsupported=[],
@@ -634,7 +634,7 @@ def map_card(c: dict) -> dict | None:
         return base(
             c,
             playAdditionalCost=do("trash_own_program"),
-            onPlay=do("scavenge_install_program"),
+            onPlay=do("install_scavenge_program"),
             unsupported=[],
         )
 

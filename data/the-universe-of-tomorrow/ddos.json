@@ -25,7 +25,7 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "arm_cannot_rez_outermost_ice_this_turn"
+          "kind": "cannot_arm_rez_outermost_ice_this_turn"
         }
       }
     }

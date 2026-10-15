@@ -21,7 +21,7 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "miraju_move_archives_may_jack_out_derez"
+          "kind": "may_move_miraju_archives_jack_out_derez"
         }
       }
     },

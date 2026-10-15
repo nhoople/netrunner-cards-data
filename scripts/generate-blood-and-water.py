@@ -262,7 +262,7 @@ def map_card(c: dict) -> dict | None:
             c,
             subtypes=["code gate", "deflector"],
             onEncounterEndIfPrintedSubroutineBroken=do(
-                "miraju_move_archives_may_jack_out_derez"
+                "may_move_miraju_archives_jack_out_derez"
             ),
             subroutines=[
                 {
@@ -349,7 +349,7 @@ def map_card(c: dict) -> dict | None:
                 paid(
                     "whampoa-reclaim",
                     "Once per turn → Trash 1 card from HQ: Add 1 card from Archives to the bottom of R&D",
-                    do("whampoa_trash_hq_archives_to_rd_bottom"),
+                    do("trash_whampoa_hq_archives_to_rd_bottom"),
                     cost={"trashFromHq": 1},
                     once_per_turn=True,
                 ),

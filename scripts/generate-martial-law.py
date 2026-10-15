@@ -151,7 +151,7 @@ def map_card(c: dict) -> dict | None:
                 paid(
                     "mkultra-pump-break",
                     "3¢: +2 strength. Then, if this can interface with the sentry, break up to 2 subroutines",
-                    do("mkultra_spend_pump_and_break"),
+                    do("spend_mkultra_pump_and_break"),
                     credits=3,
                     windows=["encounter_paw"],
                     usable_by_runner=True,
@@ -328,7 +328,7 @@ def map_card(c: dict) -> dict | None:
             c,
             subtypes=["region"],
             unique=True,
-            onSuccessfulRunOnThisServer=do("nihongai_may_look_top5_swap_hq"),
+            onSuccessfulRunOnThisServer=do("may_look_nihongai_top5_swap_hq"),
         )
 
     if cid == "ip-block":

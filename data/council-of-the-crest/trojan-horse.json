@@ -29,7 +29,7 @@
           "onSuccess": {
             "op": "do",
             "action": {
-              "kind": "cotc_trojan_horse_trash"
+              "kind": "trash_trojan_horse"
             }
           }
         }

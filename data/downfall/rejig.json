@@ -24,7 +24,7 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "rejig_bounce_install"
+          "kind": "install_rejig_bounce"
         }
       }
     }

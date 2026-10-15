@@ -20,7 +20,7 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "troll_encounter_trace"
+          "kind": "trace_troll_encounter"
         }
       }
     }

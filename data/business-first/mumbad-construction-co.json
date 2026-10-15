@@ -35,7 +35,7 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "mumbad_construction_move_advancement_to_faceup"
+          "kind": "move_mumbad_construction_advancement_to_faceup"
         }
       }
     }

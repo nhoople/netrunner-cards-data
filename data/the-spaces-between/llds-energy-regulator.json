@@ -23,7 +23,7 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "llds_prevent_trash_hardware"
+          "kind": "prevent_llds_trash_hardware"
         }
       }
     }

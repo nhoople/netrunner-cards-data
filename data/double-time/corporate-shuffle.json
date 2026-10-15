@@ -24,7 +24,7 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "corporate_shuffle_hq_to_rd_draw",
+          "kind": "shuffle_corporate_hq_to_rd_draw",
           "draw": 5
         }
       }
