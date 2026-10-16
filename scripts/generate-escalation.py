@@ -347,9 +347,8 @@ def map_card(c: dict) -> dict | None:
             c,
             subtypes=["security"],
             onScore=do(
-                "add_agenda_counters_from_overadvance",
+                "place_agenda_counters_past",
                 past=2,
-                per=1,
             ),
             paidAbilities=[
                 paid(

@@ -306,7 +306,7 @@ def map_card(c: dict) -> dict | None:
             onScore={
                 "op": "do",
                 "action": {
-                    "kind": "add_agenda_counters_from_overadvance",
+                    "kind": "place_agenda_counters_past",
                     "past": 3,
                     "per": 2,
                 },

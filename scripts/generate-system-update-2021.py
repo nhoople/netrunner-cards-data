@@ -796,7 +796,7 @@ def map_card(c: dict) -> dict | None:
             subtypes=["research"],
             onScore={
                 "op": "do",
-                "action": {"kind": "add_agenda_counters_from_overadvance", "past": 3},
+                "action": {"kind": "place_agenda_counters_past", "past": 3},
             },
             paidAbilities=[
                 {
@@ -866,7 +866,7 @@ def map_card(c: dict) -> dict | None:
             onScore={
                 "op": "do",
                 "action": {
-                    "kind": "add_agenda_counters_from_overadvance",
+                    "kind": "place_agenda_counters_past",
                     "past": 3,
                     "per": 2,
                 },
@@ -896,7 +896,7 @@ def map_card(c: dict) -> dict | None:
             subtypes=["research"],
             onScore={
                 "op": "do",
-                "action": {"kind": "add_agenda_counters_from_overadvance", "past": 3},
+                "action": {"kind": "place_agenda_counters_past", "past": 3},
             },
             paidAbilities=[
                 {
