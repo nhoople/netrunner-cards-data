@@ -1082,18 +1082,8 @@ def map_card(c: dict) -> dict:
 
     # --- v1.07.0: Corp discard-phase hub + deferred B ---
 
-    def dividends_on_score(*, past: int = 3, per: int = 1, counters_per_excess: int | None = None):
-        action = {
-            "kind": "add_agenda_counters_from_overadvance",
-            "past": past,
-        }
-        if counters_per_excess is not None:
-            action["countersPerExcess"] = counters_per_excess
-        elif per != 1:
-            action["per"] = per
-        else:
-            action["per"] = 1
-        return {"op": "do", "action": action}
+    def dividends_on_score(*, n: int = 1):
+        return {"op": "do", "action": {"kind": "dividends", "n": n}}
 
     def discard_spend_agenda(label: str, option_id: str, body_effect: dict) -> dict:
         return {
@@ -1144,7 +1134,7 @@ def map_card(c: dict) -> dict:
     if cid == "embedded-reporting":
         return base(
             c,
-            onScore=dividends_on_score(counters_per_excess=2),
+            onScore=dividends_on_score(n=2),
             onDiscardPhaseEnd=discard_spend_agenda(
                 "Remove 1 agenda counter: search R&D for 1 operation → top of R&D",
                 "search",
