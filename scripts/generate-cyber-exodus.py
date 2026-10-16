@@ -155,7 +155,7 @@ def map_card(c: dict) -> dict | None:
                     "clickCost": 0,
                     "creditCost": 0,
                     "cost": {},
-                    "windows": ["damage_interrupt_paw"],
+                    "windows": ["damage_interrupt"],
                     "requirePendingDamageTypes": ["meat"],
                     "oncePerTurn": True,
                     "effect": {

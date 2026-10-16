@@ -170,7 +170,7 @@ def map_card(c: dict) -> dict | None:
                     "[interrupt] → [trash]: Prevent up to 3 tags or up to 3 damage",
                     do("prevent_tags_or_damage", max=3),
                     cost={"trashSelf": True},
-                    windows=["tag_interrupt_paw", "damage_interrupt_paw"],
+                    windows=["tag_interrupt", "damage_interrupt"],
                     usable_by_runner=True,
                 ),
             ],

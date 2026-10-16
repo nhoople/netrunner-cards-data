@@ -356,7 +356,7 @@ def map_card(c: dict) -> dict | None:
                     "[trash], 1 hosted advancement token: Gain 5¢",
                     gain("corp", 5),
                     trash_self=True,
-                    cost={"advancementTokens": 1},
+                    cost={"advancementCounters": 1},
                     windows=["corp_action_paw"],
                 ),
                 paid(
@@ -364,7 +364,7 @@ def map_card(c: dict) -> dict | None:
                     "[trash], 2 hosted advancement tokens: Gain 8¢",
                     gain("corp", 8),
                     trash_self=True,
-                    cost={"advancementTokens": 2},
+                    cost={"advancementCounters": 2},
                     windows=["corp_action_paw"],
                 ),
             ],

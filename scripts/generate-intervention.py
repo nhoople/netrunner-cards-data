@@ -273,7 +273,7 @@ def map_card(c: dict) -> dict | None:
                         "[interrupt] → [trash], trash all cards from your grip: Prevent all meat damage",
                         do("prevent_pending_damage", amount=99),
                         cost={"trashSelf": True, "trashEntireGrip": True},
-                        windows=["damage_interrupt_paw"],
+                        windows=["damage_interrupt"],
                         require_pending_damage_types=["meat"],
                     ),
                 },

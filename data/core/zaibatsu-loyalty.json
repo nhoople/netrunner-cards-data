@@ -30,7 +30,7 @@
         "credits": 1
       },
       "windows": [
-        "expose_interrupt_paw"
+        "expose_interrupt"
       ],
       "instructions": {
         "op": "do",
@@ -51,7 +51,7 @@
         "trashSelf": true
       },
       "windows": [
-        "expose_interrupt_paw"
+        "expose_interrupt"
       ],
       "instructions": {
         "op": "do",

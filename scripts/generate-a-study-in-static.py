@@ -127,7 +127,7 @@ def map_card(c: dict) -> dict | None:
                     "clickCost": 0,
                     "creditCost": 0,
                     "cost": {"trashSelf": True},
-                    "windows": ["trace_interrupt_paw"],
+                    "windows": ["trace_interrupt"],
                     "effect": {
                         "op": "do",
                         "action": {

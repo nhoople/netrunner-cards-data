@@ -31,7 +31,7 @@
         "rfgSelf": true
       },
       "windows": [
-        "end_the_run_interrupt_paw"
+        "end_the_run_interrupt"
       ],
       "instructions": {
         "op": "do",

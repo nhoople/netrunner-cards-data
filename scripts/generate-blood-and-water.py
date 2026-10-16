@@ -157,7 +157,7 @@ def map_card(c: dict) -> dict | None:
             "[interrupt] → Hosted power counter: Prevent 1 meat damage",
             do("prevent_pending_damage", amount=1),
             cost={"powerCounters": 1},
-            windows=["damage_interrupt_paw"],
+            windows=["damage_interrupt"],
         )
         prevent["requirePendingDamageTypes"] = ["meat"]
         return base(

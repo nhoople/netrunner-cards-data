@@ -314,7 +314,7 @@ def _remove_flag(ability: dict, word: str) -> None:
 def _is_interrupt(ability: dict) -> bool:
     windows = ability.get("windows") or []
     return bool(windows) and all(
-        isinstance(window, str) and window.endswith("_interrupt_paw") for window in windows
+        isinstance(window, str) and window.endswith("_interrupt") for window in windows
     )
 
 

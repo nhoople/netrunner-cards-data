@@ -29,7 +29,7 @@
       "label": "Remove 2 advancements: give Runner 1 tag",
       "cost": {
         "clicks": 1,
-        "advancementTokens": 2
+        "advancementCounters": 2
       },
       "windows": [
         "corp_action_paw"

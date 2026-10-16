@@ -447,7 +447,7 @@ def map_card(c: dict) -> dict | None:
                     "[interrupt] → [trash]: Prevent 2 damage",
                     do("prevent_pending_damage", amount=2),
                     trash_self=True,
-                    windows=["damage_interrupt_paw"],
+                    windows=["damage_interrupt"],
                     usable_by_runner=True,
                 ),
             ],

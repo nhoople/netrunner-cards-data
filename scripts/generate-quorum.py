@@ -144,7 +144,7 @@ def map_card(c: dict) -> dict | None:
                     "[interrupt] → X¢, [trash]: Prevent X damage from a card you are accessing",
                     do("prevent_x_damage"),
                     cost={"trashSelf": True},
-                    windows=["damage_interrupt_paw"],
+                    windows=["damage_interrupt"],
                     usable_by_runner=True,
                 ),
             ],

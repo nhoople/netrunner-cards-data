@@ -27,7 +27,7 @@
         "credits": 1
       },
       "windows": [
-        "damage_interrupt_paw"
+        "damage_interrupt"
       ],
       "instructions": {
         "op": "do",

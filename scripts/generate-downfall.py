@@ -715,7 +715,7 @@ def map_card(c: dict) -> dict:
                     "clickCost": 0,
                     "creditCost": 0,
                     "cost": {"trashSelf": True},
-                    "windows": ["trace_interrupt_paw"],
+                    "windows": ["trace_interrupt"],
                     "effect": {
                         "op": "do",
                         "action": {
@@ -1568,7 +1568,7 @@ def map_card(c: dict) -> dict:
                     "clickCost": 0,
                     "creditCost": 0,
                     "cost": {"rfgSelf": True},
-                    "windows": ["end_the_run_interrupt_paw"],
+                    "windows": ["end_the_run_interrupt"],
                     "requiresSuccessfulHqRunThisTurn": True,
                     "effect": {
                         "op": "do",

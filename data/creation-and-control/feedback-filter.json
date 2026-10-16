@@ -23,7 +23,7 @@
         "credits": 3
       },
       "windows": [
-        "damage_interrupt_paw"
+        "damage_interrupt"
       ],
       "instructions": {
         "op": "do",
@@ -47,7 +47,7 @@
         "trashSelf": true
       },
       "windows": [
-        "damage_interrupt_paw"
+        "damage_interrupt"
       ],
       "instructions": {
         "op": "do",

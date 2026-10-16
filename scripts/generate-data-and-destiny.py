@@ -533,7 +533,7 @@ def map_card(c: dict) -> dict | None:
                     "heartbeat-prevent",
                     "[interrupt] → Trash 1 installed card: Prevent 1 damage",
                     do("trash_installed_prevent_damage", amount=1),
-                    windows=["damage_interrupt_paw"],
+                    windows=["damage_interrupt"],
                     usable_by_runner=True,
                 )
             ],
@@ -580,7 +580,7 @@ def map_card(c: dict) -> dict | None:
                     do("prevent_pending_when_encountered"),
                     credits=0,
                     once_per_turn=True,
-                    windows=["when_encountered_interrupt_paw"],
+                    windows=["when_encountered_interrupt"],
                     usable_by_runner=True,
                 ),
                 paid(

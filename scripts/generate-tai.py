@@ -2022,7 +2022,7 @@ def map_card(c: dict) -> dict:
                     "clickCost": 0,
                     "creditCost": 0,
                     "cost": {"powerCounters": 1},
-                    "windows": ["damage_interrupt_paw"],
+                    "windows": ["damage_interrupt"],
                     "requireDuringRun": True,
                     "requirePendingDamageTypes": ["net"],
                     "effect": {
@@ -2042,7 +2042,7 @@ def map_card(c: dict) -> dict:
                     "clickCost": 0,
                     "creditCost": 0,
                     "cost": {"powerCounters": 1},
-                    "windows": ["when_encountered_interrupt_paw"],
+                    "windows": ["when_encountered_interrupt"],
                     "requireDuringRun": True,
                     "effect": {
                         "op": "do",

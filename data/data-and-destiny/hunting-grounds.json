@@ -30,7 +30,7 @@
         "credits": 0
       },
       "windows": [
-        "when_encountered_interrupt_paw"
+        "when_encountered_interrupt"
       ],
       "instructions": {
         "op": "do",

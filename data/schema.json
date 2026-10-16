@@ -666,7 +666,7 @@
                 "type": "integer",
                 "minimum": 0
               },
-              "advancementTokens": {
+              "advancementCounters": {
                 "type": "integer",
                 "minimum": 0,
                 "description": "Spend hosted advancement tokens from this card as a cost (Drago Ivanov)."
@@ -729,15 +729,15 @@
                 "encounter_paw",
                 "corp_action_paw",
                 "runner_action_paw",
-                "damage_interrupt_paw",
-                "tag_interrupt_paw",
-                "when_encountered_interrupt_paw",
-                "trace_interrupt_paw",
-                "end_the_run_interrupt_paw",
+                "damage_interrupt",
+                "tag_interrupt",
+                "when_encountered_interrupt",
+                "trace_interrupt",
+                "end_the_run_interrupt",
                 "other_priority_window",
-                "expose_interrupt_paw",
-                "trash_interrupt_paw",
-                "break_interrupt_paw"
+                "expose_interrupt",
+                "trash_interrupt",
+                "break_interrupt"
               ]
             }
           },
@@ -1823,7 +1823,7 @@
           "description": "Additional credits per advancement counter on the stolen agenda."
         }
       },
-      "description": "While this lockdown is active, Runner pays base + perAdvancement×advancementTokens as an additional cost to steal an agenda (NAPD Cordon)."
+      "description": "While this lockdown is active, Runner pays base + perAdvancement×advancementCounters as an additional cost to steal an agenda (NAPD Cordon)."
     },
     "allIceStrengthBonus": {
       "type": "integer",

@@ -227,7 +227,7 @@ def map_card(c: dict) -> dict | None:
                     "clickCost": 0,
                     "creditCost": 0,
                     "cost": {},
-                    "windows": ["trash_interrupt_paw"],
+                    "windows": ["trash_interrupt"],
                     "effect": do("prevent_llds_trash_hardware"),
                 }
             ],

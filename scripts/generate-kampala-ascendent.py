@@ -445,7 +445,7 @@ def map_card(c: dict) -> dict | None:
                     "[click], 7 hosted advancement tokens: add False Flag to score area as 3AP agenda",
                     do("score_self_as_agenda", agendaPoints=3),
                     clicks=1,
-                    cost={"clicks": 1, "advancementTokens": 7},
+                    cost={"clicks": 1, "advancementCounters": 7},
                     windows=["corp_action_paw"],
                 ),
             ],

@@ -36,7 +36,7 @@
       "id": "bio-vault-etr",
       "label": "[trash], 2 hosted advancement counters: End the run",
       "cost": {
-        "advancementTokens": 2,
+        "advancementCounters": 2,
         "trashSelf": true
       },
       "windows": [

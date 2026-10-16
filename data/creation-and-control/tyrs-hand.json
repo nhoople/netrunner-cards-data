@@ -33,7 +33,7 @@
         "trashSelf": true
       },
       "windows": [
-        "break_interrupt_paw"
+        "break_interrupt"
       ],
       "instructions": {
         "op": "do",

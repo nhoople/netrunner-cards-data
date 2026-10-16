@@ -177,7 +177,7 @@ def map_card(c: dict) -> dict | None:
                     "[interrupt] → [trash]: Prevent all but 1 net damage",
                     do("prevent_all_but_n_pending_damage", leave=1),
                     cost={"trashSelf": True},
-                    windows=["damage_interrupt_paw"],
+                    windows=["damage_interrupt"],
                     usable_by_runner=True,
                     require_pending_damage_types=["net"],
                 ),
