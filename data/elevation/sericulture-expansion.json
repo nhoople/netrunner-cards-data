@@ -20,9 +20,8 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "add_agenda_counters_from_overadvance",
-          "past": 3,
-          "per": 1
+          "kind": "dividends",
+          "n": 1
         }
       }
     },

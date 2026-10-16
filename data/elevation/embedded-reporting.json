@@ -20,9 +20,8 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "add_agenda_counters_from_overadvance",
-          "past": 3,
-          "countersPerExcess": 2
+          "kind": "dividends",
+          "n": 2
         }
       }
     },
@@ -42,7 +41,7 @@
           "options": [
             {
               "id": "search",
-              "label": "Remove 1 agenda counter: search R&D for 1 operation → top of R&D",
+              "label": "Remove 1 agenda counter: search R&D for 1 operation \u2192 top of R&D",
               "effect": {
                 "op": "seq",
                 "effects": [
