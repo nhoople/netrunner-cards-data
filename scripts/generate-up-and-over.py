@@ -81,7 +81,7 @@ def map_card(c: dict) -> dict | None:
                     "clickCost": 0,
                     "creditCost": 0,
                     "cost": {"powerCounters": 1},
-                    "windows": ["end_the_run_interrupt_paw"],
+                    "windows": ["end_the_run_interrupt"],
                     "effect": do("prevent_labyrinthine_jack_out"),
                 }
             ],

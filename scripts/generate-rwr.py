@@ -567,7 +567,7 @@ def map_card(c: dict) -> dict:
                     "label": "[trash], hosted advancement: Gain 3¢",
                     "clickCost": 0,
                     "creditCost": 0,
-                    "cost": {"trashSelf": True, "advancementTokens": 1},
+                    "cost": {"trashSelf": True, "advancementCounters": 1},
                     "windows": ["corp_action_paw"],
                     "effect": gain("corp", 3),
                 }

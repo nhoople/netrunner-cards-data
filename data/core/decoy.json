@@ -23,7 +23,7 @@
         "trashSelf": true
       },
       "windows": [
-        "tag_interrupt_paw"
+        "tag_interrupt"
       ],
       "instructions": {
         "op": "do",

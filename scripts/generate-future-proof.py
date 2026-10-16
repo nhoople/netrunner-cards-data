@@ -265,7 +265,7 @@ def map_card(c: dict) -> dict | None:
                     "clickCost": 0,
                     "creditCost": 2,
                     "cost": {"credits": 2},
-                    "windows": ["tag_interrupt_paw"],
+                    "windows": ["tag_interrupt"],
                     "effect": {
                         "op": "do",
                         "action": {

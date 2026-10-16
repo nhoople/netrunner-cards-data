@@ -28,7 +28,7 @@
       "label": "[click], hosted advancement counter: Gain [click][click]",
       "cost": {
         "clicks": 1,
-        "advancementTokens": 1
+        "advancementCounters": 1
       },
       "windows": [
         "corp_action_paw"

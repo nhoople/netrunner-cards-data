@@ -21,7 +21,7 @@
         "credits": 0
       },
       "windows": [
-        "trash_interrupt_paw"
+        "trash_interrupt"
       ],
       "instructions": {
         "op": "do",

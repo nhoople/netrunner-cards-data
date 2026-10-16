@@ -25,7 +25,7 @@
       "id": "ngo-5",
       "label": "[trash], 1 hosted advancement token: Gain 5¢",
       "cost": {
-        "advancementTokens": 1,
+        "advancementCounters": 1,
         "trashSelf": true
       },
       "windows": [
@@ -46,7 +46,7 @@
       "id": "ngo-8",
       "label": "[trash], 2 hosted advancement tokens: Gain 8¢",
       "cost": {
-        "advancementTokens": 2,
+        "advancementCounters": 2,
         "trashSelf": true
       },
       "windows": [

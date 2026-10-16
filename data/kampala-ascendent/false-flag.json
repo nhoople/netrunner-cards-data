@@ -40,7 +40,7 @@
       "label": "[click], 7 hosted advancement tokens: add False Flag to score area as 3AP agenda",
       "cost": {
         "clicks": 1,
-        "advancementTokens": 7
+        "advancementCounters": 7
       },
       "windows": [
         "corp_action_paw"

@@ -45,7 +45,7 @@
       "id": "gene-splicer-score",
       "label": "[click], 3 hosted advancement tokens: Add Gene Splicer to your score area as an agenda worth 1 agenda point",
       "cost": {
-        "advancementTokens": 3,
+        "advancementCounters": 3,
         "clicks": 1
       },
       "windows": [

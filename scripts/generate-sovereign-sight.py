@@ -323,7 +323,7 @@ def map_card(c: dict) -> dict | None:
                     "[click], 3 hosted advancement tokens: Add Gene Splicer to your score area as an agenda worth 1 agenda point",
                     do("score_self_as_agenda", agendaPoints=1),
                     clicks=1,
-                    cost={"advancementTokens": 3},
+                    cost={"advancementCounters": 3},
                     windows=["corp_action_paw"],
                 ),
             ],

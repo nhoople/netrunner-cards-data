@@ -90,7 +90,7 @@ def map_card(c: dict) -> dict | None:
                     "clickCost": 0,
                     "creditCost": 0,
                     "cost": {"trashSelf": True},
-                    "windows": ["trash_interrupt_paw"],
+                    "windows": ["trash_interrupt"],
                     "effect": do("prevent_trash_resource"),
                 },
                 {

@@ -331,7 +331,7 @@ def map_card(c: dict) -> dict | None:
                     "clickCost": 0,
                     "creditCost": 0,
                     "cost": {"trashSelf": True},
-                    "windows": ["tag_interrupt_paw"],
+                    "windows": ["tag_interrupt"],
                     "effect": {
                         "op": "do",
                         "action": {"kind": "prevent_pending_tags", "amount": 1},
@@ -372,7 +372,7 @@ def map_card(c: dict) -> dict | None:
                     "clickCost": 0,
                     "creditCost": 1,
                     "cost": {"credits": 1},
-                    "windows": ["damage_interrupt_paw"],
+                    "windows": ["damage_interrupt"],
                     "requirePendingDamageTypes": ["net"],
                     "oncePerTurn": True,
                     "effect": {
@@ -409,7 +409,7 @@ def map_card(c: dict) -> dict | None:
                     "clickCost": 0,
                     "creditCost": 0,
                     "cost": {"trashSelf": True},
-                    "windows": ["damage_interrupt_paw"],
+                    "windows": ["damage_interrupt"],
                     "requirePendingDamageTypes": ["meat"],
                     "effect": {
                         "op": "do",

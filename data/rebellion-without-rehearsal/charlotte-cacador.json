@@ -84,7 +84,7 @@
       "label": "[trash], hosted advancement: Gain 3¢",
       "cost": {
         "trashSelf": true,
-        "advancementTokens": 1
+        "advancementCounters": 1
       },
       "windows": [
         "corp_action_paw"

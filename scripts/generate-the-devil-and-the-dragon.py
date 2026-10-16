@@ -257,7 +257,7 @@ def map_card(c: dict) -> dict | None:
                     "[trash], 2 hosted advancement counters: End the run",
                     etr(),
                     trash_self=True,
-                    cost={"advancementTokens": 2},
+                    cost={"advancementCounters": 2},
                     windows=[
                         "approach_paw",
                         "encounter_paw",

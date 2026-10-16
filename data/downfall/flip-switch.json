@@ -60,7 +60,7 @@
         "trashSelf": true
       },
       "windows": [
-        "trace_interrupt_paw"
+        "trace_interrupt"
       ],
       "instructions": {
         "op": "do",

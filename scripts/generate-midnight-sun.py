@@ -925,7 +925,7 @@ def map_card(c: dict) -> dict:
                     "label": "Remove 2 advancements: give Runner 1 tag",
                     "clickCost": 1,
                     "creditCost": 0,
-                    "cost": {"clicks": 1, "advancementTokens": 2},
+                    "cost": {"clicks": 1, "advancementCounters": 2},
                     "windows": ["corp_action_paw"],
                     "effect": {
                         "op": "do",
@@ -1368,7 +1368,7 @@ def map_card(c: dict) -> dict:
                     "label": "Remove 2 advancements: place 2 on another root card",
                     "clickCost": 1,
                     "creditCost": 0,
-                    "cost": {"clicks": 1, "advancementTokens": 2},
+                    "cost": {"clicks": 1, "advancementCounters": 2},
                     "oncePerTurn": True,
                     "windows": ["corp_action_paw"],
                     "effect": {

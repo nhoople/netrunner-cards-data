@@ -168,7 +168,7 @@ def map_card(c: dict) -> dict | None:
                     do("cotc_no_one_home", mode="tags"),
                     trash_self=True,
                     once_per_turn=True,
-                    windows=["tag_interrupt_paw"],
+                    windows=["tag_interrupt"],
                     usable_by_runner=True,
                 ),
                 paid(
@@ -177,7 +177,7 @@ def map_card(c: dict) -> dict | None:
                     do("cotc_no_one_home", mode="net"),
                     trash_self=True,
                     once_per_turn=True,
-                    windows=["damage_interrupt_paw"],
+                    windows=["damage_interrupt"],
                     usable_by_runner=True,
                     require_pending_damage_types=["net"],
                 ),

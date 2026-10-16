@@ -39,7 +39,7 @@
         "powerCounters": 1
       },
       "windows": [
-        "damage_interrupt_paw"
+        "damage_interrupt"
       ],
       "instructions": {
         "op": "do",
@@ -64,7 +64,7 @@
         "powerCounters": 1
       },
       "windows": [
-        "when_encountered_interrupt_paw"
+        "when_encountered_interrupt"
       ],
       "instructions": {
         "op": "do",
