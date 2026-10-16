@@ -581,7 +581,7 @@ def map_card(c: dict) -> dict:
                                     "side": "corp",
                                     "amount": 0,
                                     "tally": {
-                                        "count": "source_advancement_tokens",
+                                        "count": "source_advancement_counters",
                                         "per": 3,
                                         "side": "source",
                                     },
@@ -594,7 +594,7 @@ def map_card(c: dict) -> dict:
                                     "side": "runner",
                                     "amount": 0,
                                     "tally": {
-                                        "count": "source_advancement_tokens",
+                                        "count": "source_advancement_counters",
                                         "per": 2,
                                         "side": "runner",
                                     },

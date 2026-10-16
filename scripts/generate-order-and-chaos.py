@@ -451,7 +451,7 @@ def map_card(c: dict) -> dict | None:
         return base(
             c,
             subtypes=["region"],
-            iceProtectingThisServerAdditionalAdvancementTokens=1,
+            iceProtectingThisServerAdditionalAdvancementCounters=1,
         )
 
     if cid == "the-twins":

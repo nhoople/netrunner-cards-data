@@ -3844,7 +3844,7 @@
       "type": "boolean",
       "description": "Sub Boost: host ice gains barrier and an ETR subroutine after its others."
     },
-    "iceProtectingThisServerAdditionalAdvancementTokens": {
+    "iceProtectingThisServerAdditionalAdvancementCounters": {
       "type": "integer",
       "minimum": 1,
       "description": "Satellite Grid: each ice protecting this server is considered to have N additional advancement tokens."
