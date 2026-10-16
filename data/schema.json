@@ -1415,10 +1415,6 @@
       "type": "boolean",
       "description": "While rezzed, the first run each turn cannot target a remote server (Front Company)."
     },
-    "persistent": {
-      "type": "boolean",
-      "description": "Abilities remain active while installed even if unrezzed (Tucana / Daniela)."
-    },
     "trashAdditionalCost": {
       "type": "object",
       "description": "Effect IR paid as an additional cost when the Runner trashes this card (Daniela)."
