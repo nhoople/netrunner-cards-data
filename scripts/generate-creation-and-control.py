@@ -318,7 +318,7 @@ def map_card(c: dict) -> dict | None:
                         side="corp",
                         amount=0,
                         tally={
-                            "count": "source_advancement_tokens",
+                            "count": "source_advancement_counters",
                             "per": 2,
                             "side": "source",
                         },

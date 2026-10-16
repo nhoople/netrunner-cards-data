@@ -357,7 +357,7 @@ def map_card(c: dict) -> dict | None:
                         "remove_bad_publicity",
                         amount=0,
                         tally={
-                            "count": "source_advancement_tokens",
+                            "count": "source_advancement_counters",
                             "per": 1,
                             "side": "source",
                         },

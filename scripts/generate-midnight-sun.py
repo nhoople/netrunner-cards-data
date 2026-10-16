@@ -905,7 +905,7 @@ def map_card(c: dict) -> dict:
                     "kind": "give_tags",
                     "amount": 0,
                     "tally": {
-                        "count": "source_advancement_tokens",
+                        "count": "source_advancement_counters",
                         "per": 1,
                         "side": "source",
                         "base": 1,
@@ -947,7 +947,7 @@ def map_card(c: dict) -> dict:
                     "side": "corp",
                     "amount": 0,
                     "tally": {
-                        "count": "source_advancement_tokens",
+                        "count": "source_advancement_counters",
                         "per": 1,
                         "side": "source",
                     },

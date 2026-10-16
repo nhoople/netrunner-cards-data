@@ -18,7 +18,7 @@
       "class": "static",
       "rule": "9.3.7a",
       "declaration": {
-        "field": "iceProtectingThisServerAdditionalAdvancementTokens",
+        "field": "iceProtectingThisServerAdditionalAdvancementCounters",
         "value": 1
       }
     }
