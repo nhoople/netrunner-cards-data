@@ -14,6 +14,7 @@
   "strength": 1,
   "memoryCost": 1,
   "wave": "quorum",
+  "influence": 3,
   "abilities": [
     {
       "class": "static",

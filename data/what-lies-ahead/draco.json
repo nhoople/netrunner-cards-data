@@ -11,9 +11,9 @@
     "sentry",
     "tracer"
   ],
-  "installCost": 1,
   "rezCost": 1,
   "strength": 0,
+  "influence": 0,
   "abilities": [
     {
       "class": "static",

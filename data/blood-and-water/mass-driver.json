@@ -14,6 +14,7 @@
   "strength": 1,
   "memoryCost": 2,
   "wave": "blood-and-water",
+  "influence": 3,
   "abilities": [
     {
       "class": "static",

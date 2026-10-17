@@ -9,10 +9,10 @@
   "subtypes": [
     "code gate"
   ],
-  "installCost": 9,
   "rezCost": 9,
   "strength": 7,
   "wave": "order-and-chaos",
+  "influence": 2,
   "abilities": [
     {
       "class": "static",

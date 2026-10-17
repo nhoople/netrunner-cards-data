@@ -11,6 +11,7 @@
   ],
   "installCost": 1,
   "wave": "business-first",
+  "influence": 4,
   "abilities": [
     {
       "class": "paid",

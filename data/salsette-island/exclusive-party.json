@@ -8,6 +8,7 @@
   "faction": "criminal",
   "playCost": 0,
   "wave": "salsette-island",
+  "influence": 1,
   "abilities": [
     {
       "class": "static",

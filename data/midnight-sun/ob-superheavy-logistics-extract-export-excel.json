@@ -10,6 +10,8 @@
   "subtypes": [
     "corp"
   ],
+  "minimumDeckSize": 45,
+  "influenceLimit": 15,
   "abilities": [
     {
       "class": "conditional",

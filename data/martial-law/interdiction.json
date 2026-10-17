@@ -11,6 +11,7 @@
   ],
   "playCost": 1,
   "wave": "martial-law",
+  "influence": 0,
   "abilities": [
     {
       "class": "static",

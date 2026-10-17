@@ -9,10 +9,10 @@
   "subtypes": [
     "code gate"
   ],
-  "installCost": 6,
   "rezCost": 6,
   "strength": 4,
   "wave": "down-the-white-nile",
+  "influence": 3,
   "abilities": [
     {
       "class": "subroutine",

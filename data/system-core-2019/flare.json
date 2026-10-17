@@ -12,9 +12,9 @@
     "tracer",
     "ap"
   ],
-  "installCost": 9,
   "rezCost": 9,
   "strength": 6,
+  "influence": 3,
   "abilities": [
     {
       "class": "subroutine",

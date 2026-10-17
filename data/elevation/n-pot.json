@@ -10,9 +10,9 @@
   "subtypes": [
     "code gate"
   ],
-  "installCost": 4,
   "rezCost": 4,
   "strength": 4,
+  "influence": 2,
   "abilities": [
     {
       "class": "paid",

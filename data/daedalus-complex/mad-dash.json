@@ -11,6 +11,7 @@
   ],
   "playCost": 0,
   "wave": "daedalus-complex",
+  "influence": 0,
   "abilities": [
     {
       "class": "static",

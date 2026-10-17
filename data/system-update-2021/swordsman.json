@@ -12,9 +12,9 @@
     "ap",
     "destroyer"
   ],
-  "installCost": 3,
   "rezCost": 3,
   "strength": 2,
+  "influence": 1,
   "abilities": [
     {
       "class": "static",

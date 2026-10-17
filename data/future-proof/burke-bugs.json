@@ -11,9 +11,9 @@
     "sentry",
     "destroyer"
   ],
-  "installCost": 0,
   "rezCost": 0,
   "strength": 0,
+  "influence": 1,
   "abilities": [
     {
       "class": "subroutine",

@@ -10,6 +10,8 @@
     "division"
   ],
   "wave": "data-and-destiny",
+  "minimumDeckSize": 45,
+  "influenceLimit": 15,
   "abilities": [
     {
       "class": "conditional",

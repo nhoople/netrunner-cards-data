@@ -9,10 +9,10 @@
   "subtypes": [
     "code gate"
   ],
-  "installCost": 7,
   "rezCost": 7,
   "strength": 5,
   "wave": "the-devil-and-the-dragon",
+  "influence": 5,
   "abilities": [
     {
       "class": "static",

@@ -9,10 +9,10 @@
   "subtypes": [
     "cast"
   ],
-  "installCost": 0,
   "rezCost": 0,
   "trashCost": 4,
   "wave": "first-contact",
+  "influence": 3,
   "abilities": [
     {
       "class": "static",

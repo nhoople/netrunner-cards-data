@@ -9,10 +9,10 @@
   "subtypes": [
     "region"
   ],
-  "installCost": 3,
   "rezCost": 3,
   "trashCost": 3,
   "wave": "the-valley",
+  "influence": 2,
   "abilities": [
     {
       "class": "conditional",

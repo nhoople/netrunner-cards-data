@@ -11,9 +11,9 @@
     "industrial",
     "liability"
   ],
-  "installCost": 6,
   "rezCost": 6,
   "trashCost": 6,
+  "influence": 5,
   "abilities": [
     {
       "class": "static",

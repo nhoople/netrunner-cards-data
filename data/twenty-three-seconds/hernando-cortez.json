@@ -11,6 +11,7 @@
   ],
   "installCost": 2,
   "wave": "twenty-three-seconds",
+  "influence": 1,
   "abilities": [
     {
       "class": "static",

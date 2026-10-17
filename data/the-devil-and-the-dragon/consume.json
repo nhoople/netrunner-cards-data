@@ -12,6 +12,7 @@
   "installCost": 2,
   "memoryCost": 0,
   "wave": "the-devil-and-the-dragon",
+  "influence": 5,
   "abilities": [
     {
       "class": "static",

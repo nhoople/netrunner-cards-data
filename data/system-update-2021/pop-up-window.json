@@ -6,7 +6,6 @@
   "faction": "nbn",
   "wave": "system-update-2021",
   "nrdbCode": "31065",
-  "installCost": 0,
   "rezCost": 0,
   "strength": 0,
   "subtypes": [
@@ -14,6 +13,7 @@
     "advertisement"
   ],
   "unsupported": [],
+  "influence": 1,
   "abilities": [
     {
       "class": "conditional",

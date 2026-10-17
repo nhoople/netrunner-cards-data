@@ -10,6 +10,8 @@
   "subtypes": [
     "megacorp"
   ],
+  "minimumDeckSize": 40,
+  "influenceLimit": 15,
   "abilities": [
     {
       "class": "conditional",

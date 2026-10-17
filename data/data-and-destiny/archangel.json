@@ -11,10 +11,10 @@
     "tracer",
     "ambush"
   ],
-  "installCost": 4,
   "rezCost": 4,
   "strength": 6,
   "wave": "data-and-destiny",
+  "influence": 4,
   "abilities": [
     {
       "class": "static",

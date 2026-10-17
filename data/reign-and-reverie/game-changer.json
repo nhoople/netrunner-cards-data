@@ -9,6 +9,7 @@
   "faction": "haas-bioroid",
   "playCost": 6,
   "trashCost": 2,
+  "influence": 5,
   "abilities": [
     {
       "class": "static",

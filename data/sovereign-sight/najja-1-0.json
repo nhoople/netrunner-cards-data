@@ -10,10 +10,10 @@
     "barrier",
     "bioroid"
   ],
-  "installCost": 2,
   "rezCost": 2,
   "strength": 2,
   "wave": "sovereign-sight",
+  "influence": 2,
   "abilities": [
     {
       "class": "subroutine",

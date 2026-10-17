@@ -10,6 +10,9 @@
     "g-mod"
   ],
   "wave": "order-and-chaos",
+  "link": 0,
+  "minimumDeckSize": 45,
+  "influenceLimit": 15,
   "abilities": [
     {
       "class": "conditional",

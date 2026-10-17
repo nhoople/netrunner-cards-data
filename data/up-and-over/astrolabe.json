@@ -11,6 +11,7 @@
   ],
   "installCost": 1,
   "wave": "up-and-over",
+  "influence": 2,
   "abilities": [
     {
       "class": "static",

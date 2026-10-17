@@ -12,6 +12,7 @@
   "installCost": 3,
   "memoryCost": 2,
   "wave": "order-and-chaos",
+  "influence": 5,
   "abilities": [
     {
       "class": "static",

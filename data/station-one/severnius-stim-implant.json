@@ -11,6 +11,7 @@
   ],
   "installCost": 2,
   "wave": "station-one",
+  "influence": 4,
   "abilities": [
     {
       "class": "paid",

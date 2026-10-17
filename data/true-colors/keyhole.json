@@ -9,6 +9,7 @@
   "installCost": 4,
   "memoryCost": 2,
   "wave": "true-colors",
+  "influence": 3,
   "abilities": [
     {
       "class": "paid",

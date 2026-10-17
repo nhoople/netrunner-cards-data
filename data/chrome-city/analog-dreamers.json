@@ -9,6 +9,7 @@
   "installCost": 2,
   "memoryCost": 1,
   "wave": "chrome-city",
+  "influence": 3,
   "abilities": [
     {
       "class": "paid",

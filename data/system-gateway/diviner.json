@@ -6,7 +6,6 @@
   "type": "ice",
   "side": "corp",
   "faction": "jinteki",
-  "installCost": 2,
   "rezCost": 2,
   "strength": 3,
   "subtypes": [
@@ -14,6 +13,7 @@
     "ap"
   ],
   "unsupported": [],
+  "influence": 2,
   "abilities": [
     {
       "class": "subroutine",

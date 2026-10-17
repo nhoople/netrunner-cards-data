@@ -11,6 +11,8 @@
     "digital",
     "natural"
   ],
+  "link": 0,
+  "minimumDeckSize": 40,
   "abilities": [
     {
       "class": "static",

@@ -12,10 +12,10 @@
     "destroyer",
     "ap"
   ],
-  "installCost": 10,
   "rezCost": 10,
   "strength": 6,
   "wave": "kampala-ascendent",
+  "influence": 4,
   "abilities": [
     {
       "class": "static",

@@ -6,10 +6,10 @@
   "side": "corp",
   "unsupported": [],
   "faction": "nbn",
-  "installCost": 0,
   "rezCost": 0,
   "trashCost": 2,
   "wave": "old-hollywood",
+  "influence": 3,
   "abilities": [
     {
       "class": "conditional",

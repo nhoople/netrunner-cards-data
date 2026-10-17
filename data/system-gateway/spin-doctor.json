@@ -6,13 +6,13 @@
   "type": "asset",
   "side": "corp",
   "faction": "nbn",
-  "installCost": 0,
   "rezCost": 0,
   "trashCost": 2,
   "subtypes": [
     "character"
   ],
   "unsupported": [],
+  "influence": 1,
   "abilities": [
     {
       "class": "conditional",

@@ -11,6 +11,7 @@
   ],
   "playCost": 0,
   "wave": "kampala-ascendent",
+  "influence": 3,
   "abilities": [
     {
       "class": "static",

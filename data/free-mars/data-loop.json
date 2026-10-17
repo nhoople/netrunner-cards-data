@@ -9,10 +9,10 @@
   "subtypes": [
     "barrier"
   ],
-  "installCost": 7,
   "rezCost": 7,
   "strength": 4,
   "wave": "free-mars",
+  "influence": 2,
   "abilities": [
     {
       "class": "conditional",

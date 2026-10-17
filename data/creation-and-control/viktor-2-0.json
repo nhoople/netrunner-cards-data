@@ -13,9 +13,9 @@
     "tracer",
     "ap"
   ],
-  "installCost": 5,
   "rezCost": 5,
   "strength": 5,
+  "influence": 3,
   "abilities": [
     {
       "class": "static",

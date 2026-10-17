@@ -8,6 +8,7 @@
   "unsupported": [],
   "faction": "shaper",
   "installCost": 4,
+  "influence": 2,
   "abilities": [
     {
       "class": "static",

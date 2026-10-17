@@ -8,6 +8,7 @@
   "faction": "neutral-corp",
   "playCost": 4,
   "wave": "salsette-island",
+  "influence": 3,
   "abilities": [
     {
       "class": "play",

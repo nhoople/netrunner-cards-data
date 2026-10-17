@@ -10,6 +10,8 @@
     "division"
   ],
   "wave": "the-devil-and-the-dragon",
+  "minimumDeckSize": 45,
+  "influenceLimit": 15,
   "abilities": [
     {
       "class": "conditional",

@@ -10,6 +10,8 @@
     "division"
   ],
   "wave": "the-universe-of-tomorrow",
+  "minimumDeckSize": 45,
+  "influenceLimit": 15,
   "abilities": [
     {
       "class": "static",

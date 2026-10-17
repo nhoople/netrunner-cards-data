@@ -10,10 +10,10 @@
     "sentry",
     "destroyer"
   ],
-  "installCost": 3,
   "rezCost": 3,
   "strength": 4,
   "wave": "terminal-directive",
+  "influence": 2,
   "abilities": [
     {
       "class": "subroutine",

@@ -13,9 +13,9 @@
     "destroyer",
     "tracer"
   ],
-  "installCost": 8,
   "rezCost": 8,
   "strength": 5,
+  "influence": 3,
   "abilities": [
     {
       "class": "static",

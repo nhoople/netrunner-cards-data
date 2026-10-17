@@ -6,10 +6,10 @@
   "side": "corp",
   "unsupported": [],
   "faction": "nbn",
-  "installCost": 4,
   "rezCost": 4,
   "trashCost": 1,
   "wave": "sovereign-sight",
+  "influence": 4,
   "abilities": [
     {
       "class": "paid",

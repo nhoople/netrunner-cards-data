@@ -13,9 +13,9 @@
     "ap",
     "destroyer"
   ],
-  "installCost": 3,
   "rezCost": 3,
   "strength": 3,
+  "influence": 1,
   "abilities": [
     {
       "class": "conditional",

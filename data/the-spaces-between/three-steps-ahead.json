@@ -11,6 +11,7 @@
   ],
   "playCost": 1,
   "wave": "the-spaces-between",
+  "influence": 2,
   "abilities": [
     {
       "class": "static",

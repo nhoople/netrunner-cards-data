@@ -10,10 +10,10 @@
     "sentry",
     "deflector"
   ],
-  "installCost": 9,
   "rezCost": 9,
   "strength": 7,
   "wave": "honor-and-profit",
+  "influence": 3,
   "abilities": [
     {
       "class": "static",

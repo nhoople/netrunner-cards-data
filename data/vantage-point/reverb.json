@@ -11,9 +11,9 @@
     "barrier",
     "harmonic"
   ],
-  "installCost": 4,
   "rezCost": 4,
   "strength": 2,
+  "influence": 1,
   "abilities": [
     {
       "class": "static",

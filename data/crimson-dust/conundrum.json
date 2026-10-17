@@ -9,10 +9,10 @@
   "subtypes": [
     "code gate"
   ],
-  "installCost": 8,
   "rezCost": 8,
   "strength": 4,
   "wave": "crimson-dust",
+  "influence": 0,
   "abilities": [
     {
       "class": "static",

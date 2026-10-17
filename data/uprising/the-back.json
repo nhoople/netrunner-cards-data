@@ -12,6 +12,7 @@
     "location"
   ],
   "installCost": 1,
+  "influence": 4,
   "abilities": [
     {
       "class": "static",

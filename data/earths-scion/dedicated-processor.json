@@ -11,6 +11,7 @@
   ],
   "installCost": 2,
   "wave": "earths-scion",
+  "influence": 3,
   "abilities": [
     {
       "class": "conditional",

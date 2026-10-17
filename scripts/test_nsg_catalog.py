@@ -53,11 +53,51 @@ def test_generator_pack_codes() -> None:
     assert {"sg", "su21", "ms", "msbp", "vp", "core"} <= codes, codes
 
 
+def test_printed_numbers() -> None:
+    from printed_numbers import apply_printed_numbers
+
+    runner = {}
+    apply_printed_numbers(runner, {
+        "type_code": "identity",
+        "side_code": "runner",
+        "base_link": 0,
+        "minimum_deck_size": 40,
+        "influence_limit": 15,
+        "faction_cost": None,
+    })
+    assert runner == {"link": 0, "minimumDeckSize": 40, "influenceLimit": 15}, runner
+
+    corp = {}
+    apply_printed_numbers(corp, {
+        "type_code": "identity",
+        "side_code": "corp",
+        "base_link": 0,
+        "minimum_deck_size": 45,
+        "influence_limit": 15,
+    })
+    assert "link" not in corp, corp
+    assert corp["minimumDeckSize"] == 45
+    assert corp["influenceLimit"] == 15
+
+    ice = {}
+    apply_printed_numbers(ice, {"type_code": "ice", "faction_cost": 2})
+    assert ice == {"influence": 2}, ice
+
+    neutral = {}
+    apply_printed_numbers(neutral, {"type_code": "event", "faction_cost": 0})
+    assert neutral == {"influence": 0}, neutral
+
+    no_bar = {}
+    apply_printed_numbers(no_bar, {"type_code": "agenda", "faction_cost": None})
+    assert no_bar == {}, no_bar
+
+
 def main() -> int:
     test_pool_pack_codes()
     test_pack_blobs()
     test_fact_diff()
     test_generator_pack_codes()
+    test_printed_numbers()
     print("ok")
     return 0
 

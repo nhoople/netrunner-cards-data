@@ -11,6 +11,7 @@
   ],
   "installCost": 5,
   "wave": "the-devil-and-the-dragon",
+  "influence": 3,
   "abilities": [
     {
       "class": "static",

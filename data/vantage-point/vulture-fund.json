@@ -12,6 +12,7 @@
     "liability"
   ],
   "playCost": 7,
+  "influence": 2,
   "abilities": [
     {
       "class": "play",

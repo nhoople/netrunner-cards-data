@@ -8,6 +8,7 @@
   "faction": "neutral-corp",
   "playCost": 0,
   "wave": "honor-and-profit",
+  "influence": 0,
   "abilities": [
     {
       "class": "play",

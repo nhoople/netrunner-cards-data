@@ -12,9 +12,9 @@
     "destroyer",
     "tracer"
   ],
-  "installCost": 4,
   "rezCost": 4,
   "strength": 4,
+  "influence": 4,
   "abilities": [
     {
       "class": "subroutine",

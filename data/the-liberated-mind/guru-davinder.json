@@ -11,6 +11,7 @@
   ],
   "installCost": 1,
   "wave": "the-liberated-mind",
+  "influence": 1,
   "abilities": [
     {
       "class": "static",

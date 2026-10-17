@@ -10,10 +10,10 @@
     "clone",
     "psi"
   ],
-  "installCost": 2,
   "rezCost": 2,
   "trashCost": 1,
   "wave": "double-time",
+  "influence": 4,
   "abilities": [
     {
       "class": "static",

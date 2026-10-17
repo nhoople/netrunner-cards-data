@@ -12,6 +12,7 @@
   ],
   "playCost": 6,
   "wave": "kala-ghoda",
+  "influence": 3,
   "abilities": [
     {
       "class": "static",

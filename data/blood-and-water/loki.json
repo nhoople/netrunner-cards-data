@@ -9,10 +9,10 @@
   "subtypes": [
     "bioroid"
   ],
-  "installCost": 6,
   "rezCost": 6,
   "strength": 3,
   "wave": "blood-and-water",
+  "influence": 5,
   "abilities": [
     {
       "class": "static",

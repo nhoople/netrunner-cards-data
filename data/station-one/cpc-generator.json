@@ -9,10 +9,10 @@
   "subtypes": [
     "advertisement"
   ],
-  "installCost": 0,
   "rezCost": 0,
   "trashCost": 2,
   "wave": "station-one",
+  "influence": 3,
   "abilities": [
     {
       "class": "static",

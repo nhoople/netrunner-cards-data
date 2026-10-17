@@ -11,6 +11,7 @@
   ],
   "installCost": 8,
   "wave": "data-and-destiny",
+  "influence": 3,
   "abilities": [
     {
       "class": "static",

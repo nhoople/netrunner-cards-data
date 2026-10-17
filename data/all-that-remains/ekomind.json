@@ -11,6 +11,7 @@
   ],
   "installCost": 2,
   "wave": "all-that-remains",
+  "influence": 3,
   "abilities": [
     {
       "class": "static",

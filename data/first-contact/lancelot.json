@@ -11,10 +11,10 @@
     "grail",
     "destroyer"
   ],
-  "installCost": 4,
   "rezCost": 4,
   "strength": 2,
   "wave": "first-contact",
+  "influence": 1,
   "abilities": [
     {
       "class": "conditional",

@@ -11,6 +11,7 @@
   ],
   "playCost": 4,
   "wave": "upstalk",
+  "influence": 0,
   "abilities": [
     {
       "class": "static",

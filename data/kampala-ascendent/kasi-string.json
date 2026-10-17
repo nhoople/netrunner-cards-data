@@ -11,6 +11,7 @@
   ],
   "installCost": 1,
   "wave": "kampala-ascendent",
+  "influence": 0,
   "abilities": [
     {
       "class": "static",

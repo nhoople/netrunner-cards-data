@@ -9,5 +9,6 @@
   "unsupported": [],
   "subtypes": [
     "corp"
-  ]
+  ],
+  "minimumDeckSize": 45
 }

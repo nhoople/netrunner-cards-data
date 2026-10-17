@@ -11,6 +11,7 @@
   ],
   "installCost": 2,
   "wave": "honor-and-profit",
+  "influence": 1,
   "abilities": [
     {
       "class": "static",

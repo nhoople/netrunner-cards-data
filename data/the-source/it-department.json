@@ -6,10 +6,10 @@
   "side": "corp",
   "unsupported": [],
   "faction": "haas-bioroid",
-  "installCost": 2,
   "rezCost": 2,
   "trashCost": 4,
   "wave": "the-source",
+  "influence": 1,
   "abilities": [
     {
       "class": "paid",

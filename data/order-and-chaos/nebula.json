@@ -10,10 +10,10 @@
     "sentry",
     "destroyer"
   ],
-  "installCost": 9,
   "rezCost": 9,
   "strength": 5,
   "wave": "order-and-chaos",
+  "influence": 2,
   "abilities": [
     {
       "class": "static",

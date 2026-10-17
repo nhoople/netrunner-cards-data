@@ -11,6 +11,7 @@
     "console"
   ],
   "unsupported": [],
+  "influence": 3,
   "abilities": [
     {
       "class": "paid",

@@ -11,10 +11,10 @@
     "destroyer",
     "morph"
   ],
-  "installCost": 6,
   "rezCost": 6,
   "strength": 3,
   "wave": "all-that-remains",
+  "influence": 2,
   "abilities": [
     {
       "class": "static",

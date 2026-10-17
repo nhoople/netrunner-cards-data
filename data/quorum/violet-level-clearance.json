@@ -13,6 +13,7 @@
   "playCost": 5,
   "trashCost": 1,
   "wave": "quorum",
+  "influence": 3,
   "abilities": [
     {
       "class": "static",

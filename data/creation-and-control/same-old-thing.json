@@ -8,6 +8,7 @@
   "unsupported": [],
   "faction": "neutral-runner",
   "installCost": 0,
+  "influence": 0,
   "abilities": [
     {
       "class": "paid",

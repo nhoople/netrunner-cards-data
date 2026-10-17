@@ -12,9 +12,9 @@
     "deflector",
     "psi"
   ],
-  "installCost": 3,
   "rezCost": 3,
   "strength": 4,
+  "influence": 2,
   "abilities": [
     {
       "class": "subroutine",

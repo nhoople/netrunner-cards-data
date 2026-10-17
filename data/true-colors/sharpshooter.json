@@ -13,6 +13,7 @@
   "strength": 3,
   "memoryCost": 1,
   "wave": "true-colors",
+  "influence": 1,
   "abilities": [
     {
       "class": "static",

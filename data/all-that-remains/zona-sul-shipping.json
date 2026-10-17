@@ -8,6 +8,7 @@
   "faction": "criminal",
   "installCost": 2,
   "wave": "all-that-remains",
+  "influence": 1,
   "abilities": [
     {
       "class": "conditional",

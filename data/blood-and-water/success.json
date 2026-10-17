@@ -11,6 +11,7 @@
   ],
   "playCost": 0,
   "wave": "blood-and-water",
+  "influence": 2,
   "abilities": [
     {
       "class": "static",

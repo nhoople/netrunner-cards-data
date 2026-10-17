@@ -10,6 +10,9 @@
     "bioroid"
   ],
   "wave": "data-and-destiny",
+  "link": 0,
+  "minimumDeckSize": 45,
+  "influenceLimit": 25,
   "abilities": [
     {
       "class": "static",

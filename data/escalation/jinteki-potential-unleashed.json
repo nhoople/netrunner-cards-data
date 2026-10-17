@@ -10,6 +10,8 @@
     "megacorp"
   ],
   "wave": "escalation",
+  "minimumDeckSize": 45,
+  "influenceLimit": 12,
   "abilities": [
     {
       "class": "static",

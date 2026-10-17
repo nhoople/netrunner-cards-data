@@ -11,10 +11,10 @@
     "grail",
     "ap"
   ],
-  "installCost": 6,
   "rezCost": 6,
   "strength": 4,
   "wave": "all-that-remains",
+  "influence": 1,
   "abilities": [
     {
       "class": "conditional",

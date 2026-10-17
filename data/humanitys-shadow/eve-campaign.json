@@ -10,9 +10,9 @@
   "subtypes": [
     "advertisement"
   ],
-  "installCost": 5,
   "rezCost": 5,
   "trashCost": 5,
+  "influence": 3,
   "abilities": [
     {
       "class": "conditional",

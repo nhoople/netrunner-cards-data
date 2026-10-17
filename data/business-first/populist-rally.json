@@ -8,6 +8,7 @@
   "faction": "neutral-runner",
   "playCost": 2,
   "wave": "business-first",
+  "influence": 0,
   "abilities": [
     {
       "class": "static",

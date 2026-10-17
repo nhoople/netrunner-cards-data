@@ -9,10 +9,10 @@
   "subtypes": [
     "clone"
   ],
-  "installCost": 2,
   "rezCost": 2,
   "trashCost": 4,
   "wave": "honor-and-profit",
+  "influence": 3,
   "abilities": [
     {
       "class": "paid",

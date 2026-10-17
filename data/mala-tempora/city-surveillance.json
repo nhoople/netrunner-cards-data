@@ -7,9 +7,9 @@
   "side": "corp",
   "unsupported": [],
   "faction": "nbn",
-  "installCost": 5,
   "rezCost": 5,
   "trashCost": 3,
+  "influence": 4,
   "abilities": [
     {
       "class": "conditional",

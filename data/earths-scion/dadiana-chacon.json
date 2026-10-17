@@ -11,6 +11,7 @@
   ],
   "installCost": 0,
   "wave": "earths-scion",
+  "influence": 0,
   "abilities": [
     {
       "class": "static",

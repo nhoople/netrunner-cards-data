@@ -12,6 +12,7 @@
   ],
   "playCost": 1,
   "wave": "whispers-in-nalubaale",
+  "influence": 3,
   "abilities": [
     {
       "class": "static",

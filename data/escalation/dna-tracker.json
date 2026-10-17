@@ -10,10 +10,10 @@
     "code gate",
     "ap"
   ],
-  "installCost": 8,
   "rezCost": 8,
   "strength": 6,
   "wave": "escalation",
+  "influence": 3,
   "abilities": [
     {
       "class": "subroutine",

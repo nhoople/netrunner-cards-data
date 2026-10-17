@@ -10,10 +10,10 @@
     "sentry",
     "tracer"
   ],
-  "installCost": 2,
   "rezCost": 2,
   "strength": 4,
   "wave": "data-and-destiny",
+  "influence": 2,
   "abilities": [
     {
       "class": "static",

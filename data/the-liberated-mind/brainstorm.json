@@ -10,10 +10,10 @@
     "sentry",
     "ap"
   ],
-  "installCost": 9,
   "rezCost": 9,
   "strength": 2,
   "wave": "the-liberated-mind",
+  "influence": 4,
   "abilities": [
     {
       "class": "static",

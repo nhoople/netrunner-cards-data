@@ -8,6 +8,7 @@
   "unsupported": [],
   "faction": "weyland-consortium",
   "playCost": 5,
+  "influence": 4,
   "abilities": [
     {
       "class": "play",

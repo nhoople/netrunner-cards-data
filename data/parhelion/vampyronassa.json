@@ -11,9 +11,9 @@
     "code gate",
     "ap"
   ],
-  "installCost": 7,
   "rezCost": 7,
   "strength": 4,
+  "influence": 3,
   "abilities": [
     {
       "class": "subroutine",

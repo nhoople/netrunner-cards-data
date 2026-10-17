@@ -10,6 +10,8 @@
     "division"
   ],
   "wave": "the-spaces-between",
+  "minimumDeckSize": 45,
+  "influenceLimit": 15,
   "abilities": [
     {
       "class": "conditional",

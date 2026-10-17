@@ -11,6 +11,7 @@
   ],
   "installCost": 2,
   "wave": "council-of-the-crest",
+  "influence": 1,
   "abilities": [
     {
       "class": "paid",

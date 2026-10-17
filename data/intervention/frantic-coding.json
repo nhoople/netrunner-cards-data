@@ -8,6 +8,7 @@
   "faction": "anarch",
   "playCost": 3,
   "wave": "intervention",
+  "influence": 3,
   "abilities": [
     {
       "class": "play",

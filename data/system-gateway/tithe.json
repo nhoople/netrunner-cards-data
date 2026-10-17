@@ -6,7 +6,6 @@
   "type": "ice",
   "side": "corp",
   "faction": "neutral-corp",
-  "installCost": 1,
   "rezCost": 1,
   "strength": 1,
   "subtypes": [
@@ -14,6 +13,7 @@
     "ap"
   ],
   "unsupported": [],
+  "influence": 0,
   "abilities": [
     {
       "class": "subroutine",

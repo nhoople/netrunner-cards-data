@@ -6,10 +6,10 @@
   "side": "corp",
   "unsupported": [],
   "faction": "jinteki",
-  "installCost": 5,
   "rezCost": 5,
   "trashCost": 5,
   "wave": "all-that-remains",
+  "influence": 2,
   "abilities": [
     {
       "class": "static",

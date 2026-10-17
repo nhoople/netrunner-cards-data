@@ -11,6 +11,7 @@
   ],
   "installCost": 0,
   "wave": "crimson-dust",
+  "influence": 3,
   "abilities": [
     {
       "class": "static",

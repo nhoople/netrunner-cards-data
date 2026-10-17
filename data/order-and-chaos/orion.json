@@ -11,10 +11,10 @@
     "code gate",
     "barrier"
   ],
-  "installCost": 15,
   "rezCost": 15,
   "strength": 8,
   "wave": "order-and-chaos",
+  "influence": 3,
   "abilities": [
     {
       "class": "static",

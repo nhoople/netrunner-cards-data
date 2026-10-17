@@ -6,13 +6,13 @@
   "type": "ice",
   "side": "corp",
   "faction": "neutral-corp",
-  "installCost": 3,
   "rezCost": 3,
   "strength": 2,
   "subtypes": [
     "barrier"
   ],
   "unsupported": [],
+  "influence": 0,
   "abilities": [
     {
       "class": "static",

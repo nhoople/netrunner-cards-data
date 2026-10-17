@@ -10,10 +10,10 @@
     "sentry",
     "tracer"
   ],
-  "installCost": 6,
   "rezCost": 6,
   "strength": 4,
   "wave": "the-spaces-between",
+  "influence": 2,
   "abilities": [
     {
       "class": "conditional",

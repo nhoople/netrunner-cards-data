@@ -9,10 +9,10 @@
   "subtypes": [
     "facility"
   ],
-  "installCost": 0,
   "rezCost": 0,
   "trashCost": 2,
   "wave": "fear-and-loathing",
+  "influence": 2,
   "abilities": [
     {
       "class": "static",

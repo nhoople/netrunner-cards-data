@@ -12,9 +12,9 @@
     "clone",
     "sysop"
   ],
-  "installCost": 0,
   "rezCost": 0,
   "trashCost": 2,
+  "influence": 4,
   "abilities": [
     {
       "class": "conditional",

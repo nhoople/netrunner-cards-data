@@ -10,6 +10,9 @@
     "cyborg"
   ],
   "wave": "blood-and-water",
+  "link": 0,
+  "minimumDeckSize": 50,
+  "influenceLimit": 15,
   "abilities": [
     {
       "class": "static",

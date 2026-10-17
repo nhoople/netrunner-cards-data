@@ -6,13 +6,13 @@
   "type": "ice",
   "side": "corp",
   "faction": "nbn",
-  "installCost": 2,
   "rezCost": 2,
   "strength": 1,
   "subtypes": [
     "barrier"
   ],
   "unsupported": [],
+  "influence": 2,
   "abilities": [
     {
       "class": "conditional",

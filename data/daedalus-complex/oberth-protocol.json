@@ -6,10 +6,10 @@
   "side": "corp",
   "unsupported": [],
   "faction": "weyland-consortium",
-  "installCost": 2,
   "rezCost": 2,
   "trashCost": 2,
   "wave": "daedalus-complex",
+  "influence": 4,
   "abilities": [
     {
       "class": "static",

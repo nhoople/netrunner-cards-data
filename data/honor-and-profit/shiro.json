@@ -9,10 +9,10 @@
   "subtypes": [
     "code gate"
   ],
-  "installCost": 6,
   "rezCost": 6,
   "strength": 5,
   "wave": "honor-and-profit",
+  "influence": 4,
   "abilities": [
     {
       "class": "subroutine",

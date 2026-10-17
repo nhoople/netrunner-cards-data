@@ -9,10 +9,10 @@
   "subtypes": [
     "seedy"
   ],
-  "installCost": 4,
   "rezCost": 4,
   "trashCost": 3,
   "wave": "democracy-and-dogma",
+  "influence": 4,
   "abilities": [
     {
       "class": "static",

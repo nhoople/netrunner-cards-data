@@ -10,9 +10,9 @@
   "subtypes": [
     "mythic"
   ],
-  "installCost": 2,
   "rezCost": 2,
   "strength": 0,
+  "influence": 0,
   "abilities": [
     {
       "class": "conditional",

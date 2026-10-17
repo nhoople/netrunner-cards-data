@@ -11,10 +11,10 @@
     "bioroid",
     "ap"
   ],
-  "installCost": 9,
   "rezCost": 9,
   "strength": 8,
   "wave": "martial-law",
+  "influence": 5,
   "abilities": [
     {
       "class": "static",

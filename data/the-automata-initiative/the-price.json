@@ -8,6 +8,7 @@
   "faction": "anarch",
   "unsupported": [],
   "playCost": 1,
+  "influence": 2,
   "abilities": [
     {
       "class": "play",

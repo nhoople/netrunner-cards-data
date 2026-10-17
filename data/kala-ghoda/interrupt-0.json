@@ -9,10 +9,10 @@
   "subtypes": [
     "code gate"
   ],
-  "installCost": 2,
   "rezCost": 2,
   "strength": 4,
   "wave": "kala-ghoda",
+  "influence": 1,
   "abilities": [
     {
       "class": "subroutine",

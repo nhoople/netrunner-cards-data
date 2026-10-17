@@ -11,6 +11,7 @@
     "weapon"
   ],
   "installCost": 2,
+  "influence": 2,
   "abilities": [
     {
       "class": "static",

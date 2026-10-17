@@ -11,6 +11,7 @@
   ],
   "installCost": 1,
   "wave": "old-hollywood",
+  "influence": 1,
   "abilities": [
     {
       "class": "conditional",

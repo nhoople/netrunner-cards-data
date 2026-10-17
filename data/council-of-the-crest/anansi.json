@@ -10,10 +10,10 @@
     "sentry",
     "ap"
   ],
-  "installCost": 8,
   "rezCost": 8,
   "strength": 5,
   "wave": "council-of-the-crest",
+  "influence": 4,
   "abilities": [
     {
       "class": "conditional",

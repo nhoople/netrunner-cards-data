@@ -13,6 +13,7 @@
   "playCost": 2,
   "trashCost": 1,
   "wave": "blood-money",
+  "influence": 1,
   "abilities": [
     {
       "class": "static",

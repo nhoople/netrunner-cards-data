@@ -10,6 +10,8 @@
     "division"
   ],
   "wave": "the-source",
+  "minimumDeckSize": 45,
+  "influenceLimit": 15,
   "abilities": [
     {
       "class": "static",

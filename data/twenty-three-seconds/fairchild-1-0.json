@@ -10,10 +10,10 @@
     "code gate",
     "bioroid"
   ],
-  "installCost": 1,
   "rezCost": 1,
   "strength": 2,
   "wave": "twenty-three-seconds",
+  "influence": 1,
   "abilities": [
     {
       "class": "static",

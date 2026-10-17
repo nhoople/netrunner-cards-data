@@ -9,10 +9,10 @@
   "subtypes": [
     "barrier"
   ],
-  "installCost": 1,
   "rezCost": 1,
   "strength": 4,
   "wave": "the-underway",
+  "influence": 1,
   "abilities": [
     {
       "class": "subroutine",

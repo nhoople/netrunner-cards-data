@@ -9,10 +9,10 @@
   "subtypes": [
     "character"
   ],
-  "installCost": 1,
   "rezCost": 1,
   "trashCost": 5,
   "wave": "whispers-in-nalubaale",
+  "influence": 2,
   "abilities": [
     {
       "class": "static",

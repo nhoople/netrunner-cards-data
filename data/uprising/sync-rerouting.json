@@ -12,6 +12,7 @@
   ],
   "playCost": 0,
   "trashCost": 3,
+  "influence": 3,
   "abilities": [
     {
       "class": "static",

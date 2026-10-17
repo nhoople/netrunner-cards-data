@@ -9,10 +9,10 @@
   "subtypes": [
     "character"
   ],
-  "installCost": 2,
   "rezCost": 2,
   "trashCost": 5,
   "wave": "quorum",
+  "influence": 3,
   "abilities": [
     {
       "class": "static",

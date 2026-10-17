@@ -10,10 +10,10 @@
     "sentry",
     "tracer"
   ],
-  "installCost": 7,
   "rezCost": 7,
   "strength": 6,
   "wave": "martial-law",
+  "influence": 3,
   "abilities": [
     {
       "class": "static",

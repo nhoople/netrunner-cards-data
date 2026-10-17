@@ -11,6 +11,7 @@
   ],
   "playCost": 0,
   "wave": "fear-the-masses",
+  "influence": 3,
   "abilities": [
     {
       "class": "static",

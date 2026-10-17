@@ -7,9 +7,9 @@
   "side": "corp",
   "unsupported": [],
   "faction": "weyland-consortium",
-  "installCost": 2,
   "rezCost": 2,
   "trashCost": 4,
+  "influence": 3,
   "abilities": [
     {
       "class": "static",

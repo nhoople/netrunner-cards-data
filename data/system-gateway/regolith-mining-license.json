@@ -6,10 +6,10 @@
   "type": "asset",
   "side": "corp",
   "faction": "neutral-corp",
-  "installCost": 0,
   "rezCost": 2,
   "trashCost": 3,
   "unsupported": [],
+  "influence": 0,
   "abilities": [
     {
       "class": "static",

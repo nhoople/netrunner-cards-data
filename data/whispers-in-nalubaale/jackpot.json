@@ -8,6 +8,7 @@
   "faction": "neutral-runner",
   "installCost": 0,
   "wave": "whispers-in-nalubaale",
+  "influence": 0,
   "abilities": [
     {
       "class": "conditional",

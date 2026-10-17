@@ -9,10 +9,10 @@
   "subtypes": [
     "alliance"
   ],
-  "installCost": 2,
   "rezCost": 2,
   "trashCost": 5,
   "wave": "salsette-island",
+  "influence": 3,
   "abilities": [
     {
       "class": "static",

@@ -10,9 +10,9 @@
   "subtypes": [
     "mythic"
   ],
-  "installCost": 0,
   "rezCost": 0,
   "strength": 0,
+  "influence": 0,
   "abilities": [
     {
       "class": "static",

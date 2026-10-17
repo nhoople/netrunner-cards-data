@@ -12,6 +12,7 @@
   "advancementRequirement": 3,
   "agendaPoints": 1,
   "wave": "true-colors",
+  "influence": 0,
   "abilities": [
     {
       "class": "conditional",

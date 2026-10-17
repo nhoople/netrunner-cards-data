@@ -12,6 +12,7 @@
   "advancementRequirement": 5,
   "agendaPoints": 3,
   "wave": "down-the-white-nile",
+  "influence": 0,
   "abilities": [
     {
       "class": "conditional",

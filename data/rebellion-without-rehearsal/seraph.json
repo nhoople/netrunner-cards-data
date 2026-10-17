@@ -13,9 +13,9 @@
     "observer",
     "deep net"
   ],
-  "installCost": 10,
   "rezCost": 10,
   "strength": 5,
+  "influence": 3,
   "abilities": [
     {
       "class": "conditional",

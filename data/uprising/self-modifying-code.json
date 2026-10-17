@@ -9,6 +9,7 @@
   "unsupported": [],
   "installCost": 0,
   "memoryCost": 2,
+  "influence": 3,
   "abilities": [
     {
       "class": "paid",

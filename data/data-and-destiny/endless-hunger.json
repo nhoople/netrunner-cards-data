@@ -13,6 +13,7 @@
   "strength": 11,
   "memoryCost": 4,
   "wave": "data-and-destiny",
+  "influence": 2,
   "abilities": [
     {
       "class": "static",

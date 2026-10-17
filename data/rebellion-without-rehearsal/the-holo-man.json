@@ -12,9 +12,9 @@
     "executive",
     "sysop"
   ],
-  "installCost": 2,
   "rezCost": 2,
   "trashCost": 2,
+  "influence": 3,
   "abilities": [
     {
       "class": "conditional",

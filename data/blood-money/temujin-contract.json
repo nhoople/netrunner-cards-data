@@ -11,6 +11,7 @@
   ],
   "installCost": 4,
   "wave": "blood-money",
+  "influence": 2,
   "abilities": [
     {
       "class": "static",

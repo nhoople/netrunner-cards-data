@@ -10,10 +10,10 @@
     "trap",
     "deflector"
   ],
-  "installCost": 2,
   "rezCost": 2,
   "strength": 5,
   "wave": "crimson-dust",
+  "influence": 3,
   "abilities": [
     {
       "class": "subroutine",

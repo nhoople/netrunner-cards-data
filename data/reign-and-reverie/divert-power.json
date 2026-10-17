@@ -8,6 +8,7 @@
   "unsupported": [],
   "faction": "haas-bioroid",
   "playCost": 2,
+  "influence": 1,
   "abilities": [
     {
       "class": "play",

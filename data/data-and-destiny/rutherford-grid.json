@@ -9,10 +9,10 @@
   "subtypes": [
     "region"
   ],
-  "installCost": 0,
   "rezCost": 0,
   "trashCost": 4,
   "wave": "data-and-destiny",
+  "influence": 2,
   "abilities": [
     {
       "class": "static",

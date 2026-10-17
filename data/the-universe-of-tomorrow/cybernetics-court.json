@@ -10,10 +10,10 @@
     "facility",
     "ritzy"
   ],
-  "installCost": 0,
   "rezCost": 0,
   "trashCost": 5,
   "wave": "the-universe-of-tomorrow",
+  "influence": 5,
   "abilities": [
     {
       "class": "static",

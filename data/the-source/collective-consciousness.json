@@ -9,6 +9,7 @@
   "installCost": 2,
   "memoryCost": 2,
   "wave": "the-source",
+  "influence": 2,
   "abilities": [
     {
       "class": "static",

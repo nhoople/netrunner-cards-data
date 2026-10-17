@@ -9,10 +9,10 @@
   "subtypes": [
     "code gate"
   ],
-  "installCost": 3,
   "rezCost": 3,
   "strength": 4,
   "wave": "station-one",
+  "influence": 3,
   "abilities": [
     {
       "class": "paid",

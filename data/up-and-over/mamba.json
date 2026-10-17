@@ -11,10 +11,10 @@
     "psi",
     "ap"
   ],
-  "installCost": 6,
   "rezCost": 6,
   "strength": 4,
   "wave": "up-and-over",
+  "influence": 2,
   "abilities": [
     {
       "class": "paid",

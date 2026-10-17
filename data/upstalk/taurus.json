@@ -10,10 +10,10 @@
     "sentry",
     "tracer"
   ],
-  "installCost": 5,
   "rezCost": 5,
   "strength": 5,
   "wave": "upstalk",
+  "influence": 2,
   "abilities": [
     {
       "class": "subroutine",

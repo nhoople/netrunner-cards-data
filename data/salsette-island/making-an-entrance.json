@@ -11,6 +11,7 @@
   ],
   "playCost": 0,
   "wave": "salsette-island",
+  "influence": 2,
   "abilities": [
     {
       "class": "static",

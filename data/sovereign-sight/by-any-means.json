@@ -12,6 +12,7 @@
   ],
   "playCost": 2,
   "wave": "sovereign-sight",
+  "influence": 5,
   "abilities": [
     {
       "class": "static",

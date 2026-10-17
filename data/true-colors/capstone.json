@@ -8,6 +8,7 @@
   "faction": "shaper",
   "installCost": 2,
   "wave": "true-colors",
+  "influence": 3,
   "abilities": [
     {
       "class": "static",

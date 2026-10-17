@@ -11,10 +11,10 @@
     "psi",
     "deflector"
   ],
-  "installCost": 0,
   "rezCost": 0,
   "strength": 4,
   "wave": "martial-law",
+  "influence": 3,
   "abilities": [
     {
       "class": "subroutine",

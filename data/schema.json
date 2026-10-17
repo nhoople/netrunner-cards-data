@@ -471,7 +471,23 @@
     },
     "link": {
       "type": "integer",
-      "minimum": 0
+      "minimum": 0,
+      "description": "Printed base link on a Runner identity (CR 2.9.1), or link printed on an installed card that adds to the Runner's link."
+    },
+    "minimumDeckSize": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Identity minimum deck size (CR 2.11.1). Used for deckbuilding only (CR 3.1.2)."
+    },
+    "influenceLimit": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Identity influence limit (CR 2.12.1). Used for deckbuilding only (CR 3.1.2)."
+    },
+    "influence": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Printed influence cost (CR 2.14.1). Omitted when the card has no influence bar (CR 2.14.2)."
     },
     "subroutines": {
       "type": "array",

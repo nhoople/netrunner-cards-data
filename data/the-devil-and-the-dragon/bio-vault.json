@@ -9,10 +9,10 @@
   "subtypes": [
     "off-site"
   ],
-  "installCost": 0,
   "rezCost": 0,
   "trashCost": 2,
   "wave": "the-devil-and-the-dragon",
+  "influence": 2,
   "abilities": [
     {
       "class": "static",

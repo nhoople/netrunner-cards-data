@@ -14,6 +14,7 @@
   "strength": 3,
   "memoryCost": 1,
   "wave": "all-that-remains",
+  "influence": 3,
   "abilities": [
     {
       "class": "static",

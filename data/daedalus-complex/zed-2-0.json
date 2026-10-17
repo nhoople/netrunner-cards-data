@@ -12,10 +12,10 @@
     "ap",
     "destroyer"
   ],
-  "installCost": 6,
   "rezCost": 6,
   "strength": 4,
   "wave": "daedalus-complex",
+  "influence": 3,
   "abilities": [
     {
       "class": "static",

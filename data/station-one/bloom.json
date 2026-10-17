@@ -10,10 +10,10 @@
     "code gate",
     "observer"
   ],
-  "installCost": 2,
   "rezCost": 2,
   "strength": 3,
   "wave": "station-one",
+  "influence": 2,
   "abilities": [
     {
       "class": "subroutine",

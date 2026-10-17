@@ -11,6 +11,7 @@
   ],
   "playCost": 0,
   "wave": "intervention",
+  "influence": 0,
   "abilities": [
     {
       "class": "static",

@@ -9,6 +9,7 @@
   "installCost": 0,
   "memoryCost": 0,
   "wave": "data-and-destiny",
+  "influence": 1,
   "abilities": [
     {
       "class": "static",

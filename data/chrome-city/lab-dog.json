@@ -9,10 +9,10 @@
   "subtypes": [
     "trap"
   ],
-  "installCost": 2,
   "rezCost": 2,
   "strength": 0,
   "wave": "chrome-city",
+  "influence": 2,
   "abilities": [
     {
       "class": "subroutine",

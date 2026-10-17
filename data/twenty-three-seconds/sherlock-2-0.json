@@ -11,10 +11,10 @@
     "bioroid",
     "tracer"
   ],
-  "installCost": 7,
   "rezCost": 7,
   "strength": 6,
   "wave": "twenty-three-seconds",
+  "influence": 3,
   "abilities": [
     {
       "class": "static",

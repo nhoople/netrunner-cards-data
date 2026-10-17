@@ -6,10 +6,10 @@
   "side": "corp",
   "unsupported": [],
   "faction": "neutral-corp",
-  "installCost": 2,
   "rezCost": 2,
   "trashCost": 0,
   "wave": "the-source",
+  "influence": 0,
   "abilities": [
     {
       "class": "static",

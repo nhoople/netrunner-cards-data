@@ -11,9 +11,9 @@
     "code gate",
     "harmonic"
   ],
-  "installCost": 2,
   "rezCost": 2,
   "strength": 3,
+  "influence": 1,
   "abilities": [
     {
       "class": "conditional",

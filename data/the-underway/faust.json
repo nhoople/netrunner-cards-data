@@ -14,6 +14,7 @@
   "strength": 2,
   "memoryCost": 1,
   "wave": "the-underway",
+  "influence": 2,
   "abilities": [
     {
       "class": "static",

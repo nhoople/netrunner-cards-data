@@ -11,9 +11,9 @@
     "code gate",
     "tracer"
   ],
-  "installCost": 3,
   "rezCost": 3,
   "strength": 4,
+  "influence": 1,
   "abilities": [
     {
       "class": "subroutine",

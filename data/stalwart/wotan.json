@@ -11,9 +11,9 @@
     "barrier",
     "bioroid"
   ],
-  "installCost": 14,
   "rezCost": 14,
   "strength": 10,
+  "influence": 5,
   "abilities": [
     {
       "class": "static",

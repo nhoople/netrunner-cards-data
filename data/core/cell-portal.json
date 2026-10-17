@@ -11,9 +11,9 @@
     "code gate",
     "deflector"
   ],
-  "installCost": 5,
   "rezCost": 5,
   "strength": 7,
+  "influence": 2,
   "abilities": [
     {
       "class": "subroutine",

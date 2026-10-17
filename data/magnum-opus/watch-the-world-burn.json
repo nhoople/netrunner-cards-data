@@ -13,6 +13,7 @@
   ],
   "playCost": 3,
   "wave": "magnum-opus",
+  "influence": 1,
   "abilities": [
     {
       "class": "static",

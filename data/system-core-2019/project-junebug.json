@@ -11,9 +11,9 @@
     "ambush",
     "research"
   ],
-  "installCost": 0,
   "rezCost": 0,
   "trashCost": 0,
+  "influence": 1,
   "abilities": [
     {
       "class": "static",

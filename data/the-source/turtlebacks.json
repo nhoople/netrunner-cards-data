@@ -9,10 +9,10 @@
   "subtypes": [
     "clone"
   ],
-  "installCost": 2,
   "rezCost": 2,
   "trashCost": 4,
   "wave": "the-source",
+  "influence": 1,
   "abilities": [
     {
       "class": "static",

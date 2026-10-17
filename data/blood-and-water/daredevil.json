@@ -11,6 +11,7 @@
   ],
   "installCost": 5,
   "wave": "blood-and-water",
+  "influence": 1,
   "abilities": [
     {
       "class": "static",

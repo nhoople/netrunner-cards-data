@@ -12,6 +12,7 @@
   ],
   "playCost": 4,
   "wave": "double-time",
+  "influence": 3,
   "abilities": [
     {
       "class": "static",

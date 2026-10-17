@@ -6,13 +6,13 @@
   "type": "ice",
   "side": "corp",
   "faction": "nbn",
-  "installCost": 5,
   "rezCost": 5,
   "strength": 4,
   "subtypes": [
     "code gate"
   ],
   "unsupported": [],
+  "influence": 2,
   "abilities": [
     {
       "class": "conditional",

@@ -12,9 +12,9 @@
     "bioroid",
     "tracer"
   ],
-  "installCost": 6,
   "rezCost": 6,
   "strength": 5,
+  "influence": 2,
   "abilities": [
     {
       "class": "subroutine",

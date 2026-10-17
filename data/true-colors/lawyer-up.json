@@ -11,6 +11,7 @@
   ],
   "playCost": 2,
   "wave": "true-colors",
+  "influence": 1,
   "abilities": [
     {
       "class": "static",

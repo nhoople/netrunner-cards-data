@@ -11,6 +11,7 @@
   ],
   "playCost": 0,
   "wave": "down-the-white-nile",
+  "influence": 2,
   "abilities": [
     {
       "class": "static",

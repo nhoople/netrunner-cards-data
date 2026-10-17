@@ -12,6 +12,7 @@
   ],
   "installCost": 0,
   "wave": "magnum-opus",
+  "influence": 3,
   "abilities": [
     {
       "class": "static",

@@ -13,9 +13,9 @@
     "destroyer",
     "harmonic"
   ],
-  "installCost": 3,
   "rezCost": 3,
   "strength": 5,
+  "influence": 2,
   "abilities": [
     {
       "class": "static",

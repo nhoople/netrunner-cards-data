@@ -8,6 +8,7 @@
   "unsupported": [],
   "faction": "shaper",
   "playCost": 5,
+  "influence": 3,
   "abilities": [
     {
       "class": "play",

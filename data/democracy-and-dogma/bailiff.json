@@ -9,10 +9,10 @@
   "subtypes": [
     "barrier"
   ],
-  "installCost": 2,
   "rezCost": 2,
   "strength": 0,
   "wave": "democracy-and-dogma",
+  "influence": 2,
   "abilities": [
     {
       "class": "static",

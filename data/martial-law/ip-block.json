@@ -10,10 +10,10 @@
     "barrier",
     "tracer"
   ],
-  "installCost": 2,
   "rezCost": 2,
   "strength": 4,
   "wave": "martial-law",
+  "influence": 1,
   "abilities": [
     {
       "class": "conditional",

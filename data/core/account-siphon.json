@@ -12,6 +12,7 @@
     "sabotage"
   ],
   "playCost": 0,
+  "influence": 4,
   "abilities": [
     {
       "class": "static",

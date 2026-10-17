@@ -12,10 +12,10 @@
     "ap",
     "tracer"
   ],
-  "installCost": 7,
   "rezCost": 7,
   "strength": 5,
   "wave": "data-and-destiny",
+  "influence": 0,
   "abilities": [
     {
       "class": "subroutine",

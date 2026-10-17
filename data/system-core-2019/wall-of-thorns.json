@@ -11,9 +11,9 @@
     "barrier",
     "ap"
   ],
-  "installCost": 8,
   "rezCost": 8,
   "strength": 5,
+  "influence": 1,
   "abilities": [
     {
       "class": "subroutine",

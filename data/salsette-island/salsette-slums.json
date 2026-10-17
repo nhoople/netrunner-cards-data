@@ -12,6 +12,7 @@
   ],
   "installCost": 2,
   "wave": "salsette-island",
+  "influence": 2,
   "abilities": [
     {
       "class": "static",

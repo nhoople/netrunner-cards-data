@@ -10,9 +10,9 @@
   "subtypes": [
     "facility"
   ],
-  "installCost": 2,
   "rezCost": 2,
   "trashCost": 3,
+  "influence": 1,
   "abilities": [
     {
       "class": "static",

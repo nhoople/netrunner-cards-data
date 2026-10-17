@@ -11,10 +11,10 @@
     "ap",
     "tracer"
   ],
-  "installCost": 2,
   "rezCost": 2,
   "strength": 1,
   "wave": "terminal-directive",
+  "influence": 3,
   "abilities": [
     {
       "class": "subroutine",

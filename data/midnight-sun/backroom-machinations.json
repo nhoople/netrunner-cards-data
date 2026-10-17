@@ -12,6 +12,7 @@
   ],
   "playCost": 2,
   "agendaPoints": 1,
+  "influence": 2,
   "abilities": [
     {
       "class": "static",

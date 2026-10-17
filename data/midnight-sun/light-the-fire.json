@@ -11,6 +11,7 @@
     "sabotage"
   ],
   "installCost": 1,
+  "influence": 2,
   "abilities": [
     {
       "class": "paid",

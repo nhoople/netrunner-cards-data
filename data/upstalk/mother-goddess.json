@@ -9,10 +9,10 @@
   "subtypes": [
     "mythic"
   ],
-  "installCost": 4,
   "rezCost": 4,
   "strength": 4,
   "wave": "upstalk",
+  "influence": 0,
   "abilities": [
     {
       "class": "static",

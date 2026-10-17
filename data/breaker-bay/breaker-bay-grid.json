@@ -9,10 +9,10 @@
   "subtypes": [
     "region"
   ],
-  "installCost": 0,
   "rezCost": 0,
   "trashCost": 2,
   "wave": "breaker-bay",
+  "influence": 0,
   "abilities": [
     {
       "class": "static",

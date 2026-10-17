@@ -9,10 +9,10 @@
   "subtypes": [
     "region"
   ],
-  "installCost": 1,
   "rezCost": 1,
   "trashCost": 5,
   "wave": "martial-law",
+  "influence": 2,
   "abilities": [
     {
       "class": "static",

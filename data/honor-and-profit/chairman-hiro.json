@@ -9,10 +9,10 @@
   "subtypes": [
     "executive"
   ],
-  "installCost": 2,
   "rezCost": 2,
   "trashCost": 6,
   "wave": "honor-and-profit",
+  "influence": 5,
   "abilities": [
     {
       "class": "static",

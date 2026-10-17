@@ -12,6 +12,7 @@
   "advancementRequirement": 3,
   "agendaPoints": 1,
   "wave": "the-universe-of-tomorrow",
+  "influence": 0,
   "abilities": [
     {
       "class": "conditional",

@@ -11,6 +11,7 @@
   ],
   "installCost": 6,
   "wave": "daedalus-complex",
+  "influence": 3,
   "abilities": [
     {
       "class": "static",

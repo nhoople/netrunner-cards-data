@@ -6,7 +6,6 @@
   "type": "ice",
   "side": "corp",
   "faction": "weyland-consortium",
-  "installCost": 5,
   "rezCost": 5,
   "strength": 4,
   "subtypes": [
@@ -14,6 +13,7 @@
     "destroyer"
   ],
   "unsupported": [],
+  "influence": 2,
   "abilities": [
     {
       "class": "subroutine",

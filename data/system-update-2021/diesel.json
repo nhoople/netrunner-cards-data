@@ -8,6 +8,7 @@
   "nrdbCode": "01034",
   "playCost": 0,
   "unsupported": [],
+  "influence": 2,
   "abilities": [
     {
       "class": "play",

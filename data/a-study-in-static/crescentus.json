@@ -9,6 +9,7 @@
   "faction": "criminal",
   "installCost": 1,
   "memoryCost": 1,
+  "influence": 1,
   "abilities": [
     {
       "class": "paid",

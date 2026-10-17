@@ -13,6 +13,7 @@
   "installCost": 2,
   "memoryCost": 1,
   "wave": "whispers-in-nalubaale",
+  "influence": 3,
   "abilities": [
     {
       "class": "static",

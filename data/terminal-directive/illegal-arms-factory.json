@@ -10,10 +10,10 @@
     "facility",
     "liability"
   ],
-  "installCost": 3,
   "rezCost": 3,
   "trashCost": 6,
   "wave": "terminal-directive",
+  "influence": 2,
   "abilities": [
     {
       "class": "conditional",

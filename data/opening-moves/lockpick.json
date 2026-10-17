@@ -12,6 +12,7 @@
     "stealth"
   ],
   "installCost": 1,
+  "influence": 3,
   "abilities": [
     {
       "class": "static",

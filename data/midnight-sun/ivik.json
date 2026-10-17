@@ -11,9 +11,9 @@
     "barrier",
     "ap"
   ],
-  "installCost": 7,
   "rezCost": 7,
   "strength": 5,
+  "influence": 2,
   "abilities": [
     {
       "class": "static",

@@ -11,6 +11,8 @@
     "liability"
   ],
   "wave": "fear-and-loathing",
+  "minimumDeckSize": 45,
+  "influenceLimit": 10,
   "abilities": [
     {
       "class": "conditional",

@@ -12,9 +12,9 @@
     "ap",
     "observer"
   ],
-  "installCost": 7,
   "rezCost": 7,
   "strength": 5,
+  "influence": 3,
   "abilities": [
     {
       "class": "subroutine",

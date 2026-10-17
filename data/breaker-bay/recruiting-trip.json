@@ -8,6 +8,7 @@
   "faction": "jinteki",
   "playCost": 0,
   "wave": "breaker-bay",
+  "influence": 1,
   "abilities": [
     {
       "class": "static",

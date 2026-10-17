@@ -8,5 +8,6 @@
   "faction": "neutral-corp",
   "advancementRequirement": 6,
   "agendaPoints": 4,
-  "wave": "old-hollywood"
+  "wave": "old-hollywood",
+  "influence": 1
 }

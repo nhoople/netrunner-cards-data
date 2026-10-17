@@ -9,10 +9,10 @@
   "subtypes": [
     "ritzy"
   ],
-  "installCost": 4,
   "rezCost": 4,
   "trashCost": 4,
   "wave": "first-contact",
+  "influence": 2,
   "abilities": [
     {
       "class": "static",

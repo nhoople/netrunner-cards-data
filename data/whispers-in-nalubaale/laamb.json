@@ -14,6 +14,7 @@
   "strength": 2,
   "memoryCost": 2,
   "wave": "whispers-in-nalubaale",
+  "influence": 2,
   "abilities": [
     {
       "class": "static",

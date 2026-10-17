@@ -10,9 +10,9 @@
   "subtypes": [
     "executive"
   ],
-  "installCost": 3,
   "rezCost": 3,
   "trashCost": 5,
+  "influence": 5,
   "abilities": [
     {
       "class": "static",

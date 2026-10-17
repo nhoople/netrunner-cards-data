@@ -9,6 +9,7 @@
   "installCost": 1,
   "memoryCost": 1,
   "wave": "old-hollywood",
+  "influence": 3,
   "abilities": [
     {
       "class": "conditional",

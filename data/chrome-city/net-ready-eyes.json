@@ -11,6 +11,7 @@
   ],
   "installCost": 0,
   "wave": "chrome-city",
+  "influence": 2,
   "abilities": [
     {
       "class": "static",

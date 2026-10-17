@@ -15,6 +15,7 @@
   "strength": 0,
   "memoryCost": 1,
   "wave": "crimson-dust",
+  "influence": 1,
   "abilities": [
     {
       "class": "static",

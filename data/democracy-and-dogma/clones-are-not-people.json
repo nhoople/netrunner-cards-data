@@ -11,6 +11,7 @@
   ],
   "playCost": 3,
   "wave": "democracy-and-dogma",
+  "influence": 3,
   "abilities": [
     {
       "class": "static",

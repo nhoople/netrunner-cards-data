@@ -10,10 +10,10 @@
     "barrier",
     "morph"
   ],
-  "installCost": 5,
   "rezCost": 5,
   "strength": 4,
   "wave": "up-and-over",
+  "influence": 2,
   "abilities": [
     {
       "class": "static",

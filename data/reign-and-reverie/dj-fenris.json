@@ -11,6 +11,7 @@
     "connection"
   ],
   "installCost": 3,
+  "influence": 1,
   "abilities": [
     {
       "class": "static",

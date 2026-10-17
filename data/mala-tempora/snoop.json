@@ -11,9 +11,9 @@
     "sentry",
     "tracer"
   ],
-  "installCost": 6,
   "rezCost": 6,
   "strength": 6,
+  "influence": 2,
   "abilities": [
     {
       "class": "conditional",

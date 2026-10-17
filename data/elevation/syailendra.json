@@ -11,9 +11,9 @@
     "code gate",
     "ap"
   ],
-  "installCost": 4,
   "rezCost": 4,
   "strength": 5,
+  "influence": 3,
   "abilities": [
     {
       "class": "static",

@@ -10,10 +10,10 @@
     "barrier",
     "ap"
   ],
-  "installCost": 4,
   "rezCost": 4,
   "strength": 1,
   "wave": "daedalus-complex",
+  "influence": 3,
   "abilities": [
     {
       "class": "conditional",

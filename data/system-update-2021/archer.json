@@ -11,9 +11,9 @@
     "sentry",
     "destroyer"
   ],
-  "installCost": 4,
   "rezCost": 4,
   "strength": 6,
+  "influence": 2,
   "abilities": [
     {
       "class": "static",
