@@ -11,6 +11,7 @@
   ],
   "playCost": 0,
   "wave": "escalation",
+  "influence": 1,
   "abilities": [
     {
       "class": "static",

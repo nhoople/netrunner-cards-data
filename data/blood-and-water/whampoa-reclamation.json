@@ -9,10 +9,10 @@
   "subtypes": [
     "corporation"
   ],
-  "installCost": 3,
   "rezCost": 3,
   "trashCost": 3,
   "wave": "blood-and-water",
+  "influence": 2,
   "abilities": [
     {
       "class": "paid",

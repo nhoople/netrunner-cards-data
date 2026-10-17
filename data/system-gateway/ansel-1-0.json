@@ -6,7 +6,6 @@
   "type": "ice",
   "side": "corp",
   "faction": "haas-bioroid",
-  "installCost": 6,
   "rezCost": 6,
   "strength": 4,
   "subtypes": [
@@ -15,6 +14,7 @@
     "destroyer"
   ],
   "unsupported": [],
+  "influence": 3,
   "abilities": [
     {
       "class": "subroutine",

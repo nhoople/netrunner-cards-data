@@ -11,6 +11,7 @@
     "gray ops"
   ],
   "unsupported": [],
+  "influence": 3,
   "abilities": [
     {
       "class": "play",

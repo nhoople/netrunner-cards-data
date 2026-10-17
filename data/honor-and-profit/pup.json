@@ -10,10 +10,10 @@
     "sentry",
     "ap"
   ],
-  "installCost": 1,
   "rezCost": 1,
   "strength": 0,
   "wave": "honor-and-profit",
+  "influence": 1,
   "abilities": [
     {
       "class": "subroutine",

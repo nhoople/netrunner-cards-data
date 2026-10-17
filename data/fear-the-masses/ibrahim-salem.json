@@ -10,10 +10,10 @@
     "alliance",
     "character"
   ],
-  "installCost": 2,
   "rezCost": 2,
   "trashCost": 5,
   "wave": "fear-the-masses",
+  "influence": 3,
   "abilities": [
     {
       "class": "static",

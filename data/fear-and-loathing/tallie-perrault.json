@@ -11,6 +11,7 @@
   ],
   "installCost": 2,
   "wave": "fear-and-loathing",
+  "influence": 3,
   "abilities": [
     {
       "class": "static",

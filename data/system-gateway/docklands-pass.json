@@ -8,6 +8,7 @@
   "faction": "criminal",
   "installCost": 2,
   "unsupported": [],
+  "influence": 2,
   "abilities": [
     {
       "class": "static",

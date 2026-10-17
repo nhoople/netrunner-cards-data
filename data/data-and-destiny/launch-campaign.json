@@ -9,10 +9,10 @@
   "subtypes": [
     "advertisement"
   ],
-  "installCost": 1,
   "rezCost": 1,
   "trashCost": 2,
   "wave": "data-and-destiny",
+  "influence": 0,
   "abilities": [
     {
       "class": "conditional",

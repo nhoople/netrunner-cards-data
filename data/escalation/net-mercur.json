@@ -12,6 +12,7 @@
   ],
   "installCost": 3,
   "wave": "escalation",
+  "influence": 3,
   "abilities": [
     {
       "class": "static",

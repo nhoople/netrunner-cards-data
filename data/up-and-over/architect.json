@@ -9,10 +9,10 @@
   "subtypes": [
     "sentry"
   ],
-  "installCost": 4,
   "rezCost": 4,
   "strength": 3,
   "wave": "up-and-over",
+  "influence": 2,
   "abilities": [
     {
       "class": "static",

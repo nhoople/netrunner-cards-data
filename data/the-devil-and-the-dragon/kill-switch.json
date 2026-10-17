@@ -11,6 +11,7 @@
   ],
   "playCost": 1,
   "wave": "the-devil-and-the-dragon",
+  "influence": 5,
   "abilities": [
     {
       "class": "static",

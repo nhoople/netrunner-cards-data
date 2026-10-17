@@ -10,5 +10,6 @@
   "subtypes": [
     "virtual"
   ],
-  "unsupported": []
+  "unsupported": [],
+  "influence": 3
 }

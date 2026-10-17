@@ -9,10 +9,10 @@
   "subtypes": [
     "political"
   ],
-  "installCost": 1,
   "rezCost": 1,
   "trashCost": 2,
   "wave": "democracy-and-dogma",
+  "influence": 2,
   "abilities": [
     {
       "class": "conditional",

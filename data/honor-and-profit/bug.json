@@ -9,6 +9,7 @@
   "installCost": 0,
   "memoryCost": 1,
   "wave": "honor-and-profit",
+  "influence": 1,
   "abilities": [
     {
       "class": "static",

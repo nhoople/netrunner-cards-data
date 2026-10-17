@@ -12,6 +12,7 @@
   ],
   "advancementRequirement": 4,
   "agendaPoints": 2,
+  "influence": 0,
   "abilities": [
     {
       "class": "conditional",

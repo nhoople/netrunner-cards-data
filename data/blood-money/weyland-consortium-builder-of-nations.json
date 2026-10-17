@@ -10,6 +10,8 @@
     "megacorp"
   ],
   "wave": "blood-money",
+  "minimumDeckSize": 40,
+  "influenceLimit": 12,
   "abilities": [
     {
       "class": "static",

@@ -9,10 +9,10 @@
   "subtypes": [
     "sysop"
   ],
-  "installCost": 0,
   "rezCost": 0,
   "trashCost": 3,
   "wave": "data-and-destiny",
+  "influence": 3,
   "abilities": [
     {
       "class": "static",

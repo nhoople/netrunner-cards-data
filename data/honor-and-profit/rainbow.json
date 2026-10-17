@@ -11,10 +11,10 @@
     "code gate",
     "barrier"
   ],
-  "installCost": 3,
   "rezCost": 3,
   "strength": 4,
   "wave": "honor-and-profit",
+  "influence": 0,
   "abilities": [
     {
       "class": "subroutine",

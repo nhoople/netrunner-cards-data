@@ -12,6 +12,7 @@
   ],
   "installCost": 5,
   "wave": "terminal-directive",
+  "influence": 2,
   "abilities": [
     {
       "class": "static",

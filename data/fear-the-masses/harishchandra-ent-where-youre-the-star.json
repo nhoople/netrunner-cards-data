@@ -10,6 +10,8 @@
     "division"
   ],
   "wave": "fear-the-masses",
+  "minimumDeckSize": 45,
+  "influenceLimit": 17,
   "abilities": [
     {
       "class": "static",

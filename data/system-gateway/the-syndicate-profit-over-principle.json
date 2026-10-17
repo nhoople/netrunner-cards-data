@@ -9,5 +9,6 @@
   "unsupported": [],
   "subtypes": [
     "megacorp"
-  ]
+  ],
+  "minimumDeckSize": 30
 }

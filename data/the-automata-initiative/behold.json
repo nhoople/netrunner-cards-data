@@ -10,9 +10,9 @@
   "subtypes": [
     "ambush"
   ],
-  "installCost": 0,
   "rezCost": 0,
   "trashCost": 0,
+  "influence": 2,
   "abilities": [
     {
       "class": "static",

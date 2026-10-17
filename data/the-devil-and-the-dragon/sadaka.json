@@ -9,10 +9,10 @@
   "subtypes": [
     "trap"
   ],
-  "installCost": 2,
   "rezCost": 2,
   "strength": 3,
   "wave": "the-devil-and-the-dragon",
+  "influence": 2,
   "abilities": [
     {
       "class": "subroutine",

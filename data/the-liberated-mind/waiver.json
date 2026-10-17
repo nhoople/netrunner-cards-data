@@ -10,10 +10,10 @@
     "code gate",
     "tracer"
   ],
-  "installCost": 5,
   "rezCost": 5,
   "strength": 5,
   "wave": "the-liberated-mind",
+  "influence": 2,
   "abilities": [
     {
       "class": "subroutine",

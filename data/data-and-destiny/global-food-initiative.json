@@ -12,6 +12,7 @@
   "advancementRequirement": 5,
   "agendaPoints": 3,
   "wave": "data-and-destiny",
+  "influence": 1,
   "abilities": [
     {
       "class": "static",

@@ -11,6 +11,7 @@
   ],
   "installCost": 1,
   "wave": "democracy-and-dogma",
+  "influence": 1,
   "abilities": [
     {
       "class": "static",

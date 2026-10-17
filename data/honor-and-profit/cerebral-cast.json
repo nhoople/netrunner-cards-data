@@ -12,6 +12,7 @@
   ],
   "playCost": 1,
   "wave": "honor-and-profit",
+  "influence": 3,
   "abilities": [
     {
       "class": "static",

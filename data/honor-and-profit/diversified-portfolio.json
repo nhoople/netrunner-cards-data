@@ -11,6 +11,7 @@
   ],
   "playCost": 1,
   "wave": "honor-and-profit",
+  "influence": 0,
   "abilities": [
     {
       "class": "play",

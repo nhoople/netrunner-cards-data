@@ -10,11 +10,11 @@
     "sentry",
     "ap"
   ],
-  "installCost": 3,
   "rezCost": 3,
   "trashCost": 1,
   "strength": 2,
   "wave": "twenty-three-seconds",
+  "influence": 2,
   "abilities": [
     {
       "class": "static",

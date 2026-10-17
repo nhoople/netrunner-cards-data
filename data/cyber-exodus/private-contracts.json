@@ -10,9 +10,9 @@
   "subtypes": [
     "transaction"
   ],
-  "installCost": 3,
   "rezCost": 3,
   "trashCost": 5,
+  "influence": 0,
   "abilities": [
     {
       "class": "conditional",

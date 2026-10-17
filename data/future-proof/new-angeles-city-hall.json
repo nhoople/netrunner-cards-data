@@ -12,6 +12,7 @@
     "government"
   ],
   "installCost": 1,
+  "influence": 0,
   "abilities": [
     {
       "class": "static",

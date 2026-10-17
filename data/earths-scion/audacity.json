@@ -8,6 +8,7 @@
   "faction": "weyland-consortium",
   "playCost": 0,
   "wave": "earths-scion",
+  "influence": 4,
   "abilities": [
     {
       "class": "static",

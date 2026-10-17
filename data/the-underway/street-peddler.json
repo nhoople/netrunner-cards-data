@@ -12,6 +12,7 @@
   ],
   "installCost": 0,
   "wave": "the-underway",
+  "influence": 1,
   "abilities": [
     {
       "class": "conditional",

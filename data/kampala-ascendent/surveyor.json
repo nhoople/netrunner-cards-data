@@ -10,10 +10,10 @@
     "sentry",
     "tracer"
   ],
-  "installCost": 5,
   "rezCost": 5,
   "strength": 0,
   "wave": "kampala-ascendent",
+  "influence": 2,
   "abilities": [
     {
       "class": "static",

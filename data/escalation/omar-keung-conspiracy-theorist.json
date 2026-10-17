@@ -10,6 +10,9 @@
     "natural"
   ],
   "wave": "escalation",
+  "link": 0,
+  "minimumDeckSize": 45,
+  "influenceLimit": 12,
   "abilities": [
     {
       "class": "static",

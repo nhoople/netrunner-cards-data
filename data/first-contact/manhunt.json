@@ -11,6 +11,7 @@
   ],
   "playCost": 3,
   "wave": "first-contact",
+  "influence": 3,
   "abilities": [
     {
       "class": "static",

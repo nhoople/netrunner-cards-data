@@ -10,10 +10,10 @@
     "code gate",
     "tracer"
   ],
-  "installCost": 3,
   "rezCost": 3,
   "strength": 7,
   "wave": "quorum",
+  "influence": 0,
   "abilities": [
     {
       "class": "subroutine",

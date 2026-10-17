@@ -9,10 +9,10 @@
   "subtypes": [
     "barrier"
   ],
-  "installCost": 2,
   "rezCost": 2,
   "strength": 1,
   "wave": "breaker-bay",
+  "influence": 2,
   "abilities": [
     {
       "class": "static",

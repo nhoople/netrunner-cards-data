@@ -11,6 +11,7 @@
   ],
   "installCost": 0,
   "wave": "blood-money",
+  "influence": 1,
   "abilities": [
     {
       "class": "conditional",

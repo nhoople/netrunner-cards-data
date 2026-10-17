@@ -8,6 +8,7 @@
   "faction": "neutral-runner",
   "playCost": 0,
   "wave": "data-and-destiny",
+  "influence": 0,
   "abilities": [
     {
       "class": "play",

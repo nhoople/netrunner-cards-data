@@ -10,10 +10,10 @@
     "sentry",
     "destroyer"
   ],
-  "installCost": 4,
   "rezCost": 4,
   "strength": 3,
   "wave": "the-valley",
+  "influence": 2,
   "abilities": [
     {
       "class": "paid",

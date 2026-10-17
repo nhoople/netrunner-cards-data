@@ -6,10 +6,10 @@
   "side": "corp",
   "unsupported": [],
   "faction": "nbn",
-  "installCost": 3,
   "rezCost": 3,
   "trashCost": 3,
   "wave": "council-of-the-crest",
+  "influence": 2,
   "abilities": [
     {
       "class": "conditional",

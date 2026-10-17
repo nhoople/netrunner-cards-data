@@ -8,6 +8,7 @@
   "faction": "anarch",
   "installCost": 3,
   "wave": "order-and-chaos",
+  "influence": 4,
   "abilities": [
     {
       "class": "paid",

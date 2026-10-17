@@ -12,9 +12,9 @@
     "bioroid",
     "destroyer"
   ],
-  "installCost": 8,
   "rezCost": 8,
   "strength": 5,
+  "influence": 4,
   "abilities": [
     {
       "class": "subroutine",

@@ -12,10 +12,10 @@
     "ap",
     "destroyer"
   ],
-  "installCost": 8,
   "rezCost": 8,
   "strength": 4,
   "wave": "the-valley",
+  "influence": 3,
   "abilities": [
     {
       "class": "subroutine",

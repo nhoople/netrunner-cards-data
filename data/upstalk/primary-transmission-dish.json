@@ -9,10 +9,10 @@
   "subtypes": [
     "beanstalk"
   ],
-  "installCost": 2,
   "rezCost": 2,
   "trashCost": 3,
   "wave": "upstalk",
+  "influence": 2,
   "abilities": [
     {
       "class": "static",

@@ -11,6 +11,7 @@
   ],
   "playCost": 0,
   "wave": "all-that-remains",
+  "influence": 0,
   "abilities": [
     {
       "class": "play",

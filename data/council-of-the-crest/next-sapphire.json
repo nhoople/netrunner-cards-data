@@ -10,10 +10,10 @@
     "code gate",
     "next"
   ],
-  "installCost": 4,
   "rezCost": 4,
   "strength": 2,
   "wave": "council-of-the-crest",
+  "influence": 3,
   "abilities": [
     {
       "class": "subroutine",

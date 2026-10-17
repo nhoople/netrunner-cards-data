@@ -10,10 +10,10 @@
     "sentry",
     "ap"
   ],
-  "installCost": 7,
   "rezCost": 7,
   "strength": 5,
   "wave": "kampala-ascendent",
+  "influence": 3,
   "abilities": [
     {
       "class": "subroutine",

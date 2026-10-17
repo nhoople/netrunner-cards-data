@@ -11,10 +11,10 @@
     "tracer",
     "destroyer"
   ],
-  "installCost": 7,
   "rezCost": 7,
   "strength": 5,
   "wave": "terminal-directive",
+  "influence": 2,
   "abilities": [
     {
       "class": "subroutine",

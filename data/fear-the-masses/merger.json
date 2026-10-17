@@ -12,6 +12,7 @@
   "advancementRequirement": 3,
   "agendaPoints": 2,
   "wave": "fear-the-masses",
+  "influence": 1,
   "abilities": [
     {
       "class": "static",

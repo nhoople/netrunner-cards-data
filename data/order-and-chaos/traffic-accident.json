@@ -11,6 +11,7 @@
   ],
   "playCost": 0,
   "wave": "order-and-chaos",
+  "influence": 1,
   "abilities": [
     {
       "class": "static",

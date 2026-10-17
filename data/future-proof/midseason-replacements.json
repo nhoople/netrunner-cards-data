@@ -8,6 +8,7 @@
   "unsupported": [],
   "faction": "nbn",
   "playCost": 5,
+  "influence": 4,
   "abilities": [
     {
       "class": "static",

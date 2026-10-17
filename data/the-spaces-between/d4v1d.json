@@ -9,6 +9,7 @@
   "installCost": 3,
   "memoryCost": 1,
   "wave": "the-spaces-between",
+  "influence": 4,
   "abilities": [
     {
       "class": "static",

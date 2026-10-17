@@ -9,5 +9,7 @@
   "faction": "haas-bioroid",
   "subtypes": [
     "division"
-  ]
+  ],
+  "minimumDeckSize": 45,
+  "influenceLimit": 22
 }

@@ -9,6 +9,7 @@
   "installCost": 1,
   "memoryCost": 3,
   "wave": "the-underway",
+  "influence": 3,
   "abilities": [
     {
       "class": "conditional",

@@ -11,6 +11,7 @@
     "double"
   ],
   "playCost": 0,
+  "influence": 1,
   "abilities": [
     {
       "class": "static",

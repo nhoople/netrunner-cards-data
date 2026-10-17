@@ -9,10 +9,10 @@
   "subtypes": [
     "character"
   ],
-  "installCost": 2,
   "rezCost": 2,
   "trashCost": 4,
   "wave": "the-devil-and-the-dragon",
+  "influence": 4,
   "abilities": [
     {
       "class": "static",

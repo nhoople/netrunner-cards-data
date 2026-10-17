@@ -15,6 +15,7 @@
   "strength": 2,
   "memoryCost": 1,
   "wave": "salsette-island",
+  "influence": 2,
   "abilities": [
     {
       "class": "static",

@@ -9,10 +9,10 @@
   "subtypes": [
     "ambush"
   ],
-  "installCost": 3,
   "rezCost": 3,
   "trashCost": 1,
   "wave": "order-and-chaos",
+  "influence": 0,
   "abilities": [
     {
       "class": "static",

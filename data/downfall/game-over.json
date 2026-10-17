@@ -12,6 +12,7 @@
     "liability"
   ],
   "playCost": 4,
+  "influence": 3,
   "abilities": [
     {
       "class": "static",

@@ -12,6 +12,7 @@
     "expansion"
   ],
   "unsupported": [],
+  "influence": 0,
   "abilities": [
     {
       "class": "conditional",

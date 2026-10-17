@@ -11,9 +11,9 @@
     "trap",
     "ap"
   ],
-  "installCost": 0,
   "rezCost": 0,
   "strength": 2,
+  "influence": 2,
   "abilities": [
     {
       "class": "subroutine",

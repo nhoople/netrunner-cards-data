@@ -10,6 +10,8 @@
     "corp"
   ],
   "wave": "order-and-chaos",
+  "minimumDeckSize": 45,
+  "influenceLimit": 17,
   "abilities": [
     {
       "class": "conditional",

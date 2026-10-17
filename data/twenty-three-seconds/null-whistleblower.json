@@ -10,6 +10,9 @@
     "natural"
   ],
   "wave": "twenty-three-seconds",
+  "link": 0,
+  "minimumDeckSize": 45,
+  "influenceLimit": 15,
   "abilities": [
     {
       "class": "static",

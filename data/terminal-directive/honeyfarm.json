@@ -9,10 +9,10 @@
   "subtypes": [
     "ambush"
   ],
-  "installCost": 0,
   "rezCost": 0,
   "trashCost": 2,
   "wave": "terminal-directive",
+  "influence": 0,
   "abilities": [
     {
       "class": "static",

@@ -10,10 +10,10 @@
     "alliance",
     "ritzy"
   ],
-  "installCost": 0,
   "rezCost": 0,
   "trashCost": 3,
   "wave": "salsette-island",
+  "influence": 3,
   "abilities": [
     {
       "class": "static",

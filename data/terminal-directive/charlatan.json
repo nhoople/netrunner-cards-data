@@ -11,6 +11,7 @@
   ],
   "installCost": 5,
   "wave": "terminal-directive",
+  "influence": 4,
   "abilities": [
     {
       "class": "paid",

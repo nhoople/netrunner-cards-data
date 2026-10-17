@@ -8,6 +8,7 @@
   "faction": "neutral-corp",
   "playCost": 0,
   "wave": "down-the-white-nile",
+  "influence": 0,
   "abilities": [
     {
       "class": "static",

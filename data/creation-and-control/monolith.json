@@ -11,6 +11,7 @@
     "console"
   ],
   "installCost": 18,
+  "influence": 3,
   "abilities": [
     {
       "class": "static",

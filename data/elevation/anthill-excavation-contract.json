@@ -10,9 +10,9 @@
   "subtypes": [
     "industrial"
   ],
-  "installCost": 3,
   "rezCost": 3,
   "trashCost": 1,
+  "influence": 2,
   "abilities": [
     {
       "class": "conditional",

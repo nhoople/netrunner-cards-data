@@ -11,6 +11,7 @@
   ],
   "playCost": 0,
   "wave": "station-one",
+  "influence": 1,
   "abilities": [
     {
       "class": "static",

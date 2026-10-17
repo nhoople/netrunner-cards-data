@@ -9,6 +9,7 @@
   "faction": "shaper",
   "installCost": 5,
   "memoryCost": 2,
+  "influence": 2,
   "abilities": [
     {
       "class": "paid",

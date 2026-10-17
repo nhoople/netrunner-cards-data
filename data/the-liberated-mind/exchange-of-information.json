@@ -11,6 +11,7 @@
   ],
   "playCost": 0,
   "wave": "the-liberated-mind",
+  "influence": 2,
   "abilities": [
     {
       "class": "static",

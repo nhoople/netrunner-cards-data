@@ -10,9 +10,9 @@
   "subtypes": [
     "bioroid"
   ],
-  "installCost": 1,
   "rezCost": 1,
   "trashCost": 2,
+  "influence": 1,
   "abilities": [
     {
       "class": "static",

@@ -8,6 +8,7 @@
   "faction": "weyland-consortium",
   "playCost": 0,
   "wave": "fear-the-masses",
+  "influence": 2,
   "abilities": [
     {
       "class": "play",

@@ -11,9 +11,9 @@
     "sentry",
     "observer"
   ],
-  "installCost": 9,
   "rezCost": 9,
   "strength": 6,
+  "influence": 2,
   "abilities": [
     {
       "class": "conditional",

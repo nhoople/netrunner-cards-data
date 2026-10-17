@@ -11,6 +11,9 @@
     "cyborg",
     "g-mod"
   ],
+  "link": 1,
+  "minimumDeckSize": 45,
+  "influenceLimit": 15,
   "abilities": [
     {
       "class": "static",

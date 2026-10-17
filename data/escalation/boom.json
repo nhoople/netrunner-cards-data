@@ -13,6 +13,7 @@
   "playCost": 4,
   "trashCost": 1,
   "wave": "escalation",
+  "influence": 3,
   "abilities": [
     {
       "class": "static",

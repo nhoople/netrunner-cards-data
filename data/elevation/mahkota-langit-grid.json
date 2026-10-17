@@ -10,9 +10,9 @@
   "subtypes": [
     "region"
   ],
-  "installCost": 2,
   "rezCost": 2,
   "trashCost": 2,
+  "influence": 0,
   "abilities": [
     {
       "class": "static",

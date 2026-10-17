@@ -12,10 +12,10 @@
     "ap",
     "liability"
   ],
-  "installCost": 7,
   "rezCost": 7,
   "strength": 5,
   "wave": "double-time",
+  "influence": 3,
   "abilities": [
     {
       "class": "conditional",

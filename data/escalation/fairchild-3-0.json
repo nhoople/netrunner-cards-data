@@ -11,10 +11,10 @@
     "bioroid",
     "ap"
   ],
-  "installCost": 6,
   "rezCost": 6,
   "strength": 5,
   "wave": "escalation",
+  "influence": 3,
   "abilities": [
     {
       "class": "static",

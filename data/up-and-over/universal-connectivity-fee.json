@@ -9,10 +9,10 @@
   "subtypes": [
     "trap"
   ],
-  "installCost": 2,
   "rezCost": 2,
   "strength": 2,
   "wave": "up-and-over",
+  "influence": 1,
   "abilities": [
     {
       "class": "subroutine",

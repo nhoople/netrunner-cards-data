@@ -6,13 +6,13 @@
   "type": "ice",
   "side": "corp",
   "faction": "neutral-corp",
-  "installCost": 2,
   "rezCost": 2,
   "strength": 0,
   "subtypes": [
     "code gate"
   ],
   "unsupported": [],
+  "influence": 0,
   "abilities": [
     {
       "class": "subroutine",

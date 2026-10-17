@@ -11,10 +11,10 @@
     "destroyer",
     "ap"
   ],
-  "installCost": 4,
   "rezCost": 4,
   "strength": 1,
   "wave": "salsette-island",
+  "influence": 0,
   "abilities": [
     {
       "class": "subroutine",

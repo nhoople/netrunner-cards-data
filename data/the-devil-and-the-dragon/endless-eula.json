@@ -9,10 +9,10 @@
   "subtypes": [
     "barrier"
   ],
-  "installCost": 6,
   "rezCost": 6,
   "strength": 0,
   "wave": "the-devil-and-the-dragon",
+  "influence": 2,
   "abilities": [
     {
       "class": "subroutine",

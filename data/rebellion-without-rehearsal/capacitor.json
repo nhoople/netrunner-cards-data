@@ -10,9 +10,9 @@
   "subtypes": [
     "barrier"
   ],
-  "installCost": 4,
   "rezCost": 4,
   "strength": 3,
+  "influence": 1,
   "abilities": [
     {
       "class": "static",

@@ -12,6 +12,7 @@
     "virtual"
   ],
   "installCost": 0,
+  "influence": 3,
   "abilities": [
     {
       "class": "static",

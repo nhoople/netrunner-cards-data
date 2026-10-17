@@ -10,6 +10,8 @@
     "division"
   ],
   "wave": "chrome-city",
+  "minimumDeckSize": 40,
+  "influenceLimit": 15,
   "abilities": [
     {
       "class": "static",

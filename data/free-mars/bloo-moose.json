@@ -12,6 +12,7 @@
   ],
   "installCost": 4,
   "wave": "free-mars",
+  "influence": 0,
   "abilities": [
     {
       "class": "static",

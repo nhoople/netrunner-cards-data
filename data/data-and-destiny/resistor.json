@@ -10,10 +10,10 @@
     "barrier",
     "tracer"
   ],
-  "installCost": 0,
   "rezCost": 0,
   "strength": 0,
   "wave": "data-and-destiny",
+  "influence": 2,
   "abilities": [
     {
       "class": "static",

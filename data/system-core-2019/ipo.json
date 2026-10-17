@@ -12,6 +12,7 @@
     "transaction"
   ],
   "playCost": 8,
+  "influence": 0,
   "abilities": [
     {
       "class": "static",

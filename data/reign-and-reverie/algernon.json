@@ -9,6 +9,7 @@
   "faction": "adam",
   "installCost": 0,
   "memoryCost": 1,
+  "influence": 5,
   "abilities": [
     {
       "class": "static",

@@ -11,9 +11,9 @@
     "code gate",
     "liability"
   ],
-  "installCost": 5,
   "rezCost": 5,
   "strength": 6,
+  "influence": 3,
   "abilities": [
     {
       "class": "subroutine",

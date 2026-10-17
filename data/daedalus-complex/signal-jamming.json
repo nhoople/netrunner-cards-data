@@ -6,10 +6,10 @@
   "side": "corp",
   "unsupported": [],
   "faction": "neutral-corp",
-  "installCost": 0,
   "rezCost": 0,
   "trashCost": 2,
   "wave": "daedalus-complex",
+  "influence": 0,
   "abilities": [
     {
       "class": "paid",

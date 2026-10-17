@@ -10,6 +10,8 @@
     "division"
   ],
   "wave": "kampala-ascendent",
+  "minimumDeckSize": 45,
+  "influenceLimit": 15,
   "abilities": [
     {
       "class": "static",

@@ -11,6 +11,7 @@
   ],
   "playCost": 0,
   "wave": "the-source",
+  "influence": 2,
   "abilities": [
     {
       "class": "static",

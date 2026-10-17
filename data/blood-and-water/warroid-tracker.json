@@ -9,10 +9,10 @@
   "subtypes": [
     "bioroid"
   ],
-  "installCost": 2,
   "rezCost": 2,
   "trashCost": 4,
   "wave": "blood-and-water",
+  "influence": 2,
   "abilities": [
     {
       "class": "conditional",

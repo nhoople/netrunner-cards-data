@@ -9,6 +9,7 @@
   "installCost": 0,
   "memoryCost": 1,
   "wave": "martial-law",
+  "influence": 2,
   "abilities": [
     {
       "class": "paid",

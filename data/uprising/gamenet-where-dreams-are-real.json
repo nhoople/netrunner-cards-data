@@ -10,6 +10,8 @@
   "subtypes": [
     "division"
   ],
+  "minimumDeckSize": 45,
+  "influenceLimit": 17,
   "abilities": [
     {
       "class": "conditional",

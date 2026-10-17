@@ -10,6 +10,9 @@
   "subtypes": [
     "cyborg"
   ],
+  "link": 0,
+  "minimumDeckSize": 45,
+  "influenceLimit": 10,
   "abilities": [
     {
       "class": "static",

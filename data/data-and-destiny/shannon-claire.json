@@ -9,10 +9,10 @@
   "subtypes": [
     "character"
   ],
-  "installCost": 0,
   "rezCost": 0,
   "trashCost": 3,
   "wave": "data-and-destiny",
+  "influence": 2,
   "abilities": [
     {
       "class": "static",

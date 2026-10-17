@@ -6,13 +6,13 @@
   "type": "asset",
   "side": "corp",
   "faction": "weyland-consortium",
-  "installCost": 0,
   "rezCost": 0,
   "trashCost": 3,
   "subtypes": [
     "hostile"
   ],
   "unsupported": [],
+  "influence": 3,
   "abilities": [
     {
       "class": "conditional",

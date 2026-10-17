@@ -10,9 +10,9 @@
   "subtypes": [
     "trap"
   ],
-  "installCost": 0,
   "rezCost": 0,
   "strength": 1,
+  "influence": 2,
   "abilities": [
     {
       "class": "subroutine",

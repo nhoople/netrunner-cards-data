@@ -12,10 +12,10 @@
     "tracer",
     "ap"
   ],
-  "installCost": 6,
   "rezCost": 6,
   "strength": 5,
   "wave": "kala-ghoda",
+  "influence": 2,
   "abilities": [
     {
       "class": "static",

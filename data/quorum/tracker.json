@@ -9,6 +9,7 @@
   "installCost": 0,
   "memoryCost": 2,
   "wave": "quorum",
+  "influence": 2,
   "abilities": [
     {
       "class": "conditional",

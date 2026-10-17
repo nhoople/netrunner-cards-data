@@ -10,10 +10,10 @@
     "barrier",
     "liability"
   ],
-  "installCost": 10,
   "rezCost": 10,
   "strength": 8,
   "wave": "intervention",
+  "influence": 3,
   "abilities": [
     {
       "class": "static",

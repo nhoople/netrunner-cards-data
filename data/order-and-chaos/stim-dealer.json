@@ -11,6 +11,7 @@
   ],
   "installCost": 4,
   "wave": "order-and-chaos",
+  "influence": 3,
   "abilities": [
     {
       "class": "conditional",

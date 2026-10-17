@@ -10,9 +10,9 @@
   "subtypes": [
     "cast"
   ],
-  "installCost": 2,
   "rezCost": 2,
   "trashCost": 4,
+  "influence": 1,
   "abilities": [
     {
       "class": "static",

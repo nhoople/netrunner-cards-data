@@ -13,6 +13,7 @@
   ],
   "playCost": 1,
   "wave": "blood-money",
+  "influence": 1,
   "abilities": [
     {
       "class": "static",

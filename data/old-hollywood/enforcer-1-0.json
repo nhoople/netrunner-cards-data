@@ -12,10 +12,10 @@
     "destroyer",
     "ap"
   ],
-  "installCost": 1,
   "rezCost": 1,
   "strength": 5,
   "wave": "old-hollywood",
+  "influence": 2,
   "abilities": [
     {
       "class": "static",

@@ -12,9 +12,9 @@
     "destroyer",
     "observer"
   ],
-  "installCost": 6,
   "rezCost": 6,
   "strength": 4,
+  "influence": 2,
   "abilities": [
     {
       "class": "static",

@@ -11,6 +11,7 @@
   ],
   "playCost": 3,
   "wave": "martial-law",
+  "influence": 2,
   "abilities": [
     {
       "class": "play",

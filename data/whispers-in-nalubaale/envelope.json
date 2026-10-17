@@ -10,10 +10,10 @@
     "barrier",
     "ap"
   ],
-  "installCost": 4,
   "rezCost": 4,
   "strength": 3,
   "wave": "whispers-in-nalubaale",
+  "influence": 2,
   "abilities": [
     {
       "class": "subroutine",

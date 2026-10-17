@@ -11,6 +11,7 @@
     "connection"
   ],
   "installCost": 5,
+  "influence": 2,
   "abilities": [
     {
       "class": "paid",

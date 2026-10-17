@@ -11,10 +11,10 @@
     "observer",
     "next"
   ],
-  "installCost": 4,
   "rezCost": 4,
   "strength": 3,
   "wave": "earths-scion",
+  "influence": 1,
   "abilities": [
     {
       "class": "static",

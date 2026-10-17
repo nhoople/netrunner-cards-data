@@ -11,6 +11,7 @@
     "gray ops"
   ],
   "trashCost": 5,
+  "influence": 5,
   "abilities": [
     {
       "class": "play",

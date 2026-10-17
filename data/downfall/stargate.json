@@ -9,6 +9,7 @@
   "faction": "anarch",
   "installCost": 4,
   "memoryCost": 2,
+  "influence": 3,
   "abilities": [
     {
       "class": "paid",

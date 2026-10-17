@@ -9,6 +9,7 @@
   "unsupported": [],
   "playCost": 10,
   "agendaPoints": 2,
+  "influence": 4,
   "abilities": [
     {
       "class": "static",

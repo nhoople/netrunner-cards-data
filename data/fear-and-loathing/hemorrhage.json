@@ -12,6 +12,7 @@
   "installCost": 3,
   "memoryCost": 1,
   "wave": "fear-and-loathing",
+  "influence": 4,
   "abilities": [
     {
       "class": "conditional",

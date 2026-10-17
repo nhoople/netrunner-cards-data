@@ -9,10 +9,10 @@
   "subtypes": [
     "security protocol"
   ],
-  "installCost": 4,
   "rezCost": 4,
   "trashCost": 1,
   "wave": "terminal-directive",
+  "influence": 5,
   "abilities": [
     {
       "class": "conditional",

@@ -10,10 +10,10 @@
     "sysop",
     "psi"
   ],
-  "installCost": 0,
   "rezCost": 0,
   "trashCost": 1,
   "wave": "the-underway",
+  "influence": 3,
   "abilities": [
     {
       "class": "static",

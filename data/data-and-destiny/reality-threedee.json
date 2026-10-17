@@ -9,10 +9,10 @@
   "subtypes": [
     "liability"
   ],
-  "installCost": 0,
   "rezCost": 0,
   "trashCost": 6,
   "wave": "data-and-destiny",
+  "influence": 2,
   "abilities": [
     {
       "class": "static",

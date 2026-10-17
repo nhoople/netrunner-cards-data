@@ -12,9 +12,9 @@
     "bioroid",
     "ap"
   ],
-  "installCost": 15,
   "rezCost": 15,
   "strength": 8,
+  "influence": 3,
   "abilities": [
     {
       "class": "subroutine",

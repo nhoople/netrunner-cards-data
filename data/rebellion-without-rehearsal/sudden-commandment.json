@@ -12,6 +12,7 @@
   ],
   "playCost": 1,
   "trashCost": 2,
+  "influence": 3,
   "abilities": [
     {
       "class": "play",

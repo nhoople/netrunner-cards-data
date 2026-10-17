@@ -12,6 +12,7 @@
   ],
   "installCost": 2,
   "wave": "first-contact",
+  "influence": 4,
   "abilities": [
     {
       "class": "static",

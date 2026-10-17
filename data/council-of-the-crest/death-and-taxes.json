@@ -12,6 +12,7 @@
   ],
   "playCost": 2,
   "wave": "council-of-the-crest",
+  "influence": 3,
   "abilities": [
     {
       "class": "static",

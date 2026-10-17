@@ -9,10 +9,10 @@
   "subtypes": [
     "barrier"
   ],
-  "installCost": 3,
   "rezCost": 3,
   "strength": 1,
   "wave": "station-one",
+  "influence": 0,
   "abilities": [
     {
       "class": "static",

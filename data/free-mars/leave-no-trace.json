@@ -11,6 +11,7 @@
   ],
   "playCost": 2,
   "wave": "free-mars",
+  "influence": 3,
   "abilities": [
     {
       "class": "static",

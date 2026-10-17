@@ -8,6 +8,7 @@
   "faction": "neutral-runner",
   "installCost": 2,
   "wave": "terminal-directive",
+  "influence": 0,
   "abilities": [
     {
       "class": "paid",

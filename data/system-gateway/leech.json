@@ -12,6 +12,7 @@
   ],
   "unsupported": [],
   "memoryCost": 1,
+  "influence": 1,
   "abilities": [
     {
       "class": "paid",

@@ -10,9 +10,9 @@
   "subtypes": [
     "hostile"
   ],
-  "installCost": 2,
   "rezCost": 2,
   "trashCost": 3,
+  "influence": 3,
   "abilities": [
     {
       "class": "conditional",

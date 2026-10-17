@@ -9,10 +9,10 @@
   "subtypes": [
     "sentry"
   ],
-  "installCost": 4,
   "rezCost": 4,
   "strength": 2,
   "wave": "honor-and-profit",
+  "influence": 0,
   "abilities": [
     {
       "class": "static",

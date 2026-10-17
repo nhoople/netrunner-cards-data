@@ -11,10 +11,10 @@
     "tracer",
     "liability"
   ],
-  "installCost": 4,
   "rezCost": 4,
   "strength": 7,
   "wave": "order-and-chaos",
+  "influence": 2,
   "abilities": [
     {
       "class": "static",

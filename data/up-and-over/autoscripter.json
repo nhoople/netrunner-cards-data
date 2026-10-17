@@ -8,6 +8,7 @@
   "faction": "criminal",
   "installCost": 3,
   "wave": "up-and-over",
+  "influence": 3,
   "abilities": [
     {
       "class": "static",

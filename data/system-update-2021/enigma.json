@@ -6,13 +6,13 @@
   "faction": "neutral-corp",
   "wave": "system-update-2021",
   "nrdbCode": "01111",
-  "installCost": 3,
   "rezCost": 3,
   "strength": 2,
   "subtypes": [
     "code gate"
   ],
   "unsupported": [],
+  "influence": 0,
   "abilities": [
     {
       "class": "subroutine",

@@ -9,10 +9,10 @@
   "subtypes": [
     "sentry"
   ],
-  "installCost": 1,
   "rezCost": 1,
   "strength": 3,
   "wave": "the-source",
+  "influence": 2,
   "abilities": [
     {
       "class": "conditional",

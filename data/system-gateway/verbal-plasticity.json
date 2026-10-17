@@ -10,5 +10,6 @@
   "subtypes": [
     "genetics"
   ],
-  "unsupported": []
+  "unsupported": [],
+  "influence": 0
 }

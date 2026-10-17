@@ -9,6 +9,7 @@
   "faction": "shaper",
   "installCost": 2,
   "memoryCost": 1,
+  "influence": 1,
   "abilities": [
     {
       "class": "conditional",

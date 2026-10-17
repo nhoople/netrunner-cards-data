@@ -9,10 +9,10 @@
   "subtypes": [
     "corporation"
   ],
-  "installCost": 2,
   "rezCost": 2,
   "trashCost": 2,
   "wave": "council-of-the-crest",
+  "influence": 0,
   "abilities": [
     {
       "class": "static",

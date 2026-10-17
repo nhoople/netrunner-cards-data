@@ -12,9 +12,9 @@
     "enforcer",
     "expendable"
   ],
-  "installCost": 0,
   "rezCost": 0,
   "trashCost": 2,
+  "influence": 3,
   "abilities": [
     {
       "class": "static",

@@ -14,6 +14,7 @@
   "strength": 1,
   "memoryCost": 1,
   "wave": "free-mars",
+  "influence": 1,
   "abilities": [
     {
       "class": "static",

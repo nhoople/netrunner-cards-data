@@ -12,6 +12,7 @@
   ],
   "installCost": 1,
   "wave": "kala-ghoda",
+  "influence": 0,
   "abilities": [
     {
       "class": "static",

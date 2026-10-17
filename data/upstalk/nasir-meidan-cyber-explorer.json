@@ -10,6 +10,9 @@
     "cyborg"
   ],
   "wave": "upstalk",
+  "link": 1,
+  "minimumDeckSize": 45,
+  "influenceLimit": 15,
   "abilities": [
     {
       "class": "conditional",

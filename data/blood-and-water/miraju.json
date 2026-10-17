@@ -10,10 +10,10 @@
     "code gate",
     "deflector"
   ],
-  "installCost": 2,
   "rezCost": 2,
   "strength": 0,
   "wave": "blood-and-water",
+  "influence": 2,
   "abilities": [
     {
       "class": "conditional",

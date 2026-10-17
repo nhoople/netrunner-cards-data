@@ -6,13 +6,13 @@
   "type": "ice",
   "side": "corp",
   "faction": "weyland-consortium",
-  "installCost": 7,
   "rezCost": 7,
   "strength": 5,
   "subtypes": [
     "barrier"
   ],
   "unsupported": [],
+  "influence": 3,
   "abilities": [
     {
       "class": "static",

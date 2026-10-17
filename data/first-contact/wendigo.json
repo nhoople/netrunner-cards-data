@@ -10,10 +10,10 @@
     "code gate",
     "morph"
   ],
-  "installCost": 2,
   "rezCost": 2,
   "strength": 4,
   "wave": "first-contact",
+  "influence": 2,
   "abilities": [
     {
       "class": "static",

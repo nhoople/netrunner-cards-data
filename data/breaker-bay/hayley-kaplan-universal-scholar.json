@@ -10,6 +10,9 @@
     "g-mod"
   ],
   "wave": "breaker-bay",
+  "link": 0,
+  "minimumDeckSize": 45,
+  "influenceLimit": 15,
   "abilities": [
     {
       "class": "conditional",

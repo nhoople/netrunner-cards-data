@@ -7,9 +7,9 @@
   "side": "corp",
   "unsupported": [],
   "faction": "haas-bioroid",
-  "installCost": 0,
   "rezCost": 0,
   "trashCost": 2,
+  "influence": 1,
   "abilities": [
     {
       "class": "static",

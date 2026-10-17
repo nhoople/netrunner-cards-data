@@ -10,9 +10,9 @@
   "subtypes": [
     "ritzy"
   ],
-  "installCost": 1,
   "rezCost": 1,
   "trashCost": 3,
+  "influence": 1,
   "abilities": [
     {
       "class": "conditional",

@@ -9,10 +9,10 @@
   "subtypes": [
     "bioroid"
   ],
-  "installCost": 3,
   "rezCost": 3,
   "trashCost": 3,
   "wave": "old-hollywood",
+  "influence": 3,
   "abilities": [
     {
       "class": "static",

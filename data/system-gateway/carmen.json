@@ -14,6 +14,7 @@
   "unsupported": [],
   "installCost": 5,
   "memoryCost": 1,
+  "influence": 2,
   "abilities": [
     {
       "class": "static",

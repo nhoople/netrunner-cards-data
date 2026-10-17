@@ -10,6 +10,8 @@
     "division"
   ],
   "wave": "business-first",
+  "minimumDeckSize": 45,
+  "influenceLimit": 15,
   "abilities": [
     {
       "class": "static",

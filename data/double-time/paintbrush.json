@@ -9,6 +9,7 @@
   "installCost": 3,
   "memoryCost": 2,
   "wave": "double-time",
+  "influence": 4,
   "abilities": [
     {
       "class": "paid",

@@ -9,11 +9,11 @@
   "subtypes": [
     "code gate"
   ],
-  "installCost": 2,
   "rezCost": 2,
   "trashCost": 1,
   "strength": 1,
   "wave": "quorum",
+  "influence": 2,
   "abilities": [
     {
       "class": "static",

@@ -13,9 +13,9 @@
     "tracer",
     "liability"
   ],
-  "installCost": 7,
   "rezCost": 7,
   "strength": 6,
+  "influence": 3,
   "abilities": [
     {
       "class": "conditional",

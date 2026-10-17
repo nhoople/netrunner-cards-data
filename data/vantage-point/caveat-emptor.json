@@ -11,6 +11,7 @@
     "transaction"
   ],
   "playCost": 5,
+  "influence": 3,
   "abilities": [
     {
       "class": "play",

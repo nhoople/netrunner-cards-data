@@ -12,6 +12,7 @@
     "seedy"
   ],
   "installCost": 1,
+  "influence": 1,
   "abilities": [
     {
       "class": "static",

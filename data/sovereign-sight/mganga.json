@@ -11,10 +11,10 @@
     "psi",
     "ap"
   ],
-  "installCost": 1,
   "rezCost": 1,
   "strength": 3,
   "wave": "sovereign-sight",
+  "influence": 2,
   "abilities": [
     {
       "class": "subroutine",

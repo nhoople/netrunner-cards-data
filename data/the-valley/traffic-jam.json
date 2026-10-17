@@ -11,6 +11,7 @@
   ],
   "playCost": 2,
   "wave": "the-valley",
+  "influence": 0,
   "abilities": [
     {
       "class": "static",

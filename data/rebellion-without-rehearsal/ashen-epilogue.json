@@ -8,6 +8,7 @@
   "faction": "neutral-runner",
   "unsupported": [],
   "playCost": 5,
+  "influence": 2,
   "abilities": [
     {
       "class": "play",

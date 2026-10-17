@@ -11,6 +11,7 @@
   ],
   "installCost": 2,
   "wave": "breaker-bay",
+  "influence": 2,
   "abilities": [
     {
       "class": "static",

@@ -12,6 +12,7 @@
   ],
   "unsupported": [],
   "memoryCost": 1,
+  "influence": 4,
   "abilities": [
     {
       "class": "conditional",

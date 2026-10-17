@@ -9,10 +9,10 @@
   "subtypes": [
     "sysop"
   ],
-  "installCost": 2,
   "rezCost": 2,
   "trashCost": 2,
   "wave": "earths-scion",
+  "influence": 1,
   "abilities": [
     {
       "class": "static",

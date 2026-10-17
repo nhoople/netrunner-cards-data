@@ -11,6 +11,7 @@
   ],
   "playCost": 4,
   "wave": "crimson-dust",
+  "influence": 4,
   "abilities": [
     {
       "class": "static",

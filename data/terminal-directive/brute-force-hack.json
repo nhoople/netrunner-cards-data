@@ -11,6 +11,7 @@
   ],
   "playCost": 0,
   "wave": "terminal-directive",
+  "influence": 3,
   "abilities": [
     {
       "class": "static",

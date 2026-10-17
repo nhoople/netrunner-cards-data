@@ -13,9 +13,9 @@
     "destroyer",
     "observer"
   ],
-  "installCost": 10,
   "rezCost": 10,
   "strength": 6,
+  "influence": 3,
   "abilities": [
     {
       "class": "conditional",

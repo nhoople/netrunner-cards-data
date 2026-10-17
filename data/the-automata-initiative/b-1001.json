@@ -11,9 +11,9 @@
     "bioroid",
     "enforcer"
   ],
-  "installCost": 1,
   "rezCost": 1,
   "trashCost": 3,
+  "influence": 0,
   "abilities": [
     {
       "class": "paid",

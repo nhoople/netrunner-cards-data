@@ -10,6 +10,8 @@
   "subtypes": [
     "natural"
   ],
+  "link": 0,
+  "minimumDeckSize": 30,
   "abilities": [
     {
       "class": "static",

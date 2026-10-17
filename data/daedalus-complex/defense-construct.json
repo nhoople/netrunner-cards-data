@@ -6,10 +6,10 @@
   "side": "corp",
   "unsupported": [],
   "faction": "haas-bioroid",
-  "installCost": 2,
   "rezCost": 2,
   "trashCost": 0,
   "wave": "daedalus-complex",
+  "influence": 3,
   "abilities": [
     {
       "class": "static",

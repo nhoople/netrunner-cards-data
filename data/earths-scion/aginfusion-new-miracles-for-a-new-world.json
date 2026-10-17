@@ -10,6 +10,8 @@
     "division"
   ],
   "wave": "earths-scion",
+  "minimumDeckSize": 45,
+  "influenceLimit": 17,
   "abilities": [
     {
       "class": "paid",

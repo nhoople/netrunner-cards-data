@@ -12,6 +12,7 @@
     "vehicle"
   ],
   "installCost": 8,
+  "influence": 5,
   "abilities": [
     {
       "class": "static",

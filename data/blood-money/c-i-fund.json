@@ -6,10 +6,10 @@
   "side": "corp",
   "unsupported": [],
   "faction": "weyland-consortium",
-  "installCost": 0,
   "rezCost": 0,
   "trashCost": 2,
   "wave": "blood-money",
+  "influence": 1,
   "abilities": [
     {
       "class": "conditional",

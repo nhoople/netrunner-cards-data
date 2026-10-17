@@ -9,10 +9,10 @@
   "subtypes": [
     "region"
   ],
-  "installCost": 2,
   "rezCost": 2,
   "trashCost": 5,
   "wave": "first-contact",
+  "influence": 2,
   "abilities": [
     {
       "class": "static",

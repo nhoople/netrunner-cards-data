@@ -11,6 +11,7 @@
   ],
   "playCost": 1,
   "wave": "quorum",
+  "influence": 2,
   "abilities": [
     {
       "class": "static",

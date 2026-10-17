@@ -10,10 +10,10 @@
     "barrier",
     "ap"
   ],
-  "installCost": 12,
   "rezCost": 12,
   "strength": 8,
   "wave": "quorum",
+  "influence": 2,
   "abilities": [
     {
       "class": "static",

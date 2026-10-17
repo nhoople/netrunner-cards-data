@@ -12,6 +12,7 @@
   ],
   "advancementRequirement": 4,
   "agendaPoints": 2,
+  "influence": 1,
   "abilities": [
     {
       "class": "static",

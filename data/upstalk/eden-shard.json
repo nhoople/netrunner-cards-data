@@ -12,6 +12,7 @@
   ],
   "installCost": 7,
   "wave": "upstalk",
+  "influence": 1,
   "abilities": [
     {
       "class": "static",

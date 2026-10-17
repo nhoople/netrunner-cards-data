@@ -9,10 +9,10 @@
   "subtypes": [
     "barrier"
   ],
-  "installCost": 6,
   "rezCost": 6,
   "strength": 5,
   "wave": "terminal-directive",
+  "influence": 4,
   "abilities": [
     {
       "class": "subroutine",

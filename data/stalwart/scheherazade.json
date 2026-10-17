@@ -12,6 +12,7 @@
   ],
   "installCost": 0,
   "memoryCost": 0,
+  "influence": 1,
   "abilities": [
     {
       "class": "static",

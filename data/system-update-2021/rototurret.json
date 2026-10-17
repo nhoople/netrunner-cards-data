@@ -6,7 +6,6 @@
   "faction": "haas-bioroid",
   "wave": "system-update-2021",
   "nrdbCode": "31046",
-  "installCost": 4,
   "rezCost": 4,
   "strength": 0,
   "subtypes": [
@@ -14,6 +13,7 @@
     "destroyer"
   ],
   "unsupported": [],
+  "influence": 1,
   "abilities": [
     {
       "class": "subroutine",

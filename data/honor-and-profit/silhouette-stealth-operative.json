@@ -10,6 +10,9 @@
     "natural"
   ],
   "wave": "honor-and-profit",
+  "link": 0,
+  "minimumDeckSize": 40,
+  "influenceLimit": 15,
   "abilities": [
     {
       "class": "conditional",

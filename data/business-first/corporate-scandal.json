@@ -11,6 +11,7 @@
   ],
   "playCost": 3,
   "wave": "business-first",
+  "influence": 1,
   "abilities": [
     {
       "class": "static",

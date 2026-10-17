@@ -10,10 +10,10 @@
     "sentry",
     "tracer"
   ],
-  "installCost": 2,
   "rezCost": 2,
   "strength": 3,
   "wave": "breaker-bay",
+  "influence": 3,
   "abilities": [
     {
       "class": "static",

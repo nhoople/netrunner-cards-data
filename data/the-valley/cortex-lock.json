@@ -10,10 +10,10 @@
     "sentry",
     "ap"
   ],
-  "installCost": 2,
   "rezCost": 2,
   "strength": 4,
   "wave": "the-valley",
+  "influence": 2,
   "abilities": [
     {
       "class": "subroutine",

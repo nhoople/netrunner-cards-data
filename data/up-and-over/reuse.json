@@ -11,6 +11,7 @@
   ],
   "playCost": 0,
   "wave": "up-and-over",
+  "influence": 1,
   "abilities": [
     {
       "class": "play",

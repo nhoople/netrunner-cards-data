@@ -9,10 +9,10 @@
   "subtypes": [
     "barrier"
   ],
-  "installCost": 0,
   "rezCost": 0,
   "strength": 0,
   "wave": "the-liberated-mind",
+  "influence": 0,
   "abilities": [
     {
       "class": "subroutine",

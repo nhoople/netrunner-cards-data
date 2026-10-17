@@ -11,6 +11,7 @@
     "job"
   ],
   "playCost": 1,
+  "influence": 1,
   "abilities": [
     {
       "class": "static",

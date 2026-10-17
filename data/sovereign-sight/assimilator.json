@@ -11,6 +11,7 @@
   ],
   "installCost": 5,
   "wave": "sovereign-sight",
+  "influence": 5,
   "abilities": [
     {
       "class": "paid",

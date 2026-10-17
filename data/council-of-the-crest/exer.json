@@ -12,6 +12,7 @@
   "installCost": 2,
   "memoryCost": 1,
   "wave": "council-of-the-crest",
+  "influence": 3,
   "abilities": [
     {
       "class": "conditional",

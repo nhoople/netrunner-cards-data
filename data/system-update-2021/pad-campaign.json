@@ -5,7 +5,6 @@
   "side": "corp",
   "faction": "neutral-corp",
   "wave": "system-update-2021",
-  "installCost": 2,
   "rezCost": 2,
   "trashCost": 4,
   "unsupported": [],

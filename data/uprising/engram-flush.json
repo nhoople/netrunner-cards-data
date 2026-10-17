@@ -11,9 +11,9 @@
     "code gate",
     "observer"
   ],
-  "installCost": 2,
   "rezCost": 2,
   "strength": 5,
+  "influence": 1,
   "abilities": [
     {
       "class": "conditional",

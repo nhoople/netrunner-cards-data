@@ -9,10 +9,10 @@
   "subtypes": [
     "ambush"
   ],
-  "installCost": 0,
   "rezCost": 0,
   "trashCost": 0,
   "wave": "crimson-dust",
+  "influence": 2,
   "abilities": [
     {
       "class": "static",

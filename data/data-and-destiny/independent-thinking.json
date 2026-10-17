@@ -8,6 +8,7 @@
   "faction": "adam",
   "playCost": 1,
   "wave": "data-and-destiny",
+  "influence": 1,
   "abilities": [
     {
       "class": "play",

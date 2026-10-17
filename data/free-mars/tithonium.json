@@ -10,10 +10,10 @@
     "barrier",
     "destroyer"
   ],
-  "installCost": 9,
   "rezCost": 9,
   "strength": 5,
   "wave": "free-mars",
+  "influence": 2,
   "abilities": [
     {
       "class": "static",

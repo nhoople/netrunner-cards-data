@@ -9,10 +9,10 @@
   "subtypes": [
     "code gate"
   ],
-  "installCost": 0,
   "rezCost": 0,
   "strength": 3,
   "wave": "double-time",
+  "influence": 1,
   "abilities": [
     {
       "class": "subroutine",

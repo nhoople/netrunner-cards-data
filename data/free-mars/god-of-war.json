@@ -15,6 +15,7 @@
   "strength": 0,
   "memoryCost": 1,
   "wave": "free-mars",
+  "influence": 3,
   "abilities": [
     {
       "class": "conditional",

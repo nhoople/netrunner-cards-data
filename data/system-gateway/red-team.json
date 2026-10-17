@@ -11,6 +11,7 @@
     "job"
   ],
   "unsupported": [],
+  "influence": 2,
   "abilities": [
     {
       "class": "static",

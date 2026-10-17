@@ -11,6 +11,7 @@
   ],
   "playCost": 2,
   "wave": "fear-the-masses",
+  "influence": 2,
   "abilities": [
     {
       "class": "play",

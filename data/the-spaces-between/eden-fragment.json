@@ -12,6 +12,7 @@
   "advancementRequirement": 5,
   "agendaPoints": 3,
   "wave": "the-spaces-between",
+  "influence": 0,
   "abilities": [
     {
       "class": "static",

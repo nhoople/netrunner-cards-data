@@ -9,10 +9,10 @@
   "subtypes": [
     "sysop"
   ],
-  "installCost": 3,
   "rezCost": 3,
   "trashCost": 2,
   "wave": "honor-and-profit",
+  "influence": 4,
   "abilities": [
     {
       "class": "static",

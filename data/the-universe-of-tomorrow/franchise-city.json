@@ -9,10 +9,10 @@
   "subtypes": [
     "facility"
   ],
-  "installCost": 3,
   "rezCost": 3,
   "trashCost": 2,
   "wave": "the-universe-of-tomorrow",
+  "influence": 5,
   "abilities": [
     {
       "class": "static",

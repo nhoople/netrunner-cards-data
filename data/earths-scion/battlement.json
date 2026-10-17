@@ -9,10 +9,10 @@
   "subtypes": [
     "barrier"
   ],
-  "installCost": 3,
   "rezCost": 3,
   "strength": 2,
   "wave": "earths-scion",
+  "influence": 4,
   "abilities": [
     {
       "class": "subroutine",

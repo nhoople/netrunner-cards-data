@@ -8,6 +8,7 @@
   "faction": "shaper",
   "installCost": 0,
   "wave": "the-universe-of-tomorrow",
+  "influence": 2,
   "abilities": [
     {
       "class": "static",

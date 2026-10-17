@@ -8,6 +8,7 @@
   "faction": "neutral-runner",
   "playCost": 0,
   "wave": "order-and-chaos",
+  "influence": 0,
   "abilities": [
     {
       "class": "play",

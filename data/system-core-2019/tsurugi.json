@@ -11,9 +11,9 @@
     "sentry",
     "ap"
   ],
-  "installCost": 6,
   "rezCost": 6,
   "strength": 2,
+  "influence": 2,
   "abilities": [
     {
       "class": "subroutine",

@@ -11,6 +11,7 @@
   ],
   "installCost": 3,
   "wave": "the-universe-of-tomorrow",
+  "influence": 3,
   "abilities": [
     {
       "class": "paid",

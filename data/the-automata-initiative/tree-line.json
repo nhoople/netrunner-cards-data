@@ -11,9 +11,9 @@
     "barrier",
     "expendable"
   ],
-  "installCost": 4,
   "rezCost": 4,
   "strength": 4,
+  "influence": 1,
   "abilities": [
     {
       "class": "static",

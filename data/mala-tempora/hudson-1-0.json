@@ -11,9 +11,9 @@
     "code gate",
     "bioroid"
   ],
-  "installCost": 3,
   "rezCost": 3,
   "strength": 5,
+  "influence": 1,
   "abilities": [
     {
       "class": "paid",

@@ -9,10 +9,10 @@
   "subtypes": [
     "barrier"
   ],
-  "installCost": 4,
   "rezCost": 4,
   "strength": 1,
   "wave": "magnum-opus",
+  "influence": 3,
   "abilities": [
     {
       "class": "paid",

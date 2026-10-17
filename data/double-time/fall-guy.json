@@ -11,6 +11,7 @@
   ],
   "installCost": 0,
   "wave": "double-time",
+  "influence": 1,
   "abilities": [
     {
       "class": "paid",

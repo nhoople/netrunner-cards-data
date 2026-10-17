@@ -1,6 +1,8 @@
 """Shared helpers for Spin cycle pack generate scripts."""
 from __future__ import annotations
 
+from printed_numbers import apply_printed_numbers
+
 import json
 import re
 import unicodedata
@@ -104,7 +106,9 @@ def base(c, **extra):
         if c["type_code"] in ("event", "operation"):
             card["playCost"] = c["cost"]
         elif c["type_code"] in ("ice", "asset", "upgrade"):
-            card["installCost"] = c["cost"]
+            # Printed rez cost. Ice install cost is 1 credit per ice already
+            # protecting the server (CR 1.16.6b). Assets and upgrades have
+            # no install cost (CR 8.5.11a).
             card["rezCost"] = c["cost"]
         else:
             card["installCost"] = c["cost"]
@@ -120,6 +124,7 @@ def base(c, **extra):
         card["agendaPoints"] = c["agenda_points"]
     if c.get("uniqueness"):
         card["unique"] = True
+    apply_printed_numbers(card, c)
     card.update(extra)
     return card
 

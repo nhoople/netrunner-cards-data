@@ -14,6 +14,7 @@
   "strength": 0,
   "memoryCost": 1,
   "wave": "breaker-bay",
+  "influence": 4,
   "abilities": [
     {
       "class": "static",

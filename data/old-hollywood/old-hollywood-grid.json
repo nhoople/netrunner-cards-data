@@ -9,10 +9,10 @@
   "subtypes": [
     "region"
   ],
-  "installCost": 5,
   "rezCost": 5,
   "trashCost": 4,
   "wave": "old-hollywood",
+  "influence": 2,
   "abilities": [
     {
       "class": "static",

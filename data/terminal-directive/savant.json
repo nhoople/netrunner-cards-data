@@ -15,6 +15,7 @@
   "strength": 1,
   "memoryCost": 2,
   "wave": "terminal-directive",
+  "influence": 3,
   "abilities": [
     {
       "class": "static",

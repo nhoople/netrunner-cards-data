@@ -9,6 +9,7 @@
   "installCost": 2,
   "memoryCost": 1,
   "wave": "down-the-white-nile",
+  "influence": 3,
   "abilities": [
     {
       "class": "static",

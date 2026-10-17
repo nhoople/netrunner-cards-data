@@ -10,10 +10,10 @@
     "barrier",
     "grail"
   ],
-  "installCost": 2,
   "rezCost": 2,
   "strength": 1,
   "wave": "upstalk",
+  "influence": 1,
   "abilities": [
     {
       "class": "conditional",

@@ -9,6 +9,7 @@
   "installCost": 0,
   "memoryCost": 1,
   "wave": "double-time",
+  "influence": 3,
   "abilities": [
     {
       "class": "static",
