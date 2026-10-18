@@ -9,6 +9,7 @@ Follow NSG pack stripped_text (not IR-hint paraphrases).
 from __future__ import annotations
 
 import json
+from card_layout import card_file, manifest_file, write_card
 from ability_record import classify_card
 import sys
 from pathlib import Path
@@ -358,7 +359,6 @@ def map_card(c: dict) -> dict | None:
 def main():
     pack = sorted(load_pack_cards(PACK), key=lambda c: c.get("position", 0))
     assert len(pack) == EXPECTED, len(pack)
-    OUT.mkdir(parents=True, exist_ok=True)
     written: list[str] = []
     skipped: list[str] = []
     for raw in pack:
@@ -368,15 +368,14 @@ def main():
             skipped.append(cid)
             continue
         mapped["wave"] = WAVE
-        path = OUT / f"{cid}.json"
-        path.write_text(json.dumps(classify_card(mapped), indent=2, ensure_ascii=False) + "\n")
+        write_card(classify_card(mapped))
         written.append(cid)
 
     pool_ids = [slugify(c["title"]) for c in pack]
     clear_written = [
         cid
         for cid in written
-        if not json.loads((OUT / f"{cid}.json").read_text()).get("unsupported")
+        if not json.loads(card_file(cid).read_text()).get("unsupported")
     ]
     write_manifest(OUT, WAVE, PACK, EXPECTED, pool_ids, written, skipped, clear_written)
     print(f"Wrote {len(written)}; skipped {len(skipped)}; clears {len(clear_written)}")

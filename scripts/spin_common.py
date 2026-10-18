@@ -130,6 +130,7 @@ def base(c, **extra):
 
 
 def write_manifest(out: Path, wave: str, pack: str, expected: int, pool_ids, written, skipped, clear_written):
+    del out  # Card files are stored by side and type, not by pack directory.
     manifest = {
         "pack": wave,
         "nrdbPackCode": pack,
@@ -145,6 +146,8 @@ def write_manifest(out: Path, wave: str, pack: str, expected: int, pool_ids, wri
         "reprintIdsFromEarlierWaves": sorted(skipped),
         "clears": clear_written,
     }
-    (out / "_manifest.json").write_text(
+    from card_layout import manifest_file
+
+    manifest_file(wave).write_text(
         json.dumps(manifest, indent=2, ensure_ascii=False) + "\n"
     )

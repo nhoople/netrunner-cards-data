@@ -14,6 +14,7 @@ from __future__ import annotations
 from printed_numbers import apply_printed_numbers
 
 import json
+from card_layout import card_file, manifest_file, write_card
 from ability_record import classify_card
 import re
 import unicodedata
@@ -1143,11 +1144,6 @@ def main():
         key=lambda c: c.get("position", 0),
     )
     assert len(su) == 82, len(su)
-    OUT.mkdir(parents=True, exist_ok=True)
-    # Clear prior generated files
-    for p in OUT.glob("*.json"):
-        p.unlink()
-
     written = []
     skipped = []
     for c in su:
@@ -1157,16 +1153,15 @@ def main():
             skipped.append(cid)
             continue
         # Drop null playCost for psychographics-style if needed
-        path = OUT / f"{cid}.json"
-        path.write_text(json.dumps(classify_card(mapped), indent=2, ensure_ascii=False) + "\n")
+        write_card(classify_card(mapped))
         written.append(cid)
 
-    print(f"Wrote {len(written)} cards to {OUT}")
+    print(f"Wrote {len(written)} cards")
     print(f"Skipped reprints/shared: {skipped}")
     full = sum(
         1
         for cid in written
-        if not json.loads((OUT / f"{cid}.json").read_text()).get("unsupported")
+        if not json.loads(card_file(cid).read_text()).get("unsupported")
     )
     partial = len(written) - full
     print(f"Among written: full={full} partial={partial}")

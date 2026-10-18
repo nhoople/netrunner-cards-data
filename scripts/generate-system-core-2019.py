@@ -20,6 +20,7 @@ from __future__ import annotations
 from printed_numbers import apply_printed_numbers
 
 import json
+from card_layout import card_file, manifest_file, write_card
 from ability_record import classify_card
 import re
 import unicodedata
@@ -1774,10 +1775,6 @@ def main():
         key=lambda c: c.get("position", 0),
     )
     assert len(pack) == EXPECTED, len(pack)
-    OUT.mkdir(parents=True, exist_ok=True)
-    for p in OUT.glob("*.json"):
-        p.unlink()
-
     written: list[str] = []
     skipped: list[str] = []
     for c in pack:
@@ -1786,15 +1783,14 @@ def main():
         if mapped is None:
             skipped.append(cid)
             continue
-        path = OUT / f"{cid}.json"
-        path.write_text(json.dumps(classify_card(mapped), indent=2, ensure_ascii=False) + "\n")
+        write_card(classify_card(mapped))
         written.append(cid)
 
     pool_ids = [slugify(c["title"]) for c in pack]
     clear_written = sum(
         1
         for cid in written
-        if not json.loads((OUT / f"{cid}.json").read_text()).get("unsupported")
+        if not json.loads(card_file(cid).read_text()).get("unsupported")
     )
 
     manifest = {
@@ -1928,11 +1924,11 @@ def main():
             "oversight-ai",
         ],
     }
-    (OUT / "_manifest.json").write_text(
+    manifest_file(WAVE).write_text(
         json.dumps(manifest, indent=2, ensure_ascii=False) + "\n"
     )
 
-    print(f"Wrote {len(written)} cards to {OUT}")
+    print(f"Wrote {len(written)} cards")
     print(f"Skipped reprints/shared: {len(skipped)}")
     print(f"Among written: full={clear_written} partial={len(written) - clear_written}")
     print("POOL_IDS=" + json.dumps(pool_ids))
