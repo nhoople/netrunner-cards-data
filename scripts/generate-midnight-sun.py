@@ -18,6 +18,7 @@ from __future__ import annotations
 from printed_numbers import apply_printed_numbers
 
 import json
+from card_layout import card_file, manifest_file, write_card
 from ability_record import classify_card
 import re
 import unicodedata
@@ -1410,16 +1411,11 @@ def main():
     ms_slugs = {slugify(c["title"]) for c in ms}
     assert msbp_slugs <= ms_slugs, msbp_slugs - ms_slugs
 
-    OUT.mkdir(parents=True, exist_ok=True)
-    for p in OUT.glob("*.json"):
-        p.unlink()
-
     written = []
     for c in ms:
         mapped = map_card(c)
         cid = mapped["id"]
-        path = OUT / f"{cid}.json"
-        path.write_text(json.dumps(classify_card(mapped), indent=2, ensure_ascii=False) + "\n")
+        write_card(classify_card(mapped))
         written.append(cid)
 
     assert len(written) == 65, len(written)
@@ -1427,7 +1423,7 @@ def main():
     full = sum(
         1
         for cid in written
-        if not json.loads((OUT / f"{cid}.json").read_text()).get("unsupported")
+        if not json.loads(card_file(cid).read_text()).get("unsupported")
     )
     partial = len(written) - full
 
@@ -1445,11 +1441,11 @@ def main():
         ),
         "cards": written,
     }
-    (OUT / "_manifest.json").write_text(
+    manifest_file(WAVE).write_text(
         json.dumps(manifest, indent=2, ensure_ascii=False) + "\n"
     )
 
-    print(f"Wrote {len(written)} cards to {OUT}")
+    print(f"Wrote {len(written)} cards")
     print(f"Among written: full={full} partial={partial}")
     print(f"msbp absorbed: {sorted(MSBP_ABSORBED)}")
     print("POOL_IDS=" + json.dumps(written))

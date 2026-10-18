@@ -19,7 +19,7 @@ Files under [`data/`](data/) are the API. Clone the repo or fetch a **tagged** r
 | [`data/schema.json`](data/schema.json) | JSON Schema for card definitions |
 | [`data/pool.json`](data/pool.json) | Declared corpus. `corpusOrder` is the release order; every wave there is `supported` |
 
-Every directory under `data/` that `corpusOrder` names is supported. The order is FFG Core through Kitara, Reign and Reverie, Magnum Opus (`mor` absorbed), System Core 2019, Downfall, Uprising, then Gateway through Vantage Point. Floor **`v1.147.6`**.
+Card files live at `data/<side>/<type>/<id>.json` (for example `data/runner/program/marjanah.json`). `corpusOrder` in [`data/pool.json`](data/pool.json) is the release order, and every wave there is supported. The order is FFG Core through Kitara, Reign and Reverie, Magnum Opus (`mor` absorbed), System Core 2019, Downfall, Uprising, then Gateway through Vantage Point. Floor **`v1.147.6`**.
 
 **Not in this repository:**
 
@@ -70,7 +70,7 @@ JavaScript — load the pool and one card from a tagged release:
 const base =
   "https://raw.githubusercontent.com/nhoople/netrunner-cards-data/v1.147.6/data";
 const pool = await fetch(`${base}/pool.json`).then((r) => r.json());
-const marjanah = await fetch(`${base}/system-gateway/marjanah.json`).then((r) =>
+const marjanah = await fetch(`${base}/runner/program/marjanah.json`).then((r) =>
   r.json(),
 );
 console.log(pool.corpusOrder, marjanah.title);
@@ -78,7 +78,7 @@ console.log(pool.corpusOrder, marjanah.title);
 
 ## Current corpus
 
-**Authoritative list:** [`data/pool.json`](data/pool.json) — **68/68** waves `supported` (`corpusOrder`, each wave’s `status`, and its card counts). The summary above is the boundary. Pack directories and card counts live in the pool.
+**Authoritative list:** [`data/pool.json`](data/pool.json) — **68/68** waves `supported` (`corpusOrder`, each wave’s `status`, and its card counts). The summary above is the boundary. Pack membership and card counts live in the pool. Card files are grouped by side and type.
 
 **Floor `v1.147.6`:** Magnum Opus complete (**8/8**; `mor` absorbed). Fixtures wave removed (Plascrete under WLA). FFG Core-forward through Kitara, RaR, SC19→VP all `supported`. Eternal + RAM unique-title Magnum Opus gaps closed. Core Sets / Standard / Startup already full. Printed facts: Runner identities store base link (CR 2.9.1), identities store minimum deck size and influence limit (CR 2.11.1, CR 2.12.1), and other cards store influence cost when they have an influence bar (CR 2.14.1). Ice, assets, and upgrades keep `rezCost` and do not store `installCost` (CR 1.16.6b, CR 8.5.11a). Paired engine floor `v1.147.9`.
 

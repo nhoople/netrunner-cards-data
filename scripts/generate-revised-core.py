@@ -20,6 +20,7 @@ stripping):
 from __future__ import annotations
 
 import json
+from card_layout import manifest_file
 import sys
 from pathlib import Path
 
@@ -27,7 +28,6 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from nsg_catalog import load_pack_cards
 from spin_common import ROOT, slugify
 
-OUT = ROOT / "data" / "revised-core"
 WAVE = "revised-core"
 PACK = "core2"
 EXPECTED = 132
@@ -98,12 +98,6 @@ def main() -> None:
             f"({len(reprint_ids)} titles → {len(set(reprint_ids))} unique)"
         )
 
-    OUT.mkdir(parents=True, exist_ok=True)
-    # Never write card JSON — reprints only.
-    for stale in OUT.glob("*.json"):
-        if stale.name != "_manifest.json":
-            raise SystemExit(f"unexpected card JSON in absorb wave: {stale}")
-
     manifest = {
         "pack": WAVE,
         "nrdbPackCode": PACK,
@@ -126,7 +120,7 @@ def main() -> None:
             {"naive": k, "corpusId": v} for k, v in sorted(NAIVE_TO_CORPUS.items())
         ],
     }
-    (OUT / "_manifest.json").write_text(
+    manifest_file(WAVE).write_text(
         json.dumps(manifest, indent=2, ensure_ascii=False) + "\n",
         encoding="utf-8",
     )
