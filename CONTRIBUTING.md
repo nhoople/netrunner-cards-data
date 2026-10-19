@@ -2,7 +2,7 @@
 
 ## Catalog source
 
-Pack extracts come from pinned [Null-Signal-Games/netrunner-cards-json](https://github.com/Null-Signal-Games/netrunner-cards-json) (NSG source of truth; NRDB is downstream). See README **Data pipeline / catalog extract source**. NRDB codes may appear as identifiers; do not ingest from the NRDB API. Watch new packs by diffing NSG against `data/pool.json`.
+Pack extracts come from pinned [Null-Signal-Games/netrunner-cards-json](https://github.com/Null-Signal-Games/netrunner-cards-json) (NSG source of truth; NRDB is downstream). See README **Data pipeline / catalog extract source**. NRDB codes may appear as identifiers. Card text is not taken from the NRDB API. Verified rulings are copied from that catalog's `v2/rulings/` snapshot, which itself was fetched from the NRDB rulings API. Watch new packs by diffing NSG against `data/pool.json`.
 
 ## Pack card work / Effect IR
 
@@ -23,4 +23,4 @@ CI runs `python3 scripts/validate-cards.py`, which enforces schema, pool consist
 
 When marking a wave `supported`, keep README pairing + `pool.json` in sync with the matching engine same-semver tag. Interaction smoke at set-complete is required for each **new** pack ([interaction-smoke-samples.md](https://github.com/nhoople/netrunner-engine/blob/master/docs/interaction-smoke-samples.md) in the engine repository); Gateway → Vantage Point already passed once via engine [#193](https://github.com/nhoople/netrunner-engine/pull/193).
 
-**Current floor:** Magnum Opus `supported` at **`v1.147.6`** (printed link, deck size, influence limit, and influence cost; ice, assets, and upgrades do not store a copied install cost). Paired engine floor **`v1.147.9`**. Idle until next NSG pack after VP or a CR bump. Skip `napd`/draft/championship; defer `tdc`. CR pin in the engine is `v26.03`.
+**Current floor:** **`v1.147.7`**. Cards are stored by side and type, with deck limits, printings, verified rulings, and format lists. The title corpus is the `v1.147.6` corpus. Released engine **`v1.147.9`** still pins cards `v1.147.6`. Idle until next NSG pack after VP or a CR bump. Skip `napd`/draft/championship; defer `tdc`. CR pin in the engine is `v26.03`.

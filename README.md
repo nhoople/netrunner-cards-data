@@ -26,7 +26,7 @@ Files under [`data/`](data/) are the API. Clone the repo or fetch a **tagged** r
 | [`data/restrictions/`](data/restrictions/) | Ban lists, Most Wanted Lists, and balance updates: banned and restricted titles, influence points, and agenda caps |
 | [`data/rotations.json`](data/rotations.json) | Rotation dates and the waves that left a format |
 
-Card files live at `data/<side>/<type>/<id>.json` (for example `data/runner/program/marjanah.json`). `corpusOrder` in [`data/pool.json`](data/pool.json) is the release order, and every wave there is supported. The order is FFG Core through Kitara, Reign and Reverie, Magnum Opus (`mor` absorbed), System Core 2019, Downfall, Uprising, then Gateway through Vantage Point. Floor **`v1.147.6`**.
+Card files live at `data/<side>/<type>/<id>.json` (for example `data/runner/program/marjanah.json`). `corpusOrder` in [`data/pool.json`](data/pool.json) is the release order, and every wave there is supported. The order is FFG Core through Kitara, Reign and Reverie, Magnum Opus (`mor` absorbed), System Core 2019, Downfall, Uprising, then Gateway through Vantage Point. Floor **`v1.147.7`**.
 
 **Not in this repository:**
 
@@ -59,7 +59,7 @@ Match this dataset and [netrunner-engine](https://github.com/nhoople/netrunner-e
 
 | Pairing | cards-data | engine |
 |---------|------------|--------|
-| **Current** | [`v1.147.6`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.147.6) | [`v1.147.9`](https://github.com/nhoople/netrunner-engine/releases/tag/v1.147.9) (ice, asset, and upgrade install cost follows the Comprehensive Rules; pins this cards tag) |
+| **Current** | [`v1.147.7`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.147.7) | [`v1.147.9`](https://github.com/nhoople/netrunner-engine/releases/tag/v1.147.9) still pins cards [`v1.147.6`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.147.6) and loads pack directories |
 
 Prior set-complete / maintenance tags: [cards Releases](https://github.com/nhoople/netrunner-cards-data/releases) · [engine Releases](https://github.com/nhoople/netrunner-engine/releases).
 
@@ -79,14 +79,14 @@ npm run demo:library  # createGame → queryLegality → applyIntent → getPubl
 Example raw URL base (match the **current** pairing tag):
 
 ```text
-https://raw.githubusercontent.com/nhoople/netrunner-cards-data/v1.147.6/data
+https://raw.githubusercontent.com/nhoople/netrunner-cards-data/v1.147.7/data
 ```
 
 JavaScript — load the pool and one card from a tagged release:
 
 ```js
 const base =
-  "https://raw.githubusercontent.com/nhoople/netrunner-cards-data/v1.147.6/data";
+  "https://raw.githubusercontent.com/nhoople/netrunner-cards-data/v1.147.7/data";
 const pool = await fetch(`${base}/pool.json`).then((r) => r.json());
 const marjanah = await fetch(`${base}/runner/program/marjanah.json`).then((r) =>
   r.json(),
@@ -98,7 +98,7 @@ console.log(pool.corpusOrder, marjanah.title);
 
 **Authoritative list:** [`data/pool.json`](data/pool.json) — **68/68** waves `supported` (`corpusOrder`, each wave’s `status`, and its card counts). The summary above is the boundary. Pack membership and card counts live in the pool. Card files are grouped by side and type.
 
-**Floor `v1.147.6`:** Magnum Opus complete (**8/8**; `mor` absorbed). Fixtures wave removed (Plascrete under WLA). FFG Core-forward through Kitara, RaR, SC19→VP all `supported`. Eternal + RAM unique-title Magnum Opus gaps closed. Core Sets / Standard / Startup already full. Printed facts: Runner identities store base link (CR 2.9.1), identities store minimum deck size and influence limit (CR 2.11.1, CR 2.12.1), and other cards store influence cost when they have an influence bar (CR 2.14.1). Ice, assets, and upgrades keep `rezCost` and do not store `installCost` (CR 1.16.6b, CR 8.5.11a). Paired engine floor `v1.147.9`.
+**Floor `v1.147.7`:** Card files are grouped by side and type. Each title has `deckLimit` and a printed sentence. Printings, verified rulings, format pools, ban lists, and rotations are separate files. The title corpus is unchanged from `v1.147.6`: Magnum Opus complete (**8/8**; `mor` absorbed), FFG Core-forward through Kitara, RaR, SC19→VP all `supported`. Runner identities store base link (CR 2.9.1), identities store minimum deck size and influence limit (CR 2.11.1, CR 2.12.1), and other cards store influence cost when they have an influence bar (CR 2.14.1). Ice, assets, and upgrades keep `rezCost` and do not store `installCost` (CR 1.16.6b, CR 8.5.11a). Released engine `v1.147.9` still pins cards `v1.147.6`.
 
 **Next:** Idle / absorb-only until next NSG pack after VP or CR bump. Skip `napd`/draft/championship; defer `tdc`. GitHub Releases only at set-complete or explicit manual — not per-slice.
 
