@@ -1,8 +1,8 @@
 {
   "id": "phoneutria",
+  "deckLimit": 3,
   "title": "Phoneutria",
   "wave": "the-automata-initiative",
-  "nrdbCode": "34043",
   "type": "ice",
   "side": "corp",
   "faction": "jinteki",

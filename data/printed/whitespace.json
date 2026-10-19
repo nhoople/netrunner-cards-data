@@ -1,0 +1,5 @@
+{
+  "cardId": "whitespace",
+  "text": "[subroutine] The Runner loses 3[credit].\n[subroutine] If the Runner has 6[credit] or less, end the run.",
+  "strippedText": "Subroutine The Runner loses 3 credits. Subroutine If the Runner has 6 credits or less, end the run."
+}

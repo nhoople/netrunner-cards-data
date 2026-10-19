@@ -1,8 +1,8 @@
 {
   "id": "conduit",
+  "deckLimit": 3,
   "title": "Conduit",
   "wave": "system-gateway",
-  "nrdbCode": "30024",
   "type": "program",
   "side": "runner",
   "faction": "shaper",

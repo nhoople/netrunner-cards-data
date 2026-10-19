@@ -1,7 +1,7 @@
 {
   "id": "sand-storm",
+  "deckLimit": 3,
   "title": "Sand Storm",
-  "nrdbCode": "12114",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

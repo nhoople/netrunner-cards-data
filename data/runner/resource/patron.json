@@ -1,7 +1,7 @@
 {
   "id": "patron",
+  "deckLimit": 3,
   "title": "Patron",
-  "nrdbCode": "10063",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

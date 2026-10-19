@@ -1,8 +1,8 @@
 {
   "id": "armitage-codebusting",
+  "deckLimit": 3,
   "title": "Armitage Codebusting",
   "wave": "system-core-2019",
-  "nrdbCode": "25062",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

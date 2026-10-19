@@ -1,8 +1,8 @@
 {
   "id": "neural-katana",
+  "deckLimit": 3,
   "title": "Neural Katana",
   "wave": "system-core-2019",
-  "nrdbCode": "25095",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

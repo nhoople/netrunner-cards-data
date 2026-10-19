@@ -1,8 +1,8 @@
 {
   "id": "stick-and-poke",
+  "deckLimit": 3,
   "title": "Stick and Poke",
   "wave": "vantage-point",
-  "nrdbCode": "36008",
   "type": "resource",
   "side": "runner",
   "faction": "anarch",

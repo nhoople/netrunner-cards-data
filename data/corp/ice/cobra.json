@@ -1,7 +1,7 @@
 {
   "id": "cobra",
+  "deckLimit": 3,
   "title": "Cobra",
-  "nrdbCode": "10074",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

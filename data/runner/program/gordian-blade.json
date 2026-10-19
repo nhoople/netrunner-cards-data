@@ -1,11 +1,11 @@
 {
   "id": "gordian-blade",
+  "deckLimit": 3,
   "title": "Gordian Blade",
   "type": "program",
   "side": "runner",
   "faction": "shaper",
   "wave": "system-update-2021",
-  "nrdbCode": "01043",
   "installCost": 4,
   "strength": 2,
   "subtypes": [

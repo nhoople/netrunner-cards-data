@@ -1,8 +1,8 @@
 {
   "id": "svyatogor-excavator",
+  "deckLimit": 3,
   "title": "Svyatogor Excavator",
   "wave": "midnight-sun",
-  "nrdbCode": "33059",
   "type": "asset",
   "side": "corp",
   "faction": "weyland-consortium",

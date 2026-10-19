@@ -1,8 +1,8 @@
 {
   "id": "chromatophores",
+  "deckLimit": 3,
   "title": "Chromatophores",
   "wave": "elevation",
-  "nrdbCode": "35030",
   "type": "program",
   "side": "runner",
   "faction": "shaper",

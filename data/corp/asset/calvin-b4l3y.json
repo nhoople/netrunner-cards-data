@@ -1,8 +1,8 @@
 {
   "id": "calvin-b4l3y",
+  "deckLimit": 3,
   "title": "Calvin B4L3Y",
   "wave": "downfall",
-  "nrdbCode": "26033",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

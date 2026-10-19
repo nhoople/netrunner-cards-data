@@ -1,8 +1,8 @@
 {
   "id": "active-policing",
+  "deckLimit": 3,
   "title": "Active Policing",
   "wave": "rebellion-without-rehearsal",
-  "nrdbCode": "34102",
   "type": "operation",
   "side": "corp",
   "faction": "haas-bioroid",

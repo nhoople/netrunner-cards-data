@@ -1,8 +1,8 @@
 {
   "id": "sandstone",
+  "deckLimit": 3,
   "title": "Sandstone",
   "wave": "downfall",
-  "nrdbCode": "26059",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

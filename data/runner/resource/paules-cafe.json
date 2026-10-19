@@ -1,8 +1,8 @@
 {
   "id": "paules-cafe",
+  "deckLimit": 3,
   "title": "Pauleʼs Café",
   "wave": "uprising",
-  "nrdbCode": "26092",
   "type": "resource",
   "side": "runner",
   "faction": "shaper",

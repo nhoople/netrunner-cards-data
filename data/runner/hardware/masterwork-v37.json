@@ -1,8 +1,8 @@
 {
   "id": "masterwork-v37",
+  "deckLimit": 3,
   "title": "Masterwork (v37)",
   "wave": "downfall",
-  "nrdbCode": "26015",
   "type": "hardware",
   "side": "runner",
   "unsupported": [],

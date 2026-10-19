@@ -1,8 +1,8 @@
 {
   "id": "viper",
+  "deckLimit": 3,
   "title": "Viper",
   "wave": "cyber-exodus",
-  "nrdbCode": "02052",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

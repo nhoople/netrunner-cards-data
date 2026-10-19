@@ -1,7 +1,7 @@
 {
   "id": "obokata-protocol",
+  "deckLimit": 3,
   "title": "Obokata Protocol",
-  "nrdbCode": "12070",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

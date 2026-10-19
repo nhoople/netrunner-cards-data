@@ -1,8 +1,8 @@
 {
   "id": "megaprix-qualifier",
+  "deckLimit": 3,
   "title": "Megaprix Qualifier",
   "wave": "uprising",
-  "nrdbCode": "26096",
   "type": "agenda",
   "side": "corp",
   "faction": "haas-bioroid",

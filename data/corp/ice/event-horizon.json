@@ -1,8 +1,8 @@
 {
   "id": "event-horizon",
+  "deckLimit": 3,
   "title": "Event Horizon",
   "wave": "vantage-point",
-  "nrdbCode": "36058",
   "type": "ice",
   "side": "corp",
   "faction": "weyland-consortium",

@@ -1,8 +1,8 @@
 {
   "id": "torch",
+  "deckLimit": 3,
   "title": "Torch",
   "wave": "mala-tempora",
-  "nrdbCode": "04047",
   "type": "program",
   "side": "runner",
   "unsupported": [],

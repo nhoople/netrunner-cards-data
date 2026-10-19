@@ -1,7 +1,7 @@
 {
   "id": "meteor-mining",
+  "deckLimit": 3,
   "title": "Meteor Mining",
-  "nrdbCode": "12076",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

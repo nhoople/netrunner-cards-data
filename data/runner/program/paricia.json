@@ -1,8 +1,8 @@
 {
   "id": "paricia",
+  "deckLimit": 3,
   "title": "Paricia",
   "wave": "system-update-2021",
-  "nrdbCode": "31034",
   "type": "program",
   "side": "runner",
   "faction": "shaper",

@@ -1,8 +1,8 @@
 {
   "id": "archived-memories",
+  "deckLimit": 3,
   "title": "Archived Memories",
   "wave": "system-update-2021",
-  "nrdbCode": "31047",
   "type": "operation",
   "side": "corp",
   "faction": "haas-bioroid",

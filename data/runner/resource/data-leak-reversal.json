@@ -1,8 +1,8 @@
 {
   "id": "data-leak-reversal",
+  "deckLimit": 3,
   "title": "Data Leak Reversal",
   "wave": "future-proof",
-  "nrdbCode": "02103",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

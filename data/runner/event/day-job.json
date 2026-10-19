@@ -1,7 +1,7 @@
 {
   "id": "day-job",
+  "deckLimit": 3,
   "title": "Day Job",
-  "nrdbCode": "07036",
   "type": "event",
   "side": "runner",
   "unsupported": [],

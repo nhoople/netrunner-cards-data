@@ -1,8 +1,8 @@
 {
   "id": "house-of-knives",
+  "deckLimit": 3,
   "title": "House of Knives",
   "wave": "system-update-2021",
-  "nrdbCode": "31051",
   "type": "agenda",
   "side": "corp",
   "faction": "jinteki",

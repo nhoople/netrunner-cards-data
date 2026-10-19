@@ -1,7 +1,7 @@
 {
   "id": "assimilator",
+  "deckLimit": 3,
   "title": "Assimilator",
-  "nrdbCode": "21008",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

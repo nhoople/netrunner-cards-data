@@ -1,0 +1,234 @@
+{
+  "id": "standard",
+  "name": "Standard",
+  "snapshots": [
+    {
+      "id": "standard_0",
+      "dateStart": "2012-09-06",
+      "cardPoolId": "pre_rotation"
+    },
+    {
+      "id": "standard_1",
+      "dateStart": "2016-02-01",
+      "cardPoolId": "pre_rotation",
+      "restrictionId": "napd_mwl_1_0"
+    },
+    {
+      "id": "standard_2",
+      "dateStart": "2016-08-01",
+      "cardPoolId": "pre_rotation",
+      "restrictionId": "napd_mwl_1_1"
+    },
+    {
+      "id": "standard_3",
+      "dateStart": "2017-04-12",
+      "cardPoolId": "pre_rotation",
+      "restrictionId": "napd_mwl_1_2"
+    },
+    {
+      "id": "standard_4",
+      "dateStart": "2017-10-01",
+      "cardPoolId": "rotation_2017",
+      "restrictionId": "napd_mwl_2_0"
+    },
+    {
+      "id": "standard_5",
+      "dateStart": "2018-02-26",
+      "cardPoolId": "rotation_2017",
+      "restrictionId": "napd_mwl_2_1"
+    },
+    {
+      "id": "standard_6",
+      "dateStart": "2018-09-06",
+      "cardPoolId": "rotation_2017",
+      "restrictionId": "napd_mwl_2_2"
+    },
+    {
+      "id": "standard_7",
+      "dateStart": "2018-12-21",
+      "cardPoolId": "rotation_2018",
+      "restrictionId": "standard_mwl_3_0"
+    },
+    {
+      "id": "standard_8",
+      "dateStart": "2019-02-22",
+      "cardPoolId": "rotation_2018",
+      "restrictionId": "standard_mwl_3_1"
+    },
+    {
+      "id": "standard_9",
+      "dateStart": "2019-05-10",
+      "cardPoolId": "rotation_2018",
+      "restrictionId": "standard_mwl_3_2"
+    },
+    {
+      "id": "standard_10",
+      "dateStart": "2019-07-19",
+      "cardPoolId": "rotation_2018",
+      "restrictionId": "standard_mwl_3_3"
+    },
+    {
+      "id": "standard_11",
+      "dateStart": "2019-09-20",
+      "cardPoolId": "rotation_2018",
+      "restrictionId": "standard_mwl_3_4"
+    },
+    {
+      "id": "standard_12",
+      "dateStart": "2019-12-27",
+      "cardPoolId": "rotation_2019",
+      "restrictionId": "standard_mwl_3_4"
+    },
+    {
+      "id": "standard_13",
+      "dateStart": "2019-12-31",
+      "cardPoolId": "rotation_2019",
+      "restrictionId": "standard_mwl_3_4_b"
+    },
+    {
+      "id": "standard_14",
+      "dateStart": "2020-06-26",
+      "cardPoolId": "rotation_2019",
+      "restrictionId": "standard_ban_list_20_06"
+    },
+    {
+      "id": "standard_15",
+      "dateStart": "2020-09-25",
+      "cardPoolId": "rotation_2019",
+      "restrictionId": "standard_ban_list_20_09"
+    },
+    {
+      "id": "standard_16",
+      "dateStart": "2020-12-18",
+      "cardPoolId": "rotation_2020",
+      "restrictionId": "standard_ban_list_20_09"
+    },
+    {
+      "id": "standard_17",
+      "dateStart": "2021-04-09",
+      "cardPoolId": "rotation_2021",
+      "restrictionId": "standard_ban_list_21_04"
+    },
+    {
+      "id": "standard_18",
+      "dateStart": "2021-05-01",
+      "cardPoolId": "rotation_2021",
+      "restrictionId": "standard_ban_list_21_05"
+    },
+    {
+      "id": "standard_19",
+      "dateStart": "2021-06-19",
+      "cardPoolId": "rotation_2021",
+      "restrictionId": "standard_ban_list_21_06"
+    },
+    {
+      "id": "standard_20",
+      "dateStart": "2021-10-29",
+      "cardPoolId": "rotation_2021",
+      "restrictionId": "standard_ban_list_21_10"
+    },
+    {
+      "id": "standard_21",
+      "dateStart": "2022-08-05",
+      "cardPoolId": "rotation_2022",
+      "restrictionId": "standard_ban_list_22_08"
+    },
+    {
+      "id": "standard_22",
+      "dateStart": "2022-09-23",
+      "cardPoolId": "rotation_2022",
+      "restrictionId": "standard_ban_list_22_09"
+    },
+    {
+      "id": "standard_23",
+      "dateStart": "2023-03-03",
+      "cardPoolId": "rotation_2022",
+      "restrictionId": "standard_ban_list_23_03"
+    },
+    {
+      "id": "standard_24",
+      "dateStart": "2023-08-11",
+      "cardPoolId": "rotation_2023",
+      "restrictionId": "standard_ban_list_23_08"
+    },
+    {
+      "id": "standard_25",
+      "dateStart": "2023-09-22",
+      "cardPoolId": "rotation_2023",
+      "restrictionId": "standard_ban_list_23_09"
+    },
+    {
+      "id": "standard_26",
+      "dateStart": "2024-03-30",
+      "cardPoolId": "rotation_2023",
+      "restrictionId": "standard_ban_list_24_03"
+    },
+    {
+      "id": "standard_27",
+      "dateStart": "2024-05-31",
+      "cardPoolId": "rotation_2023",
+      "restrictionId": "standard_ban_list_24_05"
+    },
+    {
+      "id": "standard_28",
+      "dateStart": "2024-09-13",
+      "cardPoolId": "rotation_2023",
+      "restrictionId": "standard_ban_list_24_09"
+    },
+    {
+      "id": "sunset_01",
+      "dateStart": "2023-09-21",
+      "cardPoolId": "rotation_2023",
+      "restrictionId": "sunset_ban_list_24_01"
+    },
+    {
+      "id": "standard_29",
+      "dateStart": "2024-12-26",
+      "cardPoolId": "rotation_2023",
+      "restrictionId": "standard_ban_list_24_12"
+    },
+    {
+      "id": "standard_30",
+      "dateStart": "2025-04-24",
+      "cardPoolId": "rotation_2025",
+      "restrictionId": "standard_ban_list_25_04"
+    },
+    {
+      "id": "standard_31",
+      "dateStart": "2025-08-01",
+      "cardPoolId": "rotation_2025",
+      "restrictionId": "standard_ban_list_25_08"
+    },
+    {
+      "id": "standard_32",
+      "dateStart": "2025-10-03",
+      "cardPoolId": "rotation_2025",
+      "restrictionId": "standard_ban_list_25_10"
+    },
+    {
+      "id": "standard_33",
+      "dateStart": "2025-12-01",
+      "cardPoolId": "rotation_2025",
+      "restrictionId": "standard_ban_list_25_12"
+    },
+    {
+      "id": "standard_34",
+      "dateStart": "2026-03-13",
+      "cardPoolId": "standard_2026_vantage_point",
+      "restrictionId": "standard_ban_list_26_03",
+      "active": true
+    },
+    {
+      "id": "standard_35",
+      "dateStart": "2026-05-01",
+      "cardPoolId": "standard_2026_vantage_point",
+      "restrictionId": "standard_ban_list_26_05"
+    },
+    {
+      "id": "standard_36",
+      "dateStart": "2026-08-01",
+      "cardPoolId": "standard_2026_vantage_point",
+      "restrictionId": "standard_balance_update_26_08"
+    }
+  ]
+}

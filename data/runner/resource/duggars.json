@@ -1,7 +1,7 @@
 {
   "id": "duggars",
+  "deckLimit": 3,
   "title": "Duggar's",
-  "nrdbCode": "06054",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

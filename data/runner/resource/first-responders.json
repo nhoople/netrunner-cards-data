@@ -1,7 +1,7 @@
 {
   "id": "first-responders",
+  "deckLimit": 3,
   "title": "First Responders",
-  "nrdbCode": "11048",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

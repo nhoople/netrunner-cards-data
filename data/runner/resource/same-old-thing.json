@@ -1,8 +1,8 @@
 {
   "id": "same-old-thing",
+  "deckLimit": 3,
   "title": "Same Old Thing",
   "wave": "creation-and-control",
-  "nrdbCode": "03054",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

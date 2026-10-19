@@ -1,7 +1,7 @@
 {
   "id": "adam-compulsive-hacker",
+  "deckLimit": 1,
   "title": "Adam: Compulsive Hacker",
-  "nrdbCode": "09037",
   "type": "identity",
   "side": "runner",
   "unsupported": [],

@@ -1,7 +1,7 @@
 {
   "id": "llds-processor",
+  "deckLimit": 3,
   "title": "LLDS Processor",
-  "nrdbCode": "04066",
   "type": "hardware",
   "side": "runner",
   "unsupported": [],

@@ -1,7 +1,7 @@
 {
   "id": "eater",
+  "deckLimit": 3,
   "title": "Eater",
-  "nrdbCode": "07040",
   "type": "program",
   "side": "runner",
   "unsupported": [],

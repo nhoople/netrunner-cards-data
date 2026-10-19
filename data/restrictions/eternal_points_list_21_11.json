@@ -1,0 +1,69 @@
+{
+  "id": "eternal_points_list_21_11",
+  "name": "Eternal Points List 21.11",
+  "formatId": "eternal",
+  "dateStart": "2021-11-12",
+  "banned": [
+    "accelerated-diagnostics",
+    "hired-help",
+    "salvaged-vanadis-armory",
+    "watch-the-world-burn"
+  ],
+  "points": {
+    "1": [
+      "24-7-news-cycle",
+      "aaron-marron",
+      "anoetic-void",
+      "aumakua",
+      "bloo-moose",
+      "breached-dome",
+      "breaking-news",
+      "caprice-nisei",
+      "counter-surveillance",
+      "deja-vu",
+      "film-critic",
+      "hacktivist-meeting",
+      "kakugo",
+      "museum-of-history",
+      "obokata-protocol",
+      "project-vacheron",
+      "shock",
+      "snitch",
+      "spin-doctor",
+      "sting",
+      "violet-level-clearance",
+      "whampoa-reclamation",
+      "zer0"
+    ],
+    "2": [
+      "bio-ethics-association",
+      "blackmail",
+      "cerebral-imaging-infinite-frontiers",
+      "clan-vengeance",
+      "crowdfunding",
+      "data-leak-reversal",
+      "ddos",
+      "employee-strike",
+      "false-echo",
+      "friends-in-high-places",
+      "industrial-genomics-growing-solutions",
+      "jackson-howard",
+      "mars-for-martians",
+      "mti-mwekundu-life-improved",
+      "scarcity-of-resources",
+      "sensie-actors-union",
+      "sifr",
+      "tech-trader"
+    ],
+    "3": [
+      "account-siphon",
+      "estelle-moon",
+      "hyperdriver",
+      "jinteki-potential-unleashed",
+      "mumbad-city-hall",
+      "rumor-mill",
+      "temujin-contract"
+    ]
+  },
+  "pointLimit": 7
+}

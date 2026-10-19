@@ -1,7 +1,7 @@
 {
   "id": "breaker-bay-grid",
+  "deckLimit": 3,
   "title": "Breaker Bay Grid",
-  "nrdbCode": "08040",
   "type": "upgrade",
   "side": "corp",
   "unsupported": [],

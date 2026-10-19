@@ -1,8 +1,8 @@
 {
   "id": "finality",
+  "deckLimit": 3,
   "title": "Finality",
   "wave": "parhelion",
-  "nrdbCode": "33066",
   "type": "event",
   "side": "runner",
   "faction": "anarch",

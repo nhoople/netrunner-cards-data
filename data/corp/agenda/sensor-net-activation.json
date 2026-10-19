@@ -1,7 +1,7 @@
 {
   "id": "sensor-net-activation",
+  "deckLimit": 3,
   "title": "Sensor Net Activation",
-  "nrdbCode": "11110",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

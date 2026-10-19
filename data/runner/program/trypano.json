@@ -1,7 +1,7 @@
 {
   "id": "trypano",
+  "deckLimit": 3,
   "title": "Trypano",
-  "nrdbCode": "21082",
   "type": "program",
   "side": "runner",
   "unsupported": [],

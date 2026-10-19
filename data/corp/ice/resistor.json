@@ -1,7 +1,7 @@
 {
   "id": "resistor",
+  "deckLimit": 3,
   "title": "Resistor",
-  "nrdbCode": "09015",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

@@ -1,7 +1,7 @@
 {
   "id": "net-quarantine",
+  "deckLimit": 3,
   "title": "Net Quarantine",
-  "nrdbCode": "11114",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

@@ -1,7 +1,7 @@
 {
   "id": "back-channels",
+  "deckLimit": 3,
   "title": "Back Channels",
-  "nrdbCode": "08099",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

@@ -1,7 +1,7 @@
 {
   "id": "hailstorm",
+  "deckLimit": 3,
   "title": "Hailstorm",
-  "nrdbCode": "13049",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

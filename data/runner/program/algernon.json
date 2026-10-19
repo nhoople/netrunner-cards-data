@@ -1,8 +1,8 @@
 {
   "id": "algernon",
+  "deckLimit": 3,
   "title": "Algernon",
   "wave": "reign-and-reverie",
-  "nrdbCode": "22022",
   "type": "program",
   "side": "runner",
   "unsupported": [],

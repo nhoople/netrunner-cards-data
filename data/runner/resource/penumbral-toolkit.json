@@ -1,8 +1,8 @@
 {
   "id": "penumbral-toolkit",
+  "deckLimit": 3,
   "title": "Penumbral Toolkit",
   "wave": "uprising",
-  "nrdbCode": "26081",
   "type": "resource",
   "side": "runner",
   "faction": "criminal",

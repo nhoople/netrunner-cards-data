@@ -1,7 +1,7 @@
 {
   "id": "eli-2-0",
+  "deckLimit": 3,
   "title": "Eli 2.0",
-  "nrdbCode": "13034",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

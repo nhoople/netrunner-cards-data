@@ -1,7 +1,7 @@
 {
   "id": "timely-public-release",
+  "deckLimit": 3,
   "title": "Timely Public Release",
-  "nrdbCode": "23027",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

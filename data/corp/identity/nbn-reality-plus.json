@@ -1,8 +1,8 @@
 {
   "id": "nbn-reality-plus",
+  "deckLimit": 1,
   "title": "NBN: Reality Plus",
   "wave": "system-gateway",
-  "nrdbCode": "30051",
   "type": "identity",
   "side": "corp",
   "faction": "nbn",

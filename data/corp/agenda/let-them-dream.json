@@ -1,8 +1,8 @@
 {
   "id": "let-them-dream",
+  "deckLimit": 3,
   "title": "Let Them Dream",
   "wave": "vantage-point",
-  "nrdbCode": "36066",
   "type": "agenda",
   "side": "corp",
   "faction": "neutral-corp",

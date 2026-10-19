@@ -1,7 +1,7 @@
 {
   "id": "transparency-initiative",
+  "deckLimit": 3,
   "title": "Transparency Initiative",
-  "nrdbCode": "12099",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

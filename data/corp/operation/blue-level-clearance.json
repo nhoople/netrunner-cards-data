@@ -1,8 +1,8 @@
 {
   "id": "blue-level-clearance",
+  "deckLimit": 3,
   "title": "Blue Level Clearance",
   "wave": "system-core-2019",
-  "nrdbCode": "25081",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

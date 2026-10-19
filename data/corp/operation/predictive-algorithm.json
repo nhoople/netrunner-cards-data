@@ -1,7 +1,7 @@
 {
   "id": "predictive-algorithm",
+  "deckLimit": 3,
   "title": "Predictive Algorithm",
-  "nrdbCode": "08017",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

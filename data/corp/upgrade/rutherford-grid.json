@@ -1,7 +1,7 @@
 {
   "id": "rutherford-grid",
+  "deckLimit": 3,
   "title": "Rutherford Grid",
-  "nrdbCode": "09025",
   "type": "upgrade",
   "side": "corp",
   "unsupported": [],

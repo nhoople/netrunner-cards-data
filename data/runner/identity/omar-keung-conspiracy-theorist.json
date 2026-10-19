@@ -1,7 +1,7 @@
 {
   "id": "omar-keung-conspiracy-theorist",
+  "deckLimit": 1,
   "title": "Omar Keung: Conspiracy Theorist",
-  "nrdbCode": "11043",
   "type": "identity",
   "side": "runner",
   "unsupported": [],

@@ -1,8 +1,8 @@
 {
   "id": "aniccam",
+  "deckLimit": 3,
   "title": "Aniccam",
   "wave": "uprising",
-  "nrdbCode": "26084",
   "type": "hardware",
   "side": "runner",
   "faction": "shaper",

@@ -1,7 +1,7 @@
 {
   "id": "worlds-plaza",
+  "deckLimit": 3,
   "title": "Worlds Plaza",
-  "nrdbCode": "08116",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

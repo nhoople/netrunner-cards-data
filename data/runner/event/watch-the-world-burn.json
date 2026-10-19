@@ -1,7 +1,7 @@
 {
   "id": "watch-the-world-burn",
+  "deckLimit": 1,
   "title": "Watch the World Burn",
-  "nrdbCode": "23100",
   "type": "event",
   "side": "runner",
   "unsupported": [],

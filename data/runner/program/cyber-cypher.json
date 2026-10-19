@@ -1,8 +1,8 @@
 {
   "id": "cyber-cypher",
+  "deckLimit": 3,
   "title": "Cyber-Cypher",
   "wave": "creation-and-control",
-  "nrdbCode": "03044",
   "type": "program",
   "side": "runner",
   "unsupported": [],

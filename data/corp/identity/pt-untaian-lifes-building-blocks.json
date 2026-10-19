@@ -1,8 +1,8 @@
 {
   "id": "pt-untaian-lifes-building-blocks",
+  "deckLimit": 1,
   "title": "PT Untaian: Life's Building Blocks",
   "wave": "elevation",
-  "nrdbCode": "35047",
   "type": "identity",
   "side": "corp",
   "faction": "jinteki",

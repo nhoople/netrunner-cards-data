@@ -1,8 +1,8 @@
 {
   "id": "baker",
+  "deckLimit": 3,
   "title": "Baker",
   "wave": "vantage-point",
-  "nrdbCode": "36015",
   "type": "program",
   "side": "runner",
   "faction": "criminal",

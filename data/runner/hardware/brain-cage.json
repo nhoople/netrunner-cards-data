@@ -1,7 +1,7 @@
 {
   "id": "brain-cage",
+  "deckLimit": 3,
   "title": "Brain Cage",
-  "nrdbCode": "08049",
   "type": "hardware",
   "side": "runner",
   "unsupported": [],

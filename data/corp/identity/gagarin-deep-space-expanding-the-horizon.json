@@ -1,7 +1,7 @@
 {
   "id": "gagarin-deep-space-expanding-the-horizon",
+  "deckLimit": 1,
   "title": "Gagarin Deep Space: Expanding the Horizon",
-  "nrdbCode": "07002",
   "type": "identity",
   "side": "corp",
   "unsupported": [],

@@ -1,8 +1,8 @@
 {
   "id": "sneakdoor-beta",
+  "deckLimit": 3,
   "title": "Sneakdoor Beta",
   "wave": "system-update-2021",
-  "nrdbCode": "31023",
   "type": "program",
   "side": "runner",
   "faction": "criminal",

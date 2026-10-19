@@ -1,7 +1,7 @@
 {
   "id": "deep-data-mining",
+  "deckLimit": 3,
   "title": "Deep Data Mining",
-  "nrdbCode": "13014",
   "type": "event",
   "side": "runner",
   "unsupported": [],

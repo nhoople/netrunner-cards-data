@@ -1,7 +1,7 @@
 {
   "id": "expose",
+  "deckLimit": 3,
   "title": "Exposé",
-  "nrdbCode": "08075",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

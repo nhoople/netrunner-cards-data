@@ -1,7 +1,7 @@
 {
   "id": "hellion-beta-test",
+  "deckLimit": 3,
   "title": "Hellion Beta Test",
-  "nrdbCode": "11051",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

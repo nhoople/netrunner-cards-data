@@ -1,7 +1,7 @@
 {
   "id": "armed-intimidation",
+  "deckLimit": 3,
   "title": "Armed Intimidation",
-  "nrdbCode": "21057",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

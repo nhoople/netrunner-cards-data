@@ -1,8 +1,8 @@
 {
   "id": "descent",
+  "deckLimit": 3,
   "title": "Descent",
   "wave": "rebellion-without-rehearsal",
-  "nrdbCode": "34125",
   "type": "ice",
   "side": "corp",
   "faction": "weyland-consortium",

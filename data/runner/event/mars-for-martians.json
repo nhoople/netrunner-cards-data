@@ -1,7 +1,7 @@
 {
   "id": "mars-for-martians",
+  "deckLimit": 3,
   "title": "Mars for Martians",
-  "nrdbCode": "12081",
   "type": "event",
   "side": "runner",
   "unsupported": [],

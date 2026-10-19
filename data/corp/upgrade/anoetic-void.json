@@ -1,8 +1,8 @@
 {
   "id": "anoetic-void",
+  "deckLimit": 3,
   "title": "Anoetic Void",
   "wave": "system-gateway",
-  "nrdbCode": "30050",
   "type": "upgrade",
   "side": "corp",
   "faction": "jinteki",

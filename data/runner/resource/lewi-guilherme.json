@@ -1,7 +1,7 @@
 {
   "id": "lewi-guilherme",
+  "deckLimit": 3,
   "title": "Lewi Guilherme",
-  "nrdbCode": "21005",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

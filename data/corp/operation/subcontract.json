@@ -1,7 +1,7 @@
 {
   "id": "subcontract",
+  "deckLimit": 3,
   "title": "Subcontract",
-  "nrdbCode": "10113",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

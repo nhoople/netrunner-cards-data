@@ -1,7 +1,7 @@
 {
   "id": "virus-breeding-ground",
+  "deckLimit": 3,
   "title": "Virus Breeding Ground",
-  "nrdbCode": "07052",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

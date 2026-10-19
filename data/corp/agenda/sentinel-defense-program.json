@@ -1,8 +1,8 @@
 {
   "id": "sentinel-defense-program",
+  "deckLimit": 3,
   "title": "Sentinel Defense Program",
   "wave": "creation-and-control",
-  "nrdbCode": "03007",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

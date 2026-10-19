@@ -1,7 +1,7 @@
 {
   "id": "rip-deal",
+  "deckLimit": 3,
   "title": "Rip Deal",
-  "nrdbCode": "12084",
   "type": "event",
   "side": "runner",
   "unsupported": [],

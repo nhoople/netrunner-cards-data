@@ -1,7 +1,7 @@
 {
   "id": "encore",
+  "deckLimit": 3,
   "title": "Encore",
-  "nrdbCode": "11107",
   "type": "event",
   "side": "runner",
   "unsupported": [],

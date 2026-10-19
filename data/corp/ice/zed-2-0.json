@@ -1,7 +1,7 @@
 {
   "id": "zed-2-0",
+  "deckLimit": 3,
   "title": "Zed 2.0",
-  "nrdbCode": "12010",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

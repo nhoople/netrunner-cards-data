@@ -1,7 +1,7 @@
 {
   "id": "nyashia",
+  "deckLimit": 3,
   "title": "Nyashia",
-  "nrdbCode": "21067",
   "type": "program",
   "side": "runner",
   "unsupported": [],

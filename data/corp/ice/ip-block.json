@@ -1,7 +1,7 @@
 {
   "id": "ip-block",
+  "deckLimit": 3,
   "title": "IP Block",
-  "nrdbCode": "11094",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

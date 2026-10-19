@@ -1,8 +1,8 @@
 {
   "id": "encryption-protocol",
+  "deckLimit": 3,
   "title": "Encryption Protocol",
   "wave": "trace-amount",
-  "nrdbCode": "02029",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

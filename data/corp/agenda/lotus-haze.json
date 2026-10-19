@@ -1,8 +1,8 @@
 {
   "id": "lotus-haze",
+  "deckLimit": 3,
   "title": "Lotus Haze",
   "wave": "vantage-point",
-  "nrdbCode": "36037",
   "type": "agenda",
   "side": "corp",
   "faction": "jinteki",

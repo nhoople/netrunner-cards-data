@@ -1,7 +1,7 @@
 {
   "id": "bug-out-bag",
+  "deckLimit": 3,
   "title": "Bug Out Bag",
-  "nrdbCode": "12064",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

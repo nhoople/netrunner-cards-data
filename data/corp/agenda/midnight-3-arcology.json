@@ -1,8 +1,8 @@
 {
   "id": "midnight-3-arcology",
+  "deckLimit": 3,
   "title": "Midnight-3 Arcology",
   "wave": "midnight-sun",
-  "nrdbCode": "33032",
   "type": "agenda",
   "side": "corp",
   "faction": "haas-bioroid",

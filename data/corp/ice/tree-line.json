@@ -1,8 +1,8 @@
 {
   "id": "tree-line",
+  "deckLimit": 3,
   "title": "Tree Line",
   "wave": "the-automata-initiative",
-  "nrdbCode": "34059",
   "type": "ice",
   "side": "corp",
   "faction": "weyland-consortium",

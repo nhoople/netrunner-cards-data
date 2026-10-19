@@ -1,8 +1,8 @@
 {
   "id": "semak-samun",
+  "deckLimit": 3,
   "title": "Semak-samun",
   "wave": "elevation",
-  "nrdbCode": "35054",
   "type": "ice",
   "side": "corp",
   "faction": "jinteki",

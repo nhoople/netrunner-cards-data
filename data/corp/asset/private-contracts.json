@@ -1,8 +1,8 @@
 {
   "id": "private-contracts",
+  "deckLimit": 3,
   "title": "Private Contracts",
   "wave": "cyber-exodus",
-  "nrdbCode": "02059",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

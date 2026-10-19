@@ -1,8 +1,8 @@
 {
   "id": "wall-of-static",
+  "deckLimit": 3,
   "title": "Wall of Static",
   "wave": "system-core-2019",
-  "nrdbCode": "25145",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

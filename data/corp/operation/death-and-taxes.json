@@ -1,7 +1,7 @@
 {
   "id": "death-and-taxes",
+  "deckLimit": 3,
   "title": "Death and Taxes",
-  "nrdbCode": "21058",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

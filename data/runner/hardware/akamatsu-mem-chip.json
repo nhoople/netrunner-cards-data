@@ -1,8 +1,8 @@
 {
   "id": "akamatsu-mem-chip",
+  "deckLimit": 3,
   "title": "Akamatsu Mem Chip",
   "wave": "system-core-2019",
-  "nrdbCode": "25048",
   "type": "hardware",
   "side": "runner",
   "unsupported": [],

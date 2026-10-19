@@ -1,8 +1,8 @@
 {
   "id": "vovo-ozetti",
+  "deckLimit": 3,
   "title": "Vovô Ozetti",
   "wave": "the-automata-initiative",
-  "nrdbCode": "34038",
   "type": "upgrade",
   "side": "corp",
   "faction": "haas-bioroid",

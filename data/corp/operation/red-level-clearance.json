@@ -1,8 +1,8 @@
 {
   "id": "red-level-clearance",
+  "deckLimit": 3,
   "title": "Red Level Clearance",
   "wave": "downfall",
-  "nrdbCode": "26037",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

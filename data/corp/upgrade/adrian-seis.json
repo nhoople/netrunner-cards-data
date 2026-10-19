@@ -1,8 +1,8 @@
 {
   "id": "adrian-seis",
+  "deckLimit": 3,
   "title": "Adrian Seis",
   "wave": "the-automata-initiative",
-  "nrdbCode": "34046",
   "type": "upgrade",
   "side": "corp",
   "faction": "jinteki",

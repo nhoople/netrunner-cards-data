@@ -1,8 +1,8 @@
 {
   "id": "mu-safecracker",
+  "deckLimit": 3,
   "title": "Mu Safecracker",
   "wave": "uprising",
-  "nrdbCode": "26076",
   "type": "hardware",
   "side": "runner",
   "faction": "criminal",

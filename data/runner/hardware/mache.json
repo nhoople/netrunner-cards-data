@@ -1,8 +1,8 @@
 {
   "id": "mache",
+  "deckLimit": 3,
   "title": "Mâché",
   "wave": "reign-and-reverie",
-  "nrdbCode": "22018",
   "type": "hardware",
   "side": "runner",
   "unsupported": [],

@@ -1,7 +1,7 @@
 {
   "id": "intake",
+  "deckLimit": 3,
   "title": "Intake",
-  "nrdbCode": "21098",
   "type": "upgrade",
   "side": "corp",
   "unsupported": [],

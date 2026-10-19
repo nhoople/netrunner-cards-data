@@ -1,7 +1,7 @@
 {
   "id": "dna-tracker",
+  "deckLimit": 3,
   "title": "DNA Tracker",
-  "nrdbCode": "11053",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

@@ -1,7 +1,7 @@
 {
   "id": "paywall-implementation",
+  "deckLimit": 3,
   "title": "Paywall Implementation",
-  "nrdbCode": "06028",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

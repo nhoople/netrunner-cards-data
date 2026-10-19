@@ -1,7 +1,7 @@
 {
   "id": "constellation-protocol",
+  "deckLimit": 3,
   "title": "Constellation Protocol",
-  "nrdbCode": "07008",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

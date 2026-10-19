@@ -1,7 +1,7 @@
 {
   "id": "sandman",
+  "deckLimit": 3,
   "title": "Sandman",
-  "nrdbCode": "21075",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

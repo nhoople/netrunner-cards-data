@@ -1,8 +1,8 @@
 {
   "id": "bling",
+  "deckLimit": 3,
   "title": "Bling",
   "wave": "elevation",
-  "nrdbCode": "35006",
   "type": "hardware",
   "side": "runner",
   "faction": "anarch",

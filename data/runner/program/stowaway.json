@@ -1,8 +1,8 @@
 {
   "id": "stowaway",
+  "deckLimit": 3,
   "title": "Stowaway",
   "wave": "vantage-point",
-  "nrdbCode": "36024",
   "type": "program",
   "side": "runner",
   "faction": "shaper",

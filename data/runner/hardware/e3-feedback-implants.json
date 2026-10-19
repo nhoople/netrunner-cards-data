@@ -1,8 +1,8 @@
 {
   "id": "e3-feedback-implants",
+  "deckLimit": 3,
   "title": "e3 Feedback Implants",
   "wave": "trace-amount",
-  "nrdbCode": "02024",
   "type": "hardware",
   "side": "runner",
   "unsupported": [],

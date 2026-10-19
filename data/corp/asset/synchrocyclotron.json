@@ -1,8 +1,8 @@
 {
   "id": "synchrocyclotron",
+  "deckLimit": 3,
   "title": "Synchrocyclotron",
   "wave": "vantage-point",
-  "nrdbCode": "36027",
   "type": "asset",
   "side": "corp",
   "faction": "haas-bioroid",

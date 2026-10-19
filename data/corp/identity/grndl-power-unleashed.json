@@ -1,7 +1,7 @@
 {
   "id": "grndl-power-unleashed",
+  "deckLimit": 1,
   "title": "GRNDL: Power Unleashed",
-  "nrdbCode": "04097",
   "type": "identity",
   "side": "corp",
   "unsupported": [],

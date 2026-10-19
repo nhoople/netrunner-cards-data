@@ -1,8 +1,8 @@
 {
   "id": "greenmail",
+  "deckLimit": 3,
   "title": "Greenmail",
   "wave": "elevation",
-  "nrdbCode": "35070",
   "type": "agenda",
   "side": "corp",
   "faction": "weyland-consortium",

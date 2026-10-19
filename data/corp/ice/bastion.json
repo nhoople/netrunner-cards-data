@@ -1,8 +1,8 @@
 {
   "id": "bastion",
+  "deckLimit": 3,
   "title": "Bastion",
   "wave": "creation-and-control",
-  "nrdbCode": "03026",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

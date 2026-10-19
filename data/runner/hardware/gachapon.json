@@ -1,8 +1,8 @@
 {
   "id": "gachapon",
+  "deckLimit": 3,
   "title": "Gachapon",
   "wave": "uprising",
-  "nrdbCode": "26069",
   "type": "hardware",
   "side": "runner",
   "faction": "anarch",

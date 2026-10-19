@@ -1,8 +1,8 @@
 {
   "id": "cradle",
+  "deckLimit": 3,
   "title": "Cradle",
   "wave": "reign-and-reverie",
-  "nrdbCode": "22006",
   "type": "program",
   "side": "runner",
   "unsupported": [],

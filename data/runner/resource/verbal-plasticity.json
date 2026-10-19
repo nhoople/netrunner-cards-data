@@ -1,8 +1,8 @@
 {
   "id": "verbal-plasticity",
+  "deckLimit": 3,
   "title": "Verbal Plasticity",
   "wave": "system-gateway",
-  "nrdbCode": "30034",
   "type": "resource",
   "side": "runner",
   "faction": "neutral-runner",

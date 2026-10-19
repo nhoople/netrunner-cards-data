@@ -1,7 +1,7 @@
 {
   "id": "push-your-luck",
+  "deckLimit": 3,
   "title": "Push Your Luck",
-  "nrdbCode": "05047",
   "type": "event",
   "side": "runner",
   "unsupported": [],

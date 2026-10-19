@@ -1,7 +1,7 @@
 {
   "id": "the-future-perfect",
+  "deckLimit": 3,
   "title": "The Future Perfect",
-  "nrdbCode": "05007",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

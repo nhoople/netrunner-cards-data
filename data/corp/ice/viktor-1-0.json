@@ -1,8 +1,8 @@
 {
   "id": "viktor-1-0",
+  "deckLimit": 3,
   "title": "Viktor 1.0",
   "wave": "system-core-2019",
-  "nrdbCode": "25078",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

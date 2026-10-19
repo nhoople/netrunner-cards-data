@@ -1,7 +1,7 @@
 {
   "id": "turtlebacks",
+  "deckLimit": 3,
   "title": "Turtlebacks",
-  "nrdbCode": "06106",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

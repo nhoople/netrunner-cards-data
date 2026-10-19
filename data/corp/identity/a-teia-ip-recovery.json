@@ -1,8 +1,8 @@
 {
   "id": "a-teia-ip-recovery",
+  "deckLimit": 1,
   "title": "A Teia: IP Recovery",
   "wave": "the-automata-initiative",
-  "nrdbCode": "34039",
   "type": "identity",
   "side": "corp",
   "faction": "jinteki",

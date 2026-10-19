@@ -1,7 +1,7 @@
 {
   "id": "brain-rewiring",
+  "deckLimit": 3,
   "title": "Brain Rewiring",
-  "nrdbCode": "13029",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

@@ -1,7 +1,7 @@
 {
   "id": "cbi-raid",
+  "deckLimit": 3,
   "title": "CBI Raid",
-  "nrdbCode": "10022",
   "type": "event",
   "side": "runner",
   "unsupported": [],

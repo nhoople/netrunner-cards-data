@@ -1,8 +1,8 @@
 {
   "id": "cacophony",
+  "deckLimit": 3,
   "title": "Cacophony",
   "wave": "elevation",
-  "nrdbCode": "35010",
   "type": "resource",
   "side": "runner",
   "faction": "anarch",

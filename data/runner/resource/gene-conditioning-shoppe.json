@@ -1,7 +1,7 @@
 {
   "id": "gene-conditioning-shoppe",
+  "deckLimit": 3,
   "title": "Gene Conditioning Shoppe",
-  "nrdbCode": "08006",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

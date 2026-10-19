@@ -1,7 +1,7 @@
 {
   "id": "remote-data-farm",
+  "deckLimit": 3,
   "title": "Remote Data Farm",
-  "nrdbCode": "10033",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

@@ -1,8 +1,8 @@
 {
   "id": "alarm-clock",
+  "deckLimit": 3,
   "title": "Alarm Clock",
   "wave": "rebellion-without-rehearsal",
-  "nrdbCode": "34078",
   "type": "hardware",
   "side": "runner",
   "faction": "criminal",

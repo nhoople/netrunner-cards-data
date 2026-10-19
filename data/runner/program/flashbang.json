@@ -1,7 +1,7 @@
 {
   "id": "flashbang",
+  "deckLimit": 3,
   "title": "Flashbang",
-  "nrdbCode": "12085",
   "type": "program",
   "side": "runner",
   "unsupported": [],

@@ -1,7 +1,7 @@
 {
   "id": "pup",
+  "deckLimit": 3,
   "title": "Pup",
-  "nrdbCode": "05018",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

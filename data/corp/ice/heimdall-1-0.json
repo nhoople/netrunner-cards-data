@@ -1,8 +1,8 @@
 {
   "id": "heimdall-1-0",
+  "deckLimit": 3,
   "title": "Heimdall 1.0",
   "wave": "system-core-2019",
-  "nrdbCode": "25074",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

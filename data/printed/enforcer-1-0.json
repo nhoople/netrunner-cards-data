@@ -1,0 +1,5 @@
+{
+  "cardId": "enforcer-1-0",
+  "text": "As an additional cost to rez this ice, forfeit 1 agenda.\n<strong>Lose [click]:</strong> Break 1 subroutine on this ice. Only the Runner can use this ability.\n[subroutine] Trash 1 installed program.\n[subroutine] Do 1 core damage.\n[subroutine] Trash 1 installed <strong>console</strong>.\n[subroutine] Trash all installed <strong>virtual</strong> resources.",
+  "strippedText": "As an additional cost to rez this ice, forfeit 1 agenda. Lose click: Break 1 subroutine on this ice. Only the Runner can use this ability. Subroutine Trash 1 installed program. Subroutine Do 1 core damage. Subroutine Trash 1 installed console. Subroutine Trash all installed virtual resources."
+}

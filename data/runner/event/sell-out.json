@@ -1,8 +1,8 @@
 {
   "id": "sell-out",
+  "deckLimit": 3,
   "title": "Sell Out",
   "wave": "vantage-point",
-  "nrdbCode": "36011",
   "type": "event",
   "side": "runner",
   "faction": "criminal",

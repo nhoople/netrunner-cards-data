@@ -1,8 +1,8 @@
 {
   "id": "cold-site-server",
+  "deckLimit": 3,
   "title": "Cold Site Server",
   "wave": "downfall",
-  "nrdbCode": "26038",
   "type": "upgrade",
   "side": "corp",
   "unsupported": [],

@@ -1,8 +1,8 @@
 {
   "id": "tranquilizer",
+  "deckLimit": 3,
   "title": "Tranquilizer",
   "wave": "system-gateway",
-  "nrdbCode": "30017",
   "type": "program",
   "side": "runner",
   "faction": "criminal",

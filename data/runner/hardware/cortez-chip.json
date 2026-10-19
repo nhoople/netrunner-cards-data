@@ -1,8 +1,8 @@
 {
   "id": "cortez-chip",
+  "deckLimit": 3,
   "title": "Cortez Chip",
   "wave": "what-lies-ahead",
-  "nrdbCode": "02005",
   "type": "hardware",
   "side": "runner",
   "unsupported": [],

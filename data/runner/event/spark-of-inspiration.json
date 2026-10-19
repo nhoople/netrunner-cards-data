@@ -1,8 +1,8 @@
 {
   "id": "spark-of-inspiration",
+  "deckLimit": 3,
   "title": "Spark of Inspiration",
   "wave": "parhelion",
-  "nrdbCode": "33084",
   "type": "event",
   "side": "runner",
   "faction": "shaper",

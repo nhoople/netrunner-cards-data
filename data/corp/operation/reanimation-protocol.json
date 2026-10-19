@@ -1,8 +1,8 @@
 {
   "id": "reanimation-protocol",
+  "deckLimit": 3,
   "title": "Reanimation Protocol",
   "wave": "vantage-point",
-  "nrdbCode": "36062",
   "type": "operation",
   "side": "corp",
   "faction": "weyland-consortium",

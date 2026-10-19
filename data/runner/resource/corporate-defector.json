@@ -1,7 +1,7 @@
 {
   "id": "corporate-defector",
+  "deckLimit": 3,
   "title": "Corporate Defector",
-  "nrdbCode": "12109",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

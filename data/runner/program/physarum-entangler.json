@@ -1,8 +1,8 @@
 {
   "id": "physarum-entangler",
+  "deckLimit": 3,
   "title": "Physarum Entangler",
   "wave": "rebellion-without-rehearsal",
-  "nrdbCode": "34082",
   "type": "program",
   "side": "runner",
   "faction": "criminal",

@@ -1,8 +1,8 @@
 {
   "id": "whirlpool",
+  "deckLimit": 3,
   "title": "Whirlpool",
   "wave": "humanitys-shadow",
-  "nrdbCode": "02094",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

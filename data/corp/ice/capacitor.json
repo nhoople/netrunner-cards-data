@@ -1,8 +1,8 @@
 {
   "id": "capacitor",
+  "deckLimit": 3,
   "title": "Capacitor",
   "wave": "rebellion-without-rehearsal",
-  "nrdbCode": "34116",
   "type": "ice",
   "side": "corp",
   "faction": "nbn",

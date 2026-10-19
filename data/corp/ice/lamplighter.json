@@ -1,8 +1,8 @@
 {
   "id": "lamplighter",
+  "deckLimit": 3,
   "title": "Lamplighter",
   "wave": "elevation",
-  "nrdbCode": "35080",
   "type": "ice",
   "side": "corp",
   "faction": "neutral-corp",

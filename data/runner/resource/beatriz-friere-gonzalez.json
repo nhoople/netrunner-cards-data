@@ -1,8 +1,8 @@
 {
   "id": "beatriz-friere-gonzalez",
+  "deckLimit": 3,
   "title": "Beatriz Friere Gonzalez",
   "wave": "the-automata-initiative",
-  "nrdbCode": "34028",
   "type": "resource",
   "side": "runner",
   "faction": "shaper",

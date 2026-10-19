@@ -1,7 +1,7 @@
 {
   "id": "black-orchestra",
+  "deckLimit": 3,
   "title": "Black Orchestra",
-  "nrdbCode": "11042",
   "type": "program",
   "side": "runner",
   "unsupported": [],

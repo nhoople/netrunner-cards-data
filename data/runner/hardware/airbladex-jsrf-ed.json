@@ -1,8 +1,8 @@
 {
   "id": "airbladex-jsrf-ed",
+  "deckLimit": 3,
   "title": "AirbladeX (JSRF Ed.)",
   "wave": "the-automata-initiative",
-  "nrdbCode": "34022",
   "type": "hardware",
   "side": "runner",
   "faction": "shaper",

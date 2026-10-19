@@ -1,8 +1,8 @@
 {
   "id": "all-nighter",
+  "deckLimit": 3,
   "title": "All-nighter",
   "wave": "a-study-in-static",
-  "nrdbCode": "02067",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

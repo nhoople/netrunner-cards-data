@@ -1,7 +1,7 @@
 {
   "id": "tapestry",
+  "deckLimit": 3,
   "title": "Tapestry",
-  "nrdbCode": "13037",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

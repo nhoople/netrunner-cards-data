@@ -1,8 +1,8 @@
 {
   "id": "principia",
+  "deckLimit": 3,
   "title": "Principia",
   "wave": "elevation",
-  "nrdbCode": "35032",
   "type": "program",
   "side": "runner",
   "faction": "shaper",

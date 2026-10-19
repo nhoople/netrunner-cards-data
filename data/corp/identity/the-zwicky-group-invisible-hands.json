@@ -1,8 +1,8 @@
 {
   "id": "the-zwicky-group-invisible-hands",
+  "deckLimit": 1,
   "title": "The Zwicky Group: Invisible Hands",
   "wave": "elevation",
-  "nrdbCode": "35069",
   "type": "identity",
   "side": "corp",
   "faction": "weyland-consortium",

@@ -1,8 +1,8 @@
 {
   "id": "steve-cambridge-master-grifter",
+  "deckLimit": 1,
   "title": "Steve Cambridge: Master Grifter",
   "wave": "system-update-2021",
-  "nrdbCode": "31014",
   "type": "identity",
   "side": "runner",
   "faction": "criminal",

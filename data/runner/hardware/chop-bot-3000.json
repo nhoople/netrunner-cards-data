@@ -1,7 +1,7 @@
 {
   "id": "chop-bot-3000",
+  "deckLimit": 3,
   "title": "Chop Bot 3000",
-  "nrdbCode": "07045",
   "type": "hardware",
   "side": "runner",
   "unsupported": [],

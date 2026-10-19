@@ -1,7 +1,7 @@
 {
   "id": "envelope",
+  "deckLimit": 3,
   "title": "Envelope",
-  "nrdbCode": "21095",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

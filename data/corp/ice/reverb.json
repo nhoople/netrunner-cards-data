@@ -1,8 +1,8 @@
 {
   "id": "reverb",
+  "deckLimit": 3,
   "title": "Reverb",
   "wave": "vantage-point",
-  "nrdbCode": "36029",
   "type": "ice",
   "side": "corp",
   "faction": "haas-bioroid",

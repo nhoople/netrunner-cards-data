@@ -1,7 +1,7 @@
 {
   "id": "alias",
+  "deckLimit": 3,
   "title": "Alias",
-  "nrdbCode": "05041",
   "type": "program",
   "side": "runner",
   "unsupported": [],

@@ -1,7 +1,7 @@
 {
   "id": "trade-in",
+  "deckLimit": 3,
   "title": "Trade-In",
-  "nrdbCode": "06078",
   "type": "event",
   "side": "runner",
   "unsupported": [],

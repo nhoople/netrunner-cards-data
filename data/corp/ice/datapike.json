@@ -1,8 +1,8 @@
 {
   "id": "datapike",
+  "deckLimit": 3,
   "title": "Datapike",
   "wave": "creation-and-control",
-  "nrdbCode": "03027",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

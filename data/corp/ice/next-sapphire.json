@@ -1,7 +1,7 @@
 {
   "id": "next-sapphire",
+  "deckLimit": 3,
   "title": "NEXT Sapphire",
-  "nrdbCode": "21050",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

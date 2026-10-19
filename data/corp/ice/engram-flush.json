@@ -1,8 +1,8 @@
 {
   "id": "engram-flush",
+  "deckLimit": 3,
   "title": "Engram Flush",
   "wave": "uprising",
-  "nrdbCode": "26108",
   "type": "ice",
   "side": "corp",
   "faction": "jinteki",

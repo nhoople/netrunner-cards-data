@@ -1,8 +1,8 @@
 {
   "id": "midseason-replacements",
+  "deckLimit": 3,
   "title": "Midseason Replacements",
   "wave": "future-proof",
-  "nrdbCode": "02116",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

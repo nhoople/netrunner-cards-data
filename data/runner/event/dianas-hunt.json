@@ -1,7 +1,7 @@
 {
   "id": "dianas-hunt",
+  "deckLimit": 3,
   "title": "Diana's Hunt",
-  "nrdbCode": "12106",
   "type": "event",
   "side": "runner",
   "unsupported": [],

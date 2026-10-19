@@ -1,0 +1,5 @@
+{
+  "cardId": "tollbooth",
+  "text": "When the Runner encounters this ice, they must pay 3[credit], if able. If they do not, end the run.\n[subroutine] End the run.",
+  "strippedText": "When the Runner encounters this ice, they must pay 3 credits, if able. If they do not, end the run. Subroutine End the run."
+}

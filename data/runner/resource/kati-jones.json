@@ -1,8 +1,8 @@
 {
   "id": "kati-jones",
+  "deckLimit": 3,
   "title": "Kati Jones",
   "wave": "system-core-2019",
-  "nrdbCode": "25065",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

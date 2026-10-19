@@ -1,8 +1,8 @@
 {
   "id": "pichacao",
+  "deckLimit": 3,
   "title": "Pichação",
   "wave": "the-automata-initiative",
-  "nrdbCode": "34025",
   "type": "program",
   "side": "runner",
   "faction": "shaper",

@@ -1,8 +1,8 @@
 {
   "id": "district-99",
+  "deckLimit": 3,
   "title": "District 99",
   "wave": "reign-and-reverie",
-  "nrdbCode": "22007",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

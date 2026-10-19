@@ -1,7 +1,7 @@
 {
   "id": "utopia-fragment",
+  "deckLimit": 1,
   "title": "Utopia Fragment",
-  "nrdbCode": "06110",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

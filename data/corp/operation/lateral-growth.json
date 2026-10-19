@@ -1,7 +1,7 @@
 {
   "id": "lateral-growth",
+  "deckLimit": 3,
   "title": "Lateral Growth",
-  "nrdbCode": "10104",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

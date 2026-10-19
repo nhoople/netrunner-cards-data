@@ -1,8 +1,8 @@
 {
   "id": "realloc",
+  "deckLimit": 3,
   "title": "realloc()",
   "wave": "vantage-point",
-  "nrdbCode": "36033",
   "type": "operation",
   "side": "corp",
   "faction": "haas-bioroid",

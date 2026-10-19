@@ -1,0 +1,5 @@
+{
+  "cardId": "disrupter",
+  "text": "[interrupt] → [trash]: Reduce the base trace strength of a trace to 0.",
+  "strippedText": "Interrupt -> trash: Reduce the base trace strength of a trace to 0."
+}

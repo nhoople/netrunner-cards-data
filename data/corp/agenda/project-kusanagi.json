@@ -1,7 +1,7 @@
 {
   "id": "project-kusanagi",
+  "deckLimit": 3,
   "title": "Project Kusanagi",
-  "nrdbCode": "11052",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

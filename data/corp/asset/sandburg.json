@@ -1,7 +1,7 @@
 {
   "id": "sandburg",
+  "deckLimit": 3,
   "title": "Sandburg",
-  "nrdbCode": "11020",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

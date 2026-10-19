@@ -1,7 +1,7 @@
 {
   "id": "crowdfunding",
+  "deckLimit": 3,
   "title": "Crowdfunding",
-  "nrdbCode": "23013",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

@@ -1,8 +1,8 @@
 {
   "id": "open-market",
+  "deckLimit": 3,
   "title": "Open Market",
   "wave": "elevation",
-  "nrdbCode": "35022",
   "type": "resource",
   "side": "runner",
   "faction": "criminal",

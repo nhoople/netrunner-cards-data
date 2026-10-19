@@ -1,8 +1,8 @@
 {
   "id": "sting",
+  "deckLimit": 3,
   "title": "Sting!",
   "wave": "downfall",
-  "nrdbCode": "26041",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

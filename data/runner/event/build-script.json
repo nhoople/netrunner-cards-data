@@ -1,7 +1,7 @@
 {
   "id": "build-script",
+  "deckLimit": 3,
   "title": "Build Script",
-  "nrdbCode": "12028",
   "type": "event",
   "side": "runner",
   "unsupported": [],

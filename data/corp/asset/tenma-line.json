@@ -1,7 +1,7 @@
 {
   "id": "tenma-line",
+  "deckLimit": 3,
   "title": "Tenma Line",
-  "nrdbCode": "05012",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

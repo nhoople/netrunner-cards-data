@@ -1,7 +1,7 @@
 {
   "id": "hades-shard",
+  "deckLimit": 1,
   "title": "Hades Shard",
-  "nrdbCode": "06059",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

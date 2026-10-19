@@ -1,7 +1,7 @@
 {
   "id": "emptied-mind",
+  "deckLimit": 3,
   "title": "Emptied Mind",
-  "nrdbCode": "10078",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

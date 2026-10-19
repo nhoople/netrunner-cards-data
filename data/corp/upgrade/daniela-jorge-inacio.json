@@ -1,8 +1,8 @@
 {
   "id": "daniela-jorge-inacio",
+  "deckLimit": 3,
   "title": "Daniela Jorge Inácio",
   "wave": "the-automata-initiative",
-  "nrdbCode": "34047",
   "type": "upgrade",
   "side": "corp",
   "faction": "jinteki",

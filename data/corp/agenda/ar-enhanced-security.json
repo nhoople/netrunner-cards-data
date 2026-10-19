@@ -1,7 +1,7 @@
 {
   "id": "ar-enhanced-security",
+  "deckLimit": 3,
   "title": "AR-Enhanced Security",
-  "nrdbCode": "12115",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

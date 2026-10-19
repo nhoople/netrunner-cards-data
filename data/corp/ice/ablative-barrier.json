@@ -1,8 +1,8 @@
 {
   "id": "ablative-barrier",
+  "deckLimit": 3,
   "title": "Ablative Barrier",
   "wave": "the-automata-initiative",
-  "nrdbCode": "34034",
   "type": "ice",
   "side": "corp",
   "faction": "haas-bioroid",

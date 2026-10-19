@@ -1,7 +1,7 @@
 {
   "id": "reverse-infection",
+  "deckLimit": 3,
   "title": "Reverse Infection",
-  "nrdbCode": "21053",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

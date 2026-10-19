@@ -1,8 +1,8 @@
 {
   "id": "gold-farmer",
+  "deckLimit": 3,
   "title": "Gold Farmer",
   "wave": "uprising",
-  "nrdbCode": "26116",
   "type": "ice",
   "side": "corp",
   "faction": "nbn",

@@ -1,7 +1,7 @@
 {
   "id": "alice-merchant-clan-agitator",
+  "deckLimit": 1,
   "title": "Alice Merchant: Clan Agitator",
-  "nrdbCode": "12061",
   "type": "identity",
   "side": "runner",
   "unsupported": [],

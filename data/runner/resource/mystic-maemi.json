@@ -1,8 +1,8 @@
 {
   "id": "mystic-maemi",
+  "deckLimit": 3,
   "title": "Mystic Maemi",
   "wave": "uprising",
-  "nrdbCode": "26072",
   "type": "resource",
   "side": "runner",
   "faction": "anarch",

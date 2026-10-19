@@ -1,8 +1,8 @@
 {
   "id": "shibboleth",
+  "deckLimit": 3,
   "title": "Shibboleth",
   "wave": "the-automata-initiative",
-  "nrdbCode": "34018",
   "type": "program",
   "side": "runner",
   "faction": "criminal",

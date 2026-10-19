@@ -16,9 +16,11 @@ Fails closed on missing pin, HTTP errors, or invalid JSON.
 from __future__ import annotations
 
 import argparse
+import io
 import json
 import re
 import sys
+import tarfile
 import urllib.error
 import urllib.request
 from pathlib import Path
@@ -115,7 +117,68 @@ def load_pack_cards(code: str, *, force: bool = False) -> list[dict]:
     return read_pack(fetch_pack(code, force=force))
 
 
-def http_bytes(url: str) -> bytes:
+CATALOG_PREFIXES = (
+    "v2/rulings/",
+    "v2/formats/",
+    "v2/card_pools/",
+    "v2/restrictions/",
+    "v2/card_sets.json",
+    "v2/card_cycles.json",
+    "rotations.json",
+)
+
+
+def fetch_catalog_archive(*, force: bool = False) -> Path:
+    """Cache the pinned catalog files this repo copies. The rulings snapshot is included."""
+    pin = load_pin()
+    root = ROOT / pin["cacheDir"] / pin["ref"]
+    marker = root / "v2" / "card_sets.json"
+    if marker.is_file() and any((root / "v2" / "rulings").glob("*.json")) and not force:
+        return root
+    repo = pin["repo"].removeprefix("https://github.com/").removesuffix(".git")
+    url = f"https://codeload.github.com/{repo}/tar.gz/{pin['ref']}"
+    root.mkdir(parents=True, exist_ok=True)
+    try:
+        body = http_bytes(url, timeout=180)
+    except urllib.error.HTTPError as e:
+        raise SystemExit(f"Failed to fetch catalog archive (HTTP {e.code}): {url}") from e
+    except urllib.error.URLError as e:
+        raise SystemExit(f"Failed to fetch catalog archive: {url}\n{e}") from e
+    written = 0
+    with tarfile.open(fileobj=io.BytesIO(body), mode="r:gz") as archive:
+        for member in archive.getmembers():
+            if not member.isfile():
+                continue
+            name = member.name.split("/", 1)[1] if "/" in member.name else member.name
+            if not any(name == prefix or name.startswith(prefix) for prefix in CATALOG_PREFIXES):
+                continue
+            if ".." in Path(name).parts:
+                continue
+            extracted = archive.extractfile(member)
+            if extracted is None:
+                continue
+            dest = root / name
+            dest.parent.mkdir(parents=True, exist_ok=True)
+            dest.write_bytes(extracted.read())
+            written += 1
+    if written == 0:
+        raise SystemExit(f"Catalog archive has none of the expected files: {url}")
+    return root
+
+
+def fetch_rulings(*, force: bool = False) -> Path:
+    """Cache v2/rulings/*.json from the pinned catalog commit.
+
+    Those files are the NetrunnerDB ruling snapshot the catalog copied in.
+    """
+    root = fetch_catalog_archive(force=force)
+    dest = root / "v2" / "rulings"
+    if not any(dest.glob("*.json")):
+        raise SystemExit(f"Catalog archive has no v2/rulings files: {dest}")
+    return dest
+
+
+def http_bytes(url: str, timeout: int = 60) -> bytes:
     req = urllib.request.Request(
         url,
         headers={
@@ -123,7 +186,7 @@ def http_bytes(url: str) -> bytes:
             "User-Agent": "netrunner-cards-data",
         },
     )
-    with urllib.request.urlopen(req, timeout=60) as resp:
+    with urllib.request.urlopen(req, timeout=timeout) as resp:
         return resp.read()
 
 
@@ -222,18 +285,22 @@ def cmd_show_pin(_: argparse.Namespace) -> int:
 
 
 def local_cards_by_code() -> dict[str, Path]:
+    """Map a printing code to the rules file for that title."""
+    from card_layout import card_file
+
     found: dict[str, Path] = {}
-    data = ROOT / "data"
-    for path in data.glob("*/*.json"):
-        if path.name.startswith("_"):
-            continue
+    directory = ROOT / "data" / "printings"
+    if not directory.is_dir():
+        return found
+    for path in directory.glob("*.json"):
         try:
-            card = json.loads(path.read_text(encoding="utf-8"))
+            printing = json.loads(path.read_text(encoding="utf-8"))
         except json.JSONDecodeError:
             continue
-        code = card.get("nrdbCode")
-        if isinstance(code, str) and code:
-            found[code] = path
+        code = printing.get("code")
+        card_id = printing.get("cardId")
+        if isinstance(code, str) and isinstance(card_id, str):
+            found[code] = card_file(card_id)
     return found
 
 

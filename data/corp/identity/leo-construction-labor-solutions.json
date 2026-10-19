@@ -1,8 +1,8 @@
 {
   "id": "leo-construction-labor-solutions",
+  "deckLimit": 1,
   "title": "LEO Construction: Labor Solutions",
   "wave": "elevation",
-  "nrdbCode": "35035",
   "type": "identity",
   "side": "corp",
   "faction": "haas-bioroid",

@@ -1,8 +1,8 @@
 {
   "id": "liberated-account",
+  "deckLimit": 3,
   "title": "Liberated Account",
   "wave": "system-update-2021",
-  "nrdbCode": "31010",
   "type": "resource",
   "side": "runner",
   "faction": "anarch",

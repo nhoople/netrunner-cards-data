@@ -1,7 +1,7 @@
 {
   "id": "ddos",
+  "deckLimit": 3,
   "title": "DDoS",
-  "nrdbCode": "08103",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

@@ -1,7 +1,7 @@
 {
   "id": "oracle-may",
+  "deckLimit": 3,
   "title": "Oracle May",
-  "nrdbCode": "05054",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

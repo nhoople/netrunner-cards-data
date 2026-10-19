@@ -1,7 +1,7 @@
 {
   "id": "the-archivist",
+  "deckLimit": 3,
   "title": "The Archivist",
-  "nrdbCode": "12003",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

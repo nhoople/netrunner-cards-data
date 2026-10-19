@@ -1,7 +1,7 @@
 {
   "id": "emp-device",
+  "deckLimit": 3,
   "title": "EMP Device",
-  "nrdbCode": "10020",
   "type": "hardware",
   "side": "runner",
   "unsupported": [],

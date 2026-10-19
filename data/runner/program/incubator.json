@@ -1,7 +1,7 @@
 {
   "id": "incubator",
+  "deckLimit": 3,
   "title": "Incubator",
-  "nrdbCode": "06113",
   "type": "program",
   "side": "runner",
   "unsupported": [],

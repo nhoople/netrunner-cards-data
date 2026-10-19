@@ -17,7 +17,14 @@ Files under [`data/`](data/) are the API. Clone the repo or fetch a **tagged** r
 | Path | Use |
 | --- | --- |
 | [`data/schema.json`](data/schema.json) | JSON Schema for card definitions |
-| [`data/pool.json`](data/pool.json) | Declared corpus. `corpusOrder` is the release order; every wave there is `supported` |
+| [`data/pool.json`](data/pool.json) | Declared corpus. `corpusOrder` is the release order; every wave there is `supported`. Each wave also has `dateRelease`, `cycle`, and `size` |
+| [`data/printings/`](data/printings/) | One file per printing (`<code>.json`): title id, pack, flavor, illustrator, `quantity` (copies in that pack), and `position`. The image address is `https://card-images.netrunnerdb.com/v2/large/{code}.jpg` |
+| [`data/printed/`](data/printed/) | One file per title (`<id>.json`): the current printed `text` and `strippedText`, errata included. The rules file keeps the Effect IR |
+| [`data/rulings/`](data/rulings/) | One file per title with a rules-team-verified ruling (`<id>.json`). Taken from the pinned catalog's `v2/rulings/` snapshot of the NetrunnerDB rulings API. Unverified rulings are left out. A ruling explains the card text; an erratum changes the text itself |
+| [`data/formats/`](data/formats/) | One file per format. Each snapshot names a card pool and, when the catalog has one, a restriction |
+| [`data/card-pools/`](data/card-pools/) | The waves legal in one snapshot of a format |
+| [`data/restrictions/`](data/restrictions/) | Ban lists, Most Wanted Lists, and balance updates: banned and restricted titles, influence points, and agenda caps |
+| [`data/rotations.json`](data/rotations.json) | Rotation dates and the waves that left a format |
 
 Card files live at `data/<side>/<type>/<id>.json` (for example `data/runner/program/marjanah.json`). `corpusOrder` in [`data/pool.json`](data/pool.json) is the release order, and every wave there is supported. The order is FFG Core through Kitara, Reign and Reverie, Magnum Opus (`mor` absorbed), System Core 2019, Downfall, Uprising, then Gateway through Vantage Point. Floor **`v1.147.6`**.
 
@@ -31,7 +38,18 @@ Card files live at `data/<side>/<type>/<id>.json` (for example `data/runner/prog
 | Terminal Directive campaign (`tdc`) | Deferred. The `td` card pack is supported |
 | Salvaged Memories (`sm`) | Reprints only; no new titles |
 
-**Formats:** unique-title play is covered for NSG Netrunner Core Sets, Standard, Startup, Eternal, and Random Access Memories. Ban lists are out of scope.
+**Formats:** unique-title play is covered for NSG Netrunner Core Sets, Standard, Startup, Eternal, and Random Access Memories. The legal pools, ban lists, and balance updates are the files above. The engine does not check a deck against them yet. Each rules file has `deckLimit`, the maximum copies of that title in a deck.
+
+**Deferred catalog data.** These exist in the pinned Null Signal catalog and are not copied here:
+
+| Item | Upstream | Why it waits |
+| --- | --- | --- |
+| Unverified rulings | `v2/rulings/` | Only rulings with `nsg_rules_team_verified` are kept |
+| Ruling source names | `v2/ruling_sources.json` | The ruling text already names its source |
+| Translations | `v2/translations/` | Locale display, not play |
+| Designer credit, pronouns, pronunciation, narrative text | fields on `v2/cards/` | Not used by the engine or the table |
+| Prebuilt decks | `prebuilts.json` | Six published deck lists |
+| Second face and layout | `v2/printings/` | The pack files this corpus copies have a single face |
 
 Partial cards list unimplemented clauses in an `unsupported` array — never silent wrong behavior. A wave marked `supported` in [`data/pool.json`](data/pool.json) must keep those arrays empty unless the card is listed with a reason in [`data/supported-unsupported-allowlist.json`](data/supported-unsupported-allowlist.json) (enforced by `scripts/validate-cards.py`). See [`CONTRIBUTING.md`](CONTRIBUTING.md) for the CR gate PR template.
 

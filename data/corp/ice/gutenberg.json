@@ -1,7 +1,7 @@
 {
   "id": "gutenberg",
+  "deckLimit": 3,
   "title": "Gutenberg",
-  "nrdbCode": "08037",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

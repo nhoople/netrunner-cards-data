@@ -1,8 +1,8 @@
 {
   "id": "debbie-downtown-moreira",
+  "deckLimit": 3,
   "title": "Debbie \"Downtown\" Moreira",
   "wave": "the-automata-initiative",
-  "nrdbCode": "34019",
   "type": "resource",
   "side": "runner",
   "faction": "criminal",

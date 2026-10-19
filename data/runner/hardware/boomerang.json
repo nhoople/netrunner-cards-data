@@ -1,8 +1,8 @@
 {
   "id": "boomerang",
+  "deckLimit": 3,
   "title": "Boomerang",
   "wave": "uprising",
-  "nrdbCode": "26075",
   "type": "hardware",
   "side": "runner",
   "faction": "criminal",

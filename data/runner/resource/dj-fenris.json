@@ -1,8 +1,8 @@
 {
   "id": "dj-fenris",
+  "deckLimit": 1,
   "title": "DJ Fenris",
   "wave": "reign-and-reverie",
-  "nrdbCode": "22025",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

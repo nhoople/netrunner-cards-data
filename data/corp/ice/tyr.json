@@ -1,8 +1,8 @@
 {
   "id": "tyr",
+  "deckLimit": 3,
   "title": "Týr",
   "wave": "uprising",
-  "nrdbCode": "26102",
   "type": "ice",
   "side": "corp",
   "faction": "haas-bioroid",

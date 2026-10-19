@@ -1,8 +1,8 @@
 {
   "id": "boto",
+  "deckLimit": 3,
   "title": "Boto",
   "wave": "rebellion-without-rehearsal",
-  "nrdbCode": "34109",
   "type": "ice",
   "side": "corp",
   "faction": "jinteki",

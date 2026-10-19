@@ -1,8 +1,8 @@
 {
   "id": "k2cp-turbine",
+  "deckLimit": 3,
   "title": "K2CP Turbine",
   "wave": "parhelion",
-  "nrdbCode": "33090",
   "type": "program",
   "side": "runner",
   "faction": "shaper",

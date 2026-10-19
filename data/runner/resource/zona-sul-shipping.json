@@ -1,7 +1,7 @@
 {
   "id": "zona-sul-shipping",
+  "deckLimit": 3,
   "title": "Zona Sul Shipping",
-  "nrdbCode": "06097",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

@@ -1,7 +1,7 @@
 {
   "id": "reconstruction-contract",
+  "deckLimit": 3,
   "title": "Reconstruction Contract",
-  "nrdbCode": "21020",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

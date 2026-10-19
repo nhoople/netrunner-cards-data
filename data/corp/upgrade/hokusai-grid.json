@@ -1,8 +1,8 @@
 {
   "id": "hokusai-grid",
+  "deckLimit": 3,
   "title": "Hokusai Grid",
   "wave": "system-update-2021",
-  "nrdbCode": "31059",
   "type": "upgrade",
   "side": "corp",
   "faction": "jinteki",

@@ -1,8 +1,8 @@
 {
   "id": "docklands-pass",
+  "deckLimit": 3,
   "title": "Docklands Pass",
   "wave": "system-gateway",
-  "nrdbCode": "30013",
   "type": "hardware",
   "side": "runner",
   "faction": "criminal",

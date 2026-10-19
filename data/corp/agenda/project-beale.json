@@ -1,8 +1,8 @@
 {
   "id": "project-beale",
+  "deckLimit": 3,
   "title": "Project Beale",
   "wave": "system-update-2021",
-  "nrdbCode": "31062",
   "type": "agenda",
   "side": "corp",
   "faction": "nbn",

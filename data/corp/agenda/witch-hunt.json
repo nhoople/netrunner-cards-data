@@ -1,8 +1,8 @@
 {
   "id": "witch-hunt",
+  "deckLimit": 3,
   "title": "Witch Hunt",
   "wave": "vantage-point",
-  "nrdbCode": "36047",
   "type": "agenda",
   "side": "corp",
   "faction": "nbn",

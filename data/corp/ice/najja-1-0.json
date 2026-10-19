@@ -1,7 +1,7 @@
 {
   "id": "najja-1-0",
+  "deckLimit": 3,
   "title": "Najja 1.0",
-  "nrdbCode": "21011",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

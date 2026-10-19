@@ -1,8 +1,8 @@
 {
   "id": "disrupter",
+  "deckLimit": 3,
   "title": "Disrupter",
   "wave": "a-study-in-static",
-  "nrdbCode": "02061",
   "type": "program",
   "side": "runner",
   "unsupported": [],

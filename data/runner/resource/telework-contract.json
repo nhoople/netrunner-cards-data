@@ -1,8 +1,8 @@
 {
   "id": "telework-contract",
+  "deckLimit": 3,
   "title": "Telework Contract",
   "wave": "system-gateway",
-  "nrdbCode": "30027",
   "type": "resource",
   "side": "runner",
   "faction": "shaper",

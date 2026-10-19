@@ -1,7 +1,7 @@
 {
   "id": "test-ground",
+  "deckLimit": 3,
   "title": "Test Ground",
-  "nrdbCode": "08071",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

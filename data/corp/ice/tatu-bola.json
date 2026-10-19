@@ -1,8 +1,8 @@
 {
   "id": "tatu-bola",
+  "deckLimit": 3,
   "title": "Tatu-Bola",
   "wave": "the-automata-initiative",
-  "nrdbCode": "34044",
   "type": "ice",
   "side": "corp",
   "faction": "jinteki",

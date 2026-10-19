@@ -1,8 +1,8 @@
 {
   "id": "paragon",
+  "deckLimit": 3,
   "title": "Paragon",
   "wave": "system-core-2019",
-  "nrdbCode": "25032",
   "type": "hardware",
   "side": "runner",
   "unsupported": [],

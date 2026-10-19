@@ -1,0 +1,11 @@
+{
+  "cardId": "dzmz-optimizer",
+  "rulings": [
+    {
+      "dateUpdate": "2021-10-10",
+      "rulesTeamVerified": true,
+      "question": "If I have multiple [DZMZ Optimizer](/en/card/30022)s installed, do their discounts stack?",
+      "answer": "Yes. If you have 2 [DZMZ Optimizer](/en/card/30022)s installed, you will pay 2[c] less to install your first program each turn."
+    }
+  ]
+}

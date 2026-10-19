@@ -1,8 +1,8 @@
 {
   "id": "sorocaban-blade",
+  "deckLimit": 3,
   "title": "Sorocaban Blade",
   "wave": "rebellion-without-rehearsal",
-  "nrdbCode": "34101",
   "type": "ice",
   "side": "corp",
   "faction": "haas-bioroid",

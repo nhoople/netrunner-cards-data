@@ -1,7 +1,7 @@
 {
   "id": "sagittarius",
+  "deckLimit": 3,
   "title": "Sagittarius",
-  "nrdbCode": "06082",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

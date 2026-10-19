@@ -1,8 +1,8 @@
 {
   "id": "kate-mac-mccaffrey-digital-tinker",
+  "deckLimit": 1,
   "title": "Kate \"Mac\" McCaffrey: Digital Tinker",
   "wave": "core",
-  "nrdbCode": "01033",
   "type": "identity",
   "side": "runner",
   "unsupported": [],

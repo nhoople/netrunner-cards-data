@@ -1,7 +1,7 @@
 {
   "id": "sharpshooter",
+  "deckLimit": 3,
   "title": "Sharpshooter",
-  "nrdbCode": "04067",
   "type": "program",
   "side": "runner",
   "unsupported": [],

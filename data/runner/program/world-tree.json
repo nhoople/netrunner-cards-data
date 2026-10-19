@@ -1,8 +1,8 @@
 {
   "id": "world-tree",
+  "deckLimit": 3,
   "title": "World Tree",
   "wave": "parhelion",
-  "nrdbCode": "33091",
   "type": "program",
   "side": "runner",
   "faction": "shaper",

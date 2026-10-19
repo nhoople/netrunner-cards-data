@@ -1,7 +1,7 @@
 {
   "id": "bio-vault",
+  "deckLimit": 3,
   "title": "Bio Vault",
-  "nrdbCode": "21072",
   "type": "upgrade",
   "side": "corp",
   "unsupported": [],

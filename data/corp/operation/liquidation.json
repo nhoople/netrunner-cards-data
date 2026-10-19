@@ -1,7 +1,7 @@
 {
   "id": "liquidation",
+  "deckLimit": 3,
   "title": "Liquidation",
-  "nrdbCode": "11037",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

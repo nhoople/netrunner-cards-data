@@ -1,7 +1,7 @@
 {
   "id": "misdirection",
+  "deckLimit": 3,
   "title": "Misdirection",
-  "nrdbCode": "11085",
   "type": "program",
   "side": "runner",
   "unsupported": [],

@@ -1,7 +1,7 @@
 {
   "id": "find-the-truth",
+  "deckLimit": 3,
   "title": "Find the Truth",
-  "nrdbCode": "11047",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

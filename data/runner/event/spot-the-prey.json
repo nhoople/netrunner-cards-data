@@ -1,7 +1,7 @@
 {
   "id": "spot-the-prey",
+  "deckLimit": 3,
   "title": "Spot the Prey",
-  "nrdbCode": "12005",
   "type": "event",
   "side": "runner",
   "unsupported": [],

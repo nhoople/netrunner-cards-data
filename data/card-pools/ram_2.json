@@ -1,0 +1,22 @@
+{
+  "id": "ram_2",
+  "name": "RAM 2",
+  "formatId": "ram",
+  "cycles": [],
+  "waves": [
+    "all-that-remains",
+    "blood-and-water",
+    "breaker-bay",
+    "chrome-city",
+    "core",
+    "humanitys-shadow",
+    "intervention",
+    "opening-moves",
+    "revised-core",
+    "the-devil-and-the-dragon",
+    "the-underway",
+    "the-universe-of-tomorrow",
+    "trace-amount",
+    "uprising"
+  ]
+}

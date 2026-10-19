@@ -1,8 +1,8 @@
 {
   "id": "abagnale",
+  "deckLimit": 3,
   "title": "Abagnale",
   "wave": "system-update-2021",
-  "nrdbCode": "31021",
   "type": "program",
   "side": "runner",
   "faction": "criminal",

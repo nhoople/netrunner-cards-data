@@ -1,8 +1,8 @@
 {
   "id": "echelon",
+  "deckLimit": 3,
   "title": "Echelon",
   "wave": "system-gateway",
-  "nrdbCode": "30025",
   "type": "program",
   "side": "runner",
   "faction": "shaper",

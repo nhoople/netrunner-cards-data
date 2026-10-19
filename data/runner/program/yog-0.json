@@ -1,8 +1,8 @@
 {
   "id": "yog-0",
+  "deckLimit": 3,
   "title": "Yog.0",
   "wave": "core",
-  "nrdbCode": "01014",
   "type": "program",
   "side": "runner",
   "unsupported": [],

@@ -1,7 +1,7 @@
 {
   "id": "synth-dna-modification",
+  "deckLimit": 3,
   "title": "Synth DNA Modification",
-  "nrdbCode": "12012",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

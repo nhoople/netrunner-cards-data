@@ -1,8 +1,8 @@
 {
   "id": "corporate-hospitality",
+  "deckLimit": 3,
   "title": "Corporate Hospitality",
   "wave": "rebellion-without-rehearsal",
-  "nrdbCode": "34103",
   "type": "operation",
   "side": "corp",
   "faction": "haas-bioroid",

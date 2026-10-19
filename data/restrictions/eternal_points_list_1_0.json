@@ -1,0 +1,63 @@
+{
+  "id": "eternal_points_list_1_0",
+  "name": "Eternal Points List, Version 1.0",
+  "formatId": "eternal",
+  "dateStart": "2021-07-10",
+  "banned": [
+    "salvaged-vanadis-armory"
+  ],
+  "points": {
+    "1": [
+      "24-7-news-cycle",
+      "aaron-marron",
+      "anoetic-void",
+      "bio-ethics-association",
+      "bloo-moose",
+      "breached-dome",
+      "breaking-news",
+      "caprice-nisei",
+      "counter-surveillance",
+      "deja-vu",
+      "employee-strike",
+      "kakugo",
+      "obokata-protocol",
+      "rumor-mill",
+      "scarcity-of-resources",
+      "shock",
+      "snitch",
+      "spin-doctor",
+      "sting",
+      "vamp",
+      "violet-level-clearance",
+      "whampoa-reclamation",
+      "zer0"
+    ],
+    "2": [
+      "accelerated-diagnostics",
+      "blackmail",
+      "cerebral-imaging-infinite-frontiers",
+      "clan-vengeance",
+      "crowdfunding",
+      "data-leak-reversal",
+      "ddos",
+      "estelle-moon",
+      "false-echo",
+      "friends-in-high-places",
+      "jackson-howard",
+      "mars-for-martians",
+      "mti-mwekundu-life-improved",
+      "mumbad-city-hall",
+      "power-shutdown",
+      "sensie-actors-union",
+      "sifr",
+      "tech-trader"
+    ],
+    "3": [
+      "account-siphon",
+      "hyperdriver",
+      "jinteki-potential-unleashed",
+      "temujin-contract"
+    ]
+  },
+  "pointLimit": 7
+}

@@ -1,7 +1,7 @@
 {
   "id": "bookmark",
+  "deckLimit": 3,
   "title": "Bookmark",
-  "nrdbCode": "08106",
   "type": "hardware",
   "side": "runner",
   "unsupported": [],

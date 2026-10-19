@@ -1,8 +1,8 @@
 {
   "id": "jinteki-personal-evolution",
+  "deckLimit": 1,
   "title": "Jinteki: Personal Evolution",
   "wave": "system-update-2021",
-  "nrdbCode": "31050",
   "type": "identity",
   "side": "corp",
   "faction": "jinteki",

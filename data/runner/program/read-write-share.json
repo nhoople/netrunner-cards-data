@@ -1,8 +1,8 @@
 {
   "id": "read-write-share",
+  "deckLimit": 3,
   "title": "Read-Write Share",
   "wave": "vantage-point",
-  "nrdbCode": "36022",
   "type": "program",
   "side": "runner",
   "faction": "shaper",

@@ -1,8 +1,8 @@
 {
   "id": "knickknack-obrian",
+  "deckLimit": 3,
   "title": "“Knickknack” O’Brian",
   "wave": "elevation",
-  "nrdbCode": "35033",
   "type": "resource",
   "side": "runner",
   "faction": "shaper",

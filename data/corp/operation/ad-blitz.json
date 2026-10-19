@@ -1,7 +1,7 @@
 {
   "id": "ad-blitz",
+  "deckLimit": 3,
   "title": "Ad Blitz",
-  "nrdbCode": "09020",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

@@ -1,8 +1,8 @@
 {
   "id": "topan-ormas-leader",
+  "deckLimit": 1,
   "title": "Topan: Ormas Leader",
   "wave": "elevation",
-  "nrdbCode": "35002",
   "type": "identity",
   "side": "runner",
   "faction": "anarch",

@@ -1,8 +1,8 @@
 {
   "id": "chum",
+  "deckLimit": 3,
   "title": "Chum",
   "wave": "core",
-  "nrdbCode": "01075",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

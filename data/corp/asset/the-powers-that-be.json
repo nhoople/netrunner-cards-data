@@ -1,8 +1,8 @@
 {
   "id": "the-powers-that-be",
+  "deckLimit": 3,
   "title": "The Powers That Be",
   "wave": "rebellion-without-rehearsal",
-  "nrdbCode": "34130",
   "type": "asset",
   "side": "corp",
   "faction": "neutral-corp",

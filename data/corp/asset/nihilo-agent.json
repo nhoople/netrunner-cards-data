@@ -1,8 +1,8 @@
 {
   "id": "nihilo-agent",
+  "deckLimit": 3,
   "title": "Nihilo Agent",
   "wave": "vantage-point",
-  "nrdbCode": "36049",
   "type": "asset",
   "side": "corp",
   "faction": "nbn",

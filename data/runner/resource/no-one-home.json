@@ -1,7 +1,7 @@
 {
   "id": "no-one-home",
+  "deckLimit": 3,
   "title": "No One Home",
-  "nrdbCode": "21045",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

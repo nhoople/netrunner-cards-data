@@ -1,8 +1,8 @@
 {
   "id": "simulation-reset",
+  "deckLimit": 3,
   "title": "Simulation Reset",
   "wave": "parhelion",
-  "nrdbCode": "33110",
   "type": "operation",
   "side": "corp",
   "faction": "jinteki",

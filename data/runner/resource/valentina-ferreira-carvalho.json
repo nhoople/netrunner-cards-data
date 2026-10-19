@@ -1,8 +1,8 @@
 {
   "id": "valentina-ferreira-carvalho",
+  "deckLimit": 3,
   "title": "Valentina Ferreira Carvalho",
   "wave": "rebellion-without-rehearsal",
-  "nrdbCode": "34095",
   "type": "resource",
   "side": "runner",
   "faction": "neutral-runner",

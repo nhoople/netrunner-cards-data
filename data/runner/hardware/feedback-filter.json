@@ -1,8 +1,8 @@
 {
   "id": "feedback-filter",
+  "deckLimit": 3,
   "title": "Feedback Filter",
   "wave": "creation-and-control",
-  "nrdbCode": "03037",
   "type": "hardware",
   "side": "runner",
   "unsupported": [],

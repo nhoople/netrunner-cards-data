@@ -1,0 +1,11 @@
+{
+  "cardId": "malapert-data-vault",
+  "rulings": [
+    {
+      "dateUpdate": "2021-10-11",
+      "rulesTeamVerified": true,
+      "question": "What does it mean to “score an agenda from this server”?",
+      "answer": "This ability meets its trigger condition when the Corp scores an agenda that was in or in the root of the same server as [Malapert Data Vault](/en/card/30066)."
+    }
+  ]
+}

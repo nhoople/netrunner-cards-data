@@ -1,7 +1,7 @@
 {
   "id": "information-sifting",
+  "deckLimit": 3,
   "title": "Information Sifting",
-  "nrdbCode": "10079",
   "type": "event",
   "side": "runner",
   "unsupported": [],

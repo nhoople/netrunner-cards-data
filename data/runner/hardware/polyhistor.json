@@ -1,7 +1,7 @@
 {
   "id": "polyhistor",
+  "deckLimit": 3,
   "title": "Polyhistor",
-  "nrdbCode": "13005",
   "type": "hardware",
   "side": "runner",
   "unsupported": [],

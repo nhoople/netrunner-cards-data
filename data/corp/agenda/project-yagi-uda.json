@@ -1,8 +1,8 @@
 {
   "id": "project-yagi-uda",
+  "deckLimit": 3,
   "title": "Project Yagi-Uda",
   "wave": "downfall",
-  "nrdbCode": "26040",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

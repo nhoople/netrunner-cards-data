@@ -1,7 +1,7 @@
 {
   "id": "changeling",
+  "deckLimit": 3,
   "title": "Changeling",
-  "nrdbCode": "06069",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

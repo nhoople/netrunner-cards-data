@@ -1,8 +1,8 @@
 {
   "id": "wotan",
+  "deckLimit": 3,
   "title": "Wotan",
   "wave": "stalwart",
-  "nrdbCode": "04030",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

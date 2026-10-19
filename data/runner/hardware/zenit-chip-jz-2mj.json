@@ -1,8 +1,8 @@
 {
   "id": "zenit-chip-jz-2mj",
+  "deckLimit": 3,
   "title": "Zenit Chip JZ-2MJ",
   "wave": "parhelion",
-  "nrdbCode": "33079",
   "type": "hardware",
   "side": "runner",
   "faction": "criminal",

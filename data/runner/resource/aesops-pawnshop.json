@@ -1,5 +1,6 @@
 {
   "id": "aesops-pawnshop",
+  "deckLimit": 3,
   "title": "Aesop's Pawnshop",
   "type": "resource",
   "side": "runner",

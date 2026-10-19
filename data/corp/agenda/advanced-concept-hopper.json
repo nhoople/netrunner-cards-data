@@ -1,7 +1,7 @@
 {
   "id": "advanced-concept-hopper",
+  "deckLimit": 3,
   "title": "Advanced Concept Hopper",
-  "nrdbCode": "10011",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

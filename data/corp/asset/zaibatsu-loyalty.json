@@ -1,8 +1,8 @@
 {
   "id": "zaibatsu-loyalty",
+  "deckLimit": 3,
   "title": "Zaibatsu Loyalty",
   "wave": "core",
-  "nrdbCode": "01071",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

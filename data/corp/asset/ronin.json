@@ -1,8 +1,8 @@
 {
   "id": "ronin",
+  "deckLimit": 3,
   "title": "Ronin",
   "wave": "system-update-2021",
-  "nrdbCode": "31053",
   "type": "asset",
   "side": "corp",
   "faction": "jinteki",

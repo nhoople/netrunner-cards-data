@@ -1,8 +1,8 @@
 {
   "id": "tailgate",
+  "deckLimit": 3,
   "title": "Tailgate",
   "wave": "vantage-point",
-  "nrdbCode": "36012",
   "type": "event",
   "side": "runner",
   "faction": "criminal",

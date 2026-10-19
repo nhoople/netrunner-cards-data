@@ -1,7 +1,7 @@
 {
   "id": "mumbad-city-grid",
+  "deckLimit": 3,
   "title": "Mumbad City Grid",
-  "nrdbCode": "10014",
   "type": "upgrade",
   "side": "corp",
   "unsupported": [],

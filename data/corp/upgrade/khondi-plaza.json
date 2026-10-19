@@ -1,7 +1,7 @@
 {
   "id": "khondi-plaza",
+  "deckLimit": 3,
   "title": "Khondi Plaza",
-  "nrdbCode": "12019",
   "type": "upgrade",
   "side": "corp",
   "unsupported": [],

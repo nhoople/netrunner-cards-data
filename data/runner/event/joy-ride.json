@@ -1,8 +1,8 @@
 {
   "id": "joy-ride",
+  "deckLimit": 3,
   "title": "Joy Ride",
   "wave": "the-automata-initiative",
-  "nrdbCode": "34021",
   "type": "event",
   "side": "runner",
   "faction": "shaper",

@@ -1,8 +1,8 @@
 {
   "id": "federal-fundraising",
+  "deckLimit": 3,
   "title": "Federal Fundraising",
   "wave": "the-automata-initiative",
-  "nrdbCode": "34052",
   "type": "asset",
   "side": "corp",
   "faction": "nbn",

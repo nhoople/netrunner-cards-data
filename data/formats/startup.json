@@ -1,0 +1,68 @@
+{
+  "id": "startup",
+  "name": "Startup",
+  "snapshots": [
+    {
+      "id": "startup_0",
+      "dateStart": "2019-03-18",
+      "cardPoolId": "startup_ashes"
+    },
+    {
+      "id": "startup_1",
+      "dateStart": "2022-03-04",
+      "cardPoolId": "startup_ashes_plus"
+    },
+    {
+      "id": "startup_2",
+      "dateStart": "2022-07-22",
+      "cardPoolId": "startup_ashes_plus_midnight_sun"
+    },
+    {
+      "id": "startup_3",
+      "dateStart": "2022-12-09",
+      "cardPoolId": "startup_borealis"
+    },
+    {
+      "id": "startup_4",
+      "dateStart": "2023-08-11",
+      "cardPoolId": "startup_borealis_plus_the_automata_initiative"
+    },
+    {
+      "id": "startup_5",
+      "dateStart": "2024-01-19",
+      "cardPoolId": "startup_borealis_plus_the_automata_initiative",
+      "restrictionId": "startup_ban_list_24_01"
+    },
+    {
+      "id": "startup_6",
+      "dateStart": "2024-03-30",
+      "cardPoolId": "startup_liberation",
+      "restrictionId": "startup_ban_list_24_09"
+    },
+    {
+      "id": "startup_7",
+      "dateStart": "2025-04-24",
+      "cardPoolId": "startup_elevation",
+      "restrictionId": "startup_balance_update_25_04"
+    },
+    {
+      "id": "startup_8",
+      "dateStart": "2025-11-03",
+      "cardPoolId": "startup_elevation",
+      "restrictionId": "startup_balance_update_25_11"
+    },
+    {
+      "id": "startup_9",
+      "dateStart": "2026-03-02",
+      "cardPoolId": "startup_vantage_point",
+      "restrictionId": "startup_balance_update_26_03",
+      "active": true
+    },
+    {
+      "id": "startup_10",
+      "dateStart": "2026-05-01",
+      "cardPoolId": "startup_vantage_point",
+      "restrictionId": "startup_balance_update_26_05"
+    }
+  ]
+}

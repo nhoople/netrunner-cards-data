@@ -1,7 +1,7 @@
 {
   "id": "wormhole",
+  "deckLimit": 3,
   "title": "Wormhole",
-  "nrdbCode": "07013",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

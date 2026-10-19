@@ -1,8 +1,8 @@
 {
   "id": "the-outfit-family-owned-and-operated",
+  "deckLimit": 1,
   "title": "The Outfit: Family Owned and Operated",
   "wave": "reign-and-reverie",
-  "nrdbCode": "22050",
   "type": "identity",
   "side": "corp",
   "unsupported": [],

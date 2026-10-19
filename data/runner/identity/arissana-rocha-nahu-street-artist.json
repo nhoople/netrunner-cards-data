@@ -1,8 +1,8 @@
 {
   "id": "arissana-rocha-nahu-street-artist",
+  "deckLimit": 1,
   "title": "Arissana Rocha Nahu: Street Artist",
   "wave": "the-automata-initiative",
-  "nrdbCode": "34020",
   "type": "identity",
   "side": "runner",
   "faction": "shaper",

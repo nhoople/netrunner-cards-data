@@ -1,8 +1,8 @@
 {
   "id": "shipment-from-vladisibirsk",
+  "deckLimit": 3,
   "title": "Shipment from Vladisibirsk",
   "wave": "parhelion",
-  "nrdbCode": "33119",
   "type": "operation",
   "side": "corp",
   "faction": "nbn",

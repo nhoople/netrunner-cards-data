@@ -1,7 +1,7 @@
 {
   "id": "tour-guide",
+  "deckLimit": 3,
   "title": "Tour Guide",
-  "nrdbCode": "08118",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

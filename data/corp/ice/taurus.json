@@ -1,7 +1,7 @@
 {
   "id": "taurus",
+  "deckLimit": 3,
   "title": "Taurus",
-  "nrdbCode": "06009",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

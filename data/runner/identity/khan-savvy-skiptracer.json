@@ -1,7 +1,7 @@
 {
   "id": "khan-savvy-skiptracer",
+  "deckLimit": 1,
   "title": "Khan: Savvy Skiptracer",
-  "nrdbCode": "11027",
   "type": "identity",
   "side": "runner",
   "unsupported": [],

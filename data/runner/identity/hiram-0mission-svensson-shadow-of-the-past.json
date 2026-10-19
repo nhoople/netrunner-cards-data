@@ -1,8 +1,8 @@
 {
   "id": "hiram-0mission-svensson-shadow-of-the-past",
+  "deckLimit": 1,
   "title": "Hiram “0mission” Svensson: Shadow of the Past",
   "wave": "vantage-point",
-  "nrdbCode": "36017",
   "type": "identity",
   "side": "runner",
   "faction": "shaper",

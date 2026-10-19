@@ -1,8 +1,8 @@
 {
   "id": "sipa",
+  "deckLimit": 3,
   "title": "Sipa",
   "wave": "vantage-point",
-  "nrdbCode": "36023",
   "type": "program",
   "side": "runner",
   "faction": "shaper",

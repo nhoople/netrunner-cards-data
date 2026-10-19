@@ -1,0 +1,5 @@
+{
+  "cardId": "progenitor",
+  "text": "You can install <strong>virus</strong> programs onto this program. Limit 1 hosted program.\nThe memory cost of the hosted program does not count against your memory limit.\n[interrupt] → Whenever virus counters would be purged, prevent 1 virus counter on the hosted program from being removed.",
+  "strippedText": "You can install virus programs onto this program. Limit 1 hosted program. The memory cost of the hosted program does not count against your memory limit. Interrupt -> Whenever virus counters would be purged, prevent 1 virus counter on the hosted program from being removed."
+}

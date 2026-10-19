@@ -1,8 +1,8 @@
 {
   "id": "eve-campaign",
+  "deckLimit": 3,
   "title": "Eve Campaign",
   "wave": "humanitys-shadow",
-  "nrdbCode": "02092",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

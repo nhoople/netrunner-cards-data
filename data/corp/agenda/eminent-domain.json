@@ -1,8 +1,8 @@
 {
   "id": "eminent-domain",
+  "deckLimit": 3,
   "title": "Eminent Domain",
   "wave": "rebellion-without-rehearsal",
-  "nrdbCode": "34122",
   "type": "agenda",
   "side": "corp",
   "faction": "weyland-consortium",

@@ -1,8 +1,8 @@
 {
   "id": "the-professor-keeper-of-knowledge",
+  "deckLimit": 1,
   "title": "The Professor: Keeper of Knowledge",
   "wave": "creation-and-control",
-  "nrdbCode": "03029",
   "type": "identity",
   "side": "runner",
   "unsupported": [],

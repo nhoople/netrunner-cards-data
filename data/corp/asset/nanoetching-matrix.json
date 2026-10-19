@@ -1,8 +1,8 @@
 {
   "id": "nanoetching-matrix",
+  "deckLimit": 3,
   "title": "Nanoetching Matrix",
   "wave": "downfall",
-  "nrdbCode": "26034",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

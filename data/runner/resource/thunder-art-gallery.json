@@ -1,8 +1,8 @@
 {
   "id": "thunder-art-gallery",
+  "deckLimit": 3,
   "title": "Thunder Art Gallery",
   "wave": "reign-and-reverie",
-  "nrdbCode": "22013",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

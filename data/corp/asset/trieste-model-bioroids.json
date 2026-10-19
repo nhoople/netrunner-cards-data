@@ -1,8 +1,8 @@
 {
   "id": "trieste-model-bioroids",
+  "deckLimit": 3,
   "title": "Trieste Model Bioroids",
   "wave": "midnight-sun",
-  "nrdbCode": "33034",
   "type": "asset",
   "side": "corp",
   "faction": "haas-bioroid",

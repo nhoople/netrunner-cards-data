@@ -1,7 +1,7 @@
 {
   "id": "419-amoral-scammer",
+  "deckLimit": 1,
   "title": "419: Amoral Scammer",
-  "nrdbCode": "21063",
   "type": "identity",
   "side": "runner",
   "unsupported": [],

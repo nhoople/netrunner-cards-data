@@ -1,0 +1,22 @@
+{
+  "id": "ram_0",
+  "name": "RAM 0",
+  "formatId": "ram",
+  "cycles": [],
+  "waves": [
+    "business-first",
+    "chrome-city",
+    "core",
+    "daedalus-complex",
+    "double-time",
+    "downfall",
+    "escalation",
+    "humanitys-shadow",
+    "mala-tempora",
+    "martial-law",
+    "quorum",
+    "system-gateway",
+    "up-and-over",
+    "upstalk"
+  ]
+}

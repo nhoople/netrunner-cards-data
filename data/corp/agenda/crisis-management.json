@@ -1,7 +1,7 @@
 {
   "id": "crisis-management",
+  "deckLimit": 3,
   "title": "Crisis Management",
-  "nrdbCode": "11018",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

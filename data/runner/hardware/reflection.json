@@ -1,7 +1,7 @@
 {
   "id": "reflection",
+  "deckLimit": 3,
   "title": "Reflection",
-  "nrdbCode": "10041",
   "type": "hardware",
   "side": "runner",
   "unsupported": [],

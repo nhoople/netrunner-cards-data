@@ -1,0 +1,5 @@
+{
+  "cardId": "harbinger",
+  "text": "[interrupt] → When this program would be trashed, turn it facedown instead of adding it to your heap. <em>(It is still considered trashed.)</em>",
+  "strippedText": "Interrupt -> When this program would be trashed, turn it facedown instead of adding it to your heap. (It is still considered trashed.)"
+}

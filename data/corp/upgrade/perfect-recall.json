@@ -1,8 +1,8 @@
 {
   "id": "perfect-recall",
+  "deckLimit": 3,
   "title": "Perfect Recall",
   "wave": "vantage-point",
-  "nrdbCode": "36035",
   "type": "upgrade",
   "side": "corp",
   "faction": "haas-bioroid",

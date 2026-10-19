@@ -1,7 +1,7 @@
 {
   "id": "ben-musashi",
+  "deckLimit": 3,
   "title": "Ben Musashi",
-  "nrdbCode": "12054",
   "type": "upgrade",
   "side": "corp",
   "unsupported": [],

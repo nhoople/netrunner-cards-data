@@ -1,7 +1,7 @@
 {
   "id": "jak-sinclair",
+  "deckLimit": 3,
   "title": "Jak Sinclair",
-  "nrdbCode": "09052",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

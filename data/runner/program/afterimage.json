@@ -1,8 +1,8 @@
 {
   "id": "afterimage",
+  "deckLimit": 3,
   "title": "Afterimage",
   "wave": "uprising",
-  "nrdbCode": "26079",
   "type": "program",
   "side": "runner",
   "faction": "criminal",

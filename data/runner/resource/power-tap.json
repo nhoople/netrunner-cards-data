@@ -1,7 +1,7 @@
 {
   "id": "power-tap",
+  "deckLimit": 3,
   "title": "Power Tap",
-  "nrdbCode": "06016",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

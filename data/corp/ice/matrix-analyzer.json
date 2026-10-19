@@ -1,8 +1,8 @@
 {
   "id": "matrix-analyzer",
+  "deckLimit": 3,
   "title": "Matrix Analyzer",
   "wave": "core",
-  "nrdbCode": "01089",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

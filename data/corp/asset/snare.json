@@ -1,8 +1,8 @@
 {
   "id": "snare",
+  "deckLimit": 3,
   "title": "Snare!",
   "wave": "system-update-2021",
-  "nrdbCode": "31054",
   "type": "asset",
   "side": "corp",
   "faction": "jinteki",

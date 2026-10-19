@@ -1,8 +1,8 @@
 {
   "id": "angelique-garza-correa",
+  "deckLimit": 3,
   "title": "Angelique Garza Correa",
   "wave": "the-automata-initiative",
-  "nrdbCode": "34063",
   "type": "upgrade",
   "side": "corp",
   "faction": "weyland-consortium",

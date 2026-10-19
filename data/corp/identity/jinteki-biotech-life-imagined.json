@@ -1,7 +1,7 @@
 {
   "id": "jinteki-biotech-life-imagined",
+  "deckLimit": 1,
   "title": "Jinteki Biotech: Life Imagined",
-  "nrdbCode": "08012",
   "type": "identity",
   "side": "corp",
   "unsupported": [],

@@ -1,7 +1,7 @@
 {
   "id": "knobkierie",
+  "deckLimit": 3,
   "title": "Knobkierie",
-  "nrdbCode": "21062",
   "type": "hardware",
   "side": "runner",
   "unsupported": [],

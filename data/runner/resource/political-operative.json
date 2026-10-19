@@ -1,7 +1,7 @@
 {
   "id": "political-operative",
+  "deckLimit": 3,
   "title": "Political Operative",
-  "nrdbCode": "10043",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

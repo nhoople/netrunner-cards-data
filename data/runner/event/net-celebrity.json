@@ -1,7 +1,7 @@
 {
   "id": "net-celebrity",
+  "deckLimit": 3,
   "title": "Net Celebrity",
-  "nrdbCode": "06038",
   "type": "event",
   "side": "runner",
   "unsupported": [],

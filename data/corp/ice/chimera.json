@@ -1,8 +1,8 @@
 {
   "id": "chimera",
+  "deckLimit": 3,
   "title": "Chimera",
   "wave": "cyber-exodus",
-  "nrdbCode": "02060",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

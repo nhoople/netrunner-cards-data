@@ -1,8 +1,8 @@
 {
   "id": "tollbooth",
+  "deckLimit": 3,
   "title": "Tollbooth",
   "wave": "system-update-2021",
-  "nrdbCode": "31066",
   "type": "ice",
   "side": "corp",
   "faction": "nbn",

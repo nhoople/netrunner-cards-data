@@ -1,7 +1,7 @@
 {
   "id": "mongoose",
+  "deckLimit": 3,
   "title": "Mongoose",
-  "nrdbCode": "10005",
   "type": "program",
   "side": "runner",
   "unsupported": [],

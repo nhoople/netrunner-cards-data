@@ -1,8 +1,8 @@
 {
   "id": "inti",
+  "deckLimit": 3,
   "title": "Inti",
   "wave": "creation-and-control",
-  "nrdbCode": "03048",
   "type": "program",
   "side": "runner",
   "unsupported": [],

@@ -1,8 +1,8 @@
 {
   "id": "daily-business-show",
+  "deckLimit": 3,
   "title": "Daily Business Show",
   "wave": "system-update-2021",
-  "nrdbCode": "31063",
   "type": "asset",
   "side": "corp",
   "faction": "nbn",

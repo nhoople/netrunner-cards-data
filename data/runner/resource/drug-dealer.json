@@ -1,7 +1,7 @@
 {
   "id": "drug-dealer",
+  "deckLimit": 3,
   "title": "Drug Dealer",
-  "nrdbCode": "08083",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

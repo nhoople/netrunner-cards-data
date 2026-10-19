@@ -1,7 +1,7 @@
 {
   "id": "hyoubu-research-facility",
+  "deckLimit": 3,
   "title": "Hyoubu Research Facility",
-  "nrdbCode": "11012",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

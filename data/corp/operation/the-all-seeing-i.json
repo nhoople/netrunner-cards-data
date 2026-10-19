@@ -1,7 +1,7 @@
 {
   "id": "the-all-seeing-i",
+  "deckLimit": 3,
   "title": "The All-Seeing I",
-  "nrdbCode": "09022",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

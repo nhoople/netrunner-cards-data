@@ -1,7 +1,7 @@
 {
   "id": "the-black-file",
+  "deckLimit": 1,
   "title": "The Black File",
-  "nrdbCode": "10099",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

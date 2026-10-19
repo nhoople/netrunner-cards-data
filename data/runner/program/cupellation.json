@@ -1,8 +1,8 @@
 {
   "id": "cupellation",
+  "deckLimit": 3,
   "title": "Cupellation",
   "wave": "rebellion-without-rehearsal",
-  "nrdbCode": "34080",
   "type": "program",
   "side": "runner",
   "faction": "criminal",

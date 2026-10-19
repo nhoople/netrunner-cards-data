@@ -1,8 +1,8 @@
 {
   "id": "t400-memory-diamond",
+  "deckLimit": 3,
   "title": "T400 Memory Diamond",
   "wave": "system-gateway",
-  "nrdbCode": "30031",
   "type": "hardware",
   "side": "runner",
   "faction": "neutral-runner",

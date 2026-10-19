@@ -1,8 +1,8 @@
 {
   "id": "greasing-the-palm",
+  "deckLimit": 3,
   "title": "Greasing the Palm",
   "wave": "the-automata-initiative",
-  "nrdbCode": "34037",
   "type": "operation",
   "side": "corp",
   "faction": "haas-bioroid",

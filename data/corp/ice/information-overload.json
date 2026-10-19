@@ -1,7 +1,7 @@
 {
   "id": "information-overload",
+  "deckLimit": 3,
   "title": "Information Overload",
-  "nrdbCode": "06027",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

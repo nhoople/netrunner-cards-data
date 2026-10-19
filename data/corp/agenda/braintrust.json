@@ -1,8 +1,8 @@
 {
   "id": "braintrust",
+  "deckLimit": 3,
   "title": "Braintrust",
   "wave": "what-lies-ahead",
-  "nrdbCode": "02014",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

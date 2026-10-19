@@ -1,8 +1,8 @@
 {
   "id": "kimberlite-field",
+  "deckLimit": 3,
   "title": "Kimberlite Field",
   "wave": "parhelion",
-  "nrdbCode": "33121",
   "type": "agenda",
   "side": "corp",
   "faction": "weyland-consortium",

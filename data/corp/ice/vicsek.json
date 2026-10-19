@@ -1,8 +1,8 @@
 {
   "id": "vicsek",
+  "deckLimit": 3,
   "title": "Vicsek",
   "wave": "vantage-point",
-  "nrdbCode": "36042",
   "type": "ice",
   "side": "corp",
   "faction": "jinteki",

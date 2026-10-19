@@ -1,8 +1,8 @@
 {
   "id": "buzzsaw",
+  "deckLimit": 3,
   "title": "Buzzsaw",
   "wave": "system-gateway",
-  "nrdbCode": "30005",
   "type": "program",
   "side": "runner",
   "faction": "anarch",

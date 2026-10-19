@@ -1,8 +1,8 @@
 {
   "id": "superconducting-hub",
+  "deckLimit": 3,
   "title": "Superconducting Hub",
   "wave": "system-gateway",
-  "nrdbCode": "30070",
   "type": "agenda",
   "side": "corp",
   "faction": "neutral-corp",

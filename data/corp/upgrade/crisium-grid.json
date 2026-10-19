@@ -1,8 +1,8 @@
 {
   "id": "crisium-grid",
+  "deckLimit": 3,
   "title": "Crisium Grid",
   "wave": "system-update-2021",
-  "nrdbCode": "31079",
   "type": "upgrade",
   "side": "corp",
   "faction": "weyland-consortium",

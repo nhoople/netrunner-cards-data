@@ -1,8 +1,8 @@
 {
   "id": "blockchain",
+  "deckLimit": 3,
   "title": "Blockchain",
   "wave": "reign-and-reverie",
-  "nrdbCode": "22053",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

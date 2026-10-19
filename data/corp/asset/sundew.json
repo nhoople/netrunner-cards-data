@@ -1,8 +1,8 @@
 {
   "id": "sundew",
+  "deckLimit": 3,
   "title": "Sundew",
   "wave": "system-core-2019",
-  "nrdbCode": "25092",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

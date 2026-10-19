@@ -1,8 +1,8 @@
 {
   "id": "cayambe-grid",
+  "deckLimit": 3,
   "title": "Cayambe Grid",
   "wave": "uprising",
-  "nrdbCode": "26127",
   "type": "upgrade",
   "side": "corp",
   "faction": "weyland-consortium",

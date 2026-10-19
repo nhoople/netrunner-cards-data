@@ -1,7 +1,7 @@
 {
   "id": "blackguard",
+  "deckLimit": 3,
   "title": "Blackguard",
-  "nrdbCode": "04085",
   "type": "hardware",
   "side": "runner",
   "unsupported": [],

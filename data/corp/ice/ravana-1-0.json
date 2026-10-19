@@ -1,8 +1,8 @@
 {
   "id": "ravana-1-0",
+  "deckLimit": 3,
   "title": "Ravana 1.0",
   "wave": "system-update-2021",
-  "nrdbCode": "31045",
   "type": "ice",
   "side": "corp",
   "faction": "haas-bioroid",

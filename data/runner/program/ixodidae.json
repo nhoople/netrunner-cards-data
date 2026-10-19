@@ -1,7 +1,7 @@
 {
   "id": "ixodidae",
+  "deckLimit": 3,
   "title": "Ixodidae",
-  "nrdbCode": "06114",
   "type": "program",
   "side": "runner",
   "unsupported": [],

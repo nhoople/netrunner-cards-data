@@ -1,7 +1,7 @@
 {
   "id": "aeneas-informant",
+  "deckLimit": 3,
   "title": "Aeneas Informant",
-  "nrdbCode": "12044",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

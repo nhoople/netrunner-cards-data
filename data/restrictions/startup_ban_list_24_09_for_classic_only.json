@@ -1,0 +1,11 @@
+{
+  "id": "startup_ban_list_24_09_for_classic_only",
+  "name": "Startup Ban List 24.09 (ignore active date)",
+  "formatId": "standard",
+  "dateStart": "2024-09-01",
+  "banned": [
+    "creative-commission",
+    "pharos",
+    "tributary"
+  ]
+}

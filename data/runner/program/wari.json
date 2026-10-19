@@ -1,7 +1,7 @@
 {
   "id": "wari",
+  "deckLimit": 3,
   "title": "Wari",
-  "nrdbCode": "21024",
   "type": "program",
   "side": "runner",
   "unsupported": [],

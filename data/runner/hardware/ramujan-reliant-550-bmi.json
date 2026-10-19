@@ -1,7 +1,7 @@
 {
   "id": "ramujan-reliant-550-bmi",
+  "deckLimit": 6,
   "title": "Ramujan-reliant 550 BMI",
-  "nrdbCode": "10002",
   "type": "hardware",
   "side": "runner",
   "unsupported": [],

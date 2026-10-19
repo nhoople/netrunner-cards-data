@@ -1,8 +1,8 @@
 {
   "id": "project-wotan",
+  "deckLimit": 3,
   "title": "Project Wotan",
   "wave": "creation-and-control",
-  "nrdbCode": "03006",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

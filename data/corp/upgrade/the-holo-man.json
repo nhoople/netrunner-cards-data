@@ -1,8 +1,8 @@
 {
   "id": "the-holo-man",
+  "deckLimit": 3,
   "title": "The Holo Man",
   "wave": "rebellion-without-rehearsal",
-  "nrdbCode": "34120",
   "type": "upgrade",
   "side": "corp",
   "faction": "nbn",

@@ -1,8 +1,8 @@
 {
   "id": "mindscaping",
+  "deckLimit": 3,
   "title": "Mindscaping",
   "wave": "the-automata-initiative",
-  "nrdbCode": "34045",
   "type": "operation",
   "side": "corp",
   "faction": "jinteki",

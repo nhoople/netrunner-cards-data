@@ -1,7 +1,7 @@
 {
   "id": "sync-bre",
+  "deckLimit": 3,
   "title": "SYNC BRE",
-  "nrdbCode": "12015",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

@@ -1,8 +1,8 @@
 {
   "id": "magdalene-keino-chemutai-cryptarchitect",
+  "deckLimit": 1,
   "title": "Magdalene Keino-Chemutai: Cryptarchitect",
   "wave": "elevation",
-  "nrdbCode": "35024",
   "type": "identity",
   "side": "runner",
   "faction": "shaper",

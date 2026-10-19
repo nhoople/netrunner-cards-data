@@ -1,7 +1,7 @@
 {
   "id": "chetana",
+  "deckLimit": 3,
   "title": "Chetana",
-  "nrdbCode": "10089",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

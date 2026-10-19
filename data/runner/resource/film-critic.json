@@ -1,7 +1,7 @@
 {
   "id": "film-critic",
+  "deckLimit": 3,
   "title": "Film Critic",
-  "nrdbCode": "08086",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

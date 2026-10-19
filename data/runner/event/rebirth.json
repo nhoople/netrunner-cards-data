@@ -1,7 +1,7 @@
 {
   "id": "rebirth",
+  "deckLimit": 1,
   "title": "Rebirth",
-  "nrdbCode": "10083",
   "type": "event",
   "side": "runner",
   "unsupported": [],

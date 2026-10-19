@@ -1,8 +1,8 @@
 {
   "id": "hypoxia",
+  "deckLimit": 3,
   "title": "Hypoxia",
   "wave": "parhelion",
-  "nrdbCode": "33101",
   "type": "operation",
   "side": "corp",
   "faction": "haas-bioroid",

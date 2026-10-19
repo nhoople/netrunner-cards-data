@@ -1,7 +1,7 @@
 {
   "id": "always-be-running",
+  "deckLimit": 3,
   "title": "Always Be Running",
-  "nrdbCode": "09041",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

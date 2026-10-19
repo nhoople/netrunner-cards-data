@@ -1,8 +1,8 @@
 {
   "id": "hostile-architecture",
+  "deckLimit": 3,
   "title": "Hostile Architecture",
   "wave": "parhelion",
-  "nrdbCode": "33122",
   "type": "asset",
   "side": "corp",
   "faction": "weyland-consortium",

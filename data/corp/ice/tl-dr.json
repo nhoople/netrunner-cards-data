@@ -1,7 +1,7 @@
 {
   "id": "tl-dr",
+  "deckLimit": 3,
   "title": "TL;DR",
-  "nrdbCode": "09017",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

@@ -1,0 +1,5 @@
+{
+  "cardId": "assassin",
+  "text": "[subroutine] Trace[5]. If successful, do 3 net damage.\n[subroutine] Trace[4]. If successful, trash 1 program.",
+  "strippedText": "Subroutine Trace[5]. If successful, do 3 net damage. Subroutine Trace[4]. If successful, trash 1 program."
+}

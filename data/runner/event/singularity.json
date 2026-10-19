@@ -1,7 +1,7 @@
 {
   "id": "singularity",
+  "deckLimit": 3,
   "title": "Singularity",
-  "nrdbCode": "04101",
   "type": "event",
   "side": "runner",
   "unsupported": [],

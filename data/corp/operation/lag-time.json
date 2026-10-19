@@ -1,7 +1,7 @@
 {
   "id": "lag-time",
+  "deckLimit": 3,
   "title": "Lag Time",
-  "nrdbCode": "06031",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

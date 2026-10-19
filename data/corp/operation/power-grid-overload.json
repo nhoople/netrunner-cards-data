@@ -1,8 +1,8 @@
 {
   "id": "power-grid-overload",
+  "deckLimit": 3,
   "title": "Power Grid Overload",
   "wave": "trace-amount",
-  "nrdbCode": "02037",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

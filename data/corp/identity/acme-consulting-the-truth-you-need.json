@@ -1,8 +1,8 @@
 {
   "id": "acme-consulting-the-truth-you-need",
+  "deckLimit": 1,
   "title": "Acme Consulting: The Truth You Need",
   "wave": "reign-and-reverie",
-  "nrdbCode": "22042",
   "type": "identity",
   "side": "corp",
   "unsupported": [],

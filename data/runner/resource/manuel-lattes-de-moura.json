@@ -1,8 +1,8 @@
 {
   "id": "manuel-lattes-de-moura",
+  "deckLimit": 3,
   "title": "Manuel Lattes de Moura",
   "wave": "rebellion-without-rehearsal",
-  "nrdbCode": "34075",
   "type": "resource",
   "side": "runner",
   "faction": "anarch",

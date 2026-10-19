@@ -1,8 +1,8 @@
 {
   "id": "the-source",
+  "deckLimit": 3,
   "title": "The Source",
   "wave": "creation-and-control",
-  "nrdbCode": "03055",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

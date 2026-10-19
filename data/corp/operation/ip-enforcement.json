@@ -1,8 +1,8 @@
 {
   "id": "ip-enforcement",
+  "deckLimit": 3,
   "title": "IP Enforcement",
   "wave": "elevation",
-  "nrdbCode": "35066",
   "type": "operation",
   "side": "corp",
   "faction": "nbn",

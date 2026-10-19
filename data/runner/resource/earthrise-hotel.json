@@ -1,8 +1,8 @@
 {
   "id": "earthrise-hotel",
+  "deckLimit": 3,
   "title": "Earthrise Hotel",
   "wave": "system-update-2021",
-  "nrdbCode": "31039",
   "type": "resource",
   "side": "runner",
   "faction": "neutral-runner",

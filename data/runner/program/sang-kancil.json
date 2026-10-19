@@ -1,8 +1,8 @@
 {
   "id": "sang-kancil",
+  "deckLimit": 3,
   "title": "Sang Kancil",
   "wave": "elevation",
-  "nrdbCode": "35020",
   "type": "program",
   "side": "runner",
   "faction": "criminal",

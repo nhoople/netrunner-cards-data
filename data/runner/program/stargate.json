@@ -1,8 +1,8 @@
 {
   "id": "stargate",
+  "deckLimit": 3,
   "title": "Stargate",
   "wave": "downfall",
-  "nrdbCode": "26004",
   "type": "program",
   "side": "runner",
   "unsupported": [],

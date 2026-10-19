@@ -1,7 +1,7 @@
 {
   "id": "spoilers",
+  "deckLimit": 3,
   "title": "Spoilers",
-  "nrdbCode": "08082",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

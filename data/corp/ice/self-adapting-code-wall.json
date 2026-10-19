@@ -1,7 +1,7 @@
 {
   "id": "self-adapting-code-wall",
+  "deckLimit": 3,
   "title": "Self-Adapting Code Wall",
-  "nrdbCode": "12040",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

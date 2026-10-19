@@ -1,8 +1,8 @@
 {
   "id": "foxfire",
+  "deckLimit": 3,
   "title": "Foxfire",
   "wave": "humanitys-shadow",
-  "nrdbCode": "02100",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

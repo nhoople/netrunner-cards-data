@@ -1,7 +1,7 @@
 {
   "id": "enforced-curfew",
+  "deckLimit": 3,
   "title": "Enforced Curfew",
-  "nrdbCode": "11100",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

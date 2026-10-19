@@ -1,8 +1,8 @@
 {
   "id": "morning-star",
+  "deckLimit": 3,
   "title": "Morning Star",
   "wave": "what-lies-ahead",
-  "nrdbCode": "02004",
   "type": "program",
   "side": "runner",
   "unsupported": [],

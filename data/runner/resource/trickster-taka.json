@@ -1,8 +1,8 @@
 {
   "id": "trickster-taka",
+  "deckLimit": 3,
   "title": "Trickster Taka",
   "wave": "downfall",
-  "nrdbCode": "26009",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

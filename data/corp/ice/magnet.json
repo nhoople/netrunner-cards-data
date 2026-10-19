@@ -1,8 +1,8 @@
 {
   "id": "magnet",
+  "deckLimit": 3,
   "title": "Magnet",
   "wave": "system-update-2021",
-  "nrdbCode": "31044",
   "type": "ice",
   "side": "corp",
   "faction": "haas-bioroid",

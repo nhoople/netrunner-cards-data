@@ -1,7 +1,7 @@
 {
   "id": "localized-product-line",
+  "deckLimit": 3,
   "title": "Localized Product Line",
-  "nrdbCode": "10075",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

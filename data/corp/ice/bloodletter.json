@@ -1,7 +1,7 @@
 {
   "id": "bloodletter",
+  "deckLimit": 3,
   "title": "Bloodletter",
-  "nrdbCode": "13047",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

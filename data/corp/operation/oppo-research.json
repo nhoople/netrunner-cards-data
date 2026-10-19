@@ -1,8 +1,8 @@
 {
   "id": "oppo-research",
+  "deckLimit": 3,
   "title": "Oppo Research",
   "wave": "the-automata-initiative",
-  "nrdbCode": "34055",
   "type": "operation",
   "side": "corp",
   "faction": "nbn",

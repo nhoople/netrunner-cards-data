@@ -1,8 +1,8 @@
 {
   "id": "paper-wall",
+  "deckLimit": 3,
   "title": "Paper Wall",
   "wave": "mala-tempora",
-  "nrdbCode": "04059",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

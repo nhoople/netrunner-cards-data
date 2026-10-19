@@ -1,7 +1,7 @@
 {
   "id": "turnpike",
+  "deckLimit": 3,
   "title": "Turnpike",
-  "nrdbCode": "09018",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

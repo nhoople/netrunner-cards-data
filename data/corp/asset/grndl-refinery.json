@@ -1,7 +1,7 @@
 {
   "id": "grndl-refinery",
+  "deckLimit": 3,
   "title": "GRNDL Refinery",
-  "nrdbCode": "04099",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

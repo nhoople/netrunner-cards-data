@@ -1,8 +1,8 @@
 {
   "id": "ichi-1-0",
+  "deckLimit": 3,
   "title": "Ichi 1.0",
   "wave": "system-core-2019",
-  "nrdbCode": "25075",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

@@ -1,8 +1,8 @@
 {
   "id": "breaking-news",
+  "deckLimit": 3,
   "title": "Breaking News",
   "wave": "core",
-  "nrdbCode": "01082",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

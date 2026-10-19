@@ -1,8 +1,8 @@
 {
   "id": "prepaid-voicepad",
+  "deckLimit": 3,
   "title": "Prepaid VoicePAD",
   "wave": "system-update-2021",
-  "nrdbCode": "31038",
   "type": "hardware",
   "side": "runner",
   "faction": "neutral-runner",

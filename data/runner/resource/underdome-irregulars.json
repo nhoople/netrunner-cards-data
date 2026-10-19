@@ -1,8 +1,8 @@
 {
   "id": "underdome-irregulars",
+  "deckLimit": 3,
   "title": "Underdome Irregulars",
   "wave": "vantage-point",
-  "nrdbCode": "36016",
   "type": "resource",
   "side": "runner",
   "faction": "criminal",

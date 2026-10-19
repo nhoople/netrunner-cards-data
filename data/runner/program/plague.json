@@ -1,7 +1,7 @@
 {
   "id": "plague",
+  "deckLimit": 3,
   "title": "Plague",
-  "nrdbCode": "21022",
   "type": "program",
   "side": "runner",
   "unsupported": [],

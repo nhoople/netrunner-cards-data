@@ -1,8 +1,8 @@
 {
   "id": "public-access-plaza",
+  "deckLimit": 3,
   "title": "Public Access Plaza",
   "wave": "elevation",
-  "nrdbCode": "35062",
   "type": "asset",
   "side": "corp",
   "faction": "nbn",

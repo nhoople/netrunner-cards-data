@@ -1,8 +1,8 @@
 {
   "id": "whistleblower",
+  "deckLimit": 3,
   "title": "Whistleblower",
   "wave": "downfall",
-  "nrdbCode": "26030",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

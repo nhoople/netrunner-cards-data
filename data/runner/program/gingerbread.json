@@ -1,7 +1,7 @@
 {
   "id": "gingerbread",
+  "deckLimit": 3,
   "title": "Gingerbread",
-  "nrdbCode": "05044",
   "type": "program",
   "side": "runner",
   "unsupported": [],

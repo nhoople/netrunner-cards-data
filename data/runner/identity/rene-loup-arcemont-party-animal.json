@@ -1,8 +1,8 @@
 {
   "id": "rene-loup-arcemont-party-animal",
+  "deckLimit": 1,
   "title": "René “Loup” Arcemont: Party Animal",
   "wave": "system-gateway",
-  "nrdbCode": "30001",
   "type": "identity",
   "side": "runner",
   "faction": "anarch",

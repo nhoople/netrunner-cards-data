@@ -1,8 +1,8 @@
 {
   "id": "post-truth-dividend",
+  "deckLimit": 3,
   "title": "Post-Truth Dividend",
   "wave": "parhelion",
-  "nrdbCode": "33113",
   "type": "agenda",
   "side": "corp",
   "faction": "nbn",

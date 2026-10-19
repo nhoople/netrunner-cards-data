@@ -1,7 +1,7 @@
 {
   "id": "progenitor",
+  "deckLimit": 3,
   "title": "Progenitor",
-  "nrdbCode": "07043",
   "type": "program",
   "side": "runner",
   "unsupported": [],

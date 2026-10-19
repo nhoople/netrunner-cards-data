@@ -1,8 +1,8 @@
 {
   "id": "side-hustle",
+  "deckLimit": 3,
   "title": "Side Hustle",
   "wave": "elevation",
-  "nrdbCode": "35034",
   "type": "resource",
   "side": "runner",
   "faction": "neutral-runner",

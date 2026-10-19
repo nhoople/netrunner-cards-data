@@ -1,7 +1,7 @@
 {
   "id": "psychokinesis",
+  "deckLimit": 3,
   "title": "Psychokinesis",
-  "nrdbCode": "11113",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

@@ -1,8 +1,8 @@
 {
   "id": "corporate-town",
+  "deckLimit": 3,
   "title": "Corporate Town",
   "wave": "system-update-2021",
-  "nrdbCode": "31074",
   "type": "asset",
   "side": "corp",
   "faction": "weyland-consortium",

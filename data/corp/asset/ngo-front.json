@@ -1,7 +1,7 @@
 {
   "id": "ngo-front",
+  "deckLimit": 3,
   "title": "NGO Front",
-  "nrdbCode": "21039",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

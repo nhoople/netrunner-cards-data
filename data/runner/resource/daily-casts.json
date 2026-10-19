@@ -1,8 +1,8 @@
 {
   "id": "daily-casts",
+  "deckLimit": 3,
   "title": "Daily Casts",
   "wave": "uprising",
-  "nrdbCode": "26094",
   "type": "resource",
   "side": "runner",
   "faction": "neutral-runner",

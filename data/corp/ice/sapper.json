@@ -1,7 +1,7 @@
 {
   "id": "sapper",
+  "deckLimit": 3,
   "title": "Sapper",
-  "nrdbCode": "11098",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

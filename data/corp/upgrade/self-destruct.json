@@ -1,7 +1,7 @@
 {
   "id": "self-destruct",
+  "deckLimit": 3,
   "title": "Self-destruct",
-  "nrdbCode": "06112",
   "type": "upgrade",
   "side": "corp",
   "unsupported": [],

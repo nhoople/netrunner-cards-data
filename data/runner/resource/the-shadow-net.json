@@ -1,7 +1,7 @@
 {
   "id": "the-shadow-net",
+  "deckLimit": 3,
   "title": "The Shadow Net",
-  "nrdbCode": "13027",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

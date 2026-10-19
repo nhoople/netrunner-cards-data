@@ -1,0 +1,16 @@
+{
+  "id": "startup_liberation",
+  "name": "Startup (Liberation)",
+  "formatId": "startup",
+  "cycles": [
+    "liberation",
+    "system-gateway",
+    "system-update-2021"
+  ],
+  "waves": [
+    "rebellion-without-rehearsal",
+    "system-gateway",
+    "system-update-2021",
+    "the-automata-initiative"
+  ]
+}

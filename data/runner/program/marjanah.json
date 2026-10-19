@@ -1,8 +1,8 @@
 {
   "id": "marjanah",
+  "deckLimit": 3,
   "title": "Marjanah",
   "wave": "system-gateway",
-  "nrdbCode": "30016",
   "type": "program",
   "side": "runner",
   "faction": "criminal",

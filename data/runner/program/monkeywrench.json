@@ -1,8 +1,8 @@
 {
   "id": "monkeywrench",
+  "deckLimit": 3,
   "title": "Monkeywrench",
   "wave": "the-automata-initiative",
-  "nrdbCode": "34006",
   "type": "program",
   "side": "runner",
   "faction": "anarch",

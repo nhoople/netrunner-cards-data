@@ -1,7 +1,7 @@
 {
   "id": "escalate-vitriol",
+  "deckLimit": 3,
   "title": "Escalate Vitriol",
-  "nrdbCode": "12073",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

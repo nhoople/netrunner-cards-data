@@ -1,8 +1,8 @@
 {
   "id": "above-the-law",
+  "deckLimit": 1,
   "title": "Above the Law",
   "wave": "system-gateway",
-  "nrdbCode": "30060",
   "type": "agenda",
   "side": "corp",
   "faction": "weyland-consortium",

@@ -1,7 +1,7 @@
 {
   "id": "shiv",
+  "deckLimit": 3,
   "title": "Shiv",
-  "nrdbCode": "08066",
   "type": "program",
   "side": "runner",
   "unsupported": [],

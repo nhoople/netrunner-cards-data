@@ -1,8 +1,8 @@
 {
   "id": "touch-ups",
+  "deckLimit": 3,
   "title": "Touch-ups",
   "wave": "elevation",
-  "nrdbCode": "35067",
   "type": "operation",
   "side": "corp",
   "faction": "nbn",

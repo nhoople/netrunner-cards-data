@@ -1,8 +1,8 @@
 {
   "id": "spear-phishing",
+  "deckLimit": 3,
   "title": "Spear Phishing",
   "wave": "system-core-2019",
-  "nrdbCode": "25029",
   "type": "event",
   "side": "runner",
   "unsupported": [],

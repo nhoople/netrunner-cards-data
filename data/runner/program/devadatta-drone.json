@@ -1,8 +1,8 @@
 {
   "id": "devadatta-drone",
+  "deckLimit": 3,
   "title": "Devadatta Drone",
   "wave": "elevation",
-  "nrdbCode": "35031",
   "type": "program",
   "side": "runner",
   "faction": "shaper",

@@ -1,7 +1,7 @@
 {
   "id": "degree-mill",
+  "deckLimit": 3,
   "title": "Degree Mill",
-  "nrdbCode": "21055",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

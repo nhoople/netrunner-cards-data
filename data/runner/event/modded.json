@@ -1,8 +1,8 @@
 {
   "id": "modded",
+  "deckLimit": 3,
   "title": "Modded",
   "wave": "system-core-2019",
-  "nrdbCode": "25043",
   "type": "event",
   "side": "runner",
   "unsupported": [],

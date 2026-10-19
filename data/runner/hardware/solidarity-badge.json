@@ -1,8 +1,8 @@
 {
   "id": "solidarity-badge",
+  "deckLimit": 3,
   "title": "Solidarity Badge",
   "wave": "the-automata-initiative",
-  "nrdbCode": "34003",
   "type": "hardware",
   "side": "runner",
   "faction": "anarch",

@@ -1,8 +1,8 @@
 {
   "id": "minelayer",
+  "deckLimit": 3,
   "title": "Minelayer",
   "wave": "creation-and-control",
-  "nrdbCode": "03018",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

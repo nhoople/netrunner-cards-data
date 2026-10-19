@@ -1,7 +1,7 @@
 {
   "id": "paperclip",
+  "deckLimit": 3,
   "title": "Paperclip",
-  "nrdbCode": "11024",
   "type": "program",
   "side": "runner",
   "unsupported": [],

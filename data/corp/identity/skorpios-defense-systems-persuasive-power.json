@@ -1,7 +1,7 @@
 {
   "id": "skorpios-defense-systems-persuasive-power",
+  "deckLimit": 1,
   "title": "Skorpios Defense Systems: Persuasive Power",
-  "nrdbCode": "13041",
   "type": "identity",
   "side": "corp",
   "unsupported": [],

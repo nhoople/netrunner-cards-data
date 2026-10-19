@@ -1,8 +1,8 @@
 {
   "id": "fencer-fueno",
+  "deckLimit": 3,
   "title": "Fencer Fueno",
   "wave": "downfall",
-  "nrdbCode": "26007",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

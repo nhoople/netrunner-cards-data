@@ -1,8 +1,8 @@
 {
   "id": "game-over",
+  "deckLimit": 3,
   "title": "Game Over",
   "wave": "downfall",
-  "nrdbCode": "26053",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

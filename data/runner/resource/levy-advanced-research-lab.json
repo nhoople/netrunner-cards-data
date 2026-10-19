@@ -1,7 +1,7 @@
 {
   "id": "levy-advanced-research-lab",
+  "deckLimit": 3,
   "title": "Levy Advanced Research Lab",
-  "nrdbCode": "13021",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

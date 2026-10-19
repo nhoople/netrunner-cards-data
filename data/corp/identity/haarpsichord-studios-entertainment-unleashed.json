@@ -1,7 +1,7 @@
 {
   "id": "haarpsichord-studios-entertainment-unleashed",
+  "deckLimit": 1,
   "title": "Haarpsichord Studios: Entertainment Unleashed",
-  "nrdbCode": "08092",
   "type": "identity",
   "side": "corp",
   "unsupported": [],

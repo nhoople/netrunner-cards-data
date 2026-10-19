@@ -1,7 +1,7 @@
 {
   "id": "harbinger",
+  "deckLimit": 3,
   "title": "Harbinger",
-  "nrdbCode": "09034",
   "type": "program",
   "side": "runner",
   "unsupported": [],

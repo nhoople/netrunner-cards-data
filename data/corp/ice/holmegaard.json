@@ -1,7 +1,7 @@
 {
   "id": "holmegaard",
+  "deckLimit": 3,
   "title": "Holmegaard",
-  "nrdbCode": "13036",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

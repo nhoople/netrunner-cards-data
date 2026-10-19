@@ -1,8 +1,8 @@
 {
   "id": "gauss",
+  "deckLimit": 3,
   "title": "Gauss",
   "wave": "downfall",
-  "nrdbCode": "26024",
   "type": "program",
   "side": "runner",
   "unsupported": [],

@@ -1,8 +1,8 @@
 {
   "id": "ken-express-tenma-disappeared-clone",
+  "deckLimit": 1,
   "title": "Ken “Express” Tenma: Disappeared Clone",
   "wave": "system-update-2021",
-  "nrdbCode": "31013",
   "type": "identity",
   "side": "runner",
   "faction": "criminal",

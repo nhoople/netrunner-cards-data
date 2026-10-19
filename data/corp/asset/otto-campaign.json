@@ -1,8 +1,8 @@
 {
   "id": "otto-campaign",
+  "deckLimit": 3,
   "title": "Otto Campaign",
   "wave": "elevation",
-  "nrdbCode": "35040",
   "type": "asset",
   "side": "corp",
   "faction": "haas-bioroid",

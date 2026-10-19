@@ -1,7 +1,7 @@
 {
   "id": "mca-austerity-policy",
+  "deckLimit": 3,
   "title": "MCA Austerity Policy",
-  "nrdbCode": "12111",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

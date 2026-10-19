@@ -1,8 +1,8 @@
 {
   "id": "charlotte-cacador",
+  "deckLimit": 3,
   "title": "Charlotte Caçador",
   "wave": "rebellion-without-rehearsal",
-  "nrdbCode": "34107",
   "type": "asset",
   "side": "corp",
   "faction": "jinteki",

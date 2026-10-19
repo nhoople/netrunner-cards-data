@@ -1,7 +1,7 @@
 {
   "id": "waiver",
+  "deckLimit": 3,
   "title": "Waiver",
-  "nrdbCode": "10091",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

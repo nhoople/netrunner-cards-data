@@ -1,8 +1,8 @@
 {
   "id": "tycoon",
+  "deckLimit": 3,
   "title": "Tycoon",
   "wave": "reign-and-reverie",
-  "nrdbCode": "22012",
   "type": "program",
   "side": "runner",
   "unsupported": [],

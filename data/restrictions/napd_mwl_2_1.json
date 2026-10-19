@@ -1,0 +1,42 @@
+{
+  "id": "napd_mwl_2_1",
+  "name": "NAPD MWL 2.1",
+  "formatId": "standard",
+  "dateStart": "2018-02-26",
+  "banned": [
+    "aaron-marron",
+    "bloo-moose",
+    "clone-suffrage-movement",
+    "faust",
+    "friends-in-high-places",
+    "salvaged-vanadis-armory",
+    "sensie-actors-union",
+    "sifr",
+    "temujin-contract",
+    "violet-level-clearance"
+  ],
+  "restricted": [
+    "aesops-pawnshop",
+    "bio-ethics-association",
+    "brain-rewiring",
+    "clone-chip",
+    "employee-strike",
+    "estelle-moon",
+    "fairchild-3-0",
+    "film-critic",
+    "gang-sign",
+    "global-food-initiative",
+    "hunter-seeker",
+    "inversificator",
+    "levy-ar-lab-access",
+    "magnum-opus",
+    "mother-goddess",
+    "mumba-temple",
+    "mumbad-city-hall",
+    "museum-of-history",
+    "obokata-protocol",
+    "rumor-mill",
+    "tapwrm",
+    "whampoa-reclamation"
+  ]
+}

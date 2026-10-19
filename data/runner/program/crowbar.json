@@ -1,7 +1,7 @@
 {
   "id": "crowbar",
+  "deckLimit": 3,
   "title": "Crowbar",
-  "nrdbCode": "08046",
   "type": "program",
   "side": "runner",
   "unsupported": [],

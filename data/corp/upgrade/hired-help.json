@@ -1,7 +1,7 @@
 {
   "id": "hired-help",
+  "deckLimit": 1,
   "title": "Hired Help",
-  "nrdbCode": "23101",
   "type": "upgrade",
   "side": "corp",
   "unsupported": [],

@@ -1,8 +1,8 @@
 {
   "id": "femme-fatale",
+  "deckLimit": 3,
   "title": "Femme Fatale",
   "wave": "system-update-2021",
-  "nrdbCode": "31022",
   "type": "program",
   "side": "runner",
   "faction": "criminal",

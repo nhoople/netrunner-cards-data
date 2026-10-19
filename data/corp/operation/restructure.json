@@ -1,8 +1,8 @@
 {
   "id": "restructure",
+  "deckLimit": 3,
   "title": "Restructure",
   "wave": "stalwart",
-  "nrdbCode": "04040",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

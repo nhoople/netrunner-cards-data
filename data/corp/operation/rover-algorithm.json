@@ -1,7 +1,7 @@
 {
   "id": "rover-algorithm",
+  "deckLimit": 3,
   "title": "Rover Algorithm",
-  "nrdbCode": "12100",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

@@ -1,8 +1,8 @@
 {
   "id": "curupira",
+  "deckLimit": 3,
   "title": "Curupira",
   "wave": "the-automata-initiative",
-  "nrdbCode": "34015",
   "type": "program",
   "side": "runner",
   "faction": "criminal",

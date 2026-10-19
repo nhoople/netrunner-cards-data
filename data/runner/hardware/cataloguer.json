@@ -1,8 +1,8 @@
 {
   "id": "cataloguer",
+  "deckLimit": 3,
   "title": "Cataloguer",
   "wave": "rebellion-without-rehearsal",
-  "nrdbCode": "34088",
   "type": "hardware",
   "side": "runner",
   "faction": "shaper",

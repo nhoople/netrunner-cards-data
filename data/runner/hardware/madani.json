@@ -1,8 +1,8 @@
 {
   "id": "madani",
+  "deckLimit": 3,
   "title": "Madani",
   "wave": "elevation",
-  "nrdbCode": "35028",
   "type": "hardware",
   "side": "runner",
   "faction": "shaper",

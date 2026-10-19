@@ -1,7 +1,7 @@
 {
   "id": "power-nap",
+  "deckLimit": 3,
   "title": "Power Nap",
-  "nrdbCode": "04107",
   "type": "event",
   "side": "runner",
   "unsupported": [],

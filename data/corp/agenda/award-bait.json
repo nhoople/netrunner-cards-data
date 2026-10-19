@@ -1,7 +1,7 @@
 {
   "id": "award-bait",
+  "deckLimit": 3,
   "title": "Award Bait",
-  "nrdbCode": "08093",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

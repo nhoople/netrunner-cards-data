@@ -1,8 +1,8 @@
 {
   "id": "imp",
+  "deckLimit": 3,
   "title": "Imp",
   "wave": "system-update-2021",
-  "nrdbCode": "31007",
   "type": "program",
   "side": "runner",
   "faction": "anarch",

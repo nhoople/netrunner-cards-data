@@ -1,0 +1,5 @@
+{
+  "cardId": "regolith-mining-license",
+  "text": "When you rez this asset, load 15[credit] onto it. When it is empty, trash it.\n[click]<strong>:</strong> Take 3[credit] from this asset.",
+  "strippedText": "When you rez this asset, load 15 credits onto it. When it is empty, trash it. click: Take 3 credits from this asset."
+}

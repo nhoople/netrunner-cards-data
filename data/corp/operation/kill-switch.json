@@ -1,7 +1,7 @@
 {
   "id": "kill-switch",
+  "deckLimit": 3,
   "title": "Kill Switch",
-  "nrdbCode": "21070",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

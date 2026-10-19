@@ -1,7 +1,7 @@
 {
   "id": "show-of-force",
+  "deckLimit": 3,
   "title": "Show of Force",
-  "nrdbCode": "11099",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

@@ -1,8 +1,8 @@
 {
   "id": "snowball",
+  "deckLimit": 3,
   "title": "Snowball",
   "wave": "trace-amount",
-  "nrdbCode": "02027",
   "type": "program",
   "side": "runner",
   "unsupported": [],

@@ -1,7 +1,7 @@
 {
   "id": "brahman",
+  "deckLimit": 3,
   "title": "Brahman",
-  "nrdbCode": "10062",
   "type": "program",
   "side": "runner",
   "unsupported": [],

@@ -1,8 +1,8 @@
 {
   "id": "mycoweb",
+  "deckLimit": 3,
   "title": "Mycoweb",
   "wave": "elevation",
-  "nrdbCode": "35053",
   "type": "ice",
   "side": "corp",
   "faction": "jinteki",

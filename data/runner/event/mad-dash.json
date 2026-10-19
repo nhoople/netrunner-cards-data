@@ -1,7 +1,7 @@
 {
   "id": "mad-dash",
+  "deckLimit": 3,
   "title": "Mad Dash",
-  "nrdbCode": "12008",
   "type": "event",
   "side": "runner",
   "unsupported": [],

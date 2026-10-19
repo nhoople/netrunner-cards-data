@@ -1,7 +1,7 @@
 {
   "id": "mlinzi",
+  "deckLimit": 3,
   "title": "Mlinzi",
-  "nrdbCode": "21115",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

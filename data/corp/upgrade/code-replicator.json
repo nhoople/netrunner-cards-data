@@ -1,7 +1,7 @@
 {
   "id": "code-replicator",
+  "deckLimit": 3,
   "title": "Code Replicator",
-  "nrdbCode": "21052",
   "type": "upgrade",
   "side": "corp",
   "unsupported": [],

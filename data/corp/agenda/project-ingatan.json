@@ -1,8 +1,8 @@
 {
   "id": "project-ingatan",
+  "deckLimit": 3,
   "title": "Project Ingatan",
   "wave": "elevation",
-  "nrdbCode": "35038",
   "type": "agenda",
   "side": "corp",
   "faction": "haas-bioroid",

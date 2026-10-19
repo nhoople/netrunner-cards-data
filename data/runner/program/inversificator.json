@@ -1,7 +1,7 @@
 {
   "id": "inversificator",
+  "deckLimit": 3,
   "title": "Inversificator",
-  "nrdbCode": "12048",
   "type": "program",
   "side": "runner",
   "unsupported": [],

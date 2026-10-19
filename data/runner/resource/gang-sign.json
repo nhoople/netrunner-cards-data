@@ -1,7 +1,7 @@
 {
   "id": "gang-sign",
+  "deckLimit": 3,
   "title": "Gang Sign",
-  "nrdbCode": "08067",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

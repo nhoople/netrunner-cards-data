@@ -1,7 +1,7 @@
 {
   "id": "executive-boot-camp",
+  "deckLimit": 3,
   "title": "Executive Boot Camp",
-  "nrdbCode": "06088",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

@@ -1,7 +1,7 @@
 {
   "id": "cfc-excavation-contract",
+  "deckLimit": 3,
   "title": "CFC Excavation Contract",
-  "nrdbCode": "12110",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

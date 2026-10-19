@@ -1,8 +1,8 @@
 {
   "id": "jumon",
+  "deckLimit": 3,
   "title": "Jumon",
   "wave": "reign-and-reverie",
-  "nrdbCode": "22035",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

@@ -1,8 +1,8 @@
 {
   "id": "working-prototype",
+  "deckLimit": 3,
   "title": "Working Prototype",
   "wave": "rebellion-without-rehearsal",
-  "nrdbCode": "34099",
   "type": "asset",
   "side": "corp",
   "faction": "haas-bioroid",

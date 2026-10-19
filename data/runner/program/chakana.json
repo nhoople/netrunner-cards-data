@@ -1,8 +1,8 @@
 {
   "id": "chakana",
+  "deckLimit": 3,
   "title": "Chakana",
   "wave": "creation-and-control",
-  "nrdbCode": "03043",
   "type": "program",
   "side": "runner",
   "unsupported": [],

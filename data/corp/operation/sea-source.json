@@ -1,8 +1,8 @@
 {
   "id": "sea-source",
+  "deckLimit": 3,
   "title": "SEA Source",
   "wave": "system-core-2019",
-  "nrdbCode": "25119",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

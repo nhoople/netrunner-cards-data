@@ -1,8 +1,8 @@
 {
   "id": "djinn",
+  "deckLimit": 3,
   "title": "Djinn",
   "wave": "core",
-  "nrdbCode": "01009",
   "type": "program",
   "side": "runner",
   "unsupported": [],

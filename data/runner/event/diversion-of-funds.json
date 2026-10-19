@@ -1,7 +1,7 @@
 {
   "id": "diversion-of-funds",
+  "deckLimit": 3,
   "title": "Diversion of Funds",
-  "nrdbCode": "21105",
   "type": "event",
   "side": "runner",
   "unsupported": [],

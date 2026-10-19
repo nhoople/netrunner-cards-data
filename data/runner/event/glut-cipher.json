@@ -1,7 +1,7 @@
 {
   "id": "glut-cipher",
+  "deckLimit": 3,
   "title": "Glut Cipher",
-  "nrdbCode": "21061",
   "type": "event",
   "side": "runner",
   "unsupported": [],

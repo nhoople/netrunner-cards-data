@@ -1,7 +1,7 @@
 {
   "id": "rolodex",
+  "deckLimit": 3,
   "title": "Rolodex",
-  "nrdbCode": "08084",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

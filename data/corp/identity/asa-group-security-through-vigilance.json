@@ -1,7 +1,7 @@
 {
   "id": "asa-group-security-through-vigilance",
+  "deckLimit": 1,
   "title": "Asa Group: Security Through Vigilance",
-  "nrdbCode": "21009",
   "type": "identity",
   "side": "corp",
   "unsupported": [],

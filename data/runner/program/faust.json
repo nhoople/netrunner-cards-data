@@ -1,7 +1,7 @@
 {
   "id": "faust",
+  "deckLimit": 3,
   "title": "Faust",
-  "nrdbCode": "08061",
   "type": "program",
   "side": "runner",
   "unsupported": [],

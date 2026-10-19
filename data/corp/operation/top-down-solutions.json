@@ -1,8 +1,8 @@
 {
   "id": "top-down-solutions",
+  "deckLimit": 3,
   "title": "Top-Down Solutions",
   "wave": "elevation",
-  "nrdbCode": "35044",
   "type": "operation",
   "side": "corp",
   "faction": "haas-bioroid",

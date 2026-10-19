@@ -1,7 +1,7 @@
 {
   "id": "product-recall",
+  "deckLimit": 3,
   "title": "Product Recall",
-  "nrdbCode": "10029",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

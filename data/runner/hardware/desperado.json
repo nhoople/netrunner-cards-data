@@ -1,8 +1,8 @@
 {
   "id": "desperado",
+  "deckLimit": 3,
   "title": "Desperado",
   "wave": "core",
-  "nrdbCode": "01024",
   "type": "hardware",
   "side": "runner",
   "unsupported": [],

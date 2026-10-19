@@ -1,8 +1,8 @@
 {
   "id": "nova-initiumia-catalyst-impetus",
+  "deckLimit": 1,
   "title": "Nova Initiumia: Catalyst & Impetus",
   "wave": "parhelion",
-  "nrdbCode": "33093",
   "type": "identity",
   "side": "runner",
   "faction": "neutral-runner",

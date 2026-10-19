@@ -1,8 +1,8 @@
 {
   "id": "dzmz-optimizer",
+  "deckLimit": 3,
   "title": "DZMZ Optimizer",
   "wave": "system-gateway",
-  "nrdbCode": "30022",
   "type": "hardware",
   "side": "runner",
   "faction": "shaper",

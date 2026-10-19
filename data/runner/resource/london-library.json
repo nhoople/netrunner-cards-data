@@ -1,7 +1,7 @@
 {
   "id": "london-library",
+  "deckLimit": 3,
   "title": "London Library",
-  "nrdbCode": "08029",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

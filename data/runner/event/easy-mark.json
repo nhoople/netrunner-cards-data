@@ -1,8 +1,8 @@
 {
   "id": "easy-mark",
+  "deckLimit": 3,
   "title": "Easy Mark",
   "wave": "system-core-2019",
-  "nrdbCode": "25023",
   "type": "event",
   "side": "runner",
   "unsupported": [],

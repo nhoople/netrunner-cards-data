@@ -1,7 +1,7 @@
 {
   "id": "blackstone",
+  "deckLimit": 3,
   "title": "Blackstone",
-  "nrdbCode": "11068",
   "type": "program",
   "side": "runner",
   "unsupported": [],

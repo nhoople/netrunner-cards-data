@@ -1,7 +1,7 @@
 {
   "id": "global-food-initiative",
+  "deckLimit": 3,
   "title": "Global Food Initiative",
-  "nrdbCode": "09026",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

@@ -1,7 +1,7 @@
 {
   "id": "blacklist",
+  "deckLimit": 3,
   "title": "Blacklist",
-  "nrdbCode": "08036",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

@@ -1,8 +1,8 @@
 {
   "id": "flood-the-market",
+  "deckLimit": 3,
   "title": "Flood the Market",
   "wave": "vantage-point",
-  "nrdbCode": "36053",
   "type": "operation",
   "side": "corp",
   "faction": "nbn",

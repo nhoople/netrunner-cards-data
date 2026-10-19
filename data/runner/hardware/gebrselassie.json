@@ -1,7 +1,7 @@
 {
   "id": "gebrselassie",
+  "deckLimit": 3,
   "title": "Gebrselassie",
-  "nrdbCode": "21087",
   "type": "hardware",
   "side": "runner",
   "unsupported": [],

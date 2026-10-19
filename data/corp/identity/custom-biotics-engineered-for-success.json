@@ -1,8 +1,8 @@
 {
   "id": "custom-biotics-engineered-for-success",
+  "deckLimit": 1,
   "title": "Custom Biotics: Engineered for Success",
   "wave": "creation-and-control",
-  "nrdbCode": "03002",
   "type": "identity",
   "side": "corp",
   "unsupported": [],

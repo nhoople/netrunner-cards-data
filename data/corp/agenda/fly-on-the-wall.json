@@ -1,8 +1,8 @@
 {
   "id": "fly-on-the-wall",
+  "deckLimit": 3,
   "title": "Fly on the Wall",
   "wave": "reign-and-reverie",
-  "nrdbCode": "22043",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

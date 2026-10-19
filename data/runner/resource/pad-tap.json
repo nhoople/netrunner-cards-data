@@ -1,7 +1,7 @@
 {
   "id": "pad-tap",
+  "deckLimit": 3,
   "title": "PAD Tap",
-  "nrdbCode": "21106",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

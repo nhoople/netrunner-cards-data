@@ -1,8 +1,8 @@
 {
   "id": "abaasy",
+  "deckLimit": 3,
   "title": "Abaasy",
   "wave": "parhelion",
-  "nrdbCode": "33070",
   "type": "program",
   "side": "runner",
   "faction": "anarch",

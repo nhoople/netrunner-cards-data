@@ -1,7 +1,7 @@
 {
   "id": "mganga",
+  "deckLimit": 3,
   "title": "Mganga",
-  "nrdbCode": "21013",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

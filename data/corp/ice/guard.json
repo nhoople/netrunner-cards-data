@@ -1,7 +1,7 @@
 {
   "id": "guard",
+  "deckLimit": 3,
   "title": "Guard",
-  "nrdbCode": "05024",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

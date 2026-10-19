@@ -1,7 +1,7 @@
 {
   "id": "herald",
+  "deckLimit": 3,
   "title": "Herald",
-  "nrdbCode": "11115",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

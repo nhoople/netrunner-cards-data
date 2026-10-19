@@ -1,0 +1,15 @@
+{
+  "id": "startup_vantage_point",
+  "name": "Startup (Vantage Point)",
+  "formatId": "startup",
+  "cycles": [
+    "elevation",
+    "system-gateway",
+    "vantage-point"
+  ],
+  "waves": [
+    "elevation",
+    "system-gateway",
+    "vantage-point"
+  ]
+}

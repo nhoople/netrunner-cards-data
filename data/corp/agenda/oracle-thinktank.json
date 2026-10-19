@@ -1,8 +1,8 @@
 {
   "id": "oracle-thinktank",
+  "deckLimit": 3,
   "title": "Oracle Thinktank",
   "wave": "the-automata-initiative",
-  "nrdbCode": "34049",
   "type": "agenda",
   "side": "corp",
   "faction": "nbn",

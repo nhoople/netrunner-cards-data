@@ -1,8 +1,8 @@
 {
   "id": "earth-station-sea-headquarters",
+  "deckLimit": 1,
   "title": "Earth Station: SEA Headquarters",
   "wave": "uprising",
-  "nrdbCode": "26120",
   "type": "identity",
   "side": "corp",
   "faction": "weyland-consortium",

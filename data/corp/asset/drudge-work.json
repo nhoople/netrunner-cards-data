@@ -1,8 +1,8 @@
 {
   "id": "drudge-work",
+  "deckLimit": 3,
   "title": "Drudge Work",
   "wave": "reign-and-reverie",
-  "nrdbCode": "22052",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

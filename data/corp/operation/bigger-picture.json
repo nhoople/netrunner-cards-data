@@ -1,8 +1,8 @@
 {
   "id": "bigger-picture",
+  "deckLimit": 3,
   "title": "Bigger Picture",
   "wave": "elevation",
-  "nrdbCode": "35065",
   "type": "operation",
   "side": "corp",
   "faction": "nbn",

@@ -1,7 +1,7 @@
 {
   "id": "astrolabe",
+  "deckLimit": 3,
   "title": "Astrolabe",
-  "nrdbCode": "06079",
   "type": "hardware",
   "side": "runner",
   "unsupported": [],

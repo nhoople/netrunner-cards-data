@@ -1,8 +1,8 @@
 {
   "id": "digital-rights-management",
+  "deckLimit": 3,
   "title": "Digital Rights Management",
   "wave": "uprising",
-  "nrdbCode": "26117",
   "type": "operation",
   "side": "corp",
   "faction": "nbn",

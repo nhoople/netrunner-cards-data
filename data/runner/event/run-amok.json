@@ -1,8 +1,8 @@
 {
   "id": "run-amok",
+  "deckLimit": 3,
   "title": "Run Amok",
   "wave": "system-core-2019",
-  "nrdbCode": "25006",
   "type": "event",
   "side": "runner",
   "unsupported": [],

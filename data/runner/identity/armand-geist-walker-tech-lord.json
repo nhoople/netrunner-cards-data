@@ -1,7 +1,7 @@
 {
   "id": "armand-geist-walker-tech-lord",
+  "deckLimit": 1,
   "title": "Armand \"Geist\" Walker: Tech Lord",
-  "nrdbCode": "08063",
   "type": "identity",
   "side": "runner",
   "unsupported": [],

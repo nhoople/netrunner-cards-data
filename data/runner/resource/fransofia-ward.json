@@ -1,8 +1,8 @@
 {
   "id": "fransofia-ward",
+  "deckLimit": 3,
   "title": "Fransofia Ward",
   "wave": "elevation",
-  "nrdbCode": "35021",
   "type": "resource",
   "side": "runner",
   "faction": "criminal",

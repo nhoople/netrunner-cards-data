@@ -1,8 +1,8 @@
 {
   "id": "anthill-excavation-contract",
+  "deckLimit": 3,
   "title": "Anthill Excavation Contract",
   "wave": "elevation",
-  "nrdbCode": "35072",
   "type": "asset",
   "side": "corp",
   "faction": "weyland-consortium",

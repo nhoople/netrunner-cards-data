@@ -1,8 +1,8 @@
 {
   "id": "eru-ayase-pessoa",
+  "deckLimit": 3,
   "title": "Eru Ayase-Pessoa",
   "wave": "the-automata-initiative",
-  "nrdbCode": "34007",
   "type": "resource",
   "side": "runner",
   "faction": "anarch",

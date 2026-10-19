@@ -1,7 +1,7 @@
 {
   "id": "sunya",
+  "deckLimit": 3,
   "title": "Sūnya",
-  "nrdbCode": "11102",
   "type": "program",
   "side": "runner",
   "unsupported": [],

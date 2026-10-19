@@ -1,7 +1,7 @@
 {
   "id": "next-gold",
+  "deckLimit": 3,
   "title": "NEXT Gold",
-  "nrdbCode": "08011",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

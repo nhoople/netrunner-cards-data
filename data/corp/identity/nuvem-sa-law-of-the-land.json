@@ -1,8 +1,8 @@
 {
   "id": "nuvem-sa-law-of-the-land",
+  "deckLimit": 1,
   "title": "Nuvem SA: Law of the Land",
   "wave": "rebellion-without-rehearsal",
-  "nrdbCode": "34121",
   "type": "identity",
   "side": "corp",
   "faction": "weyland-consortium",

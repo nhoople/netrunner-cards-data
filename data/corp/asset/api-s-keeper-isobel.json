@@ -1,8 +1,8 @@
 {
   "id": "api-s-keeper-isobel",
+  "deckLimit": 3,
   "title": "API-S Keeper Isobel",
   "wave": "reign-and-reverie",
-  "nrdbCode": "22036",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

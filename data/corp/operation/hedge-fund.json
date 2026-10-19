@@ -1,5 +1,6 @@
 {
   "id": "hedge-fund",
+  "deckLimit": 3,
   "title": "Hedge Fund",
   "type": "operation",
   "side": "corp",

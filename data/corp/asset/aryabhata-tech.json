@@ -1,7 +1,7 @@
 {
   "id": "aryabhata-tech",
+  "deckLimit": 3,
   "title": "Aryabhata Tech",
-  "nrdbCode": "10070",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

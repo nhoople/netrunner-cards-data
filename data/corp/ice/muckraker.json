@@ -1,8 +1,8 @@
 {
   "id": "muckraker",
+  "deckLimit": 3,
   "title": "Muckraker",
   "wave": "stalwart",
-  "nrdbCode": "04035",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

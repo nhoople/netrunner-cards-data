@@ -1,7 +1,7 @@
 {
   "id": "trope",
+  "deckLimit": 3,
   "title": "Trope",
-  "nrdbCode": "08081",
   "type": "program",
   "side": "runner",
   "unsupported": [],

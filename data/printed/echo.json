@@ -1,0 +1,5 @@
+{
+  "cardId": "echo",
+  "text": "Whenever you rez a piece of <strong>harmonic</strong> ice, place 1 power counter on this ice.\nThis ice gains \"[subroutine] End the run.\" for each hosted power counter.",
+  "strippedText": "Whenever you rez a piece of harmonic ice, place 1 power counter on this ice. This ice gains \"Subroutine End the run.\" for each hosted power counter."
+}

@@ -1,7 +1,7 @@
 {
   "id": "ultraviolet-clearance",
+  "deckLimit": 3,
   "title": "Ultraviolet Clearance",
-  "nrdbCode": "13038",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

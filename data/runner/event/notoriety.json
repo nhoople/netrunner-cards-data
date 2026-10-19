@@ -1,8 +1,8 @@
 {
   "id": "notoriety",
+  "deckLimit": 3,
   "title": "Notoriety",
   "wave": "system-core-2019",
-  "nrdbCode": "25044",
   "type": "event",
   "side": "runner",
   "unsupported": [],

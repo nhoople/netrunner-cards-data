@@ -1,7 +1,7 @@
 {
   "id": "nanotk",
+  "deckLimit": 3,
   "title": "Na'Not'K",
-  "nrdbCode": "12088",
   "type": "program",
   "side": "runner",
   "unsupported": [],

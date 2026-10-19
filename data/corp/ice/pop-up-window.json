@@ -1,11 +1,11 @@
 {
   "id": "pop-up-window",
+  "deckLimit": 3,
   "title": "Pop-up Window",
   "type": "ice",
   "side": "corp",
   "faction": "nbn",
   "wave": "system-update-2021",
-  "nrdbCode": "31065",
   "rezCost": 0,
   "strength": 0,
   "subtypes": [

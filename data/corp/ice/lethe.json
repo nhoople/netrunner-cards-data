@@ -1,8 +1,8 @@
 {
   "id": "lethe",
+  "deckLimit": 3,
   "title": "Lethe",
   "wave": "vantage-point",
-  "nrdbCode": "36051",
   "type": "ice",
   "side": "corp",
   "faction": "nbn",

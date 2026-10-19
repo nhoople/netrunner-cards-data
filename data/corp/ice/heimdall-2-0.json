@@ -1,8 +1,8 @@
 {
   "id": "heimdall-2-0",
+  "deckLimit": 3,
   "title": "Heimdall 2.0",
   "wave": "creation-and-control",
-  "nrdbCode": "03015",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

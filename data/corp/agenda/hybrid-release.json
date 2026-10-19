@@ -1,8 +1,8 @@
 {
   "id": "hybrid-release",
+  "deckLimit": 3,
   "title": "Hybrid Release",
   "wave": "parhelion",
-  "nrdbCode": "33105",
   "type": "agenda",
   "side": "corp",
   "faction": "jinteki",

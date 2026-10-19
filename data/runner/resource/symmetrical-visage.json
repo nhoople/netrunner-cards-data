@@ -1,7 +1,7 @@
 {
   "id": "symmetrical-visage",
+  "deckLimit": 3,
   "title": "Symmetrical Visage",
-  "nrdbCode": "08009",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

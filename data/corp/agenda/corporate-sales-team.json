@@ -1,7 +1,7 @@
 {
   "id": "corporate-sales-team",
+  "deckLimit": 3,
   "title": "Corporate Sales Team",
-  "nrdbCode": "10037",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

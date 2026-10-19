@@ -1,7 +1,7 @@
 {
   "id": "collective-consciousness",
+  "deckLimit": 3,
   "title": "Collective Consciousness",
-  "nrdbCode": "06116",
   "type": "program",
   "side": "runner",
   "unsupported": [],

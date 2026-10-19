@@ -1,8 +1,8 @@
 {
   "id": "lucky-charm",
+  "deckLimit": 3,
   "title": "Lucky Charm",
   "wave": "downfall",
-  "nrdbCode": "26014",
   "type": "hardware",
   "side": "runner",
   "unsupported": [],

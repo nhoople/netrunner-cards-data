@@ -1,8 +1,8 @@
 {
   "id": "vampyronassa",
+  "deckLimit": 3,
   "title": "Vampyronassa",
   "wave": "parhelion",
-  "nrdbCode": "33109",
   "type": "ice",
   "side": "corp",
   "faction": "jinteki",

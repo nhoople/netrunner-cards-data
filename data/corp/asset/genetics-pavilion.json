@@ -1,7 +1,7 @@
 {
   "id": "genetics-pavilion",
+  "deckLimit": 3,
   "title": "Genetics Pavilion",
-  "nrdbCode": "08113",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

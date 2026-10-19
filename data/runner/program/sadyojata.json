@@ -1,7 +1,7 @@
 {
   "id": "sadyojata",
+  "deckLimit": 3,
   "title": "Sadyojata",
-  "nrdbCode": "10044",
   "type": "program",
   "side": "runner",
   "unsupported": [],

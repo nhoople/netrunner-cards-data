@@ -1,8 +1,8 @@
 {
   "id": "azimat",
+  "deckLimit": 3,
   "title": "Azimat",
   "wave": "elevation",
-  "nrdbCode": "35029",
   "type": "program",
   "side": "runner",
   "faction": "shaper",

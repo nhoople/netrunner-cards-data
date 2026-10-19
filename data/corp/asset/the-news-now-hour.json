@@ -1,7 +1,7 @@
 {
   "id": "the-news-now-hour",
+  "deckLimit": 3,
   "title": "The News Now Hour",
-  "nrdbCode": "06045",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

@@ -1,8 +1,8 @@
 {
   "id": "sensei",
+  "deckLimit": 3,
   "title": "Sensei",
   "wave": "trace-amount",
-  "nrdbCode": "02034",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

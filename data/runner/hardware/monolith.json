@@ -1,8 +1,8 @@
 {
   "id": "monolith",
+  "deckLimit": 3,
   "title": "Monolith",
   "wave": "creation-and-control",
-  "nrdbCode": "03036",
   "type": "hardware",
   "side": "runner",
   "unsupported": [],

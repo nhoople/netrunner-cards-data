@@ -1,7 +1,7 @@
 {
   "id": "urban-renewal",
+  "deckLimit": 3,
   "title": "Urban Renewal",
-  "nrdbCode": "21018",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

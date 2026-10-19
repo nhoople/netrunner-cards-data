@@ -1,8 +1,8 @@
 {
   "id": "luana-campos",
+  "deckLimit": 3,
   "title": "Luana Campos",
   "wave": "vantage-point",
-  "nrdbCode": "36057",
   "type": "asset",
   "side": "corp",
   "faction": "weyland-consortium",

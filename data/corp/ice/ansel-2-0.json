@@ -1,8 +1,8 @@
 {
   "id": "ansel-2-0",
+  "deckLimit": 3,
   "title": "Ansel 2.0",
   "wave": "vantage-point",
-  "nrdbCode": "36028",
   "type": "ice",
   "side": "corp",
   "faction": "haas-bioroid",

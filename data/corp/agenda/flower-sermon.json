@@ -1,8 +1,8 @@
 {
   "id": "flower-sermon",
+  "deckLimit": 3,
   "title": "Flower Sermon",
   "wave": "uprising",
-  "nrdbCode": "26106",
   "type": "agenda",
   "side": "corp",
   "faction": "jinteki",

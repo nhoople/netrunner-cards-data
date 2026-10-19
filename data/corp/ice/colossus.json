@@ -1,8 +1,8 @@
 {
   "id": "colossus",
+  "deckLimit": 3,
   "title": "Colossus",
   "wave": "uprising",
-  "nrdbCode": "26124",
   "type": "ice",
   "side": "corp",
   "faction": "weyland-consortium",

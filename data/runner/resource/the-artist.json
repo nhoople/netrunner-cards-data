@@ -1,8 +1,8 @@
 {
   "id": "the-artist",
+  "deckLimit": 3,
   "title": "The Artist",
   "wave": "downfall",
-  "nrdbCode": "26027",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

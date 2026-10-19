@@ -93,7 +93,6 @@ def base(c, **extra):
     card = {
         "id": slugify(c["title"]),
         "title": c["title"],
-        "nrdbCode": c["code"],
         "type": c["type_code"],
         "side": "runner" if c["side_code"] == "runner" else "corp",
         "unsupported": [],

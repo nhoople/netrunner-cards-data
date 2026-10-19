@@ -1,8 +1,8 @@
 {
   "id": "cordyceps",
+  "deckLimit": 3,
   "title": "Cordyceps",
   "wave": "uprising",
-  "nrdbCode": "26086",
   "type": "program",
   "side": "runner",
   "faction": "shaper",

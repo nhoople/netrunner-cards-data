@@ -1,7 +1,7 @@
 {
   "id": "next-opal",
+  "deckLimit": 3,
   "title": "NEXT Opal",
-  "nrdbCode": "12050",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

@@ -1,8 +1,8 @@
 {
   "id": "n-pot",
+  "deckLimit": 3,
   "title": "N-Pot",
   "wave": "elevation",
-  "nrdbCode": "35064",
   "type": "ice",
   "side": "corp",
   "faction": "nbn",

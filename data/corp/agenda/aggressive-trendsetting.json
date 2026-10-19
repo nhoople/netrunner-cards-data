@@ -1,8 +1,8 @@
 {
   "id": "aggressive-trendsetting",
+  "deckLimit": 3,
   "title": "Aggressive Trendsetting",
   "wave": "elevation",
-  "nrdbCode": "35037",
   "type": "agenda",
   "side": "corp",
   "faction": "haas-bioroid",

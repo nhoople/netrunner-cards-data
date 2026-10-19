@@ -1,8 +1,8 @@
 {
   "id": "false-echo",
+  "deckLimit": 3,
   "title": "False Echo",
   "wave": "opening-moves",
-  "nrdbCode": "04007",
   "type": "program",
   "side": "runner",
   "unsupported": [],

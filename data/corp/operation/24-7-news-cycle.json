@@ -1,7 +1,7 @@
 {
   "id": "24-7-news-cycle",
+  "deckLimit": 3,
   "title": "24/7 News Cycle",
-  "nrdbCode": "09019",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

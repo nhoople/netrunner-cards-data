@@ -1,8 +1,8 @@
 {
   "id": "swift",
+  "deckLimit": 3,
   "title": "Swift",
   "wave": "uprising",
-  "nrdbCode": "26078",
   "type": "hardware",
   "side": "runner",
   "faction": "criminal",

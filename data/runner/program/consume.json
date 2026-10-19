@@ -1,7 +1,7 @@
 {
   "id": "consume",
+  "deckLimit": 3,
   "title": "Consume",
-  "nrdbCode": "21068",
   "type": "program",
   "side": "runner",
   "unsupported": [],

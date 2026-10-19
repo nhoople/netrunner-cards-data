@@ -1,7 +1,7 @@
 {
   "id": "labyrinthine-servers",
+  "deckLimit": 3,
   "title": "Labyrinthine Servers",
-  "nrdbCode": "06063",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

@@ -1,7 +1,7 @@
 {
   "id": "the-supplier",
+  "deckLimit": 3,
   "title": "The Supplier",
-  "nrdbCode": "06056",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

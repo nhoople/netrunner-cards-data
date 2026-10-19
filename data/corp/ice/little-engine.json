@@ -1,7 +1,7 @@
 {
   "id": "little-engine",
+  "deckLimit": 3,
   "title": "Little Engine",
-  "nrdbCode": "08057",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

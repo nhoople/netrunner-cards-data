@@ -1,8 +1,8 @@
 {
   "id": "lightning-laboratory",
+  "deckLimit": 3,
   "title": "Lightning Laboratory",
   "wave": "rebellion-without-rehearsal",
-  "nrdbCode": "34097",
   "type": "agenda",
   "side": "corp",
   "faction": "haas-bioroid",

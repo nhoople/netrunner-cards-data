@@ -1,8 +1,8 @@
 {
   "id": "ballista",
+  "deckLimit": 3,
   "title": "Ballista",
   "wave": "system-gateway",
-  "nrdbCode": "30062",
   "type": "ice",
   "side": "corp",
   "faction": "weyland-consortium",

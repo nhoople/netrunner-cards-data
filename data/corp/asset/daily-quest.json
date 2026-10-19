@@ -1,8 +1,8 @@
 {
   "id": "daily-quest",
+  "deckLimit": 3,
   "title": "Daily Quest",
   "wave": "downfall",
-  "nrdbCode": "26048",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

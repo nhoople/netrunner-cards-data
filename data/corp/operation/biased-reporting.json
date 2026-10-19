@@ -1,7 +1,7 @@
 {
   "id": "biased-reporting",
+  "deckLimit": 3,
   "title": "Biased Reporting",
-  "nrdbCode": "12096",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

@@ -1,8 +1,8 @@
 {
   "id": "azef-protocol",
+  "deckLimit": 3,
   "title": "Azef Protocol",
   "wave": "midnight-sun",
-  "nrdbCode": "33058",
   "type": "agenda",
   "side": "corp",
   "faction": "weyland-consortium",

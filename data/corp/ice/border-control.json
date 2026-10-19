@@ -1,7 +1,7 @@
 {
   "id": "border-control",
+  "deckLimit": 3,
   "title": "Border Control",
-  "nrdbCode": "23054",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

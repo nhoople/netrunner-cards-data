@@ -1,7 +1,7 @@
 {
   "id": "feint",
+  "deckLimit": 3,
   "title": "Feint",
-  "nrdbCode": "05034",
   "type": "event",
   "side": "runner",
   "unsupported": [],

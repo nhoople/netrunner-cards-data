@@ -1,7 +1,7 @@
 {
   "id": "rigged-results",
+  "deckLimit": 3,
   "title": "Rigged Results",
-  "nrdbCode": "10102",
   "type": "event",
   "side": "runner",
   "unsupported": [],

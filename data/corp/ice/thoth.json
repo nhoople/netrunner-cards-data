@@ -1,7 +1,7 @@
 {
   "id": "thoth",
+  "deckLimit": 3,
   "title": "Thoth",
-  "nrdbCode": "11095",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

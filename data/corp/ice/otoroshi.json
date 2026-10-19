@@ -1,8 +1,8 @@
 {
   "id": "otoroshi",
+  "deckLimit": 3,
   "title": "Otoroshi",
   "wave": "reign-and-reverie",
-  "nrdbCode": "22038",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

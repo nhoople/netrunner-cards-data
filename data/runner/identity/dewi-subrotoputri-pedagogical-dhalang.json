@@ -1,8 +1,8 @@
 {
   "id": "dewi-subrotoputri-pedagogical-dhalang",
+  "deckLimit": 1,
   "title": "Dewi Subrotoputri: Pedagogical Dhalang",
   "wave": "elevation",
-  "nrdbCode": "35023",
   "type": "identity",
   "side": "runner",
   "faction": "shaper",

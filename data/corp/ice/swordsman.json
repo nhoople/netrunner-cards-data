@@ -1,8 +1,8 @@
 {
   "id": "swordsman",
+  "deckLimit": 3,
   "title": "Swordsman",
   "wave": "system-update-2021",
-  "nrdbCode": "31056",
   "type": "ice",
   "side": "corp",
   "faction": "jinteki",

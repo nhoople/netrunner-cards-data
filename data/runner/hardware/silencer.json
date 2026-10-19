@@ -1,7 +1,7 @@
 {
   "id": "silencer",
+  "deckLimit": 3,
   "title": "Silencer",
-  "nrdbCode": "04104",
   "type": "hardware",
   "side": "runner",
   "unsupported": [],

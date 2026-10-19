@@ -1,7 +1,7 @@
 {
   "id": "mass-commercialization",
+  "deckLimit": 3,
   "title": "Mass Commercialization",
-  "nrdbCode": "12080",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

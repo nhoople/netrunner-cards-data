@@ -1,8 +1,8 @@
 {
   "id": "formicary",
+  "deckLimit": 3,
   "title": "Formicary",
   "wave": "reign-and-reverie",
-  "nrdbCode": "22054",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

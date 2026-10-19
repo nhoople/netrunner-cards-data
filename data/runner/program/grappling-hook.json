@@ -1,7 +1,7 @@
 {
   "id": "grappling-hook",
+  "deckLimit": 3,
   "title": "Grappling Hook",
-  "nrdbCode": "05045",
   "type": "program",
   "side": "runner",
   "unsupported": [],

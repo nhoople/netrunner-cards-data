@@ -9,6 +9,8 @@ from __future__ import annotations
 
 
 def apply_printed_numbers(card: dict, c: dict) -> None:
+    if c.get("deck_limit") is not None:
+        card["deckLimit"] = c["deck_limit"]
     if c.get("type_code") == "identity":
         if c.get("side_code") == "runner" and c.get("base_link") is not None:
             card["link"] = c["base_link"]

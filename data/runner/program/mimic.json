@@ -1,8 +1,8 @@
 {
   "id": "mimic",
+  "deckLimit": 3,
   "title": "Mimic",
   "wave": "system-update-2021",
-  "nrdbCode": "31008",
   "type": "program",
   "side": "runner",
   "faction": "anarch",

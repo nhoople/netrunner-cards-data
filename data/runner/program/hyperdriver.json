@@ -1,7 +1,7 @@
 {
   "id": "hyperdriver",
+  "deckLimit": 3,
   "title": "Hyperdriver",
-  "nrdbCode": "08070",
   "type": "program",
   "side": "runner",
   "unsupported": [],

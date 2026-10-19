@@ -1,7 +1,7 @@
 {
   "id": "mass-driver",
+  "deckLimit": 3,
   "title": "Mass-Driver",
-  "nrdbCode": "12067",
   "type": "program",
   "side": "runner",
   "unsupported": [],

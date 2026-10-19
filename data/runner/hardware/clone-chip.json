@@ -1,8 +1,8 @@
 {
   "id": "clone-chip",
+  "deckLimit": 3,
   "title": "Clone Chip",
   "wave": "creation-and-control",
-  "nrdbCode": "03038",
   "type": "hardware",
   "side": "runner",
   "unsupported": [],

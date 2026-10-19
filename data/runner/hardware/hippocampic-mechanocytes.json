@@ -1,8 +1,8 @@
 {
   "id": "hippocampic-mechanocytes",
+  "deckLimit": 3,
   "title": "Hippocampic Mechanocytes",
   "wave": "parhelion",
-  "nrdbCode": "33085",
   "type": "hardware",
   "side": "runner",
   "faction": "shaper",

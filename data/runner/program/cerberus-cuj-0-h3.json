@@ -1,7 +1,7 @@
 {
   "id": "cerberus-cuj-0-h3",
+  "deckLimit": 3,
   "title": "Cerberus \"Cuj.0\" H3",
-  "nrdbCode": "06094",
   "type": "program",
   "side": "runner",
   "unsupported": [],

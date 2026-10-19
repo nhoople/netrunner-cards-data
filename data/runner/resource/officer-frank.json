@@ -1,7 +1,7 @@
 {
   "id": "officer-frank",
+  "deckLimit": 3,
   "title": "Officer Frank",
-  "nrdbCode": "13024",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

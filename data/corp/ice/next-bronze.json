@@ -1,8 +1,8 @@
 {
   "id": "next-bronze",
+  "deckLimit": 3,
   "title": "NEXT Bronze",
   "wave": "opening-moves",
-  "nrdbCode": "04011",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

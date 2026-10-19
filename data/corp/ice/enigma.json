@@ -1,11 +1,11 @@
 {
   "id": "enigma",
+  "deckLimit": 3,
   "title": "Enigma",
   "type": "ice",
   "side": "corp",
   "faction": "neutral-corp",
   "wave": "system-update-2021",
-  "nrdbCode": "01111",
   "rezCost": 3,
   "strength": 2,
   "subtypes": [

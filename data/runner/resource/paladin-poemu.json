@@ -1,8 +1,8 @@
 {
   "id": "paladin-poemu",
+  "deckLimit": 3,
   "title": "Paladin Poemu",
   "wave": "uprising",
-  "nrdbCode": "26073",
   "type": "resource",
   "side": "runner",
   "faction": "anarch",

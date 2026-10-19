@@ -1,8 +1,8 @@
 {
   "id": "contract-killer",
+  "deckLimit": 3,
   "title": "Contract Killer",
   "wave": "system-core-2019",
-  "nrdbCode": "25127",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

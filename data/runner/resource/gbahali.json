@@ -1,7 +1,7 @@
 {
   "id": "gbahali",
+  "deckLimit": 3,
   "title": "Gbahali",
-  "nrdbCode": "21047",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

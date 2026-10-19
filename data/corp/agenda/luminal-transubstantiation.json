@@ -1,8 +1,8 @@
 {
   "id": "luminal-transubstantiation",
+  "deckLimit": 1,
   "title": "Luminal Transubstantiation",
   "wave": "system-gateway",
-  "nrdbCode": "30036",
   "type": "agenda",
   "side": "corp",
   "faction": "haas-bioroid",

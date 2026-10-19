@@ -1,8 +1,8 @@
 {
   "id": "ayla-bios-rahim-simulant-specialist",
+  "deckLimit": 1,
   "title": "Ayla “Bios” Rahim: Simulant Specialist",
   "wave": "system-update-2021",
-  "nrdbCode": "31025",
   "type": "identity",
   "side": "runner",
   "faction": "shaper",

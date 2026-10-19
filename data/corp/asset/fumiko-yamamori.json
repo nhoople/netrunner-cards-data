@@ -1,7 +1,7 @@
 {
   "id": "fumiko-yamamori",
+  "deckLimit": 3,
   "title": "Fumiko Yamamori",
-  "nrdbCode": "11073",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

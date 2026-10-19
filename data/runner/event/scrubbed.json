@@ -1,7 +1,7 @@
 {
   "id": "scrubbed",
+  "deckLimit": 3,
   "title": "Scrubbed",
-  "nrdbCode": "06034",
   "type": "event",
   "side": "runner",
   "unsupported": [],

@@ -1,7 +1,7 @@
 {
   "id": "independent-thinking",
+  "deckLimit": 3,
   "title": "Independent Thinking",
-  "nrdbCode": "09038",
   "type": "event",
   "side": "runner",
   "unsupported": [],

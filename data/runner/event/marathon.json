@@ -1,7 +1,7 @@
 {
   "id": "marathon",
+  "deckLimit": 3,
   "title": "Marathon",
-  "nrdbCode": "21046",
   "type": "event",
   "side": "runner",
   "unsupported": [],

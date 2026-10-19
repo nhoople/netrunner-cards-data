@@ -1,7 +1,7 @@
 {
   "id": "standard-procedure",
+  "deckLimit": 3,
   "title": "Standard Procedure",
-  "nrdbCode": "21097",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

@@ -1,8 +1,8 @@
 {
   "id": "interns",
+  "deckLimit": 3,
   "title": "Interns",
   "wave": "mala-tempora",
-  "nrdbCode": "04060",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

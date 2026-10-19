@@ -1,7 +1,7 @@
 {
   "id": "embolus",
+  "deckLimit": 3,
   "title": "Embolus",
-  "nrdbCode": "23011",
   "type": "upgrade",
   "side": "corp",
   "unsupported": [],

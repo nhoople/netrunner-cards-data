@@ -1,8 +1,8 @@
 {
   "id": "mercury-chrome-libertador",
+  "deckLimit": 1,
   "title": "Mercury: Chrome Libertador",
   "wave": "the-automata-initiative",
-  "nrdbCode": "34010",
   "type": "identity",
   "side": "runner",
   "faction": "criminal",

@@ -1,8 +1,8 @@
 {
   "id": "power-shutdown",
+  "deckLimit": 3,
   "title": "Power Shutdown",
   "wave": "mala-tempora",
-  "nrdbCode": "04058",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

@@ -1,8 +1,8 @@
 {
   "id": "jackson-howard",
+  "deckLimit": 3,
   "title": "Jackson Howard",
   "wave": "opening-moves",
-  "nrdbCode": "04015",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

@@ -1,7 +1,7 @@
 {
   "id": "analog-dreamers",
+  "deckLimit": 3,
   "title": "Analog Dreamers",
-  "nrdbCode": "08048",
   "type": "program",
   "side": "runner",
   "unsupported": [],

@@ -1,8 +1,8 @@
 {
   "id": "devil-charm",
+  "deckLimit": 3,
   "title": "Devil Charm",
   "wave": "uprising",
-  "nrdbCode": "26068",
   "type": "hardware",
   "side": "runner",
   "faction": "anarch",

@@ -1,8 +1,8 @@
 {
   "id": "woman-in-the-red-dress",
+  "deckLimit": 3,
   "title": "Woman in the Red Dress",
   "wave": "mala-tempora",
-  "nrdbCode": "04048",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

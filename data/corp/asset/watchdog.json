@@ -1,7 +1,7 @@
 {
   "id": "watchdog",
+  "deckLimit": 3,
   "title": "Watchdog",
-  "nrdbCode": "11015",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

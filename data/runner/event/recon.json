@@ -1,8 +1,8 @@
 {
   "id": "recon",
+  "deckLimit": 3,
   "title": "Recon",
   "wave": "stalwart",
-  "nrdbCode": "04024",
   "type": "event",
   "side": "runner",
   "unsupported": [],

@@ -1,8 +1,8 @@
 {
   "id": "next-activation-command",
+  "deckLimit": 3,
   "title": "NEXT Activation Command",
   "wave": "uprising",
-  "nrdbCode": "26103",
   "type": "operation",
   "side": "corp",
   "faction": "haas-bioroid",

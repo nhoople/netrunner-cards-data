@@ -1,8 +1,8 @@
 {
   "id": "precognition",
+  "deckLimit": 3,
   "title": "Precognition",
   "wave": "core",
-  "nrdbCode": "01073",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

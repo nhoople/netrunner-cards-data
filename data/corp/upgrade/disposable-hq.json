@@ -1,7 +1,7 @@
 {
   "id": "disposable-hq",
+  "deckLimit": 3,
   "title": "Disposable HQ",
-  "nrdbCode": "10034",
   "type": "upgrade",
   "side": "corp",
   "unsupported": [],

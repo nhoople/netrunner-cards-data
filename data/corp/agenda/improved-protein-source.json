@@ -1,7 +1,7 @@
 {
   "id": "improved-protein-source",
+  "deckLimit": 3,
   "title": "Improved Protein Source",
-  "nrdbCode": "10105",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

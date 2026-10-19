@@ -1,8 +1,8 @@
 {
   "id": "grubber",
+  "deckLimit": 3,
   "title": "Grubber",
   "wave": "vantage-point",
-  "nrdbCode": "36050",
   "type": "ice",
   "side": "corp",
   "faction": "nbn",

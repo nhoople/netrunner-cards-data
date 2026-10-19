@@ -1,7 +1,7 @@
 {
   "id": "archives-interface",
+  "deckLimit": 3,
   "title": "Archives Interface",
-  "nrdbCode": "07044",
   "type": "hardware",
   "side": "runner",
   "unsupported": [],

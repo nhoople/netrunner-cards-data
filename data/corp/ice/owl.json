@@ -1,7 +1,7 @@
 {
   "id": "owl",
+  "deckLimit": 3,
   "title": "Owl",
-  "nrdbCode": "12060",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

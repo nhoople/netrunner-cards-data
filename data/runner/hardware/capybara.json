@@ -1,8 +1,8 @@
 {
   "id": "capybara",
+  "deckLimit": 3,
   "title": "Capybara",
   "wave": "the-automata-initiative",
-  "nrdbCode": "34013",
   "type": "hardware",
   "side": "runner",
   "faction": "criminal",

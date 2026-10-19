@@ -1,8 +1,8 @@
 {
   "id": "gamedragon-pro",
+  "deckLimit": 3,
   "title": "GAMEDRAGON™ Pro",
   "wave": "elevation",
-  "nrdbCode": "35027",
   "type": "hardware",
   "side": "runner",
   "faction": "shaper",

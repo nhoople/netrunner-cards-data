@@ -1,7 +1,7 @@
 {
   "id": "ark-lockdown",
+  "deckLimit": 3,
   "title": "Ark Lockdown",
-  "nrdbCode": "11050",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

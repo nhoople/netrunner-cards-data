@@ -1,7 +1,7 @@
 {
   "id": "underway-renovation",
+  "deckLimit": 3,
   "title": "Underway Renovation",
-  "nrdbCode": "08077",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

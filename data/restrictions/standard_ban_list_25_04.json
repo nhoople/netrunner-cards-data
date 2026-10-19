@@ -1,0 +1,31 @@
+{
+  "id": "standard_ban_list_25_04",
+  "name": "Standard Ban List 25.04",
+  "formatId": "standard",
+  "dateStart": "2025-04-24",
+  "banned": [
+    "bellona",
+    "bukhgalter",
+    "cayambe-grid",
+    "cleaver",
+    "creative-commission",
+    "cyberdex-sandbox",
+    "daily-casts",
+    "dr-vientiane-keeling",
+    "drago-ivanov",
+    "dreamnet",
+    "endurance",
+    "engram-flush",
+    "gold-farmer",
+    "k2cp-turbine",
+    "luminal-transubstantiation",
+    "moshing",
+    "nanisivik-grid",
+    "nbn-reality-plus",
+    "project-vacheron",
+    "rezeki",
+    "tributary",
+    "trick-shot",
+    "world-tree"
+  ]
+}

@@ -1,7 +1,7 @@
 {
   "id": "ashigaru",
+  "deckLimit": 3,
   "title": "Ashigaru",
-  "nrdbCode": "06064",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

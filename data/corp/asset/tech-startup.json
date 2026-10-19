@@ -1,7 +1,7 @@
 {
   "id": "tech-startup",
+  "deckLimit": 3,
   "title": "Tech Startup",
-  "nrdbCode": "08020",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

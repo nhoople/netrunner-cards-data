@@ -1,7 +1,7 @@
 {
   "id": "enhanced-vision",
+  "deckLimit": 3,
   "title": "Enhanced Vision",
-  "nrdbCode": "08005",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

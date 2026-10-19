@@ -1,7 +1,7 @@
 {
   "id": "viral-weaponization",
+  "deckLimit": 3,
   "title": "Viral Weaponization",
-  "nrdbCode": "21094",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

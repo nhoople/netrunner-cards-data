@@ -1,8 +1,8 @@
 {
   "id": "mayfly",
+  "deckLimit": 3,
   "title": "Mayfly",
   "wave": "system-gateway",
-  "nrdbCode": "30032",
   "type": "program",
   "side": "runner",
   "faction": "neutral-runner",

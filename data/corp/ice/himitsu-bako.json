@@ -1,8 +1,8 @@
 {
   "id": "himitsu-bako",
+  "deckLimit": 3,
   "title": "Himitsu-Bako",
   "wave": "system-core-2019",
-  "nrdbCode": "25093",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

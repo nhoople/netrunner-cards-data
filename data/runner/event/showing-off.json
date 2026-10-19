@@ -1,7 +1,7 @@
 {
   "id": "showing-off",
+  "deckLimit": 3,
   "title": "Showing Off",
-  "nrdbCode": "07034",
   "type": "event",
   "side": "runner",
   "unsupported": [],

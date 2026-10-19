@@ -1,8 +1,8 @@
 {
   "id": "kingmaking",
+  "deckLimit": 3,
   "title": "Kingmaking",
   "wave": "rebellion-without-rehearsal",
-  "nrdbCode": "34113",
   "type": "agenda",
   "side": "corp",
   "faction": "nbn",

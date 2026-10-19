@@ -1,7 +1,7 @@
 {
   "id": "heritage-committee",
+  "deckLimit": 3,
   "title": "Heritage Committee",
-  "nrdbCode": "10013",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

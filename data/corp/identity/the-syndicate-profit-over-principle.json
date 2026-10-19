@@ -1,8 +1,8 @@
 {
   "id": "the-syndicate-profit-over-principle",
+  "deckLimit": 1,
   "title": "The Syndicate: Profit over Principle",
   "wave": "system-gateway",
-  "nrdbCode": "30077",
   "type": "identity",
   "side": "corp",
   "faction": "neutral-corp",

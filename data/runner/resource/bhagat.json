@@ -1,7 +1,7 @@
 {
   "id": "bhagat",
+  "deckLimit": 3,
   "title": "Bhagat",
-  "nrdbCode": "10098",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

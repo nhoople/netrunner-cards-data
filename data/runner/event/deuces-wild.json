@@ -1,7 +1,7 @@
 {
   "id": "deuces-wild",
+  "deckLimit": 3,
   "title": "Deuces Wild",
-  "nrdbCode": "11008",
   "type": "event",
   "side": "runner",
   "unsupported": [],

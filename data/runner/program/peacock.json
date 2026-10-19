@@ -1,8 +1,8 @@
 {
   "id": "peacock",
+  "deckLimit": 3,
   "title": "Peacock",
   "wave": "what-lies-ahead",
-  "nrdbCode": "02006",
   "type": "program",
   "side": "runner",
   "unsupported": [],

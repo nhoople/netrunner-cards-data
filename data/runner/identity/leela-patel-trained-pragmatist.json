@@ -1,8 +1,8 @@
 {
   "id": "leela-patel-trained-pragmatist",
+  "deckLimit": 1,
   "title": "Leela Patel: Trained Pragmatist",
   "wave": "system-core-2019",
-  "nrdbCode": "25021",
   "type": "identity",
   "side": "runner",
   "unsupported": [],

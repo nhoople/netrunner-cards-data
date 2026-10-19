@@ -1,8 +1,8 @@
 {
   "id": "umbrella",
+  "deckLimit": 3,
   "title": "Umbrella",
   "wave": "the-automata-initiative",
-  "nrdbCode": "34027",
   "type": "program",
   "side": "runner",
   "faction": "shaper",

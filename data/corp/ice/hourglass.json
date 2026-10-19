@@ -1,8 +1,8 @@
 {
   "id": "hourglass",
+  "deckLimit": 3,
   "title": "Hourglass",
   "wave": "a-study-in-static",
-  "nrdbCode": "02071",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

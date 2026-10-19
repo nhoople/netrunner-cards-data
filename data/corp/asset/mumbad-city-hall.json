@@ -1,7 +1,7 @@
 {
   "id": "mumbad-city-hall",
+  "deckLimit": 3,
   "title": "Mumbad City Hall",
-  "nrdbCode": "10055",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

@@ -1,7 +1,7 @@
 {
   "id": "brain-chip",
+  "deckLimit": 3,
   "title": "Brain Chip",
-  "nrdbCode": "09039",
   "type": "hardware",
   "side": "runner",
   "unsupported": [],

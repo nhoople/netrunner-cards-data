@@ -1,8 +1,8 @@
 {
   "id": "botulus",
+  "deckLimit": 3,
   "title": "Botulus",
   "wave": "system-gateway",
-  "nrdbCode": "30004",
   "type": "program",
   "side": "runner",
   "faction": "anarch",

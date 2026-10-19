@@ -1,7 +1,7 @@
 {
   "id": "beach-party",
+  "deckLimit": 3,
   "title": "Beach Party",
-  "nrdbCode": "08031",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

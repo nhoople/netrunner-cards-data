@@ -1,8 +1,8 @@
 {
   "id": "flux-capacitor",
+  "deckLimit": 3,
   "title": "Flux Capacitor",
   "wave": "parhelion",
-  "nrdbCode": "33087",
   "type": "program",
   "side": "runner",
   "faction": "shaper",

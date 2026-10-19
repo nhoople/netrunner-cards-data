@@ -1,8 +1,8 @@
 {
   "id": "arella-salvatore",
+  "deckLimit": 3,
   "title": "Arella Salvatore",
   "wave": "reign-and-reverie",
-  "nrdbCode": "22049",
   "type": "upgrade",
   "side": "corp",
   "unsupported": [],

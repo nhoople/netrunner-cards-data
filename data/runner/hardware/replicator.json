@@ -1,8 +1,8 @@
 {
   "id": "replicator",
+  "deckLimit": 3,
   "title": "Replicator",
   "wave": "humanitys-shadow",
-  "nrdbCode": "02088",
   "type": "hardware",
   "side": "runner",
   "unsupported": [],

@@ -1,7 +1,7 @@
 {
   "id": "asteroid-belt",
+  "deckLimit": 3,
   "title": "Asteroid Belt",
-  "nrdbCode": "07012",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

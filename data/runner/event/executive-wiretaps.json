@@ -1,7 +1,7 @@
 {
   "id": "executive-wiretaps",
+  "deckLimit": 3,
   "title": "Executive Wiretaps",
-  "nrdbCode": "04084",
   "type": "event",
   "side": "runner",
   "unsupported": [],

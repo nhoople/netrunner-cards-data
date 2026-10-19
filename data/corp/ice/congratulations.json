@@ -1,8 +1,8 @@
 {
   "id": "congratulations",
+  "deckLimit": 3,
   "title": "Congratulations!",
   "wave": "downfall",
-  "nrdbCode": "26050",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

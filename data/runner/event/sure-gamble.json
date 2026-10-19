@@ -1,11 +1,11 @@
 {
   "id": "sure-gamble",
+  "deckLimit": 3,
   "title": "Sure Gamble",
   "type": "event",
   "side": "runner",
   "faction": "neutral-runner",
   "wave": "system-gateway",
-  "nrdbCode": "30030",
   "playCost": 5,
   "unsupported": [],
   "influence": 0,

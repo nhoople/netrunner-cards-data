@@ -1,8 +1,8 @@
 {
   "id": "tocsin",
+  "deckLimit": 3,
   "title": "Tocsin",
   "wave": "vantage-point",
-  "nrdbCode": "36060",
   "type": "ice",
   "side": "corp",
   "faction": "weyland-consortium",

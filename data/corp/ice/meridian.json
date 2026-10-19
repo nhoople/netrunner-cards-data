@@ -1,8 +1,8 @@
 {
   "id": "meridian",
+  "deckLimit": 3,
   "title": "Meridian",
   "wave": "reign-and-reverie",
-  "nrdbCode": "22028",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

@@ -1,8 +1,8 @@
 {
   "id": "khusyuk",
+  "deckLimit": 3,
   "title": "Khusyuk",
   "wave": "downfall",
-  "nrdbCode": "26021",
   "type": "event",
   "side": "runner",
   "unsupported": [],

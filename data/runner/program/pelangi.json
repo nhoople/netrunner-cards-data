@@ -1,8 +1,8 @@
 {
   "id": "pelangi",
+  "deckLimit": 3,
   "title": "Pelangi",
   "wave": "downfall",
-  "nrdbCode": "26025",
   "type": "program",
   "side": "runner",
   "unsupported": [],

@@ -1,8 +1,8 @@
 {
   "id": "frame-job",
+  "deckLimit": 3,
   "title": "Frame Job",
   "wave": "opening-moves",
-  "nrdbCode": "04001",
   "type": "event",
   "side": "runner",
   "unsupported": [],

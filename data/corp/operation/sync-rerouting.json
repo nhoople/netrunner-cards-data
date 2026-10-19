@@ -1,8 +1,8 @@
 {
   "id": "sync-rerouting",
+  "deckLimit": 3,
   "title": "SYNC Rerouting",
   "wave": "uprising",
-  "nrdbCode": "26118",
   "type": "operation",
   "side": "corp",
   "faction": "nbn",

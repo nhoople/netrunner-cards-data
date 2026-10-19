@@ -1,7 +1,7 @@
 {
   "id": "sweeps-week",
+  "deckLimit": 3,
   "title": "Sweeps Week",
-  "nrdbCode": "04076",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

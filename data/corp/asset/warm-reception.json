@@ -1,8 +1,8 @@
 {
   "id": "warm-reception",
+  "deckLimit": 3,
   "title": "Warm Reception",
   "wave": "rebellion-without-rehearsal",
-  "nrdbCode": "34098",
   "type": "asset",
   "side": "corp",
   "faction": "haas-bioroid",

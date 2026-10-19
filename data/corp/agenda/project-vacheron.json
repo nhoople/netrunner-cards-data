@@ -1,8 +1,8 @@
 {
   "id": "project-vacheron",
+  "deckLimit": 3,
   "title": "Project Vacheron",
   "wave": "uprising",
-  "nrdbCode": "26097",
   "type": "agenda",
   "side": "corp",
   "faction": "haas-bioroid",

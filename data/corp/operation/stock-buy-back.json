@@ -1,7 +1,7 @@
 {
   "id": "stock-buy-back",
+  "deckLimit": 3,
   "title": "Stock Buy-Back",
-  "nrdbCode": "11019",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

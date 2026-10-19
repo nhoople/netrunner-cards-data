@@ -1,8 +1,8 @@
 {
   "id": "darwin",
+  "deckLimit": 3,
   "title": "Darwin",
   "wave": "future-proof",
-  "nrdbCode": "02102",
   "type": "program",
   "side": "runner",
   "unsupported": [],

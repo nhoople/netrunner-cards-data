@@ -1,8 +1,8 @@
 {
   "id": "ob-superheavy-logistics-extract-export-excel",
+  "deckLimit": 1,
   "title": "Ob Superheavy Logistics: Extract. Export. Excel.",
   "wave": "midnight-sun",
-  "nrdbCode": "33057",
   "type": "identity",
   "side": "corp",
   "faction": "weyland-consortium",

@@ -1,0 +1,5 @@
+{
+  "cardId": "bank-job",
+  "text": "When you install this resource, load 8[credit] on it. When it is empty, trash it.\nWhenever you make a successful run on a remote server, instead of breaching that server, you may take any number of credits from this resource.",
+  "strippedText": "When you install this resource, load 8 credits on it. When it is empty, trash it. Whenever you make a successful run on a remote server, instead of breaching that server, you may take any number of credits from this resource."
+}

@@ -1,8 +1,8 @@
 {
   "id": "mandatory-upgrades",
+  "deckLimit": 3,
   "title": "Mandatory Upgrades",
   "wave": "what-lies-ahead",
-  "nrdbCode": "02011",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

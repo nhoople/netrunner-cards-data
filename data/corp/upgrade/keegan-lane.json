@@ -1,7 +1,7 @@
 {
   "id": "keegan-lane",
+  "deckLimit": 3,
   "title": "Keegan Lane",
-  "nrdbCode": "09024",
   "type": "upgrade",
   "side": "corp",
   "unsupported": [],

@@ -1,7 +1,7 @@
 {
   "id": "free-lunch",
+  "deckLimit": 3,
   "title": "Free Lunch",
-  "nrdbCode": "12035",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

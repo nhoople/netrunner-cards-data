@@ -1,0 +1,11 @@
+{
+  "cardId": "artificial-cryptocrash",
+  "rulings": [
+    {
+      "dateUpdate": "2022-10-22",
+      "rulesTeamVerified": true,
+      "question": "What happens if the Corp scores [Artificial Cryptocrash](https://netrunnerdb.com/en/card/33049) when the Runner has fewer than 7<span class=\"icon icon-credit\">?",
+      "answer": "The Runner loses all of their credits."
+    }
+  ]
+}

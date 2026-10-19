@@ -1,8 +1,8 @@
 {
   "id": "sprint",
+  "deckLimit": 3,
   "title": "Sprint",
   "wave": "system-gateway",
-  "nrdbCode": "30041",
   "type": "operation",
   "side": "corp",
   "faction": "haas-bioroid",

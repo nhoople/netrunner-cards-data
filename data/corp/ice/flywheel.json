@@ -1,8 +1,8 @@
 {
   "id": "flywheel",
+  "deckLimit": 3,
   "title": "Flywheel",
   "wave": "vantage-point",
-  "nrdbCode": "36059",
   "type": "ice",
   "side": "corp",
   "faction": "weyland-consortium",

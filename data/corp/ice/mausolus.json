@@ -1,7 +1,7 @@
 {
   "id": "mausolus",
+  "deckLimit": 3,
   "title": "Mausolus",
-  "nrdbCode": "11097",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

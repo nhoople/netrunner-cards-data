@@ -1,7 +1,7 @@
 {
   "id": "kasi-string",
+  "deckLimit": 3,
   "title": "Kasi String",
-  "nrdbCode": "21111",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

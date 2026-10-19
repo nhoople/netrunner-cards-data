@@ -1,7 +1,7 @@
 {
   "id": "donut-taganes",
+  "deckLimit": 3,
   "title": "Donut Taganes",
-  "nrdbCode": "05055",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

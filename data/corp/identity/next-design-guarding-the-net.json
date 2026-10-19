@@ -1,8 +1,8 @@
 {
   "id": "next-design-guarding-the-net",
+  "deckLimit": 1,
   "title": "NEXT Design: Guarding the Net",
   "wave": "creation-and-control",
-  "nrdbCode": "03003",
   "type": "identity",
   "side": "corp",
   "unsupported": [],

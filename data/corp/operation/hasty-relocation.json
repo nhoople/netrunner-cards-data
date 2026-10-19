@@ -1,7 +1,7 @@
 {
   "id": "hasty-relocation",
+  "deckLimit": 3,
   "title": "Hasty Relocation",
-  "nrdbCode": "11074",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

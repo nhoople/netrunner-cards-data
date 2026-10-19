@@ -1,8 +1,8 @@
 {
   "id": "clearinghouse",
+  "deckLimit": 3,
   "title": "Clearinghouse",
   "wave": "system-gateway",
-  "nrdbCode": "30061",
   "type": "asset",
   "side": "corp",
   "faction": "weyland-consortium",

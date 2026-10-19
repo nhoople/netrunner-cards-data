@@ -1,8 +1,8 @@
 {
   "id": "lilypad",
+  "deckLimit": 3,
   "title": "LilyPAD",
   "wave": "the-automata-initiative",
-  "nrdbCode": "34023",
   "type": "hardware",
   "side": "runner",
   "faction": "shaper",

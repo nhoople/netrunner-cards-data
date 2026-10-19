@@ -1,7 +1,7 @@
 {
   "id": "reaver",
+  "deckLimit": 3,
   "title": "Reaver",
-  "nrdbCode": "11086",
   "type": "program",
   "side": "runner",
   "unsupported": [],

@@ -1,8 +1,8 @@
 {
   "id": "nbn-the-world-is-yours",
+  "deckLimit": 1,
   "title": "NBN: The World is Yours*",
   "wave": "future-proof",
-  "nrdbCode": "02114",
   "type": "identity",
   "side": "corp",
   "unsupported": [],

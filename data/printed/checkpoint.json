@@ -1,0 +1,5 @@
+{
+  "cardId": "checkpoint",
+  "text": "When you rez this ice, take 1 bad publicity.\n[subroutine] Trace[5]. If successful, do 3 meat damage when this run becomes successful.",
+  "strippedText": "When you rez this ice, take 1 bad publicity. Subroutine Trace[5]. If successful, do 3 meat damage when this run becomes successful."
+}

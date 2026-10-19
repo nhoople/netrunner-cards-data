@@ -1,8 +1,8 @@
 {
   "id": "key-performance-indicators",
+  "deckLimit": 3,
   "title": "Key Performance Indicators",
   "wave": "elevation",
-  "nrdbCode": "35077",
   "type": "operation",
   "side": "corp",
   "faction": "weyland-consortium",

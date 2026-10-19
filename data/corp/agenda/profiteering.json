@@ -1,8 +1,8 @@
 {
   "id": "profiteering",
+  "deckLimit": 3,
   "title": "Profiteering",
   "wave": "stalwart",
-  "nrdbCode": "04039",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

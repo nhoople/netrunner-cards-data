@@ -1,7 +1,7 @@
 {
   "id": "fairchild",
+  "deckLimit": 3,
   "title": "Fairchild",
-  "nrdbCode": "11089",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

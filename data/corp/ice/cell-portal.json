@@ -1,8 +1,8 @@
 {
   "id": "cell-portal",
+  "deckLimit": 3,
   "title": "Cell Portal",
   "wave": "core",
-  "nrdbCode": "01074",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

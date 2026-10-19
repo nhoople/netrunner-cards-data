@@ -1,7 +1,7 @@
 {
   "id": "lockdown",
+  "deckLimit": 3,
   "title": "Lockdown",
-  "nrdbCode": "08056",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

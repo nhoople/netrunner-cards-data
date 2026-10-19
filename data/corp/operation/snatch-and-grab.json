@@ -1,7 +1,7 @@
 {
   "id": "snatch-and-grab",
+  "deckLimit": 3,
   "title": "Snatch and Grab",
-  "nrdbCode": "06090",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

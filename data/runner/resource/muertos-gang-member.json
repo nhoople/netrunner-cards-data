@@ -1,7 +1,7 @@
 {
   "id": "muertos-gang-member",
+  "deckLimit": 3,
   "title": "Muertos Gang Member",
-  "nrdbCode": "08068",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

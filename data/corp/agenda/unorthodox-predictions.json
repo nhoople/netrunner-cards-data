@@ -1,8 +1,8 @@
 {
   "id": "unorthodox-predictions",
+  "deckLimit": 3,
   "title": "Unorthodox Predictions",
   "wave": "mala-tempora",
-  "nrdbCode": "04053",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

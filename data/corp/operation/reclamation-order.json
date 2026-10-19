@@ -1,7 +1,7 @@
 {
   "id": "reclamation-order",
+  "deckLimit": 3,
   "title": "Reclamation Order",
-  "nrdbCode": "04111",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

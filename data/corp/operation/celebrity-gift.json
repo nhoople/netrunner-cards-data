@@ -1,8 +1,8 @@
 {
   "id": "celebrity-gift",
+  "deckLimit": 3,
   "title": "Celebrity Gift",
   "wave": "system-update-2021",
-  "nrdbCode": "31057",
   "type": "operation",
   "side": "corp",
   "faction": "jinteki",

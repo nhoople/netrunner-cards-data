@@ -1,7 +1,7 @@
 {
   "id": "algo-trading",
+  "deckLimit": 3,
   "title": "Algo Trading",
-  "nrdbCode": "11029",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

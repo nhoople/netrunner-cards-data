@@ -1,8 +1,8 @@
 {
   "id": "tunnel-vision",
+  "deckLimit": 3,
   "title": "Tunnel Vision",
   "wave": "parhelion",
-  "nrdbCode": "33081",
   "type": "program",
   "side": "runner",
   "faction": "criminal",

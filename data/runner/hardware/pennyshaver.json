@@ -1,8 +1,8 @@
 {
   "id": "pennyshaver",
+  "deckLimit": 3,
   "title": "Pennyshaver",
   "wave": "system-gateway",
-  "nrdbCode": "30014",
   "type": "hardware",
   "side": "runner",
   "faction": "criminal",

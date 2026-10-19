@@ -1,8 +1,8 @@
 {
   "id": "closed-accounts",
+  "deckLimit": 3,
   "title": "Closed Accounts",
   "wave": "system-core-2019",
-  "nrdbCode": "25117",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

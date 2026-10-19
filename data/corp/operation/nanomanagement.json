@@ -1,8 +1,8 @@
 {
   "id": "nanomanagement",
+  "deckLimit": 3,
   "title": "Nanomanagement",
   "wave": "elevation",
-  "nrdbCode": "35043",
   "type": "operation",
   "side": "corp",
   "faction": "haas-bioroid",

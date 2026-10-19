@@ -1,7 +1,7 @@
 {
   "id": "multithreader",
+  "deckLimit": 3,
   "title": "Multithreader",
-  "nrdbCode": "09040",
   "type": "program",
   "side": "runner",
   "unsupported": [],

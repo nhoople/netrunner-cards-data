@@ -1,0 +1,21 @@
+{
+  "id": "napd_mwl_1_0",
+  "name": "NAPD MWL 1.0",
+  "formatId": "standard",
+  "dateStart": "2016-02-01",
+  "globalPenalty": {
+    "1": [
+      "architect",
+      "astroscript-pilot-program",
+      "cerberus-lady-h1",
+      "clone-chip",
+      "desperado",
+      "eli-1-0",
+      "napd-contract",
+      "parasite",
+      "prepaid-voicepad",
+      "sansan-city-grid",
+      "yog-0"
+    ]
+  }
+}

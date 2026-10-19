@@ -1,7 +1,7 @@
 {
   "id": "security-nexus",
+  "deckLimit": 3,
   "title": "Security Nexus",
-  "nrdbCode": "09047",
   "type": "hardware",
   "side": "runner",
   "unsupported": [],

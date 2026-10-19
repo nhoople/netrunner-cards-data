@@ -1,7 +1,7 @@
 {
   "id": "lucky-find",
+  "deckLimit": 3,
   "title": "Lucky Find",
-  "nrdbCode": "04109",
   "type": "event",
   "side": "runner",
   "unsupported": [],

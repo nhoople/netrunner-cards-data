@@ -1,7 +1,7 @@
 {
   "id": "lycan",
+  "deckLimit": 3,
   "title": "Lycan",
-  "nrdbCode": "06089",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

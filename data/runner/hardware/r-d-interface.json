@@ -1,8 +1,8 @@
 {
   "id": "r-d-interface",
+  "deckLimit": 3,
   "title": "R&D Interface",
   "wave": "system-core-2019",
-  "nrdbCode": "25050",
   "type": "hardware",
   "side": "runner",
   "unsupported": [],

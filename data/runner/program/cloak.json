@@ -1,8 +1,8 @@
 {
   "id": "cloak",
+  "deckLimit": 3,
   "title": "Cloak",
   "wave": "creation-and-control",
-  "nrdbCode": "03041",
   "type": "program",
   "side": "runner",
   "unsupported": [],

@@ -1,7 +1,7 @@
 {
   "id": "clone-suffrage-movement",
+  "deckLimit": 3,
   "title": "Clone Suffrage Movement",
-  "nrdbCode": "10049",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

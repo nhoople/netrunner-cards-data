@@ -1,8 +1,8 @@
 {
   "id": "sansan-city-grid",
+  "deckLimit": 3,
   "title": "SanSan City Grid",
   "wave": "system-update-2021",
-  "nrdbCode": "31069",
   "type": "upgrade",
   "side": "corp",
   "faction": "nbn",

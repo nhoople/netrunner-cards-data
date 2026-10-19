@@ -1,0 +1,5 @@
+{
+  "cardId": "turnpike",
+  "text": "When the Runner encounters this ice, they lose 1[credit].\n[subroutine] Trace[5]. If successful, give the Runner 1 tag.",
+  "strippedText": "When the Runner encounters this ice, they lose 1 credit. Subroutine Trace[5]. If successful, give the Runner 1 tag."
+}

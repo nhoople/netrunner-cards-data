@@ -1,7 +1,7 @@
 {
   "id": "mwanza-city-grid",
+  "deckLimit": 3,
   "title": "Mwanza City Grid",
-  "nrdbCode": "21096",
   "type": "upgrade",
   "side": "corp",
   "unsupported": [],

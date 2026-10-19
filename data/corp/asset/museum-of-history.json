@@ -1,7 +1,7 @@
 {
   "id": "museum-of-history",
+  "deckLimit": 3,
   "title": "Museum of History",
-  "nrdbCode": "10019",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

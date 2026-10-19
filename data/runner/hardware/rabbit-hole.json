@@ -1,8 +1,8 @@
 {
   "id": "rabbit-hole",
+  "deckLimit": 3,
   "title": "Rabbit Hole",
   "wave": "core",
-  "nrdbCode": "01039",
   "type": "hardware",
   "side": "runner",
   "unsupported": [],

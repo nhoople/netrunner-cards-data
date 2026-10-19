@@ -1,8 +1,8 @@
 {
   "id": "thule-subsea-safety-below",
+  "deckLimit": 1,
   "title": "Thule Subsea: Safety Below",
   "wave": "parhelion",
-  "nrdbCode": "33095",
   "type": "identity",
   "side": "corp",
   "faction": "haas-bioroid",

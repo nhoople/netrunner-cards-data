@@ -1,8 +1,8 @@
 {
   "id": "argus-crackdown",
+  "deckLimit": 3,
   "title": "Argus Crackdown",
   "wave": "uprising",
-  "nrdbCode": "26126",
   "type": "operation",
   "side": "corp",
   "faction": "weyland-consortium",

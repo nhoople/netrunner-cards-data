@@ -1,7 +1,7 @@
 {
   "id": "scarcity-of-resources",
+  "deckLimit": 3,
   "title": "Scarcity of Resources",
-  "nrdbCode": "11060",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

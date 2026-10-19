@@ -1,8 +1,8 @@
 {
   "id": "seamless-launch",
+  "deckLimit": 3,
   "title": "Seamless Launch",
   "wave": "system-gateway",
-  "nrdbCode": "30040",
   "type": "operation",
   "side": "corp",
   "faction": "haas-bioroid",

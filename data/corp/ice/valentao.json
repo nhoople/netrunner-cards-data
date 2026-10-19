@@ -1,8 +1,8 @@
 {
   "id": "valentao",
+  "deckLimit": 3,
   "title": "Valentão",
   "wave": "the-automata-initiative",
-  "nrdbCode": "34060",
   "type": "ice",
   "side": "corp",
   "faction": "weyland-consortium",

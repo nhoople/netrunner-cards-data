@@ -1,8 +1,8 @@
 {
   "id": "joshua-b",
+  "deckLimit": 3,
   "title": "Joshua B.",
   "wave": "cyber-exodus",
-  "nrdbCode": "02042",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

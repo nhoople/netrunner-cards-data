@@ -1,7 +1,7 @@
 {
   "id": "bandwidth",
+  "deckLimit": 3,
   "title": "Bandwidth",
-  "nrdbCode": "08016",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

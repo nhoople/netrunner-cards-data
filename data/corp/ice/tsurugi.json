@@ -1,8 +1,8 @@
 {
   "id": "tsurugi",
+  "deckLimit": 3,
   "title": "Tsurugi",
   "wave": "system-core-2019",
-  "nrdbCode": "25097",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

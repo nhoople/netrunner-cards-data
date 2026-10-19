@@ -1,7 +1,7 @@
 {
   "id": "off-campus-apartment",
+  "deckLimit": 3,
   "title": "Off-Campus Apartment",
-  "nrdbCode": "08022",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

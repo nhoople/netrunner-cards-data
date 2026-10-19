@@ -1,8 +1,8 @@
 {
   "id": "gatekeeper",
+  "deckLimit": 3,
   "title": "Gatekeeper",
   "wave": "reign-and-reverie",
-  "nrdbCode": "22029",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

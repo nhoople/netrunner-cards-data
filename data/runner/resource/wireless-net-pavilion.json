@@ -1,7 +1,7 @@
 {
   "id": "wireless-net-pavilion",
+  "deckLimit": 3,
   "title": "Wireless Net Pavilion",
-  "nrdbCode": "08108",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

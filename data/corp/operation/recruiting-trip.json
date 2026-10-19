@@ -1,7 +1,7 @@
 {
   "id": "recruiting-trip",
+  "deckLimit": 3,
   "title": "Recruiting Trip",
-  "nrdbCode": "08035",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

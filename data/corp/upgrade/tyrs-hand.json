@@ -1,8 +1,8 @@
 {
   "id": "tyrs-hand",
+  "deckLimit": 3,
   "title": "Tyr's Hand",
   "wave": "creation-and-control",
-  "nrdbCode": "03022",
   "type": "upgrade",
   "side": "corp",
   "unsupported": [],

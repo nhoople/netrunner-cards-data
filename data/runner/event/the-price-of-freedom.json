@@ -1,7 +1,7 @@
 {
   "id": "the-price-of-freedom",
+  "deckLimit": 3,
   "title": "The Price of Freedom",
-  "nrdbCode": "10100",
   "type": "event",
   "side": "runner",
   "unsupported": [],

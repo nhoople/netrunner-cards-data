@@ -1,7 +1,7 @@
 {
   "id": "origami",
+  "deckLimit": 3,
   "title": "Origami",
-  "nrdbCode": "06074",
   "type": "program",
   "side": "runner",
   "unsupported": [],

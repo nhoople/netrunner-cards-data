@@ -1,8 +1,8 @@
 {
   "id": "fully-operational",
+  "deckLimit": 3,
   "title": "Fully Operational",
   "wave": "downfall",
-  "nrdbCode": "26036",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

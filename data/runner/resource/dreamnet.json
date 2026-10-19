@@ -1,8 +1,8 @@
 {
   "id": "dreamnet",
+  "deckLimit": 3,
   "title": "DreamNet",
   "wave": "uprising",
-  "nrdbCode": "26095",
   "type": "resource",
   "side": "runner",
   "faction": "neutral-runner",

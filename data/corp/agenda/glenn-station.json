@@ -1,7 +1,7 @@
 {
   "id": "glenn-station",
+  "deckLimit": 3,
   "title": "Glenn Station",
-  "nrdbCode": "07005",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

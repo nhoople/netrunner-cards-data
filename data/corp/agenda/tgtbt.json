@@ -1,7 +1,7 @@
 {
   "id": "tgtbt",
+  "deckLimit": 3,
   "title": "TGTBT",
-  "nrdbCode": "04075",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

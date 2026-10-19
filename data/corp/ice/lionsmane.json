@@ -1,8 +1,8 @@
 {
   "id": "lionsmane",
+  "deckLimit": 3,
   "title": "Lionsmane",
   "wave": "vantage-point",
-  "nrdbCode": "36041",
   "type": "ice",
   "side": "corp",
   "faction": "jinteki",

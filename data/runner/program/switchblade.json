@@ -1,7 +1,7 @@
 {
   "id": "switchblade",
+  "deckLimit": 3,
   "title": "Switchblade",
-  "nrdbCode": "06077",
   "type": "program",
   "side": "runner",
   "unsupported": [],

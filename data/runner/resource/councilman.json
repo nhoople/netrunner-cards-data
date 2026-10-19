@@ -1,7 +1,7 @@
 {
   "id": "councilman",
+  "deckLimit": 3,
   "title": "Councilman",
-  "nrdbCode": "10047",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

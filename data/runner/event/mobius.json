@@ -1,7 +1,7 @@
 {
   "id": "mobius",
+  "deckLimit": 3,
   "title": "Möbius",
-  "nrdbCode": "12024",
   "type": "event",
   "side": "runner",
   "unsupported": [],

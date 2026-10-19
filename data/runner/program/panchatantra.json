@@ -1,7 +1,7 @@
 {
   "id": "panchatantra",
+  "deckLimit": 3,
   "title": "Panchatantra",
-  "nrdbCode": "10008",
   "type": "program",
   "side": "runner",
   "unsupported": [],

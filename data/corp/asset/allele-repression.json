@@ -1,7 +1,7 @@
 {
   "id": "allele-repression",
+  "deckLimit": 3,
   "title": "Allele Repression",
-  "nrdbCode": "08073",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

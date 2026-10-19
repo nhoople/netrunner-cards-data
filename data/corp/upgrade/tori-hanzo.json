@@ -1,7 +1,7 @@
 {
   "id": "tori-hanzo",
+  "deckLimit": 3,
   "title": "Tori Hanzō",
-  "nrdbCode": "05022",
   "type": "upgrade",
   "side": "corp",
   "unsupported": [],

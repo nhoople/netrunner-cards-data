@@ -1,7 +1,7 @@
 {
   "id": "firmware-updates",
+  "deckLimit": 3,
   "title": "Firmware Updates",
-  "nrdbCode": "07004",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

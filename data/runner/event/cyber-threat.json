@@ -1,7 +1,7 @@
 {
   "id": "cyber-threat",
+  "deckLimit": 3,
   "title": "Cyber Threat",
-  "nrdbCode": "06013",
   "type": "event",
   "side": "runner",
   "unsupported": [],

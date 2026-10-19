@@ -1,7 +1,7 @@
 {
   "id": "kongamato",
+  "deckLimit": 3,
   "title": "Kongamato",
-  "nrdbCode": "21027",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

@@ -1,7 +1,7 @@
 {
   "id": "unscheduled-maintenance",
+  "deckLimit": 3,
   "title": "Unscheduled Maintenance",
-  "nrdbCode": "06036",
   "type": "event",
   "side": "runner",
   "unsupported": [],

@@ -1,7 +1,7 @@
 {
   "id": "macrophage",
+  "deckLimit": 3,
   "title": "Macrophage",
-  "nrdbCode": "11119",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

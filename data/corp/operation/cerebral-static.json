@@ -1,7 +1,7 @@
 {
   "id": "cerebral-static",
+  "deckLimit": 3,
   "title": "Cerebral Static",
-  "nrdbCode": "06025",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

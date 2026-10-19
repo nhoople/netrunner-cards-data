@@ -1,8 +1,8 @@
 {
   "id": "biotic-labor",
+  "deckLimit": 3,
   "title": "Biotic Labor",
   "wave": "system-update-2021",
-  "nrdbCode": "31048",
   "type": "operation",
   "side": "corp",
   "faction": "haas-bioroid",

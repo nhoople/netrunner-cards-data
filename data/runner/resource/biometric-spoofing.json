@@ -1,7 +1,7 @@
 {
   "id": "biometric-spoofing",
+  "deckLimit": 3,
   "title": "Biometric Spoofing",
-  "nrdbCode": "13026",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

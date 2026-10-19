@@ -1,7 +1,7 @@
 {
   "id": "leave-no-trace",
+  "deckLimit": 3,
   "title": "Leave No Trace",
-  "nrdbCode": "12083",
   "type": "event",
   "side": "runner",
   "unsupported": [],

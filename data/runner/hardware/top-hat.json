@@ -1,7 +1,7 @@
 {
   "id": "top-hat",
+  "deckLimit": 3,
   "title": "Top Hat",
-  "nrdbCode": "11067",
   "type": "hardware",
   "side": "runner",
   "unsupported": [],

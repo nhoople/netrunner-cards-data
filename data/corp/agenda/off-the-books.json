@@ -1,8 +1,8 @@
 {
   "id": "off-the-books",
+  "deckLimit": 3,
   "title": "Off the Books",
   "wave": "elevation",
-  "nrdbCode": "35071",
   "type": "agenda",
   "side": "corp",
   "faction": "weyland-consortium",

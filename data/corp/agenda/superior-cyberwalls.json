@@ -1,7 +1,7 @@
 {
   "id": "superior-cyberwalls",
+  "deckLimit": 3,
   "title": "Superior Cyberwalls",
-  "nrdbCode": "06087",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

@@ -1,8 +1,8 @@
 {
   "id": "idiosyncresis",
+  "deckLimit": 3,
   "title": "Idiosyncresis",
   "wave": "elevation",
-  "nrdbCode": "35061",
   "type": "asset",
   "side": "corp",
   "faction": "nbn",

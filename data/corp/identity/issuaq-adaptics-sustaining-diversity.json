@@ -1,8 +1,8 @@
 {
   "id": "issuaq-adaptics-sustaining-diversity",
+  "deckLimit": 1,
   "title": "Issuaq Adaptics: Sustaining Diversity",
   "wave": "parhelion",
-  "nrdbCode": "33104",
   "type": "identity",
   "side": "corp",
   "faction": "jinteki",

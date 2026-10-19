@@ -1,7 +1,7 @@
 {
   "id": "assassin",
+  "deckLimit": 3,
   "title": "Assassin",
-  "nrdbCode": "09028",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

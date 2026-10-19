@@ -1,7 +1,7 @@
 {
   "id": "houdini",
+  "deckLimit": 3,
   "title": "Houdini",
-  "nrdbCode": "11045",
   "type": "program",
   "side": "runner",
   "unsupported": [],

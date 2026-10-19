@@ -1,7 +1,7 @@
 {
   "id": "prisec",
+  "deckLimit": 3,
   "title": "Prisec",
-  "nrdbCode": "11040",
   "type": "upgrade",
   "side": "corp",
   "unsupported": [],

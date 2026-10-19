@@ -1,8 +1,8 @@
 {
   "id": "byte",
+  "deckLimit": 3,
   "title": "Byte!",
   "wave": "elevation",
-  "nrdbCode": "35050",
   "type": "asset",
   "side": "corp",
   "faction": "jinteki",

@@ -1,7 +1,7 @@
 {
   "id": "meru-mati",
+  "deckLimit": 3,
   "title": "Meru Mati",
-  "nrdbCode": "08039",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

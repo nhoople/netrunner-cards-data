@@ -1,7 +1,7 @@
 {
   "id": "equivocation",
+  "deckLimit": 3,
   "title": "Equivocation",
-  "nrdbCode": "11084",
   "type": "program",
   "side": "runner",
   "unsupported": [],

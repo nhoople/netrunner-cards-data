@@ -1,7 +1,7 @@
 {
   "id": "armored-servers",
+  "deckLimit": 3,
   "title": "Armored Servers",
-  "nrdbCode": "13042",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

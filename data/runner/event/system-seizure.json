@@ -1,7 +1,7 @@
 {
   "id": "system-seizure",
+  "deckLimit": 3,
   "title": "System Seizure",
-  "nrdbCode": "12026",
   "type": "event",
   "side": "runner",
   "unsupported": [],

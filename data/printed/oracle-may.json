@@ -1,0 +1,5 @@
+{
+  "cardId": "oracle-may",
+  "text": "You cannot use this resource more than once per turn.\n[click]<strong>:</strong> Choose a card type. Reveal the top card of your stack. If that card has the chosen type, draw it and gain 2[credit]. Otherwise, trash it.",
+  "strippedText": "You cannot use this resource more than once per turn. click: Choose a card type. Reveal the top card of your stack. If that card has the chosen type, draw it and gain 2[credit]. Otherwise, trash it."
+}

@@ -1,7 +1,7 @@
 {
   "id": "warroid-tracker",
+  "deckLimit": 3,
   "title": "Warroid Tracker",
-  "nrdbCode": "12068",
   "type": "upgrade",
   "side": "corp",
   "unsupported": [],

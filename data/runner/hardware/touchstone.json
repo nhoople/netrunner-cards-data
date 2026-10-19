@@ -1,8 +1,8 @@
 {
   "id": "touchstone",
+  "deckLimit": 3,
   "title": "Touchstone",
   "wave": "vantage-point",
-  "nrdbCode": "36021",
   "type": "hardware",
   "side": "runner",
   "faction": "shaper",

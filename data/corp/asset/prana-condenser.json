@@ -1,8 +1,8 @@
 {
   "id": "prana-condenser",
+  "deckLimit": 3,
   "title": "Prāna Condenser",
   "wave": "uprising",
-  "nrdbCode": "26107",
   "type": "asset",
   "side": "corp",
   "faction": "jinteki",

@@ -1,8 +1,8 @@
 {
   "id": "minds-eye",
+  "deckLimit": 3,
   "title": "Mind's Eye",
   "wave": "reign-and-reverie",
-  "nrdbCode": "22017",
   "type": "hardware",
   "side": "runner",
   "unsupported": [],

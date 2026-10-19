@@ -1,7 +1,7 @@
 {
   "id": "paige-piper",
+  "deckLimit": 3,
   "title": "Paige Piper",
-  "nrdbCode": "08002",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

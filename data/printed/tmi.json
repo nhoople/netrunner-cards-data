@@ -1,0 +1,5 @@
+{
+  "cardId": "tmi",
+  "text": "When you rez TMI, Trace[2]. If unsuccessful, derez TMI.\n[subroutine] End the run.",
+  "strippedText": "When you rez TMI, Trace[2]. If unsuccessful, derez TMI. Subroutine End the run."
+}

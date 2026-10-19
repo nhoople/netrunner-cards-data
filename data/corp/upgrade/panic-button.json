@@ -1,7 +1,7 @@
 {
   "id": "panic-button",
+  "deckLimit": 3,
   "title": "Panic Button",
-  "nrdbCode": "04072",
   "type": "upgrade",
   "side": "corp",
   "unsupported": [],

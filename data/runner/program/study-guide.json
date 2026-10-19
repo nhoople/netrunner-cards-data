@@ -1,7 +1,7 @@
 {
   "id": "study-guide",
+  "deckLimit": 3,
   "title": "Study Guide",
-  "nrdbCode": "08028",
   "type": "program",
   "side": "runner",
   "unsupported": [],

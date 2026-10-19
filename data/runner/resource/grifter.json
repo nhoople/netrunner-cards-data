@@ -1,8 +1,8 @@
 {
   "id": "grifter",
+  "deckLimit": 3,
   "title": "Grifter",
   "wave": "mala-tempora",
-  "nrdbCode": "04046",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

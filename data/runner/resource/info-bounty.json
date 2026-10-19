@@ -1,8 +1,8 @@
 {
   "id": "info-bounty",
+  "deckLimit": 3,
   "title": "Info Bounty",
   "wave": "parhelion",
-  "nrdbCode": "33083",
   "type": "resource",
   "side": "runner",
   "faction": "criminal",

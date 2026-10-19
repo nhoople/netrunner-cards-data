@@ -1,8 +1,8 @@
 {
   "id": "plutus",
+  "deckLimit": 3,
   "title": "Plutus",
   "wave": "elevation",
-  "nrdbCode": "35073",
   "type": "asset",
   "side": "corp",
   "faction": "weyland-consortium",

@@ -1,7 +1,7 @@
 {
   "id": "high-profile-target",
+  "deckLimit": 3,
   "title": "High-Profile Target",
-  "nrdbCode": "21119",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

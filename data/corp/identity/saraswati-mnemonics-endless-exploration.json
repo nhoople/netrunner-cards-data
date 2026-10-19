@@ -1,8 +1,8 @@
 {
   "id": "saraswati-mnemonics-endless-exploration",
+  "deckLimit": 1,
   "title": "Saraswati Mnemonics: Endless Exploration",
   "wave": "reign-and-reverie",
-  "nrdbCode": "22034",
   "type": "identity",
   "side": "corp",
   "unsupported": [],

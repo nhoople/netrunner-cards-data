@@ -1,8 +1,8 @@
 {
   "id": "the-tungsten-tailor",
+  "deckLimit": 3,
   "title": "The Tungsten Tailor",
   "wave": "vantage-point",
-  "nrdbCode": "36003",
   "type": "hardware",
   "side": "runner",
   "faction": "anarch",

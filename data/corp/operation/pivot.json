@@ -1,8 +1,8 @@
 {
   "id": "pivot",
+  "deckLimit": 3,
   "title": "Pivot",
   "wave": "the-automata-initiative",
-  "nrdbCode": "34062",
   "type": "operation",
   "side": "corp",
   "faction": "weyland-consortium",

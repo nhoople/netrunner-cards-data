@@ -1,7 +1,7 @@
 {
   "id": "news-hound",
+  "deckLimit": 3,
   "title": "News Hound",
-  "nrdbCode": "09014",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

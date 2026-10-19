@@ -1,7 +1,7 @@
 {
   "id": "medical-breakthrough",
+  "deckLimit": 3,
   "title": "Medical Breakthrough",
-  "nrdbCode": "05005",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

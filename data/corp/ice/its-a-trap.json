@@ -1,7 +1,7 @@
 {
   "id": "its-a-trap",
+  "deckLimit": 3,
   "title": "It's a Trap!",
-  "nrdbCode": "08090",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

@@ -1,8 +1,8 @@
 {
   "id": "cerebral-overwriter",
+  "deckLimit": 3,
   "title": "Cerebral Overwriter",
   "wave": "uprising",
-  "nrdbCode": "26099",
   "type": "asset",
   "side": "corp",
   "faction": "haas-bioroid",

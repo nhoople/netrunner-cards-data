@@ -1,8 +1,8 @@
 {
   "id": "isabel-mcguire",
+  "deckLimit": 3,
   "title": "Isabel McGuire",
   "wave": "mala-tempora",
-  "nrdbCode": "04050",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

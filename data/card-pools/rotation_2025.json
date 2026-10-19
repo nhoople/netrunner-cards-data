@@ -1,0 +1,22 @@
+{
+  "id": "rotation_2025",
+  "name": "Seventh Rotation",
+  "formatId": "standard",
+  "cycles": [
+    "ashes",
+    "borealis",
+    "elevation",
+    "liberation",
+    "system-gateway"
+  ],
+  "waves": [
+    "downfall",
+    "elevation",
+    "midnight-sun",
+    "parhelion",
+    "rebellion-without-rehearsal",
+    "system-gateway",
+    "the-automata-initiative",
+    "uprising"
+  ]
+}

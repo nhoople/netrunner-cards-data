@@ -1,7 +1,7 @@
 {
   "id": "encrypted-portals",
+  "deckLimit": 3,
   "title": "Encrypted Portals",
-  "nrdbCode": "06024",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

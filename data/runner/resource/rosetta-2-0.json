@@ -1,7 +1,7 @@
 {
   "id": "rosetta-2-0",
+  "deckLimit": 3,
   "title": "Rosetta 2.0",
-  "nrdbCode": "12045",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

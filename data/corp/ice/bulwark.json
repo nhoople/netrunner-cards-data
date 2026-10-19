@@ -1,7 +1,7 @@
 {
   "id": "bulwark",
+  "deckLimit": 3,
   "title": "Bulwark",
-  "nrdbCode": "11078",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

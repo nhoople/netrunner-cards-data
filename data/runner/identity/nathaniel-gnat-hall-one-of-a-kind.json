@@ -1,8 +1,8 @@
 {
   "id": "nathaniel-gnat-hall-one-of-a-kind",
+  "deckLimit": 1,
   "title": "Nathaniel \"Gnat\" Hall: One-of-a-Kind",
   "wave": "reign-and-reverie",
-  "nrdbCode": "22001",
   "type": "identity",
   "side": "runner",
   "unsupported": [],

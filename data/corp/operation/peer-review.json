@@ -1,8 +1,8 @@
 {
   "id": "peer-review",
+  "deckLimit": 3,
   "title": "Peer Review",
   "wave": "elevation",
-  "nrdbCode": "35055",
   "type": "operation",
   "side": "corp",
   "faction": "jinteki",

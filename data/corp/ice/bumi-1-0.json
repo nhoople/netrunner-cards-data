@@ -1,8 +1,8 @@
 {
   "id": "bumi-1-0",
+  "deckLimit": 3,
   "title": "Bumi 1.0",
   "wave": "elevation",
-  "nrdbCode": "35041",
   "type": "ice",
   "side": "corp",
   "faction": "haas-bioroid",

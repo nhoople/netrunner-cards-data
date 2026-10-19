@@ -1,7 +1,7 @@
 {
   "id": "laguna-velasco-district",
+  "deckLimit": 3,
   "title": "Laguna Velasco District",
-  "nrdbCode": "13022",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

@@ -1,8 +1,8 @@
 {
   "id": "m-i-c",
+  "deckLimit": 3,
   "title": "M.I.C.",
   "wave": "the-automata-initiative",
-  "nrdbCode": "34036",
   "type": "ice",
   "side": "corp",
   "faction": "haas-bioroid",

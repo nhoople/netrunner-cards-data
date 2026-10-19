@@ -1,7 +1,7 @@
 {
   "id": "inazuma",
+  "deckLimit": 3,
   "title": "Inazuma",
-  "nrdbCode": "05016",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

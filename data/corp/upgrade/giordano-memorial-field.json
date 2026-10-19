@@ -1,8 +1,8 @@
 {
   "id": "giordano-memorial-field",
+  "deckLimit": 3,
   "title": "Giordano Memorial Field",
   "wave": "reign-and-reverie",
-  "nrdbCode": "22033",
   "type": "upgrade",
   "side": "corp",
   "unsupported": [],

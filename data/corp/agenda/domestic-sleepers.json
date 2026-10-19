@@ -1,7 +1,7 @@
 {
   "id": "domestic-sleepers",
+  "deckLimit": 3,
   "title": "Domestic Sleepers",
-  "nrdbCode": "06001",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

@@ -1,7 +1,7 @@
 {
   "id": "voting-machine-initiative",
+  "deckLimit": 3,
   "title": "Voting Machine Initiative",
-  "nrdbCode": "10048",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

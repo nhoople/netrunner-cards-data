@@ -1,8 +1,8 @@
 {
   "id": "ipo",
+  "deckLimit": 3,
   "title": "IPO",
   "wave": "system-core-2019",
-  "nrdbCode": "25147",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

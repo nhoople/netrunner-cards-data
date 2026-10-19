@@ -1,7 +1,7 @@
 {
   "id": "rolling-brownout",
+  "deckLimit": 3,
   "title": "Rolling Brownout",
-  "nrdbCode": "12116",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

@@ -1,8 +1,8 @@
 {
   "id": "carnivore",
+  "deckLimit": 3,
   "title": "Carnivore",
   "wave": "system-gateway",
-  "nrdbCode": "30003",
   "type": "hardware",
   "side": "runner",
   "faction": "anarch",

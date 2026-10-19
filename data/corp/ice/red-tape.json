@@ -1,7 +1,7 @@
 {
   "id": "red-tape",
+  "deckLimit": 3,
   "title": "Red Tape",
-  "nrdbCode": "10093",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

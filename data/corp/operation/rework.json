@@ -1,8 +1,8 @@
 {
   "id": "rework",
+  "deckLimit": 3,
   "title": "Rework",
   "wave": "humanitys-shadow",
-  "nrdbCode": "02093",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

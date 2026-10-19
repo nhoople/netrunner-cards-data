@@ -1,7 +1,7 @@
 {
   "id": "masvingo",
+  "deckLimit": 3,
   "title": "Masvingo",
-  "nrdbCode": "21099",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

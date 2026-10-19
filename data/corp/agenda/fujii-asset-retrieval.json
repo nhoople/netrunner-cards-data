@@ -1,8 +1,8 @@
 {
   "id": "fujii-asset-retrieval",
+  "deckLimit": 3,
   "title": "Fujii Asset Retrieval",
   "wave": "the-automata-initiative",
-  "nrdbCode": "34040",
   "type": "agenda",
   "side": "corp",
   "faction": "jinteki",

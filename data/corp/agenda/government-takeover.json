@@ -1,7 +1,7 @@
 {
   "id": "government-takeover",
+  "deckLimit": 1,
   "title": "Government Takeover",
-  "nrdbCode": "07006",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

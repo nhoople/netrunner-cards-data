@@ -1,8 +1,8 @@
 {
   "id": "aggressive-negotiation",
+  "deckLimit": 3,
   "title": "Aggressive Negotiation",
   "wave": "core",
-  "nrdbCode": "01097",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

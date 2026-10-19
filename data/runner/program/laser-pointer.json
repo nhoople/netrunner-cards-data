@@ -1,8 +1,8 @@
 {
   "id": "laser-pointer",
+  "deckLimit": 3,
   "title": "Laser Pointer",
   "wave": "the-automata-initiative",
-  "nrdbCode": "34016",
   "type": "program",
   "side": "runner",
   "faction": "criminal",

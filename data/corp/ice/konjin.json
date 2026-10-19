@@ -1,8 +1,8 @@
 {
   "id": "konjin",
+  "deckLimit": 3,
   "title": "Konjin",
   "wave": "uprising",
-  "nrdbCode": "26109",
   "type": "ice",
   "side": "corp",
   "faction": "jinteki",

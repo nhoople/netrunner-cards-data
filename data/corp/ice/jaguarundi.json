@@ -1,8 +1,8 @@
 {
   "id": "jaguarundi",
+  "deckLimit": 3,
   "title": "Jaguarundi",
   "wave": "the-automata-initiative",
-  "nrdbCode": "34035",
   "type": "ice",
   "side": "corp",
   "faction": "haas-bioroid",

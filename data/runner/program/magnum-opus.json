@@ -1,8 +1,8 @@
 {
   "id": "magnum-opus",
+  "deckLimit": 3,
   "title": "Magnum Opus",
   "wave": "core",
-  "nrdbCode": "01044",
   "type": "program",
   "side": "runner",
   "unsupported": [],

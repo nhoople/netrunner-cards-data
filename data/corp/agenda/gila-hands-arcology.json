@@ -1,8 +1,8 @@
 {
   "id": "gila-hands-arcology",
+  "deckLimit": 3,
   "title": "Gila Hands Arcology",
   "wave": "creation-and-control",
-  "nrdbCode": "03023",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

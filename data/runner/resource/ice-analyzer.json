@@ -1,8 +1,8 @@
 {
   "id": "ice-analyzer",
+  "deckLimit": 3,
   "title": "Ice Analyzer",
   "wave": "system-core-2019",
-  "nrdbCode": "25057",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

@@ -1,7 +1,7 @@
 {
   "id": "the-noble-path",
+  "deckLimit": 3,
   "title": "The Noble Path",
-  "nrdbCode": "10077",
   "type": "event",
   "side": "runner",
   "unsupported": [],

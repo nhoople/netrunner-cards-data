@@ -1,8 +1,8 @@
 {
   "id": "virtual-service-agent",
+  "deckLimit": 3,
   "title": "Virtual Service Agent",
   "wave": "the-automata-initiative",
-  "nrdbCode": "34054",
   "type": "ice",
   "side": "corp",
   "faction": "nbn",

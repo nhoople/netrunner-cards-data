@@ -1,8 +1,8 @@
 {
   "id": "cyberdex-trial",
+  "deckLimit": 3,
   "title": "Cyberdex Trial",
   "wave": "opening-moves",
-  "nrdbCode": "04019",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

@@ -1,7 +1,7 @@
 {
   "id": "chronos-project",
+  "deckLimit": 3,
   "title": "Chronos Project",
-  "nrdbCode": "06049",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

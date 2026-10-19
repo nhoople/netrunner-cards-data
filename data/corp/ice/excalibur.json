@@ -1,7 +1,7 @@
 {
   "id": "excalibur",
+  "deckLimit": 3,
   "title": "Excalibur",
-  "nrdbCode": "06111",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

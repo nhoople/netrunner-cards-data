@@ -1,7 +1,7 @@
 {
   "id": "temple-of-the-liberated-mind",
+  "deckLimit": 3,
   "title": "Temple of the Liberated Mind",
-  "nrdbCode": "10082",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

@@ -1,8 +1,8 @@
 {
   "id": "nga",
+  "deckLimit": 3,
   "title": "Nga",
   "wave": "parhelion",
-  "nrdbCode": "33072",
   "type": "program",
   "side": "runner",
   "faction": "anarch",

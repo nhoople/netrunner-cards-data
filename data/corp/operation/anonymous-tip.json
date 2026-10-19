@@ -1,8 +1,8 @@
 {
   "id": "anonymous-tip",
+  "deckLimit": 3,
   "title": "Anonymous Tip",
   "wave": "core",
-  "nrdbCode": "01083",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

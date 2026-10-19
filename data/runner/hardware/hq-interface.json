@@ -1,8 +1,8 @@
 {
   "id": "hq-interface",
+  "deckLimit": 3,
   "title": "HQ Interface",
   "wave": "system-core-2019",
-  "nrdbCode": "25031",
   "type": "hardware",
   "side": "runner",
   "unsupported": [],

@@ -1,8 +1,8 @@
 {
   "id": "hijacked-router",
+  "deckLimit": 3,
   "title": "Hijacked Router",
   "wave": "reign-and-reverie",
-  "nrdbCode": "22005",
   "type": "hardware",
   "side": "runner",
   "unsupported": [],

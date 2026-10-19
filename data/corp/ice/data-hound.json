@@ -1,8 +1,8 @@
 {
   "id": "data-hound",
+  "deckLimit": 3,
   "title": "Data Hound",
   "wave": "humanitys-shadow",
-  "nrdbCode": "02096",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

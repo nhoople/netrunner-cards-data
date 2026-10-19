@@ -1,7 +1,7 @@
 {
   "id": "friday-chip",
+  "deckLimit": 3,
   "title": "Friday Chip",
-  "nrdbCode": "21042",
   "type": "hardware",
   "side": "runner",
   "unsupported": [],

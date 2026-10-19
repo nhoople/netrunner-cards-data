@@ -1,8 +1,8 @@
 {
   "id": "urtica-cipher",
+  "deckLimit": 3,
   "title": "Urtica Cipher",
   "wave": "system-gateway",
-  "nrdbCode": "30045",
   "type": "asset",
   "side": "corp",
   "faction": "jinteki",

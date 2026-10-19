@@ -1,7 +1,7 @@
 {
   "id": "akshara-sareen",
+  "deckLimit": 3,
   "title": "Akshara Sareen",
-  "nrdbCode": "10046",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

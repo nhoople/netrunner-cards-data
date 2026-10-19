@@ -1,8 +1,8 @@
 {
   "id": "xanadu",
+  "deckLimit": 3,
   "title": "Xanadu",
   "wave": "system-update-2021",
-  "nrdbCode": "31012",
   "type": "resource",
   "side": "runner",
   "faction": "anarch",

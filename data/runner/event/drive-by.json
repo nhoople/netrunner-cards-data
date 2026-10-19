@@ -1,7 +1,7 @@
 {
   "id": "drive-by",
+  "deckLimit": 3,
   "title": "Drive By",
-  "nrdbCode": "08064",
   "type": "event",
   "side": "runner",
   "unsupported": [],

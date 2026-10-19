@@ -1,7 +1,7 @@
 {
   "id": "elizas-toybox",
+  "deckLimit": 3,
   "title": "Eliza's Toybox",
-  "nrdbCode": "06042",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

@@ -1,0 +1,9 @@
+{
+  "code": "13004",
+  "cardId": "syn-attack",
+  "pack": "terminal-directive",
+  "flavor": "Flooding the system with synchronized request messages makes it unresponsive to legitimate requests.",
+  "illustrator": "Alexandr Elichev",
+  "quantity": 3,
+  "position": 4
+}

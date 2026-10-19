@@ -1,8 +1,8 @@
 {
   "id": "divested-trust",
+  "deckLimit": 3,
   "title": "Divested Trust",
   "wave": "downfall",
-  "nrdbCode": "26055",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

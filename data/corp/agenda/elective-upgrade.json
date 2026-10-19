@@ -1,7 +1,7 @@
 {
   "id": "elective-upgrade",
+  "deckLimit": 3,
   "title": "Elective Upgrade",
-  "nrdbCode": "13030",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

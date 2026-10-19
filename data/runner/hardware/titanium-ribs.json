@@ -1,7 +1,7 @@
 {
   "id": "titanium-ribs",
+  "deckLimit": 3,
   "title": "Titanium Ribs",
-  "nrdbCode": "08045",
   "type": "hardware",
   "side": "runner",
   "unsupported": [],

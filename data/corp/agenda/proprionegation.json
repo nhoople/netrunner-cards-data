@@ -1,8 +1,8 @@
 {
   "id": "proprionegation",
+  "deckLimit": 3,
   "title": "Proprionegation",
   "wave": "elevation",
-  "nrdbCode": "35048",
   "type": "agenda",
   "side": "corp",
   "faction": "jinteki",

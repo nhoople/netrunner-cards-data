@@ -1,8 +1,8 @@
 {
   "id": "reina-roja-freedom-fighter",
+  "deckLimit": 1,
   "title": "Reina Roja: Freedom Fighter",
   "wave": "system-update-2021",
-  "nrdbCode": "31002",
   "type": "identity",
   "side": "runner",
   "faction": "anarch",

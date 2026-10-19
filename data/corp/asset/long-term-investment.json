@@ -1,7 +1,7 @@
 {
   "id": "long-term-investment",
+  "deckLimit": 3,
   "title": "Long-Term Investment",
-  "nrdbCode": "13055",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

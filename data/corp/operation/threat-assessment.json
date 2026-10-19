@@ -1,7 +1,7 @@
 {
   "id": "threat-assessment",
+  "deckLimit": 3,
   "title": "Threat Assessment",
-  "nrdbCode": "21035",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

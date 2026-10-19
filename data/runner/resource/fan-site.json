@@ -1,7 +1,7 @@
 {
   "id": "fan-site",
+  "deckLimit": 3,
   "title": "Fan Site",
-  "nrdbCode": "08085",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

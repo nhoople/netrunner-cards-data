@@ -1,7 +1,7 @@
 {
   "id": "next-silver",
+  "deckLimit": 3,
   "title": "NEXT Silver",
-  "nrdbCode": "06002",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

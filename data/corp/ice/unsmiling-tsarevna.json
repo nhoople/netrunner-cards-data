@@ -1,8 +1,8 @@
 {
   "id": "unsmiling-tsarevna",
+  "deckLimit": 3,
   "title": "Unsmiling Tsarevna",
   "wave": "parhelion",
-  "nrdbCode": "33117",
   "type": "ice",
   "side": "corp",
   "faction": "nbn",

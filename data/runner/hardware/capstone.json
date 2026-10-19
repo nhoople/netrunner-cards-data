@@ -1,7 +1,7 @@
 {
   "id": "capstone",
+  "deckLimit": 3,
   "title": "Capstone",
-  "nrdbCode": "04068",
   "type": "hardware",
   "side": "runner",
   "unsupported": [],

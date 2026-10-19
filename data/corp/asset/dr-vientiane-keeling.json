@@ -1,8 +1,8 @@
 {
   "id": "dr-vientiane-keeling",
+  "deckLimit": 3,
   "title": "Dr. Vientiane Keeling",
   "wave": "parhelion",
-  "nrdbCode": "33106",
   "type": "asset",
   "side": "corp",
   "faction": "jinteki",

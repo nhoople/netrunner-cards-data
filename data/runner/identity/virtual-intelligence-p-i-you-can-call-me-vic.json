@@ -1,8 +1,8 @@
 {
   "id": "virtual-intelligence-p-i-you-can-call-me-vic",
+  "deckLimit": 1,
   "title": "Virtual Intelligence, P.I.: “You Can Call Me Vic”",
   "wave": "vantage-point",
-  "nrdbCode": "36009",
   "type": "identity",
   "side": "runner",
   "faction": "criminal",

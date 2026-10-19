@@ -1,8 +1,8 @@
 {
   "id": "lycian-multi-munition",
+  "deckLimit": 3,
   "title": "Lycian Multi-Munition",
   "wave": "rebellion-without-rehearsal",
-  "nrdbCode": "34100",
   "type": "ice",
   "side": "corp",
   "faction": "haas-bioroid",

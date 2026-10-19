@@ -1,7 +1,7 @@
 {
   "id": "upya",
+  "deckLimit": 3,
   "title": "Upya",
-  "nrdbCode": "21007",
   "type": "program",
   "side": "runner",
   "unsupported": [],

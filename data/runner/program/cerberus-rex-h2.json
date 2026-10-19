@@ -1,7 +1,7 @@
 {
   "id": "cerberus-rex-h2",
+  "deckLimit": 3,
   "title": "Cerberus \"Rex\" H2",
-  "nrdbCode": "06096",
   "type": "program",
   "side": "runner",
   "unsupported": [],

@@ -1,8 +1,8 @@
 {
   "id": "ezam",
+  "deckLimit": 3,
   "title": "ezaM",
   "wave": "vantage-point",
-  "nrdbCode": "36039",
   "type": "ice",
   "side": "corp",
   "faction": "jinteki",

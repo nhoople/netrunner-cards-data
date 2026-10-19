@@ -1,7 +1,7 @@
 {
   "id": "starlight-crusade-funding",
+  "deckLimit": 3,
   "title": "Starlight Crusade Funding",
-  "nrdbCode": "04069",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

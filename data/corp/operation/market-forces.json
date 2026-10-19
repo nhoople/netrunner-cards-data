@@ -1,7 +1,7 @@
 {
   "id": "market-forces",
+  "deckLimit": 3,
   "title": "Market Forces",
-  "nrdbCode": "21117",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

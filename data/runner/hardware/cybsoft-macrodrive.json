@@ -1,7 +1,7 @@
 {
   "id": "cybsoft-macrodrive",
+  "deckLimit": 3,
   "title": "Cybsoft MacroDrive",
-  "nrdbCode": "06098",
   "type": "hardware",
   "side": "runner",
   "unsupported": [],

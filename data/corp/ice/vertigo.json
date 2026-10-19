@@ -1,8 +1,8 @@
 {
   "id": "vertigo",
+  "deckLimit": 3,
   "title": "Vertigo",
   "wave": "vantage-point",
-  "nrdbCode": "36031",
   "type": "ice",
   "side": "corp",
   "faction": "haas-bioroid",

@@ -1,8 +1,8 @@
 {
   "id": "wave",
+  "deckLimit": 3,
   "title": "Wave",
   "wave": "midnight-sun",
-  "nrdbCode": "33037",
   "type": "ice",
   "side": "corp",
   "faction": "haas-bioroid",

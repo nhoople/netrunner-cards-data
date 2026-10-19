@@ -1,8 +1,8 @@
 {
   "id": "the-wizard-s-chest",
+  "deckLimit": 3,
   "title": "The Wizard’s Chest",
   "wave": "rebellion-without-rehearsal",
-  "nrdbCode": "34070",
   "type": "hardware",
   "side": "runner",
   "faction": "anarch",

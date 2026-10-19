@@ -1,8 +1,8 @@
 {
   "id": "decoy",
+  "deckLimit": 3,
   "title": "Decoy",
   "wave": "core",
-  "nrdbCode": "01032",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

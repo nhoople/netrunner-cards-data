@@ -1,8 +1,8 @@
 {
   "id": "orca",
+  "deckLimit": 3,
   "title": "Orca",
   "wave": "parhelion",
-  "nrdbCode": "33089",
   "type": "program",
   "side": "runner",
   "faction": "shaper",

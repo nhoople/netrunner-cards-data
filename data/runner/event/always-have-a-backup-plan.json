@@ -1,8 +1,8 @@
 {
   "id": "always-have-a-backup-plan",
+  "deckLimit": 3,
   "title": "Always Have a Backup Plan",
   "wave": "downfall",
-  "nrdbCode": "26011",
   "type": "event",
   "side": "runner",
   "unsupported": [],

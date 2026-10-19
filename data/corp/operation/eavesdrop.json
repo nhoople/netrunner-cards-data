@@ -1,8 +1,8 @@
 {
   "id": "eavesdrop",
+  "deckLimit": 3,
   "title": "Eavesdrop",
   "wave": "reign-and-reverie",
-  "nrdbCode": "22047",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

@@ -1,7 +1,7 @@
 {
   "id": "o2-shortage",
+  "deckLimit": 3,
   "title": "O₂ Shortage",
-  "nrdbCode": "12090",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

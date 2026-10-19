@@ -1,8 +1,8 @@
 {
   "id": "pretty-mary-da-silva",
+  "deckLimit": 3,
   "title": "“Pretty” Mary da Silva",
   "wave": "rebellion-without-rehearsal",
-  "nrdbCode": "34093",
   "type": "resource",
   "side": "runner",
   "faction": "shaper",

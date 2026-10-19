@@ -1,8 +1,8 @@
 {
   "id": "poison-vial",
+  "deckLimit": 3,
   "title": "Poison Vial",
   "wave": "parhelion",
-  "nrdbCode": "33077",
   "type": "hardware",
   "side": "runner",
   "faction": "criminal",

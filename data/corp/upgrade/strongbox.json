@@ -1,7 +1,7 @@
 {
   "id": "strongbox",
+  "deckLimit": 3,
   "title": "Strongbox",
-  "nrdbCode": "04091",
   "type": "upgrade",
   "side": "corp",
   "unsupported": [],

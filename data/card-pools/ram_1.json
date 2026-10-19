@@ -1,0 +1,22 @@
+{
+  "id": "ram_1",
+  "name": "RAM 1",
+  "formatId": "ram",
+  "cycles": [],
+  "waves": [
+    "creation-and-control",
+    "daedalus-complex",
+    "down-the-white-nile",
+    "downfall",
+    "earths-scion",
+    "escalation",
+    "fear-and-loathing",
+    "honor-and-profit",
+    "kampala-ascendent",
+    "martial-law",
+    "quorum",
+    "up-and-over",
+    "what-lies-ahead",
+    "whispers-in-nalubaale"
+  ]
+}

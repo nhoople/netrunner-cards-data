@@ -1,8 +1,8 @@
 {
   "id": "scrounge",
+  "deckLimit": 3,
   "title": "Scrounge",
   "wave": "elevation",
-  "nrdbCode": "35004",
   "type": "event",
   "side": "runner",
   "faction": "anarch",

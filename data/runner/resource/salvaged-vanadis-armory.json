@@ -1,7 +1,7 @@
 {
   "id": "salvaged-vanadis-armory",
+  "deckLimit": 3,
   "title": "Salvaged Vanadis Armory",
-  "nrdbCode": "12103",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

@@ -1,8 +1,8 @@
 {
   "id": "ampere-cybernetics-for-anyone",
+  "deckLimit": 1,
   "title": "Ampère: Cybernetics For Anyone",
   "wave": "parhelion",
-  "nrdbCode": "33128",
   "type": "identity",
   "side": "corp",
   "faction": "neutral-corp",

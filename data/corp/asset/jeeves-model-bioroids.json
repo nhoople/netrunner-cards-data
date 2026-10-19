@@ -1,7 +1,7 @@
 {
   "id": "jeeves-model-bioroids",
+  "deckLimit": 3,
   "title": "Jeeves Model Bioroids",
-  "nrdbCode": "10067",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

@@ -1,8 +1,8 @@
 {
   "id": "az-mccaffrey-mechanical-prodigy",
+  "deckLimit": 1,
   "title": "Az McCaffrey: Mechanical Prodigy",
   "wave": "downfall",
-  "nrdbCode": "26010",
   "type": "identity",
   "side": "runner",
   "unsupported": [],

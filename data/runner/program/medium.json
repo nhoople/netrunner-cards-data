@@ -1,8 +1,8 @@
 {
   "id": "medium",
+  "deckLimit": 3,
   "title": "Medium",
   "wave": "core",
-  "nrdbCode": "01010",
   "type": "program",
   "side": "runner",
   "unsupported": [],

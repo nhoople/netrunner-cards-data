@@ -1,8 +1,8 @@
 {
   "id": "climactic-showdown",
+  "deckLimit": 3,
   "title": "Climactic Showdown",
   "wave": "downfall",
-  "nrdbCode": "26006",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

@@ -1,7 +1,7 @@
 {
   "id": "preemptive-action",
+  "deckLimit": 3,
   "title": "Preemptive Action",
-  "nrdbCode": "11080",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

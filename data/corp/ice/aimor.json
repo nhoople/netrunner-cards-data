@@ -1,7 +1,7 @@
 {
   "id": "aimor",
+  "deckLimit": 3,
   "title": "Aimor",
-  "nrdbCode": "21032",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

@@ -1,7 +1,7 @@
 {
   "id": "better-citizen-program",
+  "deckLimit": 3,
   "title": "Better Citizen Program",
-  "nrdbCode": "21116",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

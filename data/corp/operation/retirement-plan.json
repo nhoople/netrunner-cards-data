@@ -1,8 +1,8 @@
 {
   "id": "retirement-plan",
+  "deckLimit": 3,
   "title": "Retirement Plan",
   "wave": "vantage-point",
-  "nrdbCode": "36034",
   "type": "operation",
   "side": "corp",
   "faction": "haas-bioroid",

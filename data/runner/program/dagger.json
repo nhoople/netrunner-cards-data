@@ -1,8 +1,8 @@
 {
   "id": "dagger",
+  "deckLimit": 3,
   "title": "Dagger",
   "wave": "creation-and-control",
-  "nrdbCode": "03042",
   "type": "program",
   "side": "runner",
   "unsupported": [],

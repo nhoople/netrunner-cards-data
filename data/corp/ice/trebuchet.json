@@ -1,8 +1,8 @@
 {
   "id": "trebuchet",
+  "deckLimit": 3,
   "title": "Trebuchet",
   "wave": "downfall",
-  "nrdbCode": "26060",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

@@ -1,7 +1,7 @@
 {
   "id": "paparazzi",
+  "deckLimit": 3,
   "title": "Paparazzi",
-  "nrdbCode": "08087",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

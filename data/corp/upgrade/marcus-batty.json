@@ -1,7 +1,7 @@
 {
   "id": "marcus-batty",
+  "deckLimit": 3,
   "title": "Marcus Batty",
-  "nrdbCode": "08074",
   "type": "upgrade",
   "side": "corp",
   "unsupported": [],

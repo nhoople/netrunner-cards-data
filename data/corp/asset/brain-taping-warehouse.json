@@ -1,7 +1,7 @@
 {
   "id": "brain-taping-warehouse",
+  "deckLimit": 3,
   "title": "Brain-Taping Warehouse",
-  "nrdbCode": "08010",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

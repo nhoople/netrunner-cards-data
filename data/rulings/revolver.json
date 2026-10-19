@@ -1,0 +1,11 @@
+{
+  "cardId": "revolver",
+  "rulings": [
+    {
+      "dateUpdate": "2022-09-10",
+      "rulesTeamVerified": true,
+      "question": "When using the interface ability on [Revolver](/en/card/33018) by spending a power counter, does the Runner gain a credit from [Tech Trader](/en/card/10023)?",
+      "answer": "No."
+    }
+  ]
+}

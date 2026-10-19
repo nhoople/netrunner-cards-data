@@ -1,8 +1,8 @@
 {
   "id": "ansel-1-0",
+  "deckLimit": 3,
   "title": "Ansel 1.0",
   "wave": "system-gateway",
-  "nrdbCode": "30038",
   "type": "ice",
   "side": "corp",
   "faction": "haas-bioroid",

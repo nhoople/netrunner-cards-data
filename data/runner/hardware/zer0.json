@@ -1,7 +1,7 @@
 {
   "id": "zer0",
+  "deckLimit": 3,
   "title": "Zer0",
-  "nrdbCode": "21101",
   "type": "hardware",
   "side": "runner",
   "unsupported": [],

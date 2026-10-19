@@ -1,8 +1,8 @@
 {
   "id": "muslihat-multifarious-marketeer",
+  "deckLimit": 1,
   "title": "MuslihaT: Multifarious Marketeer",
   "wave": "elevation",
-  "nrdbCode": "35013",
   "type": "identity",
   "side": "runner",
   "faction": "criminal",

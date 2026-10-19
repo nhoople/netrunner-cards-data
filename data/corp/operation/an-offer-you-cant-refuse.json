@@ -1,7 +1,7 @@
 {
   "id": "an-offer-you-cant-refuse",
+  "deckLimit": 3,
   "title": "An Offer You Can’t Refuse",
-  "nrdbCode": "08091",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

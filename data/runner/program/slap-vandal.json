@@ -1,8 +1,8 @@
 {
   "id": "slap-vandal",
+  "deckLimit": 3,
   "title": "Slap Vandal",
   "wave": "the-automata-initiative",
-  "nrdbCode": "34026",
   "type": "program",
   "side": "runner",
   "faction": "shaper",

@@ -1,7 +1,7 @@
 {
   "id": "hacktivist-meeting",
+  "deckLimit": 3,
   "title": "Hacktivist Meeting",
-  "nrdbCode": "08021",
   "type": "event",
   "side": "runner",
   "unsupported": [],

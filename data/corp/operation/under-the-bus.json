@@ -1,8 +1,8 @@
 {
   "id": "under-the-bus",
+  "deckLimit": 3,
   "title": "Under the Bus",
   "wave": "reign-and-reverie",
-  "nrdbCode": "22057",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

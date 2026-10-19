@@ -1,7 +1,7 @@
 {
   "id": "amani-senai",
+  "deckLimit": 3,
   "title": "Amani Senai",
-  "nrdbCode": "21076",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

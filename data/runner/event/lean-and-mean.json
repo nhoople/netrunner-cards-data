@@ -1,7 +1,7 @@
 {
   "id": "lean-and-mean",
+  "deckLimit": 3,
   "title": "Lean and Mean",
-  "nrdbCode": "12086",
   "type": "event",
   "side": "runner",
   "unsupported": [],

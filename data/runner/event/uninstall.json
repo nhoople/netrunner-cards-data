@@ -1,7 +1,7 @@
 {
   "id": "uninstall",
+  "deckLimit": 3,
   "title": "Uninstall",
-  "nrdbCode": "07053",
   "type": "event",
   "side": "runner",
   "unsupported": [],

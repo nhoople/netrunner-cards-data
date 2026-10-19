@@ -1,8 +1,8 @@
 {
   "id": "hantu",
+  "deckLimit": 3,
   "title": "Hantu",
   "wave": "elevation",
-  "nrdbCode": "35008",
   "type": "program",
   "side": "runner",
   "faction": "anarch",

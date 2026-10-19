@@ -1,7 +1,7 @@
 {
   "id": "gyri-labyrinth",
+  "deckLimit": 3,
   "title": "Gyri Labyrinth",
-  "nrdbCode": "04110",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

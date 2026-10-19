@@ -1,8 +1,8 @@
 {
   "id": "bioroid-efficiency-research",
+  "deckLimit": 3,
   "title": "Bioroid Efficiency Research",
   "wave": "creation-and-control",
-  "nrdbCode": "03013",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

@@ -1,8 +1,8 @@
 {
   "id": "wyldside",
+  "deckLimit": 3,
   "title": "Wyldside",
   "wave": "core",
-  "nrdbCode": "01016",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

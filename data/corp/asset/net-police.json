@@ -1,8 +1,8 @@
 {
   "id": "net-police",
+  "deckLimit": 3,
   "title": "Net Police",
   "wave": "a-study-in-static",
-  "nrdbCode": "02075",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

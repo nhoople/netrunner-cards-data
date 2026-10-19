@@ -1,7 +1,7 @@
 {
   "id": "syn-attack",
+  "deckLimit": 3,
   "title": "SYN Attack",
-  "nrdbCode": "13004",
   "type": "event",
   "side": "runner",
   "unsupported": [],

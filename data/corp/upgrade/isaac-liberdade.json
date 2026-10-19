@@ -1,8 +1,8 @@
 {
   "id": "isaac-liberdade",
+  "deckLimit": 3,
   "title": "Isaac Liberdade",
   "wave": "rebellion-without-rehearsal",
-  "nrdbCode": "34129",
   "type": "upgrade",
   "side": "corp",
   "faction": "weyland-consortium",

@@ -1,8 +1,8 @@
 {
   "id": "logjam",
+  "deckLimit": 3,
   "title": "Logjam",
   "wave": "rebellion-without-rehearsal",
-  "nrdbCode": "34127",
   "type": "ice",
   "side": "corp",
   "faction": "weyland-consortium",

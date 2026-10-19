@@ -1,8 +1,8 @@
 {
   "id": "weyland-consortium-because-we-built-it",
+  "deckLimit": 1,
   "title": "Weyland Consortium: Because We Built It",
   "wave": "a-study-in-static",
-  "nrdbCode": "02076",
   "type": "identity",
   "side": "corp",
   "unsupported": [],

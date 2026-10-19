@@ -1,7 +1,7 @@
 {
   "id": "caprice-nisei",
+  "deckLimit": 3,
   "title": "Caprice Nisei",
-  "nrdbCode": "04114",
   "type": "upgrade",
   "side": "corp",
   "unsupported": [],

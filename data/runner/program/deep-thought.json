@@ -1,8 +1,8 @@
 {
   "id": "deep-thought",
+  "deckLimit": 3,
   "title": "Deep Thought",
   "wave": "future-proof",
-  "nrdbCode": "02108",
   "type": "program",
   "side": "runner",
   "unsupported": [],

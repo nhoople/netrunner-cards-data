@@ -1,8 +1,8 @@
 {
   "id": "borrowed-goods",
+  "deckLimit": 3,
   "title": "Borrowed Goods",
   "wave": "vantage-point",
-  "nrdbCode": "36013",
   "type": "hardware",
   "side": "runner",
   "faction": "criminal",

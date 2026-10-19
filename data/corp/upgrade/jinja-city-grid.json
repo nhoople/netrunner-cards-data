@@ -1,7 +1,7 @@
 {
   "id": "jinja-city-grid",
+  "deckLimit": 3,
   "title": "Jinja City Grid",
-  "nrdbCode": "21031",
   "type": "upgrade",
   "side": "corp",
   "unsupported": [],

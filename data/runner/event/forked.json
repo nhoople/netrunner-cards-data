@@ -1,7 +1,7 @@
 {
   "id": "forked",
+  "deckLimit": 3,
   "title": "Forked",
-  "nrdbCode": "07037",
   "type": "event",
   "side": "runner",
   "unsupported": [],

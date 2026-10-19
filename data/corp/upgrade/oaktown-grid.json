@@ -1,7 +1,7 @@
 {
   "id": "oaktown-grid",
+  "deckLimit": 3,
   "title": "Oaktown Grid",
-  "nrdbCode": "08053",
   "type": "upgrade",
   "side": "corp",
   "unsupported": [],

@@ -1,8 +1,8 @@
 {
   "id": "howler",
+  "deckLimit": 3,
   "title": "Howler",
   "wave": "creation-and-control",
-  "nrdbCode": "03016",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

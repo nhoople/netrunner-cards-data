@@ -1,8 +1,8 @@
 {
   "id": "magistrate-revontulet",
+  "deckLimit": 3,
   "title": "Magistrate Revontulet",
   "wave": "vantage-point",
-  "nrdbCode": "36048",
   "type": "asset",
   "side": "corp",
   "faction": "nbn",

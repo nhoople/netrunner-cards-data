@@ -1,7 +1,7 @@
 {
   "id": "rebranding-team",
+  "deckLimit": 3,
   "title": "Rebranding Team",
-  "nrdbCode": "09006",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

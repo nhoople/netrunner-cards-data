@@ -1,8 +1,8 @@
 {
   "id": "humanoid-resources",
+  "deckLimit": 3,
   "title": "Humanoid Resources",
   "wave": "elevation",
-  "nrdbCode": "35039",
   "type": "asset",
   "side": "corp",
   "faction": "haas-bioroid",

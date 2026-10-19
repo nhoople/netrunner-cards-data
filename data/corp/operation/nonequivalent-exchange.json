@@ -1,8 +1,8 @@
 {
   "id": "nonequivalent-exchange",
+  "deckLimit": 3,
   "title": "Nonequivalent Exchange",
   "wave": "parhelion",
-  "nrdbCode": "33118",
   "type": "operation",
   "side": "corp",
   "faction": "nbn",

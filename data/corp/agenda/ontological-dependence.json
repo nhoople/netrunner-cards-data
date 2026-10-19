@@ -1,8 +1,8 @@
 {
   "id": "ontological-dependence",
+  "deckLimit": 3,
   "title": "Ontological Dependence",
   "wave": "parhelion",
-  "nrdbCode": "33096",
   "type": "agenda",
   "side": "corp",
   "faction": "haas-bioroid",

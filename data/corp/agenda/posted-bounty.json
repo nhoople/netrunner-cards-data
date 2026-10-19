@@ -1,8 +1,8 @@
 {
   "id": "posted-bounty",
+  "deckLimit": 3,
   "title": "Posted Bounty",
   "wave": "core",
-  "nrdbCode": "01095",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

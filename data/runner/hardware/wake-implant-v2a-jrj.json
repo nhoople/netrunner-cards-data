@@ -1,8 +1,8 @@
 {
   "id": "wake-implant-v2a-jrj",
+  "deckLimit": 3,
   "title": "WAKE Implant v2A-JRJ",
   "wave": "parhelion",
-  "nrdbCode": "33078",
   "type": "hardware",
   "side": "runner",
   "faction": "criminal",

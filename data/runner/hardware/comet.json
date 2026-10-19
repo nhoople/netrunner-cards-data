@@ -1,7 +1,7 @@
 {
   "id": "comet",
+  "deckLimit": 3,
   "title": "Comet",
-  "nrdbCode": "08027",
   "type": "hardware",
   "side": "runner",
   "unsupported": [],

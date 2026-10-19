@@ -1,7 +1,7 @@
 {
   "id": "nbn-controlling-the-message",
+  "deckLimit": 1,
   "title": "NBN: Controlling the Message",
-  "nrdbCode": "11017",
   "type": "identity",
   "side": "corp",
   "unsupported": [],

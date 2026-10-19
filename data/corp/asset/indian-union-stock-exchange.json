@@ -1,7 +1,7 @@
 {
   "id": "indian-union-stock-exchange",
+  "deckLimit": 3,
   "title": "Indian Union Stock Exchange",
-  "nrdbCode": "10073",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

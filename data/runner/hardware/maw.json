@@ -1,7 +1,7 @@
 {
   "id": "maw",
+  "deckLimit": 3,
   "title": "Maw",
-  "nrdbCode": "12002",
   "type": "hardware",
   "side": "runner",
   "unsupported": [],

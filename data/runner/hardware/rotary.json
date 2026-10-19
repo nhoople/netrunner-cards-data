@@ -1,8 +1,8 @@
 {
   "id": "rotary",
+  "deckLimit": 3,
   "title": "Rotary",
   "wave": "vantage-point",
-  "nrdbCode": "36014",
   "type": "hardware",
   "side": "runner",
   "faction": "criminal",

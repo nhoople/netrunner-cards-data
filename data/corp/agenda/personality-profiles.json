@@ -1,7 +1,7 @@
 {
   "id": "personality-profiles",
+  "deckLimit": 3,
   "title": "Personality Profiles",
-  "nrdbCode": "10066",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

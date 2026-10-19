@@ -1,7 +1,7 @@
 {
   "id": "dedicated-technician-team",
+  "deckLimit": 3,
   "title": "Dedicated Technician Team",
-  "nrdbCode": "07026",
   "type": "upgrade",
   "side": "corp",
   "unsupported": [],

@@ -1,8 +1,8 @@
 {
   "id": "fermenter",
+  "deckLimit": 3,
   "title": "Fermenter",
   "wave": "system-gateway",
-  "nrdbCode": "30007",
   "type": "program",
   "side": "runner",
   "faction": "anarch",

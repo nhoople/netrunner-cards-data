@@ -1,7 +1,7 @@
 {
   "id": "rsvp",
+  "deckLimit": 3,
   "title": "RSVP",
-  "nrdbCode": "04077",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

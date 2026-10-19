@@ -1,8 +1,8 @@
 {
   "id": "see-how-they-run",
+  "deckLimit": 3,
   "title": "See How They Run",
   "wave": "rebellion-without-rehearsal",
-  "nrdbCode": "34105",
   "type": "agenda",
   "side": "corp",
   "faction": "jinteki",

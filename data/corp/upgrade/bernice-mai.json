@@ -1,8 +1,8 @@
 {
   "id": "bernice-mai",
+  "deckLimit": 3,
   "title": "Bernice Mai",
   "wave": "humanitys-shadow",
-  "nrdbCode": "02097",
   "type": "upgrade",
   "side": "corp",
   "unsupported": [],

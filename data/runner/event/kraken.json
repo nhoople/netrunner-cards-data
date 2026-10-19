@@ -1,8 +1,8 @@
 {
   "id": "kraken",
+  "deckLimit": 3,
   "title": "Kraken",
   "wave": "humanitys-shadow",
-  "nrdbCode": "02090",
   "type": "event",
   "side": "runner",
   "unsupported": [],

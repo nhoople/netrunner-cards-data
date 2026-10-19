@@ -1,7 +1,7 @@
 {
   "id": "frantic-coding",
+  "deckLimit": 3,
   "title": "Frantic Coding",
-  "nrdbCode": "11062",
   "type": "event",
   "side": "runner",
   "unsupported": [],

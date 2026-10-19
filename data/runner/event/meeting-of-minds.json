@@ -1,8 +1,8 @@
 {
   "id": "meeting-of-minds",
+  "deckLimit": 3,
   "title": "Meeting of Minds",
   "wave": "rebellion-without-rehearsal",
-  "nrdbCode": "34076",
   "type": "event",
   "side": "runner",
   "faction": "criminal",

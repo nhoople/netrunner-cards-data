@@ -1,7 +1,7 @@
 {
   "id": "will-o-the-wisp",
+  "deckLimit": 3,
   "title": "Will-o'-the-Wisp",
-  "nrdbCode": "06032",
   "type": "upgrade",
   "side": "corp",
   "unsupported": [],

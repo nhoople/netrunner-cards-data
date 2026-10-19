@@ -1,7 +1,7 @@
 {
   "id": "bioroid-work-crew",
+  "deckLimit": 3,
   "title": "Bioroid Work Crew",
-  "nrdbCode": "12051",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

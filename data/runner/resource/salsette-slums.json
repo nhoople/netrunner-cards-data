@@ -1,7 +1,7 @@
 {
   "id": "salsette-slums",
+  "deckLimit": 3,
   "title": "Salsette Slums",
-  "nrdbCode": "10059",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

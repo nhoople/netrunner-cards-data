@@ -1,0 +1,22 @@
+{
+  "id": "ram_5",
+  "name": "RAM 5",
+  "formatId": "ram",
+  "cycles": [],
+  "waves": [
+    "twenty-three-seconds",
+    "all-that-remains",
+    "core",
+    "future-proof",
+    "mala-tempora",
+    "old-hollywood",
+    "reign-and-reverie",
+    "salsette-island",
+    "station-one",
+    "the-devil-and-the-dragon",
+    "the-source",
+    "the-underway",
+    "upstalk",
+    "what-lies-ahead"
+  ]
+}

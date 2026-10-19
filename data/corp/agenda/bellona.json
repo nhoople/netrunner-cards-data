@@ -1,8 +1,8 @@
 {
   "id": "bellona",
+  "deckLimit": 3,
   "title": "Bellona",
   "wave": "uprising",
-  "nrdbCode": "26114",
   "type": "agenda",
   "side": "corp",
   "faction": "nbn",

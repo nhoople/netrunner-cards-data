@@ -1,7 +1,7 @@
 {
   "id": "special-offer",
+  "deckLimit": 3,
   "title": "Special Offer",
-  "nrdbCode": "09016",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

@@ -1,0 +1,5 @@
+{
+  "cardId": "door-to-door",
+  "text": "This card is not trashed until another <strong>current</strong> is played or an agenda is stolen.\nWhen the Runner's turn begins, Trace[1]. If successful, do 1 meat damage if the Runner is tagged; otherwise, give the Runner 1 tag.",
+  "strippedText": "This card is not trashed until another current is played or an agenda is stolen. When the Runner's turn begins, Trace[1]. If successful, do 1 meat damage if the Runner is tagged; otherwise, give the Runner 1 tag."
+}

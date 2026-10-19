@@ -1,0 +1,24 @@
+{
+  "id": "ram_7",
+  "name": "RAM 7",
+  "formatId": "ram",
+  "cycles": [],
+  "waves": [
+    "all-that-remains",
+    "creation-and-control",
+    "daedalus-complex",
+    "fear-the-masses",
+    "magnum-opus",
+    "opening-moves",
+    "quorum",
+    "revised-core",
+    "salsette-island",
+    "the-devil-and-the-dragon",
+    "the-liberated-mind",
+    "up-and-over",
+    "upstalk"
+  ],
+  "outsideSets": [
+    "salvaged_memories"
+  ]
+}

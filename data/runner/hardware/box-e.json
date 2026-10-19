@@ -1,7 +1,7 @@
 {
   "id": "box-e",
+  "deckLimit": 3,
   "title": "Box-E",
-  "nrdbCode": "06055",
   "type": "hardware",
   "side": "runner",
   "unsupported": [],
