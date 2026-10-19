@@ -1,8 +1,8 @@
 {
   "id": "spark-agency-worldswide-reach",
+  "deckLimit": 1,
   "title": "Spark Agency: Worldswide Reach",
   "wave": "system-core-2019",
-  "nrdbCode": "25105",
   "type": "identity",
   "side": "corp",
   "unsupported": [],

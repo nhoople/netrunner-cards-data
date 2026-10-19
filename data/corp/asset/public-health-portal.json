@@ -1,8 +1,8 @@
 {
   "id": "public-health-portal",
+  "deckLimit": 3,
   "title": "Public Health Portal",
   "wave": "downfall",
-  "nrdbCode": "26042",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

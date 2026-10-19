@@ -1,8 +1,8 @@
 {
   "id": "hearts-and-minds",
+  "deckLimit": 3,
   "title": "Hearts and Minds",
   "wave": "rebellion-without-rehearsal",
-  "nrdbCode": "34124",
   "type": "asset",
   "side": "corp",
   "faction": "weyland-consortium",

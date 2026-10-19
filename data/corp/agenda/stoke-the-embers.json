@@ -1,8 +1,8 @@
 {
   "id": "stoke-the-embers",
+  "deckLimit": 3,
   "title": "Stoke the Embers",
   "wave": "rebellion-without-rehearsal",
-  "nrdbCode": "34114",
   "type": "agenda",
   "side": "corp",
   "faction": "nbn",

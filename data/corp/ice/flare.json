@@ -1,8 +1,8 @@
 {
   "id": "flare",
+  "deckLimit": 3,
   "title": "Flare",
   "wave": "system-core-2019",
-  "nrdbCode": "25113",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

@@ -1,8 +1,8 @@
 {
   "id": "spin-doctor",
+  "deckLimit": 3,
   "title": "Spin Doctor",
   "wave": "system-gateway",
-  "nrdbCode": "30053",
   "type": "asset",
   "side": "corp",
   "faction": "nbn",

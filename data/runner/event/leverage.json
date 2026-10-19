@@ -1,7 +1,7 @@
 {
   "id": "leverage",
+  "deckLimit": 3,
   "title": "Leverage",
-  "nrdbCode": "04064",
   "type": "event",
   "side": "runner",
   "unsupported": [],

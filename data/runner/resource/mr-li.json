@@ -1,8 +1,8 @@
 {
   "id": "mr-li",
+  "deckLimit": 3,
   "title": "Mr. Li",
   "wave": "future-proof",
-  "nrdbCode": "02105",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

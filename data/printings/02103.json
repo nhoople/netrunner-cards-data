@@ -1,0 +1,9 @@
+{
+  "code": "02103",
+  "cardId": "data-leak-reversal",
+  "pack": "future-proof",
+  "flavor": "A two-way solution to a one-way problem, the data leak reversal, or DLR for short, is a misnomer. There is no actual reversal of data, only the creation of a parallel peer-to-peer link with the initial source.",
+  "illustrator": "Andrew Mar",
+  "quantity": 3,
+  "position": 103
+}

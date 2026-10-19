@@ -1,8 +1,8 @@
 {
   "id": "nightmare-archive",
+  "deckLimit": 3,
   "title": "Nightmare Archive",
   "wave": "parhelion",
-  "nrdbCode": "33097",
   "type": "asset",
   "side": "corp",
   "faction": "haas-bioroid",

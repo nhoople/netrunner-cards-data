@@ -1,8 +1,8 @@
 {
   "id": "sudden-commandment",
+  "deckLimit": 3,
   "title": "Sudden Commandment",
   "wave": "rebellion-without-rehearsal",
-  "nrdbCode": "34119",
   "type": "operation",
   "side": "corp",
   "faction": "nbn",

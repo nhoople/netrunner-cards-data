@@ -1,8 +1,8 @@
 {
   "id": "sacrificial-construct",
+  "deckLimit": 3,
   "title": "Sacrificial Construct",
   "wave": "core",
-  "nrdbCode": "01048",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

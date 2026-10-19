@@ -1,7 +1,7 @@
 {
   "id": "estelle-moon",
+  "deckLimit": 3,
   "title": "Estelle Moon",
-  "nrdbCode": "13032",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

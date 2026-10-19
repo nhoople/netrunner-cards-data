@@ -1,8 +1,8 @@
 {
   "id": "raymond-flint",
+  "deckLimit": 3,
   "title": "Raymond Flint",
   "wave": "mala-tempora",
-  "nrdbCode": "04049",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

@@ -1,7 +1,7 @@
 {
   "id": "tri-maf-contact",
+  "deckLimit": 3,
   "title": "Tri-maf Contact",
-  "nrdbCode": "05050",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

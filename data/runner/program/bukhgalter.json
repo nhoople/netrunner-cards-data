@@ -1,8 +1,8 @@
 {
   "id": "bukhgalter",
+  "deckLimit": 3,
   "title": "Bukhgalter",
   "wave": "downfall",
-  "nrdbCode": "26016",
   "type": "program",
   "side": "runner",
   "unsupported": [],

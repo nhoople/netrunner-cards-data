@@ -1,8 +1,8 @@
 {
   "id": "klevetnik",
+  "deckLimit": 3,
   "title": "Klevetnik",
   "wave": "parhelion",
-  "nrdbCode": "33116",
   "type": "ice",
   "side": "corp",
   "faction": "nbn",

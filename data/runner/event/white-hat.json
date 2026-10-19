@@ -1,7 +1,7 @@
 {
   "id": "white-hat",
+  "deckLimit": 3,
   "title": "White Hat",
-  "nrdbCode": "21048",
   "type": "event",
   "side": "runner",
   "unsupported": [],

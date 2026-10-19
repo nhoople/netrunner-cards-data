@@ -1,8 +1,8 @@
 {
   "id": "private-security-force",
+  "deckLimit": 3,
   "title": "Private Security Force",
   "wave": "core",
-  "nrdbCode": "01107",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

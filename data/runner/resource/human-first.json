@@ -1,7 +1,7 @@
 {
   "id": "human-first",
+  "deckLimit": 3,
   "title": "Human First",
-  "nrdbCode": "07048",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

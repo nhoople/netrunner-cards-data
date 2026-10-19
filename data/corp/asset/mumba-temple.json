@@ -1,7 +1,7 @@
 {
   "id": "mumba-temple",
+  "deckLimit": 3,
   "title": "Mumba Temple",
-  "nrdbCode": "10018",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

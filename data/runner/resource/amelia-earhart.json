@@ -1,8 +1,8 @@
 {
   "id": "amelia-earhart",
+  "deckLimit": 3,
   "title": "Amelia Earhart",
   "wave": "rebellion-without-rehearsal",
-  "nrdbCode": "34083",
   "type": "resource",
   "side": "runner",
   "faction": "criminal",

@@ -1,8 +1,8 @@
 {
   "id": "test-run",
+  "deckLimit": 3,
   "title": "Test Run",
   "wave": "system-update-2021",
-  "nrdbCode": "31028",
   "type": "event",
   "side": "runner",
   "faction": "shaper",

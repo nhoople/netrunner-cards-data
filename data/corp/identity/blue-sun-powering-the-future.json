@@ -1,8 +1,8 @@
 {
   "id": "blue-sun-powering-the-future",
+  "deckLimit": 1,
   "title": "Blue Sun: Powering the Future",
   "wave": "system-core-2019",
-  "nrdbCode": "25123",
   "type": "identity",
   "side": "corp",
   "unsupported": [],

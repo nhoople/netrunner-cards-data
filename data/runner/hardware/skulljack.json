@@ -1,7 +1,7 @@
 {
   "id": "skulljack",
+  "deckLimit": 3,
   "title": "Skulljack",
-  "nrdbCode": "08042",
   "type": "hardware",
   "side": "runner",
   "unsupported": [],

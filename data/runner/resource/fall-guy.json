@@ -1,7 +1,7 @@
 {
   "id": "fall-guy",
+  "deckLimit": 3,
   "title": "Fall Guy",
-  "nrdbCode": "04106",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

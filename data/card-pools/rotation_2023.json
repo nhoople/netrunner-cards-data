@@ -1,0 +1,41 @@
+{
+  "id": "rotation_2023",
+  "name": "Sixth Rotation",
+  "formatId": "standard",
+  "cycles": [
+    "ashes",
+    "borealis",
+    "kitara",
+    "liberation",
+    "magnum-opus",
+    "magnum-opus-reprint",
+    "red-sand",
+    "reign-and-reverie",
+    "system-gateway",
+    "system-update-2021"
+  ],
+  "waves": [
+    "blood-and-water",
+    "council-of-the-crest",
+    "crimson-dust",
+    "daedalus-complex",
+    "down-the-white-nile",
+    "downfall",
+    "earths-scion",
+    "free-mars",
+    "kampala-ascendent",
+    "magnum-opus",
+    "midnight-sun",
+    "parhelion",
+    "rebellion-without-rehearsal",
+    "reign-and-reverie",
+    "sovereign-sight",
+    "station-one",
+    "system-gateway",
+    "system-update-2021",
+    "the-automata-initiative",
+    "the-devil-and-the-dragon",
+    "uprising",
+    "whispers-in-nalubaale"
+  ]
+}

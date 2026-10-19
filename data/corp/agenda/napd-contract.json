@@ -1,7 +1,7 @@
 {
   "id": "napd-contract",
+  "deckLimit": 3,
   "title": "NAPD Contract",
-  "nrdbCode": "04119",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

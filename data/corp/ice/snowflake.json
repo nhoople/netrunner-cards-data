@@ -1,8 +1,8 @@
 {
   "id": "snowflake",
+  "deckLimit": 3,
   "title": "Snowflake",
   "wave": "what-lies-ahead",
-  "nrdbCode": "02015",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

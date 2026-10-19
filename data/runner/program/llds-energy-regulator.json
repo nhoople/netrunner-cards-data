@@ -1,7 +1,7 @@
 {
   "id": "llds-energy-regulator",
+  "deckLimit": 3,
   "title": "LLDS Energy Regulator",
-  "nrdbCode": "06039",
   "type": "program",
   "side": "runner",
   "unsupported": [],

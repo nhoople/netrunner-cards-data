@@ -1,8 +1,8 @@
 {
   "id": "karuna",
+  "deckLimit": 3,
   "title": "Karunā",
   "wave": "system-gateway",
-  "nrdbCode": "30047",
   "type": "ice",
   "side": "corp",
   "faction": "jinteki",

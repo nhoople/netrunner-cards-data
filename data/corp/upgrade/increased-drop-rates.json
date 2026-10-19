@@ -1,8 +1,8 @@
 {
   "id": "increased-drop-rates",
+  "deckLimit": 3,
   "title": "Increased Drop Rates",
   "wave": "downfall",
-  "nrdbCode": "26054",
   "type": "upgrade",
   "side": "corp",
   "unsupported": [],

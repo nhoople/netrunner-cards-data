@@ -1,7 +1,7 @@
 {
   "id": "early-bird",
+  "deckLimit": 3,
   "title": "Early Bird",
-  "nrdbCode": "05032",
   "type": "event",
   "side": "runner",
   "unsupported": [],

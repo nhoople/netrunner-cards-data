@@ -1,7 +1,7 @@
 {
   "id": "mind-game",
+  "deckLimit": 3,
   "title": "Mind Game",
-  "nrdbCode": "11092",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

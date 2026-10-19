@@ -1,7 +1,7 @@
 {
   "id": "jua",
+  "deckLimit": 3,
   "title": "Jua",
-  "nrdbCode": "21034",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

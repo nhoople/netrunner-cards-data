@@ -1,7 +1,7 @@
 {
   "id": "corporate-scandal",
+  "deckLimit": 3,
   "title": "Corporate Scandal",
-  "nrdbCode": "10025",
   "type": "event",
   "side": "runner",
   "unsupported": [],

@@ -1,7 +1,7 @@
 {
   "id": "dedication-ceremony",
+  "deckLimit": 3,
   "title": "Dedication Ceremony",
-  "nrdbCode": "10017",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

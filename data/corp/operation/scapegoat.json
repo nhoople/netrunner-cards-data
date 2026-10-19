@@ -1,8 +1,8 @@
 {
   "id": "scapegoat",
+  "deckLimit": 3,
   "title": "Scapegoat",
   "wave": "vantage-point",
-  "nrdbCode": "36054",
   "type": "operation",
   "side": "corp",
   "faction": "nbn",

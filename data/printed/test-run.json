@@ -1,0 +1,5 @@
+{
+  "cardId": "test-run",
+  "text": "Search either your stack or your heap for 1 program. <em>(Shuffle your stack after searching it.)</em> Install that program, ignoring all costs. When your turn ends, if that program has not been uninstalled, add it to the top of your stack.",
+  "strippedText": "Search either your stack or your heap for 1 program. (Shuffle your stack after searching it.) Install that program, ignoring all costs. When your turn ends, if that program has not been uninstalled, add it to the top of your stack."
+}

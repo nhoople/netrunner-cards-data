@@ -1,7 +1,7 @@
 {
   "id": "hollywood-renovation",
+  "deckLimit": 3,
   "title": "Hollywood Renovation",
-  "nrdbCode": "08098",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

@@ -1,7 +1,7 @@
 {
   "id": "argus-security-protection-guaranteed",
+  "deckLimit": 1,
   "title": "Argus Security: Protection Guaranteed",
-  "nrdbCode": "07001",
   "type": "identity",
   "side": "corp",
   "unsupported": [],

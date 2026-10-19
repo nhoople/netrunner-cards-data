@@ -1,7 +1,7 @@
 {
   "id": "vanity-project",
+  "deckLimit": 3,
   "title": "Vanity Project",
-  "nrdbCode": "08100",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

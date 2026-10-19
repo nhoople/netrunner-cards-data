@@ -1,8 +1,8 @@
 {
   "id": "haas-arcology-ai",
+  "deckLimit": 3,
   "title": "Haas Arcology AI",
   "wave": "creation-and-control",
-  "nrdbCode": "03011",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

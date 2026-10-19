@@ -1,7 +1,7 @@
 {
   "id": "harmony-medtech-biomedical-pioneer",
+  "deckLimit": 1,
   "title": "Harmony Medtech: Biomedical Pioneer",
-  "nrdbCode": "05001",
   "type": "identity",
   "side": "corp",
   "unsupported": [],

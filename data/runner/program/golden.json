@@ -1,7 +1,7 @@
 {
   "id": "golden",
+  "deckLimit": 3,
   "title": "Golden",
-  "nrdbCode": "11025",
   "type": "program",
   "side": "runner",
   "unsupported": [],

@@ -1,8 +1,8 @@
 {
   "id": "guinea-pig",
+  "deckLimit": 3,
   "title": "Guinea Pig",
   "wave": "reign-and-reverie",
-  "nrdbCode": "22003",
   "type": "event",
   "side": "runner",
   "unsupported": [],

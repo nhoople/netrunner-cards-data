@@ -1,8 +1,8 @@
 {
   "id": "alix-t4lb07",
+  "deckLimit": 3,
   "title": "Alix T4LB07",
   "wave": "creation-and-control",
-  "nrdbCode": "03008",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

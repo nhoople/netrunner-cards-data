@@ -1,7 +1,7 @@
 {
   "id": "sacrificial-clone",
+  "deckLimit": 3,
   "title": "Sacrificial Clone",
-  "nrdbCode": "07050",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

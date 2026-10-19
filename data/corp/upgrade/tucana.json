@@ -1,8 +1,8 @@
 {
   "id": "tucana",
+  "deckLimit": 3,
   "title": "Tucana",
   "wave": "the-automata-initiative",
-  "nrdbCode": "34064",
   "type": "upgrade",
   "side": "corp",
   "faction": "weyland-consortium",

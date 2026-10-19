@@ -1,8 +1,8 @@
 {
   "id": "lockpick",
+  "deckLimit": 3,
   "title": "Lockpick",
   "wave": "opening-moves",
-  "nrdbCode": "04006",
   "type": "hardware",
   "side": "runner",
   "unsupported": [],

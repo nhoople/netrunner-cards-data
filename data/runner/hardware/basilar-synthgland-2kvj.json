@@ -1,8 +1,8 @@
 {
   "id": "basilar-synthgland-2kvj",
+  "deckLimit": 3,
   "title": "Basilar Synthgland 2KVJ",
   "wave": "parhelion",
-  "nrdbCode": "33086",
   "type": "hardware",
   "side": "runner",
   "faction": "shaper",

@@ -1,7 +1,7 @@
 {
   "id": "helium-3-deposit",
+  "deckLimit": 3,
   "title": "Helium-3 Deposit",
-  "nrdbCode": "06101",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

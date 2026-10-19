@@ -1,8 +1,8 @@
 {
   "id": "borrowed-satellite",
+  "deckLimit": 3,
   "title": "Borrowed Satellite",
   "wave": "creation-and-control",
-  "nrdbCode": "03050",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

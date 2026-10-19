@@ -1,8 +1,8 @@
 {
   "id": "project-junebug",
+  "deckLimit": 3,
   "title": "Project Junebug",
   "wave": "system-core-2019",
-  "nrdbCode": "25089",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

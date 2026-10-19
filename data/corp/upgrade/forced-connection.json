@@ -1,7 +1,7 @@
 {
   "id": "forced-connection",
+  "deckLimit": 3,
   "title": "Forced Connection",
-  "nrdbCode": "21037",
   "type": "upgrade",
   "side": "corp",
   "unsupported": [],

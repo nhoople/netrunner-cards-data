@@ -1,7 +1,7 @@
 {
   "id": "davinci",
+  "deckLimit": 3,
   "title": "DaVinci",
-  "nrdbCode": "08107",
   "type": "program",
   "side": "runner",
   "unsupported": [],

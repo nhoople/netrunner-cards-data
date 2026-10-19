@@ -1,7 +1,7 @@
 {
   "id": "kakugo",
+  "deckLimit": 3,
   "title": "Kakugo",
-  "nrdbCode": "12013",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

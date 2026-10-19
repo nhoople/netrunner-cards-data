@@ -1,7 +1,7 @@
 {
   "id": "surveyor",
+  "deckLimit": 3,
   "title": "Surveyor",
-  "nrdbCode": "21118",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

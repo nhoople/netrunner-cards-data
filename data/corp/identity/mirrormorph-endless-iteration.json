@@ -1,8 +1,8 @@
 {
   "id": "mirrormorph-endless-iteration",
+  "deckLimit": 1,
   "title": "MirrorMorph: Endless Iteration",
   "wave": "downfall",
-  "nrdbCode": "26031",
   "type": "identity",
   "side": "corp",
   "unsupported": [],

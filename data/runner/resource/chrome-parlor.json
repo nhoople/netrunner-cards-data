@@ -1,7 +1,7 @@
 {
   "id": "chrome-parlor",
+  "deckLimit": 3,
   "title": "Chrome Parlor",
-  "nrdbCode": "08044",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

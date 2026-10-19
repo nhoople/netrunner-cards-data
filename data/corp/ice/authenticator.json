@@ -1,7 +1,7 @@
 {
   "id": "authenticator",
+  "deckLimit": 3,
   "title": "Authenticator",
-  "nrdbCode": "12055",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

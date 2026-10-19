@@ -1,8 +1,8 @@
 {
   "id": "shipment-from-kaguya",
+  "deckLimit": 3,
   "title": "Shipment from Kaguya",
   "wave": "core",
-  "nrdbCode": "01100",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

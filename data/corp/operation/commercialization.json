@@ -1,8 +1,8 @@
 {
   "id": "commercialization",
+  "deckLimit": 3,
   "title": "Commercialization",
   "wave": "cyber-exodus",
-  "nrdbCode": "02058",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

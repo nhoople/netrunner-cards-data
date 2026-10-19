@@ -1,0 +1,5 @@
+{
+  "cardId": "next-activation-command",
+  "text": "Play only if there is no active <strong>lockdown</strong>. This operation is not trashed until your next turn begins.\nEach piece of ice gets +2 strength.\nThe Runner cannot use non-<strong>icebreaker</strong> cards to break subroutines.",
+  "strippedText": "Play only if there is no active lockdown. This operation is not trashed until your next turn begins. Each piece of ice gets +2 strength. The Runner cannot use non-icebreaker cards to break subroutines."
+}

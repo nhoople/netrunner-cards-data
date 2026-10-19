@@ -1,7 +1,7 @@
 {
   "id": "exer",
+  "deckLimit": 3,
   "title": "eXer",
-  "nrdbCode": "21041",
   "type": "program",
   "side": "runner",
   "unsupported": [],

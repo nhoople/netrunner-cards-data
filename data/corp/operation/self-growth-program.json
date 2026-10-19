@@ -1,7 +1,7 @@
 {
   "id": "self-growth-program",
+  "deckLimit": 3,
   "title": "Self-Growth Program",
-  "nrdbCode": "21016",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

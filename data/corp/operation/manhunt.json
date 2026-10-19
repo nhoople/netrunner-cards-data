@@ -1,7 +1,7 @@
 {
   "id": "manhunt",
+  "deckLimit": 3,
   "title": "Manhunt",
-  "nrdbCode": "06046",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

@@ -1,8 +1,8 @@
 {
   "id": "character-assassination",
+  "deckLimit": 3,
   "title": "Character Assassination",
   "wave": "opening-moves",
-  "nrdbCode": "04014",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

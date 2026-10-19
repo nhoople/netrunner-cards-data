@@ -1,7 +1,7 @@
 {
   "id": "liberated-chela",
+  "deckLimit": 3,
   "title": "Liberated Chela",
-  "nrdbCode": "10081",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

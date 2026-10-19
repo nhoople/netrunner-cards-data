@@ -1,8 +1,8 @@
 {
   "id": "cohort-guidance-program",
+  "deckLimit": 3,
   "title": "Cohort Guidance Program",
   "wave": "rebellion-without-rehearsal",
-  "nrdbCode": "34108",
   "type": "asset",
   "side": "corp",
   "faction": "jinteki",

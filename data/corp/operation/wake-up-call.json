@@ -1,7 +1,7 @@
 {
   "id": "wake-up-call",
+  "deckLimit": 3,
   "title": "Wake Up Call",
-  "nrdbCode": "21019",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

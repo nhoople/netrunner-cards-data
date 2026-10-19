@@ -1,0 +1,13 @@
+{
+  "id": "core",
+  "name": "Core",
+  "formatId": "core",
+  "cycles": [
+    "elevation",
+    "system-gateway"
+  ],
+  "waves": [
+    "elevation",
+    "system-gateway"
+  ]
+}

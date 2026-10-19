@@ -1,8 +1,8 @@
 {
   "id": "backroom-machinations",
+  "deckLimit": 3,
   "title": "Backroom Machinations",
   "wave": "midnight-sun",
-  "nrdbCode": "33055",
   "type": "operation",
   "side": "corp",
   "faction": "nbn",

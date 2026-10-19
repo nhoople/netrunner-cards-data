@@ -1,7 +1,7 @@
 {
   "id": "capital-investors",
+  "deckLimit": 3,
   "title": "Capital Investors",
-  "nrdbCode": "08018",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

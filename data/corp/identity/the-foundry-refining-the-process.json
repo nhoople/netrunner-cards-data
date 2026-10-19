@@ -1,7 +1,7 @@
 {
   "id": "the-foundry-refining-the-process",
+  "deckLimit": 1,
   "title": "The Foundry: Refining the Process",
-  "nrdbCode": "06021",
   "type": "identity",
   "side": "corp",
   "unsupported": [],

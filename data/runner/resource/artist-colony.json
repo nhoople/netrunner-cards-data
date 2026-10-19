@@ -1,7 +1,7 @@
 {
   "id": "artist-colony",
+  "deckLimit": 3,
   "title": "Artist Colony",
-  "nrdbCode": "10009",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

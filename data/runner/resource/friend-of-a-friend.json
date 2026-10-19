@@ -1,8 +1,8 @@
 {
   "id": "friend-of-a-friend",
+  "deckLimit": 3,
   "title": "Friend of a Friend",
   "wave": "rebellion-without-rehearsal",
-  "nrdbCode": "34074",
   "type": "resource",
   "side": "runner",
   "faction": "anarch",

@@ -1,7 +1,7 @@
 {
   "id": "eden-shard",
+  "deckLimit": 1,
   "title": "Eden Shard",
-  "nrdbCode": "06020",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

@@ -1,8 +1,8 @@
 {
   "id": "burke-bugs",
+  "deckLimit": 3,
   "title": "Burke Bugs",
   "wave": "future-proof",
-  "nrdbCode": "02119",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

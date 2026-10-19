@@ -1,8 +1,8 @@
 {
   "id": "psych-mike",
+  "deckLimit": 3,
   "title": "Psych Mike",
   "wave": "reign-and-reverie",
-  "nrdbCode": "22021",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

@@ -1,8 +1,8 @@
 {
   "id": "eli-1-0",
+  "deckLimit": 3,
   "title": "Eli 1.0",
   "wave": "system-update-2021",
-  "nrdbCode": "31043",
   "type": "ice",
   "side": "corp",
   "faction": "haas-bioroid",

@@ -1,7 +1,7 @@
 {
   "id": "signal-jamming",
+  "deckLimit": 3,
   "title": "Signal Jamming",
-  "nrdbCode": "12020",
   "type": "upgrade",
   "side": "corp",
   "unsupported": [],

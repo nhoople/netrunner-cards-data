@@ -1,7 +1,7 @@
 {
   "id": "bazaar",
+  "deckLimit": 3,
   "title": "Bazaar",
-  "nrdbCode": "10065",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

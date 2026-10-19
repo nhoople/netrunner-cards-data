@@ -1,7 +1,7 @@
 {
   "id": "architect",
+  "deckLimit": 3,
   "title": "Architect",
-  "nrdbCode": "06061",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

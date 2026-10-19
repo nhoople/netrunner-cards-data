@@ -1,8 +1,8 @@
 {
   "id": "awakening-center",
+  "deckLimit": 3,
   "title": "Awakening Center",
   "wave": "creation-and-control",
-  "nrdbCode": "03021",
   "type": "upgrade",
   "side": "corp",
   "unsupported": [],

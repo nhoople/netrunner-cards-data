@@ -1,0 +1,5 @@
+{
+  "cardId": "parasite",
+  "text": "Install only on a rezzed piece of ice.\nWhen your turn begins, place 1 virus counter on this program.\nHost ice gets -1 strength for each hosted virus counter.\nWhen the strength of host ice is 0 or less, trash it.",
+  "strippedText": "Install only on a rezzed piece of ice. When your turn begins, place 1 virus counter on this program. Host ice gets -1 strength for each hosted virus counter. When the strength of host ice is 0 or less, trash it."
+}

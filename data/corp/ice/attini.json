@@ -1,8 +1,8 @@
 {
   "id": "attini",
+  "deckLimit": 3,
   "title": "Attini",
   "wave": "the-automata-initiative",
-  "nrdbCode": "34042",
   "type": "ice",
   "side": "corp",
   "faction": "jinteki",

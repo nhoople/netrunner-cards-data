@@ -1,7 +1,7 @@
 {
   "id": "net-mercur",
+  "deckLimit": 3,
   "title": "Net Mercur",
-  "nrdbCode": "11046",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

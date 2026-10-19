@@ -1,8 +1,8 @@
 {
   "id": "hoshiko-shiro-untold-protagonist",
+  "deckLimit": 1,
   "title": "Hoshiko Shiro: Untold Protagonist",
   "wave": "uprising",
-  "nrdbCode": "26066",
   "type": "identity",
   "side": "runner",
   "faction": "anarch",

@@ -1,7 +1,7 @@
 {
   "id": "edward-kim-humanitys-hammer",
+  "deckLimit": 1,
   "title": "Edward Kim: Humanity's Hammer",
-  "nrdbCode": "07028",
   "type": "identity",
   "side": "runner",
   "unsupported": [],

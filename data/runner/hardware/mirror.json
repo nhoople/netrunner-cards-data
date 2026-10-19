@@ -1,7 +1,7 @@
 {
   "id": "mirror",
+  "deckLimit": 3,
   "title": "Mirror",
-  "nrdbCode": "11005",
   "type": "hardware",
   "side": "runner",
   "unsupported": [],

@@ -1,7 +1,7 @@
 {
   "id": "self-destruct-chips",
+  "deckLimit": 3,
   "title": "Self-Destruct Chips",
-  "nrdbCode": "08051",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

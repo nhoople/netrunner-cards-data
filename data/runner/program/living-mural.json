@@ -1,8 +1,8 @@
 {
   "id": "living-mural",
+  "deckLimit": 3,
   "title": "Living Mural",
   "wave": "the-automata-initiative",
-  "nrdbCode": "34024",
   "type": "program",
   "side": "runner",
   "faction": "shaper",

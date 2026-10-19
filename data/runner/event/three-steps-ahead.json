@@ -1,7 +1,7 @@
 {
   "id": "three-steps-ahead",
+  "deckLimit": 3,
   "title": "Three Steps Ahead",
-  "nrdbCode": "06035",
   "type": "event",
   "side": "runner",
   "unsupported": [],

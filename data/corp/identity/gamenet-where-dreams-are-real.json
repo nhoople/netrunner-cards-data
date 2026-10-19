@@ -1,8 +1,8 @@
 {
   "id": "gamenet-where-dreams-are-real",
+  "deckLimit": 1,
   "title": "GameNET: Where Dreams are Real",
   "wave": "uprising",
-  "nrdbCode": "26113",
   "type": "identity",
   "side": "corp",
   "faction": "nbn",

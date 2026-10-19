@@ -1,7 +1,7 @@
 {
   "id": "laramy-fisk-savvy-investor",
+  "deckLimit": 1,
   "title": "Laramy Fisk: Savvy Investor",
-  "nrdbCode": "08104",
   "type": "identity",
   "side": "runner",
   "unsupported": [],

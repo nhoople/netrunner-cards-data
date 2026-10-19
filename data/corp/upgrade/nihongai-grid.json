@@ -1,7 +1,7 @@
 {
   "id": "nihongai-grid",
+  "deckLimit": 3,
   "title": "Nihongai Grid",
-  "nrdbCode": "11093",
   "type": "upgrade",
   "side": "corp",
   "unsupported": [],

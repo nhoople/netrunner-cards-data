@@ -1,7 +1,7 @@
 {
   "id": "gs-sherman-m3",
+  "deckLimit": 3,
   "title": "GS Sherman M3",
-  "nrdbCode": "09050",
   "type": "program",
   "side": "runner",
   "unsupported": [],

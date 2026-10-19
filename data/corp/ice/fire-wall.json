@@ -1,7 +1,7 @@
 {
   "id": "fire-wall",
+  "deckLimit": 3,
   "title": "Fire Wall",
-  "nrdbCode": "07018",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

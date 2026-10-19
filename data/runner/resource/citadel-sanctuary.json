@@ -1,7 +1,7 @@
 {
   "id": "citadel-sanctuary",
+  "deckLimit": 3,
   "title": "Citadel Sanctuary",
-  "nrdbCode": "11070",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

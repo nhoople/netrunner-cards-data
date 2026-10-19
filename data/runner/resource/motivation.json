@@ -1,8 +1,8 @@
 {
   "id": "motivation",
+  "deckLimit": 3,
   "title": "Motivation",
   "wave": "opening-moves",
-  "nrdbCode": "04008",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

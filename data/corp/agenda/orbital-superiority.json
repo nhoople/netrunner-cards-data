@@ -1,8 +1,8 @@
 {
   "id": "orbital-superiority",
+  "deckLimit": 3,
   "title": "Orbital Superiority",
   "wave": "system-gateway",
-  "nrdbCode": "30068",
   "type": "agenda",
   "side": "corp",
   "faction": "neutral-corp",

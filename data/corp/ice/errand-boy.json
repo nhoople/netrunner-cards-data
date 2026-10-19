@@ -1,7 +1,7 @@
 {
   "id": "errand-boy",
+  "deckLimit": 3,
   "title": "Errand Boy",
-  "nrdbCode": "06102",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

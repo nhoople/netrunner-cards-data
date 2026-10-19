@@ -1,8 +1,8 @@
 {
   "id": "efficiency-committee",
+  "deckLimit": 3,
   "title": "Efficiency Committee",
   "wave": "creation-and-control",
-  "nrdbCode": "03005",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

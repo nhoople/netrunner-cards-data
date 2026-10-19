@@ -1,8 +1,8 @@
 {
   "id": "djupstad-grid",
+  "deckLimit": 3,
   "title": "Djupstad Grid",
   "wave": "parhelion",
-  "nrdbCode": "33102",
   "type": "upgrade",
   "side": "corp",
   "faction": "haas-bioroid",

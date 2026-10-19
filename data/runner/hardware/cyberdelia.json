@@ -1,7 +1,7 @@
 {
   "id": "cyberdelia",
+  "deckLimit": 3,
   "title": "Cyberdelia",
-  "nrdbCode": "21006",
   "type": "hardware",
   "side": "runner",
   "unsupported": [],

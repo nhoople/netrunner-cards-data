@@ -1,8 +1,8 @@
 {
   "id": "research-station",
+  "deckLimit": 3,
   "title": "Research Station",
   "wave": "core",
-  "nrdbCode": "01105",
   "type": "upgrade",
   "side": "corp",
   "unsupported": [],

@@ -1,8 +1,8 @@
 {
   "id": "sericulture-expansion",
+  "deckLimit": 3,
   "title": "Sericulture Expansion",
   "wave": "elevation",
-  "nrdbCode": "35049",
   "type": "agenda",
   "side": "corp",
   "faction": "jinteki",

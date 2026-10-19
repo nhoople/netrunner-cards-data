@@ -1,8 +1,8 @@
 {
   "id": "record-reconstructor",
+  "deckLimit": 3,
   "title": "Record Reconstructor",
   "wave": "stalwart",
-  "nrdbCode": "04028",
   "type": "hardware",
   "side": "runner",
   "unsupported": [],

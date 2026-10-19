@@ -1,8 +1,8 @@
 {
   "id": "vulture-fund",
+  "deckLimit": 3,
   "title": "Vulture Fund",
   "wave": "vantage-point",
-  "nrdbCode": "36063",
   "type": "operation",
   "side": "corp",
   "faction": "weyland-consortium",

@@ -1,8 +1,8 @@
 {
   "id": "dyson-mem-chip",
+  "deckLimit": 3,
   "title": "Dyson Mem Chip",
   "wave": "trace-amount",
-  "nrdbCode": "02028",
   "type": "hardware",
   "side": "runner",
   "unsupported": [],

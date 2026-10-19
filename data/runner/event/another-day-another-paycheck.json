@@ -1,7 +1,7 @@
 {
   "id": "another-day-another-paycheck",
+  "deckLimit": 3,
   "title": "Another Day, Another Paycheck",
-  "nrdbCode": "11007",
   "type": "event",
   "side": "runner",
   "unsupported": [],

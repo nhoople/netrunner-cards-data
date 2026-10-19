@@ -1,8 +1,8 @@
 {
   "id": "kessleroid",
+  "deckLimit": 3,
   "title": "Kessleroid",
   "wave": "elevation",
-  "nrdbCode": "35075",
   "type": "ice",
   "side": "corp",
   "faction": "weyland-consortium",

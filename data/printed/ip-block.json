@@ -1,0 +1,5 @@
+{
+  "cardId": "ip-block",
+  "text": "When the Runner encounters this ice, give them 1 tag if there is an installed <strong>AI</strong> program.\n[subroutine] Trace[3]. If successful, give the Runner 1 tag.\n[subroutine] End the run if the Runner is tagged.",
+  "strippedText": "When the Runner encounters this ice, give them 1 tag if there is an installed AI program. Subroutine Trace[3]. If successful, give the Runner 1 tag. Subroutine End the run if the Runner is tagged."
+}

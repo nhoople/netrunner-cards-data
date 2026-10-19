@@ -1,8 +1,8 @@
 {
   "id": "mason-bellamy",
+  "deckLimit": 3,
   "title": "Mason Bellamy",
   "wave": "system-core-2019",
-  "nrdbCode": "25083",
   "type": "upgrade",
   "side": "corp",
   "unsupported": [],

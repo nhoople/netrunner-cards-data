@@ -1,8 +1,8 @@
 {
   "id": "knowledge-seeker",
+  "deckLimit": 3,
   "title": "Knowledge Seeker",
   "wave": "vantage-point",
-  "nrdbCode": "36040",
   "type": "ice",
   "side": "corp",
   "faction": "jinteki",

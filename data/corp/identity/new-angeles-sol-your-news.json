@@ -1,7 +1,7 @@
 {
   "id": "new-angeles-sol-your-news",
+  "deckLimit": 1,
   "title": "New Angeles Sol: Your News",
-  "nrdbCode": "09002",
   "type": "identity",
   "side": "corp",
   "unsupported": [],

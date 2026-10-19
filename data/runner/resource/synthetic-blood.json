@@ -1,7 +1,7 @@
 {
   "id": "synthetic-blood",
+  "deckLimit": 3,
   "title": "Synthetic Blood",
-  "nrdbCode": "08007",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

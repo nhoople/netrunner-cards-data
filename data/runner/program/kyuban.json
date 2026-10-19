@@ -1,8 +1,8 @@
 {
   "id": "kyuban",
+  "deckLimit": 3,
   "title": "Kyuban",
   "wave": "reign-and-reverie",
-  "nrdbCode": "22020",
   "type": "program",
   "side": "runner",
   "unsupported": [],

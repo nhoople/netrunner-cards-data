@@ -1,7 +1,7 @@
 {
   "id": "gs-shrike-m2",
+  "deckLimit": 3,
   "title": "GS Shrike M2",
-  "nrdbCode": "09049",
   "type": "program",
   "side": "runner",
   "unsupported": [],

@@ -1,7 +1,7 @@
 {
   "id": "corporate-grant",
+  "deckLimit": 3,
   "title": "Corporate \"Grant\"",
-  "nrdbCode": "21044",
   "type": "event",
   "side": "runner",
   "unsupported": [],

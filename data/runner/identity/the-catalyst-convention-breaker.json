@@ -1,8 +1,8 @@
 {
   "id": "the-catalyst-convention-breaker",
+  "deckLimit": 1,
   "title": "The Catalyst: Convention Breaker",
   "wave": "system-gateway",
-  "nrdbCode": "30076",
   "type": "identity",
   "side": "runner",
   "faction": "neutral-runner",

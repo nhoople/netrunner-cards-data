@@ -1,8 +1,8 @@
 {
   "id": "ika",
+  "deckLimit": 3,
   "title": "Ika",
   "wave": "reign-and-reverie",
-  "nrdbCode": "22019",
   "type": "program",
   "side": "runner",
   "unsupported": [],

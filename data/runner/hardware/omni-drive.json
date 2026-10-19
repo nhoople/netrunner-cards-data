@@ -1,8 +1,8 @@
 {
   "id": "omni-drive",
+  "deckLimit": 3,
   "title": "Omni-drive",
   "wave": "creation-and-control",
-  "nrdbCode": "03039",
   "type": "hardware",
   "side": "runner",
   "unsupported": [],

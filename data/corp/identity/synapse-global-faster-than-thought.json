@@ -1,8 +1,8 @@
 {
   "id": "synapse-global-faster-than-thought",
+  "deckLimit": 1,
   "title": "Synapse Global: Faster than Thought",
   "wave": "elevation",
-  "nrdbCode": "35058",
   "type": "identity",
   "side": "corp",
   "faction": "nbn",

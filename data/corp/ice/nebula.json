@@ -1,7 +1,7 @@
 {
   "id": "nebula",
+  "deckLimit": 3,
   "title": "Nebula",
-  "nrdbCode": "07014",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

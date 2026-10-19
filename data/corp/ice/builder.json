@@ -1,7 +1,7 @@
 {
   "id": "builder",
+  "deckLimit": 3,
   "title": "Builder",
-  "nrdbCode": "07016",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

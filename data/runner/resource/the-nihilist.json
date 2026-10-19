@@ -1,8 +1,8 @@
 {
   "id": "the-nihilist",
+  "deckLimit": 3,
   "title": "The Nihilist",
   "wave": "downfall",
-  "nrdbCode": "26008",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

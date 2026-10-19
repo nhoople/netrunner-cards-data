@@ -1,8 +1,8 @@
 {
   "id": "bathynomus",
+  "deckLimit": 3,
   "title": "Bathynomus",
   "wave": "midnight-sun",
-  "nrdbCode": "33044",
   "type": "ice",
   "side": "corp",
   "faction": "jinteki",

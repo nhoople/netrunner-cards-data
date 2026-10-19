@@ -1,7 +1,7 @@
 {
   "id": "tithonium",
+  "deckLimit": 3,
   "title": "Tithonium",
-  "nrdbCode": "12098",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

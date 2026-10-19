@@ -1,8 +1,8 @@
 {
   "id": "spinal-modem",
+  "deckLimit": 3,
   "title": "Spinal Modem",
   "wave": "what-lies-ahead",
-  "nrdbCode": "02002",
   "type": "hardware",
   "side": "runner",
   "unsupported": [],

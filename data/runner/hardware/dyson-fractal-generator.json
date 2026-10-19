@@ -1,7 +1,7 @@
 {
   "id": "dyson-fractal-generator",
+  "deckLimit": 3,
   "title": "Dyson Fractal Generator",
-  "nrdbCode": "04103",
   "type": "hardware",
   "side": "runner",
   "unsupported": [],

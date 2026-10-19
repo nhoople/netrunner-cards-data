@@ -1,7 +1,7 @@
 {
   "id": "enforcing-loyalty",
+  "deckLimit": 3,
   "title": "Enforcing Loyalty",
-  "nrdbCode": "11033",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

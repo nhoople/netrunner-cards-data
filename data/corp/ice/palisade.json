@@ -1,8 +1,8 @@
 {
   "id": "palisade",
+  "deckLimit": 3,
   "title": "Palisade",
   "wave": "system-gateway",
-  "nrdbCode": "30072",
   "type": "ice",
   "side": "corp",
   "faction": "neutral-corp",

@@ -1,7 +1,7 @@
 {
   "id": "best-defense",
+  "deckLimit": 3,
   "title": "Best Defense",
-  "nrdbCode": "11079",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

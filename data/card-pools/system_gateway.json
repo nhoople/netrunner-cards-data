@@ -1,0 +1,11 @@
+{
+  "id": "system_gateway",
+  "name": "System Gateway",
+  "formatId": "system_gateway",
+  "cycles": [
+    "system-gateway"
+  ],
+  "waves": [
+    "system-gateway"
+  ]
+}

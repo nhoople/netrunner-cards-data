@@ -1,0 +1,5 @@
+{
+  "cardId": "environmental-testing",
+  "text": "Whenever you install a program or piece of hardware, place 1 power counter on this resource.\nWhen there are 4 or more hosted power counters, trash this resource and gain 9[credit].",
+  "strippedText": "Whenever you install a program or piece of hardware, place 1 power counter on this resource. When there are 4 or more hosted power counters, trash this resource and gain 9 credits."
+}

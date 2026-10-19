@@ -1,8 +1,8 @@
 {
   "id": "cybertrooper-talut",
+  "deckLimit": 3,
   "title": "Cybertrooper Talut",
   "wave": "uprising",
-  "nrdbCode": "26091",
   "type": "resource",
   "side": "runner",
   "faction": "shaper",

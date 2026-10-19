@@ -1,8 +1,8 @@
 {
   "id": "behold",
+  "deckLimit": 3,
   "title": "Behold!",
   "wave": "the-automata-initiative",
-  "nrdbCode": "34051",
   "type": "asset",
   "side": "corp",
   "faction": "nbn",

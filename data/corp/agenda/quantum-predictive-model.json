@@ -1,7 +1,7 @@
 {
   "id": "quantum-predictive-model",
+  "deckLimit": 3,
   "title": "Quantum Predictive Model",
-  "nrdbCode": "09007",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

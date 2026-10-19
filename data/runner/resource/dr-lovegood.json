@@ -1,7 +1,7 @@
 {
   "id": "dr-lovegood",
+  "deckLimit": 3,
   "title": "Dr. Lovegood",
-  "nrdbCode": "09042",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

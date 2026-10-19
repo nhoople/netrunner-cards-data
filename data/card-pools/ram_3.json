@@ -1,0 +1,22 @@
+{
+  "id": "ram_3",
+  "name": "RAM 3",
+  "formatId": "ram",
+  "cycles": [],
+  "waves": [
+    "a-study-in-static",
+    "business-first",
+    "creation-and-control",
+    "crimson-dust",
+    "fear-the-masses",
+    "first-contact",
+    "mala-tempora",
+    "old-hollywood",
+    "quorum",
+    "reign-and-reverie",
+    "sovereign-sight",
+    "the-liberated-mind",
+    "true-colors",
+    "upstalk"
+  ]
+}

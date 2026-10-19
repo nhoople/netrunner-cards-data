@@ -1,7 +1,7 @@
 {
   "id": "rng-key",
+  "deckLimit": 3,
   "title": "RNG Key",
-  "nrdbCode": "21029",
   "type": "program",
   "side": "runner",
   "unsupported": [],

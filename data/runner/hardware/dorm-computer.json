@@ -1,7 +1,7 @@
 {
   "id": "dorm-computer",
+  "deckLimit": 3,
   "title": "Dorm Computer",
-  "nrdbCode": "08024",
   "type": "hardware",
   "side": "runner",
   "unsupported": [],

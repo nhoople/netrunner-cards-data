@@ -1,7 +1,7 @@
 {
   "id": "bryan-stinson",
+  "deckLimit": 3,
   "title": "Bryan Stinson",
-  "nrdbCode": "11117",
   "type": "upgrade",
   "side": "corp",
   "unsupported": [],

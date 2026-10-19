@@ -1,7 +1,7 @@
 {
   "id": "enhanced-login-protocol",
+  "deckLimit": 3,
   "title": "Enhanced Login Protocol",
-  "nrdbCode": "06022",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

@@ -1,7 +1,7 @@
 {
   "id": "mandatory-seed-replacement",
+  "deckLimit": 3,
   "title": "Mandatory Seed Replacement",
-  "nrdbCode": "12092",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

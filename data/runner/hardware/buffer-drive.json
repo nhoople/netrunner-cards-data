@@ -1,8 +1,8 @@
 {
   "id": "buffer-drive",
+  "deckLimit": 3,
   "title": "Buffer Drive",
   "wave": "uprising",
-  "nrdbCode": "26093",
   "type": "hardware",
   "side": "runner",
   "faction": "neutral-runner",

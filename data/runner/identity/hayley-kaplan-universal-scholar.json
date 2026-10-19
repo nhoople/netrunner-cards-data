@@ -1,7 +1,7 @@
 {
   "id": "hayley-kaplan-universal-scholar",
+  "deckLimit": 1,
   "title": "Hayley Kaplan: Universal Scholar",
-  "nrdbCode": "08025",
   "type": "identity",
   "side": "runner",
   "unsupported": [],

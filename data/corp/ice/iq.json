@@ -1,7 +1,7 @@
 {
   "id": "iq",
+  "deckLimit": 3,
   "title": "IQ",
-  "nrdbCode": "06041",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

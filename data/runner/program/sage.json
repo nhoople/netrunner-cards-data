@@ -1,7 +1,7 @@
 {
   "id": "sage",
+  "deckLimit": 3,
   "title": "Sage",
-  "nrdbCode": "06117",
   "type": "program",
   "side": "runner",
   "unsupported": [],

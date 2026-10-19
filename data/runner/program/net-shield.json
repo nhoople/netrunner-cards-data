@@ -1,8 +1,8 @@
 {
   "id": "net-shield",
+  "deckLimit": 3,
   "title": "Net Shield",
   "wave": "core",
-  "nrdbCode": "01045",
   "type": "program",
   "side": "runner",
   "unsupported": [],

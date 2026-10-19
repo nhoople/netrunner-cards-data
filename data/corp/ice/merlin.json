@@ -1,7 +1,7 @@
 {
   "id": "merlin",
+  "deckLimit": 3,
   "title": "Merlin",
-  "nrdbCode": "06091",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

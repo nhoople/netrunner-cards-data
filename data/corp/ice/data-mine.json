@@ -1,8 +1,8 @@
 {
   "id": "data-mine",
+  "deckLimit": 3,
   "title": "Data Mine",
   "wave": "core",
-  "nrdbCode": "01076",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

@@ -1,7 +1,7 @@
 {
   "id": "null-whistleblower",
+  "deckLimit": 1,
   "title": "Null: Whistleblower",
-  "nrdbCode": "11002",
   "type": "identity",
   "side": "runner",
   "unsupported": [],

@@ -1,7 +1,7 @@
 {
   "id": "cortex-lock",
+  "deckLimit": 3,
   "title": "Cortex Lock",
-  "nrdbCode": "08014",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

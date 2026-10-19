@@ -1,8 +1,8 @@
 {
   "id": "the-red-room",
+  "deckLimit": 3,
   "title": "The Red Room",
   "wave": "vantage-point",
-  "nrdbCode": "36045",
   "type": "upgrade",
   "side": "corp",
   "faction": "jinteki",

@@ -1,7 +1,7 @@
 {
   "id": "reshape",
+  "deckLimit": 3,
   "title": "Reshape",
-  "nrdbCode": "12107",
   "type": "event",
   "side": "runner",
   "unsupported": [],

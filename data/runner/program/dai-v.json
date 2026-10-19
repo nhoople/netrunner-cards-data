@@ -1,7 +1,7 @@
 {
   "id": "dai-v",
+  "deckLimit": 3,
   "title": "Dai V",
-  "nrdbCode": "11006",
   "type": "program",
   "side": "runner",
   "unsupported": [],

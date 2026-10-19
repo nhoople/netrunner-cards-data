@@ -1,7 +1,7 @@
 {
   "id": "fawkes",
+  "deckLimit": 3,
   "title": "Fawkes",
-  "nrdbCode": "11108",
   "type": "program",
   "side": "runner",
   "unsupported": [],

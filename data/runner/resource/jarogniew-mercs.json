@@ -1,7 +1,7 @@
 {
   "id": "jarogniew-mercs",
+  "deckLimit": 3,
   "title": "Jarogniew Mercs",
-  "nrdbCode": "12062",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

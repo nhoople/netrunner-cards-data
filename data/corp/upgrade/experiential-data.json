@@ -1,8 +1,8 @@
 {
   "id": "experiential-data",
+  "deckLimit": 3,
   "title": "Experiential Data",
   "wave": "core",
-  "nrdbCode": "01066",
   "type": "upgrade",
   "side": "corp",
   "unsupported": [],

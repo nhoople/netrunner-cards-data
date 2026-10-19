@@ -1,7 +1,7 @@
 {
   "id": "lab-dog",
+  "deckLimit": 3,
   "title": "Lab Dog",
-  "nrdbCode": "08052",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

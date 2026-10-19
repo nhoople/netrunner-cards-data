@@ -1,7 +1,7 @@
 {
   "id": "false-flag",
+  "deckLimit": 3,
   "title": "False Flag",
-  "nrdbCode": "21120",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

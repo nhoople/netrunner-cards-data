@@ -1,7 +1,7 @@
 {
   "id": "temujin-contract",
+  "deckLimit": 3,
   "title": "Temüjin Contract",
-  "nrdbCode": "11026",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

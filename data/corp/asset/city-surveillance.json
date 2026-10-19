@@ -1,8 +1,8 @@
 {
   "id": "city-surveillance",
+  "deckLimit": 3,
   "title": "City Surveillance",
   "wave": "mala-tempora",
-  "nrdbCode": "04055",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

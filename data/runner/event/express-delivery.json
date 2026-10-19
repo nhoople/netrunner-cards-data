@@ -1,7 +1,7 @@
 {
   "id": "express-delivery",
+  "deckLimit": 3,
   "title": "Express Delivery",
-  "nrdbCode": "05033",
   "type": "event",
   "side": "runner",
   "unsupported": [],

@@ -53,6 +53,73 @@ def test_generator_pack_codes() -> None:
     assert {"sg", "su21", "ms", "msbp", "vp", "core"} <= codes, codes
 
 
+def test_restriction_card_ids() -> None:
+    from build_catalog_facts import partition_card_ids, restriction_document
+
+    mapped, missed = partition_card_ids(["sure_gamble", "unknown_card"], {"sure_gamble": "sure-gamble"})
+    assert mapped == ["sure-gamble"] and missed == ["unknown_card"]
+    document = restriction_document(
+        {
+            "id": "sample",
+            "name": "Sample",
+            "format_id": "startup",
+            "date_start": "2026-03-02",
+            "banned": ["sure_gamble"],
+            "points": {"1": ["unknown_card"]},
+            "point_limit": 7,
+        },
+        {"sure_gamble": "sure-gamble"},
+    )
+    assert document["banned"] == ["sure-gamble"]
+    assert document["points"] == {"1": []}
+    assert document["unmappedCardIds"] == ["unknown_card"]
+    assert document["pointLimit"] == 7
+
+
+def test_ruling_ids() -> None:
+    from build_rulings import ruling_record, text_to_id, verified_rulings
+
+    assert text_to_id("Account Siphon") == "account_siphon"
+    assert text_to_id("Aesop's Pawnshop") == "aesops_pawnshop"
+    assert text_to_id("The Wizard’s Chest") == "the_wizards_chest"
+    text = ruling_record(
+        {
+            "card_id": "account_siphon",
+            "date_update": "2017-04-08",
+            "nsg_rules_team_verified": False,
+            "text_ruling": "The Runner can choose not to use the ability.",
+        }
+    )
+    assert text["rulesTeamVerified"] is False
+    assert text["text"].startswith("The Runner")
+    question = ruling_record(
+        {
+            "date_update": "2024-01-01",
+            "nsg_rules_team_verified": True,
+            "question": "Can the Runner trash it?",
+            "answer": "Yes.",
+        }
+    )
+    assert question["rulesTeamVerified"] is True
+    assert "text" not in question
+    kept = verified_rulings(
+        [
+            {
+                "date_update": "2017-04-08",
+                "nsg_rules_team_verified": False,
+                "text_ruling": "Unverified.",
+            },
+            {
+                "date_update": "2022-05-27",
+                "nsg_rules_team_verified": True,
+                "question": "Does it still trigger?",
+                "answer": "Yes.",
+            },
+        ]
+    )
+    assert len(kept) == 1 and kept[0]["rulesTeamVerified"] is True
+
+
 def test_printed_numbers() -> None:
     from printed_numbers import apply_printed_numbers
 
@@ -64,8 +131,14 @@ def test_printed_numbers() -> None:
         "minimum_deck_size": 40,
         "influence_limit": 15,
         "faction_cost": None,
+        "deck_limit": 1,
     })
-    assert runner == {"link": 0, "minimumDeckSize": 40, "influenceLimit": 15}, runner
+    assert runner == {
+        "deckLimit": 1,
+        "link": 0,
+        "minimumDeckSize": 40,
+        "influenceLimit": 15,
+    }, runner
 
     corp = {}
     apply_printed_numbers(corp, {
@@ -80,8 +153,8 @@ def test_printed_numbers() -> None:
     assert corp["influenceLimit"] == 15
 
     ice = {}
-    apply_printed_numbers(ice, {"type_code": "ice", "faction_cost": 2})
-    assert ice == {"influence": 2}, ice
+    apply_printed_numbers(ice, {"type_code": "ice", "faction_cost": 2, "deck_limit": 3})
+    assert ice == {"deckLimit": 3, "influence": 2}, ice
 
     neutral = {}
     apply_printed_numbers(neutral, {"type_code": "event", "faction_cost": 0})
@@ -97,6 +170,8 @@ def main() -> int:
     test_pack_blobs()
     test_fact_diff()
     test_generator_pack_codes()
+    test_restriction_card_ids()
+    test_ruling_ids()
     test_printed_numbers()
     print("ok")
     return 0

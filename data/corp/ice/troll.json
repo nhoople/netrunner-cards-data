@@ -1,7 +1,7 @@
 {
   "id": "troll",
+  "deckLimit": 3,
   "title": "Troll",
-  "nrdbCode": "06108",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

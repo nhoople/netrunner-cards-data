@@ -1,8 +1,8 @@
 {
   "id": "sleipnir",
+  "deckLimit": 3,
   "title": "Sleipnir",
   "wave": "vantage-point",
-  "nrdbCode": "36030",
   "type": "ice",
   "side": "corp",
   "faction": "haas-bioroid",

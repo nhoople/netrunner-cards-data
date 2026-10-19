@@ -1,7 +1,7 @@
 {
   "id": "water-monopoly",
+  "deckLimit": 3,
   "title": "Water Monopoly",
-  "nrdbCode": "12093",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

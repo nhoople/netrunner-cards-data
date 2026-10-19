@@ -1,7 +1,7 @@
 {
   "id": "diversified-portfolio",
+  "deckLimit": 3,
   "title": "Diversified Portfolio",
-  "nrdbCode": "05026",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

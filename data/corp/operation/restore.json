@@ -1,7 +1,7 @@
 {
   "id": "restore",
+  "deckLimit": 3,
   "title": "Restore",
-  "nrdbCode": "12112",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

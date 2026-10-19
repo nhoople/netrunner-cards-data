@@ -1,8 +1,8 @@
 {
   "id": "complete-image",
+  "deckLimit": 3,
   "title": "Complete Image",
   "wave": "downfall",
-  "nrdbCode": "26045",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

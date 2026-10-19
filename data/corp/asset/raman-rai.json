@@ -1,7 +1,7 @@
 {
   "id": "raman-rai",
+  "deckLimit": 3,
   "title": "Raman Rai",
-  "nrdbCode": "10068",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

@@ -1,7 +1,7 @@
 {
   "id": "spy-camera",
+  "deckLimit": 6,
   "title": "Spy Camera",
-  "nrdbCode": "10042",
   "type": "hardware",
   "side": "runner",
   "unsupported": [],

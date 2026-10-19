@@ -1,8 +1,8 @@
 {
   "id": "bran-1-0",
+  "deckLimit": 3,
   "title": "Brân 1.0",
   "wave": "system-gateway",
-  "nrdbCode": "30039",
   "type": "ice",
   "side": "corp",
   "faction": "haas-bioroid",

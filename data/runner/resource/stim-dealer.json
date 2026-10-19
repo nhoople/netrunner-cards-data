@@ -1,7 +1,7 @@
 {
   "id": "stim-dealer",
+  "deckLimit": 3,
   "title": "Stim Dealer",
-  "nrdbCode": "07051",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

@@ -1,7 +1,7 @@
 {
   "id": "investigative-journalism",
+  "deckLimit": 3,
   "title": "Investigative Journalism",
-  "nrdbCode": "07049",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

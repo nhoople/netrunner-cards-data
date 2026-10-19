@@ -1,7 +1,7 @@
 {
   "id": "rashida-jaheem",
+  "deckLimit": 3,
   "title": "Rashida Jaheem",
-  "nrdbCode": "21080",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

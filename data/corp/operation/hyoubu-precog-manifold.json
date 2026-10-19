@@ -1,8 +1,8 @@
 {
   "id": "hyoubu-precog-manifold",
+  "deckLimit": 3,
   "title": "Hyoubu Precog Manifold",
   "wave": "uprising",
-  "nrdbCode": "26110",
   "type": "operation",
   "side": "corp",
   "faction": "jinteki",

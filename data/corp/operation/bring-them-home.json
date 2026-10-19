@@ -1,8 +1,8 @@
 {
   "id": "bring-them-home",
+  "deckLimit": 3,
   "title": "Bring Them Home",
   "wave": "rebellion-without-rehearsal",
-  "nrdbCode": "34112",
   "type": "operation",
   "side": "corp",
   "faction": "jinteki",

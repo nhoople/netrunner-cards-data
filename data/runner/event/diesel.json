@@ -1,11 +1,11 @@
 {
   "id": "diesel",
+  "deckLimit": 3,
   "title": "Diesel",
   "type": "event",
   "side": "runner",
   "faction": "shaper",
   "wave": "system-update-2021",
-  "nrdbCode": "01034",
   "playCost": 0,
   "unsupported": [],
   "influence": 2,

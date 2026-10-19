@@ -1,7 +1,7 @@
 {
   "id": "overmind",
+  "deckLimit": 3,
   "title": "Overmind",
-  "nrdbCode": "05053",
   "type": "program",
   "side": "runner",
   "unsupported": [],

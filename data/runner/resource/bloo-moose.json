@@ -1,7 +1,7 @@
 {
   "id": "bloo-moose",
+  "deckLimit": 3,
   "title": "Bloo Moose",
-  "nrdbCode": "12089",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

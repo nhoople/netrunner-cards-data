@@ -1,7 +1,7 @@
 {
   "id": "illicit-sales",
+  "deckLimit": 3,
   "title": "Illicit Sales",
-  "nrdbCode": "13043",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

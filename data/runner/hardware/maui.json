@@ -1,7 +1,7 @@
 {
   "id": "maui",
+  "deckLimit": 3,
   "title": "Māui",
-  "nrdbCode": "12063",
   "type": "hardware",
   "side": "runner",
   "unsupported": [],

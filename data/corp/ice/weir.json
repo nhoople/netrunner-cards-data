@@ -1,7 +1,7 @@
 {
   "id": "weir",
+  "deckLimit": 3,
   "title": "Weir",
-  "nrdbCode": "13056",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

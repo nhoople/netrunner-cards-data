@@ -1,7 +1,7 @@
 {
   "id": "restoring-face",
+  "deckLimit": 3,
   "title": "Restoring Face",
-  "nrdbCode": "04094",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

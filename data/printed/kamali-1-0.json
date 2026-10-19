@@ -1,0 +1,5 @@
+{
+  "cardId": "kamali-1-0",
+  "text": "<strong>Lose [click]:</strong> Break 1 subroutine on this ice. Only the Runner can use this ability.\n[subroutine] Do 1 core damage unless the Runner trashes 1 installed resource.\n[subroutine] Do 1 core damage unless the Runner trashes 1 installed piece of hardware.\n[subroutine] Do 1 core damage unless the Runner trashes 1 installed program.",
+  "strippedText": "Lose click: Break 1 subroutine on this ice. Only the Runner can use this ability. Subroutine Do 1 core damage unless the Runner trashes 1 installed resource. Subroutine Do 1 core damage unless the Runner trashes 1 installed piece of hardware. Subroutine Do 1 core damage unless the Runner trashes 1 installed program."
+}

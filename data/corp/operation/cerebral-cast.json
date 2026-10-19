@@ -1,7 +1,7 @@
 {
   "id": "cerebral-cast",
+  "deckLimit": 3,
   "title": "Cerebral Cast",
-  "nrdbCode": "05013",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

@@ -1,8 +1,8 @@
 {
   "id": "lago-paranoa-shelter",
+  "deckLimit": 3,
   "title": "Lago Paranoá Shelter",
   "wave": "the-automata-initiative",
-  "nrdbCode": "34009",
   "type": "resource",
   "side": "runner",
   "faction": "anarch",

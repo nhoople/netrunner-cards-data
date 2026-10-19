@@ -1,8 +1,8 @@
 {
   "id": "oaktown-renovation",
+  "deckLimit": 3,
   "title": "Oaktown Renovation",
   "wave": "system-update-2021",
-  "nrdbCode": "31072",
   "type": "agenda",
   "side": "corp",
   "faction": "weyland-consortium",

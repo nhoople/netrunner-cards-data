@@ -1,8 +1,8 @@
 {
   "id": "false-lead",
+  "deckLimit": 3,
   "title": "False Lead",
   "wave": "uprising",
-  "nrdbCode": "26129",
   "type": "agenda",
   "side": "corp",
   "faction": "neutral-corp",

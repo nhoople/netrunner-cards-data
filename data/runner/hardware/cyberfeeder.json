@@ -1,8 +1,8 @@
 {
   "id": "cyberfeeder",
+  "deckLimit": 3,
   "title": "Cyberfeeder",
   "wave": "system-core-2019",
-  "nrdbCode": "25008",
   "type": "hardware",
   "side": "runner",
   "unsupported": [],

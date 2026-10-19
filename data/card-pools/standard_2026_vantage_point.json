@@ -1,0 +1,24 @@
+{
+  "id": "standard_2026_vantage_point",
+  "name": "Standard 2026 - Vantage Point",
+  "formatId": "standard",
+  "cycles": [
+    "ashes",
+    "borealis",
+    "elevation",
+    "liberation",
+    "system-gateway",
+    "vantage-point"
+  ],
+  "waves": [
+    "downfall",
+    "elevation",
+    "midnight-sun",
+    "parhelion",
+    "rebellion-without-rehearsal",
+    "system-gateway",
+    "the-automata-initiative",
+    "uprising",
+    "vantage-point"
+  ]
+}

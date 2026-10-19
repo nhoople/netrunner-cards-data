@@ -1,8 +1,8 @@
 {
   "id": "nurse-hanh",
+  "deckLimit": 3,
   "title": "Nurse Hạnh",
   "wave": "vantage-point",
-  "nrdbCode": "36007",
   "type": "resource",
   "side": "runner",
   "faction": "anarch",

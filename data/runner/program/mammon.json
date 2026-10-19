@@ -1,7 +1,7 @@
 {
   "id": "mammon",
+  "deckLimit": 3,
   "title": "Mammon",
-  "nrdbCode": "13009",
   "type": "program",
   "side": "runner",
   "unsupported": [],

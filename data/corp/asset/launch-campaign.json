@@ -1,7 +1,7 @@
 {
   "id": "launch-campaign",
+  "deckLimit": 3,
   "title": "Launch Campaign",
-  "nrdbCode": "09027",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

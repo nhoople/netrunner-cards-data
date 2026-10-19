@@ -1,8 +1,8 @@
 {
   "id": "crypsis",
+  "deckLimit": 3,
   "title": "Crypsis",
   "wave": "system-core-2019",
-  "nrdbCode": "25061",
   "type": "program",
   "side": "runner",
   "unsupported": [],

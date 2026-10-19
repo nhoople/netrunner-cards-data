@@ -1,7 +1,7 @@
 {
   "id": "ele-smoke-scovak-cynosure-of-the-net",
+  "deckLimit": 1,
   "title": "Ele \"Smoke\" Scovak: Cynosure of the Net",
-  "nrdbCode": "11066",
   "type": "identity",
   "side": "runner",
   "unsupported": [],

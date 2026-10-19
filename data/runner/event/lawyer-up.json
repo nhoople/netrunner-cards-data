@@ -1,7 +1,7 @@
 {
   "id": "lawyer-up",
+  "deckLimit": 3,
   "title": "Lawyer Up",
-  "nrdbCode": "04063",
   "type": "event",
   "side": "runner",
   "unsupported": [],

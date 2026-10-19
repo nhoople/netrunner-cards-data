@@ -1,8 +1,8 @@
 {
   "id": "security-subcontract",
+  "deckLimit": 3,
   "title": "Security Subcontract",
   "wave": "core",
-  "nrdbCode": "01096",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

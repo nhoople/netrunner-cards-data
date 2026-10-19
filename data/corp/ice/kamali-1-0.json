@@ -1,7 +1,7 @@
 {
   "id": "kamali-1-0",
+  "deckLimit": 3,
   "title": "Kamali 1.0",
-  "nrdbCode": "21092",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

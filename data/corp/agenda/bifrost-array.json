@@ -1,7 +1,7 @@
 {
   "id": "bifrost-array",
+  "deckLimit": 3,
   "title": "Bifrost Array",
-  "nrdbCode": "06081",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

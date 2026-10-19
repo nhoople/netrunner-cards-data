@@ -1,7 +1,7 @@
 {
   "id": "casting-call",
+  "deckLimit": 3,
   "title": "Casting Call",
-  "nrdbCode": "08096",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

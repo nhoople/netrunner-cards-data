@@ -1,7 +1,7 @@
 {
   "id": "brainstorm",
+  "deckLimit": 3,
   "title": "Brainstorm",
-  "nrdbCode": "10086",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

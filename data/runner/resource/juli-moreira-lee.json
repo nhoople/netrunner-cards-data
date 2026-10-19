@@ -1,8 +1,8 @@
 {
   "id": "juli-moreira-lee",
+  "deckLimit": 3,
   "title": "Juli Moreira Lee",
   "wave": "rebellion-without-rehearsal",
-  "nrdbCode": "34084",
   "type": "resource",
   "side": "runner",
   "faction": "criminal",

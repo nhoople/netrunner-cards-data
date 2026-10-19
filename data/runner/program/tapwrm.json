@@ -1,7 +1,7 @@
 {
   "id": "tapwrm",
+  "deckLimit": 3,
   "title": "Tapwrm",
-  "nrdbCode": "11104",
   "type": "program",
   "side": "runner",
   "unsupported": [],

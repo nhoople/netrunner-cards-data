@@ -1,7 +1,7 @@
 {
   "id": "mamba",
+  "deckLimit": 3,
   "title": "Mamba",
-  "nrdbCode": "06065",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

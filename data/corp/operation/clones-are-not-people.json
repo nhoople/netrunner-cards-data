@@ -1,7 +1,7 @@
 {
   "id": "clones-are-not-people",
+  "deckLimit": 3,
   "title": "\"Clones are not People\"",
-  "nrdbCode": "10052",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

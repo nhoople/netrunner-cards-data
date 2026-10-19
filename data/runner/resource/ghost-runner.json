@@ -1,7 +1,7 @@
 {
   "id": "ghost-runner",
+  "deckLimit": 3,
   "title": "Ghost Runner",
-  "nrdbCode": "06040",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

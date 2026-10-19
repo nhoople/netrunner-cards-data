@@ -1,8 +1,8 @@
 {
   "id": "biawak",
+  "deckLimit": 3,
   "title": "Biawak",
   "wave": "elevation",
-  "nrdbCode": "35074",
   "type": "ice",
   "side": "corp",
   "faction": "weyland-consortium",

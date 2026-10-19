@@ -1,8 +1,8 @@
 {
   "id": "freelance-coding-contract",
+  "deckLimit": 3,
   "title": "Freelance Coding Contract",
   "wave": "creation-and-control",
-  "nrdbCode": "03033",
   "type": "event",
   "side": "runner",
   "unsupported": [],

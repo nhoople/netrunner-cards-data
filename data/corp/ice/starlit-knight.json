@@ -1,8 +1,8 @@
 {
   "id": "starlit-knight",
+  "deckLimit": 3,
   "title": "Starlit Knight",
   "wave": "the-automata-initiative",
-  "nrdbCode": "34053",
   "type": "ice",
   "side": "corp",
   "faction": "nbn",

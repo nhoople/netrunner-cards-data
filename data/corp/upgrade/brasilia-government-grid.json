@@ -1,8 +1,8 @@
 {
   "id": "brasilia-government-grid",
+  "deckLimit": 3,
   "title": "Brasília Government Grid",
   "wave": "rebellion-without-rehearsal",
-  "nrdbCode": "34104",
   "type": "upgrade",
   "side": "corp",
   "faction": "haas-bioroid",

@@ -1,7 +1,7 @@
 {
   "id": "q-coherence-chip",
+  "deckLimit": 3,
   "title": "Q-Coherence Chip",
-  "nrdbCode": "05052",
   "type": "hardware",
   "side": "runner",
   "unsupported": [],

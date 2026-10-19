@@ -1,8 +1,8 @@
 {
   "id": "flyswatter",
+  "deckLimit": 3,
   "title": "Flyswatter",
   "wave": "elevation",
-  "nrdbCode": "35079",
   "type": "ice",
   "side": "corp",
   "faction": "neutral-corp",

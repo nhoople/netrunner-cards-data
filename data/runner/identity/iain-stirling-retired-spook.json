@@ -1,7 +1,7 @@
 {
   "id": "iain-stirling-retired-spook",
+  "deckLimit": 1,
   "title": "Iain Stirling: Retired Spook",
-  "nrdbCode": "05028",
   "type": "identity",
   "side": "runner",
   "unsupported": [],

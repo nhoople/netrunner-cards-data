@@ -1,7 +1,7 @@
 {
   "id": "corporate-shuffle",
+  "deckLimit": 3,
   "title": "Corporate Shuffle",
-  "nrdbCode": "04113",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

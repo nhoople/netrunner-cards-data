@@ -1,7 +1,7 @@
 {
   "id": "underway-grid",
+  "deckLimit": 3,
   "title": "Underway Grid",
-  "nrdbCode": "08080",
   "type": "upgrade",
   "side": "corp",
   "unsupported": [],

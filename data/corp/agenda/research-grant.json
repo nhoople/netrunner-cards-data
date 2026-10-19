@@ -1,7 +1,7 @@
 {
   "id": "research-grant",
+  "deckLimit": 3,
   "title": "Research Grant",
-  "nrdbCode": "08032",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

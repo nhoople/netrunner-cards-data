@@ -1,8 +1,8 @@
 {
   "id": "tsakhia-bankhar-gantulga",
+  "deckLimit": 3,
   "title": "Tsakhia \"Bankhar\" Gantulga",
   "wave": "parhelion",
-  "nrdbCode": "33074",
   "type": "resource",
   "side": "runner",
   "faction": "anarch",

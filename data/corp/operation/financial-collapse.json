@@ -1,7 +1,7 @@
 {
   "id": "financial-collapse",
+  "deckLimit": 3,
   "title": "Financial Collapse",
-  "nrdbCode": "11039",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

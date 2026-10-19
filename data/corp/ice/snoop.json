@@ -1,8 +1,8 @@
 {
   "id": "snoop",
+  "deckLimit": 3,
   "title": "Snoop",
   "wave": "mala-tempora",
-  "nrdbCode": "04056",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

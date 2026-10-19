@@ -1,7 +1,7 @@
 {
   "id": "observe-and-destroy",
+  "deckLimit": 3,
   "title": "Observe and Destroy",
-  "nrdbCode": "11056",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

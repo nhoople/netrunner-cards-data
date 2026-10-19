@@ -1,7 +1,7 @@
 {
   "id": "merger",
+  "deckLimit": 3,
   "title": "Merger",
-  "nrdbCode": "10114",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

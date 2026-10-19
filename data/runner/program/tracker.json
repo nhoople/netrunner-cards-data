@@ -1,7 +1,7 @@
 {
   "id": "tracker",
+  "deckLimit": 3,
   "title": "Tracker",
-  "nrdbCode": "11105",
   "type": "program",
   "side": "runner",
   "unsupported": [],

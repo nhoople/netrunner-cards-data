@@ -1,7 +1,7 @@
 {
   "id": "navi-mumbai-city-grid",
+  "deckLimit": 3,
   "title": "Navi Mumbai City Grid",
-  "nrdbCode": "10110",
   "type": "upgrade",
   "side": "corp",
   "unsupported": [],

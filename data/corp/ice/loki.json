@@ -1,7 +1,7 @@
 {
   "id": "loki",
+  "deckLimit": 3,
   "title": "Loki",
-  "nrdbCode": "12069",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

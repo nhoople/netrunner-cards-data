@@ -1,8 +1,8 @@
 {
   "id": "akhet",
+  "deckLimit": 3,
   "title": "Akhet",
   "wave": "uprising",
-  "nrdbCode": "26123",
   "type": "ice",
   "side": "corp",
   "faction": "weyland-consortium",

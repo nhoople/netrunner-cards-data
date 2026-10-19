@@ -1,8 +1,8 @@
 {
   "id": "compromised-employee",
+  "deckLimit": 3,
   "title": "Compromised Employee",
   "wave": "trace-amount",
-  "nrdbCode": "02025",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

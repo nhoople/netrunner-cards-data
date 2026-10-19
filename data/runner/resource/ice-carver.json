@@ -1,8 +1,8 @@
 {
   "id": "ice-carver",
+  "deckLimit": 3,
   "title": "Ice Carver",
   "wave": "system-update-2021",
-  "nrdbCode": "31009",
   "type": "resource",
   "side": "runner",
   "faction": "anarch",

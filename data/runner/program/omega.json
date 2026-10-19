@@ -1,7 +1,7 @@
 {
   "id": "omega",
+  "deckLimit": 3,
   "title": "Omega",
-  "nrdbCode": "04088",
   "type": "program",
   "side": "runner",
   "unsupported": [],

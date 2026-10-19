@@ -1,7 +1,7 @@
 {
   "id": "oberth-protocol",
+  "deckLimit": 3,
   "title": "Oberth Protocol",
-  "nrdbCode": "12018",
   "type": "upgrade",
   "side": "corp",
   "unsupported": [],

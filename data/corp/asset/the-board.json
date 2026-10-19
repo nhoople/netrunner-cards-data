@@ -1,7 +1,7 @@
 {
   "id": "the-board",
+  "deckLimit": 3,
   "title": "The Board",
-  "nrdbCode": "07011",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

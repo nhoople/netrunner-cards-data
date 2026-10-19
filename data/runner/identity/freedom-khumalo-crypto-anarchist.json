@@ -1,7 +1,7 @@
 {
   "id": "freedom-khumalo-crypto-anarchist",
+  "deckLimit": 1,
   "title": "Freedom Khumalo: Crypto-Anarchist",
-  "nrdbCode": "21081",
   "type": "identity",
   "side": "runner",
   "unsupported": [],

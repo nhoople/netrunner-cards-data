@@ -1,7 +1,7 @@
 {
   "id": "knifed",
+  "deckLimit": 3,
   "title": "Knifed",
-  "nrdbCode": "07038",
   "type": "event",
   "side": "runner",
   "unsupported": [],

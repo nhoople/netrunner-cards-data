@@ -1,8 +1,8 @@
 {
   "id": "broad-daylight",
+  "deckLimit": 3,
   "title": "Broad Daylight",
   "wave": "reign-and-reverie",
-  "nrdbCode": "22051",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

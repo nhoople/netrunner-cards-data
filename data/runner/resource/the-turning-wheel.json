@@ -1,7 +1,7 @@
 {
   "id": "the-turning-wheel",
+  "deckLimit": 3,
   "title": "The Turning Wheel",
-  "nrdbCode": "10085",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

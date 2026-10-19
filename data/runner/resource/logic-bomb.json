@@ -1,7 +1,7 @@
 {
   "id": "logic-bomb",
+  "deckLimit": 3,
   "title": "Logic Bomb",
-  "nrdbCode": "21089",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

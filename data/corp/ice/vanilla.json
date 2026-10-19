@@ -1,7 +1,7 @@
 {
   "id": "vanilla",
+  "deckLimit": 3,
   "title": "Vanilla",
-  "nrdbCode": "10095",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

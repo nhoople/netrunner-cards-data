@@ -2630,10 +2630,6 @@
     "wave": {
       "type": "string"
     },
-    "nrdbCode": {
-      "type": "string",
-      "description": "Optional NetrunnerDB code — metadata only, not behavior."
-    },
     "strengthPerAdvancement": {
       "type": "integer"
     },

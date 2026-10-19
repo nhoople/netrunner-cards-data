@@ -1,7 +1,7 @@
 {
   "id": "kitsune",
+  "deckLimit": 3,
   "title": "Kitsune",
-  "nrdbCode": "06043",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

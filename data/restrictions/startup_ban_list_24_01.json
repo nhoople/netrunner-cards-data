@@ -1,0 +1,10 @@
+{
+  "id": "startup_ban_list_24_01",
+  "name": "Startup Ban List 24.01",
+  "formatId": "startup",
+  "dateStart": "2024-01-19",
+  "banned": [
+    "drago-ivanov",
+    "endurance"
+  ]
+}

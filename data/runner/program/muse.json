@@ -1,8 +1,8 @@
 {
   "id": "muse",
+  "deckLimit": 3,
   "title": "Muse",
   "wave": "rebellion-without-rehearsal",
-  "nrdbCode": "34091",
   "type": "program",
   "side": "runner",
   "faction": "shaper",

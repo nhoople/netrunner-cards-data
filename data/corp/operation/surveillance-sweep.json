@@ -1,7 +1,7 @@
 {
   "id": "surveillance-sweep",
+  "deckLimit": 3,
   "title": "Surveillance Sweep",
-  "nrdbCode": "09023",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

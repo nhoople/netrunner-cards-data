@@ -1,8 +1,8 @@
 {
   "id": "ubiquitous-vig",
+  "deckLimit": 3,
   "title": "Ubiquitous Vig",
   "wave": "midnight-sun",
-  "nrdbCode": "33052",
   "type": "asset",
   "side": "corp",
   "faction": "nbn",

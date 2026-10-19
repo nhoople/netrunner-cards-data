@@ -1,0 +1,11 @@
+{
+  "cardId": "networking",
+  "rulings": [
+    {
+      "dateUpdate": "2022-04-23",
+      "rulesTeamVerified": true,
+      "question": "If you play [Networking](https://netrunnerdb.com/en/card/31020) and choose to add it to your grip, do you draw 1 card with [Aniccam](https://netrunnerdb.com/en/card/26084)?",
+      "answer": "No, [Networking](https://netrunnerdb.com/en/card/31020) adding itself to HQ prevents the default trashing of a resolved event."
+    }
+  ]
+}

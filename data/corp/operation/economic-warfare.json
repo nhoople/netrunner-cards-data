@@ -1,7 +1,7 @@
 {
   "id": "economic-warfare",
+  "deckLimit": 3,
   "title": "Economic Warfare",
-  "nrdbCode": "21036",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

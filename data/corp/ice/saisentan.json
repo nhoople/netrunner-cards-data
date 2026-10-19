@@ -1,8 +1,8 @@
 {
   "id": "saisentan",
+  "deckLimit": 3,
   "title": "Saisentan",
   "wave": "downfall",
-  "nrdbCode": "26044",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

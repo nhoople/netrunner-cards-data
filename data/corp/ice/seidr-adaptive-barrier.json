@@ -1,7 +1,7 @@
 {
   "id": "seidr-adaptive-barrier",
+  "deckLimit": 3,
   "title": "Seidr Adaptive Barrier",
-  "nrdbCode": "12029",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

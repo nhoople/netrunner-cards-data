@@ -1,7 +1,7 @@
 {
   "id": "paintbrush",
+  "deckLimit": 3,
   "title": "Paintbrush",
-  "nrdbCode": "04108",
   "type": "program",
   "side": "runner",
   "unsupported": [],

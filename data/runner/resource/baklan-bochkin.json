@@ -1,8 +1,8 @@
 {
   "id": "baklan-bochkin",
+  "deckLimit": 3,
   "title": "“Baklan” Bochkin",
   "wave": "downfall",
-  "nrdbCode": "26017",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

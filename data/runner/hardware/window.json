@@ -1,7 +1,7 @@
 {
   "id": "window",
+  "deckLimit": 3,
   "title": "Window",
-  "nrdbCode": "05040",
   "type": "hardware",
   "side": "runner",
   "unsupported": [],

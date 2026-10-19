@@ -1,8 +1,8 @@
 {
   "id": "executive-retreat",
+  "deckLimit": 3,
   "title": "Executive Retreat",
   "wave": "trace-amount",
-  "nrdbCode": "02039",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

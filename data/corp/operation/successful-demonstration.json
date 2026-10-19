@@ -1,8 +1,8 @@
 {
   "id": "successful-demonstration",
+  "deckLimit": 3,
   "title": "Successful Demonstration",
   "wave": "creation-and-control",
-  "nrdbCode": "03014",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

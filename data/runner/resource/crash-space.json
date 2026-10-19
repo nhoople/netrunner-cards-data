@@ -1,8 +1,8 @@
 {
   "id": "crash-space",
+  "deckLimit": 3,
   "title": "Crash Space",
   "wave": "core",
-  "nrdbCode": "01030",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

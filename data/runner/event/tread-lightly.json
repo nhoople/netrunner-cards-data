@@ -1,8 +1,8 @@
 {
   "id": "tread-lightly",
+  "deckLimit": 3,
   "title": "Tread Lightly",
   "wave": "system-gateway",
-  "nrdbCode": "30012",
   "type": "event",
   "side": "runner",
   "faction": "criminal",

@@ -1,7 +1,7 @@
 {
   "id": "tech-trader",
+  "deckLimit": 3,
   "title": "Tech Trader",
-  "nrdbCode": "10023",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

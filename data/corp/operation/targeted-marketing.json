@@ -1,7 +1,7 @@
 {
   "id": "targeted-marketing",
+  "deckLimit": 3,
   "title": "Targeted Marketing",
-  "nrdbCode": "06026",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

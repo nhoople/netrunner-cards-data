@@ -1,8 +1,8 @@
 {
   "id": "business-as-usual",
+  "deckLimit": 3,
   "title": "Business As Usual",
   "wave": "rebellion-without-rehearsal",
-  "nrdbCode": "34128",
   "type": "operation",
   "side": "corp",
   "faction": "weyland-consortium",

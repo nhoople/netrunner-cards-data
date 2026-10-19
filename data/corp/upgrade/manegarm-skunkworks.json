@@ -1,8 +1,8 @@
 {
   "id": "manegarm-skunkworks",
+  "deckLimit": 3,
   "title": "Manegarm Skunkworks",
   "wave": "system-gateway",
-  "nrdbCode": "30042",
   "type": "upgrade",
   "side": "corp",
   "faction": "haas-bioroid",

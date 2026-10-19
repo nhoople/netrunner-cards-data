@@ -1,7 +1,7 @@
 {
   "id": "hive",
+  "deckLimit": 3,
   "title": "Hive",
-  "nrdbCode": "04117",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

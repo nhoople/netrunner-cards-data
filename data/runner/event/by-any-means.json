@@ -1,7 +1,7 @@
 {
   "id": "by-any-means",
+  "deckLimit": 3,
   "title": "By Any Means",
-  "nrdbCode": "21001",
   "type": "event",
   "side": "runner",
   "unsupported": [],

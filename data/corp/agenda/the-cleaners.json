@@ -1,8 +1,8 @@
 {
   "id": "the-cleaners",
+  "deckLimit": 3,
   "title": "The Cleaners",
   "wave": "stalwart",
-  "nrdbCode": "04036",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

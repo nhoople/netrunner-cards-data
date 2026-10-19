@@ -1,8 +1,8 @@
 {
   "id": "the-helpful-ai",
+  "deckLimit": 3,
   "title": "The Helpful AI",
   "wave": "what-lies-ahead",
-  "nrdbCode": "02008",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

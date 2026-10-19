@@ -1,7 +1,7 @@
 {
   "id": "bailiff",
+  "deckLimit": 3,
   "title": "Bailiff",
-  "nrdbCode": "10056",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

@@ -1,7 +1,7 @@
 {
   "id": "spooned",
+  "deckLimit": 3,
   "title": "Spooned",
-  "nrdbCode": "07039",
   "type": "event",
   "side": "runner",
   "unsupported": [],

@@ -1,7 +1,7 @@
 {
   "id": "cybernetics-division-humanity-upgraded",
+  "deckLimit": 1,
   "title": "Cybernetics Division: Humanity Upgraded",
-  "nrdbCode": "08050",
   "type": "identity",
   "side": "corp",
   "unsupported": [],

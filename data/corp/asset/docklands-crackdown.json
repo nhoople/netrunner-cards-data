@@ -1,7 +1,7 @@
 {
   "id": "docklands-crackdown",
+  "deckLimit": 3,
   "title": "Docklands Crackdown",
-  "nrdbCode": "06072",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

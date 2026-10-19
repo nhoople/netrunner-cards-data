@@ -1,7 +1,7 @@
 {
   "id": "endless-eula",
+  "deckLimit": 3,
   "title": "Endless EULA",
-  "nrdbCode": "21074",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

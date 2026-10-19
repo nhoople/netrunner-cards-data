@@ -1,8 +1,8 @@
 {
   "id": "audrey-v2",
+  "deckLimit": 3,
   "title": "Audrey v2",
   "wave": "the-automata-initiative",
-  "nrdbCode": "34004",
   "type": "program",
   "side": "runner",
   "faction": "anarch",

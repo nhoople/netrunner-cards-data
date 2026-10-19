@@ -1,8 +1,8 @@
 {
   "id": "reaper-function",
+  "deckLimit": 3,
   "title": "Reaper Function",
   "wave": "parhelion",
-  "nrdbCode": "33107",
   "type": "asset",
   "side": "corp",
   "faction": "jinteki",

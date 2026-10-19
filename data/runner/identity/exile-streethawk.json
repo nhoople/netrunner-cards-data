@@ -1,8 +1,8 @@
 {
   "id": "exile-streethawk",
+  "deckLimit": 1,
   "title": "Exile: Streethawk",
   "wave": "creation-and-control",
-  "nrdbCode": "03030",
   "type": "identity",
   "side": "runner",
   "unsupported": [],

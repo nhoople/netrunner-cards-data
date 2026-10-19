@@ -1,7 +1,7 @@
 {
   "id": "witness-tampering",
+  "deckLimit": 3,
   "title": "Witness Tampering",
-  "nrdbCode": "04118",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

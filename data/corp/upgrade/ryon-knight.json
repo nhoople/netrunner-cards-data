@@ -1,7 +1,7 @@
 {
   "id": "ryon-knight",
+  "deckLimit": 3,
   "title": "Ryon Knight",
-  "nrdbCode": "08054",
   "type": "upgrade",
   "side": "corp",
   "unsupported": [],

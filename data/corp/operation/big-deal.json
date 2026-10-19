@@ -1,8 +1,8 @@
 {
   "id": "big-deal",
+  "deckLimit": 3,
   "title": "Big Deal",
   "wave": "midnight-sun",
-  "nrdbCode": "33038",
   "type": "operation",
   "side": "corp",
   "faction": "haas-bioroid",

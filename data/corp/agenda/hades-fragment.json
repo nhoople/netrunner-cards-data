@@ -1,7 +1,7 @@
 {
   "id": "hades-fragment",
+  "deckLimit": 1,
   "title": "Hades Fragment",
-  "nrdbCode": "06071",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

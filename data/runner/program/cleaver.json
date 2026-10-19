@@ -1,8 +1,8 @@
 {
   "id": "cleaver",
+  "deckLimit": 3,
   "title": "Cleaver",
   "wave": "system-gateway",
-  "nrdbCode": "30006",
   "type": "program",
   "side": "runner",
   "faction": "anarch",

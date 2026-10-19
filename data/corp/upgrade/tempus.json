@@ -1,7 +1,7 @@
 {
   "id": "tempus",
+  "deckLimit": 3,
   "title": "Tempus",
-  "nrdbCode": "21071",
   "type": "upgrade",
   "side": "corp",
   "unsupported": [],

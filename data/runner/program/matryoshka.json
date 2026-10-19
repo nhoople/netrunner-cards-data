@@ -1,8 +1,8 @@
 {
   "id": "matryoshka",
+  "deckLimit": 6,
   "title": "Matryoshka",
   "wave": "parhelion",
-  "nrdbCode": "33094",
   "type": "program",
   "side": "runner",
   "faction": "neutral-runner",

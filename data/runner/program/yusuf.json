@@ -1,7 +1,7 @@
 {
   "id": "yusuf",
+  "deckLimit": 3,
   "title": "Yusuf",
-  "nrdbCode": "21002",
   "type": "program",
   "side": "runner",
   "unsupported": [],

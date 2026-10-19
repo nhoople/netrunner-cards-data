@@ -1,7 +1,7 @@
 {
   "id": "mumbad-construction-co",
+  "deckLimit": 3,
   "title": "Mumbad Construction Co.",
-  "nrdbCode": "10036",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

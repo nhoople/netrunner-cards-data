@@ -1,8 +1,8 @@
 {
   "id": "patchwork",
+  "deckLimit": 3,
   "title": "Patchwork",
   "wave": "system-core-2019",
-  "nrdbCode": "25009",
   "type": "hardware",
   "side": "runner",
   "unsupported": [],

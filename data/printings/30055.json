@@ -1,0 +1,9 @@
+{
+  "code": "30055",
+  "cardId": "ping",
+  "pack": "system-gateway",
+  "flavor": "AvID:??:73.174 time=0.632 ms\nAvID:??:73.174 time=0.201 ms\nAvID:??:73.174 time=0.000 ms <strong>ALERT</strong>",
+  "illustrator": "Bruno Balixa",
+  "quantity": 3,
+  "position": 55
+}

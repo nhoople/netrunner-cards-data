@@ -1,7 +1,7 @@
 {
   "id": "theophilius-bagbiter",
+  "deckLimit": 3,
   "title": "Theophilius Bagbiter",
-  "nrdbCode": "05049",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

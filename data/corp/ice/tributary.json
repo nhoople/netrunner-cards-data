@@ -1,8 +1,8 @@
 {
   "id": "tributary",
+  "deckLimit": 3,
   "title": "Tributary",
   "wave": "rebellion-without-rehearsal",
-  "nrdbCode": "34111",
   "type": "ice",
   "side": "corp",
   "faction": "jinteki",

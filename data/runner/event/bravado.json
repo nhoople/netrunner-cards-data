@@ -1,8 +1,8 @@
 {
   "id": "bravado",
+  "deckLimit": 3,
   "title": "Bravado",
   "wave": "uprising",
-  "nrdbCode": "26074",
   "type": "event",
   "side": "runner",
   "faction": "criminal",

@@ -1,8 +1,8 @@
 {
   "id": "midori",
+  "deckLimit": 3,
   "title": "Midori",
   "wave": "future-proof",
-  "nrdbCode": "02113",
   "type": "upgrade",
   "side": "corp",
   "unsupported": [],

@@ -1,7 +1,7 @@
 {
   "id": "markus-1-0",
+  "deckLimit": 3,
   "title": "Markus 1.0",
-  "nrdbCode": "06104",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

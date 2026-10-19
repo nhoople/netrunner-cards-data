@@ -1,8 +1,8 @@
 {
   "id": "roughneck-repair-squad",
+  "deckLimit": 3,
   "title": "Roughneck Repair Squad",
   "wave": "downfall",
-  "nrdbCode": "26057",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

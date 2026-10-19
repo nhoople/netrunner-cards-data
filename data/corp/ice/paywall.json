@@ -1,8 +1,8 @@
 {
   "id": "paywall",
+  "deckLimit": 3,
   "title": "Paywall",
   "wave": "vantage-point",
-  "nrdbCode": "36052",
   "type": "ice",
   "side": "corp",
   "faction": "nbn",

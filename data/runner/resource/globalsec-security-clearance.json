@@ -1,7 +1,7 @@
 {
   "id": "globalsec-security-clearance",
+  "deckLimit": 3,
   "title": "Globalsec Security Clearance",
-  "nrdbCode": "09051",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

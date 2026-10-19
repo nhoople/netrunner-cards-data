@@ -1,8 +1,8 @@
 {
   "id": "edge-of-world",
+  "deckLimit": 3,
   "title": "Edge of World",
   "wave": "cyber-exodus",
-  "nrdbCode": "02053",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

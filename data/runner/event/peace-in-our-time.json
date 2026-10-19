@@ -1,7 +1,7 @@
 {
   "id": "peace-in-our-time",
+  "deckLimit": 3,
   "title": "Peace in Our Time",
-  "nrdbCode": "11109",
   "type": "event",
   "side": "runner",
   "unsupported": [],

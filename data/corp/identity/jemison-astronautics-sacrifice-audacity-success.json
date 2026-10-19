@@ -1,7 +1,7 @@
 {
   "id": "jemison-astronautics-sacrifice-audacity-success",
+  "deckLimit": 1,
   "title": "Jemison Astronautics: Sacrifice. Audacity. Success.",
-  "nrdbCode": "12016",
   "type": "identity",
   "side": "corp",
   "unsupported": [],

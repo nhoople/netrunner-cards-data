@@ -1,7 +1,7 @@
 {
   "id": "fenris",
+  "deckLimit": 3,
   "title": "Fenris",
-  "nrdbCode": "04071",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

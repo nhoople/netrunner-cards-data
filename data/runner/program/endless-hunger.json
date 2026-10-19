@@ -1,7 +1,7 @@
 {
   "id": "endless-hunger",
+  "deckLimit": 3,
   "title": "Endless Hunger",
-  "nrdbCode": "09033",
   "type": "program",
   "side": "runner",
   "unsupported": [],

@@ -1,7 +1,7 @@
 {
   "id": "market-research",
+  "deckLimit": 3,
   "title": "Market Research",
-  "nrdbCode": "04095",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

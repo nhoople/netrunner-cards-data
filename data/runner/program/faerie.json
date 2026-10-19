@@ -1,8 +1,8 @@
 {
   "id": "faerie",
+  "deckLimit": 3,
   "title": "Faerie",
   "wave": "system-core-2019",
-  "nrdbCode": "25035",
   "type": "program",
   "side": "runner",
   "unsupported": [],

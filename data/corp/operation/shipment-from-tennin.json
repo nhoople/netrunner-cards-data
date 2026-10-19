@@ -1,7 +1,7 @@
 {
   "id": "shipment-from-tennin",
+  "deckLimit": 3,
   "title": "Shipment from Tennin",
-  "nrdbCode": "12072",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

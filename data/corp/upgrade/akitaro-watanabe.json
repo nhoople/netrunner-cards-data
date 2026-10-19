@@ -1,8 +1,8 @@
 {
   "id": "akitaro-watanabe",
+  "deckLimit": 3,
   "title": "Akitaro Watanabe",
   "wave": "core",
-  "nrdbCode": "01079",
   "type": "upgrade",
   "side": "corp",
   "unsupported": [],

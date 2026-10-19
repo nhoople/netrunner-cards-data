@@ -1,8 +1,8 @@
 {
   "id": "ice-wall",
+  "deckLimit": 3,
   "title": "Ice Wall",
   "wave": "system-update-2021",
-  "nrdbCode": "31077",
   "type": "ice",
   "side": "corp",
   "faction": "weyland-consortium",

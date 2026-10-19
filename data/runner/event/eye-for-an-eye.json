@@ -1,8 +1,8 @@
 {
   "id": "eye-for-an-eye",
+  "deckLimit": 3,
   "title": "Eye for an Eye",
   "wave": "rebellion-without-rehearsal",
-  "nrdbCode": "34067",
   "type": "event",
   "side": "runner",
   "faction": "anarch",

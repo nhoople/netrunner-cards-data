@@ -1,7 +1,7 @@
 {
   "id": "mother-goddess",
+  "deckLimit": 3,
   "title": "Mother Goddess",
-  "nrdbCode": "06010",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

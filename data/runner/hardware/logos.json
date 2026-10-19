@@ -1,7 +1,7 @@
 {
   "id": "logos",
+  "deckLimit": 3,
   "title": "Logos",
-  "nrdbCode": "05037",
   "type": "hardware",
   "side": "runner",
   "unsupported": [],

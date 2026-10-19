@@ -1,7 +1,7 @@
 {
   "id": "chrysalis",
+  "deckLimit": 3,
   "title": "Chrysalis",
-  "nrdbCode": "11013",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

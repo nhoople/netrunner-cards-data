@@ -1,8 +1,8 @@
 {
   "id": "hard-at-work",
+  "deckLimit": 3,
   "title": "Hard at Work",
   "wave": "stalwart",
-  "nrdbCode": "04023",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

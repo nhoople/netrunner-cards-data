@@ -1,7 +1,7 @@
 {
   "id": "next-wave-2",
+  "deckLimit": 3,
   "title": "NEXT Wave 2",
-  "nrdbCode": "12009",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

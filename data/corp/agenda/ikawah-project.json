@@ -1,7 +1,7 @@
 {
   "id": "ikawah-project",
+  "deckLimit": 3,
   "title": "Ikawah Project",
-  "nrdbCode": "21010",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

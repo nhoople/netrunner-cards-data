@@ -1,7 +1,7 @@
 {
   "id": "genetic-resequencing",
+  "deckLimit": 3,
   "title": "Genetic Resequencing",
-  "nrdbCode": "08013",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

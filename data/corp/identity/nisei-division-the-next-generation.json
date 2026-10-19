@@ -1,7 +1,7 @@
 {
   "id": "nisei-division-the-next-generation",
+  "deckLimit": 1,
   "title": "Nisei Division: The Next Generation",
-  "nrdbCode": "05002",
   "type": "identity",
   "side": "corp",
   "unsupported": [],

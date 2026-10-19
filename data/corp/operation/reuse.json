@@ -1,7 +1,7 @@
 {
   "id": "reuse",
+  "deckLimit": 3,
   "title": "Reuse",
-  "nrdbCode": "06070",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

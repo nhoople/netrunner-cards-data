@@ -1,7 +1,7 @@
 {
   "id": "berserker",
+  "deckLimit": 3,
   "title": "Berserker",
-  "nrdbCode": "12041",
   "type": "program",
   "side": "runner",
   "unsupported": [],

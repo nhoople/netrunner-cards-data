@@ -1,8 +1,8 @@
 {
   "id": "flip-switch",
+  "deckLimit": 3,
   "title": "Flip Switch",
   "wave": "downfall",
-  "nrdbCode": "26013",
   "type": "hardware",
   "side": "runner",
   "unsupported": [],

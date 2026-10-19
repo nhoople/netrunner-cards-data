@@ -1,8 +1,8 @@
 {
   "id": "word-on-the-street",
+  "deckLimit": 3,
   "title": "Word on the Street",
   "wave": "vantage-point",
-  "nrdbCode": "36025",
   "type": "resource",
   "side": "runner",
   "faction": "neutral-runner",

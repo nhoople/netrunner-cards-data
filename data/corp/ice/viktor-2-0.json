@@ -1,8 +1,8 @@
 {
   "id": "viktor-2-0",
+  "deckLimit": 3,
   "title": "Viktor 2.0",
   "wave": "creation-and-control",
-  "nrdbCode": "03019",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

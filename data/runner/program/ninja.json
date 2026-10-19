@@ -1,8 +1,8 @@
 {
   "id": "ninja",
+  "deckLimit": 3,
   "title": "Ninja",
   "wave": "core",
-  "nrdbCode": "01027",
   "type": "program",
   "side": "runner",
   "unsupported": [],

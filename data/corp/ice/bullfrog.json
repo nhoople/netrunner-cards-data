@@ -1,8 +1,8 @@
 {
   "id": "bullfrog",
+  "deckLimit": 3,
   "title": "Bullfrog",
   "wave": "a-study-in-static",
-  "nrdbCode": "02073",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

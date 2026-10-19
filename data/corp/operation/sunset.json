@@ -1,8 +1,8 @@
 {
   "id": "sunset",
+  "deckLimit": 3,
   "title": "Sunset",
   "wave": "cyber-exodus",
-  "nrdbCode": "02054",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

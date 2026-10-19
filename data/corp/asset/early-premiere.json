@@ -1,7 +1,7 @@
 {
   "id": "early-premiere",
+  "deckLimit": 3,
   "title": "Early Premiere",
-  "nrdbCode": "08095",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

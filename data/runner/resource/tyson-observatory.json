@@ -1,7 +1,7 @@
 {
   "id": "tyson-observatory",
+  "deckLimit": 3,
   "title": "Tyson Observatory",
-  "nrdbCode": "08030",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

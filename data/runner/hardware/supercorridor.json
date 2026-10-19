@@ -1,8 +1,8 @@
 {
   "id": "supercorridor",
+  "deckLimit": 3,
   "title": "Supercorridor",
   "wave": "downfall",
-  "nrdbCode": "26023",
   "type": "hardware",
   "side": "runner",
   "unsupported": [],

@@ -1,7 +1,7 @@
 {
   "id": "exclusive-party",
+  "deckLimit": 6,
   "title": "Exclusive Party",
-  "nrdbCode": "10060",
   "type": "event",
   "side": "runner",
   "unsupported": [],

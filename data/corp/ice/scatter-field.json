@@ -1,8 +1,8 @@
 {
   "id": "scatter-field",
+  "deckLimit": 3,
   "title": "Scatter Field",
   "wave": "elevation",
-  "nrdbCode": "35042",
   "type": "ice",
   "side": "corp",
   "faction": "haas-bioroid",

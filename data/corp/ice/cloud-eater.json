@@ -1,8 +1,8 @@
 {
   "id": "cloud-eater",
+  "deckLimit": 3,
   "title": "Cloud Eater",
   "wave": "rebellion-without-rehearsal",
-  "nrdbCode": "34110",
   "type": "ice",
   "side": "corp",
   "faction": "jinteki",

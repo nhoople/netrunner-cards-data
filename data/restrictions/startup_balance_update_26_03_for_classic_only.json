@@ -1,0 +1,13 @@
+{
+  "id": "startup_balance_update_26_03_for_classic_only",
+  "name": "Startup Balance Update 26.03 (ignore active date)",
+  "formatId": "standard",
+  "dateStart": "2026-03-02",
+  "banned": [
+    "cleaver",
+    "let-them-dream",
+    "mercia-b4ll4rd",
+    "nbn-reality-plus",
+    "seamless-launch"
+  ]
+}

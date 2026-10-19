@@ -1,8 +1,8 @@
 {
   "id": "slash-and-burn-agriculture",
+  "deckLimit": 3,
   "title": "Slash and Burn Agriculture",
   "wave": "the-automata-initiative",
-  "nrdbCode": "34057",
   "type": "agenda",
   "side": "corp",
   "faction": "weyland-consortium",

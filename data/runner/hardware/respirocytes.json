@@ -1,7 +1,7 @@
 {
   "id": "respirocytes",
+  "deckLimit": 3,
   "title": "Respirocytes",
-  "nrdbCode": "12102",
   "type": "hardware",
   "side": "runner",
   "unsupported": [],

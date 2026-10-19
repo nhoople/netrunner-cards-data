@@ -1,0 +1,16 @@
+{
+  "id": "startup_elevation",
+  "name": "Startup (Elevation)",
+  "formatId": "startup",
+  "cycles": [
+    "elevation",
+    "liberation",
+    "system-gateway"
+  ],
+  "waves": [
+    "elevation",
+    "rebellion-without-rehearsal",
+    "system-gateway",
+    "the-automata-initiative"
+  ]
+}

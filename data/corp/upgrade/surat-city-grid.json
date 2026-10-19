@@ -1,7 +1,7 @@
 {
   "id": "surat-city-grid",
+  "deckLimit": 3,
   "title": "Surat City Grid",
-  "nrdbCode": "10057",
   "type": "upgrade",
   "side": "corp",
   "unsupported": [],

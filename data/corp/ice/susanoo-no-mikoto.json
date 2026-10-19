@@ -1,7 +1,7 @@
 {
   "id": "susanoo-no-mikoto",
+  "deckLimit": 3,
   "title": "Susanoo-no-Mikoto",
-  "nrdbCode": "05020",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

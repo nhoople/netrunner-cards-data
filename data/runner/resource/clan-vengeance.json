@@ -1,7 +1,7 @@
 {
   "id": "clan-vengeance",
+  "deckLimit": 3,
   "title": "Clan Vengeance",
-  "nrdbCode": "12022",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

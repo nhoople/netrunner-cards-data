@@ -1,8 +1,8 @@
 {
   "id": "battering-ram",
+  "deckLimit": 3,
   "title": "Battering Ram",
   "wave": "system-core-2019",
-  "nrdbCode": "25052",
   "type": "program",
   "side": "runner",
   "unsupported": [],

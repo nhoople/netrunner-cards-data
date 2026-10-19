@@ -1,7 +1,7 @@
 {
   "id": "defective-brainchips",
+  "deckLimit": 3,
   "title": "Defective Brainchips",
-  "nrdbCode": "08072",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

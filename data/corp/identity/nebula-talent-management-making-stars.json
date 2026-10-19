@@ -1,8 +1,8 @@
 {
   "id": "nebula-talent-management-making-stars",
+  "deckLimit": 1,
   "title": "Nebula Talent Management: Making Stars",
   "wave": "elevation",
-  "nrdbCode": "35057",
   "type": "identity",
   "side": "corp",
   "faction": "nbn",

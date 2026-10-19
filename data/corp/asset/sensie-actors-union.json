@@ -1,7 +1,7 @@
 {
   "id": "sensie-actors-union",
+  "deckLimit": 3,
   "title": "Sensie Actors Union",
-  "nrdbCode": "10053",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

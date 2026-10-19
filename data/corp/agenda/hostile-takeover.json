@@ -1,11 +1,11 @@
 {
   "id": "hostile-takeover",
+  "deckLimit": 3,
   "title": "Hostile Takeover",
   "type": "agenda",
   "side": "corp",
   "faction": "weyland-consortium",
   "wave": "system-update-2021",
-  "nrdbCode": "01094",
   "advancementRequirement": 2,
   "agendaPoints": 1,
   "unsupported": [],

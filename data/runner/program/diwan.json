@@ -1,7 +1,7 @@
 {
   "id": "diwan",
+  "deckLimit": 3,
   "title": "Diwan",
-  "nrdbCode": "10021",
   "type": "program",
   "side": "runner",
   "unsupported": [],

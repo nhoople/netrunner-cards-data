@@ -1,8 +1,8 @@
 {
   "id": "satellite-uplink",
+  "deckLimit": 3,
   "title": "Satellite Uplink",
   "wave": "trace-amount",
-  "nrdbCode": "02023",
   "type": "event",
   "side": "runner",
   "unsupported": [],

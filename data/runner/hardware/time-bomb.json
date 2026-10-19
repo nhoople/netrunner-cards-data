@@ -1,8 +1,8 @@
 {
   "id": "time-bomb",
+  "deckLimit": 3,
   "title": "Time Bomb",
   "wave": "parhelion",
-  "nrdbCode": "33069",
   "type": "hardware",
   "side": "runner",
   "faction": "anarch",

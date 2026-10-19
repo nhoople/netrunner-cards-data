@@ -1,0 +1,17 @@
+{
+  "id": "startup_borealis_plus_the_automata_initiative",
+  "name": "Startup (The Automata Initiative)",
+  "formatId": "startup",
+  "cycles": [
+    "borealis",
+    "system-gateway",
+    "system-update-2021"
+  ],
+  "waves": [
+    "midnight-sun",
+    "parhelion",
+    "system-gateway",
+    "system-update-2021",
+    "the-automata-initiative"
+  ]
+}

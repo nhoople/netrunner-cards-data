@@ -1,8 +1,8 @@
 {
   "id": "arruaceiras-crew",
+  "deckLimit": 3,
   "title": "Arruaceiras Crew",
   "wave": "rebellion-without-rehearsal",
-  "nrdbCode": "34073",
   "type": "resource",
   "side": "runner",
   "faction": "anarch",

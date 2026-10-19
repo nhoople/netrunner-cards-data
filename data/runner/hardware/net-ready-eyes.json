@@ -1,7 +1,7 @@
 {
   "id": "net-ready-eyes",
+  "deckLimit": 3,
   "title": "Net-Ready Eyes",
-  "nrdbCode": "08047",
   "type": "hardware",
   "side": "runner",
   "unsupported": [],

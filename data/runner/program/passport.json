@@ -1,7 +1,7 @@
 {
   "id": "passport",
+  "deckLimit": 3,
   "title": "Passport",
-  "nrdbCode": "05046",
   "type": "program",
   "side": "runner",
   "unsupported": [],

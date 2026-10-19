@@ -1,8 +1,8 @@
 {
   "id": "project-vitruvius",
+  "deckLimit": 3,
   "title": "Project Vitruvius",
   "wave": "system-update-2021",
-  "nrdbCode": "31041",
   "type": "agenda",
   "side": "corp",
   "faction": "haas-bioroid",

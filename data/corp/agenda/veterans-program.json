@@ -1,7 +1,7 @@
 {
   "id": "veterans-program",
+  "deckLimit": 3,
   "title": "Veterans Program",
-  "nrdbCode": "04080",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

@@ -1,7 +1,7 @@
 {
   "id": "fester",
+  "deckLimit": 3,
   "title": "Fester",
-  "nrdbCode": "06075",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

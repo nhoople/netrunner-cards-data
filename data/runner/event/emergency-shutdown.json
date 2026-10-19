@@ -1,8 +1,8 @@
 {
   "id": "emergency-shutdown",
+  "deckLimit": 3,
   "title": "Emergency Shutdown",
   "wave": "system-update-2021",
-  "nrdbCode": "31016",
   "type": "event",
   "side": "runner",
   "faction": "criminal",

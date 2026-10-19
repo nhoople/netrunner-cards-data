@@ -1,8 +1,8 @@
 {
   "id": "funhouse",
+  "deckLimit": 3,
   "title": "Funhouse",
   "wave": "system-gateway",
-  "nrdbCode": "30054",
   "type": "ice",
   "side": "corp",
   "faction": "nbn",

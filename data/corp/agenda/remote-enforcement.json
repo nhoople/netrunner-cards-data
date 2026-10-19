@@ -1,7 +1,7 @@
 {
   "id": "remote-enforcement",
+  "deckLimit": 3,
   "title": "Remote Enforcement",
-  "nrdbCode": "21091",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

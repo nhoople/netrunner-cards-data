@@ -1,7 +1,7 @@
 {
   "id": "fear-the-masses",
+  "deckLimit": 6,
   "title": "Fear the Masses",
-  "nrdbCode": "10096",
   "type": "event",
   "side": "runner",
   "unsupported": [],

@@ -1,7 +1,7 @@
 {
   "id": "graft",
+  "deckLimit": 3,
   "title": "Graft",
-  "nrdbCode": "13044",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

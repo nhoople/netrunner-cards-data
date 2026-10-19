@@ -1,8 +1,8 @@
 {
   "id": "armed-asset-protection",
+  "deckLimit": 3,
   "title": "Armed Asset Protection",
   "wave": "the-automata-initiative",
-  "nrdbCode": "34061",
   "type": "operation",
   "side": "corp",
   "faction": "weyland-consortium",

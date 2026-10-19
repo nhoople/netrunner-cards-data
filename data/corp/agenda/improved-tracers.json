@@ -1,7 +1,7 @@
 {
   "id": "improved-tracers",
+  "deckLimit": 3,
   "title": "Improved Tracers",
-  "nrdbCode": "09005",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

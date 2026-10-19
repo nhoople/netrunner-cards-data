@@ -1,7 +1,7 @@
 {
   "id": "angel-arena",
+  "deckLimit": 3,
   "title": "Angel Arena",
-  "nrdbCode": "06080",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

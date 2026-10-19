@@ -1,8 +1,8 @@
 {
   "id": "vera-ivanovna-shuyskaya",
+  "deckLimit": 3,
   "title": "Vera Ivanovna Shuyskaya",
   "wave": "parhelion",
-  "nrdbCode": "33115",
   "type": "asset",
   "side": "corp",
   "faction": "nbn",

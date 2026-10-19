@@ -1,8 +1,8 @@
 {
   "id": "cyberdex-sandbox",
+  "deckLimit": 3,
   "title": "Cyberdex Sandbox",
   "wave": "uprising",
-  "nrdbCode": "26128",
   "type": "agenda",
   "side": "corp",
   "faction": "neutral-corp",

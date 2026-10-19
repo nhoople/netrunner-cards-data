@@ -1,8 +1,8 @@
 {
   "id": "barry-baz-wong-tri-maf-veteran",
+  "deckLimit": 1,
   "title": "Barry “Baz” Wong: Tri-Maf Veteran",
   "wave": "elevation",
-  "nrdbCode": "35012",
   "type": "identity",
   "side": "runner",
   "faction": "criminal",

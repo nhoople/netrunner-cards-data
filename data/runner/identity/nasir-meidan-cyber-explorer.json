@@ -1,7 +1,7 @@
 {
   "id": "nasir-meidan-cyber-explorer",
+  "deckLimit": 1,
   "title": "Nasir Meidan: Cyber Explorer",
-  "nrdbCode": "06017",
   "type": "identity",
   "side": "runner",
   "unsupported": [],

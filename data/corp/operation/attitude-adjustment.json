@@ -1,8 +1,8 @@
 {
   "id": "attitude-adjustment",
+  "deckLimit": 3,
   "title": "Attitude Adjustment",
   "wave": "reign-and-reverie",
-  "nrdbCode": "22048",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

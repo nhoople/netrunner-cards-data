@@ -1,0 +1,5 @@
+{
+  "cardId": "jarogniew-mercs",
+  "text": "When you install this resource, take 1 tag. Load X power counters onto this resource, where X is equal to the number of tags you have plus 3. When this resource is empty, trash it.\nThe Corp cannot trash this resource while there is another resource installed.\n[interrupt] → <strong>Hosted power counter:</strong> Prevent 1 meat damage.",
+  "strippedText": "When you install this resource, take 1 tag. Load X power counters onto this resource, where X is equal to the number of tags you have plus 3. When this resource is empty, trash it. The Corp cannot trash this resource while there is another resource installed. Interrupt -> Hosted power counter: Prevent 1 meat damage."
+}

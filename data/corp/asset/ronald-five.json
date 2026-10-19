@@ -1,7 +1,7 @@
 {
   "id": "ronald-five",
+  "deckLimit": 3,
   "title": "Ronald Five",
-  "nrdbCode": "08088",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

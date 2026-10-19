@@ -1,7 +1,7 @@
 {
   "id": "kala-ghoda-real-tv",
+  "deckLimit": 3,
   "title": "Kala Ghoda Real TV",
-  "nrdbCode": "10015",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

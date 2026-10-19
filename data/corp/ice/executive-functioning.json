@@ -1,7 +1,7 @@
 {
   "id": "executive-functioning",
+  "deckLimit": 3,
   "title": "Executive Functioning",
-  "nrdbCode": "13035",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

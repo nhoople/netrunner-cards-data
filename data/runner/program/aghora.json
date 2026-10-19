@@ -1,7 +1,7 @@
 {
   "id": "aghora",
+  "deckLimit": 3,
   "title": "Aghora",
-  "nrdbCode": "10097",
   "type": "program",
   "side": "runner",
   "unsupported": [],

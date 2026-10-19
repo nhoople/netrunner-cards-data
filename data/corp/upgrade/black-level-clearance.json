@@ -1,7 +1,7 @@
 {
   "id": "black-level-clearance",
+  "deckLimit": 3,
   "title": "Black Level Clearance",
-  "nrdbCode": "13039",
   "type": "upgrade",
   "side": "corp",
   "unsupported": [],

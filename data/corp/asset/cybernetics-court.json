@@ -1,7 +1,7 @@
 {
   "id": "cybernetics-court",
+  "deckLimit": 3,
   "title": "Cybernetics Court",
-  "nrdbCode": "08109",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

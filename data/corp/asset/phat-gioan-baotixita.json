@@ -1,8 +1,8 @@
 {
   "id": "phat-gioan-baotixita",
+  "deckLimit": 3,
   "title": "Phật Gioan Baotixita",
   "wave": "elevation",
-  "nrdbCode": "35051",
   "type": "asset",
   "side": "corp",
   "faction": "jinteki",

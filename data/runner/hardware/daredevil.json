@@ -1,7 +1,7 @@
 {
   "id": "daredevil",
+  "deckLimit": 3,
   "title": "Daredevil",
-  "nrdbCode": "12066",
   "type": "hardware",
   "side": "runner",
   "unsupported": [],

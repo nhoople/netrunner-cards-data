@@ -1,7 +1,7 @@
 {
   "id": "apocalypse",
+  "deckLimit": 3,
   "title": "Apocalypse",
-  "nrdbCode": "09030",
   "type": "event",
   "side": "runner",
   "unsupported": [],

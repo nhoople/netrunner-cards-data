@@ -1,8 +1,8 @@
 {
   "id": "jinteki-replicating-perfection",
+  "deckLimit": 1,
   "title": "Jinteki: Replicating Perfection",
   "wave": "system-core-2019",
-  "nrdbCode": "25085",
   "type": "identity",
   "side": "corp",
   "unsupported": [],

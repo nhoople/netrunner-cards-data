@@ -1,7 +1,7 @@
 {
   "id": "shell-corporation",
+  "deckLimit": 3,
   "title": "Shell Corporation",
-  "nrdbCode": "06092",
   "type": "upgrade",
   "side": "corp",
   "unsupported": [],

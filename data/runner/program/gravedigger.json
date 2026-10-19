@@ -1,7 +1,7 @@
 {
   "id": "gravedigger",
+  "deckLimit": 3,
   "title": "Gravedigger",
-  "nrdbCode": "07041",
   "type": "program",
   "side": "runner",
   "unsupported": [],

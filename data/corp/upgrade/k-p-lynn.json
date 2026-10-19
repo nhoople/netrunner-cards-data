@@ -1,7 +1,7 @@
 {
   "id": "k-p-lynn",
+  "deckLimit": 3,
   "title": "K. P. Lynn",
-  "nrdbCode": "13052",
   "type": "upgrade",
   "side": "corp",
   "unsupported": [],

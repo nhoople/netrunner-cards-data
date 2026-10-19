@@ -1,7 +1,7 @@
 {
   "id": "jackpot",
+  "deckLimit": 3,
   "title": "Jackpot!",
-  "nrdbCode": "21090",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

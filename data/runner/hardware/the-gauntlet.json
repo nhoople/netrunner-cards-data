@@ -1,7 +1,7 @@
 {
   "id": "the-gauntlet",
+  "deckLimit": 3,
   "title": "The Gauntlet",
-  "nrdbCode": "11063",
   "type": "hardware",
   "side": "runner",
   "unsupported": [],

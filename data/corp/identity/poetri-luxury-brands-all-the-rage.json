@@ -1,8 +1,8 @@
 {
   "id": "poetri-luxury-brands-all-the-rage",
+  "deckLimit": 1,
   "title": "Poétrï Luxury Brands: All the Rage",
   "wave": "elevation",
-  "nrdbCode": "35036",
   "type": "identity",
   "side": "corp",
   "faction": "haas-bioroid",

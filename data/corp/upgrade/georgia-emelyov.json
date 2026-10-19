@@ -1,7 +1,7 @@
 {
   "id": "georgia-emelyov",
+  "deckLimit": 3,
   "title": "Georgia Emelyov",
-  "nrdbCode": "11014",
   "type": "upgrade",
   "side": "corp",
   "unsupported": [],

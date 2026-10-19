@@ -1,0 +1,11 @@
+{
+  "cardId": "midnight-3-arcology",
+  "rulings": [
+    {
+      "dateUpdate": "2022-10-22",
+      "rulesTeamVerified": true,
+      "question": "What does “skip your discard step this turn” mean?",
+      "answer": "You will not discard cards due to exceeding your maximum hand size this turn."
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 {
   "id": "data-ward",
+  "deckLimit": 3,
   "title": "Data Ward",
-  "nrdbCode": "11075",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

@@ -1,8 +1,8 @@
 {
   "id": "clean-getaway",
+  "deckLimit": 3,
   "title": "Clean Getaway",
   "wave": "elevation",
-  "nrdbCode": "35014",
   "type": "event",
   "side": "runner",
   "faction": "criminal",

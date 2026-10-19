@@ -1,8 +1,8 @@
 {
   "id": "lotus-field",
+  "deckLimit": 3,
   "title": "Lotus Field",
   "wave": "system-update-2021",
-  "nrdbCode": "31055",
   "type": "ice",
   "side": "corp",
   "faction": "jinteki",

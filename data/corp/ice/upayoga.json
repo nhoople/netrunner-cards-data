@@ -1,7 +1,7 @@
 {
   "id": "upayoga",
+  "deckLimit": 3,
   "title": "Upayoga",
-  "nrdbCode": "10069",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

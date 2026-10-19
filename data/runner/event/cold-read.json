@@ -1,7 +1,7 @@
 {
   "id": "cold-read",
+  "deckLimit": 3,
   "title": "Cold Read",
-  "nrdbCode": "11083",
   "type": "event",
   "side": "runner",
   "unsupported": [],

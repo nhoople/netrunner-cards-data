@@ -1,8 +1,8 @@
 {
   "id": "tmi",
+  "deckLimit": 3,
   "title": "TMI",
   "wave": "what-lies-ahead",
-  "nrdbCode": "02017",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

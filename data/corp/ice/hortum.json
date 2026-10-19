@@ -1,8 +1,8 @@
 {
   "id": "hortum",
+  "deckLimit": 3,
   "title": "Hortum",
   "wave": "system-update-2021",
-  "nrdbCode": "31076",
   "type": "ice",
   "side": "corp",
   "faction": "weyland-consortium",

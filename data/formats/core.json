@@ -1,0 +1,12 @@
+{
+  "id": "core",
+  "name": "Core",
+  "snapshots": [
+    {
+      "id": "core_0",
+      "dateStart": "2025-04-24",
+      "cardPoolId": "core",
+      "active": true
+    }
+  ]
+}

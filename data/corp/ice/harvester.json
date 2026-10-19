@@ -1,7 +1,7 @@
 {
   "id": "harvester",
+  "deckLimit": 3,
   "title": "Harvester",
-  "nrdbCode": "10032",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

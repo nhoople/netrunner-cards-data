@@ -1,7 +1,7 @@
 {
   "id": "mr-stone",
+  "deckLimit": 3,
   "title": "Mr. Stone",
-  "nrdbCode": "13046",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

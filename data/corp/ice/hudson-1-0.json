@@ -1,8 +1,8 @@
 {
   "id": "hudson-1-0",
+  "deckLimit": 3,
   "title": "Hudson 1.0",
   "wave": "mala-tempora",
-  "nrdbCode": "04051",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

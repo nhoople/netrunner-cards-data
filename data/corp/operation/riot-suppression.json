@@ -1,7 +1,7 @@
 {
   "id": "riot-suppression",
+  "deckLimit": 3,
   "title": "Riot Suppression",
-  "nrdbCode": "21113",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

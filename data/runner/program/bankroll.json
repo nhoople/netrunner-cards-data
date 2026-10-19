@@ -1,8 +1,8 @@
 {
   "id": "bankroll",
+  "deckLimit": 3,
   "title": "Bankroll",
   "wave": "reign-and-reverie",
-  "nrdbCode": "22011",
   "type": "program",
   "side": "runner",
   "unsupported": [],

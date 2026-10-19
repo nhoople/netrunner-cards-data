@@ -1,7 +1,7 @@
 {
   "id": "silhouette-stealth-operative",
+  "deckLimit": 1,
   "title": "Silhouette: Stealth Operative",
-  "nrdbCode": "05030",
   "type": "identity",
   "side": "runner",
   "unsupported": [],

@@ -1,8 +1,8 @@
 {
   "id": "napd-cordon",
+  "deckLimit": 3,
   "title": "NAPD Cordon",
   "wave": "uprising",
-  "nrdbCode": "26130",
   "type": "operation",
   "side": "corp",
   "faction": "neutral-corp",

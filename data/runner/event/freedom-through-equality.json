@@ -1,7 +1,7 @@
 {
   "id": "freedom-through-equality",
+  "deckLimit": 3,
   "title": "\"Freedom Through Equality\"",
-  "nrdbCode": "10045",
   "type": "event",
   "side": "runner",
   "unsupported": [],

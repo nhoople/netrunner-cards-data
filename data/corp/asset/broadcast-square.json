@@ -1,7 +1,7 @@
 {
   "id": "broadcast-square",
+  "deckLimit": 3,
   "title": "Broadcast Square",
-  "nrdbCode": "04112",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

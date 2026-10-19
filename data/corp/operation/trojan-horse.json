@@ -1,7 +1,7 @@
 {
   "id": "trojan-horse",
+  "deckLimit": 3,
   "title": "Trojan Horse",
-  "nrdbCode": "21059",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

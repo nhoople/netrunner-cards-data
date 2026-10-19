@@ -1,8 +1,8 @@
 {
   "id": "next-big-thing",
+  "deckLimit": 3,
   "title": "Next Big Thing",
   "wave": "elevation",
-  "nrdbCode": "35060",
   "type": "agenda",
   "side": "corp",
   "faction": "nbn",

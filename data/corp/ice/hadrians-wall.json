@@ -1,8 +1,8 @@
 {
   "id": "hadrians-wall",
+  "deckLimit": 3,
   "title": "Hadrian's Wall",
   "wave": "system-core-2019",
-  "nrdbCode": "25132",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

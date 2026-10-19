@@ -1,8 +1,8 @@
 {
   "id": "makler",
+  "deckLimit": 3,
   "title": "Makler",
   "wave": "uprising",
-  "nrdbCode": "26080",
   "type": "program",
   "side": "runner",
   "faction": "criminal",

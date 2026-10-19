@@ -1,7 +1,7 @@
 {
   "id": "negotiator",
+  "deckLimit": 3,
   "title": "Negotiator",
-  "nrdbCode": "08019",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

@@ -1,0 +1,16 @@
+{
+  "id": "startup_ashes",
+  "name": "Startup (Ashes)",
+  "formatId": "startup",
+  "cycles": [
+    "ashes",
+    "system-gateway",
+    "system-update-2021"
+  ],
+  "waves": [
+    "downfall",
+    "system-gateway",
+    "system-update-2021",
+    "uprising"
+  ]
+}

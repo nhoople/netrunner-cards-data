@@ -1,7 +1,7 @@
 {
   "id": "netchip",
+  "deckLimit": 6,
   "title": "NetChip",
-  "nrdbCode": "10024",
   "type": "hardware",
   "side": "runner",
   "unsupported": [],

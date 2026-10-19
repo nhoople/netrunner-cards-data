@@ -1,8 +1,8 @@
 {
   "id": "lamprey",
+  "deckLimit": 3,
   "title": "Lamprey",
   "wave": "system-core-2019",
-  "nrdbCode": "25014",
   "type": "program",
   "side": "runner",
   "unsupported": [],

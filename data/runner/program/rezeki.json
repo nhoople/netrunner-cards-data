@@ -1,8 +1,8 @@
 {
   "id": "rezeki",
+  "deckLimit": 3,
   "title": "Rezeki",
   "wave": "downfall",
-  "nrdbCode": "26026",
   "type": "program",
   "side": "runner",
   "unsupported": [],

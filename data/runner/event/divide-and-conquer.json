@@ -1,8 +1,8 @@
 {
   "id": "divide-and-conquer",
+  "deckLimit": 3,
   "title": "Divide and Conquer",
   "wave": "reign-and-reverie",
-  "nrdbCode": "22002",
   "type": "event",
   "side": "runner",
   "unsupported": [],

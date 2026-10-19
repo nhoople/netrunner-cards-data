@@ -1,8 +1,8 @@
 {
   "id": "bangun-when-disaster-strikes",
+  "deckLimit": 1,
   "title": "BANGUN: When Disaster Strikes",
   "wave": "elevation",
-  "nrdbCode": "35068",
   "type": "identity",
   "side": "corp",
   "faction": "weyland-consortium",

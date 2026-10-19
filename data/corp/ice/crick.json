@@ -1,7 +1,7 @@
 {
   "id": "crick",
+  "deckLimit": 3,
   "title": "Crick",
-  "nrdbCode": "08034",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

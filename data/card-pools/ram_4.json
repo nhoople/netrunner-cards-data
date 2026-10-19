@@ -1,0 +1,24 @@
+{
+  "id": "ram_4",
+  "name": "RAM 4",
+  "formatId": "ram",
+  "cycles": [],
+  "waves": [
+    "blood-and-water",
+    "council-of-the-crest",
+    "cyber-exodus",
+    "daedalus-complex",
+    "data-and-destiny",
+    "fear-and-loathing",
+    "honor-and-profit",
+    "kala-ghoda",
+    "magnum-opus",
+    "martial-law",
+    "stalwart",
+    "the-valley",
+    "up-and-over"
+  ],
+  "outsideSets": [
+    "salvaged_memories"
+  ]
+}

@@ -1,7 +1,7 @@
 {
   "id": "bacterial-programming",
+  "deckLimit": 3,
   "title": "Bacterial Programming",
-  "nrdbCode": "21033",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

@@ -1,7 +1,7 @@
 {
   "id": "surfer",
+  "deckLimit": 3,
   "title": "Surfer",
-  "nrdbCode": "08102",
   "type": "program",
   "side": "runner",
   "unsupported": [],

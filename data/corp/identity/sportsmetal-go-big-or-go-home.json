@@ -1,8 +1,8 @@
 {
   "id": "sportsmetal-go-big-or-go-home",
+  "deckLimit": 1,
   "title": "Sportsmetal: Go Big or Go Home",
   "wave": "reign-and-reverie",
-  "nrdbCode": "22026",
   "type": "identity",
   "side": "corp",
   "unsupported": [],

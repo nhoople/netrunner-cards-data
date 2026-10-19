@@ -1,7 +1,7 @@
 {
   "id": "reality-threedee",
+  "deckLimit": 3,
   "title": "Reality Threedee",
-  "nrdbCode": "09012",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

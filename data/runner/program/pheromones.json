@@ -1,8 +1,8 @@
 {
   "id": "pheromones",
+  "deckLimit": 3,
   "title": "Pheromones",
   "wave": "humanitys-shadow",
-  "nrdbCode": "02086",
   "type": "program",
   "side": "runner",
   "unsupported": [],

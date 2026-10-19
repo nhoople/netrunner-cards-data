@@ -1,7 +1,7 @@
 {
   "id": "making-an-entrance",
+  "deckLimit": 3,
   "title": "Making an Entrance",
-  "nrdbCode": "10058",
   "type": "event",
   "side": "runner",
   "unsupported": [],

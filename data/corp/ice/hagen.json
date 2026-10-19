@@ -1,8 +1,8 @@
 {
   "id": "hagen",
+  "deckLimit": 3,
   "title": "Hagen",
   "wave": "downfall",
-  "nrdbCode": "26035",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

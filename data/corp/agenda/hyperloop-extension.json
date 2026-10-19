@@ -1,8 +1,8 @@
 {
   "id": "hyperloop-extension",
+  "deckLimit": 3,
   "title": "Hyperloop Extension",
   "wave": "reign-and-reverie",
-  "nrdbCode": "22027",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

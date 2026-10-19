@@ -1,7 +1,7 @@
 {
   "id": "calling-in-favors",
+  "deckLimit": 3,
   "title": "Calling in Favors",
-  "nrdbCode": "05031",
   "type": "event",
   "side": "runner",
   "unsupported": [],

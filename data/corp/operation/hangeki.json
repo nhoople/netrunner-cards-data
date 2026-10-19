@@ -1,8 +1,8 @@
 {
   "id": "hangeki",
+  "deckLimit": 3,
   "title": "Hangeki",
   "wave": "reign-and-reverie",
-  "nrdbCode": "22040",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

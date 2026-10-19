@@ -1,8 +1,8 @@
 {
   "id": "woodcutter",
+  "deckLimit": 3,
   "title": "Woodcutter",
   "wave": "cyber-exodus",
-  "nrdbCode": "02057",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

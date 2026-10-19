@@ -1,7 +1,7 @@
 {
   "id": "sadaka",
+  "deckLimit": 3,
   "title": "Sadaka",
-  "nrdbCode": "21073",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

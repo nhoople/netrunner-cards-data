@@ -1,8 +1,8 @@
 {
   "id": "smartware-distributor",
+  "deckLimit": 3,
   "title": "Smartware Distributor",
   "wave": "system-gateway",
-  "nrdbCode": "30033",
   "type": "resource",
   "side": "runner",
   "faction": "neutral-runner",

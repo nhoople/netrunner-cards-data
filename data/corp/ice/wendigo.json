@@ -1,7 +1,7 @@
 {
   "id": "wendigo",
+  "deckLimit": 3,
   "title": "Wendigo",
-  "nrdbCode": "06047",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

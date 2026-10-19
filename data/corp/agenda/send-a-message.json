@@ -1,8 +1,8 @@
 {
   "id": "send-a-message",
+  "deckLimit": 3,
   "title": "Send a Message",
   "wave": "system-gateway",
-  "nrdbCode": "30069",
   "type": "agenda",
   "side": "corp",
   "faction": "neutral-corp",

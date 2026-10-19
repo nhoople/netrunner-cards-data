@@ -1,7 +1,7 @@
 {
   "id": "ancestral-imager",
+  "deckLimit": 3,
   "title": "Ancestral Imager",
-  "nrdbCode": "08112",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

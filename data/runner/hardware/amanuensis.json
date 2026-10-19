@@ -1,8 +1,8 @@
 {
   "id": "amanuensis",
+  "deckLimit": 3,
   "title": "Amanuensis",
   "wave": "rebellion-without-rehearsal",
-  "nrdbCode": "34069",
   "type": "hardware",
   "side": "runner",
   "faction": "anarch",

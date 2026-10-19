@@ -1,8 +1,8 @@
 {
   "id": "sahasrara",
+  "deckLimit": 3,
   "title": "Sahasrara",
   "wave": "creation-and-control",
-  "nrdbCode": "03047",
   "type": "program",
   "side": "runner",
   "unsupported": [],

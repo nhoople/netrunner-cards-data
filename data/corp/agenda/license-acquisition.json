@@ -1,8 +1,8 @@
 {
   "id": "license-acquisition",
+  "deckLimit": 3,
   "title": "License Acquisition",
   "wave": "system-update-2021",
-  "nrdbCode": "31061",
   "type": "agenda",
   "side": "corp",
   "faction": "nbn",

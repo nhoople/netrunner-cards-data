@@ -1,8 +1,8 @@
 {
   "id": "cultivate",
+  "deckLimit": 3,
   "title": "Cultivate",
   "wave": "vantage-point",
-  "nrdbCode": "36043",
   "type": "operation",
   "side": "corp",
   "faction": "jinteki",

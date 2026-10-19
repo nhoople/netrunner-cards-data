@@ -1,0 +1,5 @@
+{
+  "cardId": "starlit-knight",
+  "text": "Threat 4 → When the Runner encounters this ice, it gains X \"[subroutine] End the run.\" subroutines for the remainder of this run, after its other subroutines. X is equal to the number of tags the Runner has.\n[subroutine] Give the Runner 1 tag.\n[subroutine] Give the Runner 1 tag.",
+  "strippedText": "Threat 4 -> When the Runner encounters this ice, it gains X \"Subroutine End the run.\" subroutines for the remainder of this run, after its other subroutines. X is equal to the number of tags the Runner has. Subroutine Give the Runner 1 tag. Subroutine Give the Runner 1 tag."
+}

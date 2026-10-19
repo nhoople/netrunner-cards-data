@@ -1,8 +1,8 @@
 {
   "id": "embedded-reporting",
+  "deckLimit": 3,
   "title": "Embedded Reporting",
   "wave": "elevation",
-  "nrdbCode": "35059",
   "type": "agenda",
   "side": "corp",
   "faction": "nbn",

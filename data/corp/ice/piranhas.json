@@ -1,8 +1,8 @@
 {
   "id": "piranhas",
+  "deckLimit": 3,
   "title": "Piranhas",
   "wave": "rebellion-without-rehearsal",
-  "nrdbCode": "34117",
   "type": "ice",
   "side": "corp",
   "faction": "nbn",

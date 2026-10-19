@@ -1,8 +1,8 @@
 {
   "id": "grim",
+  "deckLimit": 3,
   "title": "Grim",
   "wave": "opening-moves",
-  "nrdbCode": "04020",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

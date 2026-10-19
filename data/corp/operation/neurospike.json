@@ -1,8 +1,8 @@
 {
   "id": "neurospike",
+  "deckLimit": 3,
   "title": "Neurospike",
   "wave": "system-gateway",
-  "nrdbCode": "30049",
   "type": "operation",
   "side": "corp",
   "faction": "jinteki",

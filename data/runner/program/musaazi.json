@@ -1,7 +1,7 @@
 {
   "id": "musaazi",
+  "deckLimit": 3,
   "title": "Musaazi",
-  "nrdbCode": "21102",
   "type": "program",
   "side": "runner",
   "unsupported": [],

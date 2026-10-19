@@ -1,8 +1,8 @@
 {
   "id": "architect-deployment-test",
+  "deckLimit": 3,
   "title": "Architect Deployment Test",
   "wave": "downfall",
-  "nrdbCode": "26032",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

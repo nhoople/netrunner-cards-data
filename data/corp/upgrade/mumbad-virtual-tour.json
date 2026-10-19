@@ -1,7 +1,7 @@
 {
   "id": "mumbad-virtual-tour",
+  "deckLimit": 3,
   "title": "Mumbad Virtual Tour",
-  "nrdbCode": "10076",
   "type": "upgrade",
   "side": "corp",
   "unsupported": [],

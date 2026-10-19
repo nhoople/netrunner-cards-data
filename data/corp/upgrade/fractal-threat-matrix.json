@@ -1,7 +1,7 @@
 {
   "id": "fractal-threat-matrix",
+  "deckLimit": 3,
   "title": "Fractal Threat Matrix",
-  "nrdbCode": "12119",
   "type": "upgrade",
   "side": "corp",
   "unsupported": [],

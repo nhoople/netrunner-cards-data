@@ -1,8 +1,8 @@
 {
   "id": "too-big-to-fail",
+  "deckLimit": 3,
   "title": "Too Big to Fail",
   "wave": "reign-and-reverie",
-  "nrdbCode": "22056",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

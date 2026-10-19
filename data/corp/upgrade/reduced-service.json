@@ -1,8 +1,8 @@
 {
   "id": "reduced-service",
+  "deckLimit": 3,
   "title": "Reduced Service",
   "wave": "downfall",
-  "nrdbCode": "26062",
   "type": "upgrade",
   "side": "corp",
   "unsupported": [],

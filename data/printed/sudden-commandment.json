@@ -1,0 +1,5 @@
+{
+  "cardId": "sudden-commandment",
+  "text": "Draw 2 cards. You may play 1 non-<strong>terminal</strong> operation from HQ.\nThreat 3 → If this operation is the first <strong>mandate</strong> you played this turn, you may pay 3[credit] to gain [click]. <em>(This ability is active if any player has 3 or more agenda points.)</em>",
+  "strippedText": "Draw 2 cards. You may play 1 non-terminal operation from HQ. Threat 3 -> If this operation is the first mandate you played this turn, you may pay 3 credits to gain click. (This ability is active if any player has 3 or more agenda points.)"
+}

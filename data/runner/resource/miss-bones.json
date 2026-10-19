@@ -1,8 +1,8 @@
 {
   "id": "miss-bones",
+  "deckLimit": 3,
   "title": "Miss Bones",
   "wave": "reign-and-reverie",
-  "nrdbCode": "22014",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

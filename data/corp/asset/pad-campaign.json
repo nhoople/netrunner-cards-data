@@ -1,5 +1,6 @@
 {
   "id": "pad-campaign",
+  "deckLimit": 3,
   "title": "PAD Campaign",
   "type": "asset",
   "side": "corp",

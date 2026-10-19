@@ -1,7 +1,7 @@
 {
   "id": "blockade-runner",
+  "deckLimit": 3,
   "title": "Blockade Runner",
-  "nrdbCode": "11065",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

@@ -1,8 +1,8 @@
 {
   "id": "ryo-phoenix-ono-out-of-the-ashes",
+  "deckLimit": 1,
   "title": "Ryō “Phoenix” Ōno: Out of the Ashes",
   "wave": "elevation",
-  "nrdbCode": "35001",
   "type": "identity",
   "side": "runner",
   "faction": "anarch",

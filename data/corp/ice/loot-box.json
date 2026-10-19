@@ -1,8 +1,8 @@
 {
   "id": "loot-box",
+  "deckLimit": 3,
   "title": "Loot Box",
   "wave": "downfall",
-  "nrdbCode": "26051",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

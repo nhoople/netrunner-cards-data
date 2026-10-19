@@ -1,7 +1,7 @@
 {
   "id": "shoot-the-moon",
+  "deckLimit": 3,
   "title": "Shoot the Moon",
-  "nrdbCode": "06107",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

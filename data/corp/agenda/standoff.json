@@ -1,7 +1,7 @@
 {
   "id": "standoff",
+  "deckLimit": 3,
   "title": "Standoff",
-  "nrdbCode": "12077",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

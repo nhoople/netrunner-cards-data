@@ -1,8 +1,8 @@
 {
   "id": "rook",
+  "deckLimit": 3,
   "title": "Rook",
   "wave": "opening-moves",
-  "nrdbCode": "04003",
   "type": "program",
   "side": "runner",
   "unsupported": [],

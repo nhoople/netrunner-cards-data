@@ -1,7 +1,7 @@
 {
   "id": "shattered-remains",
+  "deckLimit": 3,
   "title": "Shattered Remains",
-  "nrdbCode": "06050",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

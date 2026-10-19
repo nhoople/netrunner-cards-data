@@ -1,8 +1,8 @@
 {
   "id": "b-1001",
+  "deckLimit": 3,
   "title": "B-1001",
   "wave": "the-automata-initiative",
-  "nrdbCode": "34065",
   "type": "asset",
   "side": "corp",
   "faction": "neutral-corp",

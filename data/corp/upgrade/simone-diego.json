@@ -1,8 +1,8 @@
 {
   "id": "simone-diego",
+  "deckLimit": 3,
   "title": "Simone Diego",
   "wave": "humanitys-shadow",
-  "nrdbCode": "02099",
   "type": "upgrade",
   "side": "corp",
   "unsupported": [],

@@ -1,8 +1,8 @@
 {
   "id": "tao-salonga-telepresence-magician",
+  "deckLimit": 1,
   "title": "Tāo Salonga: Telepresence Magician",
   "wave": "system-gateway",
-  "nrdbCode": "30019",
   "type": "identity",
   "side": "runner",
   "faction": "shaper",

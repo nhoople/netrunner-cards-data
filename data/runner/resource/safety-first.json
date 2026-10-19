@@ -1,7 +1,7 @@
 {
   "id": "safety-first",
+  "deckLimit": 3,
   "title": "Safety First",
-  "nrdbCode": "09044",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

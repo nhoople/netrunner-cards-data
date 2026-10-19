@@ -1,8 +1,8 @@
 {
   "id": "ping",
+  "deckLimit": 3,
   "title": "Ping",
   "wave": "system-gateway",
-  "nrdbCode": "30055",
   "type": "ice",
   "side": "corp",
   "faction": "nbn",

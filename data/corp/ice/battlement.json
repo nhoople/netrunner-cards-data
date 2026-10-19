@@ -1,7 +1,7 @@
 {
   "id": "battlement",
+  "deckLimit": 3,
   "title": "Battlement",
-  "nrdbCode": "12057",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

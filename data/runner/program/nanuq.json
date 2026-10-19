@@ -1,8 +1,8 @@
 {
   "id": "nanuq",
+  "deckLimit": 3,
   "title": "Nanuq",
   "wave": "parhelion",
-  "nrdbCode": "33088",
   "type": "program",
   "side": "runner",
   "faction": "shaper",

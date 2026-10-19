@@ -1,7 +1,7 @@
 {
   "id": "credit-kiting",
+  "deckLimit": 3,
   "title": "Credit Kiting",
-  "nrdbCode": "21023",
   "type": "event",
   "side": "runner",
   "unsupported": [],

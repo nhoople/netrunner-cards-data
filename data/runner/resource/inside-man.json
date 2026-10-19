@@ -1,8 +1,8 @@
 {
   "id": "inside-man",
+  "deckLimit": 3,
   "title": "Inside Man",
   "wave": "a-study-in-static",
-  "nrdbCode": "02068",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

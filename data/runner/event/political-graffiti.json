@@ -1,7 +1,7 @@
 {
   "id": "political-graffiti",
+  "deckLimit": 3,
   "title": "Political Graffiti",
-  "nrdbCode": "10039",
   "type": "event",
   "side": "runner",
   "unsupported": [],

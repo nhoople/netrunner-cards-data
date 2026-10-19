@@ -1,7 +1,7 @@
 {
   "id": "warden-fatuma",
+  "deckLimit": 3,
   "title": "Warden Fatuma",
-  "nrdbCode": "21093",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

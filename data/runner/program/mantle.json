@@ -1,8 +1,8 @@
 {
   "id": "mantle",
+  "deckLimit": 3,
   "title": "Mantle",
   "wave": "uprising",
-  "nrdbCode": "26088",
   "type": "program",
   "side": "runner",
   "faction": "shaper",

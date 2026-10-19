@@ -1,8 +1,8 @@
 {
   "id": "shadow",
+  "deckLimit": 3,
   "title": "Shadow",
   "wave": "core",
-  "nrdbCode": "01104",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

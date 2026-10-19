@@ -1,0 +1,25 @@
+{
+  "id": "napd_mwl_1_1",
+  "name": "NAPD MWL 1.1",
+  "formatId": "standard",
+  "dateStart": "2016-08-01",
+  "globalPenalty": {
+    "1": [
+      "architect",
+      "breaking-news",
+      "cerberus-lady-h1",
+      "clone-chip",
+      "d4v1d",
+      "desperado",
+      "eli-1-0",
+      "faust",
+      "mumba-temple",
+      "napd-contract",
+      "parasite",
+      "prepaid-voicepad",
+      "sansan-city-grid",
+      "wyldside",
+      "yog-0"
+    ]
+  }
+}

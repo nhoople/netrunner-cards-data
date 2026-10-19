@@ -1,7 +1,7 @@
 {
   "id": "palana-agroplex",
+  "deckLimit": 3,
   "title": "Pālanā Agroplex",
-  "nrdbCode": "10031",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

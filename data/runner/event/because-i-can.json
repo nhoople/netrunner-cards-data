@@ -1,7 +1,7 @@
 {
   "id": "because-i-can",
+  "deckLimit": 3,
   "title": "Because I Can",
-  "nrdbCode": "21066",
   "type": "event",
   "side": "runner",
   "unsupported": [],

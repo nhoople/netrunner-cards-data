@@ -1,7 +1,7 @@
 {
   "id": "honeyfarm",
+  "deckLimit": 3,
   "title": "Honeyfarm",
-  "nrdbCode": "13054",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

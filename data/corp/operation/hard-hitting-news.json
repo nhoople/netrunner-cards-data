@@ -1,7 +1,7 @@
 {
   "id": "hard-hitting-news",
+  "deckLimit": 3,
   "title": "Hard-Hitting News",
-  "nrdbCode": "11016",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

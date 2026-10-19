@@ -1,7 +1,7 @@
 {
   "id": "heinlein-grid",
+  "deckLimit": 3,
   "title": "Heinlein Grid",
-  "nrdbCode": "06023",
   "type": "upgrade",
   "side": "corp",
   "unsupported": [],

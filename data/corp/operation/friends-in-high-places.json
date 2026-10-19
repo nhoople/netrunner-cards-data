@@ -1,7 +1,7 @@
 {
   "id": "friends-in-high-places",
+  "deckLimit": 3,
   "title": "Friends in High Places",
-  "nrdbCode": "11090",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

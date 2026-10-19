@@ -1,8 +1,8 @@
 {
   "id": "yakov-erikovich-avdakov",
+  "deckLimit": 3,
   "title": "Yakov Erikovich Avdakov",
   "wave": "parhelion",
-  "nrdbCode": "33126",
   "type": "upgrade",
   "side": "corp",
   "faction": "weyland-consortium",

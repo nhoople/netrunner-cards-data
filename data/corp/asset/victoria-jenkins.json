@@ -1,7 +1,7 @@
 {
   "id": "victoria-jenkins",
+  "deckLimit": 3,
   "title": "Victoria Jenkins",
-  "nrdbCode": "09011",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

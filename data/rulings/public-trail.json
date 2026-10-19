@@ -1,0 +1,11 @@
+{
+  "cardId": "public-trail",
+  "rulings": [
+    {
+      "dateUpdate": "2021-10-11",
+      "rulesTeamVerified": true,
+      "question": "If the Corp uses [Public Trail](/en/card/30057) or another card to give the Runner a tag, can they trigger [NBN: Reality Plus](/en/card/30051)?",
+      "answer": "Yes. Giving the Runner 1 or more tags results in the Runner taking tags."
+    }
+  ]
+}

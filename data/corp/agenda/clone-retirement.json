@@ -1,8 +1,8 @@
 {
   "id": "clone-retirement",
+  "deckLimit": 3,
   "title": "Clone Retirement",
   "wave": "stalwart",
-  "nrdbCode": "04032",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

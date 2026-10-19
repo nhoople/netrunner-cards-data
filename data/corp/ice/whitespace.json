@@ -1,8 +1,8 @@
 {
   "id": "whitespace",
+  "deckLimit": 3,
   "title": "Whitespace",
   "wave": "system-gateway",
-  "nrdbCode": "30074",
   "type": "ice",
   "side": "corp",
   "faction": "neutral-corp",

@@ -1,7 +1,7 @@
 {
   "id": "bio-ethics-association",
+  "deckLimit": 3,
   "title": "Bio-Ethics Association",
-  "nrdbCode": "10050",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

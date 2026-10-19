@@ -1,7 +1,7 @@
 {
   "id": "aiki",
+  "deckLimit": 3,
   "title": "Aiki",
-  "nrdbCode": "11032",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

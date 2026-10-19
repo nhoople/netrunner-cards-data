@@ -1,8 +1,8 @@
 {
   "id": "corporate-war",
+  "deckLimit": 3,
   "title": "Corporate War",
   "wave": "future-proof",
-  "nrdbCode": "02120",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

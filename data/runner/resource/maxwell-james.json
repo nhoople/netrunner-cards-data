@@ -1,7 +1,7 @@
 {
   "id": "maxwell-james",
+  "deckLimit": 3,
   "title": "Maxwell James",
-  "nrdbCode": "13011",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

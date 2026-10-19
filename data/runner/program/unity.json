@@ -1,8 +1,8 @@
 {
   "id": "unity",
+  "deckLimit": 3,
   "title": "Unity",
   "wave": "system-gateway",
-  "nrdbCode": "30026",
   "type": "program",
   "side": "runner",
   "faction": "shaper",

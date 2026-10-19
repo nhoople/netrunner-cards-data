@@ -1,7 +1,7 @@
 {
   "id": "windfall",
+  "deckLimit": 3,
   "title": "Windfall",
-  "nrdbCode": "09054",
   "type": "event",
   "side": "runner",
   "unsupported": [],

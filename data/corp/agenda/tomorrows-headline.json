@@ -1,8 +1,8 @@
 {
   "id": "tomorrows-headline",
+  "deckLimit": 1,
   "title": "Tomorrowʼs Headline",
   "wave": "system-gateway",
-  "nrdbCode": "30052",
   "type": "agenda",
   "side": "corp",
   "faction": "nbn",

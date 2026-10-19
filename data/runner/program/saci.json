@@ -1,8 +1,8 @@
 {
   "id": "saci",
+  "deckLimit": 3,
   "title": "Saci",
   "wave": "the-automata-initiative",
-  "nrdbCode": "34017",
   "type": "program",
   "side": "runner",
   "faction": "criminal",

@@ -1,7 +1,7 @@
 {
   "id": "helheim-servers",
+  "deckLimit": 3,
   "title": "Helheim Servers",
-  "nrdbCode": "12091",
   "type": "upgrade",
   "side": "corp",
   "unsupported": [],

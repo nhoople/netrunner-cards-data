@@ -1,7 +1,7 @@
 {
   "id": "vulcan-coverup",
+  "deckLimit": 3,
   "title": "Vulcan Coverup",
-  "nrdbCode": "04098",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

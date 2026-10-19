@@ -1,8 +1,8 @@
 {
   "id": "remastered-edition",
+  "deckLimit": 3,
   "title": "Remastered Edition",
   "wave": "downfall",
-  "nrdbCode": "26047",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

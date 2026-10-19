@@ -1,7 +1,7 @@
 {
   "id": "city-works-project",
+  "deckLimit": 3,
   "title": "City Works Project",
-  "nrdbCode": "21078",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

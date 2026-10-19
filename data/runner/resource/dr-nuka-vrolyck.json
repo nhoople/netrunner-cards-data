@@ -1,8 +1,8 @@
 {
   "id": "dr-nuka-vrolyck",
+  "deckLimit": 3,
   "title": "Dr. Nuka Vrolyck",
   "wave": "parhelion",
-  "nrdbCode": "33092",
   "type": "resource",
   "side": "runner",
   "faction": "shaper",

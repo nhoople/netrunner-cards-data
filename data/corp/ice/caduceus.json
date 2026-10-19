@@ -1,8 +1,8 @@
 {
   "id": "caduceus",
+  "deckLimit": 3,
   "title": "Caduceus",
   "wave": "system-core-2019",
-  "nrdbCode": "25131",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

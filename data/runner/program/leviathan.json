@@ -1,8 +1,8 @@
 {
   "id": "leviathan",
+  "deckLimit": 3,
   "title": "Leviathan",
   "wave": "stalwart",
-  "nrdbCode": "04026",
   "type": "program",
   "side": "runner",
   "unsupported": [],

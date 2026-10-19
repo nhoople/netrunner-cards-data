@@ -1,8 +1,8 @@
 {
   "id": "hostage",
+  "deckLimit": 3,
   "title": "Hostage",
   "wave": "system-core-2019",
-  "nrdbCode": "25025",
   "type": "event",
   "side": "runner",
   "unsupported": [],

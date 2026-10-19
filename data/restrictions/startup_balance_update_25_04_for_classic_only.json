@@ -1,0 +1,12 @@
+{
+  "id": "startup_balance_update_25_04_for_classic_only",
+  "name": "Startup Balance Update 25.04 (ignore active date)",
+  "formatId": "standard",
+  "dateStart": "2025-04-23",
+  "banned": [
+    "cleaver",
+    "nbn-reality-plus",
+    "pharos",
+    "tributary"
+  ]
+}

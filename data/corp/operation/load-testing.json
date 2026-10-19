@@ -1,7 +1,7 @@
 {
   "id": "load-testing",
+  "deckLimit": 3,
   "title": "Load Testing",
-  "nrdbCode": "12031",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

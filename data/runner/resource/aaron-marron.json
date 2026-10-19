@@ -1,7 +1,7 @@
 {
   "id": "aaron-marron",
+  "deckLimit": 3,
   "title": "Aaron Marrón",
-  "nrdbCode": "11106",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

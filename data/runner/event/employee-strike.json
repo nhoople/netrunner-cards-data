@@ -1,7 +1,7 @@
 {
   "id": "employee-strike",
+  "deckLimit": 3,
   "title": "Employee Strike",
-  "nrdbCode": "09053",
   "type": "event",
   "side": "runner",
   "unsupported": [],

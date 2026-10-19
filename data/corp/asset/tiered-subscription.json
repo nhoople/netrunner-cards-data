@@ -1,8 +1,8 @@
 {
   "id": "tiered-subscription",
+  "deckLimit": 3,
   "title": "Tiered Subscription",
   "wave": "downfall",
-  "nrdbCode": "26049",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

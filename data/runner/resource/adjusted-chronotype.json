@@ -1,7 +1,7 @@
 {
   "id": "adjusted-chronotype",
+  "deckLimit": 3,
   "title": "Adjusted Chronotype",
-  "nrdbCode": "08003",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

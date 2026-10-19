@@ -1,8 +1,8 @@
 {
   "id": "hansei-review",
+  "deckLimit": 3,
   "title": "Hansei Review",
   "wave": "system-gateway",
-  "nrdbCode": "30048",
   "type": "operation",
   "side": "corp",
   "faction": "jinteki",

@@ -1,8 +1,8 @@
 {
   "id": "knight",
+  "deckLimit": 3,
   "title": "Knight",
   "wave": "mala-tempora",
-  "nrdbCode": "04043",
   "type": "program",
   "side": "runner",
   "unsupported": [],

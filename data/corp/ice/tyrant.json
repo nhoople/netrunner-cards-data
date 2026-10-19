@@ -1,8 +1,8 @@
 {
   "id": "tyrant",
+  "deckLimit": 3,
   "title": "Tyrant",
   "wave": "a-study-in-static",
-  "nrdbCode": "02078",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

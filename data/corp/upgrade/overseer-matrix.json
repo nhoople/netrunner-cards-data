@@ -1,7 +1,7 @@
 {
   "id": "overseer-matrix",
+  "deckLimit": 3,
   "title": "Overseer Matrix",
-  "nrdbCode": "21100",
   "type": "upgrade",
   "side": "corp",
   "unsupported": [],

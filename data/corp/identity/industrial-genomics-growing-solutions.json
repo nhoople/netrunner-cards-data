@@ -1,7 +1,7 @@
 {
   "id": "industrial-genomics-growing-solutions",
+  "deckLimit": 1,
   "title": "Industrial Genomics: Growing Solutions",
-  "nrdbCode": "06105",
   "type": "identity",
   "side": "corp",
   "unsupported": [],

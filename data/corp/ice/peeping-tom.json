@@ -1,8 +1,8 @@
 {
   "id": "peeping-tom",
+  "deckLimit": 3,
   "title": "Peeping Tom",
   "wave": "reign-and-reverie",
-  "nrdbCode": "22045",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

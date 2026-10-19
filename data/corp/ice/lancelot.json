@@ -1,7 +1,7 @@
 {
   "id": "lancelot",
+  "deckLimit": 3,
   "title": "Lancelot",
-  "nrdbCode": "06051",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

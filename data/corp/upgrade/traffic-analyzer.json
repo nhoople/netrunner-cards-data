@@ -1,7 +1,7 @@
 {
   "id": "traffic-analyzer",
+  "deckLimit": 3,
   "title": "Traffic Analyzer",
-  "nrdbCode": "12075",
   "type": "upgrade",
   "side": "corp",
   "unsupported": [],

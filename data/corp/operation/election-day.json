@@ -1,7 +1,7 @@
 {
   "id": "election-day",
+  "deckLimit": 3,
   "title": "Election Day",
-  "nrdbCode": "10112",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

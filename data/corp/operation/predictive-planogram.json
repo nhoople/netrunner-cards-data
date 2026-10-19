@@ -1,8 +1,8 @@
 {
   "id": "predictive-planogram",
+  "deckLimit": 3,
   "title": "Predictive Planogram",
   "wave": "system-gateway",
-  "nrdbCode": "30056",
   "type": "operation",
   "side": "corp",
   "faction": "nbn",

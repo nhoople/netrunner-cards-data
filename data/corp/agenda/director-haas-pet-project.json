@@ -1,8 +1,8 @@
 {
   "id": "director-haas-pet-project",
+  "deckLimit": 1,
   "title": "Director Haas' Pet Project",
   "wave": "creation-and-control",
-  "nrdbCode": "03004",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

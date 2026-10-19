@@ -1,7 +1,7 @@
 {
   "id": "eden-fragment",
+  "deckLimit": 1,
   "title": "Eden Fragment",
-  "nrdbCode": "06030",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

@@ -1,8 +1,8 @@
 {
   "id": "offworld-office",
+  "deckLimit": 3,
   "title": "Offworld Office",
   "wave": "system-gateway",
-  "nrdbCode": "30067",
   "type": "agenda",
   "side": "corp",
   "faction": "neutral-corp",

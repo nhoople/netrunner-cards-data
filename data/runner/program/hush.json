@@ -1,8 +1,8 @@
 {
   "id": "hush",
+  "deckLimit": 3,
   "title": "Hush",
   "wave": "parhelion",
-  "nrdbCode": "33071",
   "type": "program",
   "side": "runner",
   "faction": "anarch",

@@ -1,8 +1,8 @@
 {
   "id": "the-personal-touch",
+  "deckLimit": 3,
   "title": "The Personal Touch",
   "wave": "core",
-  "nrdbCode": "01040",
   "type": "hardware",
   "side": "runner",
   "unsupported": [],

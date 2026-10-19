@@ -1,8 +1,8 @@
 {
   "id": "wyrm",
+  "deckLimit": 3,
   "title": "Wyrm",
   "wave": "core",
-  "nrdbCode": "01013",
   "type": "program",
   "side": "runner",
   "unsupported": [],

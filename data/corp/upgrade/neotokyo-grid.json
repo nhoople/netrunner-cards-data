@@ -1,7 +1,7 @@
 {
   "id": "neotokyo-grid",
+  "deckLimit": 3,
   "title": "NeoTokyo Grid",
-  "nrdbCode": "05021",
   "type": "upgrade",
   "side": "corp",
   "unsupported": [],

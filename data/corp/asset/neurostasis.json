@@ -1,8 +1,8 @@
 {
   "id": "neurostasis",
+  "deckLimit": 3,
   "title": "Neurostasis",
   "wave": "reign-and-reverie",
-  "nrdbCode": "22037",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

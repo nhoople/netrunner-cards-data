@@ -1,7 +1,7 @@
 {
   "id": "mental-health-clinic",
+  "deckLimit": 3,
   "title": "Mental Health Clinic",
-  "nrdbCode": "05009",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

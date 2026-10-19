@@ -1,7 +1,7 @@
 {
   "id": "mushin-no-shin",
+  "deckLimit": 3,
   "title": "Mushin No Shin",
-  "nrdbCode": "05015",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

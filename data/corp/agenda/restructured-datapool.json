@@ -1,8 +1,8 @@
 {
   "id": "restructured-datapool",
+  "deckLimit": 3,
   "title": "Restructured Datapool",
   "wave": "what-lies-ahead",
-  "nrdbCode": "02016",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

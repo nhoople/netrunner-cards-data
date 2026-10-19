@@ -1,8 +1,8 @@
 {
   "id": "egret",
+  "deckLimit": 3,
   "title": "Egret",
   "wave": "system-update-2021",
-  "nrdbCode": "31032",
   "type": "program",
   "side": "runner",
   "faction": "shaper",

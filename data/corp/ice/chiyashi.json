@@ -1,7 +1,7 @@
 {
   "id": "chiyashi",
+  "deckLimit": 3,
   "title": "Chiyashi",
-  "nrdbCode": "11112",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

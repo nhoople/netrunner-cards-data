@@ -1,8 +1,8 @@
 {
   "id": "lampades",
+  "deckLimit": 3,
   "title": "Lampades",
   "wave": "vantage-point",
-  "nrdbCode": "36005",
   "type": "program",
   "side": "runner",
   "faction": "anarch",

@@ -1,8 +1,8 @@
 {
   "id": "uroboros",
+  "deckLimit": 3,
   "title": "Uroboros",
   "wave": "a-study-in-static",
-  "nrdbCode": "02074",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

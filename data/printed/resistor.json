@@ -1,0 +1,5 @@
+{
+  "cardId": "resistor",
+  "text": "Resistor has +1 strength for each tag the Runner has.\n[subroutine] Trace[4]. If successful, end the run.",
+  "strippedText": "Resistor has +1 strength for each tag the Runner has. Subroutine Trace[4]. If successful, end the run."
+}

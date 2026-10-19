@@ -1,8 +1,8 @@
 {
   "id": "dedicated-response-team",
+  "deckLimit": 3,
   "title": "Dedicated Response Team",
   "wave": "future-proof",
-  "nrdbCode": "02118",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

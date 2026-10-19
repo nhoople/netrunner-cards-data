@@ -1,8 +1,8 @@
 {
   "id": "anvil",
+  "deckLimit": 3,
   "title": "Anvil",
   "wave": "parhelion",
-  "nrdbCode": "33124",
   "type": "ice",
   "side": "corp",
   "faction": "weyland-consortium",

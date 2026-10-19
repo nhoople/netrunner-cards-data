@@ -1,8 +1,8 @@
 {
   "id": "project-ares",
+  "deckLimit": 3,
   "title": "Project Ares",
   "wave": "opening-moves",
-  "nrdbCode": "04010",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

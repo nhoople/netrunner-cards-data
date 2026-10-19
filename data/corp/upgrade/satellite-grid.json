@@ -1,7 +1,7 @@
 {
   "id": "satellite-grid",
+  "deckLimit": 3,
   "title": "Satellite Grid",
-  "nrdbCode": "07023",
   "type": "upgrade",
   "side": "corp",
   "unsupported": [],

@@ -1,8 +1,8 @@
 {
   "id": "subliminal-messaging",
+  "deckLimit": 3,
   "title": "Subliminal Messaging",
   "wave": "system-update-2021",
-  "nrdbCode": "31082",
   "type": "operation",
   "side": "corp",
   "faction": "neutral-corp",

@@ -1,7 +1,7 @@
 {
   "id": "charlatan",
+  "deckLimit": 3,
   "title": "Charlatan",
-  "nrdbCode": "13010",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

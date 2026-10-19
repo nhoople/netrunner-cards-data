@@ -1,8 +1,8 @@
 {
   "id": "ash-2x3zb9cy",
+  "deckLimit": 3,
   "title": "Ash 2X3ZB9CY",
   "wave": "system-core-2019",
-  "nrdbCode": "25082",
   "type": "upgrade",
   "side": "corp",
   "unsupported": [],

@@ -175,6 +175,201 @@ def _check_flag(ability: dict, where: str) -> str | None:
     return None
 
 
+def check_printings(card_ids: dict[str, Path], waves: dict) -> int:
+    directory = DATA / "printings"
+    if not directory.is_dir():
+        print("printings directory missing: data/printings")
+        return 1
+    errors = 0
+    seen: dict[str, set[str]] = {}
+    for path in sorted(directory.glob("*.json")):
+        raw = json.loads(path.read_text(encoding="utf-8"))
+        code = raw.get("code")
+        card_id = raw.get("cardId")
+        pack = raw.get("pack")
+        if code != path.stem:
+            print(f"{path.relative_to(ROOT)}: code {code!r} != filename")
+            errors += 1
+        if not isinstance(card_id, str) or card_id not in card_ids:
+            print(f"{path.relative_to(ROOT)}: cardId {card_id!r} has no rules file")
+            errors += 1
+            continue
+        wave = waves.get(pack) if isinstance(pack, str) else None
+        listed = (wave or {}).get("cards") or []
+        if card_id not in listed:
+            print(f"{path.relative_to(ROOT)}: pack {pack!r} does not list {card_id}")
+            errors += 1
+        for field in ("flavor", "illustrator"):
+            if field in raw and not isinstance(raw[field], str):
+                print(f"{path.relative_to(ROOT)}: {field} is not a string")
+                errors += 1
+        for field in ("quantity", "position"):
+            if type(raw.get(field)) is not int:
+                print(f"{path.relative_to(ROOT)}: {field} must be an integer")
+                errors += 1
+        if isinstance(pack, str):
+            seen.setdefault(card_id, set()).add(pack)
+    for name, wave in waves.items():
+        for card_id in wave.get("cards") or []:
+            if name not in seen.get(card_id, set()):
+                print(f"{name}/{card_id}: no printing")
+                errors += 1
+    return errors
+
+
+def check_rulings(card_ids: dict[str, Path]) -> int:
+    directory = DATA / "rulings"
+    if not directory.is_dir():
+        print("rulings directory missing: data/rulings")
+        return 1
+    errors = 0
+    for path in sorted(directory.glob("*.json")):
+        raw = json.loads(path.read_text(encoding="utf-8"))
+        card_id = raw.get("cardId")
+        if card_id != path.stem or card_id not in card_ids:
+            print(f"{path.relative_to(ROOT)}: cardId {card_id!r} has no rules file")
+            errors += 1
+            continue
+        rulings = raw.get("rulings")
+        if not isinstance(rulings, list) or not rulings:
+            print(f"{path.relative_to(ROOT)}: rulings must be a non-empty list")
+            errors += 1
+            continue
+        for index, ruling in enumerate(rulings):
+            where = f"{path.relative_to(ROOT)} rulings[{index}]"
+            if not isinstance(ruling, dict):
+                print(f"{where}: not an object")
+                errors += 1
+                continue
+            if not isinstance(ruling.get("dateUpdate"), str) or not ruling["dateUpdate"]:
+                print(f"{where}: dateUpdate is missing")
+                errors += 1
+            if ruling.get("rulesTeamVerified") is not True:
+                print(f"{where}: rulesTeamVerified is not true")
+                errors += 1
+            has_text = isinstance(ruling.get("text"), str) and ruling["text"]
+            has_question = isinstance(ruling.get("question"), str) and ruling["question"]
+            has_answer = isinstance(ruling.get("answer"), str) and ruling["answer"]
+            if has_text == (has_question or has_answer):
+                print(f"{where}: needs text, or a question and an answer")
+                errors += 1
+            allowed = {"dateUpdate", "rulesTeamVerified", "text", "question", "answer"}
+            extra = set(ruling) - allowed
+            if extra:
+                print(f"{where}: unknown fields {sorted(extra)}")
+                errors += 1
+    return errors
+
+
+def check_printed(card_ids: dict[str, Path]) -> int:
+    directory = DATA / "printed"
+    if not directory.is_dir():
+        print("printed directory missing: data/printed")
+        return 1
+    errors = 0
+    seen: set[str] = set()
+    for path in sorted(directory.glob("*.json")):
+        raw = json.loads(path.read_text(encoding="utf-8"))
+        card_id = raw.get("cardId")
+        if card_id != path.stem or card_id not in card_ids:
+            print(f"{path.relative_to(ROOT)}: cardId {card_id!r} has no rules file")
+            errors += 1
+            continue
+        seen.add(card_id)
+        for field in ("text", "strippedText"):
+            if not isinstance(raw.get(field), str):
+                print(f"{path.relative_to(ROOT)}: {field} must be a string")
+                errors += 1
+    missing = sorted(set(card_ids) - seen)
+    if missing:
+        print(f"cards with no printed text: {missing}")
+        errors += 1
+    return errors
+
+
+def check_legality(card_ids: dict[str, Path], waves: dict) -> int:
+    errors = 0
+    corpus = set(waves)
+    pools: dict[str, dict] = {}
+    pool_dir = DATA / "card-pools"
+    if not pool_dir.is_dir():
+        print("card pool directory missing: data/card-pools")
+        return 1
+    for path in sorted(pool_dir.glob("*.json")):
+        raw = json.loads(path.read_text(encoding="utf-8"))
+        if raw.get("id") != path.stem:
+            print(f"{path.relative_to(ROOT)}: id != filename")
+            errors += 1
+        for wave in raw.get("waves") or []:
+            if wave not in corpus:
+                print(f"{path.relative_to(ROOT)}: wave {wave!r} is not in the corpus")
+                errors += 1
+        pools[path.stem] = raw
+    restrictions: set[str] = set()
+    restriction_dir = DATA / "restrictions"
+    if not restriction_dir.is_dir():
+        print("restrictions directory missing: data/restrictions")
+        return 1
+    for path in sorted(restriction_dir.glob("*.json")):
+        raw = json.loads(path.read_text(encoding="utf-8"))
+        if raw.get("id") != path.stem:
+            print(f"{path.relative_to(ROOT)}: id != filename")
+            errors += 1
+        restrictions.add(path.stem)
+        for field in ("banned", "restricted"):
+            for card_id in raw.get(field) or []:
+                if card_id not in card_ids:
+                    print(f"{path.relative_to(ROOT)}: {field} card {card_id!r} has no rules file")
+                    errors += 1
+        for field in ("points", "globalPenalty", "universalFactionCost"):
+            grouped = raw.get(field) or {}
+            if not isinstance(grouped, dict):
+                print(f"{path.relative_to(ROOT)}: {field} must be an object")
+                errors += 1
+                continue
+            for card_id in (card for ids in grouped.values() for card in ids):
+                if card_id not in card_ids:
+                    print(f"{path.relative_to(ROOT)}: {field} card {card_id!r} has no rules file")
+                    errors += 1
+    formats = DATA / "formats"
+    if not formats.is_dir():
+        print("formats directory missing: data/formats")
+        return 1
+    for path in sorted(formats.glob("*.json")):
+        raw = json.loads(path.read_text(encoding="utf-8"))
+        if raw.get("id") != path.stem:
+            print(f"{path.relative_to(ROOT)}: id != filename")
+            errors += 1
+        for snapshot in raw.get("snapshots") or []:
+            pool_id = snapshot.get("cardPoolId")
+            if pool_id not in pools:
+                print(f"{path.relative_to(ROOT)}: card pool {pool_id!r} is missing")
+                errors += 1
+            restriction_id = snapshot.get("restrictionId")
+            if restriction_id is not None and restriction_id not in restrictions:
+                print(f"{path.relative_to(ROOT)}: restriction {restriction_id!r} is missing")
+                errors += 1
+    rotations = DATA / "rotations.json"
+    if not rotations.is_file():
+        print("rotations file missing: data/rotations.json")
+        errors += 1
+    else:
+        for rotation in json.loads(rotations.read_text(encoding="utf-8")):
+            for wave in rotation.get("waves") or []:
+                if wave not in corpus:
+                    print(f"rotations.json: wave {wave!r} is not in the corpus")
+                    errors += 1
+    for name, wave in waves.items():
+        for field in ("dateRelease", "cycle"):
+            if not isinstance(wave.get(field), str) or not wave[field]:
+                print(f"pool.json {name}: {field} is missing")
+                errors += 1
+        if type(wave.get("size")) is not int:
+            print(f"pool.json {name}: size must be an integer")
+            errors += 1
+    return errors
+
+
 def storage_dirs() -> list[Path]:
     dirs: list[Path] = []
     for side, types in STORAGE.items():
@@ -206,6 +401,10 @@ def main() -> int:
                 continue
             if cid != path.stem:
                 print(f"{path}: id {cid!r} != filename stem {path.stem!r}")
+                errors += 1
+            limit = raw.get("deckLimit")
+            if type(limit) is not int or limit < 1:
+                print(f"{path.relative_to(ROOT)}: deckLimit must be an integer >= 1")
                 errors += 1
             if raw.get("side") != side or raw.get("type") != type_:
                 print(
@@ -267,6 +466,11 @@ def main() -> int:
                 f"{ALLOWLIST_PATH.relative_to(ROOT)} cards.{cid}"
             )
             errors += 1
+
+    errors += check_printings(card_ids, waves)
+    errors += check_rulings(card_ids)
+    errors += check_printed(card_ids)
+    errors += check_legality(card_ids, waves)
 
     if errors:
         print(f"FAILED with {errors} error(s)")

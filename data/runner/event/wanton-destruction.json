@@ -1,7 +1,7 @@
 {
   "id": "wanton-destruction",
+  "deckLimit": 3,
   "title": "Wanton Destruction",
-  "nrdbCode": "07035",
   "type": "event",
   "side": "runner",
   "unsupported": [],

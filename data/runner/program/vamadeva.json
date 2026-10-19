@@ -1,7 +1,7 @@
 {
   "id": "vamadeva",
+  "deckLimit": 3,
   "title": "Vamadeva",
-  "nrdbCode": "10061",
   "type": "program",
   "side": "runner",
   "unsupported": [],

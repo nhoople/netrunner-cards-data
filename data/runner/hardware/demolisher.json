@@ -1,8 +1,8 @@
 {
   "id": "demolisher",
+  "deckLimit": 3,
   "title": "Demolisher",
   "wave": "downfall",
-  "nrdbCode": "26002",
   "type": "hardware",
   "side": "runner",
   "unsupported": [],

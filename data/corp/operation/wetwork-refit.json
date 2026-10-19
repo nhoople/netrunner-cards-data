@@ -1,7 +1,7 @@
 {
   "id": "wetwork-refit",
+  "deckLimit": 3,
   "title": "Wetwork Refit",
-  "nrdbCode": "11071",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

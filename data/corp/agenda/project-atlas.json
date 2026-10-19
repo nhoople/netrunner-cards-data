@@ -1,8 +1,8 @@
 {
   "id": "project-atlas",
+  "deckLimit": 3,
   "title": "Project Atlas",
   "wave": "system-update-2021",
-  "nrdbCode": "31073",
   "type": "agenda",
   "side": "corp",
   "faction": "weyland-consortium",

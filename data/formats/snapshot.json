@@ -1,0 +1,13 @@
+{
+  "id": "snapshot",
+  "name": "Snapshot",
+  "snapshots": [
+    {
+      "id": "snapshot_0",
+      "dateStart": "2018-11-16",
+      "cardPoolId": "snapshot",
+      "restrictionId": "snapshot_ban_list_1_0",
+      "active": true
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 {
   "id": "marker",
+  "deckLimit": 3,
   "title": "Marker",
-  "nrdbCode": "04116",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

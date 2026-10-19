@@ -1,7 +1,7 @@
 {
   "id": "rumor-mill",
+  "deckLimit": 3,
   "title": "Rumor Mill",
-  "nrdbCode": "11022",
   "type": "event",
   "side": "runner",
   "unsupported": [],

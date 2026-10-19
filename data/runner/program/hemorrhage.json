@@ -1,7 +1,7 @@
 {
   "id": "hemorrhage",
+  "deckLimit": 3,
   "title": "Hemorrhage",
-  "nrdbCode": "04082",
   "type": "program",
   "side": "runner",
   "unsupported": [],

@@ -1,8 +1,8 @@
 {
   "id": "ireress",
+  "deckLimit": 3,
   "title": "Ireress",
   "wave": "mala-tempora",
-  "nrdbCode": "04057",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

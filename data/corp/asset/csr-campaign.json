@@ -1,8 +1,8 @@
 {
   "id": "csr-campaign",
+  "deckLimit": 3,
   "title": "CSR Campaign",
   "wave": "downfall",
-  "nrdbCode": "26064",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

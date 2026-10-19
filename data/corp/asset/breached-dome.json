@@ -1,7 +1,7 @@
 {
   "id": "breached-dome",
+  "deckLimit": 3,
   "title": "Breached Dome",
-  "nrdbCode": "12113",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

@@ -1,8 +1,8 @@
 {
   "id": "corroder",
+  "deckLimit": 3,
   "title": "Corroder",
   "wave": "system-update-2021",
-  "nrdbCode": "31006",
   "type": "program",
   "side": "runner",
   "faction": "anarch",

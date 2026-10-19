@@ -1,8 +1,8 @@
 {
   "id": "hannah-wheels-pilintra",
+  "deckLimit": 3,
   "title": "Hannah \"Wheels\" Pilintra",
   "wave": "the-automata-initiative",
-  "nrdbCode": "34008",
   "type": "resource",
   "side": "runner",
   "faction": "anarch",

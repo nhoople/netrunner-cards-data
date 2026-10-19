@@ -1,7 +1,7 @@
 {
   "id": "data-folding",
+  "deckLimit": 3,
   "title": "Data Folding",
-  "nrdbCode": "07055",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

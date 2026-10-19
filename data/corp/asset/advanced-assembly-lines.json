@@ -1,7 +1,7 @@
 {
   "id": "advanced-assembly-lines",
+  "deckLimit": 3,
   "title": "Advanced Assembly Lines",
-  "nrdbCode": "10027",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

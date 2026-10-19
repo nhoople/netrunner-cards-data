@@ -1,7 +1,7 @@
 {
   "id": "neutralize-all-threats",
+  "deckLimit": 3,
   "title": "Neutralize All Threats",
-  "nrdbCode": "09043",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

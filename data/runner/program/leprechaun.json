@@ -1,7 +1,7 @@
 {
   "id": "leprechaun",
+  "deckLimit": 3,
   "title": "Leprechaun",
-  "nrdbCode": "06019",
   "type": "program",
   "side": "runner",
   "unsupported": [],

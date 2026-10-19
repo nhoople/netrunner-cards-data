@@ -1,8 +1,8 @@
 {
   "id": "green-level-clearance",
+  "deckLimit": 3,
   "title": "Green Level Clearance",
   "wave": "a-study-in-static",
-  "nrdbCode": "02070",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

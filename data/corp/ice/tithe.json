@@ -1,8 +1,8 @@
 {
   "id": "tithe",
+  "deckLimit": 3,
   "title": "Tithe",
   "wave": "system-gateway",
-  "nrdbCode": "30073",
   "type": "ice",
   "side": "corp",
   "faction": "neutral-corp",

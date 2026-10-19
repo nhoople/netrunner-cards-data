@@ -1,7 +1,7 @@
 {
   "id": "patch",
+  "deckLimit": 3,
   "title": "Patch",
-  "nrdbCode": "07021",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

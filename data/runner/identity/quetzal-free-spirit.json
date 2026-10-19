@@ -1,8 +1,8 @@
 {
   "id": "quetzal-free-spirit",
+  "deckLimit": 1,
   "title": "Quetzal: Free Spirit",
   "wave": "system-update-2021",
-  "nrdbCode": "31001",
   "type": "identity",
   "side": "runner",
   "faction": "anarch",

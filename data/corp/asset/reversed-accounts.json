@@ -1,8 +1,8 @@
 {
   "id": "reversed-accounts",
+  "deckLimit": 3,
   "title": "Reversed Accounts",
   "wave": "system-update-2021",
-  "nrdbCode": "31064",
   "type": "asset",
   "side": "corp",
   "faction": "nbn",

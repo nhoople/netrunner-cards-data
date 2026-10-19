@@ -1,7 +1,7 @@
 {
   "id": "street-peddler",
+  "deckLimit": 3,
   "title": "Street Peddler",
-  "nrdbCode": "08062",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

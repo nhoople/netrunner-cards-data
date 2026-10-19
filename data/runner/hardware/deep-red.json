@@ -1,8 +1,8 @@
 {
   "id": "deep-red",
+  "deckLimit": 3,
   "title": "Deep Red",
   "wave": "mala-tempora",
-  "nrdbCode": "04042",
   "type": "hardware",
   "side": "runner",
   "unsupported": [],

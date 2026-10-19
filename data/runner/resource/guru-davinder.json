@@ -1,7 +1,7 @@
 {
   "id": "guru-davinder",
+  "deckLimit": 3,
   "title": "Guru Davinder",
-  "nrdbCode": "10084",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

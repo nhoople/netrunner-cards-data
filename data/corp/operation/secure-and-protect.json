@@ -1,8 +1,8 @@
 {
   "id": "secure-and-protect",
+  "deckLimit": 3,
   "title": "Secure and Protect",
   "wave": "downfall",
-  "nrdbCode": "26061",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

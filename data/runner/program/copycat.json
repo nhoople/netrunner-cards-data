@@ -1,8 +1,8 @@
 {
   "id": "copycat",
+  "deckLimit": 3,
   "title": "Copycat",
   "wave": "stalwart",
-  "nrdbCode": "04025",
   "type": "program",
   "side": "runner",
   "unsupported": [],

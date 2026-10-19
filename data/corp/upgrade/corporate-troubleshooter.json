@@ -1,8 +1,8 @@
 {
   "id": "corporate-troubleshooter",
+  "deckLimit": 3,
   "title": "Corporate Troubleshooter",
   "wave": "system-update-2021",
-  "nrdbCode": "31049",
   "type": "upgrade",
   "side": "corp",
   "faction": "haas-bioroid",

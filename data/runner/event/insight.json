@@ -1,8 +1,8 @@
 {
   "id": "insight",
+  "deckLimit": 3,
   "title": "Insight",
   "wave": "reign-and-reverie",
-  "nrdbCode": "22016",
   "type": "event",
   "side": "runner",
   "unsupported": [],

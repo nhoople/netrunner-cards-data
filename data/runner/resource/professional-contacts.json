@@ -1,8 +1,8 @@
 {
   "id": "professional-contacts",
+  "deckLimit": 3,
   "title": "Professional Contacts",
   "wave": "system-update-2021",
-  "nrdbCode": "31036",
   "type": "resource",
   "side": "runner",
   "faction": "shaper",

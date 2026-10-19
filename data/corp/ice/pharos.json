@@ -1,8 +1,8 @@
 {
   "id": "pharos",
+  "deckLimit": 3,
   "title": "Pharos",
   "wave": "system-gateway",
-  "nrdbCode": "30063",
   "type": "ice",
   "side": "corp",
   "faction": "weyland-consortium",

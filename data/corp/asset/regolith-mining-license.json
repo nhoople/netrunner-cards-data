@@ -1,8 +1,8 @@
 {
   "id": "regolith-mining-license",
+  "deckLimit": 3,
   "title": "Regolith Mining License",
   "wave": "system-gateway",
-  "nrdbCode": "30071",
   "type": "asset",
   "side": "corp",
   "faction": "neutral-corp",

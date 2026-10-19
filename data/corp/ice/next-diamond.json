@@ -1,7 +1,7 @@
 {
   "id": "next-diamond",
+  "deckLimit": 3,
   "title": "NEXT Diamond",
-  "nrdbCode": "21112",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

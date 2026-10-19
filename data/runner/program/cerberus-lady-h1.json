@@ -1,7 +1,7 @@
 {
   "id": "cerberus-lady-h1",
+  "deckLimit": 3,
   "title": "Cerberus \"Lady\" H1",
-  "nrdbCode": "06099",
   "type": "program",
   "side": "runner",
   "unsupported": [],

@@ -1,8 +1,8 @@
 {
   "id": "diviner",
+  "deckLimit": 3,
   "title": "Diviner",
   "wave": "system-gateway",
-  "nrdbCode": "30046",
   "type": "ice",
   "side": "corp",
   "faction": "jinteki",

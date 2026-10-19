@@ -1,8 +1,8 @@
 {
   "id": "game-changer",
+  "deckLimit": 3,
   "title": "Game Changer",
   "wave": "reign-and-reverie",
-  "nrdbCode": "22032",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

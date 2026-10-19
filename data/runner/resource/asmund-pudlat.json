@@ -1,8 +1,8 @@
 {
   "id": "asmund-pudlat",
+  "deckLimit": 3,
   "title": "Asmund Pudlat",
   "wave": "parhelion",
-  "nrdbCode": "33082",
   "type": "resource",
   "side": "runner",
   "faction": "criminal",

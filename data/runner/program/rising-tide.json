@@ -1,8 +1,8 @@
 {
   "id": "rising-tide",
+  "deckLimit": 3,
   "title": "Rising Tide",
   "wave": "elevation",
-  "nrdbCode": "35009",
   "type": "program",
   "side": "runner",
   "faction": "anarch",

@@ -1,7 +1,7 @@
 {
   "id": "god-of-war",
+  "deckLimit": 3,
   "title": "God of War",
-  "nrdbCode": "12082",
   "type": "program",
   "side": "runner",
   "unsupported": [],

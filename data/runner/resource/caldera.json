@@ -1,7 +1,7 @@
 {
   "id": "caldera",
+  "deckLimit": 3,
   "title": "Caldera",
-  "nrdbCode": "12105",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

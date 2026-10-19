@@ -1,7 +1,7 @@
 {
   "id": "immolation-script",
+  "deckLimit": 3,
   "title": "Immolation Script",
-  "nrdbCode": "08041",
   "type": "event",
   "side": "runner",
   "unsupported": [],

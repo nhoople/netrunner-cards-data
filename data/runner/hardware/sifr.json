@@ -1,7 +1,7 @@
 {
   "id": "sifr",
+  "deckLimit": 3,
   "title": "Şifr",
-  "nrdbCode": "11101",
   "type": "hardware",
   "side": "runner",
   "unsupported": [],

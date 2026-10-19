@@ -1,8 +1,8 @@
 {
   "id": "letheia-nisei",
+  "deckLimit": 3,
   "title": "Letheia Nisei",
   "wave": "downfall",
-  "nrdbCode": "26046",
   "type": "upgrade",
   "side": "corp",
   "unsupported": [],

@@ -1,7 +1,7 @@
 {
   "id": "oduduwa",
+  "deckLimit": 3,
   "title": "Oduduwa",
-  "nrdbCode": "21079",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

@@ -1,7 +1,7 @@
 {
   "id": "alexa-belsky",
+  "deckLimit": 3,
   "title": "Alexa Belsky",
-  "nrdbCode": "11055",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

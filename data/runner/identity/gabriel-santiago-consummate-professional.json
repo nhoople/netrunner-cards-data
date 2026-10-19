@@ -1,8 +1,8 @@
 {
   "id": "gabriel-santiago-consummate-professional",
+  "deckLimit": 1,
   "title": "Gabriel Santiago: Consummate Professional",
   "wave": "system-core-2019",
-  "nrdbCode": "25020",
   "type": "identity",
   "side": "runner",
   "unsupported": [],

@@ -1,7 +1,7 @@
 {
   "id": "shi-kyu",
+  "deckLimit": 3,
   "title": "Shi.Kyū",
-  "nrdbCode": "05011",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

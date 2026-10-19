@@ -1,0 +1,13 @@
+{
+  "id": "startup_balance_update_25_04",
+  "name": "Startup Balance Update 25.04",
+  "formatId": "startup",
+  "dateStart": "2025-04-24",
+  "banned": [
+    "cleaver",
+    "nbn-reality-plus",
+    "pharos",
+    "tributary"
+  ],
+  "max3PointAgendas": 4
+}

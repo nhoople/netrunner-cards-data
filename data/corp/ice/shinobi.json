@@ -1,7 +1,7 @@
 {
   "id": "shinobi",
+  "deckLimit": 3,
   "title": "Shinobi",
-  "nrdbCode": "04115",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

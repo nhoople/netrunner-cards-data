@@ -1,8 +1,8 @@
 {
   "id": "au-co-the-gold-standard-in-clones",
+  "deckLimit": 1,
   "title": "AU Co.: The Gold Standard in Clones",
   "wave": "elevation",
-  "nrdbCode": "35046",
   "type": "identity",
   "side": "corp",
   "faction": "jinteki",

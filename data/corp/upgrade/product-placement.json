@@ -1,8 +1,8 @@
 {
   "id": "product-placement",
+  "deckLimit": 3,
   "title": "Product Placement",
   "wave": "system-core-2019",
-  "nrdbCode": "25120",
   "type": "upgrade",
   "side": "corp",
   "unsupported": [],

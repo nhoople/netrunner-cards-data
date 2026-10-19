@@ -1,7 +1,7 @@
 {
   "id": "contaminate",
+  "deckLimit": 3,
   "title": "Contaminate",
-  "nrdbCode": "21083",
   "type": "event",
   "side": "runner",
   "unsupported": [],

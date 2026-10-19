@@ -1,8 +1,8 @@
 {
   "id": "shipment-from-mirrormorph",
+  "deckLimit": 3,
   "title": "Shipment from MirrorMorph",
   "wave": "core",
-  "nrdbCode": "01060",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

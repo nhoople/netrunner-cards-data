@@ -1,7 +1,7 @@
 {
   "id": "baba-yaga",
+  "deckLimit": 3,
   "title": "Baba Yaga",
-  "nrdbCode": "11088",
   "type": "program",
   "side": "runner",
   "unsupported": [],

@@ -1,8 +1,8 @@
 {
   "id": "jinteki-restoring-humanity",
+  "deckLimit": 1,
   "title": "Jinteki: Restoring Humanity",
   "wave": "system-gateway",
-  "nrdbCode": "30043",
   "type": "identity",
   "side": "corp",
   "faction": "jinteki",

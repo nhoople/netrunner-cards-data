@@ -1,8 +1,8 @@
 {
   "id": "lobisomem",
+  "deckLimit": 3,
   "title": "Lobisomem",
   "wave": "rebellion-without-rehearsal",
-  "nrdbCode": "34090",
   "type": "program",
   "side": "runner",
   "faction": "shaper",

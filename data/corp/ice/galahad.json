@@ -1,7 +1,7 @@
 {
   "id": "galahad",
+  "deckLimit": 3,
   "title": "Galahad",
-  "nrdbCode": "06011",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

@@ -1,7 +1,7 @@
 {
   "id": "exchange-of-information",
+  "deckLimit": 3,
   "title": "Exchange of Information",
-  "nrdbCode": "10092",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

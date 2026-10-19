@@ -1,7 +1,7 @@
 {
   "id": "replanting",
+  "deckLimit": 3,
   "title": "Replanting",
-  "nrdbCode": "12033",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

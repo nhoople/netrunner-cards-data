@@ -1,7 +1,7 @@
 {
   "id": "15-minutes",
+  "deckLimit": 1,
   "title": "15 Minutes",
-  "nrdbCode": "09004",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

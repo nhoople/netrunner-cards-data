@@ -1,7 +1,7 @@
 {
   "id": "street-magic",
+  "deckLimit": 3,
   "title": "Street Magic",
-  "nrdbCode": "10003",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

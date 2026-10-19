@@ -1,8 +1,8 @@
 {
   "id": "creeper",
+  "deckLimit": 3,
   "title": "Creeper",
   "wave": "humanitys-shadow",
-  "nrdbCode": "02089",
   "type": "program",
   "side": "runner",
   "unsupported": [],

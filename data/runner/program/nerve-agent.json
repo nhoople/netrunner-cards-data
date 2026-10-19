@@ -1,8 +1,8 @@
 {
   "id": "nerve-agent",
+  "deckLimit": 3,
   "title": "Nerve Agent",
   "wave": "cyber-exodus",
-  "nrdbCode": "02041",
   "type": "program",
   "side": "runner",
   "unsupported": [],

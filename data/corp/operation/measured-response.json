@@ -1,8 +1,8 @@
 {
   "id": "measured-response",
+  "deckLimit": 3,
   "title": "Measured Response",
   "wave": "elevation",
-  "nrdbCode": "35078",
   "type": "operation",
   "side": "corp",
   "faction": "weyland-consortium",

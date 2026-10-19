@@ -1,8 +1,8 @@
 {
   "id": "zu-13-key-master",
+  "deckLimit": 3,
   "title": "ZU.13 Key Master",
   "wave": "what-lies-ahead",
-  "nrdbCode": "02007",
   "type": "program",
   "side": "runner",
   "unsupported": [],

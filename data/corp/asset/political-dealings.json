@@ -1,7 +1,7 @@
 {
   "id": "political-dealings",
+  "deckLimit": 3,
   "title": "Political Dealings",
-  "nrdbCode": "10051",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

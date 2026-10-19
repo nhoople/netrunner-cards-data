@@ -1,7 +1,7 @@
 {
   "id": "expo-grid",
+  "deckLimit": 3,
   "title": "Expo Grid",
-  "nrdbCode": "08119",
   "type": "upgrade",
   "side": "corp",
   "unsupported": [],

@@ -1,8 +1,8 @@
 {
   "id": "server-diagnostics",
+  "deckLimit": 3,
   "title": "Server Diagnostics",
   "wave": "creation-and-control",
-  "nrdbCode": "03025",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

@@ -1,8 +1,8 @@
 {
   "id": "odore",
+  "deckLimit": 3,
   "title": "Odore",
   "wave": "uprising",
-  "nrdbCode": "26071",
   "type": "program",
   "side": "runner",
   "faction": "anarch",

@@ -1,8 +1,8 @@
 {
   "id": "syailendra",
+  "deckLimit": 3,
   "title": "Syailendra",
   "wave": "elevation",
-  "nrdbCode": "35076",
   "type": "ice",
   "side": "corp",
   "faction": "weyland-consortium",

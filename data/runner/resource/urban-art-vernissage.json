@@ -1,8 +1,8 @@
 {
   "id": "urban-art-vernissage",
+  "deckLimit": 3,
   "title": "Urban Art Vernissage",
   "wave": "the-automata-initiative",
-  "nrdbCode": "34029",
   "type": "resource",
   "side": "runner",
   "faction": "shaper",

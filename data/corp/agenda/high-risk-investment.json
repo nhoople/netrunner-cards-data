@@ -1,7 +1,7 @@
 {
   "id": "high-risk-investment",
+  "deckLimit": 3,
   "title": "High-Risk Investment",
-  "nrdbCode": "07007",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

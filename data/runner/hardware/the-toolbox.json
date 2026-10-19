@@ -1,8 +1,8 @@
 {
   "id": "the-toolbox",
+  "deckLimit": 3,
   "title": "The Toolbox",
   "wave": "core",
-  "nrdbCode": "01041",
   "type": "hardware",
   "side": "runner",
   "unsupported": [],

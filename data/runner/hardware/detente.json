@@ -1,8 +1,8 @@
 {
   "id": "detente",
+  "deckLimit": 3,
   "title": "Detente",
   "wave": "elevation",
-  "nrdbCode": "35018",
   "type": "hardware",
   "side": "runner",
   "faction": "criminal",

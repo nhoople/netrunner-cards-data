@@ -1,8 +1,8 @@
 {
   "id": "wall-to-wall",
+  "deckLimit": 3,
   "title": "Wall to Wall",
   "wave": "uprising",
-  "nrdbCode": "26122",
   "type": "asset",
   "side": "corp",
   "faction": "weyland-consortium",

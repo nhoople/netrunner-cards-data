@@ -1,7 +1,7 @@
 {
   "id": "plan-b",
+  "deckLimit": 3,
   "title": "Plan B",
-  "nrdbCode": "05023",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

@@ -1,7 +1,7 @@
 {
   "id": "cyberdex-virus-suite",
+  "deckLimit": 3,
   "title": "Cyberdex Virus Suite",
-  "nrdbCode": "07027",
   "type": "upgrade",
   "side": "corp",
   "unsupported": [],

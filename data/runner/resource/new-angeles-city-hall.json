@@ -1,8 +1,8 @@
 {
   "id": "new-angeles-city-hall",
+  "deckLimit": 3,
   "title": "New Angeles City Hall",
   "wave": "future-proof",
-  "nrdbCode": "02109",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

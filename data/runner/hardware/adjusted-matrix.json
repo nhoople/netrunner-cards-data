@@ -1,7 +1,7 @@
 {
   "id": "adjusted-matrix",
+  "deckLimit": 3,
   "title": "Adjusted Matrix",
-  "nrdbCode": "12046",
   "type": "hardware",
   "side": "runner",
   "unsupported": [],

@@ -1,7 +1,7 @@
 {
   "id": "maxx-maximum-punk-rock",
+  "deckLimit": 1,
   "title": "MaxX: Maximum Punk Rock",
-  "nrdbCode": "07029",
   "type": "identity",
   "side": "runner",
   "unsupported": [],

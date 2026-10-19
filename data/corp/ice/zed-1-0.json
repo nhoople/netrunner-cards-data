@@ -1,8 +1,8 @@
 {
   "id": "zed-1-0",
+  "deckLimit": 3,
   "title": "Zed 1.0",
   "wave": "creation-and-control",
-  "nrdbCode": "03020",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

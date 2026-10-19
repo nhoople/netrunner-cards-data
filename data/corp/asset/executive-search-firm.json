@@ -1,7 +1,7 @@
 {
   "id": "executive-search-firm",
+  "deckLimit": 3,
   "title": "Executive Search Firm",
-  "nrdbCode": "10072",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

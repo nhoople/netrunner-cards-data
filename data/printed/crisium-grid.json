@@ -1,0 +1,5 @@
+{
+  "cardId": "crisium-grid",
+  "text": "Runs against this server cannot be declared successful. <em>(This effect does not cause runs to become unsuccessful.)</em>\nLimit 1 <strong>region</strong> per server.",
+  "strippedText": "Runs against this server cannot be declared successful. (This effect does not cause runs to become unsuccessful.) Limit 1 region per server."
+}

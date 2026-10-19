@@ -1,7 +1,7 @@
 {
   "id": "hunter-seeker",
+  "deckLimit": 3,
   "title": "Hunter Seeker",
-  "nrdbCode": "13051",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

@@ -1,7 +1,7 @@
 {
   "id": "hunting-grounds",
+  "deckLimit": 3,
   "title": "Hunting Grounds",
-  "nrdbCode": "09035",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

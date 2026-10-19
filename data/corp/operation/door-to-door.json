@@ -1,7 +1,7 @@
 {
   "id": "door-to-door",
+  "deckLimit": 3,
   "title": "Door to Door",
-  "nrdbCode": "11059",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

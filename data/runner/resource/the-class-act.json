@@ -1,8 +1,8 @@
 {
   "id": "the-class-act",
+  "deckLimit": 3,
   "title": "The Class Act",
   "wave": "downfall",
-  "nrdbCode": "26018",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

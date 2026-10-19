@@ -1,7 +1,7 @@
 {
   "id": "ssl-endorsement",
+  "deckLimit": 3,
   "title": "SSL Endorsement",
-  "nrdbCode": "21038",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

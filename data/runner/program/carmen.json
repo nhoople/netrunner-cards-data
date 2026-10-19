@@ -1,8 +1,8 @@
 {
   "id": "carmen",
+  "deckLimit": 3,
   "title": "Carmen",
   "wave": "system-gateway",
-  "nrdbCode": "30015",
   "type": "program",
   "side": "runner",
   "faction": "criminal",

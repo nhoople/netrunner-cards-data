@@ -1,8 +1,8 @@
 {
   "id": "psychographics",
+  "deckLimit": 3,
   "title": "Psychographics",
   "wave": "system-update-2021",
-  "nrdbCode": "31068",
   "type": "operation",
   "side": "corp",
   "faction": "nbn",

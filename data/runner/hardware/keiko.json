@@ -1,8 +1,8 @@
 {
   "id": "keiko",
+  "deckLimit": 3,
   "title": "Keiko",
   "wave": "uprising",
-  "nrdbCode": "26070",
   "type": "hardware",
   "side": "runner",
   "faction": "anarch",

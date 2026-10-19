@@ -1,8 +1,8 @@
 {
   "id": "lemuria-codecracker",
+  "deckLimit": 3,
   "title": "Lemuria Codecracker",
   "wave": "core",
-  "nrdbCode": "01023",
   "type": "hardware",
   "side": "runner",
   "unsupported": [],

@@ -1,8 +1,8 @@
 {
   "id": "trick-of-light",
+  "deckLimit": 3,
   "title": "Trick of Light",
   "wave": "system-update-2021",
-  "nrdbCode": "31058",
   "type": "operation",
   "side": "corp",
   "faction": "jinteki",

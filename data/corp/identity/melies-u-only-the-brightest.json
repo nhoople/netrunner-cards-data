@@ -1,8 +1,8 @@
 {
   "id": "melies-u-only-the-brightest",
+  "deckLimit": 1,
   "title": "Méliès U: Only the Brightest",
   "wave": "vantage-point",
-  "nrdbCode": "36036",
   "type": "identity",
   "side": "corp",
   "faction": "jinteki",

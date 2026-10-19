@@ -1,8 +1,8 @@
 {
   "id": "daruma",
+  "deckLimit": 3,
   "title": "Daruma",
   "wave": "reign-and-reverie",
-  "nrdbCode": "22041",
   "type": "upgrade",
   "side": "corp",
   "unsupported": [],

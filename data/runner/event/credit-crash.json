@@ -1,7 +1,7 @@
 {
   "id": "credit-crash",
+  "deckLimit": 3,
   "title": "Credit Crash",
-  "nrdbCode": "11021",
   "type": "event",
   "side": "runner",
   "unsupported": [],

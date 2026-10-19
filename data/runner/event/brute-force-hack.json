@@ -1,7 +1,7 @@
 {
   "id": "brute-force-hack",
+  "deckLimit": 3,
   "title": "Brute-Force-Hack",
-  "nrdbCode": "13002",
   "type": "event",
   "side": "runner",
   "unsupported": [],

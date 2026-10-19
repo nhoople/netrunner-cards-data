@@ -1,8 +1,8 @@
 {
   "id": "focus-group",
+  "deckLimit": 3,
   "title": "Focus Group",
   "wave": "downfall",
-  "nrdbCode": "26052",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

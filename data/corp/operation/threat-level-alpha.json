@@ -1,7 +1,7 @@
 {
   "id": "threat-level-alpha",
+  "deckLimit": 3,
   "title": "Threat Level Alpha",
-  "nrdbCode": "12117",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

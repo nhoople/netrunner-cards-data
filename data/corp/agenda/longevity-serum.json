@@ -1,8 +1,8 @@
 {
   "id": "longevity-serum",
+  "deckLimit": 1,
   "title": "Longevity Serum",
   "wave": "system-gateway",
-  "nrdbCode": "30044",
   "type": "agenda",
   "side": "corp",
   "faction": "jinteki",

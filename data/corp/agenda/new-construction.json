@@ -1,7 +1,7 @@
 {
   "id": "new-construction",
+  "deckLimit": 3,
   "title": "New Construction",
-  "nrdbCode": "10035",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

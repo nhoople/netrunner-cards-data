@@ -1,8 +1,8 @@
 {
   "id": "hyoubu-institute-absolute-clarity",
+  "deckLimit": 1,
   "title": "Hyoubu Institute: Absolute Clarity",
   "wave": "downfall",
-  "nrdbCode": "26039",
   "type": "identity",
   "side": "corp",
   "unsupported": [],

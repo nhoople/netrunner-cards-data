@@ -1,7 +1,7 @@
 {
   "id": "flame-out",
+  "deckLimit": 3,
   "title": "Flame-out",
-  "nrdbCode": "21109",
   "type": "hardware",
   "side": "runner",
   "unsupported": [],

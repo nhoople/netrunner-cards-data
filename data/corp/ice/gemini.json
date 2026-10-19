@@ -1,7 +1,7 @@
 {
   "id": "gemini",
+  "deckLimit": 3,
   "title": "Gemini",
-  "nrdbCode": "06084",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

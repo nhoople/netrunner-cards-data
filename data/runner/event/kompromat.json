@@ -1,8 +1,8 @@
 {
   "id": "kompromat",
+  "deckLimit": 3,
   "title": "Kompromat",
   "wave": "vantage-point",
-  "nrdbCode": "36010",
   "type": "event",
   "side": "runner",
   "faction": "criminal",

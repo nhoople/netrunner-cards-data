@@ -1,7 +1,7 @@
 {
   "id": "careful-planning",
+  "deckLimit": 3,
   "title": "Careful Planning",
-  "nrdbCode": "13013",
   "type": "event",
   "side": "runner",
   "unsupported": [],

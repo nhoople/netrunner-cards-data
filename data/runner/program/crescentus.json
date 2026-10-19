@@ -1,8 +1,8 @@
 {
   "id": "crescentus",
+  "deckLimit": 3,
   "title": "Crescentus",
   "wave": "a-study-in-static",
-  "nrdbCode": "02065",
   "type": "program",
   "side": "runner",
   "unsupported": [],

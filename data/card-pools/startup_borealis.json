@@ -1,0 +1,16 @@
+{
+  "id": "startup_borealis",
+  "name": "Startup (Borealis)",
+  "formatId": "startup",
+  "cycles": [
+    "borealis",
+    "system-gateway",
+    "system-update-2021"
+  ],
+  "waves": [
+    "midnight-sun",
+    "parhelion",
+    "system-gateway",
+    "system-update-2021"
+  ]
+}

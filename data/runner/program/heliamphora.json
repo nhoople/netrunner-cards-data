@@ -1,8 +1,8 @@
 {
   "id": "heliamphora",
+  "deckLimit": 3,
   "title": "Heliamphora",
   "wave": "rebellion-without-rehearsal",
-  "nrdbCode": "34072",
   "type": "program",
   "side": "runner",
   "faction": "anarch",

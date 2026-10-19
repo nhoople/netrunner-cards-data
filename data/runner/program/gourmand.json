@@ -1,8 +1,8 @@
 {
   "id": "gourmand",
+  "deckLimit": 3,
   "title": "Gourmand",
   "wave": "elevation",
-  "nrdbCode": "35007",
   "type": "program",
   "side": "runner",
   "faction": "anarch",

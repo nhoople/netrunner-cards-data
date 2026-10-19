@@ -1,8 +1,8 @@
 {
   "id": "doppelganger",
+  "deckLimit": 3,
   "title": "Doppelgänger",
   "wave": "a-study-in-static",
-  "nrdbCode": "02064",
   "type": "hardware",
   "side": "runner",
   "unsupported": [],

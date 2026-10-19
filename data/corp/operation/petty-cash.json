@@ -1,8 +1,8 @@
 {
   "id": "petty-cash",
+  "deckLimit": 3,
   "title": "Petty Cash",
   "wave": "elevation",
-  "nrdbCode": "35081",
   "type": "operation",
   "side": "corp",
   "faction": "neutral-corp",

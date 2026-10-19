@@ -1,8 +1,8 @@
 {
   "id": "empiricist",
+  "deckLimit": 3,
   "title": "Empiricist",
   "wave": "elevation",
-  "nrdbCode": "35052",
   "type": "ice",
   "side": "corp",
   "faction": "jinteki",

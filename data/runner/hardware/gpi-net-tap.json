@@ -1,7 +1,7 @@
 {
   "id": "gpi-net-tap",
+  "deckLimit": 3,
   "title": "GPI Net Tap",
-  "nrdbCode": "11003",
   "type": "hardware",
   "side": "runner",
   "unsupported": [],

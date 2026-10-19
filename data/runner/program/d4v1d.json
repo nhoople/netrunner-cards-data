@@ -1,7 +1,7 @@
 {
   "id": "d4v1d",
+  "deckLimit": 3,
   "title": "D4v1d",
-  "nrdbCode": "06033",
   "type": "program",
   "side": "runner",
   "unsupported": [],

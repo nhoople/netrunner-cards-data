@@ -1,7 +1,7 @@
 {
   "id": "adept",
+  "deckLimit": 3,
   "title": "Adept",
-  "nrdbCode": "13017",
   "type": "program",
   "side": "runner",
   "unsupported": [],

@@ -1,7 +1,7 @@
 {
   "id": "sso-industries-fueling-innovation",
+  "deckLimit": 1,
   "title": "SSO Industries: Fueling Innovation",
-  "nrdbCode": "21077",
   "type": "identity",
   "side": "corp",
   "unsupported": [],

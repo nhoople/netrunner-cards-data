@@ -1,8 +1,8 @@
 {
   "id": "seraph",
+  "deckLimit": 3,
   "title": "Seraph",
   "wave": "rebellion-without-rehearsal",
-  "nrdbCode": "34118",
   "type": "ice",
   "side": "corp",
   "faction": "nbn",

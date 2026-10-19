@@ -1,7 +1,7 @@
 {
   "id": "port-anson-grid",
+  "deckLimit": 3,
   "title": "Port Anson Grid",
-  "nrdbCode": "06044",
   "type": "upgrade",
   "side": "corp",
   "unsupported": [],

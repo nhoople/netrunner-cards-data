@@ -1,8 +1,8 @@
 {
   "id": "s-dobrado",
+  "deckLimit": 3,
   "title": "S-Dobrado",
   "wave": "the-automata-initiative",
-  "nrdbCode": "34012",
   "type": "event",
   "side": "runner",
   "faction": "criminal",

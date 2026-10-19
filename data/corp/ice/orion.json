@@ -1,7 +1,7 @@
 {
   "id": "orion",
+  "deckLimit": 3,
   "title": "Orion",
-  "nrdbCode": "07015",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

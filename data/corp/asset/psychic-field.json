@@ -1,7 +1,7 @@
 {
   "id": "psychic-field",
+  "deckLimit": 3,
   "title": "Psychic Field",
-  "nrdbCode": "05010",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

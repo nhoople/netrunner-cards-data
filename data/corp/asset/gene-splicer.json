@@ -1,7 +1,7 @@
 {
   "id": "gene-splicer",
+  "deckLimit": 3,
   "title": "Gene Splicer",
-  "nrdbCode": "21012",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

@@ -1,8 +1,8 @@
 {
   "id": "scheherazade",
+  "deckLimit": 3,
   "title": "Scheherazade",
   "wave": "stalwart",
-  "nrdbCode": "04022",
   "type": "program",
   "side": "runner",
   "unsupported": [],

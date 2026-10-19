@@ -1,8 +1,8 @@
 {
   "id": "your-digital-life",
+  "deckLimit": 3,
   "title": "Your Digital Life",
   "wave": "the-automata-initiative",
-  "nrdbCode": "34056",
   "type": "operation",
   "side": "corp",
   "faction": "nbn",

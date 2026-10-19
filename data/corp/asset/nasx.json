@@ -1,7 +1,7 @@
 {
   "id": "nasx",
+  "deckLimit": 3,
   "title": "NASX",
-  "nrdbCode": "11118",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

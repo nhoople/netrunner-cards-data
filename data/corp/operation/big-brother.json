@@ -1,8 +1,8 @@
 {
   "id": "big-brother",
+  "deckLimit": 3,
   "title": "Big Brother",
   "wave": "trace-amount",
-  "nrdbCode": "02035",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

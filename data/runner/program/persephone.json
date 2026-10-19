@@ -1,7 +1,7 @@
 {
   "id": "persephone",
+  "deckLimit": 3,
   "title": "Persephone",
-  "nrdbCode": "12042",
   "type": "program",
   "side": "runner",
   "unsupported": [],

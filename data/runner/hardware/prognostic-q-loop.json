@@ -1,8 +1,8 @@
 {
   "id": "prognostic-q-loop",
+  "deckLimit": 3,
   "title": "Prognostic Q-Loop",
   "wave": "uprising",
-  "nrdbCode": "26077",
   "type": "hardware",
   "side": "runner",
   "faction": "criminal",

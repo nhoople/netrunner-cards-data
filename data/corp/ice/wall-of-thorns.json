@@ -1,8 +1,8 @@
 {
   "id": "wall-of-thorns",
+  "deckLimit": 3,
   "title": "Wall of Thorns",
   "wave": "system-core-2019",
-  "nrdbCode": "25098",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

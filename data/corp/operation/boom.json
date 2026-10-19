@@ -1,7 +1,7 @@
 {
   "id": "boom",
+  "deckLimit": 3,
   "title": "BOOM!",
-  "nrdbCode": "11058",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

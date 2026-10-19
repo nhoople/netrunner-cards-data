@@ -1,7 +1,7 @@
 {
   "id": "utopia-shard",
+  "deckLimit": 1,
   "title": "Utopia Shard",
-  "nrdbCode": "06100",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

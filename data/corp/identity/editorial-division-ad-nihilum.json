@@ -1,8 +1,8 @@
 {
   "id": "editorial-division-ad-nihilum",
+  "deckLimit": 1,
   "title": "Editorial Division: Ad Nihilum",
   "wave": "vantage-point",
-  "nrdbCode": "36046",
   "type": "identity",
   "side": "corp",
   "faction": "nbn",

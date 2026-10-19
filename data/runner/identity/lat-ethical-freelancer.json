@@ -1,8 +1,8 @@
 {
   "id": "lat-ethical-freelancer",
+  "deckLimit": 1,
   "title": "Lat: Ethical Freelancer",
   "wave": "downfall",
-  "nrdbCode": "26019",
   "type": "identity",
   "side": "runner",
   "unsupported": [],

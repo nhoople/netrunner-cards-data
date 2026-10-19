@@ -1,7 +1,7 @@
 {
   "id": "planned-assault",
+  "deckLimit": 3,
   "title": "Planned Assault",
-  "nrdbCode": "05036",
   "type": "event",
   "side": "runner",
   "unsupported": [],

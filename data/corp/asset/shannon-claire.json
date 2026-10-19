@@ -1,7 +1,7 @@
 {
   "id": "shannon-claire",
+  "deckLimit": 3,
   "title": "Shannon Claire",
-  "nrdbCode": "09010",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

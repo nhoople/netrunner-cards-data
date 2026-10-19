@@ -1,8 +1,8 @@
 {
   "id": "chastushka",
+  "deckLimit": 3,
   "title": "Chastushka",
   "wave": "midnight-sun",
-  "nrdbCode": "33002",
   "type": "event",
   "side": "runner",
   "faction": "anarch",

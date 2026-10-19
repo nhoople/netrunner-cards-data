@@ -1,7 +1,7 @@
 {
   "id": "unregistered-s-w-35",
+  "deckLimit": 3,
   "title": "Unregistered S&W '35",
-  "nrdbCode": "05039",
   "type": "hardware",
   "side": "runner",
   "unsupported": [],

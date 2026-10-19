@@ -1,8 +1,8 @@
 {
   "id": "retribution",
+  "deckLimit": 3,
   "title": "Retribution",
   "wave": "system-gateway",
-  "nrdbCode": "30065",
   "type": "operation",
   "side": "corp",
   "faction": "weyland-consortium",

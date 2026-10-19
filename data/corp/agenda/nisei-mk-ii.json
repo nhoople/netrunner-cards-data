@@ -1,8 +1,8 @@
 {
   "id": "nisei-mk-ii",
+  "deckLimit": 3,
   "title": "Nisei MK II",
   "wave": "system-update-2021",
-  "nrdbCode": "31052",
   "type": "agenda",
   "side": "corp",
   "faction": "jinteki",

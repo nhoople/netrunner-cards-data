@@ -1,8 +1,8 @@
 {
   "id": "jeitinho",
+  "deckLimit": 3,
   "title": "Jeitinho",
   "wave": "rebellion-without-rehearsal",
-  "nrdbCode": "34079",
   "type": "hardware",
   "side": "runner",
   "faction": "criminal",

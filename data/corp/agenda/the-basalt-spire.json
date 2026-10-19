@@ -1,8 +1,8 @@
 {
   "id": "the-basalt-spire",
+  "deckLimit": 3,
   "title": "The Basalt Spire",
   "wave": "rebellion-without-rehearsal",
-  "nrdbCode": "34123",
   "type": "agenda",
   "side": "corp",
   "faction": "weyland-consortium",

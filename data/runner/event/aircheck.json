@@ -1,8 +1,8 @@
 {
   "id": "aircheck",
+  "deckLimit": 3,
   "title": "Aircheck",
   "wave": "vantage-point",
-  "nrdbCode": "36018",
   "type": "event",
   "side": "runner",
   "faction": "shaper",

@@ -1,7 +1,7 @@
 {
   "id": "news-team",
+  "deckLimit": 3,
   "title": "News Team",
-  "nrdbCode": "09009",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

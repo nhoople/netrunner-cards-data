@@ -1,8 +1,8 @@
 {
   "id": "tremolo",
+  "deckLimit": 3,
   "title": "Tremolo",
   "wave": "parhelion",
-  "nrdbCode": "33080",
   "type": "program",
   "side": "runner",
   "faction": "criminal",

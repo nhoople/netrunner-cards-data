@@ -1,7 +1,7 @@
 {
   "id": "apex-invasive-predator",
+  "deckLimit": 1,
   "title": "Apex: Invasive Predator",
-  "nrdbCode": "09029",
   "type": "identity",
   "side": "runner",
   "unsupported": [],

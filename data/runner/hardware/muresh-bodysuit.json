@@ -1,8 +1,8 @@
 {
   "id": "muresh-bodysuit",
+  "deckLimit": 3,
   "title": "Muresh Bodysuit",
   "wave": "cyber-exodus",
-  "nrdbCode": "02044",
   "type": "hardware",
   "side": "runner",
   "unsupported": [],

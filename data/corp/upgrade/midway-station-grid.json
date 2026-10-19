@@ -1,7 +1,7 @@
 {
   "id": "midway-station-grid",
+  "deckLimit": 3,
   "title": "Midway Station Grid",
-  "nrdbCode": "06007",
   "type": "upgrade",
   "side": "corp",
   "unsupported": [],

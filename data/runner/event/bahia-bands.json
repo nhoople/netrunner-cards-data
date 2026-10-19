@@ -1,8 +1,8 @@
 {
   "id": "bahia-bands",
+  "deckLimit": 3,
   "title": "Bahia Bands",
   "wave": "the-automata-initiative",
-  "nrdbCode": "34030",
   "type": "event",
   "side": "runner",
   "faction": "neutral-runner",

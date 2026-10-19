@@ -1,7 +1,7 @@
 {
   "id": "bamboo-dome",
+  "deckLimit": 3,
   "title": "Bamboo Dome",
-  "nrdbCode": "12053",
   "type": "upgrade",
   "side": "corp",
   "unsupported": [],

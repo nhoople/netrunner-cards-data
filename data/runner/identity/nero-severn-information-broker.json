@@ -1,7 +1,7 @@
 {
   "id": "nero-severn-information-broker",
+  "deckLimit": 1,
   "title": "Nero Severn: Information Broker",
-  "nrdbCode": "10040",
   "type": "identity",
   "side": "runner",
   "unsupported": [],

@@ -1,7 +1,7 @@
 {
   "id": "game-day",
+  "deckLimit": 3,
   "title": "Game Day",
-  "nrdbCode": "08026",
   "type": "event",
   "side": "runner",
   "unsupported": [],

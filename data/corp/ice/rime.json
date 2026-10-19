@@ -1,8 +1,8 @@
 {
   "id": "rime",
+  "deckLimit": 3,
   "title": "Rime",
   "wave": "downfall",
-  "nrdbCode": "26065",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

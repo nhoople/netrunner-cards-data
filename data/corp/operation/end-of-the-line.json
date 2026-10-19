@@ -1,8 +1,8 @@
 {
   "id": "end-of-the-line",
+  "deckLimit": 3,
   "title": "End of the Line",
   "wave": "parhelion",
-  "nrdbCode": "33125",
   "type": "operation",
   "side": "corp",
   "faction": "weyland-consortium",

@@ -1,7 +1,7 @@
 {
   "id": "reeducation",
+  "deckLimit": 3,
   "title": "Reeducation",
-  "nrdbCode": "12074",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

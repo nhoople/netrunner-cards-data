@@ -1,7 +1,7 @@
 {
   "id": "valencia-estevez-the-angel-of-cayambe",
+  "deckLimit": 1,
   "title": "Valencia Estevez: The Angel of Cayambe",
-  "nrdbCode": "07030",
   "type": "identity",
   "side": "runner",
   "unsupported": [],

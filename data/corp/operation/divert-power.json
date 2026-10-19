@@ -1,8 +1,8 @@
 {
   "id": "divert-power",
+  "deckLimit": 3,
   "title": "Divert Power",
   "wave": "reign-and-reverie",
-  "nrdbCode": "22030",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

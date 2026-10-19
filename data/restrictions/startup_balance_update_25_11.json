@@ -1,0 +1,15 @@
+{
+  "id": "startup_balance_update_25_11",
+  "name": "Startup Balance Update 25.11",
+  "formatId": "startup",
+  "dateStart": "2025-11-03",
+  "banned": [
+    "cleaver",
+    "coalescence",
+    "nbn-reality-plus",
+    "pharos",
+    "s-dobrado",
+    "tributary"
+  ],
+  "max3PointAgendas": 4
+}

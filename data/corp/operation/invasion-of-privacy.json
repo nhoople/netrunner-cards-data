@@ -1,8 +1,8 @@
 {
   "id": "invasion-of-privacy",
+  "deckLimit": 3,
   "title": "Invasion of Privacy",
   "wave": "opening-moves",
-  "nrdbCode": "04016",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

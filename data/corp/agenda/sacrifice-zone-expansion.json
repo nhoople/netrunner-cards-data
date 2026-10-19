@@ -1,8 +1,8 @@
 {
   "id": "sacrifice-zone-expansion",
+  "deckLimit": 3,
   "title": "Sacrifice Zone Expansion",
   "wave": "vantage-point",
-  "nrdbCode": "36056",
   "type": "agenda",
   "side": "corp",
   "faction": "weyland-consortium",

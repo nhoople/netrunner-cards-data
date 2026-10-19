@@ -1,7 +1,7 @@
 {
   "id": "puppet-master",
+  "deckLimit": 3,
   "title": "Puppet Master",
-  "nrdbCode": "10090",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

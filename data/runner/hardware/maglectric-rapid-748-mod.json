@@ -1,8 +1,8 @@
 {
   "id": "maglectric-rapid-748-mod",
+  "deckLimit": 3,
   "title": "Maglectric Rapid (748 Mod)",
   "wave": "elevation",
-  "nrdbCode": "35019",
   "type": "hardware",
   "side": "runner",
   "faction": "criminal",

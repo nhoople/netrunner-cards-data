@@ -1,7 +1,7 @@
 {
   "id": "peak-efficiency",
+  "deckLimit": 3,
   "title": "Peak Efficiency",
-  "nrdbCode": "06062",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

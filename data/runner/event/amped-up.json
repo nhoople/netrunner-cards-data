@@ -1,7 +1,7 @@
 {
   "id": "amped-up",
+  "deckLimit": 3,
   "title": "Amped Up",
-  "nrdbCode": "07031",
   "type": "event",
   "side": "runner",
   "unsupported": [],

@@ -1,7 +1,7 @@
 {
   "id": "virgo",
+  "deckLimit": 3,
   "title": "Virgo",
-  "nrdbCode": "06109",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

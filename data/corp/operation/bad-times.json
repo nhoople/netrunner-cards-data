@@ -1,7 +1,7 @@
 {
   "id": "bad-times",
+  "deckLimit": 3,
   "title": "Bad Times",
-  "nrdbCode": "06012",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

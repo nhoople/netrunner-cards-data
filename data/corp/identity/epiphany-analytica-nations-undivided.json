@@ -1,8 +1,8 @@
 {
   "id": "epiphany-analytica-nations-undivided",
+  "deckLimit": 1,
   "title": "Epiphany Analytica: Nations Undivided",
   "wave": "the-automata-initiative",
-  "nrdbCode": "34048",
   "type": "identity",
   "side": "corp",
   "faction": "nbn",

@@ -1,7 +1,7 @@
 {
   "id": "ive-had-worse",
+  "deckLimit": 3,
   "title": "I've Had Worse",
-  "nrdbCode": "07032",
   "type": "event",
   "side": "runner",
   "unsupported": [],

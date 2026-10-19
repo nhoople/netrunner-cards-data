@@ -1,8 +1,8 @@
 {
   "id": "euler",
+  "deckLimit": 3,
   "title": "Euler",
   "wave": "uprising",
-  "nrdbCode": "26087",
   "type": "program",
   "side": "runner",
   "faction": "shaper",

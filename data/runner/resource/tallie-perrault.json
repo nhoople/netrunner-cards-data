@@ -1,7 +1,7 @@
 {
   "id": "tallie-perrault",
+  "deckLimit": 3,
   "title": "Tallie Perrault",
-  "nrdbCode": "04083",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

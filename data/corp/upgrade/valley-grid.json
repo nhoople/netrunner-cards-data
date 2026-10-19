@@ -1,7 +1,7 @@
 {
   "id": "valley-grid",
+  "deckLimit": 3,
   "title": "Valley Grid",
-  "nrdbCode": "08015",
   "type": "upgrade",
   "side": "corp",
   "unsupported": [],

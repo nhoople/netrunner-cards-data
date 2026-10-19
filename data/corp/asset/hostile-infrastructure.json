@@ -1,7 +1,7 @@
 {
   "id": "hostile-infrastructure",
+  "deckLimit": 3,
   "title": "Hostile Infrastructure",
-  "nrdbCode": "06083",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

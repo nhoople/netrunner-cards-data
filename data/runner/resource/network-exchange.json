@@ -1,7 +1,7 @@
 {
   "id": "network-exchange",
+  "deckLimit": 3,
   "title": "Network Exchange",
-  "nrdbCode": "12007",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

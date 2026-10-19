@@ -1,7 +1,7 @@
 {
   "id": "dedicated-neural-net",
+  "deckLimit": 3,
   "title": "Dedicated Neural Net",
-  "nrdbCode": "10088",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

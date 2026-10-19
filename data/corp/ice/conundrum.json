@@ -1,7 +1,7 @@
 {
   "id": "conundrum",
+  "deckLimit": 3,
   "title": "Conundrum",
-  "nrdbCode": "12120",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

@@ -1,8 +1,8 @@
 {
   "id": "bass-ch1r180g4",
+  "deckLimit": 3,
   "title": "Bass CH1R180G4",
   "wave": "uprising",
-  "nrdbCode": "26098",
   "type": "asset",
   "side": "corp",
   "faction": "haas-bioroid",

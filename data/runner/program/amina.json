@@ -1,7 +1,7 @@
 {
   "id": "amina",
+  "deckLimit": 3,
   "title": "Amina",
-  "nrdbCode": "21104",
   "type": "program",
   "side": "runner",
   "unsupported": [],

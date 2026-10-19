@@ -1,8 +1,8 @@
 {
   "id": "thimblerig",
+  "deckLimit": 3,
   "title": "Thimblerig",
   "wave": "reign-and-reverie",
-  "nrdbCode": "22039",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

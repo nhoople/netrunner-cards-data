@@ -1,8 +1,8 @@
 {
   "id": "freelancer",
+  "deckLimit": 3,
   "title": "Freelancer",
   "wave": "trace-amount",
-  "nrdbCode": "02040",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

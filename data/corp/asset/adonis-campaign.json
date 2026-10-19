@@ -1,8 +1,8 @@
 {
   "id": "adonis-campaign",
+  "deckLimit": 3,
   "title": "Adonis Campaign",
   "wave": "system-core-2019",
-  "nrdbCode": "25070",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

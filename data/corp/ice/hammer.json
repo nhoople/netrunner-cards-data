@@ -1,8 +1,8 @@
 {
   "id": "hammer",
+  "deckLimit": 3,
   "title": "Hammer",
   "wave": "rebellion-without-rehearsal",
-  "nrdbCode": "34126",
   "type": "ice",
   "side": "corp",
   "faction": "weyland-consortium",

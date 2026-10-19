@@ -1,7 +1,7 @@
 {
   "id": "peregrine",
+  "deckLimit": 3,
   "title": "Peregrine",
-  "nrdbCode": "11044",
   "type": "program",
   "side": "runner",
   "unsupported": [],

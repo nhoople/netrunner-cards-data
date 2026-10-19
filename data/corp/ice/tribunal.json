@@ -1,7 +1,7 @@
 {
   "id": "tribunal",
+  "deckLimit": 3,
   "title": "Tribunal",
-  "nrdbCode": "11120",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

@@ -1,7 +1,7 @@
 {
   "id": "distract-the-masses",
+  "deckLimit": 3,
   "title": "Distract the Masses",
-  "nrdbCode": "21040",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

@@ -1,8 +1,8 @@
 {
   "id": "hackerspace",
+  "deckLimit": 3,
   "title": "Hackerspace",
   "wave": "vantage-point",
-  "nrdbCode": "36006",
   "type": "resource",
   "side": "runner",
   "faction": "anarch",

@@ -1,7 +1,7 @@
 {
   "id": "forger",
+  "deckLimit": 3,
   "title": "Forger",
-  "nrdbCode": "08065",
   "type": "hardware",
   "side": "runner",
   "unsupported": [],

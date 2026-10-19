@@ -1,8 +1,8 @@
 {
   "id": "ghost-branch",
+  "deckLimit": 3,
   "title": "Ghost Branch",
   "wave": "system-core-2019",
-  "nrdbCode": "25109",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

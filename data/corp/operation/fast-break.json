@@ -1,8 +1,8 @@
 {
   "id": "fast-break",
+  "deckLimit": 3,
   "title": "Fast Break",
   "wave": "reign-and-reverie",
-  "nrdbCode": "22031",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

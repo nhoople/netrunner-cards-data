@@ -1,7 +1,7 @@
 {
   "id": "special-report",
+  "deckLimit": 3,
   "title": "Special Report",
-  "nrdbCode": "11035",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

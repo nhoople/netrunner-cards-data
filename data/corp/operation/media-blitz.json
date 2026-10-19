@@ -1,7 +1,7 @@
 {
   "id": "media-blitz",
+  "deckLimit": 3,
   "title": "Media Blitz",
-  "nrdbCode": "09021",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

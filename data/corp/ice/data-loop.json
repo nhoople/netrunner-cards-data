@@ -1,7 +1,7 @@
 {
   "id": "data-loop",
+  "deckLimit": 3,
   "title": "Data Loop",
-  "nrdbCode": "12095",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

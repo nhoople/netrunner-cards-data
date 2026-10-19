@@ -1,8 +1,8 @@
 {
   "id": "chilo-city-grid",
+  "deckLimit": 3,
   "title": "ChiLo City Grid",
   "wave": "trace-amount",
-  "nrdbCode": "02036",
   "type": "upgrade",
   "side": "corp",
   "unsupported": [],

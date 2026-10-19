@@ -1,8 +1,8 @@
 {
   "id": "penrose",
+  "deckLimit": 3,
   "title": "Penrose",
   "wave": "uprising",
-  "nrdbCode": "26089",
   "type": "program",
   "side": "runner",
   "faction": "shaper",

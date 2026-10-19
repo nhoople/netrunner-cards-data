@@ -1,8 +1,8 @@
 {
   "id": "hydra",
+  "deckLimit": 3,
   "title": "Hydra",
   "wave": "reign-and-reverie",
-  "nrdbCode": "22046",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

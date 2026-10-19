@@ -1,8 +1,8 @@
 {
   "id": "scrubber",
+  "deckLimit": 3,
   "title": "Scrubber",
   "wave": "system-update-2021",
-  "nrdbCode": "31011",
   "type": "resource",
   "side": "runner",
   "faction": "anarch",

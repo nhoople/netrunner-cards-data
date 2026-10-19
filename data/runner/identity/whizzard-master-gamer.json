@@ -1,8 +1,8 @@
 {
   "id": "whizzard-master-gamer",
+  "deckLimit": 1,
   "title": "Whizzard: Master Gamer",
   "wave": "what-lies-ahead",
-  "nrdbCode": "02001",
   "type": "identity",
   "side": "runner",
   "unsupported": [],

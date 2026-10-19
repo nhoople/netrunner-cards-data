@@ -1,8 +1,8 @@
 {
   "id": "chameleon",
+  "deckLimit": 3,
   "title": "Chameleon",
   "wave": "system-update-2021",
-  "nrdbCode": "31031",
   "type": "program",
   "side": "runner",
   "faction": "shaper",

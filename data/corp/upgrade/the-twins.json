@@ -1,7 +1,7 @@
 {
   "id": "the-twins",
+  "deckLimit": 3,
   "title": "The Twins",
-  "nrdbCode": "07024",
   "type": "upgrade",
   "side": "corp",
   "unsupported": [],

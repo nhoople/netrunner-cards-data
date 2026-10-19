@@ -1,7 +1,7 @@
 {
   "id": "beth-kilrain-chang",
+  "deckLimit": 3,
   "title": "Beth Kilrain-Chang",
-  "nrdbCode": "11030",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

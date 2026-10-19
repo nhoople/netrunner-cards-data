@@ -1,7 +1,7 @@
 {
   "id": "kabonesa-wu-netspace-thrillseeker",
+  "deckLimit": 1,
   "title": "Kabonesa Wu: Netspace Thrillseeker",
-  "nrdbCode": "21025",
   "type": "identity",
   "side": "runner",
   "unsupported": [],

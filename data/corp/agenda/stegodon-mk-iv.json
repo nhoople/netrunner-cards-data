@@ -1,8 +1,8 @@
 {
   "id": "stegodon-mk-iv",
+  "deckLimit": 3,
   "title": "Stegodon MK IV",
   "wave": "the-automata-initiative",
-  "nrdbCode": "34032",
   "type": "agenda",
   "side": "corp",
   "faction": "haas-bioroid",

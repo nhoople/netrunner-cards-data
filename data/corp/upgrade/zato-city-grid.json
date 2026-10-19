@@ -1,8 +1,8 @@
 {
   "id": "zato-city-grid",
+  "deckLimit": 3,
   "title": "ZATO City Grid",
   "wave": "parhelion",
-  "nrdbCode": "33127",
   "type": "upgrade",
   "side": "corp",
   "faction": "weyland-consortium",

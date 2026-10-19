@@ -1,7 +1,7 @@
 {
   "id": "garrote",
+  "deckLimit": 3,
   "title": "Garrote",
-  "nrdbCode": "04065",
   "type": "program",
   "side": "runner",
   "unsupported": [],

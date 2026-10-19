@@ -1,7 +1,7 @@
 {
   "id": "lakshmi-smartfabrics",
+  "deckLimit": 3,
   "title": "Lakshmi Smartfabrics",
-  "nrdbCode": "10028",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

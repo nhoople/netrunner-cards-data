@@ -1,8 +1,8 @@
 {
   "id": "sds-drone-deployment",
+  "deckLimit": 3,
   "title": "SDS Drone Deployment",
   "wave": "downfall",
-  "nrdbCode": "26056",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

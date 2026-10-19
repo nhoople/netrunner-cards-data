@@ -1,7 +1,7 @@
 {
   "id": "violet-level-clearance",
+  "deckLimit": 3,
   "title": "Violet Level Clearance",
-  "nrdbCode": "11111",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

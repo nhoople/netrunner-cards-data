@@ -1,7 +1,7 @@
 {
   "id": "cpc-generator",
+  "deckLimit": 3,
   "title": "CPC Generator",
-  "nrdbCode": "12034",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

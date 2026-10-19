@@ -1,7 +1,7 @@
 {
   "id": "nfr",
+  "deckLimit": 3,
   "title": "Nfr",
-  "nrdbCode": "11023",
   "type": "program",
   "side": "runner",
   "unsupported": [],

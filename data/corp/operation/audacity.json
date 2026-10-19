@@ -1,7 +1,7 @@
 {
   "id": "audacity",
+  "deckLimit": 3,
   "title": "Audacity",
-  "nrdbCode": "12058",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

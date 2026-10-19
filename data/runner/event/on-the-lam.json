@@ -1,7 +1,7 @@
 {
   "id": "on-the-lam",
+  "deckLimit": 3,
   "title": "On the Lam",
-  "nrdbCode": "11082",
   "type": "event",
   "side": "runner",
   "unsupported": [],

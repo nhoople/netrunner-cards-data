@@ -1,7 +1,7 @@
 {
   "id": "severnius-stim-implant",
+  "deckLimit": 3,
   "title": "Severnius Stim Implant",
-  "nrdbCode": "12021",
   "type": "hardware",
   "side": "runner",
   "unsupported": [],

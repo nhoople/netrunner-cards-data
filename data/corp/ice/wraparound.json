@@ -1,8 +1,8 @@
 {
   "id": "wraparound",
+  "deckLimit": 3,
   "title": "Wraparound",
   "wave": "system-update-2021",
-  "nrdbCode": "31067",
   "type": "ice",
   "side": "corp",
   "faction": "nbn",

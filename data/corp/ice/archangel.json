@@ -1,7 +1,7 @@
 {
   "id": "archangel",
+  "deckLimit": 3,
   "title": "Archangel",
-  "nrdbCode": "09013",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

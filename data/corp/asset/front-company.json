@@ -1,8 +1,8 @@
 {
   "id": "front-company",
+  "deckLimit": 3,
   "title": "Front Company",
   "wave": "the-automata-initiative",
-  "nrdbCode": "34041",
   "type": "asset",
   "side": "corp",
   "faction": "jinteki",

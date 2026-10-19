@@ -1,0 +1,5 @@
+{
+  "cardId": "flagship",
+  "text": "HQ or R&D only.\nRuns against this server cannot be declared successful. <em>(This effect does not cause runs to become unsuccessful.)</em>\nPersistent → During each run against this server, the Runner cannot access more than 1 card other than this upgrade.",
+  "strippedText": "HQ or R&D only. Runs against this server cannot be declared successful. (This effect does not cause runs to become unsuccessful.) Persistent -> During each run against this server, the Runner cannot access more than 1 card other than this upgrade."
+}

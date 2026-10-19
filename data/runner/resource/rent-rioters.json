@@ -1,8 +1,8 @@
 {
   "id": "rent-rioters",
+  "deckLimit": 3,
   "title": "Rent Rioters",
   "wave": "elevation",
-  "nrdbCode": "35011",
   "type": "resource",
   "side": "runner",
   "faction": "anarch",

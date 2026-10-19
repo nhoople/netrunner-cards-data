@@ -1,7 +1,7 @@
 {
   "id": "old-hollywood-grid",
+  "deckLimit": 3,
   "title": "Old Hollywood Grid",
-  "nrdbCode": "08097",
   "type": "upgrade",
   "side": "corp",
   "unsupported": [],

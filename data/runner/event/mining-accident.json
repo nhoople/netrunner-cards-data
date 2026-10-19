@@ -1,7 +1,7 @@
 {
   "id": "mining-accident",
+  "deckLimit": 3,
   "title": "Mining Accident",
-  "nrdbCode": "12101",
   "type": "event",
   "side": "runner",
   "unsupported": [],

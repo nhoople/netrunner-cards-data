@@ -1,8 +1,8 @@
 {
   "id": "akiko-nisei-head-case",
+  "deckLimit": 1,
   "title": "Akiko Nisei: Head Case",
   "wave": "reign-and-reverie",
-  "nrdbCode": "22015",
   "type": "identity",
   "side": "runner",
   "unsupported": [],

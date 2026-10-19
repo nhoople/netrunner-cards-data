@@ -1,0 +1,11 @@
+{
+  "cardId": "clearinghouse",
+  "rulings": [
+    {
+      "dateUpdate": "2021-10-11",
+      "rulesTeamVerified": true,
+      "question": "Can the Corp advance [Clearinghouse](/en/card/30061) if it’s unrezzed?",
+      "answer": "Yes. Abilities that allow the Corp to advance a card are active even if the card is unrezzed."
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 {
   "id": "aumakua",
+  "deckLimit": 3,
   "title": "Aumakua",
-  "nrdbCode": "12104",
   "type": "program",
   "side": "runner",
   "unsupported": [],

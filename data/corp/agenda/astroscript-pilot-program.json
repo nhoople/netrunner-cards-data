@@ -1,8 +1,8 @@
 {
   "id": "astroscript-pilot-program",
+  "deckLimit": 3,
   "title": "AstroScript Pilot Program",
   "wave": "core",
-  "nrdbCode": "01081",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

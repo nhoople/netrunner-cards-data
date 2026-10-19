@@ -1,8 +1,8 @@
 {
   "id": "janus-1-0",
+  "deckLimit": 3,
   "title": "Janus 1.0",
   "wave": "what-lies-ahead",
-  "nrdbCode": "02012",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

@@ -1,7 +1,7 @@
 {
   "id": "dean-lister",
+  "deckLimit": 3,
   "title": "Dean Lister",
-  "nrdbCode": "13025",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

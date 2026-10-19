@@ -1,7 +1,7 @@
 {
   "id": "clairvoyant-monitor",
+  "deckLimit": 3,
   "title": "Clairvoyant Monitor",
-  "nrdbCode": "08055",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

@@ -1,7 +1,7 @@
 {
   "id": "bug",
+  "deckLimit": 3,
   "title": "Bug",
-  "nrdbCode": "05043",
   "type": "program",
   "side": "runner",
   "unsupported": [],

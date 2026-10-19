@@ -1,8 +1,8 @@
 {
   "id": "shipment-from-sansan",
+  "deckLimit": 3,
   "title": "Shipment from SanSan",
   "wave": "stalwart",
-  "nrdbCode": "04034",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

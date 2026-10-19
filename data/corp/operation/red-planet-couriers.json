@@ -1,7 +1,7 @@
 {
   "id": "red-planet-couriers",
+  "deckLimit": 3,
   "title": "Red Planet Couriers",
-  "nrdbCode": "12059",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

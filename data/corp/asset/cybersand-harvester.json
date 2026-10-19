@@ -1,8 +1,8 @@
 {
   "id": "cybersand-harvester",
+  "deckLimit": 3,
   "title": "Cybersand Harvester",
   "wave": "the-automata-initiative",
-  "nrdbCode": "34058",
   "type": "asset",
   "side": "corp",
   "faction": "weyland-consortium",

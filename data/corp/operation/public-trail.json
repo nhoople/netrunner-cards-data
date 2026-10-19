@@ -1,8 +1,8 @@
 {
   "id": "public-trail",
+  "deckLimit": 3,
   "title": "Public Trail",
   "wave": "system-gateway",
-  "nrdbCode": "30057",
   "type": "operation",
   "side": "corp",
   "faction": "nbn",

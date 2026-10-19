@@ -1,8 +1,8 @@
 {
   "id": "scorched-earth",
+  "deckLimit": 3,
   "title": "Scorched Earth",
   "wave": "core",
-  "nrdbCode": "01099",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

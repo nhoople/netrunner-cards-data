@@ -1,8 +1,8 @@
 {
   "id": "unleash",
+  "deckLimit": 3,
   "title": "Unleash",
   "wave": "vantage-point",
-  "nrdbCode": "36044",
   "type": "operation",
   "side": "corp",
   "faction": "jinteki",

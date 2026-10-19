@@ -1,7 +1,7 @@
 {
   "id": "fisk-investment-seminar",
+  "deckLimit": 3,
   "title": "Fisk Investment Seminar",
-  "nrdbCode": "08105",
   "type": "event",
   "side": "runner",
   "unsupported": [],

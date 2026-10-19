@@ -1,8 +1,8 @@
 {
   "id": "levy-university",
+  "deckLimit": 3,
   "title": "Levy University",
   "wave": "creation-and-control",
-  "nrdbCode": "03024",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

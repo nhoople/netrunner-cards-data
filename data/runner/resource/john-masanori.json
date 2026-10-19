@@ -1,8 +1,8 @@
 {
   "id": "john-masanori",
+  "deckLimit": 3,
   "title": "John Masanori",
   "wave": "system-core-2019",
-  "nrdbCode": "25064",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

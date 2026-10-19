@@ -1,8 +1,8 @@
 {
   "id": "distributed-tracing",
+  "deckLimit": 3,
   "title": "Distributed Tracing",
   "wave": "parhelion",
-  "nrdbCode": "33100",
   "type": "operation",
   "side": "corp",
   "faction": "haas-bioroid",

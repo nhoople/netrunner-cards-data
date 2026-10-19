@@ -1,7 +1,7 @@
 {
   "id": "pushing-the-envelope",
+  "deckLimit": 3,
   "title": "Pushing the Envelope",
-  "nrdbCode": "12001",
   "type": "event",
   "side": "runner",
   "unsupported": [],

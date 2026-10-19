@@ -1,0 +1,11 @@
+{
+  "cardId": "ballista",
+  "rulings": [
+    {
+      "dateUpdate": "2021-10-11",
+      "rulesTeamVerified": true,
+      "question": "Who chooses whether to trash a program or end the run?",
+      "answer": "The Corp makes any choices in resolving subroutines unless the ability specifically directs the Runner to perform its effect."
+    }
+  ]
+}

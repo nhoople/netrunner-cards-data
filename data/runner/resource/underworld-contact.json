@@ -1,8 +1,8 @@
 {
   "id": "underworld-contact",
+  "deckLimit": 3,
   "title": "Underworld Contact",
   "wave": "a-study-in-static",
-  "nrdbCode": "02069",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

@@ -1,8 +1,8 @@
 {
   "id": "government-contracts",
+  "deckLimit": 3,
   "title": "Government Contracts",
   "wave": "a-study-in-static",
-  "nrdbCode": "02077",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

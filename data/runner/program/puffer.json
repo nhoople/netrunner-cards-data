@@ -1,7 +1,7 @@
 {
   "id": "puffer",
+  "deckLimit": 3,
   "title": "Puffer",
-  "nrdbCode": "21004",
   "type": "program",
   "side": "runner",
   "unsupported": [],

@@ -1,8 +1,8 @@
 {
   "id": "archer",
+  "deckLimit": 3,
   "title": "Archer",
   "wave": "system-update-2021",
-  "nrdbCode": "31075",
   "type": "ice",
   "side": "corp",
   "faction": "weyland-consortium",

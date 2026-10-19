@@ -1,7 +1,7 @@
 {
   "id": "manta-grid",
+  "deckLimit": 3,
   "title": "Manta Grid",
-  "nrdbCode": "11091",
   "type": "upgrade",
   "side": "corp",
   "unsupported": [],

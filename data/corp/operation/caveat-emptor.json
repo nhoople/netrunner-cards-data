@@ -1,8 +1,8 @@
 {
   "id": "caveat-emptor",
+  "deckLimit": 3,
   "title": "Caveat Emptor",
   "wave": "vantage-point",
-  "nrdbCode": "36032",
   "type": "operation",
   "side": "corp",
   "faction": "haas-bioroid",

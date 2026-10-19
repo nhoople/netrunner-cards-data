@@ -1,7 +1,7 @@
 {
   "id": "henry-phillips",
+  "deckLimit": 3,
   "title": "Henry Phillips",
-  "nrdbCode": "12056",
   "type": "upgrade",
   "side": "corp",
   "unsupported": [],

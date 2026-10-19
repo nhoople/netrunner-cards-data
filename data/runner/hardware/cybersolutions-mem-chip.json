@@ -1,7 +1,7 @@
 {
   "id": "cybersolutions-mem-chip",
+  "deckLimit": 3,
   "title": "CyberSolutions Mem Chip",
-  "nrdbCode": "04086",
   "type": "hardware",
   "side": "runner",
   "unsupported": [],

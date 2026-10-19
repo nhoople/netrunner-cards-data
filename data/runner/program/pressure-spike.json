@@ -1,8 +1,8 @@
 {
   "id": "pressure-spike",
+  "deckLimit": 3,
   "title": "Pressure Spike",
   "wave": "rebellion-without-rehearsal",
-  "nrdbCode": "34092",
   "type": "program",
   "side": "runner",
   "faction": "shaper",

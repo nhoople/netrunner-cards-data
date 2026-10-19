@@ -143,7 +143,6 @@ def base(c, **extra):
         "id": slugify(c["title"]),
         "title": c["title"],
         "wave": "midnight-sun",
-        "nrdbCode": c["code"],
         "type": c["type_code"],
         "side": "runner" if c["side_code"] == "runner" else "corp",
         "unsupported": [],

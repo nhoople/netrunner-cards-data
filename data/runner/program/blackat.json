@@ -1,7 +1,7 @@
 {
   "id": "blackat",
+  "deckLimit": 3,
   "title": "BlacKat",
-  "nrdbCode": "06053",
   "type": "program",
   "side": "runner",
   "unsupported": [],

@@ -1,8 +1,8 @@
 {
   "id": "personal-workshop",
+  "deckLimit": 3,
   "title": "Personal Workshop",
   "wave": "cyber-exodus",
-  "nrdbCode": "02049",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

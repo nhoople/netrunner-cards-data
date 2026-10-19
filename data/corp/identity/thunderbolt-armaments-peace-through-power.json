@@ -1,8 +1,8 @@
 {
   "id": "thunderbolt-armaments-peace-through-power",
+  "deckLimit": 1,
   "title": "Thunderbolt Armaments: Peace Through Power",
   "wave": "rebellion-without-rehearsal",
-  "nrdbCode": "34096",
   "type": "identity",
   "side": "corp",
   "faction": "haas-bioroid",

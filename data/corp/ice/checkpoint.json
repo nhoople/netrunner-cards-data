@@ -1,7 +1,7 @@
 {
   "id": "checkpoint",
+  "deckLimit": 3,
   "title": "Checkpoint",
-  "nrdbCode": "07017",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

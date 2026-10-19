@@ -1,8 +1,8 @@
 {
   "id": "atman",
+  "deckLimit": 3,
   "title": "Atman",
   "wave": "system-update-2021",
-  "nrdbCode": "31030",
   "type": "program",
   "side": "runner",
   "faction": "shaper",

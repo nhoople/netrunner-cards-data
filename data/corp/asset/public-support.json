@@ -1,8 +1,8 @@
 {
   "id": "public-support",
+  "deckLimit": 3,
   "title": "Public Support",
   "wave": "system-core-2019",
-  "nrdbCode": "25129",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

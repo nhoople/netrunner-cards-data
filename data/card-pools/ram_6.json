@@ -1,0 +1,24 @@
+{
+  "id": "ram_6",
+  "name": "RAM 6",
+  "formatId": "ram",
+  "cycles": [],
+  "waves": [
+    "chrome-city",
+    "data-and-destiny",
+    "double-time",
+    "earths-scion",
+    "fear-and-loathing",
+    "intervention",
+    "kala-ghoda",
+    "quorum",
+    "stalwart",
+    "sovereign-sight",
+    "system-gateway",
+    "up-and-over",
+    "whispers-in-nalubaale"
+  ],
+  "outsideSets": [
+    "salvaged_memories"
+  ]
+}

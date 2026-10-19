@@ -1,8 +1,8 @@
 {
   "id": "scapenet",
+  "deckLimit": 3,
   "title": "Scapenet",
   "wave": "uprising",
-  "nrdbCode": "26104",
   "type": "operation",
   "side": "corp",
   "faction": "haas-bioroid",

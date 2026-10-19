@@ -1,8 +1,8 @@
 {
   "id": "salvage",
+  "deckLimit": 3,
   "title": "Salvage",
   "wave": "humanitys-shadow",
-  "nrdbCode": "02098",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

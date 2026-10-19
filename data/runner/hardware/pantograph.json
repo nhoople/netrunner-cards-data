@@ -1,8 +1,8 @@
 {
   "id": "pantograph",
+  "deckLimit": 3,
   "title": "Pantograph",
   "wave": "system-gateway",
-  "nrdbCode": "30023",
   "type": "hardware",
   "side": "runner",
   "faction": "shaper",

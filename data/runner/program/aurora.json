@@ -1,8 +1,8 @@
 {
   "id": "aurora",
+  "deckLimit": 3,
   "title": "Aurora",
   "wave": "core",
-  "nrdbCode": "01025",
   "type": "program",
   "side": "runner",
   "unsupported": [],

@@ -1,0 +1,82 @@
+{
+  "id": "eternal_points_list_25_04",
+  "name": "Eternal Points List 25.04",
+  "formatId": "eternal",
+  "dateStart": "2025-04-04",
+  "banned": [
+    "accelerated-diagnostics",
+    "aghora",
+    "hired-help",
+    "sadyojata",
+    "salvaged-vanadis-armory",
+    "vamadeva",
+    "watch-the-world-burn"
+  ],
+  "points": {
+    "1": [
+      "24-7-news-cycle",
+      "aaron-marron",
+      "anoetic-void",
+      "astroscript-pilot-program",
+      "aumakua",
+      "bloo-moose",
+      "breached-dome",
+      "breaking-news",
+      "caprice-nisei",
+      "counter-surveillance",
+      "deja-vu",
+      "film-critic",
+      "gaslight",
+      "hacktivist-meeting",
+      "kakugo",
+      "mti-mwekundu-life-improved",
+      "mutually-assured-destruction",
+      "obokata-protocol",
+      "power-shutdown",
+      "project-vacheron",
+      "shock",
+      "snitch",
+      "spin-doctor",
+      "sting",
+      "tech-trader",
+      "violet-level-clearance",
+      "wage-workers",
+      "whampoa-reclamation",
+      "world-tree",
+      "zer0"
+    ],
+    "2": [
+      "bio-ethics-association",
+      "blackmail",
+      "crowdfunding",
+      "data-leak-reversal",
+      "ddos",
+      "employee-strike",
+      "false-echo",
+      "friends-in-high-places",
+      "industrial-genomics-growing-solutions",
+      "jackson-howard",
+      "kabonesa-wu-netspace-thrillseeker",
+      "mars-for-martians",
+      "museum-of-history",
+      "scarcity-of-resources",
+      "sensie-actors-union",
+      "sifr"
+    ],
+    "3": [
+      "account-siphon",
+      "cerebral-imaging-infinite-frontiers",
+      "clan-vengeance",
+      "estelle-moon",
+      "hyperdriver",
+      "jinteki-potential-unleashed",
+      "mumbad-city-hall",
+      "ob-superheavy-logistics-extract-export-excel",
+      "temujin-contract"
+    ],
+    "4": [
+      "rumor-mill"
+    ]
+  },
+  "pointLimit": 7
+}

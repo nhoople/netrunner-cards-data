@@ -1,7 +1,7 @@
 {
   "id": "personalized-portal",
+  "deckLimit": 3,
   "title": "Personalized Portal",
-  "nrdbCode": "21056",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

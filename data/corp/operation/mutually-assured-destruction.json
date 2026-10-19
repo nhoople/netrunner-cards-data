@@ -1,8 +1,8 @@
 {
   "id": "mutually-assured-destruction",
+  "deckLimit": 3,
   "title": "Mutually Assured Destruction",
   "wave": "midnight-sun",
-  "nrdbCode": "33064",
   "type": "operation",
   "side": "corp",
   "faction": "weyland-consortium",

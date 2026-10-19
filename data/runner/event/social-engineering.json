@@ -1,7 +1,7 @@
 {
   "id": "social-engineering",
+  "deckLimit": 3,
   "title": "Social Engineering",
-  "nrdbCode": "06018",
   "type": "event",
   "side": "runner",
   "unsupported": [],

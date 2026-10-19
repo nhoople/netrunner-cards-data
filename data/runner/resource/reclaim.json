@@ -1,7 +1,7 @@
 {
   "id": "reclaim",
+  "deckLimit": 3,
   "title": "Reclaim",
-  "nrdbCode": "21107",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

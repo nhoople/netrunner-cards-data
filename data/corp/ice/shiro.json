@@ -1,7 +1,7 @@
 {
   "id": "shiro",
+  "deckLimit": 3,
   "title": "Shiro",
-  "nrdbCode": "05019",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

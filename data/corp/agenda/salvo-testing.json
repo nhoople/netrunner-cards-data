@@ -1,8 +1,8 @@
 {
   "id": "salvo-testing",
+  "deckLimit": 3,
   "title": "Salvo Testing",
   "wave": "the-automata-initiative",
-  "nrdbCode": "34031",
   "type": "agenda",
   "side": "corp",
   "faction": "haas-bioroid",

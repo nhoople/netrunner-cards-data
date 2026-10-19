@@ -1,8 +1,8 @@
 {
   "id": "bishop",
+  "deckLimit": 3,
   "title": "Bishop",
   "wave": "stalwart",
-  "nrdbCode": "04021",
   "type": "program",
   "side": "runner",
   "unsupported": [],

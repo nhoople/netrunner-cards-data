@@ -1,7 +1,7 @@
 {
   "id": "lustig",
+  "deckLimit": 3,
   "title": "Lustig",
-  "nrdbCode": "13007",
   "type": "program",
   "side": "runner",
   "unsupported": [],

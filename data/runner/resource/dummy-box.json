@@ -1,7 +1,7 @@
 {
   "id": "dummy-box",
+  "deckLimit": 3,
   "title": "Dummy Box",
-  "nrdbCode": "12108",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

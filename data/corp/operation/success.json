@@ -1,7 +1,7 @@
 {
   "id": "success",
+  "deckLimit": 3,
   "title": "Success",
-  "nrdbCode": "12078",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

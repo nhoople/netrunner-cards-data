@@ -1,7 +1,7 @@
 {
   "id": "open-forum",
+  "deckLimit": 3,
   "title": "Open Forum",
-  "nrdbCode": "12097",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

@@ -1,8 +1,8 @@
 {
   "id": "rielle-kit-peddler-transhuman",
+  "deckLimit": 1,
   "title": "Rielle “Kit” Peddler: Transhuman",
   "wave": "system-update-2021",
-  "nrdbCode": "31026",
   "type": "identity",
   "side": "runner",
   "faction": "shaper",

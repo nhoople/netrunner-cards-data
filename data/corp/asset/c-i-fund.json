@@ -1,7 +1,7 @@
 {
   "id": "c-i-fund",
+  "deckLimit": 3,
   "title": "C.I. Fund",
-  "nrdbCode": "11036",
   "type": "asset",
   "side": "corp",
   "unsupported": [],

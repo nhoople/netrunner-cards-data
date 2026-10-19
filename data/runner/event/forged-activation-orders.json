@@ -1,8 +1,8 @@
 {
   "id": "forged-activation-orders",
+  "deckLimit": 3,
   "title": "Forged Activation Orders",
   "wave": "system-update-2021",
-  "nrdbCode": "31017",
   "type": "event",
   "side": "runner",
   "faction": "criminal",

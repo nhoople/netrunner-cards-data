@@ -1,7 +1,7 @@
 {
   "id": "rainbow",
+  "deckLimit": 3,
   "title": "Rainbow",
-  "nrdbCode": "05025",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

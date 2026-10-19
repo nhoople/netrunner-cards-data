@@ -1,7 +1,7 @@
 {
   "id": "medical-research-fundraiser",
+  "deckLimit": 3,
   "title": "Medical Research Fundraiser",
-  "nrdbCode": "05014",
   "type": "operation",
   "side": "corp",
   "unsupported": [],

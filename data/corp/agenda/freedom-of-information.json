@@ -1,8 +1,8 @@
 {
   "id": "freedom-of-information",
+  "deckLimit": 3,
   "title": "Freedom of Information",
   "wave": "parhelion",
-  "nrdbCode": "33112",
   "type": "agenda",
   "side": "corp",
   "faction": "nbn",

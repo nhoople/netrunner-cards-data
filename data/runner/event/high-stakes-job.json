@@ -1,7 +1,7 @@
 {
   "id": "high-stakes-job",
+  "deckLimit": 3,
   "title": "High-Stakes Job",
-  "nrdbCode": "10004",
   "type": "event",
   "side": "runner",
   "unsupported": [],

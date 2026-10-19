@@ -1,8 +1,8 @@
 {
   "id": "self-modifying-code",
+  "deckLimit": 3,
   "title": "Self-modifying Code",
   "wave": "uprising",
-  "nrdbCode": "26090",
   "type": "program",
   "side": "runner",
   "faction": "shaper",

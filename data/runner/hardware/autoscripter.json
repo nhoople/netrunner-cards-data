@@ -1,7 +1,7 @@
 {
   "id": "autoscripter",
+  "deckLimit": 3,
   "title": "Autoscripter",
-  "nrdbCode": "06076",
   "type": "hardware",
   "side": "runner",
   "unsupported": [],

@@ -1,8 +1,8 @@
 {
   "id": "dinosaurus",
+  "deckLimit": 3,
   "title": "Dinosaurus",
   "wave": "system-core-2019",
-  "nrdbCode": "25049",
   "type": "hardware",
   "side": "runner",
   "unsupported": [],

@@ -1,8 +1,8 @@
 {
   "id": "ganked",
+  "deckLimit": 3,
   "title": "Ganked!",
   "wave": "uprising",
-  "nrdbCode": "26119",
   "type": "upgrade",
   "side": "corp",
   "faction": "nbn",

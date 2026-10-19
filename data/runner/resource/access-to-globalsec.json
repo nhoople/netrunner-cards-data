@@ -1,8 +1,8 @@
 {
   "id": "access-to-globalsec",
+  "deckLimit": 3,
   "title": "Access to Globalsec",
   "wave": "core",
-  "nrdbCode": "01052",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

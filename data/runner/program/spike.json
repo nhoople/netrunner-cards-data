@@ -1,7 +1,7 @@
 {
   "id": "spike",
+  "deckLimit": 3,
   "title": "Spike",
-  "nrdbCode": "08004",
   "type": "program",
   "side": "runner",
   "unsupported": [],

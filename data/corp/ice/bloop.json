@@ -1,8 +1,8 @@
 {
   "id": "bloop",
+  "deckLimit": 3,
   "title": "Bloop",
   "wave": "parhelion",
-  "nrdbCode": "33098",
   "type": "ice",
   "side": "corp",
   "faction": "haas-bioroid",

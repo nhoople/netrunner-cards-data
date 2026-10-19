@@ -1,0 +1,11 @@
+{
+  "cardId": "captain-padma-isbister-intrepid-explorer",
+  "rulings": [
+    {
+      "dateUpdate": "2022-09-10",
+      "rulesTeamVerified": true,
+      "question": "Can a player charge cards that have 2 or more power counters?",
+      "answer": "Yes, a card that has 2 power counters qualifies as having at least 1 power counter."
+    }
+  ]
+}

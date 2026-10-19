@@ -1,8 +1,8 @@
 {
   "id": "parasite",
+  "deckLimit": 3,
   "title": "Parasite",
   "wave": "core",
-  "nrdbCode": "01012",
   "type": "program",
   "side": "runner",
   "unsupported": [],

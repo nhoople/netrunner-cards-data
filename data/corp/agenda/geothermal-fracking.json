@@ -1,8 +1,8 @@
 {
   "id": "geothermal-fracking",
+  "deckLimit": 3,
   "title": "Geothermal Fracking",
   "wave": "opening-moves",
-  "nrdbCode": "04017",
   "type": "agenda",
   "side": "corp",
   "unsupported": [],

@@ -1,8 +1,8 @@
 {
   "id": "data-raven",
+  "deckLimit": 3,
   "title": "Data Raven",
   "wave": "system-core-2019",
-  "nrdbCode": "25112",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

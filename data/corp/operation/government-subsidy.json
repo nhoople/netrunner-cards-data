@@ -1,8 +1,8 @@
 {
   "id": "government-subsidy",
+  "deckLimit": 3,
   "title": "Government Subsidy",
   "wave": "system-gateway",
-  "nrdbCode": "30064",
   "type": "operation",
   "side": "corp",
   "faction": "weyland-consortium",

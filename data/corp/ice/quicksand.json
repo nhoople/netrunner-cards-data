@@ -1,7 +1,7 @@
 {
   "id": "quicksand",
+  "deckLimit": 3,
   "title": "Quicksand",
-  "nrdbCode": "08060",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

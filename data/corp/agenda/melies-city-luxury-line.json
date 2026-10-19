@@ -1,8 +1,8 @@
 {
   "id": "melies-city-luxury-line",
+  "deckLimit": 3,
   "title": "Méliès City Luxury Line",
   "wave": "vantage-point",
-  "nrdbCode": "36026",
   "type": "agenda",
   "side": "corp",
   "faction": "haas-bioroid",

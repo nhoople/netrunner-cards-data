@@ -1,8 +1,8 @@
 {
   "id": "cookbook",
+  "deckLimit": 3,
   "title": "Cookbook",
   "wave": "system-gateway",
-  "nrdbCode": "30009",
   "type": "resource",
   "side": "runner",
   "faction": "anarch",

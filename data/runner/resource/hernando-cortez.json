@@ -1,7 +1,7 @@
 {
   "id": "hernando-cortez",
+  "deckLimit": 3,
   "title": "Hernando Cortez",
-  "nrdbCode": "11004",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

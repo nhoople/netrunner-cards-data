@@ -1,7 +1,7 @@
 {
   "id": "drone-screen",
+  "deckLimit": 3,
   "title": "Drone Screen",
-  "nrdbCode": "11076",
   "type": "upgrade",
   "side": "corp",
   "unsupported": [],

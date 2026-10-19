@@ -1,0 +1,5 @@
+{
+  "cardId": "sealed-vault",
+  "text": "<strong>1[credit]:</strong> Move any number of credits from your credit pool to this asset.\n<strong>[click]:</strong> Take any number of credits from this asset.\n<strong>[trash]:</strong> Take any number of credits from this asset.",
+  "strippedText": "1 credit: Move any number of credits from your credit pool to this asset. click: Take any number of credits from this asset. trash: Take any number of credits from this asset."
+}

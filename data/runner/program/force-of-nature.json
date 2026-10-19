@@ -1,8 +1,8 @@
 {
   "id": "force-of-nature",
+  "deckLimit": 3,
   "title": "Force of Nature",
   "wave": "system-core-2019",
-  "nrdbCode": "25012",
   "type": "program",
   "side": "runner",
   "unsupported": [],

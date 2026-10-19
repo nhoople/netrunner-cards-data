@@ -1,7 +1,7 @@
 {
   "id": "miraju",
+  "deckLimit": 3,
   "title": "Mirāju",
-  "nrdbCode": "12071",
   "type": "ice",
   "side": "corp",
   "unsupported": [],

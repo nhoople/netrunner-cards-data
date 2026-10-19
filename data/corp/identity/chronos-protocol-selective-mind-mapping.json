@@ -1,7 +1,7 @@
 {
   "id": "chronos-protocol-selective-mind-mapping",
+  "deckLimit": 1,
   "title": "Chronos Protocol: Selective Mind-mapping",
-  "nrdbCode": "08111",
   "type": "identity",
   "side": "corp",
   "unsupported": [],

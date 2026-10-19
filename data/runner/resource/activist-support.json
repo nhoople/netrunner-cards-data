@@ -1,7 +1,7 @@
 {
   "id": "activist-support",
+  "deckLimit": 3,
   "title": "Activist Support",
-  "nrdbCode": "04062",
   "type": "resource",
   "side": "runner",
   "unsupported": [],

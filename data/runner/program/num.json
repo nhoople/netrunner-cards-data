@@ -1,8 +1,8 @@
 {
   "id": "num",
+  "deckLimit": 3,
   "title": "Num",
   "wave": "parhelion",
-  "nrdbCode": "33073",
   "type": "program",
   "side": "runner",
   "faction": "anarch",

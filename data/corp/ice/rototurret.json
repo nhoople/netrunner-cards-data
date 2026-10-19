@@ -1,11 +1,11 @@
 {
   "id": "rototurret",
+  "deckLimit": 3,
   "title": "Rototurret",
   "type": "ice",
   "side": "corp",
   "faction": "haas-bioroid",
   "wave": "system-update-2021",
-  "nrdbCode": "31046",
   "rezCost": 4,
   "strength": 0,
   "subtypes": [

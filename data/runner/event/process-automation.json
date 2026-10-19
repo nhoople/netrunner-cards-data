@@ -1,7 +1,7 @@
 {
   "id": "process-automation",
+  "deckLimit": 3,
   "title": "Process Automation",
-  "nrdbCode": "13023",
   "type": "event",
   "side": "runner",
   "unsupported": [],
