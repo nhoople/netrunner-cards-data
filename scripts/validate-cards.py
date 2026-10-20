@@ -310,6 +310,48 @@ def check_printed(card_ids: dict[str, Path]) -> int:
         if isinstance(stripped, str) and "<" in stripped:
             print(f"{path.relative_to(ROOT)}: strippedText carries HTML markup")
             errors += 1
+        faces = raw.get("faces")
+        if faces is not None:
+            if not isinstance(faces, list) or len(faces) < 2:
+                print(f"{path.relative_to(ROOT)}: faces must list at least two faces")
+                errors += 1
+            else:
+                for index, face in enumerate(faces):
+                    if not isinstance(face, dict) or set(face) != {"text", "strippedText"}:
+                        print(f"{path.relative_to(ROOT)}: faces[{index}] must have text and strippedText")
+                        errors += 1
+                        continue
+                    if not isinstance(face["text"], str) or not isinstance(face["strippedText"], str):
+                        print(f"{path.relative_to(ROOT)}: faces[{index}] text fields must be strings")
+                        errors += 1
+                first = faces[0]
+                if isinstance(first, dict) and (
+                    first.get("text") != raw.get("text")
+                    or first.get("strippedText") != raw.get("strippedText")
+                ):
+                    print(f"{path.relative_to(ROOT)}: faces[0] must repeat the front-face text")
+                    errors += 1
+    # A printing with extra faces (other than copy-layout printings, whose
+    # faces share one text) needs one printed face per printing face, plus
+    # the front face at index 0.
+    printing_faces: dict[str, int] = {}
+    printings_dir = DATA / "printings"
+    if printings_dir.is_dir():
+        for path in sorted(printings_dir.glob("*.json")):
+            raw_printing = json.loads(path.read_text(encoding="utf-8"))
+            extra = raw_printing.get("faces")
+            if isinstance(extra, list) and raw_printing.get("layoutId") != "copy":
+                card_id = raw_printing.get("cardId")
+                if isinstance(card_id, str):
+                    printing_faces[card_id] = max(printing_faces.get(card_id, 0), len(extra))
+    for card_id, extra_count in sorted(printing_faces.items()):
+        path = directory / f"{card_id}.json"
+        if not path.is_file():
+            continue
+        faces = json.loads(path.read_text(encoding="utf-8")).get("faces")
+        if not isinstance(faces, list) or len(faces) != extra_count + 1:
+            print(f"{path.relative_to(ROOT)}: printings carry {extra_count} extra face(s); printed faces must list {extra_count + 1}")
+            errors += 1
     missing = sorted(set(card_ids) - seen)
     if missing:
         print(f"cards with no printed text: {missing}")

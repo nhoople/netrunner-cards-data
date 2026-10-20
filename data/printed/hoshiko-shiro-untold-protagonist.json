@@ -1,6 +1,16 @@
 {
   "cardId": "hoshiko-shiro-untold-protagonist",
-  "text": "When your turn ends, if you accessed a card this turn, gain 2[credit] and flip this identity.\nFlip side:\nWhen your turn begins, draw 1 card and lose 1[credit].\nWhen your turn ends, if you did not access any cards this turn, flip this identity.",
-  "strippedText": "When your turn ends, if you accessed a card this turn, gain 2 credits and flip this identity. Flip side: When your turn begins, draw 1 card and lose 1 credit. When your turn ends, if you did not access any cards this turn, flip this identity.",
-  "strippedTitle": "Hoshiko Shiro: Untold Protagonist"
+  "text": "When your turn ends, if you accessed a card this turn, gain 2[credit] and flip this identity.",
+  "strippedText": "When your turn ends, if you accessed a card this turn, gain 2 credits and flip this identity.",
+  "strippedTitle": "Hoshiko Shiro: Untold Protagonist",
+  "faces": [
+    {
+      "text": "When your turn ends, if you accessed a card this turn, gain 2[credit] and flip this identity.",
+      "strippedText": "When your turn ends, if you accessed a card this turn, gain 2 credits and flip this identity."
+    },
+    {
+      "text": "When your turn begins, draw 1 card and lose 1[credit].\nWhen your turn ends, if you did not access any cards this turn, flip this identity.",
+      "strippedText": "When your turn begins, draw 1 card and lose 1 credit. When your turn ends, if you did not access any cards this turn, flip this identity."
+    }
+  ]
 }

@@ -1,30 +1,102 @@
 {
   "dewi-subrotoputri-pedagogical-dhalang": {
-    "text": "Whenever you make a successful run, if your [mu] is full, you may flip this identity and gain 1[credit].\nFlip side:\nWhenever you make a successful run, if you have at least 1 unused [mu], you may flip this identity and draw 1 card.",
-    "strippedText": "Whenever you make a successful run, if your  mu is full, you may flip this identity and gain 1 credit. Flip side: Whenever you make a successful run, if you have at least 1 unused  mu, you may flip this identity and draw 1 card."
+    "faces": [
+      {
+        "text": "Whenever you make a successful run, if your [mu] is full, you may flip this identity and gain 1[credit].",
+        "strippedText": "Whenever you make a successful run, if your  mu is full, you may flip this identity and gain 1 credit."
+      },
+      {
+        "text": "Whenever you make a successful run, if you have at least 1 unused [mu], you may flip this identity and draw 1 card.",
+        "strippedText": "Whenever you make a successful run, if you have at least 1 unused  mu, you may flip this identity and draw 1 card."
+      }
+    ]
   },
   "earth-station-sea-headquarters": {
-    "text": "Limit 1 remote server.\nAs an additional cost to run HQ, the Runner must pay 1[credit].\n<strong>[click]:</strong> Flip this identity.\nFlip side:\nLimit 1 remote server.\nAs an additional cost to run a remote server, the Runner must pay 6[credit].\nWhen the Runner makes a successful run on HQ, flip this identity.",
-    "strippedText": "Limit 1 remote server. As an additional cost to run HQ, the Runner must pay 1 credit. click: Flip this identity. Flip side: Limit 1 remote server. As an additional cost to run a remote server, the Runner must pay 6 credits. When the Runner makes a successful run on HQ, flip this identity."
+    "faces": [
+      {
+        "text": "Limit 1 remote server.\nAs an additional cost to run HQ, the Runner must pay 1[credit].\n<strong>[click]:</strong> Flip this identity.",
+        "strippedText": "Limit 1 remote server. As an additional cost to run HQ, the Runner must pay 1 credit. click: Flip this identity."
+      },
+      {
+        "text": "Limit 1 remote server.\nAs an additional cost to run a remote server, the Runner must pay 6[credit].\nWhen the Runner makes a successful run on HQ, flip this identity.",
+        "strippedText": "Limit 1 remote server. As an additional cost to run a remote server, the Runner must pay 6 credits. When the Runner makes a successful run on HQ, flip this identity."
+      }
+    ]
   },
   "hoshiko-shiro-untold-protagonist": {
-    "text": "When your turn ends, if you accessed a card this turn, gain 2[credit] and flip this identity.\nFlip side:\nWhen your turn begins, draw 1 card and lose 1[credit].\nWhen your turn ends, if you did not access any cards this turn, flip this identity.",
-    "strippedText": "When your turn ends, if you accessed a card this turn, gain 2 credits and flip this identity. Flip side: When your turn begins, draw 1 card and lose 1 credit. When your turn ends, if you did not access any cards this turn, flip this identity."
+    "faces": [
+      {
+        "text": "When your turn ends, if you accessed a card this turn, gain 2[credit] and flip this identity.",
+        "strippedText": "When your turn ends, if you accessed a card this turn, gain 2 credits and flip this identity."
+      },
+      {
+        "text": "When your turn begins, draw 1 card and lose 1[credit].\nWhen your turn ends, if you did not access any cards this turn, flip this identity.",
+        "strippedText": "When your turn begins, draw 1 card and lose 1 credit. When your turn ends, if you did not access any cards this turn, flip this identity."
+      }
+    ]
   },
   "jinteki-biotech-life-imagined": {
-    "text": "Before taking your first turn, you may switch this identity with any copy of Jinteki Biotech.\n<strong>[click][click][click]:</strong> Flip this identity.\nSide 1: When you flip this identity, do 2 net damage.\nSide 2: When you flip this identity, shuffle all cards in Archives into R&D.\nSide 3: When you flip this identity, place 4 advancement counters on 1 installed card that you can advance.",
-    "strippedText": "Before taking your first turn, you may switch this identity with any copy of Jinteki Biotech. click click click: Flip this identity. Side 1: When you flip this identity, do 2 net damage. Side 2: When you flip this identity, shuffle all cards in Archives into R&D. Side 3: When you flip this identity, place 4 advancement counters on 1 installed card that you can advance."
+    "faces": [
+      {
+        "text": "Before taking your first turn, you may switch this identity with any copy of Jinteki Biotech.\n<strong>[click][click][click]:</strong> Flip this identity.",
+        "strippedText": "Before taking your first turn, you may switch this identity with any copy of Jinteki Biotech. click click click: Flip this identity."
+      },
+      {
+        "text": "When you flip this identity, do 2 net damage.",
+        "strippedText": "When you flip this identity, do 2 net damage."
+      },
+      {
+        "text": "When you flip this identity, shuffle all cards in Archives into R&D.",
+        "strippedText": "When you flip this identity, shuffle all cards in Archives into R&D."
+      },
+      {
+        "text": "When you flip this identity, place 4 advancement counters on 1 installed card that you can advance.",
+        "strippedText": "When you flip this identity, place 4 advancement counters on 1 installed card that you can advance."
+      }
+    ]
   },
   "melies-u-only-the-brightest": {
-    "text": "When your discard phase ends, secretly set your identity to any copy of Méliès U: Only the Brightest.\nWhen the Runner makes a successful run on a central server, flip this identity.\nWhen the Runner’s action phase ends, gain 1[credit].\nSide 1: When you flip this identity to this side during a run on HQ, look at the top card of R&D. You may trash that card. If you do, add 1 card from Archives to HQ.\nWhen the Runner’s discard phase ends, flip this identity.\nSide 2: When you flip this identity to this side during a run on R&D, look at the top card of R&D. You may trash that card. If you do, add 1 card from Archives to HQ.\nWhen the Runner’s discard phase ends, flip this identity.\nSide 3: When you flip this identity to this side during a run on Archives, look at the top card of R&D. You may trash that card. If you do, add 1 card from Archives to HQ.\nWhen the Runner’s discard phase ends, flip this identity.",
-    "strippedText": "When your discard phase ends, secretly set your identity to any copy of Melies U: Only the Brightest. When the Runner makes a successful run on a central server, flip this identity. When the Runner's action phase ends, gain 1 credit. Side 1: When you flip this identity to this side during a run on HQ, look at the top card of R&D. You may trash that card. If you do, add 1 card from Archives to HQ. When the Runner's discard phase ends, flip this identity. Side 2: When you flip this identity to this side during a run on R&D, look at the top card of R&D. You may trash that card. If you do, add 1 card from Archives to HQ. When the Runner's discard phase ends, flip this identity. Side 3: When you flip this identity to this side during a run on Archives, look at the top card of R&D. You may trash that card. If you do, add 1 card from Archives to HQ. When the Runner's discard phase ends, flip this identity."
+    "faces": [
+      {
+        "text": "When your discard phase ends, secretly set your identity to any copy of Méliès U: Only the Brightest.\nWhen the Runner makes a successful run on a central server, flip this identity.\nWhen the Runner’s action phase ends, gain 1[credit].",
+        "strippedText": "When your discard phase ends, secretly set your identity to any copy of Melies U: Only the Brightest. When the Runner makes a successful run on a central server, flip this identity. When the Runner's action phase ends, gain 1 credit."
+      },
+      {
+        "text": "When you flip this identity to this side during a run on HQ, look at the top card of R&D. You may trash that card. If you do, add 1 card from Archives to HQ.\nWhen the Runner’s discard phase ends, flip this identity.",
+        "strippedText": "When you flip this identity to this side during a run on HQ, look at the top card of R&D. You may trash that card. If you do, add 1 card from Archives to HQ. When the Runner's discard phase ends, flip this identity."
+      },
+      {
+        "text": "When you flip this identity to this side during a run on R&D, look at the top card of R&D. You may trash that card. If you do, add 1 card from Archives to HQ.\nWhen the Runner’s discard phase ends, flip this identity.",
+        "strippedText": "When you flip this identity to this side during a run on R&D, look at the top card of R&D. You may trash that card. If you do, add 1 card from Archives to HQ. When the Runner's discard phase ends, flip this identity."
+      },
+      {
+        "text": "When you flip this identity to this side during a run on Archives, look at the top card of R&D. You may trash that card. If you do, add 1 card from Archives to HQ.\nWhen the Runner’s discard phase ends, flip this identity.",
+        "strippedText": "When you flip this identity to this side during a run on Archives, look at the top card of R&D. You may trash that card. If you do, add 1 card from Archives to HQ. When the Runner's discard phase ends, flip this identity."
+      }
+    ]
   },
   "nebula-talent-management-making-stars": {
-    "text": "When your action phase ends, if you played an operation this turn, gain 1[credit] and flip this identity.\nFlip side:\nThe first time each turn you play an operation, gain [click].\nWhen the Runner makes a successful run on HQ or R&D, flip this identity.",
-    "strippedText": "When your action phase ends, if you played an operation this turn, gain 1 credit and flip this identity. Flip side: The first time each turn you play an operation, gain click. When the Runner makes a successful run on HQ or R&D, flip this identity."
+    "faces": [
+      {
+        "text": "When your action phase ends, if you played an operation this turn, gain 1[credit] and flip this identity.",
+        "strippedText": "When your action phase ends, if you played an operation this turn, gain 1 credit and flip this identity."
+      },
+      {
+        "text": "The first time each turn you play an operation, gain [click].\nWhen the Runner makes a successful run on HQ or R&D, flip this identity.",
+        "strippedText": "The first time each turn you play an operation, gain click. When the Runner makes a successful run on HQ or R&D, flip this identity."
+      }
+    ]
   },
   "sync-everything-everywhere": {
-    "text": "[click]: Flip this identity.\nThe Runner pays 1[credit] more when spending a [click] to remove a tag (not through a card ability).\nFlip side:\n[click]: Flip this identity.\nYou may pay 2[credit] fewer when spending a [click] to trash a resource (not through a card ability).",
-    "strippedText": "click: Flip this identity. The Runner pays 1 credit more when spending a click to remove a tag (not through a card ability). Flip side: click: Flip this identity. You may pay 2 credits fewer when spending a click to trash a resource (not through a card ability)."
+    "faces": [
+      {
+        "text": "[click]: Flip this identity.\nThe Runner pays 1[credit] more when spending a [click] to remove a tag (not through a card ability).",
+        "strippedText": "click: Flip this identity. The Runner pays 1 credit more when spending a click to remove a tag (not through a card ability)."
+      },
+      {
+        "text": "[click]: Flip this identity.\nYou may pay 2[credit] fewer when spending a [click] to trash a resource (not through a card ability).",
+        "strippedText": "click: Flip this identity. You may pay 2 credits fewer when spending a click to trash a resource (not through a card ability)."
+      }
+    ]
   }
 }
