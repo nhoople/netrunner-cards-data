@@ -1,5 +1,6 @@
 {
   "cardId": "weyland-consortium-building-a-better-world",
   "text": "Whenever you play a <strong>transaction</strong> operation, gain 1[credit].",
-  "strippedText": "Whenever you play a transaction operation, gain 1 credit."
+  "strippedText": "Whenever you play a transaction operation, gain 1 credit.",
+  "strippedTitle": "Weyland Consortium: Building a Better World"
 }

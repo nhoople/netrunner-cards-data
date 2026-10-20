@@ -1,5 +1,6 @@
 {
   "cardId": "self-modifying-code",
   "text": "<strong>2[credit]</strong>, <strong>[trash]:</strong> Search your stack for 1 program. Install it. <em>(Shuffle your stack after searching it.)</em>",
-  "strippedText": "2 credits, trash: Search your stack for 1 program. Install it. (Shuffle your stack after searching it.)"
+  "strippedText": "2 credits, trash: Search your stack for 1 program. Install it. (Shuffle your stack after searching it.)",
+  "strippedTitle": "Self-modifying Code"
 }

@@ -1,5 +1,6 @@
 {
   "cardId": "vicsek",
   "text": "[subroutine] Do X net damage and give the Runner X tags. X is equal to the number of tags the Runner has.\n[subroutine] Give the Runner 1 tag. Trash this ice.",
-  "strippedText": "Subroutine Do X net damage and give the Runner X tags. X is equal to the number of tags the Runner has. Subroutine Give the Runner 1 tag. Trash this ice."
+  "strippedText": "Subroutine Do X net damage and give the Runner X tags. X is equal to the number of tags the Runner has. Subroutine Give the Runner 1 tag. Trash this ice.",
+  "strippedTitle": "Vicsek"
 }

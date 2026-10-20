@@ -1,5 +1,6 @@
 {
   "cardId": "the-price",
   "text": "Trash the top 4 cards of your stack. You may install 1 of those cards, paying 3[credit] less.",
-  "strippedText": "Trash the top 4 cards of your stack. You may install 1 of those cards, paying 3 credits less."
+  "strippedText": "Trash the top 4 cards of your stack. You may install 1 of those cards, paying 3 credits less.",
+  "strippedTitle": "The Price"
 }

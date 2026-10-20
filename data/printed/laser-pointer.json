@@ -1,5 +1,6 @@
 {
   "cardId": "laser-pointer",
   "text": "Whenever you encounter a piece of <strong>AP</strong>, <strong>destroyer</strong>, or <strong>observer</strong> ice, you may trash this program to bypass that ice.",
-  "strippedText": "Whenever you encounter a piece of AP, destroyer, or observer ice, you may trash this program to bypass that ice."
+  "strippedText": "Whenever you encounter a piece of AP, destroyer, or observer ice, you may trash this program to bypass that ice.",
+  "strippedTitle": "Laser Pointer"
 }

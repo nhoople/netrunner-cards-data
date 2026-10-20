@@ -1,5 +1,6 @@
 {
   "cardId": "kessleroid",
   "text": "The Runner cannot trash this ice <em>(while it is rezzed)</em>.\n[subroutine] End the run.\n[subroutine] End the run.",
-  "strippedText": "The Runner cannot trash this ice (while it is rezzed). Subroutine End the run. Subroutine End the run."
+  "strippedText": "The Runner cannot trash this ice (while it is rezzed). Subroutine End the run. Subroutine End the run.",
+  "strippedTitle": "Kessleroid"
 }

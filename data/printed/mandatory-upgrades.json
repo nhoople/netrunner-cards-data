@@ -1,5 +1,6 @@
 {
   "cardId": "mandatory-upgrades",
   "text": "You have 1 additional [click] to spend each turn.",
-  "strippedText": "You have 1 additional click to spend each turn."
+  "strippedText": "You have 1 additional click to spend each turn.",
+  "strippedTitle": "Mandatory Upgrades"
 }

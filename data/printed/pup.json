@@ -1,5 +1,6 @@
 {
   "cardId": "pup",
   "text": "[subroutine] Do 1 net damage unless the Runner pays 1[credit].\n[subroutine] Do 1 net damage unless the Runner pays 1[credit].",
-  "strippedText": "Subroutine Do 1 net damage unless the Runner pays 1 credit. Subroutine Do 1 net damage unless the Runner pays 1 credit."
+  "strippedText": "Subroutine Do 1 net damage unless the Runner pays 1 credit. Subroutine Do 1 net damage unless the Runner pays 1 credit.",
+  "strippedTitle": "Pup"
 }

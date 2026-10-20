@@ -1,5 +1,6 @@
 {
   "cardId": "bloom",
   "text": "[subroutine] You may install 1 piece of ice from HQ protecting another server, ignoring all costs.\n[subroutine] You may install 1 piece of ice from HQ directly inward from this ice, ignoring all costs.",
-  "strippedText": "Subroutine You may install 1 piece of ice from HQ protecting another server, ignoring all costs. Subroutine You may install 1 piece of ice from HQ directly inward from this ice, ignoring all costs."
+  "strippedText": "Subroutine You may install 1 piece of ice from HQ protecting another server, ignoring all costs. Subroutine You may install 1 piece of ice from HQ directly inward from this ice, ignoring all costs.",
+  "strippedTitle": "Bloom"
 }

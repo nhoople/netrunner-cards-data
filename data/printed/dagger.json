@@ -1,5 +1,6 @@
 {
   "cardId": "dagger",
   "text": "Interface → <strong>1[credit]:</strong> Break 1 <strong>sentry</strong> subroutine.\n<strong>1[credit]:</strong> +5 strength. Spend credits only from <strong>stealth</strong> cards to use this ability.",
-  "strippedText": "Interface -> 1 credit: Break 1 sentry subroutine. 1 credit: +5 strength. Spend credits only from stealth cards to use this ability."
+  "strippedText": "Interface -> 1 credit: Break 1 sentry subroutine. 1 credit: +5 strength. Spend credits only from stealth cards to use this ability.",
+  "strippedTitle": "Dagger"
 }

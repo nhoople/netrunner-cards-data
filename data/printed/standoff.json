@@ -1,5 +1,6 @@
 {
   "cardId": "standoff",
   "text": "When you score this agenda, the Runner may trash 1 of their installed cards. If they do not, draw 1 card and gain 5[credit]. Otherwise, you may trash 1 of your installed cards to repeat this process.",
-  "strippedText": "When you score this agenda, the Runner may trash 1 of their installed cards. If they do not, draw 1 card and gain 5 credits. Otherwise, you may trash 1 of your installed cards to repeat this process."
+  "strippedText": "When you score this agenda, the Runner may trash 1 of their installed cards. If they do not, draw 1 card and gain 5 credits. Otherwise, you may trash 1 of your installed cards to repeat this process.",
+  "strippedTitle": "Standoff"
 }

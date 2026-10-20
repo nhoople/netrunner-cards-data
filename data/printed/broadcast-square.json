@@ -1,5 +1,6 @@
 {
   "cardId": "broadcast-square",
   "text": "[interrupt] → Whenever you would take bad publicity, trace[3]. If successful, prevent all of that bad publicity.",
-  "strippedText": "Interrupt -> Whenever you would take bad publicity, trace[3]. If successful, prevent all of that bad publicity."
+  "strippedText": "Interrupt -> Whenever you would take bad publicity, trace[3]. If successful, prevent all of that bad publicity.",
+  "strippedTitle": "Broadcast Square"
 }

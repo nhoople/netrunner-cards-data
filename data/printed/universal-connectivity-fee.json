@@ -1,5 +1,6 @@
 {
   "cardId": "universal-connectivity-fee",
   "text": "[subroutine] If the Runner is not tagged, they lose 1[credit]. If the Runner is tagged, they lose all credits in their credit pool and you trash this ice.",
-  "strippedText": "Subroutine If the Runner is not tagged, they lose 1 credit. If the Runner is tagged, they lose all credits in their credit pool and you trash this ice."
+  "strippedText": "Subroutine If the Runner is not tagged, they lose 1 credit. If the Runner is tagged, they lose all credits in their credit pool and you trash this ice.",
+  "strippedTitle": "Universal Connectivity Fee"
 }

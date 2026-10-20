@@ -6,10 +6,9 @@ Floor v1.134.0 (Crimson Dust) → paired v1.135.0.
 All 132 titles already exist under normalized corpus ids (0 new clears).
 Defer tdc.
 
-Slug via spin_common.slugify (apostrophes/umlauts). Fail closed if any
+Ids via nsg_catalog.our_id on the v2 catalog id. Fail closed if any
 title cannot be matched to an existing corpus id. Known naive→corpus
-mismatches (documented for operators who slugify without NFKD/apostrophe
-stripping):
+mismatches from the title-slug era (kept as manifest documentation):
 
   doppelg-nger            → doppelganger
   chaos-theory-w-nderkind → chaos-theory-wunderkind
@@ -25,16 +24,16 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from nsg_catalog import load_pack_cards
-from spin_common import ROOT, slugify
+from nsg_catalog import card_type, faction_slug, load_set_cards, our_id, subtype_names
+from spin_common import ROOT
 
 WAVE = "revised-core"
 PACK = "core2"
 EXPECTED = 132
 
-# Safety map for naive slugifiers that keep apostrophes as `-s-` / drop
-# combining marks incorrectly. spin_common.slugify already yields the
-# right-hand values; this map is fail-closed insurance + documentation.
+# Historical record of title-slug mismatches, kept in the manifest.
+# v2 catalog ids resolve through nsg_catalog.our_id; this map is
+# documentation only.
 NAIVE_TO_CORPUS: dict[str, str] = {
     "doppelg-nger": "doppelganger",
     "chaos-theory-w-nderkind": "chaos-theory-wunderkind",
@@ -65,31 +64,23 @@ def corpus_ids() -> set[str]:
     return ids
 
 
-def resolve_id(title: str, known: set[str]) -> str:
-    cid = slugify(title)
+def resolve_id(raw: dict, known: set[str]) -> str:
+    cid = our_id(raw["id"])
     if cid in known:
         return cid
-    # Explicit naive→corpus overrides (and slugify already-correct ids).
-    mapped = NAIVE_TO_CORPUS.get(cid, cid)
-    if mapped in known:
-        return mapped
-    for naive, corpus in NAIVE_TO_CORPUS.items():
-        if slugify(title.replace("'", "").replace("\u2019", "")) == corpus or cid == naive:
-            if corpus in known:
-                return corpus
     raise SystemExit(
-        f"FAIL CLOSED: title {title!r} slugifies to {cid!r} "
-        f"(mapped {mapped!r}) but no matching corpus id exists"
+        f"FAIL CLOSED: catalog id {raw['id']!r} resolves to {cid!r} "
+        "but no matching corpus id exists"
     )
 
 
 def main() -> None:
-    pack = sorted(load_pack_cards(PACK), key=lambda c: c.get("position", 0))
+    pack = load_set_cards(PACK)
     assert len(pack) == EXPECTED, f"expected {EXPECTED}, got {len(pack)}"
     known = corpus_ids()
     reprint_ids: list[str] = []
     for raw in pack:
-        cid = resolve_id(raw["title"], known)
+        cid = resolve_id(raw, known)
         reprint_ids.append(cid)
 
     if len(set(reprint_ids)) != EXPECTED:
@@ -110,7 +101,7 @@ def main() -> None:
             "Wrote 0 files; absorbed 132/132 titles as reprints of earlier "
             "waves (0 new clears). Slug mismatches "
             "(Doppelgänger / Wünderkind / Maker's Eye / Aesop's / Hadrian's) "
-            "resolve to existing corpus ids via spin_common.slugify. "
+            "resolve to existing corpus ids via nsg_catalog.our_id. "
             " Defer tdc. CR pin v26.03."
         ),
         "cards": reprint_ids,

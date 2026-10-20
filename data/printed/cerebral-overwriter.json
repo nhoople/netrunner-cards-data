@@ -1,5 +1,6 @@
 {
   "cardId": "cerebral-overwriter",
   "text": "You can advance this asset.\nWhen the Runner accesses this asset while it is installed, you may pay 3[credit] to do X core damage. X is equal to the number of hosted advancement counters.",
-  "strippedText": "You can advance this asset. When the Runner accesses this asset while it is installed, you may pay 3 credits to do X core damage. X is equal to the number of hosted advancement counters."
+  "strippedText": "You can advance this asset. When the Runner accesses this asset while it is installed, you may pay 3 credits to do X core damage. X is equal to the number of hosted advancement counters.",
+  "strippedTitle": "Cerebral Overwriter"
 }

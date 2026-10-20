@@ -1,5 +1,6 @@
 {
   "cardId": "off-the-grid",
   "text": "Install only in a remote server.\nThe Runner cannot initiate a run on this server.\nWhenever the Runner makes a successful run on HQ, trash Off the Grid.",
-  "strippedText": "Install only in a remote server. The Runner cannot initiate a run on this server. Whenever the Runner makes a successful run on HQ, trash Off the Grid."
+  "strippedText": "Install only in a remote server. The Runner cannot initiate a run on this server. Whenever the Runner makes a successful run on HQ, trash Off the Grid.",
+  "strippedTitle": "Off the Grid"
 }

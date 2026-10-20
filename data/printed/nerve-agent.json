@@ -1,5 +1,6 @@
 {
   "cardId": "nerve-agent",
   "text": "Whenever you make a successful run on HQ, place 1 virus counter on this program.\nWhenever you breach HQ, choose a number less than the number of hosted virus counters. Access that many additional cards.",
-  "strippedText": "Whenever you make a successful run on HQ, place 1 virus counter on this program. Whenever you breach HQ, choose a number less than the number of hosted virus counters. Access that many additional cards."
+  "strippedText": "Whenever you make a successful run on HQ, place 1 virus counter on this program. Whenever you breach HQ, choose a number less than the number of hosted virus counters. Access that many additional cards.",
+  "strippedTitle": "Nerve Agent"
 }

@@ -1,5 +1,6 @@
 {
   "cardId": "violet-level-clearance",
   "text": "After you resolve this operation, end your action phase.\nGain 8[credit] and draw 4 cards.",
-  "strippedText": "After you resolve this operation, end your action phase. Gain 8 credits and draw 4 cards."
+  "strippedText": "After you resolve this operation, end your action phase. Gain 8 credits and draw 4 cards.",
+  "strippedTitle": "Violet Level Clearance"
 }

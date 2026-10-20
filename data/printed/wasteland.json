@@ -1,5 +1,6 @@
 {
   "cardId": "wasteland",
   "text": "The first time each turn you trash 1 of your installed cards, gain 1[credit].",
-  "strippedText": "The first time each turn you trash 1 of your installed cards, gain 1 credit."
+  "strippedText": "The first time each turn you trash 1 of your installed cards, gain 1 credit.",
+  "strippedTitle": "Wasteland"
 }

@@ -1,5 +1,6 @@
 {
   "cardId": "audacity",
   "text": "Play only if there are at least 2 other cards in HQ.\nTrash all cards from HQ. Place a total of 2 advancement counters on installed cards you can advance.",
-  "strippedText": "Play only if there are at least 2 other cards in HQ. Trash all cards from HQ. Place a total of 2 advancement counters on installed cards you can advance."
+  "strippedText": "Play only if there are at least 2 other cards in HQ. Trash all cards from HQ. Place a total of 2 advancement counters on installed cards you can advance.",
+  "strippedTitle": "Audacity"
 }

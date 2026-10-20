@@ -1,5 +1,6 @@
 {
   "cardId": "big-deal",
   "text": "After you resolve this operation, your action phase ends.\nPlace 4 advancement counters on 1 installed card. You may score that card, if able.\nRemove this operation from the game.",
-  "strippedText": "After you resolve this operation, your action phase ends. Place 4 advancement counters on 1 installed card. You may score that card, if able. Remove this operation from the game."
+  "strippedText": "After you resolve this operation, your action phase ends. Place 4 advancement counters on 1 installed card. You may score that card, if able. Remove this operation from the game.",
+  "strippedTitle": "Big Deal"
 }

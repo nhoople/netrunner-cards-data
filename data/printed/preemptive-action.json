@@ -1,5 +1,6 @@
 {
   "cardId": "preemptive-action",
   "text": "After you resolve this operation, end your action phase.\nShuffle 3 cards from Archives into R&D. Remove Preemptive Action from the game instead of trashing it.",
-  "strippedText": "After you resolve this operation, end your action phase. Shuffle 3 cards from Archives into R&D. Remove Preemptive Action from the game instead of trashing it."
+  "strippedText": "After you resolve this operation, end your action phase. Shuffle 3 cards from Archives into R&D. Remove Preemptive Action from the game instead of trashing it.",
+  "strippedTitle": "Preemptive Action"
 }

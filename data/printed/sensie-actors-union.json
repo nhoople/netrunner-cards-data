@@ -1,5 +1,6 @@
 {
   "cardId": "sensie-actors-union",
   "text": "When your turn begins, you may draw 3 cards if there is no ice protecting this server. If you do, add 1 card from HQ to the bottom of R&D.",
-  "strippedText": "When your turn begins, you may draw 3 cards if there is no ice protecting this server. If you do, add 1 card from HQ to the bottom of R&D."
+  "strippedText": "When your turn begins, you may draw 3 cards if there is no ice protecting this server. If you do, add 1 card from HQ to the bottom of R&D.",
+  "strippedTitle": "Sensie Actors Union"
 }

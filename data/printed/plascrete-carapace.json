@@ -1,5 +1,6 @@
 {
   "cardId": "plascrete-carapace",
   "text": "When you install this hardware, load 4 power counters onto it. When it is empty, trash it.\n[interrupt] → <strong>Hosted power counter:</strong> Prevent 1 meat damage.",
-  "strippedText": "When you install this hardware, load 4 power counters onto it. When it is empty, trash it. Interrupt -> Hosted power counter: Prevent 1 meat damage."
+  "strippedText": "When you install this hardware, load 4 power counters onto it. When it is empty, trash it. Interrupt -> Hosted power counter: Prevent 1 meat damage.",
+  "strippedTitle": "Plascrete Carapace"
 }

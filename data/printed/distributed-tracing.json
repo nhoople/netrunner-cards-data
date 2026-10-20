@@ -1,5 +1,6 @@
 {
   "cardId": "distributed-tracing",
   "text": "As an additional cost to play this operation, spend [click].\nPlay only if the Runner stole an agenda during their last turn.\nGive the Runner 1 tag.",
-  "strippedText": "As an additional cost to play this operation, spend click. Play only if the Runner stole an agenda during their last turn. Give the Runner 1 tag."
+  "strippedText": "As an additional cost to play this operation, spend click. Play only if the Runner stole an agenda during their last turn. Give the Runner 1 tag.",
+  "strippedTitle": "Distributed Tracing"
 }

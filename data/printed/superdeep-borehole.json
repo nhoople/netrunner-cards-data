@@ -1,5 +1,6 @@
 {
   "cardId": "superdeep-borehole",
   "text": "When you rez this asset, load 6 bad publicity counters onto it. When it is empty, you win the game.\nWhen your turn begins, take 1 bad publicity from this asset.",
-  "strippedText": "When you rez this asset, load 6 bad publicity counters onto it. When it is empty, you win the game. When your turn begins, take 1 bad publicity from this asset."
+  "strippedText": "When you rez this asset, load 6 bad publicity counters onto it. When it is empty, you win the game. When your turn begins, take 1 bad publicity from this asset.",
+  "strippedTitle": "Superdeep Borehole"
 }

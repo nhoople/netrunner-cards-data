@@ -2,8 +2,8 @@
   "code": "23101",
   "cardId": "hired-help",
   "pack": "magnum-opus",
-  "flavor": "<strong>Designed by the Day 1B players at Magnum Opus</strong>",
   "illustrator": "Matt Zeilinger",
   "quantity": 1,
-  "position": 8
+  "position": 8,
+  "releasedBy": "fantasy-flight-games"
 }

@@ -2,8 +2,14 @@
   "code": "35057",
   "cardId": "nebula-talent-management-making-stars",
   "pack": "elevation",
-  "flavor": "Igniting your potential.\nNever stop shining.",
+  "flavor": "Igniting your potential.",
   "illustrator": "Emilio Rodríguez",
   "quantity": 1,
-  "position": 57
+  "position": 57,
+  "releasedBy": "null-signal-games",
+  "faces": [
+    {
+      "flavor": "Never stop shining."
+    }
+  ]
 }

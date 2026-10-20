@@ -1,5 +1,6 @@
 {
   "cardId": "retrieval-run",
   "text": "Run Archives. If successful, instead of breaching Archives, you may install 1 program from your heap, ignoring all costs.",
-  "strippedText": "Run Archives. If successful, instead of breaching Archives, you may install 1 program from your heap, ignoring all costs."
+  "strippedText": "Run Archives. If successful, instead of breaching Archives, you may install 1 program from your heap, ignoring all costs.",
+  "strippedTitle": "Retrieval Run"
 }

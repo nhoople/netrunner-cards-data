@@ -1,5 +1,6 @@
 {
   "cardId": "saci",
   "text": "Install only on a piece of ice.\nWhenever host ice is rezzed or derezzed, gain 3[credit].",
-  "strippedText": "Install only on a piece of ice. Whenever host ice is rezzed or derezzed, gain 3 credits."
+  "strippedText": "Install only on a piece of ice. Whenever host ice is rezzed or derezzed, gain 3 credits.",
+  "strippedTitle": "Saci"
 }

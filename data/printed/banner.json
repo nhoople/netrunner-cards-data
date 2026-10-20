@@ -1,5 +1,6 @@
 {
   "cardId": "banner",
   "text": "Interface → <strong>2[credit]:</strong> Subroutines on the <strong>barrier</strong> you are encountering cannot end the run for the remainder of this encounter.",
-  "strippedText": "Interface -> 2 credits: Subroutines on the barrier you are encountering cannot end the run for the remainder of this encounter."
+  "strippedText": "Interface -> 2 credits: Subroutines on the barrier you are encountering cannot end the run for the remainder of this encounter.",
+  "strippedTitle": "Banner"
 }

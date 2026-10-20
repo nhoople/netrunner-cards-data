@@ -1,5 +1,6 @@
 {
   "cardId": "closed-accounts",
   "text": "Play only if the Runner is tagged.\nThe Runner loses all credits in their credit pool.",
-  "strippedText": "Play only if the Runner is tagged. The Runner loses all credits in their credit pool."
+  "strippedText": "Play only if the Runner is tagged. The Runner loses all credits in their credit pool.",
+  "strippedTitle": "Closed Accounts"
 }

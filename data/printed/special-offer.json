@@ -1,5 +1,6 @@
 {
   "cardId": "special-offer",
   "text": "[subroutine] The Corp gains 5[credit]. Trash Special Offer.",
-  "strippedText": "Subroutine The Corp gains 5 credits. Trash Special Offer."
+  "strippedText": "Subroutine The Corp gains 5 credits. Trash Special Offer.",
+  "strippedTitle": "Special Offer"
 }

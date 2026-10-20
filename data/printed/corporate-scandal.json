@@ -1,5 +1,6 @@
 {
   "cardId": "corporate-scandal",
   "text": "This event is not trashed until another <strong>current</strong> is played or an agenda is scored.\nThe Corp is considered to have 1 additional bad publicity <em>(even if they had no bad publicity)</em>.",
-  "strippedText": "This event is not trashed until another current is played or an agenda is scored. The Corp is considered to have 1 additional bad publicity (even if they had no bad publicity)."
+  "strippedText": "This event is not trashed until another current is played or an agenda is scored. The Corp is considered to have 1 additional bad publicity (even if they had no bad publicity).",
+  "strippedTitle": "Corporate Scandal"
 }

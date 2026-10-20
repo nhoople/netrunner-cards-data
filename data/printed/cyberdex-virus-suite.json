@@ -1,5 +1,6 @@
 {
   "cardId": "cyberdex-virus-suite",
   "text": "While the Runner is accessing this upgrade in R&D, they must reveal it.\nWhen the Runner accesses this upgrade, you may purge virus counters.\n<strong>[trash]:</strong> Purge virus counters.",
-  "strippedText": "While the Runner is accessing this upgrade in R&D, they must reveal it. When the Runner accesses this upgrade, you may purge virus counters. trash: Purge virus counters."
+  "strippedText": "While the Runner is accessing this upgrade in R&D, they must reveal it. When the Runner accesses this upgrade, you may purge virus counters. trash: Purge virus counters.",
+  "strippedTitle": "Cyberdex Virus Suite"
 }

@@ -1,5 +1,6 @@
 {
   "cardId": "fairchild-1-0",
   "text": "<strong>Lose [click]:</strong> Break 1 subroutine on this ice. Only the Runner can use this ability.\n[subroutine] The Runner must pay 1[credit] or trash 1 of their installed cards.\n[subroutine] The Runner must pay 1[credit] or trash 1 of their installed cards.",
-  "strippedText": "Lose click: Break 1 subroutine on this ice. Only the Runner can use this ability. Subroutine The Runner must pay 1 credit or trash 1 of their installed cards. Subroutine The Runner must pay 1 credit or trash 1 of their installed cards."
+  "strippedText": "Lose click: Break 1 subroutine on this ice. Only the Runner can use this ability. Subroutine The Runner must pay 1 credit or trash 1 of their installed cards. Subroutine The Runner must pay 1 credit or trash 1 of their installed cards.",
+  "strippedTitle": "Fairchild 1.0"
 }

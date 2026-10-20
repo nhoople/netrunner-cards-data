@@ -1,5 +1,6 @@
 {
   "cardId": "armed-asset-protection",
   "text": "Gain 3[credit]. Gain 1[credit] for each card type among faceup cards in Archives. If any of those cards are agendas, gain another 2[credit].",
-  "strippedText": "Gain 3 credits. Gain 1 credit for each card type among faceup cards in Archives. If any of those cards are agendas, gain another 2 credits."
+  "strippedText": "Gain 3 credits. Gain 1 credit for each card type among faceup cards in Archives. If any of those cards are agendas, gain another 2 credits.",
+  "strippedTitle": "Armed Asset Protection"
 }

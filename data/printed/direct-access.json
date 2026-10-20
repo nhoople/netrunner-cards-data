@@ -1,5 +1,6 @@
 {
   "cardId": "direct-access",
   "text": "While you are resolving this event, each playerʼs identity loses all abilities.\nRun any server. When that run ends, you may shuffle this event into your stack.",
-  "strippedText": "While you are resolving this event, each player's identity loses all abilities. Run any server. When that run ends, you may shuffle this event into your stack."
+  "strippedText": "While you are resolving this event, each player's identity loses all abilities. Run any server. When that run ends, you may shuffle this event into your stack.",
+  "strippedTitle": "Direct Access"
 }

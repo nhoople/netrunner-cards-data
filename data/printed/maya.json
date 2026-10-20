@@ -1,5 +1,6 @@
 {
   "cardId": "maya",
   "text": "+2[mu]\nOnce per turn → When you finish accessing a card in R&D, you may add that card to the bottom of R&D. If you do, take 1 tag.\nLimit 1 <strong>console</strong> per player.",
-  "strippedText": "+2 mu Once per turn -> When you finish accessing a card in R&D, you may add that card to the bottom of R&D. If you do, take 1 tag. Limit 1 console per player."
+  "strippedText": "+2 mu Once per turn -> When you finish accessing a card in R&D, you may add that card to the bottom of R&D. If you do, take 1 tag. Limit 1 console per player.",
+  "strippedTitle": "Maya"
 }

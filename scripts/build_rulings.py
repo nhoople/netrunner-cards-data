@@ -14,9 +14,8 @@ import re
 import unicodedata
 from pathlib import Path
 
-from build_printings import resolve_id
 from card_layout import STORAGE
-from nsg_catalog import fetch_rulings, load_pack_cards, load_pin
+from nsg_catalog import fetch_rulings, load_v2_cards, our_id
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
@@ -66,24 +65,12 @@ def known_ids() -> set[str]:
 
 
 def nsg_id_for_titles(known: set[str]) -> dict[str, str]:
-    """Map a catalog ruling filename to the corpus card id."""
-    pin = load_pin()
-    cache = ROOT / pin["cacheDir"] / pin["ref"] / "pack"
-    codes = sorted(path.stem for path in cache.glob("*.json"))
+    """Map a catalog card id to the corpus card id."""
     found: dict[str, str] = {}
-    for code in codes:
-        for card in load_pack_cards(code):
-            title = card.get("title")
-            if not isinstance(title, str):
-                continue
-            card_id = resolve_id(title, known)
-            if card_id is None:
-                continue
-            nsg_id = text_to_id(title)
-            previous = found.get(nsg_id)
-            if previous is not None and previous != card_id:
-                raise SystemExit(f"{nsg_id} maps to both {previous} and {card_id}")
-            found[nsg_id] = card_id
+    for catalog_id in load_v2_cards():
+        card_id = our_id(catalog_id)
+        if card_id in known:
+            found[catalog_id] = card_id
     return found
 
 

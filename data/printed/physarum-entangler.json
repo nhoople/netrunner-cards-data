@@ -1,5 +1,6 @@
 {
   "cardId": "physarum-entangler",
   "text": "Install only on a piece of ice.\nWhenever you encounter host ice, if it is not a <strong>barrier</strong>, you may pay 1[credit] for each subroutine it has. If you do, bypass that ice.\nWhen the Corp purges virus counters, trash this program.",
-  "strippedText": "Install only on a piece of ice. Whenever you encounter host ice, if it is not a barrier, you may pay 1 credit for each subroutine it has. If you do, bypass that ice. When the Corp purges virus counters, trash this program."
+  "strippedText": "Install only on a piece of ice. Whenever you encounter host ice, if it is not a barrier, you may pay 1 credit for each subroutine it has. If you do, bypass that ice. When the Corp purges virus counters, trash this program.",
+  "strippedTitle": "Physarum Entangler"
 }

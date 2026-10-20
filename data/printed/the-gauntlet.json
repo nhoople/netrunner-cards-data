@@ -1,5 +1,6 @@
 {
   "cardId": "the-gauntlet",
   "text": "+2[mu]\nWhenever you breach HQ during a run, access 1 additional card for each piece of ice protecting HQ that you fully broke during that run.\nLimit 1 <strong>console</strong> per player.",
-  "strippedText": "+2 mu Whenever you breach HQ during a run, access 1 additional card for each piece of ice protecting HQ that you fully broke during that run. Limit 1 console per player."
+  "strippedText": "+2 mu Whenever you breach HQ during a run, access 1 additional card for each piece of ice protecting HQ that you fully broke during that run. Limit 1 console per player.",
+  "strippedTitle": "The Gauntlet"
 }

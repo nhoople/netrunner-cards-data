@@ -1,5 +1,6 @@
 {
   "cardId": "gourmand",
   "text": "Access → [trash]<strong>:</strong> Trash the non-agenda card you are accessing. If you do, draw 1 card.",
-  "strippedText": "Access -> trash: Trash the non-agenda card you are accessing. If you do, draw 1 card."
+  "strippedText": "Access -> trash: Trash the non-agenda card you are accessing. If you do, draw 1 card.",
+  "strippedTitle": "Gourmand"
 }

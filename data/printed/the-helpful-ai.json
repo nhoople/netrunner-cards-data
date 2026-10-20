@@ -1,5 +1,6 @@
 {
   "cardId": "the-helpful-ai",
   "text": "+1[link]\n[trash]: Choose an <strong>icebreaker</strong>. That <strong>icebreaker</strong> has +2 strength until the end of the turn.",
-  "strippedText": "+1 link trash: Choose an icebreaker. That icebreaker has +2 strength until the end of the turn."
+  "strippedText": "+1 link trash: Choose an icebreaker. That icebreaker has +2 strength until the end of the turn.",
+  "strippedTitle": "The Helpful AI"
 }

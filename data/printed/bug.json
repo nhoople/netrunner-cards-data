@@ -1,5 +1,6 @@
 {
   "cardId": "bug",
   "text": "Install only if you made a successful run on HQ this turn.\nWhenever the Corp draws a card, you may pay 2[credit] to reveal that card.",
-  "strippedText": "Install only if you made a successful run on HQ this turn. Whenever the Corp draws a card, you may pay 2 credits to reveal that card."
+  "strippedText": "Install only if you made a successful run on HQ this turn. Whenever the Corp draws a card, you may pay 2 credits to reveal that card.",
+  "strippedTitle": "Bug"
 }

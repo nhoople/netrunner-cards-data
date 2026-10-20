@@ -1,5 +1,6 @@
 {
   "cardId": "windfall",
   "text": "Shuffle your stack. Trash the top card of your stack. Gain X[credit] where X is equal to the install cost of that card.",
-  "strippedText": "Shuffle your stack. Trash the top card of your stack. Gain X credits where X is equal to the install cost of that card."
+  "strippedText": "Shuffle your stack. Trash the top card of your stack. Gain X credits where X is equal to the install cost of that card.",
+  "strippedTitle": "Windfall"
 }

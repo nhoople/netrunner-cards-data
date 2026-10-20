@@ -1,5 +1,6 @@
 {
   "cardId": "fransofia-ward",
   "text": "The rez cost of each piece of ice is increased by 1[credit].\nWhenever you encounter a piece of ice, if the Corp has 15[credit] or more, you may trash this resource to bypass that ice. <em>(Pass that ice. No subroutines or further \"when encountered\" abilities resolve.)</em>",
-  "strippedText": "The rez cost of each piece of ice is increased by 1 credit. Whenever you encounter a piece of ice, if the Corp has 15 credits or more, you may trash this resource to bypass that ice. (Pass that ice. No subroutines or further \"when encountered\" abilities resolve.)"
+  "strippedText": "The rez cost of each piece of ice is increased by 1 credit. Whenever you encounter a piece of ice, if the Corp has 15 credits or more, you may trash this resource to bypass that ice. (Pass that ice. No subroutines or further \"when encountered\" abilities resolve.)",
+  "strippedTitle": "Fransofia Ward"
 }

@@ -1,5 +1,6 @@
 {
   "cardId": "cohort-guidance-program",
   "text": "When your turn begins, you may resolve 1 of the following:<ul><li>Trash 1 card from HQ. If you do, gain 2[credit] and draw 1 card.</li><li>Turn 1 facedown card in Archives faceup. If you do, place 1 advancement counter on an installed card.</li></ul>",
-  "strippedText": "When your turn begins, you may resolve 1 of the following: * Trash 1 card from HQ. If you do, gain 2 credits and draw 1 card. * Turn 1 facedown card in Archives faceup. If you do, place 1 advancement counter on an installed card."
+  "strippedText": "When your turn begins, you may resolve 1 of the following: * Trash 1 card from HQ. If you do, gain 2 credits and draw 1 card. * Turn 1 facedown card in Archives faceup. If you do, place 1 advancement counter on an installed card.",
+  "strippedTitle": "Cohort Guidance Program"
 }

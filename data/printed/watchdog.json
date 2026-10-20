@@ -1,5 +1,6 @@
 {
   "cardId": "watchdog",
   "text": "The rez cost of the first piece of ice you rez each turn is lowered by 1 for each tag the Runner has.",
-  "strippedText": "The rez cost of the first piece of ice you rez each turn is lowered by 1 for each tag the Runner has."
+  "strippedText": "The rez cost of the first piece of ice you rez each turn is lowered by 1 for each tag the Runner has.",
+  "strippedTitle": "Watchdog"
 }

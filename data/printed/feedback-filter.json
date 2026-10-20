@@ -1,5 +1,6 @@
 {
   "cardId": "feedback-filter",
   "text": "[interrupt] → <strong>3[credit]:</strong> Prevent 1 net damage.\n[interrupt] → <strong>[trash]:</strong> Prevent up to 2 core damage.",
-  "strippedText": "Interrupt -> 3 credits: Prevent 1 net damage. Interrupt -> trash: Prevent up to 2 core damage."
+  "strippedText": "Interrupt -> 3 credits: Prevent 1 net damage. Interrupt -> trash: Prevent up to 2 core damage.",
+  "strippedTitle": "Feedback Filter"
 }

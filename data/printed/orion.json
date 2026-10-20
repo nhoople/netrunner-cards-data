@@ -1,5 +1,6 @@
 {
   "cardId": "orion",
   "text": "Orion can be advanced and its rez cost is lowered by 3 for each advancement token on it.\n[subroutine] Trash 1 program.\n[subroutine] Resolve a subroutine on another piece of rezzed ice.\n[subroutine] End the run.",
-  "strippedText": "Orion can be advanced and its rez cost is lowered by 3 for each advancement token on it. Subroutine Trash 1 program. Subroutine Resolve a subroutine on another piece of rezzed ice. Subroutine End the run."
+  "strippedText": "Orion can be advanced and its rez cost is lowered by 3 for each advancement token on it. Subroutine Trash 1 program. Subroutine Resolve a subroutine on another piece of rezzed ice. Subroutine End the run.",
+  "strippedTitle": "Orion"
 }

@@ -1,5 +1,6 @@
 {
   "cardId": "knowledge-seeker",
   "text": "Whenever an encounter with this ice ends, if it has 3 or more hosted virus counters, purge virus counters and derez this ice.\n[subroutine] Place 1 virus counter on this ice.\n[subroutine] Look at the top 4 cards of R&D and arrange them in any order.\n[subroutine] End the run.",
-  "strippedText": "Whenever an encounter with this ice ends, if it has 3 or more hosted virus counters, purge virus counters and derez this ice. Subroutine Place 1 virus counter on this ice. Subroutine Look at the top 4 cards of R&D and arrange them in any order. Subroutine End the run."
+  "strippedText": "Whenever an encounter with this ice ends, if it has 3 or more hosted virus counters, purge virus counters and derez this ice. Subroutine Place 1 virus counter on this ice. Subroutine Look at the top 4 cards of R&D and arrange them in any order. Subroutine End the run.",
+  "strippedTitle": "Knowledge Seeker"
 }

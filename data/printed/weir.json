@@ -1,5 +1,6 @@
 {
   "cardId": "weir",
   "text": "[subroutine] The Runner loses [click].\n[subroutine] The Runner trashes 1 card from their grip.",
-  "strippedText": "Subroutine The Runner loses click. Subroutine The Runner trashes 1 card from their grip."
+  "strippedText": "Subroutine The Runner loses click. Subroutine The Runner trashes 1 card from their grip.",
+  "strippedTitle": "Weir"
 }

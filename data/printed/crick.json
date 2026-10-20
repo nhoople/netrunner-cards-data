@@ -1,5 +1,6 @@
 {
   "cardId": "crick",
   "text": "Crick has +3 strength while protecting Archives.\n[subroutine] Install a card from Archives (paying its install cost).",
-  "strippedText": "Crick has +3 strength while protecting Archives. Subroutine Install a card from Archives (paying its install cost)."
+  "strippedText": "Crick has +3 strength while protecting Archives. Subroutine Install a card from Archives (paying its install cost).",
+  "strippedTitle": "Crick"
 }

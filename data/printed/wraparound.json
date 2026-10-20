@@ -1,5 +1,6 @@
 {
   "cardId": "wraparound",
   "text": "While there are no installed <strong>fracter</strong> programs, this ice gets +7 strength.\n[subroutine] End the run.",
-  "strippedText": "While there are no installed fracter programs, this ice gets +7 strength. Subroutine End the run."
+  "strippedText": "While there are no installed fracter programs, this ice gets +7 strength. Subroutine End the run.",
+  "strippedTitle": "Wraparound"
 }

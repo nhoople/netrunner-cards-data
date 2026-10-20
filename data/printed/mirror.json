@@ -1,5 +1,6 @@
 {
   "cardId": "mirror",
   "text": "+2[mu]\nWhenever you make a successful run on R&D, you may replace 1 spent recurring credit.\nLimit 1 <strong>console</strong> per player.",
-  "strippedText": "+2 mu Whenever you make a successful run on R&D, you may replace 1 spent recurring credit. Limit 1 console per player."
+  "strippedText": "+2 mu Whenever you make a successful run on R&D, you may replace 1 spent recurring credit. Limit 1 console per player.",
+  "strippedTitle": "Mirror"
 }

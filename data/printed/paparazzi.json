@@ -1,5 +1,6 @@
 {
   "cardId": "paparazzi",
   "text": "You are tagged.\n[interrupt] → Whenever you would take meat damage, prevent all of that damage.",
-  "strippedText": "You are tagged. Interrupt -> Whenever you would take meat damage, prevent all of that damage."
+  "strippedText": "You are tagged. Interrupt -> Whenever you would take meat damage, prevent all of that damage.",
+  "strippedTitle": "Paparazzi"
 }

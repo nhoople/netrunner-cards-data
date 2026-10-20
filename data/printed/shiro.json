@@ -1,5 +1,6 @@
 {
   "cardId": "shiro",
   "text": "[subroutine] Look at the top 3 cards of R&D and arrange them in any order.\n[subroutine] You may pay 1[credit]. If you do not, the Runner breaches R&D. They cannot access cards in the root of R&D during that breach.",
-  "strippedText": "Subroutine Look at the top 3 cards of R&D and arrange them in any order. Subroutine You may pay 1 credit. If you do not, the Runner breaches R&D. They cannot access cards in the root of R&D during that breach."
+  "strippedText": "Subroutine Look at the top 3 cards of R&D and arrange them in any order. Subroutine You may pay 1 credit. If you do not, the Runner breaches R&D. They cannot access cards in the root of R&D during that breach.",
+  "strippedTitle": "Shiro"
 }

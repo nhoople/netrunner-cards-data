@@ -1,5 +1,6 @@
 {
   "cardId": "ezam",
   "text": "[click]<strong>:</strong> Swap this ice with another installed piece of ice.\n[subroutine] Look at the top card of R&D. You may add that card to the bottom of R&D.\n[subroutine] Each piece of ice gets +1 strength for the remainder of this run.",
-  "strippedText": "click: Swap this ice with another installed piece of ice. Subroutine Look at the top card of R&D. You may add that card to the bottom of R&D. Subroutine Each piece of ice gets +1 strength for the remainder of this run."
+  "strippedText": "click: Swap this ice with another installed piece of ice. Subroutine Look at the top card of R&D. You may add that card to the bottom of R&D. Subroutine Each piece of ice gets +1 strength for the remainder of this run.",
+  "strippedTitle": "ezaM"
 }

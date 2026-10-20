@@ -1,5 +1,6 @@
 {
   "cardId": "ashen-epilogue",
   "text": "Shuffle your grip and heap into your stack, then remove the top 5 cards of your stack from the game. Draw 5 cards.\nRemove this event from the game.",
-  "strippedText": "Shuffle your grip and heap into your stack, then remove the top 5 cards of your stack from the game. Draw 5 cards. Remove this event from the game."
+  "strippedText": "Shuffle your grip and heap into your stack, then remove the top 5 cards of your stack from the game. Draw 5 cards. Remove this event from the game.",
+  "strippedTitle": "Ashen Epilogue"
 }

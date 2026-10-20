@@ -1,5 +1,6 @@
 {
   "cardId": "switchblade",
   "text": "Interface → <strong>1[credit]:</strong> Break any number of <strong>sentry</strong> subroutines. Spend credits only from <strong>stealth</strong> cards to use this ability.\n<strong>1[credit]:</strong> +7 strength. Spend credits only from <strong>stealth</strong> cards to use this ability.",
-  "strippedText": "Interface -> 1 credit: Break any number of sentry subroutines. Spend credits only from stealth cards to use this ability. 1 credit: +7 strength. Spend credits only from stealth cards to use this ability."
+  "strippedText": "Interface -> 1 credit: Break any number of sentry subroutines. Spend credits only from stealth cards to use this ability. 1 credit: +7 strength. Spend credits only from stealth cards to use this ability.",
+  "strippedTitle": "Switchblade"
 }

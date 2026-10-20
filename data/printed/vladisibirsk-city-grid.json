@@ -1,5 +1,6 @@
 {
   "cardId": "vladisibirsk-city-grid",
   "text": "You can advance this upgrade.\nOnce per turn → <strong>2 hosted advancement counters:</strong> Place 2 advancement counters on another card you can advance in the root of this server.\nLimit 1 <strong>region</strong> per server.",
-  "strippedText": "You can advance this upgrade. Once per turn -> 2 hosted advancement counters: Place 2 advancement counters on another card you can advance in the root of this server. Limit 1 region per server."
+  "strippedText": "You can advance this upgrade. Once per turn -> 2 hosted advancement counters: Place 2 advancement counters on another card you can advance in the root of this server. Limit 1 region per server.",
+  "strippedTitle": "Vladisibirsk City Grid"
 }

@@ -1,5 +1,6 @@
 {
   "cardId": "cookbook",
   "text": "Whenever you install a <strong>virus</strong> program, you may place 1 virus counter on it.",
-  "strippedText": "Whenever you install a virus program, you may place 1 virus counter on it."
+  "strippedText": "Whenever you install a virus program, you may place 1 virus counter on it.",
+  "strippedTitle": "Cookbook"
 }

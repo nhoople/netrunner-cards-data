@@ -1,5 +1,6 @@
 {
   "cardId": "quicksand",
   "text": "When the Runner encounters Quicksand, place 1 power counter on Quicksand.\nQuicksand has +1 strength for each power counter on it.\n[subroutine] End the run.",
-  "strippedText": "When the Runner encounters Quicksand, place 1 power counter on Quicksand. Quicksand has +1 strength for each power counter on it. Subroutine End the run."
+  "strippedText": "When the Runner encounters Quicksand, place 1 power counter on Quicksand. Quicksand has +1 strength for each power counter on it. Subroutine End the run.",
+  "strippedTitle": "Quicksand"
 }

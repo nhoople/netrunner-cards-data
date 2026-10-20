@@ -1,5 +1,6 @@
 {
   "cardId": "the-back",
   "text": "The first time each turn you use a piece of hardware during a run, place 1 power counter on this resource.\n[click], <strong>remove this resource from the game:</strong> For each hosted power counter, choose up to 2 cards in your heap with [trash] abilities. Shuffle the chosen cards into your stack.",
-  "strippedText": "The first time each turn you use a piece of hardware during a run, place 1 power counter on this resource. click, remove this resource from the game: For each hosted power counter, choose up to 2 cards in your heap with trash abilities. Shuffle the chosen cards into your stack."
+  "strippedText": "The first time each turn you use a piece of hardware during a run, place 1 power counter on this resource. click, remove this resource from the game: For each hosted power counter, choose up to 2 cards in your heap with trash abilities. Shuffle the chosen cards into your stack.",
+  "strippedTitle": "The Back"
 }

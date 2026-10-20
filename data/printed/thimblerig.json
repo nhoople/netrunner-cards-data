@@ -1,5 +1,6 @@
 {
   "cardId": "thimblerig",
   "text": "When your turn begins and whenever the Runner passes this ice, you may swap this ice with another installed piece of ice.\n[subroutine] End the run.",
-  "strippedText": "When your turn begins and whenever the Runner passes this ice, you may swap this ice with another installed piece of ice. Subroutine End the run."
+  "strippedText": "When your turn begins and whenever the Runner passes this ice, you may swap this ice with another installed piece of ice. Subroutine End the run.",
+  "strippedTitle": "Thimblerig"
 }

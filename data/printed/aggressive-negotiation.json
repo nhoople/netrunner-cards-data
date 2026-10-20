@@ -1,5 +1,6 @@
 {
   "cardId": "aggressive-negotiation",
   "text": "Play only if you scored an agenda this turn.\nSearch R&D for 1 card and add it to HQ. Shuffle R&D.",
-  "strippedText": "Play only if you scored an agenda this turn. Search R&D for 1 card and add it to HQ. Shuffle R&D."
+  "strippedText": "Play only if you scored an agenda this turn. Search R&D for 1 card and add it to HQ. Shuffle R&D.",
+  "strippedTitle": "Aggressive Negotiation"
 }

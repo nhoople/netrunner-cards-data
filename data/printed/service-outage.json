@@ -1,5 +1,6 @@
 {
   "cardId": "service-outage",
   "text": "This operation is not trashed until another <strong>current</strong> is played or an agenda is stolen.\nAs an additional cost to run for the first time during their turn, the Runner must spend 1[credit].",
-  "strippedText": "This operation is not trashed until another current is played or an agenda is stolen. As an additional cost to run for the first time during their turn, the Runner must spend 1 credit."
+  "strippedText": "This operation is not trashed until another current is played or an agenda is stolen. As an additional cost to run for the first time during their turn, the Runner must spend 1 credit.",
+  "strippedTitle": "Service Outage"
 }

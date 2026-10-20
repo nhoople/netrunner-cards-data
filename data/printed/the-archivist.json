@@ -1,5 +1,6 @@
 {
   "cardId": "the-archivist",
   "text": "+1[link]\nWhenever the Corp scores an <strong>initiative</strong> or <strong>security</strong> agenda, they must trace[1]. If unsuccessful, give them 1 bad publicity.",
-  "strippedText": "+1 link Whenever the Corp scores an initiative or security agenda, they must trace[1]. If unsuccessful, give them 1 bad publicity."
+  "strippedText": "+1 link Whenever the Corp scores an initiative or security agenda, they must trace[1]. If unsuccessful, give them 1 bad publicity.",
+  "strippedTitle": "The Archivist"
 }

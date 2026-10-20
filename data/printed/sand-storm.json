@@ -1,5 +1,6 @@
 {
   "cardId": "sand-storm",
   "text": "[subroutine] If this ice is installed, move it to the outermost position protecting another server. <em>(The run continues from this new position.)</em> Trash this ice.",
-  "strippedText": "Subroutine If this ice is installed, move it to the outermost position protecting another server. (The run continues from this new position.) Trash this ice."
+  "strippedText": "Subroutine If this ice is installed, move it to the outermost position protecting another server. (The run continues from this new position.) Trash this ice.",
+  "strippedTitle": "Sand Storm"
 }

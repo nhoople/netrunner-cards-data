@@ -1,5 +1,6 @@
 {
   "cardId": "ob-superheavy-logistics-extract-export-excel",
   "text": "Once per turn → When you trash a rezzed card, except during installation, you may search R&D for 1 card with a printed rez cost exactly 1[credit] less than the trashed card's printed rez cost. Install and rez the card you found, ignoring credit costs.",
-  "strippedText": "Once per turn -> When you trash a rezzed card, except during installation, you may search R&D for 1 card with a printed rez cost exactly 1[credit] less than the trashed card's printed rez cost. Install and rez the card you found, ignoring credit costs."
+  "strippedText": "Once per turn -> When you trash a rezzed card, except during installation, you may search R&D for 1 card with a printed rez cost exactly 1[credit] less than the trashed card's printed rez cost. Install and rez the card you found, ignoring credit costs.",
+  "strippedTitle": "Ob Superheavy Logistics: Extract. Export. Excel."
 }

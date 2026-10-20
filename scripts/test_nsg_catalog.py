@@ -7,7 +7,16 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from nsg_catalog import diff_card_facts, diff_pack_facts, pack_blobs, pack_codes_from_pool
+from nsg_catalog import (
+    card_blobs,
+    card_type,
+    diff_card_facts,
+    diff_card_sets,
+    faction_slug,
+    nsg_id,
+    our_id,
+    pack_codes_from_pool,
+)
 
 
 def test_pool_pack_codes() -> None:
@@ -22,28 +31,43 @@ def test_pool_pack_codes() -> None:
     assert codes == {"sg", "msbp"}, codes
 
 
-def test_pack_blobs() -> None:
-    blobs = pack_blobs(
+def test_card_blobs() -> None:
+    blobs = card_blobs(
         {
             "tree": [
-                {"path": "pack/sg.json", "type": "blob", "sha": "aaa"},
+                {"path": "v2/cards/hedge_fund.json", "type": "blob", "sha": "aaa"},
                 {"path": "README.md", "type": "blob", "sha": "bbb"},
-                {"path": "pack", "type": "tree", "sha": "ccc"},
+                {"path": "v2/cards", "type": "tree", "sha": "ccc"},
             ]
         }
     )
-    assert blobs == {"sg": "aaa"}, blobs
+    assert blobs == {"hedge_fund": "aaa"}, blobs
+
+
+def test_id_transforms() -> None:
+    assert our_id("hedge_fund") == "hedge-fund"
+    assert nsg_id("hedge-fund") == "hedge_fund"
+    assert our_id("the_wizards_chest") == "the-wizard-s-chest"
+    assert our_id("o_shortage") == "o2-shortage"
+    assert nsg_id("the-wizard-s-chest") == "the_wizards_chest"
+    assert nsg_id("o2-shortage") == "o_shortage"
+    assert card_type({"card_type_id": "runner_identity"}) == "identity"
+    assert card_type({"card_type_id": "corp_identity"}) == "identity"
+    assert card_type({"card_type_id": "ice"}) == "ice"
+    assert card_type({}) is None
+    assert faction_slug({"faction_id": "haas_bioroid"}) == "haas-bioroid"
+    assert faction_slug({}) is None
 
 
 def test_fact_diff() -> None:
-    before = {"code": "30072", "title": "Palisade", "faction_code": "neutral-corp", "cost": 3, "strength": 2, "text": "End the run."}
+    before = {"id": "palisade", "title": "Palisade", "faction_id": "neutral_corp", "cost": 3, "strength": 2, "text": "End the run."}
     after = {**before, "text": "End the run. Gain 1 credit."}
     assert diff_card_facts(before, after) == ["text changed"]
     assert diff_card_facts(before, {**before, "cost": 4}) == ["cost: 3 → 4"]
     assert diff_card_facts(None, after) == ["added"]
     assert diff_card_facts(before, before) == []
-    rows = diff_pack_facts([before], [after])
-    assert rows == [("30072", "Palisade", ["text changed"])], rows
+    rows = diff_card_sets([before], [after])
+    assert rows == [("palisade", "Palisade", ["text changed"])], rows
 
 
 def test_generator_pack_codes() -> None:
@@ -125,12 +149,12 @@ def test_printed_numbers() -> None:
 
     runner = {}
     apply_printed_numbers(runner, {
-        "type_code": "identity",
-        "side_code": "runner",
+        "card_type_id": "runner_identity",
+        "side_id": "runner",
         "base_link": 0,
         "minimum_deck_size": 40,
         "influence_limit": 15,
-        "faction_cost": None,
+        "influence_cost": None,
         "deck_limit": 1,
     })
     assert runner == {
@@ -142,8 +166,8 @@ def test_printed_numbers() -> None:
 
     corp = {}
     apply_printed_numbers(corp, {
-        "type_code": "identity",
-        "side_code": "corp",
+        "card_type_id": "corp_identity",
+        "side_id": "corp",
         "base_link": 0,
         "minimum_deck_size": 45,
         "influence_limit": 15,
@@ -153,21 +177,22 @@ def test_printed_numbers() -> None:
     assert corp["influenceLimit"] == 15
 
     ice = {}
-    apply_printed_numbers(ice, {"type_code": "ice", "faction_cost": 2, "deck_limit": 3})
+    apply_printed_numbers(ice, {"card_type_id": "ice", "influence_cost": 2, "deck_limit": 3})
     assert ice == {"deckLimit": 3, "influence": 2}, ice
 
     neutral = {}
-    apply_printed_numbers(neutral, {"type_code": "event", "faction_cost": 0})
+    apply_printed_numbers(neutral, {"card_type_id": "event", "influence_cost": 0})
     assert neutral == {"influence": 0}, neutral
 
     no_bar = {}
-    apply_printed_numbers(no_bar, {"type_code": "agenda", "faction_cost": None})
+    apply_printed_numbers(no_bar, {"card_type_id": "agenda", "influence_cost": None})
     assert no_bar == {}, no_bar
 
 
 def main() -> int:
     test_pool_pack_codes()
-    test_pack_blobs()
+    test_card_blobs()
+    test_id_transforms()
     test_fact_diff()
     test_generator_pack_codes()
     test_restriction_card_ids()

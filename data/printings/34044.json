@@ -2,8 +2,9 @@
   "code": "34044",
   "cardId": "tatu-bola",
   "pack": "the-automata-initiative",
-  "flavor": "Next!\n<strong>Designed by 2020 Intercontinental Champion Yannick Stucki</strong>",
+  "flavor": "Next!",
   "illustrator": "Cat Shen",
   "quantity": 3,
-  "position": 44
+  "position": 44,
+  "releasedBy": "null-signal-games"
 }

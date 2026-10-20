@@ -1,5 +1,6 @@
 {
   "cardId": "escalate-vitriol",
   "text": "Once per turn → [click]<strong>:</strong> Gain 1[credit] for each tag the Runner has.",
-  "strippedText": "Once per turn -> click: Gain 1[credit] for each tag the Runner has."
+  "strippedText": "Once per turn -> click: Gain 1[credit] for each tag the Runner has.",
+  "strippedTitle": "Escalate Vitriol"
 }

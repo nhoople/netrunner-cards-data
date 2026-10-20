@@ -1,5 +1,6 @@
 {
   "cardId": "genetics-pavilion",
   "text": "The Runner cannot draw more than 2 cards during each of their turns.",
-  "strippedText": "The Runner cannot draw more than 2 cards during each of their turns."
+  "strippedText": "The Runner cannot draw more than 2 cards during each of their turns.",
+  "strippedTitle": "Genetics Pavilion"
 }

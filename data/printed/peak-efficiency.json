@@ -1,5 +1,6 @@
 {
   "cardId": "peak-efficiency",
   "text": "Gain 1[credit] for each rezzed piece of ice.",
-  "strippedText": "Gain 1 credit for each rezzed piece of ice."
+  "strippedText": "Gain 1 credit for each rezzed piece of ice.",
+  "strippedTitle": "Peak Efficiency"
 }

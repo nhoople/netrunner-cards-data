@@ -1,5 +1,6 @@
 {
   "cardId": "pantograph",
   "text": "+1[mu]\nWhenever an agenda is scored or stolen, gain 1[credit]. Then, you may install 1 card from your grip.\nLimit 1 <strong>console</strong> per player.",
-  "strippedText": "+1 mu Whenever an agenda is scored or stolen, gain 1 credit. Then, you may install 1 card from your grip. Limit 1 console per player."
+  "strippedText": "+1 mu Whenever an agenda is scored or stolen, gain 1 credit. Then, you may install 1 card from your grip. Limit 1 console per player.",
+  "strippedTitle": "Pantograph"
 }

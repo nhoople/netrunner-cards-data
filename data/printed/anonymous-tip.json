@@ -1,5 +1,6 @@
 {
   "cardId": "anonymous-tip",
   "text": "Draw 3 cards.",
-  "strippedText": "Draw 3 cards."
+  "strippedText": "Draw 3 cards.",
+  "strippedTitle": "Anonymous Tip"
 }

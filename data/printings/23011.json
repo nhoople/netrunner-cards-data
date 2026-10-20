@@ -2,8 +2,8 @@
   "code": "23011",
   "cardId": "embolus",
   "pack": "magnum-opus",
-  "flavor": "<strong>Designed by 2016 GenCon Champion Dan D'Argenio</strong>",
   "illustrator": "Mia Siergiejew",
   "quantity": 3,
-  "position": 6
+  "position": 6,
+  "releasedBy": "fantasy-flight-games"
 }

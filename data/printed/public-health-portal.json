@@ -1,5 +1,6 @@
 {
   "cardId": "public-health-portal",
   "text": "When your turn begins, reveal the top card of R&D and gain 2[credit].",
-  "strippedText": "When your turn begins, reveal the top card of R&D and gain 2 credits."
+  "strippedText": "When your turn begins, reveal the top card of R&D and gain 2 credits.",
+  "strippedTitle": "Public Health Portal"
 }

@@ -1,5 +1,6 @@
 {
   "cardId": "hard-hitting-news",
   "text": "After you resolve this operation, your action phase ends.\nPlay only if the Runner made a run during their last turn.\nTrace[4]. If successful, give the Runner 4 tags.",
-  "strippedText": "After you resolve this operation, your action phase ends. Play only if the Runner made a run during their last turn. Trace[4]. If successful, give the Runner 4 tags."
+  "strippedText": "After you resolve this operation, your action phase ends. Play only if the Runner made a run during their last turn. Trace[4]. If successful, give the Runner 4 tags.",
+  "strippedTitle": "Hard-Hitting News"
 }

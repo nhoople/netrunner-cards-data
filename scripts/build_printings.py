@@ -1,40 +1,29 @@
 #!/usr/bin/env python3
 """Write data/printings/<code>.json from the pinned Null Signal catalog.
 
-One record per printing in a corpus pack. A reprinted title gets one record
-for each pack that printed it. The rules file stays one per title.
+One record per printing in a corpus set, taken from v2/printings. A
+reprinted title gets one record for each set that printed it. The rules
+file stays one per title.
 
 Usage: python3 scripts/build_printings.py
 """
 from __future__ import annotations
 
 import json
-import re
 import sys
-import unicodedata
 from pathlib import Path
 
-from nsg_catalog import load_pack_cards
-from spin_common import slugify
+from nsg_catalog import load_card_sets, load_v2_printings, our_id
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
 OUT = DATA / "printings"
 
-# Booster and reprint packs whose titles were absorbed into a corpus wave.
+# Booster and reprint sets whose titles were absorbed into a corpus wave.
 ABSORBED = {
-    "uprising": ("urbp",),
-    "midnight-sun": ("msbp",),
-    "magnum-opus": ("mor",),
-}
-
-# spin_common.slugify already resolves these. Kept for a naive slug that does not.
-NAIVE_TO_CORPUS = {
-    "doppelg-nger": "doppelganger",
-    "chaos-theory-w-nderkind": "chaos-theory-wunderkind",
-    "the-maker-s-eye": "the-makers-eye",
-    "aesop-s-pawnshop": "aesops-pawnshop",
-    "hadrian-s-wall": "hadrians-wall",
+    "urbp": "uprising",
+    "msbp": "midnight-sun",
+    "mor": "magnum-opus",
 }
 
 
@@ -48,91 +37,115 @@ def pack_code_for(wave: str) -> str:
     return code
 
 
-def legacy_slug(title: str) -> str:
-    """Apostrophes become hyphens. Some corpus ids were minted that way."""
-    t = title.replace("™", "").replace("®", "").replace("©", "")
-    t = unicodedata.normalize("NFKD", t)
-    t = "".join(c for c in t if not unicodedata.combining(c))
-    t = t.lower()
-    t = t.replace("“", "").replace("”", "").replace('"', "")
-    t = t.replace(".", "-").replace(":", " ").replace("!", "").replace("*", "")
-    t = t.replace("(", " ").replace(")", " ")
-    t = re.sub(r"[^a-z0-9]+", "-", t)
-    return t.strip("-")
+def legacy_to_wave() -> dict[str, str]:
+    """Map a catalog legacy pack code to the corpus wave that stores its titles."""
+    found = dict(ABSORBED)
+    for path in (DATA / "manifests").glob("*.json"):
+        manifest = json.loads(path.read_text(encoding="utf-8"))
+        code = manifest.get("nrdbPackCode")
+        wave = manifest.get("pack")
+        if isinstance(code, str) and isinstance(wave, str):
+            found[code] = wave
+    found["su21"] = "system-update-2021"
+    return found
 
 
-def resolve_id(title: str, known: set[str]) -> str | None:
-    cid = slugify(title)
-    if cid in known:
-        return cid
-    mapped = NAIVE_TO_CORPUS.get(cid)
-    if mapped in known:
-        return mapped
-    older = legacy_slug(title)
-    if older in known:
-        return older
-    return None
-
-
-def record(card: dict, card_id: str, wave: str) -> dict:
-    printing = {
-        "code": str(card["code"]),
+def record(printing: dict, card_id: str, wave: str) -> dict:
+    record = {
+        "code": str(printing["id"]),
         "cardId": card_id,
         "pack": wave,
     }
-    flavor = card.get("flavor")
-    illustrator = card.get("illustrator")
+    flavor = printing.get("flavor")
+    illustrator = printing.get("illustrator")
     if isinstance(flavor, str) and flavor.strip():
-        printing["flavor"] = flavor
+        record["flavor"] = flavor
     if isinstance(illustrator, str) and illustrator.strip():
-        printing["illustrator"] = illustrator
-    quantity = card.get("quantity")
-    position = card.get("position")
+        record["illustrator"] = illustrator
+    quantity = printing.get("quantity")
+    position = printing.get("position")
     if isinstance(quantity, int):
-        printing["quantity"] = quantity
+        record["quantity"] = quantity
     if isinstance(position, int):
-        printing["position"] = position
-    return printing
+        record["position"] = position
+    released_by = printing.get("released_by")
+    if isinstance(released_by, str) and released_by:
+        record["releasedBy"] = released_by.replace("_", "-")
+    layout_id = printing.get("layout_id")
+    if isinstance(layout_id, str) and layout_id:
+        record["layoutId"] = layout_id
+    copy_quantity = printing.get("copy_quantity")
+    if isinstance(copy_quantity, int):
+        record["copyQuantity"] = copy_quantity
+    faces = printing.get("faces")
+    if isinstance(faces, list) and faces:
+        record["faces"] = [
+            {
+                key: face.get("copy_quantity") if key == "copyQuantity" else face.get(key)
+                for key in ("flavor", "copyQuantity")
+                if face.get("copy_quantity" if key == "copyQuantity" else key) is not None
+            }
+            for face in faces
+            if isinstance(face, dict)
+        ]
+    return record
 
 
 def main() -> int:
     pool = json.loads((DATA / "pool.json").read_text(encoding="utf-8"))
-    known: set[str] = set()
-    for wave in pool["waves"].values():
-        known.update(wave.get("cards") or [])
+    listed = {
+        wave: set(pool["waves"][wave].get("cards") or [])
+        for wave in pool["corpusOrder"]
+    }
+    codes = legacy_to_wave()
+    sets = load_card_sets()
+    wave_by_set: dict[str, str] = {}
+    primary_set_by_wave: dict[str, str] = {}
+    for card_set in sets:
+        legacy = card_set.get("legacy_code")
+        if isinstance(legacy, str) and legacy in codes:
+            wave_by_set[str(card_set["id"])] = codes[legacy]
+    errors: list[str] = []
+    for wave in pool["corpusOrder"]:
+        primary = pack_code_for(wave)
+        matches = [s for s in sets if s.get("legacy_code") == primary]
+        if len(matches) != 1:
+            errors.append(f"{wave}: expected one v2 set with legacy_code {primary!r}")
+            continue
+        primary_set_by_wave[wave] = str(matches[0]["id"])
 
     written: dict[str, dict] = {}
-    errors: list[str] = []
+    seen_in_primary: dict[str, set[str]] = {wave: set() for wave in listed}
 
-    for wave in pool["corpusOrder"]:
-        listed = set(pool["waves"][wave]["cards"])
-        primary = pack_code_for(wave)
-        seen_in_primary: set[str] = set()
-        for pack_code in (primary, *ABSORBED.get(wave, ())):
-            for card in load_pack_cards(pack_code):
-                title = card.get("title")
-                code = card.get("code")
-                if not isinstance(title, str) or not isinstance(code, str):
-                    errors.append(f"{pack_code}: card missing title or code")
-                    continue
-                card_id = resolve_id(title, known)
-                if card_id is None or card_id not in listed:
-                    if pack_code == primary:
-                        errors.append(
-                            f"{wave}/{pack_code}: {title!r} ({code}) "
-                            f"resolved to {card_id!r}, which this pack does not list"
-                        )
-                    continue
-                if pack_code == primary:
-                    seen_in_primary.add(card_id)
-                code = str(code)
-                if code in written and written[code]["cardId"] != card_id:
-                    errors.append(f"code {code} used by {written[code]['cardId']} and {card_id}")
-                    continue
-                written[code] = record(card, card_id, wave)
-        missing = sorted(listed - seen_in_primary)
+    for printing in load_v2_printings():
+        set_id = printing.get("card_set_id")
+        wave = wave_by_set.get(set_id) if isinstance(set_id, str) else None
+        if wave is None or wave not in listed:
+            continue
+        catalog_id = printing.get("card_id")
+        if not isinstance(catalog_id, str):
+            errors.append(f"{set_id}: printing {printing.get('id')!r} has no card_id")
+            continue
+        card_id = our_id(catalog_id)
+        if card_id not in listed[wave]:
+            if set_id == primary_set_by_wave.get(wave):
+                errors.append(
+                    f"{wave}/{set_id}: {catalog_id!r} ({printing.get('id')}) "
+                    "is printed in the primary set but not listed in pool.json"
+                )
+            continue
+        if set_id == primary_set_by_wave.get(wave):
+            seen_in_primary[wave].add(card_id)
+        code = str(printing["id"])
+        if code in written and written[code]["cardId"] != card_id:
+            errors.append(f"code {code} used by {written[code]['cardId']} and {card_id}")
+            continue
+        written[code] = record(printing, card_id, wave)
+
+    for wave, cards in listed.items():
+        missing = sorted(cards - seen_in_primary[wave])
         if missing:
-            errors.append(f"{wave}: pool cards missing from {primary}: {missing}")
+            errors.append(f"{wave}: pool cards missing from the primary set: {missing}")
 
     if errors:
         print("\n".join(errors))

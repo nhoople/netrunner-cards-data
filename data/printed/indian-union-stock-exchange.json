@@ -1,5 +1,6 @@
 {
   "cardId": "indian-union-stock-exchange",
   "text": "Whenever you rez or play an out-of-faction card (including Indian Union Stock Exchange), gain 1[credit].",
-  "strippedText": "Whenever you rez or play an out-of-faction card (including Indian Union Stock Exchange), gain 1 credit."
+  "strippedText": "Whenever you rez or play an out-of-faction card (including Indian Union Stock Exchange), gain 1 credit.",
+  "strippedTitle": "Indian Union Stock Exchange"
 }

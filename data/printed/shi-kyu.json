@@ -1,5 +1,6 @@
 {
   "cardId": "shi-kyu",
   "text": "When the Runner accesses this asset anywhere except in R&D, spend any number of credits. The Runner suffers 1 net damage for each credit spent this way unless they add this asset to their score area as an agenda worth −1 agenda point.",
-  "strippedText": "When the Runner accesses this asset anywhere except in R&D, spend any number of credits. The Runner suffers 1 net damage for each credit spent this way unless they add this asset to their score area as an agenda worth -1 agenda point."
+  "strippedText": "When the Runner accesses this asset anywhere except in R&D, spend any number of credits. The Runner suffers 1 net damage for each credit spent this way unless they add this asset to their score area as an agenda worth -1 agenda point.",
+  "strippedTitle": "Shi.Kyu"
 }

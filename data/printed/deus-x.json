@@ -1,5 +1,6 @@
 {
   "cardId": "deus-x",
   "text": "Interface → <strong>[trash]:</strong> Break any number of <strong>AP</strong> subroutines.\n[interrupt] → <strong>[trash]:</strong> Prevent any amount of net damage.",
-  "strippedText": "Interface -> trash: Break any number of AP subroutines. Interrupt -> trash: Prevent any amount of net damage."
+  "strippedText": "Interface -> trash: Break any number of AP subroutines. Interrupt -> trash: Prevent any amount of net damage.",
+  "strippedTitle": "Deus X"
 }

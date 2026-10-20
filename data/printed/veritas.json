@@ -1,5 +1,6 @@
 {
   "cardId": "veritas",
   "text": "[subroutine] The Corp gains 2[credit].\n[subroutine] The Runner loses 2[credit].\n[subroutine] Trace[2]. If successful, give the Runner 1 tag.",
-  "strippedText": "Subroutine The Corp gains 2 credits. Subroutine The Runner loses 2 credits. Subroutine Trace[2]. If successful, give the Runner 1 tag."
+  "strippedText": "Subroutine The Corp gains 2 credits. Subroutine The Runner loses 2 credits. Subroutine Trace[2]. If successful, give the Runner 1 tag.",
+  "strippedTitle": "Veritas"
 }

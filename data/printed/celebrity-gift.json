@@ -1,5 +1,6 @@
 {
   "cardId": "celebrity-gift",
   "text": "As an additional cost to play this operation, spend [click].\nReveal up to 5 cards in HQ. Gain 2[credit] for each card you revealed this way.",
-  "strippedText": "As an additional cost to play this operation, spend click. Reveal up to 5 cards in HQ. Gain 2 credits for each card you revealed this way."
+  "strippedText": "As an additional cost to play this operation, spend click. Reveal up to 5 cards in HQ. Gain 2 credits for each card you revealed this way.",
+  "strippedTitle": "Celebrity Gift"
 }

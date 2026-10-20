@@ -1,5 +1,6 @@
 {
   "cardId": "marker",
   "text": "[subroutine] The next piece of ice the Runner encounters during this run gains \"[subroutine] End the run.\" after its other subroutines for the remainder of that run.",
-  "strippedText": "Subroutine The next piece of ice the Runner encounters during this run gains \"Subroutine End the run.\" after its other subroutines for the remainder of that run."
+  "strippedText": "Subroutine The next piece of ice the Runner encounters during this run gains \"Subroutine End the run.\" after its other subroutines for the remainder of that run.",
+  "strippedTitle": "Marker"
 }

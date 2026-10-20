@@ -1,5 +1,6 @@
 {
   "cardId": "starlight-crusade-funding",
   "text": "When your turn begins, lose [click].\nIgnore any additional costs on each <strong>double</strong> event you play.",
-  "strippedText": "When your turn begins, lose click. Ignore any additional costs on each double event you play."
+  "strippedText": "When your turn begins, lose click. Ignore any additional costs on each double event you play.",
+  "strippedTitle": "Starlight Crusade Funding"
 }

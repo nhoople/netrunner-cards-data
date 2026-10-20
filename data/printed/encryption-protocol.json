@@ -1,5 +1,6 @@
 {
   "cardId": "encryption-protocol",
   "text": "The trash cost of all installed cards is increased by 1.",
-  "strippedText": "The trash cost of all installed cards is increased by 1."
+  "strippedText": "The trash cost of all installed cards is increased by 1.",
+  "strippedTitle": "Encryption Protocol"
 }

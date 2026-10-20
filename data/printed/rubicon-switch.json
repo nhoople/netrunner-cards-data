@@ -1,5 +1,6 @@
 {
   "cardId": "rubicon-switch",
   "text": "Once per turn → [click], <strong>X[credit]:</strong> Derez 1 piece of ice with a printed rez cost of X[credit] that was rezzed this turn.",
-  "strippedText": "Once per turn -> click, X[credit]: Derez 1 piece of ice with a printed rez cost of X[credit] that was rezzed this turn."
+  "strippedText": "Once per turn -> click, X[credit]: Derez 1 piece of ice with a printed rez cost of X[credit] that was rezzed this turn.",
+  "strippedTitle": "Rubicon Switch"
 }

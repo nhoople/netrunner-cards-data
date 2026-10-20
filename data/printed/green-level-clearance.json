@@ -1,5 +1,6 @@
 {
   "cardId": "green-level-clearance",
   "text": "Gain 3[credit] and draw 1 card.",
-  "strippedText": "Gain 3 credits and draw 1 card."
+  "strippedText": "Gain 3 credits and draw 1 card.",
+  "strippedTitle": "Green Level Clearance"
 }

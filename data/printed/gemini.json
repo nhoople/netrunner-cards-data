@@ -1,5 +1,6 @@
 {
   "cardId": "gemini",
   "text": "[subroutine] Trace[2]. If successful, do 1 net damage. If your trace strength is 5 or greater, do 1 net damage.",
-  "strippedText": "Subroutine Trace[2]. If successful, do 1 net damage. If your trace strength is 5 or greater, do 1 net damage."
+  "strippedText": "Subroutine Trace[2]. If successful, do 1 net damage. If your trace strength is 5 or greater, do 1 net damage.",
+  "strippedTitle": "Gemini"
 }

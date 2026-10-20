@@ -1,5 +1,6 @@
 {
   "cardId": "kompromat",
   "text": "Run a server protected by ice. When that run ends, if it was successful, give the Corp 1 bad publicity unless they derez 1 piece of ice protecting the attacked server.\nRemove this event from the game.",
-  "strippedText": "Run a server protected by ice. When that run ends, if it was successful, give the Corp 1 bad publicity unless they derez 1 piece of ice protecting the attacked server. Remove this event from the game."
+  "strippedText": "Run a server protected by ice. When that run ends, if it was successful, give the Corp 1 bad publicity unless they derez 1 piece of ice protecting the attacked server. Remove this event from the game.",
+  "strippedTitle": "Kompromat"
 }

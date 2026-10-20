@@ -1,5 +1,6 @@
 {
   "cardId": "brute-force-hack",
   "text": "As an additional cost to play this event, spend [click].\nDerez a piece of ice that has a rez cost of X or lower.",
-  "strippedText": "As an additional cost to play this event, spend click. Derez a piece of ice that has a rez cost of X or lower."
+  "strippedText": "As an additional cost to play this event, spend click. Derez a piece of ice that has a rez cost of X or lower.",
+  "strippedTitle": "Brute-Force-Hack"
 }

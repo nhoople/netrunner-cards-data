@@ -1,5 +1,6 @@
 {
   "cardId": "flashbang",
   "text": "Interface → <strong>6[credit]:</strong> Derez the <strong>sentry</strong> you are encountering.\n<strong>1[credit]:</strong> +1 strength.",
-  "strippedText": "Interface -> 6 credits: Derez the sentry you are encountering. 1 credit: +1 strength."
+  "strippedText": "Interface -> 6 credits: Derez the sentry you are encountering. 1 credit: +1 strength.",
+  "strippedTitle": "Flashbang"
 }

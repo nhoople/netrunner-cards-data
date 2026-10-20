@@ -1,5 +1,6 @@
 {
   "cardId": "telework-contract",
   "text": "When you install this resource, load 9[credit] onto it. When it is empty, trash it.\nOnce per turn → [click]<strong>:</strong> Take 3[credit] from this resource.",
-  "strippedText": "When you install this resource, load 9[credit] onto it. When it is empty, trash it. Once per turn -> click: Take 3[credit] from this resource."
+  "strippedText": "When you install this resource, load 9[credit] onto it. When it is empty, trash it. Once per turn -> click: Take 3[credit] from this resource.",
+  "strippedTitle": "Telework Contract"
 }

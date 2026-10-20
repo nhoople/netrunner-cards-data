@@ -1,5 +1,6 @@
 {
   "cardId": "rook",
   "text": "While this program is hosted on ice, the rez cost of each piece of ice protecting this server is increased by 2.\n[click]: Host this program on a piece of ice that is not hosting a <strong>Caïssa</strong> program.\nIf this program is hosted on ice, its [click] ability can only be used to host it on ice protecting the same server or in the same position as its current host ice. <em>(Count positions from the innermost ice.)</em>",
-  "strippedText": "While this program is hosted on ice, the rez cost of each piece of ice protecting this server is increased by 2. click: Host this program on a piece of ice that is not hosting a Caissa program. If this program is hosted on ice, its click ability can only be used to host it on ice protecting the same server or in the same position as its current host ice. (Count positions from the innermost ice.)"
+  "strippedText": "While this program is hosted on ice, the rez cost of each piece of ice protecting this server is increased by 2. click: Host this program on a piece of ice that is not hosting a Caissa program. If this program is hosted on ice, its click ability can only be used to host it on ice protecting the same server or in the same position as its current host ice. (Count positions from the innermost ice.)",
+  "strippedTitle": "Rook"
 }

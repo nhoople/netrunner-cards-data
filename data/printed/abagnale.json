@@ -1,5 +1,6 @@
 {
   "cardId": "abagnale",
   "text": "Interface → <strong>1[credit]:</strong> Break 1 <strong>code gate</strong> subroutine.\n<strong>2[credit]:</strong> +2 strength.\n[trash]<strong>:</strong> Bypass the <strong>code gate</strong> you are encountering.",
-  "strippedText": "Interface -> 1 credit: Break 1 code gate subroutine. 2 credits: +2 strength. trash: Bypass the code gate you are encountering."
+  "strippedText": "Interface -> 1 credit: Break 1 code gate subroutine. 2 credits: +2 strength. trash: Bypass the code gate you are encountering.",
+  "strippedTitle": "Abagnale"
 }

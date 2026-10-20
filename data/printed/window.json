@@ -1,5 +1,6 @@
 {
   "cardId": "window",
   "text": "[click]: Draw 1 card from the bottom of your stack.",
-  "strippedText": "click: Draw 1 card from the bottom of your stack."
+  "strippedText": "click: Draw 1 card from the bottom of your stack.",
+  "strippedTitle": "Window"
 }

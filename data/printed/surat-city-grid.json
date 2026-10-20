@@ -1,5 +1,6 @@
 {
   "cardId": "surat-city-grid",
   "text": "Whenever you rez another card in the root of or protecting this server, you may rez 1 card, paying 2[credit] less.\nLimit 1 <strong>region</strong> per server.",
-  "strippedText": "Whenever you rez another card in the root of or protecting this server, you may rez 1 card, paying 2 credits less. Limit 1 region per server."
+  "strippedText": "Whenever you rez another card in the root of or protecting this server, you may rez 1 card, paying 2 credits less. Limit 1 region per server.",
+  "strippedTitle": "Surat City Grid"
 }

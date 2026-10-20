@@ -1,5 +1,6 @@
 {
   "cardId": "ive-had-worse",
   "text": "Draw 3 cards.\nWhenever I've Had Worse is trashed by taking net or meat damage, draw 3 cards.",
-  "strippedText": "Draw 3 cards. Whenever I've Had Worse is trashed by taking net or meat damage, draw 3 cards."
+  "strippedText": "Draw 3 cards. Whenever I've Had Worse is trashed by taking net or meat damage, draw 3 cards.",
+  "strippedTitle": "I've Had Worse"
 }

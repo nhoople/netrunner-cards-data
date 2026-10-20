@@ -2,7 +2,9 @@
 
 ## Catalog source
 
-Pack extracts come from pinned [Null-Signal-Games/netrunner-cards-json](https://github.com/Null-Signal-Games/netrunner-cards-json) (NSG source of truth; NRDB is downstream). See README **Data pipeline / catalog extract source**. NRDB codes may appear as identifiers. Card text is not taken from the NRDB API. Verified rulings are copied from that catalog's `v2/rulings/` snapshot, which itself was fetched from the NRDB rulings API. Watch new packs by diffing NSG against `data/pool.json`.
+Card extracts come from the `v2` catalog in pinned [Null-Signal-Games/netrunner-cards-json](https://github.com/Null-Signal-Games/netrunner-cards-json) (NSG source of truth; NRDB is downstream): `v2/cards/` for titles, `v2/printings/` for printings, and the reference vocabularies beside them. See README **Data pipeline / catalog extract source**. The `pack/{code}.json` export is not read. NRDB codes may appear as identifiers. Card text is not taken from the NRDB API. Verified rulings are copied from that catalog's `v2/rulings/` snapshot, which itself was fetched from the NRDB rulings API. Watch new packs with `python3 scripts/nsg_catalog.py check`.
+
+Corpus title ids are this repo's own: convert a catalog id with `nsg_catalog.our_id`. Author ability wording from the catalog's `stripped_text`, and copy `text`/`stripped_text` into `data/printed/` verbatim through `scripts/build_catalog_facts.py`; do not derive a plain version from the marked-up text locally.
 
 ## Pack card work / Effect IR
 

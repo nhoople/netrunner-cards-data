@@ -1,5 +1,6 @@
 {
   "cardId": "orbital-superiority",
   "text": "When you score this agenda, if the Runner is tagged, do 4 meat damage; otherwise, give the Runner 1 tag.",
-  "strippedText": "When you score this agenda, if the Runner is tagged, do 4 meat damage; otherwise, give the Runner 1 tag."
+  "strippedText": "When you score this agenda, if the Runner is tagged, do 4 meat damage; otherwise, give the Runner 1 tag.",
+  "strippedTitle": "Orbital Superiority"
 }

@@ -1,5 +1,6 @@
 {
   "cardId": "city-surveillance",
   "text": "When the Runner's turn begins, give them 1 tag unless they pay 1[credit].",
-  "strippedText": "When the Runner's turn begins, give them 1 tag unless they pay 1 credit."
+  "strippedText": "When the Runner's turn begins, give them 1 tag unless they pay 1 credit.",
+  "strippedTitle": "City Surveillance"
 }

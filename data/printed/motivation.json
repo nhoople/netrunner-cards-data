@@ -1,5 +1,6 @@
 {
   "cardId": "motivation",
   "text": "When your turn begins, you may look at the top card of your stack.",
-  "strippedText": "When your turn begins, you may look at the top card of your stack."
+  "strippedText": "When your turn begins, you may look at the top card of your stack.",
+  "strippedTitle": "Motivation"
 }

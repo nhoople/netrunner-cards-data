@@ -1,5 +1,6 @@
 {
   "cardId": "attini",
   "text": "Threat 3 → The Runner cannot spend credits while subroutines on this ice are resolving. <em>(This ability is active if any player has 3 or more agenda points.)</em>\n[subroutine] Do 1 net damage unless the Runner pays 2[credit].\n[subroutine] Do 1 net damage unless the Runner pays 2[credit].\n[subroutine] Do 1 net damage unless the Runner pays 2[credit].",
-  "strippedText": "Threat 3 -> The Runner cannot spend credits while subroutines on this ice are resolving. (This ability is active if any player has 3 or more agenda points.) Subroutine Do 1 net damage unless the Runner pays 2 credits. Subroutine Do 1 net damage unless the Runner pays 2 credits. Subroutine Do 1 net damage unless the Runner pays 2 credits."
+  "strippedText": "Threat 3 -> The Runner cannot spend credits while subroutines on this ice are resolving. (This ability is active if any player has 3 or more agenda points.) Subroutine Do 1 net damage unless the Runner pays 2 credits. Subroutine Do 1 net damage unless the Runner pays 2 credits. Subroutine Do 1 net damage unless the Runner pays 2 credits.",
+  "strippedTitle": "Attini"
 }

@@ -1,5 +1,6 @@
 {
   "cardId": "principia",
   "text": "This program costs 1[credit] less to install for each other installed <strong>icebreaker</strong>. <em>(Programs trashed as part of installing this program don’t count.)</em>\nInterface → <strong>1[credit]:</strong> Break 1 <strong>barrier</strong> subroutine.\n<strong>2[credit]:</strong> +2 strength.",
-  "strippedText": "This program costs 1 credit less to install for each other installed icebreaker. (Programs trashed as part of installing this program don't count.) Interface -> 1 credit: Break 1 barrier subroutine. 2 credits: +2 strength."
+  "strippedText": "This program costs 1 credit less to install for each other installed icebreaker. (Programs trashed as part of installing this program don't count.) Interface -> 1 credit: Break 1 barrier subroutine. 2 credits: +2 strength.",
+  "strippedTitle": "Principia"
 }

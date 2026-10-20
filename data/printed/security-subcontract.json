@@ -1,5 +1,6 @@
 {
   "cardId": "security-subcontract",
   "text": "[click], <strong>trash a rezzed piece of ice:</strong> Gain 4[credit].",
-  "strippedText": "click, trash a rezzed piece of ice: Gain 4 credits."
+  "strippedText": "click, trash a rezzed piece of ice: Gain 4 credits.",
+  "strippedTitle": "Security Subcontract"
 }

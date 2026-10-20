@@ -1,5 +1,6 @@
 {
   "cardId": "escher",
   "text": "Run HQ. If successful, instead of breaching HQ, rearrange any number of ice protecting all servers. <em>(Do not rez or derez any ice or change the number of ice protecting any server.)</em>",
-  "strippedText": "Run HQ. If successful, instead of breaching HQ, rearrange any number of ice protecting all servers. (Do not rez or derez any ice or change the number of ice protecting any server.)"
+  "strippedText": "Run HQ. If successful, instead of breaching HQ, rearrange any number of ice protecting all servers. (Do not rez or derez any ice or change the number of ice protecting any server.)",
+  "strippedTitle": "Escher"
 }

@@ -1,5 +1,6 @@
 {
   "cardId": "hunter-seeker",
   "text": "As an additional cost to play this operation, spend [click].\nPlay only if the Runner stole an agenda during their last turn.\nTrash 1 installed card.",
-  "strippedText": "As an additional cost to play this operation, spend click. Play only if the Runner stole an agenda during their last turn. Trash 1 installed card."
+  "strippedText": "As an additional cost to play this operation, spend click. Play only if the Runner stole an agenda during their last turn. Trash 1 installed card.",
+  "strippedTitle": "Hunter Seeker"
 }

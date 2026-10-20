@@ -1,5 +1,6 @@
 {
   "cardId": "subcontract",
   "text": "Play only if the Runner is tagged.\nPlay up to 2 operations from HQ (paying all costs), resolving them one at a time.",
-  "strippedText": "Play only if the Runner is tagged. Play up to 2 operations from HQ (paying all costs), resolving them one at a time."
+  "strippedText": "Play only if the Runner is tagged. Play up to 2 operations from HQ (paying all costs), resolving them one at a time.",
+  "strippedTitle": "Subcontract"
 }

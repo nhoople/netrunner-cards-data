@@ -1,5 +1,6 @@
 {
   "cardId": "clones-are-not-people",
   "text": "This card is not trashed until another <strong>current</strong> is played or an agenda is stolen.\nWhen you score an agenda, add \"Clones are not People\" to your score area as an agenda worth 1 agenda point.",
-  "strippedText": "This card is not trashed until another current is played or an agenda is stolen. When you score an agenda, add \"Clones are not People\" to your score area as an agenda worth 1 agenda point."
+  "strippedText": "This card is not trashed until another current is played or an agenda is stolen. When you score an agenda, add \"Clones are not People\" to your score area as an agenda worth 1 agenda point.",
+  "strippedTitle": "\"Clones are not People\""
 }

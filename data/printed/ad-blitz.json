@@ -1,5 +1,6 @@
 {
   "cardId": "ad-blitz",
   "text": "As an additional cost to play this operation, spend [click].\nInstall and rez (paying all costs) X <strong>advertisements</strong> from Archives and/or HQ, if able.",
-  "strippedText": "As an additional cost to play this operation, spend click. Install and rez (paying all costs) X advertisements from Archives and/or HQ, if able."
+  "strippedText": "As an additional cost to play this operation, spend click. Install and rez (paying all costs) X advertisements from Archives and/or HQ, if able.",
+  "strippedTitle": "Ad Blitz"
 }

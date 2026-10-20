@@ -1,5 +1,6 @@
 {
   "cardId": "net-quarantine",
   "text": "For the first trace each turn, the Runner's [link] is treated as 0. <em>(They can still increase their link strength by spending credits.)</em>\nWhenever the Runner spends credits to increase their link strength, gain 1[credit] for every 2[credit] they spent.",
-  "strippedText": "For the first trace each turn, the Runner's link is treated as 0. (They can still increase their link strength by spending credits.) Whenever the Runner spends credits to increase their link strength, gain 1 credit for every 2 credits they spent."
+  "strippedText": "For the first trace each turn, the Runner's link is treated as 0. (They can still increase their link strength by spending credits.) Whenever the Runner spends credits to increase their link strength, gain 1 credit for every 2 credits they spent.",
+  "strippedTitle": "Net Quarantine"
 }

@@ -2,8 +2,8 @@
   "code": "23013",
   "cardId": "crowdfunding",
   "pack": "magnum-opus",
-  "flavor": "<strong>Designed by 2017 GenCon Champion Sam Suied</strong>",
   "illustrator": "Mia Siergiejew",
   "quantity": 3,
-  "position": 2
+  "position": 2,
+  "releasedBy": "fantasy-flight-games"
 }

@@ -1,5 +1,6 @@
 {
   "cardId": "gaslight",
   "text": "When your turn begins, you may trash this asset. If you do, search R&D for an operation and reveal it. <em>(Shuffle R&D after searching it.)</em> Add that operation to HQ.",
-  "strippedText": "When your turn begins, you may trash this asset. If you do, search R&D for an operation and reveal it. (Shuffle R&D after searching it.) Add that operation to HQ."
+  "strippedText": "When your turn begins, you may trash this asset. If you do, search R&D for an operation and reveal it. (Shuffle R&D after searching it.) Add that operation to HQ.",
+  "strippedTitle": "Gaslight"
 }

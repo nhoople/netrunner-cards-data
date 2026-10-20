@@ -1,5 +1,6 @@
 {
   "cardId": "asmund-pudlat",
   "text": "When you install this resource, search your stack for up to 2 <strong>virus</strong> or <strong>weapon</strong> cards with different names. Host those cards faceup on this resource. <em>(They are not installed.)</em>\nWhen your turn begins, you may add 1 hosted card to your grip. If there are no more hosted cards, trash this resource.",
-  "strippedText": "When you install this resource, search your stack for up to 2 virus or weapon cards with different names. Host those cards faceup on this resource. (They are not installed.) When your turn begins, you may add 1 hosted card to your grip. If there are no more hosted cards, trash this resource."
+  "strippedText": "When you install this resource, search your stack for up to 2 virus or weapon cards with different names. Host those cards faceup on this resource. (They are not installed.) When your turn begins, you may add 1 hosted card to your grip. If there are no more hosted cards, trash this resource.",
+  "strippedTitle": "Asmund Pudlat"
 }

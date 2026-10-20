@@ -1,5 +1,6 @@
 {
   "cardId": "priority-requisition",
   "text": "When you score Priority Requisition, you may rez a piece of ice ignoring all costs.",
-  "strippedText": "When you score Priority Requisition, you may rez a piece of ice ignoring all costs."
+  "strippedText": "When you score Priority Requisition, you may rez a piece of ice ignoring all costs.",
+  "strippedTitle": "Priority Requisition"
 }

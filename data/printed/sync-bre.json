@@ -1,5 +1,6 @@
 {
   "cardId": "sync-bre",
   "text": "[subroutine] Trace[4]. If successful, give the Runner 1 tag.\n[subroutine] Trace[2]. If successful, whenever the Runner breaches a server for the remainder of this run, they access 1 fewer card.",
-  "strippedText": "Subroutine Trace[4]. If successful, give the Runner 1 tag. Subroutine Trace[2]. If successful, whenever the Runner breaches a server for the remainder of this run, they access 1 fewer card."
+  "strippedText": "Subroutine Trace[4]. If successful, give the Runner 1 tag. Subroutine Trace[2]. If successful, whenever the Runner breaches a server for the remainder of this run, they access 1 fewer card.",
+  "strippedTitle": "SYNC BRE"
 }

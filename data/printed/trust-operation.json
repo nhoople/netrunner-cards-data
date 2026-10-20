@@ -1,5 +1,6 @@
 {
   "cardId": "trust-operation",
   "text": "Play only if the Runner is tagged.\nTrash 1 installed resource. Install and rez 1 card from Archives, ignoring all costs.",
-  "strippedText": "Play only if the Runner is tagged. Trash 1 installed resource. Install and rez 1 card from Archives, ignoring all costs."
+  "strippedText": "Play only if the Runner is tagged. Trash 1 installed resource. Install and rez 1 card from Archives, ignoring all costs.",
+  "strippedTitle": "Trust Operation"
 }

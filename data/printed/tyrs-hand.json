@@ -1,5 +1,6 @@
 {
   "cardId": "tyrs-hand",
   "text": "[interrupt] → When a subroutine would be broken on a piece of <strong>bioroid</strong> ice protecting this server, you may rez this upgrade.\n[interrupt] → <strong>[trash]:</strong> Prevent 1 subroutine from being broken on a piece of <strong>bioroid</strong> ice protecting this server.",
-  "strippedText": "Interrupt -> When a subroutine would be broken on a piece of bioroid ice protecting this server, you may rez this upgrade. Interrupt -> trash: Prevent 1 subroutine from being broken on a piece of bioroid ice protecting this server."
+  "strippedText": "Interrupt -> When a subroutine would be broken on a piece of bioroid ice protecting this server, you may rez this upgrade. Interrupt -> trash: Prevent 1 subroutine from being broken on a piece of bioroid ice protecting this server.",
+  "strippedTitle": "Tyr's Hand"
 }

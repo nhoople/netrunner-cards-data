@@ -1,5 +1,6 @@
 {
   "cardId": "the-cleaners",
   "text": "[interrupt] → Whenever you would do meat damage, increase that damage by 1.",
-  "strippedText": "Interrupt -> Whenever you would do meat damage, increase that damage by 1."
+  "strippedText": "Interrupt -> Whenever you would do meat damage, increase that damage by 1.",
+  "strippedTitle": "The Cleaners"
 }

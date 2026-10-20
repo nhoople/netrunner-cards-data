@@ -1,5 +1,6 @@
 {
   "cardId": "ubax",
   "text": "+1[mu]\nWhen your turn begins, draw 1 card.\nLimit 1 <strong>console</strong> per player.",
-  "strippedText": "+1 mu When your turn begins, draw 1 card. Limit 1 console per player."
+  "strippedText": "+1 mu When your turn begins, draw 1 card. Limit 1 console per player.",
+  "strippedTitle": "Ubax"
 }

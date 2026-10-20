@@ -1,5 +1,6 @@
 {
   "cardId": "economic-warfare",
   "text": "Play only if the Runner made a successful run during their last turn.\nIf the Runner has at least 4[credit], they lose 4[credit].",
-  "strippedText": "Play only if the Runner made a successful run during their last turn. If the Runner has at least 4 credits, they lose 4 credits."
+  "strippedText": "Play only if the Runner made a successful run during their last turn. If the Runner has at least 4 credits, they lose 4 credits.",
+  "strippedTitle": "Economic Warfare"
 }

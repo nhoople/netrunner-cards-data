@@ -5,5 +5,6 @@
   "flavor": "The Yog.0 database is a crowdsourced compilation of sniffed, spoofed, and logged passkeys. If the key to the gate is in the database, you're in. If it's not, change the gate!",
   "illustrator": "Kate Niemczyk",
   "quantity": 2,
-  "position": 14
+  "position": 14,
+  "releasedBy": "fantasy-flight-games"
 }

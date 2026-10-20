@@ -1,5 +1,6 @@
 {
   "cardId": "hudson-1-0",
   "text": "<strong>Lose [click]:</strong> Break 1 subroutine on this ice. Only the Runner can use this ability.\n[subroutine] The Runner cannot access more than 1 card during this run.\n[subroutine] The Runner cannot access more than 1 card during this run.",
-  "strippedText": "Lose click: Break 1 subroutine on this ice. Only the Runner can use this ability. Subroutine The Runner cannot access more than 1 card during this run. Subroutine The Runner cannot access more than 1 card during this run."
+  "strippedText": "Lose click: Break 1 subroutine on this ice. Only the Runner can use this ability. Subroutine The Runner cannot access more than 1 card during this run. Subroutine The Runner cannot access more than 1 card during this run.",
+  "strippedTitle": "Hudson 1.0"
 }

@@ -1,5 +1,6 @@
 {
   "cardId": "museum-of-history",
   "text": "This asset costs 0 influence if you have 50 or more cards in your deck.\nWhen your turn begins, you may shuffle 1 card from Archives into R&D.",
-  "strippedText": "This asset costs 0 influence if you have 50 or more cards in your deck. When your turn begins, you may shuffle 1 card from Archives into R&D."
+  "strippedText": "This asset costs 0 influence if you have 50 or more cards in your deck. When your turn begins, you may shuffle 1 card from Archives into R&D.",
+  "strippedTitle": "Museum of History"
 }

@@ -1,5 +1,6 @@
 {
   "cardId": "emergency-shutdown",
   "text": "Play only if you made a successful run on HQ this turn.\nDerez 1 installed piece of ice.",
-  "strippedText": "Play only if you made a successful run on HQ this turn. Derez 1 installed piece of ice."
+  "strippedText": "Play only if you made a successful run on HQ this turn. Derez 1 installed piece of ice.",
+  "strippedTitle": "Emergency Shutdown"
 }

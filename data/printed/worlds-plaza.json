@@ -1,5 +1,6 @@
 {
   "cardId": "worlds-plaza",
   "text": "Worlds Plaza can host up to 3 assets.\n[click]: Install an asset from HQ on Worlds Plaza and rez it, lowering its rez cost by 2, if able.",
-  "strippedText": "Worlds Plaza can host up to 3 assets. click: Install an asset from HQ on Worlds Plaza and rez it, lowering its rez cost by 2, if able."
+  "strippedText": "Worlds Plaza can host up to 3 assets. click: Install an asset from HQ on Worlds Plaza and rez it, lowering its rez cost by 2, if able.",
+  "strippedTitle": "Worlds Plaza"
 }

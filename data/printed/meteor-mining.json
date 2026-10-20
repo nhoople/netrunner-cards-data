@@ -1,5 +1,6 @@
 {
   "cardId": "meteor-mining",
   "text": "When you score Meteor Mining, you may gain 7[credit]. If the Runner has at least 2 tags, you may do 7 meat damage instead.",
-  "strippedText": "When you score Meteor Mining, you may gain 7 credits. If the Runner has at least 2 tags, you may do 7 meat damage instead."
+  "strippedText": "When you score Meteor Mining, you may gain 7 credits. If the Runner has at least 2 tags, you may do 7 meat damage instead.",
+  "strippedTitle": "Meteor Mining"
 }

@@ -1,5 +1,6 @@
 {
   "cardId": "clearinghouse",
   "text": "You can advance this asset.\nWhen your turn begins, you may trash this asset to do 1 meat damage for each hosted advancement counter.",
-  "strippedText": "You can advance this asset. When your turn begins, you may trash this asset to do 1 meat damage for each hosted advancement counter."
+  "strippedText": "You can advance this asset. When your turn begins, you may trash this asset to do 1 meat damage for each hosted advancement counter.",
+  "strippedTitle": "Clearinghouse"
 }

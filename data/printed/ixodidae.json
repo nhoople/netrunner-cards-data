@@ -1,5 +1,6 @@
 {
   "cardId": "ixodidae",
   "text": "Whenever the Corp loses at least 1[credit], gain 1[credit].\nTrash Ixodidae if the Corp purges virus counters.",
-  "strippedText": "Whenever the Corp loses at least 1 credit, gain 1 credit. Trash Ixodidae if the Corp purges virus counters."
+  "strippedText": "Whenever the Corp loses at least 1 credit, gain 1 credit. Trash Ixodidae if the Corp purges virus counters.",
+  "strippedTitle": "Ixodidae"
 }

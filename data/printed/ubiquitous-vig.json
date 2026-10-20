@@ -1,5 +1,6 @@
 {
   "cardId": "ubiquitous-vig",
   "text": "You can advance this asset.\nWhen your turn begins, gain 1[credit] for each hosted advancement counter.",
-  "strippedText": "You can advance this asset. When your turn begins, gain 1 credit for each hosted advancement counter."
+  "strippedText": "You can advance this asset. When your turn begins, gain 1 credit for each hosted advancement counter.",
+  "strippedTitle": "Ubiquitous Vig"
 }

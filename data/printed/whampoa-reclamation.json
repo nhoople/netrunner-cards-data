@@ -1,5 +1,6 @@
 {
   "cardId": "whampoa-reclamation",
   "text": "Once per turn → <strong>Trash 1 card from HQ:</strong> Add 1 card from Archives to the bottom of R&D.",
-  "strippedText": "Once per turn -> Trash 1 card from HQ: Add 1 card from Archives to the bottom of R&D."
+  "strippedText": "Once per turn -> Trash 1 card from HQ: Add 1 card from Archives to the bottom of R&D.",
+  "strippedTitle": "Whampoa Reclamation"
 }

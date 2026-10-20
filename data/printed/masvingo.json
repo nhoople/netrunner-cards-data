@@ -1,5 +1,6 @@
 {
   "cardId": "masvingo",
   "text": "You can advance this ice.\nWhen you rez this ice, place 1 advancement counter on it.\nThis ice gains \"[subroutine] End the run.\" for each hosted advancement counter.",
-  "strippedText": "You can advance this ice. When you rez this ice, place 1 advancement counter on it. This ice gains \"Subroutine End the run.\" for each hosted advancement counter."
+  "strippedText": "You can advance this ice. When you rez this ice, place 1 advancement counter on it. This ice gains \"Subroutine End the run.\" for each hosted advancement counter.",
+  "strippedTitle": "Masvingo"
 }

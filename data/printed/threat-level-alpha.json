@@ -1,5 +1,6 @@
 {
   "cardId": "threat-level-alpha",
   "text": "As an additional cost to play this operation, spend [click].\nTrace[1]. If successful, give the Runner 1 tag for each tag they have or, if the Runner has no tags, give them 1 tag.",
-  "strippedText": "As an additional cost to play this operation, spend click. Trace[1]. If successful, give the Runner 1 tag for each tag they have or, if the Runner has no tags, give them 1 tag."
+  "strippedText": "As an additional cost to play this operation, spend click. Trace[1]. If successful, give the Runner 1 tag for each tag they have or, if the Runner has no tags, give them 1 tag.",
+  "strippedTitle": "Threat Level Alpha"
 }

@@ -1,5 +1,6 @@
 {
   "cardId": "oaktown-grid",
   "text": "The trash cost of each card in the root of this server is increased by 3.\nLimit 1 <strong>region</strong> per server.",
-  "strippedText": "The trash cost of each card in the root of this server is increased by 3. Limit 1 region per server."
+  "strippedText": "The trash cost of each card in the root of this server is increased by 3. Limit 1 region per server.",
+  "strippedTitle": "Oaktown Grid"
 }

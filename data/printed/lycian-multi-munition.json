@@ -1,5 +1,6 @@
 {
   "cardId": "lycian-multi-munition",
   "text": "When you rez this ice, choose 1 or more subtypes among <strong>barrier</strong>, <strong>code gate</strong>, and <strong>sentry</strong>. This ice gains the chosen subtypes while it remains rezzed.\nWhen a turn ends, derez this ice.\n[subroutine] If this ice is a <strong>code gate</strong>, the Runner loses [click] and 1[credit].\n[subroutine] If this ice is a <strong>sentry</strong>, trash 1 installed program.\n[subroutine] If this ice is a <strong>barrier</strong>, gain 1[credit] and end the run.",
-  "strippedText": "When you rez this ice, choose 1 or more subtypes among barrier, code gate, and sentry. This ice gains the chosen subtypes while it remains rezzed. When a turn ends, derez this ice. Subroutine If this ice is a code gate, the Runner loses click and 1 credit. Subroutine If this ice is a sentry, trash 1 installed program. Subroutine If this ice is a barrier, gain 1 credit and end the run."
+  "strippedText": "When you rez this ice, choose 1 or more subtypes among barrier, code gate, and sentry. This ice gains the chosen subtypes while it remains rezzed. When a turn ends, derez this ice. Subroutine If this ice is a code gate, the Runner loses click and 1 credit. Subroutine If this ice is a sentry, trash 1 installed program. Subroutine If this ice is a barrier, gain 1 credit and end the run.",
+  "strippedTitle": "Lycian Multi-Munition"
 }

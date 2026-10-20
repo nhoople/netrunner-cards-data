@@ -1,5 +1,6 @@
 {
   "cardId": "gold-farmer",
   "text": "Whenever the Runner breaks a printed subroutine on this ice, they lose 1[credit].\n[subroutine] End the run unless the Runner pays 3[credit].\n[subroutine] End the run unless the Runner pays 3[credit].",
-  "strippedText": "Whenever the Runner breaks a printed subroutine on this ice, they lose 1 credit. Subroutine End the run unless the Runner pays 3 credits. Subroutine End the run unless the Runner pays 3 credits."
+  "strippedText": "Whenever the Runner breaks a printed subroutine on this ice, they lose 1 credit. Subroutine End the run unless the Runner pays 3 credits. Subroutine End the run unless the Runner pays 3 credits.",
+  "strippedTitle": "Gold Farmer"
 }

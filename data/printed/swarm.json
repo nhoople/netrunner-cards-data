@@ -1,5 +1,6 @@
 {
   "cardId": "swarm",
   "text": "When you rez this ice, take 1 bad publicity.\nYou can advance this ice. It gains \"[subroutine] Trash 1 installed program unless the Runner pays 3[credit].\" for each hosted advancement counter.",
-  "strippedText": "When you rez this ice, take 1 bad publicity. You can advance this ice. It gains \"Subroutine Trash 1 installed program unless the Runner pays 3 credits.\" for each hosted advancement counter."
+  "strippedText": "When you rez this ice, take 1 bad publicity. You can advance this ice. It gains \"Subroutine Trash 1 installed program unless the Runner pays 3 credits.\" for each hosted advancement counter.",
+  "strippedTitle": "Swarm"
 }

@@ -1,5 +1,6 @@
 {
   "cardId": "chum",
   "text": "[subroutine] The next piece of ice the Runner encounters during this run gets +2 strength. When that encounter ends, if the Runner did not fully break that ice, do 3 net damage.",
-  "strippedText": "Subroutine The next piece of ice the Runner encounters during this run gets +2 strength. When that encounter ends, if the Runner did not fully break that ice, do 3 net damage."
+  "strippedText": "Subroutine The next piece of ice the Runner encounters during this run gets +2 strength. When that encounter ends, if the Runner did not fully break that ice, do 3 net damage.",
+  "strippedTitle": "Chum"
 }

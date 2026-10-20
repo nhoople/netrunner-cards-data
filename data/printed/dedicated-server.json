@@ -1,5 +1,6 @@
 {
   "cardId": "dedicated-server",
   "text": "2[recurring-credit]\nUse these credits to rez ice.",
-  "strippedText": "2 recurring credits Use these credits to rez ice."
+  "strippedText": "2 recurring credits Use these credits to rez ice.",
+  "strippedTitle": "Dedicated Server"
 }

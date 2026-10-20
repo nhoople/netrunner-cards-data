@@ -1,5 +1,6 @@
 {
   "cardId": "award-bait",
   "text": "While the Runner is accessing this agenda in R&D, they must reveal it.\nWhen the Runner accesses this agenda, you may place up to 2 advancement counters on 1 installed card you can advance.",
-  "strippedText": "While the Runner is accessing this agenda in R&D, they must reveal it. When the Runner accesses this agenda, you may place up to 2 advancement counters on 1 installed card you can advance."
+  "strippedText": "While the Runner is accessing this agenda in R&D, they must reveal it. When the Runner accesses this agenda, you may place up to 2 advancement counters on 1 installed card you can advance.",
+  "strippedTitle": "Award Bait"
 }

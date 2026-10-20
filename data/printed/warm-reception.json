@@ -1,5 +1,6 @@
 {
   "cardId": "warm-reception",
   "text": "When your turn begins, you may install 1 card from HQ. You cannot score that card this turn. If this server is not protected by ice, you may derez this asset to derez another installed card.",
-  "strippedText": "When your turn begins, you may install 1 card from HQ. You cannot score that card this turn. If this server is not protected by ice, you may derez this asset to derez another installed card."
+  "strippedText": "When your turn begins, you may install 1 card from HQ. You cannot score that card this turn. If this server is not protected by ice, you may derez this asset to derez another installed card.",
+  "strippedTitle": "Warm Reception"
 }

@@ -1,5 +1,6 @@
 {
   "cardId": "hansei-review",
   "text": "Gain 10[credit]. If there are any cards in HQ, trash 1 of them.",
-  "strippedText": "Gain 10 credits. If there are any cards in HQ, trash 1 of them."
+  "strippedText": "Gain 10 credits. If there are any cards in HQ, trash 1 of them.",
+  "strippedTitle": "Hansei Review"
 }

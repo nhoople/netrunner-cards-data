@@ -1,5 +1,6 @@
 {
   "cardId": "seidr-adaptive-barrier",
   "text": "Seidr Adaptive Barrier has +1 strength for each piece of ice protecting this server.\n[subroutine] End the run.",
-  "strippedText": "Seidr Adaptive Barrier has +1 strength for each piece of ice protecting this server. Subroutine End the run."
+  "strippedText": "Seidr Adaptive Barrier has +1 strength for each piece of ice protecting this server. Subroutine End the run.",
+  "strippedTitle": "Seidr Adaptive Barrier"
 }

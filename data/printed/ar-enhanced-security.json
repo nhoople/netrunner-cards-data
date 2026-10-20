@@ -1,5 +1,6 @@
 {
   "cardId": "ar-enhanced-security",
   "text": "The first time each turn the Runner trashes a Corp card, give them 1 tag.",
-  "strippedText": "The first time each turn the Runner trashes a Corp card, give them 1 tag."
+  "strippedText": "The first time each turn the Runner trashes a Corp card, give them 1 tag.",
+  "strippedTitle": "AR-Enhanced Security"
 }

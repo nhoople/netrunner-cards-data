@@ -1,5 +1,6 @@
 {
   "cardId": "blueberry-diesel",
   "text": "Look at the top 2 cards of your stack. You may add 1 of those cards to the bottom of your stack. Draw 2 cards.",
-  "strippedText": "Look at the top 2 cards of your stack. You may add 1 of those cards to the bottom of your stack. Draw 2 cards."
+  "strippedText": "Look at the top 2 cards of your stack. You may add 1 of those cards to the bottom of your stack. Draw 2 cards.",
+  "strippedTitle": "Blueberry! Diesel"
 }

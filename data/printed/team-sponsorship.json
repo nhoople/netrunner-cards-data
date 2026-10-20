@@ -1,5 +1,6 @@
 {
   "cardId": "team-sponsorship",
   "text": "Whenever you score an agenda, you may install a card from Archives or HQ, ignoring the install cost.",
-  "strippedText": "Whenever you score an agenda, you may install a card from Archives or HQ, ignoring the install cost."
+  "strippedText": "Whenever you score an agenda, you may install a card from Archives or HQ, ignoring the install cost.",
+  "strippedTitle": "Team Sponsorship"
 }

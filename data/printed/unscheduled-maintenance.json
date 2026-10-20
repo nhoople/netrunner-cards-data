@@ -1,5 +1,6 @@
 {
   "cardId": "unscheduled-maintenance",
   "text": "This card is not trashed until another <strong>current</strong> is played or an agenda is scored.\nThe Corp cannot install more than 1 piece of ice each turn.",
-  "strippedText": "This card is not trashed until another current is played or an agenda is scored. The Corp cannot install more than 1 piece of ice each turn."
+  "strippedText": "This card is not trashed until another current is played or an agenda is scored. The Corp cannot install more than 1 piece of ice each turn.",
+  "strippedTitle": "Unscheduled Maintenance"
 }

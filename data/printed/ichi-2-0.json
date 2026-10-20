@@ -1,5 +1,6 @@
 {
   "cardId": "ichi-2-0",
   "text": "<strong>Lose [click][click]:</strong> Break up to 2 subroutines on this ice. Only the Runner can use this ability.\n[subroutine] Trash 1 installed program.\n[subroutine] Trash 1 installed program.\n[subroutine] Trace[3]. If successful, do 1 core damage and give the Runner 1 tag.",
-  "strippedText": "Lose click click: Break up to 2 subroutines on this ice. Only the Runner can use this ability. Subroutine Trash 1 installed program. Subroutine Trash 1 installed program. Subroutine Trace[3]. If successful, do 1 core damage and give the Runner 1 tag."
+  "strippedText": "Lose click click: Break up to 2 subroutines on this ice. Only the Runner can use this ability. Subroutine Trash 1 installed program. Subroutine Trash 1 installed program. Subroutine Trace[3]. If successful, do 1 core damage and give the Runner 1 tag.",
+  "strippedTitle": "Ichi 2.0"
 }

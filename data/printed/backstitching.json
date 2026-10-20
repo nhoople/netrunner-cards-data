@@ -1,5 +1,6 @@
 {
   "cardId": "backstitching",
   "text": "When your turn begins, identify your mark. <em>(If you don’t have a mark, a random central server becomes your mark for this turn.)</em>\nWhenever you encounter a piece of ice during a run on your mark, you may trash this resource to bypass that ice.",
-  "strippedText": "When your turn begins, identify your mark. (If you dont have a mark, a random central server becomes your mark for this turn.) Whenever you encounter a piece of ice during a run on your mark, you may trash this resource to bypass that ice."
+  "strippedText": "When your turn begins, identify your mark. (If you dont have a mark, a random central server becomes your mark for this turn.) Whenever you encounter a piece of ice during a run on your mark, you may trash this resource to bypass that ice.",
+  "strippedTitle": "Backstitching"
 }

@@ -1,5 +1,6 @@
 {
   "cardId": "awakening-center",
   "text": "You can install <strong>bioroid</strong> ice onto this upgrade at no install cost.\nWhenever the Runner passes all of the ice protecting this server, you may rez 1 hosted piece of ice, paying 7[credit] less. If you do, the Runner encounters that ice. When this run ends, trash that ice.",
-  "strippedText": "You can install bioroid ice onto this upgrade at no install cost. Whenever the Runner passes all of the ice protecting this server, you may rez 1 hosted piece of ice, paying 7 credits less. If you do, the Runner encounters that ice. When this run ends, trash that ice."
+  "strippedText": "You can install bioroid ice onto this upgrade at no install cost. Whenever the Runner passes all of the ice protecting this server, you may rez 1 hosted piece of ice, paying 7 credits less. If you do, the Runner encounters that ice. When this run ends, trash that ice.",
+  "strippedTitle": "Awakening Center"
 }

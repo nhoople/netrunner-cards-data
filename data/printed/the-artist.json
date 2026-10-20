@@ -1,5 +1,6 @@
 {
   "cardId": "the-artist",
   "text": "Once per turn → [click]<strong>:</strong> Gain 2[credit].\nOnce per turn → [click]<strong>:</strong> Install 1 program or piece of hardware from your grip, paying 1[credit] less.",
-  "strippedText": "Once per turn -> click: Gain 2[credit]. Once per turn -> click: Install 1 program or piece of hardware from your grip, paying 1[credit] less."
+  "strippedText": "Once per turn -> click: Gain 2[credit]. Once per turn -> click: Install 1 program or piece of hardware from your grip, paying 1[credit] less.",
+  "strippedTitle": "The Artist"
 }

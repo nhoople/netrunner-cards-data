@@ -1,5 +1,6 @@
 {
   "cardId": "mestnichestvo",
   "text": "You can advance this ice.\nWhen the Runner encounters this ice, you may remove 1 hosted advancement counter. If you do, the Runner loses 3[credit].\n[subroutine] The Runner loses 3[credit].\n[subroutine] End the run.",
-  "strippedText": "You can advance this ice. When the Runner encounters this ice, you may remove 1 hosted advancement counter. If you do, the Runner loses 3 credits. Subroutine The Runner loses 3 credits. Subroutine End the run."
+  "strippedText": "You can advance this ice. When the Runner encounters this ice, you may remove 1 hosted advancement counter. If you do, the Runner loses 3 credits. Subroutine The Runner loses 3 credits. Subroutine End the run.",
+  "strippedTitle": "Mestnichestvo"
 }

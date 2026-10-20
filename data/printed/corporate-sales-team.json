@@ -1,5 +1,6 @@
 {
   "cardId": "corporate-sales-team",
   "text": "When you score Corporate Sales Team, place 10[credit] on it.\nWhen each player's turn begins, take 1[credit] from Corporate Sales Team.",
-  "strippedText": "When you score Corporate Sales Team, place 10 credits on it. When each player's turn begins, take 1 credit from Corporate Sales Team."
+  "strippedText": "When you score Corporate Sales Team, place 10 credits on it. When each player's turn begins, take 1 credit from Corporate Sales Team.",
+  "strippedTitle": "Corporate Sales Team"
 }

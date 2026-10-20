@@ -1,5 +1,6 @@
 {
   "cardId": "reaver",
   "text": "The first time you trash an installed card each turn, draw 1 card.",
-  "strippedText": "The first time you trash an installed card each turn, draw 1 card."
+  "strippedText": "The first time you trash an installed card each turn, draw 1 card.",
+  "strippedTitle": "Reaver"
 }

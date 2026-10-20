@@ -1,5 +1,6 @@
 {
   "cardId": "corporate-troubleshooter",
   "text": "<strong>X</strong>[credit], [trash]<strong>:</strong> Choose 1 rezzed piece of ice protecting this server. That ice gets +X strength for the remainder of the turn.",
-  "strippedText": "X credits, trash: Choose 1 rezzed piece of ice protecting this server. That ice gets +X strength for the remainder of the turn."
+  "strippedText": "X credits, trash: Choose 1 rezzed piece of ice protecting this server. That ice gets +X strength for the remainder of the turn.",
+  "strippedTitle": "Corporate Troubleshooter"
 }

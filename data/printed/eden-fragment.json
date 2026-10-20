@@ -1,5 +1,6 @@
 {
   "cardId": "eden-fragment",
   "text": "Ignore the install cost of the first piece of ice you install each turn.\nLimit 1 per deck.",
-  "strippedText": "Ignore the install cost of the first piece of ice you install each turn. Limit 1 per deck."
+  "strippedText": "Ignore the install cost of the first piece of ice you install each turn. Limit 1 per deck.",
+  "strippedTitle": "Eden Fragment"
 }

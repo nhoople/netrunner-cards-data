@@ -1,5 +1,6 @@
 {
   "cardId": "cache",
   "text": "Place 3 virus counters on Cache when it is installed.\n<strong>Hosted virus counter:</strong> Gain 1[credit].",
-  "strippedText": "Place 3 virus counters on Cache when it is installed. Hosted virus counter: Gain 1 credit."
+  "strippedText": "Place 3 virus counters on Cache when it is installed. Hosted virus counter: Gain 1 credit.",
+  "strippedTitle": "Cache"
 }

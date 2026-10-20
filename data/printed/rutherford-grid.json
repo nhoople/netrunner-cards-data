@@ -1,5 +1,6 @@
 {
   "cardId": "rutherford-grid",
   "text": "The base trace strength of each trace during a run on this server is increased by 2.\nLimit 1 <strong>region</strong> per server.",
-  "strippedText": "The base trace strength of each trace during a run on this server is increased by 2. Limit 1 region per server."
+  "strippedText": "The base trace strength of each trace during a run on this server is increased by 2. Limit 1 region per server.",
+  "strippedTitle": "Rutherford Grid"
 }

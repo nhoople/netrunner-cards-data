@@ -1,5 +1,6 @@
 {
   "cardId": "elective-upgrade",
   "text": "When you score this agenda, place 2 agenda counters on it.\nOnce per turn → [click], <strong>hosted agenda counter:</strong> Gain [click][click].",
-  "strippedText": "When you score this agenda, place 2 agenda counters on it. Once per turn -> click, hosted agenda counter: Gain click click."
+  "strippedText": "When you score this agenda, place 2 agenda counters on it. Once per turn -> click, hosted agenda counter: Gain click click.",
+  "strippedTitle": "Elective Upgrade"
 }

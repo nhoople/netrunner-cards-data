@@ -1,5 +1,6 @@
 {
   "cardId": "tsurugi",
   "text": "[subroutine] End the run unless the Corp pays 1[credit].\n[subroutine] Do 1 net damage.\n[subroutine] Do 1 net damage.\n[subroutine] Do 1 net damage.",
-  "strippedText": "Subroutine End the run unless the Corp pays 1 credit. Subroutine Do 1 net damage. Subroutine Do 1 net damage. Subroutine Do 1 net damage."
+  "strippedText": "Subroutine End the run unless the Corp pays 1 credit. Subroutine Do 1 net damage. Subroutine Do 1 net damage. Subroutine Do 1 net damage.",
+  "strippedTitle": "Tsurugi"
 }

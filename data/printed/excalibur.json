@@ -1,5 +1,6 @@
 {
   "cardId": "excalibur",
   "text": "[subroutine] The Runner cannot make another run this turn.",
-  "strippedText": "Subroutine The Runner cannot make another run this turn."
+  "strippedText": "Subroutine The Runner cannot make another run this turn.",
+  "strippedTitle": "Excalibur"
 }

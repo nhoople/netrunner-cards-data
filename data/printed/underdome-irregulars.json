@@ -1,5 +1,6 @@
 {
   "cardId": "underdome-irregulars",
   "text": "When your action phase ends, if a piece of ice was rezzed this turn, draw 2 cards or remove 1 tag. If no ice was rezzed this turn, trash this resource.",
-  "strippedText": "When your action phase ends, if a piece of ice was rezzed this turn, draw 2 cards or remove 1 tag. If no ice was rezzed this turn, trash this resource."
+  "strippedText": "When your action phase ends, if a piece of ice was rezzed this turn, draw 2 cards or remove 1 tag. If no ice was rezzed this turn, trash this resource.",
+  "strippedTitle": "Underdome Irregulars"
 }

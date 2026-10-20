@@ -1,5 +1,6 @@
 {
   "cardId": "ice-wall",
   "text": "You can advance this ice. It gets +1 strength for each hosted advancement counter.\n[subroutine] End the run.",
-  "strippedText": "You can advance this ice. It gets +1 strength for each hosted advancement counter. Subroutine End the run."
+  "strippedText": "You can advance this ice. It gets +1 strength for each hosted advancement counter. Subroutine End the run.",
+  "strippedTitle": "Ice Wall"
 }

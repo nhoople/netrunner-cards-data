@@ -1,5 +1,6 @@
 {
   "cardId": "social-engineering",
   "text": "Play only as your first [click].\nChoose an unrezzed piece of ice. If the Corp rezzes that piece of ice this turn, gain credits equal to its rez cost.",
-  "strippedText": "Play only as your first click. Choose an unrezzed piece of ice. If the Corp rezzes that piece of ice this turn, gain credits equal to its rez cost."
+  "strippedText": "Play only as your first click. Choose an unrezzed piece of ice. If the Corp rezzes that piece of ice this turn, gain credits equal to its rez cost.",
+  "strippedTitle": "Social Engineering"
 }

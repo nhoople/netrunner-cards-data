@@ -1,5 +1,6 @@
 {
   "cardId": "kakugo",
   "text": "When the Runner passes Kakugo, do 1 net damage.\n[subroutine] End the run.",
-  "strippedText": "When the Runner passes Kakugo, do 1 net damage. Subroutine End the run."
+  "strippedText": "When the Runner passes Kakugo, do 1 net damage. Subroutine End the run.",
+  "strippedTitle": "Kakugo"
 }

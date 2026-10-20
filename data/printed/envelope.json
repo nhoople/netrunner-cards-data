@@ -1,5 +1,6 @@
 {
   "cardId": "envelope",
   "text": "[subroutine] Do 1 net damage.\n[subroutine] End the run.",
-  "strippedText": "Subroutine Do 1 net damage. Subroutine End the run."
+  "strippedText": "Subroutine Do 1 net damage. Subroutine End the run.",
+  "strippedTitle": "Envelope"
 }

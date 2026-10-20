@@ -1,5 +1,6 @@
 {
   "cardId": "ablative-barrier",
   "text": "Threat 3 → When you rez this ice during a run against this server, you may install 1 non-agenda card from HQ or Archives in the root of or protecting another server. <em>(This ability is active if any player has 3 or more agenda points.)</em>\n[subroutine] End the run.",
-  "strippedText": "Threat 3 -> When you rez this ice during a run against this server, you may install 1 non-agenda card from HQ or Archives in the root of or protecting another server. (This ability is active if any player has 3 or more agenda points.) Subroutine End the run."
+  "strippedText": "Threat 3 -> When you rez this ice during a run against this server, you may install 1 non-agenda card from HQ or Archives in the root of or protecting another server. (This ability is active if any player has 3 or more agenda points.) Subroutine End the run.",
+  "strippedTitle": "Ablative Barrier"
 }

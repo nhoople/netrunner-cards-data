@@ -1,5 +1,6 @@
 {
   "cardId": "wall-to-wall",
   "text": "When your turn begins, if you have any other rezzed assets, resolve 1 of the following; otherwise, resolve up to 3 in any order:<ul><li>Draw 1 card.</li><li>Gain 1[credit].</li><li>Place 1 advancement counter on an installed piece of ice.</li><li>Add this asset to HQ.</li></ul>",
-  "strippedText": "When your turn begins, if you have any other rezzed assets, resolve 1 of the following; otherwise, resolve up to 3 in any order: * Draw 1 card. * Gain 1 credit. * Place 1 advancement counter on an installed piece of ice. * Add this asset to HQ."
+  "strippedText": "When your turn begins, if you have any other rezzed assets, resolve 1 of the following; otherwise, resolve up to 3 in any order: * Draw 1 card. * Gain 1 credit. * Place 1 advancement counter on an installed piece of ice. * Add this asset to HQ.",
+  "strippedTitle": "Wall to Wall"
 }

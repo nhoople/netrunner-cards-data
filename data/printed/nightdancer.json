@@ -1,5 +1,6 @@
 {
   "cardId": "nightdancer",
   "text": "[subroutine] The Runner loses [click], if able. You have an additional [click] to spend during your next turn.\n[subroutine] The Runner loses [click], if able. You have an additional [click] to spend during your next turn.",
-  "strippedText": "Subroutine The Runner loses click, if able. You have an additional click to spend during your next turn. Subroutine The Runner loses click, if able. You have an additional click to spend during your next turn."
+  "strippedText": "Subroutine The Runner loses click, if able. You have an additional click to spend during your next turn. Subroutine The Runner loses click, if able. You have an additional click to spend during your next turn.",
+  "strippedTitle": "Nightdancer"
 }

@@ -18,8 +18,9 @@ Files under [`data/`](data/) are the API. Clone the repo or fetch a **tagged** r
 | --- | --- |
 | [`data/schema.json`](data/schema.json) | JSON Schema for card definitions |
 | [`data/pool.json`](data/pool.json) | Declared corpus. `corpusOrder` is the release order; every wave there is `supported`. Each wave also has `dateRelease`, `cycle`, and `size` |
-| [`data/printings/`](data/printings/) | One file per printing (`<code>.json`): title id, pack, flavor, illustrator, `quantity` (copies in that pack), and `position`. The image address is `https://card-images.netrunnerdb.com/v2/large/{code}.jpg` |
-| [`data/printed/`](data/printed/) | One file per title (`<id>.json`): the current printed `text` and `strippedText`, errata included. The rules file keeps the Effect IR |
+| [`data/printings/`](data/printings/) | One file per printing (`<code>.json`): title id, pack, flavor, illustrator, `quantity` (copies in that pack), `position`, `releasedBy`, and where the catalog has them `layoutId`, `copyQuantity`, and `faces`. The image address is `https://card-images.netrunnerdb.com/v2/large/{code}.jpg` |
+| [`data/printed/`](data/printed/) | One file per title (`<id>.json`): the current printed `text`, `strippedText`, and `strippedTitle`, errata included. The rules file keeps the Effect IR |
+| `data/factions.json`, `data/subtypes.json`, `data/card-types.json`, `data/sides.json`, `data/card-set-types.json`, `data/card-layouts.json`, `data/ruling-sources.json` | Reference vocabularies from the catalog: faction names and colors, subtype and type names, set types, printing layouts, and ruling sources. Card files and restriction lists are validated against them |
 | [`data/rulings/`](data/rulings/) | One file per title with a rules-team-verified ruling (`<id>.json`). Taken from the pinned catalog's `v2/rulings/` snapshot of the NetrunnerDB rulings API. Unverified rulings are left out. A ruling explains the card text; an erratum changes the text itself |
 | [`data/formats/`](data/formats/) | One file per format. Each snapshot names a card pool and, when the catalog has one, a restriction |
 | [`data/card-pools/`](data/card-pools/) | The waves legal in one snapshot of a format |
@@ -45,11 +46,10 @@ Card files live at `data/<side>/<type>/<id>.json` (for example `data/runner/prog
 | Item | Upstream | Why it waits |
 | --- | --- | --- |
 | Unverified rulings | `v2/rulings/` | Only rulings with `nsg_rules_team_verified` are kept |
-| Ruling source names | `v2/ruling_sources.json` | The ruling text already names its source |
 | Translations | `v2/translations/` | Locale display, not play |
-| Designer credit, pronouns, pronunciation, narrative text | fields on `v2/cards/` | Not used by the engine or the table |
+| Designer credit, pronouns, pronunciation, narrative text | fields on `v2/cards/` | Not used by the engine or the table. The champion credit lines in pack flavor text are not in `v2` and are not kept |
 | Prebuilt decks | `prebuilts.json` | Six published deck lists |
-| Second face and layout | `v2/printings/` | The pack files this corpus copies have a single face |
+| Second-face rules text | `v2/cards/` | At the pinned commit a flip identity's catalog text is its front face. The full printed sentence, every side, is kept in `data/printed/` from the pack export (`scripts/flip-text-overrides.json`) until `v2` stores face text |
 
 Partial cards list unimplemented clauses in an `unsupported` array — never silent wrong behavior. A wave marked `supported` in [`data/pool.json`](data/pool.json) must keep those arrays empty unless the card is listed with a reason in [`data/supported-unsupported-allowlist.json`](data/supported-unsupported-allowlist.json) (enforced by `scripts/validate-cards.py`). See [`CONTRIBUTING.md`](CONTRIBUTING.md) for the CR gate PR template.
 
@@ -110,7 +110,9 @@ Tag dataset releases as `vMAJOR.MINOR.PATCH` (e.g. `v1.35.0`). Bump when card JS
 
 **Pipeline:** pinned [Null-Signal-Games/netrunner-cards-json](https://github.com/Null-Signal-Games/netrunner-cards-json) (NSG source of truth; NRDB is downstream) → author Effect IR into this repo → [nhoople/netrunner-engine](https://github.com/nhoople/netrunner-engine) pins our tags.
 
-Pack metadata for generate/extract scripts comes from that NSG repo (`pack/{code}.json`). The NetrunnerDB public API is **not** the preferred ingest. NRDB codes may still appear as identifiers (pack codes, card ids); that does not make NRDB the catalog source.
+Card and printing facts for generate/extract scripts come from that repo's `v2` catalog: titles from `v2/cards/<id>.json`, printings from `v2/printings/<set>.json`, and the reference vocabularies beside them. The older `pack/{code}.json` export is not read. The NetrunnerDB public API is **not** the preferred ingest. NRDB codes may still appear as identifiers (pack codes, card ids); that does not make NRDB the catalog source.
+
+Corpus title ids are this repo's own. A catalog id converts with `nsg_catalog.our_id` (underscores become hyphens), with two minted exceptions kept in that function: `o_shortage` is `o2-shortage` here, and `the_wizards_chest` is `the-wizard-s-chest`.
 
 When you are about to take a new pack, or when you hear about an errata, run:
 
@@ -118,7 +120,7 @@ When you are about to take a new pack, or when you hear about an errata, run:
 python3 scripts/nsg_catalog.py check
 ```
 
-That compares the pinned commit with current `main`. It reports a pack code that is not in the corpus, and any change to `faction_code`, cost, strength, or printed text in a corpus pack. The corpus is every pack code named in `pool.json` or fetched by a `generate-*.py` script. `napd`, `tdc`, and `sm` stay outside it. The command does not edit card files. Copy an accepted fact onto the existing card. When the printed text changed, re-read that card's ability record. Then set `ref` in the pin to the reviewed commit, clear `tmp/nsg-catalog/`, and re-fetch.
+That compares the pinned commit with current `main`. It reports a catalog title that is not in the corpus, and any change to `faction_id`, cost, strength, or printed text on a corpus card. The command does not edit card files. Copy an accepted fact onto the existing card. When the printed text changed, re-read that card's ability record. Then set `ref` in the pin to the reviewed commit, clear `tmp/nsg-catalog/`, and re-fetch.
 
 | Path | Use |
 | --- | --- |

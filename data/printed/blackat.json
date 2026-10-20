@@ -1,5 +1,6 @@
 {
   "cardId": "blackat",
   "text": "Interface → <strong>1[credit]:</strong> Break 1 <strong>barrier</strong> subroutine. If you spent a credit from a <strong>stealth</strong> card to use this ability, instead break up to 3 <strong>barrier</strong> subroutines.\n<strong>2[credit]:</strong> +1 strength. If you spent at least 1 credit from a <strong>stealth</strong> card to use this ability, instead +2 strength.",
-  "strippedText": "Interface -> 1 credit: Break 1 barrier subroutine. If you spent a credit from a stealth card to use this ability, instead break up to 3 barrier subroutines. 2 credits: +1 strength. If you spent at least 1 credit from a stealth card to use this ability, instead +2 strength."
+  "strippedText": "Interface -> 1 credit: Break 1 barrier subroutine. If you spent a credit from a stealth card to use this ability, instead break up to 3 barrier subroutines. 2 credits: +1 strength. If you spent at least 1 credit from a stealth card to use this ability, instead +2 strength.",
+  "strippedTitle": "BlacKat"
 }

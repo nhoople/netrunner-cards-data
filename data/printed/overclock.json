@@ -1,5 +1,6 @@
 {
   "cardId": "overclock",
   "text": "Place 5[credit] on this event, then run any server. You can spend hosted credits during that run.",
-  "strippedText": "Place 5 credits on this event, then run any server. You can spend hosted credits during that run."
+  "strippedText": "Place 5 credits on this event, then run any server. You can spend hosted credits during that run.",
+  "strippedTitle": "Overclock"
 }

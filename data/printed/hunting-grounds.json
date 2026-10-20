@@ -1,5 +1,6 @@
 {
   "cardId": "hunting-grounds",
   "text": "[interrupt], once per turn → <strong>0[credit]:</strong> Prevent a \"when encountered\" ability on a piece of ice.\n[trash]<strong>:</strong> Install the top 3 cards of your stack facedown.",
-  "strippedText": "Interrupt, once per turn -> 0[credit]: Prevent a \"when encountered\" ability on a piece of ice. trash: Install the top 3 cards of your stack facedown."
+  "strippedText": "Interrupt, once per turn -> 0[credit]: Prevent a \"when encountered\" ability on a piece of ice. trash: Install the top 3 cards of your stack facedown.",
+  "strippedTitle": "Hunting Grounds"
 }

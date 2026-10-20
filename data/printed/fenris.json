@@ -1,5 +1,6 @@
 {
   "cardId": "fenris",
   "text": "When you rez this ice, take 1 bad publicity.\n[subroutine] Do 1 core damage.\n[subroutine] End the run.",
-  "strippedText": "When you rez this ice, take 1 bad publicity. Subroutine Do 1 core damage. Subroutine End the run."
+  "strippedText": "When you rez this ice, take 1 bad publicity. Subroutine Do 1 core damage. Subroutine End the run.",
+  "strippedTitle": "Fenris"
 }

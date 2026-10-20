@@ -1,5 +1,6 @@
 {
   "cardId": "no-free-lunch",
   "text": "[trash]<strong>:</strong> Gain 3[credit].\n[trash]<strong>:</strong> Remove 1 tag.",
-  "strippedText": "trash: Gain 3 credits. trash: Remove 1 tag."
+  "strippedText": "trash: Gain 3 credits. trash: Remove 1 tag.",
+  "strippedTitle": "No Free Lunch"
 }

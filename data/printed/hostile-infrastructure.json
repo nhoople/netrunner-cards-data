@@ -1,5 +1,6 @@
 {
   "cardId": "hostile-infrastructure",
   "text": "Whenever the Runner trashes a Corp card (including Hostile Infrastructure), do 1 net damage.",
-  "strippedText": "Whenever the Runner trashes a Corp card (including Hostile Infrastructure), do 1 net damage."
+  "strippedText": "Whenever the Runner trashes a Corp card (including Hostile Infrastructure), do 1 net damage.",
+  "strippedTitle": "Hostile Infrastructure"
 }

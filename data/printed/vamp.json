@@ -1,5 +1,6 @@
 {
   "cardId": "vamp",
   "text": "Run HQ. If successful, instead of breaching HQ, you may spend X[credit]. If you do, the Corp loses X[credit]. If you spent credits, take 1 tag.",
-  "strippedText": "Run HQ. If successful, instead of breaching HQ, you may spend X credits. If you do, the Corp loses X credits. If you spent credits, take 1 tag."
+  "strippedText": "Run HQ. If successful, instead of breaching HQ, you may spend X credits. If you do, the Corp loses X credits. If you spent credits, take 1 tag.",
+  "strippedTitle": "Vamp"
 }

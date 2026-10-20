@@ -1,5 +1,6 @@
 {
   "cardId": "fall-guy",
   "text": "[interrupt] → [trash]<strong>:</strong> Prevent a player from trashing another installed resource.\n[trash]<strong>:</strong> Gain 2[credit].",
-  "strippedText": "Interrupt -> trash: Prevent a player from trashing another installed resource. trash: Gain 2[credit]."
+  "strippedText": "Interrupt -> trash: Prevent a player from trashing another installed resource. trash: Gain 2[credit].",
+  "strippedTitle": "Fall Guy"
 }

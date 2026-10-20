@@ -1,5 +1,6 @@
 {
   "cardId": "take-a-dive",
   "text": "Run HQ or R&D. If successful, and if a subroutine resolved during this run, give the Corp 1 bad publicity.\nRemove this event from the game.",
-  "strippedText": "Run HQ or R&D. If successful, and if a subroutine resolved during this run, give the Corp 1 bad publicity. Remove this event from the game."
+  "strippedText": "Run HQ or R&D. If successful, and if a subroutine resolved during this run, give the Corp 1 bad publicity. Remove this event from the game.",
+  "strippedTitle": "Take a Dive"
 }

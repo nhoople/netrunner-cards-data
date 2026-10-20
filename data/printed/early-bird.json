@@ -1,5 +1,6 @@
 {
   "cardId": "early-bird",
   "text": "Play only as your first click.\nGain [click]. Run any server.",
-  "strippedText": "Play only as your first click. Gain click. Run any server."
+  "strippedText": "Play only as your first click. Gain click. Run any server.",
+  "strippedTitle": "Early Bird"
 }

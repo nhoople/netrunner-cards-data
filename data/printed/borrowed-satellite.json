@@ -1,5 +1,6 @@
 {
   "cardId": "borrowed-satellite",
   "text": "+1[link]\nYour maximum hand size is increased by 1.",
-  "strippedText": "+1 link Your maximum hand size is increased by 1."
+  "strippedText": "+1 link Your maximum hand size is increased by 1.",
+  "strippedTitle": "Borrowed Satellite"
 }

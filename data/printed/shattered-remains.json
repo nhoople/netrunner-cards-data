@@ -1,5 +1,6 @@
 {
   "cardId": "shattered-remains",
   "text": "Shattered Remains can be advanced.\nIf you pay 1[credit] when the Runner accesses Shattered Remains, trash 1 piece of hardware for each advancement token on Shattered Remains.",
-  "strippedText": "Shattered Remains can be advanced. If you pay 1 credit when the Runner accesses Shattered Remains, trash 1 piece of hardware for each advancement token on Shattered Remains."
+  "strippedText": "Shattered Remains can be advanced. If you pay 1 credit when the Runner accesses Shattered Remains, trash 1 piece of hardware for each advancement token on Shattered Remains.",
+  "strippedTitle": "Shattered Remains"
 }

@@ -1,5 +1,6 @@
 {
   "cardId": "traffic-accident",
   "text": "Play only if the Runner has at least 2 tags.\nDo 2 meat damage.",
-  "strippedText": "Play only if the Runner has at least 2 tags. Do 2 meat damage."
+  "strippedText": "Play only if the Runner has at least 2 tags. Do 2 meat damage.",
+  "strippedTitle": "Traffic Accident"
 }

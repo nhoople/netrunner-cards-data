@@ -1,5 +1,6 @@
 {
   "cardId": "arissana-rocha-nahu-street-artist",
   "text": "Once per turn → <strong>0[credit]:</strong> Install 1 program from your grip <em>(paying its install cost)</em>. Use this ability only during a run. When that run ends, trash that program if it is not a <strong>trojan</strong>.",
-  "strippedText": "Once per turn -> 0[credit]: Install 1 program from your grip (paying its install cost). Use this ability only during a run. When that run ends, trash that program if it is not a trojan."
+  "strippedText": "Once per turn -> 0[credit]: Install 1 program from your grip (paying its install cost). Use this ability only during a run. When that run ends, trash that program if it is not a trojan.",
+  "strippedTitle": "Arissana Rocha Nahu: Street Artist"
 }

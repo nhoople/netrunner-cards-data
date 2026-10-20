@@ -1,5 +1,6 @@
 {
   "cardId": "by-any-means",
   "text": "Play only as your first [click].\nFor the remainder of the turn, whenever you access a card not in Archives, trash it and suffer 1 meat damage.",
-  "strippedText": "Play only as your first click. For the remainder of the turn, whenever you access a card not in Archives, trash it and suffer 1 meat damage."
+  "strippedText": "Play only as your first click. For the remainder of the turn, whenever you access a card not in Archives, trash it and suffer 1 meat damage.",
+  "strippedTitle": "By Any Means"
 }

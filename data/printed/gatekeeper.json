@@ -1,5 +1,6 @@
 {
   "cardId": "gatekeeper",
   "text": "Gatekeeper has +6 strength if you rezzed it this turn.\n[subroutine] Draw up to 3 cards. Reveal up to 3 agendas in HQ and/or Archives, then shuffle those agendas into R&D.\n[subroutine] End the run.",
-  "strippedText": "Gatekeeper has +6 strength if you rezzed it this turn. Subroutine Draw up to 3 cards. Reveal up to 3 agendas in HQ and/or Archives, then shuffle those agendas into R&D. Subroutine End the run."
+  "strippedText": "Gatekeeper has +6 strength if you rezzed it this turn. Subroutine Draw up to 3 cards. Reveal up to 3 agendas in HQ and/or Archives, then shuffle those agendas into R&D. Subroutine End the run.",
+  "strippedTitle": "Gatekeeper"
 }

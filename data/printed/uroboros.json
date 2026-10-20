@@ -1,5 +1,6 @@
 {
   "cardId": "uroboros",
   "text": "[subroutine] Trace[4]. If successful, the Runner cannot make another run this turn.\n[subroutine] Trace[4]. If successful, end the run.",
-  "strippedText": "Subroutine Trace[4]. If successful, the Runner cannot make another run this turn. Subroutine Trace[4]. If successful, end the run."
+  "strippedText": "Subroutine Trace[4]. If successful, the Runner cannot make another run this turn. Subroutine Trace[4]. If successful, end the run.",
+  "strippedTitle": "Uroboros"
 }

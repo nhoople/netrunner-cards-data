@@ -1,5 +1,6 @@
 {
   "cardId": "stowaway",
   "text": "Install only on a piece of ice.\nWhenever you make a successful run on this server, gain 2[credit].",
-  "strippedText": "Install only on a piece of ice. Whenever you make a successful run on this server, gain 2 credits."
+  "strippedText": "Install only on a piece of ice. Whenever you make a successful run on this server, gain 2 credits.",
+  "strippedTitle": "Stowaway"
 }

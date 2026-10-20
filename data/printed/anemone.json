@@ -1,5 +1,6 @@
 {
   "cardId": "anemone",
   "text": "When you rez this ice during a run against this server, you may trash 1 card from HQ to do 2 net damage.\n[subroutine] Do 1 net damage.",
-  "strippedText": "When you rez this ice during a run against this server, you may trash 1 card from HQ to do 2 net damage. Subroutine Do 1 net damage."
+  "strippedText": "When you rez this ice during a run against this server, you may trash 1 card from HQ to do 2 net damage. Subroutine Do 1 net damage.",
+  "strippedTitle": "Anemone"
 }

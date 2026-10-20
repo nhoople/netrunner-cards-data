@@ -1,5 +1,6 @@
 {
   "cardId": "black-orchestra",
   "text": "Whenever you encounter a <strong>code gate</strong>, you may install this program from your heap.\n<strong>3[credit]:</strong> +2 strength. Then, if this program can interface with the <strong>code gate</strong> you are encountering, break up to 2 subroutines.",
-  "strippedText": "Whenever you encounter a code gate, you may install this program from your heap. 3 credits: +2 strength. Then, if this program can interface with the code gate you are encountering, break up to 2 subroutines."
+  "strippedText": "Whenever you encounter a code gate, you may install this program from your heap. 3 credits: +2 strength. Then, if this program can interface with the code gate you are encountering, break up to 2 subroutines.",
+  "strippedTitle": "Black Orchestra"
 }

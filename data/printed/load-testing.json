@@ -1,5 +1,6 @@
 {
   "cardId": "load-testing",
   "text": "When the Runner's next turn begins, they lose [click].",
-  "strippedText": "When the Runner's next turn begins, they lose click."
+  "strippedText": "When the Runner's next turn begins, they lose click.",
+  "strippedTitle": "Load Testing"
 }

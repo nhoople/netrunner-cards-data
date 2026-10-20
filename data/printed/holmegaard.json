@@ -1,5 +1,6 @@
 {
   "cardId": "holmegaard",
   "text": "[subroutine] Trace[4]. If successful, the Runner cannot access cards or breach the attacked server for the remainder of this run.\n[subroutine] Trash 1 installed <strong>icebreaker</strong>.",
-  "strippedText": "Subroutine Trace[4]. If successful, the Runner cannot access cards or breach the attacked server for the remainder of this run. Subroutine Trash 1 installed icebreaker."
+  "strippedText": "Subroutine Trace[4]. If successful, the Runner cannot access cards or breach the attacked server for the remainder of this run. Subroutine Trash 1 installed icebreaker.",
+  "strippedTitle": "Holmegaard"
 }

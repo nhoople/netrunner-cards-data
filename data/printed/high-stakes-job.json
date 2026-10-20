@@ -1,5 +1,6 @@
 {
   "cardId": "high-stakes-job",
   "text": "Make a run on a server with at least 1 piece of unrezzed ice. When the run ends, gain 12[credit] if it was successful.",
-  "strippedText": "Make a run on a server with at least 1 piece of unrezzed ice. When the run ends, gain 12 credits if it was successful."
+  "strippedText": "Make a run on a server with at least 1 piece of unrezzed ice. When the run ends, gain 12 credits if it was successful.",
+  "strippedTitle": "High-Stakes Job"
 }

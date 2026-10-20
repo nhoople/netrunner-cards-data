@@ -1,5 +1,6 @@
 {
   "cardId": "desperado",
   "text": "+1[mu]\nGain 1[credit] whenever you make a successful run.\nLimit 1 <strong>console</strong> per player.",
-  "strippedText": "+1 mu Gain 1 credit whenever you make a successful run. Limit 1 console per player."
+  "strippedText": "+1 mu Gain 1 credit whenever you make a successful run. Limit 1 console per player.",
+  "strippedTitle": "Desperado"
 }

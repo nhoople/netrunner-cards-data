@@ -1,5 +1,6 @@
 {
   "cardId": "disposable-hq",
   "text": "While the Runner is accessing this upgrade in R&D, they must reveal it.\nWhen the Runner accesses this upgrade, you may add any number of cards from HQ to the bottom of R&D.",
-  "strippedText": "While the Runner is accessing this upgrade in R&D, they must reveal it. When the Runner accesses this upgrade, you may add any number of cards from HQ to the bottom of R&D."
+  "strippedText": "While the Runner is accessing this upgrade in R&D, they must reveal it. When the Runner accesses this upgrade, you may add any number of cards from HQ to the bottom of R&D.",
+  "strippedTitle": "Disposable HQ"
 }

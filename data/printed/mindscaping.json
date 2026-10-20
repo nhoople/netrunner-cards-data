@@ -1,5 +1,6 @@
 {
   "cardId": "mindscaping",
   "text": "Resolve 1 of the following:<ul><li>Gain 4[credit] and draw 2 cards. Add 1 card from HQ to the top of R&D.</li><li>Do X net damage. X is equal to the number of tags the Runner has, up to 3.</li></ul>",
-  "strippedText": "Resolve 1 of the following: * Gain 4 credits and draw 2 cards. Add 1 card from HQ to the top of R&D. * Do X net damage. X is equal to the number of tags the Runner has, up to 3."
+  "strippedText": "Resolve 1 of the following: * Gain 4 credits and draw 2 cards. Add 1 card from HQ to the top of R&D. * Do X net damage. X is equal to the number of tags the Runner has, up to 3.",
+  "strippedTitle": "Mindscaping"
 }

@@ -1,5 +1,6 @@
 {
   "cardId": "vertigo",
   "text": "When the Runner passes this ice, if they have no [click] remaining, they cannot steal or trash Corp cards for the remainder of this run.\n[subroutine] The Runner loses [click].",
-  "strippedText": "When the Runner passes this ice, if they have no click remaining, they cannot steal or trash Corp cards for the remainder of this run. Subroutine The Runner loses click."
+  "strippedText": "When the Runner passes this ice, if they have no click remaining, they cannot steal or trash Corp cards for the remainder of this run. Subroutine The Runner loses click.",
+  "strippedTitle": "Vertigo"
 }

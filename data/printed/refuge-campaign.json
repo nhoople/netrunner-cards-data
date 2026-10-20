@@ -1,5 +1,6 @@
 {
   "cardId": "refuge-campaign",
   "text": "When your turn begins, gain 2[credit].",
-  "strippedText": "When your turn begins, gain 2 credits."
+  "strippedText": "When your turn begins, gain 2 credits.",
+  "strippedTitle": "Refuge Campaign"
 }

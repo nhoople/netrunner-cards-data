@@ -1,5 +1,6 @@
 {
   "cardId": "psychographics",
   "text": "X must be equal to or less than the number of tags the Runner has.\nPlace X advancement counters on 1 installed card you can advance.",
-  "strippedText": "X must be equal to or less than the number of tags the Runner has. Place X advancement counters on 1 installed card you can advance."
+  "strippedText": "X must be equal to or less than the number of tags the Runner has. Place X advancement counters on 1 installed card you can advance.",
+  "strippedTitle": "Psychographics"
 }

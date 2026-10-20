@@ -1,5 +1,6 @@
 {
   "cardId": "clairvoyant-monitor",
   "text": "[subroutine] You and the Runner secretly spend 0[credit], 1[credit], or 2[credit]. Reveal spent credits. If you and the Runner spent a different number of credits, place 1 advancement token on an installed card and end the run.",
-  "strippedText": "Subroutine You and the Runner secretly spend 0 credits, 1 credit, or 2 credits. Reveal spent credits. If you and the Runner spent a different number of credits, place 1 advancement token on an installed card and end the run."
+  "strippedText": "Subroutine You and the Runner secretly spend 0 credits, 1 credit, or 2 credits. Reveal spent credits. If you and the Runner spent a different number of credits, place 1 advancement token on an installed card and end the run.",
+  "strippedTitle": "Clairvoyant Monitor"
 }

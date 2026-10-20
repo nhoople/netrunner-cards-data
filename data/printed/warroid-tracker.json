@@ -1,5 +1,6 @@
 {
   "cardId": "warroid-tracker",
   "text": "Whenever the Runner trashes at least 1 card from this server, from its root, or protecting it, Trace[4]. If successful, the Runner trashes 2 of their installed cards.",
-  "strippedText": "Whenever the Runner trashes at least 1 card from this server, from its root, or protecting it, Trace[4]. If successful, the Runner trashes 2 of their installed cards."
+  "strippedText": "Whenever the Runner trashes at least 1 card from this server, from its root, or protecting it, Trace[4]. If successful, the Runner trashes 2 of their installed cards.",
+  "strippedTitle": "Warroid Tracker"
 }

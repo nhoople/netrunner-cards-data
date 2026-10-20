@@ -1,5 +1,6 @@
 {
   "cardId": "wetwork-refit",
   "text": "Host this operation on a rezzed piece of <strong>bioroid</strong> ice as a condition counter with \"Host ice gains '[subroutine] Do 1 core damage.' before all its other subroutines.\"",
-  "strippedText": "Host this operation on a rezzed piece of bioroid ice as a condition counter with \"Host ice gains 'Subroutine Do 1 core damage.' before all its other subroutines.\""
+  "strippedText": "Host this operation on a rezzed piece of bioroid ice as a condition counter with \"Host ice gains 'Subroutine Do 1 core damage.' before all its other subroutines.\"",
+  "strippedTitle": "Wetwork Refit"
 }

@@ -5,5 +5,6 @@
   "flavor": "At the code level, all ice manifests via a small number of common protocols. Security managers are kept awake by nightmares of a disgruntled sysop walking out the door with the core infosec library.",
   "illustrator": "Krembler",
   "quantity": 3,
-  "position": 9
+  "position": 9,
+  "releasedBy": "null-signal-games"
 }

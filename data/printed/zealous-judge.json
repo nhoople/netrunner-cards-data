@@ -1,5 +1,6 @@
 {
   "cardId": "zealous-judge",
   "text": "Zealous Judge can only be rezzed if the Runner is tagged.\n[click], 1[credit]: Give the Runner 1 tag.",
-  "strippedText": "Zealous Judge can only be rezzed if the Runner is tagged. click, 1 credit: Give the Runner 1 tag."
+  "strippedText": "Zealous Judge can only be rezzed if the Runner is tagged. click, 1 credit: Give the Runner 1 tag.",
+  "strippedTitle": "Zealous Judge"
 }

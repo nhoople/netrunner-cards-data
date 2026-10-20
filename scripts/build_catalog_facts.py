@@ -13,10 +13,10 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-from build_printings import ABSORBED, pack_code_for, resolve_id
-from build_rulings import known_ids, nsg_id_for_titles
+from build_printings import pack_code_for
+from build_rulings import known_ids
 from card_layout import card_file
-from nsg_catalog import fetch_catalog_archive, load_pack_cards
+from nsg_catalog import fetch_catalog_archive, load_v2_cards, our_id
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
@@ -133,33 +133,39 @@ def main() -> int:
     pool = load_json(DATA / "pool.json")
     errors: list[str] = []
 
+    # At the pinned commit, v2/cards carries only the front face of a flip
+    # identity. The full printed sentence (all sides) is kept from the pack
+    # export in scripts/flip-text-overrides.json until v2 stores face text.
+    flip_text = load_json(ROOT / "scripts" / "flip-text-overrides.json")
+
     limits: dict[str, int] = {}
     printed: dict[str, dict] = {}
-    for wave in pool["corpusOrder"]:
-        listed = set(pool["waves"][wave]["cards"])
-        for pack_code in (pack_code_for(wave), *ABSORBED.get(wave, ())):
-            for card in load_pack_cards(pack_code):
-                title = card.get("title")
-                if not isinstance(title, str):
-                    continue
-                card_id = resolve_id(title, known)
-                if card_id is None or card_id not in listed:
-                    continue
-                limit = card.get("deck_limit")
-                if not isinstance(limit, int):
-                    errors.append(f"{card_id}: catalog deck_limit {limit!r}")
-                elif card_id in limits and limits[card_id] != limit:
-                    errors.append(f"{card_id}: deck limit {limits[card_id]} and {limit}")
-                else:
-                    limits[card_id] = limit
-                text = card.get("text") if isinstance(card.get("text"), str) else ""
-                stripped = card.get("stripped_text") if isinstance(card.get("stripped_text"), str) else ""
-                record = {"cardId": card_id, "text": text, "strippedText": stripped}
-                previous = printed.get(card_id)
-                if previous is not None and previous != record:
-                    errors.append(f"{card_id}: printed text differs across printings")
-                else:
-                    printed[card_id] = record
+    for catalog_id, card in sorted(load_v2_cards().items()):
+        card_id = our_id(catalog_id)
+        if card_id not in known:
+            continue
+        limit = card.get("deck_limit")
+        if type(limit) is not int:
+            errors.append(f"{card_id}: catalog deck_limit {limit!r}")
+        else:
+            limits[card_id] = limit
+        text = card.get("text") if isinstance(card.get("text"), str) else ""
+        stripped = card.get("stripped_text") if isinstance(card.get("stripped_text"), str) else ""
+        stripped_title = (
+            card.get("stripped_title") if isinstance(card.get("stripped_title"), str) else ""
+        )
+        override = flip_text.get(card_id)
+        if override is not None:
+            if not override["text"].startswith(text.split("\n")[0]):
+                errors.append(f"{card_id}: flip-text override does not start with the v2 front face")
+            text = override["text"]
+            stripped = override["strippedText"]
+        printed[card_id] = {
+            "cardId": card_id,
+            "text": text,
+            "strippedText": stripped,
+            "strippedTitle": stripped_title,
+        }
 
     missing_limits = sorted(known - set(limits))
     if missing_limits:
@@ -197,7 +203,11 @@ def main() -> int:
         encoding="utf-8",
     )
 
-    mapping = nsg_id_for_titles(known)
+    mapping = {
+        catalog_id: our_id(catalog_id)
+        for catalog_id in load_v2_cards()
+        if our_id(catalog_id) in known
+    }
     pools_dir = DATA / "card-pools"
     if pools_dir.exists():
         for stale in pools_dir.glob("*.json"):

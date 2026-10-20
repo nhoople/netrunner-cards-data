@@ -1,5 +1,6 @@
 {
   "cardId": "ravana-1-0",
   "text": "<strong>Lose [click]:</strong> Break 1 subroutine on this ice. Only the Runner can use this ability.\n[subroutine] Resolve 1 subroutine on another rezzed <strong>bioroid</strong> ice.\n[subroutine] Resolve 1 subroutine on another rezzed <strong>bioroid</strong> ice.",
-  "strippedText": "Lose click: Break 1 subroutine on this ice. Only the Runner can use this ability. Subroutine Resolve 1 subroutine on another rezzed bioroid ice. Subroutine Resolve 1 subroutine on another rezzed bioroid ice."
+  "strippedText": "Lose click: Break 1 subroutine on this ice. Only the Runner can use this ability. Subroutine Resolve 1 subroutine on another rezzed bioroid ice. Subroutine Resolve 1 subroutine on another rezzed bioroid ice.",
+  "strippedTitle": "Ravana 1.0"
 }

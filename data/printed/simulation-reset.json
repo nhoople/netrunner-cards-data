@@ -1,5 +1,6 @@
 {
   "cardId": "simulation-reset",
   "text": "Trash up to 5 cards from HQ. Shuffle that many cards from Archives into R&D. Draw that many cards.\nRemove this operation from the game.",
-  "strippedText": "Trash up to 5 cards from HQ. Shuffle that many cards from Archives into R&D. Draw that many cards. Remove this operation from the game."
+  "strippedText": "Trash up to 5 cards from HQ. Shuffle that many cards from Archives into R&D. Draw that many cards. Remove this operation from the game.",
+  "strippedTitle": "Simulation Reset"
 }

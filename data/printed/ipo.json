@@ -1,5 +1,6 @@
 {
   "cardId": "ipo",
   "text": "After you resolve this operation, end your action phase.\nGain 13[credit].",
-  "strippedText": "After you resolve this operation, end your action phase. Gain 13 credits."
+  "strippedText": "After you resolve this operation, end your action phase. Gain 13 credits.",
+  "strippedTitle": "IPO"
 }

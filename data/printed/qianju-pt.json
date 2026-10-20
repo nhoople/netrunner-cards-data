@@ -1,5 +1,6 @@
 {
   "cardId": "qianju-pt",
   "text": "When your turn begins, you may lose [click]. If you do, the first time you would take tags from now until your next turn begins, prevent 1 tag.",
-  "strippedText": "When your turn begins, you may lose click. If you do, the first time you would take tags from now until your next turn begins, prevent 1 tag."
+  "strippedText": "When your turn begins, you may lose click. If you do, the first time you would take tags from now until your next turn begins, prevent 1 tag.",
+  "strippedTitle": "Qianju PT"
 }

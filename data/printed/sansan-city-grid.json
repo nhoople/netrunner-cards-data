@@ -1,5 +1,6 @@
 {
   "cardId": "sansan-city-grid",
   "text": "Each agenda in the root of this server gets −1 advancement requirement.\nLimit 1 <strong>region</strong> per server.",
-  "strippedText": "Each agenda in the root of this server gets -1 advancement requirement. Limit 1 region per server."
+  "strippedText": "Each agenda in the root of this server gets -1 advancement requirement. Limit 1 region per server.",
+  "strippedTitle": "SanSan City Grid"
 }

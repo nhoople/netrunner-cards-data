@@ -1,5 +1,6 @@
 {
   "cardId": "cfc-excavation-contract",
   "text": "When you score CFC Excavation Contract, gain 2[credit] for each rezzed <strong>bioroid</strong>.",
-  "strippedText": "When you score CFC Excavation Contract, gain 2 credits for each rezzed bioroid."
+  "strippedText": "When you score CFC Excavation Contract, gain 2 credits for each rezzed bioroid.",
+  "strippedTitle": "CFC Excavation Contract"
 }

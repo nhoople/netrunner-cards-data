@@ -1,5 +1,6 @@
 {
   "cardId": "restructure",
   "text": "Gain 15[credit].",
-  "strippedText": "Gain 15 credits."
+  "strippedText": "Gain 15 credits.",
+  "strippedTitle": "Restructure"
 }

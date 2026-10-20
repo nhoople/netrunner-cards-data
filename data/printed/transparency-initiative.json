@@ -1,5 +1,6 @@
 {
   "cardId": "transparency-initiative",
   "text": "Turn an agenda faceup and install Transparency Initiative on that agenda as a hosted condition counter with the text \"Host agenda gains <strong>public</strong>. Whenever you advance host agenda, gain 1[credit].\"",
-  "strippedText": "Turn an agenda faceup and install Transparency Initiative on that agenda as a hosted condition counter with the text \"Host agenda gains public. Whenever you advance host agenda, gain 1 credit.\""
+  "strippedText": "Turn an agenda faceup and install Transparency Initiative on that agenda as a hosted condition counter with the text \"Host agenda gains public. Whenever you advance host agenda, gain 1 credit.\"",
+  "strippedTitle": "Transparency Initiative"
 }

@@ -1,5 +1,6 @@
 {
   "cardId": "media-blitz",
   "text": "This card is not trashed until another <strong>current</strong> is played or an agenda is stolen.\nChoose an agenda in the Runner's score area. Media Blitz gains the text of that agenda.",
-  "strippedText": "This card is not trashed until another current is played or an agenda is stolen. Choose an agenda in the Runner's score area. Media Blitz gains the text of that agenda."
+  "strippedText": "This card is not trashed until another current is played or an agenda is stolen. Choose an agenda in the Runner's score area. Media Blitz gains the text of that agenda.",
+  "strippedTitle": "Media Blitz"
 }

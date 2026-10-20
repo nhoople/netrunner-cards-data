@@ -1,5 +1,6 @@
 {
   "cardId": "yakov-erikovich-avdakov",
   "text": "Whenever a player trashes a card <em>(including this upgrade)</em> from the root of this server or protecting it, except during installation, gain 2[credit].",
-  "strippedText": "Whenever a player trashes a card (including this upgrade) from the root of this server or protecting it, except during installation, gain 2 credits."
+  "strippedText": "Whenever a player trashes a card (including this upgrade) from the root of this server or protecting it, except during installation, gain 2 credits.",
+  "strippedTitle": "Yakov Erikovich Avdakov"
 }

@@ -1,5 +1,6 @@
 {
   "cardId": "government-investigations",
   "text": "This card is not trashed until another <strong>current</strong> is played or an agenda is scored.\nWhile secretly spending credits, players cannot spend 2[credit].",
-  "strippedText": "This card is not trashed until another current is played or an agenda is scored. While secretly spending credits, players cannot spend 2 credits."
+  "strippedText": "This card is not trashed until another current is played or an agenda is scored. While secretly spending credits, players cannot spend 2 credits.",
+  "strippedTitle": "Government Investigations"
 }

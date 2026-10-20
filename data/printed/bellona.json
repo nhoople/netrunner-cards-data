@@ -1,5 +1,6 @@
 {
   "cardId": "bellona",
   "text": "As an additional cost to steal this agenda, the Runner must pay 5[credit].\nWhen you score this agenda, gain 5[credit].",
-  "strippedText": "As an additional cost to steal this agenda, the Runner must pay 5 credits. When you score this agenda, gain 5 credits."
+  "strippedText": "As an additional cost to steal this agenda, the Runner must pay 5 credits. When you score this agenda, gain 5 credits.",
+  "strippedTitle": "Bellona"
 }

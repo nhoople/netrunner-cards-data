@@ -1,5 +1,6 @@
 {
   "cardId": "bumi-1-0",
   "text": "When you rez this ice during a run against this server, you may trash 1 installed <strong>trojan</strong> program.\n<strong>Lose [click]:</strong> Break 1 subroutine on this ice. Only the Runner can use this ability.\n[subroutine] Trash 1 installed program.\n[subroutine] Do 1 core damage.",
-  "strippedText": "When you rez this ice during a run against this server, you may trash 1 installed trojan program. Lose click: Break 1 subroutine on this ice. Only the Runner can use this ability. Subroutine Trash 1 installed program. Subroutine Do 1 core damage."
+  "strippedText": "When you rez this ice during a run against this server, you may trash 1 installed trojan program. Lose click: Break 1 subroutine on this ice. Only the Runner can use this ability. Subroutine Trash 1 installed program. Subroutine Do 1 core damage.",
+  "strippedTitle": "Bumi 1.0"
 }

@@ -1,5 +1,6 @@
 {
   "cardId": "zato-city-grid",
   "text": "Remote server only.\nEach piece of ice protecting this server gains \"When the Runner encounters this ice, choose 1 subroutine on it. You may trash this ice to resolve that subroutine.\".\nLimit 1 <strong>region</strong> per server.",
-  "strippedText": "Remote server only. Each piece of ice protecting this server gains When the Runner encounters this ice, choose 1 subroutine on it. You may trash this ice to resolve that subroutine.. Limit 1 region per server."
+  "strippedText": "Remote server only. Each piece of ice protecting this server gains When the Runner encounters this ice, choose 1 subroutine on it. You may trash this ice to resolve that subroutine.. Limit 1 region per server.",
+  "strippedTitle": "ZATO City Grid"
 }

@@ -1,5 +1,6 @@
 {
   "cardId": "project-wotan",
   "text": "When you score this agenda, place 3 agenda counters on it.\n<strong>Hosted agenda counter:</strong> The rezzed piece of <strong>bioroid</strong> ice the Runner is approaching gains \"[subroutine] End the run.\" after its other subroutines for the remainder of this run.",
-  "strippedText": "When you score this agenda, place 3 agenda counters on it. Hosted agenda counter: The rezzed piece of bioroid ice the Runner is approaching gains \"Subroutine End the run.\" after its other subroutines for the remainder of this run."
+  "strippedText": "When you score this agenda, place 3 agenda counters on it. Hosted agenda counter: The rezzed piece of bioroid ice the Runner is approaching gains \"Subroutine End the run.\" after its other subroutines for the remainder of this run.",
+  "strippedTitle": "Project Wotan"
 }

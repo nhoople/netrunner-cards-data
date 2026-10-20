@@ -1,5 +1,6 @@
 {
   "cardId": "cupellation",
   "text": "Limit 1 hosted card.\nAccess → <strong>1[credit]:</strong> Host the non-agenda card you are accessing faceup on this program. <em>(If it was installed, it becomes uninstalled.)</em>\nWhenever you breach HQ, if this program has a hosted Corp card, you may pay 1[credit] and trash this program to access 2 additional cards.",
-  "strippedText": "Limit 1 hosted card. Access -> 1 credit: Host the non-agenda card you are accessing faceup on this program. (If it was installed, it becomes uninstalled.) Whenever you breach HQ, if this program has a hosted Corp card, you may pay 1 credit and trash this program to access 2 additional cards."
+  "strippedText": "Limit 1 hosted card. Access -> 1 credit: Host the non-agenda card you are accessing faceup on this program. (If it was installed, it becomes uninstalled.) Whenever you breach HQ, if this program has a hosted Corp card, you may pay 1 credit and trash this program to access 2 additional cards.",
+  "strippedTitle": "Cupellation"
 }

@@ -1,5 +1,6 @@
 {
   "cardId": "gs-sherman-m3",
   "text": "If you have at least 2[link], the memory cost of this program is 0[mu], even if it is not installed.\nInterface → <strong>2[credit]:</strong> Break any number of <strong>barrier</strong> subroutines.\n<strong>2[credit]:</strong> +3 strength.",
-  "strippedText": "If you have at least 2 link, the memory cost of this program is 0 mu, even if it is not installed. Interface -> 2 credits: Break any number of barrier subroutines. 2 credits: +3 strength."
+  "strippedText": "If you have at least 2 link, the memory cost of this program is 0 mu, even if it is not installed. Interface -> 2 credits: Break any number of barrier subroutines. 2 credits: +3 strength.",
+  "strippedTitle": "GS Sherman M3"
 }

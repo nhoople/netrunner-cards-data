@@ -1,5 +1,6 @@
 {
   "cardId": "hourglass",
   "text": "[subroutine] The Runner loses [click], if able.\n[subroutine] The Runner loses [click], if able.\n[subroutine] The Runner loses [click], if able.",
-  "strippedText": "Subroutine The Runner loses click, if able. Subroutine The Runner loses click, if able. Subroutine The Runner loses click, if able."
+  "strippedText": "Subroutine The Runner loses click, if able. Subroutine The Runner loses click, if able. Subroutine The Runner loses click, if able.",
+  "strippedTitle": "Hourglass"
 }
