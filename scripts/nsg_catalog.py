@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
-"""Fetch pinned Null Signal Games pack JSON for card extract scripts.
+"""Fetch the pinned Null Signal Games v2 catalog for card extract scripts.
 
 Upstream: Null-Signal-Games/netrunner-cards-json (see data/nsg-catalog-pin.json).
-Pack files live at pack/{code}.json on the pinned ref.
+Titles live at v2/cards/<id>.json and printings at v2/printings/<set>.json
+on the pinned ref. The pack/{code}.json export is no longer read.
 
 Usage:
   python3 scripts/nsg_catalog.py fetch sg
@@ -10,8 +11,9 @@ Usage:
   python3 scripts/nsg_catalog.py show-pin
   python3 scripts/nsg_catalog.py check
 
-Generators import load_pack_cards(code) from the pinned NSG pack JSON (not the live NRDB API).
-Fails closed on missing pin, HTTP errors, or invalid JSON.
+Generators import load_set_cards(code) from the pinned NSG v2 catalog
+(not the live NRDB API). Fails closed on missing pin, HTTP errors, or
+invalid JSON.
 """
 from __future__ import annotations
 
@@ -27,11 +29,15 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 PIN_PATH = ROOT / "data" / "nsg-catalog-pin.json"
-POOL_PATH = ROOT / "data" / "pool.json"
 # Printed facts a catalog update can change. Ability records stay hand-authored.
-FACT_FIELDS = ("faction_code", "cost", "strength", "text")
-# Documented non-corpus packs. A new code outside this set is a new set.
-OUTSIDE_CORPUS = {"napd", "tdc", "sm"}
+FACT_FIELDS = ("faction_id", "cost", "strength", "text")
+# Corpus ids minted before the v2 id convention settled. Every other title
+# converts by replacing underscores with hyphens (and back).
+OUR_ID_EXCEPTIONS = {
+    "o_shortage": "o2-shortage",
+    "the_wizards_chest": "the-wizard-s-chest",
+}
+NSG_ID_EXCEPTIONS = {our: nsg for nsg, our in OUR_ID_EXCEPTIONS.items()}
 PACK_CODE_RE = re.compile(r"pack\s+\(?([a-z0-9]+)", re.IGNORECASE)
 
 
@@ -42,88 +48,155 @@ def load_pin() -> dict:
         pin = json.loads(PIN_PATH.read_text(encoding="utf-8"))
     except json.JSONDecodeError as e:
         raise SystemExit(f"Invalid catalog pin JSON ({PIN_PATH}): {e}") from e
-    for key in ("repo", "ref", "rawUrlTemplate", "cacheDir", "packPathTemplate"):
+    for key in ("repo", "ref", "cacheDir"):
         if not pin.get(key):
             raise SystemExit(f"Catalog pin missing required field {key!r}: {PIN_PATH}")
     return pin
 
 
-def pack_url(pin: dict, code: str) -> str:
-    return (
-        pin["rawUrlTemplate"]
-        .replace("{ref}", pin["ref"])
-        .replace("{code}", code)
-    )
+def our_id(nsg_card_id: str) -> str:
+    """The corpus title id for a catalog card id."""
+    return OUR_ID_EXCEPTIONS.get(nsg_card_id, nsg_card_id.replace("_", "-"))
 
 
-def cache_path(pin: dict, code: str) -> Path:
-    return ROOT / pin["cacheDir"] / pin["ref"] / "pack" / f"{code}.json"
+def nsg_id(our_card_id: str) -> str:
+    """The catalog card id for a corpus title id."""
+    return NSG_ID_EXCEPTIONS.get(our_card_id, our_card_id.replace("-", "_"))
 
 
-def fetch_pack_ref(code: str, ref: str, *, force: bool = False) -> Path:
-    """Download pack/{code}.json at ref into the local cache."""
-    if not code or "/" in code or ".." in code or not ref or "/" in ref:
-        raise SystemExit(f"Invalid pack code or ref: {code!r} {ref!r}")
-
-    pin = load_pin()
-    dest = ROOT / pin["cacheDir"] / ref / "pack" / f"{code}.json"
-    if dest.is_file() and not force:
-        return dest
-
-    url = pin["rawUrlTemplate"].replace("{ref}", ref).replace("{code}", code)
-    dest.parent.mkdir(parents=True, exist_ok=True)
-    try:
-        body = http_bytes(url)
-    except urllib.error.HTTPError as e:
-        raise SystemExit(
-            f"Failed to fetch pack {code!r} at {ref} (HTTP {e.code}): {url}"
-        ) from e
-    except urllib.error.URLError as e:
-        raise SystemExit(f"Failed to fetch pack {code!r} at {ref}: {url}\n{e}") from e
-
-    try:
-        data = json.loads(body.decode("utf-8"))
-    except (UnicodeDecodeError, json.JSONDecodeError) as e:
-        raise SystemExit(f"Pack {code!r} at {ref} is not valid JSON ({url}): {e}") from e
-    if not isinstance(data, list):
-        raise SystemExit(
-            f"Pack {code!r} at {ref} must be a JSON array of cards; "
-            f"got {type(data).__name__}: {url}"
-        )
-    dest.write_bytes(body)
-    return dest
+def card_type(card: dict) -> str | None:
+    """Stored type for a v2 card: corp_identity and runner_identity are identity."""
+    value = card.get("card_type_id")
+    if not isinstance(value, str):
+        return None
+    return value.removeprefix("corp_").removeprefix("runner_")
 
 
-def fetch_pack(code: str, *, force: bool = False) -> Path:
-    """Download pack/{code}.json for the pinned ref into the local cache.
+def faction_slug(card: dict) -> str | None:
+    """Stored faction for a v2 card: haas_bioroid is haas-bioroid here."""
+    value = card.get("faction_id")
+    if not isinstance(value, str):
+        return None
+    return value.replace("_", "-")
 
-    Returns the cache path. Exits non-zero on any fetch/parse failure.
+
+_SUBTYPE_NAMES: dict[str, str] | None = None
+
+
+def subtype_names(card: dict) -> list[str]:
+    """Stored subtype names for a v2 card, spelled as the vocabulary names them.
+
+    code_gate is written 'code gate' and g_mod is written 'g-mod', so the
+    spelling comes from v2/card_subtypes.json rather than the id alone.
     """
-    return fetch_pack_ref(code, load_pin()["ref"], force=force)
+    global _SUBTYPE_NAMES
+    if _SUBTYPE_NAMES is None:
+        _SUBTYPE_NAMES = {
+            str(raw["id"]): str(raw["name"]).lower()
+            for raw in load_v2_reference("card_subtypes.json")
+        }
+    return [
+        _SUBTYPE_NAMES.get(name, name.replace("_", " "))
+        for name in card.get("subtypes") or []
+    ]
 
 
-def read_pack(path: Path) -> list[dict]:
+def read_json(path: Path):
     try:
-        data = json.loads(path.read_text(encoding="utf-8"))
+        return json.loads(path.read_text(encoding="utf-8"))
     except json.JSONDecodeError as e:
-        raise SystemExit(f"Corrupt cached pack JSON ({path}): {e}") from e
-    if not isinstance(data, list):
-        raise SystemExit(f"Cached pack is not a JSON array: {path}")
-    return data
+        raise SystemExit(f"Corrupt cached catalog JSON ({path}): {e}") from e
 
 
-def load_pack_cards(code: str, *, force: bool = False) -> list[dict]:
-    """Return card objects from the pinned pack/{code}.json (fetching if needed)."""
-    return read_pack(fetch_pack(code, force=force))
+def load_v2_cards(*, force: bool = False) -> dict[str, dict]:
+    """Every v2/cards record at the pin, keyed by catalog card id."""
+    root = fetch_catalog_archive(force=force)
+    cards: dict[str, dict] = {}
+    for path in sorted((root / "v2" / "cards").glob("*.json")):
+        record = read_json(path)
+        card_id = record.get("id") if isinstance(record, dict) else None
+        if not isinstance(card_id, str) or not card_id:
+            raise SystemExit(f"{path}: v2 card record has no id")
+        if card_id in cards:
+            raise SystemExit(f"duplicate v2 card id {card_id}")
+        cards[card_id] = record
+    if not cards:
+        raise SystemExit(f"Catalog archive has no v2/cards files: {root}")
+    return cards
+
+
+def load_v2_printings(*, force: bool = False) -> list[dict]:
+    """Every v2/printings record at the pin, across all set files."""
+    root = fetch_catalog_archive(force=force)
+    printings: list[dict] = []
+    for path in sorted((root / "v2" / "printings").glob("*.json")):
+        records = read_json(path)
+        if not isinstance(records, list):
+            raise SystemExit(f"{path}: v2 printings file is not a list")
+        printings.extend(records)
+    if not printings:
+        raise SystemExit(f"Catalog archive has no v2/printings files: {root}")
+    return printings
+
+
+def load_card_sets(*, force: bool = False) -> list[dict]:
+    root = fetch_catalog_archive(force=force)
+    sets = read_json(root / "v2" / "card_sets.json")
+    if not isinstance(sets, list):
+        raise SystemExit("v2/card_sets.json is not a list")
+    return sets
+
+
+def load_v2_reference(name: str, *, force: bool = False):
+    """One top-level v2 reference file, such as factions.json."""
+    root = fetch_catalog_archive(force=force)
+    return read_json(root / "v2" / name)
+
+
+def set_id_for_pack(code: str, sets: list[dict] | None = None) -> str:
+    """The v2 set id whose legacy_code is a pack code such as sg."""
+    for card_set in sets if sets is not None else load_card_sets():
+        if card_set.get("legacy_code") == code:
+            return str(card_set["id"])
+    raise SystemExit(f"No v2 card set has legacy_code {code!r}")
+
+
+def load_set_cards(code: str, *, force: bool = False) -> list[dict]:
+    """v2 card records for one pack code, in printing position order."""
+    set_id = set_id_for_pack(code)
+    cards = load_v2_cards(force=force)
+    ordered = [
+        printing
+        for printing in load_v2_printings(force=force)
+        if printing.get("card_set_id") == set_id
+    ]
+    ordered.sort(key=lambda printing: printing.get("position", 0))
+    found: list[dict] = []
+    for printing in ordered:
+        card_id = printing.get("card_id")
+        record = cards.get(card_id) if isinstance(card_id, str) else None
+        if record is None:
+            raise SystemExit(f"{set_id}: printing {printing.get('id')!r} has no v2 card {card_id!r}")
+        found.append(dict(record))
+    return found
 
 
 CATALOG_PREFIXES = (
+    "v2/cards/",
+    "v2/printings/",
     "v2/rulings/",
     "v2/formats/",
     "v2/card_pools/",
     "v2/restrictions/",
     "v2/card_sets.json",
     "v2/card_cycles.json",
+    "v2/card_types.json",
+    "v2/card_subtypes.json",
+    "v2/card_set_types.json",
+    "v2/card_layouts.json",
+    "v2/factions.json",
+    "v2/sides.json",
+    "v2/ruling_sources.json",
     "rotations.json",
 )
 
@@ -133,7 +206,13 @@ def fetch_catalog_archive(*, force: bool = False) -> Path:
     pin = load_pin()
     root = ROOT / pin["cacheDir"] / pin["ref"]
     marker = root / "v2" / "card_sets.json"
-    if marker.is_file() and any((root / "v2" / "rulings").glob("*.json")) and not force:
+    if (
+        marker.is_file()
+        and any((root / "v2" / "rulings").glob("*.json"))
+        and any((root / "v2" / "cards").glob("*.json"))
+        and any((root / "v2" / "printings").glob("*.json"))
+        and not force
+    ):
         return root
     repo = pin["repo"].removeprefix("https://github.com/").removesuffix(".git")
     url = f"https://codeload.github.com/{repo}/tar.gz/{pin['ref']}"
@@ -232,20 +311,43 @@ def generator_pack_codes() -> set[str]:
     return found
 
 
-def corpus_pack_codes(pool: dict) -> set[str]:
-    return pack_codes_from_pool(pool) | generator_pack_codes()
-
-
-def pack_blobs(tree: dict) -> dict[str, str]:
-    """Map pack code to git blob sha from a recursive Git tree."""
+def card_blobs(tree: dict) -> dict[str, str]:
+    """Map catalog card id to git blob sha from a recursive Git tree."""
     blobs: dict[str, str] = {}
     for entry in tree.get("tree") or []:
         if entry.get("type") != "blob":
             continue
         path = entry.get("path") or ""
-        if path.startswith("pack/") and path.endswith(".json"):
+        if path.startswith("v2/cards/") and path.endswith(".json"):
             blobs[Path(path).stem] = entry.get("sha") or ""
     return blobs
+
+
+def corpus_card_ids() -> set[str]:
+    """Title ids with a rules file under data/<side>/<type>/."""
+    return {path.stem for path in (ROOT / "data").glob("*/*/*.json")}
+
+
+def fetch_card_ref(card_id: str, ref: str, repo: str) -> dict | None:
+    """One v2/cards record at an arbitrary ref. None when it does not exist."""
+    if not card_id or "/" in card_id or ".." in card_id:
+        raise SystemExit(f"Invalid card id: {card_id!r}")
+    url = f"https://raw.githubusercontent.com/{repo}/{ref}/v2/cards/{card_id}.json"
+    try:
+        body = http_bytes(url)
+    except urllib.error.HTTPError as e:
+        if e.code == 404:
+            return None
+        raise SystemExit(f"Failed to fetch card {card_id!r} at {ref} (HTTP {e.code}): {url}") from e
+    except urllib.error.URLError as e:
+        raise SystemExit(f"Failed to fetch card {card_id!r} at {ref}: {url}\n{e}") from e
+    try:
+        record = json.loads(body.decode("utf-8"))
+    except (UnicodeDecodeError, json.JSONDecodeError) as e:
+        raise SystemExit(f"Card {card_id!r} at {ref} is not valid JSON ({url}): {e}") from e
+    if not isinstance(record, dict):
+        raise SystemExit(f"Card {card_id!r} at {ref} is not an object: {url}")
+    return record
 
 
 def diff_card_facts(before: dict | None, after: dict | None) -> list[str]:
@@ -265,16 +367,17 @@ def diff_card_facts(before: dict | None, after: dict | None) -> list[str]:
     return changes
 
 
-def diff_pack_facts(old_cards: list[dict], new_cards: list[dict]) -> list[tuple[str, str, list[str]]]:
-    old = {str(card["code"]): card for card in old_cards if card.get("code")}
-    new = {str(card["code"]): card for card in new_cards if card.get("code")}
+def diff_card_sets(old_cards: list[dict], new_cards: list[dict]) -> list[tuple[str, str, list[str]]]:
+    """Fact changes between two lists of v2 card records, keyed by card id."""
+    old = {str(card["id"]): card for card in old_cards if card.get("id")}
+    new = {str(card["id"]): card for card in new_cards if card.get("id")}
     rows: list[tuple[str, str, list[str]]] = []
-    for code in sorted(set(old) | set(new)):
-        changes = diff_card_facts(old.get(code), new.get(code))
+    for card_id in sorted(set(old) | set(new)):
+        changes = diff_card_facts(old.get(card_id), new.get(card_id))
         if not changes:
             continue
-        sample = new.get(code) or old[code]
-        rows.append((code, str(sample.get("title") or code), changes))
+        sample = new.get(card_id) or old[card_id]
+        rows.append((card_id, str(sample.get("title") or card_id), changes))
     return rows
 
 
@@ -284,28 +387,9 @@ def cmd_show_pin(_: argparse.Namespace) -> int:
     return 0
 
 
-def local_cards_by_code() -> dict[str, Path]:
-    """Map a printing code to the rules file for that title."""
-    from card_layout import card_file
-
-    found: dict[str, Path] = {}
-    directory = ROOT / "data" / "printings"
-    if not directory.is_dir():
-        return found
-    for path in directory.glob("*.json"):
-        try:
-            printing = json.loads(path.read_text(encoding="utf-8"))
-        except json.JSONDecodeError:
-            continue
-        code = printing.get("code")
-        card_id = printing.get("cardId")
-        if isinstance(code, str) and isinstance(card_id, str):
-            found[code] = card_file(card_id)
-    return found
-
-
 def cmd_check(_: argparse.Namespace) -> int:
     """Compare the pinned catalog with current main. Prints a report. Does not edit cards."""
+    from card_layout import card_file
     pin = load_pin()
     repo = pin["repo"].removeprefix("https://github.com/").removesuffix(".git")
     head = github_json(f"https://api.github.com/repos/{repo}/commits/main")
@@ -326,78 +410,75 @@ def cmd_check(_: argparse.Namespace) -> int:
         f"https://api.github.com/repos/{repo}/git/trees/{head_sha}?recursive=1"
     )
     if pin_tree.get("truncated") or main_tree.get("truncated"):
-        raise SystemExit("GitHub tree listing was truncated; the pack diff is incomplete")
+        raise SystemExit("GitHub tree listing was truncated; the card diff is incomplete")
 
-    old_blobs = pack_blobs(pin_tree)
-    new_blobs = pack_blobs(main_tree)
-    pool = json.loads(POOL_PATH.read_text(encoding="utf-8"))
-    known = corpus_pack_codes(pool)
-    local = local_cards_by_code()
+    old_blobs = card_blobs(pin_tree)
+    new_blobs = card_blobs(main_tree)
+    corpus = {nsg_id(card_id) for card_id in corpus_card_ids()}
 
     added = sorted(set(new_blobs) - set(old_blobs))
     removed = sorted(set(old_blobs) - set(new_blobs))
     modified = sorted(
-        code for code in set(old_blobs) & set(new_blobs) if old_blobs[code] != new_blobs[code]
+        card_id
+        for card_id in set(old_blobs) & set(new_blobs)
+        if old_blobs[card_id] != new_blobs[card_id]
     )
     findings = 0
 
-    new_sets = [code for code in added if code not in known and code not in OUTSIDE_CORPUS]
-    if new_sets:
-        findings += len(new_sets)
-        print("New packs not in pool.json:")
-        for code in new_sets:
-            print(f"  {code}")
-    outside = [code for code in added if code in OUTSIDE_CORPUS]
-    if outside:
-        print("New packs already outside the corpus: " + ", ".join(outside))
+    new_titles = [card_id for card_id in added if card_id not in corpus]
+    if new_titles:
+        findings += len(new_titles)
+        print("New catalog titles not in the corpus:")
+        for card_id in new_titles:
+            print(f"  {card_id}")
     if removed:
-        known_removed = [code for code in removed if code in known]
-        other_removed = [code for code in removed if code not in known]
+        known_removed = [card_id for card_id in removed if card_id in corpus]
+        other_removed = [card_id for card_id in removed if card_id not in corpus]
         if known_removed:
             findings += len(known_removed)
-            print("Corpus packs removed since the pin: " + ", ".join(known_removed))
+            print("Corpus titles removed since the pin: " + ", ".join(known_removed))
         if other_removed:
-            print("Packs removed since the pin: " + ", ".join(other_removed))
+            print("Titles removed since the pin: " + ", ".join(other_removed))
 
-    changed_known = [code for code in modified if code in known]
+    changed_known = [card_id for card_id in modified if card_id in corpus]
     if not changed_known:
         if findings:
             print(f"{findings} catalog change(s) to review. Card files were not edited.")
             return 1
-        print("No corpus pack changed faction, cost, strength, or printed text.")
+        print("No corpus card changed faction, cost, strength, or printed text.")
         return 0
 
-    for code in changed_known:
-        old_cards = read_pack(fetch_pack_ref(code, pinned))
-        new_cards = read_pack(fetch_pack_ref(code, head_sha))
-        rows = diff_pack_facts(old_cards, new_cards)
-        if not rows:
-            print(f"{code}: pack file changed; faction, cost, strength, and text are unchanged")
+    for card_id in changed_known:
+        before = fetch_card_ref(card_id, pinned, repo)
+        after = fetch_card_ref(card_id, head_sha, repo)
+        changes = diff_card_facts(before, after)
+        if not changes:
+            print(f"{card_id}: card file changed; faction, cost, strength, and text are unchanged")
             continue
-        findings += len(rows)
-        print(f"{code}:")
-        for card_code, title, changes in rows:
-            print(f"  {card_code} {title}")
-            for change in changes:
-                print(f"    {change}")
-            path = local.get(card_code)
-            if path is not None:
-                print(f"    card file: {path.relative_to(ROOT)}")
-            if "text changed" in changes:
-                print("    re-read the ability record; the printed text changed")
+        findings += 1
+        sample = after or before or {}
+        print(f"{card_id} {sample.get('title') or ''}".rstrip())
+        for change in changes:
+            print(f"  {change}")
+        try:
+            path = card_file(our_id(card_id))
+        except FileNotFoundError:
+            continue
+        print(f"  card file: {path.relative_to(ROOT)}")
+        if "text changed" in changes:
+            print("  re-read the ability record; the printed text changed")
 
     if findings:
         print(f"{findings} catalog change(s) to review. Card files were not edited.")
         return 1
-    print("No corpus pack changed faction, cost, strength, or printed text.")
+    print("No corpus card changed faction, cost, strength, or printed text.")
     return 0
 
 
 def cmd_fetch(args: argparse.Namespace) -> int:
     for code in args.codes:
-        path = fetch_pack(code, force=args.force)
-        cards = load_pack_cards(code)
-        print(f"{code}: {len(cards)} cards → {path}")
+        cards = load_set_cards(code, force=args.force)
+        print(f"{code}: {len(cards)} cards in v2 set {set_id_for_pack(code)}")
     return 0
 
 
@@ -409,7 +490,7 @@ def main(argv: list[str] | None = None) -> int:
     p_show.set_defaults(func=cmd_show_pin)
 
     p_fetch = sub.add_parser(
-        "fetch", help="Download pack/{code}.json for the pinned ref"
+        "fetch", help="Cache the v2 catalog and list the cards in one pack code's set"
     )
     p_fetch.add_argument("codes", nargs="+", help="Pack code(s), e.g. sg su21 rwr")
     p_fetch.add_argument(

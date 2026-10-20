@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate True Colors (tc) card JSON from pinned pack `tc`.
+"""Generate True Colors (tc) card JSON from the pinned v2 set for pack `tc`.
 
 Fetch: python3 scripts/nsg_catalog.py fetch tc
 Spin cycle after Mala Tempora (floor v1.97.0 → v1.98.0).
@@ -13,7 +13,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from nsg_catalog import load_pack_cards
+from nsg_catalog import card_type, faction_slug, load_set_cards, our_id, subtype_names
 from spin_common import (
     base,
     breaker_card,
@@ -41,7 +41,7 @@ REPRINTS = {
 
 
 def map_card(c: dict) -> dict | None:
-    cid = slugify(c["title"])
+    cid = our_id(c["id"])
     if cid in REPRINTS:
         return None
 
@@ -227,12 +227,12 @@ def map_card(c: dict) -> dict | None:
 
 
 def main():
-    pack = sorted(load_pack_cards(PACK), key=lambda c: c.get("position", 0))
+    pack = load_set_cards(PACK)
     assert len(pack) == EXPECTED, len(pack)
     written: list[str] = []
     skipped: list[str] = []
     for c in pack:
-        cid = slugify(c["title"])
+        cid = our_id(c["id"])
         mapped = map_card(c)
         if mapped is None:
             skipped.append(cid)
@@ -241,7 +241,7 @@ def main():
         write_card(classify_card(mapped))
         written.append(cid)
 
-    pool_ids = [slugify(c["title"]) for c in pack]
+    pool_ids = [our_id(c["id"]) for c in pack]
     clear_written = [
         cid
         for cid in written

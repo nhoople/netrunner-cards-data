@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate Mala Tempora (mt) card JSON from pinned pack `mt`.
+"""Generate Mala Tempora (mt) card JSON from the pinned v2 set for pack `mt`.
 
 Fetch: python3 scripts/nsg_catalog.py fetch mt
 Spin cycle after Stalwart (floor v1.96.0 → v1.97.0).
@@ -15,7 +15,7 @@ import re
 import unicodedata
 from pathlib import Path
 
-from nsg_catalog import load_pack_cards
+from nsg_catalog import card_type, faction_slug, load_set_cards, our_id, subtype_names
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "data" / "mala-tempora"
@@ -60,24 +60,24 @@ def trace_sub(strength: int, on_success):
 
 def base(c, **extra):
     subtypes = []
-    if c.get("keywords"):
-        subtypes = [s.strip().lower() for s in c["keywords"].split(" - ")]
+    if c.get("subtypes"):
+        subtypes = subtype_names(c)
     card = {
-        "id": slugify(c["title"]),
+        "id": our_id(c["id"]),
         "title": c["title"],
         "wave": WAVE,
-        "type": c["type_code"],
-        "side": "runner" if c["side_code"] == "runner" else "corp",
+        "type": card_type(c),
+        "side": "runner" if c["side_id"] == "runner" else "corp",
         "unsupported": [],
     }
-    if c.get("faction_code"):
-        card["faction"] = c["faction_code"]
+    if faction_slug(c):
+        card["faction"] = faction_slug(c)
     if subtypes:
         card["subtypes"] = subtypes
     if c.get("cost") is not None:
-        if c["type_code"] in ("event", "operation"):
+        if card_type(c) in ("event", "operation"):
             card["playCost"] = c["cost"]
-        elif c["type_code"] in ("ice", "asset", "upgrade"):
+        elif card_type(c) in ("ice", "asset", "upgrade"):
             # Printed rez cost. Ice install cost is 1 credit per ice already
             # protecting the server (CR 1.16.6b). Assets and upgrades have
             # no install cost (CR 8.5.11a).
@@ -90,11 +90,11 @@ def base(c, **extra):
         card["strength"] = c["strength"]
     if c.get("memory_cost") is not None:
         card["memoryCost"] = c["memory_cost"]
-    if c.get("advancement_cost") is not None:
-        card["advancementRequirement"] = c["advancement_cost"]
+    if c.get("advancement_requirement") is not None:
+        card["advancementRequirement"] = c["advancement_requirement"]
     if c.get("agenda_points") is not None:
         card["agendaPoints"] = c["agenda_points"]
-    if c.get("uniqueness"):
+    if c.get("is_unique"):
         card["unique"] = True
     apply_printed_numbers(card, c)
     card.update(extra)
@@ -102,7 +102,7 @@ def base(c, **extra):
 
 
 def map_card(c: dict) -> dict | None:
-    cid = slugify(c["title"])
+    cid = our_id(c["id"])
     if cid in REPRINTS:
         return None
 
@@ -359,18 +359,18 @@ def map_card(c: dict) -> dict | None:
         )
 
     card = base(c)
-    text = (c.get("text") or "")[:240]
+    text = (c.get("stripped_text") or "")[:240]
     card["unsupported"] = [f"Full text not yet mapped to IR: {text}"]
     return card
 
 
 def main():
-    pack = sorted(load_pack_cards(PACK), key=lambda c: c.get("position", 0))
+    pack = load_set_cards(PACK)
     assert len(pack) == EXPECTED, len(pack)
     written: list[str] = []
     skipped: list[str] = []
     for c in pack:
-        cid = slugify(c["title"])
+        cid = our_id(c["id"])
         mapped = map_card(c)
         if mapped is None:
             skipped.append(cid)
@@ -378,7 +378,7 @@ def main():
         write_card(classify_card(mapped))
         written.append(cid)
 
-    pool_ids = [slugify(c["title"]) for c in pack]
+    pool_ids = [our_id(c["id"]) for c in pack]
     clear_written = [
         cid
         for cid in written

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate System Update 2021 card JSON from pinned pack `su21`.
+"""Generate System Update 2021 card JSON from the pinned v2 set for pack `su21`.
 
 Catalog source: Null-Signal-Games/netrunner-cards-json (see data/nsg-catalog-pin.json).
 Fetch with: python3 scripts/nsg_catalog.py fetch su21
@@ -20,7 +20,7 @@ import re
 import unicodedata
 from pathlib import Path
 
-from nsg_catalog import load_pack_cards
+from nsg_catalog import card_type, faction_slug, load_set_cards, our_id, subtype_names
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "data" / "system-update-2021"
@@ -128,24 +128,24 @@ def iff(cond, then, else_=None):
 
 def base(c, **extra):
     subtypes = []
-    if c.get("keywords"):
-        subtypes = [s.strip().lower() for s in c["keywords"].split(" - ")]
+    if c.get("subtypes"):
+        subtypes = subtype_names(c)
     card = {
-        "id": slugify(c["title"]),
+        "id": our_id(c["id"]),
         "title": c["title"],
         "wave": "system-update-2021",
-        "type": c["type_code"],
-        "side": "runner" if c["side_code"] == "runner" else "corp",
+        "type": card_type(c),
+        "side": "runner" if c["side_id"] == "runner" else "corp",
         "unsupported": [],
     }
-    if c.get("faction_code"):
-        card["faction"] = c["faction_code"]
+    if faction_slug(c):
+        card["faction"] = faction_slug(c)
     if subtypes:
         card["subtypes"] = subtypes
     if c.get("cost") is not None:
-        if c["type_code"] in ("event", "operation"):
+        if card_type(c) in ("event", "operation"):
             card["playCost"] = c["cost"]
-        elif c["type_code"] in ("ice", "asset", "upgrade"):
+        elif card_type(c) in ("ice", "asset", "upgrade"):
             # Printed rez cost. Ice install cost is 1 credit per ice already
             # protecting the server (CR 1.16.6b). Assets and upgrades have
             # no install cost (CR 8.5.11a).
@@ -158,8 +158,8 @@ def base(c, **extra):
         card["strength"] = c["strength"]
     if c.get("memory_cost") is not None:
         card["memoryCost"] = c["memory_cost"]
-    if c.get("advancement_cost") is not None:
-        card["advancementRequirement"] = c["advancement_cost"]
+    if c.get("advancement_requirement") is not None:
+        card["advancementRequirement"] = c["advancement_requirement"]
     if c.get("agenda_points") is not None:
         card["agendaPoints"] = c["agenda_points"]
     apply_printed_numbers(card, c)
@@ -186,7 +186,7 @@ def breaker_card(c, subtype, strength, break_c, pump_c=None, pump_s=None, durati
             pump_eff["action"]["duration"] = duration
         paid.append(
             {
-                "id": f"{slugify(c['title'])}-pump",
+                "id": f"{our_id(c['id'])}-pump",
                 "label": f"Pump {c['title']} +{pump_s if pump_s is not None else 1} strength",
                 "clickCost": 0,
                 "creditCost": pump_c,
@@ -199,11 +199,11 @@ def breaker_card(c, subtype, strength, break_c, pump_c=None, pump_s=None, durati
 
 
 def map_card(c: dict) -> dict | None:
-    cid = slugify(c["title"])
+    cid = our_id(c["id"])
     if cid in REPRINTS:
         return None
-    text = c.get("text") or ""
-    t = c["type_code"]
+    text = c.get("stripped_text") or ""
+    t = card_type(c)
 
     # --- Runner identities ---
     if cid == "quetzal-free-spirit":
@@ -1138,15 +1138,12 @@ def map_card(c: dict) -> dict | None:
 
 
 def main():
-    su = sorted(
-        load_pack_cards("su21"),
-        key=lambda c: c.get("position", 0),
-    )
+    su = load_set_cards("su21")
     assert len(su) == 82, len(su)
     written = []
     skipped = []
     for c in su:
-        cid = slugify(c["title"])
+        cid = our_id(c["id"])
         mapped = map_card(c)
         if mapped is None:
             skipped.append(cid)
@@ -1167,7 +1164,7 @@ def main():
     # Pool order
     pool_ids = []
     for c in su:
-        pool_ids.append(slugify(c["title"]))
+        pool_ids.append(our_id(c["id"]))
     print("POOL_IDS=" + json.dumps(pool_ids))
 
 

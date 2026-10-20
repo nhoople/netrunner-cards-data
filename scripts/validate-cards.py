@@ -207,6 +207,32 @@ def check_printings(card_ids: dict[str, Path], waves: dict) -> int:
             if type(raw.get(field)) is not int:
                 print(f"{path.relative_to(ROOT)}: {field} must be an integer")
                 errors += 1
+        if not isinstance(raw.get("releasedBy"), str) or not raw["releasedBy"]:
+            print(f"{path.relative_to(ROOT)}: releasedBy must be a non-empty string")
+            errors += 1
+        if "layoutId" in raw and not isinstance(raw["layoutId"], str):
+            print(f"{path.relative_to(ROOT)}: layoutId is not a string")
+            errors += 1
+        if "copyQuantity" in raw and type(raw["copyQuantity"]) is not int:
+            print(f"{path.relative_to(ROOT)}: copyQuantity must be an integer")
+            errors += 1
+        faces = raw.get("faces")
+        if faces is not None:
+            if not isinstance(faces, list) or not faces:
+                print(f"{path.relative_to(ROOT)}: faces must be a non-empty list")
+                errors += 1
+            else:
+                for face in faces:
+                    if not isinstance(face, dict) or set(face) - {"flavor", "copyQuantity"}:
+                        print(f"{path.relative_to(ROOT)}: face {face!r} is not a flavor/copyQuantity record")
+                        errors += 1
+                        continue
+                    if "flavor" in face and not isinstance(face["flavor"], str):
+                        print(f"{path.relative_to(ROOT)}: face flavor is not a string")
+                        errors += 1
+                    if "copyQuantity" in face and type(face["copyQuantity"]) is not int:
+                        print(f"{path.relative_to(ROOT)}: face copyQuantity must be an integer")
+                        errors += 1
         if isinstance(pack, str):
             seen.setdefault(card_id, set()).add(pack)
     for name, wave in waves.items():
@@ -276,10 +302,14 @@ def check_printed(card_ids: dict[str, Path]) -> int:
             errors += 1
             continue
         seen.add(card_id)
-        for field in ("text", "strippedText"):
+        for field in ("text", "strippedText", "strippedTitle"):
             if not isinstance(raw.get(field), str):
                 print(f"{path.relative_to(ROOT)}: {field} must be a string")
                 errors += 1
+        stripped = raw.get("strippedText")
+        if isinstance(stripped, str) and "<" in stripped:
+            print(f"{path.relative_to(ROOT)}: strippedText carries HTML markup")
+            errors += 1
     missing = sorted(set(card_ids) - seen)
     if missing:
         print(f"cards with no printed text: {missing}")
@@ -287,7 +317,51 @@ def check_printed(card_ids: dict[str, Path]) -> int:
     return errors
 
 
-def check_legality(card_ids: dict[str, Path], waves: dict) -> int:
+REFERENCE_FILES = (
+    "factions.json",
+    "subtypes.json",
+    "card-types.json",
+    "sides.json",
+    "card-set-types.json",
+    "card-layouts.json",
+    "ruling-sources.json",
+)
+
+
+def load_reference() -> tuple[dict[str, set[str]], int]:
+    """Vocabulary ids from the v2 reference files under data/."""
+    found: dict[str, set[str]] = {}
+    errors = 0
+    for name in REFERENCE_FILES:
+        path = DATA / name
+        if not path.is_file():
+            print(f"reference file missing: data/{name}")
+            errors += 1
+            continue
+        records = json.loads(path.read_text(encoding="utf-8"))
+        if not isinstance(records, list) or not records:
+            print(f"data/{name}: must be a non-empty list")
+            errors += 1
+            continue
+        ids: set[str] = set()
+        for record in records:
+            if (
+                not isinstance(record, dict)
+                or not isinstance(record.get("id"), str)
+                or not isinstance(record.get("name"), str)
+            ):
+                print(f"data/{name}: record {record!r} needs string id and name")
+                errors += 1
+                continue
+            if record["id"] in ids:
+                print(f"data/{name}: duplicate id {record['id']!r}")
+                errors += 1
+            ids.add(record["id"])
+        found[name] = ids
+    return found, errors
+
+
+def check_legality(card_ids: dict[str, Path], waves: dict, subtype_ids: set[str] | None = None) -> int:
     errors = 0
     corpus = set(waves)
     pools: dict[str, dict] = {}
@@ -316,6 +390,16 @@ def check_legality(card_ids: dict[str, Path], waves: dict) -> int:
             print(f"{path.relative_to(ROOT)}: id != filename")
             errors += 1
         restrictions.add(path.stem)
+        if subtype_ids is not None:
+            grouped_subtypes = raw.get("subtypes") or {}
+            if not isinstance(grouped_subtypes, dict):
+                print(f"{path.relative_to(ROOT)}: subtypes must be an object of name lists")
+                errors += 1
+            else:
+                for subtype in (name for names in grouped_subtypes.values() for name in names):
+                    if subtype not in subtype_ids:
+                        print(f"{path.relative_to(ROOT)}: subtype {subtype!r} is not in subtypes.json")
+                        errors += 1
         for field in ("banned", "restricted"):
             for card_id in raw.get(field) or []:
                 if card_id not in card_ids:
@@ -382,6 +466,10 @@ def main() -> int:
     validator = Draft202012Validator(SCHEMA)
     errors = 0
     card_ids: dict[str, Path] = {}
+    reference, reference_errors = load_reference()
+    errors += reference_errors
+    faction_ids = reference.get("factions.json", set())
+    subtype_ids = reference.get("subtypes.json", set())
 
     for directory in storage_dirs():
         if not directory.is_dir():
@@ -412,6 +500,14 @@ def main() -> int:
                     f"{raw.get('side')}/{raw.get('type')} != path {side}/{type_}"
                 )
                 errors += 1
+            faction = raw.get("faction")
+            if faction is not None and faction_ids and faction not in faction_ids:
+                print(f"{path.relative_to(ROOT)}: faction {faction!r} is not in factions.json")
+                errors += 1
+            for subtype in raw.get("subtypes") or []:
+                if subtype_ids and subtype not in subtype_ids:
+                    print(f"{path.relative_to(ROOT)}: subtype {subtype!r} is not in subtypes.json")
+                    errors += 1
             if cid in card_ids:
                 print(f"duplicate id {cid!r}: {card_ids[cid]} and {path}")
                 errors += 1
@@ -470,7 +566,7 @@ def main() -> int:
     errors += check_printings(card_ids, waves)
     errors += check_rulings(card_ids)
     errors += check_printed(card_ids)
-    errors += check_legality(card_ids, waves)
+    errors += check_legality(card_ids, waves, subtype_ids)
 
     if errors:
         print(f"FAILED with {errors} error(s)")

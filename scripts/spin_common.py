@@ -1,6 +1,10 @@
-"""Shared helpers for Spin cycle pack generate scripts."""
+"""Shared helpers for Spin cycle pack generate scripts.
+
+Reads v2 card records from the pinned NSG catalog.
+"""
 from __future__ import annotations
 
+from nsg_catalog import card_type, faction_slug, our_id, subtype_names
 from printed_numbers import apply_printed_numbers
 
 import json
@@ -71,9 +75,7 @@ def trace_sub(strength: int, on_success, on_failure=None):
 
 
 def breaker_card(c, subtype: str, strength: int, break_cost: int, pump_cost: int, pump_str: int):
-    subtypes = []
-    if c.get("keywords"):
-        subtypes = [s.strip().lower() for s in c["keywords"].split(" - ")]
+    subtypes = subtype_names(c)
     card = base(c, subtypes=subtypes or [subtype.split()[-1]])
     card["breaker"] = {
         "breaksSubtype": subtype,
@@ -88,23 +90,24 @@ def breaker_card(c, subtype: str, strength: int, break_cost: int, pump_cost: int
 
 def base(c, **extra):
     subtypes = extra.pop("subtypes", None)
-    if subtypes is None and c.get("keywords"):
-        subtypes = [s.strip().lower() for s in c["keywords"].split(" - ")]
+    if subtypes is None:
+        subtypes = subtype_names(c)
     card = {
-        "id": slugify(c["title"]),
+        "id": our_id(c["id"]),
         "title": c["title"],
-        "type": c["type_code"],
-        "side": "runner" if c["side_code"] == "runner" else "corp",
+        "type": card_type(c),
+        "side": c["side_id"],
         "unsupported": [],
     }
-    if c.get("faction_code"):
-        card["faction"] = c["faction_code"]
+    faction = faction_slug(c)
+    if faction:
+        card["faction"] = faction
     if subtypes:
         card["subtypes"] = subtypes
     if c.get("cost") is not None:
-        if c["type_code"] in ("event", "operation"):
+        if card_type(c) in ("event", "operation"):
             card["playCost"] = c["cost"]
-        elif c["type_code"] in ("ice", "asset", "upgrade"):
+        elif card_type(c) in ("ice", "asset", "upgrade"):
             # Printed rez cost. Ice install cost is 1 credit per ice already
             # protecting the server (CR 1.16.6b). Assets and upgrades have
             # no install cost (CR 8.5.11a).
@@ -117,11 +120,11 @@ def base(c, **extra):
         card["strength"] = c["strength"]
     if c.get("memory_cost") is not None:
         card["memoryCost"] = c["memory_cost"]
-    if c.get("advancement_cost") is not None:
-        card["advancementRequirement"] = c["advancement_cost"]
+    if c.get("advancement_requirement") is not None:
+        card["advancementRequirement"] = c["advancement_requirement"]
     if c.get("agenda_points") is not None:
         card["agendaPoints"] = c["agenda_points"]
-    if c.get("uniqueness"):
+    if c.get("is_unique"):
         card["unique"] = True
     apply_printed_numbers(card, c)
     card.update(extra)
