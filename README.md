@@ -19,7 +19,7 @@ Files under [`data/`](data/) are the API. Clone the repo or fetch a **tagged** r
 | [`data/schema.json`](data/schema.json) | JSON Schema for card definitions |
 | [`data/pool.json`](data/pool.json) | Declared corpus. `corpusOrder` is the release order; every wave there is `supported`. Each wave also has `dateRelease`, `cycle`, and `size` |
 | [`data/printings/`](data/printings/) | One file per printing (`<code>.json`): title id, pack, flavor, illustrator, `quantity` (copies in that pack), `position`, `releasedBy`, and where the catalog has them `layoutId`, `copyQuantity`, and `faces`. The image address is `https://card-images.netrunnerdb.com/v2/large/{code}.jpg` |
-| [`data/printed/`](data/printed/) | One file per title (`<id>.json`): the current printed `text`, `strippedText`, and `strippedTitle`, errata included. The rules file keeps the Effect IR |
+| [`data/printed/`](data/printed/) | One file per title (`<id>.json`): the current printed `text`, `strippedText`, and `strippedTitle`, errata included. Multi-face titles also carry `faces`, one `text`/`strippedText` pair per face with the front face first; the top-level pair repeats the front face. The rules file keeps the Effect IR |
 | `data/factions.json`, `data/subtypes.json`, `data/card-types.json`, `data/sides.json`, `data/card-set-types.json`, `data/card-layouts.json`, `data/ruling-sources.json` | Reference vocabularies from the catalog: faction names and colors, subtype and type names, set types, printing layouts, and ruling sources. Card files and restriction lists are validated against them |
 | [`data/rulings/`](data/rulings/) | One file per title with a rules-team-verified ruling (`<id>.json`). Taken from the pinned catalog's `v2/rulings/` snapshot of the NetrunnerDB rulings API. Unverified rulings are left out. A ruling explains the card text; an erratum changes the text itself |
 | [`data/formats/`](data/formats/) | One file per format. Each snapshot names a card pool and, when the catalog has one, a restriction |
@@ -49,7 +49,7 @@ Card files live at `data/<side>/<type>/<id>.json` (for example `data/runner/prog
 | Translations | `v2/translations/` | Locale display, not play |
 | Designer credit, pronouns, pronunciation, narrative text | fields on `v2/cards/` | Not used by the engine or the table. The champion credit lines in pack flavor text are not in `v2` and are not kept |
 | Prebuilt decks | `prebuilts.json` | Six published deck lists |
-| Second-face rules text | `v2/cards/` | At the pinned commit a flip identity's catalog text is its front face. The full printed sentence, every side, is kept in `data/printed/` from the pack export (`scripts/flip-text-overrides.json`) until `v2` stores face text |
+| Second-face rules text in the catalog | `v2/cards/` | At the pinned commit a flip identity's catalog text is its front face. Every face's sentence is stored in `data/printed/` (`faces`, front first), transcribed from the pack export in `scripts/flip-text-overrides.json`, until `v2` stores face text |
 
 Partial cards list unimplemented clauses in an `unsupported` array — never silent wrong behavior. A wave marked `supported` in [`data/pool.json`](data/pool.json) must keep those arrays empty unless the card is listed with a reason in [`data/supported-unsupported-allowlist.json`](data/supported-unsupported-allowlist.json) (enforced by `scripts/validate-cards.py`). See [`CONTRIBUTING.md`](CONTRIBUTING.md) for the CR gate PR template.
 

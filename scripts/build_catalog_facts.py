@@ -134,8 +134,8 @@ def main() -> int:
     errors: list[str] = []
 
     # At the pinned commit, v2/cards carries only the front face of a flip
-    # identity. The full printed sentence (all sides) is kept from the pack
-    # export in scripts/flip-text-overrides.json until v2 stores face text.
+    # identity. Every face's sentence is kept from the pack export in
+    # scripts/flip-text-overrides.json until v2 stores face text.
     flip_text = load_json(ROOT / "scripts" / "flip-text-overrides.json")
 
     limits: dict[str, int] = {}
@@ -154,18 +154,20 @@ def main() -> int:
         stripped_title = (
             card.get("stripped_title") if isinstance(card.get("stripped_title"), str) else ""
         )
-        override = flip_text.get(card_id)
-        if override is not None:
-            if not override["text"].startswith(text.split("\n")[0]):
-                errors.append(f"{card_id}: flip-text override does not start with the v2 front face")
-            text = override["text"]
-            stripped = override["strippedText"]
-        printed[card_id] = {
+        record = {
             "cardId": card_id,
             "text": text,
             "strippedText": stripped,
             "strippedTitle": stripped_title,
         }
+        override = flip_text.get(card_id)
+        if override is not None:
+            faces = override["faces"]
+            if faces[0]["text"] != text or faces[0]["strippedText"] != stripped:
+                errors.append(f"{card_id}: flip-text override front face differs from v2/cards")
+            else:
+                record["faces"] = faces
+        printed[card_id] = record
 
     missing_limits = sorted(known - set(limits))
     if missing_limits:

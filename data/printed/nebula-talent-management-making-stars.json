@@ -1,6 +1,16 @@
 {
   "cardId": "nebula-talent-management-making-stars",
-  "text": "When your action phase ends, if you played an operation this turn, gain 1[credit] and flip this identity.\nFlip side:\nThe first time each turn you play an operation, gain [click].\nWhen the Runner makes a successful run on HQ or R&D, flip this identity.",
-  "strippedText": "When your action phase ends, if you played an operation this turn, gain 1 credit and flip this identity. Flip side: The first time each turn you play an operation, gain click. When the Runner makes a successful run on HQ or R&D, flip this identity.",
-  "strippedTitle": "Nebula Talent Management: Making Stars"
+  "text": "When your action phase ends, if you played an operation this turn, gain 1[credit] and flip this identity.",
+  "strippedText": "When your action phase ends, if you played an operation this turn, gain 1 credit and flip this identity.",
+  "strippedTitle": "Nebula Talent Management: Making Stars",
+  "faces": [
+    {
+      "text": "When your action phase ends, if you played an operation this turn, gain 1[credit] and flip this identity.",
+      "strippedText": "When your action phase ends, if you played an operation this turn, gain 1 credit and flip this identity."
+    },
+    {
+      "text": "The first time each turn you play an operation, gain [click].\nWhen the Runner makes a successful run on HQ or R&D, flip this identity.",
+      "strippedText": "The first time each turn you play an operation, gain click. When the Runner makes a successful run on HQ or R&D, flip this identity."
+    }
+  ]
 }
