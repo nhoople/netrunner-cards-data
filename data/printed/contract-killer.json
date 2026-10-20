@@ -1,5 +1,6 @@
 {
   "cardId": "contract-killer",
   "text": "Contract Killer can be advanced.\nIf there are at least 2 advancement tokens on Contract Killer, it gains: \"[click], [trash]: Trash a <strong>connection</strong> or do 2 meat damage.\"",
-  "strippedText": "Contract Killer can be advanced. If there are at least 2 advancement tokens on Contract Killer, it gains: \"click, trash: Trash a connection or do 2 meat damage.\""
+  "strippedText": "Contract Killer can be advanced. If there are at least 2 advancement tokens on Contract Killer, it gains: \"click, trash: Trash a connection or do 2 meat damage.\"",
+  "strippedTitle": "Contract Killer"
 }

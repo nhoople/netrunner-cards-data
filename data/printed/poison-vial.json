@@ -1,5 +1,6 @@
 {
   "cardId": "poison-vial",
   "text": "When you install this hardware, load 3 power counters onto it. When it is empty, trash it.\n<strong>Hosted power counter:</strong> Break up to 2 subroutines. Use this ability only if you have already broken a subroutine during this encounter.",
-  "strippedText": "When you install this hardware, load 3 power counters onto it. When it is empty, trash it. Hosted power counter: Break up to 2 subroutines. Use this ability only if you have already broken a subroutine during this encounter."
+  "strippedText": "When you install this hardware, load 3 power counters onto it. When it is empty, trash it. Hosted power counter: Break up to 2 subroutines. Use this ability only if you have already broken a subroutine during this encounter.",
+  "strippedTitle": "Poison Vial"
 }

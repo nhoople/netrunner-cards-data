@@ -1,5 +1,6 @@
 {
   "cardId": "chop-bot-3000",
   "text": "When your turn begins, you may trash another of your installed cards. If you do, draw 1 card or remove 1 tag.",
-  "strippedText": "When your turn begins, you may trash another of your installed cards. If you do, draw 1 card or remove 1 tag."
+  "strippedText": "When your turn begins, you may trash another of your installed cards. If you do, draw 1 card or remove 1 tag.",
+  "strippedTitle": "Chop Bot 3000"
 }

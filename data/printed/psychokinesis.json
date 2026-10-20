@@ -1,5 +1,6 @@
 {
   "cardId": "psychokinesis",
   "text": "After you resolve this operation, end your action phase.\nLook at the top 5 cards of R&D. If any of those cards are agendas, assets, or upgrades, you may install 1 of those cards in a remote server.",
-  "strippedText": "After you resolve this operation, end your action phase. Look at the top 5 cards of R&D. If any of those cards are agendas, assets, or upgrades, you may install 1 of those cards in a remote server."
+  "strippedText": "After you resolve this operation, end your action phase. Look at the top 5 cards of R&D. If any of those cards are agendas, assets, or upgrades, you may install 1 of those cards in a remote server.",
+  "strippedTitle": "Psychokinesis"
 }

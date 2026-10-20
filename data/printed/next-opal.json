@@ -1,5 +1,6 @@
 {
   "cardId": "next-opal",
   "text": "This ice gains \"[subroutine] You may install 1 card from HQ.\" for each rezzed piece of <strong>NEXT</strong> ice.",
-  "strippedText": "This ice gains \"Subroutine You may install 1 card from HQ.\" for each rezzed piece of NEXT ice."
+  "strippedText": "This ice gains \"Subroutine You may install 1 card from HQ.\" for each rezzed piece of NEXT ice.",
+  "strippedTitle": "NEXT Opal"
 }

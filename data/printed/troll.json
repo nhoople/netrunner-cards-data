@@ -1,5 +1,6 @@
 {
   "cardId": "troll",
   "text": "When the Runner encounters Troll, Trace[2]. If successful, the Runner must lose [click] or end the run.",
-  "strippedText": "When the Runner encounters Troll, Trace[2]. If successful, the Runner must lose click or end the run."
+  "strippedText": "When the Runner encounters Troll, Trace[2]. If successful, the Runner must lose click or end the run.",
+  "strippedTitle": "Troll"
 }

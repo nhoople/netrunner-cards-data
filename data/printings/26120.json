@@ -2,8 +2,14 @@
   "code": "26120",
   "cardId": "earth-station-sea-headquarters",
   "pack": "uprising",
-  "flavor": "The First Step…\n…Further Beyond",
+  "flavor": "The First Step…",
   "illustrator": "Kira L. Nguyen",
   "quantity": 1,
-  "position": 120
+  "position": 120,
+  "releasedBy": "null-signal-games",
+  "faces": [
+    {
+      "flavor": "…Further Beyond"
+    }
+  ]
 }

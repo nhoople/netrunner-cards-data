@@ -1,5 +1,6 @@
 {
   "cardId": "zaibatsu-loyalty",
   "text": "[interrupt] → When a card would be exposed, you may rez this asset.\n[interrupt] → <strong>1[credit]</strong> or <strong>[trash]:</strong> Prevent 1 card from being exposed.",
-  "strippedText": "Interrupt -> When a card would be exposed, you may rez this asset. Interrupt -> 1 credit or trash: Prevent 1 card from being exposed."
+  "strippedText": "Interrupt -> When a card would be exposed, you may rez this asset. Interrupt -> 1 credit or trash: Prevent 1 card from being exposed.",
+  "strippedTitle": "Zaibatsu Loyalty"
 }

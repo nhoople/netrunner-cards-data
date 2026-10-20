@@ -1,5 +1,6 @@
 {
   "cardId": "fan-site",
   "text": "Whenever the Corp scores an agenda, add Fan Site to your score area as an agenda worth 0 agenda points.",
-  "strippedText": "Whenever the Corp scores an agenda, add Fan Site to your score area as an agenda worth 0 agenda points."
+  "strippedText": "Whenever the Corp scores an agenda, add Fan Site to your score area as an agenda worth 0 agenda points.",
+  "strippedTitle": "Fan Site"
 }

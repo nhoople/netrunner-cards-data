@@ -1,5 +1,6 @@
 {
   "cardId": "gravedigger",
   "text": "Whenever an installed Corp card is trashed, place 1 virus counter on Gravedigger.\n[click], <strong>hosted virus counter:</strong> The Corp trashes the top card of R&D.",
-  "strippedText": "Whenever an installed Corp card is trashed, place 1 virus counter on Gravedigger. click, hosted virus counter: The Corp trashes the top card of R&D."
+  "strippedText": "Whenever an installed Corp card is trashed, place 1 virus counter on Gravedigger. click, hosted virus counter: The Corp trashes the top card of R&D.",
+  "strippedTitle": "Gravedigger"
 }

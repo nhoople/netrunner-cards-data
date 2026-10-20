@@ -1,5 +1,6 @@
 {
   "cardId": "brainstorm",
   "text": "When the Runner encounters this ice, it gains X \"[subroutine] Do 1 core damage.\" subroutines for the remainder of this run. X is equal to the number of cards in the grip.",
-  "strippedText": "When the Runner encounters this ice, it gains X \"Subroutine Do 1 core damage.\" subroutines for the remainder of this run. X is equal to the number of cards in the grip."
+  "strippedText": "When the Runner encounters this ice, it gains X \"Subroutine Do 1 core damage.\" subroutines for the remainder of this run. X is equal to the number of cards in the grip.",
+  "strippedTitle": "Brainstorm"
 }

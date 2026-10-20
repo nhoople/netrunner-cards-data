@@ -1,5 +1,6 @@
 {
   "cardId": "unorthodox-predictions",
   "text": "When you score Unorthodox Predictions, choose <strong>sentry</strong>, <strong>code gate</strong> or <strong>barrier</strong>. Subroutines on ice of the chosen type cannot be broken until the beginning of your next turn.",
-  "strippedText": "When you score Unorthodox Predictions, choose sentry, code gate or barrier. Subroutines on ice of the chosen type cannot be broken until the beginning of your next turn."
+  "strippedText": "When you score Unorthodox Predictions, choose sentry, code gate or barrier. Subroutines on ice of the chosen type cannot be broken until the beginning of your next turn.",
+  "strippedTitle": "Unorthodox Predictions"
 }

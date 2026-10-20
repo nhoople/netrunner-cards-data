@@ -1,5 +1,6 @@
 {
   "cardId": "extract",
   "text": "Gain 6[credit]. You may trash 1 of your installed cards to gain 3[credit].",
-  "strippedText": "Gain 6 credits. You may trash 1 of your installed cards to gain 3 credits."
+  "strippedText": "Gain 6 credits. You may trash 1 of your installed cards to gain 3 credits.",
+  "strippedTitle": "Extract"
 }

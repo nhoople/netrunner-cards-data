@@ -1,5 +1,6 @@
 {
   "cardId": "commercialization",
   "text": "Choose a piece of ice. Gain 1[credit] for each advancement token on that ice.",
-  "strippedText": "Choose a piece of ice. Gain 1 credit for each advancement token on that ice."
+  "strippedText": "Choose a piece of ice. Gain 1 credit for each advancement token on that ice.",
+  "strippedTitle": "Commercialization"
 }

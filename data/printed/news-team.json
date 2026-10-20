@@ -1,5 +1,6 @@
 {
   "cardId": "news-team",
   "text": "While the Runner is accessing this asset in R&D, they must reveal it.\nWhen the Runner accesses this asset, they must either take 2 tags or add this asset to their score area as an agenda worth -1 agenda point.",
-  "strippedText": "While the Runner is accessing this asset in R&D, they must reveal it. When the Runner accesses this asset, they must either take 2 tags or add this asset to their score area as an agenda worth -1 agenda point."
+  "strippedText": "While the Runner is accessing this asset in R&D, they must reveal it. When the Runner accesses this asset, they must either take 2 tags or add this asset to their score area as an agenda worth -1 agenda point.",
+  "strippedTitle": "News Team"
 }

@@ -1,5 +1,6 @@
 {
   "cardId": "advanced-concept-hopper",
   "text": "The first time the Runner initiates a run each turn, you may draw 1 card or gain 1[credit].",
-  "strippedText": "The first time the Runner initiates a run each turn, you may draw 1 card or gain 1 credit."
+  "strippedText": "The first time the Runner initiates a run each turn, you may draw 1 card or gain 1 credit.",
+  "strippedTitle": "Advanced Concept Hopper"
 }

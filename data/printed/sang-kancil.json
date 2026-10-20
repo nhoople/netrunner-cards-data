@@ -1,5 +1,6 @@
 {
   "cardId": "sang-kancil",
   "text": "Interface → <strong>1[credit]:</strong> Break 1 <strong>code gate</strong> subroutine.\n<strong>3[credit]:</strong> +2 strength. If a <strong>run</strong> event is active, this ability costs 2[credit] less to use.",
-  "strippedText": "Interface -> 1 credit: Break 1 code gate subroutine. 3 credits: +2 strength. If a run event is active, this ability costs 2 credits less to use."
+  "strippedText": "Interface -> 1 credit: Break 1 code gate subroutine. 3 credits: +2 strength. If a run event is active, this ability costs 2 credits less to use.",
+  "strippedTitle": "Sang Kancil"
 }

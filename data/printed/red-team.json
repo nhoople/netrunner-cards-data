@@ -1,5 +1,6 @@
 {
   "cardId": "red-team",
   "text": "When you install this resource, load 12[credit] onto it. When it is empty, trash it.\n[click]<strong>:</strong> Run a central server you have not run this turn. If successful, take 3[credit] from this resource.",
-  "strippedText": "When you install this resource, load 12 credits onto it. When it is empty, trash it. click: Run a central server you have not run this turn. If successful, take 3 credits from this resource."
+  "strippedText": "When you install this resource, load 12 credits onto it. When it is empty, trash it. click: Run a central server you have not run this turn. If successful, take 3 credits from this resource.",
+  "strippedTitle": "Red Team"
 }

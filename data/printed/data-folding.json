@@ -1,5 +1,6 @@
 {
   "cardId": "data-folding",
   "text": "When your turn begins, gain 1[credit] if you have 2 or more unused MU.",
-  "strippedText": "When your turn begins, gain 1 credit if you have 2 or more unused MU."
+  "strippedText": "When your turn begins, gain 1 credit if you have 2 or more unused MU.",
+  "strippedTitle": "Data Folding"
 }

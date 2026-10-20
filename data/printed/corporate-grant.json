@@ -1,5 +1,6 @@
 {
   "cardId": "corporate-grant",
   "text": "This card is not trashed until another <strong>current</strong> is played or an agenda is scored.\nThe first time you install a card each turn, the Corp loses 1[credit].",
-  "strippedText": "This card is not trashed until another current is played or an agenda is scored. The first time you install a card each turn, the Corp loses 1 credit."
+  "strippedText": "This card is not trashed until another current is played or an agenda is scored. The first time you install a card each turn, the Corp loses 1 credit.",
+  "strippedTitle": "Corporate \"Grant\""
 }

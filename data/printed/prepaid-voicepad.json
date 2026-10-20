@@ -1,5 +1,6 @@
 {
   "cardId": "prepaid-voicepad",
   "text": "1[recurring-credit] <em>(When you install this card and before your turn begins, refill to 1 hosted credit.)</em>\nYou can spend hosted credits to play events.",
-  "strippedText": "1 recurring credit (When you install this card and before your turn begins, refill to 1 hosted credit.) You can spend hosted credits to play events."
+  "strippedText": "1 recurring credit (When you install this card and before your turn begins, refill to 1 hosted credit.) You can spend hosted credits to play events.",
+  "strippedTitle": "Prepaid VoicePAD"
 }

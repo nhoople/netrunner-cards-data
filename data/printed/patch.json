@@ -1,5 +1,6 @@
 {
   "cardId": "patch",
   "text": "Install Patch on a rezzed piece of ice as a hosted condition counter with the text \"Host ice has +2 strength.\"",
-  "strippedText": "Install Patch on a rezzed piece of ice as a hosted condition counter with the text \"Host ice has +2 strength.\""
+  "strippedText": "Install Patch on a rezzed piece of ice as a hosted condition counter with the text \"Host ice has +2 strength.\"",
+  "strippedTitle": "Patch"
 }

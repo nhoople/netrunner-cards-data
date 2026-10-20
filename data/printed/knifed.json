@@ -1,5 +1,6 @@
 {
   "cardId": "knifed",
   "text": "Run any server. The first time you fully break a <strong>barrier</strong> during that run, trash that <strong>barrier</strong>.",
-  "strippedText": "Run any server. The first time you fully break a barrier during that run, trash that barrier."
+  "strippedText": "Run any server. The first time you fully break a barrier during that run, trash that barrier.",
+  "strippedTitle": "Knifed"
 }

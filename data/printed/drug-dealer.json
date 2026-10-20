@@ -1,5 +1,6 @@
 {
   "cardId": "drug-dealer",
   "text": "When your turn begins, lose 1[credit].\nWhen the Corp's turn begins, draw 1 card.",
-  "strippedText": "When your turn begins, lose 1 credit. When the Corp's turn begins, draw 1 card."
+  "strippedText": "When your turn begins, lose 1 credit. When the Corp's turn begins, draw 1 card.",
+  "strippedTitle": "Drug Dealer"
 }

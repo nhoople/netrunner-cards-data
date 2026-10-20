@@ -1,5 +1,6 @@
 {
   "cardId": "the-black-file",
   "text": "The Corp cannot win the game except if you are flatlined.\nWhen your turn begins, place 1 power counter on this resource. If there are 3 or more hosted power counters, remove this resource from the game.\nLimit 1 per deck.",
-  "strippedText": "The Corp cannot win the game except if you are flatlined. When your turn begins, place 1 power counter on this resource. If there are 3 or more hosted power counters, remove this resource from the game. Limit 1 per deck."
+  "strippedText": "The Corp cannot win the game except if you are flatlined. When your turn begins, place 1 power counter on this resource. If there are 3 or more hosted power counters, remove this resource from the game. Limit 1 per deck.",
+  "strippedTitle": "The Black File"
 }

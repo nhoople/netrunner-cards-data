@@ -1,5 +1,6 @@
 {
   "cardId": "tiered-subscription",
   "text": "The first time each turn a run begins, gain 1[credit].",
-  "strippedText": "The first time each turn a run begins, gain 1 credit."
+  "strippedText": "The first time each turn a run begins, gain 1 credit.",
+  "strippedTitle": "Tiered Subscription"
 }

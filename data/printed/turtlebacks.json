@@ -1,5 +1,6 @@
 {
   "cardId": "turtlebacks",
   "text": "Gain 1[credit] whenever you create a server.",
-  "strippedText": "Gain 1 credit whenever you create a server."
+  "strippedText": "Gain 1 credit whenever you create a server.",
+  "strippedTitle": "Turtlebacks"
 }

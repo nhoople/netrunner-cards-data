@@ -1,5 +1,6 @@
 {
   "cardId": "hypoxia",
   "text": "Play only if the Runner is tagged.\nDo 1 core damage. The Runner gets -1 allotted [click] for their next turn.\nRemove this operation from the game.",
-  "strippedText": "Play only if the Runner is tagged. Do 1 core damage. The Runner gets -1 allotted click for their next turn. Remove this operation from the game."
+  "strippedText": "Play only if the Runner is tagged. Do 1 core damage. The Runner gets -1 allotted click for their next turn. Remove this operation from the game.",
+  "strippedTitle": "Hypoxia"
 }

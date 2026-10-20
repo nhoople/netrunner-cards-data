@@ -1,5 +1,6 @@
 {
   "cardId": "blue-level-clearance",
   "text": "As an additional cost to play this operation, spend [click].\nGain 5[credit] and draw 2 cards.",
-  "strippedText": "As an additional cost to play this operation, spend click. Gain 5 credits and draw 2 cards."
+  "strippedText": "As an additional cost to play this operation, spend click. Gain 5 credits and draw 2 cards.",
+  "strippedTitle": "Blue Level Clearance"
 }

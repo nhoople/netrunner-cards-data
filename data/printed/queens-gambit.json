@@ -1,5 +1,6 @@
 {
   "cardId": "queens-gambit",
   "text": "As an additional cost to play this event, spend [click].\nPlace up to 3 advancement counters on 1 unrezzed card in the root of a remote server. Gain 2[credit] for each counter placed this way. You cannot access that card for the remainder of the turn.",
-  "strippedText": "As an additional cost to play this event, spend click. Place up to 3 advancement counters on 1 unrezzed card in the root of a remote server. Gain 2 credits for each counter placed this way. You cannot access that card for the remainder of the turn."
+  "strippedText": "As an additional cost to play this event, spend click. Place up to 3 advancement counters on 1 unrezzed card in the root of a remote server. Gain 2 credits for each counter placed this way. You cannot access that card for the remainder of the turn.",
+  "strippedTitle": "Queen's Gambit"
 }

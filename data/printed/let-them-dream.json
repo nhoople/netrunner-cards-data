@@ -1,5 +1,6 @@
 {
   "cardId": "let-them-dream",
   "text": "When you score this agenda, you may search HQ, R&D, or Archives for 1 agenda and reveal it. <em>(Shuffle R&D after searching it.)</em> Add that agenda to HQ or the bottom of R&D.\nWhile this agenda is in the Runner’s score area, it is worth 1 less agenda point.",
-  "strippedText": "When you score this agenda, you may search HQ, R&D, or Archives for 1 agenda and reveal it. (Shuffle R&D after searching it.) Add that agenda to HQ or the bottom of R&D. While this agenda is in the Runner's score area, it is worth 1 less agenda point."
+  "strippedText": "When you score this agenda, you may search HQ, R&D, or Archives for 1 agenda and reveal it. (Shuffle R&D after searching it.) Add that agenda to HQ or the bottom of R&D. While this agenda is in the Runner's score area, it is worth 1 less agenda point.",
+  "strippedTitle": "Let Them Dream"
 }

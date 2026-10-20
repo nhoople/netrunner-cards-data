@@ -1,5 +1,6 @@
 {
   "cardId": "dorm-computer",
   "text": "When you install this hardware, place 4 power counters on it.\n[click], <strong>hosted power counter:</strong> Run any server. Whenever you would take tags during that run, prevent all of those tags.",
-  "strippedText": "When you install this hardware, place 4 power counters on it. click, hosted power counter: Run any server. Whenever you would take tags during that run, prevent all of those tags."
+  "strippedText": "When you install this hardware, place 4 power counters on it. click, hosted power counter: Run any server. Whenever you would take tags during that run, prevent all of those tags.",
+  "strippedTitle": "Dorm Computer"
 }

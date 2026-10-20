@@ -2,8 +2,9 @@
   "code": "33051",
   "cardId": "drago-ivanov",
   "pack": "midnight-sun",
-  "flavor": "\"Tell them Drago would like a word.\"\n<strong>Designed by 2019 European Champion Aaryn \"Drago\" Byrne</strong>",
+  "flavor": "\"Tell them Drago would like a word.\"",
   "illustrator": "Dimik",
   "quantity": 3,
-  "position": 51
+  "position": 51,
+  "releasedBy": "null-signal-games"
 }

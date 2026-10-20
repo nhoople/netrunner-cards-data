@@ -1,5 +1,6 @@
 {
   "cardId": "test-ground",
   "text": "Test Ground can be advanced.\n[trash]: Derez 1 card for each advancement token on Test Ground.",
-  "strippedText": "Test Ground can be advanced. trash: Derez 1 card for each advancement token on Test Ground."
+  "strippedText": "Test Ground can be advanced. trash: Derez 1 card for each advancement token on Test Ground.",
+  "strippedTitle": "Test Ground"
 }

@@ -1,5 +1,6 @@
 {
   "cardId": "archives-interface",
   "text": "[interrupt] → Whenever you would access a card in Archives, you may instead remove it from the game. Use this ability only once each time you breach Archives.",
-  "strippedText": "Interrupt -> Whenever you would access a card in Archives, you may instead remove it from the game. Use this ability only once each time you breach Archives."
+  "strippedText": "Interrupt -> Whenever you would access a card in Archives, you may instead remove it from the game. Use this ability only once each time you breach Archives.",
+  "strippedTitle": "Archives Interface"
 }

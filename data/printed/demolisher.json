@@ -1,5 +1,6 @@
 {
   "cardId": "demolisher",
   "text": "+1[mu]\nThe trash cost of each Corp card is lowered by 1[credit].\nThe first time each turn you trash a Corp card, gain 1[credit].\nLimit 1 <strong>console</strong> per player.",
-  "strippedText": "+1 mu The trash cost of each Corp card is lowered by 1 credit. The first time each turn you trash a Corp card, gain 1 credit. Limit 1 console per player."
+  "strippedText": "+1 mu The trash cost of each Corp card is lowered by 1 credit. The first time each turn you trash a Corp card, gain 1 credit. Limit 1 console per player.",
+  "strippedTitle": "Demolisher"
 }

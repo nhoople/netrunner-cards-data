@@ -1,5 +1,6 @@
 {
   "cardId": "hush",
   "text": "Install only on a piece of ice.\nHost ice cannot gain abilities and loses all abilities except its printed subroutines.\n<strong>[click]:</strong> Host this program on another installed piece of ice.",
-  "strippedText": "Install only on a piece of ice. Host ice cannot gain abilities and loses all abilities except its printed subroutines. click: Host this program on another installed piece of ice."
+  "strippedText": "Install only on a piece of ice. Host ice cannot gain abilities and loses all abilities except its printed subroutines. click: Host this program on another installed piece of ice.",
+  "strippedTitle": "Hush"
 }

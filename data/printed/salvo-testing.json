@@ -1,5 +1,6 @@
 {
   "cardId": "salvo-testing",
   "text": "Whenever you score an agenda <em>(including this one)</em>, you may do 1 core damage.",
-  "strippedText": "Whenever you score an agenda (including this one), you may do 1 core damage."
+  "strippedText": "Whenever you score an agenda (including this one), you may do 1 core damage.",
+  "strippedTitle": "Salvo Testing"
 }

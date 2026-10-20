@@ -1,5 +1,6 @@
 {
   "cardId": "akhet",
   "text": "You can advance this ice.\nWhile there are 3 or more hosted advancement counters, this ice gets +3 strength and the Runner cannot break more than 1 of its printed subroutines during each encounter.\n[subroutine] Gain 1[credit]. Place 1 advancement counter on an installed card.\n[subroutine] End the run.",
-  "strippedText": "You can advance this ice. While there are 3 or more hosted advancement counters, this ice gets +3 strength and the Runner cannot break more than 1 of its printed subroutines during each encounter. Subroutine Gain 1 credit. Place 1 advancement counter on an installed card. Subroutine End the run."
+  "strippedText": "You can advance this ice. While there are 3 or more hosted advancement counters, this ice gets +3 strength and the Runner cannot break more than 1 of its printed subroutines during each encounter. Subroutine Gain 1 credit. Place 1 advancement counter on an installed card. Subroutine End the run.",
+  "strippedTitle": "Akhet"
 }

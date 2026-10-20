@@ -1,5 +1,6 @@
 {
   "cardId": "blockchain",
   "text": "This ice gains \"[subroutine] Gain 1[credit] and the Runner loses 1[credit].\" before its other subroutines for every 2 faceup <strong>transaction</strong> operations in Archives.\n[subroutine] Gain 1[credit] and the Runner loses 1[credit].\n[subroutine] End the run.",
-  "strippedText": "This ice gains \"Subroutine Gain 1 credit and the Runner loses 1 credit.\" before its other subroutines for every 2 faceup transaction operations in Archives. Subroutine Gain 1 credit and the Runner loses 1 credit. Subroutine End the run."
+  "strippedText": "This ice gains \"Subroutine Gain 1 credit and the Runner loses 1 credit.\" before its other subroutines for every 2 faceup transaction operations in Archives. Subroutine Gain 1 credit and the Runner loses 1 credit. Subroutine End the run.",
+  "strippedTitle": "Blockchain"
 }

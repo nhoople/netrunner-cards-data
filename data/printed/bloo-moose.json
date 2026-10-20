@@ -1,5 +1,6 @@
 {
   "cardId": "bloo-moose",
   "text": "When your turn begins, you may remove 1 card in the heap from the game. If you do, gain 2[credit].",
-  "strippedText": "When your turn begins, you may remove 1 card in the heap from the game. If you do, gain 2 credits."
+  "strippedText": "When your turn begins, you may remove 1 card in the heap from the game. If you do, gain 2 credits.",
+  "strippedTitle": "Bloo Moose"
 }

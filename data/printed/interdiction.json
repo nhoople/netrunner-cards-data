@@ -1,5 +1,6 @@
 {
   "cardId": "interdiction",
   "text": "This card is not trashed until another <strong>current</strong> is played or an agenda is scored.\nThe Corp cannot rez non-ice cards during the Runner's turn.",
-  "strippedText": "This card is not trashed until another current is played or an agenda is scored. The Corp cannot rez non-ice cards during the Runner's turn."
+  "strippedText": "This card is not trashed until another current is played or an agenda is scored. The Corp cannot rez non-ice cards during the Runner's turn.",
+  "strippedTitle": "Interdiction"
 }

@@ -1,5 +1,6 @@
 {
   "cardId": "power-shutdown",
   "text": "Play only if the Runner made a run during their last turn.\nTrash any number of cards from the top of R&D. The Runner trashes an installed program or piece of hardware with an install cost equal to or less than the number of cards you trashed this way.",
-  "strippedText": "Play only if the Runner made a run during their last turn. Trash any number of cards from the top of R&D. The Runner trashes an installed program or piece of hardware with an install cost equal to or less than the number of cards you trashed this way."
+  "strippedText": "Play only if the Runner made a run during their last turn. Trash any number of cards from the top of R&D. The Runner trashes an installed program or piece of hardware with an install cost equal to or less than the number of cards you trashed this way.",
+  "strippedTitle": "Power Shutdown"
 }

@@ -1,5 +1,6 @@
 {
   "cardId": "corporate-defector",
   "text": "Whenever the Corp draws a card with the basic action, reveal that card.",
-  "strippedText": "Whenever the Corp draws a card with the basic action, reveal that card."
+  "strippedText": "Whenever the Corp draws a card with the basic action, reveal that card.",
+  "strippedTitle": "Corporate Defector"
 }

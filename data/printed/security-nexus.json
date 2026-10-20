@@ -1,5 +1,6 @@
 {
   "cardId": "security-nexus",
   "text": "+1[mu], +1[link]\nOnce per turn → When you encounter a piece of ice, you may have the Corp trace[5]. If successful, they give you 1 tag and end the run. If unsuccesful, bypass the encountered ice.\nLimit 1 <strong>console</strong> per player.",
-  "strippedText": "+1 mu, +1 link Once per turn -> When you encounter a piece of ice, you may have the Corp trace[5]. If successful, they give you 1 tag and end the run. If unsuccesful, bypass the encountered ice. Limit 1 console per player."
+  "strippedText": "+1 mu, +1 link Once per turn -> When you encounter a piece of ice, you may have the Corp trace[5]. If successful, they give you 1 tag and end the run. If unsuccesful, bypass the encountered ice. Limit 1 console per player.",
+  "strippedTitle": "Security Nexus"
 }

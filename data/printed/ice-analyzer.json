@@ -1,5 +1,6 @@
 {
   "cardId": "ice-analyzer",
   "text": "Whenever the Corp rezzes a piece of ice, place 1[credit] on Ice Analyzer.\nYou may use credits on Ice Analyzer to install programs.",
-  "strippedText": "Whenever the Corp rezzes a piece of ice, place 1 credit on Ice Analyzer. You may use credits on Ice Analyzer to install programs."
+  "strippedText": "Whenever the Corp rezzes a piece of ice, place 1 credit on Ice Analyzer. You may use credits on Ice Analyzer to install programs.",
+  "strippedTitle": "Ice Analyzer"
 }

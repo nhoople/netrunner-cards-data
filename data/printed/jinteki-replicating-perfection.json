@@ -1,5 +1,6 @@
 {
   "cardId": "jinteki-replicating-perfection",
   "text": "The Runner cannot run on remote servers. Ignore this ability until the end of the turn whenever the Runner runs on a central server.",
-  "strippedText": "The Runner cannot run on remote servers. Ignore this ability until the end of the turn whenever the Runner runs on a central server."
+  "strippedText": "The Runner cannot run on remote servers. Ignore this ability until the end of the turn whenever the Runner runs on a central server.",
+  "strippedTitle": "Jinteki: Replicating Perfection"
 }

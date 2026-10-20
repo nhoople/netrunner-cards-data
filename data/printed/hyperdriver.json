@@ -1,5 +1,6 @@
 {
   "cardId": "hyperdriver",
   "text": "When your turn begins, you may remove Hyperdriver from the game and gain [click][click][click].",
-  "strippedText": "When your turn begins, you may remove Hyperdriver from the game and gain click click click."
+  "strippedText": "When your turn begins, you may remove Hyperdriver from the game and gain click click click.",
+  "strippedTitle": "Hyperdriver"
 }

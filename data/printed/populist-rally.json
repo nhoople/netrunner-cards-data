@@ -1,5 +1,6 @@
 {
   "cardId": "populist-rally",
   "text": "Play only if you have a <strong>seedy</strong> card installed.\nThe Corp gets -1 allotted [click] for their next turn.",
-  "strippedText": "Play only if you have a seedy card installed. The Corp gets -1 allotted click for their next turn."
+  "strippedText": "Play only if you have a seedy card installed. The Corp gets -1 allotted click for their next turn.",
+  "strippedTitle": "Populist Rally"
 }

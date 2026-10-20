@@ -1,5 +1,6 @@
 {
   "cardId": "ngo-front",
   "text": "NGO Front can be advanced.\n[trash],<strong>1 hosted advancement token</strong>: Gain 5[credit].\n[trash],<strong>2 hosted advancement tokens</strong>: Gain 8[credit].",
-  "strippedText": "NGO Front can be advanced. trash,1 hosted advancement token: Gain 5 credits. trash,2 hosted advancement tokens: Gain 8 credits."
+  "strippedText": "NGO Front can be advanced. trash,1 hosted advancement token: Gain 5 credits. trash,2 hosted advancement tokens: Gain 8 credits.",
+  "strippedTitle": "NGO Front"
 }

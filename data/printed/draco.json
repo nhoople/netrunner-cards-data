@@ -1,5 +1,6 @@
 {
   "cardId": "draco",
   "text": "When you rez this ice, you may spend any number of credits to place that many power counters on it.\nThis ice gets +1 strength for each hosted power counter.\n[subroutine] Trace[2]. If successful, give the Runner 1 tag and end the run.",
-  "strippedText": "When you rez this ice, you may spend any number of credits to place that many power counters on it. This ice gets +1 strength for each hosted power counter. Subroutine Trace[2]. If successful, give the Runner 1 tag and end the run."
+  "strippedText": "When you rez this ice, you may spend any number of credits to place that many power counters on it. This ice gets +1 strength for each hosted power counter. Subroutine Trace[2]. If successful, give the Runner 1 tag and end the run.",
+  "strippedTitle": "Draco"
 }

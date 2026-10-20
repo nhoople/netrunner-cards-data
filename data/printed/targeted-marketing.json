@@ -1,5 +1,6 @@
 {
   "cardId": "targeted-marketing",
   "text": "This card is not trashed until another <strong>current</strong> is played or an agenda is stolen.\nName a card. Gain 10[credit] whenever the Runner plays or installs a copy of that card.",
-  "strippedText": "This card is not trashed until another current is played or an agenda is stolen. Name a card. Gain 10 credits whenever the Runner plays or installs a copy of that card."
+  "strippedText": "This card is not trashed until another current is played or an agenda is stolen. Name a card. Gain 10 credits whenever the Runner plays or installs a copy of that card.",
+  "strippedTitle": "Targeted Marketing"
 }

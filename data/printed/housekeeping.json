@@ -1,5 +1,6 @@
 {
   "cardId": "housekeeping",
   "text": "This operation is not trashed until another <strong>current</strong> is played or an agenda is stolen.\nThe first time each turn the Runner installs a card, they trash 1 card from the grip.",
-  "strippedText": "This operation is not trashed until another current is played or an agenda is stolen. The first time each turn the Runner installs a card, they trash 1 card from the grip."
+  "strippedText": "This operation is not trashed until another current is played or an agenda is stolen. The first time each turn the Runner installs a card, they trash 1 card from the grip.",
+  "strippedTitle": "Housekeeping"
 }

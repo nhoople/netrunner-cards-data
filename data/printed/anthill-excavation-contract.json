@@ -1,5 +1,6 @@
 {
   "cardId": "anthill-excavation-contract",
   "text": "When you rez this asset, load 8[credit] onto it. When it is empty, trash it.\nWhen your turn begins, take 4[credit] from this asset and draw 1 card.",
-  "strippedText": "When you rez this asset, load 8 credits onto it. When it is empty, trash it. When your turn begins, take 4 credits from this asset and draw 1 card."
+  "strippedText": "When you rez this asset, load 8 credits onto it. When it is empty, trash it. When your turn begins, take 4 credits from this asset and draw 1 card.",
+  "strippedTitle": "Anthill Excavation Contract"
 }

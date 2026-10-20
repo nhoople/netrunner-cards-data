@@ -1,5 +1,6 @@
 {
   "cardId": "assimilator",
   "text": "[click],[click]: Turn one of your facedown installed cards faceup. If that card is an event, trash it.",
-  "strippedText": "click,click: Turn one of your facedown installed cards faceup. If that card is an event, trash it."
+  "strippedText": "click,click: Turn one of your facedown installed cards faceup. If that card is an event, trash it.",
+  "strippedTitle": "Assimilator"
 }

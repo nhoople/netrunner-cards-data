@@ -1,5 +1,6 @@
 {
   "cardId": "patron",
   "text": "When your turn begins, you may choose a server.\nThe first time each turn you make a successful run on the chosen server, instead of breaching it, draw 2 cards.",
-  "strippedText": "When your turn begins, you may choose a server. The first time each turn you make a successful run on the chosen server, instead of breaching it, draw 2 cards."
+  "strippedText": "When your turn begins, you may choose a server. The first time each turn you make a successful run on the chosen server, instead of breaching it, draw 2 cards.",
+  "strippedTitle": "Patron"
 }

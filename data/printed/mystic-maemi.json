@@ -1,5 +1,6 @@
 {
   "cardId": "mystic-maemi",
   "text": "When your turn begins and whenever you steal an agenda, place 1[credit] on this resource.\nYou can spend hosted credits to play events.\nWhen your turn ends, if there are 3 or more hosted credits, you must trash 1 card from your grip at random or trash this resource.",
-  "strippedText": "When your turn begins and whenever you steal an agenda, place 1 credit on this resource. You can spend hosted credits to play events. When your turn ends, if there are 3 or more hosted credits, you must trash 1 card from your grip at random or trash this resource."
+  "strippedText": "When your turn begins and whenever you steal an agenda, place 1 credit on this resource. You can spend hosted credits to play events. When your turn ends, if there are 3 or more hosted credits, you must trash 1 card from your grip at random or trash this resource.",
+  "strippedTitle": "Mystic Maemi"
 }

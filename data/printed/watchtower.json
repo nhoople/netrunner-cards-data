@@ -1,5 +1,6 @@
 {
   "cardId": "watchtower",
   "text": "[subroutine] Search R&D for a card and add it to HQ. Shuffle R&D.",
-  "strippedText": "Subroutine Search R&D for a card and add it to HQ. Shuffle R&D."
+  "strippedText": "Subroutine Search R&D for a card and add it to HQ. Shuffle R&D.",
+  "strippedTitle": "Watchtower"
 }

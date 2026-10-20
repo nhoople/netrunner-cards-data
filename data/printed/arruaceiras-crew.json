@@ -1,5 +1,6 @@
 {
   "cardId": "arruaceiras-crew",
   "text": "Once per turn → <strong>Take 1 tag:</strong> The ice you are encountering gets –2 strength for the remainder of this encounter.\n[trash], <strong>2[credit]:</strong> Trash the ice you are encountering if its strength is 0 or less.",
-  "strippedText": "Once per turn -> Take 1 tag: The ice you are encountering gets -2 strength for the remainder of this encounter. trash, 2[credit]: Trash the ice you are encountering if its strength is 0 or less."
+  "strippedText": "Once per turn -> Take 1 tag: The ice you are encountering gets -2 strength for the remainder of this encounter. trash, 2[credit]: Trash the ice you are encountering if its strength is 0 or less.",
+  "strippedTitle": "Arruaceiras Crew"
 }

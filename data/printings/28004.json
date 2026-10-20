@@ -2,8 +2,8 @@
   "code": "28004",
   "cardId": "slot-machine",
   "pack": "magnum-opus",
-  "flavor": "<strong>Designed by 2017 World Champion Jess Horig</strong>",
   "illustrator": "Krembler",
   "quantity": 3,
-  "position": 4
+  "position": 4,
+  "releasedBy": "null-signal-games"
 }

@@ -1,5 +1,6 @@
 {
   "cardId": "false-lead",
   "text": "<strong>Forfeit this agenda:</strong> If the Runner has 2 or more [click] remaining, they lose [click][click].",
-  "strippedText": "Forfeit this agenda: If the Runner has 2 or more click remaining, they lose click click."
+  "strippedText": "Forfeit this agenda: If the Runner has 2 or more click remaining, they lose click click.",
+  "strippedTitle": "False Lead"
 }

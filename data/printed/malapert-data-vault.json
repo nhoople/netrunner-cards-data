@@ -1,5 +1,6 @@
 {
   "cardId": "malapert-data-vault",
   "text": "Whenever you score an agenda from the root of this server, you may search R&D for 1 non-agenda card and reveal it. <em>(Shuffle R&D after searching it.)</em> Add that card to HQ.",
-  "strippedText": "Whenever you score an agenda from the root of this server, you may search R&D for 1 non-agenda card and reveal it. (Shuffle R&D after searching it.) Add that card to HQ."
+  "strippedText": "Whenever you score an agenda from the root of this server, you may search R&D for 1 non-agenda card and reveal it. (Shuffle R&D after searching it.) Add that card to HQ.",
+  "strippedTitle": "Malapert Data Vault"
 }

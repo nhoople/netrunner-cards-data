@@ -1,5 +1,6 @@
 {
   "cardId": "mining-accident",
   "text": "Play only if you made a successful run on a central server this turn.\nGive the Corp 1 bad publicity unless they pay 5[credit].\nRemove this event from the game.",
-  "strippedText": "Play only if you made a successful run on a central server this turn. Give the Corp 1 bad publicity unless they pay 5 credits. Remove this event from the game."
+  "strippedText": "Play only if you made a successful run on a central server this turn. Give the Corp 1 bad publicity unless they pay 5 credits. Remove this event from the game.",
+  "strippedTitle": "Mining Accident"
 }

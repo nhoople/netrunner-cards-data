@@ -1,5 +1,6 @@
 {
   "cardId": "event-horizon",
   "text": "[trash]<strong>:</strong> End the run. Use this ability only during a run against this server.\n[subroutine] Trash 1 installed program unless the Runner pays 3[credit].\n[subroutine] End the run unless the Runner pays 3[credit].",
-  "strippedText": "trash: End the run. Use this ability only during a run against this server. Subroutine Trash 1 installed program unless the Runner pays 3 credits. Subroutine End the run unless the Runner pays 3 credits."
+  "strippedText": "trash: End the run. Use this ability only during a run against this server. Subroutine Trash 1 installed program unless the Runner pays 3 credits. Subroutine End the run unless the Runner pays 3 credits.",
+  "strippedTitle": "Event Horizon"
 }

@@ -1,5 +1,6 @@
 {
   "cardId": "manta-grid",
   "text": "If the Runner has fewer than 6[credit] or no unspent clicks when a successful run on this server ends, you have 1 additional [click] to spend your next turn.\nLimit 1 <strong>region</strong> per server.",
-  "strippedText": "If the Runner has fewer than 6 credits or no unspent clicks when a successful run on this server ends, you have 1 additional click to spend your next turn. Limit 1 region per server."
+  "strippedText": "If the Runner has fewer than 6 credits or no unspent clicks when a successful run on this server ends, you have 1 additional click to spend your next turn. Limit 1 region per server.",
+  "strippedTitle": "Manta Grid"
 }

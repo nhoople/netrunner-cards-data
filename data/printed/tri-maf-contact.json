@@ -1,5 +1,6 @@
 {
   "cardId": "tri-maf-contact",
   "text": "You cannot use this resource more than once per turn.\n[click]<strong>:</strong> Gain 2[credit].\nWhen this resource is trashed, suffer 3 meat damage.",
-  "strippedText": "You cannot use this resource more than once per turn. click: Gain 2[credit]. When this resource is trashed, suffer 3 meat damage."
+  "strippedText": "You cannot use this resource more than once per turn. click: Gain 2[credit]. When this resource is trashed, suffer 3 meat damage.",
+  "strippedTitle": "Tri-maf Contact"
 }

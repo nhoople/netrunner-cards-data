@@ -1,5 +1,6 @@
 {
   "cardId": "chekist-scion",
   "text": "You can advance this asset.\nWhen the Runner accesses this asset while it is installed, give them 1 tag plus 1 tag for each hosted advancement counter.",
-  "strippedText": "You can advance this asset. When the Runner accesses this asset while it is installed, give them 1 tag plus 1 tag for each hosted advancement counter."
+  "strippedText": "You can advance this asset. When the Runner accesses this asset while it is installed, give them 1 tag plus 1 tag for each hosted advancement counter.",
+  "strippedTitle": "Chekist Scion"
 }

@@ -1,5 +1,6 @@
 {
   "cardId": "scapegoat",
   "text": "Resolve 1 of the following of the Runner’s choice:<ul><li>Remove 2 bad publicity.</li><li>Choose 1 installed Runner card. The Runner shuffles it into the stack.</li></ul>",
-  "strippedText": "Resolve 1 of the following of the Runner's choice: * Remove 2 bad publicity. * Choose 1 installed Runner card. The Runner shuffles it into the stack."
+  "strippedText": "Resolve 1 of the following of the Runner's choice: * Remove 2 bad publicity. * Choose 1 installed Runner card. The Runner shuffles it into the stack.",
+  "strippedTitle": "Scapegoat"
 }

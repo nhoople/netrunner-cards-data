@@ -2,8 +2,19 @@
   "code": "36036",
   "cardId": "melies-u-only-the-brightest",
   "pack": "vantage-point",
-  "flavor": "Above all else.\nBeneath any notice.\nOff the record.",
   "illustrator": "Kira L. Nguyen",
   "quantity": 1,
-  "position": 36
+  "position": 36,
+  "releasedBy": "null-signal-games",
+  "faces": [
+    {
+      "flavor": "Above all else."
+    },
+    {
+      "flavor": "Beneath any notice."
+    },
+    {
+      "flavor": "Off the record."
+    }
+  ]
 }

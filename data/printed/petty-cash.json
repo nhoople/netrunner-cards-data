@@ -1,5 +1,6 @@
 {
   "cardId": "petty-cash",
   "text": "Play only if you have not finished an action yet this turn.\nGain 5[credit]. If you played this operation from anywhere except HQ, gain [click].\n[click]<strong>:</strong> Play this operation from Archives. After it resolves, remove it from the game.",
-  "strippedText": "Play only if you have not finished an action yet this turn. Gain 5 credits. If you played this operation from anywhere except HQ, gain click. click: Play this operation from Archives. After it resolves, remove it from the game."
+  "strippedText": "Play only if you have not finished an action yet this turn. Gain 5 credits. If you played this operation from anywhere except HQ, gain click. click: Play this operation from Archives. After it resolves, remove it from the game.",
+  "strippedTitle": "Petty Cash"
 }

@@ -1,5 +1,6 @@
 {
   "cardId": "pivot",
   "text": "As an additional cost to play this operation, spend [click].\nSearch R&D for 1 operation or agenda and reveal it. <em>(Shuffle R&D after searching it.)</em> Add that card to HQ.\nThreat 3 → You may play or install 1 card from HQ. <em>(This ability is active if any player has 3 or more agenda points.)</em>",
-  "strippedText": "As an additional cost to play this operation, spend click. Search R&D for 1 operation or agenda and reveal it. (Shuffle R&D after searching it.) Add that card to HQ. Threat 3 -> You may play or install 1 card from HQ. (This ability is active if any player has 3 or more agenda points.)"
+  "strippedText": "As an additional cost to play this operation, spend click. Search R&D for 1 operation or agenda and reveal it. (Shuffle R&D after searching it.) Add that card to HQ. Threat 3 -> You may play or install 1 card from HQ. (This ability is active if any player has 3 or more agenda points.)",
+  "strippedTitle": "Pivot"
 }

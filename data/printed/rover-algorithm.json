@@ -1,5 +1,6 @@
 {
   "cardId": "rover-algorithm",
   "text": "Install Rover Algorithm on a rezzed piece of ice as a hosted condition counter with the text \"Host ice has +1 strength for each power counter on Rover Algorithm. Whenever the Runner passes host ice, place 1 power counter on Rover Algorithm.\"",
-  "strippedText": "Install Rover Algorithm on a rezzed piece of ice as a hosted condition counter with the text \"Host ice has +1 strength for each power counter on Rover Algorithm. Whenever the Runner passes host ice, place 1 power counter on Rover Algorithm.\""
+  "strippedText": "Install Rover Algorithm on a rezzed piece of ice as a hosted condition counter with the text \"Host ice has +1 strength for each power counter on Rover Algorithm. Whenever the Runner passes host ice, place 1 power counter on Rover Algorithm.\"",
+  "strippedTitle": "Rover Algorithm"
 }

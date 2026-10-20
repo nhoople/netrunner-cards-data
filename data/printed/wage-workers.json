@@ -1,5 +1,6 @@
 {
   "cardId": "wage-workers",
   "text": "Whenever you finish taking an action, if you have taken that action exactly 3 times this turn, gain [click].",
-  "strippedText": "Whenever you finish taking an action, if you have taken that action exactly 3 times this turn, gain click."
+  "strippedText": "Whenever you finish taking an action, if you have taken that action exactly 3 times this turn, gain click.",
+  "strippedTitle": "Wage Workers"
 }

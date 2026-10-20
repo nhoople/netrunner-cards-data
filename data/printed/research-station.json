@@ -1,5 +1,6 @@
 {
   "cardId": "research-station",
   "text": "Install only in the root of HQ.\nYour maximum hand size is +2.",
-  "strippedText": "Install only in the root of HQ. Your maximum hand size is +2."
+  "strippedText": "Install only in the root of HQ. Your maximum hand size is +2.",
+  "strippedTitle": "Research Station"
 }

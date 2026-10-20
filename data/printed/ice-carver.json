@@ -1,5 +1,6 @@
 {
   "cardId": "ice-carver",
   "text": "While you are encountering a piece of ice, it gets −1 strength.",
-  "strippedText": "While you are encountering a piece of ice, it gets -1 strength."
+  "strippedText": "While you are encountering a piece of ice, it gets -1 strength.",
+  "strippedTitle": "Ice Carver"
 }

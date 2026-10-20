@@ -1,5 +1,6 @@
 {
   "cardId": "shipment-from-sansan",
   "text": "As an additional cost to play this operation, spend [click].\nPlace up to 2 advancement tokens on a card that can be advanced.",
-  "strippedText": "As an additional cost to play this operation, spend click. Place up to 2 advancement tokens on a card that can be advanced."
+  "strippedText": "As an additional cost to play this operation, spend click. Place up to 2 advancement tokens on a card that can be advanced.",
+  "strippedTitle": "Shipment from SanSan"
 }

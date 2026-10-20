@@ -1,5 +1,6 @@
 {
   "cardId": "glenn-station",
   "text": "Glenn Station can host a single card.\n[click]: Host a card from HQ facedown on Glenn Station.\n[click]: Add a card on Glenn Station to HQ.",
-  "strippedText": "Glenn Station can host a single card. click: Host a card from HQ facedown on Glenn Station. click: Add a card on Glenn Station to HQ."
+  "strippedText": "Glenn Station can host a single card. click: Host a card from HQ facedown on Glenn Station. click: Add a card on Glenn Station to HQ.",
+  "strippedTitle": "Glenn Station"
 }

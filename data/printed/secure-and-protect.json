@@ -1,5 +1,6 @@
 {
   "cardId": "secure-and-protect",
   "text": "As an additional cost to play this operation, spend [click].\nSearch R&D for 1 piece of ice and reveal it. <em>(Shuffle R&D after searching it.)</em> Install that ice protecting a central server, paying 3[credit] less.",
-  "strippedText": "As an additional cost to play this operation, spend click. Search R&D for 1 piece of ice and reveal it. (Shuffle R&D after searching it.) Install that ice protecting a central server, paying 3 credits less."
+  "strippedText": "As an additional cost to play this operation, spend click. Search R&D for 1 piece of ice and reveal it. (Shuffle R&D after searching it.) Install that ice protecting a central server, paying 3 credits less.",
+  "strippedTitle": "Secure and Protect"
 }

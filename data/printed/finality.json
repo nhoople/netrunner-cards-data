@@ -1,5 +1,6 @@
 {
   "cardId": "finality",
   "text": "As an additional cost to play this event, suffer 1 core damage.\nRun R&D. If successful, access 3 additional cards when you breach R&D.",
-  "strippedText": "As an additional cost to play this event, suffer 1 core damage. Run R&D. If successful, access 3 additional cards when you breach R&D."
+  "strippedText": "As an additional cost to play this event, suffer 1 core damage. Run R&D. If successful, access 3 additional cards when you breach R&D.",
+  "strippedTitle": "Finality"
 }

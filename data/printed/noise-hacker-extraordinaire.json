@@ -1,5 +1,6 @@
 {
   "cardId": "noise-hacker-extraordinaire",
   "text": "Whenever you install a <strong>virus</strong> program, the Corp trashes the top card of R&D.",
-  "strippedText": "Whenever you install a virus program, the Corp trashes the top card of R&D."
+  "strippedText": "Whenever you install a virus program, the Corp trashes the top card of R&D.",
+  "strippedTitle": "Noise: Hacker Extraordinaire"
 }

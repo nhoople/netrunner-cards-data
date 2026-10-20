@@ -1,5 +1,6 @@
 {
   "cardId": "flyswatter",
   "text": "When you rez this ice during a run against this server, purge virus counters.\n[subroutine] End the run.",
-  "strippedText": "When you rez this ice during a run against this server, purge virus counters. Subroutine End the run."
+  "strippedText": "When you rez this ice during a run against this server, purge virus counters. Subroutine End the run.",
+  "strippedTitle": "Flyswatter"
 }

@@ -1,5 +1,6 @@
 {
   "cardId": "rsvp",
   "text": "[subroutine] The Runner cannot spend any credits for the remainder of this run.",
-  "strippedText": "Subroutine The Runner cannot spend any credits for the remainder of this run."
+  "strippedText": "Subroutine The Runner cannot spend any credits for the remainder of this run.",
+  "strippedTitle": "RSVP"
 }

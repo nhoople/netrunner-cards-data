@@ -1,5 +1,6 @@
 {
   "cardId": "maskirovka",
   "text": "[subroutine] Gain 2[credit].\n[subroutine] End the run.",
-  "strippedText": "Subroutine Gain 2 credits. Subroutine End the run."
+  "strippedText": "Subroutine Gain 2 credits. Subroutine End the run.",
+  "strippedTitle": "Maskirovka"
 }

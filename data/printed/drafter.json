@@ -1,5 +1,6 @@
 {
   "cardId": "drafter",
   "text": "[subroutine] You may add 1 card from Archives to HQ.\n[subroutine] You may install 1 card from Archives or HQ, ignoring all costs.",
-  "strippedText": "Subroutine You may add 1 card from Archives to HQ. Subroutine You may install 1 card from Archives or HQ, ignoring all costs."
+  "strippedText": "Subroutine You may add 1 card from Archives to HQ. Subroutine You may install 1 card from Archives or HQ, ignoring all costs.",
+  "strippedTitle": "Drafter"
 }

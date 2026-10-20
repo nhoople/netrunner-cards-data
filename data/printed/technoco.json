@@ -1,5 +1,6 @@
 {
   "cardId": "technoco",
   "text": "The install cost of each program, piece of hardware, and <strong>virtual</strong> resource is increased by 1.\nWhenever the Runner installs a program, piece of hardware, or <strong>virtual</strong> resource, you may gain 1[credit].",
-  "strippedText": "The install cost of each program, piece of hardware, and virtual resource is increased by 1. Whenever the Runner installs a program, piece of hardware, or virtual resource, you may gain 1 credit."
+  "strippedText": "The install cost of each program, piece of hardware, and virtual resource is increased by 1. Whenever the Runner installs a program, piece of hardware, or virtual resource, you may gain 1 credit.",
+  "strippedTitle": "TechnoCo"
 }

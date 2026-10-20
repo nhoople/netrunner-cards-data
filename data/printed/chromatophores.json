@@ -1,5 +1,6 @@
 {
   "cardId": "chromatophores",
   "text": "Install only on a piece of ice.\nHost ice gains <strong>barrier</strong>, <strong>code gate</strong>, and <strong>sentry</strong>.",
-  "strippedText": "Install only on a piece of ice. Host ice gains barrier, code gate, and sentry."
+  "strippedText": "Install only on a piece of ice. Host ice gains barrier, code gate, and sentry.",
+  "strippedTitle": "Chromatophores"
 }

@@ -1,5 +1,6 @@
 {
   "cardId": "on-the-lam",
   "text": "Host this event on an installed resource as a condition counter with \"[interrupt] → [trash]<strong>:</strong> Prevent up to 3 tags or up to 3 damage.\"",
-  "strippedText": "Host this event on an installed resource as a condition counter with \"Interrupt -> trash: Prevent up to 3 tags or up to 3 damage.\""
+  "strippedText": "Host this event on an installed resource as a condition counter with \"Interrupt -> trash: Prevent up to 3 tags or up to 3 damage.\"",
+  "strippedTitle": "On the Lam"
 }

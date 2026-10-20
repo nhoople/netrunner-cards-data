@@ -1,5 +1,6 @@
 {
   "cardId": "net-ready-eyes",
   "text": "When you install Net-Ready Eyes, suffer 2 meat damage.\nWhenever you initiate a run, choose an <strong>icebreaker</strong>. That <strong>icebreaker</strong> has +1 strength for the remainder of the run.",
-  "strippedText": "When you install Net-Ready Eyes, suffer 2 meat damage. Whenever you initiate a run, choose an icebreaker. That icebreaker has +1 strength for the remainder of the run."
+  "strippedText": "When you install Net-Ready Eyes, suffer 2 meat damage. Whenever you initiate a run, choose an icebreaker. That icebreaker has +1 strength for the remainder of the run.",
+  "strippedTitle": "Net-Ready Eyes"
 }

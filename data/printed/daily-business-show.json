@@ -1,5 +1,6 @@
 {
   "cardId": "daily-business-show",
   "text": "[interrupt] → The first time each turn you would draw any number of cards, increase the number of cards you will draw by 1. When you draw those cards, add 1 of them to the bottom of R&D.",
-  "strippedText": "Interrupt -> The first time each turn you would draw any number of cards, increase the number of cards you will draw by 1. When you draw those cards, add 1 of them to the bottom of R&D."
+  "strippedText": "Interrupt -> The first time each turn you would draw any number of cards, increase the number of cards you will draw by 1. When you draw those cards, add 1 of them to the bottom of R&D.",
+  "strippedTitle": "Daily Business Show"
 }

@@ -1,5 +1,6 @@
 {
   "cardId": "flower-sermon",
   "text": "When you score this agenda, place 5 agenda counters on it.\nOnce per turn → <strong>Hosted agenda counter:</strong> Reveal the top card of R&D. Draw 2 cards. Add 1 card from HQ to the top of R&D.",
-  "strippedText": "When you score this agenda, place 5 agenda counters on it. Once per turn -> Hosted agenda counter: Reveal the top card of R&D. Draw 2 cards. Add 1 card from HQ to the top of R&D."
+  "strippedText": "When you score this agenda, place 5 agenda counters on it. Once per turn -> Hosted agenda counter: Reveal the top card of R&D. Draw 2 cards. Add 1 card from HQ to the top of R&D.",
+  "strippedTitle": "Flower Sermon"
 }

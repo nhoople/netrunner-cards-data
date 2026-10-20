@@ -1,5 +1,6 @@
 {
   "cardId": "personality-profiles",
   "text": "Whenever the Runner searches the stack or installs a card from the heap, they trash 1 card from the grip at random.",
-  "strippedText": "Whenever the Runner searches the stack or installs a card from the heap, they trash 1 card from the grip at random."
+  "strippedText": "Whenever the Runner searches the stack or installs a card from the heap, they trash 1 card from the grip at random.",
+  "strippedTitle": "Personality Profiles"
 }

@@ -1,5 +1,6 @@
 {
   "cardId": "out-of-the-ashes",
   "text": "Make a run.\nWhen your turn begins, if Out of the Ashes is in your heap, you may remove it from the game to make a run.\nLimit 6 per deck.",
-  "strippedText": "Make a run. When your turn begins, if Out of the Ashes is in your heap, you may remove it from the game to make a run. Limit 6 per deck."
+  "strippedText": "Make a run. When your turn begins, if Out of the Ashes is in your heap, you may remove it from the game to make a run. Limit 6 per deck.",
+  "strippedTitle": "Out of the Ashes"
 }

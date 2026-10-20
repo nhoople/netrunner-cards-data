@@ -1,5 +1,6 @@
 {
   "cardId": "brain-chip",
   "text": "+X[mu]\nYour maximum hand size is increased by X.\nX is equal to the number of agenda points you have.\nLimit 1 <strong>console</strong> per player.",
-  "strippedText": "+X mu Your maximum hand size is increased by X. X is equal to the number of agenda points you have. Limit 1 console per player."
+  "strippedText": "+X mu Your maximum hand size is increased by X. X is equal to the number of agenda points you have. Limit 1 console per player.",
+  "strippedTitle": "Brain Chip"
 }

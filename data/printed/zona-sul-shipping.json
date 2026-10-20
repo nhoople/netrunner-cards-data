@@ -1,5 +1,6 @@
 {
   "cardId": "zona-sul-shipping",
   "text": "Place 1[credit] on Zona Sul Shipping when your turn begins.\n[click]: Take all credits from Zona Sul Shipping.\nTrash Zona Sul Shipping if you are tagged.",
-  "strippedText": "Place 1 credit on Zona Sul Shipping when your turn begins. click: Take all credits from Zona Sul Shipping. Trash Zona Sul Shipping if you are tagged."
+  "strippedText": "Place 1 credit on Zona Sul Shipping when your turn begins. click: Take all credits from Zona Sul Shipping. Trash Zona Sul Shipping if you are tagged.",
+  "strippedTitle": "Zona Sul Shipping"
 }

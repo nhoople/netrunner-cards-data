@@ -1,5 +1,6 @@
 {
   "cardId": "bathynomus",
   "text": "While this ice is protecting Archives, it gets +3 strength.\n[subroutine] Do 3 net damage.",
-  "strippedText": "While this ice is protecting Archives, it gets +3 strength. Subroutine Do 3 net damage."
+  "strippedText": "While this ice is protecting Archives, it gets +3 strength. Subroutine Do 3 net damage.",
+  "strippedTitle": "Bathynomus"
 }

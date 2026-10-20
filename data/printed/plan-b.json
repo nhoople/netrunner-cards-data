@@ -1,5 +1,6 @@
 {
   "cardId": "plan-b",
   "text": "Plan B can be advanced.\nIf the Runner accesses Plan B, you may reveal and score an agenda from HQ with an advancement requirement equal to or less than the number of advancement tokens on Plan B.",
-  "strippedText": "Plan B can be advanced. If the Runner accesses Plan B, you may reveal and score an agenda from HQ with an advancement requirement equal to or less than the number of advancement tokens on Plan B."
+  "strippedText": "Plan B can be advanced. If the Runner accesses Plan B, you may reveal and score an agenda from HQ with an advancement requirement equal to or less than the number of advancement tokens on Plan B.",
+  "strippedTitle": "Plan B"
 }

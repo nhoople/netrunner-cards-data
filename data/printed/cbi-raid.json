@@ -1,5 +1,6 @@
 {
   "cardId": "cbi-raid",
   "text": "Run HQ. If successful, instead of breaching HQ, the Corp adds all cards in HQ to the top of R&D in the order of their choice.",
-  "strippedText": "Run HQ. If successful, instead of breaching HQ, the Corp adds all cards in HQ to the top of R&D in the order of their choice."
+  "strippedText": "Run HQ. If successful, instead of breaching HQ, the Corp adds all cards in HQ to the top of R&D in the order of their choice.",
+  "strippedTitle": "CBI Raid"
 }

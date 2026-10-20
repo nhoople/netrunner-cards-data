@@ -1,5 +1,6 @@
 {
   "cardId": "expert-schedule-analyzer",
   "text": "<strong>[click]:</strong> Run HQ. If successful, instead of breaching HQ, you may reveal all cards in HQ.",
-  "strippedText": "click: Run HQ. If successful, instead of breaching HQ, you may reveal all cards in HQ."
+  "strippedText": "click: Run HQ. If successful, instead of breaching HQ, you may reveal all cards in HQ.",
+  "strippedTitle": "Expert Schedule Analyzer"
 }

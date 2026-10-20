@@ -1,5 +1,6 @@
 {
   "cardId": "ultraviolet-clearance",
   "text": "As an additional cost to play this operation, spend [click][click].\nGain 10[credit] and draw 4 cards. You may install 1 card from HQ.",
-  "strippedText": "As an additional cost to play this operation, spend click click. Gain 10 credits and draw 4 cards. You may install 1 card from HQ."
+  "strippedText": "As an additional cost to play this operation, spend click click. Gain 10 credits and draw 4 cards. You may install 1 card from HQ.",
+  "strippedTitle": "Ultraviolet Clearance"
 }

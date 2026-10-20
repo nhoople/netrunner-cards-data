@@ -1,5 +1,6 @@
 {
   "cardId": "peer-review",
   "text": "Reveal all but 1 card in HQ.\nGain 7[credit]. You may install 1 card from HQ in the root of a remote server.",
-  "strippedText": "Reveal all but 1 card in HQ. Gain 7 credits. You may install 1 card from HQ in the root of a remote server."
+  "strippedText": "Reveal all but 1 card in HQ. Gain 7 credits. You may install 1 card from HQ in the root of a remote server.",
+  "strippedTitle": "Peer Review"
 }

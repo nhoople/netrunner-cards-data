@@ -1,5 +1,6 @@
 {
   "cardId": "grim",
   "text": "When you rez this ice, take 1 bad publicity.\n[subroutine] Trash 1 installed program.",
-  "strippedText": "When you rez this ice, take 1 bad publicity. Subroutine Trash 1 installed program."
+  "strippedText": "When you rez this ice, take 1 bad publicity. Subroutine Trash 1 installed program.",
+  "strippedTitle": "Grim"
 }

@@ -1,5 +1,6 @@
 {
   "cardId": "tl-dr",
   "text": "[subroutine] The next time the Runner encounters a piece of ice during this run, that ice gains a second copy of each of its subroutines <em>(after the original subroutine)</em> for the remainder of that encounter.",
-  "strippedText": "Subroutine The next time the Runner encounters a piece of ice during this run, that ice gains a second copy of each of its subroutines (after the original subroutine) for the remainder of that encounter."
+  "strippedText": "Subroutine The next time the Runner encounters a piece of ice during this run, that ice gains a second copy of each of its subroutines (after the original subroutine) for the remainder of that encounter.",
+  "strippedTitle": "TL;DR"
 }

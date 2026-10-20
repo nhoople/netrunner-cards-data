@@ -1,5 +1,6 @@
 {
   "cardId": "tour-guide",
   "text": "This ice gains \"[subroutine] End the run.\" for each rezzed asset.",
-  "strippedText": "This ice gains \"Subroutine End the run.\" for each rezzed asset."
+  "strippedText": "This ice gains \"Subroutine End the run.\" for each rezzed asset.",
+  "strippedTitle": "Tour Guide"
 }

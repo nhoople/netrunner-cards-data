@@ -1,5 +1,6 @@
 {
   "cardId": "pad-campaign",
   "text": "When your turn begins, gain 1[credit].",
-  "strippedText": "When your turn begins, gain 1 credit."
+  "strippedText": "When your turn begins, gain 1 credit.",
+  "strippedTitle": "PAD Campaign"
 }

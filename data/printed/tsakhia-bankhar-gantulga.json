@@ -1,5 +1,6 @@
 {
   "cardId": "tsakhia-bankhar-gantulga",
   "text": "When your turn begins, you may choose a server.\nDuring the first encounter each turn with a piece of ice protecting the chosen server, whenever the Corp would resolve a subroutine, instead they resolve \"[subroutine] Do 1 net damage.\".",
-  "strippedText": "When your turn begins, you may choose a server. During the first encounter each turn with a piece of ice protecting the chosen server, whenever the Corp would resolve a subroutine, instead they resolve Subroutine Do 1 net damage.."
+  "strippedText": "When your turn begins, you may choose a server. During the first encounter each turn with a piece of ice protecting the chosen server, whenever the Corp would resolve a subroutine, instead they resolve Subroutine Do 1 net damage..",
+  "strippedTitle": "Tsakhia Bankhar Gantulga"
 }

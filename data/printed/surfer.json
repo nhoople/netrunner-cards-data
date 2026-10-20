@@ -1,5 +1,6 @@
 {
   "cardId": "surfer",
   "text": "2[credit]: Swap a piece of <strong>barrier</strong> ice currently being encountered with a piece of ice directly before or after it. The run continues from this new position. You are still encountering that ice.",
-  "strippedText": "2 credits: Swap a piece of barrier ice currently being encountered with a piece of ice directly before or after it. The run continues from this new position. You are still encountering that ice."
+  "strippedText": "2 credits: Swap a piece of barrier ice currently being encountered with a piece of ice directly before or after it. The run continues from this new position. You are still encountering that ice.",
+  "strippedTitle": "Surfer"
 }

@@ -2,8 +2,14 @@
   "code": "26066",
   "cardId": "hoshiko-shiro-untold-protagonist",
   "pack": "uprising",
-  "flavor": "Please, let me have this dream.\nI’m going to be my own kind of hero.",
+  "flavor": "Please, let me have this dream.",
   "illustrator": "Luminita Pham",
   "quantity": 1,
-  "position": 66
+  "position": 66,
+  "releasedBy": "null-signal-games",
+  "faces": [
+    {
+      "flavor": "I’m going to be my own kind of hero."
+    }
+  ]
 }

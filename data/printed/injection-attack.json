@@ -1,5 +1,6 @@
 {
   "cardId": "injection-attack",
   "text": "Choose 1 installed <strong>icebreaker</strong> and run any server. During that run, the chosen <strong>icebreaker</strong> gets +2 strength.",
-  "strippedText": "Choose 1 installed icebreaker and run any server. During that run, the chosen icebreaker gets +2 strength."
+  "strippedText": "Choose 1 installed icebreaker and run any server. During that run, the chosen icebreaker gets +2 strength.",
+  "strippedTitle": "Injection Attack"
 }

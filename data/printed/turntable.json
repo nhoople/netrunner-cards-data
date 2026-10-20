@@ -1,5 +1,6 @@
 {
   "cardId": "turntable",
   "text": "+1[mu]\nWhenever you steal an agenda, you may swap that agenda with an agenda in the Corp's score area.\nLimit 1 <strong>console</strong> per player.",
-  "strippedText": "+1 mu Whenever you steal an agenda, you may swap that agenda with an agenda in the Corp's score area. Limit 1 console per player."
+  "strippedText": "+1 mu Whenever you steal an agenda, you may swap that agenda with an agenda in the Corp's score area. Limit 1 console per player.",
+  "strippedTitle": "Turntable"
 }

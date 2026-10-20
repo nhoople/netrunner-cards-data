@@ -1,5 +1,6 @@
 {
   "cardId": "vrcation",
   "text": "Draw 4 cards. If you have any [click] remaining, lose [click].",
-  "strippedText": "Draw 4 cards. If you have any click remaining, lose click."
+  "strippedText": "Draw 4 cards. If you have any click remaining, lose click.",
+  "strippedTitle": "VRcation"
 }

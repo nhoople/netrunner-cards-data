@@ -1,5 +1,6 @@
 {
   "cardId": "architect-deployment-test",
   "text": "When you score this agenda, look at the top 5 cards of R&D. You may install and rez 1 of those cards, ignoring all costs.",
-  "strippedText": "When you score this agenda, look at the top 5 cards of R&D. You may install and rez 1 of those cards, ignoring all costs."
+  "strippedText": "When you score this agenda, look at the top 5 cards of R&D. You may install and rez 1 of those cards, ignoring all costs.",
+  "strippedTitle": "Architect Deployment Test"
 }

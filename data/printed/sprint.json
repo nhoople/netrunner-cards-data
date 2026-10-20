@@ -1,5 +1,6 @@
 {
   "cardId": "sprint",
   "text": "Draw 3 cards. Shuffle 2 cards from HQ into R&D.",
-  "strippedText": "Draw 3 cards. Shuffle 2 cards from HQ into R&D."
+  "strippedText": "Draw 3 cards. Shuffle 2 cards from HQ into R&D.",
+  "strippedTitle": "Sprint"
 }

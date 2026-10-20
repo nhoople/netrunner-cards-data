@@ -1,5 +1,6 @@
 {
   "cardId": "gene-splicer",
   "text": "Gene Splicer can be advanced.\nWhen the Runner accesses Gene Splicer, do 1 net damage for each advancement token on Gene Splicer.\n<strong>[click], 3 hosted advancement tokens:</strong> Add Gene Splicer to your score area as an agenda worth 1 agenda point.",
-  "strippedText": "Gene Splicer can be advanced. When the Runner accesses Gene Splicer, do 1 net damage for each advancement token on Gene Splicer. click, 3 hosted advancement tokens: Add Gene Splicer to your score area as an agenda worth 1 agenda point."
+  "strippedText": "Gene Splicer can be advanced. When the Runner accesses Gene Splicer, do 1 net damage for each advancement token on Gene Splicer. click, 3 hosted advancement tokens: Add Gene Splicer to your score area as an agenda worth 1 agenda point.",
+  "strippedTitle": "Gene Splicer"
 }

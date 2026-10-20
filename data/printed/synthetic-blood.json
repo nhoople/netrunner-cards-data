@@ -1,5 +1,6 @@
 {
   "cardId": "synthetic-blood",
   "text": "The first time you take damage each turn, draw 1 card.",
-  "strippedText": "The first time you take damage each turn, draw 1 card."
+  "strippedText": "The first time you take damage each turn, draw 1 card.",
+  "strippedTitle": "Synthetic Blood"
 }

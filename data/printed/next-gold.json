@@ -1,5 +1,6 @@
 {
   "cardId": "next-gold",
   "text": "X is the number of rezzed <strong>NEXT</strong> ice.\n[subroutine] Do X net damage.\n[subroutine] Trash X programs.",
-  "strippedText": "X is the number of rezzed NEXT ice. Subroutine Do X net damage. Subroutine Trash X programs."
+  "strippedText": "X is the number of rezzed NEXT ice. Subroutine Do X net damage. Subroutine Trash X programs.",
+  "strippedTitle": "NEXT Gold"
 }

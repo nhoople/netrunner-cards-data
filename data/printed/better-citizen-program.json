@@ -1,5 +1,6 @@
 {
   "cardId": "better-citizen-program",
   "text": "The first time the Runner plays a <strong>run</strong> event or installs an <strong>icebreaker</strong> program each turn, you may give the Runner 1 tag.",
-  "strippedText": "The first time the Runner plays a run event or installs an icebreaker program each turn, you may give the Runner 1 tag."
+  "strippedText": "The first time the Runner plays a run event or installs an icebreaker program each turn, you may give the Runner 1 tag.",
+  "strippedTitle": "Better Citizen Program"
 }

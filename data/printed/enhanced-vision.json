@@ -1,5 +1,6 @@
 {
   "cardId": "enhanced-vision",
   "text": "The first time you make a successful run each turn, the Corp reveals 1 card at random from HQ.",
-  "strippedText": "The first time you make a successful run each turn, the Corp reveals 1 card at random from HQ."
+  "strippedText": "The first time you make a successful run each turn, the Corp reveals 1 card at random from HQ.",
+  "strippedTitle": "Enhanced Vision"
 }

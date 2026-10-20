@@ -1,5 +1,6 @@
 {
   "cardId": "armed-intimidation",
   "text": "When you score Armed Intimidation, the Runner must either suffer 5 meat damage or take 2 tags.",
-  "strippedText": "When you score Armed Intimidation, the Runner must either suffer 5 meat damage or take 2 tags."
+  "strippedText": "When you score Armed Intimidation, the Runner must either suffer 5 meat damage or take 2 tags.",
+  "strippedTitle": "Armed Intimidation"
 }

@@ -1,5 +1,6 @@
 {
   "cardId": "gachapon",
   "text": "<strong>[trash]:</strong> Set aside the top 6 cards of your stack faceup. You may install 1 program or <strong>virtual</strong> resource from among those cards, paying 2[credit] less. Shuffle 3 of the remaining cards into your stack, then remove the rest from the game.",
-  "strippedText": "trash: Set aside the top 6 cards of your stack faceup. You may install 1 program or virtual resource from among those cards, paying 2 credits less. Shuffle 3 of the remaining cards into your stack, then remove the rest from the game."
+  "strippedText": "trash: Set aside the top 6 cards of your stack faceup. You may install 1 program or virtual resource from among those cards, paying 2 credits less. Shuffle 3 of the remaining cards into your stack, then remove the rest from the game.",
+  "strippedTitle": "Gachapon"
 }

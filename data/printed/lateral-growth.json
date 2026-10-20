@@ -1,5 +1,6 @@
 {
   "cardId": "lateral-growth",
   "text": "Gain 4[credit]. You may install 1 card (paying the install cost).",
-  "strippedText": "Gain 4 credits. You may install 1 card (paying the install cost)."
+  "strippedText": "Gain 4 credits. You may install 1 card (paying the install cost).",
+  "strippedTitle": "Lateral Growth"
 }

@@ -1,5 +1,6 @@
 {
   "cardId": "security-testing",
   "text": "When your turn begins, you may choose a server.\nThe first time each turn you make a successful run on the chosen server, instead of breaching it, gain 2[credit].",
-  "strippedText": "When your turn begins, you may choose a server. The first time each turn you make a successful run on the chosen server, instead of breaching it, gain 2 credits."
+  "strippedText": "When your turn begins, you may choose a server. The first time each turn you make a successful run on the chosen server, instead of breaching it, gain 2 credits.",
+  "strippedTitle": "Security Testing"
 }

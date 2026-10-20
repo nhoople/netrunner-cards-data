@@ -1,5 +1,6 @@
 {
   "cardId": "hostile-architecture",
   "text": "The first time each turn the Runner trashes any of your installed cards <em>(including this asset)</em>, do 2 meat damage.",
-  "strippedText": "The first time each turn the Runner trashes any of your installed cards (including this asset), do 2 meat damage."
+  "strippedText": "The first time each turn the Runner trashes any of your installed cards (including this asset), do 2 meat damage.",
+  "strippedTitle": "Hostile Architecture"
 }

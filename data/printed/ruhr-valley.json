@@ -1,5 +1,6 @@
 {
   "cardId": "ruhr-valley",
   "text": "As an additional cost to make a run on this server, the Runner must spend [click].\nLimit 1 <strong>region</strong> per server.",
-  "strippedText": "As an additional cost to make a run on this server, the Runner must spend click. Limit 1 region per server."
+  "strippedText": "As an additional cost to make a run on this server, the Runner must spend click. Limit 1 region per server.",
+  "strippedTitle": "Ruhr Valley"
 }

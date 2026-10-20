@@ -1,5 +1,6 @@
 {
   "cardId": "polyhistor",
   "text": "+1[mu], +1[link]\nThe first time each turn you pass all of the ice protecting HQ, you may draw 1 card to force the Corp to draw 1 card.\nLimit 1 <strong>console</strong> per player.",
-  "strippedText": "+1 mu, +1 link The first time each turn you pass all of the ice protecting HQ, you may draw 1 card to force the Corp to draw 1 card. Limit 1 console per player."
+  "strippedText": "+1 mu, +1 link The first time each turn you pass all of the ice protecting HQ, you may draw 1 card to force the Corp to draw 1 card. Limit 1 console per player.",
+  "strippedTitle": "Polyhistor"
 }

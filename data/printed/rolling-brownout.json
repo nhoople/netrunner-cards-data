@@ -1,5 +1,6 @@
 {
   "cardId": "rolling-brownout",
   "text": "This card is not trashed until another <strong>current</strong> is played or an agenda is stolen.\nThe play cost of each operation and event is increased by 1.\nThe first time the Runner plays an event each turn, gain 1[credit].",
-  "strippedText": "This card is not trashed until another current is played or an agenda is stolen. The play cost of each operation and event is increased by 1. The first time the Runner plays an event each turn, gain 1 credit."
+  "strippedText": "This card is not trashed until another current is played or an agenda is stolen. The play cost of each operation and event is increased by 1. The first time the Runner plays an event each turn, gain 1 credit.",
+  "strippedTitle": "Rolling Brownout"
 }

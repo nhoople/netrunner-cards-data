@@ -1,5 +1,6 @@
 {
   "cardId": "crash-space",
   "text": "2[recurring-credit]\nYou can spend hosted credits to take the basic action to remove 1 tag.\n[interrupt] → [trash]<strong>:</strong> Prevent up to 3 meat damage.",
-  "strippedText": "2[recurring-credit] You can spend hosted credits to take the basic action to remove 1 tag. Interrupt -> trash: Prevent up to 3 meat damage."
+  "strippedText": "2[recurring-credit] You can spend hosted credits to take the basic action to remove 1 tag. Interrupt -> trash: Prevent up to 3 meat damage.",
+  "strippedTitle": "Crash Space"
 }

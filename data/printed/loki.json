@@ -1,5 +1,6 @@
 {
   "cardId": "loki",
   "text": "When the Runner encounters this ice, choose another rezzed piece of ice. For the remainder of this run, this ice gains the subtypes of the chosen ice and gains the subroutines of that ice in order before its other subroutines.\n[subroutine] End the run unless the Runner shuffles all cards from the grip into the stack.",
-  "strippedText": "When the Runner encounters this ice, choose another rezzed piece of ice. For the remainder of this run, this ice gains the subtypes of the chosen ice and gains the subroutines of that ice in order before its other subroutines. Subroutine End the run unless the Runner shuffles all cards from the grip into the stack."
+  "strippedText": "When the Runner encounters this ice, choose another rezzed piece of ice. For the remainder of this run, this ice gains the subtypes of the chosen ice and gains the subroutines of that ice in order before its other subroutines. Subroutine End the run unless the Runner shuffles all cards from the grip into the stack.",
+  "strippedTitle": "Loki"
 }

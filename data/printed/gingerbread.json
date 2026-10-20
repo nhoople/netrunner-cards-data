@@ -1,5 +1,6 @@
 {
   "cardId": "gingerbread",
   "text": "Interface → <strong>1[credit]:</strong> Break 1 <strong>tracer</strong> subroutine.\n<strong>2[credit]:</strong> +3 strength.",
-  "strippedText": "Interface -> 1 credit: Break 1 tracer subroutine. 2 credits: +3 strength."
+  "strippedText": "Interface -> 1 credit: Break 1 tracer subroutine. 2 credits: +3 strength.",
+  "strippedTitle": "Gingerbread"
 }

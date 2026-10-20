@@ -1,5 +1,6 @@
 {
   "cardId": "corroder",
   "text": "Interface → <strong>1[credit]:</strong> Break 1 <strong>barrier</strong> subroutine.\n<strong>1[credit]:</strong> +1 strength.",
-  "strippedText": "Interface -> 1 credit: Break 1 barrier subroutine. 1 credit: +1 strength."
+  "strippedText": "Interface -> 1 credit: Break 1 barrier subroutine. 1 credit: +1 strength.",
+  "strippedTitle": "Corroder"
 }

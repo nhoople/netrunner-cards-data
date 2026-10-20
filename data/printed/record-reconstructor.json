@@ -1,5 +1,6 @@
 {
   "cardId": "record-reconstructor",
   "text": "Whenever you make a successful run on Archives, instead of breaching Archives, you may add 1 faceup card from Archives to the top of R&D.",
-  "strippedText": "Whenever you make a successful run on Archives, instead of breaching Archives, you may add 1 faceup card from Archives to the top of R&D."
+  "strippedText": "Whenever you make a successful run on Archives, instead of breaching Archives, you may add 1 faceup card from Archives to the top of R&D.",
+  "strippedTitle": "Record Reconstructor"
 }

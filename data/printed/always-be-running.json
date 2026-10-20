@@ -1,5 +1,6 @@
 {
   "cardId": "always-be-running",
   "text": "The first [click] you spend each turn must be spent to take the basic action to play an event or the basic action to run a server. You cannot take the action to play an event this way except if you play a <strong>run</strong> event.\nOnce per turn → <strong>Lose [click][click]:</strong> Break 1 subroutine.",
-  "strippedText": "The first click you spend each turn must be spent to take the basic action to play an event or the basic action to run a server. You cannot take the action to play an event this way except if you play a run event. Once per turn -> Lose click click: Break 1 subroutine."
+  "strippedText": "The first click you spend each turn must be spent to take the basic action to play an event or the basic action to run a server. You cannot take the action to play an event this way except if you play a run event. Once per turn -> Lose click click: Break 1 subroutine.",
+  "strippedTitle": "Always Be Running"
 }

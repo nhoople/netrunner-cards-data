@@ -1,5 +1,6 @@
 {
   "cardId": "find-the-truth",
   "text": "Whenever you draw a card, reveal that card.\nThe first time each turn you make a successful run, you may look at the top card of R&D.",
-  "strippedText": "Whenever you draw a card, reveal that card. The first time each turn you make a successful run, you may look at the top card of R&D."
+  "strippedText": "Whenever you draw a card, reveal that card. The first time each turn you make a successful run, you may look at the top card of R&D.",
+  "strippedTitle": "Find the Truth"
 }

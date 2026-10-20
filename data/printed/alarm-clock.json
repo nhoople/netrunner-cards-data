@@ -1,5 +1,6 @@
 {
   "cardId": "alarm-clock",
   "text": "When your turn begins, you may run HQ. The first time you encounter a piece of ice during that run, you may spend [click][click] to bypass it.",
-  "strippedText": "When your turn begins, you may run HQ. The first time you encounter a piece of ice during that run, you may spend click click to bypass it."
+  "strippedText": "When your turn begins, you may run HQ. The first time you encounter a piece of ice during that run, you may spend click click to bypass it.",
+  "strippedTitle": "Alarm Clock"
 }

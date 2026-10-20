@@ -1,5 +1,6 @@
 {
   "cardId": "front-company",
   "text": "Rez only during your turn.\nThe first run each turn cannot be made against a remote server.\nThe first time each turn a run on Archives begins, if this server is not protected by ice, do 2 net damage.",
-  "strippedText": "Rez only during your turn. The first run each turn cannot be made against a remote server. The first time each turn a run on Archives begins, if this server is not protected by ice, do 2 net damage."
+  "strippedText": "Rez only during your turn. The first run each turn cannot be made against a remote server. The first time each turn a run on Archives begins, if this server is not protected by ice, do 2 net damage.",
+  "strippedTitle": "Front Company"
 }

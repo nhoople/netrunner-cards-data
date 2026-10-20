@@ -1,5 +1,6 @@
 {
   "cardId": "quarantine-system",
   "text": "<strong>Forfeit an agenda</strong>: Rez up to 3 pieces of ice, lowering the cost of each by 2[credit] for each printed agenda point on the forfeited agenda.",
-  "strippedText": "Forfeit an agenda: Rez up to 3 pieces of ice, lowering the cost of each by 2 credits for each printed agenda point on the forfeited agenda."
+  "strippedText": "Forfeit an agenda: Rez up to 3 pieces of ice, lowering the cost of each by 2 credits for each printed agenda point on the forfeited agenda.",
+  "strippedTitle": "Quarantine System"
 }

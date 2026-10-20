@@ -1,5 +1,6 @@
 {
   "cardId": "oracle-thinktank",
   "text": "When the Runner steals this agenda, give them 1 tag.\n[click], <strong>remove 1 tag:</strong> Shuffle this agenda into R&D. The Corp can use this ability only if this agenda is in the Runner's score area.",
-  "strippedText": "When the Runner steals this agenda, give them 1 tag. click, remove 1 tag: Shuffle this agenda into R&D. The Corp can use this ability only if this agenda is in the Runner's score area."
+  "strippedText": "When the Runner steals this agenda, give them 1 tag. click, remove 1 tag: Shuffle this agenda into R&D. The Corp can use this ability only if this agenda is in the Runner's score area.",
+  "strippedTitle": "Oracle Thinktank"
 }

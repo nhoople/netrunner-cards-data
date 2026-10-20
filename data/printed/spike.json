@@ -1,5 +1,6 @@
 {
   "cardId": "spike",
   "text": "If you have at least 2[link], the memory cost of this program is 0[mu], even if it is not installed.\nThis program gets +1 strength for each installed <strong>icebreaker</strong>.\nInterface → <strong>[trash]:</strong> Break up to 3 <strong>barrier</strong> subroutines.",
-  "strippedText": "If you have at least 2 link, the memory cost of this program is 0 mu, even if it is not installed. This program gets +1 strength for each installed icebreaker. Interface -> trash: Break up to 3 barrier subroutines."
+  "strippedText": "If you have at least 2 link, the memory cost of this program is 0 mu, even if it is not installed. This program gets +1 strength for each installed icebreaker. Interface -> trash: Break up to 3 barrier subroutines.",
+  "strippedTitle": "Spike"
 }

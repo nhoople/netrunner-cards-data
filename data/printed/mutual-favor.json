@@ -1,5 +1,6 @@
 {
   "cardId": "mutual-favor",
   "text": "Search your stack for 1 <strong>icebreaker</strong> and reveal it. <em>(Shuffle your stack after searching it.)</em> If you made a successful run this turn, you may install that program. If you do not, add it to your grip.",
-  "strippedText": "Search your stack for 1 icebreaker and reveal it. (Shuffle your stack after searching it.) If you made a successful run this turn, you may install that program. If you do not, add it to your grip."
+  "strippedText": "Search your stack for 1 icebreaker and reveal it. (Shuffle your stack after searching it.) If you made a successful run this turn, you may install that program. If you do not, add it to your grip.",
+  "strippedTitle": "Mutual Favor"
 }

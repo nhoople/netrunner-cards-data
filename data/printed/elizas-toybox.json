@@ -1,5 +1,6 @@
 {
   "cardId": "elizas-toybox",
   "text": "[click],[click],[click]: Rez a card, ignoring all costs.",
-  "strippedText": "click,click,click: Rez a card, ignoring all costs."
+  "strippedText": "click,click,click: Rez a card, ignoring all costs.",
+  "strippedTitle": "Eliza's Toybox"
 }

@@ -1,5 +1,6 @@
 {
   "cardId": "edge-of-world",
   "text": "When the Runner accesses this asset while it is installed, you may pay 3[credit]. If you do, do 1 core damage for each piece of ice protecting this server.",
-  "strippedText": "When the Runner accesses this asset while it is installed, you may pay 3 credits. If you do, do 1 core damage for each piece of ice protecting this server."
+  "strippedText": "When the Runner accesses this asset while it is installed, you may pay 3 credits. If you do, do 1 core damage for each piece of ice protecting this server.",
+  "strippedTitle": "Edge of World"
 }

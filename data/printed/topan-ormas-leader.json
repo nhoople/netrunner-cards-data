@@ -1,5 +1,6 @@
 {
   "cardId": "topan-ormas-leader",
   "text": "Once per turn → [click]<strong>:</strong> Install 1 card from your grip, paying 2[credit] less. When you install that card, suffer 1 meat damage.",
-  "strippedText": "Once per turn -> click: Install 1 card from your grip, paying 2 credits less. When you install that card, suffer 1 meat damage."
+  "strippedText": "Once per turn -> click: Install 1 card from your grip, paying 2 credits less. When you install that card, suffer 1 meat damage.",
+  "strippedTitle": "Topan: Ormas Leader"
 }

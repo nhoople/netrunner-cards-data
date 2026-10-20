@@ -1,5 +1,6 @@
 {
   "cardId": "apex-invasive-predator",
   "text": "You cannot install non-<strong>virtual</strong> resources.\nWhen your turn begins, you may install 1 card from your grip facedown.",
-  "strippedText": "You cannot install non-virtual resources. When your turn begins, you may install 1 card from your grip facedown."
+  "strippedText": "You cannot install non-virtual resources. When your turn begins, you may install 1 card from your grip facedown.",
+  "strippedTitle": "Apex: Invasive Predator"
 }

@@ -1,5 +1,6 @@
 {
   "cardId": "the-supplier",
   "text": "[click]: Host a resource or piece of hardware from your grip on The Supplier.\nWhen your turn begins, you may install a hosted card, lowering the install cost by 2.",
-  "strippedText": "click: Host a resource or piece of hardware from your grip on The Supplier. When your turn begins, you may install a hosted card, lowering the install cost by 2."
+  "strippedText": "click: Host a resource or piece of hardware from your grip on The Supplier. When your turn begins, you may install a hosted card, lowering the install cost by 2.",
+  "strippedTitle": "The Supplier"
 }

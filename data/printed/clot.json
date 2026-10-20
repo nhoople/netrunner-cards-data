@@ -1,5 +1,6 @@
 {
   "cardId": "clot",
   "text": "The Corp cannot score an agenda during the same turn they installed that agenda.\nWhen the Corp purges virus counters, trash this program.",
-  "strippedText": "The Corp cannot score an agenda during the same turn they installed that agenda. When the Corp purges virus counters, trash this program."
+  "strippedText": "The Corp cannot score an agenda during the same turn they installed that agenda. When the Corp purges virus counters, trash this program.",
+  "strippedTitle": "Clot"
 }

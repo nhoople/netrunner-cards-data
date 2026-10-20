@@ -1,5 +1,6 @@
 {
   "cardId": "midway-station-grid",
   "text": "During runs on this server, the Runner must pay 1[credit] as an additional cost to use an <strong>icebreaker</strong> ability to break subroutines.\nLimit 1 <strong>region</strong> per server.",
-  "strippedText": "During runs on this server, the Runner must pay 1 credit as an additional cost to use an icebreaker ability to break subroutines. Limit 1 region per server."
+  "strippedText": "During runs on this server, the Runner must pay 1 credit as an additional cost to use an icebreaker ability to break subroutines. Limit 1 region per server.",
+  "strippedTitle": "Midway Station Grid"
 }

@@ -1,5 +1,6 @@
 {
   "cardId": "n-pot",
   "text": "<strong>3[credit]:</strong> Break 1 subroutine on this ice. Only the Runner can use this ability.\n[subroutine] End the run.\n[subroutine] If the threat level is 2 or greater, end the run.\n[subroutine] If the threat level is 4 or greater, end the run.",
-  "strippedText": "3 credits: Break 1 subroutine on this ice. Only the Runner can use this ability. Subroutine End the run. Subroutine If the threat level is 2 or greater, end the run. Subroutine If the threat level is 4 or greater, end the run."
+  "strippedText": "3 credits: Break 1 subroutine on this ice. Only the Runner can use this ability. Subroutine End the run. Subroutine If the threat level is 2 or greater, end the run. Subroutine If the threat level is 4 or greater, end the run.",
+  "strippedTitle": "N-Pot"
 }

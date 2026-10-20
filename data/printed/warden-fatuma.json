@@ -1,5 +1,6 @@
 {
   "cardId": "warden-fatuma",
   "text": "Each rezzed piece of <strong>bioroid</strong> ice gains \"[subroutine] The Runner loses [click].\" before its other subroutines.",
-  "strippedText": "Each rezzed piece of bioroid ice gains \"Subroutine The Runner loses click.\" before its other subroutines."
+  "strippedText": "Each rezzed piece of bioroid ice gains \"Subroutine The Runner loses click.\" before its other subroutines.",
+  "strippedTitle": "Warden Fatuma"
 }

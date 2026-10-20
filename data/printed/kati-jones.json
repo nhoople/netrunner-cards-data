@@ -1,5 +1,6 @@
 {
   "cardId": "kati-jones",
   "text": "You cannot use this resource more than once per turn.\n[click]<strong>:</strong> Place 3[credit] on this resource.\n[click]<strong>:</strong> Take all credits from this resource.",
-  "strippedText": "You cannot use this resource more than once per turn. click: Place 3[credit] on this resource. click: Take all credits from this resource."
+  "strippedText": "You cannot use this resource more than once per turn. click: Place 3[credit] on this resource. click: Take all credits from this resource.",
+  "strippedTitle": "Kati Jones"
 }

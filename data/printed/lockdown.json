@@ -1,5 +1,6 @@
 {
   "cardId": "lockdown",
   "text": "[subroutine] The Runner cannot draw cards for the remainder of this turn.",
-  "strippedText": "Subroutine The Runner cannot draw cards for the remainder of this turn."
+  "strippedText": "Subroutine The Runner cannot draw cards for the remainder of this turn.",
+  "strippedTitle": "Lockdown"
 }

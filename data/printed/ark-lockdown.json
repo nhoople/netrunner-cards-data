@@ -1,5 +1,6 @@
 {
   "cardId": "ark-lockdown",
   "text": "Name a card. Remove all copies of that card in the heap from the game.",
-  "strippedText": "Name a card. Remove all copies of that card in the heap from the game."
+  "strippedText": "Name a card. Remove all copies of that card in the heap from the game.",
+  "strippedTitle": "Ark Lockdown"
 }

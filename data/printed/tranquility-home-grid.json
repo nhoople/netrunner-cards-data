@@ -1,5 +1,6 @@
 {
   "cardId": "tranquility-home-grid",
   "text": "Remote server only.\nThe first time each turn you install a card in the root of this server, gain 2[credit] or draw 1 card.\nLimit 1 <strong>region</strong> per server.",
-  "strippedText": "Remote server only. The first time each turn you install a card in the root of this server, gain 2 credits or draw 1 card. Limit 1 region per server."
+  "strippedText": "Remote server only. The first time each turn you install a card in the root of this server, gain 2 credits or draw 1 card. Limit 1 region per server.",
+  "strippedTitle": "Tranquility Home Grid"
 }

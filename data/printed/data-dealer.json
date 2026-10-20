@@ -1,5 +1,6 @@
 {
   "cardId": "data-dealer",
   "text": "<strong>[click]</strong>, <strong>forfeit 1 agenda:</strong> Gain 9[credit].",
-  "strippedText": "click, forfeit 1 agenda: Gain 9 credits."
+  "strippedText": "click, forfeit 1 agenda: Gain 9 credits.",
+  "strippedTitle": "Data Dealer"
 }

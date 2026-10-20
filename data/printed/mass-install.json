@@ -1,5 +1,6 @@
 {
   "cardId": "mass-install",
   "text": "Install up to 3 programs from your grip (paying the install costs).",
-  "strippedText": "Install up to 3 programs from your grip (paying the install costs)."
+  "strippedText": "Install up to 3 programs from your grip (paying the install costs).",
+  "strippedTitle": "Mass Install"
 }

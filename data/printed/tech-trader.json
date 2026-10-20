@@ -1,5 +1,6 @@
 {
   "cardId": "tech-trader",
   "text": "Whenever you use a [trash] ability, gain 1[credit].",
-  "strippedText": "Whenever you use a trash ability, gain 1 credit."
+  "strippedText": "Whenever you use a trash ability, gain 1 credit.",
+  "strippedTitle": "Tech Trader"
 }

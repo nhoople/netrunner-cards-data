@@ -1,5 +1,6 @@
 {
   "cardId": "lag-time",
   "text": "This operation is not trashed until another <strong>current</strong> is played or an agenda is stolen.\nAll <strong>ice</strong> have +1 strength.",
-  "strippedText": "This operation is not trashed until another current is played or an agenda is stolen. All ice have +1 strength."
+  "strippedText": "This operation is not trashed until another current is played or an agenda is stolen. All ice have +1 strength.",
+  "strippedTitle": "Lag Time"
 }

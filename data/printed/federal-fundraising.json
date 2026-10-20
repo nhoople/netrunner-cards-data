@@ -1,5 +1,6 @@
 {
   "cardId": "federal-fundraising",
   "text": "When your turn begins, you may look at the top 3 cards of R&D and arrange them in any order. Then, if this server is not protected by ice, you may draw 1 card.",
-  "strippedText": "When your turn begins, you may look at the top 3 cards of R&D and arrange them in any order. Then, if this server is not protected by ice, you may draw 1 card."
+  "strippedText": "When your turn begins, you may look at the top 3 cards of R&D and arrange them in any order. Then, if this server is not protected by ice, you may draw 1 card.",
+  "strippedTitle": "Federal Fundraising"
 }

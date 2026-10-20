@@ -1,5 +1,6 @@
 {
   "cardId": "woodcutter",
   "text": "You can advance this ice if it is rezzed. It gains \"[subroutine] Do 1 net damage.\" for each hosted advancement counter.",
-  "strippedText": "You can advance this ice if it is rezzed. It gains \"Subroutine Do 1 net damage.\" for each hosted advancement counter."
+  "strippedText": "You can advance this ice if it is rezzed. It gains \"Subroutine Do 1 net damage.\" for each hosted advancement counter.",
+  "strippedTitle": "Woodcutter"
 }

@@ -1,5 +1,6 @@
 {
   "cardId": "prisec",
   "text": "If the Runner accesses Prisec while installed, you may pay 2[credit] to give the Runner 1 tag and do 1 meat damage.",
-  "strippedText": "If the Runner accesses Prisec while installed, you may pay 2 credits to give the Runner 1 tag and do 1 meat damage."
+  "strippedText": "If the Runner accesses Prisec while installed, you may pay 2 credits to give the Runner 1 tag and do 1 meat damage.",
+  "strippedTitle": "Prisec"
 }

@@ -1,5 +1,6 @@
 {
   "cardId": "greasing-the-palm",
   "text": "Gain 5[credit]. You may install 1 card from HQ. You may remove 1 tag to place 1 advancement counter on that card.",
-  "strippedText": "Gain 5 credits. You may install 1 card from HQ. You may remove 1 tag to place 1 advancement counter on that card."
+  "strippedText": "Gain 5 credits. You may install 1 card from HQ. You may remove 1 tag to place 1 advancement counter on that card.",
+  "strippedTitle": "Greasing the Palm"
 }

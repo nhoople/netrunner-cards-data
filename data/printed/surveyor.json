@@ -1,5 +1,6 @@
 {
   "cardId": "surveyor",
   "text": "X is twice the number of ice protecting this server.\n[subroutine]Trace[X]. If successful, give the Runner 2 tags.\n[subroutine]Trace[X]. If successful, end the run.",
-  "strippedText": "X is twice the number of ice protecting this server. Subroutine Trace[X]. If successful, give the Runner 2 tags. Subroutine Trace[X]. If successful, end the run."
+  "strippedText": "X is twice the number of ice protecting this server. Subroutine Trace[X]. If successful, give the Runner 2 tags. Subroutine Trace[X]. If successful, end the run.",
+  "strippedTitle": "Surveyor"
 }

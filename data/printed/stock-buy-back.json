@@ -1,5 +1,6 @@
 {
   "cardId": "stock-buy-back",
   "text": "After you resolve this operation, end your action phase.\nGain 3[credit] for each agenda in the Runner's score area.",
-  "strippedText": "After you resolve this operation, end your action phase. Gain 3 credits for each agenda in the Runner's score area."
+  "strippedText": "After you resolve this operation, end your action phase. Gain 3 credits for each agenda in the Runner's score area.",
+  "strippedTitle": "Stock Buy-Back"
 }

@@ -1,5 +1,6 @@
 {
   "cardId": "bloodletter",
   "text": "[subroutine] The Runner must trash either 1 installed program or the top 2 cards of the stack.",
-  "strippedText": "Subroutine The Runner must trash either 1 installed program or the top 2 cards of the stack."
+  "strippedText": "Subroutine The Runner must trash either 1 installed program or the top 2 cards of the stack.",
+  "strippedTitle": "Bloodletter"
 }

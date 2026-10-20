@@ -1,5 +1,6 @@
 {
   "cardId": "cortex-lock",
   "text": "[subroutine] Do 1 net damage for each unused MU the Runner has.",
-  "strippedText": "Subroutine Do 1 net damage for each unused MU the Runner has."
+  "strippedText": "Subroutine Do 1 net damage for each unused MU the Runner has.",
+  "strippedTitle": "Cortex Lock"
 }

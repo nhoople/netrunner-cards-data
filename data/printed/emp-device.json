@@ -1,5 +1,6 @@
 {
   "cardId": "emp-device",
   "text": "[trash]: The Corp cannot rez more than 1 piece of ice for the remainder of this run. Use this ability only during a run.",
-  "strippedText": "trash: The Corp cannot rez more than 1 piece of ice for the remainder of this run. Use this ability only during a run."
+  "strippedText": "trash: The Corp cannot rez more than 1 piece of ice for the remainder of this run. Use this ability only during a run.",
+  "strippedTitle": "EMP Device"
 }

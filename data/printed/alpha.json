@@ -1,5 +1,6 @@
 {
   "cardId": "alpha",
   "text": "Interface → <strong>1[credit]:</strong> Break 1 subroutine.\n<strong>1[credit]:</strong> +1 strength.\nThis program can only interface with the outermost piece of ice protecting a server.",
-  "strippedText": "Interface -> 1 credit: Break 1 subroutine. 1 credit: +1 strength. This program can only interface with the outermost piece of ice protecting a server."
+  "strippedText": "Interface -> 1 credit: Break 1 subroutine. 1 credit: +1 strength. This program can only interface with the outermost piece of ice protecting a server.",
+  "strippedTitle": "Alpha"
 }

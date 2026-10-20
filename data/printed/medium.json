@@ -1,5 +1,6 @@
 {
   "cardId": "medium",
   "text": "Whenever you make a successful run on R&D, place 1 virus counter on this program.\nWhenever you breach R&D, choose a number less than the number of hosted virus counters. Access that many additional cards.",
-  "strippedText": "Whenever you make a successful run on R&D, place 1 virus counter on this program. Whenever you breach R&D, choose a number less than the number of hosted virus counters. Access that many additional cards."
+  "strippedText": "Whenever you make a successful run on R&D, place 1 virus counter on this program. Whenever you breach R&D, choose a number less than the number of hosted virus counters. Access that many additional cards.",
+  "strippedTitle": "Medium"
 }

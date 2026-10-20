@@ -1,5 +1,6 @@
 {
   "cardId": "hivemind",
   "text": "Place 1 virus counter on Hivemind when it is installed.\nVirus counters on Hivemind are considered to be hosted on all other <strong>virus</strong> programs for the purposes of card effects (and can be spent as if on them).",
-  "strippedText": "Place 1 virus counter on Hivemind when it is installed. Virus counters on Hivemind are considered to be hosted on all other virus programs for the purposes of card effects (and can be spent as if on them)."
+  "strippedText": "Place 1 virus counter on Hivemind when it is installed. Virus counters on Hivemind are considered to be hosted on all other virus programs for the purposes of card effects (and can be spent as if on them).",
+  "strippedTitle": "Hivemind"
 }

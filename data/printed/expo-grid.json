@@ -1,5 +1,6 @@
 {
   "cardId": "expo-grid",
   "text": "When your turn begins, gain 1[credit] if there is a rezzed asset installed in the root of this server.\nLimit 1 <strong>region</strong> per server.",
-  "strippedText": "When your turn begins, gain 1 credit if there is a rezzed asset installed in the root of this server. Limit 1 region per server."
+  "strippedText": "When your turn begins, gain 1 credit if there is a rezzed asset installed in the root of this server. Limit 1 region per server.",
+  "strippedTitle": "Expo Grid"
 }

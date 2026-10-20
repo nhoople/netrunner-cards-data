@@ -1,5 +1,6 @@
 {
   "cardId": "zed-1-0",
   "text": "<strong>Lose [click]:</strong> Break 1 subroutine on this ice. Only the Runner can use this ability.\n[subroutine] If the Runner has lost [click] to break a subroutine during this run, do 1 core damage.\n[subroutine] If the Runner has lost [click] to break a subroutine during this run, do 1 core damage.",
-  "strippedText": "Lose click: Break 1 subroutine on this ice. Only the Runner can use this ability. Subroutine If the Runner has lost click to break a subroutine during this run, do 1 core damage. Subroutine If the Runner has lost click to break a subroutine during this run, do 1 core damage."
+  "strippedText": "Lose click: Break 1 subroutine on this ice. Only the Runner can use this ability. Subroutine If the Runner has lost click to break a subroutine during this run, do 1 core damage. Subroutine If the Runner has lost click to break a subroutine during this run, do 1 core damage.",
+  "strippedTitle": "Zed 1.0"
 }

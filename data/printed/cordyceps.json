@@ -1,5 +1,6 @@
 {
   "cardId": "cordyceps",
   "text": "When you install this program, place 2 virus counters on it.\nOnce per turn → When you make a successful run on a central server, you may remove 1 hosted virus counter to swap 1 piece of ice protecting that server with another installed piece of ice.",
-  "strippedText": "When you install this program, place 2 virus counters on it. Once per turn -> When you make a successful run on a central server, you may remove 1 hosted virus counter to swap 1 piece of ice protecting that server with another installed piece of ice."
+  "strippedText": "When you install this program, place 2 virus counters on it. Once per turn -> When you make a successful run on a central server, you may remove 1 hosted virus counter to swap 1 piece of ice protecting that server with another installed piece of ice.",
+  "strippedTitle": "Cordyceps"
 }

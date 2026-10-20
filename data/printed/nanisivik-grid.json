@@ -1,5 +1,6 @@
 {
   "cardId": "nanisivik-grid",
   "text": "Whenever the Runner approaches this server, you may turn 1 facedown piece of ice in Archives faceup. If you do, resolve 1 subroutine on that ice.\nLimit 1 <strong>region</strong> per server.",
-  "strippedText": "Whenever the Runner approaches this server, you may turn 1 facedown piece of ice in Archives faceup. If you do, resolve 1 subroutine on that ice. Limit 1 region per server."
+  "strippedText": "Whenever the Runner approaches this server, you may turn 1 facedown piece of ice in Archives faceup. If you do, resolve 1 subroutine on that ice. Limit 1 region per server.",
+  "strippedTitle": "Nanisivik Grid"
 }

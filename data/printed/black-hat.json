@@ -1,5 +1,6 @@
 {
   "cardId": "black-hat",
   "text": "The Corp must trace[4]. If unsuccessful, for the remainder of the turn, access 2 additional cards whenever you breach HQ or R&D.",
-  "strippedText": "The Corp must trace[4]. If unsuccessful, for the remainder of the turn, access 2 additional cards whenever you breach HQ or R&D."
+  "strippedText": "The Corp must trace[4]. If unsuccessful, for the remainder of the turn, access 2 additional cards whenever you breach HQ or R&D.",
+  "strippedTitle": "Black Hat"
 }

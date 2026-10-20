@@ -1,5 +1,6 @@
 {
   "cardId": "three-steps-ahead",
   "text": "Play only as your first [click].\nWhen this turn ends, gain 2[credit] for each successful run you made during it.",
-  "strippedText": "Play only as your first click. When this turn ends, gain 2 credits for each successful run you made during it."
+  "strippedText": "Play only as your first click. When this turn ends, gain 2 credits for each successful run you made during it.",
+  "strippedTitle": "Three Steps Ahead"
 }

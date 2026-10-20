@@ -1,5 +1,6 @@
 {
   "cardId": "explode-a-palooza",
   "text": "While the Runner is accessing this agenda in R&D, they must reveal it.\nWhen the Runner accesses this agenda, you may gain 5[credit].",
-  "strippedText": "While the Runner is accessing this agenda in R&D, they must reveal it. When the Runner accesses this agenda, you may gain 5 credits."
+  "strippedText": "While the Runner is accessing this agenda in R&D, they must reveal it. When the Runner accesses this agenda, you may gain 5 credits.",
+  "strippedTitle": "Explode-a-palooza"
 }

@@ -1,5 +1,6 @@
 {
   "cardId": "predictive-algorithm",
   "text": "This card is not trashed until another <strong>current</strong> is played or an agenda is stolen.\nAs an additional cost to steal an agenda, the Runner must pay 2[credit].",
-  "strippedText": "This card is not trashed until another current is played or an agenda is stolen. As an additional cost to steal an agenda, the Runner must pay 2 credits."
+  "strippedText": "This card is not trashed until another current is played or an agenda is stolen. As an additional cost to steal an agenda, the Runner must pay 2 credits.",
+  "strippedTitle": "Predictive Algorithm"
 }

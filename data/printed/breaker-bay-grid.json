@@ -1,5 +1,6 @@
 {
   "cardId": "breaker-bay-grid",
   "text": "The rez cost of each card in the root of this server is lowered by 5.\nLimit 1 <strong>region</strong> per server.",
-  "strippedText": "The rez cost of each card in the root of this server is lowered by 5. Limit 1 region per server."
+  "strippedText": "The rez cost of each card in the root of this server is lowered by 5. Limit 1 region per server.",
+  "strippedTitle": "Breaker Bay Grid"
 }

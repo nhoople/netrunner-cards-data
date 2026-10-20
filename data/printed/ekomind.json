@@ -1,5 +1,6 @@
 {
   "cardId": "ekomind",
   "text": "Your memory limit is equal to the number of cards in your grip.\nLimit 1 <strong>console</strong> per player.",
-  "strippedText": "Your memory limit is equal to the number of cards in your grip. Limit 1 console per player."
+  "strippedText": "Your memory limit is equal to the number of cards in your grip. Limit 1 console per player.",
+  "strippedTitle": "Ekomind"
 }

@@ -1,5 +1,6 @@
 {
   "cardId": "simulchip",
   "text": "As an additional cost to use this hardware, trash 1 installed program. Ignore this cost if an installed program has already been trashed this turn.\n<strong>[trash]:</strong> Install 1 program from your heap, paying 3[credit] less.",
-  "strippedText": "As an additional cost to use this hardware, trash 1 installed program. Ignore this cost if an installed program has already been trashed this turn. trash: Install 1 program from your heap, paying 3 credits less."
+  "strippedText": "As an additional cost to use this hardware, trash 1 installed program. Ignore this cost if an installed program has already been trashed this turn. trash: Install 1 program from your heap, paying 3 credits less.",
+  "strippedTitle": "Simulchip"
 }
