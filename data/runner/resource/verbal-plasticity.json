@@ -11,5 +11,15 @@
     "genetics"
   ],
   "unsupported": [],
-  "influence": 0
+  "influence": 0,
+  "abilities": [
+    {
+      "class": "static",
+      "rule": "9.3.7a",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    }
+  ]
 }

@@ -1,7 +1,7 @@
 {
   "id": "aesops-pawnshop",
   "deckLimit": 3,
-  "title": "Aesop's Pawnshop",
+  "title": "Aesop’s Pawnshop",
   "type": "resource",
   "side": "runner",
   "faction": "shaper",
@@ -12,7 +12,16 @@
     "connection",
     "location"
   ],
+  "influence": 2,
   "abilities": [
+    {
+      "class": "static",
+      "rule": "9.3.7a",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
     {
       "class": "static",
       "rule": "9.3.7a",

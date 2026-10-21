@@ -2,5 +2,6 @@
   "cardId": "hired-help",
   "text": "As an additional cost to run this server, the Runner must trash 1 agenda from their score area. Ignore this ability if the Runner made a successful run on HQ this turn.\nLimit 1 per deck.",
   "strippedText": "As an additional cost to run this server, the Runner must trash 1 agenda from their score area. Ignore this ability if the Runner made a successful run on HQ this turn. Limit 1 per deck.",
-  "strippedTitle": "Hired Help"
+  "strippedTitle": "Hired Help",
+  "attribution": "Designed by the Day 1B players at Magnum Opus"
 }

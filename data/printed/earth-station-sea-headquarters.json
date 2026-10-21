@@ -3,14 +3,25 @@
   "text": "Limit 1 remote server.\nAs an additional cost to run HQ, the Runner must pay 1[credit].\n<strong>[click]:</strong> Flip this identity.",
   "strippedText": "Limit 1 remote server. As an additional cost to run HQ, the Runner must pay 1 credit. click: Flip this identity.",
   "strippedTitle": "Earth Station: SEA Headquarters",
+  "layoutId": "flip",
   "faces": [
     {
+      "title": "Earth Station: SEA Headquarters",
+      "strippedTitle": "Earth Station: SEA Headquarters",
       "text": "Limit 1 remote server.\nAs an additional cost to run HQ, the Runner must pay 1[credit].\n<strong>[click]:</strong> Flip this identity.",
-      "strippedText": "Limit 1 remote server. As an additional cost to run HQ, the Runner must pay 1 credit. click: Flip this identity."
+      "strippedText": "Limit 1 remote server. As an additional cost to run HQ, the Runner must pay 1 credit. click: Flip this identity.",
+      "subtypes": [
+        "division"
+      ]
     },
     {
+      "title": "Earth Station: Ascending to Orbit",
+      "strippedTitle": "Earth Station: Ascending to Orbit",
       "text": "Limit 1 remote server.\nAs an additional cost to run a remote server, the Runner must pay 6[credit].\nWhen the Runner makes a successful run on HQ, flip this identity.",
-      "strippedText": "Limit 1 remote server. As an additional cost to run a remote server, the Runner must pay 6 credits. When the Runner makes a successful run on HQ, flip this identity."
+      "strippedText": "Limit 1 remote server. As an additional cost to run a remote server, the Runner must pay 6 credits. When the Runner makes a successful run on HQ, flip this identity.",
+      "subtypes": [
+        "division"
+      ]
     }
   ]
 }

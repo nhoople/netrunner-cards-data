@@ -17,6 +17,39 @@
       "class": "static",
       "rule": "9.3.7a",
       "declaration": {
+        "field": "identityFaces",
+        "value": [
+          {
+            "title": "Jinteki Biotech: Life Imagined",
+            "subtypes": [
+              "division"
+            ]
+          },
+          {
+            "title": "The Brewery: Jinteki Biotech",
+            "subtypes": [
+              "department"
+            ]
+          },
+          {
+            "title": "The Tank: Jinteki Biotech",
+            "subtypes": [
+              "department"
+            ]
+          },
+          {
+            "title": "The Greenhouse: Jinteki Biotech",
+            "subtypes": [
+              "department"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "class": "static",
+      "rule": "9.3.7a",
+      "declaration": {
         "field": "chooseIdentityFaceBeforeFirstTurn",
         "value": true
       }

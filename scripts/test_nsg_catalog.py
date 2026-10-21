@@ -189,6 +189,29 @@ def test_printed_numbers() -> None:
     assert no_bar == {}, no_bar
 
 
+def test_printed_face_and_unique() -> None:
+    from build_catalog_facts import printed_face, rules_unique
+
+    back = printed_face(
+        {
+            "stripped_title": "Hoshiko Shiro: Mahou Shoujo",
+            "text": "When your turn begins, draw 1 card.",
+            "stripped_text": "When your turn begins, draw 1 card.",
+            "base_link": 1,
+        },
+        "Hoshiko Shiro: Untold Protagonist",
+    )
+    assert back["title"] == "Hoshiko Shiro: Mahou Shoujo"
+    assert back["link"] == 1 and "subtypes" not in back
+    untitled = printed_face({"text": "x", "stripped_text": "x"}, "SYNC: Everything, Everywhere")
+    assert untitled["title"] == "SYNC: Everything, Everywhere"
+
+    assert rules_unique({"abilities": [{"declaration": {"field": "unique", "value": True}}]})
+    assert rules_unique({"unique": True})
+    assert not rules_unique({"abilities": [{"declaration": {"field": "unique", "value": False}}]})
+    assert not rules_unique({})
+
+
 def main() -> int:
     test_pool_pack_codes()
     test_card_blobs()
@@ -198,6 +221,7 @@ def main() -> int:
     test_restriction_card_ids()
     test_ruling_ids()
     test_printed_numbers()
+    test_printed_face_and_unique()
     print("ok")
     return 0
 

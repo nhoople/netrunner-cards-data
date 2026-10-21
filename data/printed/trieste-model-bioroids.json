@@ -2,5 +2,6 @@
   "cardId": "trieste-model-bioroids",
   "text": "When you rez this asset, choose 1 rezzed piece of <strong>bioroid</strong> ice.\nRunner card abilities cannot break subroutines on the chosen ice.",
   "strippedText": "When you rez this asset, choose 1 rezzed piece of bioroid ice. Runner card abilities cannot break subroutines on the chosen ice.",
-  "strippedTitle": "Trieste Model Bioroids"
+  "strippedTitle": "Trieste Model Bioroids",
+  "attribution": "Designed by 2019 World Champion Oliver \"Pinsel\" Siccha"
 }

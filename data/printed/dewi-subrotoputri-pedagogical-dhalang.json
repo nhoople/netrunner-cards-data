@@ -3,14 +3,26 @@
   "text": "Whenever you make a successful run, if your [mu] is full, you may flip this identity and gain 1[credit].",
   "strippedText": "Whenever you make a successful run, if your  mu is full, you may flip this identity and gain 1 credit.",
   "strippedTitle": "Dewi Subrotoputri: Pedagogical Dhalang",
+  "layoutId": "flip",
   "faces": [
     {
+      "title": "Dewi Subrotoputri: Pedagogical Dhalang",
+      "strippedTitle": "Dewi Subrotoputri: Pedagogical Dhalang",
       "text": "Whenever you make a successful run, if your [mu] is full, you may flip this identity and gain 1[credit].",
-      "strippedText": "Whenever you make a successful run, if your  mu is full, you may flip this identity and gain 1 credit."
+      "strippedText": "Whenever you make a successful run, if your  mu is full, you may flip this identity and gain 1 credit.",
+      "subtypes": [
+        "natural"
+      ],
+      "link": 0
     },
     {
+      "title": "Dewi Subrotoputri: Shadow Guide",
+      "strippedTitle": "Dewi Subrotoputri: Shadow Guide",
       "text": "Whenever you make a successful run, if you have at least 1 unused [mu], you may flip this identity and draw 1 card.",
-      "strippedText": "Whenever you make a successful run, if you have at least 1 unused  mu, you may flip this identity and draw 1 card."
+      "strippedText": "Whenever you make a successful run, if you have at least 1 unused  mu, you may flip this identity and draw 1 card.",
+      "subtypes": [
+        "natural"
+      ]
     }
   ]
 }

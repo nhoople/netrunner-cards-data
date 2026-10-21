@@ -30,7 +30,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 PIN_PATH = ROOT / "data" / "nsg-catalog-pin.json"
 # Printed facts a catalog update can change. Ability records stay hand-authored.
-FACT_FIELDS = ("faction_id", "cost", "strength", "text")
+FACT_FIELDS = ("faction_id", "cost", "strength", "text", "is_unique", "influence_cost")
 # Corpus ids minted before the v2 id convention settled. Every other title
 # converts by replacing underscores with hyphens (and back).
 OUR_ID_EXCEPTIONS = {
@@ -89,6 +89,8 @@ def subtype_names(card: dict) -> list[str]:
     code_gate is written 'code gate' and g_mod is written 'g-mod', so the
     spelling comes from v2/card_subtypes.json rather than the id alone.
     """
+    if not card.get("subtypes"):
+        return []
     global _SUBTYPE_NAMES
     if _SUBTYPE_NAMES is None:
         _SUBTYPE_NAMES = {

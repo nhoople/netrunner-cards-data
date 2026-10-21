@@ -19,6 +19,14 @@
       "class": "static",
       "rule": "9.3.7a",
       "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "rule": "9.3.7a",
+      "declaration": {
         "field": "advancedIceProtectingThisServerStrengthBonus",
         "value": 2
       }

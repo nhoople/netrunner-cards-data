@@ -16,7 +16,7 @@ from pathlib import Path
 from build_printings import pack_code_for
 from build_rulings import known_ids
 from card_layout import card_file
-from nsg_catalog import fetch_catalog_archive, load_v2_cards, our_id
+from nsg_catalog import fetch_catalog_archive, load_v2_cards, our_id, subtype_names
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
@@ -86,6 +86,40 @@ def write_json(path: Path, document: dict | list) -> None:
     path.write_text(json.dumps(document, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
 
 
+def printed_face(raw: dict, fallback_title: str) -> dict:
+    """One stored face record from a v2 card or face record.
+
+    The face title is optional upstream (SYNC's back face keeps the front
+    name, and most flip faces carry only stripped_title); fall back to the
+    stripped title, then to the card's title.
+    """
+    record = {
+        "title": raw.get("title") or raw.get("stripped_title") or fallback_title,
+        "strippedTitle": raw.get("stripped_title") or fallback_title,
+        "text": raw.get("text") if isinstance(raw.get("text"), str) else "",
+        "strippedText": raw.get("stripped_text") if isinstance(raw.get("stripped_text"), str) else "",
+    }
+    subtypes = subtype_names(raw)
+    if subtypes:
+        record["subtypes"] = subtypes
+    if raw.get("base_link") is not None:
+        record["link"] = raw["base_link"]
+    return record
+
+
+def rules_unique(rules: dict) -> bool:
+    """Whether a rules file encodes uniqueness the way the engine reads it."""
+    if rules.get("unique") is True:
+        return True
+    return any(
+        isinstance(ability.get("declaration"), dict)
+        and ability["declaration"].get("field") == "unique"
+        and ability["declaration"].get("value") is True
+        for ability in rules.get("abilities") or []
+        if isinstance(ability, dict)
+    )
+
+
 def restriction_document(raw: dict, mapping: dict[str, str]) -> dict:
     document = {
         "id": raw["id"],
@@ -133,11 +167,6 @@ def main() -> int:
     pool = load_json(DATA / "pool.json")
     errors: list[str] = []
 
-    # At the pinned commit, v2/cards carries only the front face of a flip
-    # identity. Every face's sentence is kept from the pack export in
-    # scripts/flip-text-overrides.json until v2 stores face text.
-    flip_text = load_json(ROOT / "scripts" / "flip-text-overrides.json")
-
     limits: dict[str, int] = {}
     printed: dict[str, dict] = {}
     for catalog_id, card in sorted(load_v2_cards().items()):
@@ -160,14 +189,40 @@ def main() -> int:
             "strippedText": stripped,
             "strippedTitle": stripped_title,
         }
-        override = flip_text.get(card_id)
-        if override is not None:
-            faces = override["faces"]
-            if faces[0]["text"] != text or faces[0]["strippedText"] != stripped:
-                errors.append(f"{card_id}: flip-text override front face differs from v2/cards")
-            else:
-                record["faces"] = faces
+        if isinstance(card.get("attribution"), str) and card["attribution"]:
+            record["attribution"] = card["attribution"]
+        if isinstance(card.get("layout_id"), str) and card["layout_id"]:
+            record["layoutId"] = card["layout_id"]
+        # v2/cards carries every face of a double-sided identity: the card
+        # record is the front face and `faces` lists the remaining faces.
+        # Stored faces keep the front face first.
+        extra_faces = card.get("faces")
+        if isinstance(extra_faces, list) and extra_faces:
+            record["faces"] = [printed_face(card, stripped_title)] + [
+                printed_face(face, stripped_title) for face in extra_faces
+            ]
         printed[card_id] = record
+
+        # Fail closed when a source fact the rules file must encode drifts
+        # from what is stored, so a catalog refresh cannot silently drop it.
+        rules = load_json(card_file(card_id))
+        if bool(card.get("is_unique")) != rules_unique(rules):
+            errors.append(
+                f"{card_id}: catalog is_unique {card.get('is_unique')!r} is not "
+                "encoded in the rules file (CR 10.3.1d)"
+            )
+        if (rules.get("subtypes") or []) != subtype_names(card):
+            errors.append(f"{card_id}: stored subtypes differ from the catalog")
+        if card.get("card_type_id") not in ("corp_identity", "runner_identity"):
+            expected_influence = card.get("influence_cost")
+            stored_influence = rules.get("influence")
+            if expected_influence is None and stored_influence is not None:
+                errors.append(f"{card_id}: rules store influence but the catalog has no bar")
+            elif expected_influence is not None and (stored_influence or 0) != expected_influence:
+                errors.append(
+                    f"{card_id}: stored influence {stored_influence!r} != "
+                    f"catalog influence_cost {expected_influence!r}"
+                )
 
     missing_limits = sorted(known - set(limits))
     if missing_limits:

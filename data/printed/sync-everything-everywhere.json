@@ -3,14 +3,25 @@
   "text": "[click]: Flip this identity.\nThe Runner pays 1[credit] more when spending a [click] to remove a tag (not through a card ability).",
   "strippedText": "click: Flip this identity. The Runner pays 1 credit more when spending a click to remove a tag (not through a card ability).",
   "strippedTitle": "SYNC: Everything, Everywhere",
+  "layoutId": "flip",
   "faces": [
     {
+      "title": "SYNC: Everything, Everywhere",
+      "strippedTitle": "SYNC: Everything, Everywhere",
       "text": "[click]: Flip this identity.\nThe Runner pays 1[credit] more when spending a [click] to remove a tag (not through a card ability).",
-      "strippedText": "click: Flip this identity. The Runner pays 1 credit more when spending a click to remove a tag (not through a card ability)."
+      "strippedText": "click: Flip this identity. The Runner pays 1 credit more when spending a click to remove a tag (not through a card ability).",
+      "subtypes": [
+        "division"
+      ]
     },
     {
+      "title": "SYNC: Everything, Everywhere",
+      "strippedTitle": "SYNC: Everything, Everywhere",
       "text": "[click]: Flip this identity.\nYou may pay 2[credit] fewer when spending a [click] to trash a resource (not through a card ability).",
-      "strippedText": "click: Flip this identity. You may pay 2 credits fewer when spending a click to trash a resource (not through a card ability)."
+      "strippedText": "click: Flip this identity. You may pay 2 credits fewer when spending a click to trash a resource (not through a card ability).",
+      "subtypes": [
+        "division"
+      ]
     }
   ]
 }
