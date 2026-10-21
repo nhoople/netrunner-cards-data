@@ -36,7 +36,6 @@
       "id": "drago-tag",
       "label": "Remove 2 advancements: give Runner 1 tag",
       "cost": {
-        "clicks": 1,
         "advancementCounters": 2
       },
       "windows": [
@@ -48,7 +47,8 @@
           "kind": "give_tags",
           "amount": 1
         }
-      }
+      },
+      "onlyDuringOwnTurn": true
     }
   ]
 }

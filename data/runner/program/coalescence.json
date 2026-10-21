@@ -37,7 +37,8 @@
           "side": "runner",
           "amount": 2
         }
-      }
+      },
+      "onlyDuringOwnTurn": true
     }
   ]
 }

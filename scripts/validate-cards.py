@@ -404,6 +404,54 @@ def check_printed(card_ids: dict[str, Path]) -> int:
                         "differs from the rules identityFaces"
                     )
                     errors += 1
+    # "Use ... only during your turn" restricts paid abilities to the
+    # controller's turn (CR 9.5.2f: restrictions specified in text). Every
+    # non-click paid ability on such a card must declare onlyDuringOwnTurn,
+    # and the flag must not appear without the printed restriction. A card
+    # whose phrase restricts rezzing instead declares rezOnlyDuringCorpTurn
+    # (Front Company) and has no paid abilities to flag.
+    for card_id, rules_path in sorted(card_ids.items()):
+        printed_path = directory / f"{card_id}.json"
+        if not printed_path.is_file():
+            continue
+        printed = json.loads(printed_path.read_text(encoding="utf-8"))
+        texts = [printed.get("strippedText") or ""]
+        texts += [
+            face.get("strippedText") or ""
+            for face in printed.get("faces") or []
+            if isinstance(face, dict)
+        ]
+        restricted = any("only during your turn" in text for text in texts)
+        rules = json.loads(rules_path.read_text(encoding="utf-8"))
+        abilities = [a for a in rules.get("abilities") or [] if isinstance(a, dict)]
+        declared_fields = {
+            a["declaration"].get("field")
+            for a in abilities
+            if isinstance(a.get("declaration"), dict)
+        }
+        if "rezOnlyDuringCorpTurn" in declared_fields:
+            restricted = False
+        for ability in abilities:
+            if ability.get("class") != "paid":
+                continue
+            cost = ability.get("cost") or {}
+            if isinstance(cost, dict) and cost.get("clicks"):
+                continue  # a click-first cost is an action (CR 9.5.2a)
+            flagged = ability.get("onlyDuringOwnTurn") is True
+            if restricted and not flagged:
+                print(
+                    f"{printed_path.relative_to(ROOT)}: paid ability "
+                    f"{ability.get('id')!r} lacks onlyDuringOwnTurn for its "
+                    "printed 'only during your turn' restriction"
+                )
+                errors += 1
+            if flagged and not restricted:
+                print(
+                    f"{printed_path.relative_to(ROOT)}: paid ability "
+                    f"{ability.get('id')!r} declares onlyDuringOwnTurn but the "
+                    "printed text has no 'only during your turn' restriction"
+                )
+                errors += 1
     missing = sorted(set(card_ids) - seen)
     if missing:
         print(f"cards with no printed text: {missing}")
