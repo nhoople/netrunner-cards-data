@@ -2,5 +2,6 @@
   "cardId": "architect",
   "text": "Players cannot trash this ice.\n[subroutine] Look at the top 5 cards of R&D. You may install 1 of those cards, ignoring the install cost.\n[subroutine] You may install 1 card from Archives or HQ.",
   "strippedText": "Players cannot trash this ice. Subroutine Look at the top 5 cards of R&D. You may install 1 of those cards, ignoring the install cost. Subroutine You may install 1 card from Archives or HQ.",
-  "strippedTitle": "Architect"
+  "strippedTitle": "Architect",
+  "attribution": "Designed by 2012 World Champion Jeremy Zwirn"
 }

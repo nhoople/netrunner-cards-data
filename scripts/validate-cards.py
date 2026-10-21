@@ -310,19 +310,43 @@ def check_printed(card_ids: dict[str, Path]) -> int:
         if isinstance(stripped, str) and "<" in stripped:
             print(f"{path.relative_to(ROOT)}: strippedText carries HTML markup")
             errors += 1
+        if "attribution" in raw and not isinstance(raw["attribution"], str):
+            print(f"{path.relative_to(ROOT)}: attribution must be a string")
+            errors += 1
+        if "layoutId" in raw and not isinstance(raw["layoutId"], str):
+            print(f"{path.relative_to(ROOT)}: layoutId must be a string")
+            errors += 1
         faces = raw.get("faces")
         if faces is not None:
             if not isinstance(faces, list) or len(faces) < 2:
                 print(f"{path.relative_to(ROOT)}: faces must list at least two faces")
                 errors += 1
             else:
+                face_fields = {"title", "strippedTitle", "text", "strippedText", "subtypes", "link"}
                 for index, face in enumerate(faces):
-                    if not isinstance(face, dict) or set(face) != {"text", "strippedText"}:
-                        print(f"{path.relative_to(ROOT)}: faces[{index}] must have text and strippedText")
+                    if (
+                        not isinstance(face, dict)
+                        or not {"text", "strippedText"} <= set(face)
+                        or set(face) - face_fields
+                    ):
+                        print(f"{path.relative_to(ROOT)}: faces[{index}] has unknown or missing fields")
                         errors += 1
                         continue
                     if not isinstance(face["text"], str) or not isinstance(face["strippedText"], str):
                         print(f"{path.relative_to(ROOT)}: faces[{index}] text fields must be strings")
+                        errors += 1
+                    for field in ("title", "strippedTitle"):
+                        if field in face and not isinstance(face[field], str):
+                            print(f"{path.relative_to(ROOT)}: faces[{index}] {field} must be a string")
+                            errors += 1
+                    if "subtypes" in face and (
+                        not isinstance(face["subtypes"], list)
+                        or not all(isinstance(name, str) for name in face["subtypes"])
+                    ):
+                        print(f"{path.relative_to(ROOT)}: faces[{index}] subtypes must be strings")
+                        errors += 1
+                    if "link" in face and type(face["link"]) is not int:
+                        print(f"{path.relative_to(ROOT)}: faces[{index}] link must be an integer")
                         errors += 1
                 first = faces[0]
                 if isinstance(first, dict) and (
@@ -352,6 +376,34 @@ def check_printed(card_ids: dict[str, Path]) -> int:
         if not isinstance(faces, list) or len(faces) != extra_count + 1:
             print(f"{path.relative_to(ROOT)}: printings carry {extra_count} extra face(s); printed faces must list {extra_count + 1}")
             errors += 1
+    # The rules file's identityFaces declaration (the play facts the engine
+    # switches on, CR 3.1.1a) and the printed faces (the display record)
+    # describe the same faces and must agree.
+    for card_id, rules_path in sorted(card_ids.items()):
+        rules = json.loads(rules_path.read_text(encoding="utf-8"))
+        declared = None
+        for ability in rules.get("abilities") or []:
+            declaration = ability.get("declaration") if isinstance(ability, dict) else None
+            if isinstance(declaration, dict) and declaration.get("field") == "identityFaces":
+                declared = declaration.get("value")
+        printed_path = directory / f"{card_id}.json"
+        if not printed_path.is_file():
+            continue
+        printed_faces = json.loads(printed_path.read_text(encoding="utf-8")).get("faces")
+        if declared is None and printed_faces is None:
+            continue
+        if not isinstance(declared, list) or not isinstance(printed_faces, list) or len(declared) != len(printed_faces):
+            print(f"{printed_path.relative_to(ROOT)}: printed faces do not match the rules identityFaces")
+            errors += 1
+            continue
+        for index, (face, printed_face) in enumerate(zip(declared, printed_faces)):
+            for field in ("title", "subtypes", "link"):
+                if face.get(field) != printed_face.get(field):
+                    print(
+                        f"{printed_path.relative_to(ROOT)}: faces[{index}] {field} "
+                        "differs from the rules identityFaces"
+                    )
+                    errors += 1
     missing = sorted(set(card_ids) - seen)
     if missing:
         print(f"cards with no printed text: {missing}")
@@ -367,6 +419,8 @@ REFERENCE_FILES = (
     "card-set-types.json",
     "card-layouts.json",
     "ruling-sources.json",
+    "card-sets.json",
+    "card-cycles.json",
 )
 
 

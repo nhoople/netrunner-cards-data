@@ -3,22 +3,43 @@
   "text": "Before taking your first turn, you may switch this identity with any copy of Jinteki Biotech.\n<strong>[click][click][click]:</strong> Flip this identity.",
   "strippedText": "Before taking your first turn, you may switch this identity with any copy of Jinteki Biotech. click click click: Flip this identity.",
   "strippedTitle": "Jinteki Biotech: Life Imagined",
+  "layoutId": "facade",
   "faces": [
     {
+      "title": "Jinteki Biotech: Life Imagined",
+      "strippedTitle": "Jinteki Biotech: Life Imagined",
       "text": "Before taking your first turn, you may switch this identity with any copy of Jinteki Biotech.\n<strong>[click][click][click]:</strong> Flip this identity.",
-      "strippedText": "Before taking your first turn, you may switch this identity with any copy of Jinteki Biotech. click click click: Flip this identity."
+      "strippedText": "Before taking your first turn, you may switch this identity with any copy of Jinteki Biotech. click click click: Flip this identity.",
+      "subtypes": [
+        "division"
+      ]
     },
     {
+      "title": "The Brewery: Jinteki Biotech",
+      "strippedTitle": "The Brewery: Jinteki Biotech",
       "text": "When you flip this identity, do 2 net damage.",
-      "strippedText": "When you flip this identity, do 2 net damage."
+      "strippedText": "When you flip this identity, do 2 net damage.",
+      "subtypes": [
+        "department"
+      ]
     },
     {
+      "title": "The Tank: Jinteki Biotech",
+      "strippedTitle": "The Tank: Jinteki Biotech",
       "text": "When you flip this identity, shuffle all cards in Archives into R&D.",
-      "strippedText": "When you flip this identity, shuffle all cards in Archives into R&D."
+      "strippedText": "When you flip this identity, shuffle all cards in Archives into R&D.",
+      "subtypes": [
+        "department"
+      ]
     },
     {
+      "title": "The Greenhouse: Jinteki Biotech",
+      "strippedTitle": "The Greenhouse: Jinteki Biotech",
       "text": "When you flip this identity, place 4 advancement counters on 1 installed card that you can advance.",
-      "strippedText": "When you flip this identity, place 4 advancement counters on 1 installed card that you can advance."
+      "strippedText": "When you flip this identity, place 4 advancement counters on 1 installed card that you can advance.",
+      "subtypes": [
+        "department"
+      ]
     }
   ]
 }

@@ -11,5 +11,15 @@
     "virtual"
   ],
   "unsupported": [],
-  "influence": 3
+  "influence": 3,
+  "abilities": [
+    {
+      "class": "static",
+      "rule": "9.3.7a",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    }
+  ]
 }

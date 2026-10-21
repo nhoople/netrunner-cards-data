@@ -1,0 +1,205 @@
+[
+  {
+    "id": "draft",
+    "legacyCode": "draft",
+    "name": "Draft",
+    "position": 0,
+    "releasedBy": "fantasy-flight-games"
+  },
+  {
+    "id": "core-set",
+    "legacyCode": "core",
+    "name": "Core Set",
+    "position": 1,
+    "releasedBy": "fantasy-flight-games"
+  },
+  {
+    "id": "genesis",
+    "legacyCode": "genesis",
+    "name": "Genesis",
+    "position": 2,
+    "releasedBy": "fantasy-flight-games"
+  },
+  {
+    "id": "creation-and-control",
+    "legacyCode": "creation-and-control",
+    "name": "Creation and Control",
+    "position": 3,
+    "releasedBy": "fantasy-flight-games"
+  },
+  {
+    "id": "spin",
+    "legacyCode": "spin",
+    "name": "Spin",
+    "position": 4,
+    "releasedBy": "fantasy-flight-games"
+  },
+  {
+    "id": "honor-and-profit",
+    "legacyCode": "honor-and-profit",
+    "name": "Honor and Profit",
+    "position": 5,
+    "releasedBy": "fantasy-flight-games"
+  },
+  {
+    "id": "lunar",
+    "legacyCode": "lunar",
+    "name": "Lunar",
+    "position": 6,
+    "releasedBy": "fantasy-flight-games"
+  },
+  {
+    "id": "order-and-chaos",
+    "legacyCode": "order-and-chaos",
+    "name": "Order and Chaos",
+    "position": 7,
+    "releasedBy": "fantasy-flight-games"
+  },
+  {
+    "id": "sansan",
+    "legacyCode": "sansan",
+    "name": "SanSan",
+    "position": 8,
+    "releasedBy": "fantasy-flight-games"
+  },
+  {
+    "id": "data-and-destiny",
+    "legacyCode": "data-and-destiny",
+    "name": "Data and Destiny",
+    "position": 9,
+    "releasedBy": "fantasy-flight-games"
+  },
+  {
+    "id": "mumbad",
+    "legacyCode": "mumbad",
+    "name": "Mumbad",
+    "position": 10,
+    "releasedBy": "fantasy-flight-games"
+  },
+  {
+    "id": "flashpoint",
+    "legacyCode": "flashpoint",
+    "name": "Flashpoint",
+    "position": 11,
+    "releasedBy": "fantasy-flight-games"
+  },
+  {
+    "id": "red-sand",
+    "legacyCode": "red-sand",
+    "name": "Red Sand",
+    "position": 12,
+    "releasedBy": "fantasy-flight-games"
+  },
+  {
+    "id": "terminal-directive",
+    "legacyCode": "terminal-directive",
+    "name": "Terminal Directive",
+    "position": 13,
+    "releasedBy": "fantasy-flight-games"
+  },
+  {
+    "id": "revised-core-set",
+    "legacyCode": "core2",
+    "name": "Revised Core Set",
+    "position": 20,
+    "releasedBy": "fantasy-flight-games"
+  },
+  {
+    "id": "kitara",
+    "legacyCode": "kitara",
+    "name": "Kitara",
+    "position": 21,
+    "releasedBy": "fantasy-flight-games"
+  },
+  {
+    "id": "reign-and-reverie",
+    "legacyCode": "reign-and-reverie",
+    "name": "Reign and Reverie",
+    "position": 22,
+    "releasedBy": "fantasy-flight-games"
+  },
+  {
+    "id": "magnum-opus",
+    "legacyCode": "magnum-opus",
+    "name": "Magnum Opus",
+    "position": 23,
+    "releasedBy": "fantasy-flight-games"
+  },
+  {
+    "id": "napd-multiplayer",
+    "legacyCode": "napd",
+    "name": "NAPD Multiplayer",
+    "position": 24,
+    "releasedBy": "fantasy-flight-games"
+  },
+  {
+    "id": "system-core-2019",
+    "legacyCode": "sc19",
+    "name": "System Core 2019",
+    "position": 25,
+    "releasedBy": "null-signal-games"
+  },
+  {
+    "id": "ashes",
+    "legacyCode": "ashes",
+    "name": "Ashes",
+    "position": 26,
+    "releasedBy": "null-signal-games"
+  },
+  {
+    "id": "magnum-opus-reprint",
+    "legacyCode": "magnum-opus-reprint",
+    "name": "Magnum Opus Reprint",
+    "position": 28,
+    "releasedBy": "null-signal-games"
+  },
+  {
+    "id": "salvaged-memories",
+    "legacyCode": "salvaged-memories",
+    "name": "Salvaged Memories",
+    "position": 29,
+    "releasedBy": "null-signal-games"
+  },
+  {
+    "id": "system-gateway",
+    "legacyCode": "system-gateway",
+    "name": "System Gateway",
+    "position": 30,
+    "releasedBy": "null-signal-games"
+  },
+  {
+    "id": "system-update-2021",
+    "legacyCode": "system-update-2021",
+    "name": "System Update 2021",
+    "position": 31,
+    "releasedBy": "null-signal-games"
+  },
+  {
+    "id": "borealis",
+    "legacyCode": "borealis",
+    "name": "Borealis",
+    "position": 32,
+    "releasedBy": "null-signal-games"
+  },
+  {
+    "id": "liberation",
+    "legacyCode": "liberation",
+    "name": "Liberation",
+    "position": 33,
+    "releasedBy": "null-signal-games"
+  },
+  {
+    "id": "elevation",
+    "legacyCode": "elevation",
+    "name": "Elevation",
+    "position": 34,
+    "releasedBy": "null-signal-games"
+  },
+  {
+    "id": "vantage-point",
+    "legacyCode": "vantage-point",
+    "name": "Vantage Point",
+    "position": 35,
+    "releasedBy": "null-signal-games"
+  }
+]

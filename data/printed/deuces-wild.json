@@ -2,5 +2,6 @@
   "cardId": "deuces-wild",
   "text": "Resolve two of the following in any order:<ul><li>Gain 3[credit].</li><li>Draw 2 cards.</li><li>Remove 1 tag.</li><li>Expose 1 piece of ice, then make a run.</li></ul>",
   "strippedText": "Resolve two of the following in any order: * Gain 3 credits. * Draw 2 cards. * Remove 1 tag. * Expose 1 piece of ice, then make a run.",
-  "strippedTitle": "Deuces Wild"
+  "strippedTitle": "Deuces Wild",
+  "attribution": "Designed by 2014 World Champion Dan D'Argenio"
 }

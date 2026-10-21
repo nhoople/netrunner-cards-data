@@ -2,5 +2,6 @@
   "cardId": "the-wizard-s-chest",
   "text": "Use this hardware only if you made a successful run on HQ, R&D, and Archives this turn.\n[trash]<strong>:</strong> Choose hardware, program, or resource. Set aside cards from the top of your stack faceup until you set aside 2 cards of the chosen type. You may install 1 of those 2 cards, ignoring all costs. Shuffle the rest of the set-aside cards into your stack.",
   "strippedText": "Use this hardware only if you made a successful run on HQ, R&D, and Archives this turn. trash: Choose hardware, program, or resource. Set aside cards from the top of your stack faceup until you set aside 2 cards of the chosen type. You may install 1 of those 2 cards, ignoring all costs. Shuffle the rest of the set-aside cards into your stack.",
-  "strippedTitle": "The Wizard's Chest"
+  "strippedTitle": "The Wizard's Chest",
+  "attribution": "Designed by 2020 World Champion Richard Hall"
 }

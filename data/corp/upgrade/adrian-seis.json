@@ -17,6 +17,14 @@
   "influence": 4,
   "abilities": [
     {
+      "class": "static",
+      "rule": "9.3.7a",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
       "class": "conditional",
       "rule": "9.3.7c",
       "trigger": "successful_run",

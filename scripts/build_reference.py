@@ -76,6 +76,38 @@ def card_layouts() -> list[dict]:
     ]
 
 
+def card_sets() -> list[dict]:
+    found = []
+    for raw in load_v2_reference("card_sets.json"):
+        record = {
+            "id": str(raw["id"]).replace("_", "-"),
+            "name": raw["name"],
+            "cardSetTypeId": str(raw["card_set_type_id"]).replace("_", "-"),
+            "cardCycleId": str(raw["card_cycle_id"]).replace("_", "-"),
+            "position": raw["position"],
+            "size": raw["size"],
+            "dateRelease": raw["date_release"],
+            "releasedBy": str(raw["released_by"]).replace("_", "-"),
+        }
+        if raw.get("legacy_code"):
+            record["legacyCode"] = raw["legacy_code"]
+        found.append(record)
+    return found
+
+
+def card_cycles() -> list[dict]:
+    return [
+        {
+            "id": str(raw["id"]).replace("_", "-"),
+            "legacyCode": raw["legacy_code"],
+            "name": raw["name"],
+            "position": raw["position"],
+            "releasedBy": str(raw["released_by"]).replace("_", "-"),
+        }
+        for raw in load_v2_reference("card_cycles.json")
+    ]
+
+
 def ruling_sources() -> list[dict]:
     found = []
     for raw in load_v2_reference("ruling_sources.json"):
@@ -94,6 +126,8 @@ BUILDERS = {
     "card-set-types.json": card_set_types,
     "card-layouts.json": card_layouts,
     "ruling-sources.json": ruling_sources,
+    "card-sets.json": card_sets,
+    "card-cycles.json": card_cycles,
 }
 
 

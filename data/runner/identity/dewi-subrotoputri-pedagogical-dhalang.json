@@ -18,6 +18,28 @@
       "class": "static",
       "rule": "9.3.7a",
       "declaration": {
+        "field": "identityFaces",
+        "value": [
+          {
+            "title": "Dewi Subrotoputri: Pedagogical Dhalang",
+            "subtypes": [
+              "natural"
+            ],
+            "link": 0
+          },
+          {
+            "title": "Dewi Subrotoputri: Shadow Guide",
+            "subtypes": [
+              "natural"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "class": "static",
+      "rule": "9.3.7a",
+      "declaration": {
         "field": "link",
         "value": 0
       }

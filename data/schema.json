@@ -3972,6 +3972,34 @@
       },
       "description": "Jinteki Biotech switchable faces (Brewery / Agriculture / Warehouse)."
     },
+    "identityFaces": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "object",
+        "required": [
+          "title",
+          "subtypes"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "title": {
+            "type": "string",
+            "minLength": 1
+          },
+          "subtypes": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "link": {
+            "type": "integer",
+            "minimum": 0,
+            "description": "Printed base link on this face (CR 2.9.1)."
+          }
+        }
+      },
+      "description": "Faces of a double-sided identity, front face first (CR 3.1.1a). Only the faceup face is active, so its title, subtypes, and base link replace the front face's while it is faceup. Sourced from the faces records on v2/cards at the catalog pin."
+    },
     "onFullyBreakProtectingIce": {
       "type": "object",
       "description": "Valley Grid: effect whenever the Runner fully breaks a piece of ice protecting this server."

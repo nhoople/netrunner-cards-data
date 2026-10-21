@@ -14,6 +14,14 @@
   "influence": 1,
   "abilities": [
     {
+      "class": "static",
+      "rule": "9.3.7a",
+      "declaration": {
+        "field": "unique",
+        "value": true
+      }
+    },
+    {
       "class": "conditional",
       "rule": "9.3.7c",
       "trigger": "first_corp_card_trash_each_turn",

@@ -3,14 +3,25 @@
   "text": "When your action phase ends, if you played an operation this turn, gain 1[credit] and flip this identity.",
   "strippedText": "When your action phase ends, if you played an operation this turn, gain 1 credit and flip this identity.",
   "strippedTitle": "Nebula Talent Management: Making Stars",
+  "layoutId": "flip",
   "faces": [
     {
+      "title": "Nebula Talent Management: Making Stars",
+      "strippedTitle": "Nebula Talent Management: Making Stars",
       "text": "When your action phase ends, if you played an operation this turn, gain 1[credit] and flip this identity.",
-      "strippedText": "When your action phase ends, if you played an operation this turn, gain 1 credit and flip this identity."
+      "strippedText": "When your action phase ends, if you played an operation this turn, gain 1 credit and flip this identity.",
+      "subtypes": [
+        "division"
+      ]
     },
     {
+      "title": "Gemilang Arena: Burning Bright",
+      "strippedTitle": "Gemilang Arena: Burning Bright",
       "text": "The first time each turn you play an operation, gain [click].\nWhen the Runner makes a successful run on HQ or R&D, flip this identity.",
-      "strippedText": "The first time each turn you play an operation, gain click. When the Runner makes a successful run on HQ or R&D, flip this identity."
+      "strippedText": "The first time each turn you play an operation, gain click. When the Runner makes a successful run on HQ or R&D, flip this identity.",
+      "subtypes": [
+        "division"
+      ]
     }
   ]
 }

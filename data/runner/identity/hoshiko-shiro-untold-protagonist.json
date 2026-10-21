@@ -18,6 +18,29 @@
       "class": "static",
       "rule": "9.3.7a",
       "declaration": {
+        "field": "identityFaces",
+        "value": [
+          {
+            "title": "Hoshiko Shiro: Untold Protagonist",
+            "subtypes": [
+              "natural"
+            ],
+            "link": 0
+          },
+          {
+            "title": "Hoshiko Shiro: Mahou Shoujo",
+            "subtypes": [
+              "digital"
+            ],
+            "link": 1
+          }
+        ]
+      }
+    },
+    {
+      "class": "static",
+      "rule": "9.3.7a",
+      "declaration": {
         "field": "link",
         "value": 0
       }

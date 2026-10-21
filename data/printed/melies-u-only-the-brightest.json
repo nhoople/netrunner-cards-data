@@ -3,22 +3,43 @@
   "text": "When your discard phase ends, secretly set your identity to any copy of Méliès U: Only the Brightest.\nWhen the Runner makes a successful run on a central server, flip this identity.\nWhen the Runner’s action phase ends, gain 1[credit].",
   "strippedText": "When your discard phase ends, secretly set your identity to any copy of Melies U: Only the Brightest. When the Runner makes a successful run on a central server, flip this identity. When the Runner's action phase ends, gain 1 credit.",
   "strippedTitle": "Melies U: Only the Brightest",
+  "layoutId": "facade",
   "faces": [
     {
+      "title": "Méliès U: Only the Brightest",
+      "strippedTitle": "Melies U: Only the Brightest",
       "text": "When your discard phase ends, secretly set your identity to any copy of Méliès U: Only the Brightest.\nWhen the Runner makes a successful run on a central server, flip this identity.\nWhen the Runner’s action phase ends, gain 1[credit].",
-      "strippedText": "When your discard phase ends, secretly set your identity to any copy of Melies U: Only the Brightest. When the Runner makes a successful run on a central server, flip this identity. When the Runner's action phase ends, gain 1 credit."
+      "strippedText": "When your discard phase ends, secretly set your identity to any copy of Melies U: Only the Brightest. When the Runner makes a successful run on a central server, flip this identity. When the Runner's action phase ends, gain 1 credit.",
+      "subtypes": [
+        "division"
+      ]
     },
     {
+      "title": "Tenure Floors: Méliès U",
+      "strippedTitle": "Tenure Floors: Melies U",
       "text": "When you flip this identity to this side during a run on HQ, look at the top card of R&D. You may trash that card. If you do, add 1 card from Archives to HQ.\nWhen the Runner’s discard phase ends, flip this identity.",
-      "strippedText": "When you flip this identity to this side during a run on HQ, look at the top card of R&D. You may trash that card. If you do, add 1 card from Archives to HQ. When the Runner's discard phase ends, flip this identity."
+      "strippedText": "When you flip this identity to this side during a run on HQ, look at the top card of R&D. You may trash that card. If you do, add 1 card from Archives to HQ. When the Runner's discard phase ends, flip this identity.",
+      "subtypes": [
+        "department"
+      ]
     },
     {
+      "title": "Subsurface Labs: Méliès U",
+      "strippedTitle": "Subsurface Labs: Melies U",
       "text": "When you flip this identity to this side during a run on R&D, look at the top card of R&D. You may trash that card. If you do, add 1 card from Archives to HQ.\nWhen the Runner’s discard phase ends, flip this identity.",
-      "strippedText": "When you flip this identity to this side during a run on R&D, look at the top card of R&D. You may trash that card. If you do, add 1 card from Archives to HQ. When the Runner's discard phase ends, flip this identity."
+      "strippedText": "When you flip this identity to this side during a run on R&D, look at the top card of R&D. You may trash that card. If you do, add 1 card from Archives to HQ. When the Runner's discard phase ends, flip this identity.",
+      "subtypes": [
+        "department"
+      ]
     },
     {
+      "title": "Disposal Grounds: Méliès U",
+      "strippedTitle": "Disposal Grounds: Melies U",
       "text": "When you flip this identity to this side during a run on Archives, look at the top card of R&D. You may trash that card. If you do, add 1 card from Archives to HQ.\nWhen the Runner’s discard phase ends, flip this identity.",
-      "strippedText": "When you flip this identity to this side during a run on Archives, look at the top card of R&D. You may trash that card. If you do, add 1 card from Archives to HQ. When the Runner's discard phase ends, flip this identity."
+      "strippedText": "When you flip this identity to this side during a run on Archives, look at the top card of R&D. You may trash that card. If you do, add 1 card from Archives to HQ. When the Runner's discard phase ends, flip this identity.",
+      "subtypes": [
+        "department"
+      ]
     }
   ]
 }

@@ -17,6 +17,27 @@
       "class": "static",
       "rule": "9.3.7a",
       "declaration": {
+        "field": "identityFaces",
+        "value": [
+          {
+            "title": "Earth Station: SEA Headquarters",
+            "subtypes": [
+              "division"
+            ]
+          },
+          {
+            "title": "Earth Station: Ascending to Orbit",
+            "subtypes": [
+              "division"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "class": "static",
+      "rule": "9.3.7a",
+      "declaration": {
         "field": "maxRemoteServers",
         "value": 1
       }
