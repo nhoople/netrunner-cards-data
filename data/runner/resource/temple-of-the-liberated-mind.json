@@ -63,7 +63,8 @@
           "amount": 1
         }
       },
-      "usableByRunnerOnSelfIce": true
+      "usableByRunnerOnSelfIce": true,
+      "onlyDuringOwnTurn": true
     }
   ]
 }

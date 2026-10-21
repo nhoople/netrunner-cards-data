@@ -29,7 +29,8 @@
           "kind": "end_the_run"
         }
       },
-      "requireDuringRun": true
+      "requireDuringRun": true,
+      "onlyDuringOwnTurn": true
     },
     {
       "class": "paid",
@@ -48,7 +49,8 @@
           "kind": "remove_tags",
           "amount": 1
         }
-      }
+      },
+      "onlyDuringOwnTurn": true
     },
     {
       "class": "paid",
@@ -69,7 +71,8 @@
           "kind": "set_trace_base_strength",
           "amount": 0
         }
-      }
+      },
+      "onlyDuringOwnTurn": true
     }
   ]
 }

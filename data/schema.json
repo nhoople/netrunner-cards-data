@@ -765,6 +765,10 @@
             "type": "boolean",
             "description": "Advanced Assembly Lines: ability cannot be used during a run."
           },
+          "onlyDuringOwnTurn": {
+            "type": "boolean",
+            "description": "Ability usable only during its controller's turn (Coalescence, Drago Ivanov; CR 9.5.2f restrictions in text)."
+          },
           "onlyDuringHqRun": {
             "type": "boolean",
             "description": "Ability usable only during a run on HQ (Panic Button)."
