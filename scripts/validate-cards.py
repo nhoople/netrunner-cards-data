@@ -452,6 +452,35 @@ def check_printed(card_ids: dict[str, Path]) -> int:
                     "printed text has no 'only during your turn' restriction"
                 )
                 errors += 1
+    # A paid ability whose cost includes a click is an action (CR 9.5.2a),
+    # so it can only be offered in action windows. The one printed
+    # exception is bioroid ice, whose click-cost break abilities are used
+    # while encountering that ice. Fail closed on any other window shape
+    # so a click-cost ability cannot silently become usable mid-run.
+    for card_id, rules_path in sorted(card_ids.items()):
+        rules = json.loads(rules_path.read_text(encoding="utf-8"))
+        is_bioroid_ice = rules.get("type") == "ice" and "bioroid" in (
+            rules.get("subtypes") or []
+        )
+        for ability in rules.get("abilities") or []:
+            if not isinstance(ability, dict) or ability.get("class") != "paid":
+                continue
+            cost = ability.get("cost") or {}
+            if not (isinstance(cost, dict) and cost.get("clicks")):
+                continue
+            windows = ability.get("windows") or []
+            if all(
+                isinstance(w, str) and w.endswith("_action_paw") for w in windows
+            ):
+                continue
+            if is_bioroid_ice:
+                continue
+            print(
+                f"{rules_path.relative_to(ROOT)}: paid ability "
+                f"{ability.get('id')!r} costs a click but declares "
+                f"non-action windows {windows!r} (only bioroid ice may)"
+            )
+            errors += 1
     missing = sorted(set(card_ids) - seen)
     if missing:
         print(f"cards with no printed text: {missing}")
