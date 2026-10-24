@@ -31,13 +31,14 @@
       "class": "subroutine",
       "rule": "9.3.7e",
       "id": "shiro-pay",
-      "text": "You may pay 1[credit]. If you do, do 1 net damage.",
+      "text": "You may pay 1[credit]. If you do not, the Runner breaches R&D. They cannot access cards in the root of R&D during that breach.",
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "may_corp_pay_net",
-          "creditCost": 1,
-          "damage": 1
+          "kind": "may_corp_pay_credits_else_breach",
+          "credits": 1,
+          "server": "rd",
+          "cannotAccessRoot": true
         }
       }
     }
