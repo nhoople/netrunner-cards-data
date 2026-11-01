@@ -19,18 +19,24 @@
       "class": "static",
       "rule": "9.3.7a",
       "declaration": {
-        "field": "gainsSubroutinesOnEncounterEqualGripSize",
-        "value": {
-          "id": "brainstorm-core",
-          "text": "Do 1 core damage.",
-          "effect": {
-            "op": "do",
-            "action": {
-              "kind": "core_damage",
-              "amount": 1
+        "field": "continuousGainedSubDecls",
+        "value": [
+          {
+            "kind": "grip_size_on_encounter",
+            "position": "after",
+            "subroutine": {
+              "id": "brainstorm-core",
+              "text": "Do 1 core damage.",
+              "effect": {
+                "op": "do",
+                "action": {
+                  "kind": "core_damage",
+                  "amount": 1
+                }
+              }
             }
           }
-        }
+        ]
       }
     }
   ]

@@ -48,35 +48,39 @@
       "class": "static",
       "rule": "9.3.7a",
       "declaration": {
-        "field": "gainsSubroutinesPerAdvancement",
-        "value": {
-          "subroutine": {
-            "id": "swarm-trash-prog",
-            "text": "Trash 1 installed program unless the Runner pays 3[credit].",
-            "effect": {
-              "op": "do",
-              "action": {
-                "kind": "unless",
-                "payer": "runner",
-                "cost": {
-                  "op": "do",
-                  "action": {
-                    "kind": "lose_credits",
-                    "side": "runner",
-                    "amount": 3
-                  }
-                },
-                "instruction": {
-                  "op": "do",
-                  "action": {
-                    "kind": "trash_program",
-                    "pick": "choose"
+        "field": "continuousGainedSubDecls",
+        "value": [
+          {
+            "kind": "per_advancement",
+            "position": "after",
+            "subroutine": {
+              "id": "swarm-trash-prog",
+              "text": "Trash 1 installed program unless the Runner pays 3[credit].",
+              "effect": {
+                "op": "do",
+                "action": {
+                  "kind": "unless",
+                  "payer": "runner",
+                  "cost": {
+                    "op": "do",
+                    "action": {
+                      "kind": "lose_credits",
+                      "side": "runner",
+                      "amount": 3
+                    }
+                  },
+                  "instruction": {
+                    "op": "do",
+                    "action": {
+                      "kind": "trash_program",
+                      "pick": "choose"
+                    }
                   }
                 }
               }
             }
           }
-        }
+        ]
       }
     }
   ]

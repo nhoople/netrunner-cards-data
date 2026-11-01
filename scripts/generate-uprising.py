@@ -1042,11 +1042,17 @@ def map_card(c: dict) -> dict:
                     "effect": trace_hardware,
                 },
             ],
-            gainsSubroutinesWhileProtectingHq=[
+            continuousGainedSubDecls=[
                 {
-                    "id": "winchester-etr",
-                    "text": "Trace[3]. If successful, end the run.",
-                    "effect": trace_etr,
+                    "kind": "hq_protect_subs",
+                    "position": "after",
+                    "subroutines": [
+                        {
+                            "id": "winchester-etr",
+                            "text": "Trace[3]. If successful, end the run.",
+                            "effect": trace_etr,
+                        }
+                    ],
                 }
             ],
             unsupported=[],

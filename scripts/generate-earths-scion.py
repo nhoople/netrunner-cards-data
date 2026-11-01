@@ -252,14 +252,18 @@ def map_card(c: dict) -> dict | None:
         return base(
             c,
             subtypes=["code gate", "observer", "next"],
-            gainsSubroutinesPerRezzedIceWithSubtype={
-                "subtype": "next",
-                "subroutine": {
-                    "id": "next-opal-install",
-                    "text": "You may install 1 card from HQ.",
-                    "effect": do("may_install_from_hq_paying_costs"),
-                },
-            },
+            continuousGainedSubDecls=[
+                {
+                    "kind": "per_rezzed_subtype",
+                    "position": "after",
+                    "subtype": "next",
+                    "subroutine": {
+                        "id": "next-opal-install",
+                        "text": "You may install 1 card from HQ.",
+                        "effect": do("may_install_from_hq_paying_costs"),
+                    },
+                }
+            ],
             subroutines=[],
         )
 

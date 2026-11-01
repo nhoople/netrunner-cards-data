@@ -3052,7 +3052,7 @@
     },
     "continuousGainedSubDecls": {
       "type": "array",
-      "description": "Continuous gained-sub declarations (fatuma_lose_click, wetwork_hosted_before, sub_boost_etr). Optional subroutine payload(s) and position.",
+      "description": "Continuous gained-sub declarations (Fatuma/Wetwork/Sub Boost + Winchester-family). Optional subroutine payload(s), position, and scope fields.",
       "items": {
         "type": "object",
         "required": ["kind"],
@@ -3063,13 +3063,22 @@
             "enum": [
               "fatuma_lose_click",
               "wetwork_hosted_before",
-              "sub_boost_etr"
+              "sub_boost_etr",
+              "hq_protect_subs",
+              "archives_faceup_per",
+              "per_advancement",
+              "per_rezzed_subtype",
+              "grip_size_on_encounter",
+              "etr_per_rezzed_asset"
             ]
           },
           "position": {
             "type": "string",
             "enum": ["before", "after"]
           },
+          "type": { "type": "string" },
+          "subtype": { "type": "string" },
+          "per": { "type": "integer", "minimum": 1 },
           "subroutine": {
             "type": "object",
             "required": ["id", "text", "effect"],

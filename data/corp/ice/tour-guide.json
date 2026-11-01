@@ -18,8 +18,13 @@
       "class": "static",
       "rule": "9.3.7a",
       "declaration": {
-        "field": "etrSubroutinesPerRezzedAsset",
-        "value": true
+        "field": "continuousGainedSubDecls",
+        "value": [
+          {
+            "kind": "etr_per_rezzed_asset",
+            "position": "before"
+          }
+        ]
       }
     }
   ]

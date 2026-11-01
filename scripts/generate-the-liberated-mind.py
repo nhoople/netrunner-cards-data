@@ -236,11 +236,17 @@ def map_card(c: dict) -> dict | None:
         return base(
             c,
             subtypes=["sentry", "ap"],
-            gainsSubroutinesOnEncounterEqualGripSize={
-                "id": "brainstorm-core",
-                "text": "Do 1 core damage.",
-                "effect": core(1),
-            },
+            continuousGainedSubDecls=[
+                {
+                    "kind": "grip_size_on_encounter",
+                    "position": "after",
+                    "subroutine": {
+                        "id": "brainstorm-core",
+                        "text": "Do 1 core damage.",
+                        "effect": core(1),
+                    },
+                }
+            ],
         )
 
     if cid == "dedicated-neural-net":

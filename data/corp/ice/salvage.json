@@ -35,27 +35,31 @@
       "class": "static",
       "rule": "9.3.7a",
       "declaration": {
-        "field": "gainsSubroutinesPerAdvancement",
-        "value": {
-          "subroutine": {
-            "id": "salvage-trace-tag",
-            "text": "Trace[2]. If successful, give the Runner 1 tag.",
-            "effect": {
-              "op": "do",
-              "action": {
-                "kind": "trace",
-                "strength": 2,
-                "onSuccess": {
-                  "op": "do",
-                  "action": {
-                    "kind": "give_tags",
-                    "amount": 1
+        "field": "continuousGainedSubDecls",
+        "value": [
+          {
+            "kind": "per_advancement",
+            "position": "after",
+            "subroutine": {
+              "id": "salvage-trace-tag",
+              "text": "Trace[2]. If successful, give the Runner 1 tag.",
+              "effect": {
+                "op": "do",
+                "action": {
+                  "kind": "trace",
+                  "strength": 2,
+                  "onSuccess": {
+                    "op": "do",
+                    "action": {
+                      "kind": "give_tags",
+                      "amount": 1
+                    }
                   }
                 }
               }
             }
           }
-        }
+        ]
       }
     }
   ]

@@ -375,13 +375,17 @@ def map_card(c: dict) -> dict | None:
             c,
             canAdvance=True,
             canAdvanceOnlyWhenRezzed=True,
-            gainsSubroutinesPerAdvancement={
-                "subroutine": {
-                    "id": "tyrant-etr",
-                    "text": "End the run.",
-                    "effect": etr(),
+            continuousGainedSubDecls=[
+                {
+                    "kind": "per_advancement",
+                    "position": "after",
+                    "subroutine": {
+                        "id": "tyrant-etr",
+                        "text": "End the run.",
+                        "effect": etr(),
+                    },
                 }
-            },
+            ],
             subroutines=[],
             unsupported=[],
         )

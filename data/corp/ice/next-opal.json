@@ -20,20 +20,24 @@
       "class": "static",
       "rule": "9.3.7a",
       "declaration": {
-        "field": "gainsSubroutinesPerRezzedIceWithSubtype",
-        "value": {
-          "subtype": "next",
-          "subroutine": {
-            "id": "next-opal-install",
-            "text": "You may install 1 card from HQ.",
-            "effect": {
-              "op": "do",
-              "action": {
-                "kind": "may_install_from_hq_paying_costs"
+        "field": "continuousGainedSubDecls",
+        "value": [
+          {
+            "kind": "per_rezzed_subtype",
+            "position": "after",
+            "subtype": "next",
+            "subroutine": {
+              "id": "next-opal-install",
+              "text": "You may install 1 card from HQ.",
+              "effect": {
+                "op": "do",
+                "action": {
+                  "kind": "may_install_from_hq_paying_costs"
+                }
               }
             }
           }
-        }
+        ]
       }
     }
   ]
