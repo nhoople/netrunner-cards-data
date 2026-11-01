@@ -42,6 +42,18 @@
           }
         ]
       }
+    },
+    {
+      "class": "static",
+      "rule": "9.3.7a",
+      "declaration": {
+        "field": "continuousGainedSubDecls",
+        "value": [
+          {
+            "kind": "wetwork_hosted_before"
+          }
+        ]
+      }
     }
   ]
 }

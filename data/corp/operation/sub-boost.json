@@ -30,6 +30,30 @@
         "field": "hostGainsBarrierAndEtrSubroutine",
         "value": true
       }
+    },
+    {
+      "class": "static",
+      "rule": "9.3.7a",
+      "declaration": {
+        "field": "continuousSubtypeGrants",
+        "value": [
+          {
+            "kind": "host_grant_barrier"
+          }
+        ]
+      }
+    },
+    {
+      "class": "static",
+      "rule": "9.3.7a",
+      "declaration": {
+        "field": "continuousGainedSubDecls",
+        "value": [
+          {
+            "kind": "sub_boost_etr"
+          }
+        ]
+      }
     }
   ]
 }

@@ -3031,6 +3031,44 @@
     "hostGainsAllIceSubtypes": {
       "type": "boolean"
     },
+    "continuousSubtypeGrants": {
+      "type": "array",
+      "description": "Continuous subtype grants for the 9.12 layer (host_grant_bcs, host_grant_barrier, copy_other_rezzed_ice_subtypes).",
+      "items": {
+        "type": "object",
+        "required": ["kind"],
+        "additionalProperties": false,
+        "properties": {
+          "kind": {
+            "type": "string",
+            "enum": [
+              "host_grant_bcs",
+              "host_grant_barrier",
+              "copy_other_rezzed_ice_subtypes"
+            ]
+          }
+        }
+      }
+    },
+    "continuousGainedSubDecls": {
+      "type": "array",
+      "description": "Continuous gained-sub declarations (fatuma_lose_click, wetwork_hosted_before, sub_boost_etr).",
+      "items": {
+        "type": "object",
+        "required": ["kind"],
+        "additionalProperties": false,
+        "properties": {
+          "kind": {
+            "type": "string",
+            "enum": [
+              "fatuma_lose_click",
+              "wetwork_hosted_before",
+              "sub_boost_etr"
+            ]
+          }
+        }
+      }
+    },
     "dynamicEtrSubroutineCountFromRezzedIceSubtype": {
       "type": "string"
     },
