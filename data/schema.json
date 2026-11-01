@@ -1086,7 +1086,7 @@
     },
     "paidAbilitiesOncePerTurn": {
       "type": "boolean",
-      "description": "At most one paid ability on this card may be used each turn (Kati Jones)."
+      "description": "At most one paid ability on this card may be used each turn (Kati Jones, Savoir-faire)."
     },
     "iceRezCostReductionProtectingThisServer": {
       "type": "integer",
@@ -3028,9 +3028,6 @@
       "type": "object",
       "description": "Effect IR paid as an additional cost when playing this event/operation (e.g. Running Hot suffer core damage)."
     },
-    "hostGainsAllIceSubtypes": {
-      "type": "boolean"
-    },
     "continuousSubtypeGrants": {
       "type": "array",
       "description": "Continuous subtype grants for the 9.12 layer (host_grant_bcs, host_grant_barrier, copy_other_rezzed_ice_subtypes).",
@@ -3332,10 +3329,6 @@
       "type": "integer",
       "minimum": 0,
       "description": "Advancement requirement +N per Corp bad publicity (NAPD Contract)."
-    },
-    "oncePerTurnPaidAbilities": {
-      "type": "boolean",
-      "description": "Each paid ability on this card may be used at most once per turn (Savoir-faire)."
     },
     "onScoreIfRunnerTaggedPlaceAgendaCounter": {
       "type": "boolean",
@@ -3703,54 +3696,6 @@
     "onFirstInstallInThisServerRootThisTurn": {
       "description": "Tranquility: first install in this server root"
     },
-    "gainsSubroutinesWhileProtectingHq": {
-      "type": "array",
-      "items": {
-        "type": "object"
-      }
-    },
-    "gainsSubroutinesBeforePrintedPerFaceupArchives": {
-      "type": "object",
-      "description": "Ice gains N copies of subroutine before printed subs, where N = floor(faceup Archives cards matching type+subtype / per) (Blockchain).",
-      "required": [
-        "subtype",
-        "type",
-        "per",
-        "subroutine"
-      ],
-      "additionalProperties": false,
-      "properties": {
-        "subtype": {
-          "type": "string"
-        },
-        "type": {
-          "type": "string"
-        },
-        "per": {
-          "type": "integer",
-          "minimum": 1
-        },
-        "subroutine": {
-          "type": "object",
-          "required": [
-            "id",
-            "text",
-            "effect"
-          ],
-          "properties": {
-            "id": {
-              "type": "string"
-            },
-            "text": {
-              "type": "string"
-            },
-            "effect": {
-              "type": "object"
-            }
-          }
-        }
-      }
-    },
     "additionalTagsDuringOutermostIceEncounter": {
       "type": "integer",
       "minimum": 1,
@@ -3817,34 +3762,6 @@
     "canAdvanceOnlyWhenRezzed": {
       "type": "boolean",
       "description": "Woodcutter-class: canAdvance applies only while this card is rezzed."
-    },
-    "gainsSubroutinesPerAdvancement": {
-      "type": "object",
-      "required": [
-        "subroutine"
-      ],
-      "properties": {
-        "subroutine": {
-          "type": "object",
-          "required": [
-            "id",
-            "text",
-            "effect"
-          ],
-          "properties": {
-            "id": {
-              "type": "string"
-            },
-            "text": {
-              "type": "string"
-            },
-            "effect": {
-              "type": "object"
-            }
-          }
-        }
-      },
-      "description": "Woodcutter/Tyrant-class: gains one copy of subroutine per hosted advancement counter."
     },
     "mayRezWhenCardWouldBeExposed": {
       "type": "boolean",
@@ -3925,10 +3842,6 @@
     "firstRunnerInstallTrashFromGripEachTurn": {
       "type": "boolean",
       "description": "Housekeeping: first time each turn Runner installs, they trash 1 from grip."
-    },
-    "hostGainsBarrierAndEtrSubroutine": {
-      "type": "boolean",
-      "description": "Sub Boost: host ice gains barrier and an ETR subroutine after its others."
     },
     "iceProtectingThisServerAdditionalAdvancementCounters": {
       "type": "integer",
@@ -4282,10 +4195,6 @@
       "type": "boolean",
       "description": "Worlds Plaza: this card may only host assets."
     },
-    "etrSubroutinesPerRezzedAsset": {
-      "type": "boolean",
-      "description": "Tour Guide: gains an End the run subroutine for each rezzed asset."
-    },
     "basicRemoveTagAdditionalCostCreditsWhileUnflipped": {
       "type": "integer",
       "minimum": 1,
@@ -4619,28 +4528,6 @@
       "type": "boolean",
       "description": "The Turning Wheel: whenever a run on HQ or R&D ends, place 1 power counter if you stole no agendas during that run."
     },
-    "gainsSubroutinesOnEncounterEqualGripSize": {
-      "type": "object",
-      "required": [
-        "id",
-        "text",
-        "effect"
-      ],
-      "additionalProperties": false,
-      "properties": {
-        "id": {
-          "type": "string",
-          "minLength": 1
-        },
-        "text": {
-          "type": "string"
-        },
-        "effect": {
-          "type": "object"
-        }
-      },
-      "description": "Brainstorm: on encounter, gains X copies of this subroutine for the remainder of the run; X = cards in grip."
-    },
     "firstSuccessfulHqRunEachTurnPsiCorpChoosesAccess": {
       "type": "boolean",
       "description": "Dedicated Neural Net: first successful HQ run each turn → psi; if bids differ, Corp chooses which HQ cards the Runner accesses for the remainder of the run."
@@ -4807,30 +4694,6 @@
       "type": "integer",
       "minimum": 0,
       "description": "Government Investigations: while secretly spending credits, players cannot spend exactly this many credits."
-    },
-    "hostGainsSubroutinesBeforePrinted": {
-      "type": "array",
-      "description": "Wetwork Refit: host ice gains these subroutines before all its other subroutines.",
-      "items": {
-        "type": "object",
-        "required": [
-          "id",
-          "text",
-          "effect"
-        ],
-        "additionalProperties": false,
-        "properties": {
-          "id": {
-            "type": "string"
-          },
-          "text": {
-            "type": "string"
-          },
-          "effect": {
-            "type": "object"
-          }
-        }
-      }
     },
     "meatDamageWhenSecretSpendAmountsDiffer": {
       "type": "integer",
@@ -5045,41 +4908,6 @@
       "type": "integer",
       "minimum": 1,
       "description": "Dadiana Chacon: whenever you have 0 credits, trash this and take this many meat damage."
-    },
-    "gainsSubroutinesPerRezzedIceWithSubtype": {
-      "type": "object",
-      "required": [
-        "subtype",
-        "subroutine"
-      ],
-      "additionalProperties": false,
-      "properties": {
-        "subtype": {
-          "type": "string",
-          "minLength": 1
-        },
-        "subroutine": {
-          "type": "object",
-          "required": [
-            "id",
-            "text",
-            "effect"
-          ],
-          "additionalProperties": false,
-          "properties": {
-            "id": {
-              "type": "string"
-            },
-            "text": {
-              "type": "string"
-            },
-            "effect": {
-              "type": "object"
-            }
-          }
-        }
-      },
-      "description": "NEXT Opal: this ice gains the given subroutine once for each rezzed ice with the subtype."
     },
     "bioroidWorkCrewRequireAfterOperationPaidWindow": {
       "type": "boolean",
@@ -5388,10 +5216,6 @@
     "onAgendaAddedToRunnerScore": {
       "type": "object",
       "description": "Jackpot!: whenever an agenda is added to the Runner's score area, resolve this effect."
-    },
-    "bioroidIceGainsLoseClickSubroutineBeforeOthers": {
-      "type": "boolean",
-      "description": "Warden Fatuma: each rezzed bioroid ice gains 'The Runner loses [click]' before its other subroutines."
     },
     "onScoreTurnEnd": {
       "type": "object",
