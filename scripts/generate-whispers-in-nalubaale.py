@@ -311,7 +311,17 @@ def map_card(c: dict) -> dict | None:
             c,
             subtypes=["character"],
             unique=True,
-            bioroidIceGainsLoseClickSubroutineBeforeOthers=True,
+            continuousGainedSubDecls=[
+                {
+                    "kind": "fatuma_lose_click",
+                    "position": "before",
+                    "subroutine": {
+                        "id": "warden-lose-click",
+                        "text": "The Runner loses [click].",
+                        "effect": do("lose_clicks", side="runner", amount=1),
+                    },
+                }
+            ],
         )
 
     if cid == "viral-weaponization":

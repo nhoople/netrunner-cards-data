@@ -286,11 +286,17 @@ def map_card(c: dict) -> dict | None:
             c,
             subtypes=["condition"],
             onPlay=do("host_on_rezzed_bioroid_ice_as_condition"),
-            hostGainsSubroutinesBeforePrinted=[
+            continuousGainedSubDecls=[
                 {
-                    "id": "wetwork-core",
-                    "text": "Do 1 core damage.",
-                    "effect": do("core_damage", amount=1),
+                    "kind": "wetwork_hosted_before",
+                    "position": "before",
+                    "subroutines": [
+                        {
+                            "id": "wetwork-core",
+                            "text": "Do 1 core damage.",
+                            "effect": do("core_damage", amount=1),
+                        }
+                    ],
                 }
             ],
         )
