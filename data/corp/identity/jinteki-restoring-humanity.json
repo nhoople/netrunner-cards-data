@@ -11,5 +11,15 @@
     "megacorp"
   ],
   "minimumDeckSize": 40,
-  "influenceLimit": 15
+  "influenceLimit": 15,
+  "abilities": [
+    {
+      "class": "static",
+      "rule": "9.3.7a",
+      "declaration": {
+        "field": "gainCreditOnCorpTurnEndIfArchivesHasFacedown",
+        "value": 1
+      }
+    }
+  ]
 }
