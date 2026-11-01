@@ -15,7 +15,7 @@
       "class": "static",
       "rule": "9.3.7a",
       "declaration": {
-        "field": "oncePerTurnPaidAbilities",
+        "field": "paidAbilitiesOncePerTurn",
         "value": true
       }
     },
