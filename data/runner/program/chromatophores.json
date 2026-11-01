@@ -26,14 +26,6 @@
       "class": "static",
       "rule": "9.3.7a",
       "declaration": {
-        "field": "hostGainsAllIceSubtypes",
-        "value": true
-      }
-    },
-    {
-      "class": "static",
-      "rule": "9.3.7a",
-      "declaration": {
         "field": "continuousSubtypeGrants",
         "value": [
           {

@@ -27,30 +27,24 @@
       "class": "static",
       "rule": "9.3.7a",
       "declaration": {
-        "field": "hostGainsSubroutinesBeforePrinted",
-        "value": [
-          {
-            "id": "wetwork-core",
-            "text": "Do 1 core damage.",
-            "effect": {
-              "op": "do",
-              "action": {
-                "kind": "core_damage",
-                "amount": 1
-              }
-            }
-          }
-        ]
-      }
-    },
-    {
-      "class": "static",
-      "rule": "9.3.7a",
-      "declaration": {
         "field": "continuousGainedSubDecls",
         "value": [
           {
-            "kind": "wetwork_hosted_before"
+            "kind": "wetwork_hosted_before",
+            "position": "before",
+            "subroutines": [
+              {
+                "id": "wetwork-core",
+                "text": "Do 1 core damage.",
+                "effect": {
+                  "op": "do",
+                  "action": {
+                    "kind": "core_damage",
+                    "amount": 1
+                  }
+                }
+              }
+            ]
           }
         ]
       }

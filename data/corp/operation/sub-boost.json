@@ -27,14 +27,6 @@
       "class": "static",
       "rule": "9.3.7a",
       "declaration": {
-        "field": "hostGainsBarrierAndEtrSubroutine",
-        "value": true
-      }
-    },
-    {
-      "class": "static",
-      "rule": "9.3.7a",
-      "declaration": {
         "field": "continuousSubtypeGrants",
         "value": [
           {
@@ -50,7 +42,18 @@
         "field": "continuousGainedSubDecls",
         "value": [
           {
-            "kind": "sub_boost_etr"
+            "kind": "sub_boost_etr",
+            "position": "after",
+            "subroutine": {
+              "id": "sub-boost-etr",
+              "text": "End the run.",
+              "effect": {
+                "op": "do",
+                "action": {
+                  "kind": "end_the_run"
+                }
+              }
+            }
           }
         ]
       }

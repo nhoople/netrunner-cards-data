@@ -444,7 +444,18 @@ def map_card(c: dict) -> dict | None:
         return base(
             c,
             onPlay=do("host_on_ice_as_condition"),
-            hostGainsBarrierAndEtrSubroutine=True,
+            continuousSubtypeGrants=[{"kind": "host_grant_barrier"}],
+            continuousGainedSubDecls=[
+                {
+                    "kind": "sub_boost_etr",
+                    "position": "after",
+                    "subroutine": {
+                        "id": "sub-boost-etr",
+                        "text": "End the run.",
+                        "effect": etr(),
+                    },
+                }
+            ],
         )
 
     # --- Upgrades ---

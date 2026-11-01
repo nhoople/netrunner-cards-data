@@ -115,7 +115,7 @@ def map_card(c: dict) -> dict | None:
     if cid == "mother-goddess":
         return base(
             c,
-            hostGainsAllIceSubtypes=True,
+            continuousSubtypeGrants=[{"kind": "copy_other_rezzed_ice_subtypes"}],
             subroutines=[
                 {"id": "mother-goddess-etr", "text": "End the run.", "effect": etr()}
             ],

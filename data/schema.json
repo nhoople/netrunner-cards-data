@@ -3052,7 +3052,7 @@
     },
     "continuousGainedSubDecls": {
       "type": "array",
-      "description": "Continuous gained-sub declarations (fatuma_lose_click, wetwork_hosted_before, sub_boost_etr).",
+      "description": "Continuous gained-sub declarations (fatuma_lose_click, wetwork_hosted_before, sub_boost_etr). Optional subroutine payload(s) and position.",
       "items": {
         "type": "object",
         "required": ["kind"],
@@ -3065,6 +3065,33 @@
               "wetwork_hosted_before",
               "sub_boost_etr"
             ]
+          },
+          "position": {
+            "type": "string",
+            "enum": ["before", "after"]
+          },
+          "subroutine": {
+            "type": "object",
+            "required": ["id", "text", "effect"],
+            "additionalProperties": false,
+            "properties": {
+              "id": { "type": "string" },
+              "text": { "type": "string" },
+              "effect": { "type": "object" }
+            }
+          },
+          "subroutines": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["id", "text", "effect"],
+              "additionalProperties": false,
+              "properties": {
+                "id": { "type": "string" },
+                "text": { "type": "string" },
+                "effect": { "type": "object" }
+              }
+            }
           }
         }
       }

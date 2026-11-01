@@ -26,18 +26,23 @@
       "class": "static",
       "rule": "9.3.7a",
       "declaration": {
-        "field": "bioroidIceGainsLoseClickSubroutineBeforeOthers",
-        "value": true
-      }
-    },
-    {
-      "class": "static",
-      "rule": "9.3.7a",
-      "declaration": {
         "field": "continuousGainedSubDecls",
         "value": [
           {
-            "kind": "fatuma_lose_click"
+            "kind": "fatuma_lose_click",
+            "position": "before",
+            "subroutine": {
+              "id": "warden-lose-click",
+              "text": "The Runner loses [click].",
+              "effect": {
+                "op": "do",
+                "action": {
+                  "kind": "lose_clicks",
+                  "side": "runner",
+                  "amount": 1
+                }
+              }
+            }
           }
         ]
       }

@@ -452,7 +452,7 @@ def map_card(c: dict) -> dict | None:
             subtypes=["trojan"],
             memoryCost=1,
             installOnIce=True,
-            hostGainsAllIceSubtypes=True,
+            continuousSubtypeGrants=[{"kind": "host_grant_bcs"}],
             unsupported=[
                 "Install only on rezzed ice; host gains barrier+code gate+sentry — installOnIce exists; subtype grant not yet applied to interface."
             ],

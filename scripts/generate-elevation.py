@@ -236,7 +236,7 @@ def map_card(c: dict) -> dict:
         return base(
             c,
             installOnIce=True,
-            hostGainsAllIceSubtypes=True,
+            continuousSubtypeGrants=[{"kind": "host_grant_bcs"}],
             unsupported=[],
         )
 
