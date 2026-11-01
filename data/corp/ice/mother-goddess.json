@@ -31,6 +31,18 @@
       }
     },
     {
+      "class": "static",
+      "rule": "9.3.7a",
+      "declaration": {
+        "field": "continuousSubtypeGrants",
+        "value": [
+          {
+            "kind": "copy_other_rezzed_ice_subtypes"
+          }
+        ]
+      }
+    },
+    {
       "class": "subroutine",
       "rule": "9.3.7e",
       "id": "mother-goddess-etr",

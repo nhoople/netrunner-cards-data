@@ -29,6 +29,18 @@
         "field": "bioroidIceGainsLoseClickSubroutineBeforeOthers",
         "value": true
       }
+    },
+    {
+      "class": "static",
+      "rule": "9.3.7a",
+      "declaration": {
+        "field": "continuousGainedSubDecls",
+        "value": [
+          {
+            "kind": "fatuma_lose_click"
+          }
+        ]
+      }
     }
   ]
 }
