@@ -38,19 +38,23 @@
       "class": "static",
       "rule": "9.3.7a",
       "declaration": {
-        "field": "gainsSubroutinesPerAdvancement",
-        "value": {
-          "subroutine": {
-            "id": "masvingo-etr",
-            "text": "End the run.",
-            "effect": {
-              "op": "do",
-              "action": {
-                "kind": "end_the_run"
+        "field": "continuousGainedSubDecls",
+        "value": [
+          {
+            "kind": "per_advancement",
+            "position": "after",
+            "subroutine": {
+              "id": "masvingo-etr",
+              "text": "End the run.",
+              "effect": {
+                "op": "do",
+                "action": {
+                  "kind": "end_the_run"
+                }
               }
             }
           }
-        }
+        ]
       }
     }
   ]

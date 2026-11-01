@@ -18,37 +18,41 @@
       "class": "static",
       "rule": "9.3.7a",
       "declaration": {
-        "field": "gainsSubroutinesBeforePrintedPerFaceupArchives",
-        "value": {
-          "subtype": "transaction",
-          "type": "operation",
-          "per": 2,
-          "subroutine": {
-            "id": "blockchain-tx",
-            "text": "Gain 1[credit] and the Runner loses 1[credit].",
-            "effect": {
-              "op": "seq",
-              "effects": [
-                {
-                  "op": "do",
-                  "action": {
-                    "kind": "gain_credits",
-                    "side": "corp",
-                    "amount": 1
+        "field": "continuousGainedSubDecls",
+        "value": [
+          {
+            "kind": "archives_faceup_per",
+            "position": "before",
+            "subtype": "transaction",
+            "type": "operation",
+            "per": 2,
+            "subroutine": {
+              "id": "blockchain-tx",
+              "text": "Gain 1[credit] and the Runner loses 1[credit].",
+              "effect": {
+                "op": "seq",
+                "effects": [
+                  {
+                    "op": "do",
+                    "action": {
+                      "kind": "gain_credits",
+                      "side": "corp",
+                      "amount": 1
+                    }
+                  },
+                  {
+                    "op": "do",
+                    "action": {
+                      "kind": "lose_credits",
+                      "side": "runner",
+                      "amount": 1
+                    }
                   }
-                },
-                {
-                  "op": "do",
-                  "action": {
-                    "kind": "lose_credits",
-                    "side": "runner",
-                    "amount": 1
-                  }
-                }
-              ]
+                ]
+              }
             }
           }
-        }
+        ]
       }
     },
     {

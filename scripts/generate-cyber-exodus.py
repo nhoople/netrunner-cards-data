@@ -315,16 +315,20 @@ def map_card(c: dict) -> dict | None:
             c,
             canAdvance=True,
             canAdvanceOnlyWhenRezzed=True,
-            gainsSubroutinesPerAdvancement={
-                "subroutine": {
-                    "id": "woodcutter-net",
-                    "text": "Do 1 net damage.",
-                    "effect": {
-                        "op": "do",
-                        "action": {"kind": "net_damage", "amount": 1},
+            continuousGainedSubDecls=[
+                {
+                    "kind": "per_advancement",
+                    "position": "after",
+                    "subroutine": {
+                        "id": "woodcutter-net",
+                        "text": "Do 1 net damage.",
+                        "effect": {
+                            "op": "do",
+                            "action": {"kind": "net_damage", "amount": 1},
+                        },
                     },
                 }
-            },
+            ],
             subroutines=[],
             unsupported=[],
         )

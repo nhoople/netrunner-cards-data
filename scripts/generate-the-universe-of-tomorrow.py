@@ -294,7 +294,9 @@ def map_card(c: dict) -> dict | None:
         return base(
             c,
             subtypes=["sentry"],
-            etrSubroutinesPerRezzedAsset=True,
+            continuousGainedSubDecls=[
+                {"kind": "etr_per_rezzed_asset", "position": "before"}
+            ],
             subroutines=[],
         )
 

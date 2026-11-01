@@ -351,13 +351,17 @@ def map_card(c: dict) -> dict | None:
             onRez=do("give_bad_publicity", amount=1),
             canAdvance=True,
             canAdvanceOnlyWhenRezzed=True,
-            gainsSubroutinesPerAdvancement={
-                "subroutine": {
-                    "id": "swarm-trash-prog",
-                    "text": "Trash 1 installed program unless the Runner pays 3[credit].",
-                    "effect": trash_prog_unless_pay3(),
+            continuousGainedSubDecls=[
+                {
+                    "kind": "per_advancement",
+                    "position": "after",
+                    "subroutine": {
+                        "id": "swarm-trash-prog",
+                        "text": "Trash 1 installed program unless the Runner pays 3[credit].",
+                        "effect": trash_prog_unless_pay3(),
+                    },
                 }
-            },
+            ],
             subroutines=[],
             unsupported=[],
         )

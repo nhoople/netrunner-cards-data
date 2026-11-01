@@ -386,13 +386,17 @@ def map_card(c: dict) -> dict | None:
             subtypes=["barrier"],
             canAdvance=True,
             onRez=do("place_advancement_on_self", amount=1),
-            gainsSubroutinesPerAdvancement={
-                "subroutine": {
-                    "id": "masvingo-etr",
-                    "text": "End the run.",
-                    "effect": etr(),
+            continuousGainedSubDecls=[
+                {
+                    "kind": "per_advancement",
+                    "position": "after",
+                    "subroutine": {
+                        "id": "masvingo-etr",
+                        "text": "End the run.",
+                        "effect": etr(),
+                    },
                 }
-            },
+            ],
             subroutines=[],
         )
 

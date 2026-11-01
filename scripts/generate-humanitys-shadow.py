@@ -325,20 +325,24 @@ def map_card(c: dict) -> dict | None:
             c,
             canAdvance=True,
             canAdvanceOnlyWhenRezzed=True,
-            gainsSubroutinesPerAdvancement={
-                "subroutine": {
-                    "id": "salvage-trace-tag",
-                    "text": "Trace[2]. If successful, give the Runner 1 tag.",
-                    "effect": {
-                        "op": "do",
-                        "action": {
-                            "kind": "trace",
-                            "strength": 2,
-                            "onSuccess": tags(1),
+            continuousGainedSubDecls=[
+                {
+                    "kind": "per_advancement",
+                    "position": "after",
+                    "subroutine": {
+                        "id": "salvage-trace-tag",
+                        "text": "Trace[2]. If successful, give the Runner 1 tag.",
+                        "effect": {
+                            "op": "do",
+                            "action": {
+                                "kind": "trace",
+                                "strength": 2,
+                                "onSuccess": tags(1),
+                            },
                         },
                     },
                 }
-            },
+            ],
             subroutines=[],
             unsupported=[],
         )

@@ -60,24 +60,30 @@
       "class": "static",
       "rule": "9.3.7a",
       "declaration": {
-        "field": "gainsSubroutinesWhileProtectingHq",
+        "field": "continuousGainedSubDecls",
         "value": [
           {
-            "id": "winchester-etr",
-            "text": "Trace[3]. If successful, end the run.",
-            "effect": {
-              "op": "do",
-              "action": {
-                "kind": "trace",
-                "strength": 3,
-                "onSuccess": {
+            "kind": "hq_protect_subs",
+            "position": "after",
+            "subroutines": [
+              {
+                "id": "winchester-etr",
+                "text": "Trace[3]. If successful, end the run.",
+                "effect": {
                   "op": "do",
                   "action": {
-                    "kind": "end_the_run"
+                    "kind": "trace",
+                    "strength": 3,
+                    "onSuccess": {
+                      "op": "do",
+                      "action": {
+                        "kind": "end_the_run"
+                      }
+                    }
                   }
                 }
               }
-            }
+            ]
           }
         ]
       }
