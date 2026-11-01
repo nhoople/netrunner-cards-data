@@ -4825,6 +4825,16 @@
       "minimum": 1,
       "description": "Laguna Velasco District: whenever you take the basic action to draw cards, increase the number drawn by this many."
     },
+    "additionalCardsOnFirstBasicDrawEachTurn": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Verbal Plasticity: the first time each turn you take the basic action to draw, draw this many additional cards."
+    },
+    "gainCreditOnCorpTurnEndIfArchivesHasFacedown": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Jinteki: Restoring Humanity: when your turn ends, if there is a facedown card in Archives, gain this many credits."
+    },
     "polyhistorPassAllHqIceMayDrawForceCorpDraw": {
       "type": "boolean",
       "description": "Polyhistor: first time each turn you pass all ice protecting HQ, you may draw 1 to force Corp to draw 1."
