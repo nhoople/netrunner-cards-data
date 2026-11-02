@@ -58,7 +58,7 @@ A set-complete shares one semver on this dataset and [netrunner-engine](https://
 
 | Pairing | cards-data | engine |
 |---------|------------|--------|
-| **Current** | [`v1.147.18`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.147.18) | [`v1.147.242`](https://github.com/nhoople/netrunner-engine/releases/tag/v1.147.242) (maintenance pair; pins this cards tag) |
+| **Current** | [`v1.147.18`](https://github.com/nhoople/netrunner-cards-data/releases/tag/v1.147.18) | [`v1.147.243`](https://github.com/nhoople/netrunner-engine/releases/tag/v1.147.243) (maintenance pair; pins this cards tag) |
 
 Prior set-complete / maintenance tags: [cards Releases](https://github.com/nhoople/netrunner-cards-data/releases) · [engine Releases](https://github.com/nhoople/netrunner-engine/releases).
 
@@ -97,7 +97,7 @@ console.log(pool.corpusOrder, marjanah.title);
 
 **Authoritative list:** [`data/pool.json`](data/pool.json) — **68/68** waves `supported` (`corpusOrder`, each wave’s `status`, and its card counts). The summary above is the boundary. Pack membership and card counts live in the pool. Card files are grouped by side and type.
 
-**Floor `v1.147.18`:** Card files are grouped by side and type. Each title has `deckLimit` and a printed sentence. Printings, verified rulings, format pools, ban lists, and rotations are separate files. The title corpus is unchanged from `v1.147.6`: Magnum Opus complete (**8/8**; `mor` absorbed), FFG Core-forward through Kitara, RaR, SC19→VP all `supported`. Runner identities store base link (CR 2.9.1), identities store minimum deck size and influence limit (CR 2.11.1, CR 2.12.1), and other cards store influence cost when they have an influence bar (CR 2.14.1). Ice, assets, and upgrades keep `rezCost` and do not store `installCost` (CR 1.16.6b, CR 8.5.11a). `v1.147.13` restored the v2 facts the conversion dropped: uniqueness on 87 cards, double-sided identity faces with per-face title, subtypes, and link (CR 3.1.1a), designer `attribution`, and set/cycle reference records. This tag declares Verbal Plasticity's first-basic-draw bonus and Jinteki: Restoring Humanity's facedown-Archives credit. Engine `v1.147.242` pins this tag.
+**Floor `v1.147.18`:** Card files are grouped by side and type. Each title has `deckLimit` and a printed sentence. Printings, verified rulings, format pools, ban lists, and rotations are separate files. The title corpus is unchanged from `v1.147.6`: Magnum Opus complete (**8/8**; `mor` absorbed), FFG Core-forward through Kitara, RaR, SC19→VP all `supported`. Runner identities store base link (CR 2.9.1), identities store minimum deck size and influence limit (CR 2.11.1, CR 2.12.1), and other cards store influence cost when they have an influence bar (CR 2.14.1). Ice, assets, and upgrades keep `rezCost` and do not store `installCost` (CR 1.16.6b, CR 8.5.11a). `v1.147.13` restored the v2 facts the conversion dropped: uniqueness on 87 cards, double-sided identity faces with per-face title, subtypes, and link (CR 3.1.1a), designer `attribution`, and set/cycle reference records. This tag declares Verbal Plasticity's first-basic-draw bonus and Jinteki: Restoring Humanity's facedown-Archives credit. Engine `v1.147.243` pins this tag.
 
 **Next:** Idle / absorb-only until next NSG pack after VP or CR bump. Skip `napd`/draft/championship; defer `tdc`. GitHub Releases only at set-complete or explicit manual — not per-slice.
 
