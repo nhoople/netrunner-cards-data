@@ -38,7 +38,8 @@
                   "op": "do",
                   "action": {
                     "kind": "look_top_n_rd_arrange",
-                    "n": 4
+                    "n": 4,
+                    "looker": "corp"
                   }
                 }
               },

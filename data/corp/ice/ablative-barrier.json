@@ -30,34 +30,12 @@
             "op": "source_protects_attacked_server"
           },
           "then": {
-            "op": "choose",
-            "chooser": "corp",
-            "options": [
-              {
-                "id": "install",
-                "label": "Install 1 non-agenda from HQ/Archives protecting/root of another server",
-                "effect": {
-                  "op": "do",
-                  "action": {
-                    "kind": "install_from_hq_or_archives",
-                    "excludeAgenda": true,
-                    "excludeSourceServer": true
-                  }
-                }
-              },
-              {
-                "id": "decline",
-                "label": "Decline",
-                "effect": {
-                  "op": "do",
-                  "action": {
-                    "kind": "gain_credits",
-                    "side": "corp",
-                    "amount": 0
-                  }
-                }
-              }
-            ]
+            "op": "do",
+            "action": {
+              "kind": "install_from_hq_or_archives",
+              "excludeAgenda": true,
+              "excludeSourceServer": true
+            }
           }
         }
       }

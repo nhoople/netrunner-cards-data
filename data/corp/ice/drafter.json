@@ -55,33 +55,11 @@
       "id": "drafter-install",
       "text": "You may install 1 card from Archives or HQ, ignoring all costs.",
       "instructions": {
-        "op": "choose",
-        "chooser": "corp",
-        "options": [
-          {
-            "id": "install",
-            "label": "Install 1 card from Archives or HQ, ignoring all costs",
-            "effect": {
-              "op": "do",
-              "action": {
-                "kind": "install_from_hq_or_archives",
-                "ignoreInstallCost": true
-              }
-            }
-          },
-          {
-            "id": "decline",
-            "label": "Decline",
-            "effect": {
-              "op": "do",
-              "action": {
-                "kind": "gain_credits",
-                "side": "corp",
-                "amount": 0
-              }
-            }
-          }
-        ]
+        "op": "do",
+        "action": {
+          "kind": "install_from_hq_or_archives",
+          "ignoreInstallCost": true
+        }
       }
     }
   ]

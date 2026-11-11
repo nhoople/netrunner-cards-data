@@ -132,7 +132,55 @@ def check_abilities(path: Path, raw: dict) -> int:
                 "the unless kind (CR 1.16.11b)"
             )
             errors += 1
+        for label in _installs_asked_twice(ability.get("instructions")):
+            print(
+                f"{where}: option {label!r} wraps an optional install from HQ or "
+                "Archives in a second yes-or-no; the install already lets the Corp "
+                "stop without choosing a card, so write it without the choose"
+            )
+            errors += 1
     return errors
+
+
+def _is_no_op(effect: object) -> bool:
+    if not isinstance(effect, dict) or effect.get("op") != "do":
+        return False
+    action = effect.get("action")
+    return (
+        isinstance(action, dict)
+        and action.get("kind") == "gain_credits"
+        and action.get("amount") == 0
+    )
+
+
+def _installs_asked_twice(node: object) -> list[str]:
+    """Labels of "install or decline" options around an install that is already optional.
+
+    `install_from_hq_or_archives` without `required` offers "done" beside the
+    cards. A choose around it with a no-op "Decline" asks "you may" twice.
+    """
+    found: list[str] = []
+    if isinstance(node, dict):
+        options = node.get("options") if node.get("op") == "choose" else None
+        if isinstance(options, list) and len(options) == 2:
+            for option, other in ((options[0], options[1]), (options[1], options[0])):
+                if not isinstance(option, dict) or not isinstance(other, dict):
+                    continue
+                effect = option.get("effect")
+                action = effect.get("action") if isinstance(effect, dict) and effect.get("op") == "do" else None
+                if (
+                    isinstance(action, dict)
+                    and action.get("kind") == "install_from_hq_or_archives"
+                    and not action.get("required")
+                    and _is_no_op(other.get("effect"))
+                ):
+                    found.append(str(option.get("label") or ""))
+        for value in node.values():
+            found.extend(_installs_asked_twice(value))
+    elif isinstance(node, list):
+        for value in node:
+            found.extend(_installs_asked_twice(value))
+    return found
 
 
 _LOSS_KINDS = {"lose_credits", "lose_clicks"}
