@@ -15,7 +15,7 @@
       "class": "paid",
       "rule": "9.3.7b",
       "id": "keyhole-run",
-      "label": "[click]: Run R&D; on success may look at top 3 and trash 1 program",
+      "label": "[click]: Run R&D. If successful, instead of breaching R&D, look at the top 3 cards of R&D and trash 1 of them",
       "cost": {
         "clicks": 1
       },
@@ -43,7 +43,7 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "may_breach_instead_keyhole"
+          "kind": "breach_instead_keyhole"
         }
       }
     }
