@@ -17,33 +17,26 @@
       "class": "play",
       "rule": "9.3.7d",
       "instructions": {
-        "op": "choose",
-        "chooser": "runner",
-        "options": [
-          {
-            "id": "pay8",
-            "label": "Pay 8¢",
-            "effect": {
-              "op": "do",
-              "action": {
-                "kind": "lose_credits",
-                "side": "runner",
-                "amount": 8
-              }
+        "op": "do",
+        "action": {
+          "kind": "unless",
+          "payer": "runner",
+          "cost": {
+            "op": "do",
+            "action": {
+              "kind": "lose_credits",
+              "side": "runner",
+              "amount": 8
             }
           },
-          {
-            "id": "tag",
-            "label": "Take 1 tag",
-            "effect": {
-              "op": "do",
-              "action": {
-                "kind": "give_tags",
-                "amount": 1
-              }
+          "instruction": {
+            "op": "do",
+            "action": {
+              "kind": "give_tags",
+              "amount": 1
             }
           }
-        ]
+        }
       }
     },
     {

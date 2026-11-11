@@ -26,33 +26,26 @@
           "level": 4
         },
         "then": {
-          "op": "choose",
-          "chooser": "runner",
-          "options": [
-            {
-              "id": "spend-click",
-              "label": "Spend [click]",
-              "effect": {
-                "op": "do",
-                "action": {
-                  "kind": "lose_clicks",
-                  "side": "runner",
-                  "amount": 1
-                }
+          "op": "do",
+          "action": {
+            "kind": "unless",
+            "payer": "runner",
+            "cost": {
+              "op": "do",
+              "action": {
+                "kind": "lose_clicks",
+                "side": "runner",
+                "amount": 1
               }
             },
-            {
-              "id": "take-tag",
-              "label": "Take 1 tag",
-              "effect": {
-                "op": "do",
-                "action": {
-                  "kind": "give_tags",
-                  "amount": 1
-                }
+            "instruction": {
+              "op": "do",
+              "action": {
+                "kind": "give_tags",
+                "amount": 1
               }
             }
-          ]
+          }
         }
       }
     },
