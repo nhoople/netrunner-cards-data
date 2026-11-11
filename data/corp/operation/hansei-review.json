@@ -36,7 +36,7 @@
               "op": "do",
               "action": {
                 "kind": "trash_hq",
-                "pick": "first"
+                "pick": "choose"
               }
             }
           }

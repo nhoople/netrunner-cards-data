@@ -35,33 +35,26 @@
       "rule": "9.3.7c",
       "trigger": "run_begin",
       "instructions": {
-        "op": "choose",
-        "chooser": "runner",
-        "options": [
-          {
-            "id": "pay4",
-            "label": "Pay 4¢",
-            "effect": {
-              "op": "do",
-              "action": {
-                "kind": "lose_credits",
-                "side": "runner",
-                "amount": 4
-              }
+        "op": "do",
+        "action": {
+          "kind": "unless",
+          "payer": "runner",
+          "cost": {
+            "op": "do",
+            "action": {
+              "kind": "lose_credits",
+              "side": "runner",
+              "amount": 4
             }
           },
-          {
-            "id": "tag",
-            "label": "Take 1 tag",
-            "effect": {
-              "op": "do",
-              "action": {
-                "kind": "give_tags",
-                "amount": 1
-              }
+          "instruction": {
+            "op": "do",
+            "action": {
+              "kind": "give_tags",
+              "amount": 1
             }
           }
-        ]
+        }
       }
     }
   ]

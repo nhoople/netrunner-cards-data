@@ -29,7 +29,9 @@
               "op": "do",
               "action": {
                 "kind": "trash_hq",
-                "pick": "first"
+                "pick": "choose",
+                "amount": 99,
+                "upTo": true
               }
             }
           },

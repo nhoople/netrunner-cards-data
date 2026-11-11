@@ -125,7 +125,53 @@ def check_abilities(path: Path, raw: dict) -> int:
             if not isinstance(restriction, dict) or restriction.get("appliesTo") not in RESTRICTION_TARGETS:
                 print(f"{where}: restriction appliesTo is unknown")
                 errors += 1
+        for label in _payments_offered_as_losses(ability.get("instructions")):
+            print(
+                f"{where}: option {label!r} pays by losing credits or clicks, which a "
+                "player who cannot pay could still pick; write the nested cost with "
+                "the unless kind (CR 1.16.11b)"
+            )
+            errors += 1
     return errors
+
+
+_LOSS_KINDS = {"lose_credits", "lose_clicks"}
+
+
+def _only_losses(effect: object) -> bool:
+    if not isinstance(effect, dict):
+        return False
+    if effect.get("op") == "do":
+        action = effect.get("action")
+        return isinstance(action, dict) and action.get("kind") in _LOSS_KINDS
+    if effect.get("op") == "seq":
+        parts = effect.get("effects")
+        return isinstance(parts, list) and bool(parts) and all(_only_losses(p) for p in parts)
+    return False
+
+
+def _payments_offered_as_losses(node: object) -> list[str]:
+    """Labels of choose options that say "Pay" or "Spend" but only lose resources.
+
+    A loss resolves as far as it can, so a player with nothing could take the
+    "pay" option and skip the other one. A nested cost must be payable in full
+    (CR 1.16.11b), which the unless kind enforces.
+    """
+    found: list[str] = []
+    if isinstance(node, dict):
+        if node.get("op") == "choose":
+            for option in node.get("options") or []:
+                if not isinstance(option, dict):
+                    continue
+                label = str(option.get("label") or "")
+                if label.split(" ", 1)[0] in {"Pay", "Spend"} and _only_losses(option.get("effect")):
+                    found.append(label)
+        for value in node.values():
+            found.extend(_payments_offered_as_losses(value))
+    elif isinstance(node, list):
+        for value in node:
+            found.extend(_payments_offered_as_losses(value))
+    return found
 
 
 def _flag_list(flag: object) -> list[object] | None:
