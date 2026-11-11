@@ -33,29 +33,18 @@
       "class": "paid",
       "rule": "9.3.7b",
       "id": "buffer-drive-heap-top",
-      "label": "Remove Buffer Drive from the game: Add 1 card from your heap to the top of your stack",
+      "label": "Remove this hardware from the game: Add 1 card from your heap to the top of your stack",
       "cost": {
-        "credits": 0
+        "rfgSelf": true
       },
       "windows": [
         "runner_action_paw"
       ],
       "instructions": {
-        "op": "seq",
-        "effects": [
-          {
-            "op": "do",
-            "action": {
-              "kind": "rfg_self"
-            }
-          },
-          {
-            "op": "do",
-            "action": {
-              "kind": "may_add_from_heap_to_stack_top"
-            }
-          }
-        ]
+        "op": "do",
+        "action": {
+          "kind": "may_add_from_heap_to_stack_top"
+        }
       }
     }
   ]

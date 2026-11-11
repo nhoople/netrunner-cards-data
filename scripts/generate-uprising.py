@@ -1918,27 +1918,18 @@ def map_card(c: dict) -> dict:
                 {
                     "id": "buffer-drive-heap-top",
                     "label": (
-                        "Remove Buffer Drive from the game: Add 1 card from "
+                        "Remove this hardware from the game: Add 1 card from "
                         "your heap to the top of your stack"
                     ),
                     "clickCost": 0,
                     "creditCost": 0,
-                    "cost": {},
+                    "cost": {"rfgSelf": True},
                     "windows": ["runner_action_paw"],
                     "effect": {
-                        "op": "seq",
-                        "effects": [
-                            {
-                                "op": "do",
-                                "action": {"kind": "rfg_self"},
-                            },
-                            {
-                                "op": "do",
-                                "action": {
-                                    "kind": "may_add_from_heap_to_stack_top"
-                                },
-                            },
-                        ],
+                        "op": "do",
+                        "action": {
+                            "kind": "may_add_from_heap_to_stack_top"
+                        },
                     },
                 }
             ],
