@@ -25,7 +25,9 @@
               "op": "do",
               "action": {
                 "kind": "search_rd_to_hq",
-                "amount": 3
+                "amount": 3,
+                "upTo": true,
+                "reveal": true
               }
             }
           },

@@ -27,7 +27,9 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "install_from_hq_or_archives"
+          "kind": "install_from_hq_or_archives",
+          "ignoreInstallCost": true,
+          "required": true
         }
       }
     }

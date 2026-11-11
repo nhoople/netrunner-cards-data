@@ -77,7 +77,8 @@
               "op": "do",
               "action": {
                 "kind": "search_rd_to_hq",
-                "amount": 2
+                "amount": 2,
+                "upTo": true
               }
             },
             {

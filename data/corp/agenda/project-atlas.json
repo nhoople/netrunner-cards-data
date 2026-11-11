@@ -29,7 +29,7 @@
       "class": "paid",
       "rule": "9.3.7b",
       "id": "atlas-search",
-      "label": "Hosted agenda counter: Search R&D",
+      "label": "Hosted agenda counter: Search R&D for 1 card and reveal it. Add it to HQ",
       "cost": {
         "agendaCounters": 1
       },
@@ -40,7 +40,8 @@
         "op": "do",
         "action": {
           "kind": "search_rd_to_hq",
-          "amount": 1
+          "amount": 1,
+          "reveal": true
         }
       }
     }
