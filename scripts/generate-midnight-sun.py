@@ -880,10 +880,14 @@ def map_card(c: dict) -> dict:
             paidAbilities=[
                 {
                     "id": "moon-pool-resolve",
-                    "label": "[click], trash: Remove Moon Pool from the game",
-                    "clickCost": 1,
+                    "label": (
+                        "Remove this asset from the game: Trash up to 2 cards "
+                        "from HQ, then reveal up to 2 facedown cards in "
+                        "Archives and shuffle them into R&D"
+                    ),
+                    "clickCost": 0,
                     "creditCost": 0,
-                    "cost": {"clicks": 1, "trashSelf": True},
+                    "cost": {"rfgSelf": True},
                     "windows": ["corp_action_paw"],
                     "effect": {
                         "op": "do",

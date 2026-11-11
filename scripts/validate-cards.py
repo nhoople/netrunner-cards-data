@@ -6,6 +6,7 @@ Usage: python3 scripts/validate-cards.py
 from __future__ import annotations
 
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -573,6 +574,37 @@ def check_printed(card_ids: dict[str, Path]) -> int:
                 f"{rules_path.relative_to(ROOT)}: paid ability "
                 f"{ability.get('id')!r} costs a click but declares "
                 f"non-action windows {windows!r} (only bioroid ice may)"
+            )
+            errors += 1
+    # "Remove this asset from the game: ..." makes leaving the game the cost
+    # of the ability (CR 1.16.1), so the card never reaches Archives or the
+    # heap. Every such printed cost needs a paid ability paying rfgSelf, and
+    # rfgSelf must not appear without one.
+    for card_id, rules_path in sorted(card_ids.items()):
+        printed_path = directory / f"{card_id}.json"
+        if not printed_path.is_file():
+            continue
+        printed = json.loads(printed_path.read_text(encoding="utf-8"))
+        text = printed.get("strippedText") or ""
+        title = printed.get("strippedTitle") or ""
+        names = "this [a-z]+" + (f"|{re.escape(title)}" if title else "")
+        printed_costs = len(
+            re.findall(rf"[Rr]emove (?:{names}) from the game[^.:\n]*:", text)
+        )
+        rules = json.loads(rules_path.read_text(encoding="utf-8"))
+        paid_costs = sum(
+            1
+            for ability in rules.get("abilities") or []
+            if isinstance(ability, dict)
+            and ability.get("class") == "paid"
+            and isinstance(ability.get("cost"), dict)
+            and ability["cost"].get("rfgSelf") is True
+        )
+        if printed_costs != paid_costs:
+            print(
+                f"{rules_path.relative_to(ROOT)}: printed text removes this card "
+                f"from the game as a cost {printed_costs} time(s); "
+                f"{paid_costs} paid abilit(ies) pay rfgSelf"
             )
             errors += 1
     missing = sorted(set(card_ids) - seen)
