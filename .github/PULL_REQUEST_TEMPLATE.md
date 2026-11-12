@@ -24,3 +24,9 @@ Verdict: clear | clear-with-debt | blocked | n/a — <reason>
 - [ ] Effect IR / card mapping: CR gate filled above (or `n/a` with reason)
 - [ ] `python3 scripts/validate-cards.py` passes (includes supported-wave empty-`unsupported` invariant)
 - [ ] If keeping non-empty `unsupported` on a `supported` wave card: entry + reason in `data/supported-unsupported-allowlist.json`
+
+## Release
+
+- [ ] None: tests, docs, tooling, or dependencies only
+- [ ] Maintenance release `<tag>` (engine `src/` change); the game pin and the [pin table](https://github.com/nhoople/netrunner#readme) follow
+- [ ] Set-complete pair `<tag>` (cards and engine share the semver)
