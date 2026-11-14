@@ -9,6 +9,7 @@
   "rezCost": 2,
   "trashCost": 4,
   "unsupported": [],
+  "influence": 0,
   "subtypes": [
     "advertisement"
   ],

@@ -212,6 +212,17 @@ def test_printed_face_and_unique() -> None:
     assert not rules_unique({})
 
 
+def test_influence_problem() -> None:
+    from build_catalog_facts import influence_problem
+
+    assert influence_problem(0, 0) is None
+    assert influence_problem(2, 2) is None
+    assert influence_problem(None, None) is None
+    assert influence_problem(0, None) == "stored influence None != catalog influence_cost 0"
+    assert influence_problem(2, 1) is not None
+    assert influence_problem(None, 0) == "rules store influence but the catalog has no bar"
+
+
 def main() -> int:
     test_pool_pack_codes()
     test_card_blobs()
@@ -222,6 +233,7 @@ def main() -> int:
     test_ruling_ids()
     test_printed_numbers()
     test_printed_face_and_unique()
+    test_influence_problem()
     print("ok")
     return 0
 
