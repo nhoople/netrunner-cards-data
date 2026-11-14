@@ -38,7 +38,7 @@
       "id": "abr-break",
       "label": "Once per turn → Lose [click][click]: Break 1 subroutine",
       "cost": {
-        "clicks": 2
+        "loseClicks": 2
       },
       "windows": [
         "runner_action_paw"

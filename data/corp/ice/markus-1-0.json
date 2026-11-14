@@ -21,7 +21,7 @@
       "id": "markus-break",
       "label": "Lose [click]: Break 1 subroutine on Markus 1.0",
       "cost": {
-        "clicks": 1
+        "loseClicks": 1
       },
       "windows": [
         "encounter_paw"

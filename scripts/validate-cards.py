@@ -88,6 +88,10 @@ def check_abilities(path: Path, raw: dict) -> int:
         if kind == "paid" and not isinstance(ability.get("cost"), dict):
             print(f"{where}: a paid ability needs a cost")
             errors += 1
+        lose_err = _lose_click_cost_error(ability)
+        if lose_err:
+            print(f"{where}: {lose_err}")
+            errors += 1
         if kind == "paid" and not ability.get("instructions"):
             print(f"{where}: a paid ability needs instructions")
             errors += 1
@@ -141,6 +145,33 @@ def check_abilities(path: Path, raw: dict) -> int:
             )
             errors += 1
     return errors
+
+
+def _lose_click_cost_error(ability: dict) -> str | None:
+    """A printed "Lose [click]" cost is written as cost.loseClicks.
+
+    Losing a click is not spending it (CR 1.11.3b), so the cost does not begin
+    with a [click] symbol and the ability is not an action (CR 5.2.1). Only
+    cost.clicks marks the [click] that begins an action.
+    """
+    if ability.get("class") != "paid":
+        return None
+    label = ability.get("label")
+    cost = ability.get("cost")
+    if not isinstance(label, str) or not isinstance(cost, dict):
+        return None
+    match = re.search(r"(?:^|→\s*)Lose ((?:\[click\])+):", label)
+    if not match:
+        return None
+    printed = match.group(1).count("[click]")
+    if cost.get("clicks"):
+        return (
+            f"label {label!r} loses clicks but cost.clicks makes it an action; "
+            "write cost.loseClicks (CR 1.11.3b, 5.2.1)"
+        )
+    if cost.get("loseClicks") != printed:
+        return f"label {label!r} loses {printed} [click] but cost.loseClicks is {cost.get('loseClicks')!r}"
+    return None
 
 
 def _is_no_op(effect: object) -> bool:
@@ -548,15 +579,12 @@ def check_printed(card_ids: dict[str, Path]) -> int:
                 )
                 errors += 1
     # A paid ability whose cost includes a click is an action (CR 9.5.2a),
-    # so it can only be offered in action windows. The one printed
-    # exception is bioroid ice, whose click-cost break abilities are used
-    # while encountering that ice. Fail closed on any other window shape
-    # so a click-cost ability cannot silently become usable mid-run.
+    # so it can only be offered in action windows. Fail closed on any other
+    # window shape so a click-cost ability cannot silently become usable
+    # mid-run. Bioroid ice break abilities cost "Lose [click]", which is not
+    # an action (CR 1.11.3b), and are written as cost.loseClicks.
     for card_id, rules_path in sorted(card_ids.items()):
         rules = json.loads(rules_path.read_text(encoding="utf-8"))
-        is_bioroid_ice = rules.get("type") == "ice" and "bioroid" in (
-            rules.get("subtypes") or []
-        )
         for ability in rules.get("abilities") or []:
             if not isinstance(ability, dict) or ability.get("class") != "paid":
                 continue
@@ -568,12 +596,10 @@ def check_printed(card_ids: dict[str, Path]) -> int:
                 isinstance(w, str) and w.endswith("_action_paw") for w in windows
             ):
                 continue
-            if is_bioroid_ice:
-                continue
             print(
                 f"{rules_path.relative_to(ROOT)}: paid ability "
                 f"{ability.get('id')!r} costs a click but declares "
-                f"non-action windows {windows!r} (only bioroid ice may)"
+                f"non-action windows {windows!r}"
             )
             errors += 1
     # "Remove this asset from the game: ..." makes leaving the game the cost
