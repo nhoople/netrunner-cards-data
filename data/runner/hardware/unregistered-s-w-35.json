@@ -14,18 +14,10 @@
   "influence": 3,
   "abilities": [
     {
-      "class": "static",
-      "rule": "9.3.7a",
-      "declaration": {
-        "field": "playRequiresSuccessfulHqRunThisTurn",
-        "value": true
-      }
-    },
-    {
       "class": "paid",
       "rule": "9.3.7b",
       "id": "unregistered-trash",
-      "label": "[click][click]: Trash 1 rezzed ice, gain 2[credit] per strength",
+      "label": "[click][click]: Trash 1 rezzed bioroid, clone, executive, or sysop in the root of a remote server",
       "cost": {
         "clicks": 2
       },
@@ -35,9 +27,26 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "trash_unregistered_rezzed_ice_gain_per_strength"
+          "kind": "choose_card",
+          "chooser": "runner",
+          "zone": "remote_root",
+          "rezzedOnly": true,
+          "includeSubtypes": [
+            "bioroid",
+            "clone",
+            "executive",
+            "sysop"
+          ],
+          "then": {
+            "op": "do",
+            "action": {
+              "kind": "trash_corp_card",
+              "cardId": "$chosen"
+            }
+          }
         }
-      }
+      },
+      "requiresSuccessfulHqRunThisTurn": true
     }
   ]
 }

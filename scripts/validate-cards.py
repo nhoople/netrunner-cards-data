@@ -144,7 +144,42 @@ def check_abilities(path: Path, raw: dict) -> int:
                 "stop without choosing a card, so write it without the choose"
             )
             errors += 1
+    play_gate = _play_gate_on_used_card_error(raw)
+    if play_gate:
+        print(f"{path}: {play_gate}")
+        errors += 1
     return errors
+
+
+PLAYED_TYPES = {"event", "operation"}
+
+
+def _play_gate_on_used_card_error(raw: dict) -> str | None:
+    """A playRequires* declaration gates only playing an event or operation.
+
+    On a card that is installed and used, such as hardware with "Use this
+    hardware only if ..." (CR 9.3.7a), it does not stop the card's paid
+    abilities. Write the restriction on each paid ability instead, as
+    requiresSuccessfulHqRunThisTurn and the other requires* fields.
+    """
+    if raw.get("type") in PLAYED_TYPES:
+        return None
+    abilities = raw.get("abilities")
+    if not isinstance(abilities, list):
+        return None
+    if not any(isinstance(a, dict) and a.get("class") == "paid" for a in abilities):
+        return None
+    for ability in abilities:
+        if not isinstance(ability, dict) or ability.get("class") != "static":
+            continue
+        declaration = ability.get("declaration")
+        field = declaration.get("field") if isinstance(declaration, dict) else None
+        if isinstance(field, str) and field.startswith("playRequires"):
+            return (
+                f"static {field} gates only playing an event or operation; on a "
+                f"{raw.get('type')} write the restriction on its paid abilities (CR 9.3.7a)"
+            )
+    return None
 
 
 def _lose_click_cost_error(ability: dict) -> str | None:

@@ -41,6 +41,38 @@ def test_click_cost_is_not_a_lose_click_cost() -> None:
     assert check(paid("[click]: The Runner loses [click].", {"clicks": 1})) is None
 
 
+def static(field: str) -> dict:
+    return {"class": "static", "rule": "9.3.7a", "declaration": {"field": field, "value": True}}
+
+
+def test_play_gate_on_hardware_with_paid_ability_fails() -> None:
+    # Unregistered S&W '35 as cards v1.147.22 wrote it: the static play gate
+    # never stopped its paid ability.
+    check = validate_cards._play_gate_on_used_card_error
+    card = {
+        "type": "hardware",
+        "abilities": [
+            static("playRequiresSuccessfulHqRunThisTurn"),
+            paid("[click][click]: Trash 1 rezzed bioroid", {"clicks": 2}),
+        ],
+    }
+    err = check(card)
+    assert err and "paid abilities" in err, err
+
+
+def test_use_restriction_on_paid_ability_passes() -> None:
+    check = validate_cards._play_gate_on_used_card_error
+    ability = paid("[click][click]: Trash 1 rezzed bioroid", {"clicks": 2})
+    ability["requiresSuccessfulHqRunThisTurn"] = True
+    assert check({"type": "hardware", "abilities": [ability]}) is None
+
+
+def test_play_gate_on_event_passes() -> None:
+    check = validate_cards._play_gate_on_used_card_error
+    card = {"type": "event", "abilities": [static("playRequiresSuccessfulHqRunThisTurn")]}
+    assert check(card) is None
+
+
 def main() -> int:
     tests = [value for name, value in sorted(globals().items()) if name.startswith("test_")]
     for test in tests:
