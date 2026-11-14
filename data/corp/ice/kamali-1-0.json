@@ -23,7 +23,7 @@
       "id": "kamali-break",
       "label": "Lose [click]: Break 1 subroutine on Kamali 1.0",
       "cost": {
-        "clicks": 1
+        "loseClicks": 1
       },
       "windows": [
         "encounter_paw"

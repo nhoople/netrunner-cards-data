@@ -71,15 +71,17 @@
       "id": "hakarl-click-break",
       "label": "Lose [click]: Break 1 subroutine on Hákarl 1.0",
       "cost": {
-        "clicks": 1
+        "loseClicks": 1
       },
       "windows": [
         "encounter_paw"
       ],
+      "usableByRunnerOnSelfIce": true,
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "break_host_subroutine"
+          "kind": "break_subroutine_on_self",
+          "amount": 1
         }
       }
     }
