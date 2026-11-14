@@ -2,7 +2,7 @@
   "_comment": "Shrink-only baseline for scripts/check_labels.py (CR audit tool 1.4). Regenerate with `python3 scripts/check_labels.py --write`; never add entries by hand.",
   "counts": {
     "unlabelled": 1187,
-    "drift": 395,
+    "drift": 394,
     "unsupported": 0
   },
   "unlabelled": {
@@ -4392,9 +4392,6 @@
     ],
     "universal-connectivity-fee": [
       "Untagged lose 1¢; tagged lose all ¢ and trash this ice"
-    ],
-    "unregistered-s-w-35": [
-      "[click][click]: Trash 1 rezzed ice, gain 2[credit] per strength"
     ],
     "upayoga": [
       "Psi game. If bids differ, the Runner loses 2¢."
