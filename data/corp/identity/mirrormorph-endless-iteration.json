@@ -39,7 +39,7 @@
             "effect": {
               "op": "do",
               "action": {
-                "kind": "mirrormorph_take_different_action_click_discount"
+                "kind": "take_different_action_paying_click_less"
               }
             }
           },
