@@ -19,3 +19,7 @@ jobs:
         run: python3 scripts/validate-cards.py
       - name: Check catalog diff helpers
         run: python3 scripts/test_nsg_catalog.py
+      - name: Check label normalizer
+        run: python3 scripts/test_check_labels.py
+      - name: Check printed-text label baseline
+        run: python3 scripts/check_labels.py --report

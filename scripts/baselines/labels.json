@@ -1,0 +1,4453 @@
+{
+  "_comment": "Shrink-only baseline for scripts/check_labels.py (CR audit tool 1.4). Regenerate with `python3 scripts/check_labels.py --write`; never add entries by hand.",
+  "counts": {
+    "unlabelled": 1187,
+    "drift": 395,
+    "unsupported": 0
+  },
+  "unlabelled": {
+    "24-7-news-cycle": [
+      "1:play"
+    ],
+    "a-teia-ip-recovery": [
+      "1:conditional"
+    ],
+    "aaron-marron": [
+      "1:conditional"
+    ],
+    "abaasy": [
+      "2:conditional"
+    ],
+    "ablative-barrier": [
+      "0:conditional"
+    ],
+    "above-the-law": [
+      "0:conditional"
+    ],
+    "acacia": [
+      "0:conditional"
+    ],
+    "accelerated-beta-test": [
+      "0:conditional"
+    ],
+    "accelerated-diagnostics": [
+      "0:play"
+    ],
+    "account-siphon": [
+      "1:conditional"
+    ],
+    "active-policing": [
+      "2:play"
+    ],
+    "activist-support": [
+      "0:conditional",
+      "1:conditional"
+    ],
+    "ad-blitz": [
+      "2:play"
+    ],
+    "adjusted-chronotype": [
+      "1:conditional"
+    ],
+    "adjusted-matrix": [
+      "0:conditional"
+    ],
+    "adonis-campaign": [
+      "2:conditional"
+    ],
+    "adrian-seis": [
+      "1:conditional",
+      "2:conditional"
+    ],
+    "advanced-assembly-lines": [
+      "0:conditional"
+    ],
+    "advanced-concept-hopper": [
+      "0:conditional"
+    ],
+    "aesops-pawnshop": [
+      "3:conditional"
+    ],
+    "afshar": [
+      "0:conditional"
+    ],
+    "aggressive-negotiation": [
+      "1:play"
+    ],
+    "aggressive-secretary": [
+      "1:conditional"
+    ],
+    "aggressive-trendsetting": [
+      "0:conditional"
+    ],
+    "aircheck": [
+      "1:conditional"
+    ],
+    "akiko-nisei-head-case": [
+      "1:conditional"
+    ],
+    "alarm-clock": [
+      "1:conditional"
+    ],
+    "algernon": [
+      "1:conditional"
+    ],
+    "algo-trading": [
+      "0:conditional"
+    ],
+    "alice-merchant-clan-agitator": [
+      "1:conditional"
+    ],
+    "always-have-a-backup-plan": [
+      "1:conditional"
+    ],
+    "amani-senai": [
+      "1:conditional"
+    ],
+    "amanuensis": [
+      "2:conditional",
+      "3:conditional"
+    ],
+    "amelia-earhart": [
+      "2:conditional"
+    ],
+    "amina": [
+      "1:conditional"
+    ],
+    "amped-up": [
+      "0:play"
+    ],
+    "an-offer-you-cant-refuse": [
+      "0:play"
+    ],
+    "anansi": [
+      "0:conditional"
+    ],
+    "anemone": [
+      "1:conditional"
+    ],
+    "angel-arena": [
+      "1:conditional"
+    ],
+    "angelique-garza-correa": [
+      "2:conditional"
+    ],
+    "aniccam": [
+      "2:conditional"
+    ],
+    "ankusa": [
+      "1:conditional"
+    ],
+    "anonymous-tip": [
+      "0:play"
+    ],
+    "another-day-another-paycheck": [
+      "2:conditional"
+    ],
+    "anson-rose": [
+      "1:conditional"
+    ],
+    "anthill-excavation-contract": [
+      "0:conditional",
+      "1:conditional"
+    ],
+    "anvil": [
+      "0:conditional"
+    ],
+    "apex-invasive-predator": [
+      "2:conditional"
+    ],
+    "api-s-keeper-isobel": [
+      "1:conditional"
+    ],
+    "apocalypse": [
+      "1:play"
+    ],
+    "ar-enhanced-security": [
+      "0:conditional"
+    ],
+    "archangel": [
+      "2:conditional"
+    ],
+    "architect-deployment-test": [
+      "0:conditional"
+    ],
+    "archived-memories": [
+      "0:play"
+    ],
+    "arella-salvatore": [
+      "1:conditional"
+    ],
+    "argus-crackdown": [
+      "2:conditional"
+    ],
+    "argus-security-protection-guaranteed": [
+      "0:conditional"
+    ],
+    "ark-lockdown": [
+      "0:play"
+    ],
+    "armed-asset-protection": [
+      "0:play"
+    ],
+    "armed-intimidation": [
+      "0:conditional"
+    ],
+    "armored-servers": [
+      "0:conditional"
+    ],
+    "artificial-cryptocrash": [
+      "0:conditional"
+    ],
+    "asa-group-security-through-vigilance": [
+      "0:conditional"
+    ],
+    "ash-2x3zb9cy": [
+      "1:conditional"
+    ],
+    "ashen-epilogue": [
+      "0:play"
+    ],
+    "asmund-pudlat": [
+      "1:conditional",
+      "2:conditional"
+    ],
+    "astrolabe": [
+      "3:conditional"
+    ],
+    "astroscript-pilot-program": [
+      "0:conditional"
+    ],
+    "attitude-adjustment": [
+      "0:play"
+    ],
+    "au-co-the-gold-standard-in-clones": [
+      "1:conditional"
+    ],
+    "audacity": [
+      "1:play"
+    ],
+    "audrey-v2": [
+      "1:conditional"
+    ],
+    "authenticator": [
+      "0:conditional"
+    ],
+    "autoscripter": [
+      "1:conditional"
+    ],
+    "avgustina-ivanovskaya": [
+      "1:conditional"
+    ],
+    "award-bait": [
+      "1:conditional"
+    ],
+    "azef-protocol": [
+      "0:conditional"
+    ],
+    "azmari-edtech-shaping-the-future": [
+      "0:conditional"
+    ],
+    "back-channels": [
+      "0:play"
+    ],
+    "backroom-machinations": [
+      "1:play"
+    ],
+    "backstitching": [
+      "0:conditional"
+    ],
+    "bacterial-programming": [
+      "0:conditional",
+      "1:conditional"
+    ],
+    "bad-times": [
+      "1:play"
+    ],
+    "bahia-bands": [
+      "1:conditional"
+    ],
+    "baklan-bochkin": [
+      "1:conditional"
+    ],
+    "balanced-coverage": [
+      "0:conditional"
+    ],
+    "bangun-when-disaster-strikes": [
+      "1:conditional"
+    ],
+    "bank-job": [
+      "1:conditional"
+    ],
+    "bankroll": [
+      "0:conditional"
+    ],
+    "barry-baz-wong-tri-maf-veteran": [
+      "1:conditional"
+    ],
+    "basilar-synthgland-2kvj": [
+      "1:conditional"
+    ],
+    "beach-party": [
+      "1:conditional"
+    ],
+    "beanstalk-royalties": [
+      "0:play"
+    ],
+    "because-i-can": [
+      "1:conditional"
+    ],
+    "begemot": [
+      "2:conditional"
+    ],
+    "behold": [
+      "2:conditional"
+    ],
+    "bellona": [
+      "1:conditional"
+    ],
+    "bernice-mai": [
+      "1:conditional"
+    ],
+    "best-defense": [
+      "0:play"
+    ],
+    "beta-build": [
+      "0:play",
+      "2:conditional"
+    ],
+    "beth-kilrain-chang": [
+      "1:conditional"
+    ],
+    "bhagat": [
+      "1:conditional"
+    ],
+    "biased-reporting": [
+      "0:play"
+    ],
+    "bifrost-array": [
+      "0:conditional"
+    ],
+    "big-brother": [
+      "1:play"
+    ],
+    "big-deal": [
+      "1:play"
+    ],
+    "bigger-picture": [
+      "1:play"
+    ],
+    "bio-ethics-association": [
+      "0:conditional"
+    ],
+    "bioroid-efficiency-research": [
+      "0:play",
+      "1:conditional"
+    ],
+    "biotic-labor": [
+      "0:play"
+    ],
+    "black-hat": [
+      "0:play"
+    ],
+    "black-level-clearance": [
+      "0:conditional"
+    ],
+    "bladderwort": [
+      "0:conditional"
+    ],
+    "bling": [
+      "3:conditional",
+      "4:conditional"
+    ],
+    "bloo-moose": [
+      "1:conditional"
+    ],
+    "blue-level-clearance": [
+      "1:play"
+    ],
+    "blue-sun-powering-the-future": [
+      "0:conditional"
+    ],
+    "blueberry-diesel": [
+      "0:play"
+    ],
+    "boom": [
+      "2:play"
+    ],
+    "borrowed-goods": [
+      "1:conditional"
+    ],
+    "botulus": [
+      "1:conditional",
+      "2:conditional"
+    ],
+    "brain-cage": [
+      "2:conditional"
+    ],
+    "brain-rewiring": [
+      "0:conditional"
+    ],
+    "braintrust": [
+      "0:conditional"
+    ],
+    "bravado": [
+      "1:conditional"
+    ],
+    "breached-dome": [
+      "1:conditional"
+    ],
+    "breaking-news": [
+      "0:conditional",
+      "1:conditional"
+    ],
+    "bring-them-home": [
+      "2:play"
+    ],
+    "broad-daylight": [
+      "0:conditional"
+    ],
+    "broadcast-square": [
+      "1:conditional"
+    ],
+    "brute-force-hack": [
+      "2:play"
+    ],
+    "buffer-drive": [
+      "1:conditional"
+    ],
+    "bug": [
+      "1:conditional"
+    ],
+    "bug-out-bag": [
+      "1:conditional"
+    ],
+    "build-script": [
+      "0:play"
+    ],
+    "building-blocks": [
+      "0:play"
+    ],
+    "bukhgalter": [
+      "2:conditional"
+    ],
+    "bulwark": [
+      "1:conditional"
+    ],
+    "bumi-1-0": [
+      "0:conditional"
+    ],
+    "burner": [
+      "1:conditional"
+    ],
+    "business-as-usual": [
+      "0:play"
+    ],
+    "by-any-means": [
+      "1:play"
+    ],
+    "byte": [
+      "2:conditional"
+    ],
+    "c-i-fund": [
+      "0:conditional"
+    ],
+    "cache": [
+      "0:conditional"
+    ],
+    "cacophony": [
+      "1:conditional",
+      "2:conditional"
+    ],
+    "calling-in-favors": [
+      "0:play"
+    ],
+    "calvin-b4l3y": [
+      "2:conditional"
+    ],
+    "caprice-nisei": [
+      "1:conditional"
+    ],
+    "captain-padma-isbister-intrepid-explorer": [
+      "1:conditional"
+    ],
+    "capybara": [
+      "1:conditional"
+    ],
+    "career-fair": [
+      "0:play"
+    ],
+    "careful-planning": [
+      "1:play"
+    ],
+    "carpe-diem": [
+      "0:play"
+    ],
+    "casting-call": [
+      "0:play"
+    ],
+    "cataloguer": [
+      "2:conditional"
+    ],
+    "caveat-emptor": [
+      "0:play"
+    ],
+    "cayambe-grid": [
+      "0:conditional"
+    ],
+    "cbi-raid": [
+      "1:conditional"
+    ],
+    "celebrity-gift": [
+      "1:play"
+    ],
+    "cerebral-cast": [
+      "1:play"
+    ],
+    "cerebral-overwriter": [
+      "1:conditional"
+    ],
+    "cfc-excavation-contract": [
+      "0:conditional"
+    ],
+    "chain-reaction": [
+      "1:play"
+    ],
+    "chairman-hiro": [
+      "2:conditional"
+    ],
+    "chakana": [
+      "0:conditional"
+    ],
+    "character-assassination": [
+      "0:conditional"
+    ],
+    "charlotte-cacador": [
+      "2:conditional"
+    ],
+    "charm-offensive": [
+      "1:conditional"
+    ],
+    "chastushka": [
+      "1:conditional"
+    ],
+    "chekist-scion": [
+      "1:conditional"
+    ],
+    "chilo-city-grid": [
+      "0:conditional"
+    ],
+    "chimera": [
+      "0:conditional"
+    ],
+    "chisel": [
+      "2:conditional"
+    ],
+    "chop-bot-3000": [
+      "1:conditional"
+    ],
+    "chronos-project": [
+      "0:conditional"
+    ],
+    "chrysalis": [
+      "2:conditional"
+    ],
+    "chrysopoeian-skimming": [
+      "0:play"
+    ],
+    "citadel-sanctuary": [
+      "1:conditional"
+    ],
+    "city-surveillance": [
+      "0:conditional"
+    ],
+    "city-works-project": [
+      "2:conditional"
+    ],
+    "clean-getaway": [
+      "1:conditional"
+    ],
+    "clearinghouse": [
+      "0:conditional"
+    ],
+    "climactic-showdown": [
+      "1:conditional"
+    ],
+    "clone-retirement": [
+      "0:conditional",
+      "1:conditional"
+    ],
+    "clone-suffrage-movement": [
+      "0:conditional"
+    ],
+    "clones-are-not-people": [
+      "2:conditional"
+    ],
+    "closed-accounts": [
+      "1:play"
+    ],
+    "cloud-eater": [
+      "1:conditional"
+    ],
+    "clyde-van-rite": [
+      "1:conditional"
+    ],
+    "code-replicator": [
+      "0:conditional"
+    ],
+    "code-siphon": [
+      "1:conditional"
+    ],
+    "cohort-guidance-program": [
+      "0:conditional"
+    ],
+    "cold-read": [
+      "1:conditional"
+    ],
+    "cold-site-server": [
+      "2:conditional"
+    ],
+    "commercial-bankers-group": [
+      "0:conditional"
+    ],
+    "commercialization": [
+      "0:play"
+    ],
+    "compile": [
+      "1:conditional",
+      "2:conditional"
+    ],
+    "complete-image": [
+      "3:play"
+    ],
+    "compromised-employee": [
+      "3:conditional"
+    ],
+    "concerto": [
+      "0:play"
+    ],
+    "conduit": [
+      "0:conditional"
+    ],
+    "congratulations": [
+      "0:conditional"
+    ],
+    "constellation-protocol": [
+      "0:conditional"
+    ],
+    "consulting-visit": [
+      "2:play"
+    ],
+    "contaminate": [
+      "0:play"
+    ],
+    "copycat": [
+      "0:conditional"
+    ],
+    "cordyceps": [
+      "0:conditional",
+      "2:conditional"
+    ],
+    "corporate-hospitality": [
+      "1:play"
+    ],
+    "corporate-sales-team": [
+      "0:conditional",
+      "1:conditional",
+      "2:conditional"
+    ],
+    "corporate-shuffle": [
+      "1:play"
+    ],
+    "corporate-town": [
+      "1:conditional"
+    ],
+    "corporate-war": [
+      "0:conditional"
+    ],
+    "creative-commission": [
+      "0:play"
+    ],
+    "credit-kiting": [
+      "1:play"
+    ],
+    "crisis-management": [
+      "0:conditional"
+    ],
+    "crowdfunding": [
+      "2:conditional",
+      "3:conditional"
+    ],
+    "crypt": [
+      "0:conditional"
+    ],
+    "csr-campaign": [
+      "0:conditional"
+    ],
+    "cultivate": [
+      "0:play"
+    ],
+    "cupellation": [
+      "2:conditional"
+    ],
+    "curupira": [
+      "1:conditional"
+    ],
+    "customized-secretary": [
+      "0:conditional"
+    ],
+    "cyber-cypher": [
+      "0:conditional"
+    ],
+    "cyber-threat": [
+      "1:play"
+    ],
+    "cyberdex-sandbox": [
+      "1:conditional",
+      "2:conditional"
+    ],
+    "cyberdex-trial": [
+      "0:play"
+    ],
+    "cyberdex-virus-suite": [
+      "1:conditional"
+    ],
+    "dadiana-chacon": [
+      "1:conditional"
+    ],
+    "daeg-first-net-cat": [
+      "1:conditional"
+    ],
+    "daily-casts": [
+      "2:conditional"
+    ],
+    "daily-quest": [
+      "1:conditional",
+      "2:conditional"
+    ],
+    "daruma": [
+      "0:conditional"
+    ],
+    "darwin": [
+      "2:conditional"
+    ],
+    "data-breach": [
+      "1:conditional"
+    ],
+    "data-folding": [
+      "0:conditional"
+    ],
+    "data-loop": [
+      "0:conditional"
+    ],
+    "data-raven": [
+      "0:conditional"
+    ],
+    "data-ward": [
+      "0:conditional"
+    ],
+    "datasucker": [
+      "0:conditional"
+    ],
+    "davinci": [
+      "0:conditional"
+    ],
+    "day-job": [
+      "1:play"
+    ],
+    "debbie-downtown-moreira": [
+      "2:conditional"
+    ],
+    "dedicated-processor": [
+      "0:conditional"
+    ],
+    "dedicated-response-team": [
+      "0:conditional"
+    ],
+    "dedication-ceremony": [
+      "0:play"
+    ],
+    "deep-dive": [
+      "1:play"
+    ],
+    "deep-thought": [
+      "0:conditional",
+      "1:conditional"
+    ],
+    "deja-vu": [
+      "0:play"
+    ],
+    "demolisher": [
+      "3:conditional"
+    ],
+    "descent": [
+      "0:conditional"
+    ],
+    "desperado": [
+      "2:conditional"
+    ],
+    "detente": [
+      "2:conditional"
+    ],
+    "deuces-wild": [
+      "0:play"
+    ],
+    "dewi-subrotoputri-pedagogical-dhalang": [
+      "2:conditional"
+    ],
+    "diesel": [
+      "0:play"
+    ],
+    "digital-rights-management": [
+      "1:play"
+    ],
+    "direct-access": [
+      "2:conditional"
+    ],
+    "director-haas": [
+      "2:conditional"
+    ],
+    "director-haas-pet-project": [
+      "2:conditional"
+    ],
+    "dirty-laundry": [
+      "1:conditional"
+    ],
+    "disposable-hq": [
+      "1:conditional"
+    ],
+    "distract-the-masses": [
+      "1:play"
+    ],
+    "distributed-tracing": [
+      "2:play"
+    ],
+    "district-99": [
+      "1:conditional"
+    ],
+    "diversified-portfolio": [
+      "0:play"
+    ],
+    "diversion-of-funds": [
+      "2:conditional"
+    ],
+    "divert-power": [
+      "0:play"
+    ],
+    "divested-trust": [
+      "0:conditional"
+    ],
+    "divide-and-conquer": [
+      "1:conditional"
+    ],
+    "dj-fenris": [
+      "2:conditional"
+    ],
+    "door-to-door": [
+      "2:conditional"
+    ],
+    "doppelganger": [
+      "2:conditional"
+    ],
+    "dr-lovegood": [
+      "1:conditional"
+    ],
+    "dr-vientiane-keeling": [
+      "2:conditional",
+      "3:conditional"
+    ],
+    "dreamnet": [
+      "1:conditional"
+    ],
+    "drive-by": [
+      "1:play"
+    ],
+    "drone-screen": [
+      "0:conditional"
+    ],
+    "drug-dealer": [
+      "0:conditional",
+      "1:conditional"
+    ],
+    "early-bird": [
+      "1:play"
+    ],
+    "early-premiere": [
+      "0:conditional"
+    ],
+    "earth-station-sea-headquarters": [
+      "5:conditional"
+    ],
+    "earthrise-hotel": [
+      "2:conditional"
+    ],
+    "easy-mark": [
+      "0:play"
+    ],
+    "eavesdrop": [
+      "0:play",
+      "1:conditional"
+    ],
+    "economic-warfare": [
+      "1:play"
+    ],
+    "edge-of-world": [
+      "1:conditional"
+    ],
+    "editorial-division-ad-nihilum": [
+      "0:conditional"
+    ],
+    "efficiency-committee": [
+      "0:conditional"
+    ],
+    "election-day": [
+      "0:play"
+    ],
+    "elective-upgrade": [
+      "0:conditional"
+    ],
+    "elivagar-bifurcation": [
+      "0:conditional"
+    ],
+    "elizabeth-mills": [
+      "1:conditional"
+    ],
+    "embedded-reporting": [
+      "0:conditional",
+      "1:conditional"
+    ],
+    "embezzle": [
+      "1:conditional"
+    ],
+    "embolus": [
+      "2:conditional"
+    ],
+    "emergency-shutdown": [
+      "1:play"
+    ],
+    "emergent-creativity": [
+      "1:play"
+    ],
+    "eminent-domain": [
+      "1:conditional"
+    ],
+    "emptied-mind": [
+      "1:conditional"
+    ],
+    "en-passant": [
+      "1:play"
+    ],
+    "encore": [
+      "2:play"
+    ],
+    "encrypted-portals": [
+      "1:conditional"
+    ],
+    "end-of-the-line": [
+      "0:play"
+    ],
+    "endurance": [
+      "4:conditional"
+    ],
+    "enforcing-loyalty": [
+      "1:play"
+    ],
+    "engram-flush": [
+      "0:conditional"
+    ],
+    "enhanced-vision": [
+      "1:conditional"
+    ],
+    "envelopment": [
+      "1:conditional",
+      "2:conditional"
+    ],
+    "environmental-testing": [
+      "0:conditional"
+    ],
+    "epiphany-analytica-nations-undivided": [
+      "0:conditional"
+    ],
+    "equivocation": [
+      "1:conditional"
+    ],
+    "eru-ayase-pessoa": [
+      "2:conditional"
+    ],
+    "esa-afontov-eco-insurrectionist": [
+      "1:conditional"
+    ],
+    "esca": [
+      "1:conditional"
+    ],
+    "escher": [
+      "1:conditional"
+    ],
+    "eureka": [
+      "1:play"
+    ],
+    "eve-campaign": [
+      "0:conditional",
+      "1:conditional"
+    ],
+    "exchange-of-information": [
+      "1:play"
+    ],
+    "exclusive-party": [
+      "1:play"
+    ],
+    "executive-boot-camp": [
+      "0:conditional"
+    ],
+    "executive-retreat": [
+      "0:conditional"
+    ],
+    "executive-wiretaps": [
+      "1:play"
+    ],
+    "exer": [
+      "0:conditional",
+      "1:conditional"
+    ],
+    "exile-streethawk": [
+      "1:conditional"
+    ],
+    "expert-schedule-analyzer": [
+      "1:conditional"
+    ],
+    "explode-a-palooza": [
+      "1:conditional"
+    ],
+    "exploit": [
+      "1:play"
+    ],
+    "exploratory-romp": [
+      "1:conditional"
+    ],
+    "expo-grid": [
+      "0:conditional"
+    ],
+    "express-delivery": [
+      "0:play"
+    ],
+    "extract": [
+      "0:play"
+    ],
+    "eye-for-an-eye": [
+      "3:conditional"
+    ],
+    "false-echo": [
+      "0:conditional"
+    ],
+    "false-flag": [
+      "1:conditional"
+    ],
+    "falsified-credentials": [
+      "0:play"
+    ],
+    "fan-site": [
+      "0:conditional"
+    ],
+    "fast-break": [
+      "0:play"
+    ],
+    "fast-track": [
+      "0:play"
+    ],
+    "fear-the-masses": [
+      "2:conditional"
+    ],
+    "federal-fundraising": [
+      "0:conditional"
+    ],
+    "fencer-fueno": [
+      "1:conditional",
+      "2:conditional",
+      "4:conditional"
+    ],
+    "fenris": [
+      "0:conditional"
+    ],
+    "fermenter": [
+      "0:conditional",
+      "1:conditional"
+    ],
+    "fester": [
+      "0:conditional"
+    ],
+    "fetal-ai": [
+      "3:conditional"
+    ],
+    "financial-collapse": [
+      "1:play"
+    ],
+    "find-the-truth": [
+      "2:conditional"
+    ],
+    "firmware-updates": [
+      "0:conditional"
+    ],
+    "fisk-investment-seminar": [
+      "1:play"
+    ],
+    "flood-the-market": [
+      "1:play"
+    ],
+    "flower-sermon": [
+      "0:conditional"
+    ],
+    "fly-on-the-wall": [
+      "0:conditional"
+    ],
+    "flyswatter": [
+      "0:conditional"
+    ],
+    "focus-group": [
+      "1:play"
+    ],
+    "forced-connection": [
+      "2:conditional"
+    ],
+    "forged-activation-orders": [
+      "0:play"
+    ],
+    "foxfire": [
+      "0:play"
+    ],
+    "frame-job": [
+      "1:play"
+    ],
+    "frantic-coding": [
+      "0:play"
+    ],
+    "freedom-through-equality": [
+      "2:conditional"
+    ],
+    "freelance-coding-contract": [
+      "0:play"
+    ],
+    "freelancer": [
+      "1:play"
+    ],
+    "friday-chip": [
+      "1:conditional"
+    ],
+    "friends-in-high-places": [
+      "1:play"
+    ],
+    "front-company": [
+      "3:conditional"
+    ],
+    "fujii-asset-retrieval": [
+      "0:conditional",
+      "1:conditional"
+    ],
+    "fully-operational": [
+      "0:play"
+    ],
+    "funhouse": [
+      "0:conditional"
+    ],
+    "gabriel-santiago-consummate-professional": [
+      "1:conditional"
+    ],
+    "galahad": [
+      "0:conditional"
+    ],
+    "game-changer": [
+      "1:play"
+    ],
+    "game-day": [
+      "1:play"
+    ],
+    "game-over": [
+      "1:play"
+    ],
+    "gamedragon-pro": [
+      "1:conditional",
+      "2:conditional"
+    ],
+    "gamenet-where-dreams-are-real": [
+      "0:conditional"
+    ],
+    "gang-sign": [
+      "0:conditional"
+    ],
+    "ganked": [
+      "1:conditional"
+    ],
+    "gaslight": [
+      "0:conditional"
+    ],
+    "gauss": [
+      "2:conditional"
+    ],
+    "gene-splicer": [
+      "1:conditional"
+    ],
+    "genetic-resequencing": [
+      "0:conditional"
+    ],
+    "genotyping": [
+      "1:play"
+    ],
+    "georgia-emelyov": [
+      "1:conditional"
+    ],
+    "geothermal-fracking": [
+      "0:conditional"
+    ],
+    "ghost-branch": [
+      "1:conditional"
+    ],
+    "ghosttongue": [
+      "2:conditional"
+    ],
+    "giordano-memorial-field": [
+      "1:conditional"
+    ],
+    "globalsec-security-clearance": [
+      "1:conditional"
+    ],
+    "glut-cipher": [
+      "1:conditional"
+    ],
+    "god-of-war": [
+      "0:conditional"
+    ],
+    "gorman-drip-v1": [
+      "0:conditional"
+    ],
+    "government-subsidy": [
+      "0:play"
+    ],
+    "graft": [
+      "0:conditional"
+    ],
+    "greasing-the-palm": [
+      "0:play"
+    ],
+    "green-level-clearance": [
+      "0:play"
+    ],
+    "greenmail": [
+      "0:conditional",
+      "1:conditional"
+    ],
+    "grifter": [
+      "0:conditional"
+    ],
+    "grim": [
+      "0:conditional"
+    ],
+    "grndl-power-unleashed": [
+      "0:conditional"
+    ],
+    "grubber": [
+      "0:conditional"
+    ],
+    "guinea-pig": [
+      "0:play"
+    ],
+    "haas-bioroid-engineering-the-future": [
+      "0:conditional"
+    ],
+    "haas-bioroid-precision-design": [
+      "1:conditional"
+    ],
+    "hades-fragment": [
+      "2:conditional"
+    ],
+    "hafrun": [
+      "0:conditional"
+    ],
+    "hakarl-1-0": [
+      "0:conditional"
+    ],
+    "hammer": [
+      "1:conditional"
+    ],
+    "hangeki": [
+      "2:play"
+    ],
+    "hannah-wheels-pilintra": [
+      "2:conditional"
+    ],
+    "hansei-review": [
+      "0:play"
+    ],
+    "hantu": [
+      "2:conditional"
+    ],
+    "hard-at-work": [
+      "0:conditional"
+    ],
+    "hard-hitting-news": [
+      "2:play"
+    ],
+    "harmony-ar-therapy": [
+      "0:play"
+    ],
+    "hasty-relocation": [
+      "0:play"
+    ],
+    "hatchet-job": [
+      "1:play"
+    ],
+    "hayley-kaplan-universal-scholar": [
+      "0:conditional"
+    ],
+    "hearts-and-minds": [
+      "0:conditional"
+    ],
+    "hedge-fund": [
+      "0:play"
+    ],
+    "heliamphora": [
+      "1:conditional"
+    ],
+    "helium-3-deposit": [
+      "0:conditional"
+    ],
+    "hellion-alpha-test": [
+      "1:play"
+    ],
+    "hellion-beta-test": [
+      "1:play"
+    ],
+    "hemorrhage": [
+      "0:conditional"
+    ],
+    "herald": [
+      "2:conditional"
+    ],
+    "heritage-committee": [
+      "1:play"
+    ],
+    "hermes": [
+      "2:conditional"
+    ],
+    "high-profile-target": [
+      "1:play"
+    ],
+    "high-risk-investment": [
+      "0:conditional"
+    ],
+    "high-stakes-job": [
+      "1:conditional"
+    ],
+    "hijacked-router": [
+      "2:conditional"
+    ],
+    "hippocampic-mechanocytes": [
+      "3:conditional"
+    ],
+    "hiram-0mission-svensson-shadow-of-the-past": [
+      "1:conditional"
+    ],
+    "hivemind": [
+      "1:conditional"
+    ],
+    "hokusai-grid": [
+      "0:conditional"
+    ],
+    "honeyfarm": [
+      "1:conditional"
+    ],
+    "hoshiko-shiro-untold-protagonist": [
+      "2:conditional",
+      "3:conditional"
+    ],
+    "hostage": [
+      "1:play"
+    ],
+    "hostile-infrastructure": [
+      "1:conditional"
+    ],
+    "hostile-takeover": [
+      "0:conditional"
+    ],
+    "hot-pursuit": [
+      "1:conditional"
+    ],
+    "house-of-knives": [
+      "0:conditional"
+    ],
+    "human-first": [
+      "1:conditional"
+    ],
+    "hunter-seeker": [
+      "2:play"
+    ],
+    "hybrid-release": [
+      "0:conditional"
+    ],
+    "hyoubu-institute-absolute-clarity": [
+      "0:conditional"
+    ],
+    "hyoubu-precog-manifold": [
+      "2:play",
+      "3:conditional"
+    ],
+    "hyperdriver": [
+      "0:conditional"
+    ],
+    "hyperloop-extension": [
+      "0:conditional"
+    ],
+    "hypoxia": [
+      "1:play"
+    ],
+    "iain-stirling-retired-spook": [
+      "0:conditional"
+    ],
+    "ibrahim-salem": [
+      "3:conditional"
+    ],
+    "idiosyncresis": [
+      "1:conditional"
+    ],
+    "illegal-arms-factory": [
+      "0:conditional"
+    ],
+    "illicit-sales": [
+      "0:conditional"
+    ],
+    "illumination": [
+      "1:conditional"
+    ],
+    "imp": [
+      "0:conditional"
+    ],
+    "improved-protein-source": [
+      "0:conditional",
+      "1:conditional"
+    ],
+    "increased-drop-rates": [
+      "1:conditional"
+    ],
+    "incubator": [
+      "0:conditional"
+    ],
+    "independent-thinking": [
+      "0:play"
+    ],
+    "indexing": [
+      "1:conditional"
+    ],
+    "infiltration": [
+      "0:play"
+    ],
+    "info-bounty": [
+      "1:conditional"
+    ],
+    "information-overload": [
+      "0:conditional"
+    ],
+    "information-sifting": [
+      "1:conditional"
+    ],
+    "inject": [
+      "0:play"
+    ],
+    "injection-attack": [
+      "0:play"
+    ],
+    "insight": [
+      "1:play"
+    ],
+    "intake": [
+      "2:conditional"
+    ],
+    "interns": [
+      "1:play"
+    ],
+    "into-the-depths": [
+      "1:conditional"
+    ],
+    "invasion-of-privacy": [
+      "1:play"
+    ],
+    "ip-block": [
+      "0:conditional"
+    ],
+    "ip-enforcement": [
+      "0:play"
+    ],
+    "ipo": [
+      "1:play"
+    ],
+    "isaac-liberdade": [
+      "2:conditional",
+      "3:conditional"
+    ],
+    "isolation": [
+      "1:play"
+    ],
+    "its-a-trap": [
+      "0:conditional"
+    ],
+    "ive-had-worse": [
+      "0:play",
+      "1:conditional"
+    ],
+    "jackpot": [
+      "0:conditional",
+      "1:conditional"
+    ],
+    "jaguarundi": [
+      "0:conditional"
+    ],
+    "jailbreak": [
+      "1:conditional"
+    ],
+    "jak-sinclair": [
+      "2:conditional"
+    ],
+    "janaina-jk-dumont-kindelan": [
+      "1:conditional"
+    ],
+    "jarogniew-mercs": [
+      "1:conditional"
+    ],
+    "jeitinho": [
+      "1:conditional"
+    ],
+    "john-masanori": [
+      "1:conditional",
+      "2:conditional"
+    ],
+    "joshua-b": [
+      "1:conditional"
+    ],
+    "joy-ride": [
+      "1:conditional"
+    ],
+    "jua": [
+      "0:conditional"
+    ],
+    "juli-moreira-lee": [
+      "3:conditional"
+    ],
+    "jumon": [
+      "0:conditional"
+    ],
+    "k-p-lynn": [
+      "1:conditional"
+    ],
+    "kakugo": [
+      "0:conditional"
+    ],
+    "kakurenbo": [
+      "1:play"
+    ],
+    "kala-ghoda-real-tv": [
+      "0:conditional"
+    ],
+    "katorga-breakout": [
+      "1:conditional"
+    ],
+    "key-performance-indicators": [
+      "0:play"
+    ],
+    "keyhole": [
+      "1:conditional"
+    ],
+    "khan-savvy-skiptracer": [
+      "1:conditional"
+    ],
+    "khusyuk": [
+      "1:conditional"
+    ],
+    "kill-switch": [
+      "3:conditional"
+    ],
+    "kimberlite-field": [
+      "0:conditional"
+    ],
+    "kingmaking": [
+      "0:conditional"
+    ],
+    "klevetnik": [
+      "0:conditional"
+    ],
+    "knickknack-obrian": [
+      "1:conditional"
+    ],
+    "knobkierie": [
+      "3:conditional"
+    ],
+    "knowledge-seeker": [
+      "3:conditional"
+    ],
+    "komainu": [
+      "0:conditional"
+    ],
+    "kompromat": [
+      "1:conditional"
+    ],
+    "konjin": [
+      "1:conditional"
+    ],
+    "kraken": [
+      "1:play"
+    ],
+    "kuwinda-k4h1u3": [
+      "1:conditional"
+    ],
+    "kyuban": [
+      "1:conditional"
+    ],
+    "la-costa-grid": [
+      "1:conditional"
+    ],
+    "labor-rights": [
+      "1:play"
+    ],
+    "labyrinthine-servers": [
+      "0:conditional"
+    ],
+    "lady-liberty": [
+      "2:conditional"
+    ],
+    "lago-paranoa-shelter": [
+      "1:conditional"
+    ],
+    "lamplighter": [
+      "0:conditional"
+    ],
+    "lamprey": [
+      "1:conditional"
+    ],
+    "lancelot": [
+      "0:conditional"
+    ],
+    "laramy-fisk-savvy-investor": [
+      "1:conditional"
+    ],
+    "lat-ethical-freelancer": [
+      "1:conditional"
+    ],
+    "lateral-growth": [
+      "0:play"
+    ],
+    "launch-campaign": [
+      "0:conditional",
+      "1:conditional"
+    ],
+    "lawyer-up": [
+      "1:play"
+    ],
+    "leave-no-trace": [
+      "1:conditional"
+    ],
+    "leech": [
+      "1:conditional"
+    ],
+    "leela-patel-trained-pragmatist": [
+      "1:conditional"
+    ],
+    "let-them-dream": [
+      "1:conditional"
+    ],
+    "lethe": [
+      "0:conditional",
+      "1:conditional"
+    ],
+    "letheia-nisei": [
+      "2:conditional"
+    ],
+    "leverage": [
+      "1:play"
+    ],
+    "levy-ar-lab-access": [
+      "0:play"
+    ],
+    "lewi-guilherme": [
+      "2:conditional"
+    ],
+    "license-acquisition": [
+      "0:conditional"
+    ],
+    "lie-low": [
+      "1:play"
+    ],
+    "light-the-fire": [
+      "1:conditional"
+    ],
+    "lightning-laboratory": [
+      "0:conditional"
+    ],
+    "lily-lockwell": [
+      "1:conditional"
+    ],
+    "lilypad": [
+      "2:conditional"
+    ],
+    "liquidation": [
+      "1:play"
+    ],
+    "living-mural": [
+      "2:conditional"
+    ],
+    "liza-talking-thunder-prominent-legislator": [
+      "1:conditional"
+    ],
+    "load-testing": [
+      "0:play"
+    ],
+    "lobisomem": [
+      "1:conditional",
+      "2:conditional"
+    ],
+    "localized-product-line": [
+      "0:play"
+    ],
+    "logjam": [
+      "2:conditional"
+    ],
+    "logos": [
+      "3:conditional"
+    ],
+    "loki": [
+      "1:conditional"
+    ],
+    "long-term-investment": [
+      "0:conditional"
+    ],
+    "longevity-serum": [
+      "0:conditional"
+    ],
+    "los-data-hijacker": [
+      "0:conditional"
+    ],
+    "lotus-haze": [
+      "0:conditional"
+    ],
+    "luana-campos": [
+      "1:conditional"
+    ],
+    "lucky-find": [
+      "1:play"
+    ],
+    "luminal-transubstantiation": [
+      "0:conditional"
+    ],
+    "lycian-multi-munition": [
+      "1:conditional"
+    ],
+    "mache": [
+      "1:conditional"
+    ],
+    "mad-dash": [
+      "1:conditional"
+    ],
+    "magdalene-keino-chemutai-cryptarchitect": [
+      "1:conditional"
+    ],
+    "magistrate-revontulet": [
+      "2:conditional"
+    ],
+    "maglectric-rapid-748-mod": [
+      "1:conditional"
+    ],
+    "magnet": [
+      "2:conditional"
+    ],
+    "making-an-entrance": [
+      "1:play"
+    ],
+    "makler": [
+      "2:conditional"
+    ],
+    "malia-z0l0k4": [
+      "1:conditional"
+    ],
+    "mammon": [
+      "1:conditional",
+      "2:conditional"
+    ],
+    "mandatory-seed-replacement": [
+      "0:conditional"
+    ],
+    "manhunt": [
+      "2:conditional"
+    ],
+    "marathon": [
+      "1:conditional"
+    ],
+    "marilyn-campaign": [
+      "0:conditional",
+      "1:conditional"
+    ],
+    "marked-accounts": [
+      "0:conditional"
+    ],
+    "market-forces": [
+      "1:play"
+    ],
+    "marrow": [
+      "3:conditional",
+      "4:conditional"
+    ],
+    "mars-for-martians": [
+      "1:play"
+    ],
+    "mass-commercialization": [
+      "0:play"
+    ],
+    "mass-install": [
+      "0:play"
+    ],
+    "masterwork-v37": [
+      "2:conditional",
+      "3:conditional"
+    ],
+    "masvingo": [
+      "1:conditional"
+    ],
+    "matrix-analyzer": [
+      "0:conditional"
+    ],
+    "matryoshka": [
+      "2:conditional"
+    ],
+    "mavirus": [
+      "0:conditional",
+      "1:conditional"
+    ],
+    "maxx-maximum-punk-rock": [
+      "0:conditional"
+    ],
+    "maya": [
+      "2:conditional"
+    ],
+    "mca-informant": [
+      "1:play"
+    ],
+    "measured-response": [
+      "2:play"
+    ],
+    "media-blitz": [
+      "2:play"
+    ],
+    "medical-research-fundraiser": [
+      "0:play"
+    ],
+    "medium": [
+      "0:conditional"
+    ],
+    "meeting-of-minds": [
+      "0:play"
+    ],
+    "megaprix-qualifier": [
+      "0:conditional"
+    ],
+    "melies-city-luxury-line": [
+      "1:conditional"
+    ],
+    "melies-u-only-the-brightest": [
+      "1:conditional",
+      "3:conditional",
+      "5:conditional",
+      "6:conditional"
+    ],
+    "mental-health-clinic": [
+      "0:conditional"
+    ],
+    "mercia-b4ll4rd": [
+      "1:conditional"
+    ],
+    "merlin": [
+      "0:conditional"
+    ],
+    "mestnichestvo": [
+      "1:conditional"
+    ],
+    "meteor-mining": [
+      "0:conditional"
+    ],
+    "methuselah": [
+      "3:conditional"
+    ],
+    "midnight-3-arcology": [
+      "0:conditional"
+    ],
+    "midori": [
+      "2:conditional"
+    ],
+    "midseason-replacements": [
+      "1:play"
+    ],
+    "minds-eye": [
+      "2:conditional"
+    ],
+    "mindscaping": [
+      "0:play"
+    ],
+    "mining-accident": [
+      "1:play"
+    ],
+    "miraju": [
+      "0:conditional"
+    ],
+    "mirrormorph-endless-iteration": [
+      "0:conditional"
+    ],
+    "mitosis": [
+      "1:play"
+    ],
+    "mitra-aman": [
+      "1:conditional"
+    ],
+    "mobius": [
+      "1:conditional"
+    ],
+    "modded": [
+      "0:play"
+    ],
+    "monolith": [
+      "2:conditional"
+    ],
+    "moshing": [
+      "1:play"
+    ],
+    "motivation": [
+      "0:conditional"
+    ],
+    "mr-hendrik": [
+      "0:conditional"
+    ],
+    "mti-mwekundu-life-improved": [
+      "1:conditional"
+    ],
+    "muckraker": [
+      "0:conditional"
+    ],
+    "muertos-gang-member": [
+      "0:conditional",
+      "1:conditional"
+    ],
+    "mumbad-construction-co": [
+      "0:conditional"
+    ],
+    "musaazi": [
+      "0:conditional"
+    ],
+    "muse": [
+      "1:conditional"
+    ],
+    "museum-of-history": [
+      "2:conditional"
+    ],
+    "mushin-no-shin": [
+      "1:play"
+    ],
+    "muslihat-multifarious-marketeer": [
+      "1:conditional"
+    ],
+    "mutate": [
+      "0:play"
+    ],
+    "mutual-favor": [
+      "0:play"
+    ],
+    "mutually-assured-destruction": [
+      "1:play"
+    ],
+    "myoshu": [
+      "1:play"
+    ],
+    "mystic-maemi": [
+      "1:conditional",
+      "2:conditional",
+      "4:conditional"
+    ],
+    "nanisivik-grid": [
+      "0:conditional"
+    ],
+    "nanoetching-matrix": [
+      "1:conditional"
+    ],
+    "nanomanagement": [
+      "0:play"
+    ],
+    "nanuq": [
+      "3:conditional"
+    ],
+    "nasir-meidan-cyber-explorer": [
+      "0:conditional"
+    ],
+    "nasx": [
+      "1:conditional"
+    ],
+    "nathaniel-gnat-hall-one-of-a-kind": [
+      "1:conditional"
+    ],
+    "nbn-controlling-the-message": [
+      "0:conditional"
+    ],
+    "nbn-reality-plus": [
+      "0:conditional"
+    ],
+    "nebula-talent-management-making-stars": [
+      "1:conditional",
+      "3:conditional",
+      "4:conditional"
+    ],
+    "neotokyo-grid": [
+      "0:conditional"
+    ],
+    "nerve-agent": [
+      "0:conditional"
+    ],
+    "net-ready-eyes": [
+      "1:conditional",
+      "2:conditional"
+    ],
+    "networking": [
+      "0:play"
+    ],
+    "neural-emp": [
+      "1:play"
+    ],
+    "neurospike": [
+      "0:play"
+    ],
+    "neurostasis": [
+      "1:conditional"
+    ],
+    "new-angeles-city-hall": [
+      "2:conditional"
+    ],
+    "new-angeles-sol-your-news": [
+      "0:conditional"
+    ],
+    "new-construction": [
+      "1:conditional"
+    ],
+    "news-team": [
+      "1:conditional"
+    ],
+    "next-big-thing": [
+      "0:conditional",
+      "1:conditional"
+    ],
+    "next-design-guarding-the-net": [
+      "0:conditional"
+    ],
+    "next-wave-2": [
+      "0:conditional"
+    ],
+    "nfr": [
+      "1:conditional"
+    ],
+    "nga": [
+      "4:conditional"
+    ],
+    "nico-campaign": [
+      "0:conditional",
+      "1:conditional"
+    ],
+    "nightmare-archive": [
+      "1:conditional"
+    ],
+    "nihilo-agent": [
+      "0:conditional",
+      "2:conditional",
+      "3:conditional"
+    ],
+    "nihongai-grid": [
+      "1:conditional"
+    ],
+    "nisei-division-the-next-generation": [
+      "0:conditional"
+    ],
+    "nisei-mk-ii": [
+      "0:conditional"
+    ],
+    "noise-hacker-extraordinaire": [
+      "1:conditional"
+    ],
+    "nonequivalent-exchange": [
+      "0:play"
+    ],
+    "notoriety": [
+      "1:play"
+    ],
+    "null-whistleblower": [
+      "1:conditional"
+    ],
+    "nuvem-sa-law-of-the-land": [
+      "0:conditional"
+    ],
+    "nyusha-sable-sintashta-symphonic-prodigy": [
+      "1:conditional",
+      "3:conditional"
+    ],
+    "o2-shortage": [
+      "0:play"
+    ],
+    "ob-superheavy-logistics-extract-export-excel": [
+      "0:conditional"
+    ],
+    "observe-and-destroy": [
+      "1:play"
+    ],
+    "oduduwa": [
+      "1:conditional"
+    ],
+    "off-the-books": [
+      "0:conditional",
+      "1:conditional"
+    ],
+    "office-supplies": [
+      "1:play"
+    ],
+    "offworld-office": [
+      "0:conditional"
+    ],
+    "on-the-lam": [
+      "0:play"
+    ],
+    "open-forum": [
+      "0:conditional"
+    ],
+    "open-market": [
+      "4:conditional"
+    ],
+    "oppo-research": [
+      "2:play"
+    ],
+    "oracle-thinktank": [
+      "0:conditional"
+    ],
+    "orbital-superiority": [
+      "0:conditional"
+    ],
+    "orca": [
+      "2:conditional"
+    ],
+    "order-of-sol": [
+      "1:conditional"
+    ],
+    "otto-campaign": [
+      "0:conditional",
+      "1:conditional"
+    ],
+    "oversight-ai": [
+      "0:play"
+    ],
+    "pad-campaign": [
+      "1:conditional"
+    ],
+    "paige-piper": [
+      "1:conditional"
+    ],
+    "paladin-poemu": [
+      "1:conditional",
+      "2:conditional",
+      "5:conditional"
+    ],
+    "palana-agroplex": [
+      "0:conditional"
+    ],
+    "pan-weave": [
+      "1:conditional",
+      "2:conditional"
+    ],
+    "panchatantra": [
+      "0:conditional"
+    ],
+    "paper-trail": [
+      "0:conditional"
+    ],
+    "paper-tripping": [
+      "1:play"
+    ],
+    "paragon": [
+      "3:conditional"
+    ],
+    "parasite": [
+      "2:conditional"
+    ],
+    "patch": [
+      "0:play"
+    ],
+    "paywall": [
+      "0:conditional"
+    ],
+    "paywall-implementation": [
+      "2:conditional"
+    ],
+    "peace-in-our-time": [
+      "2:play"
+    ],
+    "peak-efficiency": [
+      "0:play"
+    ],
+    "peeping-tom": [
+      "0:conditional"
+    ],
+    "peer-review": [
+      "0:play"
+    ],
+    "pelangi": [
+      "0:conditional"
+    ],
+    "pennyshaver": [
+      "3:conditional"
+    ],
+    "persephone": [
+      "1:conditional"
+    ],
+    "personal-workshop": [
+      "3:conditional"
+    ],
+    "personalized-portal": [
+      "0:conditional"
+    ],
+    "petty-cash": [
+      "1:play"
+    ],
+    "phat-gioan-baotixita": [
+      "1:conditional",
+      "2:conditional"
+    ],
+    "pheromones": [
+      "2:conditional"
+    ],
+    "philotic-entanglement": [
+      "2:conditional"
+    ],
+    "phoneutria": [
+      "0:conditional"
+    ],
+    "pichacao": [
+      "1:conditional"
+    ],
+    "ping": [
+      "0:conditional"
+    ],
+    "pinhole-threading": [
+      "1:conditional"
+    ],
+    "pivot": [
+      "1:play"
+    ],
+    "plague": [
+      "0:conditional",
+      "1:conditional"
+    ],
+    "plan-b": [
+      "1:conditional"
+    ],
+    "planned-assault": [
+      "1:play"
+    ],
+    "plutus": [
+      "1:conditional"
+    ],
+    "poetri-luxury-brands-all-the-rage": [
+      "0:conditional",
+      "1:conditional"
+    ],
+    "political-graffiti": [
+      "3:conditional"
+    ],
+    "pop-up-window": [
+      "0:conditional"
+    ],
+    "populist-rally": [
+      "1:play"
+    ],
+    "post-truth-dividend": [
+      "0:conditional"
+    ],
+    "posted-bounty": [
+      "0:conditional"
+    ],
+    "power-grid-overload": [
+      "1:play"
+    ],
+    "power-nap": [
+      "1:play"
+    ],
+    "power-shutdown": [
+      "1:play"
+    ],
+    "power-to-the-people": [
+      "1:play"
+    ],
+    "pravdivost-consulting-political-solutions": [
+      "0:conditional"
+    ],
+    "precognition": [
+      "0:play"
+    ],
+    "predictive-planogram": [
+      "0:play"
+    ],
+    "preemptive-action": [
+      "2:play"
+    ],
+    "priority-construction": [
+      "1:play"
+    ],
+    "priority-requisition": [
+      "0:conditional"
+    ],
+    "prisec": [
+      "1:conditional"
+    ],
+    "private-contracts": [
+      "0:conditional"
+    ],
+    "privileged-access": [
+      "2:conditional"
+    ],
+    "process-automation": [
+      "0:play"
+    ],
+    "product-placement": [
+      "2:conditional"
+    ],
+    "product-recall": [
+      "1:play"
+    ],
+    "profiteering": [
+      "0:conditional"
+    ],
+    "prognostic-q-loop": [
+      "1:conditional"
+    ],
+    "project-ares": [
+      "0:conditional"
+    ],
+    "project-atlas": [
+      "0:conditional"
+    ],
+    "project-beale": [
+      "0:conditional"
+    ],
+    "project-ingatan": [
+      "0:conditional",
+      "1:conditional"
+    ],
+    "project-junebug": [
+      "1:conditional"
+    ],
+    "project-kusanagi": [
+      "0:conditional"
+    ],
+    "project-vacheron": [
+      "2:conditional"
+    ],
+    "project-vitruvius": [
+      "0:conditional"
+    ],
+    "project-wotan": [
+      "0:conditional"
+    ],
+    "project-yagi-uda": [
+      "0:conditional"
+    ],
+    "proprionegation": [
+      "0:conditional"
+    ],
+    "psych-mike": [
+      "1:conditional"
+    ],
+    "psychic-field": [
+      "0:conditional",
+      "1:conditional"
+    ],
+    "psychographics": [
+      "1:play"
+    ],
+    "psychokinesis": [
+      "1:play"
+    ],
+    "pt-untaian-lifes-building-blocks": [
+      "0:conditional"
+    ],
+    "public-access-plaza": [
+      "0:conditional"
+    ],
+    "public-health-portal": [
+      "0:conditional"
+    ],
+    "public-support": [
+      "2:conditional"
+    ],
+    "public-trail": [
+      "0:play"
+    ],
+    "pulse": [
+      "0:conditional"
+    ],
+    "punitive-counterstrike": [
+      "0:play"
+    ],
+    "push-your-luck": [
+      "0:play"
+    ],
+    "qianju-pt": [
+      "0:conditional"
+    ],
+    "quality-time": [
+      "0:play"
+    ],
+    "queens-gambit": [
+      "1:play"
+    ],
+    "quest-completed": [
+      "1:play"
+    ],
+    "quicksand": [
+      "1:conditional"
+    ],
+    "rabbit-hole": [
+      "1:conditional"
+    ],
+    "raindrops-cut-stone": [
+      "1:conditional"
+    ],
+    "rashida-jaheem": [
+      "1:conditional"
+    ],
+    "raymond-flint": [
+      "1:conditional"
+    ],
+    "read-write-share": [
+      "1:conditional",
+      "2:conditional"
+    ],
+    "reality-threedee": [
+      "1:conditional"
+    ],
+    "realloc": [
+      "1:play"
+    ],
+    "reanimation-protocol": [
+      "0:play"
+    ],
+    "reaper-function": [
+      "0:conditional"
+    ],
+    "rebirth": [
+      "2:play"
+    ],
+    "reboot": [
+      "1:conditional"
+    ],
+    "reclamation-order": [
+      "1:play"
+    ],
+    "record-reconstructor": [
+      "0:conditional"
+    ],
+    "recruiting-trip": [
+      "1:play"
+    ],
+    "red-level-clearance": [
+      "0:play"
+    ],
+    "red-planet-couriers": [
+      "1:play"
+    ],
+    "red-team": [
+      "3:conditional"
+    ],
+    "reduced-service": [
+      "3:conditional"
+    ],
+    "reeducation": [
+      "0:conditional"
+    ],
+    "refuge-campaign": [
+      "0:conditional"
+    ],
+    "regenesis": [
+      "0:conditional"
+    ],
+    "regolith-mining-license": [
+      "1:conditional"
+    ],
+    "rejig": [
+      "1:play"
+    ],
+    "remastered-edition": [
+      "0:conditional"
+    ],
+    "remote-enforcement": [
+      "0:conditional"
+    ],
+    "replanting": [
+      "1:play"
+    ],
+    "replicator": [
+      "0:conditional"
+    ],
+    "reprise": [
+      "1:play"
+    ],
+    "research-grant": [
+      "0:conditional"
+    ],
+    "reshape": [
+      "0:play"
+    ],
+    "respirocytes": [
+      "0:conditional",
+      "1:conditional"
+    ],
+    "restore": [
+      "0:play"
+    ],
+    "restoring-face": [
+      "0:play"
+    ],
+    "restructure": [
+      "0:play"
+    ],
+    "retirement-plan": [
+      "1:play"
+    ],
+    "retribution": [
+      "0:play"
+    ],
+    "reuse": [
+      "0:play"
+    ],
+    "reverse-infection": [
+      "0:play"
+    ],
+    "rework": [
+      "0:play"
+    ],
+    "rex-campaign": [
+      "2:conditional",
+      "3:conditional"
+    ],
+    "rezeki": [
+      "0:conditional"
+    ],
+    "rigged-results": [
+      "0:play"
+    ],
+    "rigging-up": [
+      "0:play"
+    ],
+    "riot-suppression": [
+      "2:play"
+    ],
+    "ritual": [
+      "0:play"
+    ],
+    "rng-key": [
+      "1:conditional"
+    ],
+    "rolodex": [
+      "0:conditional",
+      "1:conditional"
+    ],
+    "rover-algorithm": [
+      "0:play",
+      "2:conditional"
+    ],
+    "run-amok": [
+      "1:conditional"
+    ],
+    "running-hot": [
+      "0:play"
+    ],
+    "ryo-phoenix-ono-out-of-the-ashes": [
+      "1:conditional"
+    ],
+    "saci": [
+      "1:conditional",
+      "2:conditional"
+    ],
+    "sacrifice": [
+      "1:play"
+    ],
+    "sacrifice-zone-expansion": [
+      "2:conditional"
+    ],
+    "saisentan": [
+      "0:conditional"
+    ],
+    "salems-hospitality": [
+      "1:play"
+    ],
+    "salvo-testing": [
+      "0:conditional"
+    ],
+    "sandstone": [
+      "0:conditional"
+    ],
+    "sapper": [
+      "2:conditional"
+    ],
+    "satellite-uplink": [
+      "0:play"
+    ],
+    "scapegoat": [
+      "0:play"
+    ],
+    "scapenet": [
+      "1:play"
+    ],
+    "scavenge": [
+      "0:play"
+    ],
+    "scorched-earth": [
+      "1:play"
+    ],
+    "scrounge": [
+      "1:play"
+    ],
+    "sds-drone-deployment": [
+      "0:conditional"
+    ],
+    "sea-source": [
+      "1:play"
+    ],
+    "seamless-launch": [
+      "0:play"
+    ],
+    "sebastiao-souza-pessoa-activist-organizer": [
+      "1:conditional"
+    ],
+    "secure-and-protect": [
+      "1:play"
+    ],
+    "see-how-they-run": [
+      "0:conditional"
+    ],
+    "seidr-laboratories-destiny-defined": [
+      "0:conditional"
+    ],
+    "self-growth-program": [
+      "1:play"
+    ],
+    "sell-out": [
+      "1:play"
+    ],
+    "sensie-actors-union": [
+      "0:conditional"
+    ],
+    "sensor-net-activation": [
+      "0:conditional"
+    ],
+    "sentinel-defense-program": [
+      "0:conditional"
+    ],
+    "seraph": [
+      "1:conditional"
+    ],
+    "sericulture-expansion": [
+      "0:conditional",
+      "1:conditional"
+    ],
+    "server-diagnostics": [
+      "1:conditional"
+    ],
+    "shackleton-grid": [
+      "0:conditional"
+    ],
+    "shattered-remains": [
+      "0:conditional"
+    ],
+    "shi-kyu": [
+      "0:conditional"
+    ],
+    "shinobi": [
+      "0:conditional"
+    ],
+    "shipment-from-kaguya": [
+      "0:play"
+    ],
+    "shipment-from-mirrormorph": [
+      "0:play"
+    ],
+    "shipment-from-sansan": [
+      "1:play"
+    ],
+    "shipment-from-tennin": [
+      "1:play"
+    ],
+    "shipment-from-vladisibirsk": [
+      "1:play"
+    ],
+    "shock": [
+      "1:conditional"
+    ],
+    "shoot-the-moon": [
+      "1:play"
+    ],
+    "show-of-force": [
+      "0:conditional"
+    ],
+    "side-hustle": [
+      "0:conditional",
+      "1:conditional"
+    ],
+    "silhouette-stealth-operative": [
+      "0:conditional"
+    ],
+    "simulation-reset": [
+      "0:play"
+    ],
+    "singularity": [
+      "2:conditional"
+    ],
+    "sisyphus-protocol": [
+      "0:conditional"
+    ],
+    "siu": [
+      "1:conditional"
+    ],
+    "skulljack": [
+      "2:conditional"
+    ],
+    "slipstream": [
+      "0:conditional"
+    ],
+    "slot-machine": [
+      "0:conditional"
+    ],
+    "snare": [
+      "1:conditional"
+    ],
+    "snatch-and-grab": [
+      "0:play"
+    ],
+    "snoop": [
+      "0:conditional"
+    ],
+    "social-engineering": [
+      "1:play"
+    ],
+    "solidarity-badge": [
+      "1:conditional",
+      "2:conditional"
+    ],
+    "space-camp": [
+      "1:conditional"
+    ],
+    "spark-of-inspiration": [
+      "0:play"
+    ],
+    "spec-work": [
+      "1:play"
+    ],
+    "special-order": [
+      "0:play"
+    ],
+    "special-report": [
+      "0:play"
+    ],
+    "spin-doctor": [
+      "1:conditional"
+    ],
+    "spinal-modem": [
+      "4:conditional"
+    ],
+    "spoilers": [
+      "0:conditional"
+    ],
+    "sportsmetal-go-big-or-go-home": [
+      "0:conditional"
+    ],
+    "spot-the-prey": [
+      "0:play"
+    ],
+    "sprint": [
+      "0:play"
+    ],
+    "ssl-endorsement": [
+      "0:conditional",
+      "1:conditional",
+      "3:conditional"
+    ],
+    "sso-industries-fueling-innovation": [
+      "0:conditional"
+    ],
+    "standard-procedure": [
+      "1:play"
+    ],
+    "standoff": [
+      "0:conditional"
+    ],
+    "stargate": [
+      "1:conditional"
+    ],
+    "starlight-crusade-funding": [
+      "0:conditional"
+    ],
+    "starlit-knight": [
+      "0:conditional"
+    ],
+    "stavka": [
+      "0:conditional"
+    ],
+    "steelskin-scarring": [
+      "0:play",
+      "1:conditional"
+    ],
+    "stegodon-mk-iv": [
+      "1:conditional"
+    ],
+    "stim-dealer": [
+      "0:conditional"
+    ],
+    "stimhack": [
+      "1:conditional"
+    ],
+    "sting": [
+      "0:conditional",
+      "1:conditional"
+    ],
+    "stock-buy-back": [
+      "1:play"
+    ],
+    "stoke-the-embers": [
+      "0:conditional",
+      "1:conditional"
+    ],
+    "storgotic-resonator": [
+      "1:conditional"
+    ],
+    "stowaway": [
+      "1:conditional"
+    ],
+    "street-peddler": [
+      "0:conditional"
+    ],
+    "strike-fund": [
+      "0:play",
+      "1:conditional"
+    ],
+    "sub-boost": [
+      "0:play"
+    ],
+    "subcontract": [
+      "1:play"
+    ],
+    "subliminal-messaging": [
+      "0:play"
+    ],
+    "success": [
+      "2:play"
+    ],
+    "successful-demonstration": [
+      "1:play"
+    ],
+    "successful-field-test": [
+      "0:conditional"
+    ],
+    "sudden-commandment": [
+      "0:play"
+    ],
+    "sunset": [
+      "0:play"
+    ],
+    "sunya": [
+      "1:conditional"
+    ],
+    "superconducting-hub": [
+      "1:conditional"
+    ],
+    "supercorridor": [
+      "3:conditional"
+    ],
+    "superdeep-borehole": [
+      "2:conditional"
+    ],
+    "superior-cyberwalls": [
+      "1:conditional"
+    ],
+    "sure-gamble": [
+      "0:play"
+    ],
+    "surge": [
+      "1:play"
+    ],
+    "svyatogor-excavator": [
+      "0:conditional"
+    ],
+    "swarm": [
+      "0:conditional"
+    ],
+    "sweeps-week": [
+      "0:play"
+    ],
+    "syailendra": [
+      "1:conditional"
+    ],
+    "symmetrical-visage": [
+      "1:conditional"
+    ],
+    "syn-attack": [
+      "1:play"
+    ],
+    "synapse-global-faster-than-thought": [
+      "0:conditional"
+    ],
+    "sync-rerouting": [
+      "2:conditional"
+    ],
+    "synthetic-blood": [
+      "1:conditional"
+    ],
+    "take-a-dive": [
+      "1:conditional",
+      "2:conditional"
+    ],
+    "takobi": [
+      "1:conditional"
+    ],
+    "tallie-perrault": [
+      "1:conditional"
+    ],
+    "tapwrm": [
+      "2:conditional"
+    ],
+    "targeted-marketing": [
+      "3:play"
+    ],
+    "tatu-bola": [
+      "0:conditional"
+    ],
+    "team-sponsorship": [
+      "0:conditional"
+    ],
+    "tech-startup": [
+      "0:conditional"
+    ],
+    "tempus": [
+      "2:conditional"
+    ],
+    "temujin-contract": [
+      "1:conditional",
+      "4:conditional"
+    ],
+    "tennin-institute-the-secrets-within": [
+      "0:conditional"
+    ],
+    "test-run": [
+      "0:play"
+    ],
+    "tgtbt": [
+      "1:conditional"
+    ],
+    "the-all-seeing-i": [
+      "1:play"
+    ],
+    "the-back": [
+      "1:conditional"
+    ],
+    "the-basalt-spire": [
+      "0:conditional",
+      "1:conditional"
+    ],
+    "the-black-file": [
+      "3:conditional"
+    ],
+    "the-board": [
+      "2:conditional"
+    ],
+    "the-class-act": [
+      "1:conditional",
+      "2:conditional"
+    ],
+    "the-foundry-refining-the-process": [
+      "0:conditional"
+    ],
+    "the-future-is-now": [
+      "0:conditional"
+    ],
+    "the-future-perfect": [
+      "0:conditional"
+    ],
+    "the-holo-man": [
+      "1:conditional"
+    ],
+    "the-nihilist": [
+      "1:conditional",
+      "2:conditional"
+    ],
+    "the-noble-path": [
+      "0:play"
+    ],
+    "the-personal-touch": [
+      "0:conditional"
+    ],
+    "the-powers-that-be": [
+      "1:conditional"
+    ],
+    "the-price": [
+      "0:play"
+    ],
+    "the-price-of-freedom": [
+      "0:play"
+    ],
+    "the-red-room": [
+      "2:conditional"
+    ],
+    "the-source": [
+      "3:conditional"
+    ],
+    "the-supplier": [
+      "3:conditional"
+    ],
+    "the-twins": [
+      "1:conditional"
+    ],
+    "the-zwicky-group-invisible-hands": [
+      "0:conditional"
+    ],
+    "theophilius-bagbiter": [
+      "1:conditional"
+    ],
+    "thimblerig": [
+      "0:conditional",
+      "1:conditional"
+    ],
+    "thoth": [
+      "1:conditional"
+    ],
+    "threat-assessment": [
+      "3:play"
+    ],
+    "threat-level-alpha": [
+      "1:play"
+    ],
+    "three-steps-ahead": [
+      "1:conditional"
+    ],
+    "thule-subsea-safety-below": [
+      "0:conditional"
+    ],
+    "thunder-art-gallery": [
+      "1:conditional"
+    ],
+    "tiered-subscription": [
+      "0:conditional"
+    ],
+    "time-bomb": [
+      "3:conditional"
+    ],
+    "timely-public-release": [
+      "0:conditional"
+    ],
+    "tinkering": [
+      "0:play"
+    ],
+    "titan-transnational-investing-in-your-future": [
+      "0:conditional"
+    ],
+    "titanium-ribs": [
+      "2:conditional"
+    ],
+    "tmi": [
+      "0:conditional"
+    ],
+    "tollbooth": [
+      "0:conditional"
+    ],
+    "tomorrows-headline": [
+      "0:conditional",
+      "1:conditional"
+    ],
+    "too-big-to-fail": [
+      "1:play"
+    ],
+    "top-down-solutions": [
+      "0:play"
+    ],
+    "tori-hanzo": [
+      "1:conditional"
+    ],
+    "toshiyuki-sakai": [
+      "2:conditional"
+    ],
+    "touch-ups": [
+      "1:play"
+    ],
+    "tracker": [
+      "0:conditional"
+    ],
+    "trade-in": [
+      "0:play"
+    ],
+    "traffic-accident": [
+      "1:play"
+    ],
+    "traffic-analyzer": [
+      "0:conditional"
+    ],
+    "tranquility-home-grid": [
+      "1:conditional"
+    ],
+    "tranquilizer": [
+      "2:conditional",
+      "3:conditional"
+    ],
+    "transfer-of-wealth": [
+      "1:conditional"
+    ],
+    "transparency-initiative": [
+      "0:play",
+      "1:conditional"
+    ],
+    "transport-monopoly": [
+      "0:conditional"
+    ],
+    "trebuchet": [
+      "0:conditional"
+    ],
+    "tri-maf-contact": [
+      "2:conditional"
+    ],
+    "tributary": [
+      "1:conditional"
+    ],
+    "trick-of-light": [
+      "0:play"
+    ],
+    "trick-shot": [
+      "1:conditional",
+      "2:conditional"
+    ],
+    "trickster-taka": [
+      "1:conditional",
+      "2:conditional",
+      "4:conditional"
+    ],
+    "trieste-model-bioroids": [
+      "0:conditional"
+    ],
+    "trojan-horse": [
+      "1:play"
+    ],
+    "troll": [
+      "0:conditional"
+    ],
+    "trope": [
+      "0:conditional"
+    ],
+    "trust-operation": [
+      "1:play"
+    ],
+    "trypano": [
+      "2:conditional"
+    ],
+    "tsakhia-bankhar-gantulga": [
+      "1:conditional"
+    ],
+    "tucana": [
+      "2:conditional"
+    ],
+    "tunnel-vision": [
+      "2:conditional"
+    ],
+    "turnpike": [
+      "0:conditional"
+    ],
+    "turntable": [
+      "3:conditional"
+    ],
+    "ubax": [
+      "3:conditional"
+    ],
+    "ubiquitous-vig": [
+      "1:conditional"
+    ],
+    "ultraviolet-clearance": [
+      "1:play"
+    ],
+    "under-the-bus": [
+      "1:play"
+    ],
+    "underdome-irregulars": [
+      "0:conditional"
+    ],
+    "underworld-contact": [
+      "0:conditional"
+    ],
+    "uninstall": [
+      "0:play"
+    ],
+    "unleash": [
+      "1:play"
+    ],
+    "unorthodox-predictions": [
+      "0:conditional"
+    ],
+    "unsmiling-tsarevna": [
+      "0:conditional"
+    ],
+    "upya": [
+      "0:conditional"
+    ],
+    "urban-art-vernissage": [
+      "1:conditional"
+    ],
+    "urban-renewal": [
+      "2:conditional",
+      "3:conditional"
+    ],
+    "urtica-cipher": [
+      "0:conditional"
+    ],
+    "valentina-ferreira-carvalho": [
+      "1:conditional",
+      "2:conditional"
+    ],
+    "valley-grid": [
+      "0:conditional"
+    ],
+    "vamp": [
+      "1:conditional"
+    ],
+    "vaporframe-fabricator": [
+      "1:conditional"
+    ],
+    "vasilisa": [
+      "0:conditional"
+    ],
+    "vera-ivanovna-shuyskaya": [
+      "1:conditional"
+    ],
+    "vertigo": [
+      "0:conditional"
+    ],
+    "veterans-program": [
+      "0:conditional"
+    ],
+    "victoria-jenkins": [
+      "2:conditional"
+    ],
+    "vigil": [
+      "3:conditional"
+    ],
+    "violet-level-clearance": [
+      "1:play"
+    ],
+    "viral-weaponization": [
+      "0:conditional"
+    ],
+    "virtual-service-agent": [
+      "0:conditional"
+    ],
+    "virtuoso": [
+      "2:conditional",
+      "3:conditional"
+    ],
+    "virus-breeding-ground": [
+      "0:conditional"
+    ],
+    "voter-intimidation": [
+      "1:play"
+    ],
+    "voting-machine-initiative": [
+      "0:conditional",
+      "1:conditional"
+    ],
+    "vovo-ozetti": [
+      "3:conditional"
+    ],
+    "vrcation": [
+      "0:play"
+    ],
+    "vulcan-coverup": [
+      "0:conditional",
+      "1:conditional"
+    ],
+    "vulture-fund": [
+      "0:play"
+    ],
+    "wake-implant-v2a-jrj": [
+      "1:conditional",
+      "2:conditional"
+    ],
+    "wake-up-call": [
+      "3:play"
+    ],
+    "wall-to-wall": [
+      "1:conditional"
+    ],
+    "wanton-destruction": [
+      "1:conditional"
+    ],
+    "wari": [
+      "1:conditional"
+    ],
+    "warm-reception": [
+      "0:conditional"
+    ],
+    "warroid-tracker": [
+      "0:conditional"
+    ],
+    "wave": [
+      "0:conditional"
+    ],
+    "wetwork-refit": [
+      "0:play"
+    ],
+    "whistleblower": [
+      "1:conditional"
+    ],
+    "white-hat": [
+      "1:play"
+    ],
+    "wildcat-strike": [
+      "0:play"
+    ],
+    "will-o-the-wisp": [
+      "0:conditional"
+    ],
+    "windfall": [
+      "0:play"
+    ],
+    "window-of-opportunity": [
+      "0:play"
+    ],
+    "witch-hunt": [
+      "1:conditional",
+      "2:conditional"
+    ],
+    "witness-tampering": [
+      "1:play"
+    ],
+    "woman-in-the-red-dress": [
+      "1:conditional"
+    ],
+    "word-on-the-street": [
+      "1:conditional",
+      "2:conditional"
+    ],
+    "world-tree": [
+      "1:conditional"
+    ],
+    "wyldside": [
+      "1:conditional"
+    ],
+    "your-digital-life": [
+      "0:play"
+    ],
+    "yusuf": [
+      "0:conditional"
+    ],
+    "zenit-chip-jz-2mj": [
+      "1:conditional",
+      "2:conditional"
+    ],
+    "zona-sul-shipping": [
+      "0:conditional"
+    ]
+  },
+  "drift": {
+    "abaasy": [
+      "Pump Abaasy +2 strength"
+    ],
+    "abagnale": [
+      "Pump Abagnale +2 strength",
+      "Trash Abagnale: bypass encountered code gate"
+    ],
+    "advanced-assembly-lines": [
+      "[trash]: Install a non-agenda card from HQ (paying install cost)"
+    ],
+    "afterimage": [
+      "1¢: +2 strength (stealth credits only)",
+      "2¢: Bypass encountered sentry (stealth; once per turn)"
+    ],
+    "aginfusion-new-miracles-for-a-new-world": [
+      "Once per turn → Trash approached unrezzed ice: move Runner to outermost of another server"
+    ],
+    "airbladex-jsrf-ed": [
+      "Interrupt: hosted power counter — prevent 1 net damage (run only)",
+      "Interrupt: hosted power counter — prevent when encountered on ice"
+    ],
+    "alexa-belsky": [
+      "[trash]: Shuffle HQ into R&D; Runner may pay 2¢ each to trash instead of shuffling"
+    ],
+    "alix-t4lb07": [
+      "[click], [trash]: Gain 2¢ per power counter"
+    ],
+    "allele-repression": [
+      "[trash]: Swap 1 HQ ↔ Archives card per advancement"
+    ],
+    "analog-dreamers": [
+      "[click]: Run R&D. If successful, instead of breaching, may shuffle an unrezzed non-ice card with no advancements into R&D"
+    ],
+    "angel-arena": [
+      "Hosted power counter: reveal top of stack; may bottom"
+    ],
+    "angelique-garza-correa": [
+      "Threat 3 → [click], 1¢, trash from HQ: do 1 meat damage"
+    ],
+    "anoetic-void": [
+      "Pay 2¢ and trash 2 from HQ: end the run"
+    ],
+    "ansel-1-0": [
+      "Runner cannot steal/trash Corp cards this run."
+    ],
+    "archer": [
+      "Trash 1 program."
+    ],
+    "architect": [
+      "Look at top 5 of R&D; may install 1 ignoring cost"
+    ],
+    "arissana-rocha-nahu-street-artist": [
+      "Once per turn: 0¢ install 1 program from grip (pay install cost); run only"
+    ],
+    "armored-servers": [
+      "Hosted agenda counter: Remainder of run, trash 1 grip as additional cost to jack out or break a subroutine"
+    ],
+    "arruaceiras-crew": [
+      "Take 1 tag: encountered ice gets –2 strength",
+      "[trash], 2¢: Trash encountered ice if strength ≤ 0"
+    ],
+    "artist-colony": [
+      "Forfeit 1 agenda: Search stack for a program, resource, or hardware and install it"
+    ],
+    "audrey-v2": [
+      "Trash 1 card from grip: +3 strength"
+    ],
+    "aurora": [
+      "Pump Aurora +3 strength"
+    ],
+    "ayla-bios-rahim-simulant-specialist": [
+      "Add 1 card from set-aside to grip"
+    ],
+    "b-1001": [
+      "Remove 1 tag: End the run (other server only)"
+    ],
+    "backstitching": [
+      "Trash Backstitching: bypass encountered ice (mark run)"
+    ],
+    "baker": [
+      "[click]: Run Archives (may redirect approach with stealth)"
+    ],
+    "baklan-bochkin": [
+      "[trash], X power: Derez encountering ice if strength ≤ X; take 1 tag"
+    ],
+    "ballista": [
+      "Trash 1 program or end the run."
+    ],
+    "bamboo-dome": [
+      "[click]: Reveal top 3 of R&D; secretly add 1 to HQ; return others to top in any order"
+    ],
+    "bankroll": [
+      "Trash Bankroll: take all hosted credits"
+    ],
+    "banner": [
+      "2¢: barrier subs cannot ETR this encounter"
+    ],
+    "battering-ram": [
+      "Pump Battering Ram +1 strength for the remainder of this run"
+    ],
+    "beatriz-friere-gonzalez": [
+      "[click][click]: Run HQ; success → breach R&D +1 access"
+    ],
+    "bioroid-work-crew": [
+      "[trash]: Install 1 card from HQ (after playing an operation)"
+    ],
+    "bishop": [
+      "[click]: Host on ice not hosting a Caïssa program"
+    ],
+    "black-orchestra": [
+      "3¢: +2 strength. Then, if this can interface, break up to 2 code gate subroutines"
+    ],
+    "blackat": [
+      "1¢: Break 1 barrier subroutine (up to 3 if stealth paid)",
+      "2¢: +1 strength (+2 if stealth paid)"
+    ],
+    "blackstone": [
+      "3¢ (≥1 stealth): +4 strength for the remainder of this run"
+    ],
+    "boi-tata": [
+      "Pump Boi-tatá +3 strength"
+    ],
+    "bookmark": [
+      "[click]: Add all hosted cards to grip",
+      "[click]: Host up to 3 cards from grip facedown",
+      "[trash]: Add all hosted cards to grip"
+    ],
+    "boomerang": [
+      "[trash]: Break up to 2 subroutines; if this run is successful, may shuffle Boomerang from heap into stack"
+    ],
+    "border-control": [
+      "[trash]: End the run (run on this server)"
+    ],
+    "botulus": [
+      "Spend 1 virus counter: break 1 subroutine on host"
+    ],
+    "bran-1-0": [
+      "May install ice inward ignoring costs."
+    ],
+    "builder": [
+      "Place 1 advancement on ice protecting this server that can be advanced.",
+      "[click]: Move this ice to the outermost position of any server"
+    ],
+    "bukhgalter": [
+      "Pump Bukhgalter +1 strength"
+    ],
+    "buzzsaw": [
+      "Pump Buzzsaw +1 strength"
+    ],
+    "capstone": [
+      "[click]: Trash grip copies; draw for installed dupes"
+    ],
+    "carmen": [
+      "Pump Carmen +3 strength"
+    ],
+    "cats-cradle": [
+      "Pump Cat's Cradle +1 strength"
+    ],
+    "charlatan": [
+      "[click][click]: Run any server; first approach rezzed ice may pay strength to bypass"
+    ],
+    "charlotte-cacador": [
+      "[trash], hosted advancement: Gain 3¢"
+    ],
+    "chatterjee-university": [
+      "[click]: Install a program from grip, lowering cost by power counters; remove 1 power counter"
+    ],
+    "chetana": [
+      "Psi game. If bids differ, do 1 net damage for each card in the Runner's grip."
+    ],
+    "clairvoyant-monitor": [
+      "Psi game. If bids differ, place 1 advancement token on an installed card and end the run."
+    ],
+    "clan-vengeance": [
+      "[trash]: Trash 1 card from HQ at random per power counter"
+    ],
+    "cleaver": [
+      "Pump Cleaver +1 strength"
+    ],
+    "colossus": [
+      "Give the Runner 1 tag. If 3+ advancements, instead give 2 tags.",
+      "Trash 1 installed program. If 3+ advancements, also trash 1 installed resource."
+    ],
+    "conduit": [
+      "Run R&D; access +X (virus counters)"
+    ],
+    "contract-killer": [
+      "Trash Contract Killer: trash a connection or do 2 meat damage (needs 2 advancements)"
+    ],
+    "corporate-troubleshooter": [
+      "Trash: spend X¢, ice +X strength this turn"
+    ],
+    "corroder": [
+      "Pump Corroder +1 strength"
+    ],
+    "corsair": [
+      "1[credit] from stealth: barrier gets −3 strength"
+    ],
+    "cortez-chip": [
+      "[trash]: Choose a piece of ice. +2¢ additional cost to rez that ice until end of turn"
+    ],
+    "counter-surveillance": [
+      "[click], [trash]: Run any server; on success pay X=tags to access ≤X instead of breach"
+    ],
+    "creeper": [
+      "Pump Creeper +1 strength"
+    ],
+    "crescentus": [
+      "[trash]: Derez ice fully broken this encounter"
+    ],
+    "crypsis": [
+      "Pump Crypsis +1 strength"
+    ],
+    "crypt": [
+      "[click], [trash], 3 hosted virus counters: Search stack for a virus program and install it (paying its install cost), then shuffle"
+    ],
+    "curupira": [
+      "Spend 3 power: bypass encountered barrier"
+    ],
+    "cybersand-harvester": [
+      "[trash]: Take all hosted credits"
+    ],
+    "d4v1d": [
+      "Hosted power counter: Break 1 subroutine on ice strength 5+"
+    ],
+    "dai-v": [
+      "2¢ (stealth): Break all subroutines"
+    ],
+    "data-raven": [
+      "Hosted power: Give the Runner 1 tag"
+    ],
+    "datapike": [
+      "The Runner must pay 2¢, if able. If they cannot, end the run."
+    ],
+    "datasucker": [
+      "Spend virus: ice −1 strength"
+    ],
+    "davinci": [
+      "[trash]: Install a grip card costing ≤ power counters, ignoring install cost"
+    ],
+    "ddos": [
+      "[trash]: Corp cannot rez outermost ice during a run this turn"
+    ],
+    "dean-lister": [
+      "[trash]: Choose an icebreaker; +1 strength per grip card until end of run"
+    ],
+    "debbie-downtown-moreira": [
+      "[click]: Run any server; spend hosted credits during that run"
+    ],
+    "defense-construct": [
+      "[trash]: Add 1 facedown card from Archives to HQ per advancement (Archives run)"
+    ],
+    "demara": [
+      "Pump Demara +3 strength",
+      "Trash Demara: bypass encountered barrier"
+    ],
+    "descent": [
+      "[click], 1¢, reveal and trash from HQ: Draw 1; shuffle up to 2 agendas into R&D"
+    ],
+    "deus-x": [
+      "Interrupt: trash Deus X — prevent any amount of net damage",
+      "Trash Deus X: break any number of AP subroutines"
+    ],
+    "devil-charm": [
+      "Remove Devil Charm from the game: encountered ice gets −6 strength this run"
+    ],
+    "disrupter": [
+      "[interrupt] → [trash]: Reduce base trace strength to 0"
+    ],
+    "diviner": [
+      "Do 1 net damage. If grip count odd, end the run."
+    ],
+    "dorm-computer": [
+      "[click], hosted power counter: Run any server; prevent all tags this run"
+    ],
+    "drago-ivanov": [
+      "Remove 2 advancements: give Runner 1 tag"
+    ],
+    "drudge-work": [
+      "[click], hosted power counter: Reveal an agenda in HQ or Archives, gain credits equal to its agenda points, shuffle into R&D"
+    ],
+    "duggars": [
+      "[click]×4: Draw 10 cards"
+    ],
+    "dummy-box": [
+      "[interrupt] → Trash 1 card from grip: Prevent Corp trashing 1 installed card of the same type"
+    ],
+    "echelon": [
+      "Pump Echelon +2 strength"
+    ],
+    "elizabeth-mills": [
+      "Trash: Trash 1 location resource. Take 1 bad publicity."
+    ],
+    "embolus": [
+      "Hosted power counter: End the run (run on this server)"
+    ],
+    "eminent-domain": [
+      "[click], 1¢, reveal and trash from HQ: Install and rez from HQ paying 5¢ less"
+    ],
+    "emp-device": [
+      "[trash]: Corp cannot rez more than 1 ice for the remainder of this run"
+    ],
+    "empiricist": [
+      "Draw 1. You may add 1 card from HQ to the top of R&D."
+    ],
+    "endless-hunger": [
+      "Trash 1 installed card: Break 1 End the run subroutine"
+    ],
+    "endurance": [
+      "Spend 2 power counters: break up to 2 subroutines"
+    ],
+    "enigma": [
+      "The Runner loses [click], if able."
+    ],
+    "epiphany-analytica-nations-undivided": [
+      "[click], hosted power counter: Look at top 3 of R&D; may install 1"
+    ],
+    "eru-ayase-pessoa": [
+      "[click], take 1 tag: Run Archives; success → breach R&D (Threat 3: +1 access)"
+    ],
+    "estelle-moon": [
+      "[trash]: For each power counter, gain 2¢ and draw 1 card"
+    ],
+    "euler": [
+      "0¢: Break 1 code gate subroutine (installed this turn)"
+    ],
+    "event-horizon": [
+      "[trash]: End the run (run against this server)"
+    ],
+    "executive-boot-camp": [
+      "1¢,[trash]: Search R&D for an asset, reveal it, add to HQ"
+    ],
+    "expert-schedule-analyzer": [
+      "[click]: Run HQ; on success may reveal all cards in HQ instead of breaching"
+    ],
+    "expose": [
+      "[trash]: Remove 1 bad publicity per advancement"
+    ],
+    "ezam": [
+      "[click]: Swap this ice with another installed ice"
+    ],
+    "f2p": [
+      "2¢: Break 1 subroutine (Runner; untagged)"
+    ],
+    "faerie": [
+      "Pump Faerie +1 strength"
+    ],
+    "fall-guy": [
+      "[interrupt] [trash]: Prevent trash of another resource"
+    ],
+    "false-flag": [
+      "[click], 7 hosted advancement tokens: add False Flag to score area as 3AP agenda"
+    ],
+    "false-lead": [
+      "Forfeit: if Runner has 2+ [click], they lose [click][click]"
+    ],
+    "fawkes": [
+      "X¢ (≥1 stealth): +X strength for the remainder of this run"
+    ],
+    "femme-fatale": [
+      "Pump Femme Fatale +1 strength"
+    ],
+    "fermenter": [
+      "Trash: gain 2¢ per virus"
+    ],
+    "film-critic": [
+      "[click],[click]: Add a hosted agenda to your score area"
+    ],
+    "firmware-updates": [
+      "Hosted agenda counter: Place 1 advancement on advanceable ice"
+    ],
+    "first-responders": [
+      "2¢: Draw 1 card (if suffered Corp damage this turn)"
+    ],
+    "flip-switch": [
+      "[interrupt] → [trash]: Reduce base trace strength to 0"
+    ],
+    "flower-sermon": [
+      "Hosted agenda counter: Look at top of R&D; may advance; may bottom"
+    ],
+    "force-of-nature": [
+      "Pump Force of Nature +1 strength"
+    ],
+    "formicary": [
+      "Rez Formicary, move innermost on approached server, encounter"
+    ],
+    "fransofia-ward": [
+      "Trash Fransofia Ward: bypass encountered ice (Corp ≥15¢)"
+    ],
+    "friend-of-a-friend": [
+      "[click], [trash]: Gain 9¢ and take 1 tag (if untagged)"
+    ],
+    "funhouse": [
+      "Tag unless pay 4¢."
+    ],
+    "gachapon": [
+      "[trash]: Set aside top 6 faceup; may install program/virtual −2¢; shuffle 3; RFG rest"
+    ],
+    "gauss": [
+      "Pump Gauss +2 strength"
+    ],
+    "gebrselassie": [
+      "[click]: Host Gebrselassie on an installed non-AI icebreaker"
+    ],
+    "gemini": [
+      "Trace[2]. If successful, do 1 net damage. If strength ≥5, do 1 net damage."
+    ],
+    "golden": [
+      "2¢, add this program to your grip: Derez fully broken sentry"
+    ],
+    "gordian-blade": [
+      "Pump Gordian Blade +1 strength for the remainder of the run"
+    ],
+    "gorman-drip-v1": [
+      "[click], [trash]: Gain 1¢ per virus counter"
+    ],
+    "gravedigger": [
+      "[click], hosted virus counter: Corp trashes top of R&D"
+    ],
+    "grndl-refinery": [
+      "[click], [trash]: Gain 4[credit] per advancement token"
+    ],
+    "gyri-labyrinth": [
+      "Runner max hand size -2 until Corp next turn."
+    ],
+    "hades-shard": [
+      "[trash]: Breach Archives (no root access)"
+    ],
+    "hakarl-1-0": [
+      "Lose [click]: Break 1 subroutine on Hákarl 1.0"
+    ],
+    "hannah-wheels-pilintra": [
+      "[click]: Gain [click]. Run a remote; if unsuccessful, take 1 tag"
+    ],
+    "heartbeat": [
+      "[interrupt] → Trash 1 installed card: Prevent 1 damage"
+    ],
+    "helheim-servers": [
+      "Trash 1 card from HQ: All ice protecting this server has +2 strength until end of run"
+    ],
+    "hemorrhage": [
+      "[click], 2 virus counters: Corp trashes 1 card from HQ"
+    ],
+    "high-risk-investment": [
+      "[click], hosted agenda counter: Gain 1¢ per Runner credit"
+    ],
+    "hortum": [
+      "End the run. If 3+ advancements, search R&D for up to 2 cards then ETR.",
+      "Gain 1¢ (4¢ if 3+ advancements)."
+    ],
+    "houdini": [
+      "2¢ (≥1 stealth): +4 strength for the remainder of this run"
+    ],
+    "house-of-knives": [
+      "Hosted agenda counter: 1 net damage (once per run)"
+    ],
+    "howler": [
+      "You may install and rez 1 bioroid ice from HQ or Archives directly inward, ignoring all costs."
+    ],
+    "hudson-1-0": [
+      "Lose [click]: Break 1 subroutine on Hudson 1.0"
+    ],
+    "humanoid-resources": [
+      "[click][click][click], [trash]: Gain 4¢ and draw 3. Install up to 2 from HQ. May play 1 operation from HQ."
+    ],
+    "hush": [
+      "[click]: Host on another installed ice"
+    ],
+    "hype-machine": [
+      "[trash]: Place 1 advancement on a card you can advance in this server's root"
+    ],
+    "hyperbaric": [
+      "2¢: Place 1 power counter on Hyperbaric"
+    ],
+    "inazuma": [
+      "Next encounter this run Runner cannot break subroutines on encountered ice."
+    ],
+    "incubator": [
+      "[click], [trash]: Move all virus counters to another installed virus program"
+    ],
+    "information-overload": [
+      "The Runner trashes 1 installed card for each tag they have."
+    ],
+    "interrupt-0": [
+      "For the remainder of this run, icebreaker break abilities cost +1¢."
+    ],
+    "investigative-journalism": [
+      "[click]×4, [trash]: Give the Corp 1 bad publicity"
+    ],
+    "ireress": [
+      "The Runner loses 1[credit] for each bad publicity the Corp has."
+    ],
+    "it-department": [
+      "Hosted power counter: Choose rezzed ice; +1 strength per power (incl. spent) until end of turn"
+    ],
+    "jackson-howard": [
+      "Remove Jackson Howard from the game: Shuffle up to 3 from Archives into R&D"
+    ],
+    "janaina-jk-dumont-kindelan": [
+      "[click], add to HQ: Take all hosted credits; may install"
+    ],
+    "kabonesa-wu-netspace-thrillseeker": [
+      "[click]: Search stack for a non-virus program and install it, lowering install cost by 1¢; RFG it if still installed at turn end"
+    ],
+    "kamali-1-0": [
+      "Lose [click]: Break 1 subroutine on Kamali 1.0"
+    ],
+    "karuna": [
+      "Do 2 net damage. Runner may jack out."
+    ],
+    "kati-jones": [
+      "[click]: Place 3¢ on Kati Jones",
+      "[click]: Take all credits from Kati Jones"
+    ],
+    "keegan-lane": [
+      "[trash], remove 1 tag: Trash 1 program (run on this server)"
+    ],
+    "keyhole": [
+      "[click]: Run R&D. If successful, instead of breaching R&D, look at the top 3 cards of R&D and trash 1 of them"
+    ],
+    "kitsune": [
+      "Choose 1 card in HQ; breach HQ with forced access"
+    ],
+    "knight": [
+      "[click]: Host on ice not hosting a Caïssa program"
+    ],
+    "labyrinthine-servers": [
+      "Hosted power counter: prevent jack-out for run"
+    ],
+    "lakshmi-smartfabrics": [
+      "X hosted power counters: Reveal an agenda worth X from HQ; Runner cannot steal copies this turn"
+    ],
+    "laser-pointer": [
+      "Trash Laser Pointer: bypass encountered ap ice",
+      "Trash Laser Pointer: bypass encountered destroyer ice",
+      "Trash Laser Pointer: bypass encountered observer ice"
+    ],
+    "leech": [
+      "Spend virus: ice −1 strength"
+    ],
+    "lemuria-codecracker": [
+      "[click], 1¢: Expose 1 card. Use this ability only if you made a successful run on HQ this turn."
+    ],
+    "leo-construction-labor-solutions": [
+      "Once per turn → Trash 1 rezzed bioroid in/protecting attacked server: End the run"
+    ],
+    "leviathan": [
+      "Pump Leviathan +5 strength"
+    ],
+    "levy-advanced-research-lab": [
+      "[click]: Reveal top 4 of stack; may add 1 program to grip; rest to bottom"
+    ],
+    "levy-university": [
+      "[click], 1¢: Search R&D for ice → HQ"
+    ],
+    "liberated-chela": [
+      "[click]×5, forfeit an agenda: Corp may forfeit to RFG this; if not, score as 2 AP agenda"
+    ],
+    "light-the-fire": [
+      "[click], trash, suffer 1 core damage: run a remote; blank root; on success trash root"
+    ],
+    "lily-lockwell": [
+      "[click], remove 1 tag: Search R&D for an operation; add to top of R&D"
+    ],
+    "living-mural": [
+      "1¢: Break 1 sentry sub protecting host server"
+    ],
+    "llds-energy-regulator": [
+      "3[credit] or [trash]: Prevent trashing 1 installed hardware"
+    ],
+    "lobisomem": [
+      "X¢, hosted power: Break X barrier subroutines"
+    ],
+    "logic-bomb": [
+      "[trash]: Bypass the ice you are encountering; lose remaining clicks"
+    ],
+    "london-library": [
+      "[click]: Install a non-virus program from grip on London Library, ignoring install cost"
+    ],
+    "loot-box": [
+      "Reveal the top 3 cards of the stack. Add 1 of those cards to the grip and gain X[credit], where X is equal to that card's play or install cost. The Runner shuffles the remaining cards into the stack."
+    ],
+    "lotus-haze": [
+      "Hosted agenda counter: Move 1 rezzed upgrade to another server"
+    ],
+    "lucky-charm": [
+      "[interrupt] → Remove from the game: Prevent a Corp card ability from ending the run"
+    ],
+    "lycian-multi-munition": [
+      "If barrier: Gain 1¢ and end the run.",
+      "If code gate: Runner loses [click] and 1¢.",
+      "If sentry: Trash 1 installed program."
+    ],
+    "madani": [
+      "[click]: Host any number of programs from your grip faceup (not installed)"
+    ],
+    "makler": [
+      "Pump Makler +2 strength"
+    ],
+    "malandragem": [
+      "Hosted power: bypass ice if strength ≤ 3 (once per turn)",
+      "Threat 4 → RFG: bypass encountered ice"
+    ],
+    "mamba": [
+      "Hosted power counter: 1 net damage (during run)",
+      "Psi; if bids differ place 1 power counter on Mamba"
+    ],
+    "marcus-batty": [
+      "[trash]: Psi game; if bids differ, resolve 1 sub on rezzed ice protecting this server"
+    ],
+    "marjanah": [
+      "Pump Marjanah +1 strength"
+    ],
+    "mark-yale": [
+      "[trash]: Gain 2[credit]"
+    ],
+    "marked-accounts": [
+      "[click]: Place 3¢ on Marked Accounts"
+    ],
+    "marker": [
+      "Next ice encountered gains ETR after its subroutines."
+    ],
+    "markus-1-0": [
+      "Lose [click]: Break 1 subroutine on Markus 1.0"
+    ],
+    "matryoshka": [
+      "Pump Matryoshka +1 strength",
+      "X¢, turn 1 hosted Matryoshka facedown: Break X subroutines",
+      "[click]: Host a copy of Matryoshka from grip faceup"
+    ],
+    "mausolus": [
+      "Do 1 net damage. If 3+ hosted advancement counters, instead do 3 net damage.",
+      "Gain 1¢. If 3+ hosted advancement counters, instead gain 3¢.",
+      "Give the Runner 1 tag. If 3+ hosted advancement counters, instead give the Runner 1 tag and end the run."
+    ],
+    "mayfly": [
+      "Pump Mayfly +1 strength"
+    ],
+    "mca-austerity-policy": [
+      "[click]: Place 1 power counter; Runner loses [click] at start of their next turn"
+    ],
+    "mind-game": [
+      "Psi game. If bids differ, choose another server; Runner moves to outermost of that server; additional cost to jack out; Runner may jack out."
+    ],
+    "minds-eye": [
+      "[click], 3 hosted power counters: Breach R&D (cannot access root)"
+    ],
+    "minelayer": [
+      "You may install 1 ice from HQ protecting this server, ignoring the install cost."
+    ],
+    "mkultra": [
+      "3¢: +2 strength. Then, if this can interface with the sentry, break up to 2 subroutines"
+    ],
+    "monolith": [
+      "[interrupt] → Trash 1 program from grip: Prevent 1 core or net damage"
+    ],
+    "moon-pool": [
+      "Remove this asset from the game: Trash up to 2 cards from HQ, then reveal up to 2 facedown cards in Archives and shuffle them into R&D"
+    ],
+    "mr-li": [
+      "[click]: Draw 2 cards; put 1 of those on bottom of stack"
+    ],
+    "muresh-bodysuit": [
+      "[interrupt] → Prevent 1 meat damage (first each turn)"
+    ],
+    "n-pot": [
+      "3¢: Break 1 subroutine on N-Pot",
+      "If threat ≥ 2, end the run.",
+      "If threat ≥ 4, end the run."
+    ],
+    "nanuq": [
+      "Pump Nanuq +1 strength"
+    ],
+    "negotiator": [
+      "2¢: Break 1 subroutine on this ice (Runner only)"
+    ],
+    "net-shield": [
+      "[interrupt] → 1¢: Prevent 1 net damage (first each turn)"
+    ],
+    "next-big-thing": [
+      "[click], hosted agenda counter: Draw 4. Shuffle any number from HQ into R&D."
+    ],
+    "ninja": [
+      "Pump Ninja +5 strength"
+    ],
+    "no-free-lunch": [
+      "Trash No Free Lunch: gain 3¢",
+      "Trash No Free Lunch: remove 1 tag"
+    ],
+    "no-one-home": [
+      "[interrupt] → [trash]: first net damage this turn — Corp Trace[0]; if unsuccessful, prevent all net damage",
+      "[interrupt] → [trash]: first tags this turn — Corp Trace[0]; if unsuccessful, prevent all tags"
+    ],
+    "odore": [
+      "0¢: Break 1 sentry (3+ virtual resources)"
+    ],
+    "officer-frank": [
+      "[trash], 1¢: Corp trashes 2 cards from HQ at random"
+    ],
+    "omar-keung-conspiracy-theorist": [
+      "[click]: Run Archives. If that run would be successful, change attacked server to HQ or R&D"
+    ],
+    "oracle-may": [
+      "[click]: Choose type; reveal top of stack; install if match"
+    ],
+    "oracle-thinktank": [
+      "[click], remove 1 tag: Shuffle this into R&D"
+    ],
+    "orca": [
+      "Pump Orca +3 strength"
+    ],
+    "pad-factory": [
+      "[click]: Place 1 advancement token on a card; cannot score it until your next turn begins"
+    ],
+    "pad-tap": [
+      "[click], 3¢: Trash PAD Tap (Corp only)"
+    ],
+    "paintbrush": [
+      "[click]: Choose rezzed ice; gain subtype until end of next run"
+    ],
+    "panic-button": [
+      "1[credit]: Draw 1 during a run on HQ"
+    ],
+    "paperclip": [
+      "X¢: +X strength. Then break up to X barrier subroutines"
+    ],
+    "paules-cafe": [
+      "1¢: Install 1 hosted card (first this turn −1¢ per unique ♦ connection resource installed)",
+      "[click]: Host 1 program or hardware from grip faceup on this resource"
+    ],
+    "pawn": [
+      "[click]: Host on outermost ice protecting a central server"
+    ],
+    "peacock": [
+      "Pump Peacock +3 strength"
+    ],
+    "pelangi": [
+      "Hosted virus counter: Choose an ice subtype for encountered ice"
+    ],
+    "pennyshaver": [
+      "Place 1¢ then take all"
+    ],
+    "penrose": [
+      "1¢: +3 strength (stealth credits only)",
+      "1¢: Break 1 barrier subroutine (installed this turn)"
+    ],
+    "peregrine": [
+      "2¢, add this program to your grip: Derez fully broken code gate"
+    ],
+    "perfect-recall": [
+      "Hosted power: Reveal HQ card — Runner cannot steal/trash copies this run"
+    ],
+    "personal-workshop": [
+      "1¢: Remove 1 power counter from a hosted card (install ignoring costs at 0)",
+      "[click]: Host a program or hardware from grip; place power counters equal to its install cost"
+    ],
+    "physarum-entangler": [
+      "Pay 1¢ per sub: bypass host ice (if not barrier)"
+    ],
+    "pipeline": [
+      "Pump Pipeline +1 strength for the remainder of this run"
+    ],
+    "prana-condenser": [
+      "Interrupt: prevent 1 net damage → +1 power + 3¢"
+    ],
+    "pressure-spike": [
+      "Pump Pressure Spike +3 strength",
+      "Threat 4 → 2¢: +9 strength (once per run)"
+    ],
+    "principia": [
+      "Pump Principia +2 strength"
+    ],
+    "private-security-force": [
+      "[click]: Do 1 meat damage (Runner tagged)"
+    ],
+    "prognostic-q-loop": [
+      "1¢: Reveal top of stack; may install if program or hardware"
+    ],
+    "project-kusanagi": [
+      "Hosted agenda counter: choose ice to gain '[subroutine] Do 1 net damage' this run"
+    ],
+    "project-vitruvius": [
+      "Hosted agenda counter: Archives → HQ"
+    ],
+    "project-wotan": [
+      "Hosted agenda counter: approached rezzed bioroid gains ETR subroutine this run"
+    ],
+    "project-yagi-uda": [
+      "Hosted agenda counter: Swap 1 HQ card with 1 card in the root of or protecting the attacked server; Runner may jack out"
+    ],
+    "propeller": [
+      "Spend 1 power counter: +2 strength"
+    ],
+    "proprionegation": [
+      "Hosted agenda counter: Move Runner to outermost Archives (during a run)"
+    ],
+    "pup": [
+      "Do 1 net unless Runner pays 1[credit]."
+    ],
+    "quarantine-system": [
+      "Forfeit an agenda: Rez up to 3 pieces of ice, lowering each by 2¢ per printed AP"
+    ],
+    "ramujan-reliant-550-bmi": [
+      "[interrupt] → [trash]: Prevent up to X net or core damage; trash that many from stack"
+    ],
+    "reclaim": [
+      "[click], [trash], trash a card from grip: Install program/hardware/virtual from heap paying cost"
+    ],
+    "red-team": [
+      "Run a central not run this turn; if successful take 3¢"
+    ],
+    "refractor": [
+      "1¢ (stealth): +3 strength",
+      "1¢ (stealth): Break 1 code gate subroutine"
+    ],
+    "reversed-accounts": [
+      "Trash: Runner loses 4¢ per advancement"
+    ],
+    "revolver": [
+      "Pump Revolver +3 strength",
+      "Spend 1 power counter: break 1 sentry subroutine",
+      "Trash Revolver: break 1 sentry subroutine"
+    ],
+    "rising-tide": [
+      "Pump Rising Tide +1 strength"
+    ],
+    "ronin": [
+      "Trash Ronin: 3 net damage (needs 4 advancements)"
+    ],
+    "rook": [
+      "[click]: Host on ice not hosting a Caïssa program"
+    ],
+    "rosetta-2-0": [
+      "[click], remove an installed program from the game: Search stack for non-virus program, install lowering by RFG cost"
+    ],
+    "rotary": [
+      "[click], 2[credit]: Trash Rotary (Corp; Runner tagged)"
+    ],
+    "rototurret": [
+      "Trash a program."
+    ],
+    "rsvp": [
+      "Runner cannot spend credits for remainder of run."
+    ],
+    "rubicon-switch": [
+      "Once per turn → [click], X¢: Derez 1 ice with printed rez cost X rezzed this turn"
+    ],
+    "ryon-knight": [
+      "[trash]: Do 1 core damage (run against this server; Runner has no unspent clicks)"
+    ],
+    "sagittarius": [
+      "Trace[2]. If successful, trash 1 program. If strength ≥5, trash 1 program."
+    ],
+    "saker": [
+      "2¢, add this program to your grip: Derez fully broken barrier"
+    ],
+    "salvaged-vanadis-armory": [
+      "[trash]: Corp trashes the top X cards of R&D (X = damage suffered this turn)"
+    ],
+    "same-old-thing": [
+      "[click], [click], [trash]: Play an event from heap"
+    ],
+    "sang-kancil": [
+      "Pump Sang Kancil +2 strength"
+    ],
+    "saraswati-mnemonics-endless-exploration": [
+      "[click], 1[credit]: Install 1 card from HQ in the root of a remote server, then place 1 advancement counter on it (cannot score or rez until your next turn begins)"
+    ],
+    "savoir-faire": [
+      "2[credit]: Install a program from grip paying install cost"
+    ],
+    "sealed-vault": [
+      "1[credit]: Move any number of credits from credit pool to Sealed Vault",
+      "[click]: Take any number of credits from Sealed Vault",
+      "[trash]: Take any number of credits from Sealed Vault"
+    ],
+    "searchlight": [
+      "Trace[X]. If successful, give the Runner 1 tag. X = advancements."
+    ],
+    "security-chip": [
+      "[trash]: Chosen icebreaker(s) gain +1 strength per link this run"
+    ],
+    "security-nexus": [
+      "Once per turn → On encounter: Corp traces[5]; success tag+ETR, fail bypass"
+    ],
+    "self-destruct": [
+      "[trash]: Trash all cards in/protecting this server; Trace[X] for 3 net damage"
+    ],
+    "self-modifying-code": [
+      "2¢, [trash]: Search stack for a program and install it"
+    ],
+    "sensor-net-activation": [
+      "Hosted agenda counter: Rez a bioroid, ignoring all costs; derez at turn end"
+    ],
+    "severnius-stim-implant": [
+      "[click]: Trash 2 or more cards from grip. Run HQ or R&D; +1 access per 2 trashed"
+    ],
+    "shannon-claire": [
+      "[trash]: Search R&D or Archives for an agenda; add to bottom of R&D"
+    ],
+    "shell-corporation": [
+      "[click]: Place 3¢ on Shell Corporation",
+      "[click]: Take all credits from Shell Corporation"
+    ],
+    "shibboleth": [
+      "Pump Shibboleth +2 strength"
+    ],
+    "shiro": [
+      "Look at top 3 of R&D and arrange them."
+    ],
+    "signal-jamming": [
+      "[trash]: Cards cannot be installed until the end of the run (run on this server)"
+    ],
+    "simulchip": [
+      "[trash]: Install 1 program from heap, paying 3¢ less"
+    ],
+    "slash-and-burn-agriculture": [
+      "[click], 1¢, reveal and trash from HQ: place 2 advancements on 1 advanceable card"
+    ],
+    "sneakdoor-beta": [
+      "Run Archives (success → HQ)"
+    ],
+    "snoop": [
+      "Hosted power counter: Reveal grip; trash 1 card"
+    ],
+    "snowball": [
+      "Pump Snowball +1 strength"
+    ],
+    "spree": [
+      "Hosted power: host installed trojan on attacked ice"
+    ],
+    "spy-camera": [
+      "[click]: Look at the top X cards of your stack and arrange them (X = installed Spy Camera copies)"
+    ],
+    "stargate": [
+      "[click]: Run R&D (once per turn)"
+    ],
+    "stoneship-chart-room": [
+      "Trash Stoneship Chart Room: charge 1 installed card",
+      "Trash Stoneship Chart Room: draw 2"
+    ],
+    "street-peddler": [
+      "[trash]: Install 1 hosted card, lowering install cost by 1"
+    ],
+    "surfer": [
+      "2¢: Swap encountered barrier with ice directly before or after it"
+    ],
+    "susanoo-no-mikoto": [
+      "If server is not Archives, move to outermost Archives instead of passing."
+    ],
+    "switchblade": [
+      "1¢ (stealth): +7 strength",
+      "1¢ (stealth): Break any number of sentry subroutines"
+    ],
+    "syailendra": [
+      "You may place 1 advancement on an advanceable card."
+    ],
+    "tallie-perrault": [
+      "[trash]: Draw 1 if you have at least 1 tag"
+    ],
+    "taurus": [
+      "Trace[2]. If successful, trash 1 hardware; if strength ≥5 trash another."
+    ],
+    "the-artist": [
+      "[click]: Install program or hardware, paying 1¢ less"
+    ],
+    "the-back": [
+      "[click], remove The Back from the game: For each hosted power counter, shuffle up to 2 heap cards with [trash] abilities into your stack"
+    ],
+    "the-basalt-spire": [
+      "Hosted agenda counter, trash top of R&D: Archives → HQ"
+    ],
+    "the-helpful-ai": [
+      "[trash]: Choose an icebreaker. That icebreaker has +2 strength until end of turn"
+    ],
+    "the-holo-man": [
+      "[click], 4¢: Place 2 (or 3) advancements on this server"
+    ],
+    "the-red-room": [
+      "Hosted power counter: End the run (other server)"
+    ],
+    "the-supplier": [
+      "[click]: Host a resource or hardware from grip"
+    ],
+    "the-turning-wheel": [
+      "2 hosted power counters: Choose HQ or R&D; +1 access when breaching that server this run"
+    ],
+    "the-wizard-s-chest": [
+      "[trash]: Set aside until 2 of a type; may install 1 ignoring costs"
+    ],
+    "thomas-haas": [
+      "[trash]: Gain 2¢ per advancement token"
+    ],
+    "timely-public-release": [
+      "Hosted agenda counter: Install 1 ice from HQ or Archives in any position protecting a server, ignoring all costs"
+    ],
+    "tl-dr": [
+      "Next ice encounter this run gains a second copy of each subroutine."
+    ],
+    "tocsin": [
+      "[click], 1[credit], trash: Search R&D for barrier + sentry"
+    ],
+    "topan-ormas-leader": [
+      "Once per turn → [click]: Install 1 card from grip (−2¢); suffer 1 meat damage"
+    ],
+    "tracker": [
+      "[click], 2¢: Run the chosen server; prevent first subroutine that would resolve"
+    ],
+    "tree-line": [
+      "[click], 1¢, reveal and trash from HQ: place 3 advancements on 1 installed ice"
+    ],
+    "tremolo": [
+      "Pump Tremolo +2 strength"
+    ],
+    "tributary": [
+      "Each ice gets +2 strength for the remainder of this run.",
+      "You may draw 1. You may install ice from HQ on another server, ignoring costs."
+    ],
+    "trope": [
+      "[click], remove Trope from the game: Shuffle 1 heap card into stack per power counter"
+    ],
+    "tunnel-vision": [
+      "Pump Tunnel Vision +2 strength"
+    ],
+    "tycoon": [
+      "Pump Tycoon +3 strength"
+    ],
+    "tyrs-hand": [
+      "[trash]: Prevent 1 subroutine from being broken on bioroid ice protecting this server"
+    ],
+    "tyson-observatory": [
+      "[click][click]: Search stack for a piece of hardware, reveal it, add to grip; shuffle"
+    ],
+    "umbrella": [
+      "2¢: Break up to 3 code gate subs; if any, each player may draw 1"
+    ],
+    "unity": [
+      "Pump Unity +1 strength"
+    ],
+    "universal-connectivity-fee": [
+      "Untagged lose 1¢; tagged lose all ¢ and trash this ice"
+    ],
+    "unregistered-s-w-35": [
+      "[click][click]: Trash 1 rezzed ice, gain 2[credit] per strength"
+    ],
+    "upayoga": [
+      "Psi game. If bids differ, the Runner loses 2¢."
+    ],
+    "utae": [
+      "1¢: Break 1 code gate subroutine (3+ virtual resources)",
+      "X¢: Break X code gate subroutines (once per run)"
+    ],
+    "utopia-shard": [
+      "[trash]: Corp discards 2 cards from HQ at random"
+    ],
+    "virgo": [
+      "Trace[2]. If successful, give the Runner 1 tag. If strength ≥5, give the Runner 1 tag."
+    ],
+    "virtual-intelligence-p-i-you-can-call-me-vic": [
+      "Once per turn → [click], 1[credit]: Draw 1 and remove 1 tag"
+    ],
+    "virus-breeding-ground": [
+      "[click]: Move 1 virus counter to another card with a virus counter"
+    ],
+    "vladisibirsk-city-grid": [
+      "Remove 2 advancements: place 2 on another root card"
+    ],
+    "waiver": [
+      "Trace[5]. If successful, reveal grip; trash each card with play/install cost ≤ excess."
+    ],
+    "wendigo": [
+      "Choose a program; Runner cannot use it this run"
+    ],
+    "whitespace": [
+      "If Runner has 6¢ or less, ETR."
+    ],
+    "window": [
+      "[click]: Draw 1 from bottom of stack"
+    ],
+    "working-prototype": [
+      "[click], 5 hosted power: Gain 6¢; resource to stack top",
+      "[click], hosted power: Gain 3¢"
+    ],
+    "worlds-plaza": [
+      "[click]: Install an asset from HQ on Worlds Plaza and rez it (−2¢)"
+    ],
+    "wyrm": [
+      "1¢: Encountered ice gets −1 strength for this encounter",
+      "Pump Wyrm +1 strength"
+    ],
+    "zaibatsu-loyalty": [
+      "[interrupt] → 1¢: Prevent 1 card from being exposed",
+      "[interrupt] → [trash]: Prevent 1 card from being exposed"
+    ],
+    "zu-13-key-master": [
+      "Pump ZU.13 Key Master +1 strength"
+    ]
+  },
+  "unsupported": []
+}
