@@ -107,6 +107,19 @@ def printed_face(raw: dict, fallback_title: str) -> dict:
     return record
 
 
+def influence_problem(expected: int | None, stored: int | None) -> str | None:
+    """Why the stored influence differs from the catalog's, or None.
+
+    A missing bar is not a cost of 0 (CR 2.14.2), and a printed 0 is not a
+    missing bar: Hedge Fund prints 0, so its rules file must store 0.
+    """
+    if expected is None and stored is not None:
+        return "rules store influence but the catalog has no bar"
+    if expected is not None and stored != expected:
+        return f"stored influence {stored!r} != catalog influence_cost {expected!r}"
+    return None
+
+
 def rules_unique(rules: dict) -> bool:
     """Whether a rules file encodes uniqueness the way the engine reads it."""
     if rules.get("unique") is True:
@@ -214,15 +227,9 @@ def main() -> int:
         if (rules.get("subtypes") or []) != subtype_names(card):
             errors.append(f"{card_id}: stored subtypes differ from the catalog")
         if card.get("card_type_id") not in ("corp_identity", "runner_identity"):
-            expected_influence = card.get("influence_cost")
-            stored_influence = rules.get("influence")
-            if expected_influence is None and stored_influence is not None:
-                errors.append(f"{card_id}: rules store influence but the catalog has no bar")
-            elif expected_influence is not None and (stored_influence or 0) != expected_influence:
-                errors.append(
-                    f"{card_id}: stored influence {stored_influence!r} != "
-                    f"catalog influence_cost {expected_influence!r}"
-                )
+            problem = influence_problem(card.get("influence_cost"), rules.get("influence"))
+            if problem:
+                errors.append(f"{card_id}: {problem}")
 
     missing_limits = sorted(known - set(limits))
     if missing_limits:
