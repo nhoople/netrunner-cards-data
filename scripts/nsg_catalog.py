@@ -41,6 +41,10 @@ NSG_ID_EXCEPTIONS = {our: nsg for nsg, our in OUR_ID_EXCEPTIONS.items()}
 PACK_CODE_RE = re.compile(r"pack\s+\(?([a-z0-9]+)", re.IGNORECASE)
 
 
+# Every field data/nsg-catalog-pin.json may hold. The first three are required.
+PIN_FIELDS = ("repo", "ref", "cacheDir", "notes")
+
+
 def load_pin() -> dict:
     if not PIN_PATH.is_file():
         raise SystemExit(f"Catalog pin missing: {PIN_PATH}")
@@ -48,9 +52,12 @@ def load_pin() -> dict:
         pin = json.loads(PIN_PATH.read_text(encoding="utf-8"))
     except json.JSONDecodeError as e:
         raise SystemExit(f"Invalid catalog pin JSON ({PIN_PATH}): {e}") from e
-    for key in ("repo", "ref", "cacheDir"):
+    for key in PIN_FIELDS[:3]:
         if not pin.get(key):
             raise SystemExit(f"Catalog pin missing required field {key!r}: {PIN_PATH}")
+    unknown = sorted(set(pin) - set(PIN_FIELDS))
+    if unknown:
+        raise SystemExit(f"Catalog pin has fields nothing reads {unknown}: {PIN_PATH}")
     return pin
 
 
