@@ -20,7 +20,7 @@
       "id": "false-lead-forfeit",
       "label": "Forfeit: if Runner has 2+ [click], they lose [click][click]",
       "cost": {
-        "trashSelf": true
+        "forfeitSelf": true
       },
       "windows": [
         "corp_action_paw"

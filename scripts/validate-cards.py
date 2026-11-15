@@ -491,6 +491,33 @@ def check_rulings(card_ids: dict[str, Path]) -> int:
     return errors
 
 
+def _forfeit_self_cost_error(printed: dict, rules: dict) -> str | None:
+    """
+    "Forfeit this agenda: ..." pays by forfeiting the agenda, which removes it
+    from the game (CR 8.2.5, 4.9.3); trashing it would put it in Archives.
+    Every such printed cost needs a paid ability paying forfeitSelf, and
+    forfeitSelf must not appear without one.
+    """
+    text = printed.get("strippedText") or ""
+    title = printed.get("strippedTitle") or ""
+    names = "this agenda" + (f"|{re.escape(title)}" if title else "")
+    printed_costs = len(re.findall(rf"[Ff]orfeit (?:{names})[^.:\n]*:", text))
+    paid_costs = sum(
+        1
+        for ability in rules.get("abilities") or []
+        if isinstance(ability, dict)
+        and ability.get("class") == "paid"
+        and isinstance(ability.get("cost"), dict)
+        and ability["cost"].get("forfeitSelf") is True
+    )
+    if printed_costs == paid_costs:
+        return None
+    return (
+        f"printed text forfeits this agenda as a cost {printed_costs} time(s); "
+        f"{paid_costs} paid abilit(ies) pay forfeitSelf"
+    )
+
+
 def check_printed(card_ids: dict[str, Path]) -> int:
     directory = DATA / "printed"
     if not directory.is_dir():
@@ -710,6 +737,17 @@ def check_printed(card_ids: dict[str, Path]) -> int:
                 f"from the game as a cost {printed_costs} time(s); "
                 f"{paid_costs} paid abilit(ies) pay rfgSelf"
             )
+            errors += 1
+    # "Forfeit this agenda: ..." must pay forfeitSelf (_forfeit_self_cost_error).
+    for card_id, rules_path in sorted(card_ids.items()):
+        printed_path = directory / f"{card_id}.json"
+        if not printed_path.is_file():
+            continue
+        printed = json.loads(printed_path.read_text(encoding="utf-8"))
+        rules = json.loads(rules_path.read_text(encoding="utf-8"))
+        err = _forfeit_self_cost_error(printed, rules)
+        if err:
+            print(f"{rules_path.relative_to(ROOT)}: {err}")
             errors += 1
     missing = sorted(set(card_ids) - seen)
     if missing:
