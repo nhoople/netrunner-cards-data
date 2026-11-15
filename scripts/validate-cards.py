@@ -92,6 +92,10 @@ def check_abilities(path: Path, raw: dict) -> int:
         if lose_err:
             print(f"{where}: {lose_err}")
             errors += 1
+        self_break_err = _ice_self_break_error(raw, ability)
+        if self_break_err:
+            print(f"{where}: {self_break_err}")
+            errors += 1
         if kind == "paid" and not ability.get("instructions"):
             print(f"{where}: a paid ability needs instructions")
             errors += 1
@@ -206,6 +210,45 @@ def _lose_click_cost_error(ability: dict) -> str | None:
         )
     if cost.get("loseClicks") != printed:
         return f"label {label!r} loses {printed} [click] but cost.loseClicks is {cost.get('loseClicks')!r}"
+    return None
+
+
+def _effect_kinds(node: object) -> set[str]:
+    """Every action kind named anywhere inside an instruction tree."""
+    kinds: set[str] = set()
+    if isinstance(node, dict):
+        action = node.get("action")
+        if isinstance(action, dict) and isinstance(action.get("kind"), str):
+            kinds.add(action["kind"])
+        for value in node.values():
+            kinds |= _effect_kinds(value)
+    elif isinstance(node, list):
+        for value in node:
+            kinds |= _effect_kinds(value)
+    return kinds
+
+
+def _ice_self_break_error(raw: dict, ability: dict) -> str | None:
+    """A break printed on ice is the Runner's: "Only the Runner can use this ability".
+
+    The Runner breaks subroutines on the encountered ice (CR 6.5.4, 9.8.5),
+    and the card says only the Runner can use the ability (CR 1.2.1), so it
+    breaks with break_subroutine_on_self and sets usableByRunnerOnSelfIce.
+    break_host_subroutine is for a program hosted on ice; ice has no host.
+    """
+    if raw.get("type") != "ice" or ability.get("class") != "paid":
+        return None
+    kinds = _effect_kinds(ability.get("instructions"))
+    if "break_host_subroutine" in kinds:
+        return (
+            "ice breaks its own subroutines with break_subroutine_on_self; "
+            "break_host_subroutine needs a host (CR 9.8.5)"
+        )
+    if "break_subroutine_on_self" in kinds and ability.get("usableByRunnerOnSelfIce") is not True:
+        return (
+            "a break on ice is used and paid for by the Runner; "
+            "set usableByRunnerOnSelfIce (CR 1.2.1, 6.5.4)"
+        )
     return None
 
 

@@ -28,9 +28,11 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "break_host_subroutine"
+          "kind": "break_subroutine_on_self",
+          "amount": 1
         }
-      }
+      },
+      "usableByRunnerOnSelfIce": true
     },
     {
       "class": "subroutine",
