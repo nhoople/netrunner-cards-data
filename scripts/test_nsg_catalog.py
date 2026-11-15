@@ -8,6 +8,8 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from nsg_catalog import (
+    PIN_FIELDS,
+    load_pin,
     card_blobs,
     card_type,
     diff_card_facts,
@@ -223,6 +225,12 @@ def test_influence_problem() -> None:
     assert influence_problem(None, 0) == "rules store influence but the catalog has no bar"
 
 
+def test_pin_fields() -> None:
+    pin = load_pin()
+    assert set(pin) <= set(PIN_FIELDS)
+    assert len(pin["ref"]) == 40, "ref is a full commit SHA, not a branch"
+
+
 def main() -> int:
     test_pool_pack_codes()
     test_card_blobs()
@@ -234,6 +242,7 @@ def main() -> int:
     test_printed_numbers()
     test_printed_face_and_unique()
     test_influence_problem()
+    test_pin_fields()
     print("ok")
     return 0
 
