@@ -73,6 +73,44 @@ def test_play_gate_on_event_passes() -> None:
     assert check(card) is None
 
 
+def ice_break(action: dict, **extra: object) -> dict:
+    return {
+        "class": "paid",
+        "rule": "9.3.7b",
+        "label": "3¢: Break 1 subroutine on N-Pot",
+        "cost": {"credits": 3},
+        "windows": ["encounter_paw"],
+        "instructions": {"op": "do", "action": action},
+        **extra,
+    }
+
+
+def test_ice_break_is_runner_self_break() -> None:
+    check = validate_cards._ice_self_break_error
+    ice = {"type": "ice"}
+    good = ice_break(
+        {"kind": "break_subroutine_on_self", "amount": 1}, usableByRunnerOnSelfIce=True
+    )
+    assert check(ice, good) is None
+
+
+def test_ice_break_written_as_host_break_fails() -> None:
+    check = validate_cards._ice_self_break_error
+    err = check({"type": "ice"}, ice_break({"kind": "break_host_subroutine"}))
+    assert err and "break_subroutine_on_self" in err, err
+
+
+def test_ice_self_break_needs_runner_flag() -> None:
+    check = validate_cards._ice_self_break_error
+    err = check({"type": "ice"}, ice_break({"kind": "break_subroutine_on_self", "amount": 1}))
+    assert err and "usableByRunnerOnSelfIce" in err, err
+
+
+def test_program_host_break_is_not_ice() -> None:
+    check = validate_cards._ice_self_break_error
+    assert check({"type": "program"}, ice_break({"kind": "break_host_subroutine"})) is None
+
+
 def main() -> int:
     tests = [value for name, value in sorted(globals().items()) if name.startswith("test_")]
     for test in tests:
