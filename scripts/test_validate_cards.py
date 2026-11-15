@@ -111,6 +111,33 @@ def test_program_host_break_is_not_ice() -> None:
     assert check({"type": "program"}, ice_break({"kind": "break_host_subroutine"})) is None
 
 
+FALSE_LEAD_TEXT = {
+    "strippedTitle": "False Lead",
+    "strippedText": "Forfeit this agenda: If the Runner has 2 or more click remaining, they lose click click.",
+}
+
+
+def test_forfeit_this_agenda_pays_forfeit_self() -> None:
+    check = validate_cards._forfeit_self_cost_error
+    rules = {"abilities": [paid("Forfeit", {"forfeitSelf": True})]}
+    assert check(FALSE_LEAD_TEXT, rules) is None
+
+
+def test_forfeit_this_agenda_written_as_trash_self_fails() -> None:
+    check = validate_cards._forfeit_self_cost_error
+    rules = {"abilities": [paid("Forfeit", {"trashSelf": True})]}
+    err = check(FALSE_LEAD_TEXT, rules)
+    assert err and "forfeitSelf" in err, err
+
+
+def test_forfeit_self_without_printed_cost_fails() -> None:
+    check = validate_cards._forfeit_self_cost_error
+    printed = {"strippedTitle": "Data Dealer", "strippedText": "click, forfeit 1 agenda: Gain 9 credit."}
+    rules = {"abilities": [paid("Forfeit", {"forfeitSelf": True})]}
+    assert check(printed, rules)
+    assert check(printed, {"abilities": [paid("Forfeit", {"forfeitAgenda": True})]}) is None
+
+
 def main() -> int:
     tests = [value for name, value in sorted(globals().items()) if name.startswith("test_")]
     for test in tests:

@@ -719,6 +719,10 @@
                 "type": "boolean",
                 "description": "Forfeit 1 scored agenda as a cost (Data Dealer)."
               },
+              "forfeitSelf": {
+                "type": "boolean",
+                "description": "Forfeit this agenda as a cost (False Lead): it is removed from the game, not trashed (CR 8.2.5)."
+              },
               "trashProgramFromGrip": {
                 "type": "boolean",
                 "description": "Monolith: trash a program from grip as a cost."

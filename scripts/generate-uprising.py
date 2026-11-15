@@ -265,7 +265,7 @@ def map_card(c: dict) -> dict:
                     "label": "Forfeit: if Runner has 2+ [click], they lose [click][click]",
                     "clickCost": 0,
                     "creditCost": 0,
-                    "cost": {"trashSelf": True},
+                    "cost": {"forfeitSelf": True},
                     "windows": ["corp_action_paw"],
                     "effect": {
                         "op": "if",
