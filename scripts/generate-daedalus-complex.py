@@ -6,6 +6,7 @@ Red Sand #1 after Quorum / Flashpoint closer (floor v1.127.0 → v1.128.0).
 Reprint skips: none (20/20 new clears).
 Follow NSG v2 stripped_text (not IR-hint paraphrases).
 """
+
 from __future__ import annotations
 
 import json
@@ -89,11 +90,7 @@ def paid(
         "creditCost": credits,
         "cost": c,
         "windows": windows
-        or (
-            ["corp_action_paw"]
-            if not usable_by_runner
-            else ["runner_action_paw"]
-        ),
+        or (["corp_action_paw"] if not usable_by_runner else ["runner_action_paw"]),
         "effect": effect,
     }
     if once_per_turn:
@@ -244,7 +241,12 @@ def map_card(c: dict) -> dict | None:
                     "[trash]: Add 1 facedown card from Archives to HQ per advancement (Archives run)",
                     do("add_facedown_archives_to_hq_per_advancement"),
                     trash_self=True,
-                    windows=["corp_action_paw", "approach_paw", "encounter_paw", "approach_server_paw"],
+                    windows=[
+                        "corp_action_paw",
+                        "approach_paw",
+                        "encounter_paw",
+                        "approach_server_paw",
+                    ],
                     require_during_run=True,
                     only_during_archives_run=True,
                 ),
@@ -344,7 +346,12 @@ def map_card(c: dict) -> dict | None:
                     "[trash]: Cards cannot be installed until the end of the run (run on this server)",
                     do("forbid_installs_until_run_end"),
                     trash_self=True,
-                    windows=["corp_action_paw", "approach_paw", "encounter_paw", "approach_server_paw"],
+                    windows=[
+                        "corp_action_paw",
+                        "approach_paw",
+                        "encounter_paw",
+                        "approach_server_paw",
+                    ],
                     require_during_run=True,
                     require_this_server=True,
                 ),

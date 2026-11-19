@@ -8,6 +8,7 @@ Follow NSG v2 stripped_text (not IR-hint paraphrases).
 Slug via spin_common.slugify (Rosetta 2.0→rosetta-2-0,
 AgInfusion: New Miracles for a New World→aginfusion-new-miracles-for-a-new-world).
 """
+
 from __future__ import annotations
 
 import json
@@ -87,11 +88,7 @@ def paid(
         "creditCost": credits,
         "cost": c,
         "windows": windows
-        or (
-            ["corp_action_paw"]
-            if not usable_by_runner
-            else ["runner_action_paw"]
-        ),
+        or (["corp_action_paw"] if not usable_by_runner else ["runner_action_paw"]),
         "effect": effect,
     }
     if once_per_turn:
@@ -155,9 +152,7 @@ def map_card(c: dict) -> dict | None:
             pump_credits=1,
             pump_strength=1,
         )
-        card["onPassRezzedIce"] = do(
-            "may_trash_stack_top_then_trash_rd_per_resolved"
-        )
+        card["onPassRezzedIce"] = do("may_trash_stack_top_then_trash_rd_per_resolved")
         return card
 
     if cid == "rubicon-switch":

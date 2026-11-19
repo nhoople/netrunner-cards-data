@@ -9,6 +9,7 @@ everything else lists honest unsupported notes — never invent IR.
 
 Usage: python3 scripts/generate-elevation.py
 """
+
 from __future__ import annotations
 
 from printed_numbers import apply_printed_numbers
@@ -112,7 +113,9 @@ def base(c, **extra):
     return card
 
 
-def breaker_card(c, subtype, strength, break_c, pump_c=None, pump_s=None, break_max=None, **extra):
+def breaker_card(
+    c, subtype, strength, break_c, pump_c=None, pump_s=None, break_max=None, **extra
+):
     br = {
         "breaksSubtype": subtype,
         "strength": strength,
@@ -174,7 +177,7 @@ def may_place_adv(amount: int = 1):
 
 def map_card(c: dict) -> dict:
     cid = our_id(c["id"])
-    text = (c.get("stripped_text") or "")
+    text = c.get("stripped_text") or ""
     plain = re.sub(r"\s+", " ", text).strip()
 
     # --- Mapped (existing IR covers full card text) ---
@@ -463,9 +466,7 @@ def map_card(c: dict) -> dict:
             c,
             onAgendaScoredOrStolen={
                 "op": "if",
-                "cond": {
-                    "op": "last_agenda_scored_or_stolen_from_source_server_root"
-                },
+                "cond": {"op": "last_agenda_scored_or_stolen_from_source_server_root"},
                 "then": {"op": "do", "action": {"kind": "trash_self"}},
             },
             subroutines=[
@@ -1036,9 +1037,7 @@ def map_card(c: dict) -> dict:
                             "label": "Install 1 ice from HQ, ignoring all costs",
                             "effect": {
                                 "op": "do",
-                                "action": {
-                                    "kind": "install_ice_from_hq_ignore_costs"
-                                },
+                                "action": {"kind": "install_ice_from_hq_ignore_costs"},
                             },
                         },
                         {
@@ -2049,8 +2048,7 @@ def map_card(c: dict) -> dict:
                 {
                     "id": "madani-install",
                     "label": (
-                        "0[credit]: Install 1 hosted program "
-                        "(paying its install cost)"
+                        "0[credit]: Install 1 hosted program (paying its install cost)"
                     ),
                     "clickCost": 0,
                     "creditCost": 0,
@@ -2141,9 +2139,7 @@ def map_card(c: dict) -> dict:
                     "usableByAnyPlayer": True,
                     "effect": {
                         "op": "do",
-                        "action": {
-                            "kind": "return_two_hosted_may_access"
-                        },
+                        "action": {"kind": "return_two_hosted_may_access"},
                     },
                 }
             ],

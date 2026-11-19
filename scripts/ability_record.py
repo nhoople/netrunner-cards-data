@@ -137,12 +137,18 @@ def classify_card(card: dict) -> dict:
         if key in KEEP:
             continue
         if key == "paidAbilities" and isinstance(value, list):
-            abilities.extend(_paid(item) for item in value if isinstance(item, dict) and "effect" in item)
+            abilities.extend(
+                _paid(item)
+                for item in value
+                if isinstance(item, dict) and "effect" in item
+            )
             remove.append(key)
             continue
         if key == "subroutines" and isinstance(value, list):
             abilities.extend(
-                _subroutine(item) for item in value if isinstance(item, dict) and "effect" in item
+                _subroutine(item)
+                for item in value
+                if isinstance(item, dict) and "effect" in item
             )
             remove.append(key)
             continue
@@ -163,12 +169,16 @@ def classify_card(card: dict) -> dict:
                 )
             remove.append(key)
             continue
-        abilities.append({"class": "static", "declaration": {"field": key, "value": value}})
+        abilities.append(
+            {"class": "static", "declaration": {"field": key, "value": value}}
+        )
         remove.append(key)
 
     if restrictions:
         play = next((item for item in abilities if item.get("class") == "play"), None)
-        host = play or next((item for item in abilities if item.get("class") != "static"), None)
+        host = play or next(
+            (item for item in abilities if item.get("class") != "static"), None
+        )
         if host is None:
             host = {"class": "static", "restrictions": restrictions}
             abilities.append(host)
@@ -213,15 +223,21 @@ ACCESS_FIELDS = {
 # The persistent flag sits on the printed ability, not on its own declaration.
 # CR 9.3.6e / 9.12.5.
 PERSISTENT_ON = {
-    "red-herrings": lambda ability: _field(ability) == "stealAdditionalCreditsFromProtectingServer",
+    "red-herrings": lambda ability: (
+        _field(ability) == "stealAdditionalCreditsFromProtectingServer"
+    ),
     "ben-musashi": lambda ability: bool(ability.get("restrictions")),
-    "mahkota-langit-grid": lambda ability: _field(ability) == "serverRootAssetTrashCostBonus",
+    "mahkota-langit-grid": lambda ability: (
+        _field(ability) == "serverRootAssetTrashCostBonus"
+    ),
     "tucana": lambda ability: ability.get("trigger") == "agenda_scored_or_stolen",
     "daniela-jorge-inacio": lambda ability: bool(ability.get("restrictions")),
     "overseer-matrix": lambda ability: (
         _field(ability) == "mayPayCreditsToTagWhenRunnerTrashesFromThisServerOrRoot"
     ),
-    "old-hollywood-grid": lambda ability: _field(ability) == "cannotStealUnlessCopyInRunnerScore",
+    "old-hollywood-grid": lambda ability: (
+        _field(ability) == "cannotStealUnlessCopyInRunnerScore"
+    ),
 }
 
 
@@ -408,7 +424,9 @@ def annotate_card(card: dict) -> dict:
         return card
     abilities = _lift_hosted([item for item in abilities if isinstance(item, dict)])
     persistent = PERSISTENT_ON.get(card.get("id"))
-    if persistent is not None and any(_is_persistent_declaration(item) for item in abilities):
+    if persistent is not None and any(
+        _is_persistent_declaration(item) for item in abilities
+    ):
         kept: list[dict] = []
         matched = False
         for ability in abilities:
@@ -419,10 +437,14 @@ def annotate_card(card: dict) -> dict:
                 matched = True
             kept.append(ability)
         if not matched:
-            raise ValueError(f"{card.get('id')}: persistent flag did not land on an ability")
+            raise ValueError(
+                f"{card.get('id')}: persistent flag did not land on an ability"
+            )
         abilities = kept
     elif any(_is_persistent_declaration(item) for item in abilities):
-        raise ValueError(f"{card.get('id')}: persistent declaration has no printed ability")
+        raise ValueError(
+            f"{card.get('id')}: persistent declaration has no printed ability"
+        )
     icebreaker = _is_icebreaker(card)
     for ability in abilities:
         if _is_access(ability):

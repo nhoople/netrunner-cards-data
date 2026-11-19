@@ -14,6 +14,7 @@ everything else lists honest unsupported notes — never invent IR.
 
 Usage: python3 scripts/generate-what-lies-ahead.py
 """
+
 from __future__ import annotations
 
 from printed_numbers import apply_printed_numbers
@@ -110,8 +111,7 @@ def breaker_card(
             {
                 "id": f"{our_id(c['id'])}-pump",
                 "label": (
-                    f"Pump {c['title']} +{pump_s if pump_s is not None else 1} "
-                    "strength"
+                    f"Pump {c['title']} +{pump_s if pump_s is not None else 1} strength"
                 ),
                 "clickCost": 0,
                 "creditCost": pump_c,
@@ -171,7 +171,7 @@ def map_card(c: dict) -> dict | None:
     if cid in REPRINTS:
         return None
 
-    text = (c.get("stripped_text") or "")
+    text = c.get("stripped_text") or ""
     plain = re.sub(r"\s+", " ", text).strip()
 
     if cid == "whizzard-master-gamer":
@@ -483,10 +483,7 @@ def main():
 
     print(f"Wrote {len(written)} cards")
     print(f"Skipped reprints/shared: {len(skipped)}")
-    print(
-        f"Among written: full={len(clear_written)} "
-        f"partial={len(partial_written)}"
-    )
+    print(f"Among written: full={len(clear_written)} partial={len(partial_written)}")
     print("CLEARS=" + json.dumps(clear_written))
     print("POOL_IDS=" + json.dumps(pool_ids))
 

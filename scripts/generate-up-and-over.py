@@ -4,6 +4,7 @@
 Fetch: python3 scripts/nsg_catalog.py fetch uao
 Lunar cycle after First Contact (floor v1.104.0 → v1.105.0).
 """
+
 from __future__ import annotations
 
 import json
@@ -63,12 +64,15 @@ def map_card(c: dict) -> dict | None:
         )
 
     if cid == "peak-efficiency":
-        return base(c, onPlay=do(
-            "gain_credits",
-            side="corp",
-            amount=0,
-            tally={"count": "rezzed_ice", "per": 1, "side": "corp"},
-        ))
+        return base(
+            c,
+            onPlay=do(
+                "gain_credits",
+                side="corp",
+                amount=0,
+                tally={"count": "rezzed_ice", "per": 1, "side": "corp"},
+            ),
+        )
 
     if cid == "labyrinthine-servers":
         return base(
@@ -147,7 +151,9 @@ def map_card(c: dict) -> dict | None:
             subtypes=["barrier", "morph"],
             canAdvance=True,
             morphOddAdvancementSubtypeSwap={"gain": "sentry", "lose": "barrier"},
-            subroutines=[{"id": "changeling-etr", "text": "End the run", "effect": etr()}],
+            subroutines=[
+                {"id": "changeling-etr", "text": "End the run", "effect": etr()}
+            ],
         )
 
     if cid == "reuse":

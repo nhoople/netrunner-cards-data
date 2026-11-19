@@ -7,6 +7,7 @@ All 8 titles are unique (mor reprints absorbed — do not generate a mor wave).
 Follow NSG v2 stripped_text (not IR-hint paraphrases).
 Slug via spin_common.slugify.
 """
+
 from __future__ import annotations
 
 import json

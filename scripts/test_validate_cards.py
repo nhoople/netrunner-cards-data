@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Unit checks for validate-cards.py rules. No network."""
+
 from __future__ import annotations
 
 import importlib.util
@@ -7,7 +8,9 @@ import sys
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
-spec = importlib.util.spec_from_file_location("validate_cards", HERE / "validate-cards.py")
+spec = importlib.util.spec_from_file_location(
+    "validate_cards", HERE / "validate-cards.py"
+)
 assert spec and spec.loader
 validate_cards = importlib.util.module_from_spec(spec)
 sys.path.insert(0, str(HERE))
@@ -20,17 +23,30 @@ def paid(label: str, cost: dict) -> dict:
 
 def test_lose_click_cost_is_lose_clicks() -> None:
     check = validate_cards._lose_click_cost_error
-    assert check(paid("Lose [click]: Break 1 subroutine on Markus 1.0", {"loseClicks": 1})) is None
-    assert check(
-        paid("Once per turn → Lose [click][click]: Break 1 subroutine", {"loseClicks": 2})
-    ) is None
+    assert (
+        check(paid("Lose [click]: Break 1 subroutine on Markus 1.0", {"loseClicks": 1}))
+        is None
+    )
+    assert (
+        check(
+            paid(
+                "Once per turn → Lose [click][click]: Break 1 subroutine",
+                {"loseClicks": 2},
+            )
+        )
+        is None
+    )
 
 
 def test_lose_click_cost_written_as_clicks_fails() -> None:
     check = validate_cards._lose_click_cost_error
     err = check(paid("Lose [click]: Break 1 subroutine on Markus 1.0", {"clicks": 1}))
     assert err and "loseClicks" in err, err
-    err = check(paid("Once per turn → Lose [click][click]: Break 1 subroutine", {"loseClicks": 1}))
+    err = check(
+        paid(
+            "Once per turn → Lose [click][click]: Break 1 subroutine", {"loseClicks": 1}
+        )
+    )
     assert err and "loses 2" in err, err
 
 
@@ -42,7 +58,11 @@ def test_click_cost_is_not_a_lose_click_cost() -> None:
 
 
 def static(field: str) -> dict:
-    return {"class": "static", "rule": "9.3.7a", "declaration": {"field": field, "value": True}}
+    return {
+        "class": "static",
+        "rule": "9.3.7a",
+        "declaration": {"field": field, "value": True},
+    }
 
 
 def test_play_gate_on_hardware_with_paid_ability_fails() -> None:
@@ -69,7 +89,10 @@ def test_use_restriction_on_paid_ability_passes() -> None:
 
 def test_play_gate_on_event_passes() -> None:
     check = validate_cards._play_gate_on_used_card_error
-    card = {"type": "event", "abilities": [static("playRequiresSuccessfulHqRunThisTurn")]}
+    card = {
+        "type": "event",
+        "abilities": [static("playRequiresSuccessfulHqRunThisTurn")],
+    }
     assert check(card) is None
 
 
@@ -102,13 +125,17 @@ def test_ice_break_written_as_host_break_fails() -> None:
 
 def test_ice_self_break_needs_runner_flag() -> None:
     check = validate_cards._ice_self_break_error
-    err = check({"type": "ice"}, ice_break({"kind": "break_subroutine_on_self", "amount": 1}))
+    err = check(
+        {"type": "ice"}, ice_break({"kind": "break_subroutine_on_self", "amount": 1})
+    )
     assert err and "usableByRunnerOnSelfIce" in err, err
 
 
 def test_program_host_break_is_not_ice() -> None:
     check = validate_cards._ice_self_break_error
-    assert check({"type": "program"}, ice_break({"kind": "break_host_subroutine"})) is None
+    assert (
+        check({"type": "program"}, ice_break({"kind": "break_host_subroutine"})) is None
+    )
 
 
 FALSE_LEAD_TEXT = {
@@ -132,14 +159,22 @@ def test_forfeit_this_agenda_written_as_trash_self_fails() -> None:
 
 def test_forfeit_self_without_printed_cost_fails() -> None:
     check = validate_cards._forfeit_self_cost_error
-    printed = {"strippedTitle": "Data Dealer", "strippedText": "click, forfeit 1 agenda: Gain 9 credit."}
+    printed = {
+        "strippedTitle": "Data Dealer",
+        "strippedText": "click, forfeit 1 agenda: Gain 9 credit.",
+    }
     rules = {"abilities": [paid("Forfeit", {"forfeitSelf": True})]}
     assert check(printed, rules)
-    assert check(printed, {"abilities": [paid("Forfeit", {"forfeitAgenda": True})]}) is None
+    assert (
+        check(printed, {"abilities": [paid("Forfeit", {"forfeitAgenda": True})]})
+        is None
+    )
 
 
 def main() -> int:
-    tests = [value for name, value in sorted(globals().items()) if name.startswith("test_")]
+    tests = [
+        value for name, value in sorted(globals().items()) if name.startswith("test_")
+    ]
     for test in tests:
         test()
     print(f"validate-cards: {len(tests)} tests passed")

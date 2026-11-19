@@ -12,6 +12,7 @@ everything else lists honest unsupported notes — never invent IR.
 
 Usage: python3 scripts/generate-uprising.py
 """
+
 from __future__ import annotations
 
 from printed_numbers import apply_printed_numbers
@@ -149,7 +150,7 @@ def breaker_card(
 
 def map_card(c: dict) -> dict:
     cid = our_id(c["id"])
-    text = (c.get("stripped_text") or "")
+    text = c.get("stripped_text") or ""
     plain = re.sub(r"\s+", " ", text).strip()
 
     # --- v1.35.0 kickoff: existing IR only ---
@@ -1298,9 +1299,7 @@ def map_card(c: dict) -> dict:
                     "windows": ["corp_action_paw"],
                     "effect": {
                         "op": "do",
-                        "action": {
-                            "kind": "look_top_rd_may_advance_may_bottom"
-                        },
+                        "action": {"kind": "look_top_rd_may_advance_may_bottom"},
                     },
                 }
             ],
@@ -1572,8 +1571,7 @@ def map_card(c: dict) -> dict:
                 {
                     "id": "prognostic-q-loop-reveal-install",
                     "label": (
-                        "1¢: Reveal top of stack; may install if program "
-                        "or hardware"
+                        "1¢: Reveal top of stack; may install if program or hardware"
                     ),
                     "clickCost": 0,
                     "creditCost": 1,
@@ -1583,9 +1581,7 @@ def map_card(c: dict) -> dict:
                     "effect": {
                         "op": "do",
                         "action": {
-                            "kind": (
-                                "reveal_top_stack_may_install_program_or_hardware"
-                            )
+                            "kind": ("reveal_top_stack_may_install_program_or_hardware")
                         },
                     },
                 }
@@ -1817,21 +1813,20 @@ def map_card(c: dict) -> dict:
                 "effects": [
                     {
                         "op": "do",
-                        "action": {"kind": "search_rd_type_to_hq", "cardType": "agenda"},
-                    },
-                    {
-                        "op": "do",
                         "action": {
-                            "kind": (
-                                "may_install_from_hq_in_remote_root_paying_costs"
-                            )
+                            "kind": "search_rd_type_to_hq",
+                            "cardType": "agenda",
                         },
                     },
                     {
                         "op": "do",
                         "action": {
-                            "kind": "forbid_scoring_agendas_this_turn"
+                            "kind": ("may_install_from_hq_in_remote_root_paying_costs")
                         },
+                    },
+                    {
+                        "op": "do",
+                        "action": {"kind": "forbid_scoring_agendas_this_turn"},
                     },
                 ],
             },
@@ -1910,9 +1905,7 @@ def map_card(c: dict) -> dict:
             c,
             onFirstGripOrStackTrashBatchEachTurn={
                 "op": "do",
-                "action": {
-                    "kind": "may_add_one_of_card_ids_to_stack_bottom"
-                },
+                "action": {"kind": "may_add_one_of_card_ids_to_stack_bottom"},
             },
             paidAbilities=[
                 {
@@ -1927,9 +1920,7 @@ def map_card(c: dict) -> dict:
                     "windows": ["runner_action_paw"],
                     "effect": {
                         "op": "do",
-                        "action": {
-                            "kind": "may_add_from_heap_to_stack_top"
-                        },
+                        "action": {"kind": "may_add_from_heap_to_stack_top"},
                     },
                 }
             ],
@@ -1946,9 +1937,7 @@ def map_card(c: dict) -> dict:
             paidAbilities=[
                 {
                     "id": "prana-prevent-net",
-                    "label": (
-                        "Interrupt: prevent 1 net damage → +1 power + 3¢"
-                    ),
+                    "label": ("Interrupt: prevent 1 net damage → +1 power + 3¢"),
                     "clickCost": 0,
                     "creditCost": 0,
                     "cost": {},

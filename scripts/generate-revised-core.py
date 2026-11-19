@@ -16,6 +16,7 @@ mismatches from the title-slug era (kept as manifest documentation):
   aesop-s-pawnshop        → aesops-pawnshop
   hadrian-s-wall          → hadrians-wall
 """
+
 from __future__ import annotations
 
 import json

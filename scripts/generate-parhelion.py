@@ -9,6 +9,7 @@ everything else lists honest unsupported notes — never invent IR.
 
 Usage: python3 scripts/generate-parhelion.py
 """
+
 from __future__ import annotations
 
 from printed_numbers import apply_printed_numbers
@@ -137,7 +138,9 @@ def base(c, **extra):
     return card
 
 
-def breaker_card(c, subtype, strength, break_c, pump_c=None, pump_s=None, break_max=None, **extra):
+def breaker_card(
+    c, subtype, strength, break_c, pump_c=None, pump_s=None, break_max=None, **extra
+):
     br = {
         "breaksSubtype": subtype,
         "strength": strength,
@@ -173,7 +176,7 @@ def breaker_card(c, subtype, strength, break_c, pump_c=None, pump_s=None, break_
 
 def map_card(c: dict) -> dict:
     cid = our_id(c["id"])
-    text = (c.get("stripped_text") or "")
+    text = c.get("stripped_text") or ""
     plain = re.sub(r"\s+", " ", text).strip()
 
     # --- Identities (deckbuilding-only or deferred) ---
@@ -568,7 +571,10 @@ def map_card(c: dict) -> dict:
                             trash_self(),
                             {
                                 "op": "do",
-                                "action": {"kind": "search_rd_type_to_hq", "cardType": "operation"},
+                                "action": {
+                                    "kind": "search_rd_type_to_hq",
+                                    "cardType": "operation",
+                                },
                             },
                         ),
                     },
@@ -802,9 +808,7 @@ def map_card(c: dict) -> dict:
         return card
 
     if cid == "abaasy":
-        card = breaker_card(
-            c, "code gate", 1, 1, pump_c=2, pump_s=2, unsupported=[]
-        )
+        card = breaker_card(c, "code gate", 1, 1, pump_c=2, pump_s=2, unsupported=[])
         card["onFullyBreakOncePerTurn"] = {
             "op": "do",
             "action": {"kind": "may_trash_from_grip_to_draw"},
@@ -977,9 +981,7 @@ def map_card(c: dict) -> dict:
                         "kind": "may_trash_hq_then",
                         "then": {
                             "op": "do",
-                            "action": {
-                                "kind": "forbid_installed_runner_break_for_run"
-                            },
+                            "action": {"kind": "forbid_installed_runner_break_for_run"},
                         },
                     },
                 },

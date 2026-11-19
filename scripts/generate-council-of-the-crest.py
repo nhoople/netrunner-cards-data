@@ -9,6 +9,7 @@ Slug via spin_common.slugify (Corporate "Grant"→corporate-grant, eXer→exer,
 Azmari EdTech: Shaping the Future→azmari-edtech-shaping-the-future,
 Kuwinda K4H1U3→kuwinda-k4h1u3, NEXT Sapphire→next-sapphire, TechnoCo→technoco).
 """
+
 from __future__ import annotations
 
 import json

@@ -4,6 +4,7 @@
 Fetch: python3 scripts/nsg_catalog.py fetch tc
 Spin cycle after Mala Tempora (floor v1.97.0 → v1.98.0).
 """
+
 from __future__ import annotations
 
 import json
@@ -185,12 +186,15 @@ def map_card(c: dict) -> dict | None:
         )
 
     if cid == "sweeps-week":
-        return base(c, onPlay=do(
+        return base(
+            c,
+            onPlay=do(
                 "gain_credits",
                 side="runner",
                 amount=0,
                 tally={"count": "runner_grip", "per": 1, "side": "runner"},
-            ))
+            ),
+        )
 
     if cid == "rsvp":
         return base(

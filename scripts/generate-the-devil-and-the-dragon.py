@@ -9,6 +9,7 @@ Slug via spin_common.slugify (419: Amoral Scammer→419-amoral-scammer,
 Malia Z0L0K4→malia-z0l0k4, SSO Industries: Fueling Innovation→
 sso-industries-fueling-innovation, Endless EULA→endless-eula).
 """
+
 from __future__ import annotations
 
 import json

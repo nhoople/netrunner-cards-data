@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Offline checks for the catalog diff. No network."""
+
 from __future__ import annotations
 
 import sys
@@ -25,8 +26,12 @@ def test_pool_pack_codes() -> None:
     codes = pack_codes_from_pool(
         {
             "waves": {
-                "system-gateway": {"notes": "Null Signal System Gateway (NRDB pack sg) learner set."},
-                "midnight-sun": {"notes": "Midnight Sun Booster Pack (msbp) titles absorbed."},
+                "system-gateway": {
+                    "notes": "Null Signal System Gateway (NRDB pack sg) learner set."
+                },
+                "midnight-sun": {
+                    "notes": "Midnight Sun Booster Pack (msbp) titles absorbed."
+                },
             }
         }
     )
@@ -62,7 +67,14 @@ def test_id_transforms() -> None:
 
 
 def test_fact_diff() -> None:
-    before = {"id": "palisade", "title": "Palisade", "faction_id": "neutral_corp", "cost": 3, "strength": 2, "text": "End the run."}
+    before = {
+        "id": "palisade",
+        "title": "Palisade",
+        "faction_id": "neutral_corp",
+        "cost": 3,
+        "strength": 2,
+        "text": "End the run.",
+    }
     after = {**before, "text": "End the run. Gain 1 credit."}
     assert diff_card_facts(before, after) == ["text changed"]
     assert diff_card_facts(before, {**before, "cost": 4}) == ["cost: 3 → 4"]
@@ -82,7 +94,9 @@ def test_generator_pack_codes() -> None:
 def test_restriction_card_ids() -> None:
     from build_catalog_facts import partition_card_ids, restriction_document
 
-    mapped, missed = partition_card_ids(["sure_gamble", "unknown_card"], {"sure_gamble": "sure-gamble"})
+    mapped, missed = partition_card_ids(
+        ["sure_gamble", "unknown_card"], {"sure_gamble": "sure-gamble"}
+    )
     assert mapped == ["sure-gamble"] and missed == ["unknown_card"]
     document = restriction_document(
         {
@@ -150,15 +164,18 @@ def test_printed_numbers() -> None:
     from printed_numbers import apply_printed_numbers
 
     runner = {}
-    apply_printed_numbers(runner, {
-        "card_type_id": "runner_identity",
-        "side_id": "runner",
-        "base_link": 0,
-        "minimum_deck_size": 40,
-        "influence_limit": 15,
-        "influence_cost": None,
-        "deck_limit": 1,
-    })
+    apply_printed_numbers(
+        runner,
+        {
+            "card_type_id": "runner_identity",
+            "side_id": "runner",
+            "base_link": 0,
+            "minimum_deck_size": 40,
+            "influence_limit": 15,
+            "influence_cost": None,
+            "deck_limit": 1,
+        },
+    )
     assert runner == {
         "deckLimit": 1,
         "link": 0,
@@ -167,19 +184,24 @@ def test_printed_numbers() -> None:
     }, runner
 
     corp = {}
-    apply_printed_numbers(corp, {
-        "card_type_id": "corp_identity",
-        "side_id": "corp",
-        "base_link": 0,
-        "minimum_deck_size": 45,
-        "influence_limit": 15,
-    })
+    apply_printed_numbers(
+        corp,
+        {
+            "card_type_id": "corp_identity",
+            "side_id": "corp",
+            "base_link": 0,
+            "minimum_deck_size": 45,
+            "influence_limit": 15,
+        },
+    )
     assert "link" not in corp, corp
     assert corp["minimumDeckSize"] == 45
     assert corp["influenceLimit"] == 15
 
     ice = {}
-    apply_printed_numbers(ice, {"card_type_id": "ice", "influence_cost": 2, "deck_limit": 3})
+    apply_printed_numbers(
+        ice, {"card_type_id": "ice", "influence_cost": 2, "deck_limit": 3}
+    )
     assert ice == {"deckLimit": 3, "influence": 2}, ice
 
     neutral = {}
@@ -205,12 +227,18 @@ def test_printed_face_and_unique() -> None:
     )
     assert back["title"] == "Hoshiko Shiro: Mahou Shoujo"
     assert back["link"] == 1 and "subtypes" not in back
-    untitled = printed_face({"text": "x", "stripped_text": "x"}, "SYNC: Everything, Everywhere")
+    untitled = printed_face(
+        {"text": "x", "stripped_text": "x"}, "SYNC: Everything, Everywhere"
+    )
     assert untitled["title"] == "SYNC: Everything, Everywhere"
 
-    assert rules_unique({"abilities": [{"declaration": {"field": "unique", "value": True}}]})
+    assert rules_unique(
+        {"abilities": [{"declaration": {"field": "unique", "value": True}}]}
+    )
     assert rules_unique({"unique": True})
-    assert not rules_unique({"abilities": [{"declaration": {"field": "unique", "value": False}}]})
+    assert not rules_unique(
+        {"abilities": [{"declaration": {"field": "unique", "value": False}}]}
+    )
     assert not rules_unique({})
 
 
@@ -220,9 +248,14 @@ def test_influence_problem() -> None:
     assert influence_problem(0, 0) is None
     assert influence_problem(2, 2) is None
     assert influence_problem(None, None) is None
-    assert influence_problem(0, None) == "stored influence None != catalog influence_cost 0"
+    assert (
+        influence_problem(0, None)
+        == "stored influence None != catalog influence_cost 0"
+    )
     assert influence_problem(2, 1) is not None
-    assert influence_problem(None, 0) == "rules store influence but the catalog has no bar"
+    assert (
+        influence_problem(None, 0) == "rules store influence but the catalog has no bar"
+    )
 
 
 def test_pin_fields() -> None:

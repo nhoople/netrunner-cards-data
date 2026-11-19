@@ -4,6 +4,7 @@
 Fetch: python3 scripts/nsg_catalog.py fetch dt
 Spin cycle after Fear and Loathing (floor v1.99.0 → v1.100.0).
 """
+
 from __future__ import annotations
 
 import json
@@ -244,7 +245,9 @@ def map_card(c: dict) -> dict | None:
     if cid == "quandary":
         return base(
             c,
-            subroutines=[{"id": "quandary-etr", "text": "End the run.", "effect": etr()}],
+            subroutines=[
+                {"id": "quandary-etr", "text": "End the run.", "effect": etr()}
+            ],
         )
 
     card = base(c)

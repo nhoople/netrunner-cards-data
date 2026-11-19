@@ -4,6 +4,7 @@
 Fetch: python3 scripts/nsg_catalog.py fetch ts
 Lunar cycle after All That Remains (floor v1.106.0 → v1.107.0).
 """
+
 from __future__ import annotations
 
 import json

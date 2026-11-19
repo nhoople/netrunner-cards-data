@@ -9,6 +9,7 @@ Reprints Sure Gamble (30030) and Hedge Fund (30075) are skipped (reuse wave defs
 
 Usage: python3 scripts/generate-system-gateway.py
 """
+
 # NOTE: Full mapping lives in git history. Card files live under data/<side>/<type>/.
 # This stub documents how the corpus was produced; prefer editing card JSON
 # directly for fidelity fixes. Re-run only when refreshing from the pinned catalog.

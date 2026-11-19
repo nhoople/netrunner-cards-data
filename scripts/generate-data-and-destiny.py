@@ -5,6 +5,7 @@ Fetch: python3 scripts/nsg_catalog.py fetch dad
 Deluxe after The Universe of Tomorrow / SanSan (floor v1.114.0 → v1.115.0).
 Reprint skip: spark-agency-worldswide-reach (SC19).
 """
+
 from __future__ import annotations
 
 import json
@@ -87,11 +88,7 @@ def paid(
         "creditCost": credits,
         "cost": c,
         "windows": windows
-        or (
-            ["corp_action_paw"]
-            if not usable_by_runner
-            else ["runner_action_paw"]
-        ),
+        or (["corp_action_paw"] if not usable_by_runner else ["runner_action_paw"]),
         "effect": effect,
     }
     if once_per_turn:
@@ -227,9 +224,7 @@ def map_card(c: dict) -> dict | None:
                     {
                         "id": "score",
                         "label": "Add News Team to score area as −1 agenda point",
-                        "effect": do(
-                            "add_to_runner_score_as_agenda", agendaPoints=-1
-                        ),
+                        "effect": do("add_to_runner_score_as_agenda", agendaPoints=-1),
                     },
                 ],
             ),
@@ -261,9 +256,7 @@ def map_card(c: dict) -> dict | None:
             subtypes=["executive"],
             unique=True,
             runnerAllottedClicksBonus=-1,
-            onTrashWhileAccessed=do(
-                "add_to_runner_score_as_agenda", agendaPoints=2
-            ),
+            onTrashWhileAccessed=do("add_to_runner_score_as_agenda", agendaPoints=2),
         )
 
     if cid == "reality-threedee":
@@ -328,9 +321,7 @@ def map_card(c: dict) -> dict | None:
                 {
                     "id": "resistor-trace",
                     "text": "Trace[4]. If successful, end the run.",
-                    "effect": do(
-                        "trace", strength=4, onSuccess=etr()
-                    ),
+                    "effect": do("trace", strength=4, onSuccess=etr()),
                 }
             ],
         )
@@ -474,9 +465,7 @@ def map_card(c: dict) -> dict | None:
                 {
                     "id": "assassin-net",
                     "text": "Trace[5]. If successful, do 3 net damage.",
-                    "effect": do(
-                        "trace", strength=5, onSuccess=net(3)
-                    ),
+                    "effect": do("trace", strength=5, onSuccess=net(3)),
                 },
                 {
                     "id": "assassin-trash",

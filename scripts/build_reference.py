@@ -8,6 +8,7 @@ the catalog spelling.
 
 Usage: python3 scripts/build_reference.py
 """
+
 from __future__ import annotations
 
 import json
@@ -21,7 +22,9 @@ DATA = ROOT / "data"
 
 
 def write_json(path: Path, document: list) -> None:
-    path.write_text(json.dumps(document, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    path.write_text(
+        json.dumps(document, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
+    )
 
 
 def factions() -> list[dict]:

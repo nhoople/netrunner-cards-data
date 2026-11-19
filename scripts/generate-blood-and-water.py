@@ -9,6 +9,7 @@ Slug via spin_common.slugify (Māui→maui, Mirāju→miraju,
 Alice Merchant: Clan Agitator→alice-merchant-clan-agitator,
 Mass-Driver→mass-driver).
 """
+
 from __future__ import annotations
 
 import json
@@ -90,11 +91,7 @@ def paid(
         "creditCost": credits,
         "cost": c,
         "windows": windows
-        or (
-            ["corp_action_paw"]
-            if not usable_by_runner
-            else ["runner_action_paw"]
-        ),
+        or (["corp_action_paw"] if not usable_by_runner else ["runner_action_paw"]),
         "effect": effect,
     }
     if once_per_turn:

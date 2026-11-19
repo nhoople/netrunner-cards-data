@@ -9,6 +9,7 @@ everything else lists honest unsupported notes — never invent IR.
 
 Usage: python3 scripts/generate-rwr.py
 """
+
 from __future__ import annotations
 
 from printed_numbers import apply_printed_numbers
@@ -113,7 +114,9 @@ def base(c, **extra):
     return card
 
 
-def breaker_card(c, subtype, strength, break_c, pump_c=None, pump_s=None, break_max=None, **extra):
+def breaker_card(
+    c, subtype, strength, break_c, pump_c=None, pump_s=None, break_max=None, **extra
+):
     br = {
         "breaksSubtype": subtype,
         "strength": strength,
@@ -149,7 +152,7 @@ def breaker_card(c, subtype, strength, break_c, pump_c=None, pump_s=None, break_
 
 def map_card(c: dict) -> dict:
     cid = our_id(c["id"])
-    text = (c.get("stripped_text") or "")
+    text = c.get("stripped_text") or ""
     plain = re.sub(r"\s+", " ", text).strip()
 
     if cid == "coalescence":
@@ -607,9 +610,7 @@ def map_card(c: dict) -> dict:
                         },
                         {
                             "op": "do",
-                            "action": {
-                                "kind": "may_install_from_hq_paying_costs"
-                            },
+                            "action": {"kind": "may_install_from_hq_paying_costs"},
                         },
                     ),
                 }
@@ -1918,7 +1919,10 @@ def map_card(c: dict) -> dict:
                         "label": "Trash 1 installed Runner card",
                         "effect": {
                             "op": "do",
-                            "action": {"kind": "trash_installed_runner", "pick": "choose"},
+                            "action": {
+                                "kind": "trash_installed_runner",
+                                "pick": "choose",
+                            },
                         },
                     },
                 ],
@@ -2085,9 +2089,7 @@ def map_card(c: dict) -> dict:
                 "op": "do",
                 "action": {"kind": "add_agenda_counter", "amount": 1},
             },
-            onRunBeginMaySpendAgendaCounterRezUpToIceProtectingAttacked={
-                "maxIce": 2
-            },
+            onRunBeginMaySpendAgendaCounterRezUpToIceProtectingAttacked={"maxIce": 2},
             onCorpTurnEndDerezUpToIceProtectingLightningServer={"maxIce": 2},
             unsupported=[],
         )
@@ -2303,8 +2305,7 @@ def map_card(c: dict) -> dict:
                         {
                             "id": "score",
                             "label": (
-                                "Add to score area as 0-point "
-                                "assassination agenda"
+                                "Add to score area as 0-point assassination agenda"
                             ),
                             "effect": seq(
                                 {
@@ -2380,8 +2381,7 @@ def map_card(c: dict) -> dict:
                     {
                         "id": "bonus",
                         "label": (
-                            "Pay 1¢ and trash Cupellation: "
-                            "access 2 additional cards"
+                            "Pay 1¢ and trash Cupellation: access 2 additional cards"
                         ),
                         "effect": seq(
                             {

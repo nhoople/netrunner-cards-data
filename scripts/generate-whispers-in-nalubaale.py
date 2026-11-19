@@ -9,6 +9,7 @@ Slug via spin_common.slugify (Jackpot!→jackpot, Kamali 1.0→kamali-1-0,
 Freedom Khumalo: Crypto-Anarchist→freedom-khumalo-crypto-anarchist,
 Mwanza City Grid→mwanza-city-grid, Overseer Matrix→overseer-matrix).
 """
+
 from __future__ import annotations
 
 import json

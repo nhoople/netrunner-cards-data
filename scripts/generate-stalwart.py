@@ -4,6 +4,7 @@
 Fetch: python3 scripts/nsg_catalog.py fetch st
 Spin cycle after Opening Moves (floor v1.95.0 → v1.96.0).
 """
+
 from __future__ import annotations
 
 from printed_numbers import apply_printed_numbers
@@ -384,7 +385,7 @@ def map_card(c: dict) -> dict | None:
         return base(c, onPlay=gain("corp", 15))
 
     card = base(c)
-    text = (c.get("stripped_text") or "")
+    text = c.get("stripped_text") or ""
     card["unsupported"] = [f"Full text not yet mapped to IR: {text[:240]}"]
     return card
 

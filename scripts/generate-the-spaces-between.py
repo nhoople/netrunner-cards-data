@@ -4,6 +4,7 @@
 Fetch: python3 scripts/nsg_catalog.py fetch tsb
 Lunar cycle after Upstalk (floor v1.102.0 → v1.103.0).
 """
+
 from __future__ import annotations
 
 import json

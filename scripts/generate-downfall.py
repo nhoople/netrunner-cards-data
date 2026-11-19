@@ -12,6 +12,7 @@ everything else lists honest unsupported notes — never invent IR.
 
 Usage: python3 scripts/generate-downfall.py
 """
+
 from __future__ import annotations
 
 from printed_numbers import apply_printed_numbers
@@ -169,7 +170,7 @@ def breaker_card(
 
 def map_card(c: dict) -> dict:
     cid = our_id(c["id"])
-    text = (c.get("stripped_text") or "")
+    text = c.get("stripped_text") or ""
     plain = re.sub(r"\s+", " ", text).strip()
 
     # --- v1.47.0 kickoff: existing IR only ---
@@ -772,9 +773,7 @@ def map_card(c: dict) -> dict:
                             "strength": 6,
                             "onSuccess": {
                                 "op": "do",
-                                "action": {
-                                    "kind": "forbid_steal_trash_this_run"
-                                },
+                                "action": {"kind": "forbid_steal_trash_this_run"},
                             },
                         },
                     },
@@ -820,9 +819,7 @@ def map_card(c: dict) -> dict:
                     "oncePerTurn": True,
                     "effect": {
                         "op": "do",
-                        "action": {
-                            "kind": "choose_grant_encounter_ice_subtype"
-                        },
+                        "action": {"kind": "choose_grant_encounter_ice_subtype"},
                     },
                 }
             ],
@@ -1577,8 +1574,7 @@ def map_card(c: dict) -> dict:
                         "op": "do",
                         "action": {
                             "kind": (
-                                "prevent_pending_end_the_run_"
-                                "from_corp_card_ability"
+                                "prevent_pending_end_the_run_from_corp_card_ability"
                             ),
                         },
                     },
@@ -1593,10 +1589,7 @@ def map_card(c: dict) -> dict:
             onSuccessfulRun={
                 "op": "do",
                 "action": {
-                    "kind": (
-                        "whistleblower_may_trash_name_agenda_"
-                        "steal_ignore_costs"
-                    ),
+                    "kind": ("whistleblower_may_trash_name_agenda_steal_ignore_costs"),
                 },
             },
             unsupported=[],
@@ -1752,15 +1745,12 @@ def map_card(c: dict) -> dict:
                     },
                     {
                         "id": "extra-action",
-                        "label": (
-                            "Take another different action, paying [click] less"
-                        ),
+                        "label": ("Take another different action, paying [click] less"),
                         "effect": {
                             "op": "do",
                             "action": {
                                 "kind": (
-                                    "mirrormorph_take_different_"
-                                    "action_click_discount"
+                                    "mirrormorph_take_different_action_click_discount"
                                 ),
                             },
                         },

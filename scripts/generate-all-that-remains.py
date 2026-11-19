@@ -4,6 +4,7 @@
 Fetch: python3 scripts/nsg_catalog.py fetch atr
 Lunar cycle after Up and Over (floor v1.105.0 → v1.106.0).
 """
+
 from __future__ import annotations
 
 import json

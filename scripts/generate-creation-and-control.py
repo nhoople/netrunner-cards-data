@@ -12,6 +12,7 @@ Hand-mapped Effect IR only — empty unsupported for set-complete.
 
 Usage: python3 scripts/generate-creation-and-control.py
 """
+
 from __future__ import annotations
 
 from printed_numbers import apply_printed_numbers
@@ -277,9 +278,7 @@ def map_card(c: dict) -> dict | None:
             c,
             unique=True,
             allottedClicksBonus=1,
-            onTrashWhileAccessed=do(
-                "add_to_runner_score_as_agenda", agendaPoints=2
-            ),
+            onTrashWhileAccessed=do("add_to_runner_score_as_agenda", agendaPoints=2),
             unsupported=[],
         )
 
@@ -491,8 +490,7 @@ def map_card(c: dict) -> dict | None:
                 {
                     "id": "viktor-2-0-trace",
                     "text": (
-                        "Trace[2]. If successful, place 1 power counter "
-                        "on this ice."
+                        "Trace[2]. If successful, place 1 power counter on this ice."
                     ),
                     "effect": do(
                         "trace",
@@ -555,8 +553,7 @@ def map_card(c: dict) -> dict | None:
                 {
                     "id": "datapike-pay",
                     "text": (
-                        "The Runner must pay 2¢, if able. If they cannot, "
-                        "end the run."
+                        "The Runner must pay 2¢, if able. If they cannot, end the run."
                     ),
                     "effect": do("pay_credits_or_etr", side="runner", amount=2),
                 },
@@ -614,9 +611,7 @@ def map_card(c: dict) -> dict | None:
             c,
             runEvent={
                 "servers": "any",
-                "onSuccessfulRun": do(
-                    "may_breach_instead_exploratory_romp", amount=3
-                ),
+                "onSuccessfulRun": do("may_breach_instead_exploratory_romp", amount=3),
             },
             unsupported=[],
         )
@@ -852,7 +847,7 @@ def map_card(c: dict) -> dict | None:
         )
 
     card = base(c)
-    text = (c.get("stripped_text") or "")
+    text = c.get("stripped_text") or ""
     plain = re.sub(r"\s+", " ", text).strip()
     card["unsupported"] = [f"Full text not yet mapped to IR: {plain[:240]}"]
     return card
@@ -905,10 +900,7 @@ def main():
 
     print(f"Wrote {len(written)} cards")
     print(f"Skipped reprints/shared: {len(skipped)}")
-    print(
-        f"Among written: full={len(clear_written)} "
-        f"partial={len(partial_written)}"
-    )
+    print(f"Among written: full={len(clear_written)} partial={len(partial_written)}")
     if partial_written:
         print("PARTIAL=" + json.dumps(partial_written))
     print("CLEARS=" + json.dumps(clear_written))

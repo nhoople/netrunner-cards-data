@@ -15,6 +15,7 @@ everything else lists honest unsupported notes — never invent IR.
 
 Usage: python3 scripts/generate-system-core-2019.py
 """
+
 from __future__ import annotations
 
 from printed_numbers import apply_printed_numbers
@@ -172,9 +173,7 @@ def breaker_card(
         }
         if duration:
             pump_eff["action"]["duration"] = duration
-        label_dur = (
-            " for the remainder of this run" if duration == "run" else ""
-        )
+        label_dur = " for the remainder of this run" if duration == "run" else ""
         paid.append(
             {
                 "id": f"{our_id(c['id'])}-pump",
@@ -240,7 +239,7 @@ def map_card(c: dict) -> dict | None:
     if cid in REPRINTS:
         return None
 
-    text = (c.get("stripped_text") or "")
+    text = c.get("stripped_text") or ""
     plain = re.sub(r"\s+", " ", text).strip()
 
     # --- v1.59.0 kickoff: existing IR only ---
@@ -1762,9 +1761,7 @@ def map_card(c: dict) -> dict | None:
         )
 
     card = base(c)
-    card["unsupported"] = [
-        f"Full text not yet mapped to IR: {plain[:200]}"
-    ]
+    card["unsupported"] = [f"Full text not yet mapped to IR: {plain[:200]}"]
     return card
 
 

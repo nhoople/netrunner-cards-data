@@ -18,6 +18,7 @@ means the baseline needs regenerating so it keeps shrinking.
     python3 scripts/check_labels.py --write    # regenerate the baseline
     python3 scripts/check_labels.py --report   # also list the worst drift
 """
+
 from __future__ import annotations
 
 import argparse
@@ -102,7 +103,11 @@ def collect() -> tuple[dict, dict[str, dict]]:
         card = json.loads(path.read_text(encoding="utf-8"))
         cid = card["id"]
         printed_path = DATA / "printed" / f"{cid}.json"
-        printed = json.loads(printed_path.read_text(encoding="utf-8")) if printed_path.is_file() else {}
+        printed = (
+            json.loads(printed_path.read_text(encoding="utf-8"))
+            if printed_path.is_file()
+            else {}
+        )
         printed_by_id[cid] = printed
         if card.get("unsupported"):
             unsupported.append(cid)
@@ -125,7 +130,11 @@ def collect() -> tuple[dict, dict[str, dict]]:
 def flatten(entries: dict) -> dict[str, set[str]]:
     out: dict[str, set[str]] = {}
     for section in ("unlabelled", "drift"):
-        out[section] = {f"{cid} {item}" for cid, items in entries.get(section, {}).items() for item in items}
+        out[section] = {
+            f"{cid} {item}"
+            for cid, items in entries.get(section, {}).items()
+            for item in items
+        }
     out["unsupported"] = set(entries.get("unsupported", []))
     return out
 
@@ -145,7 +154,9 @@ def baseline_document(entries: dict) -> dict:
     }
 
 
-def worst_drift(entries: dict, printed_by_id: dict[str, dict], limit: int) -> list[tuple[list[str], str, str]]:
+def worst_drift(
+    entries: dict, printed_by_id: dict[str, dict], limit: int
+) -> list[tuple[list[str], str, str]]:
     """The `limit` drift entries with the most label words absent from the printed text."""
     rows = [
         (drift_rank(label, printed_by_id.get(cid, {})), cid, label)
@@ -153,7 +164,10 @@ def worst_drift(entries: dict, printed_by_id: dict[str, dict], limit: int) -> li
         for label in labels
     ]
     rows.sort()
-    return [(missing_words(label, printed_by_id.get(cid, {})), cid, label) for _, cid, label in rows[:limit]]
+    return [
+        (missing_words(label, printed_by_id.get(cid, {})), cid, label)
+        for _, cid, label in rows[:limit]
+    ]
 
 
 def compare(current: dict, baseline: dict) -> list[str]:
@@ -164,15 +178,24 @@ def compare(current: dict, baseline: dict) -> list[str]:
         for item in sorted(now[section] - then[section]):
             problems.append(f"new {section} entry: {item}")
         for item in sorted(then[section] - now[section]):
-            problems.append(f"{section} entry no longer present (regenerate the baseline): {item}")
+            problems.append(
+                f"{section} entry no longer present (regenerate the baseline): {item}"
+            )
     return problems
 
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("--write", action="store_true", help="regenerate the baseline")
-    parser.add_argument("--report", type=int, nargs="?", const=10, default=0, metavar="N",
-                        help="print the N worst drift entries (default 10)")
+    parser.add_argument(
+        "--report",
+        type=int,
+        nargs="?",
+        const=10,
+        default=0,
+        metavar="N",
+        help="print the N worst drift entries (default 10)",
+    )
     args = parser.parse_args(argv)
 
     current, printed_by_id = collect()
@@ -188,7 +211,10 @@ def main(argv: list[str] | None = None) -> int:
 
     if args.write:
         BASELINE.parent.mkdir(parents=True, exist_ok=True)
-        BASELINE.write_text(json.dumps(baseline_document(current), indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+        BASELINE.write_text(
+            json.dumps(baseline_document(current), indent=2, ensure_ascii=False) + "\n",
+            encoding="utf-8",
+        )
         print(f"wrote {BASELINE.relative_to(ROOT)}")
         return 0
 
@@ -202,7 +228,9 @@ def main(argv: list[str] | None = None) -> int:
     for line in problems:
         print(line)
     if problems:
-        print(f"{len(problems)} label baseline mismatch(es). If the change is intended, run `{REGENERATE}` and commit the result.")
+        print(
+            f"{len(problems)} label baseline mismatch(es). If the change is intended, run `{REGENERATE}` and commit the result."
+        )
         return 1
     print("label baseline matches")
     return 0

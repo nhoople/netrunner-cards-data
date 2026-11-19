@@ -7,6 +7,7 @@ Reprint skips: none (20/20 new clears).
 Follow NSG v2 stripped_text (not IR-hint paraphrases).
 Slug via spin_common.slugify (Lewi Guilherme→lewi-guilherme, Najja 1.0→najja-1-0).
 """
+
 from __future__ import annotations
 
 import json
