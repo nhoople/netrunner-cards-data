@@ -21,6 +21,8 @@ Rare explicit deferrals while keeping `supported` require an entry in [`data/sup
 
 CI runs `python3 scripts/validate-cards.py`, which enforces schema, pool consistency, and this invariant. It also runs `python3 scripts/check_labels.py`, which reports unlabelled conditional and play abilities and labels that drift from the printed text against the shrink-only baseline `scripts/baselines/labels.json`; regenerate it with `--write` when labels change.
 
+Python scripts are formatted with Ruff (`ruff.toml`). Install it with `pip install -r requirements-dev.txt`, run `ruff format scripts` before committing, and CI fails on `ruff format --check scripts`. Card JSON under `data/` is never reformatted.
+
 ## Set-complete
 
 When marking a wave `supported`, keep `pool.json` and the project [pin table](https://github.com/nhoople/netrunner#readme) in sync with the matching engine same-semver tag. Interaction smoke at set-complete is required for each **new** pack ([interaction-smoke-samples.md](https://github.com/nhoople/netrunner-engine/blob/master/docs/interaction-smoke-samples.md) in the engine repository); Gateway → Vantage Point already passed once via engine [#193](https://github.com/nhoople/netrunner-engine/pull/193).

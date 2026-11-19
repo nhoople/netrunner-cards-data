@@ -1,0 +1,2 @@
+# Development tools. CI installs these beside requirements.txt.
+ruff==0.17.5

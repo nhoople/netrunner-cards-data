@@ -1,0 +1,8 @@
+# Ruff formats the Python scripts only. Card JSON under data/ is generated
+# and is never reformatted. Run `ruff format scripts` to fix, and
+# `ruff format --check scripts` to check (CI runs the check).
+line-length = 88
+include = ["scripts/**/*.py"]
+
+[format]
+quote-style = "double"
