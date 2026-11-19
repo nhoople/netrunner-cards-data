@@ -4,6 +4,7 @@
 Fetch: python3 scripts/nsg_catalog.py fetch mt
 Spin cycle after Stalwart (floor v1.96.0 → v1.97.0).
 """
+
 from __future__ import annotations
 
 from printed_numbers import apply_printed_numbers

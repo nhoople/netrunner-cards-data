@@ -2,6 +2,7 @@
 
 Reads v2 card records from the pinned NSG catalog.
 """
+
 from __future__ import annotations
 
 from nsg_catalog import card_type, faction_slug, our_id, subtype_names
@@ -22,12 +23,7 @@ def slugify(title: str) -> str:
     t = t.lower()
     t = t.replace(""", "").replace(""", "").replace('"', "")
     # Strip ASCII/curly/modifier apostrophes (U+0027, U+2018, U+2019, U+02BC).
-    t = (
-        t.replace("'", "")
-        .replace("\u2018", "")
-        .replace("\u2019", "")
-        .replace("ʼ", "")
-    )
+    t = t.replace("'", "").replace("\u2018", "").replace("\u2019", "").replace("ʼ", "")
     t = t.replace(".", "-").replace(":", " ").replace("!", "").replace("*", "")
     t = t.replace("(", " ").replace(")", " ")
     t = re.sub(r"[^a-z0-9]+", "-", t)
@@ -74,7 +70,9 @@ def trace_sub(strength: int, on_success, on_failure=None):
     return {"op": "do", "action": action}
 
 
-def breaker_card(c, subtype: str, strength: int, break_cost: int, pump_cost: int, pump_str: int):
+def breaker_card(
+    c, subtype: str, strength: int, break_cost: int, pump_cost: int, pump_str: int
+):
     subtypes = subtype_names(c)
     card = base(c, subtypes=subtypes or [subtype.split()[-1]])
     card["breaker"] = {
@@ -131,7 +129,16 @@ def base(c, **extra):
     return card
 
 
-def write_manifest(out: Path, wave: str, pack: str, expected: int, pool_ids, written, skipped, clear_written):
+def write_manifest(
+    out: Path,
+    wave: str,
+    pack: str,
+    expected: int,
+    pool_ids,
+    written,
+    skipped,
+    clear_written,
+):
     del out  # Card files are stored by side and type, not by pack directory.
     manifest = {
         "pack": wave,

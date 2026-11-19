@@ -12,6 +12,7 @@ Diversion of Funds→diversion-of-funds, High-Profile Target→high-profile-targ
 Better Citizen Program→better-citizen-program, NEXT Diamond→next-diamond,
 PAD Tap→pad-tap, Kasi String→kasi-string, False Flag→false-flag).
 """
+
 from __future__ import annotations
 
 import json
@@ -339,7 +340,9 @@ def map_card(c: dict) -> dict | None:
                     {
                         "id": "lose-clicks",
                         "label": "Get −3 allotted [click] for your next turn",
-                        "effect": do("allotted_clicks_next_turn", side="runner", delta=-3),
+                        "effect": do(
+                            "allotted_clicks_next_turn", side="runner", delta=-3
+                        ),
                     },
                 ],
             ),

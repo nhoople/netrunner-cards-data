@@ -3,6 +3,7 @@
 
 Usage: python3 scripts/validate-cards.py
 """
+
 from __future__ import annotations
 
 import json
@@ -82,7 +83,11 @@ def check_abilities(path: Path, raw: dict) -> int:
         if kind == "static" and ability.get("instructions") is not None:
             print(f"{where}: a static ability cannot contain instructions")
             errors += 1
-        if kind == "static" and not ability.get("declaration") and not ability.get("restrictions"):
+        if (
+            kind == "static"
+            and not ability.get("declaration")
+            and not ability.get("restrictions")
+        ):
             print(f"{where}: a static ability needs a declaration or a restriction")
             errors += 1
         if kind == "paid" and not isinstance(ability.get("cost"), dict):
@@ -128,10 +133,15 @@ def check_abilities(path: Path, raw: dict) -> int:
                 for other in abilities
                 if isinstance(abilities, list)
             ):
-                print(f"{where}: hostAbility {host_ability!r} is not an ability on this card")
+                print(
+                    f"{where}: hostAbility {host_ability!r} is not an ability on this card"
+                )
                 errors += 1
         for restriction in ability.get("restrictions") or []:
-            if not isinstance(restriction, dict) or restriction.get("appliesTo") not in RESTRICTION_TARGETS:
+            if (
+                not isinstance(restriction, dict)
+                or restriction.get("appliesTo") not in RESTRICTION_TARGETS
+            ):
                 print(f"{where}: restriction appliesTo is unknown")
                 errors += 1
         for label in _payments_offered_as_losses(ability.get("instructions")):
@@ -244,7 +254,10 @@ def _ice_self_break_error(raw: dict, ability: dict) -> str | None:
             "ice breaks its own subroutines with break_subroutine_on_self; "
             "break_host_subroutine needs a host (CR 9.8.5)"
         )
-    if "break_subroutine_on_self" in kinds and ability.get("usableByRunnerOnSelfIce") is not True:
+    if (
+        "break_subroutine_on_self" in kinds
+        and ability.get("usableByRunnerOnSelfIce") is not True
+    ):
         return (
             "a break on ice is used and paid for by the Runner; "
             "set usableByRunnerOnSelfIce (CR 1.2.1, 6.5.4)"
@@ -277,7 +290,11 @@ def _installs_asked_twice(node: object) -> list[str]:
                 if not isinstance(option, dict) or not isinstance(other, dict):
                     continue
                 effect = option.get("effect")
-                action = effect.get("action") if isinstance(effect, dict) and effect.get("op") == "do" else None
+                action = (
+                    effect.get("action")
+                    if isinstance(effect, dict) and effect.get("op") == "do"
+                    else None
+                )
                 if (
                     isinstance(action, dict)
                     and action.get("kind") == "install_from_hq_or_archives"
@@ -304,7 +321,11 @@ def _only_losses(effect: object) -> bool:
         return isinstance(action, dict) and action.get("kind") in _LOSS_KINDS
     if effect.get("op") == "seq":
         parts = effect.get("effects")
-        return isinstance(parts, list) and bool(parts) and all(_only_losses(p) for p in parts)
+        return (
+            isinstance(parts, list)
+            and bool(parts)
+            and all(_only_losses(p) for p in parts)
+        )
     return False
 
 
@@ -322,7 +343,9 @@ def _payments_offered_as_losses(node: object) -> list[str]:
                 if not isinstance(option, dict):
                     continue
                 label = str(option.get("label") or "")
-                if label.split(" ", 1)[0] in {"Pay", "Spend"} and _only_losses(option.get("effect")):
+                if label.split(" ", 1)[0] in {"Pay", "Spend"} and _only_losses(
+                    option.get("effect")
+                ):
                     found.append(label)
         for value in node.values():
             found.extend(_payments_offered_as_losses(value))
@@ -427,15 +450,22 @@ def check_printings(card_ids: dict[str, Path], waves: dict) -> int:
                 errors += 1
             else:
                 for face in faces:
-                    if not isinstance(face, dict) or set(face) - {"flavor", "copyQuantity"}:
-                        print(f"{path.relative_to(ROOT)}: face {face!r} is not a flavor/copyQuantity record")
+                    if not isinstance(face, dict) or set(face) - {
+                        "flavor",
+                        "copyQuantity",
+                    }:
+                        print(
+                            f"{path.relative_to(ROOT)}: face {face!r} is not a flavor/copyQuantity record"
+                        )
                         errors += 1
                         continue
                     if "flavor" in face and not isinstance(face["flavor"], str):
                         print(f"{path.relative_to(ROOT)}: face flavor is not a string")
                         errors += 1
                     if "copyQuantity" in face and type(face["copyQuantity"]) is not int:
-                        print(f"{path.relative_to(ROOT)}: face copyQuantity must be an integer")
+                        print(
+                            f"{path.relative_to(ROOT)}: face copyQuantity must be an integer"
+                        )
                         errors += 1
         if isinstance(pack, str):
             seen.setdefault(card_id, set()).add(pack)
@@ -471,14 +501,19 @@ def check_rulings(card_ids: dict[str, Path]) -> int:
                 print(f"{where}: not an object")
                 errors += 1
                 continue
-            if not isinstance(ruling.get("dateUpdate"), str) or not ruling["dateUpdate"]:
+            if (
+                not isinstance(ruling.get("dateUpdate"), str)
+                or not ruling["dateUpdate"]
+            ):
                 print(f"{where}: dateUpdate is missing")
                 errors += 1
             if ruling.get("rulesTeamVerified") is not True:
                 print(f"{where}: rulesTeamVerified is not true")
                 errors += 1
             has_text = isinstance(ruling.get("text"), str) and ruling["text"]
-            has_question = isinstance(ruling.get("question"), str) and ruling["question"]
+            has_question = (
+                isinstance(ruling.get("question"), str) and ruling["question"]
+            )
             has_answer = isinstance(ruling.get("answer"), str) and ruling["answer"]
             if has_text == (has_question or has_answer):
                 print(f"{where}: needs text, or a question and an answer")
@@ -553,38 +588,59 @@ def check_printed(card_ids: dict[str, Path]) -> int:
                 print(f"{path.relative_to(ROOT)}: faces must list at least two faces")
                 errors += 1
             else:
-                face_fields = {"title", "strippedTitle", "text", "strippedText", "subtypes", "link"}
+                face_fields = {
+                    "title",
+                    "strippedTitle",
+                    "text",
+                    "strippedText",
+                    "subtypes",
+                    "link",
+                }
                 for index, face in enumerate(faces):
                     if (
                         not isinstance(face, dict)
                         or not {"text", "strippedText"} <= set(face)
                         or set(face) - face_fields
                     ):
-                        print(f"{path.relative_to(ROOT)}: faces[{index}] has unknown or missing fields")
+                        print(
+                            f"{path.relative_to(ROOT)}: faces[{index}] has unknown or missing fields"
+                        )
                         errors += 1
                         continue
-                    if not isinstance(face["text"], str) or not isinstance(face["strippedText"], str):
-                        print(f"{path.relative_to(ROOT)}: faces[{index}] text fields must be strings")
+                    if not isinstance(face["text"], str) or not isinstance(
+                        face["strippedText"], str
+                    ):
+                        print(
+                            f"{path.relative_to(ROOT)}: faces[{index}] text fields must be strings"
+                        )
                         errors += 1
                     for field in ("title", "strippedTitle"):
                         if field in face and not isinstance(face[field], str):
-                            print(f"{path.relative_to(ROOT)}: faces[{index}] {field} must be a string")
+                            print(
+                                f"{path.relative_to(ROOT)}: faces[{index}] {field} must be a string"
+                            )
                             errors += 1
                     if "subtypes" in face and (
                         not isinstance(face["subtypes"], list)
                         or not all(isinstance(name, str) for name in face["subtypes"])
                     ):
-                        print(f"{path.relative_to(ROOT)}: faces[{index}] subtypes must be strings")
+                        print(
+                            f"{path.relative_to(ROOT)}: faces[{index}] subtypes must be strings"
+                        )
                         errors += 1
                     if "link" in face and type(face["link"]) is not int:
-                        print(f"{path.relative_to(ROOT)}: faces[{index}] link must be an integer")
+                        print(
+                            f"{path.relative_to(ROOT)}: faces[{index}] link must be an integer"
+                        )
                         errors += 1
                 first = faces[0]
                 if isinstance(first, dict) and (
                     first.get("text") != raw.get("text")
                     or first.get("strippedText") != raw.get("strippedText")
                 ):
-                    print(f"{path.relative_to(ROOT)}: faces[0] must repeat the front-face text")
+                    print(
+                        f"{path.relative_to(ROOT)}: faces[0] must repeat the front-face text"
+                    )
                     errors += 1
     # A printing with extra faces (other than copy-layout printings, whose
     # faces share one text) needs one printed face per printing face, plus
@@ -598,14 +654,18 @@ def check_printed(card_ids: dict[str, Path]) -> int:
             if isinstance(extra, list) and raw_printing.get("layoutId") != "copy":
                 card_id = raw_printing.get("cardId")
                 if isinstance(card_id, str):
-                    printing_faces[card_id] = max(printing_faces.get(card_id, 0), len(extra))
+                    printing_faces[card_id] = max(
+                        printing_faces.get(card_id, 0), len(extra)
+                    )
     for card_id, extra_count in sorted(printing_faces.items()):
         path = directory / f"{card_id}.json"
         if not path.is_file():
             continue
         faces = json.loads(path.read_text(encoding="utf-8")).get("faces")
         if not isinstance(faces, list) or len(faces) != extra_count + 1:
-            print(f"{path.relative_to(ROOT)}: printings carry {extra_count} extra face(s); printed faces must list {extra_count + 1}")
+            print(
+                f"{path.relative_to(ROOT)}: printings carry {extra_count} extra face(s); printed faces must list {extra_count + 1}"
+            )
             errors += 1
     # The rules file's identityFaces declaration (the play facts the engine
     # switches on, CR 3.1.1a) and the printed faces (the display record)
@@ -614,17 +674,30 @@ def check_printed(card_ids: dict[str, Path]) -> int:
         rules = json.loads(rules_path.read_text(encoding="utf-8"))
         declared = None
         for ability in rules.get("abilities") or []:
-            declaration = ability.get("declaration") if isinstance(ability, dict) else None
-            if isinstance(declaration, dict) and declaration.get("field") == "identityFaces":
+            declaration = (
+                ability.get("declaration") if isinstance(ability, dict) else None
+            )
+            if (
+                isinstance(declaration, dict)
+                and declaration.get("field") == "identityFaces"
+            ):
                 declared = declaration.get("value")
         printed_path = directory / f"{card_id}.json"
         if not printed_path.is_file():
             continue
-        printed_faces = json.loads(printed_path.read_text(encoding="utf-8")).get("faces")
+        printed_faces = json.loads(printed_path.read_text(encoding="utf-8")).get(
+            "faces"
+        )
         if declared is None and printed_faces is None:
             continue
-        if not isinstance(declared, list) or not isinstance(printed_faces, list) or len(declared) != len(printed_faces):
-            print(f"{printed_path.relative_to(ROOT)}: printed faces do not match the rules identityFaces")
+        if (
+            not isinstance(declared, list)
+            or not isinstance(printed_faces, list)
+            or len(declared) != len(printed_faces)
+        ):
+            print(
+                f"{printed_path.relative_to(ROOT)}: printed faces do not match the rules identityFaces"
+            )
             errors += 1
             continue
         for index, (face, printed_face) in enumerate(zip(declared, printed_faces)):
@@ -697,9 +770,7 @@ def check_printed(card_ids: dict[str, Path]) -> int:
             if not (isinstance(cost, dict) and cost.get("clicks")):
                 continue
             windows = ability.get("windows") or []
-            if all(
-                isinstance(w, str) and w.endswith("_action_paw") for w in windows
-            ):
+            if all(isinstance(w, str) and w.endswith("_action_paw") for w in windows):
                 continue
             print(
                 f"{rules_path.relative_to(ROOT)}: paid ability "
@@ -802,7 +873,9 @@ def load_reference() -> tuple[dict[str, set[str]], int]:
     return found, errors
 
 
-def check_legality(card_ids: dict[str, Path], waves: dict, subtype_ids: set[str] | None = None) -> int:
+def check_legality(
+    card_ids: dict[str, Path], waves: dict, subtype_ids: set[str] | None = None
+) -> int:
     errors = 0
     corpus = set(waves)
     pools: dict[str, dict] = {}
@@ -834,17 +907,25 @@ def check_legality(card_ids: dict[str, Path], waves: dict, subtype_ids: set[str]
         if subtype_ids is not None:
             grouped_subtypes = raw.get("subtypes") or {}
             if not isinstance(grouped_subtypes, dict):
-                print(f"{path.relative_to(ROOT)}: subtypes must be an object of name lists")
+                print(
+                    f"{path.relative_to(ROOT)}: subtypes must be an object of name lists"
+                )
                 errors += 1
             else:
-                for subtype in (name for names in grouped_subtypes.values() for name in names):
+                for subtype in (
+                    name for names in grouped_subtypes.values() for name in names
+                ):
                     if subtype not in subtype_ids:
-                        print(f"{path.relative_to(ROOT)}: subtype {subtype!r} is not in subtypes.json")
+                        print(
+                            f"{path.relative_to(ROOT)}: subtype {subtype!r} is not in subtypes.json"
+                        )
                         errors += 1
         for field in ("banned", "restricted"):
             for card_id in raw.get(field) or []:
                 if card_id not in card_ids:
-                    print(f"{path.relative_to(ROOT)}: {field} card {card_id!r} has no rules file")
+                    print(
+                        f"{path.relative_to(ROOT)}: {field} card {card_id!r} has no rules file"
+                    )
                     errors += 1
         for field in ("points", "globalPenalty", "universalFactionCost"):
             grouped = raw.get(field) or {}
@@ -854,7 +935,9 @@ def check_legality(card_ids: dict[str, Path], waves: dict, subtype_ids: set[str]
                 continue
             for card_id in (card for ids in grouped.values() for card in ids):
                 if card_id not in card_ids:
-                    print(f"{path.relative_to(ROOT)}: {field} card {card_id!r} has no rules file")
+                    print(
+                        f"{path.relative_to(ROOT)}: {field} card {card_id!r} has no rules file"
+                    )
                     errors += 1
     formats = DATA / "formats"
     if not formats.is_dir():
@@ -872,7 +955,9 @@ def check_legality(card_ids: dict[str, Path], waves: dict, subtype_ids: set[str]
                 errors += 1
             restriction_id = snapshot.get("restrictionId")
             if restriction_id is not None and restriction_id not in restrictions:
-                print(f"{path.relative_to(ROOT)}: restriction {restriction_id!r} is missing")
+                print(
+                    f"{path.relative_to(ROOT)}: restriction {restriction_id!r} is missing"
+                )
                 errors += 1
     rotations = DATA / "rotations.json"
     if not rotations.is_file():
@@ -943,11 +1028,15 @@ def main() -> int:
                 errors += 1
             faction = raw.get("faction")
             if faction is not None and faction_ids and faction not in faction_ids:
-                print(f"{path.relative_to(ROOT)}: faction {faction!r} is not in factions.json")
+                print(
+                    f"{path.relative_to(ROOT)}: faction {faction!r} is not in factions.json"
+                )
                 errors += 1
             for subtype in raw.get("subtypes") or []:
                 if subtype_ids and subtype not in subtype_ids:
-                    print(f"{path.relative_to(ROOT)}: subtype {subtype!r} is not in subtypes.json")
+                    print(
+                        f"{path.relative_to(ROOT)}: subtype {subtype!r} is not in subtypes.json"
+                    )
                     errors += 1
             if cid in card_ids:
                 print(f"duplicate id {cid!r}: {card_ids[cid]} and {path}")
@@ -955,7 +1044,9 @@ def main() -> int:
             card_ids[cid] = path
             wave = raw.get("wave")
             waves = POOL.get("waves") or {}
-            if wave and (wave not in waves or cid not in (waves[wave].get("cards") or [])):
+            if wave and (
+                wave not in waves or cid not in (waves[wave].get("cards") or [])
+            ):
                 print(f"{path.relative_to(ROOT)}: wave {wave!r} does not list {cid}")
                 errors += 1
             errors += check_abilities(path, raw)
@@ -977,7 +1068,9 @@ def main() -> int:
             print(f"{name}: pool cards with no file: {missing_anywhere}")
             errors += 1
 
-    listed_anywhere = {cid for wave in waves.values() for cid in (wave.get("cards") or [])}
+    listed_anywhere = {
+        cid for wave in waves.values() for cid in (wave.get("cards") or [])
+    }
     unlisted = [cid for cid in sorted(card_ids) if cid not in listed_anywhere]
     if unlisted:
         print(f"card files missing from every pool wave: {unlisted}")

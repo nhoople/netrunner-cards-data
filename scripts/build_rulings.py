@@ -7,6 +7,7 @@ text. It does not replace the rules file.
 
 Usage: python3 scripts/build_rulings.py
 """
+
 from __future__ import annotations
 
 import json
@@ -50,7 +51,11 @@ def ruling_record(raw: dict) -> dict:
 
 
 def verified_rulings(raw_list: list[dict]) -> list[dict]:
-    return [ruling_record(raw) for raw in raw_list if raw.get("nsg_rules_team_verified") is True]
+    return [
+        ruling_record(raw)
+        for raw in raw_list
+        if raw.get("nsg_rules_team_verified") is True
+    ]
 
 
 def known_ids() -> set[str]:
@@ -103,7 +108,9 @@ def main() -> int:
             continue
         dest = OUT / f"{card_id}.json"
         if dest.exists():
-            raise SystemExit(f"{path.name}: {card_id} already has rulings from another file")
+            raise SystemExit(
+                f"{path.name}: {card_id} already has rulings from another file"
+            )
         document = {"cardId": card_id, "rulings": rulings}
         dest.write_text(
             json.dumps(document, indent=2, ensure_ascii=False) + "\n",

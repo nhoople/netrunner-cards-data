@@ -2,6 +2,7 @@
 
 Pack membership stays in data/pool.json. A reprinted title still has one file.
 """
+
 from __future__ import annotations
 
 import json

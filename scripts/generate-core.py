@@ -15,6 +15,7 @@ Note: Magnum Opus the *program* is Core Set content (distinct from packs `mo`/`m
 
 Usage: python3 scripts/generate-core.py
 """
+
 from __future__ import annotations
 
 from printed_numbers import apply_printed_numbers
@@ -185,9 +186,7 @@ def breaker_card(
         }
         if duration:
             pump_eff["action"]["duration"] = duration
-        label_dur = (
-            " for the remainder of this run" if duration == "run" else ""
-        )
+        label_dur = " for the remainder of this run" if duration == "run" else ""
         paid.append(
             {
                 "id": f"{our_id(c['id'])}-pump",
@@ -253,7 +252,7 @@ def map_card(c: dict) -> dict | None:
     if cid in REPRINTS:
         return None
 
-    text = (c.get("stripped_text") or "")
+    text = c.get("stripped_text") or ""
     plain = re.sub(r"\s+", " ", text).strip()
 
     # --- Kickoff clears: existing IR only ---
@@ -369,8 +368,7 @@ def map_card(c: dict) -> dict | None:
                 {
                     "id": "net-shield-prevent",
                     "label": (
-                        "[interrupt] → 1¢: Prevent 1 net damage "
-                        "(first each turn)"
+                        "[interrupt] → 1¢: Prevent 1 net damage (first each turn)"
                     ),
                     "clickCost": 0,
                     "creditCost": 1,
@@ -706,10 +704,7 @@ def main():
 
     print(f"Wrote {len(written)} cards")
     print(f"Skipped reprints/shared: {len(skipped)}")
-    print(
-        f"Among written: full={len(clear_written)} "
-        f"partial={len(partial_written)}"
-    )
+    print(f"Among written: full={len(clear_written)} partial={len(partial_written)}")
     print("CLEARS=" + json.dumps(clear_written))
     print("POOL_IDS=" + json.dumps(pool_ids))
 

@@ -6,6 +6,7 @@ Flashpoint #5 after Intervention (floor v1.125.0 → v1.126.0).
 Reprint skips: none (20/20 new clears).
 Follow NSG v2 stripped_text (not IR-hint paraphrases).
 """
+
 from __future__ import annotations
 
 import json
@@ -88,11 +89,7 @@ def paid(
         "creditCost": credits,
         "cost": c,
         "windows": windows
-        or (
-            ["corp_action_paw"]
-            if not usable_by_runner
-            else ["runner_action_paw"]
-        ),
+        or (["corp_action_paw"] if not usable_by_runner else ["runner_action_paw"]),
         "effect": effect,
     }
     if once_per_turn:
@@ -184,9 +181,7 @@ def map_card(c: dict) -> dict | None:
             runEvent={
                 "servers": "any",
                 "placeEventCredits": 4,
-                "onRunEnd": do(
-                    "trash_one_program_used_this_run_cannot_prevent"
-                ),
+                "onRunEnd": do("trash_one_program_used_this_run_cannot_prevent"),
             },
         )
 

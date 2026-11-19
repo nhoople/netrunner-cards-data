@@ -6,6 +6,7 @@ Flashpoint #2 after 23 Seconds (floor v1.122.0 → v1.123.0).
 Reprint skip: none (20/20 new clears).
 Follow NSG v2 stripped_text (not IR-hint paraphrases).
 """
+
 from __future__ import annotations
 
 import json
@@ -85,11 +86,7 @@ def paid(
         "creditCost": credits,
         "cost": c,
         "windows": windows
-        or (
-            ["corp_action_paw"]
-            if not usable_by_runner
-            else ["runner_action_paw"]
-        ),
+        or (["corp_action_paw"] if not usable_by_runner else ["runner_action_paw"]),
         "effect": effect,
     }
     if once_per_turn:

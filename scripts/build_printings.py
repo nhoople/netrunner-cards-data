@@ -7,6 +7,7 @@ file stays one per title.
 
 Usage: python3 scripts/build_printings.py
 """
+
 from __future__ import annotations
 
 import json
@@ -30,7 +31,9 @@ ABSORBED = {
 def pack_code_for(wave: str) -> str:
     if wave == "system-update-2021":
         return "su21"
-    manifest = json.loads((DATA / "manifests" / f"{wave}.json").read_text(encoding="utf-8"))
+    manifest = json.loads(
+        (DATA / "manifests" / f"{wave}.json").read_text(encoding="utf-8")
+    )
     code = manifest.get("nrdbPackCode")
     if not isinstance(code, str) or not code:
         raise SystemExit(f"{wave}: manifest is missing nrdbPackCode")
@@ -81,9 +84,12 @@ def record(printing: dict, card_id: str, wave: str) -> dict:
     if isinstance(faces, list) and faces:
         record["faces"] = [
             {
-                key: face.get("copy_quantity") if key == "copyQuantity" else face.get(key)
+                key: face.get("copy_quantity")
+                if key == "copyQuantity"
+                else face.get(key)
                 for key in ("flavor", "copyQuantity")
-                if face.get("copy_quantity" if key == "copyQuantity" else key) is not None
+                if face.get("copy_quantity" if key == "copyQuantity" else key)
+                is not None
             }
             for face in faces
             if isinstance(face, dict)
@@ -138,7 +144,9 @@ def main() -> int:
             seen_in_primary[wave].add(card_id)
         code = str(printing["id"])
         if code in written and written[code]["cardId"] != card_id:
-            errors.append(f"code {code} used by {written[code]['cardId']} and {card_id}")
+            errors.append(
+                f"code {code} used by {written[code]['cardId']} and {card_id}"
+            )
             continue
         written[code] = record(printing, card_id, wave)
 
@@ -158,7 +166,10 @@ def main() -> int:
     OUT.mkdir(parents=True, exist_ok=True)
     for code in sorted(written):
         path = OUT / f"{code}.json"
-        path.write_text(json.dumps(written[code], indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+        path.write_text(
+            json.dumps(written[code], indent=2, ensure_ascii=False) + "\n",
+            encoding="utf-8",
+        )
     print(f"Wrote {len(written)} printings to {OUT.relative_to(ROOT)}")
     return 0
 

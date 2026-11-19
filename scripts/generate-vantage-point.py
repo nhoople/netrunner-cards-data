@@ -9,6 +9,7 @@ everything else lists honest unsupported notes — never invent IR.
 
 Usage: python3 scripts/generate-vantage-point.py
 """
+
 from __future__ import annotations
 
 from printed_numbers import apply_printed_numbers
@@ -136,7 +137,9 @@ def base(c, **extra):
     return card
 
 
-def breaker_card(c, subtype, strength, break_c, pump_c=None, pump_s=None, break_max=None, **extra):
+def breaker_card(
+    c, subtype, strength, break_c, pump_c=None, pump_s=None, break_max=None, **extra
+):
     br = {
         "breaksSubtype": subtype,
         "strength": strength,
@@ -172,7 +175,7 @@ def breaker_card(c, subtype, strength, break_c, pump_c=None, pump_s=None, break_
 
 def map_card(c: dict) -> dict:
     cid = our_id(c["id"])
-    text = (c.get("stripped_text") or "")
+    text = c.get("stripped_text") or ""
     plain = re.sub(r"\s+", " ", text).strip()
 
     # --- v1.13.0 kickoff: existing IR only ---
@@ -531,7 +534,6 @@ def map_card(c: dict) -> dict:
             unsupported=[],
         )
 
-
     if cid == "take-a-dive":
         return base(
             c,
@@ -833,9 +835,7 @@ def map_card(c: dict) -> dict:
                         "cond": {"op": "run_successful"},
                         "then": {
                             "op": "do",
-                            "action": {
-                                "kind": "derez_unless_protecting_attacked"
-                            },
+                            "action": {"kind": "derez_unless_protecting_attacked"},
                         },
                     },
                     {"op": "do", "action": {"kind": "rfg_self"}},
@@ -1704,9 +1704,7 @@ def map_card(c: dict) -> dict:
             identityFlippedHooks={
                 "onFlipToBackIfRunMatchesFace": {
                     "op": "do",
-                    "action": {
-                        "kind": "look_top_rd_may_trash_if_do_archives_to_hq"
-                    },
+                    "action": {"kind": "look_top_rd_may_trash_if_do_archives_to_hq"},
                 },
                 "onRunnerDiscardPhaseEnd": {
                     "op": "do",

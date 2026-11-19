@@ -4,6 +4,7 @@
 Fetch: python3 scripts/nsg_catalog.py fetch fc
 Lunar cycle after The Spaces Between (floor v1.103.0 → v1.104.0).
 """
+
 from __future__ import annotations
 
 import json
@@ -59,9 +60,7 @@ def map_card(c: dict) -> dict | None:
             subtypes=["code gate"],
             strengthPerCorpCardInHq=1,
             rezCostIncreasePerCorpCardInHq=1,
-            subroutines=[
-                {"id": "iq-etr", "text": "End the run.", "effect": etr()}
-            ],
+            subroutines=[{"id": "iq-etr", "text": "End the run.", "effect": etr()}],
         )
 
     if cid == "elizas-toybox":

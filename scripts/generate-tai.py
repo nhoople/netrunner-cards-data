@@ -9,6 +9,7 @@ everything else lists honest unsupported notes — never invent IR.
 
 Usage: python3 scripts/generate-tai.py
 """
+
 from __future__ import annotations
 
 from printed_numbers import apply_printed_numbers
@@ -132,7 +133,9 @@ def base(c, **extra):
     return card
 
 
-def breaker_card(c, subtype, strength, break_c, pump_c=None, pump_s=None, break_max=None, **extra):
+def breaker_card(
+    c, subtype, strength, break_c, pump_c=None, pump_s=None, break_max=None, **extra
+):
     br = {
         "breaksSubtype": subtype,
         "strength": strength,
@@ -168,7 +171,7 @@ def breaker_card(c, subtype, strength, break_c, pump_c=None, pump_s=None, break_
 
 def map_card(c: dict) -> dict:
     cid = our_id(c["id"])
-    text = (c.get("stripped_text") or "")
+    text = c.get("stripped_text") or ""
     plain = re.sub(r"\s+", " ", text).strip()
 
     # --- Fully clear kickoff mappings (existing IR only) ---
@@ -621,9 +624,7 @@ def map_card(c: dict) -> dict:
                         "label": "Remove from the game: derez that ice",
                         "effect": {
                             "op": "do",
-                            "action": {
-                                "kind": "rfg_self_then_derez_bypassed_ice"
-                            },
+                            "action": {"kind": "rfg_self_then_derez_bypassed_ice"},
                         },
                     },
                     {
@@ -769,9 +770,7 @@ def map_card(c: dict) -> dict:
                 gain("corp", 3),
                 {
                     "op": "do",
-                    "action": {
-                        "kind": "gain_credits_per_distinct_faceup_archive_type"
-                    },
+                    "action": {"kind": "gain_credits_per_distinct_faceup_archive_type"},
                 },
             ),
             unsupported=[],
@@ -1241,9 +1240,7 @@ def map_card(c: dict) -> dict:
                                 },
                                 "then": {
                                     "op": "do",
-                                    "action": {
-                                        "kind": "return_source_to_grip"
-                                    },
+                                    "action": {"kind": "return_source_to_grip"},
                                 },
                             },
                         ),
@@ -1405,8 +1402,7 @@ def map_card(c: dict) -> dict:
                 {
                     "id": "debbie-run",
                     "label": (
-                        "[click]: Run any server; spend hosted credits "
-                        "during that run"
+                        "[click]: Run any server; spend hosted credits during that run"
                     ),
                     "clickCost": 1,
                     "creditCost": 0,
@@ -1427,9 +1423,7 @@ def map_card(c: dict) -> dict:
             c,
             onPass={
                 "op": "if",
-                "cond": {
-                    "op": "did_not_break_printed_sub_with_decoder_this_encounter"
-                },
+                "cond": {"op": "did_not_break_printed_sub_with_decoder_this_encounter"},
                 "then": tags(1),
             },
             subroutines=[
@@ -1617,9 +1611,7 @@ def map_card(c: dict) -> dict:
             },
             onCorpTurnEnd={
                 "op": "do",
-                "action": {
-                    "kind": "may_move_source_upgrade_to_another_server_root"
-                },
+                "action": {"kind": "may_move_source_upgrade_to_another_server_root"},
             },
             unsupported=[],
         )
@@ -1694,9 +1686,7 @@ def map_card(c: dict) -> dict:
             onPlay=seq(
                 {
                     "op": "do",
-                    "action": {
-                        "kind": "search_rd_operation_or_agenda_to_hq"
-                    },
+                    "action": {"kind": "search_rd_operation_or_agenda_to_hq"},
                 },
                 {
                     "op": "if",
@@ -1733,9 +1723,7 @@ def map_card(c: dict) -> dict:
                         "label": "Decline to look",
                         "effect": {
                             "op": "if",
-                            "cond": {
-                                "op": "host_server_unprotected_by_ice"
-                            },
+                            "cond": {"op": "host_server_unprotected_by_ice"},
                             "then": choose(
                                 "corp",
                                 [
@@ -1840,9 +1828,7 @@ def map_card(c: dict) -> dict:
             persistent=True,
             onAgendaScoredOrStolen={
                 "op": "if",
-                "cond": {
-                    "op": "last_agenda_scored_or_stolen_from_source_server_root"
-                },
+                "cond": {"op": "last_agenda_scored_or_stolen_from_source_server_root"},
                 "then": choose(
                     "corp",
                     [
@@ -1876,9 +1862,7 @@ def map_card(c: dict) -> dict:
                 "cond": {"op": "threat", "level": 4},
                 "then": {
                     "op": "do",
-                    "action": {
-                        "kind": "etr_subroutines_per_runner_tags_on_encounter"
-                    },
+                    "action": {"kind": "etr_subroutines_per_runner_tags_on_encounter"},
                 },
             },
             subroutines=[
@@ -1940,9 +1924,7 @@ def map_card(c: dict) -> dict:
             },
             onCorpTurnEnd={
                 "op": "do",
-                "action": {
-                    "kind": "may_move_source_upgrade_to_another_server_root"
-                },
+                "action": {"kind": "may_move_source_upgrade_to_another_server_root"},
             },
             unsupported=[],
         )
@@ -2049,9 +2031,7 @@ def map_card(c: dict) -> dict:
                     "requireDuringRun": True,
                     "effect": {
                         "op": "do",
-                        "action": {
-                            "kind": "prevent_current_ice_on_encounter"
-                        },
+                        "action": {"kind": "prevent_current_ice_on_encounter"},
                     },
                 },
             ],

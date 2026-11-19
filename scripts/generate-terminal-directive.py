@@ -8,6 +8,7 @@ Defer `tdc` (campaign scenarios) entirely — do not extract or clear tdc.
 Follow NSG v2 stripped_text (not IR-hint paraphrases).
 Slug via spin_common.slugify (LLDS→llds, Skorpios…, K. P. Lynn→k-p-lynn).
 """
+
 from __future__ import annotations
 
 import json
@@ -106,11 +107,7 @@ def paid(
         "creditCost": credits,
         "cost": c,
         "windows": windows
-        or (
-            ["corp_action_paw"]
-            if not usable_by_runner
-            else ["runner_action_paw"]
-        ),
+        or (["corp_action_paw"] if not usable_by_runner else ["runner_action_paw"]),
         "effect": effect,
     }
     if once_per_turn:
@@ -561,9 +558,7 @@ def map_card(c: dict) -> dict | None:
                 {
                     "id": "holmegaard-trace",
                     "text": "Trace[4]. If successful, the Runner cannot access cards or breach the attacked server for the remainder of this run.",
-                    "effect": trace_sub(
-                        4, do("forbid_access_and_breach_this_run")
-                    ),
+                    "effect": trace_sub(4, do("forbid_access_and_breach_this_run")),
                 },
                 {
                     "id": "holmegaard-trash-breaker",

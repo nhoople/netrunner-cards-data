@@ -12,6 +12,7 @@ Hand-mapped Effect IR only — empty unsupported for set-complete.
 
 Usage: python3 scripts/generate-cyber-exodus.py
 """
+
 from __future__ import annotations
 
 from printed_numbers import apply_printed_numbers
@@ -151,10 +152,7 @@ def map_card(c: dict) -> dict | None:
             paidAbilities=[
                 {
                     "id": "muresh-bodysuit-prevent",
-                    "label": (
-                        "[interrupt] → Prevent 1 meat damage "
-                        "(first each turn)"
-                    ),
+                    "label": ("[interrupt] → Prevent 1 meat damage (first each turn)"),
                     "clickCost": 0,
                     "creditCost": 0,
                     "cost": {},
@@ -230,8 +228,7 @@ def map_card(c: dict) -> dict | None:
                 "op": "do",
                 "action": {
                     "kind": (
-                        "remove_power_from_hosted_card_"
-                        "install_at_zero_ignore_costs"
+                        "remove_power_from_hosted_card_install_at_zero_ignore_costs"
                     ),
                 },
             },
@@ -248,8 +245,7 @@ def map_card(c: dict) -> dict | None:
                 {
                     "id": "viper-trace-click",
                     "text": (
-                        "Trace[3]. If successful, the Runner loses "
-                        "[click], if able."
+                        "Trace[3]. If successful, the Runner loses [click], if able."
                     ),
                     "effect": {
                         "op": "do",
@@ -291,8 +287,7 @@ def map_card(c: dict) -> dict | None:
                 "op": "do",
                 "action": {
                     "kind": (
-                        "may_pay_credits_for_core_damage_"
-                        "per_ice_protecting_this_server"
+                        "may_pay_credits_for_core_damage_per_ice_protecting_this_server"
                     ),
                     "amount": 3,
                 },
@@ -391,7 +386,7 @@ def map_card(c: dict) -> dict | None:
         )
 
     card = base(c)
-    text = (c.get("stripped_text") or "")
+    text = c.get("stripped_text") or ""
     plain = re.sub(r"\s+", " ", text).strip()
     card["unsupported"] = [f"Full text not yet mapped to IR: {plain[:240]}"]
     return card
@@ -443,10 +438,7 @@ def main():
 
     print(f"Wrote {len(written)} cards")
     print(f"Skipped reprints/shared: {len(skipped)}")
-    print(
-        f"Among written: full={len(clear_written)} "
-        f"partial={len(partial_written)}"
-    )
+    print(f"Among written: full={len(clear_written)} partial={len(partial_written)}")
     print("CLEARS=" + json.dumps(clear_written))
     print("POOL_IDS=" + json.dumps(pool_ids))
 

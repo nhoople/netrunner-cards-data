@@ -13,6 +13,7 @@ notes — never invent IR.
 
 Usage: python3 scripts/generate-midnight-sun.py
 """
+
 from __future__ import annotations
 
 from printed_numbers import apply_printed_numbers
@@ -176,7 +177,9 @@ def base(c, **extra):
     return card
 
 
-def breaker_card(c, subtype, strength, break_c, pump_c=None, pump_s=None, break_max=None, **extra):
+def breaker_card(
+    c, subtype, strength, break_c, pump_c=None, pump_s=None, break_max=None, **extra
+):
     br = {
         "breaksSubtype": subtype,
         "strength": strength,
@@ -266,7 +269,7 @@ def note_charge_trigger(extra: str) -> str:
 
 def map_card(c: dict) -> dict:
     cid = our_id(c["id"])
-    text = (c.get("stripped_text") or "")
+    text = c.get("stripped_text") or ""
     plain = re.sub(r"\s+", " ", text).strip()
 
     # --- Runner identities ---
@@ -1182,7 +1185,10 @@ def map_card(c: dict) -> dict:
             subtypes=["barrier"],
             etrSubroutinesPerPowerCounter=True,
             onRez={"op": "do", "action": {"kind": "add_power_counter", "amount": 4}},
-            onTurnBegin={"op": "do", "action": {"kind": "remove_power_counter", "amount": 1}},
+            onTurnBegin={
+                "op": "do",
+                "action": {"kind": "remove_power_counter", "amount": 1},
+            },
             subroutines=[
                 {
                     "id": "env-trash",
@@ -1394,9 +1400,7 @@ def map_card(c: dict) -> dict:
 
     # Fallback: skeleton with full text as unsupported
     card = base(c)
-    card["unsupported"] = [
-        f"Full text not yet mapped to IR: {plain[:240]}"
-    ]
+    card["unsupported"] = [f"Full text not yet mapped to IR: {plain[:240]}"]
     return card
 
 

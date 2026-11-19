@@ -5,6 +5,7 @@ Fetch: python3 scripts/nsg_catalog.py fetch oh
 SanSan cycle after The Underway (floor v1.112.0 → v1.113.0).
 Reprint skip: explode-a-palooza.
 """
+
 from __future__ import annotations
 
 import json
@@ -91,11 +92,7 @@ def paid(
         "creditCost": credits,
         "cost": c,
         "windows": windows
-        or (
-            ["corp_action_paw"]
-            if not usable_by_runner
-            else ["runner_action_paw"]
-        ),
+        or (["corp_action_paw"] if not usable_by_runner else ["runner_action_paw"]),
         "effect": effect,
     }
     if once_per_turn:
@@ -165,9 +162,7 @@ def map_card(c: dict) -> dict | None:
         return base(
             c,
             subtypes=["virtual"],
-            onAgendaScored=do(
-                "add_to_runner_score_as_agenda", agendaPoints=0
-            ),
+            onAgendaScored=do("add_to_runner_score_as_agenda", agendaPoints=0),
         )
 
     if cid == "film-critic":

@@ -9,6 +9,7 @@ Reprints that reuse earlier wave defs (skipped as files; listed in pool.json):
 
 Usage: python3 scripts/generate-system-update-2021.py
 """
+
 from __future__ import annotations
 
 from printed_numbers import apply_printed_numbers
@@ -167,7 +168,9 @@ def base(c, **extra):
     return card
 
 
-def breaker_card(c, subtype, strength, break_c, pump_c=None, pump_s=None, duration=None, **extra):
+def breaker_card(
+    c, subtype, strength, break_c, pump_c=None, pump_s=None, duration=None, **extra
+):
     br = {
         "breaksSubtype": subtype,
         "strength": strength,
@@ -180,7 +183,10 @@ def breaker_card(c, subtype, strength, break_c, pump_c=None, pump_s=None, durati
     if pump_c is not None:
         pump_eff = {
             "op": "do",
-            "action": {"kind": "pump_strength", "amount": pump_s if pump_s is not None else 1},
+            "action": {
+                "kind": "pump_strength",
+                "amount": pump_s if pump_s is not None else 1,
+            },
         }
         if duration:
             pump_eff["action"]["duration"] = duration
@@ -322,13 +328,23 @@ def map_card(c: dict) -> dict | None:
                             "label": "Pay 1¢ to return Networking to grip",
                             "effect": {
                                 "op": "do",
-                                "action": {"kind": "return_self_to_grip", "creditCost": 1},
+                                "action": {
+                                    "kind": "return_self_to_grip",
+                                    "creditCost": 1,
+                                },
                             },
                         },
                         {
                             "id": "decline",
                             "label": "Decline",
-                            "effect": {"op": "do", "action": {"kind": "gain_credits", "side": "runner", "amount": 0}},
+                            "effect": {
+                                "op": "do",
+                                "action": {
+                                    "kind": "gain_credits",
+                                    "side": "runner",
+                                    "amount": 0,
+                                },
+                            },
                         },
                     ],
                 ),
@@ -404,7 +420,10 @@ def map_card(c: dict) -> dict | None:
             c,
             subtypes=["virus"],
             memoryCost=1,
-            onInstall={"op": "do", "action": {"kind": "add_virus_counter", "amount": 2}},
+            onInstall={
+                "op": "do",
+                "action": {"kind": "add_virus_counter", "amount": 2},
+            },
             accessTrashWithVirus=True,
             unsupported=[
                 "Access once-per-turn hosted virus trash of accessed card — needs access paid ability window."
@@ -434,7 +453,11 @@ def map_card(c: dict) -> dict | None:
                     "windows": ["runner_action_paw"],
                     "effect": {
                         "op": "do",
-                        "action": {"kind": "gain_credits", "side": "runner", "amount": 0},
+                        "action": {
+                            "kind": "gain_credits",
+                            "side": "runner",
+                            "amount": 0,
+                        },
                     },
                     "startsRun": {
                         "servers": "archives",
@@ -584,7 +607,10 @@ def map_card(c: dict) -> dict | None:
             c,
             subtypes=["sabotage"],
             playRequiresSuccessfulRunThisTurn=True,
-            onPlay={"op": "do", "action": {"kind": "trash_unrezzed_ice_passed_last_run"}},
+            onPlay={
+                "op": "do",
+                "action": {"kind": "trash_unrezzed_ice_passed_last_run"},
+            },
             unsupported=[
                 "Trash 1 unrezzed ice passed during last run — needs last-run passed-ice tracking."
             ],
@@ -592,7 +618,10 @@ def map_card(c: dict) -> dict | None:
     if cid == "career-fair":
         return base(
             c,
-            onPlay={"op": "do", "action": {"kind": "install_resource_from_grip", "discount": 3}},
+            onPlay={
+                "op": "do",
+                "action": {"kind": "install_resource_from_grip", "discount": 3},
+            },
             unsupported=[
                 "Install 1 resource from grip paying 3¢ less — needs discounted install-from-grip targeting."
             ],
@@ -743,8 +772,16 @@ def map_card(c: dict) -> dict | None:
             rezAdditionalCostForfeitAgenda=True,
             subroutines=[
                 {"id": "archer-gain", "text": "Gain 2¢.", "effect": gain("corp", 2)},
-                {"id": "archer-trash1", "text": "Trash 1 program.", "effect": trash_prog()},
-                {"id": "archer-trash2", "text": "Trash 1 program.", "effect": trash_prog()},
+                {
+                    "id": "archer-trash1",
+                    "text": "Trash 1 program.",
+                    "effect": trash_prog(),
+                },
+                {
+                    "id": "archer-trash2",
+                    "text": "Trash 1 program.",
+                    "effect": trash_prog(),
+                },
                 {"id": "archer-etr", "text": "End the run.", "effect": etr()},
             ],
             unsupported=["Additional rez cost: forfeit 1 agenda — not enforced."],
@@ -771,7 +808,10 @@ def map_card(c: dict) -> dict | None:
                     "effect": iff(
                         {"op": "advancements_gte", "amount": 3},
                         seq(
-                            {"op": "do", "action": {"kind": "search_rd_to_hq", "amount": 2}},
+                            {
+                                "op": "do",
+                                "action": {"kind": "search_rd_to_hq", "amount": 2},
+                            },
                             etr(),
                         ),
                         etr(),
@@ -833,7 +873,9 @@ def map_card(c: dict) -> dict | None:
                     "oncePerRun": True,
                 }
             ],
-            unsupported=["Once-per-run agenda-counter net damage — oncePerRun / counter spend need wiring."],
+            unsupported=[
+                "Once-per-run agenda-counter net damage — oncePerRun / counter spend need wiring."
+            ],
         )
     if cid == "nisei-mk-ii":
         return base(
@@ -857,7 +899,10 @@ def map_card(c: dict) -> dict | None:
         return base(
             c,
             subtypes=["expansion"],
-            onScore={"op": "do", "action": {"kind": "install_and_rez_asset_or_upgrade_free"}},
+            onScore={
+                "op": "do",
+                "action": {"kind": "install_and_rez_asset_or_upgrade_free"},
+            },
             unsupported=[
                 "On score: install and rez asset/upgrade from HQ or Archives ignoring costs."
             ],
@@ -909,10 +954,15 @@ def map_card(c: dict) -> dict | None:
                     "creditCost": 0,
                     "cost": {"agendaCounters": 1},
                     "windows": ["corp_action_paw"],
-                    "effect": {"op": "do", "action": {"kind": "search_rd_to_hq", "amount": 1}},
+                    "effect": {
+                        "op": "do",
+                        "action": {"kind": "search_rd_to_hq", "amount": 1},
+                    },
                 }
             ],
-            unsupported=["Overadvance counters + R&D search for 1 card — search/counter spend incomplete."],
+            unsupported=[
+                "Overadvance counters + R&D search for 1 card — search/counter spend incomplete."
+            ],
         )
 
     # --- Assets / upgrades / ops ---
@@ -943,7 +993,9 @@ def map_card(c: dict) -> dict | None:
                     "requiresAdvancements": 4,
                 }
             ],
-            unsupported=["Requires 4+ advancements gate on trash ability not enforced."],
+            unsupported=[
+                "Requires 4+ advancements gate on trash ability not enforced."
+            ],
         )
     if cid == "snare":
         return base(
@@ -973,7 +1025,10 @@ def map_card(c: dict) -> dict | None:
             c,
             subtypes=["double"],
             playAdditionalClick=True,
-            onPlay={"op": "do", "action": {"kind": "reveal_hq_gain_credits_per", "max": 5, "per": 2}},
+            onPlay={
+                "op": "do",
+                "action": {"kind": "reveal_hq_gain_credits_per", "max": 5, "per": 2},
+            },
             unsupported=[
                 "Double (extra click cost) + reveal up to 5 HQ cards for 2¢ each — reveal/gain not implemented."
             ],
@@ -982,7 +1037,9 @@ def map_card(c: dict) -> dict | None:
         return base(
             c,
             onPlay={"op": "do", "action": {"kind": "move_advancements", "amount": 2}},
-            unsupported=["Move up to 2 advancements between advanceable cards — needs targeting."],
+            unsupported=[
+                "Move up to 2 advancements between advanceable cards — needs targeting."
+            ],
         )
     if cid == "hokusai-grid":
         return base(
@@ -1083,7 +1140,9 @@ def map_card(c: dict) -> dict | None:
                     "strength": 5,
                     "onSuccess": {
                         "op": "do",
-                        "action": {"kind": "meat_damage_stolen_agenda_points_last_turn"},
+                        "action": {
+                            "kind": "meat_damage_stolen_agenda_points_last_turn"
+                        },
                     },
                 },
             },
@@ -1117,7 +1176,9 @@ def map_card(c: dict) -> dict | None:
                     },
                 }
             ],
-            unsupported=["X¢ trash for +X ice strength remainder of turn — X payment not modeled."],
+            unsupported=[
+                "X¢ trash for +X ice strength remainder of turn — X payment not modeled."
+            ],
         )
     if cid == "subliminal-messaging":
         return base(

@@ -13,6 +13,7 @@ everything else lists honest unsupported notes — never invent IR.
 
 Usage: python3 scripts/generate-reign-and-reverie.py
 """
+
 from __future__ import annotations
 
 from printed_numbers import apply_printed_numbers
@@ -124,7 +125,7 @@ def map_card(c: dict) -> dict | None:
     if cid in REPRINTS:
         return None
 
-    text = (c.get("stripped_text") or "")
+    text = c.get("stripped_text") or ""
     plain = re.sub(r"\s+", " ", text).strip()
 
     # --- v1.75.0 kickoff: existing IR only ---

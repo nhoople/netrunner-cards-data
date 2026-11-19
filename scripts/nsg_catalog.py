@@ -15,6 +15,7 @@ Generators import load_set_cards(code) from the pinned NSG v2 catalog
 (not the live NRDB API). Fails closed on missing pin, HTTP errors, or
 invalid JSON.
 """
+
 from __future__ import annotations
 
 import argparse
@@ -185,7 +186,9 @@ def load_set_cards(code: str, *, force: bool = False) -> list[dict]:
         card_id = printing.get("card_id")
         record = cards.get(card_id) if isinstance(card_id, str) else None
         if record is None:
-            raise SystemExit(f"{set_id}: printing {printing.get('id')!r} has no v2 card {card_id!r}")
+            raise SystemExit(
+                f"{set_id}: printing {printing.get('id')!r} has no v2 card {card_id!r}"
+            )
         found.append(dict(record))
     return found
 
@@ -229,7 +232,9 @@ def fetch_catalog_archive(*, force: bool = False) -> Path:
     try:
         body = http_bytes(url, timeout=180)
     except urllib.error.HTTPError as e:
-        raise SystemExit(f"Failed to fetch catalog archive (HTTP {e.code}): {url}") from e
+        raise SystemExit(
+            f"Failed to fetch catalog archive (HTTP {e.code}): {url}"
+        ) from e
     except urllib.error.URLError as e:
         raise SystemExit(f"Failed to fetch catalog archive: {url}\n{e}") from e
     written = 0
@@ -238,7 +243,9 @@ def fetch_catalog_archive(*, force: bool = False) -> Path:
             if not member.isfile():
                 continue
             name = member.name.split("/", 1)[1] if "/" in member.name else member.name
-            if not any(name == prefix or name.startswith(prefix) for prefix in CATALOG_PREFIXES):
+            if not any(
+                name == prefix or name.startswith(prefix) for prefix in CATALOG_PREFIXES
+            ):
                 continue
             if ".." in Path(name).parts:
                 continue
@@ -347,13 +354,19 @@ def fetch_card_ref(card_id: str, ref: str, repo: str) -> dict | None:
     except urllib.error.HTTPError as e:
         if e.code == 404:
             return None
-        raise SystemExit(f"Failed to fetch card {card_id!r} at {ref} (HTTP {e.code}): {url}") from e
+        raise SystemExit(
+            f"Failed to fetch card {card_id!r} at {ref} (HTTP {e.code}): {url}"
+        ) from e
     except urllib.error.URLError as e:
-        raise SystemExit(f"Failed to fetch card {card_id!r} at {ref}: {url}\n{e}") from e
+        raise SystemExit(
+            f"Failed to fetch card {card_id!r} at {ref}: {url}\n{e}"
+        ) from e
     try:
         record = json.loads(body.decode("utf-8"))
     except (UnicodeDecodeError, json.JSONDecodeError) as e:
-        raise SystemExit(f"Card {card_id!r} at {ref} is not valid JSON ({url}): {e}") from e
+        raise SystemExit(
+            f"Card {card_id!r} at {ref} is not valid JSON ({url}): {e}"
+        ) from e
     if not isinstance(record, dict):
         raise SystemExit(f"Card {card_id!r} at {ref} is not an object: {url}")
     return record
@@ -376,7 +389,9 @@ def diff_card_facts(before: dict | None, after: dict | None) -> list[str]:
     return changes
 
 
-def diff_card_sets(old_cards: list[dict], new_cards: list[dict]) -> list[tuple[str, str, list[str]]]:
+def diff_card_sets(
+    old_cards: list[dict], new_cards: list[dict]
+) -> list[tuple[str, str, list[str]]]:
     """Fact changes between two lists of v2 card records, keyed by card id."""
     old = {str(card["id"]): card for card in old_cards if card.get("id")}
     new = {str(card["id"]): card for card in new_cards if card.get("id")}
@@ -399,6 +414,7 @@ def cmd_show_pin(_: argparse.Namespace) -> int:
 def cmd_check(_: argparse.Namespace) -> int:
     """Compare the pinned catalog with current main. Prints a report. Does not edit cards."""
     from card_layout import card_file
+
     pin = load_pin()
     repo = pin["repo"].removeprefix("https://github.com/").removesuffix(".git")
     head = github_json(f"https://api.github.com/repos/{repo}/commits/main")
@@ -419,7 +435,9 @@ def cmd_check(_: argparse.Namespace) -> int:
         f"https://api.github.com/repos/{repo}/git/trees/{head_sha}?recursive=1"
     )
     if pin_tree.get("truncated") or main_tree.get("truncated"):
-        raise SystemExit("GitHub tree listing was truncated; the card diff is incomplete")
+        raise SystemExit(
+            "GitHub tree listing was truncated; the card diff is incomplete"
+        )
 
     old_blobs = card_blobs(pin_tree)
     new_blobs = card_blobs(main_tree)
@@ -452,7 +470,9 @@ def cmd_check(_: argparse.Namespace) -> int:
     changed_known = [card_id for card_id in modified if card_id in corpus]
     if not changed_known:
         if findings:
-            print(f"{findings} catalog change(s) to review. Card files were not edited.")
+            print(
+                f"{findings} catalog change(s) to review. Card files were not edited."
+            )
             return 1
         print("No corpus card changed faction, cost, strength, or printed text.")
         return 0
@@ -462,7 +482,9 @@ def cmd_check(_: argparse.Namespace) -> int:
         after = fetch_card_ref(card_id, head_sha, repo)
         changes = diff_card_facts(before, after)
         if not changes:
-            print(f"{card_id}: card file changed; faction, cost, strength, and text are unchanged")
+            print(
+                f"{card_id}: card file changed; faction, cost, strength, and text are unchanged"
+            )
             continue
         findings += 1
         sample = after or before or {}

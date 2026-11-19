@@ -8,6 +8,7 @@ Follow NSG v2 stripped_text (not IR-hint paraphrases).
 Slug via spin_common.slugify (Na'Not'K→nanotk, O₂ Shortage→o2-shortage,
 Bloo Moose→bloo-moose).
 """
+
 from __future__ import annotations
 
 import json
@@ -88,11 +89,7 @@ def paid(
         "creditCost": credits,
         "cost": c,
         "windows": windows
-        or (
-            ["corp_action_paw"]
-            if not usable_by_runner
-            else ["runner_action_paw"]
-        ),
+        or (["corp_action_paw"] if not usable_by_runner else ["runner_action_paw"]),
         "effect": effect,
     }
     if once_per_turn:
@@ -298,7 +295,10 @@ def map_card(c: dict) -> dict | None:
                 paid(
                     "helheim-boost",
                     "Trash 1 card from HQ: All ice protecting this server has +2 strength until end of run",
-                    do("helheim_ice_protecting_this_server_strength_until_end_of_run", amount=2),
+                    do(
+                        "helheim_ice_protecting_this_server_strength_until_end_of_run",
+                        amount=2,
+                    ),
                     cost={"trashFromHq": 1},
                     windows=[
                         "corp_action_paw",

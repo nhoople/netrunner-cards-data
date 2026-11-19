@@ -4,6 +4,7 @@
 Fetch: python3 scripts/nsg_catalog.py fetch fal
 Spin cycle after True Colors (floor v1.98.0 → v1.99.0).
 """
+
 from __future__ import annotations
 
 import json

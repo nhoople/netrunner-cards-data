@@ -4,6 +4,7 @@
 Fetch: python3 scripts/nsg_catalog.py fetch up
 Lunar cycle after Honor and Profit (floor v1.101.0 → v1.102.0).
 """
+
 from __future__ import annotations
 
 import json

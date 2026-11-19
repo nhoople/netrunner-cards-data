@@ -8,6 +8,7 @@ added to each wave in pool.json.
 
 Usage: python3 scripts/build_catalog_facts.py
 """
+
 from __future__ import annotations
 
 import json
@@ -29,7 +30,9 @@ ABSORBED_CODES = {
 }
 
 
-def partition_card_ids(nsg_ids: list, mapping: dict[str, str]) -> tuple[list[str], list[str]]:
+def partition_card_ids(
+    nsg_ids: list, mapping: dict[str, str]
+) -> tuple[list[str], list[str]]:
     mapped: list[str] = []
     unmapped: list[str] = []
     for nsg_id in nsg_ids:
@@ -83,7 +86,9 @@ def load_json(path: Path):
 
 def write_json(path: Path, document: dict | list) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps(document, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    path.write_text(
+        json.dumps(document, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
+    )
 
 
 def printed_face(raw: dict, fallback_title: str) -> dict:
@@ -97,7 +102,9 @@ def printed_face(raw: dict, fallback_title: str) -> dict:
         "title": raw.get("title") or raw.get("stripped_title") or fallback_title,
         "strippedTitle": raw.get("stripped_title") or fallback_title,
         "text": raw.get("text") if isinstance(raw.get("text"), str) else "",
-        "strippedText": raw.get("stripped_text") if isinstance(raw.get("stripped_text"), str) else "",
+        "strippedText": raw.get("stripped_text")
+        if isinstance(raw.get("stripped_text"), str)
+        else "",
     }
     subtypes = subtype_names(raw)
     if subtypes:
@@ -192,9 +199,15 @@ def main() -> int:
         else:
             limits[card_id] = limit
         text = card.get("text") if isinstance(card.get("text"), str) else ""
-        stripped = card.get("stripped_text") if isinstance(card.get("stripped_text"), str) else ""
+        stripped = (
+            card.get("stripped_text")
+            if isinstance(card.get("stripped_text"), str)
+            else ""
+        )
         stripped_title = (
-            card.get("stripped_title") if isinstance(card.get("stripped_title"), str) else ""
+            card.get("stripped_title")
+            if isinstance(card.get("stripped_title"), str)
+            else ""
         )
         record = {
             "cardId": card_id,
@@ -227,7 +240,9 @@ def main() -> int:
         if (rules.get("subtypes") or []) != subtype_names(card):
             errors.append(f"{card_id}: stored subtypes differ from the catalog")
         if card.get("card_type_id") not in ("corp_identity", "runner_identity"):
-            problem = influence_problem(card.get("influence_cost"), rules.get("influence"))
+            problem = influence_problem(
+                card.get("influence_cost"), rules.get("influence")
+            )
             if problem:
                 errors.append(f"{card_id}: {problem}")
 
@@ -241,7 +256,9 @@ def main() -> int:
 
     for card_id, limit in sorted(limits.items()):
         path = card_file(card_id)
-        path.write_text(insert_deck_limit(path.read_text(encoding="utf-8"), limit), encoding="utf-8")
+        path.write_text(
+            insert_deck_limit(path.read_text(encoding="utf-8"), limit), encoding="utf-8"
+        )
 
     printed_dir = DATA / "printed"
     if printed_dir.exists():
@@ -252,7 +269,9 @@ def main() -> int:
 
     for wave_name in pool["corpusOrder"]:
         primary = pack_code_for(wave_name)
-        match = next(card_set for card_set in card_sets if card_set.get("legacy_code") == primary)
+        match = next(
+            card_set for card_set in card_sets if card_set.get("legacy_code") == primary
+        )
         wave = pool["waves"][wave_name]
         updated = {}
         for key, value in wave.items():
@@ -290,7 +309,9 @@ def main() -> int:
                 "id": raw["id"],
                 "name": raw["name"],
                 "formatId": raw["format_id"],
-                "cycles": [cycle.replace("_", "-") for cycle in raw.get("card_cycle_ids") or []],
+                "cycles": [
+                    cycle.replace("_", "-") for cycle in raw.get("card_cycle_ids") or []
+                ],
                 "waves": waves,
             }
             if outside:
@@ -315,11 +336,14 @@ def main() -> int:
             if snapshot.get("active") is True:
                 entry["active"] = True
             snapshots.append(entry)
-        write_json(formats_dir / f"{raw['id']}.json", {
-            "id": raw["id"],
-            "name": raw["name"],
-            "snapshots": snapshots,
-        })
+        write_json(
+            formats_dir / f"{raw['id']}.json",
+            {
+                "id": raw["id"],
+                "name": raw["name"],
+                "snapshots": snapshots,
+            },
+        )
 
     restrictions_dir = DATA / "restrictions"
     if restrictions_dir.exists():
@@ -332,7 +356,10 @@ def main() -> int:
         if restriction_id in seen_restrictions:
             raise SystemExit(f"duplicate restriction id {restriction_id}")
         seen_restrictions.add(restriction_id)
-        write_json(restrictions_dir / f"{restriction_id}.json", restriction_document(raw, mapping))
+        write_json(
+            restrictions_dir / f"{restriction_id}.json",
+            restriction_document(raw, mapping),
+        )
 
     rotations = []
     for raw in load_json(catalog / "rotations.json"):
@@ -341,17 +368,23 @@ def main() -> int:
         for card_set in card_sets:
             cycle = card_set["card_cycle_id"].replace("_", "-")
             set_id = card_set["id"].replace("_", "-")
-            if card_set.get("legacy_code") in tokens or cycle in tokens or set_id in tokens:
+            if (
+                card_set.get("legacy_code") in tokens
+                or cycle in tokens
+                or set_id in tokens
+            ):
                 wave_name = set_wave.get(card_set["id"])
                 if wave_name and wave_name not in waves:
                     waves.append(wave_name)
-        rotations.append({
-            "id": raw["code"],
-            "name": raw["name"],
-            "dateStart": raw["date_start"],
-            "cycles": raw["rotated"],
-            "waves": waves,
-        })
+        rotations.append(
+            {
+                "id": raw["code"],
+                "name": raw["name"],
+                "dateStart": raw["date_start"],
+                "cycles": raw["rotated"],
+                "waves": waves,
+            }
+        )
     write_json(DATA / "rotations.json", rotations)
 
     print(

@@ -5,6 +5,7 @@ Fetch: python3 scripts/nsg_catalog.py fetch cc
 SanSan cycle after Breaker Bay (floor v1.110.0 → v1.111.0).
 Reprint skip: oaktown-renovation, corporate-town (system-update-2021).
 """
+
 from __future__ import annotations
 
 import json
@@ -90,11 +91,7 @@ def paid(
         "creditCost": credits,
         "cost": c,
         "windows": windows
-        or (
-            ["corp_action_paw"]
-            if not usable_by_runner
-            else ["runner_action_paw"]
-        ),
+        or (["corp_action_paw"] if not usable_by_runner else ["runner_action_paw"]),
         "effect": effect,
     }
     if once_per_turn:

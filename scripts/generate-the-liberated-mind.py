@@ -5,6 +5,7 @@ Fetch: python3 scripts/nsg_catalog.py fetch tlm
 Mumbad cycle after Salsette Island (floor v1.119.0 → v1.120.0).
 Reprint skip: ravana-1-0 (18/19 new clears).
 """
+
 from __future__ import annotations
 
 import json
@@ -95,11 +96,7 @@ def paid(
         "creditCost": credits,
         "cost": c,
         "windows": windows
-        or (
-            ["corp_action_paw"]
-            if not usable_by_runner
-            else ["runner_action_paw"]
-        ),
+        or (["corp_action_paw"] if not usable_by_runner else ["runner_action_paw"]),
         "effect": effect,
     }
     if once_per_turn:
@@ -309,9 +306,7 @@ def map_card(c: dict) -> dict | None:
                         "action": {
                             "kind": "trace",
                             "strength": 5,
-                            "onSuccess": do(
-                                "reveal_grip_trash_cost_lte_excess"
-                            ),
+                            "onSuccess": do("reveal_grip_trash_cost_lte_excess"),
                         },
                     },
                 }

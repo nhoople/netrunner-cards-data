@@ -5,6 +5,7 @@ Fetch: python3 scripts/nsg_catalog.py fetch oac
 Deluxe after The Source / Lunar (floor v1.107.0 → v1.108.0).
 All 55 cards are new clears (0 reprints).
 """
+
 from __future__ import annotations
 
 import json
@@ -54,7 +55,9 @@ def may(effect: dict, label: str = "Accept", decline_side: str = "corp") -> dict
             {
                 "id": "decline",
                 "label": "Decline",
-                "effect": gain(decline_side if decline_side in ("corp", "runner") else "corp", 0),
+                "effect": gain(
+                    decline_side if decline_side in ("corp", "runner") else "corp", 0
+                ),
             },
         ],
     )
@@ -87,11 +90,7 @@ def paid(
         "creditCost": credits,
         "cost": c,
         "windows": windows
-        or (
-            ["corp_action_paw"]
-            if not usable_by_runner
-            else ["runner_action_paw"]
-        ),
+        or (["corp_action_paw"] if not usable_by_runner else ["runner_action_paw"]),
         "effect": effect,
     }
     if once_per_turn:
@@ -261,9 +260,7 @@ def map_card(c: dict) -> dict | None:
             c,
             unique=True,
             agendaPointsModifierInRunnerScoreArea=-1,
-            onTrashWhileAccessed=do(
-                "add_to_runner_score_as_agenda", agendaPoints=2
-            ),
+            onTrashWhileAccessed=do("add_to_runner_score_as_agenda", agendaPoints=2),
         )
 
     # --- Ice ---
@@ -346,12 +343,16 @@ def map_card(c: dict) -> dict | None:
                 {
                     "id": "builder-adv-1",
                     "text": "Place 1 advancement on ice protecting this server that can be advanced.",
-                    "effect": do("place_advancement_on_advanceable_ice_protecting_this_server"),
+                    "effect": do(
+                        "place_advancement_on_advanceable_ice_protecting_this_server"
+                    ),
                 },
                 {
                     "id": "builder-adv-2",
                     "text": "Place 1 advancement on ice protecting this server that can be advanced.",
-                    "effect": do("place_advancement_on_advanceable_ice_protecting_this_server"),
+                    "effect": do(
+                        "place_advancement_on_advanceable_ice_protecting_this_server"
+                    ),
                 },
             ],
         )
@@ -707,9 +708,7 @@ def map_card(c: dict) -> dict | None:
         return base(
             c,
             unique=True,
-            onAgendaScoredOrStolen=do(
-                "gain_credits_equal_to_agenda_points_of_trigger"
-            ),
+            onAgendaScoredOrStolen=do("gain_credits_equal_to_agenda_points_of_trigger"),
         )
 
     if cid == "investigative-journalism":

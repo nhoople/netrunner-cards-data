@@ -4,6 +4,7 @@
 Fetch: python3 scripts/nsg_catalog.py fetch hap
 Deluxe after Double Time (floor v1.100.0 → v1.101.0).
 """
+
 from __future__ import annotations
 
 import json
@@ -91,9 +92,7 @@ def map_card(c: dict) -> dict | None:
             c,
             subtypes=["executive"],
             runnerHandSizeBonus=-2,
-            onTrashWhileAccessed=do(
-                "add_to_runner_score_as_agenda", agendaPoints=-2
-            ),
+            onTrashWhileAccessed=do("add_to_runner_score_as_agenda", agendaPoints=-2),
         )
 
     if cid == "mental-health-clinic":
@@ -252,7 +251,9 @@ def map_card(c: dict) -> dict | None:
     if cid == "rainbow":
         return base(
             c,
-            subroutines=[{"id": "rainbow-etr", "text": "End the run.", "effect": etr()}],
+            subroutines=[
+                {"id": "rainbow-etr", "text": "End the run.", "effect": etr()}
+            ],
         )
 
     if cid == "diversified-portfolio":

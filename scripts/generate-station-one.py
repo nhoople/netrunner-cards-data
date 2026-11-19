@@ -7,6 +7,7 @@ Reprint skips: none (20/20 new clears).
 Follow NSG v2 stripped_text (not IR-hint paraphrases).
 Slug via spin_common.slugify (Möbius→mobius, Los: Data Hijacker→los-data-hijacker).
 """
+
 from __future__ import annotations
 
 import json
@@ -87,11 +88,7 @@ def paid(
         "creditCost": credits,
         "cost": c,
         "windows": windows
-        or (
-            ["corp_action_paw"]
-            if not usable_by_runner
-            else ["runner_action_paw"]
-        ),
+        or (["corp_action_paw"] if not usable_by_runner else ["runner_action_paw"]),
         "effect": effect,
     }
     if once_per_turn:
@@ -255,9 +252,7 @@ def map_card(c: dict) -> dict | None:
                 {
                     "id": "bloom-other-server",
                     "text": "You may install 1 piece of ice from HQ protecting another server, ignoring all costs.",
-                    "effect": do(
-                        "may_install_ice_from_hq_other_server_ignore_costs"
-                    ),
+                    "effect": do("may_install_ice_from_hq_other_server_ignore_costs"),
                 },
                 {
                     "id": "bloom-inward",

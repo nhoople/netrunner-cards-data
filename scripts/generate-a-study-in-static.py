@@ -12,6 +12,7 @@ Hand-mapped Effect IR only — empty unsupported for set-complete.
 
 Usage: python3 scripts/generate-a-study-in-static.py
 """
+
 from __future__ import annotations
 
 from printed_numbers import apply_printed_numbers
@@ -124,9 +125,7 @@ def map_card(c: dict) -> dict | None:
             paidAbilities=[
                 {
                     "id": "disrupter-trace",
-                    "label": (
-                        "[interrupt] → [trash]: Reduce base trace strength to 0"
-                    ),
+                    "label": ("[interrupt] → [trash]: Reduce base trace strength to 0"),
                     "clickCost": 0,
                     "creditCost": 0,
                     "cost": {"trashSelf": True},
@@ -161,9 +160,7 @@ def map_card(c: dict) -> dict | None:
             paidAbilities=[
                 {
                     "id": "crescentus-derez",
-                    "label": (
-                        "[trash]: Derez ice fully broken this encounter"
-                    ),
+                    "label": ("[trash]: Derez ice fully broken this encounter"),
                     "clickCost": 0,
                     "creditCost": 0,
                     "cost": {"trashSelf": True},
@@ -224,10 +221,13 @@ def map_card(c: dict) -> dict | None:
     if cid == "green-level-clearance":
         return base(
             c,
-            onPlay=seq(gain("corp", 3), {
-                "op": "do",
-                "action": {"kind": "draw", "side": "corp", "amount": 1},
-            }),
+            onPlay=seq(
+                gain("corp", 3),
+                {
+                    "op": "do",
+                    "action": {"kind": "draw", "side": "corp", "amount": 1},
+                },
+            ),
             unsupported=[],
         )
 
@@ -391,7 +391,7 @@ def map_card(c: dict) -> dict | None:
         )
 
     card = base(c)
-    text = (c.get("stripped_text") or "")
+    text = c.get("stripped_text") or ""
     plain = re.sub(r"\s+", " ", text).strip()
     card["unsupported"] = [f"Full text not yet mapped to IR: {plain[:240]}"]
     return card
@@ -444,10 +444,7 @@ def main():
 
     print(f"Wrote {len(written)} cards")
     print(f"Skipped reprints/shared: {len(skipped)}")
-    print(
-        f"Among written: full={len(clear_written)} "
-        f"partial={len(partial_written)}"
-    )
+    print(f"Among written: full={len(clear_written)} partial={len(partial_written)}")
     print("CLEARS=" + json.dumps(clear_written))
     print("POOL_IDS=" + json.dumps(pool_ids))
 
