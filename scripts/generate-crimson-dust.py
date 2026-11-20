@@ -254,7 +254,9 @@ def map_card(c: dict) -> dict | None:
                 paid(
                     "dummy-box-prevent",
                     "[interrupt] → Trash 1 card from grip: Prevent Corp trashing 1 installed card of the same type",
-                    do("trash_grip_same_type_prevent"),
+                    do("prevent_pending_installed_trash", amount=1),
+                    # The grip card is the cost (CR 1.16.1).
+                    cost={"trashFromGripSameTypeAsPendingTrash": True},
                     windows=["trash_interrupt"],
                     usable_by_runner=True,
                 ),

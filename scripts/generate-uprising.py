@@ -205,6 +205,8 @@ def map_card(c: dict) -> dict:
                     "kind": "place_advancements",
                     "amount": 1,
                     "sameServerRootAsSource": True,
+                    # "a card in the root": placing is not advancing (CR 1.18.2).
+                    "anyCard": True,
                     "pick": "choose",
                 },
             },

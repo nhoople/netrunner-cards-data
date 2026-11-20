@@ -21,7 +21,7 @@
       "id": "dummy-box-prevent",
       "label": "[interrupt] → Trash 1 card from grip: Prevent Corp trashing 1 installed card of the same type",
       "cost": {
-        "credits": 0
+        "trashFromGripSameTypeAsPendingTrash": true
       },
       "windows": [
         "trash_interrupt"
@@ -29,7 +29,8 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "trash_grip_same_type_prevent"
+          "kind": "prevent_pending_installed_trash",
+          "amount": 1
         }
       },
       "usableByRunnerOnSelfIce": true
