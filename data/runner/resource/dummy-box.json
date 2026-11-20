@@ -26,6 +26,7 @@
       "windows": [
         "trash_interrupt"
       ],
+      "onlyCorpTrashes": true,
       "instructions": {
         "op": "do",
         "action": {
