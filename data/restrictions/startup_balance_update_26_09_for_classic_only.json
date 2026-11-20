@@ -1,0 +1,13 @@
+{
+  "id": "startup_balance_update_26_09_for_classic_only",
+  "name": "Startup Balance Update 26.09 (ignore active date)",
+  "formatId": "standard",
+  "dateStart": "2026-07-01",
+  "banned": [
+    "cleaver",
+    "let-them-dream",
+    "mercia-b4ll4rd",
+    "offworld-office",
+    "seamless-launch"
+  ]
+}
