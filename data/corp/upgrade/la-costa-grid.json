@@ -33,6 +33,7 @@
           "kind": "place_advancements",
           "amount": 1,
           "sameServerRootAsSource": true,
+          "anyCard": true,
           "pick": "choose"
         }
       }

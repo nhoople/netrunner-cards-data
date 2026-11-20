@@ -250,14 +250,19 @@ def map_card(c: dict) -> dict | None:
         return base(
             c,
             subtypes=["virtual"],
+            # "Prevent the Corp from trashing": not when the Runner trashes
+            # (CR 1.14.5), hence onlyCorpTrashes.
             paidAbilities=[
                 paid(
                     "dummy-box-prevent",
                     "[interrupt] → Trash 1 card from grip: Prevent Corp trashing 1 installed card of the same type",
-                    do("trash_grip_same_type_prevent"),
+                    do("prevent_pending_installed_trash", amount=1),
+                    # The grip card is the cost (CR 1.16.1).
+                    cost={"trashFromGripSameTypeAsPendingTrash": True},
                     windows=["trash_interrupt"],
                     usable_by_runner=True,
-                ),
+                )
+                | {"onlyCorpTrashes": True},
             ],
         )
 
