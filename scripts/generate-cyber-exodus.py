@@ -364,6 +364,7 @@ def map_card(c: dict) -> dict | None:
                     },
                 }
             ],
+            trashWhenHostedCreditsEmpty=True,
             unsupported=[],
         )
 

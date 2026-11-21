@@ -233,6 +233,7 @@ def map_card(c: dict) -> dict | None:
                 "op": "do",
                 "action": {"kind": "take_hosted_credits", "amount": 2},
             },
+            trashWhenHostedCreditsEmpty=True,
             unsupported=[],
         )
 

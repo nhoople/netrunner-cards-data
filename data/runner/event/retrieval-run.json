@@ -19,8 +19,20 @@
       "declaration": {
         "field": "runEvent",
         "value": {
-          "servers": "archives",
-          "skipBreachInstallProgramFromHeap": true
+          "servers": "archives"
+        }
+      }
+    },
+    {
+      "class": "conditional",
+      "rule": "9.3.7c",
+      "trigger": "successful_run",
+      "host": "runEvent",
+      "label": "If successful, instead of breaching Archives, you may install 1 program from your heap, ignoring all costs.",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "may_install_heap_program_instead_of_breach"
         }
       }
     }

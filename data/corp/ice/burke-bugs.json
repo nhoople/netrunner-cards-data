@@ -28,7 +28,8 @@
           "onSuccess": {
             "op": "do",
             "action": {
-              "kind": "trash_own_program"
+              "kind": "trash_program",
+              "pick": "choose"
             }
           }
         }

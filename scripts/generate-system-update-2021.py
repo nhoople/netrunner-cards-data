@@ -595,12 +595,10 @@ def map_card(c: dict) -> dict | None:
                 "servers": "archives",
                 "onSuccessfulRun": {
                     "op": "do",
-                    "action": {"kind": "install_program_from_heap_ignoring_costs"},
+                    "action": {"kind": "may_install_heap_program_instead_of_breach"},
                 },
             },
-            unsupported=[
-                "Successful Archives: instead of breach, may install program from heap ignoring costs — needs replace-breach + heap install."
-            ],
+            unsupported=[],
         )
     if cid == "en-passant":
         return base(

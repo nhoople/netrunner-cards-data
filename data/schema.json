@@ -188,9 +188,6 @@
           "type": "boolean",
           "description": "Shred: first Corp end-the-run is prevented unless Corp reveals and trashes X random HQ (X = root size)."
         },
-        "skipBreachInstallProgramFromHeap": {
-          "type": "boolean"
-        },
         "skipBreach": {
           "type": "boolean",
           "description": "On successful run, skip breaching the attacked server (e.g. Chastushka replace-breach)."
@@ -3477,9 +3474,6 @@
     "aesopPawnshop": {
       "type": "boolean"
     },
-    "skipBreachInstallProgramFromHeap": {
-      "type": "boolean"
-    },
     "onInstallFromNonHq": {
       "type": "object",
       "description": "Effect IR when this card is installed from anywhere except HQ (Stoke the Embers)."
@@ -5155,6 +5149,10 @@
     "onEncounterEndIfNotFullyBroken": {
       "type": "object",
       "description": "Anansi: when an encounter with this ice ends, if the Runner did not fully break it, resolve this effect."
+    },
+    "onEncounterEndIfBroke": {
+      "type": "object",
+      "description": "Faerie: whenever an encounter ends, if this program broke a subroutine during that encounter, resolve this effect."
     },
     "gainCreditsOnFirstRunnerPlayOrInstallNamedType": {
       "type": "integer",
