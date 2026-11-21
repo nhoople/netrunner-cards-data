@@ -360,7 +360,7 @@ def map_card(c: dict) -> dict | None:
                             "strength": 0,
                             "onSuccess": {
                                 "op": "do",
-                                "action": {"kind": "trash_own_program"},
+                                "action": {"kind": "trash_program", "pick": "choose"},
                             },
                         },
                     },

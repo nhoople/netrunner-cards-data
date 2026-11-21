@@ -37,6 +37,14 @@
           "amount": 2
         }
       }
+    },
+    {
+      "class": "static",
+      "rule": "9.3.7a",
+      "declaration": {
+        "field": "trashWhenHostedCreditsEmpty",
+        "value": true
+      }
     }
   ]
 }

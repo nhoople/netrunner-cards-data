@@ -422,7 +422,10 @@ def map_card(c: dict) -> dict | None:
     if cid == "adonis-campaign":
         return base(
             c,
-            hostedCreditsOnInstall=12,
+            onRez={
+                "op": "do",
+                "action": {"kind": "place_hosted_credits", "amount": 12},
+            },
             onTurnBegin={
                 "op": "do",
                 "action": {"kind": "take_hosted_credits", "amount": 3},
@@ -1210,7 +1213,7 @@ def map_card(c: dict) -> dict | None:
             0,
             1,
             1,
-            trashAfterBreakingThisRun=True,
+            onEncounterEndIfBroke={"op": "do", "action": {"kind": "trash_self"}},
             unsupported=[],
         )
 
@@ -1343,12 +1346,7 @@ def map_card(c: dict) -> dict | None:
                     "clickCost": 0,
                     "creditCost": 0,
                     "cost": {"powerCounters": 1},
-                    "windows": [
-                        "corp_action_paw",
-                        "approach_paw",
-                        "encounter_paw",
-                        "approach_server_paw",
-                    ],
+                    "windows": ["corp_action_paw"],
                     "effect": {
                         "op": "do",
                         "action": {"kind": "give_tags", "amount": 1},
@@ -1725,7 +1723,6 @@ def map_card(c: dict) -> dict | None:
     if cid == "dinosaurus":
         return base(
             c,
-            muBonus=1,
             maxHostedCards=1,
             hostIcebreakerStrengthBonus=2,
             hostNonAiIcebreaker=True,

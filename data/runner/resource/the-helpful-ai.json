@@ -40,8 +40,7 @@
         "trashSelf": true
       },
       "windows": [
-        "runner_action_paw",
-        "encounter_paw"
+        "runner_action_paw"
       ],
       "instructions": {
         "op": "do",

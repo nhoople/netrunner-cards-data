@@ -216,11 +216,7 @@ def map_card(c: dict) -> dict | None:
                     "clickCost": 0,
                     "creditCost": 0,
                     "cost": {"trashSelf": True},
-                    "windows": [
-                        "runner_action_paw",
-                        "approach_paw",
-                        "encounter_paw",
-                    ],
+                    "windows": ["runner_action_paw"],
                     "effect": {
                         "op": "do",
                         "action": {
@@ -273,7 +269,7 @@ def map_card(c: dict) -> dict | None:
                     "clickCost": 0,
                     "creditCost": 0,
                     "cost": {"trashSelf": True},
-                    "windows": ["runner_action_paw", "encounter_paw"],
+                    "windows": ["runner_action_paw"],
                     "effect": {
                         "op": "do",
                         "action": {

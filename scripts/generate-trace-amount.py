@@ -201,7 +201,6 @@ def map_card(c: dict) -> dict | None:
     if cid == "compromised-employee":
         return base(
             c,
-            link=1,
             recurringCreditsMax=1,
             recurringSpendFor=["trace"],
             onAnyIceRez=gain("runner", 1),

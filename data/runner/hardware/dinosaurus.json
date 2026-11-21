@@ -25,14 +25,6 @@
       "class": "static",
       "rule": "9.3.7a",
       "declaration": {
-        "field": "muBonus",
-        "value": 1
-      }
-    },
-    {
-      "class": "static",
-      "rule": "9.3.7a",
-      "declaration": {
         "field": "maxHostedCards",
         "value": 1
       }

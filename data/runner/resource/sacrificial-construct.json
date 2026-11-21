@@ -26,6 +26,10 @@
       "windows": [
         "trash_interrupt"
       ],
+      "requirePendingTrashCardTypes": [
+        "program",
+        "hardware"
+      ],
       "instructions": {
         "op": "do",
         "action": {

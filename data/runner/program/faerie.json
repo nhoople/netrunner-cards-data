@@ -54,11 +54,15 @@
       }
     },
     {
-      "class": "static",
-      "rule": "9.3.7a",
-      "declaration": {
-        "field": "trashAfterBreakingThisRun",
-        "value": true
+      "class": "conditional",
+      "rule": "9.3.7c",
+      "trigger": "encounter_end_if_broke",
+      "label": "Whenever an encounter ends, if you used this program to break a subroutine during that encounter, trash this program.",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "trash_self"
+        }
       }
     }
   ]

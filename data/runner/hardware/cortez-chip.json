@@ -22,9 +22,7 @@
         "trashSelf": true
       },
       "windows": [
-        "runner_action_paw",
-        "approach_paw",
-        "encounter_paw"
+        "runner_action_paw"
       ],
       "instructions": {
         "op": "do",

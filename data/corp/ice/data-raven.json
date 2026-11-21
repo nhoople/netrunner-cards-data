@@ -50,10 +50,7 @@
         "powerCounters": 1
       },
       "windows": [
-        "corp_action_paw",
-        "approach_paw",
-        "encounter_paw",
-        "approach_server_paw"
+        "corp_action_paw"
       ],
       "instructions": {
         "op": "do",
