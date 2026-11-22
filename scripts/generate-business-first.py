@@ -191,7 +191,7 @@ def map_card(c: dict) -> dict | None:
                 paid(
                     "aal-install",
                     "[trash]: Install a non-agenda card from HQ (paying install cost)",
-                    do("may_install_from_hq_paying_costs", excludeAgenda=True),
+                    do("install_from_hq_paying_costs", excludeAgenda=True),
                     trash_self=True,
                     windows=["corp_action_paw"],
                     forbid_during_run=True,

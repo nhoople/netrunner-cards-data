@@ -3434,9 +3434,9 @@
       },
       "description": "While this card is active (e.g. Corp identity), each ice with subtype gets +bonus strength (Haas-Bioroid: Stronger Together)."
     },
-    "preventFirstTagThisTurn": {
+    "preventFirstTagEachRun": {
       "type": "boolean",
-      "description": "The first time each turn you would take a tag, prevent 1 tag (Jesminder-class; also blocks nested tag costs per CR §1.16.1b)."
+      "description": "The first time each run you would take tags, prevent 1 tag (Jesminder Sareen; also blocks nested tag costs per CR §1.16.1b)."
     },
     "threatBasicTrashAdditionalCostTrashHq": {
       "type": "integer",

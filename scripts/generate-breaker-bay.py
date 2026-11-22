@@ -181,7 +181,7 @@ def map_card(c: dict) -> dict | None:
                 "2¢: Place 1 power counter on this program",
                 do("add_power_counter", amount=1),
                 credits=2,
-                windows=["runner_action_paw", "encounter_paw"],
+                windows=["runner_action_paw"],
             )
         ]
         return card

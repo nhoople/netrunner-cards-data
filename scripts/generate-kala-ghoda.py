@@ -146,7 +146,11 @@ def map_card(c: dict) -> dict | None:
             runEvent={
                 "servers": "any",
                 "requiresUnrezzedIce": True,
-                "onSuccessfulRun": gain("runner", 12),
+                "onRunEnd": {
+                    "op": "if",
+                    "cond": {"op": "run_successful"},
+                    "then": gain("runner", 12),
+                },
             },
         )
 
@@ -161,7 +165,7 @@ def map_card(c: dict) -> dict | None:
             c,
             subtypes=["natural"],
             link=c.get("base_link", 0),
-            preventFirstTagThisTurn=True,
+            preventFirstTagEachRun=True,
         )
 
     if cid == "maya":
