@@ -161,7 +161,7 @@ def map_card(c: dict) -> dict | None:
                 paid(
                     "15-minutes-shuffle",
                     "[click]: Shuffle 15 Minutes into R&D",
-                    do("shuffle_source_into_rd"),
+                    do("shuffle_source_into_rd", fromCorpScoreArea=True),
                     clicks=1,
                     usable_from_runner_score=True,
                 )
@@ -172,7 +172,7 @@ def map_card(c: dict) -> dict | None:
         return base(
             c,
             subtypes=["security"],
-            iceStrengthBonusForSubtype={"subtype": "tracer", "bonus": 1},
+            whileScoredIceSubtypeStrengthBonus={"subtype": "tracer", "bonus": 1},
             subroutineTraceBaseStrengthBonus=1,
         )
 
@@ -567,7 +567,7 @@ def map_card(c: dict) -> dict | None:
                 paid(
                     "hunting-grounds-prevent",
                     "[interrupt], once per turn → 0¢: Prevent a when-encountered ability",
-                    do("prevent_pending_when_encountered"),
+                    do("prevent_current_ice_on_encounter"),
                     credits=0,
                     once_per_turn=True,
                     windows=["when_encountered_interrupt"],
@@ -721,7 +721,7 @@ def map_card(c: dict) -> dict | None:
             onTurnBegin=may(
                 seq(
                     do("lose_clicks", side="runner", amount=1),
-                    do("reveal_top_of_rd"),
+                    do("look_top_n_rd_peek", n=1),
                 ),
                 label="Lose [click]: Look at the top card of R&D",
                 decline_side="runner",

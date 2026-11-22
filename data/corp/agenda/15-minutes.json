@@ -40,7 +40,8 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "shuffle_source_into_rd"
+          "kind": "shuffle_source_into_rd",
+          "fromCorpScoreArea": true
         }
       },
       "usableFromRunnerScoreArea": true

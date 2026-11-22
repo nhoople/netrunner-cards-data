@@ -48,7 +48,7 @@ def map_card(c: dict) -> dict | None:
         return base(
             c,
             agendaPoints=0,
-            agendaPointsPerAgendaCounter=1,
+            agendaPointsWhileHasAgendaCounter=1,
             paidAbilities=[
                 {
                     "id": "domestic-sleepers-counter",
@@ -177,10 +177,24 @@ def map_card(c: dict) -> dict | None:
         )
 
     if cid == "leprechaun":
-        return base(c, daemonHost=True, daemonHostMaxMu=2)
+        return base(c, daemonHost=True, maxHostedCards=2)
 
     if cid == "eden-shard":
-        return base(c, onGripRdSuccessInstallSelfIgnoringCosts=True)
+        return base(
+            c,
+            onGripRdSuccessInstallSelfIgnoringCosts=True,
+            paidAbilities=[
+                {
+                    "id": "eden-draw",
+                    "label": "[trash]: The Corp draws 2 cards",
+                    "clickCost": 0,
+                    "creditCost": 0,
+                    "cost": {"trashSelf": True},
+                    "windows": ["runner_action_paw"],
+                    "effect": do("draw", side="corp", amount=2),
+                }
+            ],
+        )
 
     card = base(c)
     card["unsupported"] = [f"Unmapped up card: {cid}"]

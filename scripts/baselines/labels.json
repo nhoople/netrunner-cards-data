@@ -2,7 +2,7 @@
   "_comment": "Shrink-only baseline for scripts/check_labels.py (CR audit tool 1.4). Regenerate with `python3 scripts/check_labels.py --write`; never add entries by hand.",
   "counts": {
     "unlabelled": 1187,
-    "drift": 392,
+    "drift": 391,
     "unsupported": 0
   },
   "unlabelled": {
@@ -2658,7 +2658,7 @@
       "0:conditional"
     ],
     "shattered-remains": [
-      "0:conditional"
+      "1:conditional"
     ],
     "shi-kyu": [
       "0:conditional"
@@ -3914,9 +3914,6 @@
     ],
     "living-mural": [
       "1¢: Break 1 sentry sub protecting host server"
-    ],
-    "llds-energy-regulator": [
-      "3[credit] or [trash]: Prevent trashing 1 installed hardware"
     ],
     "lobisomem": [
       "X¢, hosted power: Break X barrier subroutines"

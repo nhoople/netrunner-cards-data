@@ -46,7 +46,8 @@
                 {
                   "op": "do",
                   "action": {
-                    "kind": "reveal_top_of_rd"
+                    "kind": "look_top_n_rd_peek",
+                    "n": 1
                   }
                 }
               ]

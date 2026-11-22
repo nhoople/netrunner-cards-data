@@ -14,7 +14,7 @@
       "class": "static",
       "rule": "9.3.7a",
       "declaration": {
-        "field": "agendaPointsPerAgendaCounter",
+        "field": "agendaPointsWhileHasAgendaCounter",
         "value": 1
       }
     },

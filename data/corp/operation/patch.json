@@ -19,7 +19,8 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "host_on_ice_as_condition"
+          "kind": "host_on_ice_as_condition",
+          "rezzedOnly": true
         }
       }
     },

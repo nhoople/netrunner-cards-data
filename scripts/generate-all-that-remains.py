@@ -272,7 +272,7 @@ def map_card(c: dict) -> dict | None:
                     "clickCost": 0,
                     "creditCost": 0,
                     "cost": {"trashSelf": True},
-                    "windows": ["runner_action_paw", "encounter_paw"],
+                    "windows": ["runner_action_paw"],
                     "effect": do("corp_discard_random_from_hq", amount=2),
                 }
             ],

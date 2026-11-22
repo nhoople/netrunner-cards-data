@@ -28,7 +28,8 @@
               "op": "do",
               "action": {
                 "kind": "add_agenda_counter",
-                "amount": 1
+                "amount": 1,
+                "onTriggerAgenda": true
               }
             }
           },

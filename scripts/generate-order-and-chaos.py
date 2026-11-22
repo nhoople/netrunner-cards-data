@@ -141,7 +141,7 @@ def map_card(c: dict) -> dict | None:
         return base(
             c,
             onAgendaScored=may(
-                do("add_agenda_counter", amount=1),
+                do("add_agenda_counter", amount=1, onTriggerAgenda=True),
                 label="Place 1 agenda counter on the scored agenda",
             ),
         )
@@ -259,7 +259,7 @@ def map_card(c: dict) -> dict | None:
         return base(
             c,
             unique=True,
-            agendaPointsModifierInRunnerScoreArea=-1,
+            runnerScoredAgendaPointsModifier=-1,
             onTrashWhileAccessed=do("add_to_runner_score_as_agenda", agendaPoints=2),
         )
 
@@ -430,7 +430,7 @@ def map_card(c: dict) -> dict | None:
     if cid == "patch":
         return base(
             c,
-            onPlay=do("host_on_ice_as_condition"),
+            onPlay=do("host_on_ice_as_condition", rezzedOnly=True),
             hostStrengthModifier=2,
         )
 
@@ -444,7 +444,7 @@ def map_card(c: dict) -> dict | None:
     if cid == "sub-boost":
         return base(
             c,
-            onPlay=do("host_on_ice_as_condition"),
+            onPlay=do("host_on_ice_as_condition", rezzedOnly=True),
             continuousSubtypeGrants=[{"kind": "host_grant_barrier"}],
             continuousGainedSubDecls=[
                 {
@@ -498,7 +498,7 @@ def map_card(c: dict) -> dict | None:
                     "[trash]: Purge virus counters",
                     do("purge_virus_counters"),
                     trash_self=True,
-                    windows=["corp_action_paw", "approach_paw", "encounter_paw"],
+                    windows=["corp_action_paw"],
                 )
             ],
         )
@@ -535,6 +535,7 @@ def map_card(c: dict) -> dict | None:
             c,
             onPlay=draw("runner", 3),
             onTrashFromGripOrStack=draw("runner", 3),
+            trashFromGripTriggerOnlyByNetOrMeatDamage=True,
         )
 
     if cid == "itinerant-protesters":

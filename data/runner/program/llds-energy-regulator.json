@@ -16,18 +16,46 @@
       "rule": "9.3.7b",
       "flagRule": "9.3.6d",
       "flag": "interrupt",
-      "id": "llds-prevent",
-      "label": "3[credit] or [trash]: Prevent trashing 1 installed hardware",
+      "id": "llds-prevent-credits",
+      "label": "[interrupt] → 3[credit] or [trash]: Prevent a player from trashing 1 installed piece of hardware",
       "cost": {
-        "credits": 0
+        "credits": 3
       },
       "windows": [
         "trash_interrupt"
       ],
+      "requirePendingTrashCardTypes": [
+        "hardware"
+      ],
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "prevent_llds_trash_hardware"
+          "kind": "prevent_pending_installed_trash",
+          "amount": 1
+        }
+      }
+    },
+    {
+      "class": "paid",
+      "rule": "9.3.7b",
+      "flagRule": "9.3.6d",
+      "flag": "interrupt",
+      "id": "llds-prevent-trash",
+      "label": "[interrupt] → 3[credit] or [trash]: Prevent a player from trashing 1 installed piece of hardware",
+      "cost": {
+        "trashSelf": true
+      },
+      "windows": [
+        "trash_interrupt"
+      ],
+      "requirePendingTrashCardTypes": [
+        "hardware"
+      ],
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "prevent_pending_installed_trash",
+          "amount": 1
         }
       }
     }

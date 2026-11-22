@@ -64,9 +64,7 @@
         "trashSelf": true
       },
       "windows": [
-        "corp_action_paw",
-        "approach_paw",
-        "encounter_paw"
+        "corp_action_paw"
       ],
       "instructions": {
         "op": "do",

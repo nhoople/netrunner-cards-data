@@ -30,7 +30,7 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "look_top_n_rd_may_install_and_rez_ignore_costs",
+          "kind": "look_top_n_rd_may_install_ignore_install_cost",
           "n": 5
         }
       }

@@ -2415,10 +2415,10 @@
       "type": "object",
       "description": "Corp identity: turn begin if Runner made no successful run last turn (Tennin)."
     },
-    "advancementRequirementReductionPerSameTitleAnywhere": {
+    "advancementRequirementReductionPerScoredCopy": {
       "type": "integer",
       "minimum": 0,
-      "description": "Lower this agenda's advancement requirement per copy of this title anywhere in Corp zones (Medical Breakthrough)."
+      "description": "Lower each copy's advancement requirement per copy of this title in the Corp's or the Runner's score area (Medical Breakthrough)."
     },
     "onAccessWhileUninstalled": {
       "type": "object",
@@ -2981,6 +2981,10 @@
     },
     "agendaPointsPerAgendaCounter": {
       "type": "integer"
+    },
+    "agendaPointsWhileHasAgendaCounter": {
+      "type": "integer",
+      "description": "Worth this many more agenda points while it has at least 1 agenda counter (Domestic Sleepers)."
     },
     "advancementRequirementReduction": {
       "type": "integer"
@@ -3597,6 +3601,10 @@
       "type": "integer",
       "description": "Modify agenda points while in the Runner score area (Let Them Dream −1)."
     },
+    "runnerScoredAgendaPointsModifier": {
+      "type": "integer",
+      "description": "While this card is active, each agenda in the Runner's score area is worth this many more points (The Board −1)."
+    },
     "onFirstBadPublicityTakeEachTurn": {
       "type": "object",
       "description": "First time each turn Corp takes bad publicity, evaluate this effect (Editorial Division)."
@@ -3909,6 +3917,10 @@
     "muBonusOnlyForVirusPrograms": {
       "type": "boolean",
       "description": "MemStrips: MU bonus only usable for virus programs."
+    },
+    "trashFromGripTriggerOnlyByNetOrMeatDamage": {
+      "type": "boolean",
+      "description": "Its trashed-from-grip-or-stack ability is met only when net or meat damage trashes it (I've Had Worse)."
     },
     "onPassRezzedIceProtectingThisServer": {
       "description": "The Twins: effect when Runner passes rezzed ice protecting this server."
