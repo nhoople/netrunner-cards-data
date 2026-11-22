@@ -53,7 +53,7 @@ def map_card(c: dict) -> dict | None:
                 {
                     "id": "architect-rd",
                     "text": "Look at top 5 of R&D; may install 1 ignoring cost",
-                    "effect": do("look_top_n_rd_may_install_and_rez_ignore_costs", n=5),
+                    "effect": do("look_top_n_rd_may_install_ignore_install_cost", n=5),
                 },
                 {
                     "id": "architect-hq-arch",
@@ -110,7 +110,7 @@ def map_card(c: dict) -> dict | None:
                     "clickCost": 0,
                     "creditCost": 0,
                     "cost": {"powerCounters": 1},
-                    "windows": ["encounter_paw"],
+                    "windows": ["approach_paw", "encounter_paw"],
                     "effect": net(1),
                 }
             ],

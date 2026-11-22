@@ -17,7 +17,7 @@
       "class": "static",
       "rule": "9.3.7a",
       "declaration": {
-        "field": "iceStrengthBonusForSubtype",
+        "field": "whileScoredIceSubtypeStrengthBonus",
         "value": {
           "subtype": "tracer",
           "bonus": 1

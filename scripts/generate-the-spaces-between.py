@@ -192,7 +192,8 @@ def map_card(c: dict) -> dict | None:
         )
 
     if cid == "unscheduled-maintenance":
-        return current_corp(c, corpMaxIceInstallsPerTurn=1)
+        # A Runner current: trashed when an agenda is scored (CR 3.7.1b).
+        return current_runner(c, corpMaxIceInstallsPerTurn=1)
 
     if cid == "cache":
         return base(
@@ -206,7 +207,7 @@ def map_card(c: dict) -> dict | None:
                     "clickCost": 0,
                     "creditCost": 0,
                     "cost": {"virusCounters": 1},
-                    "windows": ["runner_action_paw", "encounter_paw"],
+                    "windows": ["runner_action_paw"],
                     "effect": gain("runner", 1),
                 }
             ],
@@ -224,14 +225,25 @@ def map_card(c: dict) -> dict | None:
             c,
             paidAbilities=[
                 {
-                    "id": "llds-prevent",
-                    "label": "3[credit] or [trash]: Prevent trashing 1 installed hardware",
+                    "id": "llds-prevent-credits",
+                    "label": "[interrupt] → 3[credit] or [trash]: Prevent a player from trashing 1 installed piece of hardware",
+                    "clickCost": 0,
+                    "creditCost": 3,
+                    "cost": {"credits": 3},
+                    "windows": ["trash_interrupt"],
+                    "requirePendingTrashCardTypes": ["hardware"],
+                    "effect": do("prevent_pending_installed_trash", amount=1),
+                },
+                {
+                    "id": "llds-prevent-trash",
+                    "label": "[interrupt] → 3[credit] or [trash]: Prevent a player from trashing 1 installed piece of hardware",
                     "clickCost": 0,
                     "creditCost": 0,
-                    "cost": {},
+                    "cost": {"trashSelf": True},
                     "windows": ["trash_interrupt"],
-                    "effect": do("prevent_llds_trash_hardware"),
-                }
+                    "requirePendingTrashCardTypes": ["hardware"],
+                    "effect": do("prevent_pending_installed_trash", amount=1),
+                },
             ],
         )
 

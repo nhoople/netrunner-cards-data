@@ -25,6 +25,7 @@
         "powerCounters": 1
       },
       "windows": [
+        "approach_paw",
         "encounter_paw"
       ],
       "instructions": {

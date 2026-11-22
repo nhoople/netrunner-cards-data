@@ -79,7 +79,7 @@ def map_card(c: dict) -> dict | None:
         )
 
     if cid == "medical-breakthrough":
-        return base(c, advancementRequirementReductionPerSameTitleAnywhere=1)
+        return base(c, advancementRequirementReductionPerScoredCopy=1)
 
     if cid == "the-future-perfect":
         return base(

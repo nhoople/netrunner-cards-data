@@ -97,7 +97,7 @@ def map_card(c: dict) -> dict | None:
                     "clickCost": 0,
                     "creditCost": 0,
                     "cost": {"powerCounters": 1},
-                    "windows": ["corp_action_paw", "approach_paw", "encounter_paw"],
+                    "windows": ["corp_action_paw"],
                     "effect": do("boost_ice"),
                 },
             ],

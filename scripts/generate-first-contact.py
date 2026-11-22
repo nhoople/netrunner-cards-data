@@ -74,7 +74,7 @@ def map_card(c: dict) -> dict | None:
                     "creditCost": 0,
                     "cost": {"clicks": 3},
                     "windows": ["corp_action_paw"],
-                    "effect": do("rez_ice_ignoring_costs"),
+                    "effect": do("rez_card_ignoring_costs"),
                 }
             ],
         )
@@ -116,6 +116,7 @@ def map_card(c: dict) -> dict | None:
         return base(
             c,
             subtypes=["code gate", "morph"],
+            canAdvance=True,
             morphOddAdvancementSubtypeSwap={"gain": "barrier", "lose": "code gate"},
             subroutines=[
                 {
@@ -137,6 +138,7 @@ def map_card(c: dict) -> dict | None:
         return base(
             c,
             subtypes=["ambush"],
+            canAdvance=True,
             onAccess=do("shattered_remains_access"),
         )
 
@@ -279,7 +281,7 @@ def map_card(c: dict) -> dict | None:
                     "clickCost": 0,
                     "creditCost": 0,
                     "cost": {"trashSelf": True},
-                    "windows": ["runner_action_paw", "encounter_paw"],
+                    "windows": ["runner_action_paw"],
                     "effect": do("breach_archives"),
                 }
             ],

@@ -19,6 +19,14 @@
       "class": "static",
       "rule": "9.3.7a",
       "declaration": {
+        "field": "canAdvance",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "rule": "9.3.7a",
+      "declaration": {
         "field": "morphOddAdvancementSubtypeSwap",
         "value": {
           "gain": "barrier",

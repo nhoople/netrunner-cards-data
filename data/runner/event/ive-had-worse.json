@@ -34,6 +34,14 @@
           "amount": 3
         }
       }
+    },
+    {
+      "class": "static",
+      "rule": "9.3.7a",
+      "declaration": {
+        "field": "trashFromGripTriggerOnlyByNetOrMeatDamage",
+        "value": true
+      }
     }
   ]
 }

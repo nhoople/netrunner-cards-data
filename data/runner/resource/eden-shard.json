@@ -29,6 +29,26 @@
         "field": "onGripRdSuccessInstallSelfIgnoringCosts",
         "value": true
       }
+    },
+    {
+      "class": "paid",
+      "rule": "9.3.7b",
+      "id": "eden-draw",
+      "label": "[trash]: The Corp draws 2 cards",
+      "cost": {
+        "trashSelf": true
+      },
+      "windows": [
+        "runner_action_paw"
+      ],
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "draw",
+          "side": "corp",
+          "amount": 2
+        }
+      }
     }
   ]
 }
