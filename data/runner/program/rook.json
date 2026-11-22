@@ -45,7 +45,8 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "caissa_rook_host"
+          "kind": "caissa_rook_host",
+          "move": "same_server_or_position"
         }
       }
     }

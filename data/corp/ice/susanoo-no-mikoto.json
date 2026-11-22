@@ -29,10 +29,21 @@
       "id": "susanoo-redirect",
       "text": "If server is not Archives, move to outermost Archives instead of passing.",
       "instructions": {
-        "op": "do",
-        "action": {
-          "kind": "redirect_susanoo_to_archives"
-        }
+        "op": "seq",
+        "effects": [
+          {
+            "op": "do",
+            "action": {
+              "kind": "redirect_susanoo_to_archives"
+            }
+          },
+          {
+            "op": "do",
+            "action": {
+              "kind": "forbid_jack_out_until_next_encounter"
+            }
+          }
+        ]
       }
     }
   ]

@@ -963,7 +963,7 @@ def map_card(c: dict) -> dict:
         return base(
             c,
             link=1,
-            nonAiIcebreakerInstallStrengthBonusThisTurn=2,
+            icebreakerInstallStrengthBonusThisTurn={"amount": 2, "nonAiOnly": True},
             unsupported=[],
         )
 

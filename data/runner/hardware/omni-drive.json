@@ -25,6 +25,14 @@
       "class": "static",
       "rule": "9.3.7a",
       "declaration": {
+        "field": "hostedProgramMemoryDoesNotCount",
+        "value": true
+      }
+    },
+    {
+      "class": "static",
+      "rule": "9.3.7a",
+      "declaration": {
         "field": "recurringCreditsMax",
         "value": 1
       }

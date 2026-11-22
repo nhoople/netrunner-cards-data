@@ -38,7 +38,7 @@
         "op": "do",
         "action": {
           "kind": "add_to_runner_score_as_agenda",
-          "agendaPoints": -2
+          "agendaPoints": 2
         }
       }
     }

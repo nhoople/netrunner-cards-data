@@ -29,7 +29,8 @@
           "breakCredits": 2,
           "breakMaxSubs": 3,
           "pumpCredits": 2,
-          "pumpStrength": 3
+          "pumpStrength": 4,
+          "cannotInterfaceRemoteIce": true
         }
       }
     }

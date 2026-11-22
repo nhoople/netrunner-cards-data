@@ -476,7 +476,7 @@ def map_card(c: dict) -> dict | None:
                     "clickCost": 0,
                     "creditCost": 1,
                     "cost": {"credits": 1},
-                    "windows": ["corp_action_paw", "encounter_paw"],
+                    "windows": ["corp_action_paw"],
                     "effect": {
                         "op": "do",
                         "action": {"kind": "return_source_to_hq"},

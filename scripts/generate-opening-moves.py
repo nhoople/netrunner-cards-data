@@ -138,8 +138,10 @@ def map_card(c: dict) -> dict | None:
         return base(
             c,
             playAdditionalClick=True,
-            playAdditionalCost=do("choose_forfeit_runner_scored_agenda"),
-            onPlay=do("give_bad_publicity", amount=1),
+            onPlay=do(
+                "choose_forfeit_runner_scored_agenda",
+                then=do("give_bad_publicity", amount=1),
+            ),
             unsupported=[],
         )
 
@@ -175,7 +177,7 @@ def map_card(c: dict) -> dict | None:
                     "creditCost": 0,
                     "cost": {"clicks": 1},
                     "windows": ["runner_action_paw"],
-                    "effect": do("caissa_rook_host"),
+                    "effect": do("caissa_rook_host", move="same_server_or_position"),
                 }
             ],
             unsupported=[],
@@ -351,7 +353,6 @@ def map_card(c: dict) -> dict | None:
             c,
             onRez=do("give_bad_publicity", amount=1),
             canAdvance=True,
-            canAdvanceOnlyWhenRezzed=True,
             continuousGainedSubDecls=[
                 {
                     "kind": "per_advancement",

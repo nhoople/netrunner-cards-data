@@ -26,16 +26,15 @@
           "ifBidsMatch": {
             "op": "do",
             "action": {
-              "kind": "net_damage",
-              "amount": 1
+              "kind": "gain_credits",
+              "side": "corp",
+              "amount": 0
             }
           },
           "ifBidsDiffer": {
             "op": "do",
             "action": {
-              "kind": "gain_credits",
-              "side": "corp",
-              "amount": 0
+              "kind": "forbid_steal_accessed_agenda"
             }
           }
         }

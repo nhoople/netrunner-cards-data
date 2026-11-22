@@ -36,7 +36,7 @@
       "class": "paid",
       "rule": "9.3.7b",
       "id": "tallie-draw",
-      "label": "[trash]: Draw 1 if you have at least 1 tag",
+      "label": "[trash]: Draw 1 card for each bad publicity the Corp has",
       "cost": {
         "trashSelf": true
       },
@@ -44,17 +44,15 @@
         "runner_action_paw"
       ],
       "instructions": {
-        "op": "if",
-        "cond": {
-          "op": "tags_gte",
-          "amount": 1
-        },
-        "then": {
-          "op": "do",
-          "action": {
-            "kind": "draw",
-            "side": "runner",
-            "amount": 1
+        "op": "do",
+        "action": {
+          "kind": "draw",
+          "side": "runner",
+          "amount": 0,
+          "tally": {
+            "count": "bad_publicity",
+            "per": 1,
+            "side": "runner"
           }
         }
       }

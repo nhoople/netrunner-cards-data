@@ -69,6 +69,18 @@
           "kind": "end_the_run"
         }
       }
+    },
+    {
+      "class": "subroutine",
+      "rule": "9.3.7e",
+      "id": "hive-etr-5",
+      "text": "End the run.",
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "end_the_run"
+        }
+      }
     }
   ]
 }

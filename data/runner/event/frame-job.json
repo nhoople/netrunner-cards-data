@@ -27,21 +27,16 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "give_bad_publicity",
-          "amount": 1
-        }
-      },
-      "restrictions": [
-        {
-          "appliesTo": "play",
-          "effect": {
+          "kind": "choose_forfeit_runner_scored_agenda",
+          "then": {
             "op": "do",
             "action": {
-              "kind": "choose_forfeit_runner_scored_agenda"
+              "kind": "give_bad_publicity",
+              "amount": 1
             }
           }
         }
-      ]
+      }
     }
   ]
 }
