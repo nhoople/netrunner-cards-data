@@ -27,7 +27,7 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "may_install_from_heap",
+          "kind": "install_from_heap",
           "types": [
             "program"
           ]

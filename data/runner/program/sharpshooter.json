@@ -28,21 +28,16 @@
           "breakCredits": 0,
           "breakMaxSubs": 1,
           "pumpCredits": 1,
-          "pumpStrength": 2
+          "pumpStrength": 2,
+          "breakViaPaidAbilityOnly": true
         }
       }
     },
     {
       "class": "paid",
       "rule": "9.3.7b",
-      "flagRule": [
-        "9.3.6c",
-        "9.3.6g"
-      ],
-      "flag": [
-        "interface",
-        "once_per_turn"
-      ],
+      "flagRule": "9.3.6c",
+      "flag": "interface",
       "id": "sharpshooter-trash-break",
       "label": "[trash]: Break any number of destroyer subroutines",
       "cost": {

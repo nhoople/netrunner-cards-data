@@ -575,6 +575,10 @@
           "type": "boolean",
           "description": "Standard credit break only while attacking the mark (Tunnel Vision)."
         },
+        "cannotInterfaceRemoteIce": {
+          "type": "boolean",
+          "description": "This program cannot interface with ice protecting a remote server (Alias, Breach, Passport)."
+        },
         "breakRequiresIceStrengthLte": {
           "type": "integer",
           "description": "Wyrm-class: only break when encountered ice strength ≤ this."
@@ -2949,7 +2953,15 @@
       "description": "Upgrade/agenda may only be installed on these central servers (The Red Room / Flagship)."
     },
     "canAdvance": {
-      "type": "boolean"
+      "oneOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "const": "unrezzed"
+        }
+      ],
+      "description": "This card can be advanced; \"unrezzed\" only while it is unrezzed (Haas Arcology AI)."
     },
     "cannotBreakWithAi": {
       "type": "boolean"
@@ -3067,7 +3079,8 @@
               "per_advancement",
               "per_rezzed_subtype",
               "grip_size_on_encounter",
-              "etr_per_rezzed_asset"
+              "etr_per_rezzed_asset",
+              "per_bad_publicity"
             ]
           },
           "position": {
@@ -3687,9 +3700,22 @@
     "onFirstEventTrashedThisTurn": {
       "description": "Aniccam: effect on first event trashed each turn"
     },
-    "nonAiIcebreakerInstallStrengthBonusThisTurn": {
-      "type": "integer",
-      "minimum": 0
+    "icebreakerInstallStrengthBonusThisTurn": {
+      "type": "object",
+      "required": [
+        "amount"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "amount": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "nonAiOnly": {
+          "type": "boolean"
+        }
+      },
+      "description": "Each icebreaker installed while this card is active gets +amount strength until the end of the turn (LLDS Processor); nonAiOnly limits it to non-AI icebreakers (Cybertrooper Talut)."
     },
     "onFirstInstallInThisServerRootThisTurn": {
       "description": "Tranquility: first install in this server root"

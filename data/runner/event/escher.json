@@ -31,7 +31,7 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "may_breach_instead_escher"
+          "kind": "rearrange_ice_instead_of_breach"
         }
       }
     }

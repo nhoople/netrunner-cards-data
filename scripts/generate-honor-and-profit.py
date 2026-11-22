@@ -84,7 +84,9 @@ def map_card(c: dict) -> dict | None:
     if cid == "the-future-perfect":
         return base(
             c,
-            onAccessWhileUninstalled=psi(2, net(1), gain("corp", 0)),
+            onAccessWhileUninstalled=psi(
+                2, gain("corp", 0), do("forbid_steal_accessed_agenda")
+            ),
         )
 
     if cid == "chairman-hiro":
@@ -92,7 +94,7 @@ def map_card(c: dict) -> dict | None:
             c,
             subtypes=["executive"],
             runnerHandSizeBonus=-2,
-            onTrashWhileAccessed=do("add_to_runner_score_as_agenda", agendaPoints=-2),
+            onTrashWhileAccessed=do("add_to_runner_score_as_agenda", agendaPoints=2),
         )
 
     if cid == "mental-health-clinic":
@@ -105,8 +107,24 @@ def map_card(c: dict) -> dict | None:
     if cid == "psychic-field":
         return base(
             c,
-            onAccessWhileInstalled=psi(3, net(2), gain("corp", 0)),
-            onExposeWhileInstalled=psi(3, net(2), gain("corp", 0)),
+            onAccessWhileInstalled=psi(
+                2,
+                gain("corp", 0),
+                do(
+                    "net_damage",
+                    amount=0,
+                    tally={"count": "runner_grip", "per": 1, "side": "runner"},
+                ),
+            ),
+            onExposeWhileInstalled=psi(
+                2,
+                gain("corp", 0),
+                do(
+                    "net_damage",
+                    amount=0,
+                    tally={"count": "runner_grip", "per": 1, "side": "runner"},
+                ),
+            ),
         )
 
     if cid == "shi-kyu":
@@ -135,7 +153,26 @@ def map_card(c: dict) -> dict | None:
         return base(
             c,
             playRequiresSuccessfulRunLastTurn=True,
-            onPlay=psi(3, net(2), gain("corp", 0)),
+            onPlay=psi(
+                2,
+                gain("corp", 0),
+                {
+                    "op": "choose",
+                    "chooser": "runner",
+                    "options": [
+                        {
+                            "id": "core",
+                            "label": "Suffer 1 core damage",
+                            "effect": do("core_damage", amount=1),
+                        },
+                        {
+                            "id": "tag",
+                            "label": "Take 1 tag",
+                            "effect": do("give_tags", amount=1),
+                        },
+                    ],
+                },
+            ),
         )
 
     if cid == "medical-research-fundraiser":
@@ -216,7 +253,10 @@ def map_card(c: dict) -> dict | None:
                 {
                     "id": "susanoo-redirect",
                     "text": "If server is not Archives, move to outermost Archives instead of passing.",
-                    "effect": do("redirect_susanoo_to_archives"),
+                    "effect": seq(
+                        do("redirect_susanoo_to_archives"),
+                        do("forbid_jack_out_until_next_encounter"),
+                    ),
                 }
             ],
         )
@@ -238,7 +278,7 @@ def map_card(c: dict) -> dict | None:
         return base(
             c,
             canAdvance=True,
-            onAccessWhileInstalled=do("reveal_score_from_hq"),
+            onAccessWhileInstalled=do("may_reveal_score_from_hq"),
         )
 
     if cid == "guard":
@@ -313,10 +353,8 @@ def map_card(c: dict) -> dict | None:
         return base(
             c,
             playRequiresFirstClick=True,
-            onPlay=seq(
-                do("gain_clicks", side="runner", amount=1),
-                do("may_start_run", servers="any"),
-            ),
+            runEvent={"servers": "any"},
+            onPlay=do("gain_clicks", side="runner", amount=1),
         )
 
     if cid == "express-delivery":
@@ -390,23 +428,28 @@ def map_card(c: dict) -> dict | None:
         )
 
     if cid == "alias":
-        return breaker_card(c, "sentry", 1, 1, 2, 3)
+        card = breaker_card(c, "sentry", 1, 1, 2, 3)
+        card["breaker"]["cannotInterfaceRemoteIce"] = True
+        return card
 
     if cid == "breach":
-        card = breaker_card(c, "barrier", 2, 2, 2, 3)
+        card = breaker_card(c, "barrier", 2, 2, 2, 4)
         card["breaker"]["breakMaxSubs"] = 3
+        card["breaker"]["cannotInterfaceRemoteIce"] = True
         return card
 
     if cid == "gingerbread":
         return breaker_card(c, "tracer", 1, 1, 2, 3)
 
     if cid == "passport":
-        return breaker_card(c, "code gate", 1, 1, 2, 2)
+        card = breaker_card(c, "code gate", 1, 1, 2, 2)
+        card["breaker"]["cannotInterfaceRemoteIce"] = True
+        return card
 
     if cid == "bug":
         return base(
             c,
-            playRequiresSuccessfulHqRunThisTurn=True,
+            installRequiresSuccessfulHqRunThisTurn=True,
             onCorpDrawCard=do("may_pay_reveal_top"),
         )
 
@@ -451,7 +494,7 @@ def map_card(c: dict) -> dict | None:
                     "effect": gain("runner", 2),
                 }
             ],
-            onTrash=do("give_tags", amount=1),
+            onTrash=do("meat_damage", amount=3),
         )
 
     if cid == "mass-install":
@@ -476,11 +519,25 @@ def map_card(c: dict) -> dict | None:
         card["breaker"] = {
             "breaksSubtype": "*",
             "strength": 0,
-            "breakCredits": 1,
-            "breakMaxSubs": 99,
+            "breakCredits": 0,
+            "breakMaxSubs": 1,
+            "pumpCredits": 1,
+            "pumpStrength": 1,
+            "breakViaPaidAbilityOnly": True,
         }
         card["powerCountersOnInstallFromUnusedMu"] = True
-        card["strengthPerPowerCounter"] = True
+        card["paidAbilities"] = [
+            {
+                "id": "overmind-break",
+                "label": "Hosted power counter: Break 1 subroutine",
+                "clickCost": 0,
+                "creditCost": 0,
+                "cost": {"powerCounters": 1},
+                "windows": ["encounter_paw"],
+                "interface": True,
+                "effect": do("break_encounter_subroutine", maxSubs=1),
+            }
+        ]
         return card
 
     if cid == "oracle-may":
@@ -495,7 +552,7 @@ def map_card(c: dict) -> dict | None:
                     "creditCost": 0,
                     "cost": {"clicks": 1},
                     "windows": ["runner_action_paw"],
-                    "effect": do("choose_type_reveal_install"),
+                    "effect": do("choose_card_type_reveal_stack_top"),
                 }
             ],
         )

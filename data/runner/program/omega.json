@@ -24,7 +24,7 @@
       "declaration": {
         "field": "breaker",
         "value": {
-          "breaksSubtype": "sentry",
+          "breaksSubtype": "*",
           "strength": 0,
           "breakCredits": 1,
           "breakMaxSubs": 1,

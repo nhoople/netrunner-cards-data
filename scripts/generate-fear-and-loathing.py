@@ -71,16 +71,17 @@ def map_card(c: dict) -> dict | None:
             paidAbilities=[
                 {
                     "id": "tallie-draw",
-                    "label": "[trash]: Draw 1 if you have at least 1 tag",
+                    "label": "[trash]: Draw 1 card for each bad publicity the Corp has",
                     "clickCost": 0,
                     "creditCost": 0,
                     "cost": {"trashSelf": True},
                     "windows": ["runner_action_paw"],
-                    "effect": {
-                        "op": "if",
-                        "cond": {"op": "tags_gte", "amount": 1},
-                        "then": draw("runner", 1),
-                    },
+                    "effect": do(
+                        "draw",
+                        side="runner",
+                        amount=0,
+                        tally={"count": "bad_publicity", "per": 1, "side": "runner"},
+                    ),
                 }
             ],
         )
@@ -89,7 +90,7 @@ def map_card(c: dict) -> dict | None:
         return base(
             c,
             playAdditionalClick=True,
-            onPlay=do("reveal_hq_gain_credits", maxCards=99, creditsEach=0),
+            onPlay=do("reveal_hq"),
         )
 
     if cid == "blackguard":
@@ -105,12 +106,12 @@ def map_card(c: dict) -> dict | None:
         return base(c, muBonus=2)
 
     if cid == "alpha":
-        card = breaker_card(c, "sentry", 0, 1, 1, 1)
+        card = breaker_card(c, "*", 0, 1, 1, 1)
         card["breakerOnlyOutermostIce"] = True
         return card
 
     if cid == "omega":
-        card = breaker_card(c, "sentry", 0, 1, 1, 1)
+        card = breaker_card(c, "*", 0, 1, 1, 1)
         card["breakerOnlyInnermostIce"] = True
         return card
 
@@ -128,7 +129,9 @@ def map_card(c: dict) -> dict | None:
         return base(
             c,
             subtypes=["persistent"],
-            stealAdditionalClicks=1,
+            stealAdditionalCostFromProtectingServer=do(
+                "spend_click_additional_cost", side="runner"
+            ),
         )
 
     if cid == "toshiyuki-sakai":
@@ -136,7 +139,7 @@ def map_card(c: dict) -> dict | None:
             c,
             subtypes=["sysop"],
             canAdvance=True,
-            onAccess=do("swap_with_hq"),
+            onAccess=do("may_swap_with_hq"),
             onAccessRequiresInstalled=True,
         )
 

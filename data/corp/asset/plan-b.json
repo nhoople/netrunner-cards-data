@@ -29,7 +29,7 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "reveal_score_from_hq"
+          "kind": "may_reveal_score_from_hq"
         }
       }
     }

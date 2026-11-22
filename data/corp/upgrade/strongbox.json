@@ -14,10 +14,18 @@
     {
       "class": "static",
       "rule": "9.3.7a",
-      "declaration": {
-        "field": "stealAdditionalClicks",
-        "value": 1
-      }
+      "restrictions": [
+        {
+          "appliesTo": "steal_from_protecting_server",
+          "effect": {
+            "op": "do",
+            "action": {
+              "kind": "spend_click_additional_cost",
+              "side": "runner"
+            }
+          }
+        }
+      ]
     }
   ]
 }

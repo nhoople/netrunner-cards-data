@@ -285,7 +285,7 @@ def map_card(c: dict) -> dict | None:
     if cid == "haas-arcology-ai":
         return base(
             c,
-            canAdvance=True,
+            canAdvance="unrezzed",
             paidAbilities=[
                 {
                     "id": "haai-clicks",
@@ -408,7 +408,7 @@ def map_card(c: dict) -> dict | None:
                         "You may install and rez 1 bioroid ice from HQ or "
                         "Archives directly inward, ignoring all costs."
                     ),
-                    "effect": do("install_rez_bioroid_inward"),
+                    "effect": do("may_install_rez_bioroid_inward"),
                 }
             ],
             unsupported=[],
@@ -422,12 +422,12 @@ def map_card(c: dict) -> dict | None:
                 {
                     "id": "ichi-2-0-trash-1",
                     "text": "Trash 1 installed program.",
-                    "effect": do("trash_own_program"),
+                    "effect": do("trash_program", pick="choose"),
                 },
                 {
                     "id": "ichi-2-0-trash-2",
                     "text": "Trash 1 installed program.",
-                    "effect": do("trash_own_program"),
+                    "effect": do("trash_program", pick="choose"),
                 },
                 {
                     "id": "ichi-2-0-trace",
@@ -477,12 +477,7 @@ def map_card(c: dict) -> dict | None:
                     "clickCost": 0,
                     "creditCost": 0,
                     "cost": {"powerCounters": 1},
-                    "windows": [
-                        "corp_action_paw",
-                        "approach_paw",
-                        "encounter_paw",
-                        "approach_server_paw",
-                    ],
+                    "windows": ["corp_action_paw"],
                     "effect": do("core_damage", amount=1),
                 }
             ],
@@ -517,8 +512,11 @@ def map_card(c: dict) -> dict | None:
                         "If the Runner has lost [click] to break a "
                         "subroutine during this run, do 1 core damage."
                     ),
-                    "requireLostClickToBreakThisRun": True,
-                    "effect": do("core_damage", amount=1),
+                    "effect": {
+                        "op": "if",
+                        "cond": {"op": "lost_click_to_break_this_run"},
+                        "then": do("core_damage", amount=1),
+                    },
                 },
                 {
                     "id": "zed-1-0-core-2",
@@ -526,8 +524,11 @@ def map_card(c: dict) -> dict | None:
                         "If the Runner has lost [click] to break a "
                         "subroutine during this run, do 1 core damage."
                     ),
-                    "requireLostClickToBreakThisRun": True,
-                    "effect": do("core_damage", amount=1),
+                    "effect": {
+                        "op": "if",
+                        "cond": {"op": "lost_click_to_break_this_run"},
+                        "then": do("core_damage", amount=1),
+                    },
                 },
             ],
             unsupported=[],
@@ -601,7 +602,7 @@ def map_card(c: dict) -> dict | None:
             c,
             runEvent={
                 "servers": "hq",
-                "onSuccessfulRun": do("may_breach_instead_escher"),
+                "onSuccessfulRun": do("rearrange_ice_instead_of_breach"),
             },
             unsupported=[],
         )
@@ -716,7 +717,7 @@ def map_card(c: dict) -> dict | None:
                     "creditCost": 0,
                     "cost": {"trashSelf": True},
                     "windows": ["runner_action_paw"],
-                    "effect": do("may_install_from_heap", types=["program"]),
+                    "effect": do("install_from_heap", types=["program"]),
                 }
             ],
             unsupported=[],
@@ -726,6 +727,7 @@ def map_card(c: dict) -> dict | None:
         return base(
             c,
             hostsAnyProgramMemoryCostLte=1,
+            hostedProgramMemoryDoesNotCount=True,
             recurringCreditsMax=1,
             recurringSpendFor=["use_program"],
             unsupported=[],
@@ -830,7 +832,7 @@ def map_card(c: dict) -> dict | None:
                     "creditCost": 0,
                     "cost": {"clicks": 2, "trashSelf": True},
                     "windows": ["runner_action_paw"],
-                    "effect": do("may_play_event_from_heap"),
+                    "effect": do("play_event_from_heap_paying_costs"),
                 }
             ],
             unsupported=[],

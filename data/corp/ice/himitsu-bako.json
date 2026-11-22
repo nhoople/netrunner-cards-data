@@ -23,8 +23,7 @@
         "credits": 1
       },
       "windows": [
-        "corp_action_paw",
-        "encounter_paw"
+        "corp_action_paw"
       ],
       "instructions": {
         "op": "do",

@@ -27,9 +27,7 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "reveal_hq_gain_credits",
-          "maxCards": 99,
-          "creditsEach": 0
+          "kind": "reveal_hq"
         }
       }
     }

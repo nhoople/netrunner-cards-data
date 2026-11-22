@@ -73,18 +73,29 @@
       "class": "subroutine",
       "rule": "9.3.7e",
       "id": "shinobi-trace-3",
-      "text": "Trace 3 — If successful, do 3 net damage.",
+      "text": "Trace 3 — If successful, do 3 net damage and end the run.",
       "instructions": {
         "op": "do",
         "action": {
           "kind": "trace",
           "strength": 3,
           "onSuccess": {
-            "op": "do",
-            "action": {
-              "kind": "net_damage",
-              "amount": 3
-            }
+            "op": "seq",
+            "effects": [
+              {
+                "op": "do",
+                "action": {
+                  "kind": "net_damage",
+                  "amount": 3
+                }
+              },
+              {
+                "op": "do",
+                "action": {
+                  "kind": "end_the_run"
+                }
+              }
+            ]
           }
         }
       }

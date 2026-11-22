@@ -16,7 +16,7 @@
       "rule": "9.3.7a",
       "declaration": {
         "field": "canAdvance",
-        "value": true
+        "value": "unrezzed"
       }
     },
     {

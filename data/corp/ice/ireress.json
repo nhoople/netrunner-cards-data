@@ -15,15 +15,28 @@
   "influence": 1,
   "abilities": [
     {
-      "class": "subroutine",
-      "rule": "9.3.7e",
-      "id": "ireress-lose",
-      "text": "The Runner loses 1[credit] for each bad publicity the Corp has.",
-      "instructions": {
-        "op": "do",
-        "action": {
-          "kind": "runner_lose_credits_equal_corp_bad_publicity"
-        }
+      "class": "static",
+      "rule": "9.3.7a",
+      "declaration": {
+        "field": "continuousGainedSubDecls",
+        "value": [
+          {
+            "kind": "per_bad_publicity",
+            "position": "after",
+            "subroutine": {
+              "id": "ireress-lose",
+              "text": "The Runner loses 1[credit].",
+              "effect": {
+                "op": "do",
+                "action": {
+                  "kind": "lose_credits",
+                  "side": "runner",
+                  "amount": 1
+                }
+              }
+            }
+          }
+        ]
       }
     }
   ]

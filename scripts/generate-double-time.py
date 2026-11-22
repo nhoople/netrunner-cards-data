@@ -198,8 +198,8 @@ def map_card(c: dict) -> dict | None:
                 },
                 {
                     "id": "shinobi-trace-3",
-                    "text": "Trace 3 — If successful, do 3 net damage.",
-                    "effect": trace_sub(3, net(3)),
+                    "text": "Trace 3 — If successful, do 3 net damage and end the run.",
+                    "effect": trace_sub(3, seq(net(3), etr())),
                 },
             ],
         )
@@ -225,6 +225,7 @@ def map_card(c: dict) -> dict | None:
                 {"id": "hive-etr-2", "text": "End the run.", "effect": etr()},
                 {"id": "hive-etr-3", "text": "End the run.", "effect": etr()},
                 {"id": "hive-etr-4", "text": "End the run.", "effect": etr()},
+                {"id": "hive-etr-5", "text": "End the run.", "effect": etr()},
             ],
         )
 

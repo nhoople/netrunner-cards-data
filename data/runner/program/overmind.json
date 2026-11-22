@@ -26,8 +26,11 @@
         "value": {
           "breaksSubtype": "*",
           "strength": 0,
-          "breakCredits": 1,
-          "breakMaxSubs": 99
+          "breakCredits": 0,
+          "breakMaxSubs": 1,
+          "pumpCredits": 1,
+          "pumpStrength": 1,
+          "breakViaPaidAbilityOnly": true
         }
       }
     },
@@ -40,11 +43,24 @@
       }
     },
     {
-      "class": "static",
-      "rule": "9.3.7a",
-      "declaration": {
-        "field": "strengthPerPowerCounter",
-        "value": true
+      "class": "paid",
+      "rule": "9.3.7b",
+      "flagRule": "9.3.6c",
+      "flag": "interface",
+      "id": "overmind-break",
+      "label": "Hosted power counter: Break 1 subroutine",
+      "cost": {
+        "powerCounters": 1
+      },
+      "windows": [
+        "encounter_paw"
+      ],
+      "instructions": {
+        "op": "do",
+        "action": {
+          "kind": "break_encounter_subroutine",
+          "maxSubs": 1
+        }
       }
     }
   ]

@@ -136,7 +136,7 @@ def map_card(c: dict) -> dict | None:
                     "creditCost": 0,
                     "cost": {"clicks": 1},
                     "windows": ["runner_action_paw"],
-                    "effect": do("caissa_rook_host"),
+                    "effect": do("caissa_rook_host", move="not_adjacent"),
                 },
             ],
         )
@@ -304,7 +304,7 @@ def map_card(c: dict) -> dict | None:
                     "clickCost": 0,
                     "creditCost": 0,
                     "cost": {"powerCounters": 1},
-                    "windows": ["encounter_paw"],
+                    "windows": ["corp_action_paw"],
                     "effect": do("reveal_grip_may_trash_one"),
                 }
             ],
@@ -323,11 +323,15 @@ def map_card(c: dict) -> dict | None:
     if cid == "ireress":
         return base(
             c,
-            subroutines=[
+            continuousGainedSubDecls=[
                 {
-                    "id": "ireress-lose",
-                    "text": "The Runner loses 1[credit] for each bad publicity the Corp has.",
-                    "effect": do("runner_lose_credits_equal_corp_bad_publicity"),
+                    "kind": "per_bad_publicity",
+                    "position": "after",
+                    "subroutine": {
+                        "id": "ireress-lose",
+                        "text": "The Runner loses 1[credit].",
+                        "effect": do("lose_credits", side="runner", amount=1),
+                    },
                 }
             ],
         )

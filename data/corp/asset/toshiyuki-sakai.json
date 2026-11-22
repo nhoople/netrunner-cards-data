@@ -37,7 +37,7 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "swap_with_hq"
+          "kind": "may_swap_with_hq"
         }
       }
     },

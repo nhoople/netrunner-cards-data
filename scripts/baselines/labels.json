@@ -2,7 +2,7 @@
   "_comment": "Shrink-only baseline for scripts/check_labels.py (CR audit tool 1.4). Regenerate with `python3 scripts/check_labels.py --write`; never add entries by hand.",
   "counts": {
     "unlabelled": 1187,
-    "drift": 394,
+    "drift": 392,
     "unsupported": 0
   },
   "unlabelled": {
@@ -3840,9 +3840,6 @@
     "investigative-journalism": [
       "[click]×4, [trash]: Give the Corp 1 bad publicity"
     ],
-    "ireress": [
-      "The Runner loses 1[credit] for each bad publicity the Corp has."
-    ],
     "it-department": [
       "Hosted power counter: Choose rezzed ice; +1 strength per power (incl. spent) until end of turn"
     ],
@@ -4307,9 +4304,6 @@
     ],
     "syailendra": [
       "You may place 1 advancement on an advanceable card."
-    ],
-    "tallie-perrault": [
-      "[trash]: Draw 1 if you have at least 1 tag"
     ],
     "taurus": [
       "Trace[2]. If successful, trash 1 hardware; if strength ≥5 trash another."

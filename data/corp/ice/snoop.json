@@ -35,7 +35,7 @@
         "powerCounters": 1
       },
       "windows": [
-        "encounter_paw"
+        "corp_action_paw"
       ],
       "instructions": {
         "op": "do",

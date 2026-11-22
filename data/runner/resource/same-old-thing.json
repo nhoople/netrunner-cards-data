@@ -25,7 +25,7 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "may_play_event_from_heap"
+          "kind": "play_event_from_heap_paying_costs"
         }
       }
     }

@@ -91,10 +91,11 @@ def map_card(c: dict) -> dict | None:
         return breaker_card(c, "sentry", 0, 1, 1, 1)
 
     if cid == "llds-processor":
-        return base(c, nonAiIcebreakerInstallStrengthBonusThisTurn=1)
+        return base(c, icebreakerInstallStrengthBonusThisTurn={"amount": 1})
 
     if cid == "sharpshooter":
         card = breaker_card(c, "destroyer", 0, 0, 1, 2)
+        card["breaker"]["breakViaPaidAbilityOnly"] = True
         card["paidAbilities"] = [
             {
                 "id": "sharpshooter-trash-break",
@@ -103,7 +104,6 @@ def map_card(c: dict) -> dict | None:
                 "creditCost": 0,
                 "cost": {"trashSelf": True},
                 "windows": ["encounter_paw"],
-                "oncePerTurn": True,
                 "effect": do("break_all_destroyer_subroutines_on_encounter"),
             }
         ]
@@ -190,9 +190,9 @@ def map_card(c: dict) -> dict | None:
             c,
             onPlay=do(
                 "gain_credits",
-                side="runner",
+                side="corp",
                 amount=0,
-                tally={"count": "runner_grip", "per": 1, "side": "runner"},
+                tally={"count": "runner_grip", "per": 1, "side": "corp"},
             ),
         )
 

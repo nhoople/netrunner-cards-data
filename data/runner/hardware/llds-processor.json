@@ -17,8 +17,10 @@
       "class": "static",
       "rule": "9.3.7a",
       "declaration": {
-        "field": "nonAiIcebreakerInstallStrengthBonusThisTurn",
-        "value": 1
+        "field": "icebreakerInstallStrengthBonusThisTurn",
+        "value": {
+          "amount": 1
+        }
       }
     }
   ]
