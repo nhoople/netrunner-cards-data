@@ -34,7 +34,8 @@
               "op": "do",
               "action": {
                 "kind": "trash_resource",
-                "pick": "choose"
+                "pick": "choose",
+                "cannotPrevent": true
               }
             }
           },

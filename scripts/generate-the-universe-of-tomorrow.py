@@ -175,7 +175,6 @@ def map_card(c: dict) -> dict | None:
     if cid == "bookmark":
         return base(
             c,
-            maxHostedCards=3,
             paidAbilities=[
                 paid(
                     "bookmark-host",

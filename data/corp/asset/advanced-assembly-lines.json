@@ -41,7 +41,7 @@
       "instructions": {
         "op": "do",
         "action": {
-          "kind": "may_install_from_hq_paying_costs",
+          "kind": "install_from_hq_paying_costs",
           "excludeAgenda": true
         }
       },

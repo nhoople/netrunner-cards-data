@@ -28,14 +28,20 @@
     {
       "class": "conditional",
       "rule": "9.3.7c",
-      "trigger": "successful_run",
+      "trigger": "run_end",
       "host": "runEvent",
       "instructions": {
-        "op": "do",
-        "action": {
-          "kind": "gain_credits",
-          "side": "runner",
-          "amount": 12
+        "op": "if",
+        "cond": {
+          "op": "run_successful"
+        },
+        "then": {
+          "op": "do",
+          "action": {
+            "kind": "gain_credits",
+            "side": "runner",
+            "amount": 12
+          }
         }
       }
     }

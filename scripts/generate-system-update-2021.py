@@ -1114,7 +1114,14 @@ def map_card(c: dict) -> dict | None:
                     {
                         "id": "trash",
                         "label": "Trash a resource",
-                        "effect": trash_res(),
+                        "effect": {
+                            "op": "do",
+                            "action": {
+                                "kind": "trash_resource",
+                                "pick": "choose",
+                                "cannotPrevent": True,
+                            },
+                        },
                     },
                     {
                         "id": "decline",
@@ -1123,9 +1130,6 @@ def map_card(c: dict) -> dict | None:
                     },
                 ],
             ),
-            unsupported=[
-                "Rez requires forfeit agenda; trash resource cannot be prevented — forfeit + unpreventable not modeled."
-            ],
         )
     if cid == "punitive-counterstrike":
         return base(
