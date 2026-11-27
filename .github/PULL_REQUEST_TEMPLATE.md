@@ -35,7 +35,7 @@ Verdict: clear | clear-with-debt | blocked | n/a — <reason>
 
 - [ ] Effect IR / card mapping: CR gate filled above (or `n/a` with reason)
 - [ ] `ruff format --check scripts tests` passes
-- [ ] `python3 scripts/validate-cards.py` passes (includes supported-wave empty-`unsupported` invariant)
+- [ ] `python3 scripts/validate_cards.py` passes (includes supported-wave empty-`unsupported` invariant)
 - [ ] The `tests/` checks and `python3 scripts/check_labels.py --report` pass (the full CI list is in `AGENTS.md`)
 - [ ] If keeping non-empty `unsupported` on a `supported` wave card: entry + reason in `data/supported-unsupported-allowlist.json`
 

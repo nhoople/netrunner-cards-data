@@ -50,7 +50,7 @@ Card files live at `data/<side>/<type>/<id>.json` (for example `data/runner/prog
 | Pronouns, pronunciation, narrative text | fields on `v2/cards/` | Display flavor, not used by the engine or the table. Designer credit is no longer deferred: the catalog's `attribution` field is stored on `data/printed/` |
 | Prebuilt decks | `prebuilts.json` | Six published deck lists |
 
-Partial cards list unimplemented clauses in an `unsupported` array — never silent wrong behavior. A wave marked `supported` in [`data/pool.json`](data/pool.json) must keep those arrays empty unless the card is listed with a reason in [`data/supported-unsupported-allowlist.json`](data/supported-unsupported-allowlist.json) (enforced by `scripts/validate-cards.py`). See [`CONTRIBUTING.md`](CONTRIBUTING.md) for the CR gate PR template.
+Partial cards list unimplemented clauses in an `unsupported` array — never silent wrong behavior. A wave marked `supported` in [`data/pool.json`](data/pool.json) must keep those arrays empty unless the card is listed with a reason in [`data/supported-unsupported-allowlist.json`](data/supported-unsupported-allowlist.json) (enforced by `scripts/validate_cards.py`). See [`CONTRIBUTING.md`](CONTRIBUTING.md) for the CR gate PR template.
 
 ### Cards ↔ engine pairing
 

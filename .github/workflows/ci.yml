@@ -18,7 +18,7 @@ jobs:
       - name: Format check (ruff)
         run: ruff format --check scripts tests
       - name: Validate cards
-        run: python3 scripts/validate-cards.py
+        run: python3 scripts/validate_cards.py
       - name: Check validator rules
         run: python3 tests/test_validate_cards.py
       - name: Check catalog diff helpers

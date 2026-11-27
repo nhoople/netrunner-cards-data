@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Validate card JSON under data/ against data/schema.json and pool consistency.
 
-Usage: python3 scripts/validate-cards.py
+Usage: python3 scripts/validate_cards.py
 """
 
 from __future__ import annotations
