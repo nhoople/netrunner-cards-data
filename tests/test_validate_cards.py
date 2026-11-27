@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Unit checks for validate-cards.py rules. No network."""
+"""Unit checks for validate_cards.py rules. No network."""
 
 from __future__ import annotations
 
@@ -9,7 +9,7 @@ from pathlib import Path
 
 SCRIPTS = Path(__file__).resolve().parents[1] / "scripts"
 spec = importlib.util.spec_from_file_location(
-    "validate_cards", SCRIPTS / "validate-cards.py"
+    "validate_cards", SCRIPTS / "validate_cards.py"
 )
 assert spec and spec.loader
 validate_cards = importlib.util.module_from_spec(spec)
