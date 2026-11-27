@@ -10,6 +10,31 @@ This is a **consumer dataset**, in the same spirit as [netrunner-comprehensive-r
 
 See [`NOTICE`](NOTICE) for affiliation and trademark notes. Toolchain/schema are MIT; printed card text remains Null Signal Games reference material.
 
+## Layout
+
+Every folder in the repository is listed here. `tests/test_layout_map.py` (run by CI) fails on a folder this table does not list, and on a row that names no folder. A `<placeholder>` stands for one folder name.
+
+| Folder | What it holds |
+| --- | --- |
+| `data/` | The published dataset, which is the API. Its files are described in [Consume the data](#consume-the-data) |
+| `data/corp/`, `data/runner/` | Card rules files, by side |
+| `data/corp/<type>/`, `data/runner/<type>/` | One rules file per title (`<id>.json`), by card type, for example `data/runner/program/` |
+| `data/printed/` | One file per title: the printed text |
+| `data/printings/` | One file per printing |
+| `data/rulings/` | One file per title with a verified ruling |
+| `data/formats/` | One file per format |
+| `data/card-pools/` | The waves legal in one snapshot of a format |
+| `data/restrictions/` | Ban lists, Most Wanted Lists and balance updates |
+| `data/manifests/` | One file per wave, written by its generator (bookkeeping, not read by the engine) |
+| `scripts/` | The commands (validate, build, check, catalog fetch) and the modules they share |
+| `scripts/generate/` | One generator per pack, `<set>.py`, which writes that pack's card files from the pinned catalog |
+| `scripts/baselines/` | The shrink-only label baseline that `scripts/check_labels.py` compares with |
+| `tests/` | The checks CI runs on the scripts, and this layout map check |
+| `.github/` | The pull request template and Dependabot settings |
+| `.github/workflows/` | CI: the `validate` job |
+
+Script and test files are named in snake_case. The commands CI runs are listed in [`AGENTS.md`](AGENTS.md).
+
 ## Consume the data
 
 Files under [`data/`](data/) are the API. Clone the repo or fetch a **tagged** release (do not pin `master`).
