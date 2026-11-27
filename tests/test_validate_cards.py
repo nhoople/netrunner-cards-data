@@ -7,13 +7,13 @@ import importlib.util
 import sys
 from pathlib import Path
 
-HERE = Path(__file__).resolve().parent
+SCRIPTS = Path(__file__).resolve().parents[1] / "scripts"
 spec = importlib.util.spec_from_file_location(
-    "validate_cards", HERE / "validate-cards.py"
+    "validate_cards", SCRIPTS / "validate-cards.py"
 )
 assert spec and spec.loader
 validate_cards = importlib.util.module_from_spec(spec)
-sys.path.insert(0, str(HERE))
+sys.path.insert(0, str(SCRIPTS))
 spec.loader.exec_module(validate_cards)
 
 
