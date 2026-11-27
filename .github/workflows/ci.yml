@@ -25,5 +25,7 @@ jobs:
         run: python3 tests/test_nsg_catalog.py
       - name: Check label normalizer
         run: python3 tests/test_check_labels.py
+      - name: Check README layout map
+        run: python3 tests/test_layout_map.py
       - name: Check printed-text label baseline
         run: python3 scripts/check_labels.py --report
