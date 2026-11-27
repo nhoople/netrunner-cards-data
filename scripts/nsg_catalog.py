@@ -316,7 +316,7 @@ def pack_codes_from_pool(pool: dict) -> set[str]:
 def generator_pack_codes() -> set[str]:
     """Pack codes the extract scripts fetch from the pinned catalog."""
     found: set[str] = set()
-    for path in (ROOT / "scripts").glob("generate-*.py"):
+    for path in (ROOT / "scripts" / "generate").glob("*.py"):
         for line in path.read_text(encoding="utf-8").splitlines():
             if "nsg_catalog.py fetch" not in line:
                 continue

@@ -125,7 +125,7 @@ That compares the pinned commit with current `main`. It reports a catalog title 
 ```bash
 python3 scripts/nsg_catalog.py show-pin
 python3 scripts/nsg_catalog.py fetch rar sc19 df ur sg su21 ms msbp ph tai rwr elev vp
-# then: python3 scripts/generate-<set>.py
+# then: python3 scripts/generate/<set>.py   (the set name in snake_case, e.g. blood_money.py)
 ```
 
 To bump the catalog: set `ref` in the pin to a newer commit SHA on `main`, clear `tmp/nsg-catalog/`, and re-fetch. Effect IR remains hand-authored in this repo.
