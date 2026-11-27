@@ -16,14 +16,14 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt -r requirements-dev.txt
       - name: Format check (ruff)
-        run: ruff format --check scripts
+        run: ruff format --check scripts tests
       - name: Validate cards
         run: python3 scripts/validate-cards.py
       - name: Check validator rules
-        run: python3 scripts/test_validate_cards.py
+        run: python3 tests/test_validate_cards.py
       - name: Check catalog diff helpers
-        run: python3 scripts/test_nsg_catalog.py
+        run: python3 tests/test_nsg_catalog.py
       - name: Check label normalizer
-        run: python3 scripts/test_check_labels.py
+        run: python3 tests/test_check_labels.py
       - name: Check printed-text label baseline
         run: python3 scripts/check_labels.py --report
