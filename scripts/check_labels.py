@@ -28,8 +28,8 @@ import sys
 import unicodedata
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
-DATA = ROOT / "data"
+from data_paths import DATA, ROOT, RULES
+
 BASELINE = ROOT / "scripts" / "baselines" / "labels.json"
 REGENERATE = "python3 scripts/check_labels.py --write"
 
@@ -90,7 +90,7 @@ def drift_rank(label: str, printed: dict) -> tuple[int, float]:
 
 
 def card_paths() -> list[Path]:
-    return sorted(DATA.glob("corp/*/*.json")) + sorted(DATA.glob("runner/*/*.json"))
+    return sorted(RULES.glob("corp/*/*.json")) + sorted(RULES.glob("runner/*/*.json"))
 
 
 def collect() -> tuple[dict, dict[str, dict]]:

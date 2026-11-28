@@ -28,7 +28,8 @@ import urllib.error
 import urllib.request
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
+from data_paths import ROOT, RULES
+
 PIN_PATH = ROOT / "data" / "nsg-catalog-pin.json"
 # Printed facts a catalog update can change. Ability records stay hand-authored.
 FACT_FIELDS = ("faction_id", "cost", "strength", "text", "is_unique", "influence_cost")
@@ -340,8 +341,8 @@ def card_blobs(tree: dict) -> dict[str, str]:
 
 
 def corpus_card_ids() -> set[str]:
-    """Title ids with a rules file under data/<side>/<type>/."""
-    return {path.stem for path in (ROOT / "data").glob("*/*/*.json")}
+    """Title ids with a rules file under data/rules/<side>/<type>/."""
+    return {path.stem for path in RULES.glob("*/*/*.json")}
 
 
 def fetch_card_ref(card_id: str, ref: str, repo: str) -> dict | None:

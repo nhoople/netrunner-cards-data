@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Write the v2 reference vocabularies under data/.
+"""Write the v2 reference vocabularies to their card data groups.
 
 Factions, subtypes, card types, sides, set types, layouts, and ruling
 sources. Ids are written in corpus form: factions and subtypes use the
@@ -15,10 +15,8 @@ import json
 import sys
 from pathlib import Path
 
+from data_paths import REFERENCE_FILES, ROOT
 from nsg_catalog import load_v2_reference
-
-ROOT = Path(__file__).resolve().parents[1]
-DATA = ROOT / "data"
 
 
 def write_json(path: Path, document: list) -> None:
@@ -137,8 +135,9 @@ BUILDERS = {
 def main() -> int:
     for name, build in BUILDERS.items():
         records = build()
-        write_json(DATA / name, records)
-        print(f"Wrote {len(records)} records to data/{name}")
+        path = REFERENCE_FILES[name]
+        write_json(path, records)
+        print(f"Wrote {len(records)} records to {path.relative_to(ROOT)}")
     return 0
 
 

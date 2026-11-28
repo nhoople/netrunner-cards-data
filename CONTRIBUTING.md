@@ -15,7 +15,7 @@ Corpus title ids are this repo's own: convert a catalog id with `nsg_catalog.our
 
 ## Pool invariant (`supported` waves)
 
-A wave with `status: "supported"` in `data/pool.json` must have **empty** `unsupported: []` on every listed card.
+A wave with `status: "supported"` in `data/rules/pool.json` must have **empty** `unsupported: []` on every listed card.
 
 Rare explicit deferrals while keeping `supported` require an entry in [`data/supported-unsupported-allowlist.json`](data/supported-unsupported-allowlist.json) (card id → reason with CR cite / tracking note). Prefer leaving the wave non-`supported` until the pack is fully mapped.
 

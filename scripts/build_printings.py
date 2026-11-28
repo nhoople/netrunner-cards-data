@@ -12,12 +12,10 @@ from __future__ import annotations
 
 import json
 import sys
-from pathlib import Path
 
+from data_paths import DATA, POOL_PATH, ROOT
 from nsg_catalog import load_card_sets, load_v2_printings, our_id
 
-ROOT = Path(__file__).resolve().parents[1]
-DATA = ROOT / "data"
 OUT = DATA / "printings"
 
 # Booster and reprint sets whose titles were absorbed into a corpus wave.
@@ -98,7 +96,7 @@ def record(printing: dict, card_id: str, wave: str) -> dict:
 
 
 def main() -> int:
-    pool = json.loads((DATA / "pool.json").read_text(encoding="utf-8"))
+    pool = json.loads(POOL_PATH.read_text(encoding="utf-8"))
     listed = {
         wave: set(pool["waves"][wave].get("cards") or [])
         for wave in pool["corpusOrder"]

@@ -13,13 +13,11 @@ from __future__ import annotations
 import json
 import re
 import unicodedata
-from pathlib import Path
 
 from card_layout import STORAGE
+from data_paths import DATA, ROOT, RULES
 from nsg_catalog import fetch_rulings, load_v2_cards, our_id
 
-ROOT = Path(__file__).resolve().parents[1]
-DATA = ROOT / "data"
 OUT = DATA / "rulings"
 
 APOSTROPHE = re.compile(
@@ -62,7 +60,7 @@ def known_ids() -> set[str]:
     found: set[str] = set()
     for side, types in STORAGE.items():
         for type_ in types:
-            directory = DATA / side / type_
+            directory = RULES / side / type_
             if not directory.is_dir():
                 continue
             found.update(path.stem for path in directory.glob("*.json"))

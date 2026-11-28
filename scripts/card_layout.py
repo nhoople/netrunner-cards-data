@@ -1,6 +1,6 @@
-"""Card JSON lives at data/<side>/<type>/<id>.json.
+"""Card JSON lives at data/rules/<side>/<type>/<id>.json.
 
-Pack membership stays in data/pool.json. A reprinted title still has one file.
+Pack membership stays in data/rules/pool.json. A reprinted title still has one file.
 """
 
 from __future__ import annotations
@@ -8,8 +8,7 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
-DATA = ROOT / "data"
+from data_paths import DATA, RULES
 
 STORAGE: dict[str, tuple[str, ...]] = {
     "corp": ("identity", "agenda", "asset", "ice", "operation", "upgrade"),
@@ -25,7 +24,7 @@ def card_path(card: dict) -> Path:
         raise ValueError(f"{cid}: side {side!r} type {type_!r} is not a storage path")
     if not isinstance(cid, str) or not cid:
         raise ValueError(f"card is missing id: {card!r}")
-    return DATA / side / type_ / f"{cid}.json"
+    return RULES / side / type_ / f"{cid}.json"
 
 
 def write_card(card: dict) -> Path:
@@ -36,7 +35,7 @@ def write_card(card: dict) -> Path:
 
 
 def card_file(cid: str) -> Path:
-    matches = sorted(DATA.glob(f"*/*/{cid}.json"))
+    matches = sorted(RULES.glob(f"*/*/{cid}.json"))
     if len(matches) != 1:
         raise FileNotFoundError(f"{cid}: expected one card file, found {matches}")
     return matches[0]

@@ -17,8 +17,10 @@ Every folder in the repository is listed here. `tests/test_layout_map.py` (run b
 | Folder | What it holds |
 | --- | --- |
 | `data/` | The published dataset, which is the API. Its files are described in [Consume the data](#consume-the-data) |
-| `data/corp/`, `data/runner/` | Card rules files, by side |
-| `data/corp/<type>/`, `data/runner/<type>/` | One rules file per title (`<id>.json`), by card type, for example `data/runner/program/` |
+| `data/rules/` | What the engine runs: `pool.json`, `schema.json`, and the word lists rules files are checked against (`card-types.json`, `factions.json`, `sides.json`, `subtypes.json`) |
+| `data/rules/corp/`, `data/rules/runner/` | Card rules files, by side |
+| `data/rules/corp/agenda/`, `data/rules/corp/asset/`, `data/rules/corp/ice/`, `data/rules/corp/identity/`, `data/rules/corp/operation/`, `data/rules/corp/upgrade/` | One Corp rules file per title (`<id>.json`), by card type |
+| `data/rules/runner/event/`, `data/rules/runner/hardware/`, `data/rules/runner/identity/`, `data/rules/runner/program/`, `data/rules/runner/resource/` | One Runner rules file per title (`<id>.json`), by card type |
 | `data/printed/` | One file per title: the printed text |
 | `data/printings/` | One file per printing |
 | `data/rulings/` | One file per title with a verified ruling |

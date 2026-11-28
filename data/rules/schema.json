@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/nhoople/netrunner-cards-data/data/schema.json",
+  "$id": "https://github.com/nhoople/netrunner-cards-data/data/rules/schema.json",
   "title": "NetrunnerEngineCard",
   "description": "Card definition as pure data. Effect IR is the executable language; unknown IR nodes fail closed at load time.",
   "type": "object",
