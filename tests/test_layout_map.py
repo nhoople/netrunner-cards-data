@@ -2,9 +2,9 @@
 """The README's "Layout" section names every folder in the repo. No network.
 
 Every folder that holds a tracked file, or a new file git does not ignore, must
-match a row of the table under `## Layout` in README.md, and every row must match
-at least one folder. A `<placeholder>` in a row stands for one folder name, so
-`data/corp/<type>/` covers `data/corp/agenda/`, `data/corp/ice/`, and so on.
+be named in a row of the table under `## Layout` in README.md, and every folder a
+row names must exist. Each folder is named in full: a `<placeholder>` row such as
+`data/rules/corp/<type>/` is refused, because it would accept any new folder there.
 """
 
 from __future__ import annotations
@@ -63,34 +63,26 @@ def map_entries(section: str) -> list[str]:
     return entries
 
 
-def entry_pattern(entry: str) -> re.Pattern[str]:
-    """`data/corp/<type>/` matches `data/corp/` plus one folder name."""
-    parts = re.split(r"<[^<>/]+>", entry)
-    return re.compile("[^/]+".join(re.escape(part) for part in parts) + r"\Z")
+def placeholders(entries: list[str]) -> list[str]:
+    """Entries that use a `<placeholder>` instead of naming each folder."""
+    return [entry for entry in entries if re.search(r"[<>]", entry)]
 
 
 def compare(folders: set[str], entries: list[str]) -> tuple[list[str], list[str]]:
-    """Folders no entry covers, and entries that match no folder."""
-    patterns = {entry: entry_pattern(entry) for entry in entries}
-    unlisted = sorted(
-        folder
-        for folder in folders
-        if not any(pattern.match(folder) for pattern in patterns.values())
-    )
-    stale = [
-        entry
-        for entry, pattern in patterns.items()
-        if not any(pattern.match(folder) for folder in folders)
-    ]
+    """Folders no entry names, and entries that name no folder."""
+    listed = set(entries)
+    unlisted = sorted(folder for folder in folders if folder not in listed)
+    stale = [entry for entry in entries if entry not in folders]
     return unlisted, stale
 
 
-def test_placeholder_matches_one_folder_name() -> None:
-    pattern = entry_pattern("data/corp/<type>/")
-    assert pattern.match("data/corp/ice/")
-    assert not pattern.match("data/corp/")
-    assert not pattern.match("data/corp/ice/extra/")
-    assert not pattern.match("data/runner/program/")
+def test_placeholder_rows_are_refused() -> None:
+    entries = ["data/rules/corp/<type>/", "data/rules/corp/ice/"]
+    assert placeholders(entries) == ["data/rules/corp/<type>/"]
+    # A placeholder row names no real folder, so it never covers a new one.
+    unlisted, stale = compare({"data/rules/corp/made-up/"}, entries)
+    assert unlisted == ["data/rules/corp/made-up/"], unlisted
+    assert "data/rules/corp/<type>/" in stale, stale
 
 
 def test_compare_reports_unlisted_and_stale() -> None:
@@ -114,15 +106,25 @@ def test_section_reads_only_the_layout_table() -> None:
 def test_readme_layout_names_every_folder() -> None:
     entries = map_entries(layout_section(README.read_text(encoding="utf-8")))
     unlisted, stale = compare(repo_folders(), entries)
-    problems = [
-        f"{folder}: not in the README's {HEADING!r} table. "
-        "Add a row that names it and says what it holds."
-        for folder in unlisted
-    ] + [
-        f"{entry}: listed in the README's {HEADING!r} table, but no such folder "
-        "exists. Remove or fix the row."
-        for entry in stale
-    ]
+    refused = placeholders(entries)
+    stale = [entry for entry in stale if entry not in refused]
+    problems = (
+        [
+            f"{entry}: uses a placeholder. Name each folder it stands for instead, "
+            "so a new folder needs its own row."
+            for entry in refused
+        ]
+        + [
+            f"{folder}: not in the README's {HEADING!r} table. "
+            "Add a row that names it and says what it holds."
+            for folder in unlisted
+        ]
+        + [
+            f"{entry}: listed in the README's {HEADING!r} table, but no such folder "
+            "exists. Remove or fix the row."
+            for entry in stale
+        ]
+    )
     assert not problems, "\n".join(problems)
 
 
