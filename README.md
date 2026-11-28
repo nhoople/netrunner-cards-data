@@ -12,12 +12,12 @@ See [`NOTICE`](NOTICE) for affiliation and trademark notes. Toolchain/schema are
 
 ## Layout
 
-Every folder in the repository is listed here. `tests/test_layout_map.py` (run by CI) fails on a folder this table does not list, and on a row that names no folder. A `<placeholder>` stands for one folder name.
+Every folder in the repository is listed here. `tests/test_layout_map.py` (run by CI) fails on a folder this table does not list, on a row that names no folder, and on a row that uses a `<placeholder>` instead of folder names.
 
 | Folder | What it holds |
 | --- | --- |
 | `data/` | The published dataset, which is the API. Its files are described in [Consume the data](#consume-the-data) |
-| `data/rules/` | What the engine runs: `pool.json`, `schema.json`, and the word lists rules files are checked against (`card-types.json`, `factions.json`, `sides.json`, `subtypes.json`) |
+| `data/rules/` | What the engine runs: `pool.json`, `schema.json`, and the word lists for rules-file fields (`card-types.json`, `factions.json`, `sides.json`, `subtypes.json`) |
 | `data/rules/corp/`, `data/rules/runner/` | Card rules files, by side |
 | `data/rules/corp/agenda/`, `data/rules/corp/asset/`, `data/rules/corp/ice/`, `data/rules/corp/identity/`, `data/rules/corp/operation/`, `data/rules/corp/upgrade/` | One Corp rules file per title (`<id>.json`), by card type |
 | `data/rules/runner/event/`, `data/rules/runner/hardware/`, `data/rules/runner/identity/`, `data/rules/runner/program/`, `data/rules/runner/resource/` | One Runner rules file per title (`<id>.json`), by card type |
@@ -43,22 +43,31 @@ Script and test files are named in snake_case. The commands CI runs are listed i
 
 ## Consume the data
 
-Files under [`data/`](data/) are the API. Clone the repo or fetch a **tagged** release (do not pin `master`).
+Files under [`data/`](data/) are the API. Clone the repo or fetch a **tagged** release (do not pin `master`). `data/` holds four groups, sorted by who uses them: `rules/` (what the engine runs), `print/` (what the card shows), `formats/` (which cards are legal where) and `rulings/`. The dataset's own bookkeeping is in [`bookkeeping/`](bookkeeping/), outside the API.
+
+Tags before `v1.148.0` use the earlier flat layout: the same files without the group folder, for example `data/pool.json`, `data/runner/program/marjanah.json`, `data/printed/`, `data/formats/<id>.json` and `data/rulings/<id>.json`.
 
 | Path | Use |
 | --- | --- |
-| [`data/schema.json`](data/schema.json) | JSON Schema for card definitions |
-| [`data/pool.json`](data/pool.json) | Declared corpus. `corpusOrder` is the release order; every wave there is `supported`. Each wave also has `dateRelease`, `cycle`, and `size` |
-| [`data/printings/`](data/printings/) | One file per printing (`<code>.json`): title id, pack, flavor, illustrator, `quantity` (copies in that pack), `position`, `releasedBy`, and where the catalog has them `layoutId`, `copyQuantity`, and `faces`. The image address is `https://card-images.netrunnerdb.com/v2/large/{code}.jpg`. A back face of a double-sided card adds `-{n}`, counted from 0, so `{code}-0.jpg` is the first back face. The other sizes are `tiny`, `small`, and `medium` |
-| [`data/printed/`](data/printed/) | One file per title (`<id>.json`): the current printed `text`, `strippedText`, and `strippedTitle`, errata included. Where the catalog carries them, `attribution` (designer credit) and `layoutId` are kept too. Multi-face titles also carry `faces` from the catalog's face records, front face first; each face keeps its `title`, `strippedTitle`, `text`, `strippedText`, and where they differ per face its `subtypes` and base `link`; the top-level pair repeats the front face. The rules file keeps the Effect IR, and its `identityFaces` declaration mirrors the same faces for the engine |
-| `data/factions.json`, `data/subtypes.json`, `data/card-types.json`, `data/sides.json`, `data/card-set-types.json`, `data/card-layouts.json`, `data/ruling-sources.json`, `data/card-sets.json`, `data/card-cycles.json` | Reference vocabularies and records from the catalog: faction names and colors, subtype and type names, set types, printing layouts, ruling sources, and the set/cycle records (name, type, position, size, release date). Card files and restriction lists are validated against them |
-| [`data/rulings/`](data/rulings/) | One file per title with a rules-team-verified ruling (`<id>.json`). Taken from the pinned catalog's `v2/rulings/` snapshot of the NetrunnerDB rulings API. Unverified rulings are left out. A ruling explains the card text; an erratum changes the text itself |
-| [`data/formats/`](data/formats/) | One file per format. Each snapshot names a card pool and, when the catalog has one, a restriction |
-| [`data/card-pools/`](data/card-pools/) | The waves legal in one snapshot of a format |
-| [`data/restrictions/`](data/restrictions/) | Ban lists, Most Wanted Lists, and balance updates: banned and restricted titles, influence points, and agenda caps |
-| [`data/rotations.json`](data/rotations.json) | Rotation dates and the waves that left a format |
+| **Rules** | |
+| [`data/rules/schema.json`](data/rules/schema.json) | JSON Schema for card definitions |
+| [`data/rules/pool.json`](data/rules/pool.json) | Declared corpus. `corpusOrder` is the release order; every wave there is `supported`. Each wave also has `dateRelease`, `cycle`, and `size` |
+| [`data/rules/corp/`](data/rules/corp/), [`data/rules/runner/`](data/rules/runner/) | One rules file per title, at `data/rules/<side>/<type>/<id>.json` (for example `data/rules/runner/program/marjanah.json`): stats, subtypes, `deckLimit`, and abilities as Effect IR |
+| `data/rules/factions.json`, `data/rules/subtypes.json`, `data/rules/card-types.json`, `data/rules/sides.json` | The word lists for rules-file fields: faction names and colors, and subtype, type and side names. `scripts/validate_cards.py` checks each rules file's `faction` against `factions.json`, and its `subtypes` (and each restriction list's subtypes) against `subtypes.json` |
+| **Print** | |
+| [`data/print/printed/`](data/print/printed/) | One file per title (`<id>.json`): the current printed `text`, `strippedText`, and `strippedTitle`, errata included. Where the catalog carries them, `attribution` (designer credit) and `layoutId` are kept too. Multi-face titles also carry `faces` from the catalog's face records, front face first; each face keeps its `title`, `strippedTitle`, `text`, `strippedText`, and where they differ per face its `subtypes` and base `link`; the top-level pair repeats the front face. The rules file keeps the Effect IR, and its `identityFaces` declaration mirrors the same faces for the engine |
+| [`data/print/printings/`](data/print/printings/) | One file per printing (`<code>.json`): title id, pack, flavor, illustrator, `quantity` (copies in that pack), `position`, `releasedBy`, and where the catalog has them `layoutId`, `copyQuantity`, and `faces`. The image address is `https://card-images.netrunnerdb.com/v2/large/{code}.jpg`. A back face of a double-sided card adds `-{n}`, counted from 0, so `{code}-0.jpg` is the first back face. The other sizes are `tiny`, `small`, and `medium` |
+| `data/print/card-sets.json`, `data/print/card-cycles.json`, `data/print/card-set-types.json`, `data/print/card-layouts.json` | The set and cycle records (name, type, position, size, release date), set types, and printing layouts |
+| **Formats** | |
+| [`data/formats/formats/`](data/formats/formats/) | One file per format. Each snapshot names a card pool and, when the catalog has one, a restriction |
+| [`data/formats/card-pools/`](data/formats/card-pools/) | The waves legal in one snapshot of a format |
+| [`data/formats/restrictions/`](data/formats/restrictions/) | Ban lists, Most Wanted Lists, and balance updates: banned and restricted titles, influence points, and agenda caps |
+| [`data/formats/rotations.json`](data/formats/rotations.json) | Rotation dates and the waves that left a format |
+| **Rulings** | |
+| [`data/rulings/rulings/`](data/rulings/rulings/) | One file per title with a rules-team-verified ruling (`<id>.json`). Taken from the pinned catalog's `v2/rulings/` snapshot of the NetrunnerDB rulings API. Unverified rulings are left out. A ruling explains the card text; an erratum changes the text itself |
+| `data/rulings/ruling-sources.json` | The catalog's ruling sources: where a ruling came from |
 
-Card files live at `data/<side>/<type>/<id>.json` (for example `data/runner/program/marjanah.json`). `corpusOrder` in [`data/pool.json`](data/pool.json) is the release order, and every wave there is supported. The order is FFG Core through Kitara, Reign and Reverie, Magnum Opus (`mor` absorbed), System Core 2019, Downfall, Uprising, then Gateway through Vantage Point. Floor **`v1.147.8`**.
+`corpusOrder` in [`data/rules/pool.json`](data/rules/pool.json) is the release order, and every wave there is supported. The order is FFG Core through Kitara, Reign and Reverie, Magnum Opus (`mor` absorbed), System Core 2019, Downfall, Uprising, then Gateway through Vantage Point. Floor **`v1.147.8`**.
 
 **Not in this repository:**
 
@@ -78,10 +87,10 @@ Card files live at `data/<side>/<type>/<id>.json` (for example `data/runner/prog
 | --- | --- | --- |
 | Unverified rulings | `v2/rulings/` | Only rulings with `nsg_rules_team_verified` are kept |
 | Translations | `v2/translations/` | Locale display, not play |
-| Pronouns, pronunciation, narrative text | fields on `v2/cards/` | Display flavor, not used by the engine or the table. Designer credit is no longer deferred: the catalog's `attribution` field is stored on `data/printed/` |
+| Pronouns, pronunciation, narrative text | fields on `v2/cards/` | Display flavor, not used by the engine or the table. Designer credit is no longer deferred: the catalog's `attribution` field is stored on `data/print/printed/` |
 | Prebuilt decks | `prebuilts.json` | Six published deck lists |
 
-Partial cards list unimplemented clauses in an `unsupported` array — never silent wrong behavior. A wave marked `supported` in [`data/pool.json`](data/pool.json) must keep those arrays empty unless the card is listed with a reason in [`data/supported-unsupported-allowlist.json`](data/supported-unsupported-allowlist.json) (enforced by `scripts/validate_cards.py`). See [`CONTRIBUTING.md`](CONTRIBUTING.md) for the CR gate PR template.
+Partial cards list unimplemented clauses in an `unsupported` array — never silent wrong behavior. A wave marked `supported` in [`data/rules/pool.json`](data/rules/pool.json) must keep those arrays empty unless the card is listed with a reason in [`bookkeeping/supported-unsupported-allowlist.json`](bookkeeping/supported-unsupported-allowlist.json) (enforced by `scripts/validate_cards.py`). See [`CONTRIBUTING.md`](CONTRIBUTING.md) for the CR gate PR template.
 
 ### Cards ↔ engine pairing
 
@@ -113,16 +122,16 @@ JavaScript — load the pool and one card from a tagged release:
 ```js
 const base =
   "https://raw.githubusercontent.com/nhoople/netrunner-cards-data/<tag>/data";
-const pool = await fetch(`${base}/pool.json`).then((r) => r.json());
-const marjanah = await fetch(`${base}/runner/program/marjanah.json`).then((r) =>
-  r.json(),
+const pool = await fetch(`${base}/rules/pool.json`).then((r) => r.json());
+const marjanah = await fetch(`${base}/rules/runner/program/marjanah.json`).then(
+  (r) => r.json(),
 );
 console.log(pool.corpusOrder, marjanah.title);
 ```
 
 ## Current corpus
 
-**Authoritative list:** [`data/pool.json`](data/pool.json) — **68/68** waves `supported` (`corpusOrder`, each wave’s `status`, and its card counts). The summary above is the boundary. Pack membership and card counts live in the pool. Card files are grouped by side and type.
+**Authoritative list:** [`data/rules/pool.json`](data/rules/pool.json) — **68/68** waves `supported` (`corpusOrder`, each wave’s `status`, and its card counts). The summary above is the boundary. Pack membership and card counts live in the pool. Card files are grouped by side and type.
 
 **What the data contains:** Card files are grouped by side and type. Each title has `deckLimit` and a printed sentence. Printings, verified rulings, format pools, ban lists, and rotations are separate files.
 
@@ -150,7 +159,7 @@ That compares the pinned commit with current `main`. It reports a catalog title 
 
 | Path | Use |
 | --- | --- |
-| [`data/nsg-catalog-pin.json`](data/nsg-catalog-pin.json) | Upstream NSG repo URL + commit SHA pin |
+| [`bookkeeping/nsg-catalog-pin.json`](bookkeeping/nsg-catalog-pin.json) | Upstream NSG repo URL + commit SHA pin |
 | [`scripts/nsg_catalog.py`](scripts/nsg_catalog.py) | Fetch helper (caches under `tmp/nsg-catalog/`) |
 
 ```bash
