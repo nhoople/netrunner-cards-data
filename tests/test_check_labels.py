@@ -9,13 +9,11 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 
-from check_labels import DATA, compare, label_found, missing_words, normalize
+from check_labels import PRINTED_DIR, compare, label_found, missing_words, normalize
 
 
 def printed(card_id: str) -> dict:
-    return json.loads(
-        (DATA / "printed" / f"{card_id}.json").read_text(encoding="utf-8")
-    )
+    return json.loads((PRINTED_DIR / f"{card_id}.json").read_text(encoding="utf-8"))
 
 
 def test_normalize_symbols() -> None:

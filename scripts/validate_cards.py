@@ -12,7 +12,16 @@ import sys
 from pathlib import Path
 
 from card_layout import STORAGE
-from data_paths import DATA, POOL_PATH, REFERENCE_FILES, ROOT, RULES, SCHEMA_PATH
+from data_paths import (
+    DATA,
+    POOL_PATH,
+    PRINTED_DIR,
+    PRINTINGS_DIR,
+    REFERENCE_FILES,
+    ROOT,
+    RULES,
+    SCHEMA_PATH,
+)
 from jsonschema import Draft202012Validator
 
 SCHEMA = json.loads(SCHEMA_PATH.read_text())
@@ -402,9 +411,9 @@ def _check_flag(ability: dict, where: str) -> str | None:
 
 
 def check_printings(card_ids: dict[str, Path], waves: dict) -> int:
-    directory = DATA / "printings"
+    directory = PRINTINGS_DIR
     if not directory.is_dir():
-        print("printings directory missing: data/printings")
+        print(f"printings directory missing: {directory.relative_to(ROOT)}")
         return 1
     errors = 0
     seen: dict[str, set[str]] = {}
@@ -553,9 +562,9 @@ def _forfeit_self_cost_error(printed: dict, rules: dict) -> str | None:
 
 
 def check_printed(card_ids: dict[str, Path]) -> int:
-    directory = DATA / "printed"
+    directory = PRINTED_DIR
     if not directory.is_dir():
-        print("printed directory missing: data/printed")
+        print(f"printed directory missing: {directory.relative_to(ROOT)}")
         return 1
     errors = 0
     seen: set[str] = set()
@@ -645,7 +654,7 @@ def check_printed(card_ids: dict[str, Path]) -> int:
     # faces share one text) needs one printed face per printing face, plus
     # the front face at index 0.
     printing_faces: dict[str, int] = {}
-    printings_dir = DATA / "printings"
+    printings_dir = PRINTINGS_DIR
     if printings_dir.is_dir():
         for path in sorted(printings_dir.glob("*.json")):
             raw_printing = json.loads(path.read_text(encoding="utf-8"))

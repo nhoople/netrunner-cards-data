@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Write data/printings/<code>.json from the pinned Null Signal catalog.
+"""Write data/print/printings/<code>.json from the pinned Null Signal catalog.
 
 One record per printing in a corpus set, taken from v2/printings. A
 reprinted title gets one record for each set that printed it. The rules
@@ -13,10 +13,10 @@ from __future__ import annotations
 import json
 import sys
 
-from data_paths import DATA, POOL_PATH, ROOT
+from data_paths import DATA, POOL_PATH, PRINTINGS_DIR, ROOT
 from nsg_catalog import load_card_sets, load_v2_printings, our_id
 
-OUT = DATA / "printings"
+OUT = PRINTINGS_DIR
 
 # Booster and reprint sets whose titles were absorbed into a corpus wave.
 ABSORBED = {
