@@ -25,9 +25,10 @@ Every folder in the repository is listed here. `tests/test_layout_map.py` (run b
 | `data/print/printed/` | One file per title: the printed text |
 | `data/print/printings/` | One file per printing |
 | `data/rulings/` | One file per title with a verified ruling |
-| `data/formats/` | One file per format |
-| `data/card-pools/` | The waves legal in one snapshot of a format |
-| `data/restrictions/` | Ban lists, Most Wanted Lists and balance updates |
+| `data/formats/` | Which cards are legal where: the three folders below and `rotations.json` (rotation dates and the waves that left a format) |
+| `data/formats/formats/` | One file per format |
+| `data/formats/card-pools/` | The waves legal in one snapshot of a format |
+| `data/formats/restrictions/` | Ban lists, Most Wanted Lists and balance updates |
 | `data/manifests/` | One file per wave, written by its generator (bookkeeping, not read by the engine) |
 | `scripts/` | The commands (validate, build, check, catalog fetch) and the modules they share |
 | `scripts/generate/` | One generator per pack, `<set>.py`, which writes that pack's card files from the pinned catalog |
