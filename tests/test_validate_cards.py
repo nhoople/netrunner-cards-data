@@ -188,6 +188,23 @@ def test_rules_files_and_word_lists_are_read_from_data_rules() -> None:
         assert path.is_file(), path
 
 
+def test_print_files_are_read_from_data_print() -> None:
+    import data_paths
+
+    print_dir = data_paths.PRINT
+    assert data_paths.PRINTED_DIR == print_dir / "printed"
+    assert data_paths.PRINTINGS_DIR == print_dir / "printings"
+    for directory in (data_paths.PRINTED_DIR, data_paths.PRINTINGS_DIR):
+        assert directory.is_dir() and any(directory.glob("*.json")), directory
+    for name in (
+        "card-cycles.json",
+        "card-layouts.json",
+        "card-set-types.json",
+        "card-sets.json",
+    ):
+        assert data_paths.REFERENCE_FILES[name] == print_dir / name
+
+
 def main() -> int:
     tests = [
         value for name, value in sorted(globals().items()) if name.startswith("test_")

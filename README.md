@@ -21,8 +21,9 @@ Every folder in the repository is listed here. `tests/test_layout_map.py` (run b
 | `data/rules/corp/`, `data/rules/runner/` | Card rules files, by side |
 | `data/rules/corp/agenda/`, `data/rules/corp/asset/`, `data/rules/corp/ice/`, `data/rules/corp/identity/`, `data/rules/corp/operation/`, `data/rules/corp/upgrade/` | One Corp rules file per title (`<id>.json`), by card type |
 | `data/rules/runner/event/`, `data/rules/runner/hardware/`, `data/rules/runner/identity/`, `data/rules/runner/program/`, `data/rules/runner/resource/` | One Runner rules file per title (`<id>.json`), by card type |
-| `data/printed/` | One file per title: the printed text |
-| `data/printings/` | One file per printing |
+| `data/print/` | What the card shows: the printed text and printings below, and the set, set type, cycle and layout records (`card-sets.json`, `card-set-types.json`, `card-cycles.json`, `card-layouts.json`) |
+| `data/print/printed/` | One file per title: the printed text |
+| `data/print/printings/` | One file per printing |
 | `data/rulings/` | One file per title with a verified ruling |
 | `data/formats/` | One file per format |
 | `data/card-pools/` | The waves legal in one snapshot of a format |

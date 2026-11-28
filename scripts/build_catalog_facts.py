@@ -2,7 +2,7 @@
 """Copy deck limits, printed text, and format legality from the pinned catalog.
 
 Deck limit is one number per title, written onto the rules file. The printed
-sentence lives in data/printed/. Formats, card pools, restrictions, and
+sentence lives in data/print/printed/. Formats, card pools, restrictions, and
 rotations are separate documents. Pack release date, cycle, and size are
 added to each wave in data/rules/pool.json.
 
@@ -17,7 +17,7 @@ from pathlib import Path
 from build_printings import pack_code_for
 from build_rulings import known_ids
 from card_layout import card_file
-from data_paths import DATA, POOL_PATH
+from data_paths import DATA, POOL_PATH, PRINTED_DIR
 from nsg_catalog import fetch_catalog_archive, load_v2_cards, our_id, subtype_names
 
 # Booster and reprint sets whose titles already live on a corpus wave.
@@ -258,7 +258,7 @@ def main() -> int:
             insert_deck_limit(path.read_text(encoding="utf-8"), limit), encoding="utf-8"
         )
 
-    printed_dir = DATA / "printed"
+    printed_dir = PRINTED_DIR
     if printed_dir.exists():
         for stale in printed_dir.glob("*.json"):
             stale.unlink()

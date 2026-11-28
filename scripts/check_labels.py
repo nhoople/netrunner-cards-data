@@ -7,7 +7,7 @@ Reports three gaps and keeps them in a shrink-only baseline,
 - unlabelled: conditional and play abilities with no `label`.
 - drift: printed wording on an ability (`label` on paid abilities, `text`
   on subroutines) whose normalized form is not found in the card's
-  normalized `data/printed/<id>.json` `strippedText` (or any face's).
+  normalized `data/print/printed/<id>.json` `strippedText` (or any face's).
 - unsupported: cards with a non-empty `unsupported` list.
 
 Wording differences are a report. CI fails only when the current entries and
@@ -28,7 +28,7 @@ import sys
 import unicodedata
 from pathlib import Path
 
-from data_paths import DATA, ROOT, RULES
+from data_paths import PRINTED_DIR, ROOT, RULES
 
 BASELINE = ROOT / "scripts" / "baselines" / "labels.json"
 REGENERATE = "python3 scripts/check_labels.py --write"
@@ -102,7 +102,7 @@ def collect() -> tuple[dict, dict[str, dict]]:
     for path in card_paths():
         card = json.loads(path.read_text(encoding="utf-8"))
         cid = card["id"]
-        printed_path = DATA / "printed" / f"{cid}.json"
+        printed_path = PRINTED_DIR / f"{cid}.json"
         printed = (
             json.loads(printed_path.read_text(encoding="utf-8"))
             if printed_path.is_file()
