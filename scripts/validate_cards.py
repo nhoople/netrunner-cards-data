@@ -24,6 +24,7 @@ from data_paths import (
     ROOT,
     ROTATIONS_PATH,
     RULES,
+    RULINGS_DIR,
     SCHEMA_PATH,
 )
 from jsonschema import Draft202012Validator
@@ -490,9 +491,9 @@ def check_printings(card_ids: dict[str, Path], waves: dict) -> int:
 
 
 def check_rulings(card_ids: dict[str, Path]) -> int:
-    directory = DATA / "rulings"
+    directory = RULINGS_DIR
     if not directory.is_dir():
-        print("rulings directory missing: data/rulings")
+        print(f"rulings directory missing: {directory.relative_to(ROOT)}")
         return 1
     errors = 0
     for path in sorted(directory.glob("*.json")):

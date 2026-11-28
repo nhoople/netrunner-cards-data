@@ -8,6 +8,8 @@
   set type, cycle, and layout records.
 - `data/formats/`: which cards are legal where. Formats, card pools,
   restrictions, and rotations.
+- `data/rulings/`: verified rulings, one file per title, and the ruling
+  sources.
 
 The README's "Layout" section names every folder.
 """
@@ -21,6 +23,7 @@ DATA = ROOT / "data"
 RULES = DATA / "rules"
 PRINT = DATA / "print"
 FORMATS = DATA / "formats"
+RULINGS = DATA / "rulings"
 
 SCHEMA_PATH = RULES / "schema.json"
 POOL_PATH = RULES / "pool.json"
@@ -30,6 +33,7 @@ FORMATS_DIR = FORMATS / "formats"
 CARD_POOLS_DIR = FORMATS / "card-pools"
 RESTRICTIONS_DIR = FORMATS / "restrictions"
 ROTATIONS_PATH = FORMATS / "rotations.json"
+RULINGS_DIR = RULINGS / "rulings"
 
 # The reference vocabularies from the catalog, by file name, in the order
 # `build_reference.py` writes them and `validate_cards.py` checks them.
@@ -40,7 +44,7 @@ REFERENCE_FILES: dict[str, Path] = {
     "sides.json": RULES / "sides.json",
     "card-set-types.json": PRINT / "card-set-types.json",
     "card-layouts.json": PRINT / "card-layouts.json",
-    "ruling-sources.json": DATA / "ruling-sources.json",
+    "ruling-sources.json": RULINGS / "ruling-sources.json",
     "card-sets.json": PRINT / "card-sets.json",
     "card-cycles.json": PRINT / "card-cycles.json",
 }

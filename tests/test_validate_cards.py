@@ -225,6 +225,21 @@ def test_format_files_are_read_from_data_formats() -> None:
     assert [p.name for p in formats.glob("*.json")] == ["rotations.json"]
 
 
+def test_rulings_are_read_from_data_rulings() -> None:
+    import data_paths
+
+    rulings = data_paths.RULINGS
+    assert data_paths.RULINGS_DIR == rulings / "rulings"
+    assert data_paths.RULINGS_DIR.is_dir()
+    assert any(data_paths.RULINGS_DIR.glob("*.json"))
+    assert data_paths.REFERENCE_FILES["ruling-sources.json"] == (
+        rulings / "ruling-sources.json"
+    )
+    # build_rulings.py deletes every *.json in RULINGS_DIR before it writes, so
+    # ruling-sources.json must sit outside that folder.
+    assert [p.name for p in rulings.glob("*.json")] == ["ruling-sources.json"]
+
+
 def main() -> int:
     tests = [
         value for name, value in sorted(globals().items()) if name.startswith("test_")
