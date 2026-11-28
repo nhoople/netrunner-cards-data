@@ -4,7 +4,7 @@
 Deck limit is one number per title, written onto the rules file. The printed
 sentence lives in data/printed/. Formats, card pools, restrictions, and
 rotations are separate documents. Pack release date, cycle, and size are
-added to each wave in pool.json.
+added to each wave in data/rules/pool.json.
 
 Usage: python3 scripts/build_catalog_facts.py
 """
@@ -17,10 +17,8 @@ from pathlib import Path
 from build_printings import pack_code_for
 from build_rulings import known_ids
 from card_layout import card_file
+from data_paths import DATA, POOL_PATH
 from nsg_catalog import fetch_catalog_archive, load_v2_cards, our_id, subtype_names
-
-ROOT = Path(__file__).resolve().parents[1]
-DATA = ROOT / "data"
 
 # Booster and reprint sets whose titles already live on a corpus wave.
 ABSORBED_CODES = {
@@ -184,7 +182,7 @@ def main() -> int:
     codes = legacy_to_wave()
     card_sets = load_json(catalog / "v2" / "card_sets.json")
     set_wave = {card_set["id"]: wave_for_set(card_set, codes) for card_set in card_sets}
-    pool = load_json(DATA / "pool.json")
+    pool = load_json(POOL_PATH)
     errors: list[str] = []
 
     limits: dict[str, int] = {}
@@ -281,7 +279,7 @@ def main() -> int:
                 updated["cycle"] = match["card_cycle_id"].replace("_", "-")
                 updated["size"] = match["size"]
         pool["waves"][wave_name] = updated
-    (DATA / "pool.json").write_text(
+    POOL_PATH.write_text(
         json.dumps(pool, indent=2, ensure_ascii=True) + "\n",
         encoding="utf-8",
     )

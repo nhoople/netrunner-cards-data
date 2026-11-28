@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate card JSON under data/ against data/schema.json and pool consistency.
+"""Validate card JSON under data/rules/ against its schema and pool consistency.
 
 Usage: python3 scripts/validate_cards.py
 """
@@ -12,12 +12,11 @@ import sys
 from pathlib import Path
 
 from card_layout import STORAGE
+from data_paths import DATA, POOL_PATH, REFERENCE_FILES, ROOT, RULES, SCHEMA_PATH
 from jsonschema import Draft202012Validator
 
-ROOT = Path(__file__).resolve().parents[1]
-DATA = ROOT / "data"
-SCHEMA = json.loads((DATA / "schema.json").read_text())
-POOL = json.loads((DATA / "pool.json").read_text())
+SCHEMA = json.loads(SCHEMA_PATH.read_text())
+POOL = json.loads(POOL_PATH.read_text())
 ALLOWLIST_PATH = DATA / "supported-unsupported-allowlist.json"
 
 
@@ -827,32 +826,18 @@ def check_printed(card_ids: dict[str, Path]) -> int:
     return errors
 
 
-REFERENCE_FILES = (
-    "factions.json",
-    "subtypes.json",
-    "card-types.json",
-    "sides.json",
-    "card-set-types.json",
-    "card-layouts.json",
-    "ruling-sources.json",
-    "card-sets.json",
-    "card-cycles.json",
-)
-
-
 def load_reference() -> tuple[dict[str, set[str]], int]:
-    """Vocabulary ids from the v2 reference files under data/."""
+    """Vocabulary ids from the v2 reference files (`data_paths.REFERENCE_FILES`)."""
     found: dict[str, set[str]] = {}
     errors = 0
-    for name in REFERENCE_FILES:
-        path = DATA / name
+    for name, path in REFERENCE_FILES.items():
         if not path.is_file():
-            print(f"reference file missing: data/{name}")
+            print(f"reference file missing: {path.relative_to(ROOT)}")
             errors += 1
             continue
         records = json.loads(path.read_text(encoding="utf-8"))
         if not isinstance(records, list) or not records:
-            print(f"data/{name}: must be a non-empty list")
+            print(f"{path.relative_to(ROOT)}: must be a non-empty list")
             errors += 1
             continue
         ids: set[str] = set()
@@ -862,11 +847,13 @@ def load_reference() -> tuple[dict[str, set[str]], int]:
                 or not isinstance(record.get("id"), str)
                 or not isinstance(record.get("name"), str)
             ):
-                print(f"data/{name}: record {record!r} needs string id and name")
+                print(
+                    f"{path.relative_to(ROOT)}: record {record!r} needs string id and name"
+                )
                 errors += 1
                 continue
             if record["id"] in ids:
-                print(f"data/{name}: duplicate id {record['id']!r}")
+                print(f"{path.relative_to(ROOT)}: duplicate id {record['id']!r}")
                 errors += 1
             ids.add(record["id"])
         found[name] = ids
@@ -984,7 +971,7 @@ def storage_dirs() -> list[Path]:
     dirs: list[Path] = []
     for side, types in STORAGE.items():
         for type_ in types:
-            dirs.append(DATA / side / type_)
+            dirs.append(RULES / side / type_)
     return dirs
 
 

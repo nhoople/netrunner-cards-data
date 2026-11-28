@@ -171,6 +171,23 @@ def test_forfeit_self_without_printed_cost_fails() -> None:
     )
 
 
+def test_rules_files_and_word_lists_are_read_from_data_rules() -> None:
+    import data_paths
+
+    rules = data_paths.RULES
+    dirs = validate_cards.storage_dirs()
+    assert len(dirs) == 11, dirs
+    for directory in dirs:
+        assert directory.parent.parent == rules, directory
+        assert directory.is_dir() and any(directory.glob("*.json")), directory
+    assert data_paths.SCHEMA_PATH.parent == rules
+    assert data_paths.POOL_PATH.parent == rules
+    for name in ("card-types.json", "factions.json", "sides.json", "subtypes.json"):
+        assert data_paths.REFERENCE_FILES[name] == rules / name
+    for path in data_paths.REFERENCE_FILES.values():
+        assert path.is_file(), path
+
+
 def main() -> int:
     tests = [
         value for name, value in sorted(globals().items()) if name.startswith("test_")
