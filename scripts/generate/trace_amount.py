@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Generate Trace Amount card JSON from the pinned v2 set for pack `ta`.
 
-Catalog source: Null-Signal-Games/netrunner-cards-json (see data/nsg-catalog-pin.json).
+Catalog source: Null-Signal-Games/netrunner-cards-json (see bookkeeping/nsg-catalog-pin.json).
 Fetch with: python3 scripts/nsg_catalog.py fetch ta
 
 Second Genesis-cycle wave after What Lies Ahead set-complete (floor v1.88.0).

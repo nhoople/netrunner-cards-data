@@ -1,6 +1,0 @@
-{
-  "repo": "https://github.com/Null-Signal-Games/netrunner-cards-json",
-  "ref": "a4bdb50d7e4d29a09debb5edbe3957198f0cfa93",
-  "cacheDir": "tmp/nsg-catalog",
-  "notes": "Canonical NSG catalog. scripts/nsg_catalog.py downloads the whole repository at `ref` (a commit SHA on main, not a branch) into cacheDir/<ref>/ and reads its v2 catalog; the pack/{code}.json export is not read. To bump: run `nsg_catalog.py check`, set `ref` to the reviewed SHA, clear tmp/nsg-catalog/, then re-run `nsg_catalog.py fetch <pack>` and the generate-*.py scripts. Effect IR remains hand-authored in this repo."
-}

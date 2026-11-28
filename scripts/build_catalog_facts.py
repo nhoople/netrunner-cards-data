@@ -19,8 +19,8 @@ from build_rulings import known_ids
 from card_layout import card_file
 from data_paths import (
     CARD_POOLS_DIR,
-    DATA,
     FORMATS_DIR,
+    MANIFESTS_DIR,
     POOL_PATH,
     PRINTED_DIR,
     RESTRICTIONS_DIR,
@@ -52,7 +52,7 @@ def partition_card_ids(
 
 def legacy_to_wave() -> dict[str, str]:
     found: dict[str, str] = {}
-    for path in (DATA / "manifests").glob("*.json"):
+    for path in MANIFESTS_DIR.glob("*.json"):
         manifest = json.loads(path.read_text(encoding="utf-8"))
         code = manifest.get("nrdbPackCode")
         wave = manifest.get("pack")

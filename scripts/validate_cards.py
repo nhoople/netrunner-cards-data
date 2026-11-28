@@ -13,8 +13,8 @@ from pathlib import Path
 
 from card_layout import STORAGE
 from data_paths import (
+    ALLOWLIST_PATH,
     CARD_POOLS_DIR,
-    DATA,
     FORMATS_DIR,
     POOL_PATH,
     PRINTED_DIR,
@@ -31,7 +31,6 @@ from jsonschema import Draft202012Validator
 
 SCHEMA = json.loads(SCHEMA_PATH.read_text())
 POOL = json.loads(POOL_PATH.read_text())
-ALLOWLIST_PATH = DATA / "supported-unsupported-allowlist.json"
 
 
 def load_unsupported_allowlist() -> dict[str, str]:

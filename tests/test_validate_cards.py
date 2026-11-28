@@ -240,6 +240,77 @@ def test_rulings_are_read_from_data_rulings() -> None:
     assert [p.name for p in rulings.glob("*.json")] == ["ruling-sources.json"]
 
 
+def test_bookkeeping_is_outside_data() -> None:
+    import data_paths
+
+    bookkeeping = data_paths.BOOKKEEPING
+    assert bookkeeping == data_paths.ROOT / "bookkeeping"
+    assert data_paths.MANIFESTS_DIR == bookkeeping / "manifests"
+    assert any(data_paths.MANIFESTS_DIR.glob("*.json"))
+    assert data_paths.ALLOWLIST_PATH.parent == bookkeeping
+    assert data_paths.CATALOG_PIN_PATH.parent == bookkeeping
+    assert validate_cards.ALLOWLIST_PATH == data_paths.ALLOWLIST_PATH
+    for path in (data_paths.ALLOWLIST_PATH, data_paths.CATALOG_PIN_PATH):
+        assert path.is_file(), path
+
+
+def data_files() -> set[Path]:
+    """Files under data/ that git tracks or would add (ignored files left out)."""
+    import subprocess
+
+    import data_paths
+
+    listed = subprocess.run(
+        ["git", "ls-files", "--cached", "--others", "--exclude-standard", "-z"],
+        cwd=data_paths.DATA,
+        check=True,
+        capture_output=True,
+        text=True,
+    ).stdout
+    return {(data_paths.DATA / p).resolve() for p in filter(None, listed.split("\0"))}
+
+
+def test_data_holds_only_the_four_card_data_groups() -> None:
+    import data_paths
+
+    groups = sorted(
+        {p.relative_to(data_paths.DATA.resolve()).parts[0] for p in data_files()}
+    )
+    assert groups == ["formats", "print", "rules", "rulings"], groups
+
+
+_OPENED: set[Path] | None = None
+
+
+def _record_open(event: str, args: tuple) -> None:
+    if _OPENED is not None and event == "open" and isinstance(args[0], str):
+        _OPENED.add(Path(args[0]).resolve())
+
+
+def test_validator_reads_every_file_under_data() -> None:
+    """A path the validator stops reading after a move would pass silently."""
+    import contextlib
+    import io
+
+    import data_paths
+
+    global _OPENED
+    _OPENED = set()
+    sys.addaudithook(_record_open)
+    try:
+        with contextlib.redirect_stdout(io.StringIO()):
+            assert validate_cards.main() == 0
+        opened = set(_OPENED)
+    finally:
+        _OPENED = None
+    # The schema and the pool are read once, when validate_cards is imported.
+    opened |= {data_paths.SCHEMA_PATH.resolve(), data_paths.POOL_PATH.resolve()}
+    root = data_paths.ROOT.resolve()
+    unread = sorted(str(p.relative_to(root)) for p in data_files() - opened)
+    assert not unread, f"{len(unread)} files under data/ not read: {unread[:10]}"
+    assert data_paths.ALLOWLIST_PATH.resolve() in opened
+
+
 def main() -> int:
     tests = [
         value for name, value in sorted(globals().items()) if name.startswith("test_")

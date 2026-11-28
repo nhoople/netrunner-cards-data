@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Generate What Lies Ahead card JSON from the pinned v2 set for pack `wla`.
 
-Catalog source: Null-Signal-Games/netrunner-cards-json (see data/nsg-catalog-pin.json).
+Catalog source: Null-Signal-Games/netrunner-cards-json (see bookkeeping/nsg-catalog-pin.json).
 Fetch with: python3 scripts/nsg_catalog.py fetch wla
 
 First Genesis-cycle wave after FFG Core Set set-complete (floor v1.87.0).

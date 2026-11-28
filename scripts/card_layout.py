@@ -8,7 +8,7 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-from data_paths import DATA, RULES
+from data_paths import MANIFESTS_DIR, RULES
 
 STORAGE: dict[str, tuple[str, ...]] = {
     "corp": ("identity", "agenda", "asset", "ice", "operation", "upgrade"),
@@ -42,6 +42,6 @@ def card_file(cid: str) -> Path:
 
 
 def manifest_file(wave: str) -> Path:
-    path = DATA / "manifests" / f"{wave}.json"
+    path = MANIFESTS_DIR / f"{wave}.json"
     path.parent.mkdir(parents=True, exist_ok=True)
     return path

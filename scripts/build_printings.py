@@ -13,7 +13,7 @@ from __future__ import annotations
 import json
 import sys
 
-from data_paths import DATA, POOL_PATH, PRINTINGS_DIR, ROOT
+from data_paths import MANIFESTS_DIR, POOL_PATH, PRINTINGS_DIR, ROOT
 from nsg_catalog import load_card_sets, load_v2_printings, our_id
 
 OUT = PRINTINGS_DIR
@@ -29,9 +29,7 @@ ABSORBED = {
 def pack_code_for(wave: str) -> str:
     if wave == "system-update-2021":
         return "su21"
-    manifest = json.loads(
-        (DATA / "manifests" / f"{wave}.json").read_text(encoding="utf-8")
-    )
+    manifest = json.loads((MANIFESTS_DIR / f"{wave}.json").read_text(encoding="utf-8"))
     code = manifest.get("nrdbPackCode")
     if not isinstance(code, str) or not code:
         raise SystemExit(f"{wave}: manifest is missing nrdbPackCode")
@@ -41,7 +39,7 @@ def pack_code_for(wave: str) -> str:
 def legacy_to_wave() -> dict[str, str]:
     """Map a catalog legacy pack code to the corpus wave that stores its titles."""
     found = dict(ABSORBED)
-    for path in (DATA / "manifests").glob("*.json"):
+    for path in MANIFESTS_DIR.glob("*.json"):
         manifest = json.loads(path.read_text(encoding="utf-8"))
         code = manifest.get("nrdbPackCode")
         wave = manifest.get("pack")

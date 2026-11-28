@@ -11,6 +11,10 @@
 - `data/rulings/`: verified rulings, one file per title, and the ruling
   sources.
 
+The dataset's own bookkeeping sits outside `data/`, in `bookkeeping/`: the
+per-wave manifests the generators write, the supported-but-unsupported
+allowlist, and the catalog pin.
+
 The README's "Layout" section names every folder.
 """
 
@@ -24,6 +28,7 @@ RULES = DATA / "rules"
 PRINT = DATA / "print"
 FORMATS = DATA / "formats"
 RULINGS = DATA / "rulings"
+BOOKKEEPING = ROOT / "bookkeeping"
 
 SCHEMA_PATH = RULES / "schema.json"
 POOL_PATH = RULES / "pool.json"
@@ -34,6 +39,9 @@ CARD_POOLS_DIR = FORMATS / "card-pools"
 RESTRICTIONS_DIR = FORMATS / "restrictions"
 ROTATIONS_PATH = FORMATS / "rotations.json"
 RULINGS_DIR = RULINGS / "rulings"
+MANIFESTS_DIR = BOOKKEEPING / "manifests"
+ALLOWLIST_PATH = BOOKKEEPING / "supported-unsupported-allowlist.json"
+CATALOG_PIN_PATH = BOOKKEEPING / "nsg-catalog-pin.json"
 
 # The reference vocabularies from the catalog, by file name, in the order
 # `build_reference.py` writes them and `validate_cards.py` checks them.

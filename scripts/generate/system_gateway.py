@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Regenerate System Gateway card JSON from the pinned v2 set for pack `sg`.
 
-Catalog source: Null-Signal-Games/netrunner-cards-json (see data/nsg-catalog-pin.json).
+Catalog source: Null-Signal-Games/netrunner-cards-json (see bookkeeping/nsg-catalog-pin.json).
 Fetch with: python3 scripts/nsg_catalog.py fetch sg
 
 Hand-mapped Effect IR; unsupported clauses listed explicitly.
@@ -14,6 +14,6 @@ Usage: python3 scripts/generate/system_gateway.py
 # This stub documents how the corpus was produced; prefer editing card JSON
 # directly for fidelity fixes. Re-run only when refreshing from the pinned catalog.
 print("Gateway cards are committed under data/rules/<side>/<type>/.")
-print("Catalog pin: data/nsg-catalog-pin.json (netrunner-cards-json).")
+print("Catalog pin: bookkeeping/nsg-catalog-pin.json (netrunner-cards-json).")
 print("Fetch pack: python3 scripts/nsg_catalog.py fetch sg")
 print("To refresh stubs, restore the generator from git history or re-author maps.")
