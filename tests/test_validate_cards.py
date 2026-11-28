@@ -205,6 +205,26 @@ def test_print_files_are_read_from_data_print() -> None:
         assert data_paths.REFERENCE_FILES[name] == print_dir / name
 
 
+def test_format_files_are_read_from_data_formats() -> None:
+    import data_paths
+
+    formats = data_paths.FORMATS
+    assert data_paths.FORMATS_DIR == formats / "formats"
+    assert data_paths.CARD_POOLS_DIR == formats / "card-pools"
+    assert data_paths.RESTRICTIONS_DIR == formats / "restrictions"
+    assert data_paths.ROTATIONS_PATH == formats / "rotations.json"
+    for directory in (
+        data_paths.FORMATS_DIR,
+        data_paths.CARD_POOLS_DIR,
+        data_paths.RESTRICTIONS_DIR,
+    ):
+        assert directory.is_dir() and any(directory.glob("*.json")), directory
+    assert data_paths.ROTATIONS_PATH.is_file()
+    # Only folders and the rotations file sit at the top of data/formats/, so no
+    # format glob can read rotations.json as a format.
+    assert [p.name for p in formats.glob("*.json")] == ["rotations.json"]
+
+
 def main() -> int:
     tests = [
         value for name, value in sorted(globals().items()) if name.startswith("test_")

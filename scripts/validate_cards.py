@@ -13,12 +13,16 @@ from pathlib import Path
 
 from card_layout import STORAGE
 from data_paths import (
+    CARD_POOLS_DIR,
     DATA,
+    FORMATS_DIR,
     POOL_PATH,
     PRINTED_DIR,
     PRINTINGS_DIR,
     REFERENCE_FILES,
+    RESTRICTIONS_DIR,
     ROOT,
+    ROTATIONS_PATH,
     RULES,
     SCHEMA_PATH,
 )
@@ -875,9 +879,9 @@ def check_legality(
     errors = 0
     corpus = set(waves)
     pools: dict[str, dict] = {}
-    pool_dir = DATA / "card-pools"
+    pool_dir = CARD_POOLS_DIR
     if not pool_dir.is_dir():
-        print("card pool directory missing: data/card-pools")
+        print(f"card pool directory missing: {pool_dir.relative_to(ROOT)}")
         return 1
     for path in sorted(pool_dir.glob("*.json")):
         raw = json.loads(path.read_text(encoding="utf-8"))
@@ -890,9 +894,9 @@ def check_legality(
                 errors += 1
         pools[path.stem] = raw
     restrictions: set[str] = set()
-    restriction_dir = DATA / "restrictions"
+    restriction_dir = RESTRICTIONS_DIR
     if not restriction_dir.is_dir():
-        print("restrictions directory missing: data/restrictions")
+        print(f"restrictions directory missing: {restriction_dir.relative_to(ROOT)}")
         return 1
     for path in sorted(restriction_dir.glob("*.json")):
         raw = json.loads(path.read_text(encoding="utf-8"))
@@ -935,9 +939,9 @@ def check_legality(
                         f"{path.relative_to(ROOT)}: {field} card {card_id!r} has no rules file"
                     )
                     errors += 1
-    formats = DATA / "formats"
+    formats = FORMATS_DIR
     if not formats.is_dir():
-        print("formats directory missing: data/formats")
+        print(f"formats directory missing: {formats.relative_to(ROOT)}")
         return 1
     for path in sorted(formats.glob("*.json")):
         raw = json.loads(path.read_text(encoding="utf-8"))
@@ -955,9 +959,9 @@ def check_legality(
                     f"{path.relative_to(ROOT)}: restriction {restriction_id!r} is missing"
                 )
                 errors += 1
-    rotations = DATA / "rotations.json"
+    rotations = ROTATIONS_PATH
     if not rotations.is_file():
-        print("rotations file missing: data/rotations.json")
+        print(f"rotations file missing: {rotations.relative_to(ROOT)}")
         errors += 1
     else:
         for rotation in json.loads(rotations.read_text(encoding="utf-8")):

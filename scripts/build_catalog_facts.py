@@ -3,7 +3,7 @@
 
 Deck limit is one number per title, written onto the rules file. The printed
 sentence lives in data/print/printed/. Formats, card pools, restrictions, and
-rotations are separate documents. Pack release date, cycle, and size are
+rotations are separate documents in data/formats/. Pack release date, cycle, and size are
 added to each wave in data/rules/pool.json.
 
 Usage: python3 scripts/build_catalog_facts.py
@@ -17,7 +17,15 @@ from pathlib import Path
 from build_printings import pack_code_for
 from build_rulings import known_ids
 from card_layout import card_file
-from data_paths import DATA, POOL_PATH, PRINTED_DIR
+from data_paths import (
+    CARD_POOLS_DIR,
+    DATA,
+    FORMATS_DIR,
+    POOL_PATH,
+    PRINTED_DIR,
+    RESTRICTIONS_DIR,
+    ROTATIONS_PATH,
+)
 from nsg_catalog import fetch_catalog_archive, load_v2_cards, our_id, subtype_names
 
 # Booster and reprint sets whose titles already live on a corpus wave.
@@ -289,7 +297,7 @@ def main() -> int:
         for catalog_id in load_v2_cards()
         if our_id(catalog_id) in known
     }
-    pools_dir = DATA / "card-pools"
+    pools_dir = CARD_POOLS_DIR
     if pools_dir.exists():
         for stale in pools_dir.glob("*.json"):
             stale.unlink()
@@ -316,7 +324,7 @@ def main() -> int:
                 document["outsideSets"] = outside
             write_json(pools_dir / f"{raw['id']}.json", document)
 
-    formats_dir = DATA / "formats"
+    formats_dir = FORMATS_DIR
     if formats_dir.exists():
         for stale in formats_dir.glob("*.json"):
             stale.unlink()
@@ -343,7 +351,7 @@ def main() -> int:
             },
         )
 
-    restrictions_dir = DATA / "restrictions"
+    restrictions_dir = RESTRICTIONS_DIR
     if restrictions_dir.exists():
         for stale in restrictions_dir.glob("*.json"):
             stale.unlink()
@@ -383,7 +391,7 @@ def main() -> int:
                 "waves": waves,
             }
         )
-    write_json(DATA / "rotations.json", rotations)
+    write_json(ROTATIONS_PATH, rotations)
 
     print(
         f"Deck limits on {len(limits)} cards; "

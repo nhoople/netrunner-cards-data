@@ -6,6 +6,8 @@
   schema, and the word lists the rules files are checked against.
 - `data/print/`: what the card shows. Printed text, printings, and the set,
   set type, cycle, and layout records.
+- `data/formats/`: which cards are legal where. Formats, card pools,
+  restrictions, and rotations.
 
 The README's "Layout" section names every folder.
 """
@@ -18,11 +20,16 @@ ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
 RULES = DATA / "rules"
 PRINT = DATA / "print"
+FORMATS = DATA / "formats"
 
 SCHEMA_PATH = RULES / "schema.json"
 POOL_PATH = RULES / "pool.json"
 PRINTED_DIR = PRINT / "printed"
 PRINTINGS_DIR = PRINT / "printings"
+FORMATS_DIR = FORMATS / "formats"
+CARD_POOLS_DIR = FORMATS / "card-pools"
+RESTRICTIONS_DIR = FORMATS / "restrictions"
+ROTATIONS_PATH = FORMATS / "rotations.json"
 
 # The reference vocabularies from the catalog, by file name, in the order
 # `build_reference.py` writes them and `validate_cards.py` checks them.
