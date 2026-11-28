@@ -17,7 +17,7 @@ Corpus title ids are this repo's own: convert a catalog id with `nsg_catalog.our
 
 A wave with `status: "supported"` in `data/rules/pool.json` must have **empty** `unsupported: []` on every listed card.
 
-Rare explicit deferrals while keeping `supported` require an entry in [`data/supported-unsupported-allowlist.json`](data/supported-unsupported-allowlist.json) (card id → reason with CR cite / tracking note). Prefer leaving the wave non-`supported` until the pack is fully mapped.
+Rare explicit deferrals while keeping `supported` require an entry in [`bookkeeping/supported-unsupported-allowlist.json`](bookkeeping/supported-unsupported-allowlist.json) (card id → reason with CR cite / tracking note). Prefer leaving the wave non-`supported` until the pack is fully mapped.
 
 CI runs `python3 scripts/validate_cards.py`, which enforces schema, pool consistency, and this invariant. It also runs `python3 scripts/check_labels.py`, which reports unlabelled conditional and play abilities and labels that drift from the printed text against the shrink-only baseline `scripts/baselines/labels.json`; regenerate it with `--write` when labels change.
 

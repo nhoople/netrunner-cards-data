@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Generate Reign and Reverie card JSON from the pinned v2 set for pack `rar`.
 
-Catalog source: Null-Signal-Games/netrunner-cards-json (see data/nsg-catalog-pin.json).
+Catalog source: Null-Signal-Games/netrunner-cards-json (see bookkeeping/nsg-catalog-pin.json).
 Fetch with: python3 scripts/nsg_catalog.py fetch rar
 
 Reign and Reverie is the next legacy-backwards wave after System Core 2019.

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Generate Parhelion card JSON from the pinned v2 set for pack `ph`.
 
-Catalog source: Null-Signal-Games/netrunner-cards-json (see data/nsg-catalog-pin.json).
+Catalog source: Null-Signal-Games/netrunner-cards-json (see bookkeeping/nsg-catalog-pin.json).
 Fetch with: python3 scripts/nsg_catalog.py fetch ph
 
 Hand-mapped Effect IR only where existing primitives fully cover the card;

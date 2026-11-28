@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Generate Downfall card JSON from the pinned v2 set for pack `df`.
 
-Catalog source: Null-Signal-Games/netrunner-cards-json (see data/nsg-catalog-pin.json).
+Catalog source: Null-Signal-Games/netrunner-cards-json (see bookkeeping/nsg-catalog-pin.json).
 Fetch with: python3 scripts/nsg_catalog.py fetch df
 
 Downfall is Ashes set 1 of 2 (Uprising is set 2). Magnum Opus Reprint (`mor`)

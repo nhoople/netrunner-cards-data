@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Generate System Core 2019 card JSON from the pinned v2 set for pack `sc19`.
 
-Catalog source: Null-Signal-Games/netrunner-cards-json (see data/nsg-catalog-pin.json).
+Catalog source: Null-Signal-Games/netrunner-cards-json (see bookkeeping/nsg-catalog-pin.json).
 Fetch with: python3 scripts/nsg_catalog.py fetch sc19
 
 System Core 2019 is the next legacy-backwards wave after Downfall. Magnum Opus

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Generate System Update 2021 card JSON from the pinned v2 set for pack `su21`.
 
-Catalog source: Null-Signal-Games/netrunner-cards-json (see data/nsg-catalog-pin.json).
+Catalog source: Null-Signal-Games/netrunner-cards-json (see bookkeeping/nsg-catalog-pin.json).
 Fetch with: python3 scripts/nsg_catalog.py fetch su21
 
 Reprints that reuse earlier wave defs (skipped as files; listed in pool.json):

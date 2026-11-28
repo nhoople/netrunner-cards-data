@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Fetch the pinned Null Signal Games v2 catalog for card extract scripts.
 
-Upstream: Null-Signal-Games/netrunner-cards-json (see data/nsg-catalog-pin.json).
+Upstream: Null-Signal-Games/netrunner-cards-json (see bookkeeping/nsg-catalog-pin.json).
 Titles live at v2/cards/<id>.json and printings at v2/printings/<set>.json
 on the pinned ref. The pack/{code}.json export is no longer read.
 
@@ -28,9 +28,9 @@ import urllib.error
 import urllib.request
 from pathlib import Path
 
-from data_paths import ROOT, RULES
+from data_paths import CATALOG_PIN_PATH, ROOT, RULES
 
-PIN_PATH = ROOT / "data" / "nsg-catalog-pin.json"
+PIN_PATH = CATALOG_PIN_PATH
 # Printed facts a catalog update can change. Ability records stay hand-authored.
 FACT_FIELDS = ("faction_id", "cost", "strength", "text", "is_unique", "influence_cost")
 # Corpus ids minted before the v2 id convention settled. Every other title
@@ -43,7 +43,7 @@ NSG_ID_EXCEPTIONS = {our: nsg for nsg, our in OUR_ID_EXCEPTIONS.items()}
 PACK_CODE_RE = re.compile(r"pack\s+\(?([a-z0-9]+)", re.IGNORECASE)
 
 
-# Every field data/nsg-catalog-pin.json may hold. The first three are required.
+# Every field bookkeeping/nsg-catalog-pin.json may hold. The first three are required.
 PIN_FIELDS = ("repo", "ref", "cacheDir", "notes")
 
 
@@ -518,7 +518,7 @@ def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     sub = parser.add_subparsers(dest="cmd", required=True)
 
-    p_show = sub.add_parser("show-pin", help="Print data/nsg-catalog-pin.json")
+    p_show = sub.add_parser("show-pin", help="Print bookkeeping/nsg-catalog-pin.json")
     p_show.set_defaults(func=cmd_show_pin)
 
     p_fetch = sub.add_parser(

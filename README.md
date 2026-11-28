@@ -30,7 +30,8 @@ Every folder in the repository is listed here. `tests/test_layout_map.py` (run b
 | `data/formats/formats/` | One file per format |
 | `data/formats/card-pools/` | The waves legal in one snapshot of a format |
 | `data/formats/restrictions/` | Ban lists, Most Wanted Lists and balance updates |
-| `data/manifests/` | One file per wave, written by its generator (bookkeeping, not read by the engine) |
+| `bookkeeping/` | The dataset's own bookkeeping, not card data: `nsg-catalog-pin.json` (the pinned Null Signal catalog commit) and `supported-unsupported-allowlist.json` (supported-wave cards allowed to keep an `unsupported` list) |
+| `bookkeeping/manifests/` | One file per wave, written by its generator |
 | `scripts/` | The commands (validate, build, check, catalog fetch) and the modules they share |
 | `scripts/generate/` | One generator per pack, `<set>.py`, which writes that pack's card files from the pinned catalog |
 | `scripts/baselines/` | The shrink-only label baseline that `scripts/check_labels.py` compares with |

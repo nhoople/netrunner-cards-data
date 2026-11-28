@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Generate FFG Core Set card JSON from the pinned v2 set for pack `core`.
 
-Catalog source: Null-Signal-Games/netrunner-cards-json (see data/nsg-catalog-pin.json).
+Catalog source: Null-Signal-Games/netrunner-cards-json (see bookkeeping/nsg-catalog-pin.json).
 Fetch with: python3 scripts/nsg_catalog.py fetch core
 
 Core Set is the first FFG Core-forward wave from floor v1.86.0.

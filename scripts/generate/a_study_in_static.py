@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Generate A Study in Static card JSON from the pinned v2 set for pack `asis`.
 
-Catalog source: Null-Signal-Games/netrunner-cards-json (see data/nsg-catalog-pin.json).
+Catalog source: Null-Signal-Games/netrunner-cards-json (see bookkeeping/nsg-catalog-pin.json).
 Fetch with: python3 scripts/nsg_catalog.py fetch asis
 
 Fourth Genesis-cycle wave after Cyber Exodus set-complete (floor v1.90.0).

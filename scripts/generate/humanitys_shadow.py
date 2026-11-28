@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Generate Humanity's Shadow card JSON from the pinned v2 set for pack `hs`.
 
-Catalog source: Null-Signal-Games/netrunner-cards-json (see data/nsg-catalog-pin.json).
+Catalog source: Null-Signal-Games/netrunner-cards-json (see bookkeeping/nsg-catalog-pin.json).
 Fetch with: python3 scripts/nsg_catalog.py fetch hs
 
 Fifth Genesis-cycle wave after A Study in Static set-complete (floor v1.91.0).
