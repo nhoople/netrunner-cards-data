@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Write data/rulings/<cardId>.json from the pinned Null Signal catalog.
+"""Write data/rulings/rulings/<cardId>.json from the pinned Null Signal catalog.
 
 The catalog stores a NetrunnerDB ruling snapshot at v2/rulings/. Only
 rulings the rules team has verified are kept. A ruling explains the current
@@ -15,10 +15,10 @@ import re
 import unicodedata
 
 from card_layout import STORAGE
-from data_paths import DATA, ROOT, RULES
+from data_paths import ROOT, RULES, RULINGS_DIR
 from nsg_catalog import fetch_rulings, load_v2_cards, our_id
 
-OUT = DATA / "rulings"
+OUT = RULINGS_DIR
 
 APOSTROPHE = re.compile(
     r"['\u2018\u2019\u201B\u2039\u203A\u275B\u275C\uFF07\u300C\u300D]"

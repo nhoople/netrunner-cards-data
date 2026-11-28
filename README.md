@@ -24,7 +24,8 @@ Every folder in the repository is listed here. `tests/test_layout_map.py` (run b
 | `data/print/` | What the card shows: the printed text and printings below, and the set, set type, cycle and layout records (`card-sets.json`, `card-set-types.json`, `card-cycles.json`, `card-layouts.json`) |
 | `data/print/printed/` | One file per title: the printed text |
 | `data/print/printings/` | One file per printing |
-| `data/rulings/` | One file per title with a verified ruling |
+| `data/rulings/` | Rulings: the folder below and `ruling-sources.json` (where a ruling came from) |
+| `data/rulings/rulings/` | One file per title with a verified ruling |
 | `data/formats/` | Which cards are legal where: the three folders below and `rotations.json` (rotation dates and the waves that left a format) |
 | `data/formats/formats/` | One file per format |
 | `data/formats/card-pools/` | The waves legal in one snapshot of a format |
